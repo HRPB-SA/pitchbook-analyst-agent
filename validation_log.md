@@ -1,4 +1,4 @@
-# Phase One Validation Log — Databricks Initiation Note
+# Phase One Validation Log - Databricks Initiation Note
 
 Author: Harrison Rolfes, Senior Research Director
 Validation window: July 10, 2026. Canonical pack: v3.4 (July 7-9, 2026).
@@ -6,31 +6,31 @@ Method: live re-verification of every load-bearing figure against primary source
 
 ## Priority items (per brief Section 1)
 
-### 1. The upcoming raise — STATUS: STILL UNCLOSED. Do-not-adopt holds.
+### 1. The upcoming raise - STATUS: STILL UNCLOSED. Do-not-adopt holds.
 - PitchBook financing status note dated 2026-07-07: company "is in talks to raise venture funding on an undisclosed date, putting the company's post-money valuation at an estimated $170 billion." Deal 334745-56T carried as Rumor/Speculation, 13th Round, Later Stage VC. (T2/T3, PB research)
 - The Information, June 9, 2026 (echoed by Reuters, CNA, Benzinga): talks at $165B-$175B; round "could kick off within the next month"; terms being finalized; unclear whether new capital will be included in the valuation. No closing reported through July 10.
 - CONCLUSION: unclosed as of July 10, 2026. Excluded from base-case valuation; analyzed as forward signal.
 
-### 2. IPO / S-1 status — CONFIRMED: no S-1 on file.
+### 2. IPO / S-1 status - CONFIRMED: no S-1 on file.
 - SEC EDGAR submissions API, CIK 0001587468, checked July 10, 2026: only Form D / D/A filings (most recent 2025-12-31). No S-1, S-1/A, or other registration statement. (T1)
 - CEO Ali Ghodsi, Bloomberg Television, June 4, 2026: 2026 is "a terrible year to go public"; 2027 earliest. Reaffirmed in June 9 reporting ("on track for an IPO, potentially as early as next year"). Holds.
 - Prediction markets (24/7 Wall St, July 7, 2026): "No Databricks IPO by Dec 31, 2027" priced at 0.54.
 - NEW vs pack: OpenAI and Anthropic have reportedly filed IPO paperwork (CNA/Reuters syndication, June 9, 2026). Sequencing risk is live, not hypothetical.
 
-### 3. Run-rate and gross margin — CONFIRMED, no newer print.
+### 3. Run-rate and gross margin - CONFIRMED, no newer print.
 - $6.9B annualized, +80% YoY: CNBC, June 16, 2026, from Data + AI Summit analyst session. (T2)
 - Ladder re-verified from company press releases and CNBC: $4.0B/+50% (Sep 2025, PR), $4.8B/+55% (Dec 2025, PR), $5.4B/+65% (Feb 9, 2026, PR), $6.9B/+80% (Jun 16, 2026, CNBC). Acceleration confirmed.
 - Gross margin 74%, down from >80%; Ghodsi guided margins to "decline further" on agent-driven compute ("the agents are generating way more queries"). Each GM point ≈ $69M annualized gross profit at $6.9B. (T2 via MLQ/CNBC coverage, June 16, 2026)
 - FCF positive on TTM basis (company PR, Feb 9, 2026, T2). No newer disclosure; next print expected ~Sep-Oct 2026.
-- PitchBook revenue field shows $6,900M labeled "TTM 4Q2026, period end 2026-12-31" — i.e., a forward-window figure, NOT current-period actuals. Guardrail 5 confirmed empirically; PB revenue not used as a run-rate source.
+- PitchBook revenue field shows $6,900M labeled "TTM 4Q2026, period end 2026-12-31" - i.e., a forward-window figure, NOT current-period actuals. Guardrail 5 confirmed empirically; PB revenue not used as a run-rate source.
 
-### 4. Snowflake comp — CONFIRMED with refresh.
+### 4. Snowflake comp - CONFIRMED with refresh.
 - Market cap ~$91.1B (July 7, 2026, MacroTrends/companiesmarketcap); EV ~$89B after net cash (estimate). Shares $260.15 July 2, +18.6% YTD.
 - FY27 product revenue guide $5.84B, +31%, raised from $5.66B/+27% at Q1 FY27 print May 27, 2026 (8-K, T1). Q1 actual product growth ~30-34% (Tunguz cites 34%).
 - Multiple: ~$89B / $5.84B = 15.3x forward product revenue. Growth-adjusted: 0.49x per growth point vs Databricks 0.24x. Holds.
 - Databricks revenue has overtaken Snowflake; gap ~$1.6B and widening (Tunguz, June 2026).
 
-### 5. Leadership / Naveen Rao — CONFIRMED digested.
+### 5. Leadership / Naveen Rao - CONFIRMED digested.
 - Departure announced September 12, 2025 (Bloomberg): exit to found AI-hardware startup; advisory role retained; Databricks investing in the new venture. ~10 months old at publication; no new adverse developments found. Treated as digested with residual key-person watch on the AI line.
 
 ## Other load-bearing figures
