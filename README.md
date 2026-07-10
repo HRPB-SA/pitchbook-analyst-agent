@@ -57,15 +57,16 @@ Institutional research note on the July 2026 frontier-model repricing,
 built around cost per completed task as the unit of account. Prepared by
 Harrison Rolfes, July 10, 2026.
 
-- `output/Frontier_AI_Price_Wars_Jul2026.docx` - the note (two data tables,
-  three embedded 300-DPI charts, arithmetic asserted on build).
+- `output/Frontier_AI_Price_Wars_Jul2026.docx` - the note (expanded
+  edition: technical primer, consumer-implications section, Claude Mythos
+  as premium anchor; two data tables, four embedded 300-DPI charts,
+  arithmetic asserted on build).
 - `output/Frontier_AI_Price_Wars_Jul2026.md` - markdown mirror, same content.
 - Rebuild: `python3 build/pricewars_charts.py` (renders the three charts,
   asserts every headline number in Sections 1-2), then
   `python3 build/build_pricewars_docx.py` (parses the markdown mirror,
-  embeds the charts, scans for em/en dashes and fails loudly). Body word count 3,272
-  as rendered (target 3,200, ceiling 3,300), references and disclaimer
-  excluded.
+  embeds the charts, scans for em/en dashes and fails loudly). Body word count 4,667 as
+  rendered, references and disclaimer excluded.
 
 ## Standing constraints (do not relax when editing)
 

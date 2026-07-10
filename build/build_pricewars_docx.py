@@ -17,8 +17,8 @@ MD = os.path.join(OUTDIR, "Frontier_AI_Price_Wars_Jul2026.md")
 DOCX = os.path.join(OUTDIR, "Frontier_AI_Price_Wars_Jul2026.docx")
 
 # rendered figures, in order of CHART: appearance in the markdown mirror
-CHART_FILES = ["pw_cost_curves.png", "pw_margin_vs_price.png",
-               "pw_layer_economics.png"]
+CHART_FILES = ["pw_pricing_ladder.png", "pw_cost_curves.png",
+               "pw_margin_vs_price.png", "pw_layer_economics.png"]
 chart_seen = 0
 
 NAVY = RGBColor(0x1F, 0x2A, 0x44)
