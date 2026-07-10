@@ -58,10 +58,12 @@ built around cost per completed task as the unit of account. Prepared by
 Harrison Rolfes, July 10, 2026.
 
 - `output/Frontier_AI_Price_Wars_Jul2026.docx` - the note (two data tables,
-  three CHART placeholders for the downstream template pass).
+  three embedded 300-DPI charts, arithmetic asserted on build).
 - `output/Frontier_AI_Price_Wars_Jul2026.md` - markdown mirror, same content.
-- Rebuild: `python3 build/build_pricewars_docx.py` (parses the markdown
-  mirror; scans for em/en dashes and fails loudly). Body word count 3,283
+- Rebuild: `python3 build/pricewars_charts.py` (renders the three charts,
+  asserts every headline number in Sections 1-2), then
+  `python3 build/build_pricewars_docx.py` (parses the markdown mirror,
+  embeds the charts, scans for em/en dashes and fails loudly). Body word count 3,272
   as rendered (target 3,200, ceiling 3,300), references and disclaimer
   excluded.
 

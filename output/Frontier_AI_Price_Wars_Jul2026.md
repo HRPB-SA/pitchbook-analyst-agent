@@ -21,7 +21,7 @@ July 10, 2026
 
 The July tape reads as a collapse in frontier pricing. Meta's Muse Spark 1.1 lists at $1.25 / $4.25 per million tokens (input / output), xAI's Grok 4.5 at $2 / $6, and OpenAI's GPT-5.6 Luna at $1 / $6, against Anthropic's Claude Opus 4.8 at $5 / $25 and OpenAI's GPT-5.6 Sol at $5 / $30 (all T1 list prices; Meta's claim of state-of-the-art agent reasoning at 1M context is vendor-reported, T3 after our standard one-tier discount).
 
-Headline per-token price is the wrong unit of account, and most commentary on this repricing is built on it. Enterprises do not buy tokens; they buy completed tasks. The correct unit is:
+Headline per-token price is the wrong unit of account. Enterprises do not buy tokens; they buy completed tasks. The correct unit is:
 
 cost per completed task = (tokens_in x price_in + tokens_out x price_out) x expected attempts to success, at a fixed quality bar.
 
@@ -55,7 +55,7 @@ Test: by September 30, 2026, third-party agentic evaluations that publish cost-p
 
 ## 2. Margin mechanics: who can subsidize, and is this a war?
 
-Consider what a 4x to 5x output-price cut does to model-layer gross margin. Assume a frontier-scale model serves at roughly $6 to $8 per million output tokens in amortized compute at current utilization (our estimate, T2, from public GPU-hour economics; serving-cost disclosures do not exist at T1). At $25 output, that is roughly a 70% gross margin. At $4.25 to $6, it is roughly negative 15% to negative 30% unless serving cost falls in step. Distillation, batching, and custom silicon have historically delivered 2x to 3x serving-cost reduction per model generation (T3, trade analyses), and frontier token prices have fallen roughly an order of magnitude per year at constant quality (T3). A 4x cut inside one generation therefore outruns cost decline. Someone is funding the gap.
+Consider what a 4x to 5x output-price cut does to model-layer gross margin. Assume a frontier-scale model serves at roughly $6 to $8 per million output tokens in amortized compute at current utilization (our estimate, T2; no serving-cost disclosures exist at T1). At $25 output, that is roughly a 70% gross margin. At the $4.25 to $6 floor it is negative: roughly negative 17% at $6 and negative 65% at $4.25 at the midpoint serving cost. Distillation, batching, and custom silicon have historically delivered 2x to 3x serving-cost reduction per model generation (T3, trade analyses), and frontier token prices have fallen roughly an order of magnitude per year at constant quality (T3). A 4x cut inside one generation therefore outruns cost decline. Someone is funding the gap.
 
 CHART: Implied model-layer gross margin versus output list price at a fixed serving cost of $6 to $8 per million output tokens (our estimate, T2). Takeaway: every output price below roughly $8 is gross-margin negative without a step change in serving cost; the floor tier is priced below cost. Data: the five output list prices against the $6 to $8 serving band.
 
@@ -117,7 +117,7 @@ The war looks like a pricing table but is being decided on the desktop. OpenAI's
 
 This reframes the token price cuts as second-order moves. Cheap tokens are necessary but not sufficient: they win benchmarks and API spot volume, both of which churn on the next price sheet. Seat-level reliability, admin tooling, audit trails, and permissioning are what enterprises cannot switch quarterly. Meta's problem is not price, where it wins, but the absence of an enterprise surface to convert cheap tokens into sticky seats. xAI has neither the surface nor the economics. The end state we expect is not a token price winner but two or three surface owners buying inference, including one another's, at whatever the floor price is that quarter.
 
-Test: by September 30, 2026, the first disclosed enterprise-agent seat or attach metric from any lab will show whether the surface thesis is measurable; if disclosed seats are trivial (<100k) at both OpenAI and Anthropic, the surface war is earlier than we think and the token war matters more than this section argues.
+Test: by September 30, 2026, the first disclosed enterprise-agent seat or attach metric from any lab will show whether the surface thesis is measurable; if disclosed seats are trivial (<100k) at both OpenAI and Anthropic, the surface war is earlier than we think and tokens matter more than this section argues.
 
 ## What would change the call, and what we're watching
 
@@ -154,4 +154,4 @@ This note is published by the PitchBook Institutional Research Group for informa
 
 ---
 
-*Word count, Key takeaways through What we're watching, including tables and chart captions: 3,283 as rendered in the .docx (3,286 in this markdown mirror; target 3,200, ceiling 3,300). References and disclaimer excluded as boilerplate.*
+*Word count, Key takeaways through What we're watching, including tables and chart captions: 3,272 as rendered in the .docx (3,275 in this markdown mirror; target 3,200, ceiling 3,300). References and disclaimer excluded as boilerplate.*

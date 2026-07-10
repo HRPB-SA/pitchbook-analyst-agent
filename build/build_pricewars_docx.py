@@ -12,8 +12,14 @@ from docx.oxml import OxmlElement
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUTDIR = os.path.join(HERE, "..", "output")
+CHARTS = os.path.join(HERE, "..", "charts")
 MD = os.path.join(OUTDIR, "Frontier_AI_Price_Wars_Jul2026.md")
 DOCX = os.path.join(OUTDIR, "Frontier_AI_Price_Wars_Jul2026.docx")
+
+# rendered figures, in order of CHART: appearance in the markdown mirror
+CHART_FILES = ["pw_cost_curves.png", "pw_margin_vs_price.png",
+               "pw_layer_economics.png"]
+chart_seen = 0
 
 NAVY = RGBColor(0x1F, 0x2A, 0x44)
 SLATE = RGBColor(0x35, 0x50, 0x6E)
@@ -157,6 +163,15 @@ def callout(text, kind):
     r2 = p.add_run(text)
     r2.font.name = "Georgia"; r2.font.size = Pt(9.2); r2.font.italic = True
     r2.font.color.rgb = INK
+    if kind == "CHART":
+        global chart_seen
+        png = os.path.join(CHARTS, CHART_FILES[chart_seen])
+        chart_seen += 1
+        if os.path.exists(png):
+            ip = doc.add_paragraph()
+            ip.paragraph_format.space_before = Pt(4)
+            ip.paragraph_format.space_after = Pt(2)
+            ip.add_run().add_picture(png, width=Inches(6.5))
     doc.add_paragraph().paragraph_format.space_after = Pt(2)
 
 
