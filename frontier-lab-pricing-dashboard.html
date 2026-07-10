@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Frontier-Lab Price War — Routing Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/htm/3.1.1/htm.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --page: #f9f9f7;
+    --surface: #fcfcfb;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --axis: #c3c2b7;
+    --good: #006300;
+    --border: rgba(11, 11, 11, 0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #0d0d0d;
+      --surface: #1a1a19;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --axis: #383835;
+      --good: #0ca30c;
+      --border: rgba(255, 255, 255, 0.10);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  #root { max-width: 1180px; margin: 0 auto; padding: 28px 20px 64px; }
+  header.page { margin-bottom: 20px; }
+  header.page h1 { font-size: 21px; font-weight: 650; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header.page p { margin: 0; color: var(--ink-2); max-width: 72ch; }
+  h2.section { font-size: 15px; font-weight: 650; margin: 30px 0 12px; }
+  h2.section span.hint { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 8px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .grid-providers { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(206px, 1fr)); }
+  .grid-2 { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; align-items: start; }
+  @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  .prov-head { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
+  .prov-name { font-weight: 600; font-size: 13.5px; }
+  .prov-tier { margin: 6px 0 10px; }
+
+  .field { margin-top: 10px; }
+  .field-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .field-row label { color: var(--ink-2); font-size: 12.5px; }
+  .field input[type="range"] { width: 100%; margin: 6px 0 0; accent-color: var(--accent, var(--ink-2)); }
+  input[type="number"], select, input[type="text"] {
+    font: inherit; color: var(--ink); background: var(--surface);
+    border: 1px solid var(--border); border-radius: 6px; padding: 3px 7px;
+  }
+  input[type="number"] { width: 86px; text-align: right; font-variant-numeric: tabular-nums; }
+  input[type="text"] { width: 100%; }
+  select { padding: 3px 4px; }
+  input:focus-visible, select:focus-visible { outline: 2px solid var(--accent, var(--axis)); outline-offset: 1px; }
+
+  .chart-wrap { position: relative; }
+  .caption { color: var(--muted); font-size: 12px; margin-top: 10px; }
+
+  table.data { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  table.data th {
+    text-align: left; color: var(--muted); font-weight: 500; font-size: 12px;
+    padding: 5px 8px; border-bottom: 1px solid var(--grid);
+  }
+  table.data td { padding: 6px 8px; border-bottom: 1px solid var(--grid); }
+  table.data tr:last-child td { border-bottom: none; }
+  table.data th.num, table.data td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .key { display: inline-flex; align-items: center; gap: 7px; }
+
+  .tiles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom: 14px; }
+  .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+  .tile .label { color: var(--ink-2); font-size: 12.5px; }
+  .tile .value { font-size: 22px; font-weight: 650; margin-top: 2px; }
+  .tile .sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  .hero { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 18px; margin: 2px 0 14px; }
+  .hero .figure { font-size: 52px; font-weight: 650; letter-spacing: -0.02em; line-height: 1.1; }
+  .hero .figure.good { color: var(--good); }
+  .hero .meta { color: var(--ink-2); }
+  .hero .meta strong { color: var(--ink); font-weight: 600; }
+
+  .wf-table input[type="number"] { width: 84px; }
+  .wf-table input[type="text"] { min-width: 130px; }
+  button.ghost {
+    font: inherit; color: var(--ink-2); background: none; border: 1px solid var(--border);
+    border-radius: 6px; padding: 3px 10px; cursor: pointer;
+  }
+  button.ghost:hover { color: var(--ink); }
+  footer.assumptions { color: var(--muted); font-size: 12px; margin-top: 28px; max-width: 84ch; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<noscript>This dashboard requires JavaScript (React and Chart.js are loaded from cdnjs).</noscript>
+<script>
+(function () {
+  "use strict";
+  const { useState, useEffect, useRef, useMemo } = React;
+  const html = htm.bind(React.createElement);
+
+  /* ---------------- design tokens (validated reference palette) ---------------- */
+
+  const TOKENS = {
+    light: { surface: "#fcfcfb", ink: "#0b0b0b", ink2: "#52514e", muted: "#898781",
+             grid: "#e1e0d9", axis: "#c3c2b7", good: "#006300", tooltipBg: "#ffffff",
+             border: "rgba(11,11,11,0.10)" },
+    dark:  { surface: "#1a1a19", ink: "#ffffff", ink2: "#c3c2b7", muted: "#898781",
+             grid: "#2c2c2a", axis: "#383835", good: "#0ca30c", tooltipBg: "#242423",
+             border: "rgba(255,255,255,0.10)" },
+  };
+  // Categorical slots 1–5 (blue, aqua, yellow, green, violet), light + dark steps.
+  const SERIES = {
+    light: ["#2a78d6", "#1baf7a", "#eda100", "#008300", "#4a3aa7"],
+    dark:  ["#3987e5", "#199e70", "#c98500", "#008300", "#9085e9"],
+  };
+
+  const DAYS_PER_MONTH = 30;
+
+  /* ---------------- initial state ---------------- */
+  // Anthropic Opus defaults to real list pricing (Opus 4.8, $5 in / $25 out per Mtok,
+  // platform.claude.com). The other labs' figures are illustrative scenario defaults —
+  // every price is a slider, so set them to whatever the war looks like this week.
+
+  const INITIAL_PROVIDERS = [
+    { id: "opus", name: "Anthropic Opus",      lab: "Anthropic", tier: "frontier", inP: 5.0,  outP: 25.0 },
+    { id: "sol",  name: "OpenAI Sol",          lab: "OpenAI",    tier: "frontier", inP: 2.5,  outP: 10.0 },
+    { id: "luna", name: "OpenAI Luna",         lab: "OpenAI",    tier: "standard", inP: 0.4,  outP: 1.6  },
+    { id: "grok", name: "xAI Grok 4.5",        lab: "xAI",       tier: "frontier", inP: 3.0,  outP: 15.0 },
+    { id: "muse", name: "Meta Muse Spark 1.1", lab: "Meta",      tier: "standard", inP: 0.2,  outP: 0.8  },
+  ];
+
+  const INITIAL_WORKFLOWS = [
+    { name: "Agentic coding",         tin: 45000, tout: 8000, tpd: 120,  need: "frontier" },
+    { name: "Deep research memos",    tin: 30000, tout: 4000, tpd: 40,   need: "frontier" },
+    { name: "Customer support chat",  tin: 2500,  tout: 400,  tpd: 3000, need: "standard" },
+    { name: "Document summarization", tin: 8000,  tout: 600,  tpd: 800,  need: "standard" },
+    { name: "Data extraction",        tin: 1500,  tout: 200,  tpd: 6000, need: "standard" },
+  ];
+
+  /* ---------------- helpers ---------------- */
+
+  function fmtMoney(v) {
+    if (!isFinite(v)) return "—";
+    const a = Math.abs(v);
+    if (a >= 1e6) return "$" + (v / 1e6).toFixed(2) + "M";
+    if (a >= 1e4) return "$" + (v / 1e3).toFixed(1) + "K";
+    if (a >= 100) return "$" + Math.round(v).toLocaleString("en-US");
+    if (a >= 1)   return "$" + v.toFixed(2);
+    if (a === 0)  return "$0";
+    return "$" + v.toFixed(4);
+  }
+  function fmtInt(v) { return Math.round(v).toLocaleString("en-US"); }
+  function fmtPct(v, dp) { return (v * 100).toFixed(dp == null ? 0 : dp) + "%"; }
+  function costPerTask(p, tin, tout) { return (tin * p.inP + tout * p.outP) / 1e6; }
+  function monthly(p, tin, tout, tpd) { return costPerTask(p, tin, tout) * tpd * DAYS_PER_MONTH; }
+  function mix(hex, target, amt) { // lighten/darken toward target hex
+    const h = x => [1, 3, 5].map(i => parseInt(x.slice(i, i + 2), 16));
+    const [a, b] = [h(hex), h(target)];
+    const c = a.map((v, i) => Math.round(v + (b[i] - v) * amt));
+    return "#" + c.map(v => v.toString(16).padStart(2, "0")).join("");
+  }
+
+  /* ---------------- Chart.js plugins (read live values from chart.options) ---------------- */
+
+  // Direct value labels at horizontal-bar tips (relief channel for sub-3:1 fills).
+  // Note: no function-valued plugin options — Chart.js treats those as scriptable
+  // resolvers and calls them with a context object. Format directly instead.
+  const barValueLabels = {
+    id: "valueLabels",
+    afterDatasetsDraw(chart) {
+      const o = chart.options.plugins.valueLabels;
+      if (!o || !o.display) return;
+      const { ctx } = chart;
+      const meta = chart.getDatasetMeta(0);
+      ctx.save();
+      ctx.font = "600 12px system-ui, -apple-system, 'Segoe UI', sans-serif";
+      ctx.fillStyle = o.color;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "middle";
+      meta.data.forEach((el, i) => {
+        const v = chart.data.datasets[0].data[i];
+        ctx.fillText(fmtMoney(v), el.x + 8, el.y);
+      });
+      ctx.restore();
+    },
+  };
+
+  // Vertical crosshair snapped to the active tooltip X (line charts).
+  const crosshair = {
+    id: "xhair",
+    afterDraw(chart) {
+      const o = chart.options.plugins.xhair;
+      if (!o || !o.display) return;
+      const active = chart.tooltip && chart.tooltip.getActiveElements();
+      if (!active || !active.length) return;
+      const x = active[0].element.x;
+      const { top, bottom } = chart.chartArea;
+      const { ctx } = chart;
+      ctx.save();
+      ctx.strokeStyle = o.color;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(x, top);
+      ctx.lineTo(x, bottom);
+      ctx.stroke();
+      ctx.restore();
+    },
+  };
+
+  // Break-even marker: solid hairline + label + intersection dot with surface ring.
+  const beMarker = {
+    id: "beMarker",
+    afterDatasetsDraw(chart) {
+      const o = chart.options.plugins.beMarker;
+      if (!o || o.x == null) return;
+      const xs = chart.scales.x, ys = chart.scales.y;
+      if (o.x < xs.min || o.x > xs.max) return;
+      const px = xs.getPixelForValue(o.x);
+      const { top, bottom } = chart.chartArea;
+      const { ctx } = chart;
+      ctx.save();
+      ctx.strokeStyle = o.lineColor;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(px, top + 14);
+      ctx.lineTo(px, bottom);
+      ctx.stroke();
+      // intersection marker (>=8px, 2px surface ring)
+      const py = ys.getPixelForValue(o.y);
+      ctx.beginPath();
+      ctx.arc(px, py, 5, 0, Math.PI * 2);
+      ctx.fillStyle = o.dotColor;
+      ctx.fill();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = o.surface;
+      ctx.stroke();
+      // label
+      ctx.font = "600 12px system-ui, -apple-system, 'Segoe UI', sans-serif";
+      ctx.fillStyle = o.textColor;
+      ctx.textBaseline = "top";
+      const w = ctx.measureText(o.label).width;
+      const right = chart.chartArea.right;
+      ctx.textAlign = px + 8 + w > right ? "right" : "left";
+      ctx.fillText(o.label, px + (ctx.textAlign === "right" ? -8 : 8), top);
+      ctx.restore();
+    },
+  };
+
+  /* ---------------- generic chart host ---------------- */
+
+  function ChartCanvas({ config, height, ariaLabel }) {
+    const canvasRef = useRef(null);
+    const chartRef = useRef(null);
+    useEffect(() => {
+      if (chartRef.current) {
+        chartRef.current.data = config.data;
+        chartRef.current.options = config.options;
+        chartRef.current.update("none");
+      } else {
+        chartRef.current = new Chart(canvasRef.current, config);
+      }
+    });
+    useEffect(() => () => { if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; } }, []);
+    return html`<div class="chart-wrap" style=${{ height: height + "px" }}>
+      <canvas ref=${canvasRef} role="img" aria-label=${ariaLabel}></canvas>
+    </div>`;
+  }
+
+  /* ---------------- form pieces ---------------- */
+
+  function SliderField({ label, value, min, max, step, onChange, accent, format }) {
+    return html`<div class="field" style=${{ "--accent": accent }}>
+      <div class="field-row">
+        <label>${label}</label>
+        <input type="number" min=${min} step=${step} value=${value}
+          onChange=${e => onChange(Math.max(0, parseFloat(e.target.value) || 0))}
+          aria-label=${label} />
+      </div>
+      <input type="range" min=${min} max=${max} step=${step} value=${Math.min(value, max)}
+        onChange=${e => onChange(parseFloat(e.target.value))} aria-label=${label + " slider"} />
+      ${format ? html`<div class="caption" style=${{ marginTop: "2px" }}>${format(value)}</div>` : null}
+    </div>`;
+  }
+
+  function ProviderCard({ p, color, onChange }) {
+    return html`<div class="card" style=${{ "--accent": color }}>
+      <div class="prov-head">
+        <span class="dot" style=${{ background: color }}></span>
+        <span class="prov-name">${p.name}</span>
+      </div>
+      <div class="caption" style=${{ marginTop: 0 }}>${p.lab}</div>
+      <div class="prov-tier">
+        <label class="caption" style=${{ marginRight: "6px" }}>Quality tier</label>
+        <select value=${p.tier} onChange=${e => onChange({ tier: e.target.value })} aria-label=${p.name + " quality tier"}>
+          <option value="frontier">Frontier</option>
+          <option value="standard">Standard</option>
+        </select>
+      </div>
+      <${SliderField} label="Input $ / Mtok" value=${p.inP} min=${0} max=${20} step=${0.05}
+        accent=${color} onChange=${v => onChange({ inP: v })} />
+      <${SliderField} label="Output $ / Mtok" value=${p.outP} min=${0} max=${100} step=${0.25}
+        accent=${color} onChange=${v => onChange({ outP: v })} />
+    </div>`;
+  }
+
+  /* ---------------- app ---------------- */
+
+  function useColorMode() {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const [mode, setMode] = useState(mq.matches ? "dark" : "light");
+    useEffect(() => {
+      const fn = e => setMode(e.matches ? "dark" : "light");
+      mq.addEventListener("change", fn);
+      return () => mq.removeEventListener("change", fn);
+    }, []);
+    return mode;
+  }
+
+  function App() {
+    const mode = useColorMode();
+    const t = TOKENS[mode];
+    const colors = SERIES[mode];
+
+    const [providers, setProviders] = useState(INITIAL_PROVIDERS);
+    const [calc, setCalc] = useState({ tin: 4000, tout: 1200, tpd: 500 });
+    const [workflows, setWorkflows] = useState(INITIAL_WORKFLOWS);
+
+    const colorOf = id => colors[INITIAL_PROVIDERS.findIndex(p => p.id === id)];
+    const updateProvider = (id, patch) =>
+      setProviders(ps => ps.map(p => (p.id === id ? { ...p, ...patch } : p)));
+    const updateWorkflow = (i, patch) =>
+      setWorkflows(ws => ws.map((w, j) => (j === i ? { ...w, ...patch } : w)));
+
+    /* ---- derived: calculator ---- */
+    const rows = useMemo(() =>
+      providers
+        .map(p => ({ p, task: costPerTask(p, calc.tin, calc.tout), mo: monthly(p, calc.tin, calc.tout, calc.tpd) }))
+        .sort((a, b) => b.mo - a.mo),
+      [providers, calc]);
+    const opus = providers.find(p => p.id === "opus");
+    const opusTask = costPerTask(opus, calc.tin, calc.tout);
+    const cheapest = useMemo(() => {
+      const cands = providers.filter(p => p.id !== "opus")
+        .map(p => ({ p, task: costPerTask(p, calc.tin, calc.tout) }));
+      return cands.reduce((a, b) => (b.task < a.task ? b : a), cands[0]);
+    }, [providers, calc]);
+    const breakEven = cheapest.task > 0 ? opusTask / cheapest.task - 1 : Infinity;
+
+    /* ---- derived: break-even curve ---- */
+    const pMaxPct = isFinite(breakEven) && breakEven > 0
+      ? Math.max(Math.ceil((breakEven * 100 * 1.3) / 25) * 25, 50)
+      : 100;
+    const curve = useMemo(() => {
+      const opusPts = [], flatPts = [];
+      const steps = 80;
+      for (let i = 0; i <= steps; i++) {
+        const pct = (pMaxPct * i) / steps;
+        opusPts.push({ x: pct, y: opusTask / (1 + pct / 100) });
+        flatPts.push({ x: pct, y: cheapest.task });
+      }
+      return { opusPts, flatPts };
+    }, [opusTask, cheapest.task, pMaxPct]);
+
+    /* ---- derived: routing ---- */
+    const routing = useMemo(() => workflows.map(w => {
+      const eligible = providers.filter(p => (w.need === "frontier" ? p.tier === "frontier" : true));
+      const pool = eligible.length ? eligible : providers;
+      const best = pool.reduce((a, b) =>
+        costPerTask(b, w.tin, w.tout) < costPerTask(a, w.tin, w.tout) ? b : a, pool[0]);
+      return {
+        w,
+        best,
+        routedMo: monthly(best, w.tin, w.tout, w.tpd),
+        opusMo: monthly(opus, w.tin, w.tout, w.tpd),
+      };
+    }), [workflows, providers]);
+    const routedTotal = routing.reduce((s, r) => s + r.routedMo, 0);
+    const opusTotal = routing.reduce((s, r) => s + r.opusMo, 0);
+    const savings = opusTotal - routedTotal;
+
+    /* ---- shared chart chrome ---- */
+    Chart.defaults.font.family = "system-ui, -apple-system, 'Segoe UI', sans-serif";
+    Chart.defaults.font.size = 12;
+    const tooltipBase = {
+      backgroundColor: t.tooltipBg,
+      titleColor: t.ink, bodyColor: t.ink,
+      borderColor: t.border, borderWidth: 1,
+      padding: 10, boxPadding: 5, usePointStyle: true, caretSize: 5,
+    };
+
+    /* ---- chart 1: monthly spend per provider ---- */
+    const barConfig = {
+      type: "bar",
+      data: {
+        labels: rows.map(r => r.p.name),
+        datasets: [{
+          data: rows.map(r => r.mo),
+          backgroundColor: rows.map(r => colorOf(r.p.id)),
+          hoverBackgroundColor: rows.map(r => mix(colorOf(r.p.id), mode === "dark" ? "#ffffff" : "#000000", 0.14)),
+          maxBarThickness: 24,
+          borderRadius: 4,
+          borderSkipped: "start",
+          categoryPercentage: 0.72,
+        }],
+      },
+      plugins: [barValueLabels],
+      options: {
+        indexAxis: "y",
+        responsive: true, maintainAspectRatio: false,
+        layout: { padding: { right: 84 } },
+        interaction: { mode: "nearest", axis: "y", intersect: false },
+        scales: {
+          x: {
+            grid: { color: t.grid, drawTicks: false },
+            border: { display: false },
+            ticks: { color: t.muted, callback: v => fmtMoney(v), maxTicksLimit: 6 },
+          },
+          y: {
+            grid: { display: false },
+            border: { color: t.axis },
+            ticks: { color: t.ink2 },
+          },
+        },
+        plugins: {
+          legend: { display: false },
+          valueLabels: { display: true, color: t.ink2 },
+          tooltip: { ...tooltipBase,
+            callbacks: { label: ctx => " " + fmtMoney(ctx.parsed.x) + " / month" } },
+        },
+      },
+    };
+
+    /* ---- chart 2: break-even ---- */
+    const opusColor = colorOf("opus");
+    const cheapColor = colorOf(cheapest.p.id);
+    const beConfig = {
+      type: "line",
+      data: {
+        datasets: [
+          {
+            label: "Anthropic Opus",
+            data: curve.opusPts,
+            borderColor: opusColor, borderWidth: 2, tension: 0,
+            pointRadius: 0, pointHoverRadius: 5,
+            pointHoverBackgroundColor: opusColor,
+            pointHoverBorderColor: t.surface, pointHoverBorderWidth: 2,
+          },
+          {
+            label: cheapest.p.name,
+            data: curve.flatPts,
+            borderColor: cheapColor, borderWidth: 2, tension: 0,
+            pointRadius: 0, pointHoverRadius: 5,
+            pointHoverBackgroundColor: cheapColor,
+            pointHoverBorderColor: t.surface, pointHoverBorderWidth: 2,
+          },
+        ],
+      },
+      plugins: [crosshair, beMarker],
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        layout: { padding: { right: 28, top: 4 } },
+        interaction: { mode: "index", intersect: false },
+        scales: {
+          x: {
+            type: "linear", min: 0, max: pMaxPct,
+            grid: { color: t.grid, drawTicks: false },
+            border: { color: t.axis },
+            ticks: { color: t.muted, callback: v => "+" + v + "%", maxTicksLimit: 8 },
+            title: { display: true, text: "Quality premium of Opus over " + cheapest.p.name,
+                     color: t.muted, font: { size: 12 } },
+          },
+          y: {
+            beginAtZero: true,
+            grid: { color: t.grid, drawTicks: false },
+            border: { display: false },
+            ticks: { color: t.muted, callback: v => fmtMoney(v), maxTicksLimit: 6 },
+            title: { display: true, text: "Cost per successful task", color: t.muted, font: { size: 12 } },
+          },
+        },
+        plugins: {
+          legend: {
+            position: "top", align: "start",
+            labels: { color: t.ink2, usePointStyle: true, pointStyle: "line", boxWidth: 18, boxHeight: 2 },
+          },
+          xhair: { display: true, color: t.axis },
+          beMarker: (isFinite(breakEven) && breakEven > 0 && breakEven * 100 <= pMaxPct) ? {
+            x: breakEven * 100, y: cheapest.task,
+            label: "Break-even +" + fmtInt(breakEven * 100) + "%",
+            lineColor: t.axis, dotColor: opusColor, surface: t.surface, textColor: t.ink2,
+          } : { x: null },
+          tooltip: { ...tooltipBase,
+            callbacks: {
+              title: items => "Quality premium +" + items[0].parsed.x.toFixed(0) + "%",
+              label: ctx => " " + ctx.dataset.label + ": " + fmtMoney(ctx.parsed.y) + " / successful task",
+            } },
+        },
+      },
+    };
+
+    /* ---- render ---- */
+    return html`<div>
+      <header class="page">
+        <h1>Frontier-lab price war — cost and routing model</h1>
+        <p>Set each lab's per-Mtok pricing, describe your workload, and see monthly spend,
+        the quality premium Anthropic Opus needs to justify its price, and a per-workflow
+        routing recommendation. All state lives in this page — nothing is stored.</p>
+      </header>
+
+      <h2 class="section">Provider pricing
+        <span class="hint">$ per million tokens · Opus defaults to Anthropic list price; other labs are scenario defaults</span></h2>
+      <div class="grid-providers">
+        ${providers.map(p => html`<${ProviderCard} key=${p.id} p=${p} color=${colorOf(p.id)}
+          onChange=${patch => updateProvider(p.id, patch)} />`)}
+      </div>
+
+      <h2 class="section">Cost-per-task calculator
+        <span class="hint">one task profile applied to every provider · ${DAYS_PER_MONTH}-day month</span></h2>
+      <div class="grid-2">
+        <div class="card">
+          <${SliderField} label="Tokens in / task" value=${calc.tin} min=${0} max=${100000} step=${500}
+            onChange=${v => setCalc(c => ({ ...c, tin: v }))} format=${v => fmtInt(v) + " input tokens per task"} />
+          <${SliderField} label="Tokens out / task" value=${calc.tout} min=${0} max=${50000} step=${250}
+            onChange=${v => setCalc(c => ({ ...c, tout: v }))} format=${v => fmtInt(v) + " output tokens per task"} />
+          <${SliderField} label="Tasks / day" value=${calc.tpd} min=${0} max=${20000} step=${50}
+            onChange=${v => setCalc(c => ({ ...c, tpd: v }))} format=${v => fmtInt(v * DAYS_PER_MONTH) + " tasks per month"} />
+        </div>
+        <div class="card">
+          <${ChartCanvas} key=${"bar-" + mode} config=${barConfig} height=${235}
+            ariaLabel="Bar chart of monthly spend per provider; values are in the table below" />
+          <table class="data">
+            <thead><tr>
+              <th>Provider</th><th class="num">$ / task</th><th class="num">$ / month</th><th class="num">× cheapest</th>
+            </tr></thead>
+            <tbody>
+              ${rows.map(r => {
+                const minTask = rows[rows.length - 1].task;
+                return html`<tr key=${r.p.id}>
+                  <td><span class="key"><span class="dot" style=${{ background: colorOf(r.p.id), width: "9px", height: "9px" }}></span>${r.p.name}</span></td>
+                  <td class="num">${fmtMoney(r.task)}</td>
+                  <td class="num">${fmtMoney(r.mo)}</td>
+                  <td class="num">${minTask > 0 ? (r.task / minTask).toFixed(1) + "×" : "—"}</td>
+                </tr>`;
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="section">When does Opus pay for itself?
+        <span class="hint">cost per successful task, assuming a q% quality premium means 1 ⁄ (1 + q) as many attempts per completed task</span></h2>
+      <div class="tiles">
+        <div class="tile">
+          <div class="label">Break-even quality premium</div>
+          <div class="value">${!isFinite(breakEven) ? "n/a"
+            : breakEven <= 0 ? "0%"
+            : "+" + fmtInt(breakEven * 100) + "%"}</div>
+          <div class="sub">${breakEven <= 0 ? "Opus is already the cheapest option"
+            : "vs " + cheapest.p.name + " at equal task success"}</div>
+        </div>
+        <div class="tile">
+          <div class="label">Opus cost per task</div>
+          <div class="value">${fmtMoney(opusTask)}</div>
+          <div class="sub">${fmtInt(calc.tin)} in / ${fmtInt(calc.tout)} out</div>
+        </div>
+        <div class="tile">
+          <div class="label">Cheapest tier cost per task</div>
+          <div class="value">${fmtMoney(cheapest.task)}</div>
+          <div class="sub">${cheapest.p.name}</div>
+        </div>
+        <div class="tile">
+          <div class="label">Price gap</div>
+          <div class="value">${cheapest.task > 0 ? (opusTask / cheapest.task).toFixed(1) + "×" : "—"}</div>
+          <div class="sub">Opus vs cheapest, per task</div>
+        </div>
+      </div>
+      <div class="card">
+        <${ChartCanvas} key=${"be-" + mode} config=${beConfig} height=${320}
+          ariaLabel="Line chart of cost per successful task versus quality premium; break-even values are in the table below" />
+        <table class="data">
+          <thead><tr>
+            <th>Provider</th><th class="num">$ / task</th><th class="num">Opus premium needed to break even</th>
+          </tr></thead>
+          <tbody>
+            ${providers.filter(p => p.id !== "opus").map(p => {
+              const task = costPerTask(p, calc.tin, calc.tout);
+              const need = task > 0 ? opusTask / task - 1 : Infinity;
+              return html`<tr key=${p.id}>
+                <td><span class="key"><span class="dot" style=${{ background: colorOf(p.id), width: "9px", height: "9px" }}></span>${p.name}</span></td>
+                <td class="num">${fmtMoney(task)}</td>
+                <td class="num">${!isFinite(need) ? "—" : need <= 0 ? "0% (Opus is cheaper)" : "+" + fmtInt(need * 100) + "%"}</td>
+              </tr>`;
+            })}
+          </tbody>
+        </table>
+        <p class="caption">Reading: the blue curve is Opus's effective cost per <em>successful</em> task as its
+        assumed quality premium rises; the flat line is ${cheapest.p.name} at equal task success.
+        Right of the marker, Opus is the cheaper way to get a task done.</p>
+      </div>
+
+      <h2 class="section">Routing recommendation
+        <span class="hint">cheapest provider that meets each workflow's quality bar · savings vs running everything on Anthropic Opus</span></h2>
+      <div class="card">
+        <div class="hero">
+          <span class=${"figure" + (savings > 0 ? " good" : "")}>${fmtMoney(Math.max(savings, 0))}<span style=${{ fontSize: "22px", fontWeight: 500, color: "var(--ink-2)" }}> / month saved</span></span>
+          <span class="meta">Routed portfolio <strong>${fmtMoney(routedTotal)}</strong> vs all-premium${" "}
+            <strong>${fmtMoney(opusTotal)}</strong>${opusTotal > 0 ? " (−" + ((savings / opusTotal) * 100).toFixed(0) + "%)" : ""}</span>
+        </div>
+        <div style=${{ overflowX: "auto" }}>
+        <table class="data wf-table">
+          <thead><tr>
+            <th>Workflow</th><th class="num">Tokens in</th><th class="num">Tokens out</th>
+            <th class="num">Tasks/day</th><th>Quality bar</th><th>Route to</th>
+            <th class="num">$ / mo routed</th><th class="num">$ / mo on Opus</th><th class="num">Savings</th><th></th>
+          </tr></thead>
+          <tbody>
+            ${routing.map((r, i) => html`<tr key=${i}>
+              <td><input type="text" value=${r.w.name} aria-label="Workflow name"
+                onChange=${e => updateWorkflow(i, { name: e.target.value })} /></td>
+              <td class="num"><input type="number" min="0" step="100" value=${r.w.tin}
+                onChange=${e => updateWorkflow(i, { tin: Math.max(0, parseFloat(e.target.value) || 0) })} aria-label="Tokens in" /></td>
+              <td class="num"><input type="number" min="0" step="100" value=${r.w.tout}
+                onChange=${e => updateWorkflow(i, { tout: Math.max(0, parseFloat(e.target.value) || 0) })} aria-label="Tokens out" /></td>
+              <td class="num"><input type="number" min="0" step="10" value=${r.w.tpd}
+                onChange=${e => updateWorkflow(i, { tpd: Math.max(0, parseFloat(e.target.value) || 0) })} aria-label="Tasks per day" /></td>
+              <td>
+                <select value=${r.w.need} onChange=${e => updateWorkflow(i, { need: e.target.value })} aria-label="Quality bar">
+                  <option value="frontier">Frontier</option>
+                  <option value="standard">Standard</option>
+                </select>
+              </td>
+              <td><span class="key"><span class="dot" style=${{ background: colorOf(r.best.id), width: "9px", height: "9px" }}></span>${r.best.name}</span></td>
+              <td class="num">${fmtMoney(r.routedMo)}</td>
+              <td class="num">${fmtMoney(r.opusMo)}</td>
+              <td class="num" style=${{ color: r.opusMo - r.routedMo > 0 ? "var(--good)" : "var(--ink-2)" }}>
+                ${fmtMoney(r.opusMo - r.routedMo)}</td>
+              <td><button class="ghost" title="Remove workflow"
+                onClick=${() => setWorkflows(ws => ws.filter((_, j) => j !== i))}>×</button></td>
+            </tr>`)}
+          </tbody>
+        </table>
+        </div>
+        <div style=${{ marginTop: "12px" }}>
+          <button class="ghost" onClick=${() =>
+            setWorkflows(ws => [...ws, { name: "New workflow", tin: 2000, tout: 500, tpd: 100, need: "standard" }])}>
+            + Add workflow</button>
+        </div>
+      </div>
+
+      <footer class="assumptions">
+        Assumptions: a ${DAYS_PER_MONTH}-day month; no prompt caching, batching, or volume discounts;
+        routing picks the cheapest provider whose quality tier meets the workflow's bar (Frontier-bar
+        workflows only route to Frontier-tier models). Anthropic Opus input/output defaults are the
+        published Claude Opus 4.8 list prices; OpenAI Sol, OpenAI Luna, xAI Grok 4.5, and Meta Muse
+        Spark 1.1 defaults are illustrative — adjust the sliders to match the current round of cuts.
+        The break-even model treats a quality premium as fewer attempts needed per completed task;
+        it ignores latency, rate limits, and the cost of failed-task cleanup, all of which favor the
+        higher-quality model.
+      </footer>
+    </div>`;
+  }
+
+  ReactDOM.createRoot(document.getElementById("root")).render(html`<${App} />`);
+})();
+</script>
+</body>
+</html>
