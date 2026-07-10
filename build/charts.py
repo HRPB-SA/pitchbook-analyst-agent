@@ -85,7 +85,7 @@ def per_point_ladder():
     title_block(fig, "The buyer pays the least per unit of quality in the cohort",
                 "Valuation per AIBQ point, July 2026. Databricks $134B / 8.81; Anthropic $965B / 8.20; OpenAI $852B / 4.53;\n"
                 "xAI est. ~$1.55T implied inside listed SpaceX / 4.49. SSI excluded (pre-revenue; ratio not meaningful).")
-    save(fig, "fig01_per_point.png")
+    save(fig, "per_point.png")
 
 # ---------------------------------------------------------- 2. acceleration
 def acceleration():
@@ -118,7 +118,7 @@ def acceleration():
     ax2.spines["right"].set_color("#E3C4B8")
     title_block(fig, "Growth is accelerating at $7B scale, not decelerating",
                 "Annualized revenue run-rate (bars, left) and year-over-year growth (line, right), company disclosures Sep 2025 to Jun 2026.")
-    save(fig, "fig04_acceleration.png")
+    save(fig, "acceleration.png")
 
 # ------------------------------------------------- 3. growth-adjusted multiple
 def growth_adjusted():
@@ -154,7 +154,7 @@ def growth_adjusted():
     title_block(fig, "Growth-adjusted, Databricks trades at roughly half Snowflake's price",
                 "Revenue multiple vs growth rate, July 2026. Dashed rays are iso-value lines (equal multiple per point of growth);\n"
                 "a lower ray means the buyer pays less for each unit of growth purchased. Two-company comparison; no fitted line.")
-    save(fig, "fig07_growth_adjusted.png")
+    save(fig, "growth_adjusted.png")
 
 # ----------------------------------------------------------------- 4. radar
 def radar():
@@ -195,7 +195,7 @@ def radar():
     title_block(fig, "Elite on four dimensions; compute independence is the honest notch",
                 "AIBQ dimension scores (0-10, weights in parentheses), July 2026. Cohort dimension averages are desk estimates\n"
                 "consistent with published composites. Databricks CI 8.0 reflects hyperscaler distribution dependence, mitigated by multi-cloud posture.")
-    save(fig, "fig02_radar.png")
+    save(fig, "radar.png")
 
 # ------------------------------------------------------------ 5. gate gauge
 def gate_gauge():
@@ -227,7 +227,7 @@ def gate_gauge():
     title_block(fig, "The number that changes the rating: gross margin vs the 70% gate",
                 "Gross margin against the AIBQ efficiency-gate floor. A print below 70% breaks the gate and forces a re-score.\n"
                 "Guided lower on agentic compute costs; watch the ~Sep-Oct 2026 disclosure.")
-    save(fig, "fig05_gate_gauge.png")
+    save(fig, "gate_gauge.png")
 
 # ------------------------------------------------------------------ 6. CE bars
 def ce_bars():
@@ -250,7 +250,7 @@ def ce_bars():
     title_block(fig, "Capital efficiency: growth funded from within, not from the capital markets",
                 "Revenue run-rate divided by cumulative equity raised (debt excluded by AIBQ ruling), July 2026.\n"
                 "Databricks: $6.9B / ~$20.2B. Peer ratios are desk estimates from reported raises and run-rates.")
-    save(fig, "fig06_ce_bars.png")
+    save(fig, "ce_bars.png")
 
 # ------------------------------------------------------------ 7. football field
 def football_field():
@@ -269,7 +269,7 @@ def football_field():
     ax.text(134, 2.62, "current mark $134B\n(Series L, Feb 2026)", ha="center",
             fontsize=7.4, color=INK)
     ax.axvspan(165, 175, color=SLATE, alpha=0.18, zorder=2)
-    ax.text(170, -0.62, "rumored range $165-175B\n(unclosed; The Information, Jun 9)",
+    ax.text(170, -0.62, "rumored range $165-175B\n(unclosed; press reports, Jun 9)",
             ha="center", fontsize=7.4, color=SLATE)
     ax.set_yticks(range(3), [s[0] for s in scen], fontsize=8.4)
     ax.set_xlim(95, 260)
@@ -279,7 +279,7 @@ def football_field():
     title_block(fig, "The base case reaches the rumored range without adopting it",
                 "Scenario valuation ranges, 12-month forward view anchored on the $134B mark. The rumored raise is a reference\n"
                 "line, not an input: the base case is fundamentals (forward run-rate x sustained multiple), not the last private print.")
-    save(fig, "fig09_football_field.png")
+    save(fig, "football_field.png")
 
 # ------------------------------------------------------------- 8. sensitivity
 def sensitivity():
@@ -310,7 +310,7 @@ def sensitivity():
     title_block(fig, "Valuation sensitivity: run-rate times multiple, twelve months out",
                 "Implied valuation ($B) across forward run-rate and multiple. Base case: ~$11.5B run-rate (graceful deceleration\n"
                 "to ~65-70% growth) at 14-16x, a de-rate from today's 19.4x. Bear and bull corners shown for discipline, not drama.")
-    save(fig, "fig10_sensitivity.png")
+    save(fig, "sensitivity.png")
 
 # ------------------------------------------------------------ 9. composition
 def composition():
@@ -350,7 +350,7 @@ def composition():
     title_block(fig, "The AI line is the largest and fastest product, on top of a profitable core",
                 "Revenue composition by product line. Jun 2026: AI products $1.7B, Databricks SQL $1.5B, core platform ~$3.7B\n"
                 "(residual). Forward split is a desk estimate; AI line grew ~70% in four months ($1.4B Feb to $1.7B Jun).")
-    save(fig, "fig03_composition.png")
+    save(fig, "composition.png")
 
 # ------------------------------------------------------------ 10. absorption
 def absorption():
@@ -391,7 +391,49 @@ def absorption():
     title_block(fig, "The absorption question: a mega-listing wave against a $45B-a-year market",
                 "Left: AI mega-listing values ($T); SpaceX has already cleared. Right: potential combined primary raises vs total 2025\n"
                 "US IPO proceeds ($44-47B per Deloitte/EY). Databricks needs the least primary capital of any name in the wave.")
-    save(fig, "fig08_absorption.png")
+    save(fig, "absorption.png")
+
+# ------------------------------------------------------- 11. valuation ladder
+def valuation_ladder():
+    rounds = [
+        ("Series G\nFeb 2021", 28, "$1.0B"),
+        ("Series H\nAug 2021", 38, "$1.6B"),
+        ("Series I\nNov 2023", 43, "$0.7B"),
+        ("Series J\nDec 2024", 62, "$10.2B"),
+        ("Series K\nSep 2025", 100, "$1.0B"),
+        ("Series L\nDec 25/Feb 26", 134, "$7.0B"),
+    ]
+    fig, ax = plt.subplots(figsize=(6.5, 3.3))
+    fig.subplots_adjust(top=0.78, left=0.08, right=0.97, bottom=0.16)
+    x = np.arange(len(rounds))
+    vals = [r[1] for r in rounds]
+    cols = [SLATE] * 5 + [GREEN]
+    ax.bar(x, vals, width=0.58, color=cols, zorder=3)
+    for i, (name, v, size) in enumerate(rounds):
+        ax.text(i, v + 4, f"${v}B" + ("+" if v == 100 else ""), ha="center",
+                fontsize=8.6, fontweight="bold",
+                color=GREEN if i == 5 else INK)
+        if v > 40:
+            ax.text(i, v / 2, size, ha="center", va="center", fontsize=7.2,
+                    color="white")
+        else:
+            ax.text(i, v + 16, size, ha="center", fontsize=7.0, color=GREY)
+    ax.bar([6], [10], bottom=165, width=0.58, color=SLATE, alpha=0.35,
+           hatch="///", edgecolor="white", zorder=3)
+    ax.text(6, 181, "$165-175B", ha="center", fontsize=8.2, fontweight="bold",
+            color=SLATE)
+    ax.text(6, 148, "in talks,\nunclosed", ha="center", fontsize=6.8,
+            color=GREY)
+    ax.set_xticks(list(x) + [6],
+                  [r[0] for r in rounds] + ["Reported talks\nJun 2026"],
+                  fontsize=7.2)
+    ax.set_ylim(0, 205)
+    ax.set_ylabel("Post-money valuation ($B)", fontsize=7.8)
+    style_ax(ax, "y")
+    title_block(fig, "Six marks in five years, each cleared by the fundamentals beneath it",
+                "Post-money valuation by round; bar labels show round size (PitchBook deal records; company announcements).\n"
+                "Both Series L closes priced at $134B. The reported $165-175B round was unclosed as of Jul 10, 2026 and anchors nothing here.")
+    save(fig, "val_ladder.png")
 
 if __name__ == "__main__":
     per_point_ladder()
@@ -404,4 +446,5 @@ if __name__ == "__main__":
     sensitivity()
     composition()
     absorption()
+    valuation_ladder()
     print("done")
