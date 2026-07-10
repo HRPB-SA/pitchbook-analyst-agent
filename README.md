@@ -8,8 +8,8 @@ July 10, 2026.
 
 ## Deliverables
 
-- `output/Databricks_BrickByBrick_Jul2026.docx` - the report (30 pages: cover,
-  contents, ten sections, 11 embedded 300-DPI charts).
+- `output/Databricks_BrickByBrick_Jul2026.docx` - the report (35 pages: cover,
+  contents, eleven sections, 11 embedded 300-DPI charts).
 - `output/Databricks_Operating_Model_Jul2026.xlsx` - the model. Sheets mirror
   a standard 3-statement teaching structure: Cover (TOC + model checks),
   Outputs (dashboard + charts), Inputs (Best/Base/Worst driver switch, every
@@ -23,7 +23,9 @@ July 10, 2026.
 
 ## Report structure
 
-Executive Summary, The Foundation, The Bricks (products layer by layer),
+The AIBQ Breakdown (standalone rating section: framework, composite, all 24
+sub-scores, bands, delta, cohort), Executive Summary, The Foundation,
+The Bricks (products layer by layer),
 The Mortar (how the money is made, incl. DBU price mechanics), The Builders
 (customers and use cases), The Neighborhood (competition on three fronts),
 The Blueprint (strategy read through acquisitions, partnerships, capital),

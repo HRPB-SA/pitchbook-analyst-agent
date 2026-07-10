@@ -1,5 +1,6 @@
 import subprocess, json, re, sys
-SECTIONS = ["Executive Summary: The House That Data Built",
+SECTIONS = ["The AIBQ Breakdown: Business Quality, Scored and Decomposed",
+"Executive Summary: The House That Data Built",
 "The Foundation: What Databricks Is",
 "The Bricks: Products and Services, Layer by Layer",
 "The Mortar: How the Money Is Made",

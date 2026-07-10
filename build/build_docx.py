@@ -11,7 +11,7 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-import content_r1, content_r2, content_r3, content_r4
+import content_r0, content_r1, content_r2, content_r3, content_r4
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CHARTS = os.path.join(HERE, "..", "charts")
@@ -341,6 +341,7 @@ def cover():
 
 # ================================================================ CONTENTS
 TOC_SECTIONS = [
+    "The AIBQ Breakdown: Business Quality, Scored and Decomposed",
     "Executive Summary: The House That Data Built",
     "The Foundation: What Databricks Is",
     "The Bricks: Products and Services, Layer by Layer",
@@ -354,14 +355,14 @@ TOC_SECTIONS = [
     "The Verdict",
 ]
 TOC_EXHIBITS = [
-    (1, "The per-point ladder: valuation per unit of quality"),
-    (2, "Revenue composition by product line"),
-    (3, "The valuation ladder: six marks in five years"),
-    (4, "The absorption wall: listings vs issuance capacity"),
-    (5, "The acceleration: run-rate and growth, four prints"),
-    (6, "Gross margin vs the 70% efficiency gate"),
-    (7, "Capital efficiency across the Frontier Five"),
-    (8, "AIBQ dimension radar vs cohort average"),
+    (1, "AIBQ dimension radar vs cohort average"),
+    (2, "The per-point ladder: valuation per unit of quality"),
+    (3, "Revenue composition by product line"),
+    (4, "The valuation ladder: six marks in five years"),
+    (5, "The absorption wall: listings vs issuance capacity"),
+    (6, "The acceleration: run-rate and growth, four prints"),
+    (7, "Gross margin vs the 70% efficiency gate"),
+    (8, "Capital efficiency across the Frontier Five"),
     (9, "Growth-adjusted multiples vs Snowflake"),
     (10, "Valuation football field, 12-month view"),
     (11, "Sensitivity: run-rate by multiple"),
@@ -397,6 +398,7 @@ def add_toc():
 
 cover()
 add_toc()
+render(content_r0.BLOCKS)
 render(content_r1.BLOCKS)
 render(content_r2.BLOCKS)
 render(content_r3.BLOCKS)
