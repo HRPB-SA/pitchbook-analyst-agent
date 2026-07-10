@@ -205,6 +205,12 @@ r = title.add_run("The Frontier AI Price Wars")
 r.font.name = "Georgia"; r.font.size = Pt(22); r.font.bold = True
 r.font.color.rgb = NAVY
 title.paragraph_format.space_after = Pt(2)
+sub = doc.add_paragraph()
+rs = sub.add_run("It reads as a price war. On the right unit of account, "
+                 "it is a segmentation event.")
+rs.font.name = "Georgia"; rs.font.size = Pt(12.5); rs.font.italic = True
+rs.font.color.rgb = SLATE
+sub.paragraph_format.space_after = Pt(8)
 para("PitchBook Institutional Research Group | Late-Stage Company Research",
      size=10, color=SLATE)
 para("Analyst: Harrison Rolfes, Senior Research Director   |   July 10, 2026",
@@ -214,6 +220,12 @@ para("Evidence tiers: T1, primary or SEC-grade disclosure. T2, PitchBook data, "
      "press. Vendor-reported benchmarks and pricing claims are discounted one "
      "tier on receipt. Figures not in our canonical dataset are flagged as our "
      "estimates or assumptions and tiered.", size=8.8, color=GREY, italic=True)
+para("Purpose of this note: to give an institutional reader a working mental "
+     "model of how frontier model pricing is set, why the headline numbers "
+     "mislead, and what the July 2026 repricing means for the model layer, the "
+     "application layer, the compute buildout, and the consumer. We assume no "
+     "prior familiarity with token economics and build the argument from the "
+     "unit up.", size=8.8, color=GREY, italic=True)
 
 # ---- Parse the markdown mirror ----
 lines = open(MD, encoding="utf-8").read().splitlines()

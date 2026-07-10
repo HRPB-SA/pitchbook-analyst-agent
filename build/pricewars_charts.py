@@ -105,6 +105,16 @@ assert round(muse_be * 100, 1) == 87.6              # "p = 87.6%"
 assert round((1 - 7 / 25) * 100) == 72              # "roughly a 70% gross margin"
 assert round((1 - 7 / 6) * 100) == -17              # "negative 17% at $6"
 assert round((1 - 7 / 4.25) * 100) == -65           # "negative 65% at $4.25"
+
+# break-even failure cost F* where Opus loaded == Muse loaded, at Opus p=0.90:
+# F* = (p_o*c_m - p_m*c_o) / (p_m - p_o). Section 2 sensitivity line.
+c_muse = costs["Muse Spark 1.1"]
+c_opus = costs["Claude Opus 4.8"]
+def f_star(p_muse, p_opus=0.90):
+    return (p_opus * c_muse - p_muse * c_opus) / (p_muse - p_opus)
+assert round(f_star(0.75), 2) == 2.24               # "$2.24 at a 15-point edge"
+assert round(f_star(0.80), 2) == 3.67               # "$3.67 at a 10-point edge"
+assert round(f_star(0.85), 2) == 7.93               # "$7.93 at a 5-point edge"
 print("arithmetic assertions pass")
 
 # ------------------------------------------------ 0. the pricing ladder
