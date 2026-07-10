@@ -22,6 +22,7 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "charts")
 os.makedirs(OUT, exist_ok=True)
 
 plt.rcParams.update({
+    "text.parse_math": False,
     "font.family": "DejaVu Sans",
     "font.size": 8,
     "text.color": INK,

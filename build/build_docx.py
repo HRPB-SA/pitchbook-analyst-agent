@@ -102,6 +102,15 @@ def table_borders(table, hexcolor=BORDER_HEX, sz="4"):
         borders.append(e)
     tblPr.append(borders)
 
+def row_no_split(row, header=False):
+    trPr = row._tr.get_or_add_trPr()
+    cant = OxmlElement("w:cantSplit")
+    trPr.append(cant)
+    if header:
+        th = OxmlElement("w:tblHeader")
+        th.set(qn("w:val"), "true")
+        trPr.append(th)
+
 def cell_margins(table, top=40, bottom=40, left=80, right=80):
     tblPr = table._tbl.tblPr
     m = OxmlElement("w:tblCellMar")
@@ -164,8 +173,9 @@ def add_table_block(spec):
     header, rows = spec["header"], spec["rows"]
     align = spec.get("align", "L" * len(header))
     if spec.get("title"):
-        add_para(spec["title"], size=9.5, color=NAVY, bold=True,
-                 align=WD_ALIGN_PARAGRAPH.LEFT, space_after=3)
+        tp = add_para(spec["title"], size=9.5, color=NAVY, bold=True,
+                      align=WD_ALIGN_PARAGRAPH.LEFT, space_after=3)
+        tp.paragraph_format.keep_with_next = True
     t = doc.add_table(rows=len(rows) + 1, cols=len(header))
     t.alignment = WD_TABLE_ALIGNMENT.CENTER
     t.autofit = False
@@ -173,6 +183,9 @@ def add_table_block(spec):
     table_borders(t)
     cell_margins(t)
     widths = spec.get("widths") or col_widths(header, rows, align)
+    row_no_split(t.rows[0], header=True)
+    for r_ in t.rows[1:]:
+        row_no_split(r_)
     for j, h in enumerate(header):
         c = t.rows[0].cells[j]
         set_cell_width(c, widths[j])
