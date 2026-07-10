@@ -378,8 +378,77 @@ def cover():
                   "Prepared for institutional-investor and venture-capital recipients.",
     })
 
+# ================================================================ CONTENTS
+import json
+TOC_SECTIONS = [
+    "Disclosure and Basis of Preparation",
+    "Executive Summary and Investment Thesis",
+    "The AIBQ Rating: Full Breakdown",
+    "Business Model and the Lakehouse",
+    "Products and Services Deep Dive",
+    "AI Focus: Where the Models End and the Business Begins",
+    "Financials",
+    "Capital Structure and Capital Efficiency",
+    "The Upcoming Raise: Analyzed, Not Adopted",
+    "Competitive Position and the Moat",
+    "Market Implications and Category",
+    "The IPO as the Convergence Event",
+    "Valuation and Scenarios",
+    "Risks and What Would Change Our Mind",
+    "Management and Governance",
+    "Recommendation and Positioning",
+    "Appendix A: The AIBQ Framework",
+    "Appendix B: Sources and Tiering",
+]
+TOC_EXHIBITS = [
+    (1, "The per-point ladder: valuation per unit of quality"),
+    (2, "AIBQ dimension radar, Databricks vs cohort average"),
+    (3, "Revenue composition by product line"),
+    (4, "The acceleration: run-rate and growth, four prints"),
+    (5, "Gross margin vs the 70% efficiency gate"),
+    (6, "Capital efficiency across the Frontier Five"),
+    (7, "Growth-adjusted multiples vs Snowflake"),
+    (8, "The absorption wall: listings vs issuance capacity"),
+    (9, "Valuation football field, 12-month view"),
+    (10, "Sensitivity: run-rate by multiple"),
+]
+
+def add_toc():
+    pages = {}
+    pfile = os.path.join(HERE, "toc_pages.json")
+    if os.path.exists(pfile):
+        pages = json.load(open(pfile))
+    doc.add_heading("Contents", level=1)
+
+    def toc_row(t, title, pg, size=9.2):
+        r_ = t.add_row()
+        c1, c2 = r_.cells
+        set_cell_width(c1, CONTENT_W - 900)
+        set_cell_width(c2, 900)
+        cell_text(c1, title, size=size, color=INK)
+        cell_text(c2, str(pg), size=8.8, color=GREY, align="R")
+
+    t = doc.add_table(rows=0, cols=2)
+    set_table_width(t, CONTENT_W)
+    cell_margins(t, top=26, bottom=26)
+    for title in TOC_SECTIONS:
+        toc_row(t, title, pages.get(title, ""))
+    doc.add_heading("Exhibits", level=3)
+    t2 = doc.add_table(rows=0, cols=2)
+    set_table_width(t2, CONTENT_W)
+    cell_margins(t2, top=22, bottom=22)
+    for num, title in TOC_EXHIBITS:
+        toc_row(t2, f"Figure {num}.  {title}", pages.get(f"fig{num}", ""),
+                size=8.6)
+
 cover()
-render(content_a.BLOCKS)
+# split content_a: disclosure section first, contents page, then the rest
+_a = content_a.BLOCKS
+_split = next(i for i, b in enumerate(_a)
+              if b[0] == "h1" and b[1].startswith("Executive Summary"))
+render(_a[:_split])
+add_toc()
+render(_a[_split:])
 render(content_b.BLOCKS)
 render(content_c.BLOCKS)
 render(content_d.BLOCKS)

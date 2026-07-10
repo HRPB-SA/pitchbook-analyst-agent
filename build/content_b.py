@@ -19,7 +19,7 @@ BLOCKS = [
 # =====================================================================
 ("h1", "Products and Services Deep Dive"),
 
-("p", "The product surface is best read as four strata, each deepening the dependency on the one below. The foundational layer creates the gravity; analytics monetizes it against the warehouse incumbents; the AI layer monetizes it against the model era; and the newest agentic and security surface aims to make the platform the operating substrate for autonomous software. Revenue attribution, where disclosed: AI products roughly $1.7 billion run-rate and Databricks SQL roughly $1.5 billion (both T2: June 16, 2026, CNBC and Bloomberg respectively), implying a residual core platform of roughly $3.7 billion. Figure 9 (Section 7) charts the mix."),
+("p", "The product surface is best read as four strata, each deepening the dependency on the one below. The foundational layer creates the gravity; analytics monetizes it against the warehouse incumbents; the AI layer monetizes it against the model era; and the newest agentic and security surface aims to make the platform the operating substrate for autonomous software. Revenue attribution, where disclosed: AI products roughly $1.7 billion run-rate and Databricks SQL roughly $1.5 billion (both T2: June 16, 2026, CNBC and Bloomberg respectively), implying a residual core platform of roughly $3.7 billion. Figure 3 (Section 7) charts the mix."),
 
 ("table", {
   "title": "Product surface, by stratum",
@@ -50,8 +50,8 @@ BLOCKS = [
 
 ("p", "The cost of the wager is visible in the gross margin, and we treat it as the price of the prize rather than a defect: agents generate far more queries per human decision than humans do ('the agents are generating way more queries'; T2: Ghodsi, June 16, 2026), and serving that load compresses margin from above 80% to 74%, guided lower. The bull case is operating leverage on a much larger revenue base; the bear case is that agentic workloads permanently carry warehouse-era revenue at inference-era margins. The 70% gate (Section 8, Figure 5) is where we adjudicate that argument with data instead of adjectives."),
 
-("fig", "fig09_composition.png",
- "Figure 9. Revenue composition by product line, June 2026 disclosed versus June 2027 desk estimate. Sources: AI line $1.7B (T2: CNBC, Jun 16, 2026); DBSQL $1.5B (T2: Bloomberg, Jun 16, 2026); core is the residual; forward split is a desk estimate."),
+("fig", "fig03_composition.png",
+ "Figure 3. Revenue composition by product line, June 2026 disclosed versus June 2027 desk estimate. Sources: AI line $1.7B (T2: CNBC, Jun 16, 2026); DBSQL $1.5B (T2: Bloomberg, Jun 16, 2026); core is the residual; forward split is a desk estimate."),
 
 # =====================================================================
 # SECTION 8 - FINANCIALS
@@ -59,10 +59,10 @@ BLOCKS = [
 ("h1", "Financials"),
 
 ("h2", "Revenue: the acceleration is the story"),
-("p", "Databricks disclosed a $6.9 billion annualized revenue run-rate growing more than 80% year over year on June 16, 2026 (T2: CNBC, from the Data + AI Summit analyst session). The level is remarkable; the second derivative is the thesis. Four consecutive public prints show growth accelerating at scale: $4.0 billion at +50% (September 2025), $4.8 billion at +55% (December 2025), $5.4 billion at +65% (February 9, 2026), $6.9 billion at +80% (June 2026), all company-announced (Figure 2). Software companies at multi-billion scale decelerate; this one added thirty points of growth rate in nine months while nearly doubling its base. The proximate drivers are attributable: the AI line compounding fastest, DBSQL doubling on workload switching, and consumption billing translating customer agent adoption directly into metered revenue."),
+("p", "Databricks disclosed a $6.9 billion annualized revenue run-rate growing more than 80% year over year on June 16, 2026 (T2: CNBC, from the Data + AI Summit analyst session). The level is remarkable; the second derivative is the thesis. Four consecutive public prints show growth accelerating at scale: $4.0 billion at +50% (September 2025), $4.8 billion at +55% (December 2025), $5.4 billion at +65% (February 9, 2026), $6.9 billion at +80% (June 2026), all company-announced (Figure 4). Software companies at multi-billion scale decelerate; this one added thirty points of growth rate in nine months while nearly doubling its base. The proximate drivers are attributable: the AI line compounding fastest, DBSQL doubling on workload switching, and consumption billing translating customer agent adoption directly into metered revenue."),
 
-("fig", "fig02_acceleration.png",
- "Figure 2. Revenue run-rate and year-over-year growth, September 2025 to June 2026. Sources: company press releases (Sep 2025, Dec 2025, Feb 2026, T2) and CNBC from company disclosure (Jun 16, 2026, T2)."),
+("fig", "fig04_acceleration.png",
+ "Figure 4. Revenue run-rate and year-over-year growth, September 2025 to June 2026. Sources: company press releases (Sep 2025, Dec 2025, Feb 2026, T2) and CNBC from company disclosure (Jun 16, 2026, T2)."),
 
 ("p", "Forward build: we model graceful deceleration, not extrapolation of the acceleration. Base case: roughly $11.5 billion run-rate by mid-2027 (about +67%), roughly $16 billion in 2028, low-to-mid $20 billions by 2030, an unusually visible path given >140% NRR arithmetic alone sustains mid-40s growth before any new logo lands. A note of discipline on sources: PitchBook carries $6.9 billion labeled as TTM for a fiscal window ending December 2026 (PB financials field, retrieved July 10, 2026), which is a forward-window projection, not trailing actuals; we therefore use only the dated company prints above as run-rate evidence, per our cross-reference rule."),
 

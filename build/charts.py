@@ -118,7 +118,7 @@ def acceleration():
     ax2.spines["right"].set_color("#E3C4B8")
     title_block(fig, "Growth is accelerating at $7B scale, not decelerating",
                 "Annualized revenue run-rate (bars, left) and year-over-year growth (line, right), company disclosures Sep 2025 to Jun 2026.")
-    save(fig, "fig02_acceleration.png")
+    save(fig, "fig04_acceleration.png")
 
 # ------------------------------------------------- 3. growth-adjusted multiple
 def growth_adjusted():
@@ -154,7 +154,7 @@ def growth_adjusted():
     title_block(fig, "Growth-adjusted, Databricks trades at roughly half Snowflake's price",
                 "Revenue multiple vs growth rate, July 2026. Dashed rays are iso-value lines (equal multiple per point of growth);\n"
                 "a lower ray means the buyer pays less for each unit of growth purchased. Two-company comparison; no fitted line.")
-    save(fig, "fig03_growth_adjusted.png")
+    save(fig, "fig07_growth_adjusted.png")
 
 # ----------------------------------------------------------------- 4. radar
 def radar():
@@ -195,7 +195,7 @@ def radar():
     title_block(fig, "Elite on four dimensions; compute independence is the honest notch",
                 "AIBQ dimension scores (0-10, weights in parentheses), July 2026. Cohort dimension averages are desk estimates\n"
                 "consistent with published composites. Databricks CI 8.0 reflects hyperscaler distribution dependence, mitigated by multi-cloud posture.")
-    save(fig, "fig04_radar.png")
+    save(fig, "fig02_radar.png")
 
 # ------------------------------------------------------------ 5. gate gauge
 def gate_gauge():
@@ -279,7 +279,7 @@ def football_field():
     title_block(fig, "The base case reaches the rumored range without adopting it",
                 "Scenario valuation ranges, 12-month forward view anchored on the $134B mark. The rumored raise is a reference\n"
                 "line, not an input: the base case is fundamentals (forward run-rate x sustained multiple), not the last private print.")
-    save(fig, "fig07_football_field.png")
+    save(fig, "fig09_football_field.png")
 
 # ------------------------------------------------------------- 8. sensitivity
 def sensitivity():
@@ -310,7 +310,7 @@ def sensitivity():
     title_block(fig, "Valuation sensitivity: run-rate times multiple, twelve months out",
                 "Implied valuation ($B) across forward run-rate and multiple. Base case: ~$11.5B run-rate (graceful deceleration\n"
                 "to ~65-70% growth) at 14-16x, a de-rate from today's 19.4x. Bear and bull corners shown for discipline, not drama.")
-    save(fig, "fig08_sensitivity.png")
+    save(fig, "fig10_sensitivity.png")
 
 # ------------------------------------------------------------ 9. composition
 def composition():
@@ -350,7 +350,7 @@ def composition():
     title_block(fig, "The AI line is the largest and fastest product, on top of a profitable core",
                 "Revenue composition by product line. Jun 2026: AI products $1.7B, Databricks SQL $1.5B, core platform ~$3.7B\n"
                 "(residual). Forward split is a desk estimate; AI line grew ~70% in four months ($1.4B Feb to $1.7B Jun).")
-    save(fig, "fig09_composition.png")
+    save(fig, "fig03_composition.png")
 
 # ------------------------------------------------------------ 10. absorption
 def absorption():
@@ -391,7 +391,7 @@ def absorption():
     title_block(fig, "The absorption question: a mega-listing wave against a $45B-a-year market",
                 "Left: AI mega-listing values ($T); SpaceX has already cleared. Right: potential combined primary raises vs total 2025\n"
                 "US IPO proceeds ($44-47B per Deloitte/EY). Databricks needs the least primary capital of any name in the wave.")
-    save(fig, "fig10_absorption.png")
+    save(fig, "fig08_absorption.png")
 
 if __name__ == "__main__":
     per_point_ladder()
