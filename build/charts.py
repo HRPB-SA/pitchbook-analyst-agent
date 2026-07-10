@@ -160,7 +160,7 @@ def growth_adjusted():
 def radar():
     dims = ["Capital\nEfficiency (20%)", "Revenue\nQuality (25%)",
             "Compute\nIndependence (15%)", "Governance\nOptionality (20%)",
-            "Moat &\nDefensibility (20%)"]
+            "Moat\nDurability (20%)"]
     dbx = [8.9, 9.0, 8.0, 8.9, 9.0]
     cohort = [5.6, 6.0, 5.9, 5.2, 5.5]
     ang = np.linspace(0, 2 * np.pi, len(dims), endpoint=False).tolist()

@@ -19,7 +19,7 @@ BLOCKS = [
 
 ("h3", "How the report is laid"),
 ("bullets", [
-  "The AIBQ Breakdown (preceding this summary): the quality score in full, all 24 sub-scores, and the one number that falsifies it.",
+  "The AIBQ Breakdown (preceding this summary): the five quality dimensions in full, and the one number that falsifies the score.",
   "The Foundation: what Databricks is, where it came from, and what the lakehouse actually solves.",
   "The Bricks: every product layer, what it is, what it earns, and how each one deepens the one below.",
   "The Mortar: the consumption billing machine, unit pricing, and why expansion is a property of the product.",
