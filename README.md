@@ -53,22 +53,24 @@ python3 build/build_docx.py && soffice --headless --convert-to pdf --outdir outp
 
 ## Companion note: The Frontier AI Price Wars (July 2026)
 
-Institutional research note on the July 2026 frontier-model repricing,
-built around cost per completed task as the unit of account. Prepared by
-Harrison Rolfes, July 10, 2026.
+Institutional thematic note on the July 2026 frontier-model repricing, built
+around cost per completed task as the unit of account. Formatted to the
+PitchBook thematic-research template (Calibri Light, cover metadata block,
+Contents, Landing-page hero chart, Report picks, blue Heading 2 sections).
+Prepared by Harrison Rolfes, July 10, 2026.
 
-- `output/Frontier_AI_Price_Wars_Jul2026.docx` - the note (expanded
-  edition: subtitle thesis, 30-second positioning synthesis, technical
-  primer, failure-cost sensitivity, private- and public-market reads with
-  navigable sub-heads, consumer-implications section, stated bear case,
-  Claude Mythos as premium anchor; two data tables, four embedded 300-DPI
-  charts, all arithmetic asserted on build).
-- `output/Frontier_AI_Price_Wars_Jul2026.md` - markdown mirror, same content.
-- Rebuild: `python3 build/pricewars_charts.py` (renders the three charts,
-  asserts every headline number in Sections 1-2), then
-  `python3 build/build_pricewars_docx.py` (parses the markdown mirror,
-  embeds the charts, scans for em/en dashes and fails loudly). Body word count 5,385 as
-  rendered, references and disclaimer excluded.
+- `output/Frontier_AI_Price_Wars_Jul2026.docx` - the note: cover +
+  seven sections + What would change the call + References; one pricing
+  table and five embedded 300-DPI charts (pricing ladder as the landing
+  hero, cost curves, failure-cost sensitivity, margin vs price, layer
+  economics). No disclaimer, no AIBQ table, no positioning section.
+- `output/Frontier_AI_Price_Wars_Jul2026.md` - markdown mirror.
+- Rebuild: `python3 build/pricewars_charts.py` (renders five charts and
+  asserts every headline number in Sections 1-3, including the failure-cost
+  break-evens), then `python3 build/build_pricewars_docx.py` (builds the
+  templated docx, embeds the charts, scans for em/en dashes and fails
+  loudly). Body word count 3,144 (ceiling 3,300), Key takeaways through
+  What would change the call; References excluded.
 
 ## Standing constraints (do not relax when editing)
 

@@ -210,6 +210,43 @@ title_block(fig,
             "Workload 60k in / 12k out per attempt. List prices T1; workload and $17 remediation our assumptions, T2.")
 save(fig, "pw_cost_curves.png")
 
+# --------------------------------- 1b. failure-cost sensitivity of premium
+fig, ax = plt.subplots(figsize=(7.2, 3.6))
+fig.subplots_adjust(top=0.80, left=0.09, right=0.96, bottom=0.14)
+edges = np.linspace(2, 40, 300)          # reliability edge in points, Opus - Muse
+pm = 0.90 - edges / 100.0
+Fcurve = (0.90 * c_muse - pm * c_opus) / (pm - 0.90)
+ax.plot(edges, Fcurve, color="#2a78d6", linewidth=2.2, zorder=4)
+ax.fill_between(edges, Fcurve, 60, color="#1baf7a", alpha=0.10, zorder=1)
+ax.fill_between(edges, 0.4, Fcurve, color="#e34948", alpha=0.08, zorder=1)
+ax.set_yscale("log")
+ax.set_ylim(0.8, 60)
+ax.set_xlim(2, 40)
+for e, f in [(15, 2.24), (10, 3.67), (5, 7.93)]:
+    ax.plot([e], [f], marker="o", markersize=8, color="#1F2A44", zorder=5,
+            markeredgecolor="white", markeredgewidth=1.4)
+    ax.annotate(f"{e}-pt edge:\n${f:.2f}", xy=(e, f), xytext=(e + 1.2, f * 1.9),
+                fontsize=7.2, color=INK,
+                arrowprops=dict(arrowstyle="-", color=GREY, lw=0.7))
+ax.axhline(10, color=GREY, linewidth=1, linestyle=(0, (4, 3)), zorder=3)
+ax.annotate("typical production failure cost (our estimate) sits above ~$10",
+            xy=(20, 11.5), fontsize=7.2, color=GREY)
+ax.annotate("PREMIUM JUSTIFIED\n(failure costs more than break-even)",
+            xy=(30, 28), fontsize=7.6, color="#1C5D46", ha="center",
+            fontweight="bold")
+ax.annotate("floor wins", xy=(6.5, 1.15), fontsize=7.4, color="#8F3421",
+            fontweight="bold")
+ax.set_xlabel("reliability edge, Opus success minus cheap-tier success (points)")
+ax.set_ylabel("break-even failure cost, $ per failed attempt (log)")
+ax.set_yticks([1, 3, 10, 30])
+ax.set_yticklabels(["$1", "$3", "$10", "$30"])
+style_ax(ax)
+title_block(fig,
+            "The premium survives its own stress test: at any real reliability edge, failure need only cost a few dollars",
+            "Break-even failure cost F* = (p_o x c_m - p_m x c_o) / (p_m - p_o), Opus success p_o = 90%. Above the curve the "
+            "reliability premium is cheaper per completed task. Prices T1; workload and costs our assumptions, T2.")
+save(fig, "pw_sensitivity.png")
+
 # ------------------------------------------- 2. margin vs output price
 fig, ax = plt.subplots(figsize=(7.2, 3.5))
 fig.subplots_adjust(top=0.80, left=0.09, right=0.97, bottom=0.14)
