@@ -192,8 +192,8 @@ def embed(png, caption=None):
 
 # ==================== COVER ====================
 para("Q3 2026  The Frontier AI Price Wars", size=14, bold=True, after=2)
-para("It reads as a price war among the labs. The one clear winner never "
-     "fired a shot.", size=12, bold=True, color=BLUE, after=8)
+para("The war is won on value per token, not price per token. On that "
+     "measure, one lab is winning it.", size=12, bold=True, color=BLUE, after=8)
 
 meta = [
     ("Data filepath: ", "R&E - Thematic Research\\Frontier AI\\Price Wars Jul2026"),
@@ -202,7 +202,7 @@ meta = [
     ("Research type: ", "Emerging Tech"),
     ("Access level: ", "Client only (Platform only, no preview on N&A)"),
     ("Chart count: ", "5"),
-    ("Table count: ", "1"),
+    ("Table count: ", "2"),
 ]
 for label, val in meta:
     p = para("", size=10, after=1)
@@ -217,12 +217,13 @@ para("Contents", size=12, bold=True, after=2)
 contents = [
     "Key takeaways",
     "1. What you are buying: the technology behind a token price",
-    "2. The unit of account: cost per completed task",
+    "2. The unit of account: value per token",
     "3. Margin mechanics: who can subsidize, and is this a war?",
     "4. The barbell and the squeezed middle",
-    "5. Market implications and the one clear winner",
+    "5. Market implications",
     "6. Consumer implications",
     "7. The surface decides",
+    "8. The verdict: pricing, model, and moat",
     "What would change the call",
     "References",
 ]
@@ -235,20 +236,19 @@ embed(LANDING_CHART,
       "The pricing ladder, from the free consumer tier to the restricted "
       "premium anchor. One market, a spread past 30x, with two crowded ends "
       "and a hollow middle.")
-para("Four frontier labs are cutting prices to the bone, and the one clear "
-     "winner is a company that never entered the fight: Databricks. It buys "
-     "the inference the labs sell below cost, wraps it in data and workflow it "
-     "already owns, and books the margin the labs are giving away. On the "
-     "right unit of account, cost per completed task rather than price per "
-     "token, a two-to-three-point reliability gap funds a five-times token "
-     "premium, so the market splits into a barbell and the middle hollows out. "
-     "This note builds that argument from the token up and names the winner it "
-     "produces.", size=10, after=8)
+para("Frontier token prices collapsed in July, but headline price is the "
+     "wrong scoreboard. The war is fought on value per token, the completed "
+     "tasks a dollar of inference actually buys, and on that measure a "
+     "two-to-three-point reliability edge outweighs a four-times price cut. "
+     "Judge the four labs on the axes that compound, pricing for value, model "
+     "quality, moat, and unit economics, and the verdict is not close: "
+     "Anthropic is winning. This note builds that case from the token up.",
+     size=10, after=8)
 
 para("Report picks", size=12, bold=True, after=2)
-para("Databricks: Brick by Brick (July 2026)", size=10, after=1)
 para("AI Compute and Power: The Buildout Is a Scarcity Trade (forthcoming)",
-     size=10, after=8)
+     size=10, after=1)
+para("Enterprise Agents: Who Owns the Seat (forthcoming)", size=10, after=8)
 
 para("Evidence tiers: T1, primary or SEC-grade. T2, PitchBook data and direct "
      "company statements. T3, vendor claims and trade press, discounted one "
