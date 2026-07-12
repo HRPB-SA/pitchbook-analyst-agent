@@ -60,7 +60,7 @@ Contents, Landing-page hero chart, Report picks, blue Heading 2 sections).
 Prepared by Harrison Rolfes, July 10, 2026.
 
 - `output/Frontier_AI_Price_Wars_Jul2026.docx` - the note: cover +
-  seven sections + What would change the call + References; one pricing
+  seven sections + What would change the call + References; names Databricks as the one clear winner; includes Grok's reported mid-July capability refresh; one pricing
   table and five embedded 300-DPI charts (pricing ladder as the landing
   hero, cost curves, failure-cost sensitivity, margin vs price, layer
   economics). No disclaimer, no AIBQ table, no positioning section.
@@ -69,7 +69,7 @@ Prepared by Harrison Rolfes, July 10, 2026.
   asserts every headline number in Sections 1-3, including the failure-cost
   break-evens), then `python3 build/build_pricewars_docx.py` (builds the
   templated docx, embeds the charts, scans for em/en dashes and fails
-  loudly). Body word count 3,144 (ceiling 3,300), Key takeaways through
+  loudly). Body word count 3,300 (ceiling 3,300), Key takeaways through
   What would change the call; References excluded.
 
 ## Standing constraints (do not relax when editing)

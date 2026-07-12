@@ -192,8 +192,8 @@ def embed(png, caption=None):
 
 # ==================== COVER ====================
 para("Q3 2026  The Frontier AI Price Wars", size=14, bold=True, after=2)
-para("It reads as a price war. On the right unit of account, it is a "
-     "segmentation event.", size=12, bold=True, color=BLUE, after=8)
+para("It reads as a price war among the labs. The one clear winner never "
+     "fired a shot.", size=12, bold=True, color=BLUE, after=8)
 
 meta = [
     ("Data filepath: ", "R&E - Thematic Research\\Frontier AI\\Price Wars Jul2026"),
@@ -220,7 +220,7 @@ contents = [
     "2. The unit of account: cost per completed task",
     "3. Margin mechanics: who can subsidize, and is this a war?",
     "4. The barbell and the squeezed middle",
-    "5. Market implications",
+    "5. Market implications and the one clear winner",
     "6. Consumer implications",
     "7. The surface decides",
     "What would change the call",
@@ -235,14 +235,15 @@ embed(LANDING_CHART,
       "The pricing ladder, from the free consumer tier to the restricted "
       "premium anchor. One market, a spread past 30x, with two crowded ends "
       "and a hollow middle.")
-para("The July 2026 repricing looks like a price war and is mostly a "
-     "segmentation event. On the right unit of account, cost per completed "
-     "task rather than price per token, a two-to-three-point reliability gap "
-     "funds a five-times token premium, and the market splits into a barbell: "
-     "cheapest-useful inference at one end, most-reliable premium surface at "
-     "the other, a hollow commodity middle. This note builds that argument "
-     "from the token up and draws the read-through for public books, private "
-     "books, and the consumer.", size=10, after=8)
+para("Four frontier labs are cutting prices to the bone, and the one clear "
+     "winner is a company that never entered the fight: Databricks. It buys "
+     "the inference the labs sell below cost, wraps it in data and workflow it "
+     "already owns, and books the margin the labs are giving away. On the "
+     "right unit of account, cost per completed task rather than price per "
+     "token, a two-to-three-point reliability gap funds a five-times token "
+     "premium, so the market splits into a barbell and the middle hollows out. "
+     "This note builds that argument from the token up and names the winner it "
+     "produces.", size=10, after=8)
 
 para("Report picks", size=12, bold=True, after=2)
 para("Databricks: Brick by Brick (July 2026)", size=10, after=1)
