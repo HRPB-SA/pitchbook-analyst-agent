@@ -44,8 +44,18 @@
   header.page { margin-bottom: 20px; }
   header.page h1 { font-size: 21px; font-weight: 650; margin: 0 0 4px; letter-spacing: -0.01em; }
   header.page p { margin: 0; color: var(--ink-2); max-width: 72ch; }
-  h2.section { font-size: 15px; font-weight: 650; margin: 30px 0 12px; }
+  h2.section { font-size: 15px; font-weight: 650; margin: 30px 0 4px; }
   h2.section span.hint { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 8px; }
+  p.explain { color: var(--ink-2); font-size: 13px; margin: 0 0 12px; max-width: 96ch; }
+  ol.steps { margin: 10px 0 0; padding-left: 20px; color: var(--ink-2); max-width: 88ch; }
+  ol.steps li { margin: 3px 0; }
+  ol.steps strong { color: var(--ink); font-weight: 600; }
+  .presets { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 4px; }
+  .presets .caption { margin: 0 4px 0 0; }
+  .meter { margin: 14px 0 4px; }
+  .meter-track { height: 10px; border-radius: 5px; overflow: hidden; }
+  .meter-fill { height: 100%; border-radius: 5px; }
+  .meter-label { font-size: 12.5px; margin-top: 6px; font-weight: 600; }
 
   .card {
     background: var(--surface);
@@ -171,6 +181,13 @@
     return "$" + v.toFixed(4);
   }
   function fmtInt(v) { return Math.round(v).toLocaleString("en-US"); }
+  function fmtCount(v) {
+    if (!isFinite(v)) return "—";
+    const a = Math.abs(v);
+    if (a >= 1e6) return (v / 1e6).toFixed(1) + "M";
+    if (a >= 1e4) return (v / 1e3).toFixed(0) + "K";
+    return Math.round(v).toLocaleString("en-US");
+  }
   function fmtPct(v, dp) { return (v * 100).toFixed(dp == null ? 0 : dp) + "%"; }
   function costPerTask(p, tin, tout) { return (tin * p.inP + tout * p.outP) / 1e6; }
   function monthly(p, tin, tout, tpd) { return costPerTask(p, tin, tout) * tpd * DAYS_PER_MONTH; }
@@ -198,9 +215,10 @@
       ctx.fillStyle = o.color;
       ctx.textAlign = "left";
       ctx.textBaseline = "middle";
+      const fmt = o.kind === "count" ? fmtCount : fmtMoney;
       meta.data.forEach((el, i) => {
         const v = chart.data.datasets[0].data[i];
-        ctx.fillText(fmtMoney(v), el.x + 8, el.y);
+        ctx.fillText(fmt(v), el.x + 8, el.y);
       });
       ctx.restore();
     },
@@ -345,6 +363,7 @@
     const [providers, setProviders] = useState(INITIAL_PROVIDERS);
     const [calc, setCalc] = useState({ tin: 4000, tout: 1200, tpd: 500 });
     const [workflows, setWorkflows] = useState(INITIAL_WORKFLOWS);
+    const [budget, setBudget] = useState(5000);
 
     const colorOf = id => colors[INITIAL_PROVIDERS.findIndex(p => p.id === id)];
     const updateProvider = (id, patch) =>
@@ -398,6 +417,48 @@
     const routedTotal = routing.reduce((s, r) => s + r.routedMo, 0);
     const opusTotal = routing.reduce((s, r) => s + r.opusMo, 0);
     const savings = opusTotal - routedTotal;
+
+    /* ---- derived: budget planner ---- */
+    const headroom = budget - routedTotal;
+    const util = budget > 0 ? routedTotal / budget : Infinity;
+    const capRows = useMemo(() =>
+      providers
+        .map(p => ({ p, task: costPerTask(p, calc.tin, calc.tout) }))
+        .map(x => ({ ...x, n: x.task > 0 ? budget / x.task : 0 }))
+        .sort((a, b) => b.n - a.n),
+      [providers, calc, budget]);
+    const opusCap = opusTask > 0 ? budget / opusTask : 0;
+    // Meter: fill carries severity (accent → warning → critical); track is a
+    // lighter step of the fill's own ramp. Status colors are fixed, never themed.
+    const STATUS = { warning: "#fab219", critical: "#d03b3b" };
+    const overBudget = isFinite(util) && util > 1;
+    const meterFill = !isFinite(util) ? t.axis
+      : util > 1 ? STATUS.critical
+      : util > 0.75 ? STATUS.warning
+      : colorOf("opus");
+    const meterTrack = mix(meterFill, t.surface, 0.82);
+    const meterIcon = !isFinite(util) ? "·" : util > 1 ? "✕" : util > 0.75 ? "⚠" : "✓";
+    const meterText = !isFinite(util) ? "Set a budget above $0 to see utilization"
+      : util > 1 ? "Over budget by " + fmtMoney(routedTotal - budget) + " (" + (util * 100).toFixed(0) + "% of budget)"
+      : "Routed plan uses " + (util * 100).toFixed(0) + "% of budget" + (util > 0.75 ? " — little headroom left" : "");
+    let guidance;
+    if (!isFinite(util)) {
+      guidance = "Enter your monthly AI budget to see how the routed plan from step 4 fits inside it.";
+    } else if (util > 1) {
+      guidance = "The routed plan does not fit this budget. Ways to close the gap: lower the quality bar on " +
+        "volume workflows in step 4 (Standard-bar work routes to the cheap tier), trim tasks/day on the " +
+        "biggest line items, or use this page's numbers to negotiate price in step 1. For scale: the " +
+        "all-premium plan would cost " + fmtMoney(opusTotal) +
+        (budget > 0 ? " (" + ((opusTotal / budget) * 100).toFixed(0) + "% of budget)" : "") + ".";
+    } else {
+      const extraCheap = cheapest.task > 0 ? headroom / cheapest.task : Infinity;
+      const extraOpus = opusTask > 0 ? headroom / opusTask : Infinity;
+      guidance = "The routed plan fits with " + fmtMoney(headroom) + " of headroom. At step 2's task size, " +
+        "that headroom buys roughly " + fmtCount(extraCheap) + " more tasks per month on " + cheapest.p.name +
+        " or " + fmtCount(extraOpus) + " on Anthropic Opus — spend it on more volume, or on upgrading " +
+        "borderline workflows to a Frontier-tier model. Routing itself (step 4) is what frees " +
+        fmtMoney(savings) + " per month vs all-premium.";
+    }
 
     /* ---- shared chart chrome ---- */
     Chart.defaults.font.family = "system-ui, -apple-system, 'Segoe UI', sans-serif";
@@ -518,31 +579,107 @@
       },
     };
 
+    /* ---- chart 3: what the budget buys ---- */
+    const capConfig = {
+      type: "bar",
+      data: {
+        labels: capRows.map(r => r.p.name),
+        datasets: [{
+          data: capRows.map(r => r.n),
+          backgroundColor: capRows.map(r => colorOf(r.p.id)),
+          hoverBackgroundColor: capRows.map(r => mix(colorOf(r.p.id), mode === "dark" ? "#ffffff" : "#000000", 0.14)),
+          maxBarThickness: 24,
+          borderRadius: 4,
+          borderSkipped: "start",
+          categoryPercentage: 0.72,
+        }],
+      },
+      plugins: [barValueLabels],
+      options: {
+        indexAxis: "y",
+        responsive: true, maintainAspectRatio: false,
+        layout: { padding: { right: 84 } },
+        interaction: { mode: "nearest", axis: "y", intersect: false },
+        scales: {
+          x: {
+            grid: { color: t.grid, drawTicks: false },
+            border: { display: false },
+            ticks: { color: t.muted, callback: v => fmtCount(v), maxTicksLimit: 6 },
+          },
+          y: {
+            grid: { display: false },
+            border: { color: t.axis },
+            ticks: { color: t.ink2 },
+          },
+        },
+        plugins: {
+          legend: { display: false },
+          valueLabels: { display: true, color: t.ink2, kind: "count" },
+          tooltip: { ...tooltipBase,
+            callbacks: { label: ctx => " " + fmtCount(ctx.parsed.x) + " tasks / month" } },
+        },
+      },
+    };
+
     /* ---- render ---- */
     return html`<div>
       <header class="page">
         <h1>Frontier-lab price war — cost and routing model</h1>
-        <p>Set each lab's per-Mtok pricing, describe your workload, and see monthly spend,
-        the quality premium Anthropic Opus needs to justify its price, and a per-workflow
-        routing recommendation. All state lives in this page — nothing is stored.</p>
+        <p>AI labs keep cutting prices, and the gap between the premium model and the cheap
+        ones is now 10–30×. This page answers three practical questions: <em>what will my
+        workload cost on each model, when is the expensive model actually the better deal,
+        and how should I split work across models to get the most out of a budget?</em> Work
+        top to bottom — every section feeds the ones below it. Nothing is stored or
+        sent anywhere; refresh to reset.</p>
+        <ol class="steps">
+          <li><strong>Set prices</strong> — what each lab charges per million tokens. The defaults are a reasonable starting point.</li>
+          <li><strong>Describe a task</strong> — how big a typical unit of work is and how often you run it. Use a preset if unsure.</li>
+          <li><strong>Read the break-even</strong> — how much better the premium model must be before it wins on cost. Nothing to fill in.</li>
+          <li><strong>List your workflows</strong> — the page routes each one to the cheapest model that is good enough.</li>
+          <li><strong>Set a budget</strong> — see what the routed plan costs against it and how far the same money stretches on each model.</li>
+        </ol>
       </header>
 
-      <h2 class="section">Provider pricing
-        <span class="hint">$ per million tokens · Opus defaults to Anthropic list price; other labs are scenario defaults</span></h2>
+      <h2 class="section">1 · Provider pricing
+        <span class="hint">$ per million tokens (Mtok)</span></h2>
+      <p class="explain"><strong>Purpose:</strong> these five cards are the inputs that drive every
+      number on the page. Each card is one model; set what its lab charges per million
+      tokens <em>read</em> (input — your prompts, documents, and context) and per million
+      tokens <em>written</em> (output — the model's answers). Anthropic Opus defaults to the published
+      Claude Opus 4.8 list price; the other labs' defaults are illustrative, so drag them to
+      whatever this week's price cuts look like. <strong>Quality tier</strong> is your own judgment
+      call, not a fact about the model: mark a model <em>Frontier</em> if you would trust it with
+      your hardest, most failure-expensive work — step 4 only routes demanding workflows to
+      Frontier-tier models.</p>
       <div class="grid-providers">
         ${providers.map(p => html`<${ProviderCard} key=${p.id} p=${p} color=${colorOf(p.id)}
           onChange=${patch => updateProvider(p.id, patch)} />`)}
       </div>
 
-      <h2 class="section">Cost-per-task calculator
-        <span class="hint">one task profile applied to every provider · ${DAYS_PER_MONTH}-day month</span></h2>
+      <h2 class="section">2 · Cost-per-task calculator
+        <span class="hint">one task profile, priced on every provider · ${DAYS_PER_MONTH}-day month</span></h2>
+      <p class="explain"><strong>Purpose:</strong> turn prices into a monthly bill.
+      A <em>task</em> is one unit of work — one support reply, one summarized document, one
+      coding session.
+      Estimate its size in tokens: <em>tokens in</em> is everything the model reads (the question
+      plus any context or documents), <em>tokens out</em> is what it writes back. Rule of thumb:
+      1,000 tokens ≈ 750 words ≈ 1.5 pages, so a 10-page contract is roughly 7,000 tokens in.
+      Not sure? Click a preset below — it fills all three fields with a typical profile. The chart
+      prices this same task on every provider; the table underneath has the exact figures.</p>
       <div class="grid-2">
         <div class="card">
-          <${SliderField} label="Tokens in / task" value=${calc.tin} min=${0} max=${100000} step=${500}
-            onChange=${v => setCalc(c => ({ ...c, tin: v }))} format=${v => fmtInt(v) + " input tokens per task"} />
-          <${SliderField} label="Tokens out / task" value=${calc.tout} min=${0} max=${50000} step=${250}
-            onChange=${v => setCalc(c => ({ ...c, tout: v }))} format=${v => fmtInt(v) + " output tokens per task"} />
-          <${SliderField} label="Tasks / day" value=${calc.tpd} min=${0} max=${20000} step=${50}
+          <div class="presets">
+            <span class="caption">Presets:</span>
+            <button class="ghost" onClick=${() => setCalc({ tin: 2500, tout: 400, tpd: 3000 })}>Support reply</button>
+            <button class="ghost" onClick=${() => setCalc({ tin: 8000, tout: 600, tpd: 800 })}>Doc summary</button>
+            <button class="ghost" onClick=${() => setCalc({ tin: 6000, tout: 500, tpd: 1500 })}>RAG Q&A</button>
+            <button class="ghost" onClick=${() => setCalc({ tin: 45000, tout: 8000, tpd: 120 })}>Agentic coding</button>
+          </div>
+          <${SliderField} label="Tokens in / task (what the model reads)" value=${calc.tin} min=${0} max=${100000} step=${500}
+            onChange=${v => setCalc(c => ({ ...c, tin: v }))} format=${v => fmtInt(v) + " input tokens ≈ " + fmtInt(v * 0.75) + " words of prompt + context"} />
+          <${SliderField} label="Tokens out / task (what it writes)" value=${calc.tout} min=${0} max=${50000} step=${250}
+            onChange=${v => setCalc(c => ({ ...c, tout: v }))} format=${v => fmtInt(v) + " output tokens ≈ " + fmtInt(v * 0.75) + " words of answer"} />
+          <${SliderField} label="Tasks / day (how often you run it)" value=${calc.tpd} min=${0} max=${20000} step=${50}
             onChange=${v => setCalc(c => ({ ...c, tpd: v }))} format=${v => fmtInt(v * DAYS_PER_MONTH) + " tasks per month"} />
         </div>
         <div class="card">
@@ -567,8 +704,17 @@
         </div>
       </div>
 
-      <h2 class="section">When does Opus pay for itself?
-        <span class="hint">cost per successful task, assuming a q% quality premium means 1 ⁄ (1 + q) as many attempts per completed task</span></h2>
+      <h2 class="section">3 · When does Opus pay for itself?
+        <span class="hint">nothing to fill in — this reads from steps 1 and 2</span></h2>
+      <p class="explain"><strong>Purpose:</strong> on sticker price alone the cheapest model always
+      wins, but a better model fails less — fewer retries, fewer human fixes, fewer tasks redone —
+      so what matters is the cost per <em>successfully completed</em> task. The <strong>quality
+      premium</strong> is how much more work the premium model finishes per attempt: a +100% premium
+      means it completes twice as much per attempt, halving its effective cost. This section finds
+      the <strong>break-even premium</strong>: how much better Anthropic Opus must be than the
+      cheapest model above before Opus becomes the cheaper way to get a task <em>done</em>. If you
+      believe Opus's real advantage on your work is above that number, pay for Opus; if below,
+      the cheap model wins. The table extends the same break-even math to every provider.</p>
       <div class="tiles">
         <div class="tile">
           <div class="label">Break-even quality premium</div>
@@ -618,8 +764,16 @@
         Right of the marker, Opus is the cheaper way to get a task done.</p>
       </div>
 
-      <h2 class="section">Routing recommendation
-        <span class="hint">cheapest provider that meets each workflow's quality bar · savings vs running everything on Anthropic Opus</span></h2>
+      <h2 class="section">4 · Routing recommendation
+        <span class="hint">cheapest provider that clears each workflow's quality bar</span></h2>
+      <p class="explain"><strong>Purpose:</strong> in practice you don't pick one model — you send
+      each kind of work to the cheapest model that is good enough for it. List your workflows below
+      (edit the sample rows or add your own), size each one the same way as step 2, and set
+      its <strong>quality bar</strong>: choose <em>Frontier</em> when mistakes are expensive or the work
+      is genuinely hard (complex coding, high-stakes analysis), <em>Standard</em> for routine volume
+      work (support replies, summaries, tagging). Each row then routes to the cheapest provider
+      whose tier (from step 1) clears that bar, and the headline number is what routing saves every
+      month versus the lazy default of running everything on Anthropic Opus.</p>
       <div class="card">
         <div class="hero">
           <span class=${"figure" + (savings > 0 ? " good" : "")}>${fmtMoney(Math.max(savings, 0))}<span style=${{ fontSize: "22px", fontWeight: 500, color: "var(--ink-2)" }}> / month saved</span></span>
@@ -667,6 +821,63 @@
         </div>
       </div>
 
+      <h2 class="section">5 · Budget planner
+        <span class="hint">fit the routed plan to what you can spend, and see what the money buys</span></h2>
+      <p class="explain"><strong>Purpose:</strong> most teams don't start from a workload — they
+      start from a number they're allowed to spend. Enter your monthly AI budget on the left: the
+      meter shows how much of it the routed plan from step 4 consumes, and the note underneath says
+      what to do with the headroom (or how to close the gap if you're over). The chart on the right
+      is the value view of the price war: <em>if you put this entire budget on a single model, how
+      many step-2-sized tasks would it buy per month?</em> The spread between the top and bottom
+      bars is exactly what routing exploits — burn the budget on premium calls only where quality
+      pays for itself, and let the cheap tier carry the volume.</p>
+      <div class="grid-2">
+        <div class="card">
+          <${SliderField} label="Monthly budget ($)" value=${budget} min=${0} max=${100000} step=${100}
+            onChange=${v => setBudget(v)}
+            format=${v => "Your total monthly spend ceiling across all AI workflows"} />
+          <div class="meter">
+            <div class="meter-track" style=${{ background: meterTrack }}>
+              <div class="meter-fill" style=${{
+                width: (isFinite(util) ? Math.min(util, 1) * 100 : 0) + "%",
+                background: meterFill }}></div>
+            </div>
+            <div class="meter-label" style=${{ color: "var(--ink-2)" }}>
+              <span style=${{ color: meterFill }}>${meterIcon}</span> ${meterText}</div>
+          </div>
+          <table class="data">
+            <tbody>
+              <tr><td>Monthly budget</td><td class="num">${fmtMoney(budget)}</td></tr>
+              <tr><td>Routed plan (step 4)</td><td class="num">${fmtMoney(routedTotal)}</td></tr>
+              <tr><td>All-premium plan, for comparison</td><td class="num">${fmtMoney(opusTotal)}</td></tr>
+              <tr><td>${overBudget ? "Over budget by" : "Headroom left"}</td>
+                <td class="num" style=${{ color: overBudget ? "#d03b3b" : "var(--good)", fontWeight: 600 }}>
+                  ${fmtMoney(Math.abs(headroom))}</td></tr>
+            </tbody>
+          </table>
+          <p class="caption" style=${{ marginTop: "12px" }}>${guidance}</p>
+        </div>
+        <div class="card">
+          <div class="caption" style=${{ marginTop: 0, marginBottom: "8px" }}>
+            Tasks per month the full budget buys on each model, at step 2's task size</div>
+          <${ChartCanvas} key=${"cap-" + mode} config=${capConfig} height=${235}
+            ariaLabel="Bar chart of how many tasks per month the budget buys on each provider; values are in the table below" />
+          <table class="data">
+            <thead><tr>
+              <th>Provider</th><th class="num">$ / task</th><th class="num">Tasks / mo it buys</th><th class="num">× vs Opus</th>
+            </tr></thead>
+            <tbody>
+              ${capRows.map(r => html`<tr key=${r.p.id}>
+                <td><span class="key"><span class="dot" style=${{ background: colorOf(r.p.id), width: "9px", height: "9px" }}></span>${r.p.name}</span></td>
+                <td class="num">${r.task > 0 ? fmtMoney(r.task) : "—"}</td>
+                <td class="num">${r.task > 0 ? fmtCount(r.n) : "—"}</td>
+                <td class="num">${r.task > 0 && opusCap > 0 ? (r.n / opusCap).toFixed(1) + "×" : "—"}</td>
+              </tr>`)}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <footer class="assumptions">
         Assumptions: a ${DAYS_PER_MONTH}-day month; no prompt caching, batching, or volume discounts;
         routing picks the cheapest provider whose quality tier meets the workflow's bar (Frontier-bar
@@ -675,7 +886,9 @@
         Spark 1.1 defaults are illustrative — adjust the sliders to match the current round of cuts.
         The break-even model treats a quality premium as fewer attempts needed per completed task;
         it ignores latency, rate limits, and the cost of failed-task cleanup, all of which favor the
-        higher-quality model.
+        higher-quality model. The budget planner's capacity chart assumes the entire budget is spent
+        on a single model at step 2's task size — it shows reach, not a recommendation; the
+        recommendation is the routing table in step 4.
       </footer>
     </div>`;
   }
