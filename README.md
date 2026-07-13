@@ -54,10 +54,11 @@ python3 build/build_docx.py && soffice --headless --convert-to pdf --outdir outp
 ## Companion note: The Frontier AI Price Wars (July 2026)
 
 Institutional thematic note on the July 2026 frontier-model repricing, framed
-on value per token (cost per completed task). Its verdict is a single call:
-the best model for the money is Claude Opus 4.8, the most expensive model on
-the sheet, because at a fixed quality bar it finishes an enterprise task for
-less than half what the cheapest model costs to run. Deliberately pointed
+on value per token (cost per completed task). Its verdict: Anthropic owns
+both ends of the value frontier, Claude Mythos the best model outright and
+Claude Opus 4.8 the best value, the most expensive open model yet the cheapest
+to run because at a fixed quality bar it finishes an enterprise task for less
+than half what the cheapest model costs. Retitled 'Frontier AI's Token Trap.' Deliberately pointed
 (the price war as a trap) for reach. Formatted to the PitchBook thematic
 template (Calibri Light, cover metadata, Contents, Landing-page hero chart,
 Report picks, blue Heading 2 sections). Prepared by Harrison Rolfes,
@@ -65,7 +66,7 @@ July 10, 2026.
 
 - `output/Frontier_AI_Price_Wars_Jul2026.docx` - the note: cover + eight
   sections + What would change the call + References; a pricing table, a
-  four-axis competitive scorecard table, and six embedded 300-DPI charts
+  a six-row pricing table that now includes an assumed Claude Mythos tier, a four-axis competitive scorecard, and six embedded 300-DPI charts
   (true-cost inversion as the landing hero, pricing ladder, cost curves,
   failure-cost sensitivity, margin vs price, layer economics). Includes xAI's
   reported Grok 4.5 capability refresh. No disclaimer, no inline evidence-tier
@@ -74,8 +75,7 @@ July 10, 2026.
 - Rebuild: `python3 build/pricewars_charts.py` (renders six charts and asserts
   every headline number, including the true-cost inversion and failure-cost
   break-evens), then `python3 build/build_pricewars_docx.py` (templated docx,
-  embeds charts, scans for em/en dashes and fails loudly). Body word count
-  3,300 (ceiling 3,300), Key takeaways through What would change the call.
+  embeds charts, scans for em/en dashes and fails loudly). Body word count 3,299 (ceiling 3,300), Key takeaways through What would change the call.
 
 ## Standing constraints (do not relax when editing)
 

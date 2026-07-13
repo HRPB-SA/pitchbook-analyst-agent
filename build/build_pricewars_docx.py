@@ -191,10 +191,9 @@ def embed(png, caption=None):
 
 
 # ==================== COVER ====================
-para("Q3 2026  The Frontier AI Price Wars", size=14, bold=True, after=2)
-para("The best model for the money is also the most expensive one: Claude "
-     "Opus 4.8. The price war is a trap, and the buyers cheering the cuts are "
-     "the ones paying for it.", size=12, bold=True, color=BLUE, after=8)
+para("Q3 2026  Frontier AI's Token Trap", size=14, bold=True, after=2)
+para("Anthropic's priciest tokens do the cheapest work.",
+     size=12, bold=True, color=BLUE, after=8)
 
 meta = [
     ("Data filepath: ", "R&E - Thematic Research\\Frontier AI\\Price Wars Jul2026"),
@@ -224,7 +223,7 @@ contents = [
     "5. Market implications",
     "6. Consumer implications",
     "7. The surface decides",
-    "8. The verdict: the best model for the money",
+    "8. The verdict: best model, best value",
     "What would change the call",
     "References",
 ]
