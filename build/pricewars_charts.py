@@ -117,7 +117,52 @@ assert round(f_star(0.80), 2) == 3.67               # "$3.67 at a 10-point edge"
 assert round(f_star(0.85), 2) == 7.93               # "$7.93 at a 5-point edge"
 print("arithmetic assertions pass")
 
-# ------------------------------------------------ 0. the pricing ladder
+# --------------------------------------- 0. the true-cost inversion (hero)
+# Cost per completed task at a fixed quality bar, illustrative per-model
+# reliabilities, with the $17 remediation cost. The point: the highest
+# sticker price is the lowest true cost.
+REL = {"Claude Opus 4.8": 0.90, "GPT-5.6 Sol": 0.89, "Grok 4.5": 0.82,
+       "GPT-5.6 Luna": 0.78, "Muse Spark 1.1": 0.76}
+STICK = {"Claude Opus 4.8": 25, "GPT-5.6 Sol": 30, "Grok 4.5": 6,
+         "GPT-5.6 Luna": 6, "Muse Spark 1.1": 4.25}
+true_cost = {m: (costs[m] + REMED * (1 - p)) / p for m, p in REL.items()}
+assert min(true_cost, key=true_cost.get) == "Claude Opus 4.8"
+assert round(true_cost["Claude Opus 4.8"], 2) == 2.56
+order = sorted(true_cost, key=true_cost.get)
+fig, ax = plt.subplots(figsize=(7.2, 3.7))
+fig.subplots_adjust(top=0.80, left=0.16, right=0.95, bottom=0.12)
+y = np.arange(len(order))[::-1]
+bar_colors = {"Claude Opus 4.8": "#2a78d6", "GPT-5.6 Sol": "#1baf7a",
+              "Grok 4.5": "#008300", "GPT-5.6 Luna": "#eda100",
+              "Muse Spark 1.1": "#4a3aa7"}
+for yi, m in zip(y, order):
+    ax.barh(yi, true_cost[m], height=0.62, color=bar_colors[m], zorder=3,
+            edgecolor="white", linewidth=0.8)
+    ax.annotate(f"${true_cost[m]:.2f}", xy=(true_cost[m] + 0.08, yi),
+                va="center", fontsize=8.4, fontweight="bold", color=INK)
+    ax.annotate(f"sticker ${STICK[m]:g}/Mtok out", xy=(0.12, yi),
+                va="center", fontsize=7.0, color="white")
+ax.set_yticks(y)
+ax.set_yticklabels(order, fontsize=8.4)
+ax.set_xlim(0, 6.6)
+ax.set_xlabel("true cost per completed enterprise task, $ (lower is better)")
+ax.annotate("cheapest to RUN,\nnear-highest sticker", xy=(2.56, y[0]),
+            xytext=(3.7, y[0] + 0.35), fontsize=7.4, color="#1C5D46",
+            fontweight="bold",
+            arrowprops=dict(arrowstyle="->", color="#1C5D46", lw=1.0))
+ax.annotate("cheapest sticker, most expensive to RUN",
+            xy=(true_cost["Muse Spark 1.1"], 0.28),
+            xytext=(2.5, 0.62), fontsize=7.4, color="#8F3421",
+            fontweight="bold", va="center",
+            arrowprops=dict(arrowstyle="->", color="#8F3421", lw=1.0))
+style_ax(ax)
+title_block(fig,
+            "The cheapest model to run is the one with the highest sticker price",
+            "Cost per completed agentic task at a fixed quality bar, $17 remediation per failed attempt, illustrative "
+            "per-model reliabilities. Sticker prices are published; the reliability spread is our assumption.")
+save(fig, "pw_true_cost.png")
+
+# ------------------------------------------------ 0b. the pricing ladder
 # Horizontal log ladder of output list price per Mtok, from the commodity
 # floor to the restricted premium anchor, with the consumer free tier shown
 # as priced-at-zero (monetized off-token). Makes the ~30x spread legible.

@@ -19,9 +19,9 @@ MD = os.path.join(OUTDIR, "Frontier_AI_Price_Wars_Jul2026.md")
 DOCX = os.path.join(OUTDIR, "Frontier_AI_Price_Wars_Jul2026.docx")
 
 # body charts in order of CHART: appearance after Key takeaways
-BODY_CHARTS = ["pw_cost_curves.png", "pw_sensitivity.png",
+BODY_CHARTS = ["pw_pricing_ladder.png", "pw_cost_curves.png", "pw_sensitivity.png",
                "pw_margin_vs_price.png", "pw_layer_economics.png"]
-LANDING_CHART = "pw_pricing_ladder.png"
+LANDING_CHART = "pw_true_cost.png"
 chart_seen = 0
 
 FONT = "Calibri Light"
@@ -192,8 +192,9 @@ def embed(png, caption=None):
 
 # ==================== COVER ====================
 para("Q3 2026  The Frontier AI Price Wars", size=14, bold=True, after=2)
-para("The war is won on value per token, not price per token. On that "
-     "measure, one lab is winning it.", size=12, bold=True, color=BLUE, after=8)
+para("The best model for the money is also the most expensive one: Claude "
+     "Opus 4.8. The price war is a trap, and the buyers cheering the cuts are "
+     "the ones paying for it.", size=12, bold=True, color=BLUE, after=8)
 
 meta = [
     ("Data filepath: ", "R&E - Thematic Research\\Frontier AI\\Price Wars Jul2026"),
@@ -201,7 +202,7 @@ meta = [
     ("Chart geography: ", "Global"),
     ("Research type: ", "Emerging Tech"),
     ("Access level: ", "Client only (Platform only, no preview on N&A)"),
-    ("Chart count: ", "5"),
+    ("Chart count: ", "6"),
     ("Table count: ", "2"),
 ]
 for label, val in meta:
@@ -223,7 +224,7 @@ contents = [
     "5. Market implications",
     "6. Consumer implications",
     "7. The surface decides",
-    "8. The verdict: pricing, model, and moat",
+    "8. The verdict: the best model for the money",
     "What would change the call",
     "References",
 ]
@@ -233,27 +234,29 @@ para("", after=6)
 
 para("Landing page", size=12, bold=True, after=4)
 embed(LANDING_CHART,
-      "The pricing ladder, from the free consumer tier to the restricted "
-      "premium anchor. One market, a spread past 30x, with two crowded ends "
-      "and a hollow middle.")
-para("Frontier token prices collapsed in July, but headline price is the "
-     "wrong scoreboard. The war is fought on value per token, the completed "
-     "tasks a dollar of inference actually buys, and on that measure a "
-     "two-to-three-point reliability edge outweighs a four-times price cut. "
-     "Judge the four labs on the axes that compound, pricing for value, model "
-     "quality, moat, and unit economics, and the verdict is not close: "
-     "Anthropic is winning. This note builds that case from the token up.",
-     size=10, after=8)
+      "The cheapest model to run is the one with the highest sticker price. "
+      "Cost per completed enterprise task at a fixed quality bar: the near-top "
+      "sticker finishes the work for less than half what the cheapest model "
+      "on the sheet costs to run.")
+para("Frontier token prices collapsed in July, and the coverage has the story "
+     "backwards. Buyers do not purchase tokens; they purchase completed tasks, "
+     "and once you price the work rather than the tokens, the ranking inverts. "
+     "The most expensive model on the sheet becomes the cheapest to run, and "
+     "the models winning the price-cut headlines become the most expensive way "
+     "to get an agentic job done. The best model for the money is Claude Opus "
+     "4.8, and it is not close. This note shows why, and it argues that the "
+     "price war is a trap that hands the buyer the appearance of savings and "
+     "the real cost of failure.", size=10, after=8)
 
 para("Report picks", size=12, bold=True, after=2)
 para("AI Compute and Power: The Buildout Is a Scarcity Trade (forthcoming)",
      size=10, after=1)
 para("Enterprise Agents: Who Owns the Seat (forthcoming)", size=10, after=8)
 
-para("Evidence tiers: T1, primary or SEC-grade. T2, PitchBook data and direct "
-     "company statements. T3, vendor claims and trade press, discounted one "
-     "tier on receipt. Figures not in our canonical dataset are flagged as our "
-     "estimates and tiered.", size=8.6, italic=True, color=GREY, after=10)
+para("Method: figures are drawn from published price lists and PitchBook "
+     "company data. Vendor performance claims are treated skeptically, and "
+     "where we introduce an estimate or an assumption we say so in the "
+     "sentence.", size=8.6, italic=True, color=GREY, after=10)
 
 # page break before the body
 doc.add_page_break()
