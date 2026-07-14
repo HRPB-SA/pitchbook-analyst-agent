@@ -29,10 +29,10 @@ OP_ORANGE = "#eb6834"
 TOK_IN, TOK_OUT = 60_000, 12_000
 REMED = 17.0
 
-# Claude Mythos is Anthropic's restricted-access flagship above Opus 4.8;
-# it is not openly list-priced. Our working assumption for the premium anchor
-# of the barbell, flagged T3 in the note. Not a canonical figure.
-MYTHOS_IN_EST, MYTHOS_OUT_EST = 8.0, 40.0
+# Claude Mythos 5 is Anthropic's limited-availability flagship above Opus 4.8.
+# Published list price per the Anthropic pricing page: $10 / $50 per Mtok,
+# exactly twice Opus. Not an assumption.
+MYTHOS_IN, MYTHOS_OUT = 10.0, 50.0
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "charts")
 os.makedirs(OUT, exist_ok=True)
@@ -165,14 +165,14 @@ save(fig, "pw_true_cost.png")
 # ------------------------------------------------ 0b. the pricing ladder
 # Horizontal log ladder of output list price per Mtok, from the commodity
 # floor to the restricted premium anchor, with the consumer free tier shown
-# as priced-at-zero (monetized off-token). Makes the ~30x spread legible.
+# as priced-at-zero (monetized off-token).
 ladder = [
     ("Muse Spark 1.1", 4.25, "#4a3aa7", "cheap"),
     ("GPT-5.6 Luna", 6.00, "#eda100", "cheap"),
     ("Grok 4.5", 6.00, "#008300", "cheap"),
     ("Claude Opus 4.8", 25.00, "#2a78d6", "premium"),
     ("GPT-5.6 Sol", 30.00, "#1baf7a", "premium"),
-    ("Claude Mythos (est.)", MYTHOS_OUT_EST, "#e34948", "premium"),
+    ("Claude Mythos 5", MYTHOS_OUT, "#e34948", "premium"),
 ]
 fig, ax = plt.subplots(figsize=(7.2, 3.6))
 fig.subplots_adjust(top=0.79, left=0.30, right=0.92, bottom=0.14)
@@ -186,9 +186,9 @@ for yi, (name, price, color, band) in zip(y, ladder):
 ax.set_xscale("log")
 ax.set_yticks(y)
 ax.set_yticklabels([n for n, *_ in ladder], fontsize=8)
-ax.set_xlim(0.5, 70)
-ax.set_xticks([1, 3, 10, 30])
-ax.set_xticklabels(["$1", "$3", "$10", "$30"])
+ax.set_xlim(0.5, 82)
+ax.set_xticks([1, 3, 10, 30, 50])
+ax.set_xticklabels(["$1", "$3", "$10", "$30", "$50"])
 ax.set_xlabel("output list price, $ per Mtok (log scale)")
 # consumer free tier band, labeled inside the band so it clears the bars
 ax.axvspan(0.5, 0.82, color=GREY, alpha=0.12, zorder=0)
@@ -198,15 +198,15 @@ ax.axhspan(-0.5, 2.5, color="#4a3aa7", alpha=0.05, zorder=0)
 ax.axhspan(2.5, 5.5, color="#2a78d6", alpha=0.05, zorder=0)
 ax.annotate("commodity floor", xy=(11, 1), fontsize=7, color=GREY,
             ha="left", va="center", style="italic")
-ax.annotate("reliability premium", xy=(52, 4), fontsize=7, color=GREY,
+ax.annotate("reliability premium", xy=(56, 4), fontsize=7, color=GREY,
             ha="left", va="center", style="italic")
 for s in ["top", "right"]:
     ax.spines[s].set_visible(False)
 ax.set_axisbelow(True)
 title_block(fig,
-            "One market, a 30-fold price spread: the barbell has two ends and a hollow middle",
-            "Output list price per million tokens, log scale. Muse-to-Sol spread is ~7x on published prices; the Mythos "
-            "anchor (hatched, our estimate T3) and the $0 consumer tier stretch the real spread past 30x. Prices T1.")
+            "One market, two crowded ends and a hollow middle",
+            "Output list price per million tokens, log scale. Published prices run from Muse Spark at $4.25 to Claude "
+            "Mythos 5 at $50, roughly twelvefold, and the free consumer tier makes the full spread unbounded.")
 save(fig, "pw_pricing_ladder.png")
 
 # ---------------------------------------------------- 1. cost curves

@@ -66,7 +66,7 @@ July 10, 2026.
 
 - `output/Frontier_AI_Price_Wars_Jul2026.docx` - the note: cover + eight
   sections + What would change the call + References; a pricing table, a
-  a six-row pricing table that now includes an assumed Claude Mythos tier, a four-axis competitive scorecard, and six embedded 300-DPI charts
+  a six-row pricing table including the published Claude Mythos 5 tier ($10/$50), a four-axis competitive scorecard, and six embedded 300-DPI charts
   (true-cost inversion as the landing hero, pricing ladder, cost curves,
   failure-cost sensitivity, margin vs price, layer economics). Includes xAI's
   reported Grok 4.5 capability refresh. No disclaimer, no inline evidence-tier

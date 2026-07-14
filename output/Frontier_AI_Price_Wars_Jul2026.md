@@ -58,7 +58,7 @@ Two consequences follow. Utilization sets the real cost: providers batch request
 
 The step that reframes the competition is that enterprise work is agentic. An agent plans, calls a tool, reads the result, replans, and repeats dozens of times, each pass re-reading a growing context, and consumption multiplies every time it fails and retries. The per-token price therefore says almost nothing about what a task costs, because the loop and its failure rate dominate the sticker.
 
-CHART: The pricing ladder, from the free consumer tier to the restricted premium anchor. The spread is more than thirty times, with two crowded ends and a hollow middle.
+CHART: The pricing ladder, from the free tier to the premium anchor. Published prices span more than tenfold, from Muse Spark at $4.25 to Mythos 5 at $50, and the free tier makes the full spread unbounded: two crowded ends, a hollow middle.
 
 ## 2. The unit of account: value per token
 
@@ -73,9 +73,9 @@ TABLE: Cost per completed task at list prices, sixty thousand in and twelve thou
 | GPT-5.6 Luna | $1.00 | $6.00 | $0.13 | $0.15 | $0.18 | $0.20 |
 | Grok 4.5 | $2.00 | $6.00 | $0.19 | $0.21 | $0.26 | $0.30 |
 | Muse Spark 1.1 | $1.25 | $4.25 | $0.13 | $0.14 | $0.17 | $0.19 |
-| Claude Mythos (assumed) | $8.00 | $40.00 | $0.96 | $1.07 | $1.28 | $1.48 |
+| Claude Mythos 5 | $10.00 | $50.00 | $1.20 | $1.33 | $1.60 | $1.85 |
 
-Prices are published list prices, except Claude Mythos, Anthropic's restricted flagship, which is not openly priced and which we assume at roughly one and a half to two times Opus. Per-task figures are our arithmetic.
+Prices are published list prices, including Claude Mythos 5, Anthropic's limited-availability flagship at $10 and $50, exactly twice Opus. Per-task figures are our arithmetic.
 
 On tokens alone the cheap tier wins almost mechanically, because Opus at sixty cents an attempt only beats Muse Spark at about thirteen cents if it succeeds nearly five times as often, and no frontier gap is that wide. That is exactly where the token-only view fails, because a failed agentic attempt is not free: it burns reviewer time, breaks the automation downstream, and erodes trust in the seat. Assign a deliberately conservative seventeen dollars to each failed attempt, about ten minutes of a fully loaded operator, and the ranking inverts. Opus succeeding nine times in ten finishes the task for about $2.56; Muse Spark succeeding three times in four finishes it for about $5.83, more than twice as much despite tokens at a quarter of the price. The cheapest model on the sheet is the most expensive to run, and the near-priciest is the cheapest. That inversion is the thesis of this note. It is also why a lower sticker often produces a larger bill: a cheaper token invites longer contexts and more agent loops, and the failures it hides are billed to the buyer in labor, not tokens.
 
@@ -97,7 +97,7 @@ xAI is the capability story that does not fix the economics. The mid-July Grok 4
 
 OpenAI is running segmentation, not a race to zero, and the tell is that Sol lists above Opus on output. Luna harvests price-sensitive volume while Sol defends the premium, and with roughly twenty-five billion in net revenue, about nine hundred million weekly users, and Codex above one and a half million, OpenAI needs the premium tier because its rich multiple and thin capital efficiency cannot ride six-dollar output.
 
-Anthropic defends a two-tier premium and declines to chase. Opus holds at five and twenty-five, and Claude Mythos sits above it as a restricted flagship that is not openly priced, which we assume at one and a half to two times Opus on output. On PitchBook's marks Anthropic carries a $965B valuation on forty-seven billion of gross run-rate revenue, the best capital efficiency among the labs, and a first quarterly operating profit near $559M, though that figure excludes stock compensation and rides a SpaceX ramp discount, flattering the steady state. The strategy is three moves: hold list price, extend the premium upward, and prove that enterprises keep buying it.
+Anthropic defends a two-tier premium and declines to chase. Opus holds at five and twenty-five, and Claude Mythos 5 sits above it as a limited-availability flagship priced at ten and fifty, exactly twice Opus on output. On PitchBook's marks Anthropic carries a $965B valuation on forty-seven billion of gross run-rate revenue, the best capital efficiency among the labs, and a first quarterly operating profit near $559M, though that figure excludes stock compensation and rides a SpaceX ramp discount, flattering the steady state. The strategy is three moves: hold list price, extend the premium upward, and prove that enterprises keep buying it.
 
 CHART: Implied model-layer gross margin versus output list price at a six-to-eight-dollar serving cost. Every output price below roughly eight dollars is gross-margin negative, so the floor tier is sold below cost.
 
@@ -156,7 +156,7 @@ TABLE: Competitive scorecard on the four axes that decide the war. Anthropic lea
 
 The scorecard is our assessment; the Meta and xAI model claims are the vendors' own.
 
-Anthropic owns both ends of the value frontier, and the distinction matters. The best model outright is Claude Mythos, the restricted flagship above Opus on capability and, we assume, on price. At the top of the risk curve, where a mistake costs the most, its reliability edge earns that premium, and once the edge over Opus reaches two to three points Mythos is also the cheapest way to finish the work. The best value on the market is Claude Opus 4.8, which finishes a representative task for about $2.56 despite a near-top sticker. Either way, the company is Anthropic.
+Anthropic owns both ends of the value frontier, and the distinction matters. The best model outright is Claude Mythos 5, the limited-availability flagship above Opus on capability and, at ten and fifty, exactly twice Opus. At the top of the risk curve, where a mistake costs the most, its reliability edge earns that premium, and once the edge over Opus reaches about three points Mythos is also the cheapest way to finish the work. The best value on the market is Claude Opus 4.8, which finishes a representative task for about $2.56 despite a near-top sticker. Either way, the company is Anthropic.
 
 Is Opus really best, or an artifact of our reliability assumption? The verdict is sturdier than it looks. Against Sol it wins at every equal level of reliability, because Sol prices output at thirty dollars to Opus's twenty-five, so Sol can take the value crown only by being materially more reliable, which nothing in the quality data suggests. Against the cheap tier it wins the moment its reliability edge clears a few points, which the break-even math shows is a low bar. The one load-bearing assumption is the ordering, that Anthropic's models are the most reliable, and that is what the business-quality data supports: Anthropic outscores every other lab on our composite. The controversial part is not the pick but what it says about the market: the companies winning the price-cut headlines are selling the worst value in it, and the model the war was meant to kill is the cheapest way to get real work done.
 
@@ -166,7 +166,7 @@ The verdict breaks if OpenAI turns its distribution lead into the enterprise sea
 
 ## References
 
-1. Published API price lists for Claude Opus 4.8, GPT-5.6 Sol and Luna, Grok 4.5, and Meta Muse Spark 1.1, accessed July 2026. Claude Mythos is a restricted tier with no public price, and its premium is our assumption.
+1. Published API price lists, accessed July 2026: the Anthropic pricing page (platform.claude.com/docs/en/about-claude/pricing) for Claude Opus 4.8 at $5 and $25 and the limited-availability Claude Mythos 5 at $10 and $50; and the vendors' own price lists for GPT-5.6 Sol and Luna, Grok 4.5, and Meta Muse Spark 1.1.
 2. Meta's July 2026 announcement of Muse Spark 1.1, including the agent-reasoning and million-token-context claims, which are the vendor's own.
 3. xAI's mid-July Grok 4.5 capability refresh, including native computer use, multimodal input, a real-time X and Starlink data path, and a frontier-parity reasoning claim, which are the vendor's own.
 4. PitchBook company data: Anthropic at a $965B mark on $47B of gross run-rate revenue with a first quarterly operating profit near $559M; OpenAI at $852B on roughly $25B of net revenue with about 900M weekly users; xAI's AI segment near $3.2B of revenue against a FY25 operating loss above $6.36B inside a combined structure marked near $1.97T.
