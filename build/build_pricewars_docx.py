@@ -244,9 +244,10 @@ para("Frontier token prices collapsed in July, and the coverage has the story "
      "The near-priciest model on the sheet becomes the cheapest to run, and "
      "the models winning the price-cut headlines become the most expensive way "
      "to get an agentic job done. The best model for the money is Claude Opus "
-     "4.8, and it is not close. This note shows why, and it argues that the "
-     "price war is a trap that hands the buyer the appearance of savings and "
-     "the real cost of failure.", size=10, after=8)
+     "4.8, but Google's Gemini 3.1 Pro, a frontier model at a fraction of the "
+     "price, closes the gap to a whisker. This note shows why, and it argues "
+     "that the price war is a trap that hands the buyer the appearance of "
+     "savings and the real cost of failure.", size=10, after=8)
 
 para("Report picks", size=12, bold=True, after=2)
 para("AI Compute and Power: The Buildout Is a Scarcity Trade (forthcoming)",

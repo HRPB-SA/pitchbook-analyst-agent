@@ -23,6 +23,8 @@ MODELS = [
     ("Grok 4.5", 2.00, 6.00, "#008300"),
     ("Muse Spark 1.1", 1.25, 4.25, "#4a3aa7"),
     ("Claude Mythos 5", 10.00, 50.00, "#e34948"),
+    # Gemini 3.1 Pro, Google's frontier tier, published $2 / $12 (<=200k context)
+    ("Gemini 3.1 Pro", 2.00, 12.00, "#d5187f"),
 ]
 ARR_BLUE = "#2a78d6"
 OP_ORANGE = "#eb6834"
@@ -93,6 +95,7 @@ assert abs(costs["GPT-5.6 Sol"] - 0.66) < 1e-9
 assert abs(costs["GPT-5.6 Luna"] - 0.132) < 1e-9
 assert abs(costs["Grok 4.5"] - 0.192) < 1e-9
 assert abs(costs["Muse Spark 1.1"] - 0.126) < 1e-9
+assert abs(costs["Gemini 3.1 Pro"] - 0.264) < 1e-9   # 60k*2 + 12k*12
 ratio = costs["Claude Opus 4.8"] / costs["Muse Spark 1.1"]
 assert round(ratio, 1) == 4.8                       # "a factor of 4.8"
 assert round((1 - 0.90 / ratio) * 100) == 81        # "fail more than 81%"
@@ -122,23 +125,29 @@ print("arithmetic assertions pass")
 # Cost per completed task at a fixed quality bar, illustrative per-model
 # reliabilities, with the $17 remediation cost. The point: the highest
 # sticker price is the lowest true cost.
-# Mythos is the flagship, so it carries the highest reliability; at a 2-point
-# edge over Opus it is second-best value, converging on Opus but not passing it.
-REL = {"Claude Opus 4.8": 0.90, "Claude Mythos 5": 0.92, "GPT-5.6 Sol": 0.89,
-       "Grok 4.5": 0.82, "GPT-5.6 Luna": 0.78, "Muse Spark 1.1": 0.76}
-STICK = {"Claude Opus 4.8": 25, "Claude Mythos 5": 50, "GPT-5.6 Sol": 30,
-         "Grok 4.5": 6, "GPT-5.6 Luna": 6, "Muse Spark 1.1": 4.25}
+# Illustrative reliabilities. Mythos, the flagship, carries the highest; Gemini
+# 3.1 Pro is frontier-class and sits just below Opus (a ~2-point edge), which is
+# the only reason Opus stays the value winner: at equal reliability Gemini's
+# far cheaper tokens would win. This is the one assumption the value call rests on.
+REL = {"Claude Opus 4.8": 0.90, "Claude Mythos 5": 0.92, "Gemini 3.1 Pro": 0.88,
+       "GPT-5.6 Sol": 0.89, "Grok 4.5": 0.82, "GPT-5.6 Luna": 0.78,
+       "Muse Spark 1.1": 0.76}
+STICK = {"Claude Opus 4.8": 25, "Claude Mythos 5": 50, "Gemini 3.1 Pro": 12,
+         "GPT-5.6 Sol": 30, "Grok 4.5": 6, "GPT-5.6 Luna": 6,
+         "Muse Spark 1.1": 4.25}
 true_cost = {m: (costs[m] + REMED * (1 - p)) / p for m, p in REL.items()}
 assert min(true_cost, key=true_cost.get) == "Claude Opus 4.8"
 assert round(true_cost["Claude Opus 4.8"], 2) == 2.56
 assert round(true_cost["Claude Mythos 5"], 2) == 2.78     # 2x Opus sticker
+assert round(true_cost["Gemini 3.1 Pro"], 2) == 2.62      # closest value rival
 order = sorted(true_cost, key=true_cost.get)
-fig, ax = plt.subplots(figsize=(7.2, 4.2))
-fig.subplots_adjust(top=0.82, left=0.16, right=0.95, bottom=0.11)
+fig, ax = plt.subplots(figsize=(7.2, 4.9))
+fig.subplots_adjust(top=0.84, left=0.16, right=0.95, bottom=0.10)
 y = np.arange(len(order))[::-1]
 bar_colors = {"Claude Opus 4.8": "#2a78d6", "Claude Mythos 5": "#e34948",
-              "GPT-5.6 Sol": "#1baf7a", "Grok 4.5": "#008300",
-              "GPT-5.6 Luna": "#eda100", "Muse Spark 1.1": "#4a3aa7"}
+              "Gemini 3.1 Pro": "#d5187f", "GPT-5.6 Sol": "#1baf7a",
+              "Grok 4.5": "#008300", "GPT-5.6 Luna": "#eda100",
+              "Muse Spark 1.1": "#4a3aa7"}
 for yi, m in zip(y, order):
     ax.barh(yi, true_cost[m], height=0.62, color=bar_colors[m], zorder=3,
             edgecolor="white", linewidth=0.8)
@@ -151,27 +160,27 @@ ax.set_yticklabels(order, fontsize=8.4)
 ax.set_xlim(0, 6.6)
 ax.set_xlabel("true cost per completed enterprise task, $ (lower is better)")
 iopus = order.index("Claude Opus 4.8")
-imyth = order.index("Claude Mythos 5")
+igem = order.index("Gemini 3.1 Pro")
 ax.annotate("cheapest to RUN", xy=(true_cost["Claude Opus 4.8"], y[iopus]),
-            xytext=(3.2, y[iopus] + 0.36), fontsize=7.4, color="#1C5D46",
+            xytext=(3.1, y[iopus] + 0.30), fontsize=7.4, color="#1C5D46",
             fontweight="bold",
             arrowprops=dict(arrowstyle="->", color="#1C5D46", lw=1.0))
-ax.annotate("priciest sticker on the sheet ($50),\nstill near-cheapest to RUN",
-            xy=(true_cost["Claude Mythos 5"], y[imyth]),
-            xytext=(3.4, y[imyth] + 0.30), fontsize=7.4, color="#8a1f6a",
+ax.annotate("Gemini 3.1 Pro: frontier tokens at under half\nOpus's cost, the closest value rival",
+            xy=(true_cost["Gemini 3.1 Pro"], y[igem]),
+            xytext=(3.4, y[igem] + 0.10), fontsize=7.2, color="#d5187f",
             fontweight="bold",
-            arrowprops=dict(arrowstyle="->", color="#8a1f6a", lw=1.0))
+            arrowprops=dict(arrowstyle="->", color="#d5187f", lw=1.0))
 ax.annotate("cheapest sticker, most expensive to RUN",
             xy=(true_cost["Muse Spark 1.1"], 0.28),
-            xytext=(2.5, 0.62), fontsize=7.4, color="#8F3421",
+            xytext=(2.7, 0.66), fontsize=7.4, color="#8F3421",
             fontweight="bold", va="center",
             arrowprops=dict(arrowstyle="->", color="#8F3421", lw=1.0))
 style_ax(ax)
 title_block(fig,
             "The priciest tier runs cheapest; the cheapest sticker runs dearest",
             "Cost per completed agentic task at a fixed quality bar, $17 remediation per failed attempt, illustrative "
-            "per-model reliabilities. Mythos 5, the $50 flagship, runs near-cheapest; Muse Spark, the $4.25 floor, "
-            "runs dearest. Sticker prices published; reliability spread our assumption.")
+            "per-model reliabilities. Gemini 3.1 Pro, a frontier model at $2/$12, is the closest value rival and edges "
+            "out Mythos; Opus stays cheapest only on an assumed reliability lead. Sticker prices published.")
 save(fig, "pw_true_cost.png")
 
 # ------------------------------------------------ 0b. the pricing ladder
@@ -182,12 +191,13 @@ ladder = [
     ("Muse Spark 1.1", 4.25, "#4a3aa7", "cheap"),
     ("GPT-5.6 Luna", 6.00, "#eda100", "cheap"),
     ("Grok 4.5", 6.00, "#008300", "cheap"),
+    ("Gemini 3.1 Pro", 12.00, "#d5187f", "mid"),
     ("Claude Opus 4.8", 25.00, "#2a78d6", "premium"),
     ("GPT-5.6 Sol", 30.00, "#1baf7a", "premium"),
     ("Claude Mythos 5", MYTHOS_OUT, "#e34948", "premium"),
 ]
-fig, ax = plt.subplots(figsize=(7.2, 3.6))
-fig.subplots_adjust(top=0.79, left=0.30, right=0.92, bottom=0.14)
+fig, ax = plt.subplots(figsize=(7.2, 4.0))
+fig.subplots_adjust(top=0.80, left=0.30, right=0.92, bottom=0.13)
 y = np.arange(len(ladder))
 for yi, (name, price, color, band) in zip(y, ladder):
     ax.barh(yi, price, height=0.6, color=color, zorder=3,
@@ -204,21 +214,24 @@ ax.set_xticklabels(["$1", "$3", "$10", "$30", "$50"])
 ax.set_xlabel("output list price, $ per Mtok (log scale)")
 # consumer free tier band, labeled inside the band so it clears the bars
 ax.axvspan(0.5, 0.82, color=GREY, alpha=0.12, zorder=0)
-ax.text(0.64, 2.5, "consumer free tier: $0 per token, monetized off-token",
+ax.text(0.64, 3.0, "consumer free tier: $0 per token, monetized off-token",
         fontsize=6.8, color=GREY, rotation=90, ha="center", va="center")
-ax.axhspan(-0.5, 2.5, color="#4a3aa7", alpha=0.05, zorder=0)
-ax.axhspan(2.5, 5.5, color="#2a78d6", alpha=0.05, zorder=0)
+ax.axhspan(-0.5, 2.5, color="#4a3aa7", alpha=0.05, zorder=0)   # commodity floor
+ax.axhspan(2.5, 3.5, color="#d5187f", alpha=0.06, zorder=0)    # Gemini in the middle
+ax.axhspan(3.5, 6.5, color="#2a78d6", alpha=0.05, zorder=0)    # reliability premium
 ax.annotate("commodity floor", xy=(11, 1), fontsize=7, color=GREY,
             ha="left", va="center", style="italic")
-ax.annotate("reliability premium", xy=(56, 4), fontsize=7, color=GREY,
+ax.annotate("Gemini holds the middle", xy=(18, 3), fontsize=7, color="#d5187f",
+            ha="left", va="center", style="italic")
+ax.annotate("reliability premium", xy=(56, 5), fontsize=7, color=GREY,
             ha="left", va="center", style="italic")
 for s in ["top", "right"]:
     ax.spines[s].set_visible(False)
 ax.set_axisbelow(True)
 title_block(fig,
-            "One market, two crowded ends and a hollow middle",
-            "Output list price per million tokens, log scale. Published prices run from Muse Spark at $4.25 to Claude "
-            "Mythos 5 at $50, roughly twelvefold, and the free consumer tier makes the full spread unbounded.")
+            "Two crowded ends, and one frontier model holding the middle",
+            "Output list price per million tokens, log scale. Prices run from Muse Spark at $4.25 to Mythos 5 at $50; "
+            "the middle the note calls hollow is held by one differentiated frontier model, Google's Gemini 3.1 Pro at $12.")
 save(fig, "pw_pricing_ladder.png")
 
 # ---------------------------------------------------- 1. cost curves
@@ -252,7 +265,10 @@ ax.annotate("Sol", xy=(99.3, ends["GPT-5.6 Sol"] * 1.06), fontsize=7.4,
 ax.annotate("Opus 4.8", xy=(99.3, ends["Claude Opus 4.8"] * 0.82),
             fontsize=7.4, color="#2a78d6", fontweight="bold",
             annotation_clip=False)
-ax.annotate("Grok 4.5", xy=(99.3, ends["Grok 4.5"] * 1.14), fontsize=7.4,
+ax.annotate("Gemini 3.1 Pro", xy=(99.3, ends["Gemini 3.1 Pro"] * 1.02),
+            fontsize=7.4, color="#d5187f", fontweight="bold",
+            annotation_clip=False)
+ax.annotate("Grok 4.5", xy=(99.3, ends["Grok 4.5"] * 0.90), fontsize=7.4,
             color="#008300", fontweight="bold", annotation_clip=False)
 ax.annotate("Luna / Muse Spark", xy=(99.3, ends["Muse Spark 1.1"] * 0.88),
             fontsize=7.4, color="#4a3aa7", fontweight="bold",
@@ -327,8 +343,9 @@ ax.annotate("serving-cost band $6-8 per Mtok out\n(our estimate, T2)",
 # Luna and Grok share the $6 / -17% point: Luna drawn as an open ring
 # behind Grok's filled marker so both stay visible
 labels = {"GPT-5.6 Luna": (6.5, -7), "Grok 4.5": (6.5, -30),
-          "Muse Spark 1.1": (3.6, -58), "Claude Opus 4.8": (12.5, 60),
-          "GPT-5.6 Sol": (20, 82), "Claude Mythos 5": (30, 90)}
+          "Muse Spark 1.1": (3.6, -58), "Gemini 3.1 Pro": (9.5, 30),
+          "Claude Opus 4.8": (15.5, 58), "GPT-5.6 Sol": (24, 80),
+          "Claude Mythos 5": (37, 92)}
 for name, pin, pout, color in MODELS:
     m = (1 - mid / pout) * 100
     if name == "GPT-5.6 Luna":
