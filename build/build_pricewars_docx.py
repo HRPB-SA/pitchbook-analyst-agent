@@ -233,7 +233,8 @@ para("", after=6)
 
 para("Landing page", size=12, bold=True, after=4)
 embed(LANDING_CHART,
-      "The cheapest model to run is the one with the highest sticker price. "
+      "Mythos 5, the priciest sticker on the sheet at $50, runs "
+      "near-cheapest, while the cheapest sticker, Muse Spark, runs dearest. "
       "Cost per completed enterprise task at a fixed quality bar: the near-top "
       "sticker finishes the work for less than half what the cheapest model "
       "on the sheet costs to run.")

@@ -22,6 +22,7 @@ MODELS = [
     ("GPT-5.6 Luna", 1.00, 6.00, "#eda100"),
     ("Grok 4.5", 2.00, 6.00, "#008300"),
     ("Muse Spark 1.1", 1.25, 4.25, "#4a3aa7"),
+    ("Claude Mythos 5", 10.00, 50.00, "#e34948"),
 ]
 ARR_BLUE = "#2a78d6"
 OP_ORANGE = "#eb6834"
@@ -121,20 +122,23 @@ print("arithmetic assertions pass")
 # Cost per completed task at a fixed quality bar, illustrative per-model
 # reliabilities, with the $17 remediation cost. The point: the highest
 # sticker price is the lowest true cost.
-REL = {"Claude Opus 4.8": 0.90, "GPT-5.6 Sol": 0.89, "Grok 4.5": 0.82,
-       "GPT-5.6 Luna": 0.78, "Muse Spark 1.1": 0.76}
-STICK = {"Claude Opus 4.8": 25, "GPT-5.6 Sol": 30, "Grok 4.5": 6,
-         "GPT-5.6 Luna": 6, "Muse Spark 1.1": 4.25}
+# Mythos is the flagship, so it carries the highest reliability; at a 2-point
+# edge over Opus it is second-best value, converging on Opus but not passing it.
+REL = {"Claude Opus 4.8": 0.90, "Claude Mythos 5": 0.92, "GPT-5.6 Sol": 0.89,
+       "Grok 4.5": 0.82, "GPT-5.6 Luna": 0.78, "Muse Spark 1.1": 0.76}
+STICK = {"Claude Opus 4.8": 25, "Claude Mythos 5": 50, "GPT-5.6 Sol": 30,
+         "Grok 4.5": 6, "GPT-5.6 Luna": 6, "Muse Spark 1.1": 4.25}
 true_cost = {m: (costs[m] + REMED * (1 - p)) / p for m, p in REL.items()}
 assert min(true_cost, key=true_cost.get) == "Claude Opus 4.8"
 assert round(true_cost["Claude Opus 4.8"], 2) == 2.56
+assert round(true_cost["Claude Mythos 5"], 2) == 2.78     # 2x Opus sticker
 order = sorted(true_cost, key=true_cost.get)
-fig, ax = plt.subplots(figsize=(7.2, 3.7))
-fig.subplots_adjust(top=0.80, left=0.16, right=0.95, bottom=0.12)
+fig, ax = plt.subplots(figsize=(7.2, 4.2))
+fig.subplots_adjust(top=0.82, left=0.16, right=0.95, bottom=0.11)
 y = np.arange(len(order))[::-1]
-bar_colors = {"Claude Opus 4.8": "#2a78d6", "GPT-5.6 Sol": "#1baf7a",
-              "Grok 4.5": "#008300", "GPT-5.6 Luna": "#eda100",
-              "Muse Spark 1.1": "#4a3aa7"}
+bar_colors = {"Claude Opus 4.8": "#2a78d6", "Claude Mythos 5": "#e34948",
+              "GPT-5.6 Sol": "#1baf7a", "Grok 4.5": "#008300",
+              "GPT-5.6 Luna": "#eda100", "Muse Spark 1.1": "#4a3aa7"}
 for yi, m in zip(y, order):
     ax.barh(yi, true_cost[m], height=0.62, color=bar_colors[m], zorder=3,
             edgecolor="white", linewidth=0.8)
@@ -146,10 +150,17 @@ ax.set_yticks(y)
 ax.set_yticklabels(order, fontsize=8.4)
 ax.set_xlim(0, 6.6)
 ax.set_xlabel("true cost per completed enterprise task, $ (lower is better)")
-ax.annotate("cheapest to RUN,\nnear-highest sticker", xy=(2.56, y[0]),
-            xytext=(3.7, y[0] + 0.35), fontsize=7.4, color="#1C5D46",
+iopus = order.index("Claude Opus 4.8")
+imyth = order.index("Claude Mythos 5")
+ax.annotate("cheapest to RUN", xy=(true_cost["Claude Opus 4.8"], y[iopus]),
+            xytext=(3.2, y[iopus] + 0.36), fontsize=7.4, color="#1C5D46",
             fontweight="bold",
             arrowprops=dict(arrowstyle="->", color="#1C5D46", lw=1.0))
+ax.annotate("priciest sticker on the sheet ($50),\nstill near-cheapest to RUN",
+            xy=(true_cost["Claude Mythos 5"], y[imyth]),
+            xytext=(3.4, y[imyth] + 0.30), fontsize=7.4, color="#8a1f6a",
+            fontweight="bold",
+            arrowprops=dict(arrowstyle="->", color="#8a1f6a", lw=1.0))
 ax.annotate("cheapest sticker, most expensive to RUN",
             xy=(true_cost["Muse Spark 1.1"], 0.28),
             xytext=(2.5, 0.62), fontsize=7.4, color="#8F3421",
@@ -159,7 +170,8 @@ style_ax(ax)
 title_block(fig,
             "The priciest tier runs cheapest; the cheapest sticker runs dearest",
             "Cost per completed agentic task at a fixed quality bar, $17 remediation per failed attempt, illustrative "
-            "per-model reliabilities. Sticker prices are published; the reliability spread is our assumption.")
+            "per-model reliabilities. Mythos 5, the $50 flagship, runs near-cheapest; Muse Spark, the $4.25 floor, "
+            "runs dearest. Sticker prices published; reliability spread our assumption.")
 save(fig, "pw_true_cost.png")
 
 # ------------------------------------------------ 0b. the pricing ladder
@@ -233,6 +245,8 @@ ax.annotate("break-even: Muse Spark\nmatches Opus at p = 87.6%",
 # Muse curves sit within 5% of each other, labeled jointly
 ends = {name: loaded(attempt_cost(pin, pout), 0.99)
         for name, pin, pout, _ in MODELS}
+ax.annotate("Mythos 5", xy=(99.3, ends["Claude Mythos 5"] * 1.04), fontsize=7.4,
+            color="#e34948", fontweight="bold", annotation_clip=False)
 ax.annotate("Sol", xy=(99.3, ends["GPT-5.6 Sol"] * 1.06), fontsize=7.4,
             color="#1baf7a", fontweight="bold", annotation_clip=False)
 ax.annotate("Opus 4.8", xy=(99.3, ends["Claude Opus 4.8"] * 0.82),
@@ -295,21 +309,26 @@ save(fig, "pw_sensitivity.png")
 # ------------------------------------------- 2. margin vs output price
 fig, ax = plt.subplots(figsize=(7.2, 3.5))
 fig.subplots_adjust(top=0.80, left=0.09, right=0.97, bottom=0.14)
-price = np.linspace(3.5, 32, 400)
+price = np.geomspace(3.5, 56, 400)
 lo, mid, hi = 6.0, 7.0, 8.0
 ax.fill_between(price, (1 - hi / price) * 100, (1 - lo / price) * 100,
                 color="#2a78d6", alpha=0.13, linewidth=0, zorder=1)
 ax.plot(price, (1 - mid / price) * 100, color=GREY, linewidth=1.4, zorder=2)
 ax.axhline(0, color=INK, linewidth=1, zorder=2)
-ax.annotate("breakeven: output price = serving cost", xy=(15.5, 4),
+ax.set_xscale("log")
+ax.set_xlim(3.5, 60)
+ax.set_xticks([4, 6, 10, 25, 50])
+ax.set_xticklabels(["$4", "$6", "$10", "$25", "$50"])
+ax.xaxis.set_minor_formatter(plt.NullFormatter())
+ax.annotate("breakeven: output price = serving cost", xy=(9.5, 4),
             fontsize=7.2, color=GREY)
 ax.annotate("serving-cost band $6-8 per Mtok out\n(our estimate, T2)",
-            xy=(11.5, 62), fontsize=7.2, color=GREY)
+            xy=(3.7, 66), fontsize=7.2, color=GREY)
 # Luna and Grok share the $6 / -17% point: Luna drawn as an open ring
 # behind Grok's filled marker so both stay visible
-labels = {"GPT-5.6 Luna": (6.8, -7), "Grok 4.5": (6.8, -25),
-          "Muse Spark 1.1": (4.7, -57), "Claude Opus 4.8": (23.2, 58),
-          "GPT-5.6 Sol": (26.2, 84)}
+labels = {"GPT-5.6 Luna": (6.5, -7), "Grok 4.5": (6.5, -30),
+          "Muse Spark 1.1": (3.6, -58), "Claude Opus 4.8": (12.5, 60),
+          "GPT-5.6 Sol": (20, 82), "Claude Mythos 5": (30, 90)}
 for name, pin, pout, color in MODELS:
     m = (1 - mid / pout) * 100
     if name == "GPT-5.6 Luna":
@@ -327,9 +346,9 @@ ax.set_ylabel("implied gross margin (%)")
 ax.set_ylim(-95, 95)
 style_ax(ax)
 title_block(fig,
-            "Every output price below ~$8 is gross-margin negative at today's serving cost",
+            "A margin barbell: the floor is sold below cost, Mythos 5 earns ~86%",
             "Implied model-layer gross margin = 1 - serving cost / output list price, at the $7 midpoint of the "
-            "$6-8 serving band. Prices T1; serving cost our estimate, T2; markers at each model's output price.")
+            "$6-8 serving band, log price axis. Below ~$8 the margin is negative; Mythos 5 at $50 earns about 86%.")
 save(fig, "pw_margin_vs_price.png")
 
 # --------------------------------------- 3. layer economics, two panels
