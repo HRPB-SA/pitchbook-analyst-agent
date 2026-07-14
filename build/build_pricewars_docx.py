@@ -240,7 +240,7 @@ embed(LANDING_CHART,
 para("Frontier token prices collapsed in July, and the coverage has the story "
      "backwards. Buyers do not purchase tokens; they purchase completed tasks, "
      "and once you price the work rather than the tokens, the ranking inverts. "
-     "The most expensive model on the sheet becomes the cheapest to run, and "
+     "The near-priciest model on the sheet becomes the cheapest to run, and "
      "the models winning the price-cut headlines become the most expensive way "
      "to get an agentic job done. The best model for the money is Claude Opus "
      "4.8, and it is not close. This note shows why, and it argues that the "

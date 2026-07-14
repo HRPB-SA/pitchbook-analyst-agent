@@ -157,7 +157,7 @@ ax.annotate("cheapest sticker, most expensive to RUN",
             arrowprops=dict(arrowstyle="->", color="#8F3421", lw=1.0))
 style_ax(ax)
 title_block(fig,
-            "The cheapest model to run is the one with the highest sticker price",
+            "The priciest tier runs cheapest; the cheapest sticker runs dearest",
             "Cost per completed agentic task at a fixed quality bar, $17 remediation per failed attempt, illustrative "
             "per-model reliabilities. Sticker prices are published; the reliability spread is our assumption.")
 save(fig, "pw_true_cost.png")
