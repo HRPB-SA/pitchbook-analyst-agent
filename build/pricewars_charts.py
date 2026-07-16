@@ -374,7 +374,7 @@ fig, (axl, axr) = plt.subplots(1, 2, figsize=(7.2, 3.3),
 fig.subplots_adjust(top=0.78, left=0.07, right=0.985, bottom=0.12, wspace=0.28)
 
 labs = ["Anthropic", "OpenAI", "xAI (AI segment)"]
-arr = [47, 25, 3.2]
+arr = [47, 30, 2.0]
 op = [0.559, None, -6.36]
 x = np.arange(len(labs))
 w = 0.38
