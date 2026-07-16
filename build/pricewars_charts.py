@@ -131,7 +131,7 @@ print("arithmetic assertions pass")
 # far cheaper tokens would win. This is the one assumption the value call rests on.
 REL = {"Claude Opus 4.8": 0.90, "Claude Mythos 5": 0.92, "Gemini 3.1 Pro": 0.88,
        "GPT-5.6 Sol": 0.89, "Grok 4.5": 0.82, "GPT-5.6 Luna": 0.78,
-       "Muse Spark 1.1": 0.76}
+       "Muse Spark 1.1": 0.75}
 STICK = {"Claude Opus 4.8": 25, "Claude Mythos 5": 50, "Gemini 3.1 Pro": 12,
          "GPT-5.6 Sol": 30, "Grok 4.5": 6, "GPT-5.6 Luna": 6,
          "Muse Spark 1.1": 4.25}
