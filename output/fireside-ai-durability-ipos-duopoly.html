@@ -1,0 +1,1069 @@
+<title>Durability, IPOs and the Duopoly Myth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+/* ============ TOKENS ============ */
+:root{
+  color-scheme: light;
+  --page:#f3f3ee; --surface:#fbfbf8; --surface-2:#f2f2ec; --sunk:#ecece4;
+  --ink:#16170f; --ink-2:#54554c; --muted:#8b8c80;
+  --rule:#e0e0d6; --rule-2:#d0d0c4; --hair:rgba(20,23,15,.08);
+  --brand:#1f6b4f; --brand-2:#164d39; --brand-wash:#e6efe9;
+  --amber:#b7791f; --amber-wash:#f4ead2;
+  --pos:#1a7a3c; --neg:#c0392f;
+  /* validated dataviz categorical (light) */
+  --s1:#2a78d6; --s2:#008300; --s3:#e87ba4; --s4:#eda100;
+  --s5:#1baf7a; --s6:#eb6834; --s7:#4a3aa7; --s8:#e34948;
+  --grid:#e1e0d9; --axis:#c3c2b7;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){
+  color-scheme:dark;
+  --page:#0e0f0b; --surface:#17180f; --surface-2:#1c1d13; --sunk:#121309;
+  --ink:#f6f6ee; --ink-2:#bcbcae; --muted:#8b8c80;
+  --rule:#2a2b20; --rule-2:#34352a; --hair:rgba(246,246,238,.10);
+  --brand:#4bb488; --brand-2:#6fca9f; --brand-wash:#12251d;
+  --amber:#e0a94b; --amber-wash:#2a2113;
+  --pos:#43c46e; --neg:#e8695d;
+  --s1:#3987e5; --s2:#3aa53a; --s3:#d55181; --s4:#c98500;
+  --s5:#199e70; --s6:#d95926; --s7:#9085e9; --s8:#e66767;
+  --grid:#2c2c2a; --axis:#3c3d31;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0e0f0b; --surface:#17180f; --surface-2:#1c1d13; --sunk:#121309;
+  --ink:#f6f6ee; --ink-2:#bcbcae; --muted:#8b8c80;
+  --rule:#2a2b20; --rule-2:#34352a; --hair:rgba(246,246,238,.10);
+  --brand:#4bb488; --brand-2:#6fca9f; --brand-wash:#12251d;
+  --amber:#e0a94b; --amber-wash:#2a2113;
+  --pos:#43c46e; --neg:#e8695d;
+  --s1:#3987e5; --s2:#3aa53a; --s3:#d55181; --s4:#c98500;
+  --s5:#199e70; --s6:#d95926; --s7:#9085e9; --s8:#e66767;
+  --grid:#2c2c2a; --axis:#3c3d31;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page);color:var(--ink);
+  font-family:var(--sans);line-height:1.6;
+  font-feature-settings:"kern";text-rendering:optimizeLegibility}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ============ TYPE ============ */
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.02em;line-height:1.05;
+  text-wrap:balance}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--brand);font-weight:600}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted)}
+p{margin:0 0 14px}
+a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--hair)}
+.lede{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:64ch}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ============ HEADER ============ */
+header.top{border-bottom:1px solid var(--rule);background:var(--surface);
+  position:sticky;top:0;z-index:20;backdrop-filter:saturate(1.1)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;
+  height:52px;gap:16px}
+.lockup{display:flex;align-items:center;gap:10px;font-family:var(--mono);
+  font-size:12px;letter-spacing:.04em;color:var(--ink)}
+.lockup b{font-weight:700}
+.lockup .x{color:var(--muted)}
+.live{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.live .dot{width:7px;height:7px;border-radius:50%;background:var(--neg);
+  box-shadow:0 0 0 0 var(--neg);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(192,57,47,.5)}70%{box-shadow:0 0 0 7px rgba(192,57,47,0)}100%{box-shadow:0 0 0 0 rgba(192,57,47,0)}}
+.themebtn{font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;background:none;border:1px solid var(--rule-2);
+  color:var(--ink-2);border-radius:6px;padding:5px 9px;cursor:pointer}
+.themebtn:hover{border-color:var(--brand);color:var(--brand)}
+nav.rundown{border-bottom:1px solid var(--rule);background:var(--surface-2)}
+nav.rundown .wrap{display:flex;gap:0;flex-wrap:wrap}
+nav.rundown a{border-bottom:none;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.04em;color:var(--ink-2);padding:11px 16px 11px 0;margin-right:22px;
+  display:flex;gap:8px;align-items:baseline}
+nav.rundown a:hover{color:var(--brand)}
+nav.rundown a .n{color:var(--brand);font-weight:700}
+nav.rundown a.skip{color:var(--muted);opacity:.55}
+
+/* ============ HERO ============ */
+.hero{padding:60px 0 40px;border-bottom:1px solid var(--rule)}
+.hero h1{font-size:clamp(34px,6vw,62px)}
+.hero .lede{margin-top:20px;font-size:clamp(17px,2.2vw,21px)}
+.stamp{font-family:var(--mono);font-size:11px;color:var(--muted);
+  letter-spacing:.04em;margin-top:26px;display:flex;gap:18px;flex-wrap:wrap}
+.stamp span{white-space:nowrap}
+
+/* ============ SECTION ============ */
+section.seg{padding:56px 0;border-bottom:1px solid var(--rule)}
+.seghead{display:flex;gap:20px;align-items:flex-start;margin-bottom:8px}
+.segno{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--brand);
+  border:1px solid var(--brand);border-radius:6px;padding:4px 9px;white-space:nowrap;
+  margin-top:6px}
+.seghead h2{font-size:clamp(26px,4vw,40px)}
+.seghead .sub{color:var(--ink-2);margin-top:10px;max-width:66ch;font-size:16.5px}
+
+/* ============ KPI ROW ============ */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));
+  gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;
+  overflow:hidden;margin:26px 0}
+.kpi{background:var(--surface);padding:16px 16px 15px}
+.kpi .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);line-height:1.35}
+.kpi .v{font-size:29px;font-weight:800;letter-spacing:-.02em;margin-top:7px;
+  line-height:1}
+.kpi .v small{font-size:15px;font-weight:700;color:var(--ink-2);letter-spacing:0}
+.kpi .d{font-family:var(--mono);font-size:11px;margin-top:7px;color:var(--ink-2)}
+.kpi .d.pos{color:var(--pos)} .kpi .d.neg{color:var(--neg)}
+
+/* ============ FIGURE / CHART ============ */
+figure{margin:30px 0;background:var(--surface);border:1px solid var(--rule);
+  border-radius:14px;padding:20px 20px 16px}
+figure .fhead{display:flex;justify-content:space-between;gap:14px;
+  align-items:baseline;flex-wrap:wrap;margin-bottom:4px}
+figure h3{font-size:17px;font-weight:700;letter-spacing:-.01em}
+figure .fnum{font-family:var(--mono);font-size:11px;color:var(--brand);
+  letter-spacing:.1em}
+figure figcaption{color:var(--ink-2);font-size:14px;margin-top:2px;max-width:78ch}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--mono);
+  font-size:11.5px;color:var(--ink-2);margin:10px 0 2px}
+.legend .k{display:inline-flex;align-items:center;gap:6px}
+.legend .sw{width:11px;height:11px;border-radius:3px;flex:none}
+.legend .ln{width:15px;height:0;border-top:2.5px solid;border-radius:2px}
+.src{font-family:var(--mono);font-size:10.5px;color:var(--muted);
+  letter-spacing:.02em;margin-top:12px;padding-top:11px;border-top:1px solid var(--rule)}
+.chartbox{width:100%;overflow-x:auto}
+svg{display:block;max-width:100%;height:auto;font-family:var(--sans)}
+svg text{fill:var(--ink-2)}
+.ax{fill:var(--muted);font-size:11px;font-family:var(--mono)}
+.axt{font-family:var(--mono)}
+.vlab{fill:var(--ink);font-weight:700;font-size:12.5px;font-variant-numeric:tabular-nums}
+.blab{fill:var(--ink);font-size:12.5px;font-weight:600}
+.blab2{fill:var(--ink-2);font-size:11px;font-family:var(--mono)}
+
+/* tooltip */
+.tt{position:fixed;pointer-events:none;z-index:60;background:var(--ink);
+  color:var(--page);font-family:var(--mono);font-size:11.5px;line-height:1.45;
+  padding:8px 10px;border-radius:8px;opacity:0;transform:translateY(4px);
+  transition:opacity .1s;max-width:260px;box-shadow:0 6px 24px rgba(0,0,0,.28)}
+.tt b{color:#fff}
+:root[data-theme="dark"] .tt,:root:where(:not([data-theme="light"])) .tt{
+  background:#000}
+.hit{cursor:default}
+
+/* ============ PROSE BLOCKS ============ */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:8px}
+.cols h4{font-size:15px;font-weight:800;margin:0 0 6px;letter-spacing:-.01em}
+.cols p{font-size:15px;color:var(--ink-2)}
+.pull{border-left:3px solid var(--brand);padding:4px 0 4px 18px;margin:22px 0;
+  font-size:19px;line-height:1.45;font-weight:600;color:var(--ink);max-width:60ch;
+  letter-spacing:-.01em}
+.pull cite{display:block;font-family:var(--mono);font-size:11px;font-weight:400;
+  font-style:normal;color:var(--muted);letter-spacing:.06em;margin-top:9px;
+  text-transform:uppercase}
+.flag{background:var(--amber-wash);border:1px solid var(--amber);border-radius:10px;
+  padding:13px 15px;margin:20px 0;font-size:14px;color:var(--ink)}
+.flag b{color:var(--amber)}
+.flag .ft{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--amber);display:block;margin-bottom:4px}
+
+/* last-mile diagram */
+.mile{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.mile .m{border:1px solid var(--rule);border-radius:12px;padding:16px 17px;
+  background:var(--surface)}
+.mile .m.short{border-top:3px solid var(--s8)}
+.mile .m.long{border-top:3px solid var(--s2)}
+.mile .m .t{font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted)}
+.mile .m .h{font-size:17px;font-weight:800;margin:5px 0 8px}
+.mile .m .h.short{color:var(--s8)} .mile .m .h.long{color:var(--pos)}
+.mile .m p{font-size:13.5px;color:var(--ink-2);margin:0 0 10px}
+.mile .m ul{margin:0;padding-left:16px;font-size:13px;color:var(--ink-2)}
+.mile .m li{margin:3px 0}
+
+/* tables */
+.tbl{width:100%;overflow-x:auto;margin:22px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule)}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);font-weight:600;
+  border-bottom:1px solid var(--rule-2)}
+td.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono)}
+tr:hover td{background:var(--surface-2)}
+.tag{font-family:var(--mono);font-size:10px;padding:1px 6px;border-radius:5px;
+  letter-spacing:.04em;vertical-align:middle}
+.tag.v{background:var(--brand-wash);color:var(--brand)}
+.tag.r{background:var(--sunk);color:var(--muted)}
+.chip{font-family:var(--mono);font-size:11px;padding:3px 9px;border-radius:20px;
+  border:1px solid var(--rule-2);color:var(--ink-2);display:inline-block;margin:3px 4px 3px 0}
+.chip b{color:var(--brand)}
+
+/* matrix */
+.matrix{width:100%;overflow-x:auto}
+.mx{border-collapse:collapse;font-family:var(--mono);font-size:11.5px;min-width:600px}
+.mx th{writing-mode:vertical-rl;transform:rotate(180deg);text-align:left;
+  padding:8px 3px;font-size:10.5px;white-space:nowrap;border:none;color:var(--ink-2);
+  letter-spacing:.02em}
+.mx td:first-child,.mx th:first-child{writing-mode:horizontal-tb;transform:none;
+  text-align:left;font-weight:700;color:var(--ink);padding-right:12px;white-space:nowrap}
+.mx td{text-align:center;padding:7px 3px;border:1px solid var(--rule)}
+.mx .d1{color:var(--brand);font-weight:800}
+.mx .d2{color:var(--amber);font-weight:800}
+
+/* footer */
+footer{padding:44px 0 70px;color:var(--ink-2)}
+footer h3{font-size:15px;margin-bottom:12px;color:var(--ink)}
+footer .grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+footer p,footer li{font-size:12.5px;line-height:1.6}
+footer ul{margin:0;padding-left:16px}
+.method{font-size:12px;color:var(--muted);font-family:var(--mono);line-height:1.7}
+
+@media(max-width:720px){
+  .cols{grid-template-columns:1fr;gap:20px}
+  .mile{grid-template-columns:1fr}
+  footer .grid{grid-template-columns:1fr}
+  nav.rundown a{margin-right:14px}
+  .hero{padding:40px 0 30px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:3px}
+</style>
+
+<header class="top"><div class="wrap">
+  <div class="lockup"><b>PitchBook</b><span class="x">&#215;</span><b>Madrona</b></div>
+  <div class="live"><span class="dot"></span>Live &#183; Fireside</div>
+  <button class="themebtn" id="tg" aria-label="Toggle theme">Theme</button>
+</div></header>
+
+<nav class="rundown"><div class="wrap">
+  <a href="#s1"><span class="n">01</span> Durability</a>
+  <a href="#s3"><span class="n">03</span> AI IPOs</a>
+  <a href="#s4"><span class="n">04</span> The Duopoly</a>
+  <a class="skip" href="#method">Method &amp; sources</a>
+</div></nav>
+
+<div class="wrap">
+
+<div class="hero">
+  <div class="eyebrow">Live podcast recording &#183; Data brief</div>
+  <h1>Durability, IPOs, and the Duopoly Myth</h1>
+  <p class="lede">Three questions the AI market keeps asking, answered with the
+  data underneath them: what actually makes an AI startup defensible, why the
+  biggest companies are staying private, and whether "two winners per category"
+  is a real pattern or a story we tell because funding rounds are easy to count.</p>
+  <div class="stamp">
+    <span>Prepared July 15, 2026</span>
+    <span>Segments 1 &#183; 3 &#183; 4</span>
+    <span>Every figure sourced to PitchBook Premium or named press</span>
+  </div>
+</div>
+
+<!-- ================= SEGMENT 1 ================= -->
+<section class="seg" id="s1">
+  <div class="seghead">
+    <div class="segno">SEG 01</div>
+    <div>
+      <div class="eyebrow">What does the data show on durability?</div>
+      <h2>Defensibility is measurable, and the tool already has a memory</h2>
+      <p class="sub">The central question is whether you can build a defensible AI
+      startup at this pace of innovation. Two data assets speak to it directly:
+      PitchBook's VC Exit Predictor, and the five years of IA40 lists it feeds.
+      The headline finding resolves a real debate.</p>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="l">Exit Predictor: does it keep history?</div>
+      <div class="v" style="color:var(--pos)">Yes</div>
+      <div class="d">Per-company time series on every scored profile</div></div>
+    <div class="kpi"><div class="l">Success vs no-exit accuracy</div>
+      <div class="v">71<small>%</small></div>
+      <div class="d">Out-of-sample</div></div>
+    <div class="kpi"><div class="l">M&amp;A vs IPO accuracy</div>
+      <div class="v">94<small>%</small></div>
+      <div class="d">Given a successful exit</div></div>
+    <div class="kpi"><div class="l">IA40 turnover per year</div>
+      <div class="v">~50<small>%</small></div>
+      <div class="d">27 first-time winners in 2025</div></div>
+    <div class="kpi"><div class="l">Names on all five IA40 lists</div>
+      <div class="v">1</div>
+      <div class="d">Databricks, only</div></div>
+  </div>
+
+  <p>The panel's opening question, "does the exit predictor have historical data
+  or only a real-time score?", has a clean answer: <b>it keeps history.</b> Every
+  VC-backed company PitchBook scores carries a Historical Predictions chart:
+  success, IPO, and M&amp;A probability lines tracked over time, with financing
+  rounds overlaid and analyst notes explaining the swings. So the compelling
+  angle is on the table. You can ask, for a specific company or a screened
+  cohort, whether a defensibility score has climbed or decayed as the model got
+  cheaper to copy. The one caveat worth stating plainly: the productized
+  time series lives at the company level; a vertical-wide "have vertical-AI
+  scores improved?" trend is a cohort pull, not a built-in chart.</p>
+
+  <div class="pull">The IA40's churn is itself the durability signal. Across
+  five annual lists, only Databricks has survived every cut. Application-layer
+  names rotate out; the infrastructure layer compounds.
+  <cite>Madrona x PitchBook IA40, 2021 to 2025</cite></div>
+
+  <figure id="fig1">
+    <div class="fhead"><h3>IA40 winners: staying power is rare</h3>
+      <span class="fnum">FIG 1</span></div>
+    <figcaption>2025 was the fifth annual list. Roughly half the cohort is
+    replaced every year. Of the four names that made all four lists through 2024,
+    only Databricks carried into 2025, the sole five-time winner.</figcaption>
+    <div class="legend">
+      <span class="k"><span class="sw" style="background:var(--s1)"></span>First-time winner</span>
+      <span class="k"><span class="sw" style="background:var(--s4)"></span>Returning winner</span>
+    </div>
+    <div class="chartbox" id="c_ia40"></div>
+    <div class="src">Source: Madrona / PitchBook IA40 (ia40.com), 2025 edition,
+    BusinessWire Aug 28 2025. Methodology uses PitchBook's VC Exit Predictor
+    Opportunity Score as a scoring input.</div>
+  </figure>
+
+  <figure id="fig2">
+    <div class="fhead"><h3>The last mile, priced in dollars: vertical AI is many
+      small bets, horizontal AI is a few enormous ones</h3>
+      <span class="fnum">FIG 2</span></div>
+    <figcaption>Q1 2025 set a record for AI/ML venture at $73.6B across 1,603
+    deals. Vertical applications were ~60% of the deals but under a third of the
+    capital. A vertical model costs roughly $3M to $10M to build; a horizontal
+    LLM costs hundreds of millions. Low barriers cut both ways, they invite
+    wrappers and they let real vertical players start cheap.</figcaption>
+    <div class="legend">
+      <span class="k"><span class="sw" style="background:var(--s1)"></span>Horizontal platforms</span>
+      <span class="k"><span class="sw" style="background:var(--s5)"></span>Vertical applications</span>
+      <span class="k"><span class="sw" style="background:var(--sunk);border:1px solid var(--rule-2)"></span>Other</span>
+    </div>
+    <div class="chartbox" id="c_split"></div>
+    <div class="src">Source: PitchBook "Q1 2025 AI &amp; ML VC Trends" (Jul 9
+    2025). Shares of $73.6B capital and 1,603 deals.</div>
+  </figure>
+
+  <h3 style="font-size:19px;margin:34px 0 4px">Why some verticals defend and
+  others dissolve</h3>
+  <p class="lede" style="font-size:16px;margin-bottom:6px">The framing that
+  anchors this segment is the "long and short last mile" of vertical AI. Note the
+  attribution carefully.</p>
+
+  <div class="flag"><span class="ft">Attribution check</span>
+  The "long and short last miles" framework is authored by <b>Nihar Bobba of
+  Better Tomorrow Ventures</b> ("Will Vertical AI Survive?", Feb 2026), not by
+  Sabrina Wu or Madrona. Madrona's own durability thesis is "Winning the Wedge"
+  and "Own the Data Loop." Worth citing correctly on stage.</div>
+
+  <div class="mile">
+    <div class="m short">
+      <div class="t">Absorbed by the frontier</div>
+      <div class="h short">Short last mile</div>
+      <p>Little between the model's intelligence and the delivered outcome.
+      Frontier labs swallow it as a feature.</p>
+      <ul><li>Marketing copy, basic drafting</li><li>Image generation</li>
+      <li>Coding assistants</li><li>First-pass legal drafts</li></ul>
+    </div>
+    <div class="m long">
+      <div class="t">Structurally defensible</div>
+      <div class="h long">Long last mile</div>
+      <p>Regulation, liability, and real-world coordination sit between the model
+      and the outcome. Owning that converts cost-center pricing into insurance
+      pricing: customers pay for certainty.</p>
+      <ul><li>Tax compliance with filing</li><li>Audit-ready accounting</li>
+      <li>Licensed healthcare under HIPAA / FDA</li><li>Cross-border regulatory work</li></ul>
+    </div>
+  </div>
+
+  <p>PitchBook's own research lands in the same place from the data side. Its
+  Q1 2026 note "SaaS Is Dead, Long Live SaS" calls the SaaS-pocalypse a "false
+  prophecy" and reframes the winners as Service-as-Software: pricing shifts from
+  roughly <b>$1,200 per seat per year to about $10,000 per automated workflow</b>,
+  an ~8x unit uplift as the software TAM merges with the labor TAM. The recurring
+  guidance across notes is blunt: <b>avoid funding UI wrappers, back vertical
+  agents with proprietary data moats,</b> and treat 60% gross margin as the
+  AI-era durability line. Early-stage SaaS still posts the single highest expected
+  successful-exit rate of any vertical, 72.1%, top-ranked for eight years running,
+  while AI early-stage deal value grew 41.2% over the trailing year against a
+  17.5% cross-vertical average. Durability is not dead; it moved up the stack from
+  the model to the workflow it is embedded in.</p>
+</section>
+
+<!-- ================= SEGMENT 3 ================= -->
+<section class="seg" id="s3">
+  <div class="seghead">
+    <div class="segno">SEG 03</div>
+    <div>
+      <div class="eyebrow">State of AI IPOs</div>
+      <h2>The drought is a mirage. The value is real, it is just private</h2>
+      <p class="sub">There is no shortage of exit-scale companies. There is a
+      backlog of them sitting in the private market because private capital is
+      cheap and public markets are messy. The scale has grown so distorted that
+      one listing now dwarfs a decade of the asset class.</p>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="l">Active US unicorns</div>
+      <div class="v">945</div><div class="d">Record, Q2 2026</div></div>
+    <div class="kpi"><div class="l">Aggregate unicorn value</div>
+      <div class="v">$5.3<small>T</small></div>
+      <div class="d pos">+9.4% vs year-end 2025</div></div>
+    <div class="kpi"><div class="l">Held by SpaceX, OpenAI, Anthropic</div>
+      <div class="v">&gt;25<small>%</small></div>
+      <div class="d">Three names, one quarter of the herd</div></div>
+    <div class="kpi"><div class="l">2025 unicorn IPOs</div>
+      <div class="v">17</div>
+      <div class="d neg">14 priced below their private mark</div></div>
+    <div class="kpi"><div class="l">LP cash out &gt; cash back</div>
+      <div class="v">4<small> yrs</small></div>
+      <div class="d">Distributions have trailed contributions</div></div>
+  </div>
+
+  <figure id="fig3">
+    <div class="fhead"><h3>The scale distortion: one listing versus a decade of
+      the asset class</h3><span class="fnum">FIG 3</span></div>
+    <figcaption>SpaceX priced its June 2026 IPO at a $1.78T valuation and closed
+    its first day near a $2.1T market cap. That single number exceeds the combined
+    value of every US venture-backed public listing since 2016. Against a normal
+    US IPO year, it is off the chart. This is why "IPO drought" is the wrong
+    frame: the pipe is not empty, it is holding a few objects too large to move.</figcaption>
+    <div class="chartbox" id="c_spacex"></div>
+    <div class="src">Source: PitchBook Q2 2026 Venture Monitor and 2026 US VC
+    Outlook Midyear Update; CNBC Jun 12 2026 (SpaceX first-day cap). The looser
+    "half of every tech IPO since the internet" claim is not sourceable; this is
+    the verifiable version.</div>
+  </figure>
+
+  <div class="cols">
+    <div>
+      <h4>Databricks: raising a mega-round at $134B, on purpose</h4>
+      <p>The reason a company this large keeps raising privately is not weakness,
+      it is arithmetic. Private capital has been cheap and abundant, and tender
+      and secondary markets provide employee liquidity without the exposure of a
+      public listing. CEO Ali Ghodsi has called 2026 "a terrible year to go
+      public." The valuation staircase below is the record of a company that never
+      needed the exit.</p>
+    </div>
+    <div>
+      <h4>Anthropic: timing into a moving target</h4>
+      <p>Anthropic re-rated from $380B to $965B in three months and filed
+      confidentially in June 2026 for an expected October listing. The risk is
+      not demand, it is the revenue narrative: an enterprise shift away from
+      "token maxing" toward efficiency, plus export-control uncertainty on the
+      Alphabet-chip supply it just raised $34.5B of debt to buy. Revenue is still
+      accelerating; the question is whether it prints one more clean quarter first.</p>
+    </div>
+  </div>
+
+  <figure id="fig4">
+    <div class="fhead"><h3>Databricks: thirteen years, a $47M to $134B climb,
+      still private</h3><span class="fnum">FIG 4</span></div>
+    <figcaption>Post-money valuation at each round, log scale. There is no
+    "Series I in 2026", that round was 2023 at $43.2B; the recent marks are
+    Series K ($100B, Sep 2025) and Series L ($134B, Feb 2026). A ~$170B round is
+    rumored but unclosed and is not treated as a mark here.</figcaption>
+    <div class="chartbox" id="c_dbx"></div>
+    <div class="src">Source: PitchBook Premium financing records (entity
+    59199-40); round announcements via company newsroom and CNBC. Total raised
+    ~$29.5B; run-rate ~$6.9B TTM.</div>
+  </figure>
+
+  <figure id="fig5">
+    <div class="fhead"><h3>Anthropic: revenue run-rate, the number the IPO is
+      timed around</h3><span class="fnum">FIG 5</span></div>
+    <figcaption>Annualized revenue run-rate, log scale. From ~$87M in Jan 2024 to
+    ~$47B by May 2026, overtaking OpenAI on ARR in April 2026. The "token maxing"
+    pullback is a forward risk to the slope, not yet a dent in it.</figcaption>
+    <div class="chartbox" id="c_anth"></div>
+    <div class="src">Source: PitchBook Premium; TechCrunch / VentureBeat /
+    CNBC reporting, Jan 2024 to May 2026. Run-rate figures are annualized.</div>
+  </figure>
+
+  <div class="flag"><span class="ft">Read the fine print on 2026's IPOs</span>
+  Cerebras listed in May 2026 at $40.6B and reported ~$248M of TTM net income,
+  which reads as "profitable AI chip IPO". The asterisk: that GAAP profit is
+  largely a ~$363M non-cash warrant gain tied to its OpenAI deal; on a non-GAAP
+  operating basis it lost money, and the stock trades below its first-day close,
+  as do the other 2026 listings (EquipmentShare, BitGo). The exit window is open,
+  but it is pricing for scrutiny, not euphoria.</div>
+</section>
+
+<!-- ================= SEGMENT 4 ================= -->
+<section class="seg" id="s4">
+  <div class="seghead">
+    <div class="segno">SEG 04</div>
+    <div>
+      <div class="eyebrow">The idea: two winners in every category</div>
+      <h2>It is not a duopoly. It is winner-take-most, miscounted</h2>
+      <p class="sub">The tempting pattern is two names per AI vertical:
+      Harvey and Legora, Anthropic and OpenAI, Exa and Parallel. The data says
+      something sharper and more useful. Genuine two-way splits are the exception.
+      The rule is one company many times larger than whatever sits in second,
+      and often the real business leader never appears in funding data at all.</p>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="l">Verticals with two priced marks</div>
+      <div class="v">16</div><div class="d">Mapped in this set</div></div>
+    <div class="kpi"><div class="l">Genuine near-parity duopolies</div>
+      <div class="v">2</div>
+      <div class="d">Formal math, foundation models (~1.1x)</div></div>
+    <div class="kpi"><div class="l">Gaps wider than 10x</div>
+      <div class="v">5</div>
+      <div class="d">Plus 3 where #2 has no venture mark</div></div>
+    <div class="kpi"><div class="l">Widest priced gap</div>
+      <div class="v">30<small>x</small></div>
+      <div class="d">Voice AI: ElevenLabs vs Cartesia</div></div>
+  </div>
+
+  <figure id="fig6">
+    <div class="fhead"><h3>The #1-to-#2 valuation ratio across 16 AI verticals</h3>
+      <span class="fnum">FIG 6</span></div>
+    <figcaption>Log scale. A true duopoly sits near 1x. Only formal math and
+    foundation models qualify. Most categories are lopsided, and six clear the 2x
+    line by a wide margin. The green pair at the base are the only real dead heats.</figcaption>
+    <div class="legend">
+      <span class="k"><span class="sw" style="background:var(--s2)"></span>Near-parity (&lt;1.5x)</span>
+      <span class="k"><span class="sw" style="background:var(--s1)"></span>Lopsided</span>
+      <span class="k"><span class="sw" style="background:var(--s6)"></span>Blowout (&gt;10x)</span>
+    </div>
+    <div class="chartbox" id="c_ratio"></div>
+    <div class="src">Source: PitchBook Premium latest priced post-money marks,
+    verified July 2026. Voice AI uses ElevenLabs' $11B priced mark; a rumored
+    $22B secondary would read as 61x. Second-place marks tagged reported are the
+    best available public figure.</div>
+  </figure>
+
+  <figure id="fig7">
+    <div class="fhead"><h3>The trap: the biggest round is not the biggest
+      business</h3><span class="fnum">FIG 7</span></div>
+    <figcaption>Three categories where a "who raised the most" lens names the
+    wrong leader. Valuation in blue, disclosed revenue in green. Surge out-earns
+    Scale with zero venture funding; Otter out-earns Granola on disclosed
+    revenue; Midjourney does ~$500M and has no venture valuation to plot at all.</figcaption>
+    <div class="legend">
+      <span class="k"><span class="sw" style="background:var(--s1)"></span>Post-money valuation ($B)</span>
+      <span class="k"><span class="sw" style="background:var(--s2)"></span>Disclosed revenue ($B, TTM)</span>
+    </div>
+    <div class="chartbox" id="c_fund"></div>
+    <div class="src">Source: PitchBook Premium. Scale AI rev ~$1B / $29B val;
+    Surge AI ~$1.4B rev, no institutional VC; Granola $1.5B val, revenue
+    undisclosed; Otter ~$0.1B disclosed rev, $94M val; Midjourney ~$0.5B rev,
+    no VC (not plotted).</div>
+  </figure>
+
+  <figure id="fig8">
+    <div class="fhead"><h3>Who manufactures the "2": the same funds sit on both
+      sides</h3><span class="fnum">FIG 8</span></div>
+    <figcaption>Where a category looks like a duopoly, the same crossover funds
+    often back both seats, funding a hedge rather than picking a winner. a16z is
+    the cleanest example, holding both #1 and #2 in legal and in health scribes.
+    Filled marks are the category #1; ringed marks are the #2.</figcaption>
+    <div class="matrix" id="c_matrix"></div>
+    <div class="src">Source: PitchBook Premium investor records. Sequoia is a
+    Harvey backer but is not in Legora; Kleiner is in Harvey and Harmonic but not
+    Cerebras. a16z's dual holdings in legal (Harvey + Legora) and health scribes
+    (Abridge + Ambience) are the strongest on-record instances.</div>
+  </figure>
+
+  <div class="pull">When you see a "2" in AI, check what it really is: a genuine
+  dead heat, a US champion beside a non-US sovereign-tech champion, a hedge two
+  crossover funds paid for, or a distant runner-up that only looks like a rival
+  because it raised a round.</div>
+
+  <div class="cols">
+    <div>
+      <h4>Geographic bifurcation, not competition</h4>
+      <p>Some "duopolies" are one champion per regulatory bloc. Defense AI splits
+      cleanly into Anduril (US) and Helsing (EU sovereign-tech). Legal AI has the
+      same shadow structure: Harvey is US-rooted, Legora is Stockholm-rooted and
+      pitches European firms. They are a 1 plus 1 serving different buyers, not a
+      head-to-head 2.</p>
+      <h4>Stagnation, not concentration</h4>
+      <p>AI companion apps are the counter-case: Character.ai has been frozen
+      since its founders left for Google in Aug 2024, Replika since 2017. The real
+      winners became features inside Grok and Meta AI rather than standalone
+      venture outcomes. Sometimes a category converges to zero investable names.</p>
+    </div>
+    <div>
+      <h4>The exits are already live, and they are the #1</h4>
+      <p>The set contains real liquidity, and it moves in one direction:
+      strategics pay up for the outright leader, not the struggling runner-up.</p>
+      <div class="tbl" style="margin-top:8px">
+      <table style="min-width:0">
+        <thead><tr><th>Exit</th><th class="num">Value</th><th>Type</th></tr></thead>
+        <tbody>
+        <tr><td>Cursor &#8594; SpaceX</td><td class="num">$60B</td><td>M&amp;A</td></tr>
+        <tr><td>Cerebras &#8594; Nasdaq</td><td class="num">$40.6B</td><td>IPO</td></tr>
+        <tr><td>Scale &#8594; Meta</td><td class="num">$29B*</td><td>Stake + CEO</td></tr>
+        <tr><td>Groq &#8594; Nvidia</td><td class="num">$20B</td><td>M&amp;A</td></tr>
+        <tr><td>Robin AI &#8594; Microsoft</td><td class="num">n/d</td><td>Acquihire</td></tr>
+        <tr><td>Neeva &#8594; Snowflake</td><td class="num">n/d</td><td>M&amp;A</td></tr>
+        </tbody>
+      </table></div>
+      <p class="method" style="margin-top:6px">*Meta took a ~$14.3B stake and
+      hired the CEO; an effective absorption, not a clean acquisition.</p>
+    </div>
+  </div>
+
+  <div class="flag" style="background:var(--brand-wash);border-color:var(--brand)">
+    <span class="ft" style="color:var(--brand)">The frontier breaks the frame too</span>
+    At the top of the market, "Anthropic vs OpenAI" reads as a clean 1.1x duopoly
+    ($965B vs $852B). But PitchBook's Frontier Five note counts five, not two, and
+    finds a valuation-quality paradox: on its AI Business Quality score, Databricks
+    tops the group at 8.7 and is the only member with positive free cash flow,
+    while OpenAI, the highest-profile name, scores lowest at 4.8. And xAI is not a
+    standalone third, it is $250B folded inside a ~$2.4T SpaceX. The two-name story
+    does not survive contact with the cap tables.
+  </div>
+</section>
+
+<footer id="method">
+  <h3>The through-line</h3>
+  <p style="max-width:70ch;font-size:14px;color:var(--ink-2)">Across all three
+  segments the same correction applies: <b>count the business, not the round.</b>
+  Durability is now measurable and has a history you can chart. The IPO drought is
+  a liquidity choice, not an absence of exit-scale companies. And the "duopoly" is
+  usually a winner-take-most market with a nominal second place that funding data
+  overstates. If a thesis rests on round size, it will name the wrong winners.</p>
+
+  <div class="grid" style="margin-top:26px">
+    <div>
+      <h3>How to read this brief</h3>
+      <ul>
+        <li>Private valuations are latest priced post-money marks from PitchBook
+        Premium, verified the week of July 13, 2026.</li>
+        <li>Rumored or unclosed rounds (Databricks ~$170B, ElevenLabs $22B,
+        Mercor $20B) are named as rumors and never used as marks.</li>
+        <li>Second-place marks labeled "reported" are the best available public
+        figure and may lag a live round.</li>
+        <li>Where the input brief and the source records disagreed, the source
+        record won. Ten such corrections are logged alongside this file.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Primary sources</h3>
+      <ul>
+        <li>PitchBook Help Center: VC Exit Predictor; Navigating the Historical
+        Predictions Chart</li>
+        <li>Madrona x PitchBook IA40 (2021 to 2025); ia40.com/methodology</li>
+        <li>PitchBook: "SaaS Is Dead, Long Live SaS" (Feb 2026); "Agentic AI
+        Part I" (Apr 2026); "Ranking the AI Giants: Frontier Five" (Mar 2026)</li>
+        <li>PitchBook Q2 2026 NVCA Venture Monitor; 2026 US VC Outlook Midyear
+        Update</li>
+        <li>PitchBook Premium financing and investor records; CNBC, TechCrunch,
+        Bloomberg, VentureBeat for round announcements</li>
+        <li>N. Bobba, "Will Vertical AI Survive?", Better Tomorrow Ventures
+        (Feb 2026)</li>
+      </ul>
+    </div>
+  </div>
+  <p class="method" style="margin-top:26px">PitchBook x Madrona live fireside data
+  brief. Figures verified against PitchBook Premium and named press; estimates and
+  rumors labeled throughout. Prepared July 15, 2026.</p>
+</footer>
+
+</div>
+
+<div class="tt" id="tt"></div>
+
+<script>
+(function(){
+"use strict";
+/* ---------- theme toggle ---------- */
+var root=document.documentElement, tg=document.getElementById('tg');
+function cur(){var t=root.getAttribute('data-theme');
+  if(t)return t;
+  return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+tg.addEventListener('click',function(){
+  root.setAttribute('data-theme', cur()==='dark'?'light':'dark');
+  setTimeout(drawAll,30);
+});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){
+  if(!root.getAttribute('data-theme'))drawAll();});
+
+/* ---------- helpers ---------- */
+var NS='http://www.w3.org/2000/svg';
+function C(v){return getComputedStyle(root).getPropertyValue(v).trim();}
+function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e;}
+function clear(id){var b=document.getElementById(id);if(b)b.innerHTML='';return b;}
+var tt=document.getElementById('tt');
+function showTT(evt,html){tt.innerHTML=html;tt.style.opacity='1';moveTT(evt);}
+function moveTT(evt){var x=evt.clientX,y=evt.clientY,w=tt.offsetWidth,h=tt.offsetHeight;
+  var nx=x+14,ny=y+14;if(nx+w>innerWidth-8)nx=x-w-14;if(ny+h>innerHeight-8)ny=y-h-14;
+  tt.style.left=nx+'px';tt.style.top=ny+'px';}
+function hideTT(){tt.style.opacity='0';}
+function bind(node,html){
+  node.classList.add('hit');
+  node.addEventListener('mousemove',function(e){showTT(e,html);});
+  node.addEventListener('mouseleave',hideTT);
+}
+function fmtB(v){ // v in $B
+  if(v>=1000)return '$'+(v/1000).toFixed(v>=1e4?0:2).replace(/\.00$/,'')+'T';
+  if(v>=1)return '$'+(v%1?v.toFixed(1):v)+'B';
+  return '$'+Math.round(v*1000)+'M';
+}
+
+/* ================= FIG 1: IA40 turnover ================= */
+function ia40(){
+  var box=clear('c_ia40');if(!box)return;
+  var data=[{y:'2025',first:27,ret:13}]; // detailed year
+  // show the five lists as survivorship: how many made all N lists
+  var surv=[{k:'On 1 list',v:'many'},{k:'On all 4 (2021-24)',v:4},{k:'On all 5',v:1}];
+  var W=Math.min(box.clientWidth||760,760),H=250,P={t:28,r:20,b:44,l:20};
+  var svg=el('svg',{viewBox:'0 0 '+W+' '+H,width:W,height:H,role:'img'});
+  // Left: 2025 composition as one stacked bar (40 winners)
+  var innerW=W-P.l-P.r;
+  var total=40, x0=P.l, barY=P.t+6, barH=54;
+  var scale=innerW/total;
+  var segs=[{lab:'First-time winners',v:27,c:C('--s1')},
+            {lab:'Returning winners',v:13,c:C('--s4')}];
+  var cx=x0;
+  segs.forEach(function(s){
+    var w=s.v*scale-2;
+    var r=el('rect',{x:cx,y:barY,width:Math.max(w,2),height:barH,rx:4,fill:s.c});
+    bind(r,'<b>'+s.v+'</b> '+s.lab+'<br>of 40 (2025 list)');
+    svg.appendChild(r);
+    var t=el('text',{x:cx+Math.max(w,2)/2,y:barY+barH/2+4,'text-anchor':'middle',
+      'class':'vlab'});t.setAttribute('fill','#fff');t.textContent=s.v;svg.appendChild(t);
+    cx+=s.v*scale;
+  });
+  var cap=el('text',{x:x0,y:barY-8,'class':'blab'});
+  cap.textContent='2025 IA40 cohort: 40 winners';svg.appendChild(cap);
+  var capr=el('text',{x:x0+innerW,y:barY-8,'text-anchor':'end','class':'blab2'});
+  capr.textContent='~50% replaced each year';svg.appendChild(capr);
+
+  // Below: survivorship steps
+  var sy=P.t+barH+52, items=[['Made all 4 lists, 2021 to 2024',4,C('--s5')],
+    ['Made all 5 lists, 2021 to 2025',1,C('--s2')]];
+  var maxv=4, sScale=(innerW*0.66)/maxv;
+  items.forEach(function(it,i){
+    var yy=sy+i*46;
+    var t=el('text',{x:x0,y:yy-8,'class':'blab2'});t.textContent=it[0];svg.appendChild(t);
+    var w=it[1]*sScale;
+    var names=it[1]===1?'Databricks':'Abnormal, Databricks, Hugging Face, Runway';
+    var r=el('rect',{x:x0,y:yy,width:Math.max(w,10),height:22,rx:4,fill:it[2]});
+    bind(r,'<b>'+it[1]+'</b> name'+(it[1]>1?'s':'')+'<br>'+it[0]+'<br>'+names);
+    svg.appendChild(r);
+    var v=el('text',{x:x0+Math.max(w,10)+8,y:yy+16,'class':'vlab'});
+    v.textContent=it[1]+(it[1]===1?' name (Databricks)':' names');
+    svg.appendChild(v);
+  });
+  box.appendChild(svg);
+}
+
+/* ================= FIG 2: capital vs deal split ================= */
+function split(){
+  var box=clear('c_split');if(!box)return;
+  var W=Math.min(box.clientWidth||760,760),H=210,P={t:34,r:20,b:20,l:120};
+  var svg=el('svg',{viewBox:'0 0 '+W+' '+H,width:W,height:H,role:'img'});
+  var innerW=W-P.l-P.r;
+  var rows=[
+    {lab:'Share of capital',note:'$73.6B',seg:[['Horizontal',70,C('--s1')],['Vertical',26,C('--s5')],['Other',4,C('--sunk')]]},
+    {lab:'Share of deals',note:'1,603 deals',seg:[['Horizontal',26.5,C('--s1')],['Vertical',63.8,C('--s5')],['Other',9.7,C('--sunk')]]}
+  ];
+  rows.forEach(function(r,i){
+    var y=P.t+i*72, bh=40, x=P.l;
+    var lab=el('text',{x:P.l-14,y:y+bh/2-2,'text-anchor':'end','class':'blab'});
+    lab.textContent=r.lab;svg.appendChild(lab);
+    var nt=el('text',{x:P.l-14,y:y+bh/2+14,'text-anchor':'end','class':'blab2'});
+    nt.textContent=r.note;svg.appendChild(nt);
+    r.seg.forEach(function(s){
+      var w=innerW*s[1]/100-2;
+      var rect=el('rect',{x:x,y:y,width:Math.max(w,2),height:bh,rx:4,fill:s[2]});
+      if(s[0]==='Other')rect.setAttribute('stroke',C('--rule-2'));
+      bind(rect,'<b>'+s[1]+'%</b> '+s[0]+'<br>'+r.lab.toLowerCase());
+      svg.appendChild(rect);
+      if(s[1]>12){var t=el('text',{x:x+Math.max(w,2)/2,y:y+bh/2+4,'text-anchor':'middle','class':'vlab'});
+        t.setAttribute('fill',s[0]==='Other'?C('--ink-2'):'#fff');
+        t.textContent=Math.round(s[1])+'%';svg.appendChild(t);}
+      x+=innerW*s[1]/100;
+    });
+  });
+  box.appendChild(svg);
+}
+
+/* ================= FIG 3: SpaceX distortion ================= */
+function spacex(){
+  var box=clear('c_spacex');if(!box)return;
+  var data=[
+    {lab:'SpaceX, first-day market cap',sub:'Jun 12 2026',v:2100,c:C('--s6')},
+    {lab:'All US VC-backed IPOs since 2016',sub:'combined',v:1500,c:C('--s1')},
+    {lab:'US IPO proceeds, full-year 2025',sub:'all sectors',v:45,c:C('--muted')}
+  ];
+  var W=Math.min(box.clientWidth||760,760),rowH=64,P={t:14,r:24,b:30,l:14};
+  var H=P.t+data.length*rowH+P.b;
+  var svg=el('svg',{viewBox:'0 0 '+W+' '+H,width:W,height:H,role:'img'});
+  var innerW=W-P.l-P.r, max=2100, sc=innerW/max;
+  // gridlines
+  [0,500,1000,1500,2000].forEach(function(g){
+    var x=P.l+g*sc;
+    svg.appendChild(el('line',{x1:x,y1:P.t,x2:x,y2:P.t+data.length*rowH,
+      stroke:C('--grid'),'stroke-width':1}));
+    var t=el('text',{x:x,y:P.t+data.length*rowH+18,'text-anchor':'middle','class':'ax'});
+    t.textContent='$'+(g/1000).toFixed(g%1000?1:0)+'T';svg.appendChild(t);
+  });
+  data.forEach(function(d,i){
+    var y=P.t+i*rowH+8, bh=26;
+    var lab=el('text',{x:P.l+2,y:y-4,'class':'blab'});lab.textContent=d.lab;svg.appendChild(lab);
+    var w=d.v*sc;
+    var r=el('rect',{x:P.l,y:y,width:Math.max(w,3),height:bh,rx:4,fill:d.c});
+    bind(r,'<b>'+fmtB(d.v)+'</b><br>'+d.lab+' ('+d.sub+')');
+    svg.appendChild(r);
+    var v=el('text',{x:P.l+Math.max(w,3)+(w>innerW-90?-8:8),y:y+bh/2+5,'class':'vlab'});
+    if(w>innerW-90){v.setAttribute('text-anchor','end');v.setAttribute('fill','#fff');}
+    v.textContent=fmtB(d.v);svg.appendChild(v);
+  });
+  box.appendChild(svg);
+}
+
+/* ================= log-line ladder (FIG 4 & 5) ================= */
+function logLine(id,series,opts){
+  var box=clear(id);if(!box)return;
+  opts=opts||{};
+  var W=Math.min(box.clientWidth||760,760),H=opts.h||300,P={t:24,r:78,b:44,l:46};
+  var svg=el('svg',{viewBox:'0 0 '+W+' '+H,width:W,height:H,role:'img'});
+  var innerW=W-P.l-P.r, innerH=H-P.t-P.b;
+  var vals=series.map(function(d){return d.v;});
+  var lo=opts.lo||Math.min.apply(null,vals), hi=opts.hi||Math.max.apply(null,vals);
+  var l0=Math.log10(lo), l1=Math.log10(hi);
+  function x(i){return P.l+innerW*i/(series.length-1);}
+  function y(v){return P.t+innerH*(1-(Math.log10(v)-l0)/(l1-l0));}
+  // y gridlines at decades
+  for(var e=Math.floor(l0);e<=Math.ceil(l1);e++){
+    var yy=y(Math.pow(10,e));if(yy<P.t-1||yy>P.t+innerH+1)continue;
+    svg.appendChild(el('line',{x1:P.l,y1:yy,x2:P.l+innerW,y2:yy,stroke:C('--grid'),'stroke-width':1}));
+    var lt=el('text',{x:P.l-8,y:yy+4,'text-anchor':'end','class':'ax'});
+    var val=Math.pow(10,e);
+    lt.textContent = val>=1000?'$'+(val/1000)+'T':(val>=1?'$'+val+'B':'$'+val*1000+'M');
+    svg.appendChild(lt);
+  }
+  // rumor extension (dashed) if present
+  var col=opts.color||C('--s1');
+  // main path
+  var dpath='';
+  series.forEach(function(d,i){dpath+=(i?'L':'M')+x(i)+' '+y(d.v);});
+  svg.appendChild(el('path',{d:dpath,fill:'none',stroke:col,'stroke-width':2.4,
+    'stroke-linejoin':'round','stroke-linecap':'round'}));
+  if(opts.rumor){
+    var last=series.length-1;
+    svg.appendChild(el('path',{d:'M'+x(last)+' '+y(series[last].v)+'L'+(x(last)+innerW*0.001+34)+' '+y(opts.rumor.v),
+      fill:'none',stroke:C('--muted'),'stroke-width':2,'stroke-dasharray':'4 4'}));
+  }
+  // markers + labels
+  series.forEach(function(d,i){
+    var cxp=x(i),cyp=y(d.v);
+    var ring=el('circle',{cx:cxp,cy:cyp,r:5.5,fill:col,stroke:C('--surface'),'stroke-width':2});
+    bind(ring,'<b>'+d.lab+'</b>: '+(d.v>=1000?'$'+(d.v/1000).toFixed(2)+'T':d.v>=1?'$'+d.v+'B':'$'+d.v*1000+'M')+
+      (d.date?'<br>'+d.date:''));
+    svg.appendChild(ring);
+    // x label
+    if(!opts.sparseX || i%opts.sparseX===0 || i===series.length-1){
+      var xl=el('text',{x:cxp,y:P.t+innerH+18,'text-anchor':'middle','class':'ax'});
+      xl.textContent=d.x;svg.appendChild(xl);
+    }
+    // value label on select points
+    if(d.show){
+      var vl=el('text',{x:cxp,y:cyp-11,'text-anchor':i===series.length-1?'end':'middle','class':'vlab'});
+      vl.textContent=d.v>=1000?'$'+(d.v/1000).toFixed(2)+'T':(d.v>=1?'$'+d.v+'B':'$'+Math.round(d.v*1000)+'M');
+      svg.appendChild(vl);
+    }
+  });
+  // end label
+  if(opts.endLabel){
+    var li=series.length-1;
+    var e2=el('text',{x:x(li)+8,y:y(series[li].v)+4,'class':'vlab'});
+    e2.textContent=opts.endLabel;svg.appendChild(e2);
+  }
+  if(opts.rumor){
+    var lastp=series.length-1;
+    var rt=el('text',{x:x(lastp)+40,y:y(opts.rumor.v)-6,'text-anchor':'end','class':'blab2'});
+    rt.setAttribute('fill',C('--muted'));rt.textContent=opts.rumor.lab;svg.appendChild(rt);
+  }
+  box.appendChild(svg);
+}
+
+function dbx(){
+  logLine('c_dbx',[
+    {x:"'13",lab:'Series A',v:0.047,date:'Sep 2013'},
+    {x:'',lab:'Series B',v:0.923,date:'Jun 2014'},
+    {x:"'16",lab:'3rd round',v:0.56,date:'Dec 2016'},
+    {x:'',lab:'Series D',v:0.985,date:'Sep 2018'},
+    {x:"'19",lab:'Series E',v:2.75,date:'Jan 2019'},
+    {x:'',lab:'Series F',v:6.2,date:'Oct 2019'},
+    {x:"'21",lab:'Series G',v:28,date:'Feb 2021'},
+    {x:'',lab:'Series H',v:38,date:'Aug 2021'},
+    {x:"'23",lab:'Series I',v:43.2,date:'Nov 2023',show:true},
+    {x:"'24",lab:'Series J',v:62,date:'Dec 2024'},
+    {x:"'25",lab:'Series K',v:100,date:'Sep 2025'},
+    {x:"'26",lab:'Series L',v:134,date:'Feb 2026',show:true}
+  ],{color:C('--s1'),lo:0.04,hi:200,h:310});
+}
+function anth(){
+  logLine('c_anth',[
+    {x:'Jan24',lab:'run-rate',v:0.087,date:'Jan 2024',show:true},
+    {x:'Dec24',lab:'run-rate',v:1,date:'Dec 2024'},
+    {x:"'25",lab:'run-rate',v:9,date:'End 2025'},
+    {x:'Feb26',lab:'run-rate',v:14,date:'Feb 2026'},
+    {x:'Apr26',lab:'run-rate',v:30,date:'Apr 2026'},
+    {x:'May26',lab:'run-rate',v:47,date:'May 2026',show:true}
+  ],{color:C('--s2'),lo:0.08,hi:60,h:280});
+}
+
+/* ================= FIG 6: ratio chart ================= */
+function ratio(){
+  var box=clear('c_ratio');if(!box)return;
+  var data=[
+    {v:'Formal math',a:'Axiom',b:'Harmonic',r:1.10},
+    {v:'Foundation models',a:'Anthropic',b:'OpenAI',r:1.13},
+    {v:'Legal AI',a:'Harvey',b:'Legora',r:1.96},
+    {v:'AI inference chips',a:'Cerebras',b:'Groq',r:2.03},
+    {v:'AI coding',a:'Cursor',b:'Cognition',r:2.31},
+    {v:'Defense AI',a:'Anduril',b:'Helsing',r:3.39},
+    {v:'Customer support',a:'Sierra',b:'Decagon',r:3.51},
+    {v:'Healthcare scribes',a:'Abridge',b:'Ambience',r:4.24},
+    {v:'AI recruiting',a:'Mercor',b:'Eightfold',r:4.76},
+    {v:'Humanoid robotics',a:'Figure',b:'Physical Intel.',r:7.22},
+    {v:'AI web search',a:'Perplexity',b:'Exa',r:9.09},
+    {v:'Enterprise search',a:'Glean',b:'Hebbia',r:10.29},
+    {v:'Video generation',a:'Runway',b:'Pika',r:11.28},
+    {v:'Meeting notetakers',a:'Granola',b:'Otter',r:15.96},
+    {v:'Sales / GTM',a:'Clay',b:'Artisan',r:20.0},
+    {v:'Voice AI',a:'ElevenLabs',b:'Cartesia',r:30.4}
+  ];
+  var W=Math.min(box.clientWidth||760,760),rowH=25,P={t:22,r:64,b:34,l:150};
+  var H=P.t+data.length*rowH+P.b;
+  var svg=el('svg',{viewBox:'0 0 '+W+' '+H,width:W,height:H,role:'img'});
+  var innerW=W-P.l-P.r, innerH=data.length*rowH;
+  var l0=0, l1=Math.log10(40); // log axis 1x..40x
+  function xr(r){return P.l+innerW*(Math.log10(r)-l0)/(l1-l0);}
+  // gridlines at 1,2,5,10,20,40
+  [1,2,5,10,20,40].forEach(function(g){
+    var x=xr(g);
+    var em=(g===2||g===10);
+    svg.appendChild(el('line',{x1:x,y1:P.t-4,x2:x,y2:P.t+innerH,
+      stroke:em?C('--rule-2'):C('--grid'),'stroke-width':1,
+      'stroke-dasharray':em?'3 3':'0'}));
+    var t=el('text',{x:x,y:P.t+innerH+18,'text-anchor':'middle','class':'ax'});
+    t.textContent=g+'x';svg.appendChild(t);
+  });
+  // annotation for 2x/10x
+  var a2=el('text',{x:xr(2),y:P.t-9,'text-anchor':'middle','class':'blab2'});
+  a2.setAttribute('fill',C('--muted'));a2.textContent='2x';svg.appendChild(a2);
+  var a10=el('text',{x:xr(10),y:P.t-9,'text-anchor':'middle','class':'blab2'});
+  a10.setAttribute('fill',C('--muted'));a10.textContent='10x line';svg.appendChild(a10);
+
+  data.forEach(function(d,i){
+    var y=P.t+i*rowH+rowH/2, bh=13;
+    var col=d.r<1.5?C('--s2'):(d.r>10?C('--s6'):C('--s1'));
+    var lab=el('text',{x:P.l-12,y:y+4,'text-anchor':'end','class':'blab'});
+    lab.setAttribute('font-size','11.5');lab.textContent=d.v;svg.appendChild(lab);
+    var x1=xr(1), x2=xr(d.r);
+    var r=el('rect',{x:x1,y:y-bh/2,width:Math.max(x2-x1,2),height:bh,rx:4,fill:col});
+    bind(r,'<b>'+d.v+'</b><br>'+d.a+' is <b>'+d.r.toFixed(d.r<10?2:1)+'x</b> '+d.b);
+    svg.appendChild(r);
+    var vl=el('text',{x:x2+7,y:y+4,'class':'vlab'});
+    vl.setAttribute('font-size','11.5');
+    vl.textContent=d.r.toFixed(d.r<10?1:0)+'x';svg.appendChild(vl);
+  });
+  box.appendChild(svg);
+}
+
+/* ================= FIG 7: funding vs revenue ================= */
+function fund(){
+  var box=clear('c_fund');if(!box)return;
+  var groups=[
+    {g:'Data labeling',items:[
+      {n:'Scale AI',val:29,rev:1.0},{n:'Surge AI',val:0,rev:1.4,novc:true}]},
+    {g:'Meeting notes',items:[
+      {n:'Granola',val:1.5,rev:0,norev:true},{n:'Otter.ai',val:0.094,rev:0.1}]}
+  ];
+  var W=Math.min(box.clientWidth||760,760),P={t:26,r:20,b:30,l:96};
+  var groupH=118, H=P.t+groups.length*groupH+P.b;
+  var svg=el('svg',{viewBox:'0 0 '+W+' '+H,width:W,height:H,role:'img'});
+  var innerW=W-P.l-P.r, max=29;
+  // use sqrt to keep small bars visible; leave room at the end for value labels
+  var fullW=innerW-52;
+  function bx(v){return v<=0?0:Math.max(fullW*Math.sqrt(v)/Math.sqrt(max),3);}
+  groups.forEach(function(gr,gi){
+    var gy=P.t+gi*groupH;
+    var gl=el('text',{x:P.l-88,y:gy+6,'class':'blab'});gl.setAttribute('font-size','12');
+    gl.textContent=gr.g;svg.appendChild(gl);
+    gr.items.forEach(function(it,ii){
+      var base=gy+ii*54+16;
+      var nm=el('text',{x:P.l-12,y:base+8,'text-anchor':'end','class':'blab'});
+      nm.setAttribute('font-size','12');nm.textContent=it.n;svg.appendChild(nm);
+      // valuation bar
+      var vw=bx(it.val), rv=el('rect',{x:P.l,y:base-4,width:vw,height:12,rx:4,fill:C('--s1')});
+      bind(rv, it.novc?'<b>No venture valuation</b><br>'+it.n+' never took institutional VC'
+        :'<b>'+fmtB(it.val)+'</b> post-money<br>'+it.n);
+      svg.appendChild(rv);
+      if(it.novc){var nz=el('text',{x:P.l+4,y:base+6,'class':'blab2'});
+        nz.textContent='no VC valuation';svg.appendChild(nz);}
+      else{var vt=el('text',{x:P.l+vw+7,y:base+6,'class':'vlab'});vt.setAttribute('font-size','11');
+        vt.textContent=fmtB(it.val);svg.appendChild(vt);}
+      // revenue bar
+      var rw=bx(it.rev), rr=el('rect',{x:P.l,y:base+14,width:rw,height:12,rx:4,fill:C('--s2')});
+      bind(rr, it.norev?'<b>Revenue undisclosed</b><br>'+it.n
+        :'<b>'+fmtB(it.rev)+'</b> TTM revenue<br>'+it.n);
+      svg.appendChild(rr);
+      if(it.norev){var nr=el('text',{x:P.l+4,y:base+24,'class':'blab2'});
+        nr.textContent='revenue undisclosed';svg.appendChild(nr);}
+      else{var rt=el('text',{x:P.l+rw+7,y:base+24,'class':'vlab'});rt.setAttribute('font-size','11');
+        rt.textContent=fmtB(it.rev);svg.appendChild(rt);}
+    });
+    if(gi<groups.length-1)
+      svg.appendChild(el('line',{x1:P.l-92,y1:gy+groupH-14,x2:P.l+innerW,y2:gy+groupH-14,
+        stroke:C('--rule'),'stroke-width':1}));
+  });
+  box.appendChild(svg);
+}
+
+/* ================= FIG 8: crossover matrix ================= */
+function matrix(){
+  var box=clear('c_matrix');if(!box)return;
+  var verticals=['Legal','Health scribes','Coding','Ent. search','Voice','Formal math','Defense'];
+  var funds=[
+    {n:'a16z',      m:{Legal:[1,1],'Health scribes':[1,1],Coding:[1,0],Voice:[1,0],Defense:[1,0]}},
+    {n:'Nvidia',    m:{Legal:[0,1],Coding:[1,0]}},
+    {n:'Sequoia',   m:{Legal:[1,0],'Ent. search':[1,0],Voice:[1,0],'Formal math':[0,1]}},
+    {n:'Kleiner P.',m:{Legal:[1,0],'Ent. search':[1,0],'Formal math':[0,1]}},
+    {n:'Gen. Catalyst',m:{Legal:[0,1],Coding:[0,1],'Ent. search':[1,0]}}
+  ];
+  var t=document.createElement('table');t.className='mx';
+  var thead='<tr><th>Fund</th>';
+  verticals.forEach(function(v){thead+='<th>'+v+'</th>';});
+  thead+='</tr>';
+  var body='';
+  funds.forEach(function(f){
+    body+='<tr><td>'+f.n+'</td>';
+    verticals.forEach(function(v){
+      var cell=f.m[v];var s='';
+      if(cell){
+        if(cell[0])s+='<span class="d1" title="Backs the #1">&#9679;</span>';
+        if(cell[1])s+='<span class="d2" title="Backs the #2">&#9711;</span>';
+      }
+      body+='<td>'+(s||'')+'</td>';
+    });
+    body+='</tr>';
+  });
+  t.innerHTML=thead+body;
+  box.appendChild(t);
+  var key=document.createElement('div');
+  key.className='legend';key.style.marginTop='10px';
+  key.innerHTML='<span class="k"><span style="color:var(--brand);font-weight:800">&#9679;</span> Backs the #1</span>'+
+    '<span class="k"><span style="color:var(--amber);font-weight:800">&#9711;</span> Backs the #2</span>'+
+    '<span class="k" style="color:var(--muted)">a16z holds both seats in legal and health scribes</span>';
+  box.appendChild(key);
+}
+
+/* ---------- draw all ---------- */
+function drawAll(){
+  ia40();split();spacex();dbx();anth();ratio();fund();matrix();
+}
+drawAll();
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(drawAll,180);});
+})();
+</script>
