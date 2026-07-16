@@ -191,16 +191,17 @@ def embed(png, caption=None):
 
 
 # ==================== COVER ====================
-para("Q3 2026  Frontier AI's Token Trap", size=14, bold=True, after=2)
-para("Anthropic's priciest tokens do the cheapest work.",
+para("Q3 2026  Anthropic is winning on value, not price", size=14, bold=True,
+     after=2)
+para("Frontier AI's token trap, where the priciest tokens do the cheapest work",
      size=12, bold=True, color=BLUE, after=8)
 
 meta = [
     ("Data filepath: ", "R&E - Thematic Research\\Frontier AI\\Price Wars Jul2026"),
     ("Chart as-of date: ", "July 10, 2026"),
-    ("Chart geography: ", "Global"),
+    ("Chart geography: ", "US"),
     ("Research type: ", "Emerging Tech"),
-    ("Access level: ", "Client only (Platform only, no preview on N&A)"),
+    ("Access level: ", "Public (Full report on N&A + platform)"),
     ("Chart count: ", "6"),
     ("Table count: ", "2"),
 ]
@@ -210,8 +211,8 @@ for label, val in meta:
     run(p, val, 10)
 
 para("Credits", size=12, bold=True, after=2)
-para("Harrison Rolfes, Senior Research Director", size=10, after=1)
-para("Published on July 10, 2026", size=10, after=8)
+para("Harrison Rolfes, Senior Research Analyst", size=10, after=1)
+para("Published on July 17, 2026", size=10, after=8)
 
 para("Contents", size=12, bold=True, after=2)
 contents = [
@@ -238,6 +239,8 @@ embed(LANDING_CHART,
       "Cost per completed enterprise task at a fixed quality bar: the near-top "
       "sticker finishes the work for less than half what the cheapest model "
       "on the sheet costs to run.")
+para("The market is pricing tokens. It should be pricing work.",
+     size=11, bold=True, color=BLUE, after=6)
 para("Frontier token prices collapsed in July, and the coverage has the story "
      "backwards. Buyers do not purchase tokens; they purchase completed tasks, "
      "and once you price the work rather than the tokens, the ranking inverts. "
