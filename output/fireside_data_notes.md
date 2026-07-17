@@ -21,7 +21,11 @@ credible source; [E] estimate or projection, labeled as such.
 
 3. Databricks has NO "Series I" in 2025/26. Series I was Nov 2023 ($43.2B).
    The 2025-26 rounds are Series K (Sept 2025, $100B) and Series L ($134B,
-   closed Feb 2026; announced Dec 2025). A ~$170B round is rumored, unclosed. [V]
+   closed Feb 2026; announced Dec 2025). NEW (Jul 16 2026): Databricks signed a
+   term sheet for a $188B strategic round led by Coatue, expected to close this
+   summer (Databricks newsroom + Bloomberg). $188B is the newest reported mark;
+   $134B remains the last CLOSED round. PitchBook's feed still showed a ~$170B
+   estimate at the time of the pull, now superseded by the $188B announcement. [V]
 
 4. Anthropic is ~$965B (Series H, May 28 2026), not ~$350B. The lower figure was
    Series G (Feb 2026, $380B), two rounds stale. [V]
@@ -97,8 +101,9 @@ credible source; [E] estimate or projection, labeled as such.
 - Databricks ladder (post-money): A $47M (2013), B $923M (2014), 3rd $560M
   (2016), D $985M (2018), E $2.75B (Jan 2019), F $6.2B (Oct 2019), G $28B (Feb
   2021), H $38B (Aug 2021), I $43.2B (Nov 2023), J $62B (Dec 2024), K $100B (Sep
-  2025), L $134B (Feb 2026). Rumor ~$170B unclosed. Total raised $29.5B; run-rate
-  $6.9B TTM. [V ladder / R rumor]
+  2025), L $134B (Feb 2026). NEW: $188B strategic round, term sheet signed Jul 16
+  2026, led by Coatue, closing this summer (not yet closed). Total raised $29.5B;
+  run-rate $6.9B TTM. [V ladder + V $188B]
 - Anthropic ladder: A $461M (2021), B $3.0B (2022), C $4.55B (2023), D $21B (Jul
   2024), E $61.5B (Mar 2025), F $183B (Sep 2025), G $380B (Feb 2026), H $965B
   (May 2026). Revenue run-rate: $87M (Jan 2024), $1B (Dec 2024), $9B (end 2025),
