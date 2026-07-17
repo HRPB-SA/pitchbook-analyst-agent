@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Token Trap Calculator (hero)</title>
+<style>
+  :root{
+    --bg:#ffffff; --panel:#f6f8fb; --panel2:#eef3fa; --ink:#0f1c2e; --muted:#5a6b80;
+    --line:#dfe5ee; --accent:#2f5496; --win:#1c7a4a; --winbg:#e7f5ec;
+    --track:#dfe5ee; --shadow:0 1px 2px rgba(16,30,54,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#0f151d; --panel:#161d27; --panel2:#131b26; --ink:#eaf0f8; --muted:#9fb0c4;
+      --line:#26303c; --accent:#8fb4ff; --win:#5fd39a; --winbg:#12301f; --track:#26303c;
+      --shadow:0 1px 2px rgba(0,0,0,.3); }
+  }
+  :root[data-theme="dark"]{ --bg:#0f151d; --panel:#161d27; --panel2:#131b26; --ink:#eaf0f8; --muted:#9fb0c4;
+      --line:#26303c; --accent:#8fb4ff; --win:#5fd39a; --winbg:#12301f; --track:#26303c; }
+  :root[data-theme="light"]{ --bg:#ffffff; --panel:#f6f8fb; --panel2:#eef3fa; --ink:#0f1c2e; --muted:#5a6b80;
+      --line:#dfe5ee; --accent:#2f5496; --win:#1c7a4a; --winbg:#e7f5ec; --track:#dfe5ee; }
+
+  *{box-sizing:border-box}
+  .hero{
+    font-family:"Calibri","Segoe UI",system-ui,-apple-system,sans-serif;
+    color:var(--ink); background:var(--bg);
+    max-width:1000px; margin:0 auto;
+    display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr); gap:20px;
+    align-items:stretch;
+  }
+  @media (max-width:760px){ .hero{ grid-template-columns:1fr } }
+
+  .card{ border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow);
+    padding:20px 22px 18px; line-height:1.35 }
+
+  /* ---- left: calculator ---- */
+  .ttc h1{ font-size:18px; margin:0 0 3px; font-weight:700; letter-spacing:-.2px }
+  .ttc .sub{ font-size:12.5px; color:var(--muted); margin:0 0 15px }
+  .ttc .how{ font-size:12px; color:var(--muted); margin:0 0 6px; font-weight:600;
+    text-transform:uppercase; letter-spacing:.4px }
+  .sliderwrap{ background:var(--panel); border:1px solid var(--line); border-radius:11px;
+    padding:13px 15px 11px; margin-bottom:6px }
+  .sliderhead{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:9px }
+  .sliderhead label{ font-size:13.5px; font-weight:600 }
+  .badge{ font-size:16px; font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums }
+  input[type=range]{ -webkit-appearance:none; appearance:none; width:100%; height:6px;
+    border-radius:6px; background:var(--track); outline:none; margin:2px 0 0 }
+  input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; appearance:none;
+    width:22px; height:22px; border-radius:50%; background:var(--accent);
+    border:3px solid var(--bg); box-shadow:0 1px 3px rgba(16,30,54,.35); cursor:pointer }
+  input[type=range]::-moz-range-thumb{ width:22px; height:22px; border-radius:50%;
+    background:var(--accent); border:3px solid var(--bg); cursor:pointer }
+  .ticks{ display:flex; justify-content:space-between; font-size:10.5px; color:var(--muted); margin-top:7px }
+  .verdict{ font-size:12.5px; margin:12px 2px 12px; min-height:34px }
+  .verdict b{ color:var(--ink) }
+  .rows{ display:flex; flex-direction:column; gap:7px }
+  .row{ display:grid; grid-template-columns:126px 1fr 52px; align-items:center; gap:9px; transition:transform .35s ease }
+  .label{ font-size:12px; font-weight:600; text-align:right; line-height:1.15 }
+  .label .stick{ display:block; font-size:10px; font-weight:500; color:var(--muted) }
+  .bartrack{ height:20px; position:relative }
+  .barfill{ height:20px; border-radius:5px; width:0; transition:width .35s ease }
+  .val{ font-size:12.5px; font-weight:700; text-align:right; font-variant-numeric:tabular-nums }
+  .row.best .label{ color:var(--win) } .row.best .val{ color:var(--win) }
+  .pill{ display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:.5px;
+    color:var(--win); background:var(--winbg); border-radius:4px; padding:1px 5px; margin-left:6px; vertical-align:1px }
+  .foot{ font-size:10.5px; color:var(--muted); margin:14px 2px 0; line-height:1.45;
+    border-top:1px solid var(--line); padding-top:9px }
+  .tip{ position:relative }
+  .tip:hover .tipbox{ opacity:1; visibility:visible }
+  .tipbox{ position:absolute; left:0; bottom:24px; z-index:5; opacity:0; visibility:hidden; transition:.12s;
+    background:var(--ink); color:var(--bg); font-size:10.5px; font-weight:500; border-radius:7px;
+    padding:7px 9px; width:186px; line-height:1.4; box-shadow:0 4px 14px rgba(0,0,0,.25) }
+
+  /* ---- right: why-this-happens caption ---- */
+  .why{ background:var(--panel2); display:flex; flex-direction:column }
+  .why .eyebrow{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px;
+    color:var(--accent); margin:0 0 6px }
+  .why h2{ font-size:18px; margin:0 0 10px; font-weight:700; letter-spacing:-.2px; line-height:1.22 }
+  .why p{ font-size:13px; color:var(--ink); margin:0 0 13px; line-height:1.5 }
+  .steps{ display:flex; flex-direction:column; gap:10px; margin:2px 0 14px }
+  .step{ display:grid; grid-template-columns:22px 1fr; gap:10px; align-items:start }
+  .step .n{ width:22px; height:22px; border-radius:50%; background:var(--accent); color:#fff;
+    font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center }
+  .step .t{ font-size:12.5px; line-height:1.4 } .step .t b{ font-weight:700 }
+  .why .formula{ font-size:11.5px; color:var(--muted); background:var(--bg); border:1px solid var(--line);
+    border-radius:8px; padding:9px 11px; line-height:1.45; margin-top:auto }
+</style>
+</head>
+<body>
+<div class="hero" data-palette>
+
+  <!-- ================= LEFT: CALCULATOR ================= -->
+  <div class="card ttc">
+    <h1>You are not buying tokens. You are buying finished work.</h1>
+    <p class="sub">Cost to complete one enterprise agentic task, at each model&rsquo;s real success rate.</p>
+
+    <p class="how">Drag the slider &rarr;</p>
+    <div class="sliderwrap">
+      <div class="sliderhead">
+        <label for="fcost">What does one failed attempt cost you?</label>
+        <span class="badge" id="fval">$17</span>
+      </div>
+      <input type="range" id="fcost" min="0" max="40" step="0.5" value="17" aria-label="Cost of a failed attempt in dollars">
+      <div class="ticks"><span>$0 &middot; failures free</span><span>~$17 typical</span><span>$40 costly</span></div>
+    </div>
+
+    <p class="verdict" id="verdict"></p>
+    <div class="rows" id="rows"></div>
+    <p class="foot" id="foot"></p>
+  </div>
+
+  <!-- ================= RIGHT: WHY THIS HAPPENS ================= -->
+  <div class="card why">
+    <p class="eyebrow">Why this happens</p>
+    <h2>The priciest tokens can do the cheapest work.</h2>
+    <p>Buyers pay for finished tasks, not tokens. A cheaper model that fails more often has to be re-run,
+       and every re-run burns operator time. Count that, and the sticker price stops mattering, the
+       success rate takes over, and the ranking flips.</p>
+
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div class="t">A cheaper sticker usually means a <b>lower success rate</b>, so the task is retried more often.</div></div>
+      <div class="step"><div class="n">2</div><div class="t">Each failed try costs <b>human time</b> to catch and fix. That is the slider on the left.</div></div>
+      <div class="step"><div class="n">3</div><div class="t">Past about <b>$2 a failure</b>, reliability outweighs price, and the cheap tier becomes the most expensive way to finish the job.</div></div>
+    </div>
+
+    <p class="formula">Cost per completed task = (cost per try + failure cost &times; chance of failure) &divide; success rate.
+       At the report&rsquo;s $17 assumption, Claude Opus 4.8 finishes for about $2.56 while Muse Spark, the cheapest sticker, costs about $5.83.</p>
+  </div>
+
+</div>
+
+<script>
+const MODELS = [
+  {name:"Claude Opus 4.8", cost:0.600, p:0.90, stick:25,   c:"#2a78d6"},
+  {name:"Gemini 3.1 Pro",  cost:0.264, p:0.88, stick:12,   c:"#d5187f"},
+  {name:"Claude Mythos 5", cost:1.200, p:0.92, stick:50,   c:"#e34948"},
+  {name:"GPT-5.6 Sol",     cost:0.660, p:0.89, stick:30,   c:"#1baf7a"},
+  {name:"Grok 4.5",        cost:0.192, p:0.82, stick:6,    c:"#008300"},
+  {name:"GPT-5.6 Luna",    cost:0.132, p:0.78, stick:6,    c:"#eda100"},
+  {name:"Muse Spark 1.1",  cost:0.126, p:0.75, stick:4.25, c:"#4a3aa7"}
+];
+const loaded = (m,F) => (m.cost + F*(1-m.p)) / m.p;
+
+const rowsEl = document.getElementById("rows");
+const slider = document.getElementById("fcost");
+const fval   = document.getElementById("fval");
+const verdict= document.getElementById("verdict");
+const foot   = document.getElementById("foot");
+
+const nodes = {};
+MODELS.forEach(m=>{
+  const row = document.createElement("div"); row.className="row";
+  row.innerHTML =
+    `<div class="label tip">${m.name}<span class="stick">$${m.stick} sticker</span>
+       <span class="tipbox"></span></div>
+     <div class="bartrack"><div class="barfill" style="background:${m.c}"></div></div>
+     <div class="val"></div>`;
+  rowsEl.appendChild(row);
+  nodes[m.name] = { row, fill:row.querySelector(".barfill"), val:row.querySelector(".val"), tip:row.querySelector(".tipbox") };
+});
+
+function render(){
+  const F = parseFloat(slider.value);
+  fval.textContent = "$" + (F % 1 ? F.toFixed(1) : F);
+  const scored = MODELS.map(m=>({m, v:loaded(m,F)})).sort((a,b)=>a.v-b.v);
+  const max = Math.max(...scored.map(s=>s.v));
+  const winner = scored[0];
+
+  scored.forEach((s,i)=>{
+    const n = nodes[s.m.name];
+    const label = n.row.querySelector(".label");
+    n.row.style.order = i;
+    n.row.classList.toggle("best", i===0);
+    n.fill.style.width = (max? (s.v/max*100):0).toFixed(1) + "%";
+    n.val.textContent = "$" + s.v.toFixed(2);
+    label.querySelector(".pill")?.remove();
+    if(i===0) label.insertAdjacentHTML("beforeend",`<span class="pill">BEST VALUE</span>`);
+    n.tip.innerHTML =
+      `<b>${s.m.name}</b><br>Success rate: ${(s.m.p*100).toFixed(0)}%<br>`+
+      `Cost per try: $${s.m.cost.toFixed(2)}<br>Avg tries to finish: ${(1/s.m.p).toFixed(2)}<br>`+
+      `Completed-task cost: <b>$${s.v.toFixed(2)}</b>`;
+  });
+
+  const dearest = scored[scored.length-1];
+  verdict.innerHTML =
+    `At <b>$${(F%1?F.toFixed(1):F)}</b> a failure, the cheapest way to finish the work is `+
+    `<span style="color:${winner.m.c};font-weight:700">${winner.m.name}</span> `+
+    `at <b>$${winner.v.toFixed(2)}</b>, while <b>${dearest.m.name}</b> `+
+    `(cheapest sticker: $${dearest.m.stick}) is the most expensive to run at <b>$${dearest.v.toFixed(2)}</b>.`;
+
+  foot.innerHTML =
+    `Success rates are illustrative; prices are published list rates. `+
+    `Slide toward $0 and the cheap stickers win; past roughly $2 a failure, the ranking inverts.`;
+}
+slider.addEventListener("input", render);
+render();
+</script>
+</body>
+</html>
