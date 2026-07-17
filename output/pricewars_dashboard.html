@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Token Trap Calculator</title>
+<style>
+  :root{
+    --bg:#ffffff; --panel:#f6f8fb; --ink:#0f1c2e; --muted:#5a6b80;
+    --line:#dfe5ee; --accent:#2f5496; --win:#1c7a4a; --winbg:#e7f5ec;
+    --track:#dfe5ee; --shadow:0 1px 2px rgba(16,30,54,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#0f151d; --panel:#161d27; --ink:#eaf0f8; --muted:#9fb0c4;
+      --line:#26303c; --accent:#8fb4ff; --win:#5fd39a; --winbg:#12301f;
+      --track:#26303c; --shadow:0 1px 2px rgba(0,0,0,.3); }
+  }
+  :root[data-theme="dark"]{ --bg:#0f151d; --panel:#161d27; --ink:#eaf0f8; --muted:#9fb0c4;
+      --line:#26303c; --accent:#8fb4ff; --win:#5fd39a; --winbg:#12301f; --track:#26303c; }
+  :root[data-theme="light"]{ --bg:#ffffff; --panel:#f6f8fb; --ink:#0f1c2e; --muted:#5a6b80;
+      --line:#dfe5ee; --accent:#2f5496; --win:#1c7a4a; --winbg:#e7f5ec; --track:#dfe5ee; }
+
+  *{box-sizing:border-box}
+  .ttc{
+    font-family:"Calibri","Segoe UI",system-ui,-apple-system,sans-serif;
+    color:var(--ink); background:var(--bg);
+    max-width:520px; margin:0 auto; padding:20px 22px 18px;
+    border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow);
+    line-height:1.35;
+  }
+  .ttc h1{ font-size:19px; margin:0 0 3px; font-weight:700; letter-spacing:-.2px }
+  .ttc .sub{ font-size:12.5px; color:var(--muted); margin:0 0 16px }
+  .ttc .how{ font-size:12px; color:var(--muted); margin:0 0 6px; font-weight:600;
+    text-transform:uppercase; letter-spacing:.4px }
+
+  .sliderwrap{ background:var(--panel); border:1px solid var(--line); border-radius:11px;
+    padding:13px 15px 11px; margin-bottom:6px }
+  .sliderhead{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:9px }
+  .sliderhead label{ font-size:13.5px; font-weight:600 }
+  .badge{ font-size:16px; font-weight:700; color:var(--accent);
+    font-variant-numeric:tabular-nums }
+  input[type=range]{ -webkit-appearance:none; appearance:none; width:100%; height:6px;
+    border-radius:6px; background:var(--track); outline:none; margin:2px 0 0 }
+  input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; appearance:none;
+    width:22px; height:22px; border-radius:50%; background:var(--accent);
+    border:3px solid var(--bg); box-shadow:0 1px 3px rgba(16,30,54,.35); cursor:pointer }
+  input[type=range]::-moz-range-thumb{ width:22px; height:22px; border-radius:50%;
+    background:var(--accent); border:3px solid var(--bg); cursor:pointer }
+  .ticks{ display:flex; justify-content:space-between; font-size:10.5px; color:var(--muted); margin-top:7px }
+
+  .verdict{ font-size:13px; margin:13px 2px 12px; min-height:34px }
+  .verdict b{ color:var(--ink) }
+  .verdict .name{ font-weight:700 }
+
+  .rows{ display:flex; flex-direction:column; gap:7px }
+  .row{ display:grid; grid-template-columns:128px 1fr 52px; align-items:center;
+    gap:9px; transition:transform .35s ease }
+  .label{ font-size:12px; font-weight:600; text-align:right; line-height:1.15 }
+  .label .stick{ display:block; font-size:10px; font-weight:500; color:var(--muted) }
+  .bartrack{ height:20px; background:transparent; position:relative }
+  .barfill{ height:20px; border-radius:5px; width:0; transition:width .35s ease;
+    display:flex; align-items:center }
+  .val{ font-size:12.5px; font-weight:700; text-align:right; font-variant-numeric:tabular-nums }
+  .row.best .label{ color:var(--win) }
+  .row.best .val{ color:var(--win) }
+  .pill{ display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:.5px;
+    color:var(--win); background:var(--winbg); border-radius:4px; padding:1px 5px; margin-left:6px;
+    vertical-align:1px }
+
+  .foot{ font-size:10.5px; color:var(--muted); margin:14px 2px 0; line-height:1.45; border-top:1px solid var(--line); padding-top:9px }
+  .tip{ position:relative }
+  .tip:hover .tipbox{ opacity:1; visibility:visible }
+  .tipbox{ position:absolute; left:0; bottom:24px; z-index:5; opacity:0; visibility:hidden;
+    transition:.12s; background:var(--ink); color:var(--bg); font-size:10.5px; font-weight:500;
+    border-radius:7px; padding:7px 9px; width:186px; line-height:1.4; box-shadow:0 4px 14px rgba(0,0,0,.25) }
+</style>
+</head>
+<body>
+<div class="ttc" data-palette>
+  <h1>You are not buying tokens. You are buying finished work.</h1>
+  <p class="sub">Cost to complete one enterprise agentic task, at each model&rsquo;s real success rate.</p>
+
+  <p class="how">Drag the slider &rarr;</p>
+  <div class="sliderwrap">
+    <div class="sliderhead">
+      <label for="fcost">What does one failed attempt cost you?</label>
+      <span class="badge" id="fval">$17</span>
+    </div>
+    <input type="range" id="fcost" min="0" max="40" step="0.5" value="17" aria-label="Cost of a failed attempt in dollars">
+    <div class="ticks"><span>$0 &middot; failures free</span><span>~$17 typical</span><span>$40 costly</span></div>
+  </div>
+
+  <p class="verdict" id="verdict"></p>
+
+  <div class="rows" id="rows"></div>
+
+  <p class="foot" id="foot"></p>
+</div>
+
+<script>
+// Model data drawn from the report: cost per attempt ($), real success rate p,
+// sticker output price ($/Mtok), and the report's brand hue. Bars are directly
+// labeled, so color is secondary encoding (identity never rests on hue alone).
+const MODELS = [
+  {name:"Claude Opus 4.8", cost:0.600, p:0.90, stick:25,   c:"#2a78d6"},
+  {name:"Gemini 3.1 Pro",  cost:0.264, p:0.88, stick:12,   c:"#d5187f"},
+  {name:"Claude Mythos 5", cost:1.200, p:0.92, stick:50,   c:"#e34948"},
+  {name:"GPT-5.6 Sol",     cost:0.660, p:0.89, stick:30,   c:"#1baf7a"},
+  {name:"Grok 4.5",        cost:0.192, p:0.82, stick:6,    c:"#008300"},
+  {name:"GPT-5.6 Luna",    cost:0.132, p:0.78, stick:6,    c:"#eda100"},
+  {name:"Muse Spark 1.1",  cost:0.126, p:0.75, stick:4.25, c:"#4a3aa7"}
+];
+const loaded = (m,F) => (m.cost + F*(1-m.p)) / m.p;   // fully loaded cost per completed task
+
+const rowsEl = document.getElementById("rows");
+const slider = document.getElementById("fcost");
+const fval   = document.getElementById("fval");
+const verdict= document.getElementById("verdict");
+const foot   = document.getElementById("foot");
+
+// build rows once, then just reorder + resize on input
+const nodes = {};
+MODELS.forEach(m=>{
+  const row = document.createElement("div"); row.className="row";
+  row.innerHTML =
+    `<div class="label tip">${m.name}<span class="stick">$${m.stick} sticker</span>
+       <span class="tipbox"></span></div>
+     <div class="bartrack"><div class="barfill" style="background:${m.c}"></div></div>
+     <div class="val"></div>`;
+  rowsEl.appendChild(row);
+  nodes[m.name] = { row, fill:row.querySelector(".barfill"),
+                    val:row.querySelector(".val"), tip:row.querySelector(".tipbox") };
+});
+
+function render(){
+  const F = parseFloat(slider.value);
+  fval.textContent = "$" + (F % 1 ? F.toFixed(1) : F);
+
+  const scored = MODELS.map(m=>({m, v:loaded(m,F)})).sort((a,b)=>a.v-b.v);
+  const max = Math.max(...scored.map(s=>s.v));
+  const winner = scored[0];
+
+  scored.forEach((s,i)=>{
+    const n = nodes[s.m.name];
+    const label = n.row.querySelector(".label");
+    n.row.style.order = i;
+    n.row.classList.toggle("best", i===0);
+    n.fill.style.width = (max? (s.v/max*100):0).toFixed(1) + "%";
+    n.val.textContent = "$" + s.v.toFixed(2);
+    label.querySelector(".pill")?.remove();               // clear pill from every row
+    if(i===0) label.insertAdjacentHTML("beforeend",`<span class="pill">BEST VALUE</span>`);
+    n.tip.innerHTML =
+      `<b>${s.m.name}</b><br>Success rate: ${(s.m.p*100).toFixed(0)}%<br>`+
+      `Cost per try: $${s.m.cost.toFixed(2)}<br>Avg tries to finish: ${(1/s.m.p).toFixed(2)}<br>`+
+      `Completed-task cost: <b>$${s.v.toFixed(2)}</b>`;
+  });
+
+  const dearest = scored[scored.length-1];
+  verdict.innerHTML =
+    `At <b>$${(F%1?F.toFixed(1):F)}</b> a failure, the cheapest way to finish the work is `+
+    `<span class="name" style="color:${winner.m.c}">${winner.m.name}</span> `+
+    `at <b>$${winner.v.toFixed(2)}</b>, while <b>${dearest.m.name}</b> `+
+    `(cheapest sticker: $${dearest.m.stick}) is the most expensive to run at <b>$${dearest.v.toFixed(2)}</b>.`;
+
+  foot.innerHTML =
+    `Completed-task cost = (cost per try + failure cost &times; chance of failure) &divide; success rate. `+
+    `Success rates are illustrative; prices are published list rates. `+
+    `Slide toward $0 and the cheap stickers win; past roughly $2 a failure, the ranking inverts and premium reliability wins.`;
+}
+slider.addEventListener("input", render);
+render();
+</script>
+</body>
+</html>
