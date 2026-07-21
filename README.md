@@ -18,8 +18,21 @@ July 10, 2026; figures and financing section re-verified July 21, 2026.
   anchors, customer-cohort build, product-line split, funding ladder),
   Valuation (sensitivity grid, per-point table, growth-adjusted comparison).
 - `output/Databricks_BrickByBrick_Jul2026.pdf` - rendered inspection copy.
+- `output/Databricks_Granular_Model_Jul2026.xlsx` - the granular bottom-up
+  operating model, FY2022A to FY2032E (the full window from the brief). Built
+  by `build/granular_model.py`. Seven sheets: Cover (checks), Guide (plain-
+  English build map), Assumptions (every driver sourced; one scenario switch),
+  Revenue (five product lines summed to total, plus customer-tier and DBU-
+  consumption cross-checks), Costs (cost of revenue by four components so gross
+  margin is an output, opex decomposed into people/programs/facilities, implied
+  headcount bridge), Financials (income statement, cash flow, balance sheet,
+  zero balance check every year), KPIs (growth, margins, Rule of 40, revenue
+  per head, capital efficiency). Operating-margin path is calibrated to
+  reconcile with the 3-statement model above from FY2025 on. Independently
+  recalculated (LibreOffice): balances in all eleven years, revenue ties to the
+  product-line sum, customer tiers reconcile to zero.
 - `validation_log.md` - the July 10, 2026 live re-verification log behind the
-  figures (internal working document).
+  figures, with a July 21, 2026 update section (internal working document).
 
 ## Report structure
 
