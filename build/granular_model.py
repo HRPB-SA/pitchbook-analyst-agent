@@ -18,6 +18,7 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.chart import BarChart, LineChart, Reference
+from openpyxl.chart.series import SeriesLabel
 
 # ----------------------------------------------------------------- palette
 NAVY = "1F2A44"; SLATE = "35506E"; GREEN = "1C5D46"; GREY = "6B7280"
@@ -202,6 +203,7 @@ for i in range(NY):
 # ================================================================= workbook
 wb = openpyxl.Workbook()
 ws_cover = wb.active; ws_cover.title = "Cover"
+ws_dash = wb.create_sheet("Dashboard")
 ws_guide = wb.create_sheet("Guide")
 ws_a = wb.create_sheet("Assumptions")
 ws_r = wb.create_sheet("Revenue")
@@ -735,6 +737,117 @@ ws_cover.cell(r, 3, "Sources: company press releases and disclosures (2021 to Ju
                     "Not investment advice; private-company figures are estimates unless disclosed.").font = f_src
 ws_cover.cell(r, 3).alignment = Alignment(wrap_text=True, vertical="top")
 ws_cover.row_dimensions[r].height = 58
+
+# --------------------------------------------------------------- DASHBOARD
+prep(ws_dash, {"A":2,"B":34,"C":13,"D":13,"E":13,"F":3,"G":13,"H":13,"I":13,"J":13})
+ws_dash.cell(2, 2, "Databricks   |   Model Dashboard").font = f_title
+ws_dash.cell(3, 2, "One-page read-through of the granular model. Base case unless the scenario switch is changed. "
+                   "USD millions unless stated. Every figure is a live link.").font = f_sub
+ws_dash.cell(5, 2, "Scenario in use").font = f_lblb
+ws_dash.cell(5, 3, '=CHOOSE(Assumptions!D5,"Best","Base","Worst")').font = Font(
+    name="Calibri", size=11, bold=True, color=WARN)
+ws_dash.cell(5, 4, "(change on the Assumptions tab, cell D5)").font = f_src
+
+# ---- headline metric table: three snapshot years
+snap = [(4, "FY2026A"), (5, "FY2027E"), (10, "FY2032E")]
+hr = 7
+ws_dash.cell(hr, 2, "Headline metrics").font = f_h
+for col in range(2, 6): ws_dash.cell(hr, col).fill = fill_soft
+hr += 1
+ws_dash.cell(hr, 2, "").font = f_hdr
+for j, (idx, lbl) in enumerate(snap):
+    c = ws_dash.cell(hr, 3 + j, lbl); c.font = f_hdr; c.fill = fill_hdr
+    c.alignment = Alignment(horizontal="center")
+hr += 1
+def dash_metric(label, mkf, fmt=NUM, bold=False, fill=None, src=None):
+    global hr
+    c = ws_dash.cell(hr, 2, label); c.font = f_numb if bold else f_lbl
+    c.alignment = Alignment(indent=1)
+    for j, (idx, lbl) in enumerate(snap):
+        cc = ws_dash.cell(hr, 3 + j, mkf(idx))
+        cc.number_format = fmt; cc.font = f_numb if bold else f_num
+        if fill: cc.fill = fill
+    if src: ws_dash.cell(hr, 7, src).font = f_src
+    hr += 1
+Lc = lambda i: L(i)
+dash_metric("Revenue", lambda i: f"=Financials!{Lc(i)}{FREV}", bold=True)
+dash_metric("Revenue growth (YoY)", lambda i: f"=Financials!{Lc(i)}{FREV}/Financials!{Lc(i-1)}{FREV}-1", fmt=PCT)
+dash_metric("Gross margin", lambda i: f"=Financials!{Lc(i)}{FGP}/Financials!{Lc(i)}{FREV}", fmt=PCT)
+dash_metric("Operating (EBIT) margin", lambda i: f"=Financials!{Lc(i)}{FEBIT}/Financials!{Lc(i)}{FREV}", fmt=PCT)
+dash_metric("Net income (GAAP est.)", lambda i: f"=Financials!{Lc(i)}{FNI}")
+dash_metric("Free cash flow", lambda i: f"=Financials!{Lc(i)}{FFCF}", bold=True, fill=fill_green)
+dash_metric("FCF margin", lambda i: f"=Financials!{Lc(i)}{FFCF}/Financials!{Lc(i)}{FREV}", fmt=PCT)
+dash_metric("Rule of 40 (growth + FCF margin)",
+    lambda i: f"=(Financials!{Lc(i)}{FREV}/Financials!{Lc(i-1)}{FREV}-1)+Financials!{Lc(i)}{FFCF}/Financials!{Lc(i)}{FREV}",
+    fmt=PCT, bold=True)
+dash_metric("Implied headcount (year end)", lambda i: f"=Costs!{Lc(i)}{THEAD}")
+dash_metric("Revenue per head (USD 000)", lambda i: f"=Costs!{Lc(i)}{CREV}*1000/Costs!{Lc(i)}{THEAD}")
+dash_metric("Customers >$1M / yr", lambda i: f"=Assumptions!{Lc(i)}{T10C}+Assumptions!{Lc(i)}{T1C}",
+    src="300+ Sep-2023, 500+ Dec-2024, 800+ Feb-2026 (company).")
+dash_metric("Cash and investments (close)", lambda i: f"=Financials!{Lc(i)}{FCASH}")
+dash_metric("Debt (close)", lambda i: f"=Financials!{Lc(i)}{FDEBT}")
+
+# ---- where revenue comes from (mix table)
+hr += 1
+ws_dash.cell(hr, 2, "Where revenue comes from (product line)").font = f_h
+for col in range(2, 6): ws_dash.cell(hr, col).fill = fill_soft
+hr += 1
+for j, (idx, lbl) in enumerate(snap):
+    c = ws_dash.cell(hr, 3 + j, lbl + " $ / %"); c.font = f_hdr; c.fill = fill_hdr
+    c.alignment = Alignment(horizontal="center")
+hr += 1
+MIXTOP = hr
+for k in LINES:
+    c = ws_dash.cell(hr, 2, "  " + k); c.font = f_lbl; c.alignment = Alignment(indent=1)
+    for j, (idx, lbl) in enumerate(snap):
+        cc = ws_dash.cell(hr, 3 + j,
+            f'=TEXT(Revenue!{Lc(idx)}{RLROW[k]},"#,##0")&"  ("&TEXT(Revenue!{Lc(idx)}{RLROW[k]}/Revenue!{Lc(idx)}{TREV},"0%")&")"')
+        cc.font = f_num; cc.alignment = Alignment(horizontal="right")
+    hr += 1
+c = ws_dash.cell(hr, 2, "Total revenue"); c.font = f_numb
+for j, (idx, lbl) in enumerate(snap):
+    cc = ws_dash.cell(hr, 3 + j, f"=Revenue!{Lc(idx)}{TREV}"); cc.font = f_numb; cc.number_format = NUM
+    cc.border = border_b
+hr += 2
+
+# ---- hidden helper series for the margin chart (all years)
+HELP = hr
+ws_dash.cell(HELP, 2, "Margin path (for chart)").font = f_src
+for i in range(NY):
+    ws_dash.cell(HELP, C0 + i, FY[i]).font = f_src
+GMr = HELP + 1; EBr = HELP + 2; FCr = HELP + 3
+for lab, row, num, den in [("Gross margin", GMr, FGP, FREV),
+                           ("Operating margin", EBr, FEBIT, FREV),
+                           ("FCF margin", FCr, FFCF, FREV)]:
+    ws_dash.cell(row, 2, lab).font = f_src
+    for i in range(NY):
+        cc = ws_dash.cell(row, C0 + i, f"=Financials!{Lc(i)}{num}/Financials!{Lc(i)}{den}")
+        cc.number_format = PCT; cc.font = f_src
+
+# ---- dashboard charts
+ch_rev = BarChart(); ch_rev.type = "col"; ch_rev.grouping = "stacked"; ch_rev.overlap = 100
+ch_rev.title = "Revenue by product line (USD M)"; ch_rev.height = 8.2; ch_rev.width = 17
+for k in LINES:
+    d = Reference(ws_r, min_col=C0, max_col=C0 + NY - 1, min_row=RLROW[k], max_row=RLROW[k])
+    ch_rev.add_data(d, from_rows=True, titles_from_data=False)
+ch_rev.set_categories(Reference(ws_r, min_col=C0, max_col=C0 + NY - 1, min_row=5, max_row=5))
+for si, s in enumerate(ch_rev.series):
+    s.graphicalProperties.solidFill = [NAVY, SLATE, GREEN, GOLD, GREY][si]
+    s.tx = SeriesLabel(v=LINES[si])
+ch_rev.legend.position = "b"
+ws_dash.add_chart(ch_rev, "B" + str(HELP + 5))
+
+ch_m = LineChart(); ch_m.title = "Margin path (%)"; ch_m.height = 8.2; ch_m.width = 17
+for row in (GMr, EBr, FCr):
+    d = Reference(ws_dash, min_col=C0, max_col=C0 + NY - 1, min_row=row, max_row=row)
+    ch_m.add_data(d, from_rows=True, titles_from_data=False)
+ch_m.set_categories(Reference(ws_dash, min_col=C0, max_col=C0 + NY - 1, min_row=HELP, max_row=HELP))
+for si, (col, nm) in enumerate([(NAVY, "Gross margin"), (GREEN, "Operating margin"), (SLATE, "FCF margin")]):
+    ch_m.series[si].graphicalProperties.line.solidFill = col
+    ch_m.series[si].graphicalProperties.line.width = 22000
+    ch_m.series[si].tx = SeriesLabel(v=nm)
+ch_m.legend.position = "b"
+ws_dash.add_chart(ch_m, "G" + str(HELP + 5))
 
 # ------------------------------------------------------- charts (visual aids)
 def _catref():
