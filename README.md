@@ -1,3 +1,17 @@
+# Research Deliverables
+
+## Harvey vs. Legora: Anatomy of the Legal AI Duopoly (July 2026)
+
+Competitive deep dive comparing Harvey AI and Legora (formerly Leya), the two
+dominant venture-backed legal AI platforms. Covers founding, full funding and
+valuation ladders (PitchBook deal-level data), investor syndicates, ARR
+trajectories, product architecture, model strategy, go-to-market, customers,
+M&A, competitive field, and a similarities-vs-differences synthesis with a
+validation ledger (conflicts frozen, not averaged). Prepared July 21, 2026.
+
+- `output/Harvey_vs_Legora_DeepDive_Jul2026.md` - the report (13 sections,
+  scoreboard, deal tables, validation ledger).
+
 # Databricks: Brick by Brick (July 2026)
 
 Institutional deep dive on Databricks, Inc. built around a single question:
