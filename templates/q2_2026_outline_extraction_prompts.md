@@ -80,14 +80,19 @@ range, the universe headline, index date range) and pause. Then build:
 
 Leaders & universe
 - `M-Concentration` - feeds Leaders "the quarter that belonged to five
-  companies." Quarterly deal value with top-5 / top-10 / remainder shares, the
-  single-largest strip-out, and new-unicorn count vs value contributed. Monitor
-  basis stated.
+  companies." NOTE: this file has no deal-level capital-raised amounts, so
+  deal-VALUE concentration is not computable here (it is a primary-tracker
+  exhibit). Build VALUATION concentration instead: top-10 share of aggregate
+  (47.8%), the top-5 names' share of aggregate value, and formation
+  (new-unicorn count vs value contributed). Monitor basis stated.
 - `M-Step Ups` - feeds Leaders "step-ups" and Valuations "step-ups and RVVC."
-  Median step-up by year vs the 2016-2018 baseline and 2021 peak; down-round
-  frequency and down-round share of value; RVVC (new valuation created per $
-  invested) by year. State the denominator excludes the non-raising dormant
-  population.
+  First verify Global Unicorn History shows round-date variation per company; if
+  it does, build a snapshot-derived median step-up by year (labeled
+  snapshot-derived) vs the 2016-2018 baseline and 2021 peak. RVVC and
+  down-round share of value need capital-invested amounts NOT in this file ->
+  `M-GAPS` (primary-tracker exhibit). If there is only one round date per
+  company, the step-up is not derivable either -> GAPS. State the denominator
+  excludes the non-raising dormant population.
 - `M-AI Share` - feeds Leaders "AI: one-third of count, nearly half of value"
   and Verticals "AI as growth engine." AI share of count and of value by year,
   the 50% crossing, and concentration inside AI (top-2/3 names' share). Tie the
