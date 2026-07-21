@@ -125,6 +125,32 @@ date. Each item names the sheet/exhibit it unblocks and the likely source.
 24. **Standardized round-series / stage labels (Seed / A / B / C / D+)** on every
     round; current labels required probing. Sheets 06, 13.
 
+## Addendum - discovered in batches (d)-(e)
+
+25. **Re-authenticate the workbook's PitchBook connection, or supply static
+    exports, for the auth-gated (`#NOTAUTH`) fields.** Company names, acquirer
+    names, and investor names/counts return `#NOTAUTH` in every source that
+    carries them. Names/verticals/countries were rebuilt by PBID join, but
+    acquirer names (sheets 26, 28) are unrecoverable and the M&A narrative needs
+    them. This is an environment fix at source, not a per-quarter hand-repair.
+    Tier 1/2. D-024, D-029.
+
+26. **Clean re-exports fixing column-shift misalignment.** Two UNI LIST rows have
+    PBIDs sitting in status fields; the VCE export's trailing columns are shifted
+    +1 vs their headers (ticker actually at BX, price-per-share at CD). Corrected
+    in-extract this quarter, but the source exports should be fixed. D-025,
+    D-029.
+
+27. **Estimate as-of dates.** The valuation-estimate DATE columns are `#REF!` /
+    absent, so estimates cannot be aged - the 88%-above-mark reading has to stay
+    a static cross-section. Supplying estimate dates would let us measure
+    estimate staleness. Strengthens items 4 and 12. D-003.
+
+28. **Reconcile the fourth active-count basis.** UNI LIST reports 1,738 actives
+    (vs published 1,743, constituent-list 1,688, and exits-derived), and its
+    per-company marks are the freshest in the workbook (it carries Anthropic at
+    $965B). Confirm which basis is authoritative for current marks. D-027.
+
 ## Note on as-of alignment
 
 Two cutoffs currently coexist: universe 6/30/2026, trading/index 3/31/2026. The
