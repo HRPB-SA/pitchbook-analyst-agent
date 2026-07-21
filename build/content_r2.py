@@ -40,7 +40,7 @@ BLOCKS = [
 ("h1", "The Builders: Customers and What They Do"),
 
 ("h3", "What it is"),
-("p", "The customer base is a pyramid of more than 20,000 organizations (company, February 9, 2026): a broad self-serve and departmental tail, a professional class of more than 800 customers spending over $1 million a year, and an apex of more than 70 customers spending over $10 million a year, with more than 60% of the Fortune 500 somewhere on the platform. Consumption economics make the pyramid dynamic by design: today's $200 thousand departmental workload is tomorrow's $2 million platform standard, and the disclosed tiers are snapshots of customers in transit between them."),
+("p", "The customer base is a pyramid of more than 20,000 organizations (company, February 9, 2026): a broad self-serve and departmental tail, a professional class of more than 800 customers spending over $1 million a year, and an apex of more than 70 customers spending over $10 million a year, with 70% of the Fortune 500 somewhere on the platform (company, July 16, 2026). Consumption economics make the pyramid dynamic by design: today's $200 thousand departmental workload is tomorrow's $2 million platform standard, and the disclosed tiers are snapshots of customers in transit between them."),
 
 ("table", {
   "title": "What the customers actually build (company-published case studies)",
@@ -50,7 +50,7 @@ BLOCKS = [
     ["Shell", "Predictive operations: more than 3 terabytes of real-time sensor data daily across energy infrastructure", "Industrial IoT at scale; the lakehouse as the operational nervous system, not just analytics"],
     ["Rivian", "Vehicle telemetry and battery/charge prediction models; a cybersecurity lakehouse migrated in under three months", "One customer, three strata: core platform, ML, and the security push, adopted in sequence"],
     ["HSBC", "Customer analytics and personalization across retail banking", "Regulated-industry proof: governance (Unity Catalog) is the purchase criterion, not an afterthought"],
-    ["Fortune 500 broadly", ">60% penetration; use cases from fraud detection to genomics to supply-chain optimization", "The platform is horizontal; vertical depth comes from the data, which the customer already owns"],
+    ["Fortune 500 broadly", "70% penetration (company, Jul 2026); use cases from fraud detection to genomics to supply-chain optimization", "The platform is horizontal; vertical depth comes from the data, which the customer already owns"],
   ],
   "align": "LLL",
   "source": "Company-published case studies and disclosures, retrieved July 2026. Case-study metrics are company-reported.",

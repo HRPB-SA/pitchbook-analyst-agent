@@ -2,6 +2,51 @@
 
 Author: Harrison Rolfes, Senior Research Director
 Validation window: July 10, 2026. Canonical pack: v3.4 (July 7-9, 2026).
+
+## JULY 21, 2026 UPDATE (post-publication re-verification)
+
+Material events since the July 10 window; artifacts updated accordingly.
+
+### U1. The round is no longer a rumor - ANNOUNCED, SIGNED, UNCLOSED. Do-not-adopt still holds.
+- Company press release, July 16, 2026: strategic round at a $188B valuation, led by existing
+  investor Coatue, term sheet signed, close expected summer 2026. Round size NOT disclosed by
+  the company. Stated use of proceeds: AI roadmap (Unity AI Gateway, Genie, Lakebase), AI
+  acquisitions, research. (T2)
+- PitchBook deal 334745-56T, updated July 17, 2026: status upgraded from Rumor/Speculation
+  (est. $170B, July 7) to Announced/In Progress, 13th Round, Later Stage VC, post-money $188B
+  (valuation status Actual), Coatue Management lead. (T2)
+- TechCrunch, July 17, 2026: round size ~$3B. SINGLE SOURCE on size; carried as ~$3B (est.),
+  [VERIFY] until close. The prior $165-175B range (The Information, June 9) is superseded.
+- CONCLUSION: cross-checked T2 (company PR + PB deal record); signed but unclosed as of
+  July 21, 2026. Guardrail 2 holds: excluded from base case; analyzed as forward signal.
+  $188B = +40% step-up over the $134B completed mark; 27.2x current $6.9B run-rate; sits at
+  the top edge of the report's $155-190B fundamentals corridor. Report sections, snapshot,
+  Figures 4 and 9-10 reference lines, and model notes updated to the announced round.
+- SUPERSEDES prior "raising at $188B post led by Coatue on July 17" phrasing in PB financing
+  status note; the company's own July 16 announcement is the controlling disclosure.
+
+### U2. Fortune 500 penetration - RAISED to 70% (company, July 16, 2026).
+- The July 16 PR states 20,000+ organizations and 70% of the Fortune 500. Supersedes the
+  ">60%" figure from the February 9, 2026 PR; resolves frozen conflict on the third-party
+  "70%" claims (the company now says it). Customer-count tiers (800+ at $1M+, 70+ at $10M+)
+  remain as of Feb 2026; NRR >140% last stated Feb 2026.
+
+### U3. S-1 status - RE-CONFIRMED clean as of July 21, 2026.
+- SEC EDGAR submissions API, CIK 0001587468: latest filing remains Form D, December 31, 2025.
+  No registration statement. (T1) "No 2026 listing; 2027 earliest" stance holds.
+
+### U4. Headcount conflict - noted, unresolved, not load-bearing.
+- PitchBook: 9,000 (as of 2026-06-09). Wikipedia: 10,000 (2026). Revelio Labs / TrueUp
+  estimates: ~15,800 (June 2026). No official company disclosure. The note's "roughly 9,000
+  (PitchBook)" phrasing retained with source attribution; flagged [DISPUTED] at >10%
+  divergence between comparable-tier trackers.
+
+### U5. Acquisitions - Quotient AI (March 11, 2026, undisclosed; agent evaluation, integrated
+  into Genie/Agent Bricks) confirmed via company blog; Panther remains announced-not-closed
+  (June 16, 2026). Third-party tracker count: 18 disclosed acquisitions to date (Tracxn).
+  The ~19 estimate in the note stands within labeling tolerance.
+
+---
 Method: live re-verification of every load-bearing figure against primary sources (SEC EDGAR, Databricks newsroom, CNBC, Bloomberg, The Information via aggregators, Reuters syndication), PitchBook Premium MCP (entity 59199-40, profile last updated 2026-07-09), and web search. Conflicts frozen, not averaged.
 
 ## Priority items (per brief Section 1)

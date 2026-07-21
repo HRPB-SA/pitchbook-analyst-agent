@@ -489,13 +489,13 @@ for i, (nm, sz, post) in enumerate(ladder):
     if i % 2:
         for col in (2,5,7): ws_m.cell(r, col).fill = fill_soft
     r += 1
-ws_m.cell(r, 2, "Lifetime: ~$29.5B total = ~$20.2B equity + ~$9.3B debt (PitchBook 21-deal record, retrieved Jul 10, 2026). "
-                "Reported $165-175B round (Jun 2026) unclosed; excluded everywhere.").font = f_src
+ws_m.cell(r, 2, "Lifetime: ~$29.5B total = ~$20.2B equity + ~$9.3B debt (PitchBook 21-deal record, retrieved Jul 21, 2026). "
+                "Announced $188B round (Coatue-led, signed Jul 16, 2026) unclosed; excluded everywhere.").font = f_src
 
 # ================================================================ VALUATION
 sheet_prep(ws_v, {"A":2,"B":34,"C":12,"D":12,"E":12,"F":12,"G":12,"H":12,"I":12,"J":40})
 ws_v.cell(2, 2, "Valuation").font = f_title
-ws_v.cell(3, 2, "Anchored on the completed $134B mark (Feb 9, 2026). The reported $165-175B round is a reference, not an input. "
+ws_v.cell(3, 2, "Anchored on the completed $134B mark (Feb 9, 2026). The announced $188B round (signed Jul 16, 2026, unclosed) is a reference, not an input. "
                 "The quality-valuation correlation is embargoed; only the per-point spread is expressed.").font = f_src
 r = 5
 ws_v.cell(r, 2, "Sensitivity: implied valuation ($B) = mid-2027E run-rate x multiple").font = f_h; r += 1
@@ -598,7 +598,7 @@ ws_out.add_chart(ch2, "H" + str(r + 1))
 sheet_prep(ws_cover, {"A":3,"B":4,"C":44,"D":14,"E":30,"F":6,"G":30,"H":16})
 ws_cover.cell(4, 3, "Databricks, Inc.").font = Font(name="Georgia", size=24, bold=True, color=NAVY)
 ws_cover.cell(5, 3, "Three-Statement Operating Model").font = Font(name="Georgia", size=13, color=SLATE, italic=True)
-ws_cover.cell(6, 3, "Companion to: Brick by Brick, an institutional deep dive. July 10, 2026.").font = f_src
+ws_cover.cell(6, 3, "Companion to: Brick by Brick, an institutional deep dive. July 10, 2026; updated July 21, 2026.").font = f_src
 ws_cover.cell(7, 3, "All figures USD millions; fiscal years end January 31. FY2025A / FY2026A are "
                     "estimates calibrated to disclosed run-rates; Databricks publishes no financial statements.").font = f_src
 r = 10
@@ -621,7 +621,7 @@ ws_cover.cell(r, 5, "=Inputs!E5").font = f_lblb; r += 1
 ws_cover.cell(r, 3, "FCF positive in FY2025A/FY2026A (disclosed fact)?").font = f_lbl
 ws_cover.cell(r, 5, f"=IF(AND(Model!{L(0)}{FCF}>0,Model!{L(1)}{FCF}>0),\"OK\",\"REVIEW\")").font = f_lblb; r += 2
 ws_cover.cell(r, 3, "Sourcing: company press releases and disclosures (Sep 2024 to Jun 2026); PitchBook deal records "
-                    "(entity 59199-40, retrieved Jul 10, 2026); SEC EDGAR (CIK 1587468); public cloud price lists. "
+                    "(entity 59199-40, retrieved Jul 21, 2026); SEC EDGAR (CIK 1587468); public cloud price lists. "
                     "All non-disclosed lines are labeled estimates.").font = f_src
 
 out = "../output/Databricks_Operating_Model_Jul2026.xlsx"

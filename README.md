@@ -4,7 +4,7 @@ Institutional deep dive on Databricks, Inc. built around a single question:
 what is each layer of the business, what does it earn, what does it mean now,
 and what does it imply next. Companion seven-year three-statement operating
 model in Excel. Prepared by Harrison Rolfes, Senior Research Director,
-July 10, 2026.
+July 10, 2026; figures and financing section re-verified July 21, 2026.
 
 ## Deliverables
 
@@ -58,8 +58,10 @@ python3 build/build_docx.py && soffice --headless --convert-to pdf --outdir outp
 1. The quality-valuation correlation coefficient is embargoed: no
    score-vs-valuation scatter, no fitted lines, no correlation statistic.
    The per-point ranked bar is the only cleared expression.
-2. Unclosed or rumored financings (the reported $165-175B talks) never anchor
-   the base case; they are analyzed, not adopted.
+2. Unclosed or rumored financings never anchor the base case; they are
+   analyzed, not adopted. Current instance: the $188B Coatue-led round
+   (term sheet signed July 16, 2026; close expected summer 2026) is
+   analyzed as a forward signal only until a confirmed close.
 3. Capital-efficiency denominators are equity-only; debt informs compute
    independence and risk.
 4. PitchBook TTM revenue is a forward-window projection, not a run-rate source.

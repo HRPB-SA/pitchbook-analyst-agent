@@ -268,17 +268,17 @@ def football_field():
     ax.axvline(134, color=INK, linewidth=1.5, linestyle="-", zorder=4)
     ax.text(134, 2.62, "current mark $134B\n(Series L, Feb 2026)", ha="center",
             fontsize=7.4, color=INK)
-    ax.axvspan(165, 175, color=SLATE, alpha=0.18, zorder=2)
-    ax.text(170, -0.62, "rumored range $165-175B\n(unclosed; press reports, Jun 9)",
+    ax.axvline(188, color=SLATE, linewidth=1.4, linestyle="--", zorder=2)
+    ax.text(188, -0.62, "announced round $188B\n(signed, unclosed; company, Jul 16)",
             ha="center", fontsize=7.4, color=SLATE)
     ax.set_yticks(range(3), [s[0] for s in scen], fontsize=8.4)
     ax.set_xlim(95, 260)
     ax.set_ylim(-1.0, 3.1)
     ax.set_xlabel("Implied valuation ($B), 12-month view", fontsize=7.8)
     style_ax(ax, "x")
-    title_block(fig, "The base case reaches the rumored range without adopting it",
-                "Scenario valuation ranges, 12-month forward view anchored on the $134B mark. The rumored raise is a reference\n"
-                "line, not an input: the base case is fundamentals (forward run-rate x sustained multiple), not the last private print.")
+    title_block(fig, "The announced round prices the top of the base corridor",
+                "Scenario valuation ranges, 12-month forward view anchored on the $134B mark. The announced $188B round is a\n"
+                "reference line, not an input: the base case is fundamentals (forward run-rate x sustained multiple), not the last private print.")
     save(fig, "football_field.png")
 
 # ------------------------------------------------------------- 8. sensitivity
@@ -361,7 +361,7 @@ def absorption():
     rows = [("SpaceX + xAI", 1.77, GREY, "listed Jun 2026,\n+23% since debut"),
             ("OpenAI", 1.00, NAVY, "target; paperwork\nreportedly filed"),
             ("Anthropic", 0.965, SLATE, "last mark; paperwork\nreportedly filed"),
-            ("Databricks", 0.17, GREEN, "if rumored range\nmarks (est.)")]
+            ("Databricks", 0.188, GREEN, "announced round\nprice (unclosed)")]
     y = np.arange(len(rows))[::-1]
     for yi, (n, v, c, note) in zip(y, rows):
         ax1.barh(yi, v, height=0.58, color=c, zorder=3)
@@ -418,21 +418,21 @@ def valuation_ladder():
                     color="white")
         else:
             ax.text(i, v + 16, size, ha="center", fontsize=7.0, color=GREY)
-    ax.bar([6], [10], bottom=165, width=0.58, color=SLATE, alpha=0.35,
+    ax.bar([6], [188], width=0.58, color=SLATE, alpha=0.35,
            hatch="///", edgecolor="white", zorder=3)
-    ax.text(6, 181, "$165-175B", ha="center", fontsize=8.2, fontweight="bold",
+    ax.text(6, 194, "$188B", ha="center", fontsize=8.2, fontweight="bold",
             color=SLATE)
-    ax.text(6, 148, "in talks,\nunclosed", ha="center", fontsize=6.8,
+    ax.text(6, 94, "signed,\nunclosed", ha="center", fontsize=6.8,
             color=GREY)
     ax.set_xticks(list(x) + [6],
-                  [r[0] for r in rounds] + ["Reported talks\nJun 2026"],
+                  [r[0] for r in rounds] + ["Announced round\nJul 2026"],
                   fontsize=7.2)
-    ax.set_ylim(0, 205)
+    ax.set_ylim(0, 215)
     ax.set_ylabel("Post-money valuation ($B)", fontsize=7.8)
     style_ax(ax, "y")
     title_block(fig, "Six marks in five years, each cleared by the fundamentals beneath it",
                 "Post-money valuation by round; bar labels show round size (PitchBook deal records; company announcements).\n"
-                "Both Series L closes priced at $134B. The reported $165-175B round was unclosed as of Jul 10, 2026 and anchors nothing here.")
+                "Both Series L closes priced at $134B. The Coatue-led round announced Jul 16, 2026 at $188B was unclosed as of Jul 21 and anchors nothing here.")
     save(fig, "val_ladder.png")
 
 if __name__ == "__main__":

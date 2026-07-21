@@ -321,22 +321,22 @@ def cover():
     add_para("", size=6, space_after=8)
 
     add_table_block({
-        "title": "Snapshot (all figures re-verified July 10, 2026)",
+        "title": "Snapshot (all figures re-verified July 21, 2026)",
         "header": ["Metric", "Value", "Source, date"],
         "rows": [
             ["Last completed mark", "$134B (held flat across two closes)", "Series L; company, Dec 2025; PitchBook deal record, Feb 9, 2026"],
-            ["Reported round (not adopted)", "$165-175B, in talks, unclosed", "Press reports, Jun 9, 2026; PitchBook note, Jul 7, 2026"],
+            ["Announced round (not adopted)", "$188B, Coatue-led, term sheet signed, unclosed; close expected summer 2026", "Company, Jul 16, 2026; PitchBook deal record, Jul 17, 2026"],
             ["Revenue run-rate", "$6.9B, +80% YoY, accelerating", "Company disclosure, Jun 16, 2026"],
             ["Gross margin", "74% (from >80%), guided lower", "Company disclosure, Jun 16, 2026"],
             ["Free cash flow", "Positive (TTM and FY2025; magnitude undisclosed)", "Company, Feb 9, 2026"],
             ["Net revenue retention", ">140%", "Company, Feb 9, 2026"],
-            ["Customers", "20,000+ orgs; 800+ >$1M/yr; 70+ >$10M/yr; >60% of Fortune 500", "Company, Feb 9, 2026"],
+            ["Customers", "20,000+ orgs; 800+ >$1M/yr; 70+ >$10M/yr; 70% of Fortune 500", "Company, Feb 9 and Jul 16, 2026"],
             ["Lifetime capital", "~$29.5B (~$20.2B equity + ~$9.3B debt)", "PitchBook 21-deal record, Jul 2026"],
-            ["Run-rate multiple", "19.4x ($134B / $6.9B)", "Derived"],
-            ["Listing status", "No S-1 on file; 2026 ruled out; 2027 earliest", "SEC EDGAR, Jul 10, 2026; company, Jun 4, 2026"],
+            ["Run-rate multiple", "19.4x ($134B / $6.9B); 27.2x at announced round price", "Derived"],
+            ["Listing status", "No S-1 on file; 2026 ruled out; 2027 earliest", "SEC EDGAR, Jul 21, 2026; company, Jun 4, 2026"],
         ],
         "align": "LLL",
-        "source": "Prepared by Harrison Rolfes, Senior Research Director  |  July 10, 2026  |  Companion workbook: Databricks_Operating_Model_Jul2026.xlsx.",
+        "source": "Prepared by Harrison Rolfes, Senior Research Director  |  July 10, 2026; figures and financing section updated July 21, 2026  |  Companion workbook: Databricks_Operating_Model_Jul2026.xlsx.",
     })
 
 # ================================================================ CONTENTS
