@@ -8,14 +8,16 @@ letters (column A is blank in most Monitor sheets; data starts at B).
 ## Files (short codes) and as-of
 
 - **B** = Morningstar PitchBook Unicorn 20 Valuations and Pricing Data
-  (3607983d). Daily MODEL valuations, to 7/15/2026.
+  (3607983d). Daily MODEL valuations; used at the 6/30/2026 Q2 close (file
+  extends to 7/15/2026).
 - **C** = Unicorn Monitor Q2 2026 lighter (bc89fe92). Universe, verticals,
   indexes, secondaries, to 6/30/2026 (history snapshot 6/22).
 - (File A, Unicorn 20 Pricing Data, is redundant - a pricing-only subset of B.
   Do not use.)
 
-Universe figures are on the Monitor basis (1,556 active / $8,496.6B). Model
-marks (B) are 7/15; universe/index (C) are 6/30. State both stamps.
+Universe figures are on the Monitor basis (1,556 active / $8,496.6B). Everything
+is as of 6/30/2026 (model marks pulled at the 6/30 row; 6/22 is only the history
+snapshot date). Single as-of.
 
 ## Step 0 - set up the consolidation and the join key
 
@@ -58,8 +60,9 @@ Feeds analysis: "The top of the market" and "estimate integrity".
   e.g. D = "C!Global Unicorn History col I / 1000".
 - **Flags**: SpaceX has no round mark in history (IPO/exit); Cerebras round mark
   is missing (IPO'd Q2). Mark both "n/a" and note.
-- Read-outs it produces: model +9.8% over round in aggregate; secondary ~11%
-  below model for megacaps; up-round pressure mid-cap; repricing bottom-tier.
+- Read-outs it produces: model +15.1% over round in aggregate; secondary 7-32%
+  below model for megacaps (widest SpaceX -32%, Anthropic -22% at the 6/30 close);
+  up-round pressure mid-cap; repricing bottom-tier.
 
 ## Tab 2 - `Top20_Performance` (value creation, YTD)
 
@@ -73,7 +76,7 @@ Feeds: "Value creation at the top".
 - **YTD %** = Latest / Jan-2026 - 1. **Since-inception $ created** = Latest -
   Inception.
 - Steps: use INDEX/MATCH on the date column (B) for the three rows, then compute.
-- Read-outs: Anthropic+SpaceX = 61.2% of the 20; top 3 = 80.8%; YTD spread
+- Read-outs: Anthropic+SpaceX = 65.7% of the 20; top 3 = 82.9%; YTD spread
   +600% (Cerebras) to -22% (Ripple); note Perplexity read -12%, not the
   +752% a corrupt 1/1/2026 holiday row implied.
 
@@ -130,8 +133,10 @@ Feeds: "the vertical return layer".
   size. To get a FULLER window than the 6/16/2023 summary, compute return
   directly from the daily level columns (level history starts 3/22/2021):
   last level / first level - 1. Always stamp the window on the cell.
-- Read-outs: AI +58.1% (16.5% ann), SaaS +34.2%, most others below the +20.0%
-  TME benchmark; risk understated by mark smoothing (note it).
+- Read-outs (ANNUALIZED; source publishes annualized not cumulative): AI +58.1%
+  ann / +302.6% cum, SaaS +34.2%, Cyber +22.2% - three beat the Global TME
+  +19.6% ann / +72.4% cum benchmark; AI ~3.0x public; risk understated by mark
+  smoothing (note it).
 
 ## Tab 7 - `Vintage_2021`
 
@@ -143,7 +148,7 @@ Feeds: "the 2021 vintage and 2028 outlook".
   vintage; (b) of those, how many appear in the latest snapshot (F = 6/22/2026)
   = survivors; (c) departed = vintage minus survivors. Use COUNTIFS / a helper
   pivot on distinct ThirdPartyId.
-- Read-outs: 622 minted, 466 active (75%), 156 departed.
+- Read-outs: 618 minted, 465 active (75.2%), 153 departed.
 
 ## Tab 8 - `Coverage_Gap`
 
