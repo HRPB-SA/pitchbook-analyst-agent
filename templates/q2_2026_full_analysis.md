@@ -1,174 +1,243 @@
 # Global Unicorn Tracker - Q2 2026
 
-Late-Stage Company Research. Universe and index data as of June 30, 2026;
-top-20 model marks as of July 15, 2026. Universe figures are stated on the
-Morningstar PitchBook Monitor basis (1,556 active unicorns, $8,496.6 billion
-aggregate post-money) and should not be blended with other universe definitions.
+Late-Stage Company Research. Universe and index data as of June 30, 2026; top-20
+model marks as of July 15, 2026. Universe figures are stated on the Morningstar
+PitchBook Monitor basis (1,556 active unicorns, $8,496.6 billion aggregate
+post-money) and should not be blended with other universe definitions.
 
 ## Introduction
 
-The aggregate value of the private unicorn universe reached $8,496.6 billion in
-Q2 2026, a figure that will be quoted widely and scrutinized rarely. It deserves
-scrutiny. The number rose from $6,654 billion at the end of 2025, an apparent
-$1.8 trillion of value creation in two quarters, but almost none of it was broad.
-The top ten companies went from $1,459 billion to $4,058 billion over the same
-window; the remaining 1,546 companies, taken together, barely moved. The headline
-describes the appreciation of a handful of frontier names and the composition of
-the index around them. It does not describe the market that most of the universe
-actually experiences.
+The private unicorn universe carried an aggregate post-money valuation of
+$8,496.6 billion in Q2 2026. That figure is worth defining before it is quoted.
+It is the sum of each company's most recently observed post-money mark; it is not
+a market capitalization, because none of these shares trade continuously, and it
+is not a realizable value, because there is no venue in which $8.5 trillion of
+private stock could be sold. It is an accounting sum that treats a six-month-old
+mark and a seven-year-old mark with identical confidence. Understanding what the
+number is turns out to be most of the work of understanding what it means.
 
-This report examines the quarter through four lenses: who created the value and
-whether their marks are real, how the value distributes across verticals, what
-business quality looks like once it is separated from price, and where the
-coverage and repricing risk sits. The through-line is a single divergence. The
-top of the market is fresh, tested, and compounding. The middle is stale,
-untested, and stagnant. The distance between the two is the risk the next three
-years will resolve.
+The aggregate rose from $6,654 billion at the end of 2025, an apparent $1.8
+trillion of value creation in two quarters. The composition of that increase is
+the entire story. The ten largest companies went from a combined $1,459 billion
+to $4,058 billion; the other 1,546 companies moved comparatively little. The
+average top-ten company is now worth $405.8 billion, while the average company
+outside the top ten is worth $2.87 billion, a ratio of roughly 141 to 1. This is
+not a distribution with a fat tail. It is a bimodal universe: a dozen
+sovereign-scale enterprises and fifteen hundred ordinary unicorns sharing a label
+that has lost most of its descriptive power.
+
+This report examines four questions: who created the value and whether their
+marks are real, how the value distributes across verticals, what business quality
+looks like once separated from price, and where the coverage and repricing risk
+sits. The through-line is one divergence. The top of the market is fresh, tested,
+and compounding. The middle is stale, untested, and stagnant. The distance
+between them is the risk the next three years will resolve.
 
 ## Market overview: the leaders
 
 ### The quarter that belonged to a handful of companies
 
-Q2 was, in value terms, a top-ten event. The top-ten share of aggregate unicorn
-value reached 47.8%, up from 26.2% at the end of 2025, with the top ten's
-absolute value nearly tripling from $1,459 billion to $4,058 billion. Against
-that, formation was unremarkable: 107 new unicorns in the first half of 2026, an
-annualized pace near 214, well beneath the 618 minted in 2021. The market did not
-broaden; it concentrated. When a $1.8 trillion move in the aggregate is traced
-almost entirely to ten names, the aggregate has become a proxy for those names'
-fundraising and remarking cadence, and tells an investor little about the median
-company. (We note that deal-value concentration, the cleaner expression of this
-point, requires round-level capital data absent from this dataset; the figures
-here are valuation concentration.)
+The relevant number is the top-ten share of aggregate value, which measures how
+much of the universe's total post-money sits in its ten largest names. It reached
+47.8% in Q2 2026, up from 26.2% at the end of 2025 and from an 18.3% trough in
+2023. The three-year move is +29.5 percentage points, a 2.6-fold increase in
+concentration. What this means is that value creation, having spread across the
+universe through 2023, has re-gathered at the top faster than at any point in the
+dataset. What it implies is that the aggregate has become a proxy for the
+remarking of ten companies: a 10% move in the top ten now shifts the headline by
+roughly $400 billion, more than the entire aggregate value of the universe in
+2014.
+
+Formation, by contrast, was ordinary. The count of companies newly crossing the
+$1 billion threshold ran to 107 in the first half of 2026, an annualized pace
+near 214. That is a recovery from the 2023 trough of 123 (a collapse of 80% from
+the 2021 peak of 618) but a fraction of the boom. The signal is that the market
+did not broaden in Q2; it concentrated. New unicorns are being minted at a
+healthy clip, but they enter at the bottom of a distribution whose value is
+determined at the top. (We note that deal-value concentration, the cleaner
+version of this point, requires round-level capital data absent from this
+dataset; the figures here measure valuation concentration.)
 
 ### The top of the market: fresh prices, stale prices, and the gap between them
 
-The twenty most closely tracked private companies carry three prices that, on
-inspection, rarely agree: a daily model valuation, the last primary-round
-post-money, and an implied price from the secondary market. The gaps between
-them are the most instructive data in this report.
+Each of the twenty most closely tracked private companies carries three distinct
+prices, and identifying what each one is matters as much as the gaps between them.
+The model mark is Morningstar's daily valuation, derived from a modeled share
+price that incorporates public comparables and secondary activity; it is the
+freshest and most forward-looking. The round mark is the post-money of the last
+priced primary financing; it is the last price a primary investor actually paid,
+and it is frozen until the next round. The secondary-implied value is an actual
+secondary transaction price multiplied by shares outstanding; it is the one price
+at which stock genuinely changed hands.
 
-In aggregate, the model marks sit 9.8% above last-round marks, consistent with a
-market in which fresh views exceed stale prices. But the secondary tape tells a
-more cautious story at the very top. For every megacap, secondary-implied value
-sits below the model: SpaceX by roughly 14%, Anthropic by 12%, Databricks by 11%,
-OpenAI by 10%, Revolut by 8%. The model is the most optimistic of the three
-prices, and actual transactions corroborate its direction without confirming its
-magnitude. An investor marking these names to model is marking them 10% to 14%
-above where their shares are changing hands.
+In aggregate the model marks sit 9.8% above the round marks, which is what one
+expects in a rising market: fresh views exceed stale prices. But the secondary
+tape complicates the picture precisely where it matters most. For every megacap,
+the price at which shares actually traded sits below the model: SpaceX by roughly
+14%, Anthropic by 12%, Databricks by 11%, OpenAI by 10%, Revolut by 8%, an average
+discount near 11%. What this means is that the model is the most optimistic of the
+three prices, and that real transactions validate its direction but not its
+level. What it implies is concrete and quantifiable: an investor marking the top
+ten to model rather than to the secondary tape is carrying roughly 11% of $4,058
+billion, on the order of $450 billion, of value that the market is not currently
+paying. For a limited partner reporting NAV, that is the difference between a mark
+and a bid.
 
-Below the megacaps, the picture inverts into genuine up-round pressure: secondary
-prices sit above the last round for Applied Intuition (+37%), Anysphere (+30%),
-Anduril (+22%), Revolut (+16%), and Databricks (+4%), the signature of companies
-whose last primary mark now understates them. And at the bottom of the group,
-repricing is already visible across all three prices at once: Ripple is marked
-53% below its last round, Epic Games 38% below, Kraken 38% below with secondaries
-lower still, alongside softer markdowns at Figure AI, Perplexity, and Deel. One
-outlier, Neuralink, sits 332% above a last round set in 2021, a reminder that a
-very wide gap can reflect an ancient mark rather than a mispriced company.
+Below the megacaps the sign flips into genuine up-round pressure. Secondary prices
+sit above the last round for Applied Intuition (+37%), Anysphere (+30%), Anduril
+(+22%), Revolut (+16%), and Databricks (+4%), which identifies these as companies
+whose last primary mark now understates them; their next round, when it comes,
+should be an up-round, and their stale marks are conservative rather than
+inflated. At the bottom of the group, repricing has already happened across all
+three prices at once: Ripple is marked 53% below its last round, Epic Games 38%
+below, Kraken 38% below with secondaries lower still, alongside softer markdowns
+at Figure AI, Perplexity, and Deel. One name, Neuralink, sits 332% above a round
+set in 2021; that gap identifies an ancient mark, not a cheap company, and is a
+caution against reading every large model-to-round spread as upside.
 
-The analytical takeaway is durable: a private valuation is only as reliable as
-the agreement among its independent prices, and in Q2 that agreement is weakest
-precisely where the dollars are largest.
+The durable conclusion is that a private valuation is only as reliable as the
+agreement among its independent prices, and in Q2 2026 that agreement is thinnest
+exactly where the dollars are largest. The top of the market is not mispriced, but
+it is marked with the widest confidence interval in the universe.
 
 ### Value creation at the top, value stagnation everywhere else
 
-Value creation inside the top twenty is extraordinarily concentrated. Anthropic,
-whose model index rose from an inception value near $4.0 billion to $1,120.7
-billion, and SpaceX, from $75 billion to $1,605.5 billion, have between them
-added more than $2.6 trillion of model value. Against that, mature names have
-compounded slowly: Stripe from $121 billion to $169 billion, Applied Intuition
-essentially flat. The year-to-date dispersion is stark, running from Perplexity
-(+755%), Cerebras (+482%), Anthropic (+219%), and Neuralink (+205%) at one
-extreme to outright decliners at the other (Ripple -27%, Rippling -15%, Canva
--13%, Kraken -13%). This is not a universe rising together. It is a small set of
-compounders carrying a long, flat tail, and the aggregate inherits the shape of
-the former while being populated mostly by the latter.
+Value creation here means the increase in a company's model valuation since its
+inception mark, and its distribution among the twenty is among the most skewed in
+the report. Anthropic, whose model index rose from an inception value near $4.0
+billion to $1,120.7 billion, and SpaceX, from $75 billion to $1,605.5 billion,
+have together added more than $2.6 trillion of model value. Those two names alone
+account for 61.2% of the entire twenty-company model total of $4,453 billion; add
+OpenAI and the top three reach 80.8%. What this means is that the "top of the
+market" is really the top three, and the other seventeen marquee names, valuable
+as they are, are a rounding difference by comparison.
+
+The year-to-date dispersion confirms the pattern at a finer grain. Model marks
+range from Perplexity (+755%), Cerebras (+482%), Anthropic (+219%), and Neuralink
+(+205%) at one extreme to outright decliners at the other (Ripple -27%, Rippling
+-15%, Canva -13%, Kraken -13%, Deel -9%). What this implies for portfolio
+construction is that even within the twenty most valuable private companies,
+returns are not correlated to a common factor; they are idiosyncratic to a few
+frontier stories. A basket of the top twenty is not a diversified position. It is
+a concentrated bet on two or three names with seventeen smaller positions
+attached.
 
 ### Step-ups: the active market, seen indirectly
 
-A clean read on valuation step-ups requires consecutive round post-money and
-round-level capital, neither of which this dataset carries; the median step-up
-and its history reside in our companion tracker. What the present data supports
-is an indirect read on the same question. The up-round pressure visible in the
-secondary-versus-round comparison, with mid-cap names transacting 15% to 37%
-above their last primary mark, is the behavior of a functioning but selective
-market: pricing discipline has returned for the companies actually raising and
-trading, even as it says nothing about the larger population that is not.
+A step-up is the ratio of a new round's post-money to the prior round's, and it
+measures whether the companies actually raising are being priced up or down. A
+clean median step-up requires consecutive round post-money and round-level
+capital, neither of which this dataset carries; that series resides in the
+companion tracker. What the present data supports is an indirect read on the same
+question. The up-round pressure visible in the secondary-versus-round comparison,
+with mid-cap names transacting 15% to 37% above their last primary mark,
+identifies a market that is functioning for the companies transacting in it.
+Pricing discipline has returned at the point of sale. What it does not tell us,
+and what the step-up denominator would omit, is anything about the majority of
+the universe that is not raising at all; a healthy step-up describes the active
+market, not the universe.
 
 ### AI: one-third of count, nearly half of value
 
-Artificial intelligence now accounts for 27.6% of unicorns by count (430 of
-1,556) and 48.8% of value ($4,143.7 billion of $8,496.6 billion). The implication
-of value share running nearly double count share is that AI companies are
-individually about twice as valuable as the universe average. The concentration
-compounds one level down: OpenAI and Anthropic alone hold roughly 48% of all AI
-value on model marks (44% on last-round marks). For a portfolio, "AI exposure" is
-therefore not a diversified allocation to a sector. It is exposure to two or three
-specific cap tables, and the distinction is the difference between a theme and a
-position.
+Two shares define this point. AI companies are 27.6% of the universe by count
+(430 of 1,556) and 48.8% by value ($4,143.7 billion of $8,496.6 billion). The
+gap between those shares is itself the finding: value share running nearly double
+count share means the average AI unicorn is worth $9.64 billion against a
+universe average of $5.46 billion, a 1.76-fold premium. What this means is that
+AI is not merely well represented; its companies are individually larger, and the
+category is pulling the universe's center of gravity toward itself.
+
+The concentration compounds one level down, and this is the number that should
+govern any "AI allocation" decision. Within the $4,143.7 billion of AI value,
+OpenAI and Anthropic alone hold roughly 48% on model marks (44% on round marks).
+What this implies is that exposure to AI, for most portfolios, is not exposure to
+a sector of 430 companies but exposure to two cap tables, with the remaining 428
+providing the appearance of breadth. The distinction between a theme and a
+position collapses here, and an investor who believes they are diversified across
+AI is, in valuation terms, mostly long OpenAI and Anthropic.
 
 ## Verticals
 
 ### SaaS and AI dominance, and the steep drop-off after
 
-Two verticals dominate the private landscape. AI, at $4,143.7 billion across 430
-companies, and enterprise SaaS, at $2,389.9 billion across 457, together
-represent the overwhelming majority of tagged value. After them the fall is
-steep: FinTech is a distant third at $901.7 billion, followed by e-commerce
-($578.6 billion), mobility ($492.6 billion), and a long tail down to AgTech
-($58.4 billion). Because a company can carry several vertical tags, the tagged
-totals (1,793 companies, $11,857 billion) exceed the universe itself and must not
-be summed to it. Structurally, the private market is two themes and a tail.
+A vertical aggregate is the summed post-money of companies carrying that vertical
+tag; because a company can carry several tags, these aggregates are not mutually
+exclusive and cannot be summed to the universe. Two verticals dominate: AI at
+$4,143.7 billion across 430 companies and enterprise SaaS at $2,389.9 billion
+across 457. After them the drop is severe. FinTech, the third-largest, is $901.7
+billion, less than a quarter of AI; then e-commerce ($578.6 billion), mobility
+($492.6 billion), and a long tail to AgTech ($58.4 billion). The tagged totals
+sum to 1,793 companies and $11,857 billion, both larger than the universe itself,
+which is the arithmetic signature of nonexclusive classification. What this means
+structurally is that the private market is two themes and a tail, and what it
+implies is that any statement about "vertical diversification" has to reckon with
+the fact that the top two verticals hold the overwhelming majority of value and
+overlap heavily with each other.
 
 ### The narrow investable universe
 
-The same nonexclusive tagging that inflates the vertical counts also disguises
-how little genuine breadth exists. A company building AI-powered SaaS appears in
-both leading verticals, so the apparent diversity of an eleven-vertical map
-collapses, on inspection, toward heavy SaaS and AI overlap. A portfolio
-constructed without deliberate vertical constraints would be dominated by those
-two themes; the 1,793-tag figure overstates the number of distinct, investable
-businesses available. Breadth here is substantially an artifact of
-classification, not a property of the opportunity set.
+The same nonexclusive tagging that inflates the vertical counts disguises how
+little genuine breadth exists. Because a company building AI-powered SaaS is
+counted in both leading verticals, the apparent diversity of an eleven-vertical
+map collapses, on inspection, toward heavy SaaS and AI overlap. What this means in
+practice is that a portfolio constructed without deliberate vertical constraints
+would be dominated by those two themes regardless of intent, and the 1,793-tag
+figure overstates the number of distinct, investable businesses. Breadth here is
+substantially a property of the classification system, not of the opportunity set,
+and an investor who diversifies by vertical label may be concentrating by
+underlying company.
 
 ### Count and valuation versus performance: the vertical return layer
 
-Size alone is a static view, and adding index performance changes the ranking. On
-a three-year basis (June 16, 2023 to June 30, 2026), AI returned 58.1%, the
-runaway leader, with enterprise SaaS second at 34.2%. Every other vertical trailed
-the public benchmark, the Morningstar Global TME at 20.0%: cybersecurity (+22.2%)
-was the only near-match, while FinTech (+12.9%), mobility (+11.4%), climate
-(+8.7%), and AgTech (+5.9%) lagged well behind. The synthesis is that size and
-performance align only at the top: AI and SaaS are both large and compounding,
-whereas FinTech, the third-largest vertical by value, is large but a
-below-benchmark laggard. A note of caution on the risk figures: the unicorn index
-returns are computed on infrequently updated private marks, which mechanically
-suppresses measured volatility, so the low reported "risk" of these series should
-be read as a smoothing artifact rather than genuine stability.
+Size is a static measure; a vertical index return adds the dimension it omits, by
+tracking the mark-to-model performance of a vertical's constituents over time. On
+a three-year basis (June 2023 to June 2026), AI returned 58.1% cumulatively, which
+is 16.5% annualized, the runaway leader. Enterprise SaaS returned 34.2% (10.3%
+annualized). Every other vertical trailed the public benchmark, the Morningstar
+Global TME at 20.0% cumulative (6.3% annualized): cybersecurity (+22.2%) was the
+only near-match, while FinTech (+12.9%, or 4.1% annualized), mobility (+11.4%),
+climate (+8.7%), and AgTech (+5.9%) lagged well behind. What this means is that
+AI compounded at 2.6 times the annualized rate of public equities while the median
+vertical failed to beat them. What it implies is that the size-versus-performance
+quadrant has only one populated corner that matters: AI and SaaS are both large
+and compounding, while FinTech, the third-largest vertical by value, is a
+below-benchmark laggard, large in stock but weak in flow.
+
+One caution on the risk statistics. These returns are computed on infrequently
+updated private marks, which mechanically suppresses measured volatility; the
+unicorn indexes report lower standard deviation than public equities despite
+higher returns, an outcome that is a smoothing artifact of stale marking rather
+than genuine stability. Any risk-adjusted comparison built on these volatilities
+will overstate the asset class's Sharpe ratio, and should be discounted
+accordingly.
 
 ### AI as growth engine and concentration risk
 
-AI is, at the same time, the largest vertical by value, the best-performing over
-three years, and the highest-formation category. That combination makes it both
-the entire growth case for the asset class and the entire concentration risk.
-Underweighting AI is a bet against the market's center of gravity, since it
-represents nearly half of all value; overweighting it concentrates a portfolio in
-a small number of frontier cap tables whose marks move together. There is no
-clean way to separate the two roles, and the resulting tension is the defining
-feature of the quarter.
+AI is simultaneously the largest vertical by value ($4,143.7 billion), the
+best-performing over three years (+58.1%), and the highest-formation category.
+That triple identity is the point: the same vertical is the entire growth case and
+the entire concentration risk. What this means for allocation is a genuine
+dilemma rather than a preference. Underweighting AI is a bet against a category
+that is nearly half of all value and compounding at 2.6 times the public rate;
+overweighting it concentrates a portfolio in a few frontier cap tables whose marks
+move together and are, as the secondary tape shows, marked above where they trade.
+There is no clean way to separate the growth engine from the concentration risk,
+because they are the same companies, and that inseparability is the defining
+tension of the quarter.
 
 ### The 2021 vintage and the 2028 outlook
 
-The 2021 boom minted 622 unicorns, more than triple any other year on record (the
-next-highest, 2020, produced 195). Four and a half years later, 466 of them (75%)
-remain active and 156 have departed. On paper the surviving cohort looks healthy,
-but most of its value rests on marks set in the boom and never retested in the
-market that followed. The forcing function is a fund-cycle problem: the ten-year
-funds that created these companies mature between 2028 and 2031, at which point
-holding a 2021 mark becomes untenable and the position must resolve through a
-markdown round, an acquisition, or a wind-down. The vintage's paper health is
-real; so is the fact that it has not been tested, and the test is now scheduled.
+Formation counts identify 2021 as an outlier: 622 unicorns were minted that year,
+more than triple the next-highest year (2020, at 195). Four and a half years
+later, 466 (75%) remain active and 156 (25.1%) have departed. What this means is
+that the single largest cohort in the dataset is now entering the phase where its
+marks must be tested, and most of them have not been: the survivors largely carry
+valuations set in the boom and never revisited. What it implies is a scheduled
+forcing function. The ten-year funds that created these companies mature between
+2028 and 2031, at which point a 2021 mark held at face value becomes untenable and
+the position must resolve through a markdown round, an acquisition, or a
+wind-down. The vintage's 75% survival rate looks reassuring, but survival is not
+the same as validation, and the validation is now on a clock.
 
 ## PitchBook Business Quality (PBQ) and valuations, top 20
 
@@ -176,119 +245,153 @@ real; so is the fact that it has not been tested, and the test is now scheduled.
 
 Ranked by model valuation, the twenty read SpaceX ($1,606 billion), Anthropic
 ($1,121 billion), OpenAI ($872 billion), Stripe ($169 billion), Databricks ($157
-billion), Revolut ($94 billion), and on down. This is a list of the most
-expensive companies, and expense is not quality. Two names at similar valuations
-can differ by an order of magnitude in how efficiently they converted invested
-capital into enterprise value, a distinction the price ranking simply erases. A
-quality-adjusted ordering would reshuffle this list materially. The valuation
-table is a price sheet, and it should be read as one.
+billion), Revolut ($94 billion), Anduril ($77 billion), and down. What this list
+is, precisely, is an ordering by price, and price is a function of capital raised
+as much as of value created. Two companies at the same valuation can differ by an
+order of magnitude in capital efficiency, the ratio of enterprise value to
+invested capital, and that difference is exactly what the valuation ranking
+erases: a company that reached $150 billion on $2 billion of equity and one that
+reached $150 billion on $30 billion are peers on this table and opposites in
+quality. What this implies is that the valuation table should be read as a price
+sheet, and that a quality-adjusted ordering would reshuffle it substantially,
+promoting the capital-efficient compounders and demoting the capital-hungry names
+that bought their way up the list.
 
 ### Expanding PBQ across the top 20, with secondary pricing as the estimate-integrity input
 
-A full PBQ score across the twenty requires operating inputs (revenue quality,
-margin trajectory, customer concentration, compute independence, governance
-structure) that this dataset does not contain, so the composite remains
-analyst-generated and, for fourteen of the twenty, unscored. What the data does
-supply is one observable dimension of quality: estimate integrity, measured as
-the agreement among a name's three independent prices. Companies whose model,
-last-round, and secondary marks cluster tightly, such as Canva, Stripe, and
-Rippling, have corroborated, reliable valuations. Companies whose three prices
-diverge widely, such as Neuralink (+332% model over round), Ripple (-53%), and
-Kraken, carry low mark reliability, which is itself a governance and
-valuation-quality signal and belongs in the score. The megacaps sit in an
-intermediate zone, with bullish models running ahead of a more conservative
-secondary tape.
+A full PBQ score requires operating inputs (revenue quality, margin trajectory,
+customer concentration, compute independence, governance structure) that this
+dataset does not contain, so the composite remains analyst-generated and, for
+fourteen of the twenty, unscored. What the data does supply is one measurable
+dimension of quality: estimate integrity, defined here as the degree of agreement
+among a name's three independent prices. Companies whose model, round, and
+secondary marks cluster tightly (Canva, near zero spread; Stripe and Rippling,
+within a few percent) have corroborated, reliable valuations, and that reliability
+is itself a mark of governance and reporting quality. Companies whose three prices
+diverge widely (Neuralink at +332% model over round, Ripple at -53%, Kraken with
+secondaries far below its mark) carry low mark reliability, which is a
+valuation-quality and governance signal that belongs in the score. The megacaps
+occupy an intermediate zone: bullish models running roughly 11% ahead of the
+secondary tape, reliable enough to trust directionally but not to the last dollar.
 
 ### PBQ per dollar of valuation
 
-The intended exhibit, business quality per dollar of valuation, cannot yet be
-computed, because the composites do not exist for the full twenty; only six names
-were scored in the prior edition. Conceptually the measure inverts the valuation
-table, ranking companies by the quality delivered per dollar of price paid rather
-than by absolute price, and it remains the cleanest single expression of the
-quality-versus-price relationship in the report. It awaits the analyst scores,
-and its construction is the standing task for this section.
+This exhibit, business quality per dollar of valuation, is the measure that
+inverts the price sheet: it ranks companies by the quality delivered per dollar of
+price paid rather than by absolute price, and it is the cleanest single expression
+of the quality-versus-price relationship in the report. It cannot yet be computed,
+because the composites do not exist for the full twenty; only six names were
+scored in the prior edition. What can be said now is what it will show when built:
+that the most expensive companies and the best value are rarely the same names,
+and that the ranking by quality-per-dollar will look almost nothing like the
+ranking by valuation. It awaits the analyst scores.
 
 ### PBQ scorecard by company
 
 The per-company scorecard, a composite alongside five weighted sub-scores, is
-similarly pending the analyst inputs. The prior edition scored six frontier names
-(Databricks 8.7, Anthropic 7.7, SpaceX 7.5, OpenAI 4.2, xAI 3.8, SSI 2.3), and
-extending the framework to the full twenty is the objective. This dataset
-contributes two of the pieces required: the capital context (fresh valuations and
-their secondary corroboration) and the estimate-integrity sub-signal. Revenue
-quality, compute independence, governance optionality, and moat durability still
-require company disclosure and analyst judgment before the scorecard is complete.
+similarly pending the analyst inputs. The prior edition scored six frontier names,
+and the spread among them is the argument for the whole framework: Databricks 8.7,
+Anthropic 7.7, SpaceX 7.5, OpenAI 4.2, xAI 3.8, SSI 2.3. What this spread means is
+that companies adjacent on the valuation table are far apart on quality: OpenAI,
+the third most valuable company in the world, scores below the midpoint, while
+Databricks, an order of magnitude smaller, tops the group. Extending the framework
+to the full twenty is the objective, and this dataset contributes two of the
+required pieces, the capital context and the estimate-integrity sub-signal;
+revenue quality, compute independence, governance optionality, and moat durability
+still require company disclosure and analyst judgment.
 
 ## Valuations and fallen unicorns
 
 ### Where the value sits
 
-The top-ten share of aggregate value traces a full cycle. It ran from 49.8% in
-2014 down to an 18.3% trough in 2023, the high-water mark of broad-based value
-creation, and has since reconcentrated sharply to 26.2% in 2025 and 47.8% in Q2
-2026, effectively back to its 2014 level. The value that dispersed across the
-universe during 2017 to 2023 has re-gathered at the very top. Concentration, not
-distribution, is the regime that now governs the aggregate.
+The top-ten share of aggregate value, the same concentration gauge introduced
+earlier, traces a full cycle when read across the dataset's history: 49.8% in
+2014, a steady de-concentration to an 18.3% trough in 2023, and a sharp
+reconcentration to 26.2% in 2025 and 47.8% in Q2 2026, effectively back to its
+2014 level. What this means is that the 2017-to-2023 period of broad-based value
+creation was the anomaly, not the norm, and the market has reverted to a regime in
+which a handful of companies hold most of the value. What it implies for anyone
+building exposure is that the median unicorn's fortunes and the aggregate's
+fortunes have decoupled: the index can rise while the typical company does
+nothing, because the index is, increasingly, the top ten.
 
 ### Latest valuation
 
-The aggregate of $8,496.6 billion, up from $6,654 billion at the end of 2025,
-should be decomposed rather than read at face value. The increase is almost
-entirely a top-ten event, with that cohort's value rising from $1,459 billion to
-$4,058 billion while the remaining roughly 1,546 companies moved comparatively
-little. Read naively, the headline implies a broadly appreciating universe. Read
-correctly, it is megacap mark appreciation and index composition sitting atop a
-largely flat middle, and the distinction is decisive for anyone using the
-aggregate as a market-wide signal.
+The aggregate of $8,496.6 billion, up from $6,654 billion, should be decomposed
+into repricing and composition before it is read. The increase is almost entirely
+a top-ten event: that cohort rose from $1,459 billion to $4,058 billion, an
+increase of $2,599 billion, which is larger than the entire aggregate's increase
+of roughly $1,843 billion, meaning the non-top-ten universe actually contributed
+negatively on net over the period. What this means is that the headline's growth
+is not just concentrated but more than fully explained by the top ten, with the
+middle of the universe a slight drag. What it implies is that using the aggregate
+as a market-wide signal is not merely imprecise; it is directionally misleading
+about the experience of the median company.
 
 ### The coverage gap: stale marks versus fresh marks
 
 Mark freshness is the credibility question behind the $8.5 trillion figure, and
 the coverage is thin. On a proxy basis, 78.5% of current active unicorns carry a
 unicorn-qualifying date more than 24 months old, and 71.9% more than 36 months.
-We flag that this proxy overstates true staleness, because the available field is
-the qualifying date rather than the latest round, and the underlying post-money
-marks are more current than it implies (Anthropic at $965 billion and OpenAI at
-$852 billion are recent). Even discounted, the figure indicates how much of the
-aggregate rests on prices that have not been recently tested. The twenty marquee
-names are the fresh-mark frontier of this universe; the bulk of it is not, and the
-gap between the two is precisely where repricing risk accumulates unobserved.
+What this proxy is, and is not, matters: the available field is the
+unicorn-qualifying date rather than the latest financing date, so it overstates
+true staleness, and the underlying post-money marks are more current than it
+implies (Anthropic at $965 billion and OpenAI at $852 billion are recent
+last-round marks, not old ones). Even discounted for that overstatement, the
+figure indicates that a large majority of the universe's value rests on prices
+that have not been recently tested in a financing. What this implies is a
+two-tier universe by mark reliability: the twenty marquee names are the
+fresh-mark frontier, corroborated by daily models and secondary trades, while the
+bulk of the universe carries marks whose age is unknown to the aggregate and whose
+repricing risk is therefore invisible in it.
 
 ### Step-ups and the relative velocity of value creation (RVVC)
 
-Both metrics depend on round-level capital amounts that this dataset does not
-carry, so neither the median step-up nor RVVC, the ratio of new valuation created
-to capital invested, is computable here; both reside in the companion tracker.
-The reason the pair matters is that they can diverge: a healthy-looking step-up
-can coexist with a poor RVVC when a company raises a large round for a small
-valuation increment, stepping up in price while destroying value per dollar
-invested. Read together they separate genuine value creation from dilution
-dressed as progress, and their omission here is a data limitation rather than an
-analytical judgment.
+RVVC is the ratio of new valuation created to capital invested, and it is the
+metric that separates value creation from value consumption. Both it and the
+median step-up depend on round-level capital amounts this dataset does not carry,
+so neither is computable here; both reside in the companion tracker. The reason
+the pair must be read together, and the reason RVVC is the more honest of the two,
+is that they can diverge sharply: a company can raise a $500 million round at a
+$5.5 billion post-money against a $4 billion prior mark, a 1.375-times step-up
+that looks healthy, while creating only $1.5 billion of new value on $500 million
+invested, an RVVC of 3, or in a worse case raising a huge sum for a small
+increment and posting an RVVC below 1, which means it destroyed value per dollar
+raised. A step-up can flatter a company that is diluting to survive; RVVC exposes
+it. The omission here is a data limitation, not an analytical judgment, and the
+metric's absence should not be read as an all-clear.
 
 ### Fallen unicorns
 
-This dataset cannot cleanly separate companies that fell below the unicorn
-threshold from those that exited. Across 2014 to 2026, 2,431 companies reached the
-index, 1,556 remain, and 875 have departed, a total that conflates IPOs and
-acquisitions with genuine falls below $1 billion; the 2021 vintage alone accounts
-for 156 of those departures. A true fallen count, with fall dates, causes, and
-down-round post-money, requires the curated fallen list maintained in the
-companion tracker. The systematic snapshot reconstruction available here bounds
-the attrition (875 total departures, 156 from the 2021 cohort) without resolving
-its composition, and the formal count of failures will understate stress until the
-untested middle of the universe is retested.
+A fallen unicorn is a company that dropped below the $1 billion threshold without
+a liquidity event, and the key limitation of this dataset is that it cannot
+cleanly separate that population from companies that exited. Across 2014 to 2026,
+2,431 companies reached the index, 1,556 remain, and 875 have departed, which is
+36% of every company that ever qualified. The 2021 vintage alone accounts for 156
+of those departures. What this total is, precisely, is attrition, a conflation of
+IPOs and acquisitions with genuine falls below the line; what it is not is a
+failure count. A true fallen count, with fall dates, causes, and down-round
+post-money, requires the curated fallen list maintained in the companion tracker.
+What the reconstruction here establishes is the bound: 875 total departures, 156
+from the 2021 cohort, an attrition rate that is high but whose composition between
+success and failure is unresolved. The formal count of failures will understate
+stress in any case, because it captures only companies that have already resolved,
+while the untested middle of the universe, carrying stale marks that have not yet
+been challenged, is where the next wave of falls is currently hidden.
 
 ## What to watch
 
-The quarter resolves into a single question that the next three years will answer.
-The top of the market is fresh, corroborated by secondaries within roughly 10% to
-14%, and compounding at rates that carry the entire aggregate. The middle is
-stale, untested since the 2021 boom, and stagnant. As long as the frontier names
-continue to appreciate, the headline will keep rising and the divergence will
-remain comfortable to ignore. The 2028 to 2031 fund-cycle maturities remove that
-comfort on a schedule, forcing the untested marks to resolve. The figure to track
-is not the $8.5 trillion aggregate, which will likely keep climbing, but the
-distance between the tested few and the untested many, and the pace at which that
-distance is closed by fresh rounds rather than by markdowns.
+The quarter resolves into a single question the next three years will answer. The
+top of the market is fresh, corroborated by secondaries to within roughly 11%,
+and compounding fast enough to carry the entire aggregate; the top three names
+alone drive four-fifths of the tracked value and more than the whole universe's
+net gain. The middle is stale, untested since the 2021 boom, and on the evidence
+of the composition math, a slight drag. As long as the frontier names keep
+appreciating, the headline will keep rising and the divergence will remain
+comfortable to ignore. The 2028-to-2031 fund-cycle maturities remove that comfort
+on a schedule, forcing the 466 surviving 2021-vintage companies and the broader
+untested middle to resolve their marks. The number to track is therefore not the
+$8.5 trillion aggregate, which will likely keep climbing on the strength of a
+dozen names, but the spread between the tested few and the untested many, and
+whether it closes through fresh up-rounds or through the markdowns the fund clock
+will eventually compel.
