@@ -120,7 +120,7 @@ contain, so the composite stays analyst-dependent and gap-bound. What the data
 does supply is the estimate-integrity dimension - the agreement among a name's
 three marks: companies whose model, round, and secondary prices cluster tightly
 (Canva, Stripe, Rippling) have reliable, corroborated valuations, while those
-where the three diverge widely (Neuralink +332%, Ripple -53%, Kraken) have low
+where the three diverge widely (Neuralink +439%, Ripple -51%, Kraken) have low
 mark reliability, itself a governance and valuation-quality signal.
 
 **PBQ per $ of valuation.** The intended exhibit - business quality per dollar of

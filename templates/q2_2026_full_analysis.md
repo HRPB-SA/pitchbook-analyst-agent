@@ -279,7 +279,7 @@ among a name's three independent prices. Companies whose model, round, and
 secondary marks cluster tightly (Canva, near zero spread; Stripe and Rippling,
 within a few percent) have corroborated, reliable valuations, and that reliability
 is itself a mark of governance and reporting quality. Companies whose three prices
-diverge widely (Neuralink at +332% model over round, Ripple at -53%, Kraken with
+diverge widely (Neuralink at +439% model over round, Ripple at -51%, Kraken with
 secondaries far below its mark) carry low mark reliability, which is a
 valuation-quality and governance signal that belongs in the score. The megacaps
 occupy an intermediate zone: bullish models running roughly 11% ahead of the
