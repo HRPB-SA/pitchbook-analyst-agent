@@ -72,9 +72,10 @@ the AI/TME ratio to ~3.0x and the beat-count to three.
 best-performing (+58%), and the highest-formation (60+ of recent new unicorns) -
 the single name for both the growth case and the concentration risk.
 
-**2021 vintage / 2028 outlook.** 622 unicorns minted in 2021 (the peak; next-
-highest year is 195). Four+ years on, 466 remain active (75%); 156 have departed.
-The 466 survivors carry marks largely set in the boom and now face 2028-2031
+**2021 vintage / 2028 outlook.** 618 unicorns minted in 2021 (matches published
+formation; peak year, next-highest 195). Four+ years on, 465 remain active (75.2%);
+153 have departed (still-private rate - includes exits, not only falls).
+The 465 survivors carry marks largely set in the boom and now face 2028-2031
 fund-cycle resolution.
 
 ## PBQ and valuations (top 20 = Unicorn 20 constituents)
@@ -109,7 +110,7 @@ is the qualifying date, not the latest round). Universe churn: 2,431 companies
 ever reached the index, 1,556 remain, 875 have departed.
 
 **Fallen / attrition.** This file cannot separate fallen from exited - 875 total
-departures over 2014-2026 conflate both. The 2021 vintage alone accounts for 156
+departures over 2014-2026 conflate both. The 2021 vintage alone accounts for 153
 departures. A proper fallen count needs the curated list (primary tracker).
 Formation trajectory for context: 2021 peak 618 -> 2023-24 trough 123 each ->
 2025 recovery 179 -> 2026 H1 107 (annualizing ~214).

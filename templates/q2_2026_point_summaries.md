@@ -92,9 +92,10 @@ of gravity (nearly half of all value); overweighting it concentrates a portfolio
 in a few frontier cap tables that could reprice together. That dual role is the
 central tension of the quarter.
 
-**The 2021 vintage and 2028 outlook.** The 2021 boom minted 622 unicorns, more
+**The 2021 vintage and 2028 outlook.** The 2021 boom minted 618 unicorns, more
 than triple any other year (next-highest is 2020 at 195), and four-plus years on
-466 (75%) remain active while 156 have departed. The survivors largely carry
+465 (75.2%) remain active while 153 have departed (a still-private rate; departure
+includes successful exits, not only falls). The survivors largely carry
 boom-era marks that have not been retested, and the ten-year funds that created
 them mature in 2028-2031 - a forcing function that will resolve those marks
 through markdown, M&A, or wind-down. The vintage's paper health is real but
@@ -175,7 +176,7 @@ finding.
 **Fallen unicorns.** This file cannot cleanly separate fallen from exited
 companies: across 2014-2026, 2,431 companies reached the index, 1,556 remain, and
 875 have departed - a total that conflates IPOs and acquisitions with genuine
-falls below $1B. The 2021 vintage alone accounts for 156 of those departures. A
+falls below $1B. The 2021 vintage alone accounts for 153 of those departures. A
 true fallen count, with fall dates and down-round post-money, requires the
 curated fallen list in the primary tracker; the snapshot reconstruction here
-bounds the attrition (875 total, 156 from 2021) but not its composition.
+bounds the attrition (875 total, 153 from 2021) but not its composition.

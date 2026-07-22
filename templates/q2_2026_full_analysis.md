@@ -234,9 +234,10 @@ tension of the quarter.
 
 ### The 2021 vintage and the 2028 outlook
 
-Formation counts identify 2021 as an outlier: 622 unicorns were minted that year,
+Formation counts identify 2021 as an outlier: 618 unicorns were minted that year,
 more than triple the next-highest year (2020, at 195). Four and a half years
-later, 466 (75%) remain active and 156 (25.1%) have departed. What this means is
+later, 465 (75.2%) remain active and 153 have departed (a still-private rate, since
+departure includes successful exits as well as falls). What this means is
 that the single largest cohort in the dataset is now entering the phase where its
 marks must be tested, and most of them have not been: the survivors largely carry
 valuations set in the boom and never revisited. What it implies is a scheduled
@@ -374,12 +375,12 @@ A fallen unicorn is a company that dropped below the $1 billion threshold withou
 a liquidity event, and the key limitation of this dataset is that it cannot
 cleanly separate that population from companies that exited. Across 2014 to 2026,
 2,431 companies reached the index, 1,556 remain, and 875 have departed, which is
-36% of every company that ever qualified. The 2021 vintage alone accounts for 156
+36% of every company that ever qualified. The 2021 vintage alone accounts for 153
 of those departures. What this total is, precisely, is attrition, a conflation of
 IPOs and acquisitions with genuine falls below the line; what it is not is a
 failure count. A true fallen count, with fall dates, causes, and down-round
 post-money, requires the curated fallen list maintained in the companion tracker.
-What the reconstruction here establishes is the bound: 875 total departures, 156
+What the reconstruction here establishes is the bound: 875 total departures, 153
 from the 2021 cohort, an attrition rate that is high but whose composition between
 success and failure is unresolved. The formal count of failures will understate
 stress in any case, because it captures only companies that have already resolved,
@@ -396,7 +397,7 @@ net gain. The middle is stale, untested since the 2021 boom, and on the evidence
 of the composition math, a slight drag. As long as the frontier names keep
 appreciating, the headline will keep rising and the divergence will remain
 comfortable to ignore. The 2028-to-2031 fund-cycle maturities remove that comfort
-on a schedule, forcing the 466 surviving 2021-vintage companies and the broader
+on a schedule, forcing the 465 surviving 2021-vintage companies and the broader
 untested middle to resolve their marks. The number to track is therefore not the
 $8.5 trillion aggregate, which will likely keep climbing on the strength of a
 dozen names, but the spread between the tested few and the untested many, and
