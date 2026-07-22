@@ -36,9 +36,10 @@ SpaceX -32%, Anthropic -22%, OpenAI -9%, Databricks -7%, Revolut -7%. Reads:
   round (model +439%) - the round is ancient, not the company cheap.
 
 **Value creation / YTD 2026 (model marks).** The 20 sum to $5,019B. YTD spread is
-enormous: Perplexity +752%, Cerebras +599%, Neuralink +281%, Anthropic +262%,
-SpaceX +143%, OpenAI +69%, Ramp +50% - against outright decliners Ripple -22%,
-Kraken -17%, Rippling -14%, Canva -14%, Deel -6%. Value creation is concentrated:
+enormous: Cerebras +600%, Neuralink +284%, Anthropic +261%, SpaceX +146%,
+OpenAI +67%, Ramp +50% - against outright decliners Ripple -22%, Kraken -17%,
+Rippling -14%, Canva -14%, Perplexity -12%, Deel -6%. (Perplexity's apparent
++752% was a corrupt-data artifact: a bad 1/1/2026 holiday row; true YTD -11.5%.) Value creation is concentrated:
 Anthropic (inception index $4.0B -> $1,272.1B) and SpaceX ($75B -> $2,026B) alone
 added over $3.2T of model value; mature names (Stripe $121B -> $169B, Applied
 Intuition flat) barely moved.

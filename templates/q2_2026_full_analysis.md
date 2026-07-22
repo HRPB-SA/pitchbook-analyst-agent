@@ -116,9 +116,12 @@ market" is really the top three, and the other seventeen marquee names, valuable
 as they are, are a rounding difference by comparison.
 
 The year-to-date dispersion confirms the pattern at a finer grain. Model marks
-range from Perplexity (+752%), Cerebras (+599%), Neuralink (+281%), and Anthropic
-(+262%) at one extreme to outright decliners at the other (Ripple -22%, Kraken
--17%, Rippling -14%, Canva -14%, Deel -6%). What this implies for portfolio
+range from Cerebras (+600%), Neuralink (+284%), Anthropic (+261%), and SpaceX
+(+146%) at one extreme to outright decliners at the other (Ripple -22%, Kraken
+-17%, Rippling -14%, Canva -14%, Perplexity -12%, Deel -6%). Perplexity is a
+correction worth naming: an apparent +752% gain proved to be a corrupt-data
+artifact (a bad 1/1/2026 holiday row), and its true year-to-date return is -12%.
+What this implies for portfolio
 construction is that even within the twenty most valuable private companies,
 returns are not correlated to a common factor; they are idiosyncratic to a few
 frontier stories. A basket of the top twenty is not a diversified position. It is

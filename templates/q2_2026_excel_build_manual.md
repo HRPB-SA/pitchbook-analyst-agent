@@ -74,7 +74,8 @@ Feeds: "Value creation at the top".
   Inception.
 - Steps: use INDEX/MATCH on the date column (B) for the three rows, then compute.
 - Read-outs: Anthropic+SpaceX = 61.2% of the 20; top 3 = 80.8%; YTD spread
-  +755% (Perplexity) to -27% (Ripple).
+  +600% (Cerebras) to -22% (Ripple); note Perplexity read -12%, not the
+  +752% a corrupt 1/1/2026 holiday row implied.
 
 ## Tab 3 - `Universe_TS` (aggregate, top-10 share, formation)
 

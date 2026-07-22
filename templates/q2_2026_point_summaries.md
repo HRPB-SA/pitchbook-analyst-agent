@@ -34,9 +34,10 @@ agree least at the very top.
 the 20 is extraordinarily concentrated: Anthropic (inception index $4.0B to
 $1,272.1B) and SpaceX ($75B to $2,026.2B) alone added over $3.2T of model value,
 while mature names like Stripe ($121B to $169B) and Applied Intuition (flat)
-barely moved. YTD 2026 model marks span +752% (Perplexity), +599% (Cerebras),
-+281% (Neuralink) down to outright declines (Ripple -22%, Kraken -17%, Canva
--14%). The pattern is a handful of compounders and a long stagnant tail - the
+barely moved. YTD 2026 model marks span +600% (Cerebras), +284% (Neuralink),
++261% (Anthropic) down to outright declines (Ripple -22%, Kraken -17%, Canva
+-14%, Perplexity -12% - the last a corrected corrupt-data artifact, not the
++752% a bad 1/1/2026 row implied). The pattern is a handful of compounders and a long stagnant tail - the
 boom is a few franchises, not a rising universe.
 
 **Step-ups: the active market is functioning.** This is the one Leaders point
