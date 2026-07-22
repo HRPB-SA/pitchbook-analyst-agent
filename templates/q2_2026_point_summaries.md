@@ -72,13 +72,17 @@ the 1,793-tag figure overstates the true number of distinct investable
 businesses. Breadth here is largely an artifact of multi-tagging.
 
 **Count and valuation vs. performance: the vertical return layer.** Adding the
-performance dimension that size hides, the three-year index returns (6/16/2023 to
-6/30/2026) show AI +58.1% as the runaway leader and Enterprise SaaS +34.2%
-second, with every other vertical below the +20.0% public benchmark (Global TME):
-Cybersecurity +22.2% is the only near-miss, while FinTech (+12.9%), Mobility
-(+11.4%), Climate (+8.7%) and AgTech (+5.9%) lag well behind. So AI and SaaS are
-large and compounding, while the third-largest vertical, FinTech, is large but a
-below-benchmark laggard - size and performance line up only at the very top.
+performance dimension that size hides, the three-year annualized index returns
+(6/16/2023 to 6/30/2026) show AI +58.1% per year (a cumulative +302.6%) as the
+runaway leader, Enterprise SaaS +34.2% annualized second, and cybersecurity
++22.2%; all three beat the public benchmark (Global TME +19.6% annualized, +72.4%
+cumulative), while FinTech (+12.9%), Mobility (+11.4%), Climate (+8.7%) and AgTech
+(+5.9%) lag well behind. AI compounded at roughly 3.0x the public annualized rate.
+So AI and SaaS are large and compounding, while the third-largest vertical,
+FinTech, is large but a below-benchmark laggard - size and performance line up
+only at the top. (Note: the source publishes these vertical returns annualized,
+not cumulative, and the benchmark on the same basis; an earlier cumulative read
+was corrected against the index levels.)
 
 **AI as growth engine and concentration risk.** AI is at once the largest
 vertical by value, the best-performing (+58% over three years), and the

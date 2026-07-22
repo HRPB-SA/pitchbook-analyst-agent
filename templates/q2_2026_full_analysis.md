@@ -191,17 +191,24 @@ underlying company.
 
 Size is a static measure; a vertical index return adds the dimension it omits, by
 tracking the mark-to-model performance of a vertical's constituents over time. On
-a three-year basis (June 2023 to June 2026), AI returned 58.1% cumulatively, which
-is 16.5% annualized, the runaway leader. Enterprise SaaS returned 34.2% (10.3%
-annualized). Every other vertical trailed the public benchmark, the Morningstar
-Global TME at 20.0% cumulative (6.3% annualized): cybersecurity (+22.2%) was the
-only near-match, while FinTech (+12.9%, or 4.1% annualized), mobility (+11.4%),
-climate (+8.7%), and AgTech (+5.9%) lagged well behind. What this means is that
-AI compounded at 2.6 times the annualized rate of public equities while the median
-vertical failed to beat them. What it implies is that the size-versus-performance
-quadrant has only one populated corner that matters: AI and SaaS are both large
-and compounding, while FinTech, the third-largest vertical by value, is a
-below-benchmark laggard, large in stock but weak in flow.
+a three-year basis (June 2023 to June 2026), and stated as annualized returns
+(the basis on which these index figures are published), AI returned 58.1% per
+year, a cumulative +302.6%, the runaway leader. Enterprise SaaS returned 34.2%
+annualized (+144.6% cumulative) and cybersecurity 22.2% annualized (+83.9%
+cumulative). The public benchmark, the Morningstar Global TME, returned 19.6%
+annualized (+72.4% cumulative) over the same window. Three verticals beat it, AI,
+SaaS, and cybersecurity, while FinTech (12.9% annualized), mobility (11.4%),
+climate (8.7%), and AgTech (5.9%) lagged well behind. What this means is that AI
+compounded at roughly 3.0 times the annualized rate of public equities, and that
+the private AI trade outran even the public one over the very window in which
+public AI names led the market. What it implies is that the size-versus-
+performance quadrant has one dominant corner: AI and SaaS are both large and
+compounding, while FinTech, the third-largest vertical by value, is a
+below-benchmark laggard, large in stock but weak in flow. A methodological note
+for the record: the source's published vertical returns are annualized, not
+cumulative, and its benchmark column is stated on the same annualized basis; an
+earlier read that treated the vertical figures as cumulative and the benchmark as
+a shorter-window number was corrected against the underlying index levels.
 
 One caution on the risk statistics. These returns are computed on infrequently
 updated private marks, which mechanically suppresses measured volatility; the
@@ -218,7 +225,7 @@ best-performing over three years (+58.1%), and the highest-formation category.
 That triple identity is the point: the same vertical is the entire growth case and
 the entire concentration risk. What this means for allocation is a genuine
 dilemma rather than a preference. Underweighting AI is a bet against a category
-that is nearly half of all value and compounding at 2.6 times the public rate;
+that is nearly half of all value and compounding at roughly 3.0 times the public rate;
 overweighting it concentrates a portfolio in a few frontier cap tables whose marks
 move together and are, as the secondary tape shows, marked above where they trade.
 There is no clean way to separate the growth engine from the concentration risk,

@@ -54,13 +54,19 @@ Mobility $492.6B > HealthTech $348.1B > Supply Chain $308.4B > Climate $234.1B >
 Cybersecurity $207.4B > BioPharma $60.1B > AgTech $58.4B. Tag total 1,793 co /
 $11,857B exceeds the universe (nonexclusive) - do not sum to a total.
 
-**The return layer (index total return, 6/16/2023-6/30/2026).** AI +58.1% (the
-runaway leader) > Enterprise SaaS +34.2% > Cybersecurity +22.2% > E-Commerce
-+16.1% > HealthTech +14.4% > BioPharma +13.3% > FinTech +12.9% > Mobility +11.4%
-> Climate +8.7% > Supply Chain +8.5% > AgTech +5.9%. Benchmark Global TME +20.0%.
-Only AI and SaaS beat the public benchmark; the rest are large-ish but flat.
-Size-vs-performance quadrant: AI and SaaS are big AND compounding; FinTech is the
-third-largest vertical but a below-benchmark laggard (+12.9%).
+**The return layer (index ANNUALIZED return, 6/16/2023-6/30/2026; source
+publishes annualized, not cumulative).** AI +58.1% ann / +302.6% cum (the runaway
+leader) > Enterprise SaaS +34.2% / +144.6% > Cybersecurity +22.2% / +83.9% >
+E-Commerce +16.1% > HealthTech +14.4% > BioPharma +13.3% > FinTech +12.9% >
+Mobility +11.4% > Climate +8.7% > Supply Chain +8.5% > AgTech +5.9%. Benchmark
+Global TME +19.6% ann / +72.4% cum. THREE verticals beat the public benchmark (AI,
+SaaS, Cybersecurity); AI compounded at ~3.0x the public annualized rate. The rest
+are large-ish but below benchmark. Size-vs-performance quadrant: AI and SaaS are
+big AND compounding; FinTech is the third-largest vertical but a below-benchmark
+laggard (+12.9%). Correction note: an earlier read treated the published vertical
+returns as cumulative and the benchmark as a shorter window; verifying against the
+index levels showed all figures are annualized on the same window, which raised
+the AI/TME ratio to ~3.0x and the beat-count to three.
 
 **AI as engine and risk.** AI is simultaneously the largest vertical, the
 best-performing (+58%), and the highest-formation (60+ of recent new unicorns) -
