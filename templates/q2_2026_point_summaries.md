@@ -1,8 +1,8 @@
 # Q2 2026 - one-paragraph summary per outline discussion point
 
 Grounded in the computed findings. Universe figures on the Monitor basis (1,556
-active / $8,496.6B). Three marks per top-20 name: model (Unicorn 20 daily, 7/15),
-round (Monitor last-round post-money), secondary (Monitor implied).
+active / $8,496.6B). Three marks per top-20 name: model (Unicorn 20 daily),
+round (Monitor last-round post-money), secondary (Monitor implied). All as of 6/30/2026.
 
 ## Market overview (leaders)
 
@@ -18,10 +18,12 @@ implies.
 
 **The top of the market: fresh, stale, and secondary prices.** The 20 marquee
 names carry three prices that mostly disagree. In aggregate the daily model mark
-sits +9.8% above last-round marks, but the secondary tape sits 10-14% below the
-model for every megacap (SpaceX -14%, Anthropic -12%, Databricks -11%, OpenAI
--10%) - the model is the most bullish of the three, and actual trades corroborate
-direction but not magnitude. Mid-cap names show genuine up-round pressure
+sits +15.1% above last-round marks, but the secondary tape sits below the model
+for every megacap and far below the two largest (SpaceX -32%, Anthropic -22%,
+OpenAI -9%, Databricks -7%) - the June 30 model caught SpaceX post-IPO and
+Anthropic at a fresh round, running ahead of a secondary tape that had not
+repriced; the model is the most bullish of the three, corroborated in direction
+but not magnitude. Mid-cap names show genuine up-round pressure
 (secondary above round: Applied Intuition +37%, Anysphere +30%, Anduril +22%,
 Revolut +16%), while the bottom tier is already repricing down across all three
 marks (Ripple -53%, Epic Games -38%, Kraken -38%). A private valuation's
@@ -30,11 +32,11 @@ agree least at the very top.
 
 **Value creation at the top, stagnation everywhere else.** Value creation among
 the 20 is extraordinarily concentrated: Anthropic (inception index $4.0B to
-$1,120.7B) and SpaceX ($75B to $1,605.5B) alone added over $2.6T of model value,
+$1,272.1B) and SpaceX ($75B to $2,026.2B) alone added over $3.2T of model value,
 while mature names like Stripe ($121B to $169B) and Applied Intuition (flat)
-barely moved. YTD 2026 model marks span +755% (Perplexity), +482% (Cerebras),
-+219% (Anthropic) down to outright declines (Ripple -27%, Rippling -15%, Canva
--13%). The pattern is a handful of compounders and a long stagnant tail - the
+barely moved. YTD 2026 model marks span +752% (Perplexity), +599% (Cerebras),
++281% (Neuralink) down to outright declines (Ripple -22%, Kraken -17%, Canva
+-14%). The pattern is a handful of compounders and a long stagnant tail - the
 boom is a few franchises, not a rising universe.
 
 **Step-ups: the active market is functioning.** This is the one Leaders point
@@ -50,7 +52,7 @@ tracker; here it is a documented gap.
 count (430 of 1,556) but 48.8% of aggregate value ($4,143.7B of $8,496.6B), so
 AI companies are individually about twice as valuable as the universe average.
 The concentration compounds within the vertical: OpenAI and Anthropic alone hold
-roughly 48% of all AI value on model marks (44% on round marks). For any
+roughly 51% of all AI value on model marks (44% on round marks). For any
 portfolio, "AI exposure" is therefore not a diversified sector bet but exposure
 to two or three specific cap tables.
 
@@ -104,8 +106,8 @@ untested, and the reckoning is scheduled.
 ## PitchBook Business Quality (PBQ) and valuations (top 20)
 
 **Why the valuation table isn't a quality ranking.** Ranked by model valuation
-the 20 read SpaceX $1,606B, Anthropic $1,121B, OpenAI $872B, Stripe $169B,
-Databricks $157B - a list of the most expensive companies, which is not the same
+the 20 read SpaceX $2,026B, Anthropic $1,272B, OpenAI $861B, Stripe $169B,
+Databricks $149B - a list of the most expensive companies, which is not the same
 as the best. Two names at similar valuations can differ by an order of magnitude
 in how efficiently they converted capital into value, a distinction the price
 ranking erases. A quality ranking would reorder this list substantially; the

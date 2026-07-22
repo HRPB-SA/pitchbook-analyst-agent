@@ -1,7 +1,7 @@
 # Global Unicorn Tracker - Q2 2026
 
 Late-Stage Company Research. Universe and index data as of June 30, 2026; top-20
-model marks as of July 15, 2026. Universe figures are stated on the Morningstar
+model marks as of June 30, 2026. Universe figures are stated on the Morningstar
 PitchBook Monitor basis (1,556 active unicorns, $8,496.6 billion aggregate
 post-money) and should not be blended with other universe definitions.
 
@@ -70,18 +70,21 @@ and it is frozen until the next round. The secondary-implied value is an actual
 secondary transaction price multiplied by shares outstanding; it is the one price
 at which stock genuinely changed hands.
 
-In aggregate the model marks sit 9.8% above the round marks, which is what one
+In aggregate the model marks sit 15.1% above the round marks, which is what one
 expects in a rising market: fresh views exceed stale prices. But the secondary
-tape complicates the picture precisely where it matters most. For every megacap,
-the price at which shares actually traded sits below the model: SpaceX by roughly
-14%, Anthropic by 12%, Databricks by 11%, OpenAI by 10%, Revolut by 8%, an average
-discount near 11%. What this means is that the model is the most optimistic of the
-three prices, and that real transactions validate its direction but not its
-level. What it implies is concrete and quantifiable: an investor marking the top
-ten to model rather than to the secondary tape is carrying roughly 11% of $4,058
-billion, on the order of $450 billion, of value that the market is not currently
-paying. For a limited partner reporting NAV, that is the difference between a mark
-and a bid.
+tape complicates the picture precisely where it matters most, and at the quarter-
+end close the gap is widest at the very top. For every megacap, the price at which
+shares actually traded sits below the model, and for the two largest it sits far
+below: SpaceX by 32%, Anthropic by 22%, OpenAI by 9%, Databricks by 7%, Revolut by
+7%. The two widest gaps are not noise; the June 30 model marks caught SpaceX just
+after its June IPO and Anthropic at a fresh round, when the model ran ahead of a
+secondary tape that had not repriced. What this means is that the model is the
+most optimistic of the three prices, and that real transactions validate its
+direction but not its level. What it implies is concrete: SpaceX alone carries
+roughly $650 billion more at its model mark ($2,026 billion) than at the secondary
+tape ($1,376 billion), and Anthropic roughly $280 billion more. For a limited
+partner marking to model, that is the difference between a mark and a bid, and it
+is largest exactly where the position is largest.
 
 Below the megacaps the sign flips into genuine up-round pressure. Secondary prices
 sit above the last round for Applied Intuition (+37%), Anysphere (+30%), Anduril
@@ -91,7 +94,7 @@ should be an up-round, and their stale marks are conservative rather than
 inflated. At the bottom of the group, repricing has already happened across all
 three prices at once: Ripple is marked 53% below its last round, Epic Games 38%
 below, Kraken 38% below with secondaries lower still, alongside softer markdowns
-at Figure AI, Perplexity, and Deel. One name, Neuralink, sits 332% above a round
+at Figure AI, Perplexity, and Deel. One name, Neuralink, sits 439% above a round
 set in 2021; that gap identifies an ancient mark, not a cheap company, and is a
 caution against reading every large model-to-round spread as upside.
 
@@ -105,17 +108,17 @@ it is marked with the widest confidence interval in the universe.
 Value creation here means the increase in a company's model valuation since its
 inception mark, and its distribution among the twenty is among the most skewed in
 the report. Anthropic, whose model index rose from an inception value near $4.0
-billion to $1,120.7 billion, and SpaceX, from $75 billion to $1,605.5 billion,
-have together added more than $2.6 trillion of model value. Those two names alone
-account for 61.2% of the entire twenty-company model total of $4,453 billion; add
-OpenAI and the top three reach 80.8%. What this means is that the "top of the
+billion to $1,272.1 billion, and SpaceX, from $75 billion to $2,026.2 billion,
+have together added more than $3.2 trillion of model value. Those two names alone
+account for 65.7% of the entire twenty-company model total of $5,019 billion; add
+OpenAI and the top three reach 82.9%. What this means is that the "top of the
 market" is really the top three, and the other seventeen marquee names, valuable
 as they are, are a rounding difference by comparison.
 
 The year-to-date dispersion confirms the pattern at a finer grain. Model marks
-range from Perplexity (+755%), Cerebras (+482%), Anthropic (+219%), and Neuralink
-(+205%) at one extreme to outright decliners at the other (Ripple -27%, Rippling
--15%, Canva -13%, Kraken -13%, Deel -9%). What this implies for portfolio
+range from Perplexity (+752%), Cerebras (+599%), Neuralink (+281%), and Anthropic
+(+262%) at one extreme to outright decliners at the other (Ripple -22%, Kraken
+-17%, Rippling -14%, Canva -14%, Deel -6%). What this implies for portfolio
 construction is that even within the twenty most valuable private companies,
 returns are not correlated to a common factor; they are idiosyncratic to a few
 frontier stories. A basket of the top twenty is not a diversified position. It is
@@ -149,7 +152,7 @@ category is pulling the universe's center of gravity toward itself.
 
 The concentration compounds one level down, and this is the number that should
 govern any "AI allocation" decision. Within the $4,143.7 billion of AI value,
-OpenAI and Anthropic alone hold roughly 48% on model marks (44% on round marks).
+OpenAI and Anthropic alone hold roughly 51% on model marks (44% on round marks).
 What this implies is that exposure to AI, for most portfolios, is not exposure to
 a sector of 430 companies but exposure to two cap tables, with the remaining 428
 providing the appearance of breadth. The distinction between a theme and a
@@ -251,8 +254,8 @@ the same as validation, and the validation is now on a clock.
 
 ### Why the valuation table is not a quality ranking
 
-Ranked by model valuation, the twenty read SpaceX ($1,606 billion), Anthropic
-($1,121 billion), OpenAI ($872 billion), Stripe ($169 billion), Databricks ($157
+Ranked by model valuation, the twenty read SpaceX ($2,026 billion), Anthropic
+($1,272 billion), OpenAI ($861 billion), Stripe ($169 billion), Databricks ($149
 billion), Revolut ($94 billion), Anduril ($77 billion), and down. What this list
 is, precisely, is an ordering by price, and price is a function of capital raised
 as much as of value created. Two companies at the same valuation can differ by an
