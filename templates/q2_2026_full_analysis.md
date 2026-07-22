@@ -128,6 +128,23 @@ frontier stories. A basket of the top twenty is not a diversified position. It i
 a concentrated bet on two or three names with seventeen smaller positions
 attached.
 
+A further distinction separates two kinds of value creation the headline
+valuation change conceals: appreciation and issuance. Anthropic's model valuation
+rose from $352 billion at the end of 2025 to $1,272 billion at June 30 on a share
+count that grew only 1.26 times, so almost the entire gain was per-share
+appreciation, each existing claim becoming more valuable. SpaceX and Perplexity
+are the opposite case. SpaceX's valuation rose 146% year-to-date while its share
+count expanded roughly 6.2 times through its June IPO, so its per-share price
+actually fell 61%; the valuation gain came from issuing more claims, not from
+each claim appreciating. Perplexity is starker: a roughly ten-fold share increase
+left its per-share price down about 91% while its valuation barely moved. The
+distinction matters for anyone reading "value created" as a quality signal.
+Appreciation-driven value creation, where a near-stable share base compounds, is
+higher-conviction than issuance-driven value creation, where the enterprise is
+worth more chiefly because it has sold more of itself. Of the twenty, only two
+(SpaceX and Perplexity) grew through heavy issuance; seventeen appreciated on
+stable-to-modestly-diluted bases, and one (Epic Games) declined outright.
+
 ### Step-ups: the active market, seen indirectly
 
 A step-up is the ratio of a new round's post-money to the prior round's, and it

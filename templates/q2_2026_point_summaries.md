@@ -38,7 +38,10 @@ barely moved. YTD 2026 model marks span +600% (Cerebras), +284% (Neuralink),
 +261% (Anthropic) down to outright declines (Ripple -22%, Kraken -17%, Canva
 -14%, Perplexity -12% - the last a corrected corrupt-data artifact, not the
 +752% a bad 1/1/2026 row implied). The pattern is a handful of compounders and a long stagnant tail - the
-boom is a few franchises, not a rising universe.
+boom is a few franchises, not a rising universe. One quality distinction: value
+creation is appreciation-driven for 17 of the 20 (near-stable share base) but
+issuance-driven for SpaceX (6.2x shares at IPO) and Perplexity (10x) - their
+per-share price fell even as valuation rose, a lower-conviction kind of gain.
 
 **Step-ups: the active market is functioning.** This is the one Leaders point
 these files cannot answer directly: median step-ups require consecutive round
