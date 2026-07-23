@@ -22,10 +22,10 @@ The arithmetic leaves no room for interpretation: every part of the market outsi
 artificial intelligence contracted in aggregate, by roughly $0.66 trillion
 combined. What presents as a rising asset class is a single theme lifting the
 average while the remainder of the market gives ground. The sections that follow
-take that observation apart, because nearly every question an institutional
-allocator should ask about this market, how trustworthy the valuations are, where
-liquidity actually exists, what the concentration does to portfolio risk, and how
-today's cohort is likely to age, resolves into some version of it.
+take that observation apart, because the questions that matter for this market, how
+trustworthy the valuations are, where liquidity actually exists, what the
+concentration does to risk, and how today's cohort is likely to age, each resolve
+into some version of it.
 
 ---
 
@@ -231,43 +231,36 @@ than genuine stability.
 
 ### AI is the source of both the return and the concentration of the risk
 
-Artificial intelligence is the market's growth engine and its largest single
-exposure at the same time, and critically, in the same companies. It produced $1.59
-trillion of a $0.93 trillion universe gain, so the rest of the market contracted
-around it, and it now represents 62% of value, four of the five largest rounds, and
-61% of new company formation. Because AI valuations move together and dominate the
-index, a repricing in a handful of frontier names moves the entire aggregate. The
-sensitivity can be sized: a 25% reduction in AI valuations would remove roughly
-$1.27 trillion from the universe, 15.4% of all private-technology value, from one
-theme repricing. This produces a genuine dilemma rather than a preference.
-Underweighting artificial intelligence means betting against nearly two-thirds of
-the market; overweighting it concentrates a portfolio in companies the secondary
-market already values well below their model valuations. The exposure cannot be
-hedged inside the asset class, because the return and the risk are the same
-holdings, and that inseparability is the central problem an allocator to late-stage
-venture now has to solve.
+Artificial intelligence is both the source of the market's growth and its largest
+concentration of value, in the same companies. It produced $1.59 trillion of the
+$0.93 trillion universe gain, so the rest of the market contracted around it, and it
+now represents 62% of value, four of the five largest rounds, and 61% of new company
+formation. Because AI valuations move together and dominate the index, a repricing in
+a handful of frontier names moves the entire aggregate: a 25% reduction in AI
+valuations would remove roughly $1.27 trillion, 15.4% of all private-technology
+value. The companies that produced the market's gain are the same ones the secondary
+market already values well below their model valuations, so the exposure that drove
+the aggregate up carries the widest downside, and it sits in too large a share of the
+universe to be diversified away within it.
 
 ### The 2021 cohort is the base rate for today's AI class
 
-The most disciplined way to forecast how today's cohort will age is to study the
-last one that formed under similar conditions, and the 2021 vintage supplies it. Of
-635 unicorns minted in 2021, five years on, 470 remain active, or 74%; 102 have
-exited, 16%; and 62 have failed, comprising 34 that fell below the billion-dollar
-threshold while still private, 15 that fell at exit through a public listing or sale
-below unicorn status, and 13 that went bankrupt. Two features of this record matter
-for the present. Three-quarters of the cohort remain illiquid four and a half years
-after formation, which follows directly from a median time to exit of 8.47 years.
-And the 15 companies that fell at exit are the least visible failures in the data,
-recorded as exits in the headline figures while their investors absorbed losses.
+The 2021 vintage shows how a boom cohort ages. Of 635 unicorns minted in 2021, five
+years on 470 remain active (74%), 102 have exited (16%), and 62 have failed: 34 fell
+below the billion-dollar threshold while still private, 15 fell at exit through a
+public listing or sale below unicorn status, and 13 went bankrupt. Three-quarters of
+the cohort remain illiquid four and a half years after formation, consistent with a
+median time to exit of 8.47 years. The 15 that fell at exit are recorded as exits in
+the headline figures rather than as failures, so the reported exit count overstates
+successful outcomes.
 
-Applied to today's 702 artificial-intelligence unicorns, the 2021 experience implies
-a base case of roughly a quarter impairing and three-quarters remaining illiquid into
-the next decade, with an important adjustment: AI valuations are more correlated and
-more concentrated than the 2021 cohort's were, which fattens the tail on both sides.
-The ten-year funds that financed the 2021 vintage mature between 2028 and 2031, which
-sets a fixed timetable on which those untested valuations must resolve, through
-markdown, sale, or wind-down. The cohort's 74% survival rate reads as reassuring, but
-survival is not the same as validation, and the validation is now scheduled.
+Today's 702 artificial-intelligence unicorns are a cohort of the same size at an
+earlier stage. If they age as the 2021 vintage did, roughly a quarter would impair
+and three-quarters would remain illiquid into the next decade, though AI valuations
+are more correlated and more concentrated than the 2021 cohort's, so those outcomes
+would be more tightly linked to a common driver. The ten-year funds that financed the
+2021 vintage mature between 2028 and 2031, the period over which those untested
+valuations resolve through markdown, sale, or wind-down.
 
 ---
 
@@ -281,29 +274,24 @@ close to the 2021 peak of 64%, so the rounds that do occur are more crowded than
 before. Investor participation by count, however, has not recovered alongside the
 dollars: it peaked at 2,892 in the third quarter of 2021, bottomed at 895 in the
 fourth quarter of 2023, recovered to 1,415 in the first quarter of 2026, then fell
-back to 995 in the second quarter even as financing value stayed high. A short list
-of firms writes most of the capital, led by Sequoia Capital at 491 unicorn
-financings since 2016, Tiger Global at 472, Andreessen Horowitz at 454, Accel at
-382, and Coatue at 344. Investor concentration mirrors company concentration: a
-narrow set of funds backs a narrow set of companies, which means the same handful of
-decision-makers now sets the valuations that anchor the entire late-stage market.
+back to 995 in the second quarter even as financing value stayed high. A small number
+of firms account for the most financings: Sequoia Capital participated in 491 unicorn
+financings since 2016, Tiger Global 472, Andreessen Horowitz 454, Accel 382, and
+Coatue 344. Investor concentration mirrors company concentration: a narrow set of
+funds backs a narrow set of companies.
 
 ### The public-listing window reopened, but one company is most of it
 
-Exit value in 2026 reached $2,110.9 billion across 50 exits, the highest in the
-data, and a single event accounts for four-fifths of it. SpaceX's public listing was
-$1,690 billion on its own; excluding it, exit value was $420.7 billion, still the
-strongest year since 2021 but a fraction of the headline, and both figures belong in
-any honest account of the year. Public listings drove 85% of exit value, and the
-market that was effectively closed for three years is open again, with SpaceX,
-Cerebras at $34 billion, and Quantinuum at $14 billion all listing in the quarter.
-Duration works against a simple reading of the recovery: the median time to exit rose
-to 8.47 years, near the 9.17-year peak of 2025, so the companies reaching liquidity
-now are older vintages clearing a backlog rather than recent 2023 and 2024 formations.
-The distinction matters because the constraint that will define the next two years is
-liquidity for the 2021-vintage funds now approaching maturity. Those funds must return
-capital into a market that can currently provide it only through a slow-draining
-backlog, and once that backlog empties, exit value settles well below the 2026 figure.
+Exit value in 2026 reached $2,110.9 billion across 50 exits, the highest in the data,
+and a single event accounts for four-fifths of it. SpaceX's public listing was $1,690
+billion on its own; excluding it, exit value was $420.7 billion, the strongest year
+since 2021 but far below the headline. Public listings drove 85% of exit value, and
+after three years of few listings, SpaceX, Cerebras at $34 billion, and Quantinuum at
+$14 billion all listed in the quarter. The median time to exit rose to 8.47 years,
+near the 9.17-year peak of 2025, so the companies reaching liquidity now are older
+vintages rather than recent 2023 and 2024 formations. The 2026 exit total therefore
+reflects one large listing and a backlog of aged companies reaching liquidity, not a
+broad acceleration of recent cohorts to exit.
 
 ---
 
@@ -393,18 +381,16 @@ the universe.
 
 A total of 245 unicorns have fallen below the billion-dollar threshold to date, and
 the flow of new failures has nearly stopped: six down rounds in the first half of
-2026, worth $3.85 billion, against a peak of 34 failures in 2024. When companies do
-fail, they fall hard, with a median failing valuation of $524.5 million and a median
-decline of 67% from the prior peak, leaving the typical fallen company at roughly a
-third of its high valuation and just below the billion-dollar line. The 2021 cohort
-contains the least-visible category of loss, 15 companies that fell at exit, recorded
-as exits in the headline figures while their backers lost money. A low current
-failure rate deserves skepticism rather than comfort, because failures are recognized
-when a company raises a lower valuation, and companies that do not raise cannot be
-marked down. With 47.6% of the universe carrying untested valuations, the low failure
-count is more plausibly a symptom of widespread dormancy than of underlying health,
-and the dormant interior is the reservoir from which the next wave of markdowns will
-come.
+2026, worth $3.85 billion, against a peak of 34 in 2024. Failures are severe when
+they occur, with a median failing valuation of $524.5 million and a median decline of
+67% from the prior peak, leaving the typical fallen company at about a third of its
+high valuation, just below the billion-dollar line. The 2021 cohort's 15 companies
+that fell at exit are recorded as exits rather than failures, so the reported failure
+count understates losses. The low current count also reflects how failures are
+measured: a company is recognized as failing only when it raises at a lower
+valuation, and 47.6% of the universe has not raised in more than two years, so the
+companies most likely to be carrying stale valuations are absent from the count. The
+failure rate describes companies that raised, not the dormant majority.
 
 ---
 
