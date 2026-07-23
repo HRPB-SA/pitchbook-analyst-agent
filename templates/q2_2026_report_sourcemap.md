@@ -63,7 +63,7 @@ All figures as of 6/30/2026. "Derived" = arithmetic on cited cells, shown.
 | SaaS 1.42x / 2.18x / 176 | PT | RVVC & Step Up Vertical Ranking | 1.423 / 2.183 / 176 |
 | Robotics 2.03x (5.66x avg); CleanTech 3.30x / 2.77x | PT | RVVC & Step Up Vertical Ranking | 2.025 (5.658); 3.298 / 2.771 |
 | Crypto RVVC 2.62x -> 1.11x | PT | RVVC & Step Up Vertical Ranking | 2025 median 2.619 -> 2026 median 1.11 |
-| Cyber 0.66x; E-Commerce 0.38x | PT | RVVC & Step Up Vertical Ranking | 0.662 / 0.3817 |
+| Cyber 0.66x; E-Commerce 0.38x (RVVC); step-ups 1.74x / 2.13x | PT | RVVC & Step Up Vertical Ranking | RVVC 0.662 / 0.3817; step-up 1.74 / 2.133 |
 | AI +58.1%/yr (+302.6% cum); SaaS +34.2%; Cyber +22.2% | MON | Vertical_Returns | level-based annualized / cumulative |
 | TME +19.6%/yr (+72.4% cum); 3 verticals beat; ~3x | MON | Vertical_Returns | 0.1963 ann / 0.7239 cum; beat-count 3; 0.5814/0.1963=2.96 |
 | FinTech +12.9% (trails benchmark) | MON | Vertical_Returns | 0.1291 ann |

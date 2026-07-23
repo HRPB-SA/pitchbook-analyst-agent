@@ -205,33 +205,29 @@ intelligence.
 
 ### The largest verticals are not where value is created fastest
 
-Size and the rate of value creation point in different directions, which is one of
-the more useful findings for a manager deciding where new capital earns the most.
-On 2026 medians, artificial intelligence produced a relative velocity of value
-creation, the ratio of new valuation created to capital invested, of 1.84 times
-alongside a 2.35 times step-up across 249 financings, and software 1.42 times and
-2.18 times across 176. Both are healthy, and both sit in the middle of the pack on
-velocity. The highest velocity belongs to smaller categories, robotics and drones
-at 2.03 times, clean technology at 3.30 times with a 2.77 times step-up. Crypto
-cooled sharply, its median velocity falling from 2.62 times to 1.11 times.
-Cybersecurity at 0.66 times and e-commerce at 0.38 times sit at the bottom, raising
-capital at higher valuations while generating less than a dollar of new value for
-each dollar invested, a combination that flatters headline valuations without
-building value beneath them.
+Size and the rate of value creation diverge across categories. On 2026 medians,
+artificial intelligence recorded a relative velocity of value creation, the ratio
+of new valuation created to capital invested, of 1.84 times, with a 2.35 times
+step-up across 249 financings, and software 1.42 times and 2.18 times across 176,
+both near the middle of the range. The highest velocity sits in smaller categories:
+robotics and drones at 2.03 times and clean technology at 3.30 times, the latter
+with a 2.77 times step-up. Crypto fell from 2.62 times to 1.11 times. Cybersecurity
+at 0.66 times and e-commerce at 0.38 times are the lowest, both below 1.0 even as
+they raised at higher valuations (median step-ups of 1.74 and 2.13 times), which
+means each dollar invested created less than a dollar of new valuation and the
+recorded valuation rose faster than the value beneath it.
 
-The three-year record of realized index performance confirms the same order and
-adds the dimension that size alone conceals. On the Monitor vertical indexes,
-stated as annualized returns, artificial intelligence returned 58.1% a year, a
-cumulative 302.6%, and enterprise software 34.2% and cybersecurity 22.2% were the
-only other categories to beat the public benchmark, the Global TME index, at 19.6%
-a year, or 72.4% cumulative. Artificial intelligence compounded at roughly three
-times the public rate. Financial technology, third by value, returned 12.9% and
-trailed the benchmark, which places it in the least attractive quadrant a manager
-can occupy: large enough to matter, slow enough to drag. One caution governs any
-risk-adjusted use of these figures. They are built on valuations that update
-infrequently, which mechanically suppresses measured volatility and inflates any
-Sharpe ratio derived from them, so the smoothness of the private return series is a
-feature of the data, not of the asset.
+The three-year record of realized index performance shows the same order. On the
+Monitor vertical indexes, stated as annualized returns, artificial intelligence
+returned 58.1% a year, a cumulative 302.6%; enterprise software returned 34.2% and
+cybersecurity 22.2%, the only other categories to beat the Global TME public
+benchmark at 19.6% a year, or 72.4% cumulative. Artificial intelligence compounded
+at about three times the public rate. Financial technology, third-largest by value,
+returned 12.9% and trailed the benchmark, pairing large size with a below-benchmark
+return. These figures are computed on valuations that update infrequently, which
+suppresses measured volatility and inflates any Sharpe ratio derived from them, so
+the low volatility of the private indexes reflects infrequent revaluation rather
+than genuine stability.
 
 ### AI is the source of both the return and the concentration of the risk
 
