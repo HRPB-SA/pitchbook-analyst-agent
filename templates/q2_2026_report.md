@@ -214,10 +214,11 @@ PBQ belongs beside price rather than beneath it.
 
 A full PBQ or AIBQ composite requires operating inputs, revenue quality, margins,
 customer concentration, compute independence, governance, and moat, that none of
-the three files contain. Composites exist for six frontier names: Databricks 8.7,
-Anthropic 7.7, SpaceX 7.5, OpenAI 4.2, xAI 3.8, SSI 2.3. The range argues for the
-framework on its own, since OpenAI, the third most valuable company in the world,
-scores below the midpoint. The one quality measure available from this data is
+the three files contain. Composites exist for only six frontier names, carried
+from the prior edition rather than these files: Databricks 8.7, Anthropic 7.7,
+SpaceX 7.5, OpenAI 4.2, xAI 3.8, SSI 2.3. The range argues for the framework on
+its own, since OpenAI, the second most valuable company in this universe, scores
+below the midpoint. The one quality measure available from this data is
 estimate integrity, the agreement among a company's three marks. Canva, Stripe,
 and Rippling cluster tightly and carry corroborated valuations; Neuralink (model
 441% above its last round), Ripple, and Kraken diverge widely and carry low mark
@@ -233,8 +234,9 @@ does not provide, and should be scoped as pending rather than estimated.
 ### Two companies hold a fifth of the market
 
 Anthropic ($965B) and OpenAI ($852B) together hold $1.82T, 22% of the $8.23T
-universe, and the top ten hold a majority, against a median company of $2.0B. At
-this level of concentration the index and the median move independently: the
+universe, and the ten largest hold about $2.9T, 35% of it, against a median
+company of $2.0B. At this level of concentration the index and the median move
+independently: the
 aggregate can rise on a dozen marks while the typical unicorn is flat. The two
 should be read as separate measures, one tracking a handful of frontier names and
 the other the remaining seventeen hundred.
@@ -242,9 +244,10 @@ the other the remaining seventeen hundred.
 ### Marks are current at the very top and age quickly below it
 
 Anthropic ($965B, May 2026), ByteDance ($370B, May 2026), and OpenAI ($852B, March
-2026) carry recent marks. Below the leaders the marks age fast, with top-ten names
-still on 2023 marks, including a mid-2023 FinTech mark and a May 2023 SHEIN mark.
-Measured from actual latest-round dates across the active book, 47.6% of unicorns
+2026) carry recent marks. Below the leaders the marks age fast: Ant Group,
+seventh by value, still carries an August 2020 round, and SHEIN a January 2024
+round. Measured from actual latest-round dates across the active book, 47.6% of
+unicorns
 have not raised in more than 24 months and 37.1% in more than 36 months. That is
 the test behind the $8.23T figure: close to half of it rests on marks no financing
 has retested in two years or more. The universe splits into a small fresh-marked
