@@ -150,16 +150,14 @@ formation runs ahead of its weight in the standing universe, its share is still
 rising.
 
 The implication for portfolio construction is the one many allocators have not fully
-internalized. When a single theme represents three-fifths of an asset class's value
-and two-thirds of its growth, an exposure to that asset class is no longer
-diversified across themes; it is a concentrated position in the theme, dressed as a
-broad allocation. A late-stage program built without an explicit view on artificial
-intelligence is not neutral on artificial intelligence. It is long the theme by
-default, at whatever weight the market's concentration imposes, and the size of that
-implicit bet is now larger than most diversified mandates would knowingly permit.
-(Two narrower definitions of AI appear in the data and should not be substituted for
-this one: a vertical tag covering 865 companies, which counts a single business under
-several verticals at once, and the curated Monitor AI index of 430 companies at $4.14
+internalized. With artificial intelligence at three-fifths of the asset
+class's value and two-thirds of its growth, an allocation to late-stage venture is
+a concentrated bet on one theme rather than a diversified position. A program built
+without an explicit view on AI is still long AI, at whatever weight the market's
+concentration sets, and that weight now exceeds what most diversified mandates would
+knowingly hold. (The data holds two narrower definitions of AI that should not be
+substituted here: a vertical tag of 865 companies, which counts one business under
+several categories at once, and the curated Monitor index of 430 companies at $4.14
 trillion. The figures above use the deduplicated 702-company aggregate.)
 
 ---
