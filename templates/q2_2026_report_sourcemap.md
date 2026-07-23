@@ -55,6 +55,10 @@ All figures as of 6/30/2026. "Derived" = arithmetic on cited cells, shown.
 | Space $1.87T; Mobility $0.83T; Cloud $0.74T; Health $0.45T | PT | PT-Vertical | 1,868.3 / 829.7 / 742.1 / 450.9 |
 | Top two ~$12.5T; ~1.5x universe | PT | PT-Vertical | 6,444.79 + 6,023.32 = 12,468.11; /8,232.51 = 1.514 |
 | Space $1.87T / 34 / ~$55B each | PT | PT-Vertical | 1,868.3 / 34 = 54.95 |
+| Ten largest ~$2.9T = 35%; median $2.0B | PT | Top 10 Unicorns by PV / MedAvg Post Value | 2,886.65 / 8,232.51 = 35.06%; median 2.0 |
+| 614 companies (~a third) raised within past 12 months | PT | PT-Universe (dormancy buckets) | <=12mo bucket = 614 / 1,739 = 35.3% |
+| 54% US-domiciled; 40% AI | PT | PT-Universe (country) / AI Aggregate | US 945/1,743 = 54.3%; AI 702/1,743 = 40.3% |
+| Secondary-market pricing tracked for ~20 names | MON | Secondary Markets / Top20_Marks | constituent block = 20 names |
 | AI RVVC 1.84x / step 2.35x / 249 deals | PT | RVVC & Step Up Vertical Ranking | 1.837 / 2.35 / 249 |
 | SaaS 1.42x / 2.18x / 176 | PT | RVVC & Step Up Vertical Ranking | 1.423 / 2.183 / 176 |
 | Robotics 2.03x (5.66x avg); CleanTech 3.30x / 2.77x | PT | RVVC & Step Up Vertical Ranking | 2.025 (5.658); 3.298 / 2.771 |

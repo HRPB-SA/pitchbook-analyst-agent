@@ -190,18 +190,18 @@ categories.
 
 ### The investable universe is far narrower than the company count implies
 
-The count of 1,743 unicorns overstates the number of businesses an institution can
-actually own at scale. The filters that matter to an allocator, a recently tested
-valuation, meaningful size, and some secondary-market liquidity, reduce the list
-sharply. Value is concentrated at the top, where the ten largest companies carry a
-large share of the $8.23 trillion while the median company sits at $2.0 billion.
-Require a valuation set within the last twelve months, size above $5 billion, and a
-functioning secondary market in the shares, and the list contracts to a few dozen
-names. Diversifying across the unicorn universe is therefore closer to a slogan than
-a strategy: what remains after the filters is a concentrated, artificial-intelligence-
-heavy, United States-domiciled set, and any portfolio built from it without deliberate
-category limits becomes a software-and-AI portfolio whether or not that was the intent.
-The breadth exists on paper; the investable reality is a short list.
+The count of 1,743 unicorns overstates the number of large, recently valued
+companies by a wide margin, and the data shows by how much. Value concentrates at
+the top: the ten largest companies hold about $2.9 trillion, 35% of the $8.23
+trillion total, while the median company is $2.0 billion, so most of the universe
+sits far below the names that carry it. Recency thins the field again, as only about
+a third of unicorns, 614 companies, have raised within the past twelve months, and
+the rest are priced off older financings. Geography and theme concentrate it
+further, with 54% of unicorns domiciled in the United States and 40% classified as
+artificial intelligence, while the data tracks secondary-market pricing for only
+about twenty names. Required together, size, recency, and liquidity leave a small
+subset of the headline count, weighted toward United States software and artificial
+intelligence.
 
 ### The largest verticals are not where value is created fastest
 
