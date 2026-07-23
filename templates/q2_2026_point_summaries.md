@@ -11,10 +11,13 @@ overwhelmingly a top-ten story: the aggregate rose to $8,496.6B while the top-10
 share leapt from 26.2% (2025) to 47.8%, its dollar value nearly tripling from
 $1,459B to $4,058B. New formation stayed modest (107 new unicorns in H1 2026,
 annualizing near 214, against 618 in 2021), so the headline describes megacap
-mark appreciation, not broad participation. (Deal-value concentration is not
-computable from these files, which carry no deal amounts; this is valuation
-concentration.) The middle 1,546 companies moved far less than the aggregate
-implies.
+mark appreciation, not broad participation. Deal-value concentration, the cleaner
+cut, is not computable from these Monitor files (no deal amounts), so this is
+valuation concentration; the companion primary tracker confirms it on its own
+basis (top-5 deals 62.4% of Q2 deal value, Anthropic's $65B raise 44.9% of the
+$144.9B/207-deal quarter), a figure kept on the primary-tracker basis and not
+blended with the Monitor totals here. The middle 1,546 companies moved far less
+than the aggregate implies.
 
 **The top of the market: fresh, stale, and secondary prices.** The 20 marquee
 names carry three prices that mostly disagree. In aggregate the daily model mark
@@ -50,7 +53,9 @@ What the data supports is a functioning-but-narrow read - the up-round pressure
 visible in the secondary-versus-round comparison (mid-caps trading 15-37% above
 their last round) is consistent with disciplined pricing for the companies
 actually transacting. The clean median-step-up series lives in the primary
-tracker; here it is a documented gap.
+tracker, which now supplies it (primary-tracker basis, not blended with the
+Monitor totals): median step-up ~2.2x in 2026, above the ~1.9x 2016-2018 baseline
+and short of the 2021 peak, compressing at Series D and beyond.
 
 **AI: one-third of count, nearly half of value.** AI is 27.6% of the unicorn
 count (430 of 1,556) but 48.8% of aggregate value ($4,143.7B of $8,496.6B), so
@@ -165,24 +170,35 @@ credibility question for the $8.5T headline, and coverage is thin: 78.5% of
 current actives carry a unicorn-qualifying date more than 24 months old (71.9%
 over 36 months). That figure overstates true staleness - the field is the
 qualifying date, not the latest round, and the underlying post-money marks are
-more current (Anthropic $965B, OpenAI $852B are recent) - but it flags how much
-of the aggregate rests on prices not recently tested. The 20 marquee names are
+more current (Anthropic $965B, OpenAI $852B are recent). Measured off actual
+latest-round dates (primary-tracker basis, not blended with the Monitor proxy),
+true staleness is 47.6% over 24 months and 37.1% over 36 months - roughly half
+the universe, not four-fifths - and the Monitor point-in-time series agrees at
+47.6%, the one metric where the two bases converge. Either way the figure flags
+how much of the aggregate rests on prices not recently tested. The 20 marquee names are
 the fresh-mark frontier; the bulk of the universe is not, and that gap is where
 repricing risk hides.
 
 **Step-ups and relative velocity of value creation (RVVC).** Both metrics require
 deal-level capital amounts, which the Monitor file does not carry, so neither the
-median step-up nor RVVC (valuation created per dollar invested) is computable
-here - they remain in the primary tracker. The point they exist to make is that
-a healthy step-up can coexist with poor RVVC when companies raise large rounds
-for small valuation increments, stepping up in price while destroying value per
-dollar, so the two must be read together. Here it is a documented gap, not a
-finding.
+median step-up nor RVVC (valuation created per dollar invested) is computable from
+it - they live in the primary tracker, which now supplies them (primary-tracker
+basis, not blended with the Monitor totals): median RVVC recovered to 1.42 in 2026
+from a trough near 0.23 and above the ~0.73 post-2023 baseline, median step-up
+~2.2x, down rounds ~0.97% of value and 1.35% of count. The point they exist to
+make is that a healthy step-up can coexist with poor RVVC when companies raise
+large rounds for small valuation increments, stepping up in price while destroying
+value per dollar, so the two must be read together - and on the 2026 figures the
+active market is again creating more than a dollar of valuation per dollar
+invested.
 
 **Fallen unicorns.** This file cannot cleanly separate fallen from exited
 companies: across 2014-2026, 2,431 companies reached the index, 1,556 remain, and
 875 have departed - a total that conflates IPOs and acquisitions with genuine
-falls below $1B. The 2021 vintage alone accounts for 153 of those departures. A
-true fallen count, with fall dates and down-round post-money, requires the
-curated fallen list in the primary tracker; the snapshot reconstruction here
-bounds the attrition (875 total, 153 from 2021) but not its composition.
+falls below $1B. The 2021 vintage alone accounts for 153 of those departures. The
+curated fallen list in the primary tracker now resolves the composition
+(primary-tracker basis, not blended with the Monitor attrition total): 245 genuine
+falls, median down-round post-money $524.5M, a 2024 peak of 34, and a typical
+markdown near 67.2% from the prior mark. The snapshot reconstruction here bounds
+the attrition (875 total, 153 from 2021); the curated list supplies its
+composition.

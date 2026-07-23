@@ -54,9 +54,14 @@ near 214. That is a recovery from the 2023 trough of 123 (a collapse of 80% from
 the 2021 peak of 618) but a fraction of the boom. The signal is that the market
 did not broaden in Q2; it concentrated. New unicorns are being minted at a
 healthy clip, but they enter at the bottom of a distribution whose value is
-determined at the top. (We note that deal-value concentration, the cleaner
-version of this point, requires round-level capital data absent from this
-dataset; the figures here measure valuation concentration.)
+determined at the top. Deal-value concentration, the cleaner version of this
+point, requires round-level capital data absent from this Monitor dataset, so
+the figures above measure valuation concentration; the companion primary
+tracker, which does carry round-level capital, corroborates the read on its own
+basis, with the top five deals taking 62.4% of Q2 deal value and Anthropic's $65
+billion raise alone accounting for 44.9% of the quarter's $144.9 billion across
+207 deals. That primary-tracker figure is stated on its own basis and is not
+blended with the Monitor valuation totals here.
 
 ### The top of the market: fresh prices, stale prices, and the gap between them
 
@@ -150,9 +155,13 @@ stable-to-modestly-diluted bases, and one (Epic Games) declined outright.
 A step-up is the ratio of a new round's post-money to the prior round's, and it
 measures whether the companies actually raising are being priced up or down. A
 clean median step-up requires consecutive round post-money and round-level
-capital, neither of which this dataset carries; that series resides in the
-companion tracker. What the present data supports is an indirect read on the same
-question. The up-round pressure visible in the secondary-versus-round comparison,
+capital, neither of which this Monitor dataset carries; that series resides in
+the companion primary tracker, which now supplies it. On the primary-tracker
+basis the median step-up ran about 2.2 times in 2026, above the roughly 1.9-times
+2016-2018 baseline and short of the 2021 peak, with visible compression at the
+later stages (Series D and beyond). That figure is stated on the primary-tracker
+basis and is not blended with the Monitor universe totals. What the present data
+supports directly is an indirect read on the same question. The up-round pressure visible in the secondary-versus-round comparison,
 with mid-cap names transacting 15% to 37% above their last primary mark,
 identifies a market that is functioning for the companies transacting in it.
 Pricing discipline has returned at the point of sale. What it does not tell us,
@@ -368,9 +377,15 @@ What this proxy is, and is not, matters: the available field is the
 unicorn-qualifying date rather than the latest financing date, so it overstates
 true staleness, and the underlying post-money marks are more current than it
 implies (Anthropic at $965 billion and OpenAI at $852 billion are recent
-last-round marks, not old ones). Even discounted for that overstatement, the
-figure indicates that a large majority of the universe's value rests on prices
-that have not been recently tested in a financing. What this implies is a
+last-round marks, not old ones). The companion primary tracker, which keys off
+actual latest-round dates rather than the qualifying date, puts true staleness at
+47.6% of active companies more than 24 months past their last round and 37.1%
+more than 36 months, and the Monitor point-in-time series agrees at 47.6%; on
+that basis roughly half the universe, not the four-fifths the qualifying-date
+proxy implies, carries a mark untested for two years or more, and it is the one
+metric where the two bases converge. Even discounted for the proxy's
+overstatement, the figure indicates that a large majority of the universe's value
+rests on prices that have not been recently tested in a financing. What this implies is a
 two-tier universe by mark reliability: the twenty marquee names are the
 fresh-mark frontier, corroborated by daily models and secondary trades, while the
 bulk of the universe carries marks whose age is unknown to the aggregate and whose
@@ -380,8 +395,15 @@ repricing risk is therefore invisible in it.
 
 RVVC is the ratio of new valuation created to capital invested, and it is the
 metric that separates value creation from value consumption. Both it and the
-median step-up depend on round-level capital amounts this dataset does not carry,
-so neither is computable here; both reside in the companion tracker. The reason
+median step-up depend on round-level capital amounts this Monitor dataset does not
+carry, so neither is computable here; both reside in the companion primary
+tracker, which now supplies them. On the primary-tracker basis the median RVVC
+recovered to 1.42 in 2026, up from a trough near 0.23 and above the roughly
+0.73 post-2023 baseline, meaning the active market is once again creating more
+than a dollar of new valuation per dollar invested; median step-ups ran about 2.2
+times, and down rounds were about 0.97% of value and 1.35% of count. Those
+figures are stated on the primary-tracker basis and are not blended with the
+Monitor totals. The reason
 the pair must be read together, and the reason RVVC is the more honest of the two,
 is that they can diverge sharply: a company can raise a $500 million round at a
 $5.5 billion post-money against a $4 billion prior mark, a 1.375-times step-up
@@ -405,7 +427,12 @@ failure count. A true fallen count, with fall dates, causes, and down-round
 post-money, requires the curated fallen list maintained in the companion tracker.
 What the reconstruction here establishes is the bound: 875 total departures, 153
 from the 2021 cohort, an attrition rate that is high but whose composition between
-success and failure is unresolved. The formal count of failures will understate
+success and failure is unresolved. That curated list, on the primary-tracker
+basis, now resolves the composition: 245 companies have genuinely fallen below
+the line, with a median down-round post-money of $524.5 million, a peak of 34
+falls in 2024, and a typical markdown near 67.2% from the prior mark. Those
+figures are the primary tracker's own and are not blended with the Monitor
+attrition total above. The formal count of failures will understate
 stress in any case, because it captures only companies that have already resolved,
 while the untested middle of the universe, carrying stale marks that have not yet
 been challenged, is where the next wave of falls is currently hidden.

@@ -115,14 +115,29 @@ composition, not broad-based gains. The middle 1,546 companies moved far less.
 
 **Coverage gap.** 78.5% of current actives carry a unicorn-qualifying date >24
 months old (71.9% >36 months) - a staleness proxy (overstated, since the field
-is the qualifying date, not the latest round). Universe churn: 2,431 companies
+is the qualifying date, not the latest round). True staleness from actual
+latest-round dates (primary-tracker basis, not blended with the Monitor proxy):
+47.6% >24mo, 37.1% >36mo - and the Monitor point-in-time series agrees at 47.6%,
+the one metric where the two bases converge. Universe churn: 2,431 companies
 ever reached the index, 1,556 remain, 875 have departed.
 
 **Fallen / attrition.** This file cannot separate fallen from exited - 875 total
 departures over 2014-2026 conflate both. The 2021 vintage alone accounts for 153
-departures. A proper fallen count needs the curated list (primary tracker).
-Formation trajectory for context: 2021 peak 618 -> 2023-24 trough 123 each ->
+departures. The curated list resolves the composition (primary-tracker basis, not
+blended with the Monitor attrition total): 245 genuine falls, median down-round
+post-money $524.5M, 2024 peak 34 falls, typical markdown ~67.2% from the prior
+mark. Formation trajectory for context: 2021 peak 618 -> 2023-24 trough 123 each ->
 2025 recovery 179 -> 2026 H1 107 (annualizing ~214).
 
-**Note on step-ups / RVVC.** Not computable here (no deal-level capital amounts);
-these live in the primary tracker.
+**Step-ups / RVVC (primary-tracker basis, not blended with Monitor).** Not
+computable from the Monitor file (no deal-level capital); the primary tracker
+supplies them: median RVVC recovered to 1.42 in 2026 (trough ~0.23, post-2023
+baseline ~0.73), so the active market again creates >$1 of valuation per $1
+invested; median step-up ~2.2x (vs ~1.9x 2016-2018 baseline), compressing at
+Series D+; down rounds ~0.97% of value / 1.35% of count.
+
+**Deal-value concentration (primary-tracker basis, not blended with Monitor).**
+Q2 top-5 deals = 62.4% of deal value; Anthropic's $65B raise alone = 44.9% of the
+quarter's $144.9B across 207 deals - the cleaner cut of "the quarter belonged to a
+few companies" that the Monitor file (no deal amounts) can only show as valuation
+concentration.
