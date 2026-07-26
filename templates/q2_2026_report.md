@@ -43,26 +43,26 @@ Each of the twenty most closely followed private companies can be valued three w
 daily, model-derived valuation published by Morningstar; the post-money valuation of
 the last completed primary financing, fixed until the next round; and an implied
 valuation from actual secondary-market transactions, the price at which shares change
-hands. In aggregate the model-derived valuations sit 15.2% above the last-round
-valuations for the eighteen companies with a priced round, the expected pattern when a
-live estimate leads a financing several months stale.
+hands. Across the eighteen companies with a priced round, model-derived valuations sit
+15.2% above last-round valuations. The gap is expected, since the model updates daily
+while the last-round valuation stays fixed until the next financing.
 
-The secondary market diverges exactly where the capital sits. For twelve of the
-twenty, shares trade below the model-derived valuation, and for the two largest the
-discount is severe: SpaceX changes hands 32% below its $2.03 trillion model valuation,
-about $650 billion, and Anthropic 22% below its $1.27 trillion valuation, about $282
-billion. Both were struck on a recent event, SpaceX's June listing and an Anthropic
-financing, and both moved ahead of a market that had not repriced. Lower down the
-relationship inverts: Applied Intuition, Anysphere, Anduril, and Revolut trade 16% to
-36% above their last round, so their recorded valuations understate them. At the
-bottom, model, last round, and secondary market have reset lower together at Ripple,
-Epic Games, and Kraken.
+The secondary market disagrees most where the money is. Shares in twelve of the twenty
+companies trade below their model-derived valuation, and the two largest carry the
+widest discounts. SpaceX changes hands 32% below its $2.03 trillion model valuation, a
+gap of roughly $650 billion, and Anthropic 22% below its $1.27 trillion valuation,
+about $282 billion. Both valuations were set on recent events, SpaceX's June listing
+and an Anthropic financing, and both ran ahead of a secondary market that had yet to
+reprice. Further down the list the pattern reverses. Applied Intuition, Anysphere,
+Anduril, and Revolut all trade 16% to 36% above their last round, so their recorded
+valuations understate what buyers will pay. At the bottom, all three measures have
+fallen together at Ripple, Epic Games, and Kraken.
 
-Valuation reliability, the agreement among independent estimates, runs inversely to
-position size. The companies most likely to dominate a late-stage portfolio are the
-least corroborated by trading, so a portfolio carried at model values holds its
-largest positions 20% to 30% above the price a buyer is currently paying, and the gap
-widens with position size.
+Valuation reliability, meaning how closely the independent estimates agree, is weakest
+at the largest companies. Those are the names most likely to dominate a late-stage
+portfolio, so a portfolio carried at model values holds its biggest positions 20% to
+30% above what buyers are currently paying, and the overstatement grows with the size
+of the position.
 
 ### The median and the average describe two different markets
 
