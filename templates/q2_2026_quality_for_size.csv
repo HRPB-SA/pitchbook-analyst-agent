@@ -1,0 +1,29 @@
+# Quality for Size - AIBQ/PBQ composite residual vs company size, as of 2026-06-30
+# METHODOLOGY:
+# 1. Fit an ordinary least squares line of composite score on log10(primary valuation $B) across the 20 companies: score = 5.106 + 0.844 * log10(V). R-squared = 0.145.
+# 2. residual_primary = composite - predicted score at the primary valuation (last-round post-money; Morningstar model valuation for SpaceX and Cerebras, which listed during the quarter and have no private last round - flagged 'model' in primary_basis).
+# 3. residual_secondary = composite - predicted score at the secondary valuation (secondary-implied value from observed share transactions; public trading value for SpaceX and Cerebras), using the SAME fitted line, so the difference between the two residuals reflects only the valuation gap between markets.
+# 4. Positive residual = more quality than companies of that size typically carry. Residuals inside +/-0.5 points are within the noise band and should not be ranked (score confidence bands are +/-2.75 to +/-3.75).
+# SOURCES: AIBQ/PBQ Panel as of 2026-06-30 (composites, point-in-time capped); Unicorn Monitor Top20_Marks (primary and secondary valuations).
+# Neuralink's secondary valuation reflects a stale 2021 last round, not demand; its secondary residual is an artifact of that base.
+company,framework,composite_score,primary_valuation_bn,primary_basis,secondary_valuation_bn,secondary_basis,predicted_score_primary,residual_primary,predicted_score_secondary,residual_secondary,secondary_vs_reference,within_noise_band_primary
+Canva,PBQ,7.92,42.00,last_round_post_money,42.11,secondary_implied,6.476,1.444,6.477,1.443,above,no
+Databricks,AIBQ,8.19,134.00,last_round_post_money,139.40,secondary_implied,6.902,1.288,6.916,1.274,above,no
+Stripe,PBQ,8.15,159.00,last_round_post_money,167.20,secondary_implied,6.964,1.186,6.983,1.167,above,no
+Revolut,PBQ,7.85,75.00,last_round_post_money,87.06,secondary_implied,6.689,1.161,6.744,1.106,above,no
+Rippling,PBQ,7.24,16.80,last_round_post_money,16.98,secondary_implied,6.141,1.099,6.145,1.095,above,no
+Deel,PBQ,6.98,17.30,last_round_post_money,15.47,secondary_implied,6.151,0.829,6.110,0.870,below,no
+Applied Intuition,AIBQ,6.91,15.00,last_round_post_money,20.47,secondary_implied,6.099,0.811,6.213,0.697,above,no
+Ramp,PBQ,7.15,32.00,last_round_post_money,33.99,secondary_implied,6.377,0.773,6.399,0.751,above,no
+Epic Games,PBQ,6.89,22.50,last_round_post_money,14.47,secondary_implied,6.248,0.642,6.086,0.804,below,no
+Kraken,PBQ,6.69,20.00,last_round_post_money,9.88,secondary_implied,6.205,0.485,5.946,0.744,below,yes
+Anduril,PBQ,6.94,61.00,last_round_post_money,74.50,secondary_implied,6.613,0.327,6.687,0.253,above,yes
+Ripple,PBQ,6.58,40.00,last_round_post_money,21.23,secondary_implied,6.459,0.121,6.226,0.354,below,yes
+Cursor,AIBQ,6.05,29.30,last_round_post_money,38.21,secondary_implied,6.344,-0.294,6.442,-0.392,above,yes
+SpaceX,PBQ,7.60,2026.24,model_valuation,1376.55,public_trading,7.897,-0.297,7.756,-0.156,below,yes
+Anthropic,AIBQ,7.22,965.00,last_round_post_money,989.60,secondary_implied,7.625,-0.405,7.635,-0.415,above,yes
+Cerebras,AIBQ,5.92,57.10,model_valuation,61.45,public_trading,6.589,-0.669,6.616,-0.696,above,no
+Perplexity,AIBQ,5.12,20.00,last_round_post_money,17.25,secondary_implied,6.205,-1.085,6.150,-1.030,below,no
+OpenAI,AIBQ,6.30,852.00,last_round_post_money,787.20,secondary_implied,7.580,-1.280,7.551,-1.251,below,no
+Figure AI,AIBQ,3.75,39.00,last_round_post_money,30.14,secondary_implied,6.449,-2.699,6.355,-2.605,below,no
+Neuralink,PBQ,2.50,9.65,last_round_post_money,42.84,secondary_implied,5.937,-3.437,6.484,-3.984,above,no
