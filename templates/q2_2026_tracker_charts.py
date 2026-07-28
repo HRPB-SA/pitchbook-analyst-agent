@@ -230,7 +230,7 @@ fig, ax = plt.subplots(figsize=(11.5, 7.1), dpi=200)
 header(fig,
        "Value created per dollar invested is back above its pre-boom level",
        "Median relative velocity of value creation (new valuation created per dollar invested), 2016 to mid-2026.",
-       "Source: PitchBook Q2 2026 Quarterly Unicorn Tracker, 'MedAvg Uni RVVC' tab | *As of 6/30/2026. Pre-boom baseline 0.73 = 2016-2020 median average.")
+       "Source: PitchBook Q2 2026 Quarterly Unicorn Tracker, 'MedAvg Uni RVVC' tab | *As of 6/30/2026. Pre-boom baseline 0.73 = 2016-2018 average of annual medians.")
 style_ax(ax)
 ax.axhline(1.0, color="#dcdcd6", lw=1)
 ax.text(2015.7, 1.03, "1.0x: a dollar in, a dollar of new value out", fontsize=8.2, color=MUT)

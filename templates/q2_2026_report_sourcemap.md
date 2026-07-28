@@ -1,161 +1,191 @@
-# Q2 2026 report - source traceability map
+# Q2 2026 Global Unicorn Tracker - cell-level source map
 
-Every figure in `q2_2026_report.md` mapped to its source file, tab, and the exact
-cell or computation. Three source files:
+Audited July 28, 2026 against the latest uploads. Every figure in the report body was
+located at cell level and recomputed where derived.
 
-- **PT** = Final Q2 2026 Quarterly Unicorn Tracker (HR Version) - deal-level primary tracker
-- **U20** = Morningstar PitchBook Unicorn 20 Valuations and Pricing Data (h version)
-- **MON** = Unicorn Monitor Data Q2 2026 (lighter, HR version)
+File keys:
+- **PT** = Final__Q2_2026__Quarterly_Unicorn_Tracker_HR_Version.xlsx
+- **MON** = Unicorn_Monitor_Data_Q2_2026.lighter.hr_version.xlsx
+- **MON-FULL** = Unicorn_Monitor_Data_Q2_2026.Full_Version.xlsx (raw tabs; same data vintage as MON)
+- **U20** = Morningstar_PitchBook_Unicorn_20_Valuations_and_Pricing_Data_h_version.xlsx
+  (daily Morningstar model prices; MON Top20_Marks joins them via Names_Map)
+- **PANEL** = AIBQ_PBQ_Panel_asof_20260630.xlsx
+- **HS1** = US_AI_ML_HandScored_1.xlsx (301-name roster/classification, no scores)
+- **HS2** = US_AI_ML_HandScored_2.xlsx (301 hand-scored composites)
+- **Q1-PDF** = q12026globalunicorntracker (published Q1 report; external reference)
 
-All figures as of 6/30/2026. "Derived" = arithmetic on cited cells, shown.
+## Market overview - Five financings
 
-## Summary
+| Report figure | Source | Calculation |
+|---|---|---|
+| $87.1B top-5 rounds | PT / PT-Deals / B14 | SUM of 5 largest deal sizes, 'Top Deals in Qtr' col G |
+| 62% of sized deal value | PT / PT-Deals / C14 = 0.6244 | B14 / B7 (sized total $139.494B) |
+| Anthropic $65B into $965B | PT / PT-Deals / C23, D23 | top-15 table (source 'Top Deals in Qtr' row 84) |
+| 5.4x next largest | calc | C23/C24 = 65/12 = 5.42 |
+| 16.4% of first-half financing | calc | C23 / B51 = 65/396.1369 = 0.1641 |
+| Prometheus $12B/$41B | PT / PT-Deals / C24, D24 | |
+| Anduril $5B/$61B | PT / PT-Deals / C25, D25 | |
+| ByteDance $3B/$370B | PT / PT-Deals / C26, D26 | |
+| Isomorphic $2.1B | PT / PT-Deals / C27 | |
+| four of five are AI | PT / PT-Deals / G23:G27 | vertical tags |
+| under $2B by sixth company | PT / PT-Deals / C28 = 2.0 | rank-6 deal |
+| top-10 68.9% / top-25 78.5% | PT / PT-Deals / C15, C16 | cohort sums / B7 |
+| Q2 $144.9B; Q1 record $251.3B | PT / Unicorn deal activity / AR50, AQ50 | quarterly block; counts AR51=207, AQ51=237 |
+| not 1,700 (1,743 active) | PT / Aggregate unicorns / M8 | also PT-Universe L6, B9 |
 
-| Figure | Source | Tab | Cell / logic |
-|---|---|---|---|
-| $8.23T aggregate / 1,743 active | PT | Aggregate unicorns (via PT-Universe) | 2026 col = 8,232.51; active 1,743 |
-| +13% YoY | PT | PT-Universe | 8,232.51 / 7,305.43 - 1 = +12.69% |
-| AI added $1.59T H1 | PT | AI Aggregate unicorns | 5,076.42 - 3,487.23 = 1,589.19 |
-| universe gained $0.93T | PT | PT-Universe | 8,232.51 - 7,305.43 = 927.08 |
-| non-AI lost ~$0.66T | PT | derived | 927.08 - 1,589.19 = -662.11 |
+## Market overview - who writes the checks
 
-## Market overview
+| Report figure | Source | Calculation |
+|---|---|---|
+| 60.9% syndicates of 6+ | PT / PT-Round-Dynamics / B45 = 0.609375 | 6+ bucket / total known-investor rounds (row 42), from 'Rnds by Inv Count Bucket' |
+| 2021 peak 64% | PT / PT-Round-Dynamics / B46 = 0.6402 | same, 2021 column (G43) |
+| 2,892 Q3 2021 | PT / Unicorn investors x Qtr / Y9 | helper PT-Round-Dynamics D56 |
+| 895 Q4 2023 | PT / Unicorn investors x Qtr / AH9 | helper E58 |
+| 1,415 Q1 2026 | PT / Unicorn investors x Qtr / AQ9 | helper B61 |
+| 995 Q2 2026 | PT / Unicorn investors x Qtr / AR9 | helper C61 |
+| Sequoia 491 / Tiger 472 / a16z 454 / Accel 382 / Coatue 344 | PT / Top Investors / D8:D12 | financing counts since 2016 |
 
-| Figure | Source | Tab | Cell / logic |
-|---|---|---|---|
-| Top-5 rounds $87.1B | PT | PT-Deals | Top-5 cohort = 87.1 |
-| Anthropic $65B into $965B | PT | PT-Deals / Top Deals in Qtr | rank 1: deal 65, post 965 |
-| 5.4x #2 (Prometheus $12B/$41B) | PT | PT-Deals | 65 / 12 = 5.42 |
-| Anthropic 16.4% of H1 financing | PT | derived | 65 / 396.1 = 16.41% |
-| Anduril $5B/$61B; ByteDance $3B/$370B; Isomorphic $2.1B | PT | PT-Deals | ranks 3-5 |
-| Top-10 68.9% / Top-25 78.5% of sized deal value | PT | PT-Deals | 0.6889 / 0.785 (denominator = $139.5B sized) |
-| Model +15.2% over round (aggregate) | U20+MON | Top20_Marks | 2,935.7 / 2,549.55 - 1 = 0.1515 |
-| Secondary below model for 12 of 20 | U20+MON | Top20_Marks | count = 12 |
-| SpaceX -32% ($2.03T model, $1.38T sec, ~$650B gap) | U20+MON | Top20_Marks | -0.3206; 2026.24 - 1376.55 = 649.69 |
-| Anthropic -22% ($1.27T model, ~$282B gap) | U20+MON | Top20_Marks | -0.2221; 1272.09 - 989.6 = 282.49 |
-| Applied Intuition +36% / Anysphere +30% / Anduril +22% / Revolut +16% (sec vs round) | U20+MON | Top20_Marks | 0.3648 / 0.304 / 0.2212 / 0.1608 |
-| Ripple, Epic Games, Kraken reset lower | U20+MON | Top20_Marks | all three marks negative vs round |
-| Median post $2.0B / avg $18.19B / 9.1x | PT | MedAvg Uni Post Value | median 2.0, avg 18.19, ratio 9.10 |
-| 2025 3.1x / 2024 2.8x | PT | MedAvg Uni Post Value | 4.821/1.572=3.07; 3.338/1.185=2.82 |
-| Median deal $200M / avg $1,143M | PT | MedAvg Uni Deal Size | 200 / 1,142.76 |
-| Step-up 2.20x (2026), 2.05x (2025), 2.64x (2021 peak) | PT | PT-StepUp-RVVC | 2.201 / 2.048 / 2.641 |
-| Time between rounds 0.98yr / 1.21 (2025) / 1.45 (2024) | PT | PT-Round-Dynamics | 0.9808 / 1.205 / 1.445 |
-| Down rounds 6 / $3.85B (2026); 31 (2025); 34 (2024) | PT | PT-Round-Dynamics | count 6, value 3.846; 31; 34 |
-| Hark 151.4x, Blitzy 30x, SendCutSend 30x (all <$7B) | PT | Top Deals in Qtr by Val Step Up | 151.4 / 30 / 30; posts 6.0 / 1.4 / 1.01 |
-| AI 702 / 40.3% count / $5.08T / 61.7% value | PT | AI Aggregate unicorns | 702; 702/1743=40.3%; 5,076.42; /8,232.51=61.7% |
-| AI $3.49T -> $5.08T / +45.6% | PT | AI Aggregate unicorns | 3,487.23 -> 5,076.42 = +45.57% |
-| AI 109 of 178 H1 mints | PT | AI Aggregate (109) / PT-Universe (178) | new-in-year 2026 |
-| AI tag 865; Monitor AI index 430 / $4,143.7B | PT / MON | PT-Vertical (865); AI_Share (430 / 4,143.69) | cross-basis note |
+## Market overview - three ways to value / secondary gaps
+
+All marks: MON / Top20_Marks. Cols: C=Model $B (from U20 daily prices via Names_Map),
+D=Round $B (from Global Unicorn History latest snapshot), E=Secondary $B (from
+Secondary Markets, marks as of 6/22/2026), F=Model/Round, G=Secondary/Round,
+H=Secondary/Model.
+
+| Report figure | Source | Calculation |
+|---|---|---|
+| 18 companies with a priced round | Top20_Marks D9=0, D22=0 flags | 20 minus SpaceX + Cerebras ('no round mark in history', I9/I22) |
+| model +15.2% over round | Top20_Marks C29 = 0.1515 | aggregate SUM(C)/SUM(D)-1 over the 18 |
+| 12 of 20 below model | Top20_Marks C30 = 12 | COUNT of H < 0 |
+| SpaceX -32%, $2.03T model, ~$650B gap | C22=2026.2384, E22=1376.5462, H22=-0.3206 | gap = C22-E22 = 649.7 |
+| Anthropic -22%, $1.27T, ~$282B | C5=1272.0931, E5=989.5575, H5=-0.2221 | gap = C5-E5 = 282.5 |
+| Applied +36% / Anysphere +30% / Anduril +22% / Revolut +16% | G7=0.3648, G6=0.304, G4=0.2212, G19=0.1608 | secondary vs round |
+| Ripple / Epic / Kraken all three down | rows 20, 12, 14 | F and G both negative |
+| positions 22-32% above buyers | H5, H22 | the two largest names' secondary/model discounts |
+
+## Market overview - median vs average
+
+| Report figure | Source | Calculation |
+|---|---|---|
+| median $2.0B / average $18.19B | PT / MedAvg Uni Post Value / M8, M9 | 2026 column |
+| 9.1-to-1; 3.1 (2025); 2.8 (2024) | calc | M9/M8; L9/L8 (4.8212/1.5725); K9/K8 (3.3377/1.1851) |
+| $200M median / $1,143M average deal | PT / PT-Deals / D51, E51 | source 'MedAvg Uni Deal Size' M-col |
+| widest in eleven years | PT / PT-Deals / F41:F51 | skew col; 2026 = 5.71 is max |
+
+## Market overview - repriced quickly
+
+| Report figure | Source | Calculation |
+|---|---|---|
+| step-up 2.20 / 2.05 / 2.64 peak | PT / MedAvg Uni Val Step Up / M8, L8, H8 | 2026 / 2025 / 2021 medians |
+| interval 0.98 / 1.21 / 1.45 yr | PT / MedAvg Uni Time Between Rnds / M8, L8, K8 | |
+| down rounds 6 / $3.85B; 31 (2025); 34 (2024) | PT / Unicorn down round activity / M9, M8, L9, K9 | |
+| Hark 151x, post <$7B | PT / Top Deals in Qtr by Val Step Up / E8=151.43; G8+I8 = 0.7+5.3 = 6.0 | |
+| Blitzy 30x, SendCutSend 30x | same / E9, E10 | posts: 0.2+1.2=1.4; 0.11+0.9=1.01 |
+
+## Market overview - AI three-fifths
+
+| Report figure | Source | Calculation |
+|---|---|---|
+| 702 of 1,743 = 40.3% | PT / AI Aggregate unicorns / M8; Aggregate unicorns / M8 | 702/1743 |
+| $5.08T of $8.23T = 61.7% | AI Aggregate M9=5076.4207; Aggregate M9=8232.5063 | |
+| $3.49T -> $5.08T, +45.6% | AI Aggregate L9, M9 | M9/L9 - 1 = 0.4557 |
+| 109 of 178 new | AI Aggregate M10; Aggregate M10 | |
+
+## Market overview - exits
+
+| Report figure | Source | Calculation |
+|---|---|---|
+| $2.1T across 50 exits | PT / Unicorn exit activity / M8, M9 | helper PT-Exits L9, L14 |
+| SpaceX $1.7T | PT / Top Exits in Qtr / G8 = 1690.2418 | helper PT-Exits B21 |
+| ex-SpaceX $420.7B | PT / PT-Exits / B22 | M8 - B21 |
+| four-fifths of exit value | PT / PT-Exits / B24 = 0.8007 | |
+| listings 85% of value | PT / PT-Exits / L10 = 0.8541 | public-listing value L6 / total L9 |
+| Cerebras $34B, Quantinuum $14B | PT / Top Exits in Qtr / G9=34.2454, G10=13.9782 | |
+| aggregate peaked $8.7T, ended $8.23T | PT / Aggregate unicorns / AQ47=8699.6621, AR47=8232.5063 | quarterly series |
+| TTE 8.47 / peak 9.17 (2025) | PT / MedAvg Uni Time to Exit / M8, L8 | helper PT-Exits B38, B39 |
 
 ## Verticals
 
-| Figure | Source | Tab | Cell / logic |
-|---|---|---|---|
-| SaaS $6.44T/968; AI $6.02T/865; FinTech $2.02T/436 | PT | PT-Vertical | 6,444.79/968; 6,023.32/865; 2,020.6/436 |
-| Space $1.87T; Mobility $0.83T; Cloud $0.74T; Health $0.45T | PT | PT-Vertical | 1,868.3 / 829.7 / 742.1 / 450.9 |
-| Top two ~$12.5T; ~1.5x universe | PT | PT-Vertical | 6,444.79 + 6,023.32 = 12,468.11; /8,232.51 = 1.514 |
-| Space $1.87T / 34 / ~$55B each | PT | PT-Vertical | 1,868.3 / 34 = 54.95 |
-| Ten largest ~$2.9T = 35%; median $2.0B | PT | Top 10 Unicorns by PV / MedAvg Post Value | 2,886.65 / 8,232.51 = 35.06%; median 2.0 |
-| 614 companies (~a third) raised within past 12 months | PT | PT-Universe (dormancy buckets) | <=12mo bucket = 614 / 1,739 = 35.3% |
-| 54% US-domiciled; 40% AI | PT | PT-Universe (country) / AI Aggregate | US 945/1,743 = 54.3%; AI 702/1,743 = 40.3% |
-| Secondary-market pricing tracked for ~20 names | MON | Secondary Markets / Top20_Marks | constituent block = 20 names |
-| AI RVVC 1.84x / step 2.35x / 249 deals | PT | RVVC & Step Up Vertical Ranking | 1.837 / 2.35 / 249 |
-| SaaS 1.42x / 2.18x / 176 | PT | RVVC & Step Up Vertical Ranking | 1.423 / 2.183 / 176 |
-| Robotics 2.03x (5.66x avg); CleanTech 3.30x / 2.77x | PT | RVVC & Step Up Vertical Ranking | 2.025 (5.658); 3.298 / 2.771 |
-| Crypto RVVC 2.62x -> 1.11x | PT | RVVC & Step Up Vertical Ranking | 2025 median 2.619 -> 2026 median 1.11 |
-| Cyber 0.66x; E-Commerce 0.38x (RVVC); step-ups 1.74x / 2.13x | PT | RVVC & Step Up Vertical Ranking | RVVC 0.662 / 0.3817; step-up 1.74 / 2.133 |
-| AI +58.1%/yr (+302.6% cum); SaaS +34.2%; Cyber +22.2% | MON | Vertical_Returns | level-based annualized / cumulative |
-| TME +19.6%/yr (+72.4% cum); 3 verticals beat; ~3x | MON | Vertical_Returns | 0.1963 ann / 0.7239 cum; beat-count 3; 0.5814/0.1963=2.96 |
-| FinTech +12.9% (trails benchmark) | MON | Vertical_Returns | 0.1291 ann |
-| AI $1.59T of $0.93T; 62% value; 4 of top-5; 61% mints | PT | AI Aggregate / PT-Deals | see above |
-| 25% AI cut = $1.27T = 15.4% | PT | derived | 0.25 x 5,076.42 = 1,269.1; /8,232.51 = 15.4% |
-| 2021 cohort 635: 470 active (74%), 102 exited (16%), 34 fallen, 15 fallen-at-exit, 13 bankrupt | PT | 2021 Uni Cohort | status col F value counts |
-| Median time to exit 8.47yr | PT | MedAvg Uni Time to Exit / PT-Exits | 8.47 |
+| Report figure | Source | Calculation |
+|---|---|---|
+| SaaS $6.44T/968; AI $6.02T/865; FinTech $2.02T/436 | PT / Unicorn market val x vertical / D8,C8; D9,C9; D10,C10 | col D in $T |
+| Space $1.87T/34; Mobility $0.83T/161; Cloud $0.74T/157; Health $0.45T/171 | same / D12,C12; D13,C13; D11,C11; D14,C14 | |
+| leaders ~$12.5T; 1.5x universe | PT / PT-Vertical / B37=12468.11, B39=1.5145 | (D8+D9)x1000; /8232.5063 |
+| SpaceX still in vertical; ex ~$180B | calc | D12x1000 - PT-Exits B21 = 1868.3-1690.2 = 178.1 |
+| top-10 $2.9T = 35% | PT / Top 10 Unicorns by PV / SUM(F8:F17) = 2886.65 | /8232.5063 = 0.3506 |
+| 614 raised within 12 months (a third) | PT / PT-Universe / B23, C23=0.3531 | from Active Unicorns col D vs 6/30/2026 |
+| 54% US | PT / PT-Universe / B46=945, C46=0.5434 | Active Unicorns country counts |
+| RVVC AI 1.84/2.35/249; SaaS 1.42/2.18/176 | PT / RVVC & Step Up Vertical Ranking / J9,L9,H9; J10,L10,H10 | 2026 medians |
+| Robotics 2.03; CleanTech 3.30/2.77; Crypto 2.62->1.11; Cyber 0.66/1.74; Ecomm 0.38/2.13 | same / J15; J22,L22; E19->J19; J20,L20; J21,L21 | |
+| AI 58.1%/302.6% cum; SW 34.2%; Cyber 22.2%; TME 19.6%/72.4%; FinTech 12.9% | MON / Vertical_Returns / C6,H6; C7; C14; D21,D20; C8 | level-based 3yr window 6/16/2023-6/30/2026 |
+| 3 verticals beat TME | MON / Vertical_Returns / B22 | |
+| AI ~3x public rate | MON / Vertical_Returns / B23 = 2.96 | |
+| AI added $1.59T vs $0.93T universe gain | calc | AI Agg M9-L9 = 1589.19; Agg M9-L9 = 927.08 |
+| 25% AI cut = $1.27T = 15.4% | calc | 0.25 x 5076.4207 = 1269.1; /8232.5063 = 0.1542 |
+| 2021 cohort: 634 minted | PT / Aggregate unicorns / H10 | 2021 new-unicorn count |
+| 470 active / 102 exited / 62 failed (34+15+13) | PT / 2021 Uni Cohort / col F rows 8-642 | COUNTIF statuses; 1 row has no status (635 data rows) |
+| 74% / 16% / 10% | calc | 470/634, 102/634, 62/634 |
 
-## Deal dynamics, capital, and exits
+## Business quality and valuations
 
-| Figure | Source | Tab | Cell / logic |
-|---|---|---|---|
-| Syndicate 6+ = 60.9% (2026); 64% (2021 peak) | PT | PT-Round-Dynamics | 0.6094 / 0.6402 |
-| Participation 2,892 (Q3'21), 895 (Q4'23), 1,415 (Q1'26), 995 (Q2'26) | PT | PT-Round-Dynamics / Unicorn investors x Qtr | quarterly counts |
-| Sequoia 491, Tiger 472, a16z 454, Accel 382, Coatue 344 | PT | Top Investors | 2016-YTD deal counts |
-| Exit value $2,110.9B / 50 exits | PT | PT-Exits | 2,110.9; total count 50 |
-| SpaceX IPO $1,690B | PT | PT-Exits / Top Exits in Qtr | 1,690.24 |
-| Ex-SpaceX $420.7B | PT | PT-Exits | 420.7 |
-| Public listings 85% of value | PT | PT-Exits | 0.8541 |
-| Cerebras $34B; Quantinuum $14B | PT | Top Exits in Qtr | 34.25 / 13.98 |
-| Median TTE 8.47yr; peak 9.17yr (2025) | PT | MedAvg Uni Time to Exit | 8.47 / 9.174 |
-
-## Business quality (PBQ / AIBQ)
-
-| Figure | Source | Tab | Cell / logic |
-|---|---|---|---|
-| Price ladder Anthropic/OpenAI/ByteDance/Stripe/Databricks/Waymo | PT | Top 10 Unicorns by PV | order by post-value |
-| Two of top-10 on marks >1yr old | PT | Active Unicorns col D | Ant Group 2020-08-09; SHEIN 2024-01-01 |
-| OpenAI #2 in universe by post-value | PT | Top 10 Unicorns by PV | Anthropic 965 > OpenAI 852 |
-| Neuralink model +441% over round | U20+MON | Top20_Marks | 4.416 |
-| Canva/Stripe/Rippling tight; Neuralink/Ripple/Kraken diverge | U20+MON | Top20_Marks | gap columns F/G/H |
-| **Six PBQ composites (8.7 / 7.7 / 7.5 / 4.2 / 3.8 / 2.3)** | **NOT in these files** | prior-edition analyst source | flagged in text as external |
+| Report figure | Source | Calculation |
+|---|---|---|
+| 5 dimensions + weights | PANEL / 2. Scoreboard / F3:J3 headers; 1. Methodology | CE 20 / RQ 25 / CI-SV 15 / GO 20 / MD 20 |
+| 8 AIBQ / 12 PBQ | PANEL / 2. Scoreboard / col C rows 4-23 | COUNTIF (Key Findings tab says 11/9 - source-tab error) |
+| tiers Elite >=8.0 ... Distressed <4.5 | PANEL / 1. Methodology | |
+| ~15% of score variation | calc | R^2 of composite (M4:M23) on log10(valuation), 20 names = 0.145 |
+| Databricks 8.19 Elite $134B | PANEL / Scoreboard / M4, N4, P4 | |
+| Stripe 8.15 Elite $159B | PANEL / Scoreboard / M5, N5, P5 | |
+| Anthropic 7.22 rank 7 at $965B | PANEL / Scoreboard / A10, M10, P10 | |
+| OpenAI 6.30 rank 15 at $852B | PANEL / Scoreboard / A18, M18, P18 | |
+| $2.2B/point Applied; $134B/point Anthropic; ~60x | calc | 15/6.91=2.17; 965/7.22=133.7; ratio 61.6 |
+| 10 above-round avg 7.4 / 7 below avg 6.0 | MON Top20_Marks col G x PANEL composites | see FLAG 1 below |
+| Anthropic -22% / OpenAI -9% vs model | MON / Top20_Marks / H5, H16 | |
+| Figure AI 3.75, -23% vs round | PANEL M22; MON G13 = -0.2273 | |
+| Neuralink 2.5, model +441% vs round | PANEL M23; MON F15 = 4.4164 | |
+| secondary volume $562M Q2 / $1.33B Q1 (if added) | MON / Secondary Markets / L27, K27 ($M) | per-company pivot in MON-FULL rows 67-75 |
+| 301 US AI companies | HS2 / 2. Hand-Scored AI Stack / rows 5-307; roster HS1 Sheet1 F54 | |
+| median composite ~4.5 | HS2 / col P rows 5-307 | MEDIAN = 4.55 |
+| five Strong or better | HS2 / col Q | 1 Elite + 4 Strong |
+| 140 of 301 Distressed | HS2 / col Q | COUNTIF |
 
 ## Valuations and fallen unicorns
 
-| Figure | Source | Tab | Cell / logic |
-|---|---|---|---|
-| Anthropic $965B + OpenAI $852B = $1.82T = 22% | PT | Top 10 Unicorns by PV | 1,817 / 8,232.51 = 22.07% |
-| Ten largest ~$2.9T = 35% | PT | Top 10 Unicorns by PV | sum of 10 = 2,886.65; /8,232.51 = 35.06% |
-| Anthropic May 2026 / ByteDance May 2026 / OpenAI Mar 2026 | PT | Active Unicorns col D | 2026-05-28 / 2026-05-16 / 2026-03-31 |
-| Ant Group Aug 2020; SHEIN Jan 2024 | PT | Active Unicorns col D | 2020-08-09 / 2024-01-01 |
-| 47.6% >24mo / 37.1% >36mo (latest-round dates) | PT | PT-Universe (dormancy) | 0.4761 / 0.3709 over 1,739 |
-| 78.5% qualifying-date proxy | MON | Coverage_Gap | 0.7841 |
-| RVVC 1.42x (2026), 0.93x (2025), 0.23x (2023), 0.73 baseline | PT | PT-StepUp-RVVC | 1.418 / 0.9323 / 0.2342 / 0.7306 |
-| Avg RVVC 2.73x | PT | PT-StepUp-RVVC | 2.729 |
-| 245 fallen | PT | Fallen Unicorns to Date / PT-Fallen | 245 rows |
-| Median down-round post $524.5M; markdown 67% | PT | PT-Fallen | 524.5; -0.6722 |
-| 15 fell at exit (2021 cohort) | PT | 2021 Uni Cohort | status = "Fallen at Exit" = 15 |
+| Report figure | Source | Calculation |
+|---|---|---|
+| Anthropic $965B + OpenAI $852B = $1.82T = 22% | PT / Top 10 Unicorns by PV / F8, F9 | 1817/8232.5063 = 0.2207 |
+| Anthropic valued May 2026 | PT / Active Unicorns / D91 = 2026-05-28 | |
+| ByteDance May 2026 | PT / Active Unicorns / D234 = 2026-05-16 | |
+| OpenAI March 2026 | PT / Active Unicorns / D1065 = 2026-03-31 | |
+| Ant Group Aug 2020 | PT / Active Unicorns / D90 = 2020-08-09 | |
+| SHEIN Jan 2024 | PT / Active Unicorns / D1268 = 2024-01-01 | |
+| 47.6% >24mo / 37.1% >36mo | PT / PT-Universe / B18,C18; B19,C19 | months since Active Unicorns col D, denominator B14=1739 |
+| RVVC 1.42 / 0.93 / 0.23 low / avg 2.73 | PT / MedAvg Uni RVVC / M8, L8, J8, M9 | |
+| pre-boom baseline ~0.73 | PT / PT-StepUp-RVVC / B12 = 0.7306 | defined A12: 2016-2018 average of annual medians |
+| 245 fallen | PT / PT-Fallen / B5 | curated 'Fallen Unicorns to Date' rows 8-252 |
+| vs 175 reported in Q1 | Q1-PDF | published figure |
+| rebuild: 160 since-2016 + 22 pre-2016 + 63 no-date | PT / PT-Fallen / B8, B9, B10 | |
+| 2024 peak 34 falls | PT / PT-Fallen / B11 | COUNTIFS col I by year |
+| median failing val $524.5M / -67% | PT / PT-Fallen / B15, B16 | 182 priced down rounds, col J |
+| 15 fell at exit recorded as exits | PT / 2021 Uni Cohort / col F | COUNTIF 'Fallen at Exit' |
 
 ## What to watch
 
-| Figure | Source | Tab | Cell / logic |
-|---|---|---|---|
-| 22%; top-5 62% of Q2 deal value; 47.6% untested | PT | Top 10 PV / PT-Deals / PT-Universe | 22.07%; 0.6244; 0.4761 |
-| 20-30% below model (megacaps) | U20+MON | Top20_Marks | SpaceX -32%, Anthropic -22%, OpenAI -9% |
-| AI 3/5 value on 2/5 names | PT | AI Aggregate | 61.7% / 40.3% |
-| 25% AI cut = $1.27T | PT | derived | 0.25 x 5,076.42 |
+All figures repeat earlier citations (22% top-2 share, 62% top-5 share C14, 47.6% C18,
+-22%/-32% H5/H22, three-fifths/two-fifths AI shares, $1.27T stress calc).
 
-## Analytical statements (not single-cell figures)
+## Audit flags
 
-These are reasoned claims, not direct reads, and are labeled as such in the text:
-- Fund-cycle maturity 2028-2031 (10-year life on 2021-vintage funds).
-- "Investable set falls to a few dozen" once fresh-mark + size + secondary filters
-  are stacked (illustrative funnel, not a computed count).
-- "Exit value settles below the 2026 figure once the backlog empties" (inference
-  from the 8.47yr time-to-exit and the SpaceX-dominated 2026 total).
-
-## Basis rule
-
-Universe / aggregate / dormancy / deal dynamics / exits / fallen / country -> PT.
-Three-mark secondary validation of the top 20 -> U20 + MON. Vertical index 3-year
-returns -> MON. The three bases are never blended (AI 702 vs 865 vs 430 kept
-distinct; aggregates $8.23T PT vs $8.50T MON kept distinct).
-
-## Addendum - final editorial pass (July 28, 2026)
-
-Verified against the July 28 workbook uploads. The Unicorn 20 and Monitor files are
-byte-identical to the previously verified versions; the Final Q2 tracker was re-verified
-in full (all figures confirmed, including Q1 quarterly deal value $251.26B and the Q1
-aggregate peak $8,699.66B on the 'Aggregate unicorns' quarterly block, col AR area).
-
-- 301-company US AI claims (median composite 4.55, 1 Elite + 4 Strong, 140 Distressed):
-  source is US_AI_ML_HandScored_2.xlsx tab '2. Hand-Scored AI Stack'. The separately
-  supplied US_AI_ML_HandScored_1.xlsx is the roster/classification only (301 names:
-  20 model / 35 infra / 246 application) and carries no scores - cite the _2 workbook.
-- Source-data flag: 'Unicorn market val x vertical' (as of 6/30/2026) still carries
-  SpaceX inside Space Technology ($1.868T / 34 names) while 'Active Unicorns' and the
-  $8,232.5B aggregate exclude it post-IPO. Report text now states this explicitly.
-- Basis note: "Q1's record $251.3 billion" is the current tracker's restated quarterly
-  figure; the published Q1 report printed $245.6B on its own extract.
-- Chart slots: q2_2026_aibq_vs_primary.png (after 'The scores against primary
-  valuations'), q2_2026_aibq_vs_secondary.png and q2_2026_quality_for_size.png (after
-  'The scores against the secondary market'). Quality-for-size uses the all-private
-  roster (xAI/Waymo in place of SpaceX/Cerebras); on that roster valuation explains
-  ~6% of score variance vs ~15% on the Unicorn 20 panel - caption should say so.
+1. **10-above vs 11-above (open item)**: Top20_Marks C31 counts **11** names with
+   secondary > round. The report's "ten companies ... average 7.4" excludes Neuralink,
+   whose +344% vs round (G15) is the stale-round artifact the same paragraph calls out.
+   With Neuralink included: 11 names averaging 6.9. Recommend making the exclusion
+   explicit or restating as 11/6.9.
+2. **RVVC baseline window**: defined in-file as 2016-2018 average (A12/B12), not
+   "pre-boom 2016-2020". Report wording ("roughly 0.73") is fine; the RVVC chart
+   footnote was corrected to 2016-2018.
+3. Space Technology vertical still carries SpaceX at final private valuation while the
+   universe aggregate excludes it (report states this explicitly).
+4. The 301-company score claims cite HS2 (scored); HS1 is roster-only.
+5. "Q1's record $251.3B" is the current tracker's restated quarterly basis (AQ50);
+   Q1-PDF printed $245.6B on its own extract.
