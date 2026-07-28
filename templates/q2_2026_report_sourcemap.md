@@ -137,3 +137,25 @@ Universe / aggregate / dormancy / deal dynamics / exits / fallen / country -> PT
 Three-mark secondary validation of the top 20 -> U20 + MON. Vertical index 3-year
 returns -> MON. The three bases are never blended (AI 702 vs 865 vs 430 kept
 distinct; aggregates $8.23T PT vs $8.50T MON kept distinct).
+
+## Addendum - final editorial pass (July 28, 2026)
+
+Verified against the July 28 workbook uploads. The Unicorn 20 and Monitor files are
+byte-identical to the previously verified versions; the Final Q2 tracker was re-verified
+in full (all figures confirmed, including Q1 quarterly deal value $251.26B and the Q1
+aggregate peak $8,699.66B on the 'Aggregate unicorns' quarterly block, col AR area).
+
+- 301-company US AI claims (median composite 4.55, 1 Elite + 4 Strong, 140 Distressed):
+  source is US_AI_ML_HandScored_2.xlsx tab '2. Hand-Scored AI Stack'. The separately
+  supplied US_AI_ML_HandScored_1.xlsx is the roster/classification only (301 names:
+  20 model / 35 infra / 246 application) and carries no scores - cite the _2 workbook.
+- Source-data flag: 'Unicorn market val x vertical' (as of 6/30/2026) still carries
+  SpaceX inside Space Technology ($1.868T / 34 names) while 'Active Unicorns' and the
+  $8,232.5B aggregate exclude it post-IPO. Report text now states this explicitly.
+- Basis note: "Q1's record $251.3 billion" is the current tracker's restated quarterly
+  figure; the published Q1 report printed $245.6B on its own extract.
+- Chart slots: q2_2026_aibq_vs_primary.png (after 'The scores against primary
+  valuations'), q2_2026_aibq_vs_secondary.png and q2_2026_quality_for_size.png (after
+  'The scores against the secondary market'). Quality-for-size uses the all-private
+  roster (xAI/Waymo in place of SpaceX/Cerebras); on that roster valuation explains
+  ~6% of score variance vs ~15% on the Unicorn 20 panel - caption should say so.
