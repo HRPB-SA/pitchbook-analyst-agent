@@ -10,6 +10,8 @@ Primary basis: PitchBook deal-level unicorn tracker (1,743 active companies / $8
 - AI holds $5.08 trillion, 61.7% of unicorn value on 40.3% of the companies, and added more value in six months than the whole universe gained. Meanwhile 47.6% of unicorns have not raised in more than two years.
 - Business quality and price disagree where the money is. Valuation explains about 15% of the variation in AIBQ/PBQ scores, and the secondary market prices the two most valuable names 22-32% below their model valuations.
 
+CHART: q2_2026_aggregate_universe.png
+
 ## Market overview
 
 ### Five financings defined the quarter's primary market
@@ -17,6 +19,8 @@ Primary basis: PitchBook deal-level unicorn tracker (1,743 active companies / $8
 The five largest rounds raised $87.1 billion between them, and Anthropic alone accounted for $65 billion, raising into a $965 billion post-money valuation. That one financing was 5.4 times the next-largest round, Prometheus at $12 billion into a $41 billion valuation, and 16.4% of all first-half unicorn financing. Anduril ($5 billion into a $61 billion valuation), ByteDance ($3 billion into $370 billion), and Isomorphic Labs ($2.1 billion) completed the five, four of them artificial intelligence businesses. Below them, financing sizes fall under $2 billion by the sixth company and under $1 billion shortly after, so the ten largest rounds absorbed 68.9% of the quarter's sized financing value and the twenty-five largest 78.5%. Quarterly deal value fell to $144.9 billion from Q1's record $251.3 billion, and the concentration deepened even as the total shrank. Late-stage capital is concentrating into a small number of frontier labs that set the reference valuations others raise against. A strong first-half financing refers to the fundraising of five companies, not 1,700.
 
 The same concentration runs through who writes the checks. Syndicates of six or more investors made up 60.9% of 2026 rounds with disclosed participation, near the 2021 peak of 64%, so the rounds that occur are more crowded than before. Investor participation by count has not recovered alongside the dollars. It peaked at 2,892 in Q3 2021, bottomed at 895 in Q4 2023, recovered to 1,415 in Q1 2026, then fell back to 995 in Q2, even as financing value stayed high. Sequoia Capital has participated in 491 unicorn financings since 2016, Tiger Global 472, Andreessen Horowitz 454, Accel 382, and Coatue 344. Investor concentration mirrors company concentration.
+
+CHART: q2_2026_deal_activity.png
 
 ### The largest valuations carry the widest gap to where shares actually trade
 
@@ -30,9 +34,13 @@ Valuation reliability, the agreement among independent estimates, runs inversely
 
 The gap between the typical and the average unicorn is the clearest measure of concentration. The median company carries a $2.0 billion post-money valuation. The average is $18.19 billion. That 9.1-to-1 ratio was 3.1-to-1 in 2025 and 2.8-to-1 in 2024, so the distribution split open over a single year. Financing sizes are skewed the same way, with a $200 million median against a $1,143 million average, the widest separation in eleven years. The aggregate grew because roughly a dozen valuations were rewritten upward while the middle of the distribution stood still. An institution benchmarking to the aggregate is tracking the twelve largest companies and crediting their revaluation to the asset class as a whole, when the median portfolio bears little resemblance to the index it is judged against.
 
+CHART: q2_2026_median_average.png
+
 ### Companies that raised were repriced upward quickly
 
 Among the companies that actually raised, terms were strong. The median valuation step-up, the ratio of a new round's post-money valuation to the prior round's, reached 2.20 times in 2026, up from 2.05 in 2025. Only the 2021 peak of 2.64 stands higher. The median interval between financings compressed to 0.98 years from 1.21 years in 2025 and 1.45 years in 2024. Down rounds have nearly vanished, with six in the first half of 2026 worth $3.85 billion, against 31 in all of 2025 and 34 in 2024. The steepest revaluations came from small companies rather than the leaders: Hark at 151 times its prior round, Blitzy and SendCutSend at 30 times, each valued below $7 billion, while the giants gained in dollars at modest multiples. Velocity lives at the small end of the market, where a single financing can revalue a company several times over, and the value sits at the large end. Every figure describes only companies that raised, which is well under half the universe, and the untested majority is where the market's real risk sits.
+
+CHART: q2_2026_repricing.png
 
 ### AI holds three-fifths of the universe's value on two-fifths of its companies
 
@@ -40,9 +48,13 @@ AI companies number 702 of the 1,743 unicorns, 40.3% by count, yet account for $
 
 With artificial intelligence at three-fifths of value and two-thirds of growth, an allocation to late-stage venture is a concentrated bet on one theme. A program built without an explicit view on AI is still long AI, at a weight that now exceeds what most diversified mandates would knowingly hold.
 
+CHART: q2_2026_ai_aggregate.png
+
 ### The public-listing window reopened, but one company is most of it
 
 Exit value in 2026 reached $2.1 trillion across 50 exits, with a single event accounting for four-fifths of it. SpaceX's listing alone was $1.7 trillion; excluding it, exit value was $420.7 billion, the strongest year since 2021 but far below the headline. Public listings drove 85% of exit value, and after three years of few listings, SpaceX, Cerebras ($34 billion), and Quantinuum ($14 billion) all listed in the quarter. The listing was large enough to shrink the universe itself: the aggregate peaked at $8.7 trillion in the first quarter and ended the half at $8.23 trillion, because SpaceX's departure removed more value than the rest of the market added. After a first quarter dip driven by AI-native companies exiting young, the half-year median time to exit settled at 8.47 years, near the 9.17-year peak of 2025, so the companies reaching liquidity now are older vintages rather than recent 2023 and 2024 formations. The 2026 total reflects one large listing and an aged backlog clearing.
+
+CHART: q2_2026_exit_activity.png
 
 ## Verticals
 
@@ -88,6 +100,8 @@ CHART: q2_2026_aibq_vs_secondary.png
 
 CHART: q2_2026_quality_for_size.png
 
+CHART: q2_2026_ai_stack_301.png
+
 ## Valuations and fallen unicorns
 
 ### Valuations are current at the top and grow stale quickly below it
@@ -97,6 +111,8 @@ Anthropic ($965 billion) and OpenAI ($852 billion) together hold $1.82 trillion,
 ### Value created per dollar invested has recovered above its pre-boom level
 
 The median relative velocity of value creation rose to 1.42 times in 2026 from 0.93 in 2025 and a low of 0.23 in 2023, above its pre-boom baseline of roughly 0.73, with the 2.20 median step-up and 0.98-year interval pointing in the same direction. Velocity above 1.0 means each dollar raised created more than a dollar of new valuation, a reversal from 2023, when financings diluted holders more than they built value. The 2.73 average against the 1.42 median carries the same skew as the valuations themselves. Value creation concentrates in a few names, and the measure counts only companies that have raised.
+
+CHART: q2_2026_rvvc.png
 
 ### The rate of new failures has fallen while the untested population has grown
 
