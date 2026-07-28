@@ -50,7 +50,7 @@ for name,sc,pp,ps,fl in D:
 ax.text(XL,np.log10(430),"PRIMARY MARKET\nlast round per point",ha="center",va="bottom",fontsize=9.5,color=SEC,fontweight="bold")
 ax.text(XR,np.log10(430),"SECONDARY MARKET\ntraded value per point",ha="center",va="bottom",fontsize=9.5,color=SEC,fontweight="bold")
 
-ax.text(0.5,np.log10(52),"no company in either market prices between about \$21B and \$125B per point:\nthe price of quality is two-tier",
+ax.text(0.5,np.log10(52),"no company in either market prices between about $21B and $125B per point:\nthe price of quality is two-tier",
         ha="center",va="center",fontsize=9,color="#8a8983",style="italic")
 ax.set_xlim(0,1); ax.set_ylim(np.log10(1.1),np.log10(650))
 ax.axis("off")
