@@ -4,11 +4,24 @@ const {
   BorderStyle, PageNumber, Footer, TabStopType, ShadingType, ImageRun
 } = require('docx');
 
-const SRC = '/home/user/pitchbook-analyst-agent/templates/q2_2026_report.md';
-const OUT = '/home/user/pitchbook-analyst-agent/templates/q2_2026_report.docx';
+const SRC = process.argv[2] || '/home/user/pitchbook-analyst-agent/templates/q2_2026_report.md';
+const OUT = process.argv[3] || '/home/user/pitchbook-analyst-agent/templates/q2_2026_report.docx';
 const IMGDIR = '/home/user/pitchbook-analyst-agent/templates/';
 
 const NAVY = '1A2744', INK = '1F2733', SLATE = '55637A', RULE = 'C9D2E0';
+
+
+const RED = 'C00000';
+function bodyRuns(text) {
+  const runs = [];
+  const parts = text.split('**');
+  parts.forEach((seg, i) => {
+    if (!seg) return;
+    if (i % 2 === 1) runs.push(new TextRun({ text: seg, bold: true, color: RED, size: 21, font: 'Georgia' }));
+    else runs.push(new TextRun({ text: seg, size: 21, color: INK, font: 'Georgia' }));
+  });
+  return runs;
+}
 
 const lines = fs.readFileSync(SRC, 'utf8').split('\n');
 const blocks = [];
@@ -20,6 +33,7 @@ for (const raw of lines) {
   else if (line.startsWith('## ')) { flush(); blocks.push({ t: 'h1', text: line.slice(3).trim() }); }
   else if (line.startsWith('### ')){ flush(); blocks.push({ t: 'h2', text: line.slice(4).trim() }); }
   else if (line.startsWith('CHART:')) { flush(); blocks.push({ t: 'chart', file: line.slice(6).trim() }); }
+  else if (line.startsWith('- ')) { flush(); blocks.push({ t: 'p', text: line.trim() }); }
   else if (line.trim() === '---' || line.trim() === '') { flush(); }
   else buf.push(line.trim());
 }
@@ -42,7 +56,10 @@ for (const b of blocks) {
         bottom: { style: BorderStyle.SINGLE, size: 2, color: RULE, space: 6 },
         left: { style: BorderStyle.SINGLE, size: 2, color: RULE, space: 8 },
         right: { style: BorderStyle.SINGLE, size: 2, color: RULE, space: 8 } },
-      children: [ new TextRun({ text: b.text, italics: true, size: 18, color: SLATE, font: 'Georgia' }) ] }));
+      children: b.text.split('**').filter(s => s).map((seg, i, arr) =>
+        new TextRun({ text: seg, italics: true, size: 18, font: 'Georgia',
+          bold: b.text.startsWith('**') ? i % 2 === 0 : i % 2 === 1,
+          color: (b.text.startsWith('**') ? i % 2 === 0 : i % 2 === 1) ? RED : SLATE })) }));
   } else if (b.t === 'p' && b.text.startsWith('Source:')) {
     children.push(new Paragraph({ spacing: { before: 360, after: 0 },
       border: { top: { style: BorderStyle.SINGLE, size: 4, color: RULE, space: 8 } },
@@ -61,9 +78,12 @@ for (const b of blocks) {
     children.push(new Paragraph({ alignment: AlignmentType.CENTER,
       spacing: { before: 120, after: 160 },
       children: [ new ImageRun({ type: 'png', data: img, transformation: { width: 620, height: 380 } }) ] }));
+  } else if (b.t === 'p' && b.text.startsWith('- ')) {
+    children.push(new Paragraph({ spacing: { after: 100, line: 276 }, bullet: { level: 0 },
+      children: bodyRuns(b.text.slice(2)) }));
   } else if (b.t === 'p') {
     children.push(new Paragraph({ spacing: { after: 160, line: 276 },
-      children: [ new TextRun({ text: b.text, size: 21, color: INK, font: 'Georgia' }) ] }));
+      children: bodyRuns(b.text) }));
   }
 }
 

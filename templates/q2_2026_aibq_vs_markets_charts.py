@@ -7,7 +7,7 @@ from matplotlib.lines import Line2D
 # company, composite, class, primary $B (last round; † model), secondary $B, flag
 D=[("Databricks",8.19,"AIBQ",134,139.4,""),("Stripe",8.15,"PBQ",159,167.2,""),
 ("Canva",7.92,"PBQ",42,42.11,""),("Revolut",7.85,"PBQ",75,87.06,""),
-("SpaceX",7.60,"PBQ",2026.24,1376.55,"m"),("Rippling",7.24,"PBQ",16.8,16.98,""),
+("SpaceX",7.60,"PBQ",2026.24,2110.0,"m"),("Rippling",7.24,"PBQ",16.8,16.98,""),
 ("Anthropic",7.22,"AIBQ",965,989.6,""),("Ramp",7.15,"PBQ",32,33.99,""),
 ("Deel",6.98,"PBQ",17.3,15.47,""),("Anduril",6.94,"PBQ",61,74.5,""),
 ("Applied Intuition",6.91,"AIBQ",15,20.47,""),("Epic Games",6.89,"PBQ",22.5,14.47,""),
@@ -83,7 +83,7 @@ def build(which,xcol,offs,title,sub1,sub2,out):
     src=("Source: AIBQ/PBQ Panel as of 2026-06-30; Unicorn Monitor Top20_Marks. "
          + ("† SpaceX and Cerebras have no private last round; their primary valuation is the Morningstar model estimate."
             if xcol=="p" else
-            "Secondary-implied valuations from observed share transactions; SpaceX and Cerebras use public trading values."))
+            "Secondary-implied valuations from observed share transactions, marks as of June 22, 2026.\nSpaceX shown at its day-one public close (~$2.11T) and Cerebras at its public trading value."))
     fig.text(0.008,0.016,src,fontsize=7.7,color=MUT,va="bottom")
     fig.subplots_adjust(left=0.062,right=0.975,top=0.855,bottom=0.125)
     fig.savefig(out,facecolor=SURF)
@@ -98,5 +98,5 @@ build("primary","p",OFF_P,
 build("secondary","s",OFF_S,
   "Quality Against the Secondary Market: The Outliers Move Into Line",
   "The same twenty companies against the valuation implied by actual share trades.",
-  "Kraken and Ripple shift left toward their scores; Neuralink shifts right, priced far above the weakest score on the board.",
+  "Kraken and Ripple shift left toward their scores; Neuralink is priced far above the weakest score on the board.",
   "/home/user/pitchbook-analyst-agent/templates/q2_2026_aibq_vs_secondary.png")

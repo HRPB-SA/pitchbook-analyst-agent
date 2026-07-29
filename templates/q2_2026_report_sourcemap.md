@@ -189,3 +189,26 @@ All figures repeat earlier citations (22% top-2 share, 62% top-5 share C14, 47.6
 4. The 301-company score claims cite HS2 (scored); HS1 is roster-only.
 5. "Q1's record $251.3B" is the current tracker's restated quarterly basis (AQ50);
    Q1-PDF printed $245.6B on its own extract.
+
+## Addendum - post-review corrections (July 29, 2026)
+
+- Median/average section reframed as financing-cohort figures: $2.0B/$18.19B are the
+  'MedAvg Uni Post Value' deal-year series (M8/M9), NOT universe stats. Universe-wide:
+  median active unicorn $1.65B (computed over Active Unicorns col G, n=1,155 with a
+  stated post value), implied average $4.72B ($8,232.5B / 1,743). Downstream "$2.0B
+  median company" references updated to ~$1.7B.
+- SpaceX secondary rework: the Monitor's $1,376.5B SpaceX "secondary" is a pre-listing
+  print (trade_date 2025-11-19) carried into the 6/22 snapshot. Public reality per
+  PANEL Scoreboard row 8 note: day-one close ~$2.11T vs model $2.03T. All
+  secondary-vs-model claims now scope to the 18 private names (11 below model =
+  Top20_Marks H<0 excluding SpaceX); aibq_vs_secondary chart re-rendered with SpaceX
+  at its day-one public close.
+- "two-thirds of growth" corrected to three-fifths of new formation (109/178 = 61%).
+- Above/below-round split restated: 11 of 18 above round (C31), text now states the
+  Neuralink exclusion behind the 10-name 7.4 average.
+- Added: weights disclosure, Elite/Distressed boundary convention, June 30 data cap
+  (Databricks July round excluded per PANEL Methodology), 301-panel method note,
+  R^2 n=20 caveat, secondary-source naming, xAI/Waymo index-exclusion note,
+  865-tag vs 702-cohort reconciliation, secondary-volume sentence (MON Secondary
+  Markets K27/L27), vertical-returns window note (3.039yr: 1.5814^3.039 = +302.6%).
+- Body word count is now ~3,530 (corrections took precedence over the 3,250 target).
