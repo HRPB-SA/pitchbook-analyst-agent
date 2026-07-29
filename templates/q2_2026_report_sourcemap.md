@@ -212,3 +212,35 @@ All figures repeat earlier citations (22% top-2 share, 62% top-5 share C14, 47.6
   865-tag vs 702-cohort reconciliation, secondary-volume sentence (MON Secondary
   Markets K27/L27), vertical-returns window note (3.039yr: 1.5814^3.039 = +302.6%).
 - Body word count is now ~3,530 (corrections took precedence over the 3,250 target).
+
+## Addendum - full-report audit (July 30, 2026), merged team draft
+
+Everything computable from the data pack has now been independently recomputed.
+New verifications (all exact unless noted): model-vs-round panel from U20 daily
+valuations (9 above / 9 below, median +0.1%; every named premium incl. Ramp -13.8%,
+Cursor 36.3->32.8, Kraken 11.8, Ripple 19.8); Cursor last trade 4/20; Q1-2024
+volume baselines (top-5 45.7%, U20 45.4%); AI share of secondary volume 82.5% (Q4-25)
+-> 53.1% (Q2-26) via Industry Vertical Constituents join; exit record 6.8x vs
+Q4-2021 $262.7B; index Q2 +42.7% = strongest quarter since at least 2015; three
+largest days 6/15 (+11.9%), 6/2 (+5.3%), 6/18 (+4.1%); ex-3-days +16.3% vs TME
++14.9%; 120d correlation +0.46 (2022-25 year-end avg +0.86 vs claimed +0.88);
+regional US 50.8/26.3 ex-3, Asia 24.5/21.8, Europe 12.6/11.0; >6% days 2/0/0;
+Cerebras final private mark $30.7B (U20 model 5/13); SpaceX $1.38T eve-of-listing
+(U20 model 6/11, $1,379.1B); age-premium correlation -0.37 vs claimed -0.34.
+
+Defects found this pass:
+1. Mark-age WIDTH claim (12 pts young vs 30 pts old) REVERSES under reconstruction
+   (~20 vs ~13 on tracker round dates) - verify against PrimVSec dates or cut.
+2. Prometheus "past $18 billion of total funding" - HS2 shows $16.2B raised; no
+   in-pack support for $18B.
+3. "Nearly a third of the headline aggregate" (dormancy-by-value) - basis is the
+   $6.06T disclosed-value subset; relabel like the adjacent sentence.
+4. 2021 cohort "roughly a quarter would impair" - cohort base rates are 10% failed /
+   16% exited; a quarter = resolved (exit+failure), not impaired. Reword.
+5. Minor: "1% of deal count" is 1.4%; Europe Q2 prints 12.6% vs "12.7%".
+
+Still unverifiable from the pack (needs FG's 'Uni IPOs' / 'IPO Performance' tabs or
+endnotes): all IPO pop statistics (346/290/277 populations, medians by year, -0.86
+in-quarter rank correlation, +0.42 issuance-lead), and external claims (71% of global
+venture dollars, Forge $12.19B, Ripple $50B tender, Figma, Prometheus backers,
+Anthropic/OpenAI listing-timing consensus).
