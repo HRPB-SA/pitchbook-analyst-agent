@@ -72,12 +72,26 @@ for (const b of blocks) {
   } else if (b.t === 'h2') {
     children.push(new Paragraph({ heading: HeadingLevel.HEADING_2,
       spacing: { before: 220, after: 70 },
-      children: [ new TextRun({ text: b.text, bold: true, size: 21, color: NAVY, font: 'Arial' }) ] }));
+      children: b.text.split('**').filter(s => s).map((seg, i) =>
+        new TextRun({ text: seg, bold: true, size: 21, font: 'Arial',
+          color: (b.text.startsWith('**') ? i % 2 === 0 : i % 2 === 1) ? RED : NAVY })) }));
   } else if (b.t === 'chart') {
-    const img = fs.readFileSync(IMGDIR + b.file);
-    children.push(new Paragraph({ alignment: AlignmentType.CENTER,
-      spacing: { before: 120, after: 160 },
-      children: [ new ImageRun({ type: 'png', data: img, transformation: { width: 620, height: 380 } }) ] }));
+    if (b.file.endsWith('.png') && fs.existsSync(IMGDIR + b.file)) {
+      const img = fs.readFileSync(IMGDIR + b.file);
+      children.push(new Paragraph({ alignment: AlignmentType.CENTER,
+        spacing: { before: 120, after: 160 },
+        children: [ new ImageRun({ type: 'png', data: img, transformation: { width: 620, height: 380 } }) ] }));
+    } else {
+      const runs = [];
+      b.file.split('**').forEach((seg, i) => {
+        if (!seg) return;
+        const red = b.file.startsWith('**') ? i % 2 === 0 : i % 2 === 1;
+        runs.push(new TextRun({ text: (i === 0 ? 'CHART: ' : '') + seg, italics: true, size: 19, font: 'Arial',
+          bold: red, color: red ? RED : SLATE }));
+      });
+      children.push(new Paragraph({ spacing: { before: 120, after: 160 },
+        shading: { type: ShadingType.CLEAR, fill: 'F3F6FB', color: 'auto' }, children: runs }));
+    }
   } else if (b.t === 'p' && b.text.startsWith('- ')) {
     children.push(new Paragraph({ spacing: { after: 100, line: 276 }, bullet: { level: 0 },
       children: bodyRuns(b.text.slice(2)) }));
