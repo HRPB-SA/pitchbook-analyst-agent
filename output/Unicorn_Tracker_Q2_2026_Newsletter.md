@@ -1,4 +1,4 @@
-# Unicorns Just Had a Record Quarter. Most of Them Missed It.
+# The One-Unicorn Quarter
 
 Unicorns, private startups valued at $1 billion or more, produced $1.8 trillion in value in the second quarter through companies going public or being sold, more than the prior eight years combined, according to PitchBook's Q2 2026 Global Unicorn Tracker. Nearly all of it was one event: SpaceX's stock market debut, 95% of the total.
 
