@@ -1,9 +1,9 @@
-# The Unicorn Boom Belongs to a Few
+# The IPO Signal Says Go. The Record Says Be Careful.
 
-A handful of companies now carry the whole unicorn market. Unicorns, private startups valued at $1 billion or more, were worth $8.2 trillion at the end of June. Five deals took 60% of the money they raised in the second quarter, and one company, the AI lab Anthropic, took 45% alone. It raised $65 billion in a deal that valued it at $965 billion, according to PitchBook's Q2 2026 Global Unicorn Tracker.
+The second quarter's hot stock market debuts point to more unicorn listings before the year ends. Unicorns are private startups valued at $1 billion or more, and when their new listings jump on day one, more follow within two quarters, according to PitchBook's Q2 2026 Global Unicorn Tracker. This quarter jumped. The AI chipmaker Cerebras priced its shares at $185 and closed day one at $311. SpaceX rose 19%.
 
-**Why it matters:** The boom belongs to a few. Nearly half of the more than 1,700 unicorns have not raised money, or been given a new price, in over two years. The typical unicorn is worth what it was in December, about $1.7 billion. Most of the gain came from a dozen AI companies, and AI now holds 62% of all unicorn value.
+**Why it matters:** Anthropic and OpenAI, the world's two most valuable private companies, have filed to go public and are picking their moment now. The signal says come. The record says be careful: of the 31 unicorn listings worth more than $10 billion, only four beat the stock market over the next six months, and the typical one trailed it by 44 percentage points.
 
-Unicorns raised $396 billion in the first half of the year, more than in all of 2021, the old record, in less than a quarter as many deals. Unicorns worth $1.8 trillion went public or were sold in the second quarter, more than in the prior eight years combined. SpaceX's stock market debut was 95% of that. For investors who did not own SpaceX, the record quarter never happened. Its shares have since fallen below their debut price.
+The first-day pops were costly and brief. Cerebras's jump handed about $3.7 billion to the buyers who got its shares at the offer price. SpaceX's smaller pop cost about $16.5 billion. Neither gain lasted. By late July, Cerebras sat barely above its offer price and SpaceX below its own. On August 6, the rule that keeps SpaceX employees and early investors from selling expires, freeing roughly 900 million shares into a fallen stock.
 
-**The bottom line:** Anthropic and OpenAI have filed to go public. Their debuts will test whether these prices hold. The boom is real. It is narrow.
+**The bottom line:** Anthropic is expected on the Nasdaq in October. OpenAI leans toward 2027. If SpaceX absorbs those shares, October holds. If not, both wait. The window is open. Windows close.
