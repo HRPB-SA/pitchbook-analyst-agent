@@ -1,9 +1,9 @@
-# The Unicorns Go Public
+# Unicorn IPO Pops Point to a Busy H2
 
-Unicorn exits just posted their biggest quarter on record, and one IPO was 95% of it. Exit value reached $1.8 trillion in Q2, more than the combined total from 2016 through 2023, according to our Q2 2026 Global Unicorn Tracker. SpaceX's listing accounted for $1.7 trillion; the next five exits together came to 4%.
+Q2's unicorn debuts are more than money left on the table. They are a forecast. A quarter's median first-day gain shows a +0.42 rank correlation with the next quarter's unicorn listing count; run the pairing backward and it vanishes to +0.03. Returns lead volume. Quarters with above-median pricing were followed by nearly twice as many listings. With Cerebras closing day one 68% above its offer price and SpaceX up 19%, our Q2 2026 Global Unicorn Tracker suggests a busier back half.
 
-The record was narrow, and so is the market beneath it. The 1,743 active unicorns carry an aggregate $8.2 trillion valuation, but a dozen repriced AI names drove most of this year's increase, and 47.6% of the universe hasn't raised in more than two years. For any LP not on SpaceX's cap table, the record quarter did not happen.
+The signal lands on the two companies choosing their timing now. Anthropic and OpenAI have both filed, and they are weighing an invitation against a warning: of the 31 unicorn listings worth more than $10 billion, only four beat the market over the following six months, and the median trailed by 43.8%.
 
-The listings themselves ran hot and cooled fast. Cerebras closed its first day 68% above its $185 offer price, then trailed the market over the following month; SpaceX broke its $135 issue price on July 15. Underpricing has historically led issuance, and hot quarters are followed by busier ones in our data. The queue is responding: Anthropic and OpenAI, the two largest unicorns, have both filed, though OpenAI is weighing 2027.
+The rest of the quarter will get the headlines. Exit value reached $1.8 trillion, more than 2016 through 2023 combined, with SpaceX's listing alone at 95%; the 1,743 active unicorns now carry an $8.2 trillion aggregate valuation. But the pops have cooled, with SpaceX breaking its $135 issue price in July, and its lockup expired last week, freeing roughly 900 million insider shares.
 
-SpaceX's lockup expired last week, freeing roughly 900 million insider shares into a stock below its offer price. The absorption decides whether Anthropic's October debut holds or slips to 2027. Read the full report for why we expect Q3 to give back much of Q2's gain, and why the two most valuable private companies rank sixth and 14th on business quality.
+How those shares get absorbed decides whether Anthropic's October debut holds or both names slip to 2027. Read the full report for the analysis behind the listing signal, and for why the two most valuable private companies rank sixth and 14th on business quality.
