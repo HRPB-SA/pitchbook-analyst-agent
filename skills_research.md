@@ -381,6 +381,16 @@ before results go to Excel. Install:
 
 ---
 
+## Implementation note (added 2026-08-10, same day)
+
+The Tier 1 + Tier 2 recommendation set has been vendored into this repo at
+`.claude/skills/` (91 skills from 13 sources, pinned to upstream commits,
+security-reviewed file by file; 2 companion agents in `.claude/agents/`).
+`.claude/skills/SOURCES.md` is the authoritative manifest: per-source commits
+and licenses, the two skills dropped at review, the one telemetry patch, the
+items that require machine-side installation instead (claude-mem, the plugin
+trio, Octagon, document-skills refresh), and all accepted caveats.
+
 ## Verification caveats
 
 Captured 2026-08-10. GitHub star counts and last-push dates were checked via the
