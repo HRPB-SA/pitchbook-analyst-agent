@@ -1,0 +1,67 @@
+{
+  "id": "company_update",
+  "name": "Company Update",
+  "kicker": "COMPANY UPDATE",
+  "length_pages": "6-10",
+  "rigor": 4,
+  "outname_pattern": "{company}_Update_{monyyyy}",
+  "toc": true,
+  "cover": {
+    "hero_tiles": ["lead quality or score metric", "valuation / multiple with date", "the verdict or base case"],
+    "snapshot": true
+  },
+  "sections": [
+    {
+      "id": "signal",
+      "title_hint": "The Signal: {the single sharpest change since last coverage}",
+      "required": [
+        "lead with the sharpest change since the prior report, sourced and dated",
+        "three-beat: what happened, what it means, implication",
+        "state what the consensus read misses"
+      ],
+      "auto": null,
+      "charts": ["combo_bars_line or series_bars if a ladder moved"]
+    },
+    {
+      "id": "what_changed",
+      "title_hint": "The Ledger Moves: What Changed and What Did Not",
+      "required": [
+        "every material field change since the prior snapshot, each sourced and tiered",
+        "explicitly list load-bearing figures that did NOT change",
+        "flag stale facts (decay-class breaches) that could not be refreshed"
+      ],
+      "auto": "tracker",
+      "charts": []
+    },
+    {
+      "id": "thesis_check",
+      "title_hint": "The Thesis Check: Confirmed, Extended, or Contradicted",
+      "required": [
+        "test the standing thesis against the new facts",
+        "name each prior named trigger and whether it fired",
+        "second-order: who must react, what it confirms or falsifies"
+      ],
+      "auto": null,
+      "charts": ["ranked_bars for cohort position if it moved"]
+    },
+    {
+      "id": "verdict",
+      "title_hint": "The Verdict and the Watch List",
+      "required": [
+        "restate or revise the position explicitly",
+        "dated forward hooks: the next three published numbers that matter",
+        "the falsifier: which single print would change the answer"
+      ],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "fact_sheet",
+      "title_hint": "Appendix: The Fact Sheet",
+      "required": ["full categorized fact sheet with source, date, tier on every row"],
+      "auto": "fact_sheet",
+      "charts": []
+    }
+  ],
+  "gates": ["report_ship"]
+}

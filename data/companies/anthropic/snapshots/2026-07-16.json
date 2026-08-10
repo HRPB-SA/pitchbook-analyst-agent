@@ -1,0 +1,177 @@
+{
+  "identity": {
+    "name": {
+      "value": "Anthropic",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2",
+      "decay": "PERMANENT"
+    },
+    "pb_entity_id": {
+      "value": "466959-97",
+      "as_of": "2026-07-16",
+      "source": "PitchBook profile",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "sector": {
+      "value": "AI-INFRA (frontier lab)",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2",
+      "decay": "STABLE"
+    }
+  },
+  "valuation": {
+    "post_money_bn": {
+      "value": 965,
+      "as_of": "2026-05-28",
+      "source": "Series H $65B (Dragoneer/Sequoia/Greenoaks/Altimeter), confirmed on PitchBook Jul 16",
+      "tier": "T2",
+      "decay": "VOLATILE"
+    }
+  },
+  "financing": {
+    "total_raised_bn": {
+      "value": 161.3,
+      "as_of": "2026-07-16",
+      "source": "PitchBook total raised $161.254B, confirmed live",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "equity_raised_bn": {
+      "value": 124.3,
+      "as_of": "2026-07-02",
+      "source": "canonical decomposition: excludes $34.5B chip bonds + $2.5B revolver",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "debt_raised_bn": {
+      "value": 37.0,
+      "as_of": "2026-07-02",
+      "source": "PB 334763-02T ($34.5B tranched chip bonds) + 295197-04T ($2.5B revolver)",
+      "tier": "T2",
+      "decay": "STABLE"
+    }
+  },
+  "financials": {
+    "run_rate_ladder_bn": [
+      {
+        "value": 47,
+        "as_of": "2026-05-15",
+        "source": "company-announced run-rate (gross basis)",
+        "tier": "T2",
+        "flags": [
+          "VERIFY"
+        ],
+        "note": "GROSS basis (incl. cloud partner sales); equalized net ~$28.3B at 39.75% (Ruling 5); STALE past quarterly decay"
+      }
+    ],
+    "fy2025_revenue_bn": {
+      "value": 9.0,
+      "as_of": "2026-07-16",
+      "source": "PitchBook financials",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "pb_ttm_field_note": {
+      "value": "PB revenue field $55B TTM 4Q2027 (period end 2027-12-31) = forward projection, NOT run-rate. Do not adopt.",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2",
+      "decay": "PERMANENT"
+    },
+    "first_operating_profit": {
+      "value": "~$559M expected Q2 2026",
+      "as_of": "2026-05-28",
+      "source": "press reports",
+      "tier": "T3",
+      "flags": [
+        "VERIFY"
+      ]
+    }
+  },
+  "headcount": {
+    "employees_ladder": [
+      {
+        "value": 5000,
+        "as_of": "2026-04-21",
+        "source": "PitchBook",
+        "tier": "T2"
+      }
+    ]
+  },
+  "customers": {
+    "nrr_pct": {
+      "value": "140%+",
+      "as_of": "2026-05-15",
+      "source": "company-announced",
+      "tier": "T2"
+    },
+    "business_customers": {
+      "value": "300K+",
+      "as_of": "2026-05-15",
+      "source": "company-announced",
+      "tier": "T2"
+    },
+    "acv_1m_plus": {
+      "value": "1,000+",
+      "as_of": "2026-05-15",
+      "source": "company-announced",
+      "tier": "T2"
+    },
+    "claude_code_arr_bn": {
+      "value": 2.5,
+      "as_of": "2026-05-15",
+      "source": "company-announced",
+      "tier": "T2",
+      "note": "54% coding share"
+    }
+  },
+  "ipo_status": {
+    "s1_status": {
+      "value": "Confidential S-1 filed Jun 1, 2026",
+      "as_of": "2026-06-01",
+      "source": "press + PitchBook",
+      "tier": "T2"
+    },
+    "window": {
+      "value": "October 2026 expected (PitchBook financing note, refreshed Jul 6)",
+      "as_of": "2026-07-16",
+      "source": "PitchBook",
+      "tier": "T2"
+    }
+  },
+  "scores": {
+    "aibq_composite": {
+      "value": 8.2,
+      "as_of": "2026-05-27",
+      "source": "internal AIBQ v3.0 (this desk)",
+      "tier": "T2",
+      "note": "Strong band / S5 / AI-INFRA"
+    }
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "Anthropic S-1 public filing / October 2026 pricing vs OpenAI sequencing",
+          "status": "armed"
+        },
+        "as_of": "2026-07-16",
+        "source": "canonical refresh, July 16, 2026",
+        "tier": "T2"
+      },
+      {
+        "value": {
+          "condition": "Run-rate refresh: $47B gross is May vintage, past quarterly decay; SEC gross-to-net restatement exposure 20-40%",
+          "status": "armed"
+        },
+        "as_of": "2026-07-16",
+        "source": "canonical refresh, July 16, 2026",
+        "tier": "T2"
+      }
+    ]
+  },
+  "_snapshot_date": "2026-07-16"
+}

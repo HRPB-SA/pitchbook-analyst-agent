@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "name": {
+      "value": "Safe Superintelligence (SSI)",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2",
+      "decay": "PERMANENT"
+    },
+    "sector": {
+      "value": "AI-INFRA (pre-revenue frontier lab)",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2",
+      "decay": "STABLE"
+    }
+  },
+  "valuation": {
+    "post_money_bn": {
+      "value": 31,
+      "as_of": "2026-06-12",
+      "source": "canonical ~$30-32B, midpoint carried; NOT re-pulled at the Jul 16 refresh",
+      "tier": "T3",
+      "decay": "VOLATILE",
+      "flags": [
+        "est.",
+        "VERIFY"
+      ]
+    }
+  },
+  "financing": {
+    "equity_raised_bn": {
+      "value": 3,
+      "as_of": "2026-06-12",
+      "source": "canonical",
+      "tier": "T2",
+      "decay": "STABLE"
+    }
+  },
+  "financials": {
+    "run_rate_ladder_bn": [
+      {
+        "value": 0,
+        "as_of": "2026-06-12",
+        "source": "pre-revenue",
+        "tier": "T2"
+      }
+    ]
+  },
+  "scores": {
+    "aibq_composite": {
+      "value": 2.3,
+      "as_of": "2026-05-27",
+      "source": "internal AIBQ v3.0 (this desk)",
+      "tier": "T2",
+      "note": "Distressed band / S1 / AI-INFRA"
+    }
+  },
+  "_snapshot_date": "2026-07-16"
+}

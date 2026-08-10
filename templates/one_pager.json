@@ -1,0 +1,35 @@
+{
+  "id": "one_pager",
+  "name": "One-Pager",
+  "kicker": "ONE-PAGER",
+  "length_pages": "1-2",
+  "rigor": 3,
+  "outname_pattern": "{company}_OnePager_{monyyyy}",
+  "toc": false,
+  "cover": {
+    "hero_tiles": ["quality score", "valuation + multiple", "verdict"],
+    "snapshot": true
+  },
+  "sections": [
+    {
+      "id": "brief",
+      "title_hint": "{Company} in One Page",
+      "required": [
+        "what the company is in two sentences",
+        "the thesis in one paragraph with the three load-bearing figures",
+        "the risk in one paragraph",
+        "verdict + dated falsifier"
+      ],
+      "auto": null,
+      "charts": ["one hero chart maximum"]
+    },
+    {
+      "id": "fact_sheet",
+      "title_hint": "The Fact Sheet",
+      "required": ["compact fact sheet: identity, valuation, financials, headcount only"],
+      "auto": "fact_sheet:identity,valuation,financing,financials,headcount",
+      "charts": []
+    }
+  ],
+  "gates": []
+}

@@ -1,0 +1,539 @@
+{
+  "slug": "databricks",
+  "identity": {
+    "name": {
+      "value": "Databricks, Inc.",
+      "as_of": "2026-07-10",
+      "source": "validation pack, July 10, 2026",
+      "tier": "T2",
+      "decay": "PERMANENT"
+    },
+    "pb_entity_id": {
+      "value": "59199-40",
+      "as_of": "2026-07-09",
+      "source": "PitchBook profile",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "hq": {
+      "value": "San Francisco (+46 offices)",
+      "as_of": "2026-06-09",
+      "source": "PitchBook",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "ceo": {
+      "value": "Ali Ghodsi",
+      "as_of": "2026-07-10",
+      "source": "validation pack, July 10, 2026",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "sector": {
+      "value": "AI-PLAT (lakehouse / data + AI platform)",
+      "as_of": "2026-07-10",
+      "source": "validation pack, July 10, 2026",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "founded": {
+      "value": 2013,
+      "as_of": "2026-08-10",
+      "source": "PitchBook profile",
+      "tier": "T2",
+      "decay": "PERMANENT"
+    },
+    "business_status": {
+      "value": "Generating Revenue; Privately Held (backing); Venture Capital-Backed",
+      "as_of": "2026-08-10",
+      "source": "PitchBook profile",
+      "tier": "T2"
+    }
+  },
+  "valuation": {
+    "post_money_bn": {
+      "value": 134,
+      "as_of": "2026-02-09",
+      "source": "Series L, company PR Dec 2025 + PitchBook deal 313367-68T",
+      "tier": "T2",
+      "decay": "STABLE",
+      "note": "held flat across two closes"
+    },
+    "rumored_round": {
+      "value": "Term sheet signed for a strategic round at $188B post, led by Coatue with new and existing investors; ~$3B size (press); company expects close later this summer; funds NOT in hand as of Aug 10",
+      "as_of": "2026-08-10",
+      "source": "company announcement Jul 17, 2026 + PitchBook financing note Aug 7, 2026 (deal 334745-56T, Announced/In Progress); size per press reports",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "note": "Progressed from Rumor/Speculation ($165-175B talks, Jul 7 note) to Announced/In Progress at $188B. Announced above the talked range. Base case still anchors on the $134B completed mark until close."
+    },
+    "pb_last_known_valuation_bn": {
+      "value": 188,
+      "as_of": "2026-07-16",
+      "source": "PitchBook Last Known Valuation field, deal 334745-56T (Announced/In Progress)",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "note": "Announced basis, not a completed mark; PB deal date Jul 16 vs company announcement Jul 17, trivial date skew noted"
+    },
+    "valuation_ladder_bn": [
+      {
+        "value": 62,
+        "as_of": "2024-12-15",
+        "source": "press reports of the $10B round",
+        "tier": "T3",
+        "decay": "STABLE"
+      },
+      {
+        "value": 100,
+        "as_of": "2025-09-30",
+        "source": "press reports of the $1B round",
+        "tier": "T3",
+        "decay": "STABLE"
+      },
+      {
+        "value": 134,
+        "as_of": "2026-02-09",
+        "source": "company PR + PitchBook deal 313367-68T",
+        "tier": "T2",
+        "note": "last COMPLETED mark; $188B announced Jul 2026 excluded until close",
+        "decay": "STABLE"
+      }
+    ]
+  },
+  "financing": {
+    "total_raised_bn": {
+      "value": 29.5,
+      "as_of": "2026-07-10",
+      "source": "PitchBook Total Raised $29,515.7M, 21 tracked deals",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "equity_raised_bn": {
+      "value": 20.2,
+      "as_of": "2026-07-10",
+      "source": "PitchBook 21-deal decomposition, 12 completed equity rounds A-L",
+      "tier": "T2",
+      "decay": "STABLE",
+      "flags": [
+        "est."
+      ],
+      "note": "equity ~= $20.2-20.4B within rounding"
+    },
+    "debt_raised_bn": {
+      "value": 9.3,
+      "as_of": "2026-07-10",
+      "source": "PitchBook deal records: 4 debt deals + embedded",
+      "tier": "T2",
+      "decay": "STABLE",
+      "flags": [
+        "est."
+      ]
+    },
+    "last_completed_deal": {
+      "value": "Series L $7.0B ($5.0B equity led by Insight/JPM Growth/Fidelity + Microsoft and ~44 others, $2.0B debt)",
+      "as_of": "2026-02-09",
+      "source": "PitchBook deal 313367-68T + company PR",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "active_investors": {
+      "value": 152,
+      "as_of": "2026-08-10",
+      "source": "PitchBook profile",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "series_l_pre_money_bn": {
+      "value": 129,
+      "as_of": "2026-08-07",
+      "source": "PitchBook financing note",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "series_l_participants_note": {
+      "value": "Series L $5B equity led by Insight, J.P. Morgan Growth Equity, Fidelity; Microsoft + 48 other investors; $2B loan from undisclosed lenders",
+      "as_of": "2026-08-07",
+      "source": "PitchBook financing note",
+      "tier": "T2",
+      "decay": "STABLE",
+      "note": "PB note now says 48 other investors; July pack carried ~44; PB revision, not a new close"
+    }
+  },
+  "financials": {
+    "run_rate_ladder_bn": [
+      {
+        "value": 4.0,
+        "as_of": "2025-09-30",
+        "source": "company PR",
+        "tier": "T2",
+        "note": "+50% YoY"
+      },
+      {
+        "value": 4.8,
+        "as_of": "2025-12-31",
+        "source": "company PR",
+        "tier": "T2",
+        "note": "+55% YoY"
+      },
+      {
+        "value": 5.4,
+        "as_of": "2026-02-09",
+        "source": "company PR",
+        "tier": "T2",
+        "note": "+65% YoY"
+      },
+      {
+        "value": 6.9,
+        "as_of": "2026-06-16",
+        "source": "company disclosure (analyst session)",
+        "tier": "T2",
+        "note": "+80% YoY"
+      }
+    ],
+    "growth_yoy_pct_ladder": [
+      {
+        "value": 50,
+        "as_of": "2025-09-30",
+        "source": "company PR",
+        "tier": "T2"
+      },
+      {
+        "value": 55,
+        "as_of": "2025-12-31",
+        "source": "company PR",
+        "tier": "T2"
+      },
+      {
+        "value": 65,
+        "as_of": "2026-02-09",
+        "source": "company PR",
+        "tier": "T2"
+      },
+      {
+        "value": 80,
+        "as_of": "2026-06-16",
+        "source": "company disclosure",
+        "tier": "T2"
+      }
+    ],
+    "gross_margin_pct_ladder": [
+      {
+        "value": 80,
+        "as_of": "2025-12-31",
+        "source": "company (prior level, 'above 80%')",
+        "tier": "T2",
+        "flags": [
+          "est."
+        ]
+      },
+      {
+        "value": 74,
+        "as_of": "2026-06-16",
+        "source": "company disclosure; guided to decline further on agent-driven compute",
+        "tier": "T2"
+      }
+    ],
+    "fcf_status": {
+      "value": "Positive, TTM and FY2025 bases; magnitude undisclosed",
+      "as_of": "2026-02-09",
+      "source": "company PR",
+      "tier": "T2",
+      "decay": "QUARTERLY"
+    },
+    "pb_ttm_field_note": {
+      "value": "PitchBook revenue field still $6,900M TTM 4Q2026 (period end 2026-12-31) = forward-window projection, NOT run-rate. Ruling 4 holds; not adopted.",
+      "as_of": "2026-08-10",
+      "source": "PitchBook profile, re-verified this pull",
+      "tier": "T2",
+      "decay": "PERMANENT"
+    }
+  },
+  "headcount": {
+    "employees_ladder": [
+      {
+        "value": 9000,
+        "as_of": "2026-06-09",
+        "source": "PitchBook",
+        "tier": "T2"
+      }
+    ]
+  },
+  "products": {
+    "ai_products_run_rate_bn": {
+      "value": 1.7,
+      "as_of": "2026-06-16",
+      "source": "company disclosure",
+      "tier": "T2",
+      "note": "largest, fastest line; $1.0B Dec-25 -> $1.4B Feb-26 -> $1.7B Jun-26"
+    },
+    "dbsql_run_rate_bn": {
+      "value": 1.5,
+      "as_of": "2026-06-16",
+      "source": "press reports of company disclosure",
+      "tier": "T2",
+      "note": "data warehousing, doubled YoY"
+    },
+    "lakebase": {
+      "value": "Thousands of customers in first six months; revenue growing at 2x the DW product's pace at equivalent stage",
+      "as_of": "2026-02-09",
+      "source": "company PR",
+      "tier": "T2"
+    },
+    "ai_capital_focus": {
+      "value": "New capital earmarked for AI capabilities: Genie (business-data assistant suite, debuted Mar 2026), Unity AI Gateway, Lakebase (database for AI agents)",
+      "as_of": "2026-07-17",
+      "source": "company announcement via press reports",
+      "tier": "T2",
+      "decay": "QUARTERLY"
+    }
+  },
+  "customers": {
+    "nrr_pct": {
+      "value": ">140%",
+      "as_of": "2026-02-09",
+      "source": "company PR",
+      "tier": "T2"
+    },
+    "orgs": {
+      "value": 20000,
+      "as_of": "2026-02-09",
+      "source": "company PR",
+      "tier": "T2",
+      "note": "20,000+ organizations"
+    },
+    "customers_1m_plus": {
+      "value": 800,
+      "as_of": "2026-02-09",
+      "source": "company PR",
+      "tier": "T2",
+      "note": "800+"
+    },
+    "customers_10m_plus": {
+      "value": 70,
+      "as_of": "2026-02-09",
+      "source": "company PR",
+      "tier": "T2",
+      "note": "70+"
+    },
+    "fortune500_pct": {
+      "value": ">60%",
+      "as_of": "2026-02-09",
+      "source": "company PR",
+      "tier": "T2"
+    }
+  },
+  "leadership": {
+    "ceo": {
+      "value": "Ali Ghodsi",
+      "as_of": "2026-07-10",
+      "source": "validation pack, July 10, 2026",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "naveen_rao_status": {
+      "value": "Departed Sep 12, 2025 to found AI-hardware startup; advisory role retained; Databricks investing",
+      "as_of": "2025-09-12",
+      "source": "press reports",
+      "tier": "T3",
+      "decay": "STABLE",
+      "note": "digested; residual key-person watch on the AI line"
+    }
+  },
+  "competition": {
+    "snowflake_mkt_cap_bn": {
+      "value": 91.1,
+      "as_of": "2026-07-07",
+      "source": "market data aggregators",
+      "tier": "T3",
+      "decay": "VOLATILE"
+    },
+    "snowflake_fwd_product_rev_bn": {
+      "value": 5.84,
+      "as_of": "2026-05-27",
+      "source": "Snowflake 8-K, Q1 FY27 guide, +31%",
+      "tier": "T1",
+      "decay": "QUARTERLY"
+    },
+    "vs_snowflake": {
+      "value": "Databricks revenue has overtaken Snowflake; gap ~$1.6B and widening",
+      "as_of": "2026-06-30",
+      "source": "third-party analyst data",
+      "tier": "T3",
+      "decay": "QUARTERLY",
+      "flags": [
+        "est."
+      ]
+    },
+    "private_valuation_rank": {
+      "value": "Trails only Anthropic, OpenAI, Tether, ByteDance among private companies at the announced $188B",
+      "as_of": "2026-07-17",
+      "source": "PitchBook data via PitchBook news",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "flags": [
+        "est."
+      ]
+    }
+  },
+  "deals_ma": {
+    "acquisitions_count": {
+      "value": 19,
+      "as_of": "2026-07-10",
+      "source": "aggregated company disclosures + press",
+      "tier": "T3",
+      "decay": "STABLE",
+      "flags": [
+        "est."
+      ]
+    },
+    "latest": {
+      "value": "Panther (security, 3rd security deal; terms undisclosed; $1.4B is Panther's 2021 mark, not a price)",
+      "as_of": "2026-06-16",
+      "source": "company announcement + press",
+      "tier": "T2",
+      "decay": "STABLE"
+    }
+  },
+  "ipo_status": {
+    "s1_status": {
+      "value": "No S-1 on file; Form D / D/A only (latest 2025-12-31)",
+      "as_of": "2026-07-10",
+      "source": "SEC EDGAR submissions API, CIK 0001587468",
+      "tier": "T1"
+    },
+    "window": {
+      "value": "2026 publicly ruled out by CEO; 2027 earliest",
+      "as_of": "2026-06-04",
+      "source": "company (CEO television interview)",
+      "tier": "T2"
+    },
+    "prediction_market": {
+      "value": "'No Databricks IPO by Dec 31, 2027' priced 0.54",
+      "as_of": "2026-07-07",
+      "source": "prediction-market aggregator",
+      "tier": "T3",
+      "flags": [
+        "est."
+      ]
+    }
+  },
+  "scores": {
+    "aibq_composite": {
+      "value": 8.81,
+      "as_of": "2026-07-10",
+      "source": "internal re-score (this desk)",
+      "tier": "T2",
+      "note": "Elite band; prior 8.92; CE 8.9 / RQ 9.0 / CI 8.0 / GO 8.9 / MD 9.0, CRA 0"
+    },
+    "aibq_dimensions": {
+      "value": {
+        "CE": 8.9,
+        "RQ": 9.0,
+        "CI": 8.0,
+        "GO": 8.9,
+        "MD": 9.0,
+        "CRA": 0.0
+      },
+      "as_of": "2026-07-10",
+      "source": "internal re-score (this desk)",
+      "tier": "T2"
+    }
+  },
+  "events": {
+    "stream": [
+      {
+        "value": "Series L first close >$4B at $134B",
+        "as_of": "2025-12-15",
+        "source": "company PR",
+        "tier": "T2",
+        "decay": "PERMANENT"
+      },
+      {
+        "value": "Series L final close $7.0B total at $134B",
+        "as_of": "2026-02-09",
+        "source": "PitchBook deal record",
+        "tier": "T2",
+        "decay": "PERMANENT"
+      },
+      {
+        "value": "Panther acquisition announced",
+        "as_of": "2026-06-16",
+        "source": "company + press",
+        "tier": "T2",
+        "decay": "PERMANENT"
+      },
+      {
+        "value": "Run-rate $6.9B (+80%) disclosed at Data + AI Summit",
+        "as_of": "2026-06-16",
+        "source": "company disclosure",
+        "tier": "T2",
+        "decay": "PERMANENT"
+      },
+      {
+        "value": "Term sheet signed: strategic round at $188B post led by Coatue (~$3B per press); close expected later this summer",
+        "as_of": "2026-07-17",
+        "source": "company announcement + PitchBook deal record",
+        "tier": "T2",
+        "decay": "PERMANENT"
+      }
+    ]
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "Next quarterly print (expected Sep-Oct 2026): gross margin vs the 70% efficiency gate; ~4-point cushion at 74%",
+          "status": "armed"
+        },
+        "as_of": "2026-07-10",
+        "source": "validation pack, July 10, 2026",
+        "tier": "T2"
+      },
+      {
+        "value": {
+          "condition": "$165-175B round: closes (adopt and re-mark) or lapses (rumor retired)",
+          "status": "fired",
+          "fired_on": "2026-07-17"
+        },
+        "as_of": "2026-08-10",
+        "source": "company announcement + PitchBook deal 334745-56T",
+        "tier": "T2",
+        "note": "Fired in the third direction: firmed to ANNOUNCED at $188B, above the talked range; close still pending"
+      },
+      {
+        "value": {
+          "condition": "Coatue round close (expected 'later this summer'): on completion, adopt $188B as the mark and re-run valuation",
+          "status": "armed"
+        },
+        "as_of": "2026-08-10",
+        "source": "company announcement Jul 17, 2026",
+        "tier": "T2"
+      },
+      {
+        "value": {
+          "condition": "S-1 filing at SEC EDGAR CIK 0001587468 (none on file as of Jul 10, 2026)",
+          "status": "armed"
+        },
+        "as_of": "2026-07-10",
+        "source": "validation pack, July 10, 2026",
+        "tier": "T1"
+      },
+      {
+        "value": {
+          "condition": "Metrics refresh: NRR / customer counts are Feb 2026 vintage; stale after Sep 2026 disclosure",
+          "status": "armed"
+        },
+        "as_of": "2026-07-10",
+        "source": "validation pack, July 10, 2026",
+        "tier": "T2"
+      }
+    ]
+  },
+  "_updated": "2026-08-10"
+}

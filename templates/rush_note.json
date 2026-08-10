@@ -1,0 +1,44 @@
+{
+  "id": "rush_note",
+  "name": "Rush Note (single event, shipped fast)",
+  "kicker": "RUSH NOTE",
+  "length_pages": "4-8",
+  "rigor": 4,
+  "outname_pattern": "{company}_{event}_{monyyyy}",
+  "toc": false,
+  "cover": {
+    "hero_tiles": ["the event in one number", "what repriced", "the read"],
+    "snapshot": false
+  },
+  "sections": [
+    {
+      "id": "tape",
+      "title_hint": "The Tape: What Just Happened",
+      "required": ["the event, cross-confirmed, with exact figures and dates", "disputed levels stated as disputed"],
+      "auto": null,
+      "charts": ["series_bars or line_series of the move"]
+    },
+    {
+      "id": "mechanics",
+      "title_hint": "The Mechanics: Why It Happened",
+      "required": ["the mechanism, not the narrative", "sensitivity table if a valuation moves"],
+      "auto": null,
+      "charts": ["heatmap if sensitivity applies"]
+    },
+    {
+      "id": "readthrough",
+      "title_hint": "The Read-Through: Who Must React",
+      "required": ["two steps downstream for each affected name", "what it confirms or falsifies in the standing thesis"],
+      "auto": null,
+      "charts": ["ranked_bars if cohort ordering changed"]
+    },
+    {
+      "id": "triggers",
+      "title_hint": "The Triggers: What to Watch, Dated",
+      "required": ["named triggers with dates and thresholds", "the falsifier"],
+      "auto": null,
+      "charts": []
+    }
+  ],
+  "gates": ["report_ship"]
+}

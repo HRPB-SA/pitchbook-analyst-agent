@@ -1,0 +1,341 @@
+<!-- HRPB Research Desk: report request dashboard. Published as a claude.ai
+     artifact; also works opened locally. Composes a request JSON + launch
+     prompt for the report engine in this repo (see CLAUDE.md). -->
+<title>HRPB Report Engine</title>
+<style>
+  :root {
+    --ground: #FDFDFC;
+    --panel: #F2F5F9;
+    --panel-2: #E9EEF5;
+    --ink: #1F2A44;
+    --body: #33405A;
+    --muted: #67718A;
+    --line: #C9D2DE;
+    --accent: #1C5D46;
+    --accent-ink: #FFFFFF;
+    --accent-soft: #EAF2EE;
+    --warn: #8F3421;
+    --chip-on: #1F2A44;
+    --chip-on-ink: #FFFFFF;
+    --code-bg: #202A40;
+    --code-ink: #D7E0EE;
+    --shadow: 0 1px 2px rgba(31,42,68,.06), 0 8px 24px -12px rgba(31,42,68,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #131A28; --panel: #1B2436; --panel-2: #223048;
+      --ink: #E8EDF6; --body: #C3CDDE; --muted: #8B96AC; --line: #2E3C55;
+      --accent: #3F9C77; --accent-ink: #0D1420; --accent-soft: #1E3630;
+      --warn: #D07A5F; --chip-on: #E8EDF6; --chip-on-ink: #131A28;
+      --code-bg: #0D1420; --code-ink: #C3CDDE;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #131A28; --panel: #1B2436; --panel-2: #223048;
+    --ink: #E8EDF6; --body: #C3CDDE; --muted: #8B96AC; --line: #2E3C55;
+    --accent: #3F9C77; --accent-ink: #0D1420; --accent-soft: #1E3630;
+    --warn: #D07A5F; --chip-on: #E8EDF6; --chip-on-ink: #131A28;
+    --code-bg: #0D1420; --code-ink: #C3CDDE;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.5);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--body);
+    font: 14px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header.top {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem 1rem;
+    padding: 1.1rem 1.4rem .9rem; border-bottom: 1px solid var(--line);
+  }
+  .brand { font-family: Georgia, serif; font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+  .brand em { font-style: normal; color: var(--accent); }
+  .tagline { color: var(--muted); font-size: .82rem; }
+  .status { margin-left: auto; display: flex; gap: .5rem; flex-wrap: wrap; }
+  .pill {
+    font-size: .72rem; letter-spacing: .04em; padding: .18rem .55rem;
+    border: 1px solid var(--line); border-radius: 999px; color: var(--muted);
+    white-space: nowrap;
+  }
+  .pill b { color: var(--ink); font-weight: 600; }
+  main {
+    display: grid; grid-template-columns: minmax(340px, 7fr) minmax(320px, 5fr);
+    gap: 1.2rem; padding: 1.2rem 1.4rem 3rem; max-width: 1240px; margin: 0 auto;
+  }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1rem 1.1rem; box-shadow: var(--shadow);
+  }
+  .stack { display: flex; flex-direction: column; gap: 1.2rem; min-width: 0; }
+  label.head, .head {
+    display: block; font-size: .72rem; font-weight: 700; letter-spacing: .09em;
+    text-transform: uppercase; color: var(--muted); margin: 0 0 .45rem;
+  }
+  .head .hint { font-weight: 400; text-transform: none; letter-spacing: 0; }
+  textarea, input[type="text"], input[type="date"] {
+    width: 100%; background: var(--ground); color: var(--ink);
+    border: 1px solid var(--line); border-radius: 8px; padding: .6rem .7rem;
+    font: inherit;
+  }
+  textarea#idea {
+    min-height: 108px; resize: vertical;
+    font-family: Georgia, serif; font-size: 1.02rem; line-height: 1.5;
+  }
+  textarea:focus, input:focus, button:focus-visible, .tcard:focus-visible, .chip:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 1px;
+  }
+  .tgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: .55rem; }
+  .tcard {
+    text-align: left; background: var(--ground); color: var(--body);
+    border: 1px solid var(--line); border-radius: 8px; padding: .55rem .65rem;
+    cursor: pointer; font: inherit;
+  }
+  .tcard .tname { font-weight: 650; color: var(--ink); font-size: .86rem; }
+  .tcard .tmeta { font-size: .72rem; color: var(--muted); margin-top: .15rem; }
+  .tcard[aria-pressed="true"] {
+    border-color: var(--accent); background: var(--accent-soft);
+    box-shadow: inset 0 0 0 1px var(--accent);
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .chip {
+    border: 1px solid var(--line); background: var(--ground); color: var(--body);
+    border-radius: 999px; padding: .28rem .7rem; font: inherit; font-size: .8rem;
+    cursor: pointer;
+  }
+  .chip[aria-pressed="true"] { background: var(--chip-on); color: var(--chip-on-ink); border-color: var(--chip-on); }
+  .chip.add { border-style: dashed; color: var(--muted); }
+  .row { display: flex; gap: .9rem; flex-wrap: wrap; }
+  .row > div { flex: 1 1 150px; min-width: 0; }
+  .rigor { display: flex; align-items: center; gap: .7rem; }
+  input[type="range"] { flex: 1; accent-color: var(--accent); }
+  .rigor-val { font-family: Georgia, serif; font-weight: 700; font-size: 1.15rem; color: var(--ink); min-width: 1.2ch; }
+  .rigor-label { font-size: .78rem; color: var(--muted); min-width: 12ch; }
+  .switch { display: flex; align-items: center; gap: .5rem; font-size: .85rem; color: var(--body); }
+  .switch input { accent-color: var(--accent); width: 1rem; height: 1rem; }
+  .num { display: flex; align-items: center; gap: .45rem; }
+  .num input { width: 4.2rem; text-align: center; }
+  .preview-title { font-family: Georgia, serif; font-size: 1.02rem; font-weight: 700; color: var(--ink); margin: 0 0 .1rem; }
+  .preview-sub { font-size: .78rem; color: var(--muted); margin: 0 0 .7rem; }
+  pre.brief {
+    background: var(--code-bg); color: var(--code-ink); border-radius: 8px;
+    padding: .8rem .9rem; font: 12px/1.55 ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+    white-space: pre-wrap; word-break: break-word; max-height: 46vh; overflow: auto;
+    font-variant-numeric: tabular-nums; margin: 0 0 .8rem;
+  }
+  .actions { display: flex; flex-direction: column; gap: .5rem; }
+  button.action {
+    font: inherit; font-weight: 650; border-radius: 8px; padding: .62rem .9rem;
+    border: 1px solid var(--line); background: var(--ground); color: var(--ink);
+    cursor: pointer;
+  }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  button.action:active { transform: translateY(1px); }
+  .steps { margin: .9rem 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: .45rem; }
+  .steps li { display: flex; gap: .55rem; font-size: .8rem; color: var(--muted); }
+  .steps .k {
+    font-family: Georgia, serif; font-weight: 700; color: var(--accent);
+    flex: 0 0 1.1rem; text-align: right;
+  }
+  .note { font-size: .74rem; color: var(--muted); margin-top: .8rem; border-top: 1px solid var(--line); padding-top: .6rem; }
+  .flash { position: fixed; left: 50%; bottom: 1.4rem; transform: translateX(-50%);
+    background: var(--chip-on); color: var(--chip-on-ink); padding: .5rem .9rem;
+    border-radius: 8px; font-size: .82rem; opacity: 0; pointer-events: none;
+    transition: opacity .18s; box-shadow: var(--shadow); }
+  .flash.show { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .flash { transition: none; } }
+</style>
+
+<header class="top">
+  <span class="brand">HRPB Research Desk <em>· Report Engine</em></span>
+  <span class="tagline">Type the report idea; the desk does the rest.</span>
+  <span class="status">
+    <span class="pill">Coverage <b id="cov">13</b> companies</span>
+    <span class="pill">Templates <b>6</b></span>
+    <span class="pill">Gate <b>Report Ship</b></span>
+  </span>
+</header>
+
+<main>
+  <section class="stack">
+    <div class="card">
+      <label class="head" for="idea">The report idea <span class="hint">· what question must this report answer?</span></label>
+      <textarea id="idea" placeholder="e.g. What does the announced $188B Coatue term sheet change about the Databricks thesis, and what should we watch into the close?"></textarea>
+    </div>
+
+    <div class="card">
+      <span class="head">Report type</span>
+      <div class="tgrid" id="templates" role="group" aria-label="Report type"></div>
+    </div>
+
+    <div class="card">
+      <span class="head">Companies <span class="hint">· tracked universe; type to add an untracked name</span></span>
+      <div class="chips" id="companies"></div>
+      <div style="margin-top:.55rem; display:flex; gap:.45rem;">
+        <input type="text" id="newco" placeholder="Add a company (the agent resolves + seeds it on first pass)" />
+        <button class="action" id="addco" type="button">Add</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <span class="head">Rigor dial</span>
+          <div class="rigor">
+            <input type="range" id="rigor" min="1" max="5" step="1" value="4" aria-label="Rigor 1 to 5" />
+            <span class="rigor-val" id="rigorval">4</span>
+            <span class="rigor-label" id="rigorlabel">external artifact</span>
+          </div>
+        </div>
+        <div>
+          <span class="head">Charts</span>
+          <div class="num"><input type="text" id="charts" value="3" inputmode="numeric" aria-label="Chart count" /><span style="font-size:.78rem;color:var(--muted)">house factory</span></div>
+        </div>
+        <div>
+          <span class="head">Deadline <span class="hint">· optional</span></span>
+          <input type="date" id="deadline" />
+        </div>
+      </div>
+      <div style="margin-top:.8rem; display:flex; gap:1.2rem; flex-wrap:wrap;">
+        <label class="switch"><input type="checkbox" id="model" /> Companion operating model (xlsx)</label>
+      </div>
+      <div style="margin-top:.8rem;">
+        <label class="head" for="notes">Notes to the desk <span class="hint">· constraints, angles, exclusions</span></label>
+        <input type="text" id="notes" placeholder="e.g. keep the equalization ruling front and center; no new AIBQ re-score" />
+      </div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <div class="card">
+      <p class="preview-title" id="ptitle">The brief, as the desk will receive it</p>
+      <p class="preview-sub" id="psub">Live preview of the launch prompt. Paste it into a Claude Code session on the repo and the pipeline runs end to end.</p>
+      <pre class="brief" id="brief"></pre>
+      <div class="actions">
+        <button class="action primary" id="copy" type="button">Copy launch prompt</button>
+        <button class="action" id="download" type="button">Download request file (for requests/queue/)</button>
+        <button class="action" id="copyjson" type="button">Copy request JSON only</button>
+      </div>
+      <ol class="steps">
+        <li><span class="k">1</span><span><b>Paste</b> the launch prompt into a new Claude Code session on <span style="font-family:ui-monospace,monospace">pitchbook-analyst-agent</span> (claude.ai/code), or commit the request file to <span style="font-family:ui-monospace,monospace">requests/queue/</span>.</span></li>
+        <li><span class="k">2</span><span><b>The desk runs the pipeline</b>: live PitchBook + news pull, snapshot into the tracker, trend + trigger review, composition in house style, charts, docx/pdf build.</span></li>
+        <li><span class="k">3</span><span><b>QA gates block the ship</b> until clean: em-dash scan, embargo scan, source discipline, Report Ship checklist, validation ledger. The finished report lands in <span style="font-family:ui-monospace,monospace">reports/</span>, committed and pushed.</span></li>
+      </ol>
+      <p class="note">Weekly tracker: every Monday the desk re-pulls the universe, diffs against canonical, fires triggers, and files an update request automatically when something material moved. Standing rules travel with every run: unclosed rounds never anchor a base case; CE is equity-only; PitchBook TTM fields are forward windows; the quality-valuation coefficient stays embargoed.</p>
+    </div>
+  </section>
+</main>
+
+<div class="flash" id="flash" role="status">Copied</div>
+
+<script>
+  const UNIVERSE = [
+    ["databricks", "Databricks"], ["anthropic", "Anthropic"], ["openai", "OpenAI"],
+    ["xai-spacex", "xAI / SPCX"], ["ssi", "SSI"], ["perplexity", "Perplexity"],
+    ["scale-ai", "Scale AI"], ["coreweave", "CoreWeave"], ["cursor", "Cursor"],
+    ["mistral", "Mistral"], ["elevenlabs", "ElevenLabs"], ["cohere", "Cohere"],
+    ["openevidence", "OpenEvidence"]
+  ];
+  const TEMPLATES = [
+    ["company_update", "Company Update", "6-10 pp · refresh on material change"],
+    ["initiation_note", "Initiation Note", "30-40 pp · full deep dive"],
+    ["rush_note", "Rush Note", "4-8 pp · one event, shipped fast"],
+    ["earnings_note", "Earnings Note", "4-8 pp · print vs expectations"],
+    ["one_pager", "One-Pager", "1-2 pp · fact sheet + verdict"],
+    ["sector_overview", "Sector Overview", "10-16 pp · 12-point frame"]
+  ];
+  const RIGOR = {1:"throwaway", 2:"internal note", 3:"decision-supporting", 4:"external artifact", 5:"published / media"};
+  const state = { template: "company_update", companies: new Set(["databricks"]), custom: [] };
+
+  const $ = id => document.getElementById(id);
+  const twrap = $("templates");
+  TEMPLATES.forEach(([id, name, meta]) => {
+    const b = document.createElement("button");
+    b.className = "tcard"; b.type = "button";
+    b.setAttribute("aria-pressed", String(id === state.template));
+    b.innerHTML = `<div class="tname">${name}</div><div class="tmeta">${meta}</div>`;
+    b.onclick = () => { state.template = id;
+      twrap.querySelectorAll(".tcard").forEach(x => x.setAttribute("aria-pressed", "false"));
+      b.setAttribute("aria-pressed", "true"); render(); };
+    twrap.appendChild(b);
+  });
+
+  const cwrap = $("companies");
+  function chip(slug, label) {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.textContent = label; b.dataset.slug = slug;
+    b.setAttribute("aria-pressed", String(state.companies.has(slug)));
+    b.onclick = () => { state.companies.has(slug) ? state.companies.delete(slug) : state.companies.add(slug);
+      b.setAttribute("aria-pressed", String(state.companies.has(slug))); render(); };
+    cwrap.appendChild(b);
+  }
+  UNIVERSE.forEach(([s, l]) => chip(s, l));
+  $("addco").onclick = () => {
+    const v = $("newco").value.trim();
+    if (!v) return;
+    const slug = v.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    if (!state.custom.some(c => c[0] === slug) && !UNIVERSE.some(u => u[0] === slug)) {
+      state.custom.push([slug, v + " (new)"]); chip(slug, v + " (new)");
+      state.companies.add(slug);
+      cwrap.lastChild.setAttribute("aria-pressed", "true");
+    }
+    $("newco").value = ""; render();
+  };
+  $("newco").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); $("addco").click(); } });
+
+  function buildRequest() {
+    const today = new Date().toISOString().slice(0, 10);
+    const companies = [...state.companies];
+    const id = (companies[0] || "topic") + "-" + state.template + "-" + today;
+    const req = {
+      id, submitted: today,
+      idea: $("idea").value.trim() || "(no idea text; ask before proceeding)",
+      template: state.template, companies, rigor: +$("rigor").value,
+      deadline: $("deadline").value || null,
+      extras: { charts: parseInt($("charts").value, 10) || 3, model: $("model").checked,
+                notes: $("notes").value.trim() },
+      source: "dashboard"
+    };
+    return req;
+  }
+  function buildPrompt(req) {
+    return "Process this report request end to end per CLAUDE.md: intake, research (live PitchBook + news), " +
+      "store snapshot + merge, trends + trigger review, compose per the template in house style, charts, " +
+      "build (docx + pdf), validation log with the Report Ship gate, then commit and push the finished " +
+      "report. Standing rulings apply.\n\nREQUEST:\n" + JSON.stringify(req, null, 2) + "\n";
+  }
+  function render() {
+    const req = buildRequest();
+    $("rigorval").textContent = req.rigor;
+    $("rigorlabel").textContent = RIGOR[req.rigor];
+    $("brief").textContent = buildPrompt(req);
+  }
+  ["idea", "rigor", "charts", "deadline", "model", "notes"].forEach(id =>
+    $(id).addEventListener("input", render));
+
+  function flash(msg) { const f = $("flash"); f.textContent = msg; f.classList.add("show");
+    setTimeout(() => f.classList.remove("show"), 1400); }
+  async function toClipboard(text, msg) {
+    try { await navigator.clipboard.writeText(text); flash(msg); }
+    catch { const ta = document.createElement("textarea"); ta.value = text;
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); flash(msg); } catch { flash("Copy failed; select the preview text manually"); }
+      ta.remove(); }
+  }
+  $("copy").onclick = () => toClipboard(buildPrompt(buildRequest()), "Launch prompt copied");
+  $("copyjson").onclick = () => toClipboard(JSON.stringify(buildRequest(), null, 2) + "\n", "Request JSON copied");
+  $("download").onclick = async () => {
+    const req = buildRequest();
+    const data = JSON.stringify(req, null, 2) + "\n";
+    const filename = req.id + ".json";
+    if (window.claude && window.claude.downloads) {
+      try { await window.claude.downloads.save({ filename, data }); flash("Request file saved"); return; }
+      catch (e) { if (e && e.code === "user_denied") { flash("Save declined"); return; } }
+    }
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([data], { type: "application/json" }));
+    a.download = filename; a.click(); URL.revokeObjectURL(a.href);
+    flash("Request file downloaded");
+  };
+  render();
+</script>

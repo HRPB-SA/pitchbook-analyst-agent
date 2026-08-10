@@ -1,0 +1,117 @@
+{
+  "slug": "xai-spacex",
+  "identity": {
+    "name": {
+      "value": "xAI (within SpaceX, ticker SPCX)",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2",
+      "decay": "PERMANENT"
+    },
+    "structure": {
+      "value": "All-stock merger into SpaceX completed Feb 2, 2026 at $250B; SPCX listed Jun 12, 2026",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2",
+      "decay": "STABLE"
+    }
+  },
+  "valuation": {
+    "post_money_bn": {
+      "value": 1250,
+      "as_of": "2026-07-16",
+      "source": "SOTP residual estimate: implied AI segment ~$1.10-1.41T at the ~$1.77T Jul-15 tape (midpoint carried)",
+      "tier": "T3",
+      "decay": "VOLATILE",
+      "flags": [
+        "est."
+      ],
+      "note": "was ~$1.4-1.7T at the $2.11T Jun-12 close; method in rush note"
+    },
+    "spcx_market_cap_tn": {
+      "value": 1.79,
+      "as_of": "2026-07-15",
+      "source": "market tape, level DISPUTED ~$132-141/sh",
+      "tier": "T3",
+      "decay": "VOLATILE",
+      "flags": [
+        "est.",
+        "DISPUTED"
+      ]
+    }
+  },
+  "financing": {
+    "equity_raised_bn": {
+      "value": 47.16,
+      "as_of": "2026-02-02",
+      "source": "pre-merger cumulative",
+      "tier": "T2",
+      "decay": "STABLE"
+    }
+  },
+  "financials": {
+    "run_rate_ladder_bn": [
+      {
+        "value": 3.2,
+        "as_of": "2025-12-31",
+        "source": "SEC S-1: AI segment FY2025 revenue (xAI + X)",
+        "tier": "T1",
+        "note": "~$1.25B ex-X-ads (~6.7% of company revenue)"
+      }
+    ],
+    "segment_detail": {
+      "value": "AI segment FY25: $3.2B rev, -$6.36B op, capex $12.7B; Q1-26 $818M rev, -$2.47B op, capex $7.7B (76% of group)",
+      "as_of": "2026-05-20",
+      "source": "SEC S-1 + Q1 filing",
+      "tier": "T1",
+      "decay": "QUARTERLY"
+    }
+  },
+  "ipo_status": {
+    "listing": {
+      "value": "Public within SPCX since Jun 12, 2026; broke $135 IPO price Jul 15, 2026 (named trigger fired)",
+      "as_of": "2026-07-15",
+      "source": "cross-confirmed press (event T2; level disputed)",
+      "tier": "T2"
+    },
+    "next_print": {
+      "value": "SPCX Q2 2026 earnings Aug 6, 2026: first public frontier-AI-adjacent print; first lockup tranche same day",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2"
+    }
+  },
+  "scores": {
+    "aibq_composite": {
+      "value": 4.49,
+      "as_of": "2026-05-27",
+      "source": "internal AIBQ v3.0 (this desk)",
+      "tier": "T2",
+      "note": "Developing band / S4 / AI-INFRA"
+    }
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "SPCX 30-day VWAP vs $135 IPO price",
+          "status": "fired",
+          "fired_on": "2026-07-15"
+        },
+        "as_of": "2026-07-16",
+        "source": "canonical refresh, July 16, 2026",
+        "tier": "T2"
+      },
+      {
+        "value": {
+          "condition": "SPCX Q2 2026 print Aug 6 + first lockup tranche; staged unlocks through Dec 2026",
+          "status": "armed"
+        },
+        "as_of": "2026-07-16",
+        "source": "canonical refresh, July 16, 2026",
+        "tier": "T3"
+      }
+    ]
+  },
+  "_updated": "2026-08-10"
+}

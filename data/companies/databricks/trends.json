@@ -1,0 +1,313 @@
+{
+  "slug": "databricks",
+  "computed": "2026-08-10",
+  "ladders": {
+    "run_rate_ladder_bn": {
+      "points": 4,
+      "first": [
+        "2025-09-30",
+        4.0
+      ],
+      "last": [
+        "2026-06-16",
+        6.9
+      ],
+      "direction": "accelerating",
+      "steps": [
+        {
+          "from": "2025-09-30",
+          "to": "2025-12-31",
+          "delta": 0.8,
+          "pct": 20.0
+        },
+        {
+          "from": "2025-12-31",
+          "to": "2026-02-09",
+          "delta": 0.6,
+          "pct": 12.5
+        },
+        {
+          "from": "2026-02-09",
+          "to": "2026-06-16",
+          "delta": 1.5,
+          "pct": 27.8
+        }
+      ]
+    },
+    "growth_yoy_pct_ladder": {
+      "points": 4,
+      "first": [
+        "2025-09-30",
+        50.0
+      ],
+      "last": [
+        "2026-06-16",
+        80.0
+      ],
+      "direction": "accelerating",
+      "steps": [
+        {
+          "from": "2025-09-30",
+          "to": "2025-12-31",
+          "delta": 5.0,
+          "pct": 10.0
+        },
+        {
+          "from": "2025-12-31",
+          "to": "2026-02-09",
+          "delta": 10.0,
+          "pct": 18.2
+        },
+        {
+          "from": "2026-02-09",
+          "to": "2026-06-16",
+          "delta": 15.0,
+          "pct": 23.1
+        }
+      ]
+    },
+    "gross_margin_pct_ladder": {
+      "points": 2,
+      "first": [
+        "2025-12-31",
+        80.0
+      ],
+      "last": [
+        "2026-06-16",
+        74.0
+      ],
+      "direction": "falling",
+      "steps": [
+        {
+          "from": "2025-12-31",
+          "to": "2026-06-16",
+          "delta": -6.0,
+          "pct": -7.5
+        }
+      ]
+    }
+  },
+  "derived": {
+    "ev_multiple": {
+      "value": 19.4,
+      "basis": "$134B / $6.9B run-rate (as of 2026-06-16)",
+      "label": "Derived"
+    },
+    "capital_efficiency": {
+      "value": 0.34,
+      "basis": "$6.9B run-rate / $20.2B EQUITY-ONLY (Ruling 1)",
+      "label": "Derived"
+    },
+    "usd_per_aibq_pt_bn": {
+      "value": 15.2,
+      "basis": "$134B / 8.81 AIBQ",
+      "label": "Derived"
+    }
+  },
+  "snapshot_delta": {
+    "from": "2026-07-10.json",
+    "to": "2026-08-10.json",
+    "changes": [
+      {
+        "field": "identity.business_status",
+        "from": null,
+        "to": "Generating Revenue; Privately Held (backing); Venture Capital-Backed"
+      },
+      {
+        "field": "identity.founded",
+        "from": null,
+        "to": 2013
+      },
+      {
+        "field": "valuation.pb_last_known_valuation_bn",
+        "from": null,
+        "to": 188
+      },
+      {
+        "field": "valuation.rumored_round",
+        "from": "$165-175B in talks, unclosed",
+        "to": "Term sheet signed for a strategic round at $188B post, led by Coatue with new and existing investors; ~$3B size (press); company expects close later this summer; funds NOT in hand as of Aug 10"
+      },
+      {
+        "field": "valuation.valuation_ladder_bn",
+        "from": "0 item(s)",
+        "to": "+3 new: [62, 100, 134]"
+      },
+      {
+        "field": "financing.active_investors",
+        "from": 148,
+        "to": 152
+      },
+      {
+        "field": "financing.series_l_participants_note",
+        "from": null,
+        "to": "Series L $5B equity led by Insight, J.P. Morgan Growth Equity, Fidelity; Microsoft + 48 other investors; $2B loan from undisclosed lenders"
+      },
+      {
+        "field": "financing.series_l_pre_money_bn",
+        "from": null,
+        "to": 129
+      },
+      {
+        "field": "financials.pb_ttm_field_note",
+        "from": "PitchBook revenue $6,900M labeled TTM 4Q2026 (period end 2026-12-31) = forward-window projection, NOT run-rate",
+        "to": "PitchBook revenue field still $6,900M TTM 4Q2026 (period end 2026-12-31) = forward-window projection, NOT run-rate. Ruling 4 holds; not adopted."
+      },
+      {
+        "field": "products.ai_capital_focus",
+        "from": null,
+        "to": "New capital earmarked for AI capabilities: Genie (business-data assistant suite, debuted Mar 2026), Unity AI Gateway, Lakebase (database for AI agents)"
+      },
+      {
+        "field": "competition.private_valuation_rank",
+        "from": null,
+        "to": "Trails only Anthropic, OpenAI, Tether, ByteDance among private companies at the announced $188B"
+      },
+      {
+        "field": "events.stream",
+        "from": "4 item(s)",
+        "to": "+1 new: ['Term sheet signed: strategic round at $188B post led by Coatue (~$3B per press); close e"
+      }
+    ]
+  },
+  "staleness": {
+    "stale": [
+      {
+        "field": "valuation.pb_last_known_valuation_bn",
+        "as_of": "2026-07-16",
+        "age_days": 25,
+        "value": 188,
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "financials.fcf_status",
+        "as_of": "2026-02-09",
+        "age_days": 182,
+        "value": "Positive, TTM and FY2025 bases; magnitude undisclosed",
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "products.lakebase",
+        "as_of": "2026-02-09",
+        "age_days": 182,
+        "value": "Thousands of customers in first six months; revenue growing at 2x the DW product's pace at equivalent stage",
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "customers.nrr_pct",
+        "as_of": "2026-02-09",
+        "age_days": 182,
+        "value": ">140%",
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "customers.orgs",
+        "as_of": "2026-02-09",
+        "age_days": 182,
+        "value": 20000,
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "customers.customers_1m_plus",
+        "as_of": "2026-02-09",
+        "age_days": 182,
+        "value": 800,
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "customers.customers_10m_plus",
+        "as_of": "2026-02-09",
+        "age_days": 182,
+        "value": 70,
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "customers.fortune500_pct",
+        "as_of": "2026-02-09",
+        "age_days": 182,
+        "value": ">60%",
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "competition.snowflake_mkt_cap_bn",
+        "as_of": "2026-07-07",
+        "age_days": 34,
+        "value": 91.1,
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "competition.private_valuation_rank",
+        "as_of": "2026-07-17",
+        "age_days": 24,
+        "value": "Trails only Anthropic, OpenAI, Tether, ByteDance among private companies at the announced $188B",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "ipo_status.s1_status",
+        "as_of": "2026-07-10",
+        "age_days": 31,
+        "value": "No S-1 on file; Form D / D/A only (latest 2025-12-31)",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "ipo_status.window",
+        "as_of": "2026-06-04",
+        "age_days": 67,
+        "value": "2026 publicly ruled out by CEO; 2027 earliest",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "ipo_status.prediction_market",
+        "as_of": "2026-07-07",
+        "age_days": 34,
+        "value": "'No Databricks IPO by Dec 31, 2027' priced 0.54",
+        "decay": "VOLATILE"
+      }
+    ],
+    "flagged": []
+  },
+  "open_conflicts": [],
+  "triggers": [
+    {
+      "trigger": {
+        "condition": "Next quarterly print (expected Sep-Oct 2026): gross margin vs the 70% efficiency gate; ~4-point cushion at 74%",
+        "status": "armed"
+      },
+      "as_of": "2026-07-10",
+      "source": "validation pack, July 10, 2026"
+    },
+    {
+      "trigger": {
+        "condition": "$165-175B round: closes (adopt and re-mark) or lapses (rumor retired)",
+        "status": "fired",
+        "fired_on": "2026-07-17"
+      },
+      "as_of": "2026-08-10",
+      "source": "company announcement + PitchBook deal 334745-56T"
+    },
+    {
+      "trigger": {
+        "condition": "Coatue round close (expected 'later this summer'): on completion, adopt $188B as the mark and re-run valuation",
+        "status": "armed"
+      },
+      "as_of": "2026-08-10",
+      "source": "company announcement Jul 17, 2026"
+    },
+    {
+      "trigger": {
+        "condition": "S-1 filing at SEC EDGAR CIK 0001587468 (none on file as of Jul 10, 2026)",
+        "status": "armed"
+      },
+      "as_of": "2026-07-10",
+      "source": "validation pack, July 10, 2026"
+    },
+    {
+      "trigger": {
+        "condition": "Metrics refresh: NRR / customer counts are Feb 2026 vintage; stale after Sep 2026 disclosure",
+        "status": "armed"
+      },
+      "as_of": "2026-07-10",
+      "source": "validation pack, July 10, 2026"
+    }
+  ]
+}

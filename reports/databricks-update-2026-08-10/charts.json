@@ -1,0 +1,45 @@
+[
+  {
+    "name": "val_ladder_aug2026.png",
+    "type": "ranked_bars",
+    "title": "Three completed marks and a signed bid: $62B to $188B in nineteen months",
+    "subtitle": "Post-money valuations. Completed marks solid (company disclosures; PitchBook deal records); the July 17, 2026 term sheet\nhatched: announced at $188B, led by Coatue, expected to close later this summer, not adopted until funds settle.",
+    "rows": [
+      {"label": "Dec 2024 ($10B round)", "value": 62, "alt": true, "value_label": "$62B"},
+      {"label": "Sep 2025 ($1B round)", "value": 100, "alt": true, "value_label": "$100B"},
+      {"label": "Feb 2026 (Series L)", "value": 134, "accent": true, "value_label": "$134B"},
+      {"label": "Jul 2026 (announced)", "value": 188, "est": true, "muted": true, "value_label": "~$188B, unclosed"}
+    ],
+    "xlabel": "Post-money valuation ($B)",
+    "xlim": 245
+  },
+  {
+    "name": "acceleration_aug2026.png",
+    "type": "combo_bars_line",
+    "title": "The bid moved; the engine was already accelerating",
+    "subtitle": "Annualized revenue run-rate (bars, left) and year-over-year growth (line, right), company disclosures Sep 2025 to Jun 2026.\nNo new print since June 16; the announced $188B re-prices this same ladder at 27.2x versus 19.4x at the completed mark.",
+    "labels": ["Sep 2025", "Dec 2025", "Feb 2026", "Jun 2026"],
+    "bars": [4.0, 4.8, 5.4, 6.9],
+    "bar_fmt": "${:.1f}B",
+    "bar_ylabel": "Revenue run-rate ($B)",
+    "line": [50, 55, 65, 80],
+    "line_fmt": "+{:g}%",
+    "line_ylabel": "YoY growth (%)"
+  },
+  {
+    "name": "per_point_aug2026.png",
+    "type": "ranked_bars",
+    "title": "The buyer still pays the least per unit of quality, at either mark",
+    "subtitle": "Valuation per AIBQ point, August 10, 2026. Databricks $134B completed / ~$188B announced on 8.81; Anthropic $965B on 8.20;\nOpenAI $852B on 4.53; xAI ~$1.25T implied inside its listed parent (est.) on 4.49. SSI excluded (pre-revenue).",
+    "rows": [
+      {"label": "Databricks (completed)", "value": 15.2, "accent": true, "value_label": "$15.2B / pt"},
+      {"label": "Databricks (announced)", "value": 21.3, "est": true, "value_label": "~$21.3B / pt"},
+      {"label": "Anthropic", "value": 118, "alt": true, "value_label": "$118B / pt"},
+      {"label": "OpenAI", "value": 188, "value_label": "$188B / pt"},
+      {"label": "xAI (implied, est.)", "value": 279, "muted": true, "est": true, "value_label": "~$279B / pt"}
+    ],
+    "xlabel": "Valuation per AIBQ point ($B)",
+    "xlim": 340,
+    "annotate": {"x": 335, "y": 0.55, "text": "Both Databricks marks stay on the cohort floor", "ha": "right"}
+  }
+]

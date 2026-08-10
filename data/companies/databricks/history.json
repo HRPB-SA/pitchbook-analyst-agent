@@ -1,0 +1,70 @@
+{
+  "superseded": [
+    {
+      "date": "2026-08-10",
+      "field": "valuation.rumored_round",
+      "old": {
+        "value": "$165-175B in talks, unclosed",
+        "as_of": "2026-07-07",
+        "source": "press reports Jun 9 + PitchBook financing note Jul 7 (deal 334745-56T, Rumor/Speculation)",
+        "tier": "T3",
+        "decay": "VOLATILE",
+        "flags": [
+          "do-not-adopt"
+        ],
+        "note": "analyzed as forward signal, never anchors the base case"
+      },
+      "new": {
+        "value": "Term sheet signed for a strategic round at $188B post, led by Coatue with new and existing investors; ~$3B size (press); company expects close later this summer; funds NOT in hand as of Aug 10",
+        "as_of": "2026-08-10",
+        "source": "company announcement Jul 17, 2026 + PitchBook financing note Aug 7, 2026 (deal 334745-56T, Announced/In Progress); size per press reports",
+        "tier": "T2",
+        "decay": "VOLATILE",
+        "flags": [
+          "do-not-adopt"
+        ],
+        "note": "Progressed from Rumor/Speculation ($165-175B talks, Jul 7 note) to Announced/In Progress at $188B. Announced above the talked range. Base case still anchors on the $134B completed mark until close."
+      },
+      "why": "newer as_of (2026-08-10 > 2026-07-07) at tier T2 vs T3"
+    },
+    {
+      "date": "2026-08-10",
+      "field": "financing.active_investors",
+      "old": {
+        "value": 148,
+        "as_of": "2026-07-09",
+        "source": "PitchBook profile",
+        "tier": "T2",
+        "decay": "STABLE"
+      },
+      "new": {
+        "value": 152,
+        "as_of": "2026-08-10",
+        "source": "PitchBook profile",
+        "tier": "T2",
+        "decay": "STABLE"
+      },
+      "why": "newer as_of (2026-08-10 > 2026-07-09) at tier T2 vs T2"
+    },
+    {
+      "date": "2026-08-10",
+      "field": "financials.pb_ttm_field_note",
+      "old": {
+        "value": "PitchBook revenue $6,900M labeled TTM 4Q2026 (period end 2026-12-31) = forward-window projection, NOT run-rate",
+        "as_of": "2026-07-10",
+        "source": "validation pack, July 10, 2026",
+        "tier": "T2",
+        "decay": "PERMANENT",
+        "note": "Ruling 4: never adopt PB TTM as current ARR"
+      },
+      "new": {
+        "value": "PitchBook revenue field still $6,900M TTM 4Q2026 (period end 2026-12-31) = forward-window projection, NOT run-rate. Ruling 4 holds; not adopted.",
+        "as_of": "2026-08-10",
+        "source": "PitchBook profile, re-verified this pull",
+        "tier": "T2",
+        "decay": "PERMANENT"
+      },
+      "why": "newer as_of (2026-08-10 > 2026-07-10) at tier T2 vs T2"
+    }
+  ]
+}

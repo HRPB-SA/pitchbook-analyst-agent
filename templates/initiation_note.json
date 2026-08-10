@@ -1,0 +1,124 @@
+{
+  "id": "initiation_note",
+  "name": "Initiation of Coverage (deep dive)",
+  "kicker": "AN INSTITUTIONAL DEEP DIVE",
+  "length_pages": "30-40",
+  "rigor": 5,
+  "outname_pattern": "{company}_{theme}_{monyyyy}",
+  "toc": true,
+  "cover": {
+    "hero_tiles": ["business quality score + band", "quality-adjusted price vs cohort", "model base case band"],
+    "snapshot": true
+  },
+  "sections": [
+    {
+      "id": "score",
+      "title_hint": "The {Framework} Breakdown: Business Quality, Scored and Decomposed",
+      "required": [
+        "standalone scoring section: framework, composite, every dimension defended",
+        "delta from prior score with exact reconciliation arithmetic",
+        "band placement and cohort table",
+        "state the falsifier per dimension"
+      ],
+      "auto": null,
+      "charts": ["radar vs cohort average"]
+    },
+    {
+      "id": "exec_summary",
+      "title_hint": "Executive Summary: {The House That X Built}",
+      "required": [
+        "the whole thesis in two pages",
+        "the one paradox or tension the report resolves",
+        "quality-adjusted price expression (per-point ladder; correlation stays embargoed)"
+      ],
+      "auto": null,
+      "charts": ["ranked_bars per-point ladder"]
+    },
+    {
+      "id": "foundation",
+      "title_hint": "The Foundation: What {Company} Is",
+      "required": ["origin, architecture of the business, what it actually sells", "the category it created or occupies"],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "products",
+      "title_hint": "The Bricks: Products and Services, Layer by Layer",
+      "required": ["every product line with revenue where disclosed, sourced", "which layers are growing and which carry the future"],
+      "auto": null,
+      "charts": ["composition of revenue by line"]
+    },
+    {
+      "id": "monetization",
+      "title_hint": "The Mortar: How the Money Is Made",
+      "required": ["pricing mechanics in detail", "unit economics: what a dollar of usage costs and earns"],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "customers",
+      "title_hint": "The Builders: Customers and What They Do",
+      "required": ["customer counts, concentration, retention, all dated", "two or three named use cases from disclosures"],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "competition",
+      "title_hint": "The Neighborhood: Competition on {N} Fronts",
+      "required": ["each competitive front with the honest score", "where the company loses today"],
+      "auto": null,
+      "charts": ["grouped_bars growth-adjusted comparison"]
+    },
+    {
+      "id": "strategy",
+      "title_hint": "The Blueprint: Strategy, Read Through Actions",
+      "required": ["strategy inferred from acquisitions, partnerships, capital, not from slogans"],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "financials",
+      "title_hint": "The Ledger: The Financial Picture",
+      "required": [
+        "run-rate ladder with every dated print",
+        "margin trajectory against any gate or floor",
+        "capital structure: equity vs debt, with the equity-only CE ruling applied"
+      ],
+      "auto": "tracker",
+      "charts": ["combo_bars_line acceleration", "gauge margin vs gate", "ranked_bars capital efficiency"]
+    },
+    {
+      "id": "valuation",
+      "title_hint": "The Appraisal: What the Business Is Worth",
+      "required": [
+        "valuation ladder of completed marks only; rumored rounds analyzed, never adopted",
+        "comparables with growth adjustment",
+        "scenario band with the arithmetic shown"
+      ],
+      "auto": null,
+      "charts": ["series_bars valuation ladder", "football_field", "heatmap sensitivity"]
+    },
+    {
+      "id": "stress",
+      "title_hint": "The Stress Test: What Would Change the Answer",
+      "required": ["the bear case argued honestly at full strength", "named, dated falsifiers per pillar"],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "verdict",
+      "title_hint": "The Verdict",
+      "required": ["the position, plainly", "the watch list with dates", "the single falsifier"],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "fact_sheet",
+      "title_hint": "Appendix: The Fact Sheet",
+      "required": ["full categorized fact sheet with source, date, tier on every row"],
+      "auto": "fact_sheet",
+      "charts": []
+    }
+  ],
+  "gates": ["report_ship"]
+}

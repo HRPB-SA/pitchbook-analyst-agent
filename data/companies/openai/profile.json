@@ -1,0 +1,166 @@
+{
+  "slug": "openai",
+  "identity": {
+    "name": {
+      "value": "OpenAI",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2",
+      "decay": "PERMANENT"
+    },
+    "pb_entity_id": {
+      "value": "149504-14",
+      "as_of": "2026-07-16",
+      "source": "PitchBook profile",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "sector": {
+      "value": "AI-INFRA (frontier lab)",
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026",
+      "tier": "T2",
+      "decay": "STABLE"
+    }
+  },
+  "valuation": {
+    "post_money_bn": {
+      "value": 852,
+      "as_of": "2026-03-31",
+      "source": "$122B round at $730B pre, confirmed on PitchBook Jul 16",
+      "tier": "T2",
+      "decay": "VOLATILE"
+    }
+  },
+  "financing": {
+    "total_raised_bn": {
+      "value": 186.4,
+      "as_of": "2026-07-16",
+      "source": "PitchBook $186.4365B",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "equity_raised_bn": {
+      "value": 181.2,
+      "as_of": "2026-07-16",
+      "source": "canonical: excludes $5.2365B debt (incl. $520M Jul-8 deal 338367-43T)",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "debt_raised_bn": {
+      "value": 5.2,
+      "as_of": "2026-07-16",
+      "source": "PitchBook debt decomposition",
+      "tier": "T2",
+      "decay": "STABLE"
+    }
+  },
+  "financials": {
+    "run_rate_ladder_bn": [
+      {
+        "value": 25,
+        "as_of": "2026-06-12",
+        "source": "desk estimate, net basis",
+        "tier": "T3",
+        "flags": [
+          "est.",
+          "VERIFY"
+        ],
+        "note": "NET basis; PB $30B TTM 4Q2026 is a forward projection (Ruling 4)"
+      }
+    ],
+    "fy2025_leak": {
+      "value": "Rev $13.07B / op loss $20.92B / group loss $60.35B incl. $41.55B FV swing; $17.2B paid to MSFT",
+      "as_of": "2026-06-16",
+      "source": "press reports of audited FY2025 (verified leak)",
+      "tier": "T3",
+      "decay": "STABLE"
+    },
+    "gross_margin_2025_pct": {
+      "value": 33,
+      "as_of": "2026-02-27",
+      "source": "investor documents (press-reported)",
+      "tier": "T3",
+      "decay": "STABLE",
+      "note": "13pp miss vs 46% plan"
+    },
+    "infra_obligations_tn": {
+      "value": 1.15,
+      "as_of": "2026-02-27",
+      "source": "investor documents (press-reported), 7 vendors",
+      "tier": "T3",
+      "decay": "STABLE"
+    }
+  },
+  "headcount": {
+    "employees_ladder": [
+      {
+        "value": 4500,
+        "as_of": "2026-03-21",
+        "source": "PitchBook",
+        "tier": "T2"
+      }
+    ]
+  },
+  "leadership": {
+    "altman_pb_listing": {
+      "value": "PB lists Altman as 'Co-Founder, Co-CEO & Board Member', persistent 5+ weeks across a live refresh",
+      "as_of": "2026-07-16",
+      "source": "PitchBook profile",
+      "tier": "T2",
+      "flags": [
+        "VERIFY"
+      ],
+      "note": "either a real governance change or a durable data error; resolve before media use"
+    }
+  },
+  "ipo_status": {
+    "s1_status": {
+      "value": "Confidential S-1 filed Jun 8, 2026",
+      "as_of": "2026-06-08",
+      "source": "press + PitchBook",
+      "tier": "T2"
+    },
+    "window": {
+      "value": "September 2026 (PitchBook, note refreshed Jul 9) vs media 2027-lean; CONFLICT FROZEN, both branches live",
+      "as_of": "2026-07-16",
+      "source": "PitchBook + press",
+      "tier": "T2",
+      "flags": [
+        "DISPUTED"
+      ]
+    }
+  },
+  "scores": {
+    "aibq_composite": {
+      "value": 4.53,
+      "as_of": "2026-05-27",
+      "source": "internal AIBQ v3.0 (this desk)",
+      "tier": "T2",
+      "note": "Developing band / S5 / AI-INFRA"
+    }
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "OpenAI roadshow range vs the $852B mark; Sep (PB) vs 2027 (media) sequencing conflict",
+          "status": "armed"
+        },
+        "as_of": "2026-07-16",
+        "source": "canonical refresh, July 16, 2026",
+        "tier": "T2"
+      },
+      {
+        "value": {
+          "condition": "Altman Co-CEO listing on PitchBook: governance change or data error",
+          "status": "armed"
+        },
+        "as_of": "2026-07-16",
+        "source": "canonical refresh, July 16, 2026",
+        "tier": "T2"
+      }
+    ]
+  },
+  "_updated": "2026-08-10"
+}

@@ -1,0 +1,238 @@
+[
+ [
+  "h1",
+  "The Ledger Moves: What Changed and What Did Not"
+ ],
+ [
+  "p",
+  "Four fields moved between the July 10 verification pack and this run's live pull. The financing signal upgraded from rumor to announced term sheet at $188 billion, as covered above. The active investor count rose from 148 to 152 (PitchBook profile, August 10, 2026). The deal-record detail on the February Series L was revised: the final close is now described as $5 billion of equity led by Insight, J.P. Morgan Growth Equity, and Fidelity with Microsoft and 48 other investors participating, against roughly 44 in the July pack, and the note states the $129 billion pre-money explicitly (PitchBook financing note, August 7, 2026). And the company named where the new capital goes: Genie, the business-data assistant suite introduced in March, Unity AI Gateway, and Lakebase, the database built for AI agents (company announcement via press reports, July 17, 2026)."
+ ],
+ [
+  "p",
+  "The list of what did not change is load-bearing. The run-rate ladder still ends at the June print: $6.9 billion, +80% YoY, the fourth consecutive accelerating disclosure (company disclosure, June 16, 2026). Gross margin remains 74%, guided lower on agent-driven compute. Headcount remains 9,000 (PitchBook, June 9, 2026). Free cash flow remains positive on the February bases with no newer print (company, February 9, 2026). No S-1 has appeared; the last registry check found Form D filings only (SEC EDGAR, July 10, 2026). And the tracker re-verified the standing trap: the PitchBook revenue field still reads $6,900M labeled TTM 4Q2026 with a December 2026 period end, a forward-window figure that this desk does not use as a run-rate source."
+ ],
+ [
+  "p",
+  "One scheduled gap is flagged rather than absorbed: the operating metrics beneath the revenue line, retention above 140%, more than 20,000 organizations, 800 plus customers above $1 million, are February 2026 vintage and now sit past their refresh window. The September to October disclosure is the scheduled fix; until then those figures carry their dates visibly wherever they appear. The tables below are generated directly from the tracker at build time."
+ ],
+ [
+  "table",
+  {
+   "title": "Derived metrics (computed this run)",
+   "header": [
+    "Metric",
+    "Value",
+    "Basis"
+   ],
+   "rows": [
+    [
+     "Run-rate multiple",
+     "19.4",
+     "$134B / $6.9B run-rate (as of 2026-06-16)"
+    ],
+    [
+     "Capital efficiency (CE, equity-only)",
+     "0.34",
+     "$6.9B run-rate / $20.2B EQUITY-ONLY (Ruling 1)"
+    ],
+    [
+     "Valuation per AIBQ point ($B)",
+     "15.2",
+     "$134B / 8.81 AIBQ"
+    ]
+   ],
+   "align": "LRL",
+   "source": "Derived by the tracker at build time; inputs carry their own tiers."
+  }
+ ],
+ [
+  "table",
+  {
+   "title": "Tracked ladders",
+   "header": [
+    "Series",
+    "First print",
+    "Latest print",
+    "Direction",
+    "Prints"
+   ],
+   "rows": [
+    [
+     "Run-rate ladder ($B)",
+     "4 (2025-09-30)",
+     "6.9 (2026-06-16)",
+     "accelerating",
+     "4"
+    ],
+    [
+     "YoY growth ladder (%)",
+     "50 (2025-09-30)",
+     "80 (2026-06-16)",
+     "accelerating",
+     "4"
+    ],
+    [
+     "Gross margin ladder (%)",
+     "80 (2025-12-31)",
+     "74 (2026-06-16)",
+     "falling",
+     "2"
+    ]
+   ],
+   "align": "LLLLR"
+  }
+ ],
+ [
+  "table",
+  {
+   "title": "Changed since prior snapshot (2026-07-10.json to 2026-08-10.json)",
+   "header": [
+    "Field",
+    "Prior",
+    "Current"
+   ],
+   "rows": [
+    [
+     "identity.business_status",
+     "None",
+     "Generating Revenue; Privately Held (backing);..."
+    ],
+    [
+     "identity.founded",
+     "None",
+     "2013"
+    ],
+    [
+     "valuation.pb_last_known_valuation_bn",
+     "None",
+     "188"
+    ],
+    [
+     "valuation.rumored_round",
+     "$165-175B in talks, unclosed",
+     "Term sheet signed for a strategic round at $1..."
+    ],
+    [
+     "valuation.valuation_ladder_bn",
+     "0 item(s)",
+     "+3 new: [62, 100, 134]"
+    ],
+    [
+     "financing.active_investors",
+     "148",
+     "152"
+    ],
+    [
+     "financing.series_l_participants_note",
+     "None",
+     "Series L $5B equity led by Insight, J.P. Morg..."
+    ],
+    [
+     "financing.series_l_pre_money_bn",
+     "None",
+     "129"
+    ],
+    [
+     "financials.pb_ttm_field_note",
+     "PitchBook revenue $6,900M labeled TTM 4Q2026 ...",
+     "PitchBook revenue field still $6,900M TTM 4Q2..."
+    ],
+    [
+     "products.ai_capital_focus",
+     "None",
+     "New capital earmarked for AI capabilities: Ge..."
+    ],
+    [
+     "competition.private_valuation_rank",
+     "None",
+     "Trails only Anthropic, OpenAI, Tether, ByteDa..."
+    ],
+    [
+     "events.stream",
+     "4 item(s)",
+     "+1 new: ['Term sheet signed: strategic round ..."
+    ]
+   ],
+   "align": "LLL"
+  }
+ ],
+ [
+  "table",
+  {
+   "title": "Stale facts (decay-class breach; refreshed or flagged before use)",
+   "header": [
+    "Field",
+    "Value",
+    "As of (age, class)"
+   ],
+   "rows": [
+    [
+     "valuation.pb_last_known_valuation_bn",
+     "188",
+     "2026-07-16 (25d, VOLATILE)"
+    ],
+    [
+     "financials.fcf_status",
+     "Positive, TTM and FY2025 bases; magnitude und...",
+     "2026-02-09 (182d, QUARTERLY)"
+    ],
+    [
+     "products.lakebase",
+     "Thousands of customers in first six months; r...",
+     "2026-02-09 (182d, QUARTERLY)"
+    ],
+    [
+     "customers.nrr_pct",
+     ">140%",
+     "2026-02-09 (182d, QUARTERLY)"
+    ],
+    [
+     "customers.orgs",
+     "20000",
+     "2026-02-09 (182d, QUARTERLY)"
+    ],
+    [
+     "customers.customers_1m_plus",
+     "800",
+     "2026-02-09 (182d, QUARTERLY)"
+    ],
+    [
+     "customers.customers_10m_plus",
+     "70",
+     "2026-02-09 (182d, QUARTERLY)"
+    ],
+    [
+     "customers.fortune500_pct",
+     ">60%",
+     "2026-02-09 (182d, QUARTERLY)"
+    ],
+    [
+     "competition.snowflake_mkt_cap_bn",
+     "91.1",
+     "2026-07-07 (34d, VOLATILE)"
+    ],
+    [
+     "competition.private_valuation_rank",
+     "Trails only Anthropic, OpenAI, Tether, ByteDa...",
+     "2026-07-17 (24d, VOLATILE)"
+    ],
+    [
+     "ipo_status.s1_status",
+     "No S-1 on file; Form D / D/A only (latest 202...",
+     "2026-07-10 (31d, VOLATILE)"
+    ],
+    [
+     "ipo_status.window",
+     "2026 publicly ruled out by CEO; 2027 earliest",
+     "2026-06-04 (67d, VOLATILE)"
+    ],
+    [
+     "ipo_status.prediction_market",
+     "'No Databricks IPO by Dec 31, 2027' priced 0.54",
+     "2026-07-07 (34d, VOLATILE)"
+    ]
+   ],
+   "align": "LLL"
+  }
+ ]
+]

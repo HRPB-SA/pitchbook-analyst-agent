@@ -1,0 +1,56 @@
+{
+  "_provenance": "Live pull August 10, 2026: PitchBook Premium get_profile (59199-40, profile last updated 2026-08-10) + PitchBook news analysis (PITCHBOOK_NEWS + THIRD_PARTY_NEWS, min_date 2026-07-10). Cross-checked per validation spine; conflicts frozen, not averaged.",
+  "identity": {
+    "founded": {"value": 2013, "as_of": "2026-08-10", "source": "PitchBook profile", "tier": "T2", "decay": "PERMANENT"},
+    "business_status": {"value": "Generating Revenue; Privately Held (backing); Venture Capital-Backed", "as_of": "2026-08-10", "source": "PitchBook profile", "tier": "T2"}
+  },
+  "valuation": {
+    "rumored_round": {
+      "value": "Term sheet signed for a strategic round at $188B post, led by Coatue with new and existing investors; ~$3B size (press); company expects close later this summer; funds NOT in hand as of Aug 10",
+      "as_of": "2026-08-10",
+      "source": "company announcement Jul 17, 2026 + PitchBook financing note Aug 7, 2026 (deal 334745-56T, Announced/In Progress); size per press reports",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "flags": ["do-not-adopt"],
+      "note": "Progressed from Rumor/Speculation ($165-175B talks, Jul 7 note) to Announced/In Progress at $188B. Announced above the talked range. Base case still anchors on the $134B completed mark until close."
+    },
+    "pb_last_known_valuation_bn": {
+      "value": 188,
+      "as_of": "2026-07-16",
+      "source": "PitchBook Last Known Valuation field, deal 334745-56T (Announced/In Progress)",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "flags": ["do-not-adopt"],
+      "note": "Announced basis, not a completed mark; PB deal date Jul 16 vs company announcement Jul 17, trivial date skew noted"
+    },
+    "valuation_ladder_bn": [
+      {"value": 62, "as_of": "2024-12-15", "source": "press reports of the $10B round", "tier": "T3"},
+      {"value": 100, "as_of": "2025-09-30", "source": "press reports of the $1B round", "tier": "T3"},
+      {"value": 134, "as_of": "2026-02-09", "source": "company PR + PitchBook deal 313367-68T", "tier": "T2", "note": "last COMPLETED mark; $188B announced Jul 2026 excluded until close"}
+    ]
+  },
+  "financing": {
+    "active_investors": {"value": 152, "as_of": "2026-08-10", "source": "PitchBook profile", "tier": "T2", "decay": "STABLE"},
+    "series_l_pre_money_bn": {"value": 129, "as_of": "2026-08-07", "source": "PitchBook financing note", "tier": "T2", "decay": "STABLE"},
+    "series_l_participants_note": {"value": "Series L $5B equity led by Insight, J.P. Morgan Growth Equity, Fidelity; Microsoft + 48 other investors; $2B loan from undisclosed lenders", "as_of": "2026-08-07", "source": "PitchBook financing note", "tier": "T2", "decay": "STABLE", "note": "PB note now says 48 other investors; July pack carried ~44; PB revision, not a new close"}
+  },
+  "financials": {
+    "pb_ttm_field_note": {"value": "PitchBook revenue field still $6,900M TTM 4Q2026 (period end 2026-12-31) = forward-window projection, NOT run-rate. Ruling 4 holds; not adopted.", "as_of": "2026-08-10", "source": "PitchBook profile, re-verified this pull", "tier": "T2", "decay": "PERMANENT"}
+  },
+  "headcount": {
+    "employees_ladder": [
+      {"value": 9000, "as_of": "2026-06-09", "source": "PitchBook", "tier": "T2"}
+    ]
+  },
+  "products": {
+    "ai_capital_focus": {"value": "New capital earmarked for AI capabilities: Genie (business-data assistant suite, debuted Mar 2026), Unity AI Gateway, Lakebase (database for AI agents)", "as_of": "2026-07-17", "source": "company announcement via press reports", "tier": "T2", "decay": "QUARTERLY"}
+  },
+  "competition": {
+    "private_valuation_rank": {"value": "Trails only Anthropic, OpenAI, Tether, ByteDance among private companies at the announced $188B", "as_of": "2026-07-17", "source": "PitchBook data via PitchBook news", "tier": "T2", "decay": "VOLATILE", "flags": ["est."]}
+  },
+  "events": {
+    "stream": [
+      {"value": "Term sheet signed: strategic round at $188B post led by Coatue (~$3B per press); close expected later this summer", "as_of": "2026-07-17", "source": "company announcement + PitchBook deal record", "tier": "T2", "decay": "PERMANENT"}
+    ]
+  }
+}

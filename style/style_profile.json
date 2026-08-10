@@ -1,0 +1,125 @@
+{
+  "corpus": {
+    "documents": 2,
+    "words": 16326,
+    "paragraphs": 192
+  },
+  "sentences": {
+    "mean_words": 23.3,
+    "median_words": 22.0,
+    "p25_words": 11,
+    "p75_words": 32,
+    "note": "long, clause-stacked sentences are the house signature"
+  },
+  "paragraphs": {
+    "mean_sentences": 3.7,
+    "mean_words": 85.0,
+    "note": "dense single-topic paragraphs; no one-sentence fragments"
+  },
+  "sections": {
+    "h1_titles": [
+      "Contents",
+      "The AIBQ Breakdown: Business Quality, Scored and Decomposed",
+      "Executive Summary: The House That Data Built",
+      "The Foundation: What Databricks Is",
+      "The Bricks: Products and Services, Layer by Layer",
+      "The Mortar: How the Money Is Made",
+      "The Builders: Customers and What They Do",
+      "The Neighborhood: Competition on Three Fronts",
+      "The Blueprint: Strategy, Read Through Actions",
+      "The Ledger: The Financial Picture",
+      "The Appraisal: What the Business Is Worth",
+      "The Stress Test: What Would Change the Answer",
+      "The Verdict",
+      "Disclosure and Basis of Preparation",
+      "Contents",
+      "Executive Summary and Investment Thesis",
+      "The AIBQ Rating: Full Breakdown",
+      "Business Model and the Lakehouse",
+      "Products and Services Deep Dive",
+      "AI Focus: Where the Models End and the Business Begins"
+    ],
+    "h2_per_h1": 1.2,
+    "titling_pattern": "metaphor + colon + literal claim (e.g. 'The Mortar: How the Money Is Made')"
+  },
+  "density_per_1000_words": {
+    "tables": 2.02,
+    "figures": 1.35,
+    "parenthetical_citations": 8.58,
+    "money_figures": 13.48,
+    "multiples_x": 2.57,
+    "percentages": 8.39
+  },
+  "conventions": {
+    "compact_money_vs_spelled": {
+      "compact_$14.2B": 24,
+      "spelled_billion": 187,
+      "rule": "prose may spell 'billion'; tables/tiles use $14.2B"
+    },
+    "hedges_per_1000_words": 0.8,
+    "em_dashes": 0,
+    "citation_style": "parenthetical, source kind + date: (company, February 9, 2026), (PitchBook deal record, Jul 2026)"
+  },
+  "frequent_sentence_openers": [
+    [
+      "The",
+      165
+    ],
+    [
+      "Databricks",
+      33
+    ],
+    [
+      "Figure",
+      24
+    ],
+    [
+      "What",
+      21
+    ],
+    [
+      "That",
+      13
+    ],
+    [
+      "This",
+      12
+    ],
+    [
+      "First",
+      12
+    ],
+    [
+      "Second",
+      12
+    ],
+    [
+      "Forward",
+      11
+    ],
+    [
+      "A",
+      10
+    ],
+    [
+      "Two",
+      10
+    ],
+    [
+      "At",
+      9
+    ],
+    [
+      "Growth",
+      9
+    ],
+    [
+      "Analysis",
+      9
+    ],
+    [
+      "Sources",
+      9
+    ]
+  ]
+}

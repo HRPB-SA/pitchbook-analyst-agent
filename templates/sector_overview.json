@@ -1,0 +1,51 @@
+{
+  "id": "sector_overview",
+  "name": "Sector Overview (12-point industry frame)",
+  "kicker": "SECTOR OVERVIEW",
+  "length_pages": "10-16",
+  "rigor": 4,
+  "outname_pattern": "{sector}_Overview_{monyyyy}",
+  "toc": true,
+  "cover": {
+    "hero_tiles": ["sector size + growth", "the structural tension", "the ranked verdict"],
+    "snapshot": false
+  },
+  "sections": [
+    {
+      "id": "map",
+      "title_hint": "The Map: What This Sector Is",
+      "required": ["value chain and where the profit pools sit", "the 12-point frame applied: economics, moats, cyclicality, regulation"],
+      "auto": null,
+      "charts": ["composition of the value chain"]
+    },
+    {
+      "id": "sizing",
+      "title_hint": "The Sizing: Market, Bottom-Up",
+      "required": ["bottoms-up sizing with arithmetic shown; tops-down cited only as cross-check", "growth decomposition: price vs volume vs share"],
+      "auto": null,
+      "charts": ["series_bars market size trajectory"]
+    },
+    {
+      "id": "players",
+      "title_hint": "The Players: The Cohort, Compared",
+      "required": ["cohort table across the tracked companies with tiered figures", "capital efficiency and quality ranking (per-point expression only)"],
+      "auto": null,
+      "charts": ["ranked_bars cohort ranking", "grouped_bars growth-adjusted multiples"]
+    },
+    {
+      "id": "fronts",
+      "title_hint": "The Fronts: Where Competition Is Decided",
+      "required": ["the two or three battlegrounds that decide share", "who is winning each, with evidence"],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "verdict",
+      "title_hint": "The Verdict: Ranked, With Falsifiers",
+      "required": ["explicit ranking or tiering of the cohort", "dated falsifiers per name"],
+      "auto": null,
+      "charts": []
+    }
+  ],
+  "gates": ["report_ship"]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "earnings_note",
+  "name": "Earnings / Print Note",
+  "kicker": "EARNINGS NOTE",
+  "length_pages": "4-8",
+  "rigor": 4,
+  "outname_pattern": "{company}_{period}_Print_{monyyyy}",
+  "toc": false,
+  "cover": {
+    "hero_tiles": ["headline print vs expectation", "the line that mattered", "thesis status"],
+    "snapshot": false
+  },
+  "sections": [
+    {
+      "id": "print",
+      "title_hint": "The Print: Expectations vs Actuals",
+      "required": ["table of expected vs actual on every line that matters, sourced", "beat/miss stated plainly"],
+      "auto": null,
+      "charts": ["grouped_bars expected vs actual"]
+    },
+    {
+      "id": "quality",
+      "title_hint": "The Quality of the Print",
+      "required": ["what is durable vs one-time", "any definition changes or restatements flagged"],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "thesis",
+      "title_hint": "The Thesis Check",
+      "required": ["which named triggers fired", "score or position implications"],
+      "auto": "tracker",
+      "charts": ["combo_bars_line updated ladder"]
+    },
+    {
+      "id": "verdict",
+      "title_hint": "The Verdict and the Next Print",
+      "required": ["position restated or revised", "dated watch list to the next print"],
+      "auto": null,
+      "charts": []
+    }
+  ],
+  "gates": ["report_ship"]
+}
