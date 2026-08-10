@@ -1,0 +1,591 @@
+<title>harrisonpbnews@gmail.com — Four-Month Send Audit</title>
+<style>
+  :root {
+    --paper:      #F7F8FA;
+    --surface:    #FFFFFF;
+    --surface-2:  #EFF2F6;
+    --ink:        #131820;
+    --ink-soft:   #444E5C;
+    --ink-faint:  #6E7887;
+    --rule:       #D5DBE3;
+    --rule-soft:  #E4E9EF;
+    --accent:     #1F4E79;
+    --accent-dim: #4E7CA5;
+    --amber:      #9A6414;
+    --amber-bg:   #FBF2E1;
+    --oxide:      #93362F;
+    --oxide-bg:   #FAEDEB;
+    --verify:     #38614B;
+    --verify-bg:  #EAF2ED;
+
+    --serif: ui-serif, "Iowan Old Style", Charter, "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, "Cascadia Mono", Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #0F131A;
+      --surface:    #161C25;
+      --surface-2:  #1D2530;
+      --ink:        #E3E8EF;
+      --ink-soft:   #AEB8C6;
+      --ink-faint:  #7E8899;
+      --rule:       #2B3542;
+      --rule-soft:  #212A35;
+      --accent:     #7FB0DC;
+      --accent-dim: #5B87AF;
+      --amber:      #D9A257;
+      --amber-bg:   #2A2216;
+      --oxide:      #DE8A82;
+      --oxide-bg:   #2B1B19;
+      --verify:     #7FBF9B;
+      --verify-bg:  #17271F;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #0F131A;
+    --surface:    #161C25;
+    --surface-2:  #1D2530;
+    --ink:        #E3E8EF;
+    --ink-soft:   #AEB8C6;
+    --ink-faint:  #7E8899;
+    --rule:       #2B3542;
+    --rule-soft:  #212A35;
+    --accent:     #7FB0DC;
+    --accent-dim: #5B87AF;
+    --amber:      #D9A257;
+    --amber-bg:   #2A2216;
+    --oxide:      #DE8A82;
+    --oxide-bg:   #2B1B19;
+    --verify:     #7FBF9B;
+    --verify-bg:  #17271F;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.62;
+    margin: 0;
+    padding: 0 1.5rem 5rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 62rem; margin: 0 auto; }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 3.5rem 0 1.6rem;
+    border-bottom: 2px solid var(--ink);
+  }
+  .kicker {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0;
+    max-width: 24ch;
+  }
+  .standfirst {
+    font-family: var(--serif);
+    font-size: 1.09rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin: 0;
+  }
+
+  /* ---------- scope strip ---------- */
+  .scope {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    gap: 0;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 3rem;
+  }
+  .scope div {
+    padding: 1rem 1.1rem 1.15rem;
+    border-right: 1px solid var(--rule-soft);
+  }
+  .scope div:last-child { border-right: 0; }
+  .scope dt {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 0.35rem;
+  }
+  .scope dd {
+    font-family: var(--mono);
+    font-size: 1.02rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.3;
+  }
+  .scope dd small {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    margin-top: 0.2rem;
+    letter-spacing: 0;
+  }
+
+  /* ---------- page structure ---------- */
+  .page { padding-top: 1rem; }
+  .page + .page {
+    margin-top: 3.4rem;
+    padding-top: 2.6rem;
+    border-top: 1px solid var(--rule);
+  }
+  .page-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+  }
+  .page-num {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--surface);
+    background: var(--accent);
+    padding: 0.28rem 0.5rem;
+    border-radius: 2px;
+    flex: none;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    text-wrap: balance;
+    margin: 0;
+  }
+  h3 {
+    font-family: var(--sans);
+    font-weight: 650;
+    font-size: 0.94rem;
+    letter-spacing: 0.005em;
+    margin: 2.2rem 0 0.55rem;
+    color: var(--ink);
+  }
+  h3 .tag {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-right: 0.5rem;
+  }
+  p { max-width: 68ch; margin: 0 0 0.95rem; }
+  .lede { font-family: var(--serif); font-size: 1.06rem; color: var(--ink-soft); }
+  ul { max-width: 68ch; margin: 0 0 1rem; padding-left: 1.15rem; }
+  li { margin-bottom: 0.42rem; }
+  strong { font-weight: 650; }
+  code, .m {
+    font-family: var(--mono);
+    font-size: 0.87em;
+    font-variant-numeric: tabular-nums;
+  }
+  code {
+    background: var(--surface-2);
+    padding: 0.08em 0.34em;
+    border-radius: 2px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- tables ---------- */
+  .tablewrap {
+    overflow-x: auto;
+    margin: 1.3rem 0 1.6rem;
+    border-top: 1.5px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 34rem; }
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-bottom: 0.5rem;
+  }
+  th {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 0.67rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--ink-faint);
+    padding: 0.6rem 0.85rem 0.55rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: bottom;
+  }
+  td {
+    padding: 0.6rem 0.85rem 0.6rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+    font-size: 0.89rem;
+    line-height: 1.45;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.n, th.n { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.name { font-weight: 600; }
+
+  /* ---------- pills ---------- */
+  .pill {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.13rem 0.42rem;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .pill.drift  { background: var(--amber-bg);  color: var(--amber);  }
+  .pill.fail   { background: var(--oxide-bg);  color: var(--oxide);  }
+  .pill.ok     { background: var(--verify-bg); color: var(--verify); }
+
+  /* ---------- cadence strip ---------- */
+  .cadence {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin: 1.4rem 0 0.5rem;
+    align-items: end;
+  }
+  .cadence .bar { display: flex; flex-direction: column; gap: 0.45rem; }
+  .cadence .fill {
+    background: var(--accent);
+    border-radius: 1px 1px 0 0;
+    min-height: 3px;
+  }
+  .cadence .bar:nth-child(6) .fill { background: var(--accent-dim); }
+  .cadence .bar:nth-child(7) .fill { background: var(--amber); }
+  .cadence .lab {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-faint);
+    text-align: left;
+    line-height: 1.25;
+    border-top: 1px solid var(--rule);
+    padding-top: 0.35rem;
+  }
+  .cadence .lab b {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.72rem;
+  }
+
+  /* ---------- callout ---------- */
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--amber);
+    padding: 1.05rem 1.2rem;
+    margin: 1.5rem 0;
+    max-width: 68ch;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout .label {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  footer {
+    margin-top: 3.4rem;
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    line-height: 1.7;
+    color: var(--ink-faint);
+    max-width: 68ch;
+  }
+
+  @media (max-width: 34rem) {
+    .scope div { border-right: 0; border-bottom: 1px solid var(--rule-soft); }
+    .cadence { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <span class="kicker">Mailbox audit · prepared 10 August 2026</span>
+  <h1>Everything <span style="font-family:var(--mono);font-size:0.72em;letter-spacing:-0.02em;">harrisonpbnews@gmail.com</span> sent, and what it says</h1>
+  <p class="standfirst">A complete review of the account's outbound record from 14 December 2025 to 13 April 2026 — the automated analyst pipeline it ran, the market updates those reports carried, and the structural trends visible across the run.</p>
+</header>
+
+<dl class="scope">
+  <div><dt>Window</dt><dd>14 Dec 25 – 13 Apr 26<small>121 days</small></dd></div>
+  <div><dt>Threads</dt><dd>182<small>many carry 2–6 regenerations</small></dd></div>
+  <div><dt>Named products</dt><dd>21<small>consolidating to 3</small></dd></div>
+  <div><dt>Peak day</dt><dd>4 Jan · 15<small>sends in 24h</small></dd></div>
+  <div><dt>Recipients</dt><dd>3<small>work, personal, broker</small></dd></div>
+</dl>
+
+<!-- ============ PAGE 1 ============ -->
+<section class="page">
+  <div class="page-head">
+    <span class="page-num">01</span>
+    <h2>What the account actually is, and what it sent</h2>
+  </div>
+
+  <p class="lede">The account is not a correspondent. It is the outbound endpoint of a self-built research bot, plus a small amount of human traffic. Almost every message is machine-generated equity and private-market research addressed to <span class="m">harrison.rolfes@pitchbook.com</span>. Two exceptions exist: a run of thirteen newsletter forwards to <span class="m">hypdventures@gmail.com</span> in April, and a personal brokerage-application exchange with Tradier on 11 March.</p>
+
+  <p>The run divides cleanly into seven phases. Each is defined by which report franchises were live, not by calendar boundaries — the pipeline was rebuilt repeatedly, and each rebuild replaced the previous product set rather than adding to it.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Phase structure of the outbound run</caption>
+      <thead>
+        <tr><th class="n">Dates</th><th>Phase</th><th>Products live</th><th>State</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="n">14–17 Dec</td>
+          <td class="name">Bootstrap</td>
+          <td>Weekly AI Deep Dive (PDF), PitchBook Morning Note, PitchBook Daily, PitchBook Intelligence: The Trust Gap</td>
+          <td><span class="pill fail">Mostly failing</span></td>
+        </tr>
+        <tr>
+          <td class="n">18–22 Dec</td>
+          <td class="name">The $1M Morning Newsletter</td>
+          <td>$1M Morning Newsletter (10-page format), AI Analyst Morning Brief, The Rundown, PitchBook AI Coverage</td>
+          <td><span class="pill ok">First clean output</span></td>
+        </tr>
+        <tr>
+          <td class="n">24 Dec–2 Jan</td>
+          <td class="name">Morning Alpha</td>
+          <td>/// ALPHA, /// DOSSIER (Top 150), /// BENCHMARK (Top 15 models), Master Analyst, Weekly Strategy, Daily Intel</td>
+          <td><span class="pill drift">Stale data enters</span></td>
+        </tr>
+        <tr>
+          <td class="n">2–6 Jan</td>
+          <td class="name">Private AI Brief</td>
+          <td>Daily Private AI Brief, Weekly PE Audit, Pre-IPO Alpha, GS Research → Harrison's Report, Master Blueprint</td>
+          <td><span class="pill drift">Heavy iteration</span></td>
+        </tr>
+        <tr>
+          <td class="n">7–20 Jan</td>
+          <td class="name">Command Center</td>
+          <td>Command Center (twice daily), Weekly PE Audit, Pre-IPO Alpha, AI 7 Deep Dive, Master Blueprint</td>
+          <td><span class="pill ok">Stable cadence</span></td>
+        </tr>
+        <tr>
+          <td class="n">21 Jan–14 Feb</td>
+          <td class="name">AI Intelligence Brief</td>
+          <td>🔬 AI Intelligence Brief, daily at ~06:50 UTC</td>
+          <td><span class="pill ok">Best output</span></td>
+        </tr>
+        <tr>
+          <td class="n">20 Feb–27 Mar</td>
+          <td class="name">Weekly only</td>
+          <td>Master Blueprint (Fri AM), AI 7 Deep Dive (Fri PM), Pre-IPO Alpha (1st &amp; 15th)</td>
+          <td><span class="pill drift">Narrowing</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>After 27 March the automated pipeline stops entirely. From 1 April the account produces only manual forwards of subscription newsletters — <em>The Information</em>'s Briefing, AM, AI Agenda, Applied AI and Dealmaker, plus The AI Collective — pushed in batches to a second personal address. Thirteen forwards across four sittings on 1, 2, 6 and 13 April. That is the last activity in the window.</p>
+
+  <h3><span class="tag">Franchise detail</span>What each product contained</h3>
+  <ul>
+    <li><strong>AI Intelligence Brief</strong> — executive summary, top developments with significance and market impact, funding totals, competitive dynamics, technology trends, watchlist, near-term outlook, analyst take. Sourced from live news; the most substantive product of the run.</li>
+    <li><strong>Harrison's Report: The AI 7 Deep Dive</strong> — a conviction-list note on xAI, OpenAI, Meta, Databricks, Safe Superintelligence, Anthropic and Google, with a sector valuation matrix and per-name rationale, differentiation and key risks.</li>
+    <li><strong>Master Blueprint</strong> — a fourteen-section company dossier (identity, timeline, governance, capitalization, financial model, product stack, tech, data strategy, GTM, competition, risk, talent, forward view, FAQ) across six to twelve names.</li>
+    <li><strong>Weekly PE Audit</strong> — a forensic investment memo per company across technical moat, financials, operational efficiency, human capital and risk, closing with a Buy/Hold verdict. Six issued: Databricks (Hold), Anthropic, xAI (Buy), OpenAI (Hold), Nvidia (Buy, twice).</li>
+    <li><strong>Pre-IPO Alpha</strong> — a monthly thesis series: Month 1 Vertical Moats, Month 2 Unit Economics, Month 3 Agentic Autonomy. Each names a single winner. Nvidia won Month 1; OpenAI won Month 3.</li>
+    <li><strong>Command Center</strong> — a twice-daily dossier board carrying a $4.2T universe valuation, signal intensity and per-company moat scores.</li>
+    <li><strong>/// DOSSIER and /// BENCHMARK</strong> — a 150-company profile scan and a fifteen-model capability/price comparison, both issued daily over the holidays.</li>
+  </ul>
+</section>
+
+<!-- ============ PAGE 2 ============ -->
+<section class="page">
+  <div class="page-head">
+    <span class="page-num">02</span>
+    <h2>The updates: what the reports actually reported</h2>
+  </div>
+
+  <p class="lede">Read in sequence, the outbound record tells a coherent story about the AI capital cycle over four months — accelerating megarounds through December and January, a February peak, and the first credible cracks appearing in April.</p>
+
+  <h3><span class="tag">Dec 2025</span>The megaround era opens</h3>
+  <p>The December reports lead repeatedly on Databricks raising <span class="m">$4B</span> at a <span class="m">$134B</span> valuation on a <span class="m">$4.8B</span> revenue run-rate, growing above 55% year over year. Around it: Anthropic's <span class="m">$13B</span> Series F at <span class="m">$183B</span>; Nvidia's acquisition of Groq for <span class="m">$20B</span>, its largest on record; Anysphere (Cursor) at <span class="m">$9B</span>; and a long tail of mid-size rounds — d-Matrix <span class="m">$275M</span> at <span class="m">$2B</span>, EliseAI <span class="m">$250M</span>, Loadsmart <span class="m">$200M</span>, MoEngage <span class="m">$180M</span>, Terabase <span class="m">$130M</span>, OpenAI-backed Chai Discovery <span class="m">$130M</span>, Odeko <span class="m">$126M</span>. On the product side the briefs track OpenAI's GPT-5.2 and GPT-5.2-Codex launches, the Disney–Sora licensing agreement, and developer app submissions opening in ChatGPT.</p>
+
+  <p>The December analysis frames all of this through a single thesis — <em>The Constraint Economy</em> — arguing that AI's trajectory is set by seven bottlenecks: compute, data, talent, distribution, regulation, trust and capital. A companion theme, <em>The Trust Gap</em>, argues capital-trust erosion is the binding risk and flags SaaS security credibility as the transmission channel. That call reads well four months later.</p>
+
+  <h3><span class="tag">Jan 2026</span>Capital mobilization, then whiplash</h3>
+  <p>The daily briefs from 21 January onward carry an explicit disclosed-funding total, and the series is violently uneven: <span class="m">$40B</span> on the 21st, <span class="m">$70B</span> on the 22nd, three consecutive near-zero days over the 23rd–25th, <span class="m">$21.8B</span> on the 26th, then <span class="m">$126B</span> on the 29th and above <span class="m">$100B</span> on the 30th. The briefs read this as capital concentration rather than breadth — fewer, larger, more strategic rounds, increasingly led by corporates rather than venture funds.</p>
+
+  <h3><span class="tag">Feb 2026</span>The peak</h3>
+  <p>Two February briefs carry the largest items in the entire record. On <strong>5 February</strong>: SpaceX acquires xAI in an AI–aerospace merger built around space-based compute; Nvidia's <span class="m">$20B</span> investment into OpenAI nears completion; Anthropic prepares a secondary at <span class="m">$350B</span>; a16z closes a <span class="m">$1.7B</span> AI infrastructure fund; French police raid X's Paris office over Grok. On <strong>14 February</strong>: Anthropic closes a <span class="m">$30B</span> Series G at <span class="m">$380B</span> — described as the largest AI round to date — on annualized revenue above <span class="m">$14B</span>, while xAI restructures after co-founder departures despite a <span class="m">$1.25T</span> valuation, and Mistral commits <span class="m">$1.4B</span> to European expansion.</p>
+
+  <p>The analyst take attached to that brief is the sharpest judgment in the run: capital deployment has outrun deployment capability, the market is separating into a mega-funded foundation tier and a specialized application tier, and the open question is whether sustainable business models emerge from current burn rates.</p>
+
+  <h3><span class="tag">Mar–Apr 2026</span>Carried by the forwards</h3>
+  <p>Once original output stops, the April forwards carry the updates. They are worth reading as the factual close of the record: OpenAI raises <span class="m">$122B</span> at a <span class="m">$830B</span> valuation; SpaceX files confidentially for IPO and Nasdaq moves to speed its index entry; Anthropic discusses a Q4 IPO while preparing "Claude Mythos" and wins an injunction blocking a Pentagon blacklisting; Google negotiates financing for a multibillion-dollar Anthropic data center; Bezos raises <span class="m">$100B</span> for AI manufacturing; Blackstone extends a data-center buying spree; and Meta hires three OpenAI Stargate leaders.</p>
+
+  <p>The most important forward is the last. The 12 April Briefing documents a renewed enterprise-software selloff — ServiceNow and Snowflake down roughly 8% in a day, Figma down half its value on the year — after UBS reported that over half its enterprise customer calls now include anecdotes of containing non-AI software spend. That is the December <em>Trust Gap</em> and <em>Constraint Economy</em> theses arriving as a price event.</p>
+
+  <h3><span class="tag">Positions</span>Every rating the pipeline issued</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>Verdicts on record</caption>
+      <thead><tr><th>Name</th><th>Product</th><th class="n">Date</th><th>Call</th><th>Stated basis</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Databricks</td><td>PE Audit</td><td class="n">2 Jan</td><td><span class="pill drift">Hold</span></td><td>No proprietary feedback loop; data flywheel incomplete</td></tr>
+        <tr><td class="name">Anthropic</td><td>PE Audit</td><td class="n">2 Jan</td><td><span class="pill drift">No verdict</span></td><td>Strong flywheel and NDR; Big Tech displacement risk</td></tr>
+        <tr><td class="name">xAI</td><td>PE Audit</td><td class="n">4 Jan</td><td><span class="pill ok">Buy</span></td><td>Real-time inference; scalable learning management</td></tr>
+        <tr><td class="name">OpenAI</td><td>PE Audit</td><td class="n">5 Jan</td><td><span class="pill drift">Hold</span></td><td>High displacement risk; every financial metric unknown</td></tr>
+        <tr><td class="name">Nvidia</td><td>PE Audit</td><td class="n">12 &amp; 19 Jan</td><td><span class="pill ok">Buy</span></td><td>Path to $1T data-center revenue by 2028</td></tr>
+        <tr><td class="name">Nvidia</td><td>Pre-IPO Alpha M1</td><td class="n">15 Jan</td><td><span class="pill ok">Winner</span></td><td>Strongest vertical moat: hardware plus software control</td></tr>
+        <tr><td class="name">OpenAI</td><td>Pre-IPO Alpha M3</td><td class="n">27 Mar</td><td><span class="pill ok">Winner</span></td><td>AGI pursuit balanced against commercial structure</td></tr>
+        <tr><td class="name">All seven</td><td>AI 7 Deep Dive</td><td class="n">27 Mar</td><td><span class="pill fail">Buy ×7</span></td><td>Identical +35% upside on every name — see page 3</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ PAGE 3 ============ -->
+<section class="page">
+  <div class="page-head">
+    <span class="page-num">03</span>
+    <h2>Trends across the run</h2>
+  </div>
+
+  <h3><span class="tag">Trend 1</span>Volume collapsed while quality rose, then both fell</h3>
+  <p>Send frequency describes an arc, not a decline. The pipeline began as a firehose of regenerations — fifteen sends on 4 January, twelve on 6 January, with the same report reissued three to six times as the prompt was tuned — then consolidated into a single well-formed daily brief, then thinned to three weekly products, then stopped.</p>
+
+  <div class="cadence" role="img" aria-label="Send volume by phase: bootstrap 12 sends, $1M Newsletter 18, Morning Alpha 34, Private AI Brief 41, Command Center 32, AI Intelligence Brief 25, weekly only 19, then forwards only.">
+    <div class="bar"><div class="fill" style="height:26px"></div><span class="lab"><b>Dec 14</b>Bootstrap</span></div>
+    <div class="bar"><div class="fill" style="height:44px"></div><span class="lab"><b>Dec 18</b>$1M Note</span></div>
+    <div class="bar"><div class="fill" style="height:78px"></div><span class="lab"><b>Dec 24</b>Alpha</span></div>
+    <div class="bar"><div class="fill" style="height:96px"></div><span class="lab"><b>Jan 2</b>Private AI</span></div>
+    <div class="bar"><div class="fill" style="height:72px"></div><span class="lab"><b>Jan 7</b>Cmd Center</span></div>
+    <div class="bar"><div class="fill" style="height:56px"></div><span class="lab"><b>Jan 21</b>Intel Brief</span></div>
+    <div class="bar"><div class="fill" style="height:22px"></div><span class="lab"><b>Feb 20</b>Weekly → fwd</span></div>
+  </div>
+
+  <p>The peak of output volume (early January) and the peak of output quality (mid-February) are five weeks apart. Consolidating twenty-one franchises down to one daily brief is what produced the best work in the archive.</p>
+
+  <h3><span class="tag">Trend 2</span>Two pipelines diverged — and only one tracked reality</h3>
+  <p>This is the most consequential pattern in the record. The products fall into two families with different data sources, and they progressively contradicted each other.</p>
+  <p>The <strong>news-grounded</strong> family — AI Intelligence Brief, Morning Alpha, AI Analyst Morning Brief — pulled from live sources and stayed accurate. The <strong>entity-database</strong> family — Command Center, Strategic Brief, Master Blueprint, AI 7 Deep Dive, Dossier — read from a company table that never refreshed. By March that table was wrong by an order of magnitude on nearly every name.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Valuation drift — same account, same window</caption>
+      <thead>
+        <tr><th>Company</th><th class="n">Entity-DB product</th><th class="n">News-grounded / verified</th><th class="n">Error</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">Anthropic</td>
+          <td class="n">$1.5B <small style="font-family:var(--sans);color:var(--ink-faint)">Blueprint, 27 Mar</small></td>
+          <td class="n">$380B <small style="font-family:var(--sans);color:var(--ink-faint)">Intel Brief, 14 Feb</small></td>
+          <td class="n"><span class="pill fail">253×</span></td>
+        </tr>
+        <tr>
+          <td class="name">Anthropic</td>
+          <td class="n">$5B <small style="font-family:var(--sans);color:var(--ink-faint)">AI 7, 27 Mar</small></td>
+          <td class="n">$380B</td>
+          <td class="n"><span class="pill fail">76×</span></td>
+        </tr>
+        <tr>
+          <td class="name">OpenAI</td>
+          <td class="n">$90B <small style="font-family:var(--sans);color:var(--ink-faint)">AI 7, 27 Mar</small></td>
+          <td class="n">$830B <small style="font-family:var(--sans);color:var(--ink-faint)">forward, 1 Apr</small></td>
+          <td class="n"><span class="pill fail">9.2×</span></td>
+        </tr>
+        <tr>
+          <td class="name">xAI</td>
+          <td class="n">$1B <small style="font-family:var(--sans);color:var(--ink-faint)">Blueprint, 27 Mar</small></td>
+          <td class="n">$1.25T <small style="font-family:var(--sans);color:var(--ink-faint)">Intel Brief, 14 Feb</small></td>
+          <td class="n"><span class="pill fail">1,250×</span></td>
+        </tr>
+        <tr>
+          <td class="name">Databricks</td>
+          <td class="n">$38–43B <small style="font-family:var(--sans);color:var(--ink-faint)">Dossier &amp; Blueprint</small></td>
+          <td class="n">$134B <small style="font-family:var(--sans);color:var(--ink-faint)">Alpha, 25 Dec</small></td>
+          <td class="n"><span class="pill fail">3.1×</span></td>
+        </tr>
+        <tr>
+          <td class="name">Safe Superintelligence</td>
+          <td class="n">$80M–$200M</td>
+          <td class="n">Target set at $43.2B</td>
+          <td class="n"><span class="pill fail">Incoherent</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The failure mode is visible in the templates themselves, not just the numbers. On the 6 January Strategic Brief, fourteen different companies — Nvidia, Google, Meta, OpenAI, Perplexity, Glean and others — all carry the identical valuation <span class="m">$157B (Oct 2024)</span>, a fallback value substituting for a lookup miss. Every one of the twenty-six companies scores exactly <span class="m">85/100</span> on moat. On the 27 March AI 7, five of seven names show a target valuation of <span class="m">$0.0M</span>, all seven show <span class="m">+35%</span> upside, all seven show a 90-day momentum delta of <span class="m">+5</span>, and every compute and talent signal reads <span class="m">N/A</span> — while all seven are rated Buy.</p>
+
+  <div class="callout">
+    <span class="label">The reader-facing consequence</span>
+    <p>A recipient of the 27 March package received, in the same hour, a Blueprint valuing Anthropic at $1.5 billion and a conviction note valuing it at $5 billion — six weeks after the same account had correctly reported a $380 billion round. Uniform ratings with uniform upside are not analysis; they are a template rendering with no data behind it.</p>
+  </div>
+
+  <h3><span class="tag">Trend 3</span>The model benchmark froze and was never noticed</h3>
+  <p>The /// BENCHMARK product shipped daily from 25 December to 2 January with byte-identical headline results every time: best value Llama 3.1 70B at <span class="m">$0.00/1M</span>, smartest OpenAI o1 at <span class="m">1800</span>, best coder Llama 3.1 70B at <span class="m">0% pass</span>. All fifteen models score <span class="m">0%</span> on SWE-bench — the metric was never wired up. Two models carry impossible Elo ratings (<span class="m">193</span> and <span class="m">127</span>). The roster is frozen at mid-2024 while the same account's own briefs were covering GPT-5.2 and Claude Opus 4.6.</p>
+
+  <h3><span class="tag">Trend 4</span>A consistent, diagnosable failure signature</h3>
+  <ul>
+    <li><strong>Rendering</strong> — eight sends delivered only the literal string <code>HTML Required</code>; several leaked raw <code>```html</code> fences into the body; one on 3 January transmitted character-spaced markup (<code>&lt; h 1 &gt; D a i l y</code>), an encoding fault.</li>
+    <li><strong>Runtime</strong> — three <span class="m">☠️ SYSTEM CRASHED</span> alerts on 14 December: an Airtable <code>422 Unprocessable Entity</code> on the <code>Weekly Briefs</code> table, then <code>'NoneType' object is not subscriptable</code> twice. Separately, <code>&lt;lambda&gt;() missing 2 required positional arguments</code>.</li>
+    <li><strong>Placeholders in production</strong> — the 17 December Morning Note shipped a full heatmap of "Company A" through "Company M" and three company cards for "Company X/Y/Z" to a work address.</li>
+    <li><strong>Date hallucination</strong> — two January sends are internally headed "October 23, 2023" and "October 2023" despite January datelines.</li>
+    <li><strong>No version discipline</strong> — engine stamps run in parallel and disagree: v6.0 and v11.0 on the same day, alongside SYSTEM V20.0, VOL 19.0, BENCHMARK V7 and MASTER ANALYST ENGINE V4.</li>
+  </ul>
+
+  <h3><span class="tag">Trend 5</span>Branding drifted toward attribution risk, then corrected</h3>
+  <p>On 4 January at 20:06 and 20:12 the pipeline sent two reports titled <strong>"GS RESEARCH"</strong> with bodies headed <span class="m">GOLDMAN SACHS &amp; CO. LLC</span> — a real firm's masthead on machine-generated research, delivered to a work address. It was corrected within about forty minutes to "Harrison's Advanced AI Analysis." Similarly, several products carried a <span class="m">PitchBook Intelligence</span> or <span class="m">PitchBook Private Market Coverage</span> masthead with <span class="m">CONFIDENTIAL</span> markings. By 27 March an explicit disclosure had been added — that the report is automated, for demonstration, with private-company estimates derived from news analysis. The direction of travel is right; the disclosure arrived roughly twelve weeks after the branding did.</p>
+
+  <h3><span class="tag">Assessment</span>What the run demonstrates</h3>
+  <p>The archive contains one genuinely good product and a lot of scaffolding around it. The AI Intelligence Brief worked because it did one thing, ran once a day, and read from live sources; its 14 February analyst take called the separation between funded-foundation and specialized-application tiers before the April software selloff made it a price event. Everything built on the static entity table failed the same way — plausible prose wrapped around numbers that were never fetched, with uniform scores standing in for judgment.</p>
+  <p>Three things would fix the failing half without touching the working half: fail loudly instead of substituting fallback values, so a lookup miss blocks the send rather than printing <span class="m">$157B</span> for fourteen companies; drop any field the pipeline cannot source rather than rendering <span class="m">$0.0M</span> or <span class="m">N/A</span>; and stop deriving ratings from a template — a uniform <span class="m">+35%</span> across seven names is a tell that no valuation work occurred. The final shift to hand-forwarding <em>The Information</em> suggests that judgment was already reached; the archive supports it.</p>
+</section>
+
+<footer>
+  Sources: 182 mail threads sent from harrisonpbnews@gmail.com, 14 Dec 2025 – 13 Apr 2026, read in full or in substantive part.<br>
+  Figures attributed to reports are as those reports stated them, not independently verified except where cross-checked against later forwarded reporting.<br>
+  Compiled 10 August 2026.
+</footer>
+
+</div>
