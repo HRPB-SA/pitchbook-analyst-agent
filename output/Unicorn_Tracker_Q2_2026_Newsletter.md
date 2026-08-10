@@ -1,4 +1,4 @@
-# The IPO Signal Says Go. The Record Says Be Careful.
+# The Unicorns Are Lining Up to Go Public
 
 The second quarter's hot stock market debuts point to more unicorn listings before the year ends. Unicorns are private startups valued at $1 billion or more, and when their new listings jump on day one, more follow within two quarters, according to PitchBook's Q2 2026 Global Unicorn Tracker. This quarter jumped. The AI chipmaker Cerebras priced its shares at $185 and closed day one at $311. SpaceX rose 19%.
 
