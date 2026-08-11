@@ -3,17 +3,38 @@
     "name": "val_ladder_aug2026.png",
     "type": "ranked_bars",
     "look": "pb",
-    "title": "Three completed marks and a signed bid",
+    "title": "Three completed rounds and one signed term sheet",
     "subtitle": "Databricks post-money valuation ($B)",
     "rows": [
-      {"label": "Dec 2024 ($10B round)", "value": 62, "value_label": "$62B"},
-      {"label": "Sep 2025 ($1B round)", "value": 100, "value_label": "$100B"},
-      {"label": "Feb 2026 (Series L)", "value": 134, "value_label": "$134B"},
-      {"label": "Jul 2026 (announced)", "value": 188, "est": true, "muted": true, "value_label": "~$188B, unclosed"}
+      {
+        "label": "Dec 2024 ($10B round)",
+        "value": 62,
+        "value_label": "$62B"
+      },
+      {
+        "label": "Sep 2025 ($1B round)",
+        "value": 100,
+        "value_label": "$100B"
+      },
+      {
+        "label": "Feb 2026 (Series L)",
+        "value": 134,
+        "value_label": "$134B"
+      },
+      {
+        "label": "Jul 2026 (announced)",
+        "value": 188,
+        "est": true,
+        "muted": true,
+        "value_label": "~$188B, not yet closed"
+      }
     ],
     "xlabel": "Post-money valuation ($B)",
     "xlim": 245,
-    "sources": ["PitchBook", "company announcements"],
+    "sources": [
+      "PitchBook",
+      "company announcements"
+    ],
     "geography": "US",
     "as_of": "August 10, 2026"
   },
@@ -21,16 +42,33 @@
     "name": "acceleration_aug2026.png",
     "type": "combo_bars_line",
     "look": "pb",
-    "title": "Growth is accelerating at $7 billion scale",
-    "subtitle": "Annualized revenue run-rate ($B, bars) and YoY growth (%, line)",
-    "labels": ["Sep 2025", "Dec 2025", "Feb 2026", "Jun 2026"],
-    "bars": [4.0, 4.8, 5.4, 6.9],
+    "title": "Growth keeps getting faster at $7 billion of annualized revenue",
+    "subtitle": "Annualized revenue ($B, bars) and YoY growth (%, line)",
+    "labels": [
+      "Sep 2025",
+      "Dec 2025",
+      "Feb 2026",
+      "Jun 2026"
+    ],
+    "bars": [
+      4.0,
+      4.8,
+      5.4,
+      6.9
+    ],
     "bar_fmt": "${:.1f}B",
-    "bar_ylabel": "Revenue run-rate ($B)",
-    "line": [50, 55, 65, 80],
+    "bar_ylabel": "Annualized revenue ($B)",
+    "line": [
+      50,
+      55,
+      65,
+      80
+    ],
     "line_fmt": "+{:g}%",
     "line_ylabel": "YoY growth (%)",
-    "sources": ["Company disclosures"],
+    "sources": [
+      "Company disclosures"
+    ],
     "geography": "US",
     "as_of": "June 16, 2026"
   },
@@ -38,19 +76,55 @@
     "name": "per_point_aug2026.png",
     "type": "ranked_bars",
     "look": "pb",
-    "title": "The buyer pays the least per unit of quality, at either mark",
-    "subtitle": "Valuation per AIBQ point ($B)",
+    "title": "The least expensive of its peers per unit of quality, at either price",
+    "subtitle": "Valuation per AIBQ quality point ($B)",
     "rows": [
-      {"label": "Databricks (completed)", "value": 15.2, "accent": true, "value_label": "$15.2B / pt"},
-      {"label": "Databricks (announced)", "value": 21.3, "est": true, "value_label": "~$21.3B / pt"},
-      {"label": "Anthropic", "value": 118, "value_label": "$118B / pt"},
-      {"label": "OpenAI", "value": 188, "value_label": "$188B / pt"},
-      {"label": "xAI (implied, est.)", "value": 279, "muted": true, "est": true, "value_label": "~$279B / pt"}
+      {
+        "label": "Databricks (completed)",
+        "value": 15.2,
+        "accent": true,
+        "value_label": "$15.2B / pt"
+      },
+      {
+        "label": "Databricks (announced)",
+        "value": 21.3,
+        "est": true,
+        "value_label": "~$21.3B / pt"
+      },
+      {
+        "label": "Anthropic",
+        "value": 118,
+        "value_label": "$118B / pt"
+      },
+      {
+        "label": "OpenAI",
+        "value": 188,
+        "value_label": "$188B / pt"
+      },
+      {
+        "label": "xAI (implied, est.)",
+        "value": 279,
+        "muted": true,
+        "est": true,
+        "value_label": "~$279B / pt"
+      }
     ],
     "xlabel": "Valuation per AIBQ point ($B)",
     "xlim": 340,
-    "bands": [{"rows": [0, 1], "label": "Both Databricks marks"}],
-    "sources": ["PitchBook", "company disclosures", "PitchBook analysis"],
+    "bands": [
+      {
+        "rows": [
+          0,
+          1
+        ],
+        "label": "Both Databricks valuations"
+      }
+    ],
+    "sources": [
+      "PitchBook",
+      "company disclosures",
+      "PitchBook analysis"
+    ],
     "geography": "US",
     "as_of": "August 10, 2026"
   }

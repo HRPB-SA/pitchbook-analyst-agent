@@ -116,7 +116,13 @@ Follow style/STYLE.md (prescriptive; embeds the five-rule pre-flight checklist
 from style/Institutional_Research_Style_Guide.pdf and the adopted findings of
 style/WRITING_STYLES_RESEARCH.md) + style/STYLE_PROFILE.md (measured).
 
-VOICE: the Hemingway-analyst register. Short declarative core; subject, verb,
+VOICE: the blended register (STYLE.md): Hemingway-analyst skeleton + the
+desk's published cadence + the Venture Monitor's accessibility. Write for
+the PitchBook reader: no trading-desk slang (mark, print, the tape, re-rate;
+QA flags them), companies named plainly, specialist terms defined at first
+use, multiples spelled out on first use ("19.4 times annualized revenue"),
+natural connectives (However, Although, Notably) at most one per paragraph.
+Short declarative core; subject, verb,
 object; one fact or judgment per sentence; concrete subjects doing things.
 The flow rule: each sentence opens from what the reader just learned and
 closes on the new thing (stress position); the chain of sentences IS the

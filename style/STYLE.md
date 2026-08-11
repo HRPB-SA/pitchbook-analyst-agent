@@ -33,14 +33,57 @@ readers read to allocate capital and assess risk, not for pleasure.
    on sight: "It is important to note", "Furthermore", "Delve", "Robust",
    "Paradigm shift" (plus the house list below).
 
-## Voice: the Hemingway-analyst register
+## Voice: the blended register (three sources, one voice)
 
-Write like Hemingway working as a research analyst, in this desk's cadence.
-The skeleton is declarative: subject, verb, object; concrete subjects doing
-things (companies sign, margins fall, filings appear). The depth is the
-iceberg: state the fact and what it means, and leave the machinery below the
-waterline, in the exhibits, the tables, and the validation log. Trust the
-reader.
+The house voice fuses three things: the Hemingway-analyst skeleton (short
+declarative core, concrete subjects doing things, depth below the waterline),
+this desk's published cadence (mechanism sentences, named tells, the landed
+observation), and the PitchBook-NVCA Venture Monitor's accessibility (the
+flagship register every PitchBook reader already knows). Write so a smart
+reader outside the coverage area follows every sentence on first pass.
+
+What the Venture Monitor contributes, specifically:
+- **Walk the reader through the counterintuitive.** When the data seems to
+  contradict the environment, say so and resolve it: "At first glance, this
+  expansion appears counterintuitive given the liquidity constraints.
+  However, several factors explain the trend." Reasoning happens on the
+  page, not behind it.
+- **Natural connectives in moderation.** However, Although, While, Notably,
+  Even so: at most one per paragraph, doing real logical work. The robotic
+  set stays banned (Furthermore, Moreover, Additionally, In addition).
+- **Name things plainly.** Companies get named (Anthropic, Snowflake), not
+  wrapped in epithets ("the nearest frontier peer"). Specialist terms are
+  defined at first use ("corporate venture capital firms (CVCs)"). Multiples
+  are spelled out on first use ("19.4 times annualized revenue"), compressed
+  after (19.4x).
+- **Candor about the data.** When a figure is misleading or dated, the prose
+  says so directly: "Some of these figures are misleading, particularly deal
+  value." Candor is house PitchBook style, not a concession.
+- **Forward views in plain form.** "We expect X to continue in 2026,
+  particularly in deal count, as AI penetrates the economy": expectation,
+  scope, driver, in one readable sentence, with the estimative odds where
+  the judgment is load-bearing.
+
+## Vocabulary: write for the PitchBook reader
+
+No trading-desk slang. The reader allocates capital; the reader does not sit
+on a trading floor. Banned terms and their plain replacements (QA flags the
+banned column):
+
+| Banned | Write instead |
+|---|---|
+| mark, the mark, marked at | valuation; the completed round valued the company at |
+| print, the print | disclosure; reported figures; the company's next update |
+| the tape | trading; market prices |
+| re-rate, re-rates | re-price; put a higher price on |
+| the book (demand sense) | investor demand |
+| the Street | analysts; consensus |
+
+Industry-standard PitchBook vocabulary stays, because the readership owns
+it: deal value, deal count, dry powder, megadeal, markup, first financing,
+post-money valuation, annualized revenue (preferred over bare "run rate").
+The test for any remaining term: would the Venture Monitor print it without
+a definition? If not, define it or replace it.
 
 **The blend (this is the desk's actual voice; a telegram is as wrong as a
 metronome).** The analysis breathes through mechanism sentences: a 20-35 word

@@ -55,6 +55,16 @@ NOISE_ADJECTIVES = [
 # Kent's weasels: words that carry no evaluative weight (WRITING_STYLES_RESEARCH.md).
 WEASELS = ["apparently", "seemingly", "supposedly", "arguably"]
 
+# Trading-desk slang; report prose writes for the PitchBook reader (STYLE.md
+# vocabulary table). Word-boundary regexes keyed to the suggestion shown.
+JARGON = [
+    (re.compile(r"\bmarks?\b(?!\s+a\b)"), "'mark': write 'valuation' / 'the completed round valued the company at'"),
+    (re.compile(r"\bprints?\b"), "'print': write 'disclosure' / 'reported figures' / 'update'"),
+    (re.compile(r"\bthe tape\b"), "'the tape': write 'trading' / 'market prices'"),
+    (re.compile(r"\bre-rat(?:e|es|ed|ing)\b"), "'re-rate': write 're-price' / 'put a higher price on'"),
+    (re.compile(r"\bthe Street\b"), "'the Street': write 'analysts' / 'consensus'"),
+]
+
 # Boosters flag the least-supported claim (Hyland via Pinker).
 BOOSTERS = ["clearly", "obviously", "undoubtedly", "of course", "needless to say"]
 
@@ -144,6 +154,9 @@ def check_text(text, where="", prose=True):
         for w in WEASELS:
             if re.search(rf"\b{w}\b", low):
                 add("WARN", "weasel", f"{w!r} carries no evaluative weight (Kent)")
+        for pat, hint in JARGON:
+            if pat.search(text):
+                add("WARN", "jargon", hint + " (write for the PitchBook reader)")
         for b in BOOSTERS:
             if re.search(rf"\b{re.escape(b)}\b", low):
                 add("WARN", "booster", f"{b!r} flags the least-supported claim; show the evidence instead")
