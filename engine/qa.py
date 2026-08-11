@@ -73,6 +73,19 @@ AI_TELLS = [
     "rapidly evolving", "ever-evolving", "landscape of",
 ]
 
+# The strongest statistical AI tell: analysis bolted to a finished clause as
+# a present-participial modifier (2-5x the human rate per the PNAS Biber-
+# feature study). The payload gets its own predicate instead.
+_PARTICIPIAL_BOLTON = re.compile(
+    r",\s+(?:marking|signaling|signalling|highlighting|underscoring|reflecting|"
+    r"demonstrating|showcasing|illustrating|emphasizing|cementing|solidifying|"
+    r"positioning|reinforcing|suggesting|indicating|representing|signifying|"
+    r"paving the way|setting the stage|making it)\b")
+_TRAILING_APPOSITIVE = re.compile(
+    r",\s+a\s+(?:move|sign|signal|shift|step|feat|milestone|testament|record|first)\s+that\b")
+_TRAILING_DELTA = re.compile(
+    r",\s+\d+(?:\.\d+)?%\s+(?:above|below|higher than|lower than)\b[^.;:]{0,60}[.;]")
+
 # One odds-bearing word per sentence (Kent: hedges must not stack).
 _ESTIMATIVE = re.compile(
     r"\b(?:likely|unlikely|probable|probably|possible|possibly|"
@@ -152,7 +165,30 @@ def check_text(text, where="", prose=True):
         if m:
             add("WARN", "times-greater",
                 f"{m.group(0)!r}: check the arithmetic ('to five times' is 4x; 'five times greater' is 5x)")
-        for sent in _SENT_SPLIT.split(text):
+        m = _PARTICIPIAL_BOLTON.search(text)
+        if m:
+            add("WARN", "participial-bolt-on",
+                f"{m.group(0).strip()!r}: the strongest AI tell; give the analysis its own "
+                "sentence with a real subject and verb")
+        m = _TRAILING_APPOSITIVE.search(text)
+        if m:
+            add("WARN", "trailing-appositive",
+                f"{m.group(0).strip()!r}: analysis dangling off a finished clause; "
+                "promote it to a predicate")
+        m = _TRAILING_DELTA.search(text)
+        if m:
+            add("WARN", "trailing-delta",
+                f"{m.group(0).strip()!r}: give the comparison its own verb "
+                "('...and the new price stands 40% above the February mark')")
+        sents = _SENT_SPLIT.split(text)
+        openers = [s.split()[0].lower().strip('"“(') for s in sents if s.split()]
+        for i in range(len(openers) - 2):
+            if openers[i] == openers[i + 1] == openers[i + 2]:
+                add("WARN", "monotone-openers",
+                    f"three consecutive sentences open with {openers[i]!r}; vary the "
+                    "opening (time phrase, subordinate clause, contrast)")
+                break
+        for sent in sents:
             hits = _ESTIMATIVE.findall(sent.lower())
             if len(hits) >= 2:
                 add("WARN", "hedge-stack",

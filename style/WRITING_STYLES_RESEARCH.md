@@ -178,3 +178,31 @@ Bezos 1997 and 2017 letters · Orwell, Politics and the English Language (1946) 
 Berkshire letters and Oaktree memos · Mauboussin's paper archive · Hindenburg's Nikola
 report (structure, not balance) · Mauboussin and Mauboussin, HBR 2018 · The Economist
 Style Guide introduction · Hwang and Kim 2017 · Wikipedia, Signs of AI writing.
+
+## Addendum (August 11, 2026): the syntax layer
+
+A follow-up sweep on sentence-level AI tells, run after the desk flagged the
+"clause, comma, dangling analysis" pattern in a draft.
+
+The empirical anchor is the PNAS Biber-feature study (Reinhart et al., "Do
+LLMs write like humans? Variation in grammatical and rhetorical styles",
+PNAS 2025): across parallel human/LLM corpora, instruction-tuned models used
+present participial clauses at 2 to 5 times the human rate, nominalizations
+at 1.5 to 2 times, favored "that" clauses as subjects and phrasal
+coordination, and used the agentless passive at roughly half the human rate.
+The tells are grammatical, not lexical, and they survive model scaling.
+Corroboration: the Wikipedia "Signs of AI writing" catalogue (participial
+bolt-ons, negative parallelisms, rule-of-three filler, copula avoidance,
+synonym rotation) and community linters (vale-ai-tells) that codify the same
+patterns.
+
+The practical translation, now binding in STYLE.md ("Sentence shapes"): the
+bolt-on ban (no analysis as a trailing participial or appositive; the
+payload gets its own predicate), varied sentence openings (QA flags three
+consecutive sentences opening on the same word), verbs over nominalizations,
+rationed negative parallelism and rule-of-three, the passive restored where
+topic position demands it, and no that-clause subjects. Domain absolutes
+("$6.9 billion, up 80% YoY") stay: data shorthand rides, analysis drives.
+
+Sources: pnas.org/doi/10.1073/pnas.2422455122 · en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing ·
+github.com/tbhb/vale-ai-tells · cmu.edu/dietrich/news 2025 coverage of the PNAS study.

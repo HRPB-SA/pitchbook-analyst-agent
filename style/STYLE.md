@@ -91,6 +91,51 @@ no more than two consecutive over 30. Any sentence past 25 words gets re-read
 on review and split unless it carries a single chain. A paragraph makes one
 point and opens on its bottom line.
 
+## Sentence shapes (the anti-AI syntax rules)
+
+Machine prose has a measurable grammar. Instruction-tuned models use present
+participial clauses at 2 to 5 times the human rate and nominalizations at
+1.5 to 2 times; they open sentence after sentence with the grammatical
+subject; and they bolt analysis onto finished clauses instead of building
+sentences around it. These shapes are banned or rationed by name.
+
+1. **The bolt-on ban.** Never attach the analytic payload to a completed
+   clause as a trailing modifier. Both forms are banned:
+   - the participial bolt-on: "..., marking a shift", "..., highlighting the
+     importance", "..., signaling demand" (the single strongest statistical
+     tell; QA flags it);
+   - the trailing appositive: "Databricks signed a term sheet at $188
+     billion on July 17, 40% above its last completed mark." The delta
+     dangles. Give the payload its own predicate ("...and the new price
+     stands 40% above the mark it completed in February"), subordinate the
+     event ("With the term sheet signed on July 17, ..."), or split into
+     two sentences where the second does new work.
+   Domain absolutes survive: "revenue of $6.9 billion, up 80% YoY" is
+   analyst-standard shorthand, not a bolt-on. The test is whether the
+   trailing element carries the sentence's ANALYSIS; data shorthand rides,
+   analysis drives.
+2. **Vary the opening.** Never three consecutive sentences opening with the
+   same word (QA flags it), and each paragraph opens at least one sentence
+   with something other than its subject: a time phrase ("On July 17, ..."),
+   a subordinate clause ("Because no operating figure moved, ..."), a
+   prepositional frame ("Under the house rule, ..."), or a contrast
+   ("Where February's round raised $7.0 billion, this one seeks $3
+   billion.").
+3. **Verbs over nominalizations.** "Revenue accelerated" beats "the
+   acceleration of revenue". If a sentence stacks two -tion/-ment nouns,
+   rewrite it around a verb.
+4. **Ration the machine's favorite figures.** Negative parallelism ("it is
+   not X; it is Y"): one per report. Rule of three: vary list lengths so
+   enumeration follows the content, not the meter. Decorative noun pairs
+   ("growth and momentum") collapse to the stronger noun.
+5. **The passive is legal.** Models underuse the agentless passive; humans
+   use it whenever the paragraph's protagonist belongs in front ("The round
+   was announced before the money moved"). Use it when topic position
+   demands it.
+6. **No that-clause subjects.** "That the round grew is telling" reads as
+   machine syntax; write "The round grew, and the growth tells you
+   something."
+
 **Sentence surgery (SEC Plain English Handbook).** Surface hidden verbs
 ("made an application" becomes "applied"). Write in the positive ("not able"
 becomes "unable"). Kill the pairs: "in order to" becomes "to", "prior to"
