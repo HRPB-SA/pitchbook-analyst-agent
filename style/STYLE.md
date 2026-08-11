@@ -33,12 +33,65 @@ readers read to allocate capital and assess risk, not for pleasure.
    on sight: "It is important to note", "Furthermore", "Delve", "Robust",
    "Paradigm shift" (plus the house list below).
 
-## Voice
+## Voice: the Hemingway-analyst register
 
-Signal, not story. Direct, dense, analyst register. No hedging filler, no
-disclaimers that bury the finding. Certainty is stated plainly; uncertainty is
-labeled explicitly (`~`, `(est.)`, tier tags), never smuggled in with "may" and
-"could" (hedge budget: at or below the measured rate, currently ~4/1,000 words).
+Write like Hemingway working as a research analyst. Short declarative core.
+Subject, verb, object. One fact or one judgment per sentence, never two
+judgments joined by "and". Concrete subjects doing things: companies sign,
+margins fall, filings appear. The depth is the iceberg: state the fact and
+what it means, and leave the machinery below the waterline, in the exhibits,
+the tables, and the validation log. Trust the reader.
+
+**The flow rule (this is what "natural analytic flow" means).** Each sentence
+opens from what the reader just learned and closes on the new thing. The new
+thing at the end of one sentence becomes the familiar thing at the start of
+the next. That chain is the analysis; when it holds, no connective filler is
+needed and none is allowed. Two mechanics enforce it (Gopen and Swan): the
+stress position (sentence end) carries the new information you want to land,
+and the topic position (sentence front) carries the old information that
+links backward. Keep subject and verb adjacent; a long interruption between
+them breaks the reader's stride.
+
+**Cadence.** Vary it aggressively. A long sentence is legal when it carries a
+single evidence chain, and it earns a short declarative right after. Any
+sentence past 25 words gets re-read on review and usually split. A paragraph
+makes one point. Rhythm is asymmetric on purpose; a metronome reads as a
+machine.
+
+**Sentence surgery (SEC Plain English Handbook).** Surface hidden verbs
+("made an application" becomes "applied"). Write in the positive ("not able"
+becomes "unable"). Kill the pairs: "in order to" becomes "to", "prior to"
+becomes "before". Never "respectively". When a sentence will not clarify,
+make it a table.
+
+**Citations without drag.** One parenthetical per fact cluster, at the end of
+the clause it supports, short (kind, date). Never three citations in one
+sentence; consolidate or move detail to References. The citation must not
+occupy the stress position of a sentence whose point is the finding.
+
+No hedging filler, no disclaimers that bury the finding. Certainty is stated
+plainly; uncertainty is stated as content per the estimative rules below,
+never smuggled in with "may" and "could".
+
+## Estimative language (ICD 203 discipline; see WRITING_STYLES_RESEARCH.md)
+
+Forward-looking judgments use the desk lexicon, and key judgments carry a
+numerical range in parentheses: "a close by October 31 is very likely
+(80-95%)". The bands: almost no chance (1-5%) · very unlikely (5-20%) ·
+unlikely (20-45%) · roughly even chance (45-55%) · likely (55-80%) · very
+likely (80-95%) · almost certain (95-99%). Reports that make forward calls
+print the lexicon box (engine.compose.lexicon_blocks).
+
+Confidence is stated in its own sentence, never fused with likelihood, and
+the sentence says why: "Confidence: moderate; the size is press-sourced."
+Likelihood describes the event; confidence describes the evidence base.
+
+Kent's bans, absolute: "possible" is never modified (no "serious possibility",
+"distinct possibility", "might well"); hedges never stack (one odds-bearing
+word per sentence); "apparently", "seemingly", and bare "reportedly" carry no
+evaluative weight and are flagged by QA. A forecast without an event, a date,
+and a number cannot be scored, which is its defect; every named trigger
+carries all three.
 
 ## Structure
 
@@ -59,13 +112,21 @@ Metaphor + colon + literal claim, sustained as a system across the report:
 "The Mortar: How the Money Is Made" · "The Appraisal: What the Business Is
 Worth". One metaphor family per report; never mix families.
 
-## Sentence and paragraph geometry
+## Paragraph geometry
 
-Sentences average low-20s words with wide variance: short declaratives for
-verdicts, long clause-stacked sentences for evidence chains. Paragraphs are
-dense, single-topic, roughly 4 sentences / 120 words; no one-sentence
-paragraphs in body prose. Bullets are rare in body sections; tables carry
-enumerable facts instead.
+Paragraphs are single-topic, roughly three to five sentences, opening on
+their bottom line. A one-sentence paragraph is legal once or twice per report
+as a deliberate beat, never as a habit. Bullets are rare in body sections
+(Key takeaways excepted); tables carry enumerable facts instead.
+
+## Candor (standing devices)
+
+Every update carries a "what changed since our last note" line near the top.
+Every quarterly and annual review carries a what-we-got-wrong ledger. The
+review checklist asks the reversed-positions question: does this note give
+the reader the information we would demand if positions were reversed?
+The imagined reader has a name: the IC member for memos, the LP for letters,
+the intelligent non-specialist for media work.
 
 ## Figures and formatting
 

@@ -84,6 +84,17 @@ exit timelines, capital efficiency, or risk underwriting; (5) no
 throat-clearing ("It is important to note", "Furthermore", "Delve", "Robust",
 "Paradigm shift" banned).
 
+The voice is the Hemingway-analyst register (STYLE.md, binding): short
+declarative core, one fact or judgment per sentence, concrete subjects doing
+things, and the flow rule: each sentence opens from what the reader just
+learned and closes on the new thing, so the chain of sentences IS the
+analysis. Depth lives below the waterline, in the exhibits and the store.
+Forward-looking judgments follow the estimative discipline: lexicon bands
+with parenthetical odds ("a close by October 31 is very likely (80-95%)"),
+confidence stated in its own sentence with the reason, "possible" never
+modified, one odds-bearing word per sentence. Full research basis:
+`style/WRITING_STYLES_RESEARCH.md`.
+
 - Lead with the sharpest signal. First paragraph of the report, and of every
   section, carries the finding. No preamble, no methodology throat-clearing.
 - Sentences average low-20s words with variance: short for verdicts, long
@@ -123,7 +134,13 @@ hand-edit the output files.
 Before shipping, write `reports/<id>/validation_log.md`: one ledger line per
 load-bearing claim (value, sources, tier, cross-check, confidence), frozen
 conflicts, the embargo check, any QA warnings with their override rationale,
-and the Report Ship gate checklist, every box asserted true:
+every parenthetical probability logged with its date and resolution criterion
+(for quarterly calibration scoring), and the Report Ship gate checklist,
+every box asserted true:
+
+- The call passes ENTER: Expectational, Novel (the market does not already
+  have it), Thorough, Examinable (a colleague could replicate the conclusion
+  from the note), Revealing (says where it could be wrong)
 
 - Validation ledger complete
 - Adversarial pass done (the strongest counter-argument addressed in the

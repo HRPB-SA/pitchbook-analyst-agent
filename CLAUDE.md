@@ -107,17 +107,34 @@ named fallback and FLAG the gap in the validation log; never silently skip.
 
 ## Style
 
-Follow style/STYLE.md (prescriptive; embeds the binding five-rule pre-flight
-checklist from style/Institutional_Research_Style_Guide.pdf) +
-style/STYLE_PROFILE.md (measured from the shipped library). Punchline first:
-every opening sentence and every takeaway lead IS the finding with its metric,
-never a rhetorical hook. Delete emphasis adjectives, insert the metric.
-Three-beat every analytical passage (what happened -> what it means ->
-implication) and tie every metric to multiples, exit timelines, capital
-efficiency, or risk. Metaphor + colon + literal section titles in house-theme
-reports, one metaphor family per report; analyst-note sections title as plain
-claims. Verdict takes a position and names the falsifier. After every shipped
-report, re-run
+Follow style/STYLE.md (prescriptive; embeds the five-rule pre-flight checklist
+from style/Institutional_Research_Style_Guide.pdf and the adopted findings of
+style/WRITING_STYLES_RESEARCH.md) + style/STYLE_PROFILE.md (measured).
+
+VOICE: the Hemingway-analyst register. Short declarative core; subject, verb,
+object; one fact or judgment per sentence; concrete subjects doing things.
+The flow rule: each sentence opens from what the reader just learned and
+closes on the new thing (stress position); the chain of sentences IS the
+analysis, so connective filler is neither needed nor allowed. Long sentences
+carry one evidence chain and earn a short declarative after. 25-word review
+trigger. Depth goes below the waterline: exhibits, tables, the store.
+
+ESTIMATIVE DISCIPLINE (ICD 203): key forward judgments carry lexicon words
+with parenthetical ranges ("very likely (80-95%)"); confidence is a separate
+sentence stating why; "possible" is never modified; one odds-bearing word per
+sentence; reports making forward calls include the lexicon box
+(engine.compose.lexicon_blocks). Log every parenthetical probability in the
+validation log with date + resolution criterion.
+
+Punchline first: every opening sentence and every takeaway lead IS the
+finding with its metric, never a rhetorical hook. Delete emphasis adjectives,
+insert the metric. Three-beat every analytical passage and tie every metric
+to multiples, exit timelines, capital efficiency, or risk. Updates carry a
+"what changed since our last note" line near the top. Verdict takes a
+position and names the falsifier with dated kill criteria. The call passes
+ENTER before ship (Expectational, Novel, Thorough, Examinable, Revealing);
+a call failing Novel becomes a monitoring line, not a report. After every
+shipped report, re-run
 `python3 -m engine style` so the corpus keeps teaching the profiler, and drop
 any externally produced reports into previous_reports/.
 

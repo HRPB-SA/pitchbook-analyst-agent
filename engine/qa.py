@@ -52,6 +52,39 @@ NOISE_ADJECTIVES = [
     "impressive", "staggering", "explosive",
 ]
 
+# Kent's weasels: words that carry no evaluative weight (WRITING_STYLES_RESEARCH.md).
+WEASELS = ["apparently", "seemingly", "supposedly", "arguably"]
+
+# Boosters flag the least-supported claim (Hyland via Pinker).
+BOOSTERS = ["clearly", "obviously", "undoubtedly", "of course", "needless to say"]
+
+# Vague attributions: name the source kind and date instead.
+VAGUE_ATTRIBUTIONS = [
+    "observers note", "observers have", "some argue", "some say",
+    "critics say", "many believe", "industry reports suggest",
+    "it is widely", "widely seen as", "experts say", "sources say",
+]
+
+# AI-tell vocabulary (Signs of AI writing); each violates an older rule.
+AI_TELLS = [
+    "pivotal", "underscore", "underscores", "underscoring", "tapestry",
+    "intricate", "serves as a", "stands as a", "boasts", "marking a shift",
+    "highlighting the importance", "testament to", "poised to",
+    "rapidly evolving", "ever-evolving", "landscape of",
+]
+
+# One odds-bearing word per sentence (Kent: hedges must not stack).
+_ESTIMATIVE = re.compile(
+    r"\b(?:likely|unlikely|probable|probably|possible|possibly|"
+    r"almost certain(?:ly)?|roughly even|might|could well|perhaps)\b")
+_MODIFIED_POSSIBLE = re.compile(
+    r"\b(?:serious|distinct|real|strong|significant|very real|clear)\s+possibilit",
+    re.IGNORECASE)
+_BAD_RANGE = re.compile(
+    r"\$\d[\d,.]*\s+(?:to|and)\s+\$?\d[\d,.]*\s*(?:million|billion|trillion)\b")
+_TIMES_GREATER = re.compile(r"\b\d+(?:\.\d+)?\s*times\s+(?:greater|higher|larger)\b")
+_SENT_SPLIT = re.compile(r"(?<=[.!?])\s+")
+
 OUTLET_NAMES = [
     "CNBC", "Bloomberg", "Reuters", "The Information", "TechCrunch", "Axios",
     "Business Insider", "Forbes", "Fortune", "WSJ", "Wall Street Journal",
@@ -93,6 +126,37 @@ def check_text(text, where="", prose=True):
             if re.search(rf"\b{adj}\b", low):
                 add("WARN", "adjective-noise",
                     f"{adj!r}: delete the adjective, insert the metric (style guide rule 2)")
+        for w in WEASELS:
+            if re.search(rf"\b{w}\b", low):
+                add("WARN", "weasel", f"{w!r} carries no evaluative weight (Kent)")
+        for b in BOOSTERS:
+            if re.search(rf"\b{re.escape(b)}\b", low):
+                add("WARN", "booster", f"{b!r} flags the least-supported claim; show the evidence instead")
+        for v in VAGUE_ATTRIBUTIONS:
+            if v in low:
+                add("WARN", "vague-attribution", f"{v!r}: name the source kind and date")
+        for t in AI_TELLS:
+            if re.search(rf"\b{re.escape(t)}", low):
+                add("WARN", "ai-tell", f"{t!r}: state the fact plainly instead")
+        m = _MODIFIED_POSSIBLE.search(text)
+        if m:
+            add("WARN", "modified-possible",
+                f"{m.group(0)!r}: 'possible' is never modified (Kent); use a lexicon band with odds")
+        m = _BAD_RANGE.search(text)
+        if m:
+            add("WARN", "range-units",
+                f"{m.group(0)!r}: repeat units in ranges ('$10 million to $20 million')")
+        m = _TIMES_GREATER.search(text)
+        if m:
+            add("WARN", "times-greater",
+                f"{m.group(0)!r}: check the arithmetic ('to five times' is 4x; 'five times greater' is 5x)")
+        for sent in _SENT_SPLIT.split(text):
+            hits = _ESTIMATIVE.findall(sent.lower())
+            if len(hits) >= 2:
+                add("WARN", "hedge-stack",
+                    f"{len(hits)} estimative words in one sentence ({', '.join(hits)}): "
+                    "one odds-bearing word per sentence (Kent)")
+                break
         for outlet in OUTLET_NAMES:
             if re.search(rf"\b{re.escape(outlet)}\b", text):
                 add("WARN", "outlet-name",

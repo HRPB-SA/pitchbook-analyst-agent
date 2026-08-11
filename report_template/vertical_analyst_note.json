@@ -26,9 +26,10 @@
       "title_hint": "Key takeaways",
       "heading_level": "h2",
       "required": [
-        "3-5 lead_bullets: each opens with a BOLD lead that IS the takeaway: the metric plus what it means for valuation, exit, capital efficiency, or risk (Apex Principle)",
-        "NO rhetorical hooks or aphorisms as leads ('...and the money is not in hand' fails; the number and its consequence pass)",
+        "3-5 lead_bullets in the Hemingway-analyst register: the BOLD lead is a short declarative takeaway carrying its metric; support sentences chain naturally behind it",
+        "NO rhetorical hooks or aphorisms as leads; the number and its consequence, plainly",
         "the first bullet is the single sharpest signal",
+        "forward-looking bullets carry lexicon words with parenthetical odds; confidence stated separately where it matters",
         "no bullet without a number; every figure carries its date"
       ],
       "auto": null,
@@ -46,6 +47,17 @@
       ],
       "auto": null,
       "charts": ["house factory; count declared on the meta sheet must match"]
+    },
+    {
+      "id": "estimative_language",
+      "title_hint": "Estimative language",
+      "heading_level": "h2",
+      "required": [
+        "REQUIRED when the note makes forward-looking judgments: the lexicon box via engine.compose.lexicon_blocks(), placed after the last analytical section",
+        "every parenthetical probability logged in the validation log with date and resolution criterion"
+      ],
+      "auto": "lexicon_blocks (compose helper)",
+      "charts": []
     },
     {
       "id": "references",

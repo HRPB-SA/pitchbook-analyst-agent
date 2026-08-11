@@ -27,8 +27,10 @@
       "id": "exec_summary",
       "title_hint": "Executive Summary: {The House That X Built}",
       "required": [
+        "OPEN with Key Judgments: three to six numbered judgments, each carrying its parenthetical odds and a one-line evidence basis",
         "the whole thesis in two pages",
         "the one paradox or tension the report resolves",
+        "a base-rate paragraph BEFORE the company story: where the forecast sits in the reference-class distribution",
         "quality-adjusted price expression (per-point ladder; correlation stays embargoed)"
       ],
       "auto": null,
@@ -91,9 +93,10 @@
       "id": "valuation",
       "title_hint": "The Appraisal: What the Business Is Worth",
       "required": [
+        "a 'what's priced in' passage FIRST: reverse the valuation and state the embedded expectations before arguing with them",
         "valuation ladder of completed marks only; rumored rounds analyzed, never adopted",
         "comparables with growth adjustment",
-        "scenario band with the arithmetic shown"
+        "scenario band with the arithmetic shown; chained-scenario probabilities multiplied, never narrated (four 70% events = 24%)"
       ],
       "auto": null,
       "charts": ["series_bars valuation ladder", "football_field", "heatmap sensitivity"]
@@ -101,7 +104,11 @@
     {
       "id": "stress",
       "title_hint": "The Stress Test: What Would Change the Answer",
-      "required": ["the bear case argued honestly at full strength", "named, dated falsifiers per pillar"],
+      "required": [
+        "the bear case argued honestly at full strength",
+        "the falsifier box: linchpin assumptions, what breaks if each fails, the indicators that would move the estimate",
+        "Tetlock kill criteria: what observation, by what date, counts as wrong"
+      ],
       "auto": null,
       "charts": []
     },

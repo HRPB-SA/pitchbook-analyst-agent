@@ -124,7 +124,8 @@ def profile_docx(paths):
             "median_words": stats.median(all_sent_lens),
             "p25_words": sorted(all_sent_lens)[len(all_sent_lens) // 4],
             "p75_words": sorted(all_sent_lens)[3 * len(all_sent_lens) // 4],
-            "note": "long, clause-stacked sentences are the house signature",
+            "note": "target the Hemingway-analyst register: short declarative core, "
+                    "wide variance, 25-word review trigger; see STYLE.md",
         },
         "paragraphs": {
             "mean_sentences": round(stats.mean(para_sent_counts), 1),

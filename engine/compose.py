@@ -177,6 +177,34 @@ def _label(key):
     return key.replace("_bn", " ($B)").replace("_pct", " (%)").replace("_", " ").strip().capitalize()
 
 
+def lexicon_blocks():
+    """The estimative-language methodology box (ICD 203 bands + the house
+    rules). Include in any report that makes forward-looking judgments."""
+    return [
+        ["h2", "Estimative language"],
+        ["p", "Forward-looking judgments in this note use the desk lexicon below. "
+              "Numbers in parentheses give the assessed probability range. "
+              "Confidence is stated separately and describes the evidence base, "
+              "not the event. 'Possible' is never modified; one odds-bearing "
+              "word per sentence."],
+        ["table", {
+            "title": "Probability bands",
+            "header": ["Term", "Range"],
+            "rows": [
+                ["Almost no chance / remote", "1-5%"],
+                ["Very unlikely / highly improbable", "5-20%"],
+                ["Unlikely / improbable", "20-45%"],
+                ["Roughly even chance", "45-55%"],
+                ["Likely / probable", "55-80%"],
+                ["Very likely / highly probable", "80-95%"],
+                ["Almost certain / nearly certain", "95-99%"],
+            ],
+            "align": "LR",
+            "source": "Desk adoption of the ICD 203 estimative standard; judgments are logged with dates and resolution criteria for calibration.",
+        }],
+    ]
+
+
 def export_profile_md(slug):
     """Write companies/<slug>/PROFILE.md: the canonical record as a readable,
     categorized fact sheet (value + source + date + tier on every line)."""
