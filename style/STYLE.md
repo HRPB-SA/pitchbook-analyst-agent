@@ -6,6 +6,33 @@ the prescriptive layer: what the writing must do. When the two disagree, this
 file wins; refresh the measured profile after every shipped report so the
 corpus keeps teaching the system.
 
+## The pre-flight checklist (Institutional_Research_Style_Guide.pdf, binding)
+
+Run every draft against these five before anything ships. Institutional
+readers read to allocate capital and assess risk, not for pleasure.
+
+1. **The Apex Principle (punchline first).** The opening sentence of the
+   report, of every section, and of every takeaway bullet IS the single most
+   important finding: what the market is misprices or what the data proves,
+   with the metric in it. Never a rhetorical hook, never a scene-setter.
+   A punchy aphorism without its number is a hook, not a takeaway
+   ("...and the money is not in hand" fails; "27.2x the June run-rate,
+   unsettled" passes).
+2. **High signal-to-noise (eradicate adjectives).** Adjectives project
+   uncertainty; the metric carries the emphasis. "Massive", "significant",
+   "drastic" and kin get deleted and replaced with the number
+   (QA flags them). AVOID: "Compute costs are seeing massive growth."
+   DO: "Compute CapEx now consumes 65 cents of every top-line dollar."
+3. **Rhythmic asymmetry.** Vary cadence aggressively: follow a complex,
+   multi-clause valuation chain with a short declarative. No metronome.
+4. **The "So what?" imperative.** Reporting states what happened; analysis
+   states what it means. Every metric ties directly to valuation multiples,
+   exit timelines, capital efficiency, or risk underwriting. A data point
+   left hanging is unfinished work.
+5. **No throat-clearing.** Never introduce what you are about to say. Banned
+   on sight: "It is important to note", "Furthermore", "Delve", "Robust",
+   "Paradigm shift" (plus the house list below).
+
 ## Voice
 
 Signal, not story. Direct, dense, analyst register. No hedging filler, no
@@ -55,13 +82,19 @@ enumerable facts instead.
 - Disputed figures ship as both values with both dates, or not at all
   (freeze-on-conflict).
 
-## Banned
+## Punctuation and banned language
 
-Em-dashes (U+2014) anywhere; the build fails on them. "it's worth noting" ·
-"importantly" · "leverage" as a verb · "synergy" · "going forward" · "unlock" ·
-"dive into" · "delve" · "in conclusion" · "at the end of the day" ·
-"game-changer" · "cutting-edge". Rhetorical questions as transitions. Author
-self-reference in report prose ("I think", "we believe" is acceptable as house
+Em-dashes sparingly: at most 2 in any block (WARN past that) and 8 in a
+document (build FAILS past that). Used for a genuine interruption or
+apposition, never as a comma substitute or a rhythm tic.
+
+Banned: "it's worth noting" · "it is important to note" · "importantly" ·
+"furthermore" · "leverage" as a verb · "synergy" · "going forward" ·
+"unlock" · "dive into" · "delve" · "in conclusion" · "at the end of the day" ·
+"game-changer" · "cutting-edge" · "paradigm shift" · "robust". Emphasis
+adjectives ("massive", "significant", "drastic", ...) are flagged: delete the
+adjective, insert the metric. Rhetorical questions as transitions. Author
+self-reference in report prose ("I think"; "we believe" is acceptable as house
 voice sparingly in verdict sections only).
 
 ## Evidence density

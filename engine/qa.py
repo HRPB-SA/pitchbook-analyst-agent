@@ -1,25 +1,30 @@
 """QA gates. Encodes the standing constraints so no report ships without them.
 
 Severities:
-  FAIL  blocks the build (exit nonzero): em-dashes, embargoed expressions,
-        placeholders, empty required fields.
+  FAIL  blocks the build (exit nonzero): em-dash budget breach, embargoed
+        expressions, placeholders.
   WARN  surfaced in the QA report and the validation log; ship only with a
-        deliberate override noted in the log: banned phrases, outlet names in
-        report prose, figure-dense paragraphs with no visible source cue.
+        deliberate override noted in the log: banned phrases, adjective noise,
+        outlet names in report prose, figure-dense paragraphs with no visible
+        source cue.
 
-House basis:
-  - Zero em-dashes (U+2014) anywhere in a shipped artifact.
-  - The quality-valuation correlation coefficient is EMBARGOED: no r=-0.99,
-    no score-vs-valuation scatter or fitted line. Per-point spread only.
+House basis (README.md + style/Institutional_Research_Style_Guide.pdf):
+  - Em-dashes (U+2014) SPARINGLY: more than 2 in one block is a WARN; more
+    than EM_DASH_BUDGET in a document FAILs the build.
+  - The quality-valuation coefficient is EMBARGOED: no r=-0.99, no
+    score-vs-valuation scatter or fitted line. Per-point spread only.
   - Report prose names sources by kind (company disclosure, PitchBook,
     SEC EDGAR, press reports), not by outlet name; outlets belong in the
-    validation log, not the artifact.
-  - Banned filler per house style.
+    References section and the validation log.
+  - Throat-clearing and filler banned per the style guide; emphasis
+    adjectives flagged: delete the adjective, insert the metric.
 """
 from __future__ import annotations
 import re
 
 EM_DASH = "—"
+EM_DASH_BUDGET = 8          # per document; "sparingly", not "never"
+EM_DASH_BLOCK_LIMIT = 2     # per block; more reads as a tic
 
 EMBARGO_PATTERNS = [
     r"r\s*=\s*[-−]\s*0?\.99",
@@ -33,9 +38,18 @@ PLACEHOLDER_PATTERNS = [
 ]
 
 BANNED_PHRASES = [
-    "it's worth noting", "it is worth noting", "importantly,", "synergy",
-    "going forward", "unlock", "dive into", "delve", "in conclusion",
-    "at the end of the day", "game-changer", "cutting-edge",
+    "it's worth noting", "it is worth noting", "it is important to note",
+    "importantly,", "furthermore", "synergy", "going forward", "unlock",
+    "dive into", "delve", "in conclusion", "at the end of the day",
+    "game-changer", "cutting-edge", "paradigm shift", "robust",
+]
+
+# Style guide rule 2: adjectives project uncertainty; the metric carries the
+# emphasis. Flagged so the writer swaps the adjective for the number.
+NOISE_ADJECTIVES = [
+    "massive", "significant", "significantly", "drastic", "drastically",
+    "huge", "enormous", "tremendous", "incredible", "remarkable",
+    "impressive", "staggering", "explosive",
 ]
 
 OUTLET_NAMES = [
@@ -58,9 +72,10 @@ def check_text(text, where="", prose=True):
         issues.append({"severity": sev, "rule": rule, "where": where,
                        "detail": detail[:220]})
 
-    if EM_DASH in text:
-        i = text.index(EM_DASH)
-        add("FAIL", "em-dash", f"U+2014 at offset {i}: ...{text[max(0, i-40):i+40]}...")
+    n_em = text.count(EM_DASH)
+    if n_em > EM_DASH_BLOCK_LIMIT:
+        add("WARN", "em-dash-density",
+            f"{n_em} em-dashes in one block (limit {EM_DASH_BLOCK_LIMIT}); sparing use only")
     for pat in EMBARGO_PATTERNS:
         m = re.search(pat, text, re.IGNORECASE)
         if m:
@@ -71,9 +86,13 @@ def check_text(text, where="", prose=True):
             add("FAIL", "placeholder", f"{m.group(0)!r}")
     low = text.lower()
     for ph in BANNED_PHRASES:
-        if ph in low:
+        if re.search(rf"\b{re.escape(ph)}", low):
             add("WARN", "banned-phrase", repr(ph))
     if prose:
+        for adj in NOISE_ADJECTIVES:
+            if re.search(rf"\b{adj}\b", low):
+                add("WARN", "adjective-noise",
+                    f"{adj!r}: delete the adjective, insert the metric (style guide rule 2)")
         for outlet in OUTLET_NAMES:
             if re.search(rf"\b{re.escape(outlet)}\b", text):
                 add("WARN", "outlet-name",
@@ -127,9 +146,13 @@ def check_docx(path):
             if part is not None:
                 texts += [p.text for p in part.paragraphs]
     blob = "\n".join(texts)
-    if EM_DASH in blob:
-        issues.append({"severity": "FAIL", "rule": "em-dash", "where": path,
-                       "detail": "U+2014 present in rendered document"})
+    n_em = blob.count(EM_DASH)
+    if n_em > EM_DASH_BUDGET:
+        issues.append({"severity": "FAIL", "rule": "em-dash-budget", "where": path,
+                       "detail": f"{n_em} em-dashes in document (budget {EM_DASH_BUDGET}); sparing use only"})
+    elif n_em:
+        issues.append({"severity": "WARN", "rule": "em-dash-count", "where": path,
+                       "detail": f"{n_em} em-dash(es) in document (budget {EM_DASH_BUDGET})"})
     for pat in EMBARGO_PATTERNS:
         m = re.search(pat, blob, re.IGNORECASE)
         if m:

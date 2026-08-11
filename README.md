@@ -75,6 +75,15 @@ reprice). A finding without an implication is unfinished work.
 
 ## 3. Writing rules (voice and format)
 
+The binding pre-flight checklist is `style/Institutional_Research_Style_Guide.pdf`,
+prescribed in full in `style/STYLE.md`: (1) punchline first: every opening
+sentence IS the takeaway with its metric, never a rhetorical hook; (2) delete
+emphasis adjectives, insert the metric; (3) vary cadence: long evidence chains
+broken by short declaratives; (4) every metric ties to valuation multiples,
+exit timelines, capital efficiency, or risk underwriting; (5) no
+throat-clearing ("It is important to note", "Furthermore", "Delve", "Robust",
+"Paradigm shift" banned).
+
 - Lead with the sharpest signal. First paragraph of the report, and of every
   section, carries the finding. No preamble, no methodology throat-clearing.
 - Sentences average low-20s words with variance: short for verdicts, long
@@ -92,9 +101,8 @@ reprice). A finding without an implication is unfinished work.
   (SEC EDGAR, July 10, 2026), (derived). Outlet names never appear in report
   prose; they live in the validation log.
 - Disputed values ship as both figures with both dates, or not at all.
-- Zero em-dashes. Banned: "it's worth noting", "importantly", "leverage" as a
-  verb, "synergy", "going forward", "unlock", "dive into", "delve",
-  "in conclusion", "at the end of the day".
+- Em-dashes sparingly: at most 2 per block and 8 per document (the build
+  fails past the budget). Full banned-language list in style/STYLE.md.
 
 ## 4. Charts
 

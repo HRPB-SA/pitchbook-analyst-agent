@@ -99,18 +99,25 @@ named fallback and FLAG the gap in the validation log; never silently skip.
 5. EMBARGO: the quality-valuation coefficient (r=-0.99) appears nowhere; no
    score-vs-valuation scatter or fitted line (chart factory refuses); the
    per-point ladder is the only cleared expression.
-6. Zero em-dashes (U+2014) in any shipped artifact; QA fails the build.
+6. Em-dashes SPARINGLY: more than 2 per block warns, more than 8 per document
+   fails the build. Never as a comma substitute or rhythm tic.
 7. Report prose names sources by KIND + date (company disclosure, PitchBook
    deal record, SEC EDGAR, press reports); outlet names live only in the
    validation log.
 
 ## Style
 
-Follow style/STYLE.md (prescriptive) + style/STYLE_PROFILE.md (measured from
-the shipped library). Lead with the sharpest signal; three-beat every
-analytical passage (what happened -> what it means -> implication); metaphor +
-colon + literal section titles, one metaphor family per report; verdict takes
-a position and names the falsifier. After every shipped report, re-run
+Follow style/STYLE.md (prescriptive; embeds the binding five-rule pre-flight
+checklist from style/Institutional_Research_Style_Guide.pdf) +
+style/STYLE_PROFILE.md (measured from the shipped library). Punchline first:
+every opening sentence and every takeaway lead IS the finding with its metric,
+never a rhetorical hook. Delete emphasis adjectives, insert the metric.
+Three-beat every analytical passage (what happened -> what it means ->
+implication) and tie every metric to multiples, exit timelines, capital
+efficiency, or risk. Metaphor + colon + literal section titles in house-theme
+reports, one metaphor family per report; analyst-note sections title as plain
+claims. Verdict takes a position and names the falsifier. After every shipped
+report, re-run
 `python3 -m engine style` so the corpus keeps teaching the profiler, and drop
 any externally produced reports into previous_reports/.
 
