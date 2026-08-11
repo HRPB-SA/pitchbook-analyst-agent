@@ -175,16 +175,6 @@ specialty formats in the "house" theme. `required` entries are the editorial
 contract; check each before ship. Custom section lists from a request are
 legitimate; the engine renders whatever blocks exist.
 
-## Layer H Pipeline (Notion mirror)
-
-"Layer H Pipeline/" is a read-only GitHub mirror of the Layer H Ventures
-deal-flow database in Notion (104 early-stage companies with diligence
-state, founders, and access paths); see its README for provenance and the
-refresh recipe. It is separate from companies/ (the report engine's
-coverage universe). Notion is the system of record: never edit the mirror
-by hand, and never resolve its flagged conflicts silently; re-extract and
-commit as "pipeline: <date> Layer H mirror refresh".
-
 ## Tracker refresh (scheduled or on demand)
 
 For each company in companies/universe.json (or the requested subset):
