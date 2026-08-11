@@ -35,6 +35,10 @@ gated, styled, validated docx/pdf comes out.
 A report is DONE only when the Report Ship gate in its validation log is all
 true. Any false box = not done (fix and re-assert). Never leave TODOs.
 
+Fresh container? Run `bash scripts/setup.sh` before stage 6 (installs
+python-docx/matplotlib/openpyxl + libreoffice-writer + poppler-utils; without
+the latter two the build ships docx-only and that gap must be flagged).
+
 ## Research protocol
 
 Sources, in tier order:
