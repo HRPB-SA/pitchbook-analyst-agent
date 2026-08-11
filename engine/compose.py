@@ -5,6 +5,8 @@ Blocks grammar (JSON): a list of arrays, first element the kind:
     ["h2", "Subhead"]            ["h3", "Minor head"]
     ["p", "Paragraph text."]
     ["bullets", ["item", ...]]
+    ["lead_bullets", [["Bold lead sentence.", "supporting text"], ...]]
+        (analyst-note Key takeaways convention: bold thesis, then support)
     ["table", {"title": ..., "header": [...], "rows": [[...], ...],
                "align": "LRL...", "source": "...", "widths": [...](opt)}]
     ["fig", "chart_file.png", "Figure N. Caption with source and date."]
@@ -17,7 +19,8 @@ from __future__ import annotations
 import json, os
 from . import schema, store
 
-KINDS = {"h1": 2, "h2": 2, "h3": 2, "p": 2, "bullets": 2, "table": 2, "fig": 3}
+KINDS = {"h1": 2, "h2": 2, "h3": 2, "p": 2, "bullets": 2, "lead_bullets": 2,
+         "table": 2, "fig": 3}
 
 
 def validate_blocks(blocks, where=""):
@@ -35,6 +38,10 @@ def validate_blocks(blocks, where=""):
             continue
         if kind == "bullets" and not (isinstance(b[1], list) and all(isinstance(x, str) for x in b[1])):
             errs.append(f"{loc}: bullets payload must be list[str]")
+        if kind == "lead_bullets" and not (isinstance(b[1], list) and all(
+                isinstance(x, list) and len(x) == 2 and all(isinstance(s, str) for s in x)
+                for x in b[1])):
+            errs.append(f"{loc}: lead_bullets payload must be list of [lead, rest] string pairs")
         if kind == "table":
             spec = b[1]
             if not isinstance(spec, dict) or "header" not in spec or "rows" not in spec:

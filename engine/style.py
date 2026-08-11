@@ -31,6 +31,24 @@ _HEDGE = re.compile(r"\b(?:may|might|could|possibly|perhaps|arguably|"
                     r"somewhat|potentially)\b", re.IGNORECASE)
 
 
+def _pdf_paras(path):
+    """Body paragraphs from a published PDF report via pdftotext. Headings,
+    tables, and figure furniture cannot be reliably separated, so PDFs feed
+    sentence/paragraph geometry and evidence density only."""
+    import subprocess, shutil
+    if not shutil.which("pdftotext"):
+        return []
+    out = subprocess.run(["pdftotext", "-layout", path, "-"],
+                         capture_output=True, text=True).stdout
+    paras = []
+    for chunk in re.split(r"\n\s*\n", out):
+        t = re.sub(r"\s+", " ", chunk).strip()
+        # prose filter: long enough, sentence-like, not a table/legend row
+        if len(t) > 120 and ". " in t and t.count("$") < 12:
+            paras.append(t)
+    return paras
+
+
 def _doc_text(path):
     import docx as _docx
     d = _docx.Document(path)
@@ -61,7 +79,13 @@ def profile_docx(paths):
     tables = figs = docs = 0
     for path in paths:
         try:
-            paras, headings, n_tables, n_figs = _doc_text(path)
+            if path.lower().endswith(".pdf"):
+                paras, headings = _pdf_paras(path), {"h1": [], "h2": [], "h3": []}
+                n_tables = n_figs = 0
+                if not paras:
+                    continue
+            else:
+                paras, headings, n_tables, n_figs = _doc_text(path)
         except Exception:
             continue
         docs += 1
@@ -162,8 +186,10 @@ Mean {p['mean_sentences']} sentences / ~{int(p['mean_words'])} words per paragra
 
 
 def run(extra_dirs=()):
-    paths = glob.glob(os.path.join(REPO, "previous_reports", "**", "*.docx"),
-                      recursive=True)
+    paths = []
+    for ext in ("*.docx", "*.pdf"):
+        paths += glob.glob(os.path.join(REPO, "previous_reports", "**", ext),
+                           recursive=True)
     paths += glob.glob(os.path.join(REPO, "reports", "*", "output", "*.docx"))
     for d in extra_dirs:
         paths += glob.glob(os.path.join(REPO, d, "*.docx"))

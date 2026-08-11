@@ -208,7 +208,22 @@ class ReportBuilder:
             p.paragraph_format.space_after = Pt(4)
             p.paragraph_format.left_indent = Inches(0.28)
             r = p.add_run(it)
-            r.font.size = Pt(10.5); r.font.color.rgb = INK
+            r.font.size = Pt(self.T["body_size"]); r.font.color.rgb = self.T["body_color"]
+
+    def lead_bullets(self, items):
+        """Key-takeaways convention from the published analyst notes:
+        each bullet opens with a bold thesis sentence, support follows."""
+        for lead, rest in items:
+            p = self.doc.add_paragraph(style="List Bullet")
+            p.paragraph_format.space_after = Pt(6)
+            p.paragraph_format.left_indent = Inches(0.28)
+            r1 = p.add_run(lead + (" " if rest else ""))
+            r1.font.size = Pt(self.T["body_size"]); r1.font.bold = True
+            r1.font.color.rgb = self.T["body_color"]
+            if rest:
+                r2 = p.add_run(rest)
+                r2.font.size = Pt(self.T["body_size"])
+                r2.font.color.rgb = self.T["body_color"]
 
     @staticmethod
     def _col_widths(header, rows):
@@ -280,6 +295,8 @@ class ReportBuilder:
                 self.para(b[1])
             elif kind == "bullets":
                 self.bullets(b[1])
+            elif kind == "lead_bullets":
+                self.lead_bullets(b[1])
             elif kind == "table":
                 self.table_block(b[1])
             elif kind == "fig":

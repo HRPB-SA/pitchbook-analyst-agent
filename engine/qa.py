@@ -96,6 +96,9 @@ def check_blocks(blocks, where=""):
         elif kind == "bullets":
             for j, item in enumerate(b[1]):
                 issues += check_text(item, f"{loc}[{j}]")
+        elif kind == "lead_bullets":
+            for j, (lead, rest) in enumerate(b[1]):
+                issues += check_text(lead + " " + rest, f"{loc}[{j}]")
         elif kind == "table":
             spec = b[1]
             cells = [spec.get("title", "")] + list(map(str, spec.get("header", [])))

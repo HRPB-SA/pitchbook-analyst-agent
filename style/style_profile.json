@@ -1,19 +1,19 @@
 {
   "corpus": {
-    "documents": 3,
-    "words": 18186,
-    "paragraphs": 221
+    "documents": 9,
+    "words": 57141,
+    "paragraphs": 573
   },
   "sentences": {
-    "mean_words": 22.8,
-    "median_words": 21.0,
-    "p25_words": 11,
-    "p75_words": 32,
+    "mean_words": 24.9,
+    "median_words": 23,
+    "p25_words": 12,
+    "p75_words": 34,
     "note": "long, clause-stacked sentences are the house signature"
   },
   "paragraphs": {
-    "mean_sentences": 3.6,
-    "mean_words": 82.0,
+    "mean_sentences": 4.0,
+    "mean_words": 100.0,
     "note": "dense single-topic paragraphs; no one-sentence fragments"
   },
   "sections": {
@@ -39,87 +39,87 @@
       "Products and Services Deep Dive",
       "AI Focus: Where the Models End and the Business Begins"
     ],
-    "h2_per_h1": 1.0,
+    "h2_per_h1": 1.2,
     "titling_pattern": "metaphor + colon + literal claim (e.g. 'The Mortar: How the Money Is Made')"
   },
   "density_per_1000_words": {
-    "tables": 2.86,
-    "figures": 1.54,
-    "parenthetical_citations": 9.02,
-    "money_figures": 13.69,
-    "multiples_x": 2.8,
-    "percentages": 8.36
+    "tables": 0.91,
+    "figures": 0.49,
+    "parenthetical_citations": 6.39,
+    "money_figures": 12.23,
+    "multiples_x": 2.36,
+    "percentages": 11.03
   },
   "conventions": {
     "compact_money_vs_spelled": {
-      "compact_$14.2B": 26,
-      "spelled_billion": 214,
+      "compact_$14.2B": 103,
+      "spelled_billion": 510,
       "rule": "prose may spell 'billion'; tables/tiles use $14.2B"
     },
-    "hedges_per_1000_words": 0.77,
+    "hedges_per_1000_words": 0.95,
     "em_dashes": 0,
     "citation_style": "parenthetical, source kind + date: (company, February 9, 2026), (PitchBook deal record, Jul 2026)"
   },
   "frequent_sentence_openers": [
     [
       "The",
-      195
+      479
     ],
     [
       "Databricks",
-      34
+      67
     ],
     [
       "Figure",
-      30
-    ],
-    [
-      "What",
-      23
-    ],
-    [
-      "This",
-      15
-    ],
-    [
-      "That",
-      14
-    ],
-    [
-      "First",
-      13
-    ],
-    [
-      "Second",
-      13
-    ],
-    [
-      "At",
-      12
+      56
     ],
     [
       "A",
-      11
+      55
     ],
     [
-      "Forward",
-      11
+      "What",
+      53
     ],
     [
-      "Growth",
-      10
+      "This",
+      47
     ],
     [
-      "Two",
-      10
+      "That",
+      41
     ],
     [
-      "Sources",
-      10
+      "Quality",
+      34
     ],
     [
-      "Analysis",
-      9
+      "COI",
+      34
+    ],
+    [
+      "At",
+      30
+    ],
+    [
+      "First",
+      28
+    ],
+    [
+      "Second",
+      26
+    ],
+    [
+      "We",
+      25
+    ],
+    [
+      "Revenue",
+      24
+    ],
+    [
+      "It",
+      21
     ]
   ]
 }
