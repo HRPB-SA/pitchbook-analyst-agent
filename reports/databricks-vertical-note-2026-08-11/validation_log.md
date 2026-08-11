@@ -42,11 +42,21 @@ press-sourced (single ultimate source) and undisclosed by the company.
   guard active.
 - Em-dash count: 0 (budget 8).
 
-## QA overrides
+## QA and copy-edit audit
 
-- 1 WARN (unsourced-figures, section 1 paragraph 2): the five figures are
-  restatements of values cited in the adjacent paragraphs and takeaways
-  ($134B, 40%, $13B, $165B-$175B range). Accepted for flow; no new facts.
+- Build scanner: 0 FAIL / 0 WARN on the final build.
+- Content-qa audit (stage 7, August 11): 7 findings, all fixed before ship.
+  (1) "the step looks measured against the cohort" was ambiguous (measured =
+  restrained vs. compared); rewritten "restrained by cohort standards".
+  (2) "an engine that has run faster each time it has reported": engines do
+  not report; rewritten "has grown faster with every report". (3)(4) Two
+  comma-before-"because" constructions after positive main clauses; commas
+  removed. (5) "until it prints": pronoun with a slippery antecedent;
+  rewritten "until then". (6) "sits on the cohort floor by a factor of five"
+  mixed the metaphor and the arithmetic; rewritten "prices at least five
+  times below its nearest peer". (7) The close judgment and confidence
+  sentence repeated near-verbatim (18 words) between takeaway 4 and the
+  final section; the body's confidence sentence rewritten to vary.
 
 ## ENTER screen (the call)
 

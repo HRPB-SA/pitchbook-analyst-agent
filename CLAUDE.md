@@ -31,10 +31,13 @@ gated, styled, validated docx/pdf comes out.
             python3 -m engine charts reports/<id>/charts.json
 6 BUILD     python3 -m engine build reports/<id>   (docx + pdf + measured TOC;
             QA FAIL blocks the build and deletes the docx)
-7 VALIDATE  write reports/<id>/validation_log.md: one ledger line per
-            load-bearing claim (value, sources, tier, cross-check,
-            confidence), conflicts frozen, embargo check, QA overrides,
-            Report Ship gate checklist ticked
+7 VALIDATE  copy-edit pass FIRST: run the content-qa audit (grammar,
+            punctuation, consistency, cross-section number integrity) on the
+            built document and fix every ERROR before proceeding; grammar is
+            absolute (STYLE.md). Then write reports/<id>/validation_log.md:
+            one ledger line per load-bearing claim (value, sources, tier,
+            cross-check, confidence), conflicts frozen, embargo check, QA
+            overrides, audit outcome, Report Ship gate checklist ticked
 8 SHIP      git add the report dir + companies/ changes; commit; push. Move the
             request file from "Report Automation/requests/queue/" to
             "Report Automation/requests/archive/".

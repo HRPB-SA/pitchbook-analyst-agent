@@ -63,6 +63,29 @@ stress position (sentence end) carries the new information you want to land,
 and the topic position (sentence front) carries the old information that
 links backward. Keep subject and verb adjacent.
 
+**The story (flow at report scale).** A note tells one story, and the
+subtitle states its spine. Sections are movements, not bins: each section
+closes by raising the question the next section answers, so the reader is
+handed forward rather than restarted ("Whether the higher price is earned is
+a question for the operating record, and the record has an answer."). Each
+section earns one second-level insight: the sentence that says what the
+pattern means, which the data alone does not ("Rumored rounds tend to shrink
+on contact with a term sheet, because talks leak at their most hopeful
+number. This one grew."). An insight is earned when the evidence for it sits
+in the same section; an insight asserted before its evidence is a hook, and
+hooks are banned. The verdict resolves the story it opened; it never
+introduces a new theme.
+
+**Grammar is absolute.** Zero defects ship. The traps that survive casual
+review get hunted by name: ambiguous antecedents ("it", "this", "which" must
+have one unmistakable referent; a sentential "which" is rewritten to name its
+subject); bare-noun sentence openings ("Margin stands at" becomes "The margin
+stands at"); danglers and misattached modifiers; elliptical constructions
+that drop a needed word ("its guided 31%" becomes "guided growth of 31%");
+false parallels in series; subject-verb distance. The content-qa audit runs
+on every report before ship, and every ERROR-level finding is fixed, not
+waived.
+
 **Cadence limits.** No more than three consecutive sentences under 10 words;
 no more than two consecutive over 30. Any sentence past 25 words gets re-read
 on review and split unless it carries a single chain. A paragraph makes one
