@@ -137,6 +137,15 @@ sentence; reports making forward calls include the lexicon box
 (engine.compose.lexicon_blocks). Log every parenthetical probability in the
 validation log with date + resolution criterion.
 
+VARY THE MOVES (STYLE.md; the anti-formula layer): rotate paragraph
+architectures (event-first, history, assertion-then-mechanism, contrast);
+copular "The X is Y." openers at most twice per report (QA counts); every
+paragraph keeps a concrete actor doing something in time; insights are
+delivered, never labeled ("carries the first insight" banned); one aphorism
+and one paired-symmetry frame per report; each body section outruns the
+takeaways with material they do not contain; the final section closes facing
+the reader's decision.
+
 Punchline first: every opening sentence and every takeaway lead IS the
 finding with its metric, never a rhetorical hook. Delete emphasis adjectives,
 insert the metric. Three-beat every analytical passage and tie every metric

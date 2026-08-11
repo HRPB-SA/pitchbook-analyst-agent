@@ -134,6 +134,50 @@ no more than two consecutive over 30. Any sentence past 25 words gets re-read
 on review and split unless it carries a single chain. A paragraph makes one
 point and opens on its bottom line.
 
+## Vary the moves (the anti-formula rules; one level above sentences)
+
+Uniform moves read as machine writing even when every sentence is clean.
+These rules govern the paragraph and the report, not the line.
+
+1. **Rotate paragraph architectures.** A report uses at least three of these
+   shapes, and no two consecutive paragraphs open with the same move:
+   event-first ("On July 17, Databricks signed..."), history ("Databricks
+   has been raising its own price for nineteen months."), assertion-then-
+   mechanism ("The company does not need the money."), data-narrative
+   ("Databricks reported $6.9 billion in June, and the announcement added
+   nothing to it."), contrast-frame ("Where February's round brought in
+   $7.0 billion, this one seeks $3 billion."). The copular pronouncement
+   opener ("The X is Y.") appears at most twice per report; QA counts.
+2. **Actors act.** Every paragraph keeps at least one concrete actor doing
+   something in time: a company reports, an investor leads, management
+   guides, a filing appears. If a paragraph's verbs are all states (is,
+   stands, remains, sits, carries, reads), rewrite one sentence around an
+   event. Analysis of abstractions is built on top of actors, not instead
+   of them.
+3. **Deliver insights; never label them.** "The price carries the first
+   insight" announces analysis instead of doing it; so do "the durable fact
+   in this note", "tells the same story", and "as covered above". The
+   insight is the sentence itself. Desk machinery ("the basis for our
+   analysis", "our standing rule") stays out of reader-facing prose; state
+   the practice plainly ("a round that has not closed does not set the
+   number we work from").
+4. **One aphorism per report.** A crafted epigram every few paragraphs is
+   performance; a single one, placed where it earns its keep, is voice.
+5. **One symmetry per report.** The paired construction (two prices, two
+   dates, either X) organizes at most one section. Elsewhere, vary the
+   frame.
+6. **The body outruns the takeaways.** Each body section contains material
+   the takeaways do not: history, composition, structure, second-order
+   effects, scenario work. A body paragraph that only re-words a takeaway
+   gets deepened or cut.
+7. **Close facing the reader.** The final section's last move turns to the
+   person holding the report: what this means for the prices they see, the
+   decisions in front of them, the spread worth watching. A note that ends
+   inside its own coverage is unfinished.
+8. **Watch the scaffolding words.** A load-bearing metaphor ("carries", "the
+   story") or key noun repeated three or more times as connective tissue is
+   a tic; the copy-edit pass hunts word-frequency echoes across the report.
+
 ## Sentence shapes (the anti-AI syntax rules)
 
 Machine prose has a measurable grammar. Instruction-tuned models use present

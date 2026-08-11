@@ -106,6 +106,18 @@ _MODIFIED_POSSIBLE = re.compile(
 _BAD_RANGE = re.compile(
     r"\$\d[\d,.]*\s+(?:to|and)\s+\$?\d[\d,.]*\s*(?:million|billion|trillion)\b")
 _TIMES_GREATER = re.compile(r"\b\d+(?:\.\d+)?\s*times\s+(?:greater|higher|larger)\b")
+_TIMES_LESS = re.compile(r"\b(?:\d+(?:\.\d+)?|five|four|three|ten)\s*times\s+(?:less|lower|cheaper|smaller)\b")
+
+# Insight-labeling and desk self-reference: the writer pointing at the
+# analysis instead of delivering it (STYLE.md, Vary the moves).
+META_LABELS = [
+    "carries the first insight", "carries the second insight",
+    "carries the second", "the durable fact", "tells the same story",
+    "as covered above", "the basis for our analysis", "as noted above",
+    "it is worth pausing",
+]
+# Copular pronouncement paragraph opener: "The X is/are/remains ..."
+_COPULAR_OPENER = re.compile(r"^The\s+[a-z][\w\s-]{0,24}?\s(?:is|are|was|were|remains|stands)\b")
 _SENT_SPLIT = re.compile(r"(?<=[.!?])\s+")
 
 OUTLET_NAMES = [
@@ -178,6 +190,14 @@ def check_text(text, where="", prose=True):
         if m:
             add("WARN", "times-greater",
                 f"{m.group(0)!r}: check the arithmetic ('to five times' is 4x; 'five times greater' is 5x)")
+        m = _TIMES_LESS.search(text)
+        if m:
+            add("WARN", "times-less",
+                f"{m.group(0)!r}: arithmetically fuzzy; write 'a fifth of' / 'one-quarter of'")
+        for ph in META_LABELS:
+            if ph in low:
+                add("WARN", "insight-label",
+                    f"{ph!r}: deliver the insight, do not label it (STYLE.md, Vary the moves)")
         m = _PARTICIPIAL_BOLTON.search(text)
         if m:
             add("WARN", "participial-bolt-on",

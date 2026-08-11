@@ -540,6 +540,16 @@ class ReportBuilder:
         if m.get("toc", True) and self.T["cover"] != "meta_sheet":
             self.contents(section_titles)
         issues = []
+        copular_openers = []
+        for blocks in all_blocks:
+            for b in blocks:
+                if b[0] == "p" and qa._COPULAR_OPENER.match(b[1]):
+                    copular_openers.append(b[1][:60])
+        if len(copular_openers) > 2:
+            issues.append({"severity": "WARN", "rule": "copular-openers",
+                           "where": "blocks", "detail":
+                           f"{len(copular_openers)} paragraphs open 'The X is/are...' (budget 2): "
+                           + " | ".join(copular_openers[:3])})
         for f, blocks in zip(block_files, all_blocks):
             issues += qa.check_blocks(blocks, os.path.basename(f))
             cap_max = self.T.get("caption_max_words")
