@@ -107,10 +107,11 @@ modified, one odds-bearing word per sentence. Full research basis:
 - Figures: `$14.2B` in tables and tiles; `27.1x` not "27.1 times"; `+47% YoY`
   with sign and period; `~` and `(est.)` on every estimate at the point of
   use.
-- Citations in prose name the source KIND and date in parentheses: (company
-  disclosure, June 16, 2026), (PitchBook deal record, Feb 9, 2026),
-  (SEC EDGAR, July 10, 2026), (derived). Outlet names never appear in report
-  prose; they live in the validation log.
+- Citations are endnotes: write [n] markers in the text; the builder renders
+  superscripts tied to the numbered References section, where outlets, URLs,
+  and dates live. No parenthetical citations in prose. Dates stay inline
+  only where they carry analytical weight. Derived arithmetic needs no
+  marker; the validation log holds the derivations.
 - Disputed values ship as both figures with both dates, or not at all.
 - Em-dashes sparingly: at most 2 per block and 8 per document (the build
   fails past the budget). Full banned-language list in style/STYLE.md.

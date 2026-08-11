@@ -26,7 +26,7 @@ report.json:
 }
 """
 from __future__ import annotations
-import json, os, glob, subprocess, shutil
+import json, os, glob, re, subprocess, shutil
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor, Emu
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -75,6 +75,7 @@ class ReportBuilder:
         self.outdir = os.path.join(self.dir, "output")
         os.makedirs(self.outdir, exist_ok=True)
         self.doc = Document()
+        self._used_refs = set()
         self._setup_page()
         self._setup_styles()
 
@@ -192,14 +193,39 @@ class ReportBuilder:
         r.append(t); fld.append(r)
         paragraph._p.append(fld)
 
+    _REF = re.compile(r"\[(\d+)\]")
+
+    def _write_runs(self, p, text, size, color, bold=False, italic=False):
+        """Write text into a paragraph, rendering [n] citation markers as
+        superscript endnote numbers (the published-note convention)."""
+        pos = 0
+        prev_was_ref = False
+        for m in self._REF.finditer(text):
+            if m.start() > pos:
+                r = p.add_run(text[pos:m.start()])
+                r.font.size = Pt(size); r.font.color.rgb = color
+                r.font.bold = bold; r.font.italic = italic
+                prev_was_ref = False
+            n = int(m.group(1))
+            self._used_refs.add(n)
+            # Adjacent markers separate with a superscript comma: 1,3 not 13.
+            label = ("," if prev_was_ref and m.start() == pos else "") + m.group(1)
+            r = p.add_run(label)
+            r.font.size = Pt(size); r.font.color.rgb = color
+            r.font.bold = bold; r.font.superscript = True
+            pos = m.end()
+            prev_was_ref = True
+        if pos < len(text):
+            r = p.add_run(text[pos:])
+            r.font.size = Pt(size); r.font.color.rgb = color
+            r.font.bold = bold; r.font.italic = italic
+
     def para(self, text, size=10.5, color=INK, italic=False, bold=False,
              align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=7):
         p = self.doc.add_paragraph()
         p.alignment = align
         p.paragraph_format.space_after = Pt(space_after)
-        r = p.add_run(text)
-        r.font.size = Pt(size); r.font.color.rgb = color
-        r.font.italic = italic; r.font.bold = bold
+        self._write_runs(p, text, size, color, bold=bold, italic=italic)
         return p
 
     def bullets(self, items):
@@ -207,8 +233,7 @@ class ReportBuilder:
             p = self.doc.add_paragraph(style="List Bullet")
             p.paragraph_format.space_after = Pt(4)
             p.paragraph_format.left_indent = Inches(0.28)
-            r = p.add_run(it)
-            r.font.size = Pt(self.T["body_size"]); r.font.color.rgb = self.T["body_color"]
+            self._write_runs(p, it, self.T["body_size"], self.T["body_color"])
 
     def lead_bullets(self, items):
         """Key-takeaways convention from the published analyst notes:
@@ -217,13 +242,10 @@ class ReportBuilder:
             p = self.doc.add_paragraph(style="List Bullet")
             p.paragraph_format.space_after = Pt(6)
             p.paragraph_format.left_indent = Inches(0.28)
-            r1 = p.add_run(lead + (" " if rest else ""))
-            r1.font.size = Pt(self.T["body_size"]); r1.font.bold = True
-            r1.font.color.rgb = self.T["body_color"]
+            self._write_runs(p, lead + (" " if rest else ""),
+                             self.T["body_size"], self.T["body_color"], bold=True)
             if rest:
-                r2 = p.add_run(rest)
-                r2.font.size = Pt(self.T["body_size"])
-                r2.font.color.rgb = self.T["body_color"]
+                self._write_runs(p, rest, self.T["body_size"], self.T["body_color"])
 
     @staticmethod
     def _col_widths(header, rows):
@@ -485,7 +507,8 @@ class ReportBuilder:
         refs = self.meta.get("references") or []
         if not refs:
             return
-        self.doc.add_heading("References", level=2)
+        self.doc.add_heading("References",
+                             level=2 if self.T["cover"] == "meta_sheet" else 1)
         for i, ref in enumerate(refs, start=1):
             text = ref.get("text", "") if isinstance(ref, dict) else str(ref)
             url = ref.get("url", "") if isinstance(ref, dict) else ""
@@ -527,6 +550,17 @@ class ReportBuilder:
                                        "where": os.path.basename(f),
                                        "detail": f"caption {len(b[2].split())} words > {cap_max} (template rule): {b[2][:60]}..."})
             self.render_blocks(blocks)
+        refs = m.get("references") or []
+        for n in sorted(self._used_refs):
+            if n < 1 or n > len(refs):
+                issues.append({"severity": "FAIL", "rule": "broken-ref",
+                               "where": "blocks", "detail":
+                               f"citation marker [{n}] has no References entry (list has {len(refs)})"})
+        unused = set(range(1, len(refs) + 1)) - self._used_refs
+        if refs and self._used_refs and unused:
+            issues.append({"severity": "WARN", "rule": "unused-ref",
+                           "where": "report.json", "detail":
+                           f"References entries never cited in text: {sorted(unused)}"})
         self.references_section()
         if m.get("disclosure"):
             self.doc.add_heading("Disclosures and Method", level=1)

@@ -35,12 +35,24 @@ readers read to allocate capital and assess risk, not for pleasure.
 
 ## Voice: the Hemingway-analyst register
 
-Write like Hemingway working as a research analyst. Short declarative core.
-Subject, verb, object. One fact or one judgment per sentence, never two
-judgments joined by "and". Concrete subjects doing things: companies sign,
-margins fall, filings appear. The depth is the iceberg: state the fact and
-what it means, and leave the machinery below the waterline, in the exhibits,
-the tables, and the validation log. Trust the reader.
+Write like Hemingway working as a research analyst, in this desk's cadence.
+The skeleton is declarative: subject, verb, object; concrete subjects doing
+things (companies sign, margins fall, filings appear). The depth is the
+iceberg: state the fact and what it means, and leave the machinery below the
+waterline, in the exhibits, the tables, and the validation log. Trust the
+reader.
+
+**The blend (this is the desk's actual voice; a telegram is as wrong as a
+metronome).** The analysis breathes through mechanism sentences: a 20-35 word
+sentence is right when it walks one causal chain end to end, usually on
+"because" or "so", and it earns a short declarative after it. The published
+house exemplar: "That is exactly where the token-only view fails, because a
+failed agentic attempt is not free. It burns reviewer time, breaks the
+automation downstream, and erodes trust in the seat." Mechanism, then verbs
+in series, then the landed point. Write to a sharp colleague, not to a wire
+service. Name the tell. Meet the objection where the reader will raise it.
+Let one dry observation land per section, at most ("Rumored rounds usually
+shrink on contact with a term sheet; this one grew.").
 
 **The flow rule (this is what "natural analytic flow" means).** Each sentence
 opens from what the reader just learned and closes on the new thing. The new
@@ -49,14 +61,12 @@ the next. That chain is the analysis; when it holds, no connective filler is
 needed and none is allowed. Two mechanics enforce it (Gopen and Swan): the
 stress position (sentence end) carries the new information you want to land,
 and the topic position (sentence front) carries the old information that
-links backward. Keep subject and verb adjacent; a long interruption between
-them breaks the reader's stride.
+links backward. Keep subject and verb adjacent.
 
-**Cadence.** Vary it aggressively. A long sentence is legal when it carries a
-single evidence chain, and it earns a short declarative right after. Any
-sentence past 25 words gets re-read on review and usually split. A paragraph
-makes one point. Rhythm is asymmetric on purpose; a metronome reads as a
-machine.
+**Cadence limits.** No more than three consecutive sentences under 10 words;
+no more than two consecutive over 30. Any sentence past 25 words gets re-read
+on review and split unless it carries a single chain. A paragraph makes one
+point and opens on its bottom line.
 
 **Sentence surgery (SEC Plain English Handbook).** Surface hidden verbs
 ("made an application" becomes "applied"). Write in the positive ("not able"
@@ -64,10 +74,13 @@ becomes "unable"). Kill the pairs: "in order to" becomes "to", "prior to"
 becomes "before". Never "respectively". When a sentence will not clarify,
 make it a table.
 
-**Citations without drag.** One parenthetical per fact cluster, at the end of
-the clause it supports, short (kind, date). Never three citations in one
-sentence; consolidate or move detail to References. The citation must not
-occupy the stress position of a sentence whose point is the finding.
+**Citations are endnotes.** Prose carries no parenthetical citations. A
+citation is a numbered marker written as [n] in the block text; the builder
+renders it as a superscript tied to the numbered References section, where
+the source, outlet, URL, and date live. Dates stay in the prose only where
+they carry analytical weight ("signed on July 17"; "the February disclosure").
+Derived arithmetic needs no marker; the validation log holds the derivations.
+One marker per fact cluster, placed at the end of the clause it supports.
 
 No hedging filler, no disclaimers that bury the finding. Certainty is stated
 plainly; uncertainty is stated as content per the estimative rules below,

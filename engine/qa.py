@@ -92,9 +92,11 @@ OUTLET_NAMES = [
 ]
 
 _FIGURE = re.compile(r"[$€£]\s?\d|\d+(?:\.\d+)?%|\d+(?:\.\d+)?x\b")
+# A source cue is a kind+date parenthetical (house deep-dive style) OR an
+# endnote marker [n] (analyst-note style).
 _SOURCE_CUE = re.compile(
     r"\((?:company|PitchBook|SEC|EDGAR|press|derived|internal|T[1-4]\b|est\.?"
-    r"|source|per |as of|[A-Z][a-z]+ \d{1,2}, \d{4}|\d{4})", re.IGNORECASE)
+    r"|source|per |as of|[A-Z][a-z]+ \d{1,2}, \d{4}|\d{4})|\[\d+\]", re.IGNORECASE)
 
 
 def check_text(text, where="", prose=True):

@@ -101,9 +101,11 @@ named fallback and FLAG the gap in the validation log; never silently skip.
    per-point ladder is the only cleared expression.
 6. Em-dashes SPARINGLY: more than 2 per block warns, more than 8 per document
    fails the build. Never as a comma substitute or rhythm tic.
-7. Report prose names sources by KIND + date (company disclosure, PitchBook
-   deal record, SEC EDGAR, press reports); outlet names live only in the
-   validation log.
+7. Citations are ENDNOTES: [n] markers in block text render as superscripts
+   tied to the numbered References list in report.json (source, outlet, URL,
+   date). No parenthetical citations in prose; dates stay inline only where
+   analytically relevant. The build FAILS on a marker with no References
+   entry and WARNS on uncited entries.
 
 ## Style
 
