@@ -45,6 +45,18 @@ triggers, and staleness flags are the report's raw signal.
 
 ## 2. Structure: the shape of the high-level report
 
+**Default shape: the Vertical Analyst Note** (the provided master template,
+`report_template/Vertical_Analyst_Note_10.docx`). Page 1 is the production
+metadata sheet with every field filled: data filepath, chart as-of date,
+chart geography, research type, access level, chart and table counts,
+credits, published date, contents, the landing page block (chart title,
+caption of 30 words or fewer, header, body), and two report picks. Then: Key
+takeaways (bulleted; every bullet carries its load-bearing figure and date),
+two to four analytical sections with charts, and numbered References where
+outlets and URLs live. Chart captions never exceed 30 words.
+
+**Deep-dive shape** (initiation notes and long-form house reports):
+
 Cover: kicker, company name, subtitle (metaphor + colon + literal claim),
 one-paragraph dek, three hero tiles (quality metric, valuation with date,
 verdict), snapshot table where every row carries source and date, byline.

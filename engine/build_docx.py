@@ -39,9 +39,29 @@ from . import compose, qa
 NAVY = RGBColor(0x1F, 0x2A, 0x44); SLATE = RGBColor(0x35, 0x50, 0x6E)
 GREEN = RGBColor(0x1C, 0x5D, 0x46); GREY = RGBColor(0x6B, 0x72, 0x80)
 INK = RGBColor(0x26, 0x2B, 0x35); WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+PB_BLUE = RGBColor(0x2F, 0x54, 0x96); PB_LINK = RGBColor(0x05, 0x63, 0xC1)
 SOFT_HEX, NAVY_HEX, BORDER_HEX, SUM_HEX = "F2F5F9", "1F2A44", "C9D2DE", "E2E8F0"
 CONTENT_W = 9360
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Report themes. "house" is the Georgia/navy institutional deep-dive look;
+# "analyst_note" matches report_template/Vertical_Analyst_Note_10.docx
+# (Segoe UI, blue Heading 2 sections, production metadata sheet as page 1,
+# numbered References endnotes, no header/footer chrome).
+THEMES = {
+    "house": {
+        "font": "Georgia", "body_size": 10.5, "body_color": INK,
+        "h1": (16, NAVY, True), "h2": (12.5, NAVY, False), "h3": (11, SLATE, False),
+        "accent": NAVY, "accent_hex": NAVY_HEX, "muted": GREY,
+        "cover": "institutional", "chrome": True, "caption_max_words": None,
+    },
+    "analyst_note": {
+        "font": "Segoe UI", "body_size": 10, "body_color": RGBColor(0x1A, 0x1A, 0x1A),
+        "h1": (14, PB_BLUE, True), "h2": (12, PB_BLUE, False), "h3": (10.5, PB_BLUE, False),
+        "accent": PB_BLUE, "accent_hex": "2F5496", "muted": RGBColor(0x60, 0x5E, 0x5C),
+        "cover": "meta_sheet", "chrome": False, "caption_max_words": 30,
+    },
+}
 
 
 class ReportBuilder:
@@ -49,6 +69,7 @@ class ReportBuilder:
         self.dir = os.path.abspath(report_dir)
         with open(os.path.join(self.dir, "report.json"), encoding="utf-8") as fh:
             self.meta = json.load(fh)
+        self.T = THEMES[self.meta.get("theme", "house")]
         self.charts_dirs = [os.path.join(self.dir, "charts"),
                             os.path.join(REPO, "charts")]
         self.outdir = os.path.join(self.dir, "output")
@@ -67,20 +88,28 @@ class ReportBuilder:
         self.sec = sec
 
     def _setup_styles(self):
+        T = self.T
         st = self.doc.styles["Normal"]
-        st.font.name = "Georgia"; st.font.size = Pt(10.5); st.font.color.rgb = INK
+        st.font.name = T["font"]; st.font.size = Pt(T["body_size"])
+        st.font.color.rgb = T["body_color"]
         st.paragraph_format.space_after = Pt(7)
         st.paragraph_format.line_spacing = 1.12
-        for name, size, color, kw in (
-                ("Heading 1", 16, NAVY, dict(page_break=True, before=0, after=10)),
-                ("Heading 2", 12.5, NAVY, dict(before=14, after=5)),
-                ("Heading 3", 11, SLATE, dict(before=10, after=4, italic=True))):
-            self._style_heading(name, size, color, **kw)
+        rpr = st.element.get_or_add_rPr()
+        rf = rpr.find(qn("w:rFonts"))
+        if rf is None:
+            rf = OxmlElement("w:rFonts"); rpr.append(rf)
+        for attr in ("w:ascii", "w:hAnsi"):
+            rf.set(qn(attr), T["font"])
+        h1s, h1c, h1pb = T["h1"]; h2s, h2c, _ = T["h2"]; h3s, h3c, _ = T["h3"]
+        self._style_heading("Heading 1", h1s, h1c, page_break=h1pb, before=0, after=10)
+        self._style_heading("Heading 2", h2s, h2c, before=14, after=5)
+        self._style_heading("Heading 3", h3s, h3c, before=10, after=4,
+                            italic=(self.meta.get("theme", "house") == "house"))
 
     def _style_heading(self, name, size, color, bold=True, before=10, after=6,
                        page_break=False, italic=False):
         s = self.doc.styles[name]
-        s.font.name = "Georgia"; s.font.size = Pt(size)
+        s.font.name = self.T["font"]; s.font.size = Pt(size)
         s.font.bold = bold; s.font.italic = italic; s.font.color.rgb = color
         s.paragraph_format.space_before = Pt(before)
         s.paragraph_format.space_after = Pt(after)
@@ -91,7 +120,7 @@ class ReportBuilder:
         if rf is None:
             rf = OxmlElement("w:rFonts"); rpr.append(rf)
         for attr in ("w:ascii", "w:hAnsi"):
-            rf.set(qn(attr), "Georgia")
+            rf.set(qn(attr), self.T["font"])
 
     # -------------------------------------------------------- primitives
     @staticmethod
@@ -146,15 +175,14 @@ class ReportBuilder:
             th = OxmlElement("w:tblHeader"); th.set(qn("w:val"), "true")
             trPr.append(th)
 
-    @staticmethod
-    def _cell_text(cell, text, size=8.6, bold=False, color=INK, align="L", italic=False):
+    def _cell_text(self, cell, text, size=8.6, bold=False, color=INK, align="L", italic=False):
         cell.text = ""
         p = cell.paragraphs[0]
         p.alignment = {"L": WD_ALIGN_PARAGRAPH.LEFT, "R": WD_ALIGN_PARAGRAPH.RIGHT,
                        "C": WD_ALIGN_PARAGRAPH.CENTER}[align]
         p.paragraph_format.space_after = Pt(0)
         r = p.add_run(text)
-        r.font.name = "Georgia"; r.font.size = Pt(size)
+        r.font.name = self.T["font"]; r.font.size = Pt(size)
         r.font.bold = bold; r.font.italic = italic; r.font.color.rgb = color
 
     def _field(self, paragraph, instr):
@@ -209,7 +237,7 @@ class ReportBuilder:
             self._no_split(r_)
         for j, h in enumerate(header):
             c = t.rows[0].cells[j]
-            self._cell_w(c, widths[j]); self._shade(c, NAVY_HEX)
+            self._cell_w(c, widths[j]); self._shade(c, self.T["accent_hex"])
             self._cell_text(c, str(h), bold=True, color=WHITE, align=align[j])
         for i, row in enumerate(rows):
             last = (i == len(rows) - 1)
@@ -265,7 +293,7 @@ class ReportBuilder:
         hp = self.sec.header.paragraphs[0]
         hp.alignment = WD_ALIGN_PARAGRAPH.RIGHT
         hr = hp.add_run(m.get("header_line", ""))
-        hr.font.name = "Georgia"; hr.font.size = Pt(7.5)
+        hr.font.name = self.T["font"]; hr.font.size = Pt(7.5)
         hr.font.color.rgb = GREY; hr.font.bold = True
         pPr = hp._p.get_or_add_pPr()
         pbdr = OxmlElement("w:pBdr"); bottom = OxmlElement("w:bottom")
@@ -276,19 +304,19 @@ class ReportBuilder:
         fp = self.sec.footer.paragraphs[0]
         fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
         f1 = fp.add_run(m.get("footer_note", "Not investment advice"))
-        f1.font.name = "Georgia"; f1.font.size = Pt(6.8)
+        f1.font.name = self.T["font"]; f1.font.size = Pt(6.8)
         f1.font.color.rgb = GREY; f1.font.italic = True
         fp2 = self.sec.footer.add_paragraph()
         fp2.alignment = WD_ALIGN_PARAGRAPH.CENTER
         for txt, fld in (("Page ", "PAGE"), (" of ", "NUMPAGES")):
             r = fp2.add_run(txt)
-            r.font.name = "Georgia"; r.font.size = Pt(7.5); r.font.color.rgb = GREY
+            r.font.name = self.T["font"]; r.font.size = Pt(7.5); r.font.color.rgb = GREY
             self._field(fp2, fld)
         for fldr in fp2._p.findall(qn("w:fldSimple")):
             for rr in fldr.findall(qn("w:r")):
                 rpr = OxmlElement("w:rPr")
                 fonts = OxmlElement("w:rFonts")
-                fonts.set(qn("w:ascii"), "Georgia"); fonts.set(qn("w:hAnsi"), "Georgia")
+                fonts.set(qn("w:ascii"), self.T["font"]); fonts.set(qn("w:hAnsi"), self.T["font"])
                 szel = OxmlElement("w:sz"); szel.set(qn("w:val"), "15")
                 colel = OxmlElement("w:color"); colel.set(qn("w:val"), "6B7280")
                 rpr.append(fonts); rpr.append(szel); rpr.append(colel)
@@ -297,7 +325,7 @@ class ReportBuilder:
         fpf.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r = fpf.add_run(m.get("confidential_line",
                               "CONFIDENTIAL  |  For institutional recipients only  |  Not for redistribution"))
-        r.font.name = "Georgia"; r.font.size = Pt(7.5)
+        r.font.name = self.T["font"]; r.font.size = Pt(7.5)
         r.font.color.rgb = GREY; r.font.italic = True
 
     def cover(self):
@@ -308,7 +336,7 @@ class ReportBuilder:
         p = self.doc.add_paragraph()
         p.paragraph_format.space_after = Pt(2)
         r = p.add_run(m["title"])
-        r.font.name = "Georgia"; r.font.size = Pt(30)
+        r.font.name = self.T["font"]; r.font.size = Pt(30)
         r.font.bold = True; r.font.color.rgb = NAVY
         if m.get("subtitle"):
             self.para(m["subtitle"], size=14, color=SLATE, italic=True,
@@ -329,17 +357,17 @@ class ReportBuilder:
                 p1 = c.paragraphs[0]; p1.alignment = WD_ALIGN_PARAGRAPH.CENTER
                 p1.paragraph_format.space_after = Pt(2)
                 r1 = p1.add_run(tile["label"])
-                r1.font.name = "Georgia"; r1.font.size = Pt(7.5)
+                r1.font.name = self.T["font"]; r1.font.size = Pt(7.5)
                 r1.font.bold = True; r1.font.color.rgb = GREY
                 p2 = c.add_paragraph(); p2.alignment = WD_ALIGN_PARAGRAPH.CENTER
                 p2.paragraph_format.space_after = Pt(2)
                 r2 = p2.add_run(tile["value"])
-                r2.font.name = "Georgia"; r2.font.size = Pt(13); r2.font.bold = True
+                r2.font.name = self.T["font"]; r2.font.size = Pt(13); r2.font.bold = True
                 r2.font.color.rgb = GREEN if tile.get("accent") else NAVY
                 p3 = c.add_paragraph(); p3.alignment = WD_ALIGN_PARAGRAPH.CENTER
                 p3.paragraph_format.space_after = Pt(0)
                 r3 = p3.add_run(tile.get("caption", ""))
-                r3.font.name = "Georgia"; r3.font.size = Pt(7.3); r3.font.color.rgb = GREY
+                r3.font.name = self.T["font"]; r3.font.size = Pt(7.3); r3.font.color.rgb = GREY
             self.para("", size=6, space_after=8)
         if m.get("snapshot"):
             self.table_block(m["snapshot"])
@@ -375,22 +403,114 @@ class ReportBuilder:
                 self.para(f"Figure {num}.  {cap}", size=8.6, color=INK,
                           align=WD_ALIGN_PARAGRAPH.LEFT, space_after=2)
 
+    def _kv(self, label, value, bold_label=True):
+        p = self.doc.add_paragraph()
+        p.paragraph_format.space_after = Pt(2)
+        r = p.add_run(label + ": " if label else "")
+        r.font.size = Pt(10); r.font.bold = bold_label
+        r2 = p.add_run(str(value))
+        r2.font.size = Pt(10)
+        return p
+
+    def cover_meta_sheet(self, section_titles):
+        """Page 1 of the Vertical Analyst Note: the production metadata sheet
+        (report_template/Vertical_Analyst_Note_10.docx, page 1), filled."""
+        m, prod = self.meta, self.meta.get("production", {})
+        p = self.doc.add_paragraph()
+        p.paragraph_format.space_after = Pt(1)
+        r = p.add_run(m["title"])
+        r.font.size = Pt(14); r.font.bold = True
+        if m.get("subtitle"):
+            p2 = self.doc.add_paragraph()
+            p2.paragraph_format.space_after = Pt(8)
+            r2 = p2.add_run(m["subtitle"])
+            r2.font.size = Pt(11); r2.font.bold = True
+        self._kv("Data filepath", prod.get("data_filepath", ""))
+        self._kv("Chart as-of date", prod.get("chart_as_of", ""))
+        self._kv("Chart geography", prod.get("chart_geography", ""))
+        self._kv("Research type (Core/Quant, Emerging Tech, Industry)",
+                 prod.get("research_type", ""))
+        self._kv("Access level", prod.get("access_level", ""))
+        self.para("", size=4, space_after=2)
+        self._kv("Chart count", prod.get("chart_count", ""))
+        self._kv("Table count", prod.get("table_count", ""))
+        self.doc.add_heading("Credits", level=2)
+        for c in prod.get("credits", []):
+            self._kv("", f"{c['name']}  {c['title']}", bold_label=False)
+        if prod.get("published"):
+            self.para(f"Published on {prod['published']}", size=10, space_after=8,
+                      align=WD_ALIGN_PARAGRAPH.LEFT)
+        self.doc.add_heading("Contents", level=2)
+        for t in section_titles:
+            self.para(t, size=10, space_after=1, align=WD_ALIGN_PARAGRAPH.LEFT)
+        if self.meta.get("references"):
+            self.para("References", size=10, space_after=6,
+                      align=WD_ALIGN_PARAGRAPH.LEFT)
+        lp = prod.get("landing_page")
+        if lp:
+            self.doc.add_heading("Landing page", level=2)
+            self.para("CHART: " + lp.get("chart", ""), size=10,
+                      color=self.T["accent"], italic=True,
+                      align=WD_ALIGN_PARAGRAPH.LEFT, space_after=2)
+            self.para(lp.get("caption", ""), size=10,
+                      align=WD_ALIGN_PARAGRAPH.LEFT, space_after=6)
+            self.para(lp.get("header", ""), size=10, bold=True,
+                      align=WD_ALIGN_PARAGRAPH.LEFT, space_after=2)
+            self.para(lp.get("body", ""), size=10,
+                      align=WD_ALIGN_PARAGRAPH.LEFT, space_after=8)
+        picks = prod.get("report_picks")
+        if picks:
+            self.doc.add_heading("Report picks", level=2)
+            for pick in picks:
+                self.para(pick, size=10, align=WD_ALIGN_PARAGRAPH.LEFT, space_after=1)
+
+    def references_section(self):
+        refs = self.meta.get("references") or []
+        if not refs:
+            return
+        self.doc.add_heading("References", level=2)
+        for i, ref in enumerate(refs, start=1):
+            text = ref.get("text", "") if isinstance(ref, dict) else str(ref)
+            url = ref.get("url", "") if isinstance(ref, dict) else ""
+            p = self.doc.add_paragraph()
+            p.paragraph_format.space_after = Pt(3)
+            rn = p.add_run(f"{i}. ")
+            rn.font.size = Pt(9); rn.font.bold = True
+            rt = p.add_run(text + ("  " if url else ""))
+            rt.font.size = Pt(9)
+            if url:
+                ru = p.add_run(url)
+                ru.font.size = Pt(9); ru.font.color.rgb = PB_LINK
+
     # ---------------------------------------------------------- assembly
     def build(self):
         m = self.meta
-        self.header_footer()
-        self.cover()
+        if self.T.get("chrome", True):
+            self.header_footer()
         block_files = sorted(glob.glob(os.path.join(self.dir, "blocks", "*.json")))
         if not block_files:
             raise FileNotFoundError(f"no blocks/*.json in {self.dir}")
         all_blocks = [compose.load_blocks(f) for f in block_files]
-        if m.get("toc", True):
-            titles = [b[1] for blocks in all_blocks for b in blocks if b[0] == "h1"]
-            self.contents(titles)
+        section_titles = [b[1] for blocks in all_blocks for b in blocks
+                          if b[0] in ("h1", "h2") and b[0] == ("h2" if self.T["cover"] == "meta_sheet" else "h1")]
+        if self.T["cover"] == "meta_sheet":
+            self.cover_meta_sheet(section_titles)
+        else:
+            self.cover()
+        if m.get("toc", True) and self.T["cover"] != "meta_sheet":
+            self.contents(section_titles)
         issues = []
         for f, blocks in zip(block_files, all_blocks):
             issues += qa.check_blocks(blocks, os.path.basename(f))
+            cap_max = self.T.get("caption_max_words")
+            if cap_max:
+                for b in blocks:
+                    if b[0] == "fig" and len(b[2].split()) > cap_max:
+                        issues.append({"severity": "WARN", "rule": "caption-length",
+                                       "where": os.path.basename(f),
+                                       "detail": f"caption {len(b[2].split())} words > {cap_max} (template rule): {b[2][:60]}..."})
             self.render_blocks(blocks)
+        self.references_section()
         if m.get("disclosure"):
             self.doc.add_heading("Disclosures and Method", level=1)
             for chunk in m["disclosure"].split("\n\n"):

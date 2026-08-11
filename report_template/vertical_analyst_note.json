@@ -1,0 +1,63 @@
+{
+  "id": "vertical_analyst_note",
+  "name": "Vertical Analyst Note (master template, from Vertical_Analyst_Note_10.docx)",
+  "theme": "analyst_note",
+  "source_docx": "Vertical_Analyst_Note_10.docx",
+  "length_pages": "4-10",
+  "rigor": 5,
+  "outname_pattern": "{QQ}_{YYYY}_{Company}_Vertical_Analyst_Note",
+  "toc": false,
+  "cover": {
+    "type": "meta_sheet",
+    "required_production_fields": [
+      "data_filepath (R&E - Thematic Research\\...)",
+      "chart_as_of", "chart_geography",
+      "research_type (Core/Quant, Emerging Tech, Industry)",
+      "access_level (Public / Limited / Client only, exact wording from the template)",
+      "chart_count", "table_count",
+      "credits (ANALYST + Title)", "published (Month DD, YYYY)",
+      "landing_page (chart title + caption <= 30 words + header + body)",
+      "report_picks (2 related reports)"
+    ]
+  },
+  "sections": [
+    {
+      "id": "key_takeaways",
+      "title_hint": "Key takeaways",
+      "heading_level": "h2",
+      "required": [
+        "3-5 bullets, each a complete finding with its load-bearing figure and date",
+        "the first bullet is the single sharpest signal",
+        "no bullet without a number"
+      ],
+      "auto": null,
+      "charts": []
+    },
+    {
+      "id": "body_sections",
+      "title_hint": "2-4 analytical sections, h2, titled as claims",
+      "heading_level": "h2",
+      "required": [
+        "three-beat discipline per section: fact -> mechanism -> implication",
+        "every chart referenced from the text it supports",
+        "chart captions 30 words or fewer (template rule; build warns past it)",
+        "sources cited by kind + date in prose; outlets and links go to References"
+      ],
+      "auto": null,
+      "charts": ["house factory; count declared on the meta sheet must match"]
+    },
+    {
+      "id": "references",
+      "title_hint": "References",
+      "heading_level": "h2",
+      "required": [
+        "numbered source list rendered from report.json 'references'",
+        "every load-bearing claim in the body traceable to an entry",
+        "links included where public URLs exist"
+      ],
+      "auto": "references (builder renders from meta)",
+      "charts": []
+    }
+  ],
+  "gates": ["report_ship"]
+}

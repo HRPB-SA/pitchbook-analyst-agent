@@ -116,11 +116,20 @@ any externally produced reports into previous_reports/.
 
 ## Templates
 
-report_template/*.json define section order and binding obligations per report
-type (initiation_note, company_update, rush_note, earnings_note, one_pager,
-sector_overview). `required` entries are the editorial contract; check each
-before ship. Custom section lists from a request are legitimate; the engine
-renders whatever blocks exist.
+The MASTER template is report_template/Vertical_Analyst_Note_10.docx
+(analyst-provided), encoded as vertical_analyst_note.json and rendered by the
+builder's `analyst_note` theme: production metadata sheet as page 1 (fill
+every field in report.json "production"), Key takeaways (h2, bulleted, every
+bullet carries a figure), 2-4 h2 sections with charts (captions <= 30 words;
+build warns past it), numbered References rendered from report.json
+"references" (outlets and URLs belong there, not in prose). Default template
+unless the request says otherwise.
+
+The other report_template/*.json contracts (initiation_note, company_update,
+rush_note, earnings_note, one_pager, sector_overview) cover deep-dive and
+specialty formats in the "house" theme. `required` entries are the editorial
+contract; check each before ship. Custom section lists from a request are
+legitimate; the engine renders whatever blocks exist.
 
 ## Tracker refresh (scheduled or on demand)
 

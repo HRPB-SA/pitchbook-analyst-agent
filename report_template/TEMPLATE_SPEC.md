@@ -32,6 +32,9 @@ no-TODOs cardinal rule.
 
 ## Choosing a template
 
+- vertical_analyst_note   THE DEFAULT: the analyst-provided master template
+                          (production metadata sheet + key takeaways +
+                          sections + references; `analyst_note` theme)
 - initiation_note   first full coverage of a company (30+ pages)
 - company_update    coverage refresh when the tracker shows material change
 - rush_note         one event, shipped fast (4-8 pages)

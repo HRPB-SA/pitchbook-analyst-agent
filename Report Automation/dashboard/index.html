@@ -151,7 +151,7 @@
   <span class="tagline">Type the report idea; the desk does the rest.</span>
   <span class="status">
     <span class="pill">Coverage <b id="cov">13</b> companies</span>
-    <span class="pill">Templates <b>6</b></span>
+    <span class="pill">Templates <b>7</b></span>
     <span class="pill">Gate <b>Report Ship</b></span>
   </span>
 </header>
@@ -237,6 +237,7 @@
     ["openevidence", "OpenEvidence"]
   ];
   const TEMPLATES = [
+    ["vertical_analyst_note", "Vertical Analyst Note", "4-10 pp · the master template (production format)"],
     ["company_update", "Company Update", "6-10 pp · refresh on material change"],
     ["initiation_note", "Initiation Note", "30-40 pp · full deep dive"],
     ["rush_note", "Rush Note", "4-8 pp · one event, shipped fast"],
@@ -245,7 +246,7 @@
     ["sector_overview", "Sector Overview", "10-16 pp · 12-point frame"]
   ];
   const RIGOR = {1:"throwaway", 2:"internal note", 3:"decision-supporting", 4:"external artifact", 5:"published / media"};
-  const state = { template: "company_update", companies: new Set(["databricks"]), custom: [] };
+  const state = { template: "vertical_analyst_note", companies: new Set(["databricks"]), custom: [] };
 
   const $ = id => document.getElementById(id);
   const twrap = $("templates");
