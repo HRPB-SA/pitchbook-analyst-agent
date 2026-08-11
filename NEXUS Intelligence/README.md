@@ -117,6 +117,9 @@ NEXUS Intelligence/
    (join by company name across the legacy store, v2 registry, AIBQ
    scores, and Canon dossier).
 4. Re-apply the embargo redaction pass to every generated file and to the
-   Excel workbook before committing — grep for `0.99` across the whole
-   output tree as a final check.
+   Excel workbook before committing — verify with a search for the
+   embargoed figure (Ruling 2's `Value Numeric` in the Canon export;
+   check every minus-glyph variant, not just ASCII hyphen — a prior
+   refresh missed the digest archive this way) as a final check before
+   shipping.
 5. Commit with message `nexus: <date> intelligence mirror refresh`.

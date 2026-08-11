@@ -1,0 +1,568 @@
+{
+  "slug": "cerebras-systems",
+  "company": "Cerebras Systems",
+  "pbid": "163733-59",
+  "cleaned_from": "/tmp/claude-0/-home-user-pitchbook-analyst-agent/5755094e-01b7-509b-b6de-adae73f1ce9e/scratchpad/nexus/bundles/cerebras-systems.json",
+  "cleaned_at": "2026-08-11",
+  "coverage": {
+    "nexus_tier": "Extended Coverage",
+    "internal_comp_tier_legacy_db": "Tier 2 — Challengers",
+    "summary": "Thinnest data of the 14-company core universe. Present only in the legacy Companies database, the Unicorn Scores database, and the company-snapshots database. Absent from the v2/AIBQ tracking layer and from every canon_*, shared_*, framework_*, command_center_*, and timeline_* table checked.",
+    "list_tables_checked": 49,
+    "list_tables_populated": {
+      "legacy_companies_row": 1,
+      "aibq_company_snapshots": 69,
+      "aibq_unicorn_scores": 6
+    },
+    "list_tables_empty_count": 46,
+    "list_tables_empty": [
+      "aibq_company_comparisons",
+      "aibq_daily_scores",
+      "aibq_model_registry",
+      "aibq_score_tracker",
+      "aibq_thesis_registry",
+      "aibq_unicorn_intel",
+      "canon_canonical_figures",
+      "canon_citations",
+      "canon_company_dossiers",
+      "canon_conflict_register",
+      "canon_rulings_embargoes",
+      "canon_source_authority",
+      "canon_sweep_tracker",
+      "canon_trigger_registry",
+      "command_center_intelligence_feed",
+      "command_center_master_profiles",
+      "framework_company_financials",
+      "framework_event_impact_matrix",
+      "framework_source_registry",
+      "shared_ai_cost_intelligence",
+      "shared_ai_financial_model",
+      "shared_aibq_scores",
+      "shared_cap_table",
+      "shared_cost_architecture",
+      "shared_events_calendar",
+      "shared_financial_model_inputs",
+      "shared_forecasts",
+      "shared_ipo_pipeline",
+      "shared_litigation",
+      "shared_media_outreach",
+      "shared_morning_digests_db",
+      "shared_report_data_points",
+      "shared_research_reports",
+      "shared_revenue_decomposition",
+      "shared_secondary_prices",
+      "shared_thesis_registry",
+      "shared_valuations",
+      "timeline_dated_events",
+      "v2_company_registry",
+      "v2_earnings_events",
+      "v2_event_timeline",
+      "v2_financial_history",
+      "v2_litigation_ip",
+      "v2_master_events",
+      "v2_partnership",
+      "v2_talent_flow"
+    ],
+    "dict_tables_checked": {
+      "timeline_source_stats": {
+        "total_rows_seen": 0,
+        "dated_rows_kept": 0,
+        "pagination_complete": null
+      }
+    }
+  },
+  "overview": {
+    "name": "Cerebras Systems",
+    "sector_legacy_db": "AI Infrastructure",
+    "office_locations_legacy_db": [
+      "Palo Alto CA (HQ)"
+    ],
+    "hq_conflict_flag": {
+      "legacy_companies_row_office_locations": [
+        "Palo Alto CA (HQ)"
+      ],
+      "unicorn_scores_hq_field_values": [
+        "Sunnyvale, CA",
+        "Sunnyvale, US",
+        "Sunnyvale, United States"
+      ],
+      "note": "DISPUTED -- legacy DB says Palo Alto, CA; all three unicorn-score rows with a populated HQ field say Sunnyvale, CA/US. Not reconciled; both reproduced."
+    },
+    "active_products": [
+      "HPC infrastructure",
+      "AI cloud infrastructure",
+      "AI compute infrastructure",
+      "AI infrastructure services"
+    ],
+    "key_customers": [
+      "OpenAI",
+      "Amazon (AWS)"
+    ],
+    "key_partnerships": [
+      "OpenAI",
+      "Amazon Web Services (AWS)"
+    ],
+    "strategic_priorities": [
+      "AI inference chip development",
+      "Compute / Infrastructure",
+      "AI Model Training",
+      "IPO readiness",
+      "IPO preparation",
+      "Post-IPO profitability",
+      "Scaling AI infrastructure",
+      "Enterprise AI workloads"
+    ],
+    "profitability_status": "Generating Revenue/Not Profitable",
+    "as_of": "2026-05-11"
+  },
+  "scores": {
+    "note": "Two frameworks present: AIBQ (dims CE/RQ/CI/GO/MD) and PBQ, an older/parallel rubric (dims CE/RQ/SV/GO/MD). Not on a common scale in source; not merged. One additional row (source_index 4) has no Framework, Batch, HQ, Industry, or PBID populated and cannot be attributed to either rubric.",
+    "aibq_daily_scores_table_rows": 0,
+    "aibq_score_tracker_table_rows": 0,
+    "score_leaf_page_raw": "# Cerebras Systems — AIBQ Score\nSource: https://app.notion.com/p/3af5e7ad9f7f81eba801c1954baf35f4\n\nCerebras Systems: AIBQ 4.50 (Developing) \\| — \\| —\n### Dimensions\n| CE | RQ | CI | GO | MD |\n| --- | --- | --- | --- | --- |\n| 3.0 | 3.0 | 9.0 | 4.0 | 5.0 |\n",
+    "unicorn_scores_records": [
+      {
+        "source_index": 0,
+        "company_field": "Cerebras Systems",
+        "framework": "AIBQ",
+        "batch": 1,
+        "score_date": null,
+        "composite": null,
+        "confidence": "Low",
+        "confidence_band": null,
+        "dimensions": {},
+        "valuation_rank": null,
+        "post_money_usd_b_at_scoring": 23,
+        "pbid": "163733-59",
+        "hq": "Sunnyvale, United States",
+        "industry": "Application Specific Semiconductors",
+        "verticals": "Advanced Manufacturing, Artificial Intelligence & Machine Learning, CloudTech & DevOps, Infrastructure, Manufacturing, SaaS",
+        "freshness_tag": "Current",
+        "rationale": null,
+        "source_url": "https://app.notion.com/p/36d5e7ad9f7f8101a38bebe2650800bb"
+      },
+      {
+        "source_index": 1,
+        "company_field": "Cerebras",
+        "framework": "PBQ",
+        "batch": 17,
+        "score_date": "2026-05-14",
+        "composite": 5.28,
+        "confidence": "Low",
+        "confidence_band": null,
+        "dimensions": {
+          "CE": 7,
+          "RQ": 5,
+          "SV": 6.5,
+          "GO": 5.5,
+          "MD": 6
+        },
+        "valuation_rank": 422,
+        "post_money_usd_b_at_scoring": 4,
+        "pbid": null,
+        "hq": "Sunnyvale, CA",
+        "industry": "Semiconductors",
+        "verticals": "AI & ML, Semiconductors",
+        "freshness_tag": "Current",
+        "rationale": "DUPLICATE: Already scored Batch 5 rank 110. SKIP.",
+        "source_url": "https://app.notion.com/p/3605e7ad9f7f8141a2b5e223ca2a1453"
+      },
+      {
+        "source_index": 2,
+        "company_field": "Cerebras",
+        "framework": "PBQ",
+        "batch": 8,
+        "score_date": "2026-05-14",
+        "composite": 5.28,
+        "confidence": "Low",
+        "confidence_band": null,
+        "dimensions": {
+          "CE": 3,
+          "RQ": 5,
+          "SV": 6.5,
+          "GO": 5.5,
+          "MD": 6
+        },
+        "valuation_rank": 187,
+        "post_money_usd_b_at_scoring": 4,
+        "pbid": null,
+        "hq": "Sunnyvale, CA",
+        "industry": "Semiconductors",
+        "verticals": "AI & ML, Semiconductors",
+        "freshness_tag": null,
+        "rationale": "DUPLICATE: Already scored in Batch 5 (rank 110). Wafer-scale AI chips. Keeping for reference.",
+        "source_url": "https://app.notion.com/p/3605e7ad9f7f815f8e28e24fcd7a19f0"
+      },
+      {
+        "source_index": 3,
+        "company_field": "Cerebras Systems",
+        "framework": "PBQ",
+        "batch": 5,
+        "score_date": "2026-05-14",
+        "composite": 5.28,
+        "confidence": "Low",
+        "confidence_band": null,
+        "dimensions": {
+          "CE": 3.5,
+          "RQ": 5,
+          "SV": 6.5,
+          "GO": 5.5,
+          "MD": 6
+        },
+        "valuation_rank": 110,
+        "post_money_usd_b_at_scoring": 4,
+        "pbid": null,
+        "hq": "Sunnyvale, CA",
+        "industry": "Semiconductors",
+        "verticals": "AI & ML, Semiconductors",
+        "freshness_tag": null,
+        "rationale": "CE: Rev est ~$100M / Raised ~$700M = 0.14x. RQ: Enterprise AI training/inference hardware, growing. SV: Wafer-scale AI chips/cloud inference, US + global. GO: CEO Andrew Feldman, CIK filed, IPO planned. MD: Wafer-scale engine is genuinely differentiated, fastest inference, but NVIDIA dominance and Groq competition.",
+        "source_url": "https://app.notion.com/p/3605e7ad9f7f8148858ce9f194f127d2"
+      },
+      {
+        "source_index": 4,
+        "company_field": "Cerebras Systems",
+        "framework": null,
+        "batch": null,
+        "score_date": "2026-05-13",
+        "composite": 7.65,
+        "confidence": "High",
+        "confidence_band": null,
+        "dimensions": {
+          "CE": 6,
+          "RQ": 7,
+          "GO": 8,
+          "MD": 7
+        },
+        "valuation_rank": null,
+        "post_money_usd_b_at_scoring": null,
+        "pbid": null,
+        "hq": null,
+        "industry": null,
+        "verticals": "AI/ML, Semiconductors",
+        "freshness_tag": null,
+        "rationale": null,
+        "source_url": "https://app.notion.com/p/35f5e7ad9f7f810f891cc95dfe86dfca"
+      },
+      {
+        "source_index": 5,
+        "company_field": "Cerebras Systems",
+        "framework": "AIBQ",
+        "batch": 1,
+        "score_date": "2026-05-12",
+        "composite": 4.5,
+        "confidence": "Medium",
+        "confidence_band": null,
+        "dimensions": {
+          "CE": 3,
+          "RQ": 3,
+          "CI": 9,
+          "GO": 4,
+          "MD": 5
+        },
+        "valuation_rank": 7,
+        "post_money_usd_b_at_scoring": 23,
+        "pbid": "163733-59",
+        "hq": "Sunnyvale, US",
+        "industry": "Application Specific Semiconductors",
+        "verticals": "AI/ML, Semiconductors, CloudTech",
+        "freshness_tag": null,
+        "rationale": "CE3: ~$1.1B+ raised, limited recurring revenue (hardware sales model). RQ3: hardware sales, not SaaS recurring; limited customer base. CI9: manufactures own wafer-scale AI chips, vertically integrated compute. GO4: IPO delayed, board concerns, regulatory friction (UAE dealings). MD5: unique WSE tech but niche vs NVIDIA ecosystem dominance.",
+        "source_url": "https://app.notion.com/p/35e5e7ad9f7f81cbad69d18638d60e18"
+      }
+    ],
+    "headline_aibq": {
+      "composite": 4.5,
+      "band": "Developing",
+      "date": "2026-05-12",
+      "confidence": "Medium",
+      "cross_confirmed_by": [
+        "aibq_unicorn_scores row (source_index 5)",
+        "framework/companies/cerebras-systems.md score leaf"
+      ]
+    }
+  },
+  "financials": {
+    "as_of": "2026-05-11",
+    "as_of_note": "Legacy DB row as_of 2026-05-11/2026-05-12. Every one of the 69 daily rows in aibq_company_snapshots from 2026-05-12 through 2026-08-11 (today) carries byte-identical values for every field below -- see snapshot_series.",
+    "arr_usd_m": 510,
+    "prev_arr_usd_m": 290,
+    "revenue_growth_yoy_pct": 0.76,
+    "prev_revenue_growth_yoy_pct": 0.76,
+    "prev_revenue_growth_note": "Identical to current-period value in source (0.76 both columns) -- likely not an independently re-derived prior figure; reproduced as-is.",
+    "arr_source_and_caveat": "S-1/A Filing (Nasdaq, Apr–May 2026); SiliconAngle (May 4, 2026); Cerebras Systems press release (Feb 3, 2026); TechMarketBriefs S-1/A analysis; TechCrunch (Apr 18 + May 4, 2026). ⚠️ $510M is hardware/services revenue, not SaaS ARR — logged for comparability only.",
+    "revenue_per_employee_usd_k": 1275,
+    "revenue_per_employee_flag": "est. (per source Benchmark Positions field)",
+    "customer_concentration_pct": 0.8,
+    "enterprise_mix_pct": 1,
+    "remaining_performance_obligations_usd_b": 24.6,
+    "rpo_pct_recognized_2026_2027": "~15%",
+    "rpo_multiple_of_fy2025_revenue_CONFLICT": {
+      "benchmark_positions_field_says": "~53x",
+      "top_line_trajectory_field_says": "~48x",
+      "direct_calculation_24.6B_over_0.51B": 48.2,
+      "note": "Source fields disagree; both reproduced, not reconciled."
+    },
+    "non_gaap_net_loss_fy2025_usd_m": -75.7,
+    "ocf_fy2025_usd_m": -10,
+    "ocf_fy2024_usd_m": 452,
+    "ocf_swing_driver_per_source": "OpenAI MRA timing (acronym as used in source; not expanded in extracted data)",
+    "gaap_net_income_fy2025_DISPUTED": {
+      "figure_a": {
+        "value_usd_m": 87.9,
+        "source": "SiliconAngle / Wikipedia"
+      },
+      "figure_b": {
+        "value_usd_m": 237.8,
+        "source": "TechMarketBriefs",
+        "includes": "$363.3M non-cash forward-contract gain"
+      },
+      "source_instruction_verbatim": "DO NOT attribute profitability without S-1 reconciliation."
+    },
+    "burn_rate_usd_m_per_mo": 6.3,
+    "burn_rate_flag": "est., Non-GAAP",
+    "headcount": 400,
+    "prev_headcount": 71,
+    "prev_headcount_date": null,
+    "total_capital_raised_usd_m": 4620,
+    "prev_total_capital_raised_usd_m": 2770,
+    "prev_total_capital_raised_date": null,
+    "data_confidence_self_reported": 0.72,
+    "not_captured_in_source": [
+      "Gross Margin %",
+      "Gross Profit (USD M)",
+      "Cumulative Losses (USD M)",
+      "Compute Spend (USD M/yr)",
+      "Customer Count",
+      "Revenue per Customer (USD K)",
+      "Runway (Months)",
+      "Implied ARR Multiple (x)",
+      "Job Posting Score",
+      "Media Sentiment",
+      "NRR %"
+    ],
+    "snapshot_series": {
+      "table": "aibq_company_snapshots",
+      "n_rows": 69,
+      "first_date": "2026-05-12",
+      "last_date": "2026-08-11",
+      "all_fields_constant_across_all_rows": true,
+      "constant_values": {
+        "Valuation (USD B)": 26.6,
+        "Sector": "AI Infrastructure",
+        "Enterprise Mix %": 1,
+        "Headcount": 400,
+        "Revenue per Employee (USD K)": 1275,
+        "Revenue Growth YoY %": 0.76,
+        "Customer Concentration %": 0.8,
+        "Company ID": "163733-59",
+        "ARR (USD M)": 510,
+        "Burn Rate (USD M/mo)": 6.3,
+        "Capital Raised (USD M)": 4620,
+        "Tier": "Tier 2 — Challengers",
+        "Data Confidence": 0.72
+      },
+      "interpretation": "No field moved across three months of daily tracking. Reads as a carried-forward baseline rather than independently re-confirmed daily research."
+    }
+  },
+  "valuation_and_funding": {
+    "ladder": [
+      {
+        "date": null,
+        "event": "prior period (undated in source)",
+        "valuation_usd_b": 8.1
+      },
+      {
+        "date": "2026-02-03",
+        "event": "Series H close",
+        "amount_usd_m": 1000,
+        "post_money_usd_b": 23,
+        "lead": "Tiger Global",
+        "notable_investor": "AMD (strategic)"
+      },
+      {
+        "date": "2026-05-12/2026-08-11 (69 daily snapshots, unchanged)",
+        "event": "S-1/A range and post-IPO mark",
+        "valuation_usd_b": 26.6
+      }
+    ],
+    "ipo": {
+      "s1_filed": "2026-04",
+      "s1a_amended": "2026-05",
+      "ticker": "CBRS",
+      "exchange": "Nasdaq",
+      "price_range_usd_per_share": "125-135",
+      "shares_offered_class_a_m": 28,
+      "target_raise_usd_b": 3.5,
+      "target_valuation_usd_b": "26-27",
+      "priced": "2026-05-13/14",
+      "oversubscription": "20x ($10B+ orders vs $3.5B offering)",
+      "lockup_shares_m": 171,
+      "lockup_multiple_of_ipo": "~5x",
+      "class_b_voting_power_pct": 99.2,
+      "founder_control_floor_economic_stake_pct": 5,
+      "sox_404b_exemption_years": 5,
+      "sox_404b_basis": "JOBS Act emerging growth company (EGC)",
+      "prior_ipo_attempt": {
+        "year": 2024,
+        "status": "withdrawn",
+        "reason": "CFIUS review of G42 (UAE) investment",
+        "clearance_received": "2025-05"
+      },
+      "pricing_multiple_note": "51–53x 2025 trailing revenue at $135/share IPO range."
+    },
+    "debt": {
+      "facility": "revolving credit facility",
+      "amount_usd_m": 850,
+      "secured_date": "2026-04-16",
+      "lead_arrangers": [
+        "Morgan Stanley",
+        "Citi",
+        "Barclays",
+        "UBS",
+        "Crédit Agricole",
+        "MUFG",
+        "Mizuho",
+        "TD Securities",
+        "Silicon Valley Bank (First Citizens)"
+      ]
+    },
+    "strategic_investors_and_notes": "OpenAI: $1B loan secured by warrants for 33M+ shares. Also angel investors in OpenAI leadership (Altman, Brockman, Sutskever, D’Angelo). AMD: strategic investor (Series H). Abu Dhabi Growth Fund + G42: early investors (CFIUS-cleared). OpenAI previously considered acquisition per Musk lawsuit filing.",
+    "total_capital_raised_usd_m": 4620,
+    "prev_total_capital_raised_usd_m": 2770,
+    "note_on_score_row_post_money_fields": "AIBQ score rows show Post-Money $23B (matches Series H); PBQ score rows show Post-Money $4B (does not match any point on the ladder above -- reflects whatever inputs that PBQ pass used, evidently an older/unrefreshed figure). Reproduced in scores section, not folded into this ladder."
+  },
+  "competitive_and_product": {
+    "competitive_position": "Primary NVIDIA challenger in AI inference. WSE-3 is 57–58x larger than leading GPU die; 900,000+ cores with 1-cycle on-chip SRAM access. Claims 15x faster inference vs. GPU at fraction of power. Took OpenAI's fast-inference business from NVIDIA (per CEO Feldman quote). CS-3 sold as 1.8-ton turnkey appliance; clusters via auxiliary devices. MemoryX for activation storage. Cloud delivery via AWS. Competition: NVIDIA (dominant CUDA ecosystem moat), Tenstorrent, Groq, SambaNova. Cerebras differentiates on latency and power; NVIDIA counters with software ecosystem depth and breadth of model support. Bull: solved a genuine inference bottleneck. Bear: CUDA moat is sticky even where WSE-3 is technically superior.",
+    "developer_ecosystem": "WSE-3 available on AWS cloud platform (announced shortly after OpenAI MRA, Jan 2026). On-premise CS-3 hardware sold as turnkey system. PyTorch-compatible software stack — no proprietary framework lock-in required. Pay-as-you-go cloud access. Use case sectors: medical research, cryptography, energy, large-scale AI inference. OpenAI is the marquee enterprise reference — no meaningful open developer ecosystem as of May 2026. Inference speed advantage creates a strong reference for enterprises running large-scale LLM inference workloads.",
+    "pricing_model": "Hardware sales (CS-3 AI supercomputer systems); recurring cloud-based AI services (pay-as-you-go via AWS); multi-year compute arrangements (OpenAI MRA at $10B+ deal, 750MW through 2028 with 1.25GW option to 2GW by 2030)",
+    "active_products": [
+      "HPC infrastructure",
+      "AI cloud infrastructure",
+      "AI compute infrastructure",
+      "AI infrastructure services"
+    ],
+    "key_customers": [
+      "OpenAI",
+      "Amazon (AWS)"
+    ],
+    "key_partnerships": [
+      "OpenAI",
+      "Amazon Web Services (AWS)"
+    ]
+  },
+  "technology_ip": {
+    "ip_activity": "Core IP: wafer-scale integrated circuit architecture (WSE/WSE-2/WSE-3 generations); on-chip SRAM memory hierarchy; interconnect fabric for multi-CS-3 clusters; MemoryX storage architecture for AI model activations. Historical landmark: WSE-2 added to Computer History Museum permanent collection (Aug 2022) as 'epochal achievement in fabricating transistors.' Manufactured by TSMC (7nm process for WSE-2; WSE-3 details not fully disclosed). IP moat is architecture-level — not easily replicated on standard GPU die without fundamental wafer-scale manufacturing capability."
+  },
+  "regulatory_governance_ownership": {
+    "regulatory_exposure": "Prior IPO withdrawn 2024 due to CFIUS review of G42 (UAE-based AI company) investment. Clearance received May 2025. AMD (chip competitor/partner) invested in Series H. Export controls on AI chips could affect international customers. EGC under JOBS Act (no SOX 404(b) attestation for 5 yrs).",
+    "investor_rights": "Class B supervoting: 99.2% post-IPO voting power. Founders control to 5% economic stake. No meaningful public shareholder vote on board, exec comp, change-of-control, charter amendments. No SOX 404(b) up to 5 years (JOBS Act EGC)."
+  },
+  "leadership_and_org": {
+    "leadership_team_field": null,
+    "board_composition_field": null,
+    "key_hires_90d_field": null,
+    "key_departures_90d_field": null,
+    "incidental_ceo_mention": {
+      "name": "Andrew Feldman",
+      "role_as_described": "CEO",
+      "found_in": [
+        "aibq_unicorn_scores rationale (PBQ Batch 5)",
+        "legacy_companies_row.Competitive Position ('per CEO Feldman quote')"
+      ],
+      "note": "Not sourced from a dedicated Leadership Team field -- flagged as incidental, not a verified leadership record."
+    },
+    "headcount": 400
+  },
+  "recent_activity_and_events": {
+    "recent_launches_90d_field": null,
+    "m_and_a_activity_12mo_field": null,
+    "media_sentiment_field": null,
+    "job_posting_score_field": null,
+    "v2_talent_flow_rows": 0,
+    "v2_litigation_ip_rows": 0,
+    "v2_master_events_rows": 0,
+    "v2_event_timeline_rows": 0,
+    "v2_earnings_events_rows": 0,
+    "v2_partnership_rows": 0,
+    "note": "No data captured for this section as of extraction."
+  },
+  "data_quality_flags": [
+    {
+      "id": "hq-conflict",
+      "type": "DISPUTED",
+      "detail": "Legacy DB Office Locations = Palo Alto, CA. All 3 unicorn-score rows with a populated HQ field = Sunnyvale, CA/US. Not reconciled."
+    },
+    {
+      "id": "gaap-net-income-conflict",
+      "type": "DISPUTED",
+      "detail": "FY2025 GAAP net income: $87.9M (SiliconAngle/Wikipedia) vs $237.8M incl. $363.3M non-cash forward-contract gain (TechMarketBriefs). Source: 'DO NOT attribute profitability without S-1 reconciliation.'"
+    },
+    {
+      "id": "rpo-multiple-conflict",
+      "type": "INTERNAL INCONSISTENCY",
+      "detail": "Benchmark Positions field states RPO is ~53x FY2025 revenue; Top Line Trajectory field states ~48x for the same $24.6B/$510M figures (~48.2x by direct calculation)."
+    },
+    {
+      "id": "pbq-ce-inconsistency",
+      "type": "INTERNAL INCONSISTENCY",
+      "detail": "PBQ Batches 5/8/17 (all dated 2026-05-14, all Composite 5.28, explicitly marked duplicates of Batch 5 in source rationale) report differing CE sub-scores: 3.5 / 3.0 / 7.0 respectively."
+    },
+    {
+      "id": "pbq-valuation-rank-drift",
+      "type": "OBSERVATION",
+      "detail": "Valuation Rank climbs 110 -> 187 -> 422 across the same-day Batch 5/8/17 PBQ passes, consistent with a growing comparison cohort rather than a re-scored company (hedged interpretation, not asserted as fact)."
+    },
+    {
+      "id": "pbq-stale-inputs",
+      "type": "OBSERVATION",
+      "detail": "PBQ Batch 5 rationale prices the company off ~$100M revenue est. / ~$700M raised / $4B post-money -- all far below the legacy DB row's $510M ARR / $4.62B raised / $26.6B valuation for the same window. PBQ pass appears to run on materially older/unrefreshed inputs than the legacy DB and AIBQ score."
+    },
+    {
+      "id": "headcount-jump-undated",
+      "type": "OBSERVATION",
+      "detail": "Headcount 71 (prior) -> 400 (current); prior figure carries no date in source, so growth cannot be annualized."
+    },
+    {
+      "id": "prev-revenue-growth-duplicate",
+      "type": "OBSERVATION",
+      "detail": "Prev Revenue Growth YoY % (0.76) is identical to current-period Revenue Growth YoY % (0.76) -- likely an extraction artifact, not an independently re-derived prior figure."
+    },
+    {
+      "id": "snapshot-series-static",
+      "type": "OBSERVATION",
+      "detail": "All 69 daily rows in aibq_company_snapshots (2026-05-12 to 2026-08-11) are field-for-field identical. No re-extraction has moved any figure in three months."
+    },
+    {
+      "id": "unattributed-score-row",
+      "type": "GAP",
+      "detail": "unicorn_scores source_index 4 (Composite 7.65, Confidence High, dated 2026-05-13) has no Framework, Batch, HQ, Industry, or PBID populated; cannot be attributed to AIBQ or PBQ."
+    },
+    {
+      "id": "embargo-check",
+      "type": "POLICY",
+      "detail": "No cross-company quality-vs-valuation correlation, coefficient, scatter, or fitted-line appears anywhere in this file. Source bundle for this company contains no mention of any such cross-company statistic; nothing was embargoed out of this extraction because nothing of that kind was present to begin with."
+    }
+  ],
+  "sources_named_in_legacy_row": [
+    "SEC S-1/A Filing (Nasdaq, Apr-May 2026)",
+    "SiliconAngle (May 4, 2026)",
+    "Cerebras Systems press release (Feb 3, 2026)",
+    "TechMarketBriefs S-1/A analysis",
+    "TechCrunch (Apr 18 + May 4, 2026)",
+    "Wikipedia (GAAP net income figure, disputed)"
+  ],
+  "internal_nexus_source_pages": {
+    "legacy_companies_row_page": "https://app.notion.com/p/35d5e7ad9f7f81be8256d1ff8f24faa1",
+    "aibq_score_leaf_page": "https://app.notion.com/p/3af5e7ad9f7f81eba801c1954baf35f4",
+    "unicorn_scores_row_urls": [
+      "https://app.notion.com/p/36d5e7ad9f7f8101a38bebe2650800bb",
+      "https://app.notion.com/p/3605e7ad9f7f8141a2b5e223ca2a1453",
+      "https://app.notion.com/p/3605e7ad9f7f815f8e28e24fcd7a19f0",
+      "https://app.notion.com/p/3605e7ad9f7f8148858ce9f194f127d2",
+      "https://app.notion.com/p/35f5e7ad9f7f810f891cc95dfe86dfca",
+      "https://app.notion.com/p/35e5e7ad9f7f81cbad69d18638d60e18"
+    ],
+    "note": "Each of the 69 daily company-snapshot rows also carries its own Notion page URL in the source bundle; not enumerated here given Section financials.snapshot_series confirms they are field-identical."
+  }
+}
