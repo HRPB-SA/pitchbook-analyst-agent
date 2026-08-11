@@ -2,8 +2,9 @@
 writing-style profile the composing agent must match.
 
 Usage: python -m engine style
-Reads every .docx under reference_reports/ and output/ (the shipped library),
-writes style/style_profile.json + style/STYLE_PROFILE.md.
+Reads every .docx under previous_reports/ (recursively; drop reports there to
+teach the profiler) and reports/*/output/ (the shipped library), writes
+style/style_profile.json + style/STYLE_PROFILE.md.
 
 Measured, not vibes: sentence geometry, paragraph geometry, section cadence,
 figure/table density, numeral formatting conventions, citation patterns,
@@ -161,8 +162,10 @@ Mean {p['mean_sentences']} sentences / ~{int(p['mean_words'])} words per paragra
 
 
 def run(extra_dirs=()):
-    paths = []
-    for d in ("reference_reports", "output", *extra_dirs):
+    paths = glob.glob(os.path.join(REPO, "previous_reports", "**", "*.docx"),
+                      recursive=True)
+    paths += glob.glob(os.path.join(REPO, "reports", "*", "output", "*.docx"))
+    for d in extra_dirs:
         paths += glob.glob(os.path.join(REPO, d, "*.docx"))
     paths = [p for p in paths if "~$" not in p]
     prof = profile_docx(sorted(set(paths)))

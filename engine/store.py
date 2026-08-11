@@ -2,12 +2,15 @@
 freeze-on-conflict merging.
 
 Layout (repo-relative):
-    data/universe.json                     coverage universe
-    data/companies/<slug>/profile.json     canonical current record, by category
-    data/companies/<slug>/snapshots/YYYY-MM-DD[.n].json   immutable pulls
-    data/companies/<slug>/conflicts.json   frozen conflicts (both values, never chosen)
-    data/companies/<slug>/history.json     supersession log (old value, new value, why)
-    data/companies/<slug>/trends.json      computed by engine.trends
+    companies/universe.json                coverage universe
+    companies/<slug>/store/profile.json    canonical current record, by category
+    companies/<slug>/store/snapshots/YYYY-MM-DD[.n].json   immutable pulls
+    companies/<slug>/store/conflicts.json  frozen conflicts (both values, never chosen)
+    companies/<slug>/store/history.json    supersession log (old value, new value, why)
+    companies/<slug>/store/trends.json     computed by engine.trends
+    companies/<slug>/<category>/           analyst drop zones (documents, notes);
+                                           research ingests them, tiered as provided
+    companies/<slug>/PROFILE.md            readable export (engine.compose.export_profile_md)
 
 Merge doctrine (cardinal rule 2, freeze-on-conflict):
   same value        -> refresh as_of/source if newer
@@ -21,7 +24,12 @@ import json, os, datetime as _dt
 from . import schema
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(REPO, "data")
+COMPANIES = os.path.join(REPO, "companies")
+DATA = COMPANIES  # legacy alias; universe.json lives at companies/universe.json
+
+# Analyst-facing category subfolders scaffolded for every tracked company.
+DROP_FOLDERS = ("financials", "valuation-and-deals", "products", "people",
+                "customers", "competition", "filings", "news-and-events", "notes")
 
 
 def _read(path, default):
@@ -43,7 +51,25 @@ def universe():
 
 
 def company_dir(slug):
-    return os.path.join(DATA, "companies", slug)
+    return os.path.join(COMPANIES, slug, "store")
+
+
+def add_company(slug, name, pb_entity_id=None, group="coverage", sector=None):
+    """Register a company and scaffold its folder tree. Idempotent."""
+    u = universe()
+    if not any(c["slug"] == slug for c in u["companies"]):
+        u["companies"].append({"slug": slug, "name": name,
+                               "pb_entity_id": pb_entity_id, "group": group,
+                               "sector": sector})
+        _write(os.path.join(COMPANIES, "universe.json"), u)
+    for folder in DROP_FOLDERS:
+        d = os.path.join(COMPANIES, slug, folder)
+        os.makedirs(d, exist_ok=True)
+        keep = os.path.join(d, ".gitkeep")
+        if not os.listdir(d):
+            open(keep, "w").close()
+    os.makedirs(company_dir(slug), exist_ok=True)
+    return os.path.join(COMPANIES, slug)
 
 
 def load_profile(slug):

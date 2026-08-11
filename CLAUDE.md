@@ -8,18 +8,25 @@ gated, styled, validated docx/pdf comes out.
 ## The pipeline (run these stages in order for any report request)
 
 ```
-0 INTAKE    read the request (requests/queue/*.json or the pasted prompt);
-            create reports/<slug-or-topic>-<template>-<date>/ with request.json
-1 RESEARCH  live pull per company (see protocol below); write
-            reports/<id>/research/snapshot.json as Fact dicts with tier+as_of
+0 INTAKE    read the request ("Report Automation/requests/queue/*.json" or the
+            pasted prompt); create reports/<slug-or-topic>-<template>-<date>/
+            with request.json. New company? python3 -m engine add <slug> "<Name>"
+1 RESEARCH  FIRST ingest analyst-provided material: uploads/ (documents/ +
+            links.md queue) and the company's companies/<slug>/<category>/
+            drop folders; tier it like any source, file uploads into the right
+            company folder, log links under Ingested. THEN live pull per
+            company (protocol below). Write reports/<id>/research/snapshot.json
+            as Fact dicts with tier+as_of
 2 STORE     python3 -m engine snapshot <slug> <snapshot.json>
             (immutable snapshot + freeze-on-conflict merge into canonical)
 3 TRENDS    python3 -m engine digest <slug>   -> what changed, what fired,
-            what went stale; this digest DRIVES the report's Signal section
-4 COMPOSE   pick templates/<template>.json; write blocks/NN_name.json per
+            what went stale; this digest DRIVES the report's Signal section.
+            Then python3 -m engine export <slug> to refresh PROFILE.md
+4 COMPOSE   pick report_template/<template>.json; write blocks/NN_name.json per
             section in the block grammar (engine/compose.py docstring),
-            following style/STYLE.md + style/STYLE_PROFILE.md; auto sections
-            via engine.compose.tracker_blocks / fact_sheet_blocks
+            following style/STYLE.md + style/STYLE_PROFILE.md and the writing
+            standard in README.md; auto sections via
+            engine.compose.tracker_blocks / fact_sheet_blocks
 5 CHARTS    write charts.json specs (types in engine/charts.py CHART_TYPES);
             python3 -m engine charts reports/<id>/charts.json
 6 BUILD     python3 -m engine build reports/<id>   (docx + pdf + measured TOC;
@@ -28,14 +35,19 @@ gated, styled, validated docx/pdf comes out.
             load-bearing claim (value, sources, tier, cross-check,
             confidence), conflicts frozen, embargo check, QA overrides,
             Report Ship gate checklist ticked
-8 SHIP      git add the report dir + data/ changes; commit; push. Move the
-            request file from requests/queue/ to requests/archive/.
+8 SHIP      git add the report dir + companies/ changes; commit; push. Move the
+            request file from "Report Automation/requests/queue/" to
+            "Report Automation/requests/archive/".
 ```
+
+README.md at the repo root is the report-writing standard (structure, voice,
+sourcing, gate); this runbook operationalizes it. On conflict, README wins on
+editorial questions, this file on tooling.
 
 A report is DONE only when the Report Ship gate in its validation log is all
 true. Any false box = not done (fix and re-assert). Never leave TODOs.
 
-Fresh container? Run `bash scripts/setup.sh` before stage 6 (installs
+Fresh container? Run `bash "Report Automation/scripts/setup.sh"` before stage 6 (installs
 python-docx/matplotlib/openpyxl + libreoffice-writer + poppler-utils; without
 the latter two the build ships docx-only and that gap must be flagged).
 
@@ -46,7 +58,7 @@ Sources, in tier order:
   audited filings, 8-K/10-Q/S-1.
 - T2: PitchBook Premium MCP (primary structured source) + company
   announcements. Key tools: `pitchbook_get_profile` (pbid in
-  data/universe.json), `pitchbook_get_company_deals`,
+  companies/universe.json), `pitchbook_get_company_deals`,
   `pitchbook_get_company_financials`, `pitchbook_get_company_investors`,
   `pitchbook_get_news_analysis`, `pitchbook_search` (to resolve missing
   pbids; write them back to universe.json).
@@ -100,11 +112,11 @@ analytical passage (what happened -> what it means -> implication); metaphor +
 colon + literal section titles, one metaphor family per report; verdict takes
 a position and names the falsifier. After every shipped report, re-run
 `python3 -m engine style` so the corpus keeps teaching the profiler, and drop
-any externally produced reports into reference_reports/.
+any externally produced reports into previous_reports/.
 
 ## Templates
 
-templates/*.json define section order and binding obligations per report
+report_template/*.json define section order and binding obligations per report
 type (initiation_note, company_update, rush_note, earnings_note, one_pager,
 sector_overview). `required` entries are the editorial contract; check each
 before ship. Custom section lists from a request are legitimate; the engine
@@ -112,17 +124,18 @@ renders whatever blocks exist.
 
 ## Tracker refresh (scheduled or on demand)
 
-For each company in data/universe.json (or the requested subset):
+For each company in companies/universe.json (or the requested subset):
 1. `pitchbook_get_profile` (+ targeted news query if the profile moved)
 2. Write snapshot -> `python3 -m engine snapshot <slug> <file>`
-3. `python3 -m engine digest <slug>`; update trigger statuses
+3. `python3 -m engine digest <slug>`; update trigger statuses;
+   `python3 -m engine export <slug>` to refresh the readable PROFILE.md
 4. `python3 -m engine cohort` for the cross-company view
 5. If a named trigger fired or a material field moved (valuation, mark
    status, run-rate print, S-1, leadership), START A REPORT REQUEST:
-   write requests/queue/<slug>-update-<date>.json (template company_update,
-   the trend digest as the idea) and process it, or surface it if the run is
-   refresh-only. Commit data/ changes either way with message
-   "tracker: <date> refresh (<n> companies, <changes> changes)".
+   write "Report Automation/requests/queue/<slug>-update-<date>.json"
+   (template company_update, the trend digest as the idea) and process it, or
+   surface it if the run is refresh-only. Commit companies/ changes either way
+   with message "tracker: <date> refresh (<n> companies, <changes> changes)".
 
 ## Commits
 

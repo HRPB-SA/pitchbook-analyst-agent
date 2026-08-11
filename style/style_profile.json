@@ -1,19 +1,19 @@
 {
   "corpus": {
-    "documents": 2,
-    "words": 16326,
-    "paragraphs": 192
+    "documents": 3,
+    "words": 18186,
+    "paragraphs": 221
   },
   "sentences": {
-    "mean_words": 23.3,
-    "median_words": 22.0,
+    "mean_words": 22.8,
+    "median_words": 21.0,
     "p25_words": 11,
     "p75_words": 32,
     "note": "long, clause-stacked sentences are the house signature"
   },
   "paragraphs": {
-    "mean_sentences": 3.7,
-    "mean_words": 85.0,
+    "mean_sentences": 3.6,
+    "mean_words": 82.0,
     "note": "dense single-topic paragraphs; no one-sentence fragments"
   },
   "sections": {
@@ -39,66 +39,74 @@
       "Products and Services Deep Dive",
       "AI Focus: Where the Models End and the Business Begins"
     ],
-    "h2_per_h1": 1.2,
+    "h2_per_h1": 1.0,
     "titling_pattern": "metaphor + colon + literal claim (e.g. 'The Mortar: How the Money Is Made')"
   },
   "density_per_1000_words": {
-    "tables": 2.02,
-    "figures": 1.35,
-    "parenthetical_citations": 8.58,
-    "money_figures": 13.48,
-    "multiples_x": 2.57,
-    "percentages": 8.39
+    "tables": 2.86,
+    "figures": 1.54,
+    "parenthetical_citations": 9.02,
+    "money_figures": 13.69,
+    "multiples_x": 2.8,
+    "percentages": 8.36
   },
   "conventions": {
     "compact_money_vs_spelled": {
-      "compact_$14.2B": 24,
-      "spelled_billion": 187,
+      "compact_$14.2B": 26,
+      "spelled_billion": 214,
       "rule": "prose may spell 'billion'; tables/tiles use $14.2B"
     },
-    "hedges_per_1000_words": 0.8,
+    "hedges_per_1000_words": 0.77,
     "em_dashes": 0,
     "citation_style": "parenthetical, source kind + date: (company, February 9, 2026), (PitchBook deal record, Jul 2026)"
   },
   "frequent_sentence_openers": [
     [
       "The",
-      165
+      195
     ],
     [
       "Databricks",
-      33
+      34
     ],
     [
       "Figure",
-      24
+      30
     ],
     [
       "What",
-      21
-    ],
-    [
-      "That",
-      13
+      23
     ],
     [
       "This",
-      12
+      15
+    ],
+    [
+      "That",
+      14
     ],
     [
       "First",
-      12
+      13
     ],
     [
       "Second",
+      13
+    ],
+    [
+      "At",
       12
+    ],
+    [
+      "A",
+      11
     ],
     [
       "Forward",
       11
     ],
     [
-      "A",
+      "Growth",
       10
     ],
     [
@@ -106,19 +114,11 @@
       10
     ],
     [
-      "At",
-      9
-    ],
-    [
-      "Growth",
-      9
+      "Sources",
+      10
     ],
     [
       "Analysis",
-      9
-    ],
-    [
-      "Sources",
       9
     ]
   ]

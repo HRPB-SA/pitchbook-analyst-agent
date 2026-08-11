@@ -1,7 +1,9 @@
 """CLI: python -m engine <command>
 
 Commands:
-    style                         profile reference reports -> style/
+    style                         profile previous reports -> style/
+    add <slug> "<Name>" [pbid]    register a company + scaffold its folders
+    export [slug]                 write companies/<slug>/PROFILE.md (all if omitted)
     snapshot <slug> <file>        add snapshot JSON + merge into canonical
     merge <slug> <snapshot.json>  merge an existing snapshot file by name
     trends <slug>                 recompute trends.json, print digest
@@ -29,6 +31,17 @@ def main(argv=None):
         prof = style.run()
         print(json.dumps(prof["sentences"], indent=2))
         print("wrote style/style_profile.json + style/STYLE_PROFILE.md")
+
+    elif cmd == "add":
+        slug, name = args[0], args[1]
+        pbid = args[2] if len(args) > 2 else None
+        path = store.add_company(slug, name, pb_entity_id=pbid)
+        print(f"registered {slug} -> {path} (universe + category folders)")
+
+    elif cmd == "export":
+        slugs = args or [c["slug"] for c in store.universe()["companies"]]
+        for slug in slugs:
+            print("wrote", compose.export_profile_md(slug))
 
     elif cmd == "snapshot":
         slug, path = args

@@ -170,6 +170,42 @@ def _label(key):
     return key.replace("_bn", " ($B)").replace("_pct", " (%)").replace("_", " ").strip().capitalize()
 
 
+def export_profile_md(slug):
+    """Write companies/<slug>/PROFILE.md: the canonical record as a readable,
+    categorized fact sheet (value + source + date + tier on every line)."""
+    profile = store.load_profile(slug)
+    name = profile.get("identity", {}).get("name", {})
+    name = name.get("value") if schema.is_fact(name) else slug
+    L = [f"# {name}", "",
+         f"Canonical company record, exported {profile.get('_updated', '')} "
+         "from the machine store (store/profile.json). Regenerate with "
+         f"`python3 -m engine export {slug}`. Estimates are tilded; flags in "
+         "brackets; frozen conflicts show both values in store/conflicts.json.", ""]
+    for cat in schema.CATEGORIES:
+        block = profile.get(cat)
+        if not isinstance(block, dict) or not block:
+            continue
+        L.append(f"## {schema.CATEGORIES[cat][0]}")
+        L.append("")
+        L.append("| Metric | Value | Source, date (tier) |")
+        L.append("|---|---|---|")
+        for field, v in block.items():
+            if schema.is_fact(v):
+                L.append(f"| {_label(field)} | {_md(_val(v))} | {_md(_cite(v))} |")
+            elif isinstance(v, list) and v and all(schema.is_fact(x) for x in v):
+                for item in v:
+                    L.append(f"| {_label(field)} | {_md(_val(item))} | {_md(_cite(item))} |")
+        L.append("")
+    out = os.path.join(store.COMPANIES, slug, "PROFILE.md")
+    with open(out, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(L) + "\n")
+    return out
+
+
+def _md(s):
+    return str(s).replace("|", "/").replace("\n", " ")
+
+
 def _short(v, n=48):
     s = str(v)
     return s if len(s) <= n else s[:n - 3] + "..."
