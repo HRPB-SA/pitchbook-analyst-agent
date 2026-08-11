@@ -175,6 +175,21 @@ specialty formats in the "house" theme. `required` entries are the editorial
 contract; check each before ship. Custom section lists from a request are
 legitimate; the engine renders whatever blocks exist.
 
+## NEXUS Intelligence (Notion mirror)
+
+"NEXUS Intelligence/" is a read-only GitHub mirror of Harrison's separate
+NEXUS private-market research system in Notion (Frontier Five + extended
+coverage, AIBQ/PBQ scoring, Morning Digest archive, Canon governance
+layer); see its README for provenance, structure, and the refresh
+recipe. It is a distinct system from companies/ (this repo's own report
+coverage) and from Layer H Ventures (not mirrored here). Notion is the
+system of record: never hand-edit the mirror; re-extract and commit as
+"nexus: <date> intelligence mirror refresh". NEXUS's own Canon carries a
+hard embargo on a cross-company quality-valuation coefficient — redacted
+throughout the mirror, including the Excel workbook; never recompute or
+restate it from the mirrored score/valuation data, in this mirror or in
+any report this repo produces.
+
 ## Tracker refresh (scheduled or on demand)
 
 For each company in companies/universe.json (or the requested subset):
