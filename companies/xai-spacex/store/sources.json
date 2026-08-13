@@ -1,0 +1,73 @@
+{
+  "slug": "xai-spacex",
+  "name": "xAI (within SpaceX, SPCX)",
+  "domain": "x.ai",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "xAI (within SpaceX, SPCX) newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://x.ai/news",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "xAI (within SpaceX, SPCX) blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://x.ai/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "xAI (within SpaceX, SPCX) pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://x.ai/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "xAI (within SpaceX, SPCX) careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://x.ai/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "xAI (within SpaceX, SPCX) home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://x.ai/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "xAI (within SpaceX, SPCX) about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://x.ai/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "xAI (within SpaceX, SPCX) docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://x.ai/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:03:53+00:00"
+}

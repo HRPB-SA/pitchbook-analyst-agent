@@ -1,0 +1,126 @@
+[
+  {
+    "slug": "cursor",
+    "started_at": "2026-08-13T17:56:12+00:00",
+    "finished_at": "2026-08-13T17:56:39+00:00",
+    "sources": 4,
+    "counts": {
+      "unreachable": 3,
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Cursor (Anysphere) newsroom",
+        "kind": "newsroom",
+        "url": "https://cursor.com/company/newsroom",
+        "checked_at": "2026-08-13T17:56:12+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      },
+      {
+        "id": "blog",
+        "name": "Cursor (Anysphere) blog",
+        "kind": "blog",
+        "url": "https://cursor.com/blog",
+        "checked_at": "2026-08-13T17:56:13+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cursor-com-blog-ef0299e5",
+        "chars": 9428,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Cursor (Anysphere) pricing",
+        "kind": "pricing",
+        "url": "https://cursor.com/pricing",
+        "checked_at": "2026-08-13T17:56:38+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "URLError: <urlopen error _ssl.c:999: The handshake operation timed out>"
+      },
+      {
+        "id": "careers",
+        "name": "Cursor (Anysphere) careers",
+        "kind": "careers",
+        "url": "https://cursor.com/company/careers",
+        "checked_at": "2026-08-13T17:56:39+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      }
+    ]
+  },
+  {
+    "slug": "cursor",
+    "started_at": "2026-08-13T18:04:59+00:00",
+    "finished_at": "2026-08-13T18:05:27+00:00",
+    "sources": 5,
+    "counts": {
+      "unreachable": 1,
+      "new": 4
+    },
+    "results": [
+      {
+        "id": "blog",
+        "name": "Cursor (Anysphere) blog",
+        "kind": "blog",
+        "url": "https://cursor.com/blog",
+        "checked_at": "2026-08-13T18:05:24+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "URLError: <urlopen error _ssl.c:999: The handshake operation timed out>"
+      },
+      {
+        "id": "pricing",
+        "name": "Cursor (Anysphere) pricing",
+        "kind": "pricing",
+        "url": "https://cursor.com/pricing",
+        "checked_at": "2026-08-13T18:05:25+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cursor-com-pricing-bd75bc00",
+        "chars": 9779,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Cursor (Anysphere) careers",
+        "kind": "careers",
+        "url": "https://cursor.com/careers",
+        "checked_at": "2026-08-13T18:05:26+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cursor-com-careers-406393ec",
+        "chars": 23825,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Cursor (Anysphere) home",
+        "kind": "other",
+        "url": "https://cursor.com/",
+        "checked_at": "2026-08-13T18:05:27+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cursor-com-b3356e4e",
+        "chars": 20101,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Cursor (Anysphere) docs",
+        "kind": "docs",
+        "url": "https://cursor.com/docs",
+        "checked_at": "2026-08-13T18:05:27+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cursor-com-docs-f591f488",
+        "chars": 5520,
+        "as_of": null
+      }
+    ]
+  }
+]

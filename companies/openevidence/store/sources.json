@@ -1,0 +1,73 @@
+{
+  "slug": "openevidence",
+  "name": "OpenEvidence",
+  "domain": "openevidence.com",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "OpenEvidence newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://openevidence.com/news",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "OpenEvidence blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://openevidence.com/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "OpenEvidence pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openevidence.com/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "OpenEvidence careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openevidence.com/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "OpenEvidence home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openevidence.com/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "OpenEvidence about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://openevidence.com/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "OpenEvidence docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openevidence.com/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:04:21+00:00"
+}

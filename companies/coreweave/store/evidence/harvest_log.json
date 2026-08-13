@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "coreweave",
+    "started_at": "2026-08-13T17:56:09+00:00",
+    "finished_at": "2026-08-13T17:56:12+00:00",
+    "sources": 4,
+    "counts": {
+      "unreachable": 2,
+      "new": 2
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "CoreWeave newsroom",
+        "kind": "newsroom",
+        "url": "https://coreweave.com/company/newsroom",
+        "checked_at": "2026-08-13T17:56:10+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      },
+      {
+        "id": "blog",
+        "name": "CoreWeave blog",
+        "kind": "blog",
+        "url": "https://coreweave.com/blog",
+        "checked_at": "2026-08-13T17:56:11+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-coreweave-com-blog-983d2482",
+        "chars": 21839,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "CoreWeave pricing",
+        "kind": "pricing",
+        "url": "https://coreweave.com/pricing",
+        "checked_at": "2026-08-13T17:56:11+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-coreweave-com-pricing-5c41f21b",
+        "chars": 28006,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "CoreWeave careers",
+        "kind": "careers",
+        "url": "https://coreweave.com/company/careers",
+        "checked_at": "2026-08-13T17:56:12+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      }
+    ]
+  },
+  {
+    "slug": "coreweave",
+    "started_at": "2026-08-13T18:04:55+00:00",
+    "finished_at": "2026-08-13T18:04:59+00:00",
+    "sources": 6,
+    "counts": {
+      "new": 4,
+      "unchanged": 2
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "CoreWeave newsroom",
+        "kind": "newsroom",
+        "url": "https://coreweave.com/news",
+        "checked_at": "2026-08-13T18:04:56+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-coreweave-com-news-89b88fda",
+        "chars": 17699,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "CoreWeave blog",
+        "kind": "blog",
+        "url": "https://coreweave.com/blog",
+        "checked_at": "2026-08-13T18:04:57+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-coreweave-com-blog-983d2482",
+        "chars": 21839,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "CoreWeave pricing",
+        "kind": "pricing",
+        "url": "https://coreweave.com/pricing",
+        "checked_at": "2026-08-13T18:04:57+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-coreweave-com-pricing-5c41f21b",
+        "chars": 28006,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "CoreWeave careers",
+        "kind": "careers",
+        "url": "https://coreweave.com/careers",
+        "checked_at": "2026-08-13T18:04:58+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-coreweave-com-careers-dc78b6e6",
+        "chars": 6607,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "CoreWeave home",
+        "kind": "other",
+        "url": "https://coreweave.com/",
+        "checked_at": "2026-08-13T18:04:58+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-coreweave-com-3101c684",
+        "chars": 14291,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "CoreWeave about",
+        "kind": "other",
+        "url": "https://coreweave.com/about-us",
+        "checked_at": "2026-08-13T18:04:59+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-coreweave-com-about-us-55470564",
+        "chars": 8811,
+        "as_of": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "slug": "cursor",
+  "name": "Cursor (Anysphere)",
+  "domain": "cursor.com",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "Cursor (Anysphere) newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://cursor.com/news",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "Cursor (Anysphere) blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cursor.com/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "Cursor (Anysphere) pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cursor.com/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "Cursor (Anysphere) careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cursor.com/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "Cursor (Anysphere) home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cursor.com/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "Cursor (Anysphere) about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://cursor.com/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "Cursor (Anysphere) docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cursor.com/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:02:58+00:00"
+}

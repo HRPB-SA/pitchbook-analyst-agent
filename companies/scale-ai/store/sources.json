@@ -1,0 +1,73 @@
+{
+  "slug": "scale-ai",
+  "name": "Scale AI",
+  "domain": "scale.com",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "Scale AI newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://scale.com/press",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "Scale AI blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://scale.com/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "Scale AI pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://scale.com/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "Scale AI careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://scale.com/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "Scale AI home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://scale.com/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "Scale AI about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://scale.com/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "Scale AI docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://scale.com/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:03:57+00:00"
+}

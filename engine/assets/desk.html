@@ -1,0 +1,1027 @@
+<title>HRPB Research Desk</title>
+<style>
+/* ═══ tokens ═══ palette inherited from engine/charts.py PALETTES["house"] ═══ */
+:root{
+  --navy:#1F2A44; --slate:#35506E; --green:#1C5D46; --teal:#2A6E7A;
+  --amber:#8A6410; --rust:#8F3421; --muted:#63708A; --ink:#232B3A;
+  --ground:#FAFBFC; --surface:#FFFFFF; --panel:#F2F5F9; --band:#E9EEF5;
+  --edge:#D2DAE5; --hair:#E6EBF2; --rail:#9AA6BA;
+  --shadow:0 1px 2px rgba(31,42,68,.05),0 6px 20px -14px rgba(31,42,68,.35);
+  --dino:#1C5D46; --dino-2:#2A7D5F; --dino-belly:#C9E4D6;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --rail-w:250px; --top-h:56px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --navy:#C8D4E8; --slate:#9FB3D0; --green:#6FBF9C; --teal:#5FB3BE;
+  --amber:#D6AE5C; --rust:#D89178; --muted:#8E9BB2; --ink:#DCE3EF;
+  --ground:#0F131B; --surface:#161B26; --panel:#1A202C; --band:#212936;
+  --edge:#2F3948; --hair:#242C3A; --rail:#5C6880;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 6px 20px -14px rgba(0,0,0,.8);
+  --dino:#6FBF9C; --dino-2:#4E9E7D; --dino-belly:#1E3A30;}}
+:root[data-theme="dark"]{
+  --navy:#C8D4E8; --slate:#9FB3D0; --green:#6FBF9C; --teal:#5FB3BE;
+  --amber:#D6AE5C; --rust:#D89178; --muted:#8E9BB2; --ink:#DCE3EF;
+  --ground:#0F131B; --surface:#161B26; --panel:#1A202C; --band:#212936;
+  --edge:#2F3948; --hair:#242C3A; --rail:#5C6880;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 6px 20px -14px rgba(0,0,0,.8);
+  --dino:#6FBF9C; --dino-2:#4E9E7D; --dino-belly:#1E3A30;}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);font-family:var(--serif);font-size:14.5px;
+  line-height:1.5;-webkit-font-smoothing:antialiased}
+.mono,.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:none}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:2px}
+a{color:var(--green)}
+
+/* ═══ shell ═══ */
+.top{position:fixed;inset:0 0 auto 0;height:var(--top-h);z-index:40;display:flex;
+  align-items:center;gap:1rem;padding:0 1rem;background:var(--surface);
+  border-bottom:1px solid var(--edge)}
+.brand{font-weight:700;color:var(--navy);font-size:1.02rem;white-space:nowrap}
+.brand em{font-style:normal;color:var(--green)}
+.gsearch{flex:1;max-width:520px;position:relative}
+.gsearch input{width:100%;padding:.42rem .7rem .42rem 1.9rem;background:var(--panel);
+  border:1px solid var(--edge);border-radius:4px;font-size:.86rem;font-family:var(--mono)}
+.gsearch::before{content:"⌕";position:absolute;left:.6rem;top:50%;transform:translateY(-50%);
+  color:var(--rail);font-size:1rem;pointer-events:none}
+.tstats{margin-left:auto;display:flex;gap:.4rem;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:.66rem;padding:.2rem .5rem;border:1px solid var(--edge);
+  border-radius:999px;color:var(--muted);white-space:nowrap}
+.chip b{color:var(--navy);font-weight:700}
+.chip.crit b{color:var(--rust)} .chip.warn b{color:var(--amber)}
+@media(max-width:900px){.tstats{display:none}}
+
+.rail{position:fixed;top:var(--top-h);bottom:0;left:0;width:var(--rail-w);z-index:30;
+  background:var(--surface);border-right:1px solid var(--edge);overflow-y:auto;
+  display:flex;flex-direction:column}
+.rail nav{padding:.5rem .5rem 0}
+.rail nav button{display:flex;align-items:center;gap:.55rem;width:100%;text-align:left;
+  padding:.44rem .6rem;border-radius:4px;font-size:.86rem;color:var(--ink)}
+.rail nav button[aria-current="true"]{background:var(--panel);color:var(--navy);font-weight:700}
+.rail nav button .ic{width:1.1rem;text-align:center;color:var(--rail);font-family:var(--mono);font-size:.8rem}
+.rail nav button[aria-current="true"] .ic{color:var(--green)}
+.rlabel{font-family:var(--mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--rail);padding:1rem .9rem .35rem}
+.colist{padding:0 .5rem 1.5rem;display:flex;flex-direction:column;gap:1px}
+.colist button{display:grid;grid-template-columns:1fr auto;gap:.4rem;align-items:center;
+  width:100%;text-align:left;padding:.4rem .6rem;border-radius:4px;font-size:.85rem}
+.colist button:hover{background:var(--panel)}
+.colist button[aria-current="true"]{background:var(--band);color:var(--navy);font-weight:700;
+  box-shadow:inset 2px 0 0 var(--green)}
+.colist .cn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.colist .cm{font-family:var(--mono);font-size:.66rem;color:var(--rail)}
+.colist .dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:.35rem;
+  vertical-align:middle;background:var(--green)}
+.colist .dot.thin{background:var(--rust)} .colist .dot.warn{background:var(--amber)}
+.railtoggle{display:none}
+@media(max-width:860px){
+  .rail{transform:translateX(-100%);transition:transform .2s}
+  body.railopen .rail{transform:none;box-shadow:var(--shadow)}
+  .railtoggle{display:block;font-family:var(--mono);font-size:1rem;color:var(--navy);padding:.2rem .4rem}
+  main{margin-left:0!important}
+}
+main{margin-left:var(--rail-w);margin-top:var(--top-h);padding:1.3rem 1.5rem 7rem;min-height:60vh}
+.view[hidden]{display:none}
+
+/* ═══ type ═══ */
+h1{font-size:1.6rem;color:var(--navy);margin:0 0 .2rem;letter-spacing:-.01em}
+h2{font-size:1.05rem;color:var(--navy);margin:2rem 0 .6rem}
+h3{font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);font-weight:400;margin:1.6rem 0 .5rem;padding-bottom:.3rem;
+  border-bottom:1px solid var(--edge)}
+.sub{color:var(--muted);font-size:.86rem;margin:0 0 1rem;max-width:74ch}
+.dim{color:var(--muted)}
+
+/* ═══ tiles ═══ */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:.6rem;margin:.9rem 0 0}
+.tile{background:var(--surface);border:1px solid var(--edge);border-radius:5px;padding:.65rem .75rem;
+  box-shadow:var(--shadow);position:relative}
+.tile .tl{font-family:var(--mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.2rem}
+.tile .tv{font-family:var(--mono);font-size:1.28rem;color:var(--navy);font-weight:700;
+  font-variant-numeric:tabular-nums;line-height:1.15;word-break:break-word}
+.tile .tm{font-family:var(--mono);font-size:.62rem;color:var(--rail);margin-top:.25rem;
+  display:flex;gap:.35rem;align-items:center;flex-wrap:wrap}
+.tile.stale{border-color:var(--amber)}
+.tile.stale .tm{color:var(--amber)}
+
+/* ═══ badges ═══ */
+.tier{font-family:var(--mono);font-size:.58rem;padding:.05rem .28rem;border-radius:2px;
+  border:1px solid var(--edge);color:var(--muted)}
+.tier.T1{color:var(--green);border-color:var(--green)}
+.tier.T2{color:var(--teal);border-color:var(--teal)}
+.tier.T3{color:var(--muted)}
+.flag{font-family:var(--mono);font-size:.56rem;letter-spacing:.05em;padding:.05rem .28rem;
+  border-radius:2px;background:var(--rust);color:var(--surface);margin-left:.25rem}
+.flag.est{background:var(--rail)}
+.grp{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.1rem .4rem;border:1px solid var(--edge);border-radius:3px;color:var(--muted)}
+.grp.f5{color:var(--green);border-color:var(--green)}
+.st{font-family:var(--mono);font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;
+  padding:.1rem .38rem;border-radius:3px}
+.st.armed{color:var(--amber);border:1px solid var(--amber)}
+.st.fired{color:var(--green);border:1px solid var(--green)}
+.st.expired{color:var(--muted);border:1px solid var(--edge)}
+.st.new{color:var(--green);border:1px solid var(--green)}
+.st.changed{color:var(--teal);border:1px solid var(--teal)}
+.st.unchanged{color:var(--muted);border:1px solid var(--edge)}
+.st.unreachable{color:var(--rust);border:1px solid var(--rust)}
+
+/* ═══ tables ═══ */
+.scroll{overflow-x:auto;border:1px solid var(--edge);border-radius:5px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:.83rem}
+th{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);font-weight:400;text-align:left;padding:.6rem .7rem;
+  border-bottom:1px solid var(--edge);white-space:nowrap;background:var(--panel);
+  position:sticky;top:0;z-index:1}
+td{padding:.5rem .7rem;border-bottom:1px solid var(--hair);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+th.r,td.r{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:.8rem}
+tr.clk{cursor:pointer} tr.clk:hover td{background:var(--panel)}
+.cname{color:var(--navy);font-weight:700}
+.cslug{font-family:var(--mono);font-size:.66rem;color:var(--rail);display:block}
+
+/* meters */
+.meter{display:inline-flex;align-items:center;gap:.45rem}
+.mtrack{width:64px;height:5px;background:var(--band);border-radius:3px;overflow:hidden}
+.mfill{height:100%;background:var(--green);border-radius:3px}
+.mfill.low{background:var(--rust)} .mfill.mid{background:var(--amber)}
+.mnum{font-family:var(--mono);font-size:.68rem;color:var(--muted)}
+
+/* ═══ facts ═══ */
+.catblock{background:var(--surface);border:1px solid var(--edge);border-radius:5px;margin-bottom:.6rem;overflow:hidden}
+.catblock>summary{list-style:none;cursor:pointer;padding:.55rem .8rem;display:flex;
+  align-items:center;gap:.5rem;background:var(--panel);font-family:var(--mono);font-size:.66rem;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--slate)}
+.catblock>summary::-webkit-details-marker{display:none}
+.catblock>summary::before{content:"▸";color:var(--rail);transition:transform .15s;display:inline-block}
+.catblock[open]>summary::before{transform:rotate(90deg)}
+.catblock>summary .n{margin-left:auto;color:var(--rail)}
+.frow{display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:.3rem .9rem;
+  padding:.5rem .8rem;border-top:1px solid var(--hair)}
+.frow:hover{background:var(--panel)}
+.fk{font-family:var(--mono);font-size:.72rem;color:var(--slate);word-break:break-word}
+.fval{word-break:break-word}
+.fmeta{font-family:var(--mono);font-size:.63rem;color:var(--muted);margin-top:.2rem;
+  display:flex;flex-wrap:wrap;gap:.25rem .6rem;align-items:center}
+.fsrc{color:var(--rail)}
+.fnote{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:.15rem}
+.stale-t{color:var(--amber);font-family:var(--mono);font-size:.6rem}
+@media(max-width:600px){.frow{grid-template-columns:1fr;gap:.1rem}}
+
+/* ═══ timeline ═══ */
+.tline{position:relative;padding-left:1.3rem;margin-top:.6rem}
+.tline::before{content:"";position:absolute;left:4px;top:.4rem;bottom:.4rem;width:1px;background:var(--edge)}
+.tev{position:relative;padding:.4rem 0 .5rem}
+.tev::before{content:"";position:absolute;left:-1.3rem;top:.75rem;width:7px;height:7px;
+  border-radius:50%;background:var(--rail);border:2px solid var(--ground)}
+.tev.mark::before{background:var(--teal)} .tev.print::before{background:var(--green)}
+.tev.trigger::before{background:var(--amber)} .tev.event::before{background:var(--slate)}
+.tev .td{font-family:var(--mono);font-size:.64rem;color:var(--muted)}
+.tev .tt{font-size:.87rem}
+
+/* ═══ sparkline ═══ */
+.sparks{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.6rem}
+.spark{background:var(--surface);border:1px solid var(--edge);border-radius:5px;padding:.6rem .7rem}
+.spark .sl{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin-bottom:.15rem}
+.spark .sv{font-family:var(--mono);font-size:.98rem;color:var(--navy);font-weight:700}
+.spark svg{display:block;width:100%;height:38px;margin-top:.3rem;overflow:visible}
+
+/* ═══ trigger / conflict ═══ */
+.trig{border-left:2px solid var(--edge);padding:.45rem 0 .45rem .75rem;margin-bottom:.5rem}
+.trig.armed{border-left-color:var(--amber)} .trig.fired{border-left-color:var(--green)}
+.callout{border:1px solid var(--rust);border-left-width:3px;border-radius:4px;padding:.7rem .85rem;
+  background:var(--surface);margin-bottom:.6rem}
+.empty{background:var(--panel);border:1px dashed var(--edge);border-radius:5px;padding:1.5rem;
+  color:var(--muted);font-size:.88rem;text-align:center}
+
+/* ═══ forms ═══ */
+label{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin:1rem 0 .35rem}
+input[type=text],input[type=date],select,textarea{width:100%;padding:.45rem .6rem;background:var(--surface);
+  border:1px solid var(--edge);border-radius:4px;font-size:.86rem}
+textarea{min-height:5rem;resize:vertical;font-family:var(--serif)}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.4rem}
+.opt{border:1px solid var(--edge);border-radius:4px;padding:.45rem .6rem;background:var(--surface);
+  text-align:left;font-size:.82rem}
+.opt[aria-pressed="true"]{border-color:var(--green);background:var(--panel);
+  box-shadow:inset 0 0 0 1px var(--green);color:var(--navy);font-weight:700}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:.5rem}
+.tcard{border:1px solid var(--edge);border-radius:5px;padding:.6rem .7rem;text-align:left;background:var(--surface)}
+.tcard[aria-pressed="true"]{border-color:var(--green);box-shadow:inset 0 0 0 1px var(--green);background:var(--panel)}
+.tcard b{display:block;color:var(--navy);font-size:.86rem;margin-bottom:.1rem}
+.tcard span{font-size:.72rem;color:var(--muted)}
+.tcard .pg{font-family:var(--mono);font-size:.6rem;color:var(--rail);display:block;margin-top:.25rem}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.3rem}
+.chk{display:flex;gap:.45rem;align-items:flex-start;padding:.3rem .4rem;border-radius:4px;
+  cursor:pointer;font-family:var(--serif);font-size:.82rem;text-transform:none;
+  letter-spacing:0;color:var(--ink);margin:0}
+.chk:hover{background:var(--panel)}
+.chk input{margin-top:.22rem;accent-color:var(--green)}
+.btnrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.1rem}
+.btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;padding:.5rem .85rem;
+  border:1px solid var(--edge);border-radius:4px;background:var(--surface)}
+.btn.primary{background:var(--green);border-color:var(--green);color:var(--surface);font-weight:700}
+.btn:hover{border-color:var(--green)}
+pre.out{background:var(--panel);border:1px solid var(--edge);border-radius:5px;padding:.8rem;
+  font-family:var(--mono);font-size:.72rem;line-height:1.55;white-space:pre-wrap;word-break:break-word;
+  max-height:26rem;overflow:auto;margin:.6rem 0 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:start}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+
+/* ═══ search ═══ */
+.facets{display:flex;gap:.35rem;flex-wrap:wrap;margin:.5rem 0 1rem}
+.facet{font-family:var(--mono);font-size:.66rem;padding:.22rem .5rem;border:1px solid var(--edge);
+  border-radius:999px;color:var(--muted);background:var(--surface)}
+.facet[aria-pressed="true"]{background:var(--navy);color:var(--ground);border-color:var(--navy)}
+mark{background:color-mix(in srgb,var(--green) 26%,transparent);color:inherit;border-radius:2px;padding:0 .1em}
+.hit{background:var(--surface);border:1px solid var(--edge);border-radius:5px;padding:.55rem .75rem;
+  margin-bottom:.4rem;cursor:pointer}
+.hit:hover{border-color:var(--green)}
+.hit .hh{display:flex;gap:.5rem;align-items:baseline;flex-wrap:wrap;margin-bottom:.15rem}
+.hit .hco{color:var(--navy);font-weight:700;font-size:.85rem}
+.hit .hf{font-family:var(--mono);font-size:.66rem;color:var(--slate)}
+.hit .hv{font-size:.87rem}
+
+/* ═══ feed ═══ */
+.feed{display:flex;flex-direction:column;gap:.3rem}
+.fitem{display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;align-items:baseline;
+  background:var(--surface);border:1px solid var(--edge);border-radius:4px;padding:.45rem .7rem;font-size:.83rem}
+.fitem .fw{font-family:var(--mono);font-size:.64rem;color:var(--rail);white-space:nowrap}
+
+/* ═══════════════════ THE DINOSAUR ═══════════════════
+   Walks the foot of a company page, tracking scroll progress. */
+#dino{position:fixed;left:var(--rail-w);right:0;bottom:0;height:96px;z-index:25;pointer-events:none;
+  opacity:0;transition:opacity .35s}
+body.dino-on #dino{opacity:1}
+body.dino-on main{padding-bottom:9rem}
+@media(max-width:860px){#dino{left:0}}
+/* content passes cleanly under the strip instead of colliding with the dino */
+#dino::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,var(--ground) 0,var(--ground) 46%,transparent 100%)}
+#dino .ground{position:absolute;left:1.5rem;right:1.5rem;bottom:17px;height:1px;
+  background:repeating-linear-gradient(90deg,var(--edge) 0 7px,transparent 7px 15px)}
+#dinowrap{position:absolute;bottom:13px;left:1.5rem;width:76px;height:64px;
+  transform:translateX(var(--dx,0px)) scaleX(var(--dir,1));
+  transition:transform .28s cubic-bezier(.4,.1,.3,1);transform-origin:center bottom}
+#dino svg{width:76px;height:64px;overflow:visible}
+.d-body{animation:bob 620ms ease-in-out infinite;transform-origin:38px 52px}
+.d-legF{animation:legF 620ms ease-in-out infinite;transform-origin:31px 46px}
+.d-legB{animation:legB 620ms ease-in-out infinite;transform-origin:44px 46px}
+.d-tail{animation:tail 1240ms ease-in-out infinite;transform-origin:55px 34px}
+.d-head{animation:head 1240ms ease-in-out infinite;transform-origin:26px 25px}
+.d-eye{animation:blink 4200ms step-end infinite;transform-origin:18px 21px}
+#dinowrap:not(.walking) .d-body,#dinowrap:not(.walking) .d-legF,
+#dinowrap:not(.walking) .d-legB{animation-play-state:paused}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.2px)}}
+@keyframes legF{0%,100%{transform:rotate(15deg)}50%{transform:rotate(-15deg)}}
+@keyframes legB{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(15deg)}}
+@keyframes tail{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+@keyframes head{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2.5deg)}}
+@keyframes blink{0%,94%{transform:scaleY(1)}95%,98%{transform:scaleY(.12)}99%,100%{transform:scaleY(1)}}
+.d-puff{opacity:0}
+#dinowrap.walking .d-puff{animation:puff 620ms ease-out infinite}
+@keyframes puff{0%{opacity:.5;transform:translate(0,0) scale(.5)}
+  100%{opacity:0;transform:translate(13px,-7px) scale(1.5)}}
+#dinoflag{position:absolute;bottom:76px;left:1.5rem;
+  transform:translateX(var(--dx,0px)) translateX(-50%) translateX(38px);
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.04em;
+  color:var(--slate);background:var(--surface);border:1px solid var(--edge);border-radius:4px;
+  padding:.14rem .4rem;white-space:nowrap;opacity:0;box-shadow:var(--shadow);
+  transition:opacity .25s,transform .28s cubic-bezier(.4,.1,.3,1)}
+#dinoflag::after{content:"";position:absolute;left:50%;bottom:-4px;width:6px;height:6px;
+  margin-left:-3px;background:var(--surface);border-right:1px solid var(--edge);
+  border-bottom:1px solid var(--edge);transform:rotate(45deg)}
+body.dino-say #dinoflag{opacity:1}
+@media(prefers-reduced-motion:reduce){
+  #dinowrap,#dinoflag{transition:none}
+  .d-body,.d-legF,.d-legB,.d-tail,.d-head,.d-eye,.d-puff{animation:none!important}}
+
+.flash{position:fixed;left:50%;bottom:5.5rem;transform:translateX(-50%);background:var(--navy);
+  color:var(--ground);font-family:var(--mono);font-size:.72rem;padding:.45rem .85rem;border-radius:4px;
+  opacity:0;pointer-events:none;transition:opacity .18s;z-index:60}
+.flash.show{opacity:1}
+footer{margin-left:var(--rail-w);padding:1.2rem 1.5rem 2rem;border-top:1px solid var(--edge);
+  font-family:var(--mono);font-size:.66rem;color:var(--muted);line-height:1.7}
+@media(max-width:860px){footer{margin-left:0}}
+</style>
+
+<div class="top">
+  <button class="railtoggle" id="railtoggle" aria-label="Toggle company list">☰</button>
+  <div class="brand">HRPB <em>Desk</em></div>
+  <div class="gsearch"><input id="q" type="text" placeholder="Search every fact, source and note…"
+    aria-label="Search the universe" autocomplete="off"></div>
+  <div class="tstats">
+    <span class="chip">Companies <b>__NCO__</b></span>
+    <span class="chip">Facts <b>__NFACTS__</b></span>
+    <span class="chip">Evidence <b>__NEV__</b></span>
+    <span class="chip warn">Stale <b>__NSTALE__</b></span>
+    <span class="chip crit">Thin <b>__NTHIN__</b></span>
+  </div>
+</div>
+
+<div class="rail">
+  <nav>
+    <button data-view="overview" aria-current="true"><span class="ic">▤</span>Overview</button>
+    <button data-view="search"><span class="ic">⌕</span>Search</button>
+    <button data-view="request"><span class="ic">✎</span>Request a report</button>
+    <button data-view="add"><span class="ic">＋</span>Add a company</button>
+  </nav>
+  <div class="rlabel">Coverage</div>
+  <div class="colist" id="colist"></div>
+</div>
+
+<main>
+  <section class="view" id="v-overview"></section>
+  <section class="view" id="v-company" hidden></section>
+  <section class="view" id="v-search" hidden></section>
+  <section class="view" id="v-request" hidden></section>
+  <section class="view" id="v-add" hidden></section>
+</main>
+
+<footer>
+  Generated <span class="mono">__GENAT__</span> by <span class="mono">python3 -m engine dashboard</span>.
+  Facts carry <b>as_of</b> (vintage of the information); evidence carries <b>retrieved_at</b>
+  (when we read it). This page is a view, never a source.
+</footer>
+
+<div id="dino" aria-hidden="true">
+  <div class="ground"></div>
+  <div id="dinoflag"></div>
+  <div id="dinowrap">
+    <svg viewBox="0 0 76 64" fill="none">
+      <g class="d-tail">
+        <path d="M50 40 C63 39 71 31 75 22 C68 28 60 32 51 33 Z" fill="var(--dino-2)"/>
+      </g>
+      <g class="d-legB"><rect x="39" y="44" width="11" height="15" rx="5.5" fill="var(--dino-2)"/>
+        <path d="M37 56 h14 a2.6 2.6 0 0 1 0 5.2 h-14 Z" fill="var(--dino-2)"/></g>
+      <g class="d-body">
+        <!-- fat, round-bellied body -->
+        <path d="M13 45 C7 33 12 19 28 16 C45 13 59 21 60 35 C61 47 50 54 34 54
+                 C23 54 17 52 13 45 Z" fill="var(--dino)"/>
+        <path d="M22 47 C22 38 29 34 37 34 C46 34 52 39 51 47 C49 52 41 54 33 53
+                 C27 52 23 51 22 47 Z" fill="var(--dino-belly)" opacity=".9"/>
+        <!-- back spikes -->
+        <path d="M30 16 l4 -6 l4 7 Z M39 17 l5 -6 l3 7 Z M48 21 l6 -4 l2 7 Z"
+              fill="var(--dino-2)"/>
+        <g class="d-head">
+          <path d="M25 31 C15 31 8 26 8 20 C8 13 15 8 25 9 C34 10 38 15 38 21
+                   C38 27 33 31 25 31 Z" fill="var(--dino)"/>
+          <circle class="d-eye" cx="18" cy="21" r="2.5" fill="#12161F"/>
+          <circle cx="10.5" cy="16.5" r="1.15" fill="#12161F" opacity=".55"/>
+          <path d="M10 25 C14 27.5 19 27.5 22 26" stroke="var(--dino-2)" stroke-width="1.5"
+                stroke-linecap="round"/>
+        </g>
+        <!-- tiny arm -->
+        <path d="M31 38 a4 4 0 0 1 6 2.6" stroke="var(--dino-2)" stroke-width="2.8"
+              stroke-linecap="round"/>
+      </g>
+      <g class="d-legF"><rect x="26" y="44" width="11" height="15" rx="5.5" fill="var(--dino)"/>
+        <path d="M24 56 h14 a2.6 2.6 0 0 1 0 5.2 h-14 Z" fill="var(--dino)"/></g>
+      <circle class="d-puff" cx="54" cy="58" r="3.4" fill="var(--rail)"/>
+    </svg>
+  </div>
+</div>
+
+<div class="flash" id="flash"></div>
+
+<script>
+const DATA = __DATA__;
+const $ = id => document.getElementById(id);
+const esc = s => String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const CO = Object.fromEntries(DATA.companies.map(c=>[c.slug,c]));
+let current = DATA.companies.length ? DATA.companies[0].slug : null;
+let view = "overview";
+
+/* ────────── helpers ────────── */
+function fmt(v){
+  if(v==null) return "—";
+  if(typeof v==="number") return Number.isInteger(v)?v.toLocaleString():String(v);
+  if(typeof v==="object") return JSON.stringify(v);
+  return String(v);
+}
+function ago(iso){
+  if(!iso) return "";
+  const d=new Date(iso); if(isNaN(d)) return "";
+  const days=Math.floor((Date.now()-d.getTime())/86400000);
+  if(days<0) return "";
+  if(days===0) return "today"; if(days===1) return "1d ago";
+  if(days<60) return days+"d ago";
+  if(days<730) return Math.floor(days/30)+"mo ago";
+  return Math.floor(days/365)+"y ago";
+}
+function tierBadge(t){ return t?`<span class="tier ${esc(t)}">${esc(t)}</span>`:""; }
+function flagBadges(fl){ return (fl||[]).map(f=>`<span class="flag ${f==="est."?"est":""}">${esc(f)}</span>`).join(""); }
+function meter(pct){
+  const cls = pct<20?"low":pct<50?"mid":"";
+  return `<span class="meter"><span class="mtrack"><span class="mfill ${cls}" style="width:${pct}%"></span></span><span class="mnum">${pct}%</span></span>`;
+}
+function flash(m){const f=$("flash");f.textContent=m;f.classList.add("show");
+  clearTimeout(f._t);f._t=setTimeout(()=>f.classList.remove("show"),1700);}
+async function copy(t,m){try{await navigator.clipboard.writeText(t);flash(m);}
+  catch{flash("Copy blocked — select the text and copy manually");}}
+
+/* ────────── sparkline ────────── */
+function sparkSVG(pts){
+  if(pts.length<2) return "";
+  const w=210,h=38,vals=pts.map(p=>p.value);
+  const lo=Math.min(...vals),hi=Math.max(...vals),span=(hi-lo)||1;
+  const X=i=>(i/(pts.length-1))*w, Y=v=>h-((v-lo)/span)*(h-8)-4;
+  const d=pts.map((p,i)=>`${i?"L":"M"}${X(i).toFixed(1)},${Y(p.value).toFixed(1)}`).join(" ");
+  const area=`${d} L${w},${h} L0,${h} Z`;
+  const last=pts[pts.length-1];
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img">
+    <path d="${area}" fill="var(--green)" opacity=".10"/>
+    <path d="${d}" fill="none" stroke="var(--green)" stroke-width="1.6"
+      stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+    <circle cx="${X(pts.length-1).toFixed(1)}" cy="${Y(last.value).toFixed(1)}" r="2.6"
+      fill="var(--green)"/></svg>`;
+}
+
+/* ────────── overview ────────── */
+function renderOverview(){
+  const cs=DATA.companies;
+  const totFacts=cs.reduce((a,c)=>a+c.n_facts,0);
+  const thin=cs.filter(c=>c.n_cats<=2);
+  const armed=cs.reduce((a,c)=>a+c.n_armed,0);
+  const ev=cs.reduce((a,c)=>a+c.evidence.records,0);
+  const stale=cs.reduce((a,c)=>a+c.n_stale,0);
+
+  const feed=DATA.feed.length? DATA.feed.slice(0,14).map(f=>`
+    <div class="fitem">
+      <span class="st ${esc(f.outcome)}">${esc(f.outcome)}</span>
+      <span><b class="cname">${esc(f.name)}</b> <span class="dim">${esc(f.source||"")}</span>
+        ${f.delta?`<span class="mono dim"> ${f.delta>0?"+":""}${f.delta} chars</span>`:""}</span>
+      <span class="fw">${esc(ago(f.at))}</span>
+    </div>`).join("")
+    : `<div class="empty">No harvest activity recorded yet. Run
+       <span class="mono">python3 -m engine harvest --all</span>.</div>`;
+
+  $("v-overview").innerHTML=`
+    <h1>Coverage universe</h1>
+    <p class="sub">Everything the desk knows, as of <span class="mono">${esc(DATA.generated)}</span>.
+      Facts carry the date of the information; evidence carries the moment it was read.</p>
+    <div class="tiles">
+      <div class="tile"><div class="tl">Companies</div><div class="tv">${cs.length}</div>
+        <div class="tm">${cs.filter(c=>c.group==="frontier_five").length} frontier</div></div>
+      <div class="tile"><div class="tl">Stored facts</div><div class="tv">${totFacts}</div>
+        <div class="tm">across ${DATA.categories.length} categories</div></div>
+      <div class="tile"><div class="tl">Evidence records</div><div class="tv">${ev}</div>
+        <div class="tm">archived source text</div></div>
+      <div class="tile ${stale?"stale":""}"><div class="tl">Stale facts</div><div class="tv">${stale}</div>
+        <div class="tm">past decay window</div></div>
+      <div class="tile"><div class="tl">Triggers armed</div><div class="tv">${armed}</div>
+        <div class="tm">waiting to fire</div></div>
+      <div class="tile"><div class="tl">Thin coverage</div>
+        <div class="tv" style="color:${thin.length?"var(--rust)":"var(--navy)"}">${thin.length}</div>
+        <div class="tm">2 categories or fewer</div></div>
+    </div>
+
+    <h3>Live feed — what the harvester saw move</h3>
+    <div class="feed">${feed}</div>
+
+    <h3>Every company</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Company</th><th>Group</th><th class="r">Facts</th><th>Coverage</th>
+        <th class="r">Stale</th><th class="r">Flagged</th><th class="r">Conflicts</th>
+        <th>Triggers</th><th class="r">Evidence</th><th class="r">Sources</th><th class="r">Updated</th></tr></thead>
+      <tbody>${cs.map(c=>`
+        <tr class="clk" data-slug="${esc(c.slug)}" tabindex="0">
+          <td><span class="cname">${esc(c.name)}</span><span class="cslug">${esc(c.slug)}</span></td>
+          <td><span class="grp ${c.group==="frontier_five"?"f5":""}">${c.group==="frontier_five"?"Frontier 5":"Coverage"}</span></td>
+          <td class="r" style="${c.n_cats<=2?"color:var(--rust);font-weight:700":""}">${c.n_facts}</td>
+          <td>${meter(c.coverage)}</td>
+          <td class="r" style="${c.n_stale?"color:var(--amber)":""}">${c.n_stale||"—"}</td>
+          <td class="r" style="${c.n_flagged?"color:var(--amber)":""}">${c.n_flagged||"—"}</td>
+          <td class="r" style="${c.n_conflicts?"color:var(--rust)":""}">${c.n_conflicts||"—"}</td>
+          <td class="mono" style="font-size:.72rem">${c.n_armed?c.n_armed+" armed":""}${c.n_armed&&c.n_fired?" · ":""}${c.n_fired?c.n_fired+" fired":""}${!c.n_armed&&!c.n_fired?"—":""}</td>
+          <td class="r">${c.evidence.records||"—"}</td>
+          <td class="r">${c.harvest.sources.length||"—"}</td>
+          <td class="r dim">${esc(c.updated||"—")}</td>
+        </tr>`).join("")}</tbody>
+    </table></div>`;
+  $("v-overview").querySelectorAll("tr.clk").forEach(tr=>{
+    const go=()=>openCompany(tr.dataset.slug);
+    tr.onclick=go;
+    tr.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};
+  });
+}
+
+/* ────────── company ────────── */
+function factRow(f){
+  return `<div class="frow">
+    <div class="fk">${esc(f.field)}</div>
+    <div><div class="fval">${esc(fmt(f.value))}${flagBadges(f.flags)}</div>
+      <div class="fmeta">${tierBadge(f.tier)}
+        <span>${esc(f.as_of||"—")}</span>
+        ${f.stale?`<span class="stale-t">STALE ${f.age}d · ${esc(f.decay)}</span>`:""}
+        <span class="fsrc">${esc(f.source||"")}</span></div>
+      ${f.note?`<div class="fnote">${esc(f.note)}</div>`:""}</div></div>`;
+}
+
+function renderCompany(slug){
+  const c=CO[slug]; if(!c) return;
+  const el=$("v-company");
+  const id=c.identity||{};
+  const idBits=["hq","ceo","founded","status"].filter(k=>id[k])
+    .map(k=>`<span class="dim">${k}</span> ${esc(fmt(id[k].value))}`).join(" &nbsp;·&nbsp; ");
+
+  if(!c.n_facts){
+    el.innerHTML=`<h1>${esc(c.name)}</h1>
+      <p class="sub"><span class="mono">${esc(c.slug)}</span>${c.sector?" · "+esc(c.sector):""}</p>
+      <div class="empty"><b>The store is empty for this company.</b><br>
+        It is in the universe and ${c.harvest.sources.length} source(s) are registered, but no facts
+        have been recorded yet. Run a research pass and snapshot before requesting a report.
+        <div class="btnrow" style="justify-content:center">
+          <button class="btn" onclick="copy('python3 -m engine harvest ${esc(c.slug)}','Command copied')">Copy harvest command</button>
+        </div></div>
+      ${harvestBlock(c)}`;
+    return;
+  }
+
+  const byCat={}; c.facts.forEach(f=>(byCat[f.cat]=byCat[f.cat]||[]).push(f));
+  const ladders=Object.entries(c.ladders||{});
+
+  el.innerHTML=`
+    <h1>${esc(c.name)}</h1>
+    <p class="sub">
+      <span class="grp ${c.group==="frontier_five"?"f5":""}">${c.group==="frontier_five"?"Frontier 5":"Coverage"}</span>
+      <span class="mono">${esc(c.slug)}</span>${c.sector?" · "+esc(c.sector):""}${c.pbid?" · PitchBook "+esc(c.pbid):""}${c.cik?" · CIK "+esc(c.cik):""}
+      ${c.domain?` · <a href="https://${esc(c.domain)}" target="_blank" rel="noopener">${esc(c.domain)}</a>`:""}
+      <br>${idBits}
+      <br><span class="mono dim">${c.n_facts} facts · ${c.n_cats}/${DATA.categories.length} categories · store updated ${esc(c.updated||"?")} · ${c.evidence.records} evidence records${c.evidence.latest?" · last read "+esc(ago(c.evidence.latest)):""}</span>
+    </p>
+    <div class="btnrow" style="margin-top:0">
+      <button class="btn primary" onclick="startRequest('${esc(c.slug)}')">Request a report on ${esc(c.name)}</button>
+      <button class="btn" onclick="copy('python3 -m engine harvest ${esc(c.slug)}','Command copied')">Harvest now</button>
+      <button class="btn" onclick="copy('python3 -m engine digest ${esc(c.slug)}','Command copied')">Trend digest</button>
+    </div>
+
+    ${c.headline.length?`<h3>Key figures</h3><div class="tiles">${c.headline.map(t=>`
+      <div class="tile ${t.stale?"stale":""}" title="${esc(t.source||"")}">
+        <div class="tl">${esc(t.label)}</div>
+        <div class="tv">${esc(t.prefix)}${esc(fmt(t.value))}${esc(t.suffix)}</div>
+        <div class="tm">${tierBadge(t.tier)}<span>${esc(t.as_of||"")}</span>${flagBadges(t.flags)}</div>
+      </div>`).join("")}</div>`:""}
+
+    ${ladders.length?`<h3>Series</h3><div class="sparks">${ladders.map(([k,pts])=>{
+      const last=pts[pts.length-1],first=pts[0];
+      const chg=first.value?Math.round(100*(last.value-first.value)/Math.abs(first.value)):null;
+      return `<div class="spark"><div class="sl">${esc(k)}</div>
+        <div class="sv">${esc(fmt(last.value))}
+          ${chg!=null?`<span class="mono" style="font-size:.66rem;color:${chg>=0?"var(--green)":"var(--rust)"}"> ${chg>=0?"+":""}${chg}%</span>`:""}</div>
+        ${sparkSVG(pts)}
+        <div class="sl" style="margin-top:.25rem">${esc(first.as_of||"")} → ${esc(last.as_of||"")} · ${pts.length} prints</div>
+      </div>`;}).join("")}</div>`:""}
+
+    ${c.triggers.length?`<h3>Triggers</h3>${c.triggers.map(t=>`
+      <div class="trig ${esc(t.status)}">
+        <div><span class="st ${esc(t.status)}">${esc(t.status)}</span>
+          ${t.fired_on?`<span class="mono dim" style="font-size:.66rem"> fired ${esc(t.fired_on)}</span>`:""}</div>
+        <div style="font-size:.87rem;margin-top:.2rem">${esc(t.condition)}</div>
+        ${t.source?`<div class="fmeta"><span class="fsrc">${esc(t.source)}</span></div>`:""}
+      </div>`).join("")}`:""}
+
+    ${c.n_conflicts?`<h3>Frozen conflicts</h3>
+      <div class="callout"><b>${c.n_conflicts} unresolved conflict(s).</b>
+        Both values ship or neither.<pre class="out">${esc(JSON.stringify(c.conflicts,null,1))}</pre></div>`:""}
+
+    ${c.timeline.length?`<h3>Timeline</h3><div class="tline">${c.timeline.slice(0,40).map(t=>`
+      <div class="tev ${esc(t.kind)}">
+        <div class="td">${esc(t.date)} · ${esc(t.kind)}${t.tier?" · "+esc(t.tier):""}</div>
+        <div class="tt">${esc(t.text)}</div>
+        ${t.source?`<div class="fmeta"><span class="fsrc">${esc(t.source)}</span></div>`:""}
+      </div>`).join("")}</div>`:""}
+
+    <h3>All stored facts</h3>
+    <div style="margin-bottom:.5rem">
+      <input type="text" id="cofilter" placeholder="Filter this company's facts…" style="max-width:340px">
+    </div>
+    <div id="cofacts">${DATA.categories.filter(cat=>byCat[cat]&&cat!=="triggers").map(cat=>`
+      <details class="catblock" ${["valuation","financials","financing"].includes(cat)?"open":""}>
+        <summary>${esc(cat.replace(/_/g," "))}<span class="n">${byCat[cat].length}</span></summary>
+        ${byCat[cat].map(factRow).join("")}
+      </details>`).join("")}</div>
+
+    ${c.sources_index.length?`<h3>Sources behind these facts</h3>
+      <div class="scroll"><table><thead><tr><th>Source</th><th class="r">Facts</th><th>Best tier</th>
+        <th>Categories</th><th class="r">Earliest</th><th class="r">Latest</th></tr></thead>
+      <tbody>${c.sources_index.map(s=>`<tr>
+        <td>${esc(s.source)}</td><td class="r">${s.n}</td><td>${tierBadge(s.tier)}</td>
+        <td class="dim" style="font-size:.76rem">${esc(s.cats.join(", "))}</td>
+        <td class="r dim">${esc(s.earliest||"—")}</td><td class="r dim">${esc(s.latest||"—")}</td>
+      </tr>`).join("")}</tbody></table></div>`:""}
+
+    ${c.evidence.recent.length?`<h3>Evidence locker — what we actually read</h3>
+      <div class="scroll"><table><thead><tr><th>Source</th><th>Kind</th><th class="r">Retrieved</th>
+        <th class="r">Last seen</th><th class="r">Times</th><th class="r">Chars</th><th>URL</th></tr></thead>
+      <tbody>${c.evidence.recent.map(r=>`<tr>
+        <td>${esc(r.source)}</td><td><span class="grp">${esc(r.kind)}</span></td>
+        <td class="r mono" style="font-size:.68rem">${esc((r.retrieved_at||"").replace("T"," ").replace("+00:00","Z"))}</td>
+        <td class="r dim">${esc(ago(r.last_seen))}</td><td class="r">${r.seen}</td>
+        <td class="r">${(r.chars||0).toLocaleString()}</td>
+        <td style="max-width:230px;overflow:hidden;text-overflow:ellipsis">
+          <a href="${esc(r.url)}" target="_blank" rel="noopener" style="font-size:.72rem">${esc(r.url)}</a></td>
+      </tr>`).join("")}</tbody></table></div>`:""}
+
+    ${harvestBlock(c)}
+
+    ${c.reports.length?`<h3>Reports covering this company</h3>
+      ${c.reports.map(rid=>{const r=DATA.reports.find(x=>x.id===rid)||{};
+        return `<div class="hit"><div class="hh"><span class="hco">${esc(r.title||rid)}</span>
+          <span class="hf">${esc(r.template||"")} · ${esc(r.submitted||"")}</span></div>
+          <div class="dim" style="font-size:.8rem">${esc(r.subtitle||r.idea||"")}</div>
+          <div class="fmeta"><span class="fsrc">${esc((r.outputs||[]).join(", "))}</span></div></div>`;
+      }).join("")}`:""}
+
+    ${c.snapshots.length?`<h3>Store snapshots</h3>
+      <p class="sub mono" style="font-size:.76rem">${c.snapshots.map(esc).join(" · ")}</p>`:""}
+  `;
+
+  const filt=$("cofilter");
+  if(filt) filt.oninput=()=>{
+    const q=filt.value.trim().toLowerCase();
+    $("cofacts").querySelectorAll(".catblock").forEach(b=>{
+      let any=false;
+      b.querySelectorAll(".frow").forEach(r=>{
+        const hit=!q||r.textContent.toLowerCase().includes(q);
+        r.style.display=hit?"":"none"; if(hit) any=true;
+      });
+      b.style.display=any?"":"none";
+      if(q&&any) b.open=true;
+    });
+  };
+}
+
+function harvestBlock(c){
+  const h=c.harvest;
+  if(!h.sources.length) return `<h3>Harvest</h3>
+    <div class="empty">No source manifest. Register one with
+      <span class="mono">python3 -m engine sources ${esc(c.slug)} &lt;domain&gt;</span>.</div>`;
+  const res=Object.fromEntries((h.results||[]).map(r=>[r.id,r]));
+  return `<h3>Harvest — the daily sweep</h3>
+    <p class="sub mono" style="font-size:.76rem">
+      ${h.sources.length} sources · ${h.runs} run(s)${h.last_run?" · last "+esc(h.last_run.replace("T"," ").replace("+00:00","Z")):" · never run"}</p>
+    <div class="scroll"><table><thead><tr><th>Source</th><th>Kind</th><th>Frequency</th>
+      <th>Last outcome</th><th class="r">Checked</th><th>URL</th></tr></thead>
+    <tbody>${h.sources.map(s=>{const r=res[s.id]||{};
+      return `<tr><td>${esc(s.name||s.id)}</td><td><span class="grp">${esc(s.kind||"")}</span></td>
+        <td class="dim mono" style="font-size:.72rem">${esc(s.frequency||"")}</td>
+        <td>${r.outcome?`<span class="st ${esc(r.outcome)}">${esc(r.outcome)}</span>`:'<span class="dim">—</span>'}
+          ${r.error?`<span class="dim" style="font-size:.72rem"> ${esc(r.error)}</span>`:""}</td>
+        <td class="r dim">${esc(ago(r.checked_at))}</td>
+        <td style="max-width:250px;overflow:hidden;text-overflow:ellipsis">
+          <a href="${esc(s.url)}" target="_blank" rel="noopener" style="font-size:.72rem">${esc(s.url)}</a></td>
+      </tr>`;}).join("")}</tbody></table></div>`;
+}
+
+/* ────────── search ────────── */
+const SFACETS={tier:null,cat:null,slug:null,stale:false};
+function renderSearch(){
+  const q=$("q").value.trim();
+  const tiers=[...new Set(DATA.search.map(r=>r.tier).filter(Boolean))].sort();
+  const facets=`
+    <div class="facets">
+      ${tiers.map(t=>`<button class="facet" data-f="tier" data-v="${esc(t)}" aria-pressed="${SFACETS.tier===t}">${esc(t)}</button>`).join("")}
+      <button class="facet" data-f="stale" data-v="1" aria-pressed="${SFACETS.stale}">Stale only</button>
+      ${DATA.categories.map(c=>`<button class="facet" data-f="cat" data-v="${esc(c)}" aria-pressed="${SFACETS.cat===c}">${esc(c.replace(/_/g," "))}</button>`).join("")}
+    </div>`;
+
+  let rows=DATA.search;
+  if(SFACETS.tier) rows=rows.filter(r=>r.tier===SFACETS.tier);
+  if(SFACETS.cat) rows=rows.filter(r=>r.cat===SFACETS.cat);
+  if(SFACETS.slug) rows=rows.filter(r=>r.slug===SFACETS.slug);
+  if(SFACETS.stale) rows=rows.filter(r=>r.stale);
+  const ql=q.toLowerCase();
+  if(ql) rows=rows.filter(r=>[r.name,r.field,r.cat,fmt(r.value),r.source,r.note]
+    .some(x=>String(x==null?"":x).toLowerCase().includes(ql)));
+
+  const hl=s=>{const t=esc(fmt(s)); if(!ql) return t;
+    const i=t.toLowerCase().indexOf(esc(ql).toLowerCase());
+    return i<0?t:t.slice(0,i)+"<mark>"+t.slice(i,i+ql.length)+"</mark>"+t.slice(i+ql.length);};
+
+  $("v-search").innerHTML=`
+    <h1>Search</h1>
+    <p class="sub">${rows.length.toLocaleString()} of ${DATA.search.length.toLocaleString()} facts
+      ${q?`matching “${esc(q)}”`:""}. Every row shows its source and its date.</p>
+    ${facets}
+    ${rows.length?rows.slice(0,300).map(r=>`
+      <div class="hit" data-slug="${esc(r.slug)}">
+        <div class="hh"><span class="hco">${esc(r.name)}</span>
+          <span class="hf">${esc(r.cat)}.${esc(r.field)}</span>
+          ${tierBadge(r.tier)}<span class="hf">${esc(r.as_of||"")}</span>
+          ${r.stale?'<span class="stale-t">STALE</span>':""}${flagBadges(r.flags)}</div>
+        <div class="hv">${hl(r.value)}</div>
+        <div class="fmeta"><span class="fsrc">${hl(r.source||"")}</span></div>
+        ${r.note?`<div class="fnote">${hl(r.note)}</div>`:""}
+      </div>`).join("")
+      :`<div class="empty">Nothing matches. Try fewer words, or clear the filters.</div>`}
+    ${rows.length>300?`<p class="sub mono">Showing first 300 of ${rows.length}.</p>`:""}`;
+
+  $("v-search").querySelectorAll(".facet").forEach(b=>b.onclick=()=>{
+    const f=b.dataset.f,v=b.dataset.v;
+    if(f==="stale") SFACETS.stale=!SFACETS.stale;
+    else SFACETS[f]=SFACETS[f]===v?null:v;
+    renderSearch();
+  });
+  $("v-search").querySelectorAll(".hit").forEach(h=>h.onclick=()=>openCompany(h.dataset.slug));
+}
+
+/* ────────── request builder ────────── */
+const RQ={template:"vertical_analyst_note",slug:current,rigor:"4",audience:"desk",
+  angle:"auto",chart_look:"house",length:"template",charts:3,model:false,
+  lexicon:true,factsheet:true,analysis:new Set(["base_rate","priced_in","falsifier"]),
+  sections:new Set(),deadline:"",idea:""};
+
+function startRequest(slug){ RQ.slug=slug; go("request"); }
+
+function renderRequest(){
+  const tpl=DATA.templates.find(t=>t.id===RQ.template)||DATA.templates[0];
+  const optBtns=(key,arr)=>arr.map(o=>
+    `<button class="opt" data-k="${key}" data-v="${esc(o.id)}" aria-pressed="${String(RQ[key])===String(o.id)}">${esc(o.label)}</button>`).join("");
+
+  $("v-request").innerHTML=`
+    <h1>Request a report</h1>
+    <p class="sub">Compose the request and the launch prompt. This page cannot run the pipeline
+      itself — it hands you the instruction, and the engine does the eight stages.</p>
+    <div class="two">
+      <div>
+        <label for="rq-co">Company</label>
+        <select id="rq-co">${DATA.companies.map(c=>
+          `<option value="${esc(c.slug)}"${c.slug===RQ.slug?" selected":""}>${esc(c.name)}${c.n_facts?` — ${c.n_facts} facts`:"  (store empty)"}</option>`).join("")}</select>
+
+        <label>Format</label>
+        <div class="tgrid">${DATA.templates.map(t=>`
+          <button class="tcard" data-tpl="${esc(t.id)}" aria-pressed="${t.id===RQ.template}">
+            <b>${esc(t.name)}</b><span>${esc(t.kicker||"")}</span>
+            <span class="pg">${esc(t.pages||"")} · rigor ${esc(t.rigor||"")} · ${t.sections.length} sections</span>
+          </button>`).join("")}</div>
+
+        <label for="rq-idea">The question this note answers</label>
+        <textarea id="rq-idea" placeholder="What changed, why it matters, and what you want settled.">${esc(RQ.idea)}</textarea>
+
+        <label>Sections to include <span class="dim" style="text-transform:none;letter-spacing:0">— from ${esc(tpl.name)}</span></label>
+        <div class="checks">${tpl.sections.map(s=>`
+          <label class="chk"><input type="checkbox" data-sec="${esc(s.id)}"
+            ${RQ.sections.size===0||RQ.sections.has(s.id)?"checked":""}>
+            <span>${esc(s.title)}${s.auto?' <span class="dim mono" style="font-size:.66rem">auto</span>':""}</span></label>`).join("")}</div>
+
+        <label>Analytical moves to run</label>
+        <div class="checks">${DATA.options.analysis.map(o=>`
+          <label class="chk"><input type="checkbox" data-an="${esc(o.id)}" ${RQ.analysis.has(o.id)?"checked":""}>
+            <span>${esc(o.label)}</span></label>`).join("")}</div>
+      </div>
+
+      <div>
+        <label>Rigor</label><div class="opts">${optBtns("rigor",DATA.options.rigor)}</div>
+        <label>Audience</label><div class="opts">${optBtns("audience",DATA.options.audience)}</div>
+        <label>Angle</label><div class="opts">${optBtns("angle",DATA.options.angle)}</div>
+        <label>Length</label><div class="opts">${optBtns("length",DATA.options.length)}</div>
+        <label>Chart style</label><div class="opts">${optBtns("chart_look",DATA.options.chart_look)}</div>
+
+        <label for="rq-charts">Number of charts</label>
+        <input type="text" id="rq-charts" value="${RQ.charts}" inputmode="numeric">
+        <label for="rq-deadline">Deadline (optional)</label>
+        <input type="date" id="rq-deadline" value="${esc(RQ.deadline)}">
+
+        <label>Extras</label>
+        <div class="checks">
+          <label class="chk"><input type="checkbox" id="rq-model" ${RQ.model?"checked":""}>
+            <span>Companion operating model (xlsx)</span></label>
+          <label class="chk"><input type="checkbox" id="rq-lex" ${RQ.lexicon?"checked":""}>
+            <span>Estimative language box</span></label>
+          <label class="chk"><input type="checkbox" id="rq-fs" ${RQ.factsheet?"checked":""}>
+            <span>Auto fact sheet</span></label>
+        </div>
+
+        <div class="btnrow">
+          <button class="btn primary" id="rq-copy">Copy launch prompt</button>
+          <button class="btn" id="rq-json">Copy request JSON</button>
+        </div>
+        <pre class="out" id="rq-out"></pre>
+      </div>
+    </div>`;
+
+  $("v-request").querySelectorAll(".tcard").forEach(b=>b.onclick=()=>{
+    RQ.template=b.dataset.tpl; RQ.sections=new Set(); renderRequest();});
+  $("v-request").querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    RQ[b.dataset.k]=b.dataset.v; renderRequest();});
+  $("rq-co").onchange=e=>{RQ.slug=e.target.value;paintReq();};
+  $("rq-idea").oninput=e=>{RQ.idea=e.target.value;paintReq();};
+  $("rq-charts").oninput=e=>{RQ.charts=e.target.value;paintReq();};
+  $("rq-deadline").onchange=e=>{RQ.deadline=e.target.value;paintReq();};
+  ["model","lexicon","factsheet"].forEach((k,i)=>{
+    const el=$(["rq-model","rq-lex","rq-fs"][i]);
+    el.onchange=()=>{RQ[k]=el.checked;paintReq();};});
+  $("v-request").querySelectorAll("[data-sec]").forEach(cb=>cb.onchange=()=>{
+    RQ.sections=new Set([...$("v-request").querySelectorAll("[data-sec]")]
+      .filter(x=>x.checked).map(x=>x.dataset.sec)); paintReq();});
+  $("v-request").querySelectorAll("[data-an]").forEach(cb=>cb.onchange=()=>{
+    cb.checked?RQ.analysis.add(cb.dataset.an):RQ.analysis.delete(cb.dataset.an); paintReq();});
+  $("rq-copy").onclick=()=>copy(promptText(),"Launch prompt copied");
+  $("rq-json").onclick=()=>copy(JSON.stringify(reqObj(),null,2)+"\n","Request JSON copied");
+  paintReq();
+}
+
+function reqObj(){
+  const tpl=DATA.templates.find(t=>t.id===RQ.template)||{};
+  const secs=[...RQ.sections];
+  return {
+    id:`${RQ.slug}-${RQ.template.replace(/_/g,"-")}-${DATA.generated}`,
+    submitted:DATA.generated,
+    idea:RQ.idea.trim()||"(state the question this note answers)",
+    template:RQ.template,
+    companies:[RQ.slug],
+    rigor:Number(RQ.rigor)||4,
+    deadline:RQ.deadline||null,
+    extras:{
+      charts:Number(RQ.charts)||3, model:RQ.model,
+      chart_look:RQ.chart_look, audience:RQ.audience, angle:RQ.angle,
+      length:RQ.length, lexicon:RQ.lexicon, fact_sheet:RQ.factsheet,
+      sections:secs.length&&secs.length<(tpl.sections||[]).length?secs:null,
+      analysis:[...RQ.analysis],
+    },
+    source:"desk"
+  };
+}
+
+function promptText(){
+  const r=reqObj(), c=CO[RQ.slug]||{};
+  const an=[...RQ.analysis].map(a=>(DATA.options.analysis.find(o=>o.id===a)||{}).label).filter(Boolean);
+  const warn=c.n_facts!=null&&c.n_facts<10
+    ? `\nNOTE: the store holds only ${c.n_facts} fact(s) for this company. Run a full research pass and snapshot BEFORE composing, and flag thin sourcing in the validation log.\n` : "";
+  return `Run the report pipeline in CLAUDE.md for this request.
+
+First write it to "Report Automation/requests/queue/${r.id}.json":
+
+${JSON.stringify(r,null,2)}
+${warn}
+Angle: ${(DATA.options.angle.find(o=>o.id===RQ.angle)||{}).label}
+Audience: ${(DATA.options.audience.find(o=>o.id===RQ.audience)||{}).label}
+Analytical moves to run: ${an.join("; ")||"engine's choice"}
+
+Work all eight stages in order: intake, research, store, trends, compose, charts, build, validate, ship.
+Follow style/STYLE.md and the writing standard in README.md. Every load-bearing figure needs a
+source, a tier and a date. Do not ship until every box in the Report Ship gate is true.`;
+}
+function paintReq(){const o=$("rq-out"); if(o) o.textContent=promptText();}
+
+/* ────────── add a company ────────── */
+function renderAdd(){
+  $("v-add").innerHTML=`
+    <h1>Add a company</h1>
+    <p class="sub">Registers the company, scaffolds its folders, writes a source manifest and runs
+      the first sweep. The page composes the commands; run them in a session on the repo, or paste
+      the prompt and let the agent do all of it including the first research pass.</p>
+    <div class="two">
+      <div>
+        <label for="ac-name">Company name</label>
+        <input type="text" id="ac-name" placeholder="Sierra AI">
+        <label for="ac-slug">Slug <span class="dim" style="text-transform:none;letter-spacing:0">— folder name, lowercase</span></label>
+        <input type="text" id="ac-slug" placeholder="sierra-ai">
+        <label for="ac-domain">Website domain</label>
+        <input type="text" id="ac-domain" placeholder="sierra.ai">
+        <label for="ac-pbid">PitchBook ID (optional)</label>
+        <input type="text" id="ac-pbid" placeholder="123456-78">
+        <label for="ac-cik">SEC CIK (optional)</label>
+        <input type="text" id="ac-cik" placeholder="0001587468">
+        <label for="ac-group">Group</label>
+        <select id="ac-group"><option value="coverage">Coverage</option>
+          <option value="frontier_five">Frontier Five</option></select>
+        <label for="ac-sector">Sector tag</label>
+        <input type="text" id="ac-sector" placeholder="AI-APP">
+        <div class="btnrow">
+          <button class="btn primary" id="ac-copy">Copy setup prompt</button>
+          <button class="btn" id="ac-cmds">Copy commands only</button>
+        </div>
+      </div>
+      <div>
+        <label>What will happen</label>
+        <pre class="out" id="ac-out"></pre>
+      </div>
+    </div>`;
+  const ids=["ac-name","ac-slug","ac-domain","ac-pbid","ac-cik","ac-group","ac-sector"];
+  ids.forEach(i=>{$(i).oninput=paintAdd;$(i).onchange=paintAdd;});
+  $("ac-name").oninput=()=>{
+    if(!$("ac-slug").dataset.touched)
+      $("ac-slug").value=$("ac-name").value.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+    paintAdd();};
+  $("ac-slug").oninput=()=>{$("ac-slug").dataset.touched="1";paintAdd();};
+  $("ac-copy").onclick=()=>copy(addPrompt(),"Setup prompt copied");
+  $("ac-cmds").onclick=()=>copy(addCmds(),"Commands copied");
+  paintAdd();
+}
+function addVals(){return {
+  name:$("ac-name").value.trim()||"NEW COMPANY", slug:$("ac-slug").value.trim()||"new-company",
+  domain:$("ac-domain").value.trim(), pbid:$("ac-pbid").value.trim(),
+  cik:$("ac-cik").value.trim(), group:$("ac-group").value, sector:$("ac-sector").value.trim()};}
+function addCmds(){const v=addVals();
+  return `python3 -m engine add ${v.slug} "${v.name}"${v.pbid?" "+v.pbid:""}\n`
+    +`python3 -m engine sources ${v.slug} ${v.domain||"<domain>"}${v.cik?" "+v.cik:""}\n`
+    +`python3 -m engine harvest ${v.slug}\n`
+    +`python3 -m engine dashboard`;}
+function addPrompt(){const v=addVals();
+  return `Add ${v.name} to coverage and start tracking it.
+
+1. Register it:
+   python3 -m engine add ${v.slug} "${v.name}"${v.pbid?" "+v.pbid:""}
+   Then set group="${v.group}"${v.sector?` and sector="${v.sector}"`:""} on its entry in companies/universe.json.
+
+2. Register its sources and run the first sweep:
+   python3 -m engine sources ${v.slug} ${v.domain||"<domain>"}${v.cik?" "+v.cik:""}
+   python3 -m engine harvest ${v.slug}
+   Check the manifest afterwards — add its blog, pricing, docs and newsroom paths if the
+   defaults 404, and resolve the SEC CIK if the company files.
+
+3. Do a first research pass following the protocol in CLAUDE.md: PitchBook profile, deals,
+   financials and investors; SEC EDGAR if it files; then targeted news. Tier every fact,
+   cross-check every load-bearing figure, and write the snapshot to
+   companies/${v.slug}/research/snapshot.json as Fact dicts with tier and as_of.
+
+4. Store and review:
+   python3 -m engine snapshot ${v.slug} <snapshot.json>
+   python3 -m engine digest ${v.slug}
+   python3 -m engine export ${v.slug}
+
+5. Regenerate this dashboard and commit:
+   python3 -m engine dashboard
+
+Report what you found, what you could not source, and whether the company is worth a note yet.`;}
+function paintAdd(){const o=$("ac-out"); if(o) o.textContent=addPrompt();}
+
+/* ────────── navigation ────────── */
+function renderRail(){
+  $("colist").innerHTML=DATA.companies.map(c=>{
+    const cls=c.n_cats<=2?"thin":(c.n_stale?"warn":"");
+    return `<button data-slug="${esc(c.slug)}" aria-current="${c.slug===current&&view==="company"}">
+      <span class="cn"><span class="dot ${cls}"></span>${esc(c.name)}</span>
+      <span class="cm">${c.n_facts}</span></button>`;}).join("");
+  $("colist").querySelectorAll("button").forEach(b=>
+    b.onclick=()=>{openCompany(b.dataset.slug);document.body.classList.remove("railopen");});
+}
+function go(v){
+  view=v;
+  ["overview","company","search","request","add"].forEach(x=>$("v-"+x).hidden=(x!==v));
+  document.querySelectorAll(".rail nav button").forEach(b=>
+    b.setAttribute("aria-current",String(b.dataset.view===v)));
+  document.body.classList.toggle("dino-on",v==="company");
+  if(v==="request") renderRequest();
+  if(v==="add") renderAdd();
+  if(v==="search") renderSearch();
+  if(v==="overview") renderOverview();
+  renderRail();
+  window.scrollTo({top:0,behavior:"instant"});
+  requestAnimationFrame(moveDino);
+}
+function openCompany(slug){ current=slug; renderCompany(slug); go("company"); }
+
+document.querySelectorAll(".rail nav button").forEach(b=>b.onclick=()=>{
+  go(b.dataset.view); document.body.classList.remove("railopen");});
+$("railtoggle").onclick=()=>document.body.classList.toggle("railopen");
+$("q").addEventListener("input",()=>{ if(view!=="search") go("search"); else renderSearch(); });
+$("q").addEventListener("focus",()=>{ if(view!=="search"&&$("q").value) go("search"); });
+document.addEventListener("keydown",e=>{
+  if((e.metaKey||e.ctrlKey)&&e.key==="k"){e.preventDefault();$("q").focus();$("q").select();}
+  if(e.key==="Escape"&&document.activeElement===$("q")){$("q").blur();}
+});
+
+/* ────────── the dinosaur ────────── */
+let lastX=0, walkTimer=null, sayTimer=null;
+function moveDino(){
+  if(!document.body.classList.contains("dino-on")) return;
+  const wrap=$("dinowrap"), flag=$("dinoflag");
+  const track=$("dino").clientWidth-24-76-24;   // padding both sides + body width
+  const max=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
+  const p=Math.min(1,Math.max(0,window.scrollY/max));
+  const x=Math.round(p*Math.max(0,track));
+  if(Math.abs(x-lastX)>0.5){
+    wrap.style.setProperty("--dir",x>=lastX?"1":"-1");
+    wrap.classList.add("walking");
+    clearTimeout(walkTimer);
+    walkTimer=setTimeout(()=>wrap.classList.remove("walking"),420);
+    // name the section the dino is walking past
+    const heads=[...document.querySelectorAll("#v-company h3")];
+    const passed=heads.filter(h=>h.getBoundingClientRect().top<window.innerHeight*0.55).pop();
+    if(passed){
+      flag.textContent=passed.textContent.trim().slice(0,34);
+      document.body.classList.add("dino-say");
+      clearTimeout(sayTimer);
+      sayTimer=setTimeout(()=>document.body.classList.remove("dino-say"),1500);
+    }
+  }
+  wrap.style.setProperty("--dx",x+"px");
+  flag.style.setProperty("--dx",x+"px");
+  lastX=x;
+}
+window.addEventListener("scroll",()=>requestAnimationFrame(moveDino),{passive:true});
+window.addEventListener("resize",()=>requestAnimationFrame(moveDino));
+
+/* ────────── boot ────────── */
+renderOverview();
+renderRail();
+go("overview");
+</script>

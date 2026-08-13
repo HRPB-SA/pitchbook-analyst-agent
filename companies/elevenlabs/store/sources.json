@@ -1,0 +1,73 @@
+{
+  "slug": "elevenlabs",
+  "name": "ElevenLabs",
+  "domain": "elevenlabs.io",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "ElevenLabs newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://elevenlabs.io/press",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "ElevenLabs blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://elevenlabs.io/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "ElevenLabs pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://elevenlabs.io/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "ElevenLabs careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://elevenlabs.io/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "ElevenLabs home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://elevenlabs.io/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "ElevenLabs about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://elevenlabs.io/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "ElevenLabs docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://elevenlabs.io/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:04:09+00:00"
+}

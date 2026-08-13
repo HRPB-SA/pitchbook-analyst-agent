@@ -1,0 +1,73 @@
+{
+  "slug": "perplexity",
+  "name": "Perplexity",
+  "domain": "perplexity.ai",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "Perplexity newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://perplexity.ai/news",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "Perplexity blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://perplexity.ai/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "Perplexity pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://perplexity.ai/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "Perplexity careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://perplexity.ai/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "Perplexity home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://perplexity.ai/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "Perplexity about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://perplexity.ai/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "Perplexity docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://perplexity.ai/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:02:49+00:00"
+}

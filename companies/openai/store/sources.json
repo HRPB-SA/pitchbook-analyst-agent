@@ -1,0 +1,73 @@
+{
+  "slug": "openai",
+  "name": "OpenAI",
+  "domain": "openai.com",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "OpenAI newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openai.com/news",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "OpenAI blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openai.com/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "OpenAI pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openai.com/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "OpenAI careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openai.com/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "OpenAI home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openai.com/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "OpenAI about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openai.com/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "OpenAI docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://openai.com/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:02:32+00:00"
+}

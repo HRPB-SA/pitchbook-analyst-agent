@@ -1,0 +1,73 @@
+{
+  "slug": "anthropic",
+  "name": "Anthropic",
+  "domain": "anthropic.com",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "Anthropic newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://anthropic.com/news",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "Anthropic blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://anthropic.com/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://anthropic.com/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "Anthropic careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://anthropic.com/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "Anthropic home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://anthropic.com/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "Anthropic about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://anthropic.com/company",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "Anthropic docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://anthropic.com/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:02:24+00:00"
+}

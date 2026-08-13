@@ -1,0 +1,73 @@
+{
+  "slug": "cohere",
+  "name": "Cohere",
+  "domain": "cohere.com",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "Cohere newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cohere.com/newsroom",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "Cohere blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cohere.com/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "Cohere pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cohere.com/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "Cohere careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cohere.com/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "Cohere home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cohere.com/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "Cohere about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cohere.com/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "Cohere docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://cohere.com/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:03:34+00:00"
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "slug": "ssi",
+    "started_at": "2026-08-13T17:55:37+00:00",
+    "finished_at": "2026-08-13T17:56:04+00:00",
+    "sources": 4,
+    "counts": {
+      "unreachable": 4
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Safe Superintelligence (SSI) newsroom",
+        "kind": "newsroom",
+        "url": "https://ssi.inc/company/newsroom",
+        "checked_at": "2026-08-13T17:55:37+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      },
+      {
+        "id": "blog",
+        "name": "Safe Superintelligence (SSI) blog",
+        "kind": "blog",
+        "url": "https://ssi.inc/blog",
+        "checked_at": "2026-08-13T17:56:03+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "URLError: <urlopen error _ssl.c:999: The handshake operation timed out>"
+      },
+      {
+        "id": "pricing",
+        "name": "Safe Superintelligence (SSI) pricing",
+        "kind": "pricing",
+        "url": "https://ssi.inc/pricing",
+        "checked_at": "2026-08-13T17:56:03+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      },
+      {
+        "id": "careers",
+        "name": "Safe Superintelligence (SSI) careers",
+        "kind": "careers",
+        "url": "https://ssi.inc/company/careers",
+        "checked_at": "2026-08-13T17:56:04+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      }
+    ]
+  },
+  {
+    "slug": "ssi",
+    "started_at": "2026-08-13T18:04:52+00:00",
+    "finished_at": "2026-08-13T18:04:52+00:00",
+    "sources": 1,
+    "counts": {
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "home",
+        "name": "Safe Superintelligence (SSI) home",
+        "kind": "other",
+        "url": "https://ssi.inc/",
+        "checked_at": "2026-08-13T18:04:52+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-ssi-inc-772c4478",
+        "chars": 1522,
+        "as_of": null
+      }
+    ]
+  }
+]

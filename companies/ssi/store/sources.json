@@ -1,0 +1,73 @@
+{
+  "slug": "ssi",
+  "name": "Safe Superintelligence (SSI)",
+  "domain": "ssi.inc",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "Safe Superintelligence (SSI) newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://ssi.inc/news",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "Safe Superintelligence (SSI) blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://ssi.inc/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "Safe Superintelligence (SSI) pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://ssi.inc/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "Safe Superintelligence (SSI) careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://ssi.inc/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "Safe Superintelligence (SSI) home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://ssi.inc/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "Safe Superintelligence (SSI) about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://ssi.inc/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "Safe Superintelligence (SSI) docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://ssi.inc/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:03:43+00:00"
+}

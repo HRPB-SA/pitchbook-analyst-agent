@@ -1,0 +1,73 @@
+{
+  "slug": "coreweave",
+  "name": "CoreWeave",
+  "domain": "coreweave.com",
+  "cik": null,
+  "sources": [
+    {
+      "id": "newsroom",
+      "name": "CoreWeave newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://coreweave.com/news",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "CoreWeave blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://coreweave.com/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "CoreWeave pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://coreweave.com/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "CoreWeave careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://coreweave.com/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "CoreWeave home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://coreweave.com/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "CoreWeave about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://coreweave.com/about-us",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "CoreWeave docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": false,
+      "url": "https://coreweave.com/docs",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:04:05+00:00"
+}

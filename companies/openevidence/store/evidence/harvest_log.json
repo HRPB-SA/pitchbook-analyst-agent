@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "openevidence",
+    "started_at": "2026-08-13T17:57:38+00:00",
+    "finished_at": "2026-08-13T17:57:41+00:00",
+    "sources": 4,
+    "counts": {
+      "unreachable": 3,
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "OpenEvidence newsroom",
+        "kind": "newsroom",
+        "url": "https://openevidence.com/company/newsroom",
+        "checked_at": "2026-08-13T17:57:38+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>"
+      },
+      {
+        "id": "blog",
+        "name": "OpenEvidence blog",
+        "kind": "blog",
+        "url": "https://openevidence.com/blog",
+        "checked_at": "2026-08-13T17:57:39+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-openevidence-com-blog-19741eb5",
+        "chars": 776,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "OpenEvidence pricing",
+        "kind": "pricing",
+        "url": "https://openevidence.com/pricing",
+        "checked_at": "2026-08-13T17:57:40+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      },
+      {
+        "id": "careers",
+        "name": "OpenEvidence careers",
+        "kind": "careers",
+        "url": "https://openevidence.com/company/careers",
+        "checked_at": "2026-08-13T17:57:41+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      }
+    ]
+  },
+  {
+    "slug": "openevidence",
+    "started_at": "2026-08-13T18:05:42+00:00",
+    "finished_at": "2026-08-13T18:05:45+00:00",
+    "sources": 3,
+    "counts": {
+      "new": 2,
+      "unchanged": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "OpenEvidence newsroom",
+        "kind": "newsroom",
+        "url": "https://openevidence.com/news",
+        "checked_at": "2026-08-13T18:05:42+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-openevidence-com-news-07d281ed",
+        "chars": 567,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "OpenEvidence blog",
+        "kind": "blog",
+        "url": "https://openevidence.com/blog",
+        "checked_at": "2026-08-13T18:05:44+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-openevidence-com-blog-19741eb5",
+        "chars": 776,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "OpenEvidence about",
+        "kind": "other",
+        "url": "https://openevidence.com/about",
+        "checked_at": "2026-08-13T18:05:45+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-openevidence-com-about-f0dd2543",
+        "chars": 12344,
+        "as_of": null
+      }
+    ]
+  }
+]

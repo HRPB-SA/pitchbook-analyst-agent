@@ -1,0 +1,235 @@
+Documentation | ElevenLabs Documentation 
+ For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page.
+
+ Search / 
+
+ Connect 
+ Blog Help Center API Pricing Sign up 
+
+ Overview ElevenCreative ElevenAgents ElevenAPI Reception.ai API reference Changelog Help Center 
+
+ Login Overview ElevenCreative ElevenAgents ElevenAPI Reception.ai API reference Changelog Help Center 
+
+ Introduction 
+ Models 
+ 
+ Capabilities 
+ 
+ Text to Speech 
+
+ Speech to Text 
+ Music 
+
+ Text to Dialogue 
+ Image & Video 
+
+ Ads Engine 
+ 
+ Voice Changer 
+ Voice Isolator 
+ Dubbing 
+ Sound Effects 
+ Voices 
+ Voice Remixing 
+ 
+ Forced Alignment 
+ 
+ Voice Agents 
+ 
+ Speech Engine 
+ 
+ Administration 
+ Account 
+ Billing 
+ Pay As You Go 
+ Consolidated billing 
+ Data Residency 
+ Usage analytics 
+ Assets 
+ Workspaces 
+
+ Introduction 
+ Models 
+ Text to Speech 
+ Best practices 
+ Speech to Text 
+ Music 
+ Marketplace 
+ Best practices 
+ Text to Dialogue 
+ Image & Video 
+ Avatars 
+ Ads Engine 
+ Voice Changer 
+ Voice Isolator 
+ Dubbing 
+ Sound Effects 
+ Voices 
+ Voice Remixing 
+ Forced Alignment 
+ Speech Engine 
+ Account 
+ Billing 
+ Pay As You Go 
+ Consolidated billing 
+ Data Residency 
+ Usage analytics 
+ Assets 
+ Overview 
+ Members 
+ Billing groups 
+ Service accounts 
+ API Keys 
+ SSO 
+ Microsoft Entra SAML SSO 
+ Okta SAML SSO 
+ SCIM 
+ Sharing resources 
+ User groups 
+ Model approvals 
+ Audit logs 
+ Connect 
+ Blog Help Center API Pricing Sign up 
+ Light 
+
+ On this page
+ How ElevenLabs works 
+ Concepts 
+ Choose your path 
+ Meet the models 
+ Browse by capability 
+ Scroll to top 
+
+ ElevenLabs Documentation 
+
+ Copy page 
+
+ Explore our docs and guides to integrate ElevenLabs 
+
+ How ElevenLabs works
+
+ ElevenLabs provides AI voice infrastructure: text-to-speech, speech-to-text, voice cloning, conversational agents, and generative audio. You can use it in four ways, suited to different audiences.
+
+ ElevenCreative is a no-code web application where creators, producers, and editors generate voiceovers, music, dubs, and studio projects directly in the browser.
+
+ ElevenAgents is the platform for designing and operating conversational voice agents, with a visual builder for non-technical users and full programmatic control for developers.
+
+ ElevenAPI exposes every capability as a REST interface with official Python and TypeScript SDKs, so developers can embed voice into their own applications and workflows.
+
+ Reception AI is a ready-to-deploy AI phone receptionist for small and medium businesses that answers calls, books appointments, and manages day-to-day operations from a single dashboard.
+
+ Concepts
+
+ Voices are the speech persona used in audio generation. Each voice has a unique ID — for example, JBFqnCBsd6RMkjVDRZzb — that you select in the dashboard or pass in API requests. ElevenLabs maintains a library of 10,000+ voices . You can also clone a voice from an audio recording or generate one from a text description.
+
+ Models control the quality, latency, and language coverage of generated audio. eleven_v3 produces the most expressive output across 70+ languages. eleven_flash_v2_5 targets real-time use at ~75ms latency. Each capability — speech-to-text, music, sound effects — has its own dedicated model.
+
+ Credits are the unit of consumption shared across every product. Text-to-speech costs one credit per character of input text. Other operations are charged per second of audio processed. Credits reset monthly and unused credits roll over for up to two months. See pricing for a full breakdown.
+
+ Choose your path
+
+ ElevenCreative
+
+ Learn how to use the ElevenCreative platform with step-by-step guides
+
+ ElevenAgents
+
+ Learn how to build, launch, and scale agents with ElevenLabs
+
+ ElevenAPI
+
+ Learn how to integrate with the ElevenLabs API with examples and tutorials
+
+ Meet the models
+
+ Eleven v3
+ Our most emotionally rich, expressive speech synthesis model
+ Dramatic delivery and performance
+ 70+ languages supported
+ 5,000 character limit
+ Support for natural multi-speaker dialogue
+
+ Eleven Multilingual v2
+ Lifelike, consistent quality speech synthesis model
+ Natural-sounding output
+ 29 languages supported
+ 10,000 character limit
+ Most stable on long-form generations
+
+ Eleven Flash v2.5
+ Our fast, affordable speech synthesis model
+ Ultra-low latency (~75ms†)
+ 32 languages supported
+ 40,000 character limit
+ Faster model, 50% lower price per character for API generations
+
+ Scribe v2
+ State-of-the-art speech recognition model
+ Accurate transcription in 90+ languages
+ Keyterm prompting, up to 1000 terms
+ Entity detection, 65 entity types
+ Precise word-level timestamps
+ Speaker diarization, up to 32 speakers
+ Dynamic audio tagging
+ Smart language detection
+
+ Scribe v2 Realtime
+ Real-time speech recognition model
+ Accurate transcription in 90+ languages
+ Real-time transcription
+ Low latency (~150ms†)
+ Precise word-level timestamps
+ Entity detection, 65 entity types
+
+ Explore all 
+
+ † Excluding application & network latency 
+ Browse by capability
+
+ Text to Speech
+ Convert text into lifelike speech
+
+ Speech to Text
+ Transcribe spoken audio into text
+
+ Music
+ Generate music from text
+
+ Text to Dialogue
+ Create natural-sounding dialogue from text
+
+ Image & Video
+ Generate images and videos from text
+
+ Voice changer
+ Modify and transform voices
+
+ Voice isolator
+ Isolate voices from background noise
+
+ Dubbing
+ Dub audio and videos seamlessly
+
+ Sound effects
+ Create cinematic sound effects
+
+ Voices
+ Clone and design custom voices
+
+ Voice Remixing
+ Transform and enhance existing voices
+
+ Forced Alignment
+ Align text to audio
+
+ Speech Engine
+ Add voice to anything
+
+ ElevenAgents
+ Deploy intelligent voice agents
+
+ Was this page helpful? Yes No 
+
+ Built with 
+
+ Login

@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "cohere",
+    "started_at": "2026-08-13T17:56:45+00:00",
+    "finished_at": "2026-08-13T17:57:38+00:00",
+    "sources": 4,
+    "counts": {
+      "unreachable": 2,
+      "new": 2
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Cohere newsroom",
+        "kind": "newsroom",
+        "url": "https://cohere.com/company/newsroom",
+        "checked_at": "2026-08-13T17:57:10+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "URLError: <urlopen error _ssl.c:999: The handshake operation timed out>"
+      },
+      {
+        "id": "blog",
+        "name": "Cohere blog",
+        "kind": "blog",
+        "url": "https://cohere.com/blog",
+        "checked_at": "2026-08-13T17:57:12+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cohere-com-blog-d46b5de6",
+        "chars": 9552,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Cohere pricing",
+        "kind": "pricing",
+        "url": "https://cohere.com/pricing",
+        "checked_at": "2026-08-13T17:57:12+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cohere-com-pricing-1c568210",
+        "chars": 13037,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Cohere careers",
+        "kind": "careers",
+        "url": "https://cohere.com/company/careers",
+        "checked_at": "2026-08-13T17:57:38+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "URLError: <urlopen error _ssl.c:999: The handshake operation timed out>"
+      }
+    ]
+  },
+  {
+    "slug": "cohere",
+    "started_at": "2026-08-13T18:05:35+00:00",
+    "finished_at": "2026-08-13T18:05:42+00:00",
+    "sources": 7,
+    "counts": {
+      "new": 5,
+      "unchanged": 2
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Cohere newsroom",
+        "kind": "newsroom",
+        "url": "https://cohere.com/newsroom",
+        "checked_at": "2026-08-13T18:05:36+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cohere-com-newsroom-5856adec",
+        "chars": 8833,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Cohere blog",
+        "kind": "blog",
+        "url": "https://cohere.com/blog",
+        "checked_at": "2026-08-13T18:05:37+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-blog-d46b5de6",
+        "chars": 9552,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Cohere pricing",
+        "kind": "pricing",
+        "url": "https://cohere.com/pricing",
+        "checked_at": "2026-08-13T18:05:38+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-pricing-1c568210",
+        "chars": 13037,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Cohere careers",
+        "kind": "careers",
+        "url": "https://cohere.com/careers",
+        "checked_at": "2026-08-13T18:05:39+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cohere-com-careers-89dc9ec8",
+        "chars": 10398,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Cohere home",
+        "kind": "other",
+        "url": "https://cohere.com/",
+        "checked_at": "2026-08-13T18:05:40+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cohere-com-537e80a3",
+        "chars": 9461,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Cohere about",
+        "kind": "other",
+        "url": "https://cohere.com/about",
+        "checked_at": "2026-08-13T18:05:41+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cohere-com-about-73fab699",
+        "chars": 8625,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Cohere docs",
+        "kind": "docs",
+        "url": "https://cohere.com/docs",
+        "checked_at": "2026-08-13T18:05:42+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-cohere-com-docs-081c07b3",
+        "chars": 1361,
+        "as_of": null
+      }
+    ]
+  }
+]

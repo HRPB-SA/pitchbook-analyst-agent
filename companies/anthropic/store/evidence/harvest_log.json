@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "anthropic",
+    "started_at": "2026-08-13T17:55:32+00:00",
+    "finished_at": "2026-08-13T17:55:34+00:00",
+    "sources": 4,
+    "counts": {
+      "unreachable": 3,
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Anthropic newsroom",
+        "kind": "newsroom",
+        "url": "https://anthropic.com/company/newsroom",
+        "checked_at": "2026-08-13T17:55:32+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      },
+      {
+        "id": "blog",
+        "name": "Anthropic blog",
+        "kind": "blog",
+        "url": "https://anthropic.com/blog",
+        "checked_at": "2026-08-13T17:55:33+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-anthropic-com-blog-6da09d54",
+        "chars": 3635,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Anthropic pricing",
+        "kind": "pricing",
+        "url": "https://anthropic.com/pricing",
+        "checked_at": "2026-08-13T17:55:34+00:00",
+        "http": 403,
+        "outcome": "unreachable",
+        "error": "HTTP 403"
+      },
+      {
+        "id": "careers",
+        "name": "Anthropic careers",
+        "kind": "careers",
+        "url": "https://anthropic.com/company/careers",
+        "checked_at": "2026-08-13T17:55:34+00:00",
+        "http": 404,
+        "outcome": "unreachable",
+        "error": "HTTP 404"
+      }
+    ]
+  },
+  {
+    "slug": "anthropic",
+    "started_at": "2026-08-13T18:04:48+00:00",
+    "finished_at": "2026-08-13T18:04:52+00:00",
+    "sources": 7,
+    "counts": {
+      "new": 6,
+      "unchanged": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Anthropic newsroom",
+        "kind": "newsroom",
+        "url": "https://anthropic.com/news",
+        "checked_at": "2026-08-13T18:04:48+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-anthropic-com-news-6da09d54",
+        "chars": 3635,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Anthropic blog",
+        "kind": "blog",
+        "url": "https://anthropic.com/blog",
+        "checked_at": "2026-08-13T18:04:49+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-blog-6da09d54",
+        "chars": 3635,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Anthropic pricing",
+        "kind": "pricing",
+        "url": "https://anthropic.com/pricing",
+        "checked_at": "2026-08-13T18:04:49+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-anthropic-com-pricing-9e3b481e",
+        "chars": 33648,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Anthropic careers",
+        "kind": "careers",
+        "url": "https://anthropic.com/careers",
+        "checked_at": "2026-08-13T18:04:50+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-anthropic-com-careers-7d30054e",
+        "chars": 10203,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Anthropic home",
+        "kind": "other",
+        "url": "https://anthropic.com/",
+        "checked_at": "2026-08-13T18:04:50+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-anthropic-com-5a20e936",
+        "chars": 5279,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Anthropic about",
+        "kind": "other",
+        "url": "https://anthropic.com/company",
+        "checked_at": "2026-08-13T18:04:50+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-anthropic-com-company-1546d694",
+        "chars": 7852,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Anthropic docs",
+        "kind": "docs",
+        "url": "https://anthropic.com/docs",
+        "checked_at": "2026-08-13T18:04:52+00:00",
+        "http": 200,
+        "outcome": "new",
+        "evidence_id": "https-anthropic-com-docs-f17e5e64",
+        "chars": 3923,
+        "as_of": null
+      }
+    ]
+  }
+]

@@ -15,10 +15,12 @@ Commands:
     qa <file.docx|blocks.json>    run QA gates on an artifact
     validate <blocks.json>        validate block grammar
     dashboard [out.html]          render the desk dashboard from the store
+    sources <slug> <domain> [cik] create/extend the harvest source manifest
+    harvest <slug>|--all          sweep sources, archive evidence, log outcomes
 """
 from __future__ import annotations
 import json, sys
-from . import store, trends, style, compose, charts, qa, desk
+from . import store, trends, style, compose, charts, qa, desk, harvest, evidence
 
 
 def main(argv=None):
@@ -109,6 +111,44 @@ def main(argv=None):
     elif cmd == "validate":
         compose.load_blocks(args[0])
         print("blocks valid")
+
+    elif cmd == "sources":
+        slug = args[0]
+        domain = args[1] if len(args) > 1 else None
+        cik = args[2] if len(args) > 2 else None
+        name = None
+        for ent in store.universe().get("companies", []):
+            if ent.get("slug") == slug:
+                name = ent.get("name")
+        harvest.ensure_manifest(slug, name=name, domain=domain, cik=cik)
+        m = harvest.reprobe(slug)
+        live = [s for s in m.get("sources") or [] if s.get("enabled", True)]
+        print(f"{slug}: {len(live)}/{len(m.get('sources') or [])} sources reachable"
+              + (f", CIK {m['cik']}" if m.get("cik") else ""))
+        for s in m.get("sources") or []:
+            mark = " " if s.get("enabled", True) else "x"
+            print(f"  {mark} [{s['kind']:>9}] {s['id']:<12} {s['url']}")
+
+    elif cmd == "harvest":
+        if args and args[0] == "--all":
+            runs = harvest.sweep_all(quiet=False)
+            tot = {}
+            for r in runs:
+                for k, v in r["counts"].items():
+                    tot[k] = tot.get(k, 0) + v
+            print(f"\n{len(runs)} companies swept: "
+                  + ", ".join(f"{k}={v}" for k, v in sorted(tot.items())))
+        elif args:
+            run = harvest.sweep(args[0], quiet=False)
+            for r in run["results"]:
+                mark = {"new": "+", "changed": "~", "unchanged": "=",
+                        "unreachable": "!"}.get(r["outcome"], "?")
+                print(f"  {mark} {r['id']:<16} {r['outcome']:<12}"
+                      f"{r.get('error') or str(r.get('chars', '')) + ' chars'}")
+        else:
+            for row in harvest.status_all():
+                print(f"{row['slug']:<14} sources={row['sources']:<3} "
+                      f"last={row['last_run'] or 'never'}")
 
     elif cmd == "dashboard":
         out, data = desk.build(args[0] if args else None)

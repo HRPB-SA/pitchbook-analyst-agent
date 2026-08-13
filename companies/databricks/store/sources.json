@@ -1,0 +1,82 @@
+{
+  "slug": "databricks",
+  "name": "Databricks, Inc.",
+  "domain": "databricks.com",
+  "cik": "0001587468",
+  "sources": [
+    {
+      "id": "sec-submissions",
+      "name": "SEC EDGAR submissions",
+      "kind": "filing",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://data.sec.gov/submissions/CIK0001587468.json",
+      "parser": "edgar"
+    },
+    {
+      "id": "newsroom",
+      "name": "Databricks, Inc. newsroom",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://databricks.com/newsroom",
+      "parser": "html"
+    },
+    {
+      "id": "blog",
+      "name": "Databricks, Inc. blog",
+      "kind": "blog",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://databricks.com/blog",
+      "parser": "html"
+    },
+    {
+      "id": "pricing",
+      "name": "Databricks, Inc. pricing",
+      "kind": "pricing",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://databricks.com/pricing",
+      "parser": "html"
+    },
+    {
+      "id": "careers",
+      "name": "Databricks, Inc. careers",
+      "kind": "careers",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://databricks.com/careers",
+      "parser": "html"
+    },
+    {
+      "id": "home",
+      "name": "Databricks, Inc. home",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://databricks.com/",
+      "parser": "html"
+    },
+    {
+      "id": "about",
+      "name": "Databricks, Inc. about",
+      "kind": "other",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://databricks.com/about",
+      "parser": "html"
+    },
+    {
+      "id": "docs",
+      "name": "Databricks, Inc. docs",
+      "kind": "docs",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://databricks.com/documentation",
+      "parser": "html"
+    }
+  ],
+  "created": "2026-08-13T17:54:59+00:00",
+  "probed": "2026-08-13T18:04:33+00:00"
+}
