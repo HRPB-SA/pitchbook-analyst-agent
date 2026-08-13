@@ -90,6 +90,10 @@ def default_sources(name: str, domain: str = None, cik: str = None,
     instead of a page of dead links.
     """
     src = []
+    # News always works, even when a company's own site refuses robots.
+    src.append({"id": "news", "name": f"{name} news", "kind": "press",
+                "frequency": "daily", "enabled": True,
+                "url": google_news_url(name), "parser": "feed"})
     if cik:
         c = str(cik).lstrip("CIK").lstrip("0").rjust(10, "0")
         src.append({"id": "sec-submissions", "name": "SEC EDGAR submissions",
@@ -99,6 +103,15 @@ def default_sources(name: str, domain: str = None, cik: str = None,
     d = _norm_domain(domain)
     if not d:
         return src
+
+    # A site's own feed often answers when its HTML is behind bot protection.
+    for path in ("/news/rss.xml", "/blog/rss.xml", "/rss.xml", "/feed", "/feed.xml"):
+        status, body, _ = fetch(d + path, timeout=12)
+        if status == 200 and ("<item" in body or "<entry" in body):
+            src.append({"id": "site-feed", "name": f"{name} site feed",
+                        "kind": "newsroom", "frequency": "daily", "enabled": True,
+                        "url": d + path, "parser": "feed"})
+            break
 
     for sid, kind, paths in CANDIDATES:
         chosen, ok = d + paths[0], not probe
@@ -169,13 +182,35 @@ def _ctx():
     return ssl.create_default_context()
 
 
-def fetch(url: str, timeout: int = TIMEOUT):
-    """Returns (status, text, error). Never raises."""
-    req = urllib.request.Request(url, headers={
-        "User-Agent": UA,
-        "Accept": "text/html,application/json,application/xhtml+xml,*/*",
-        "Accept-Encoding": "identity",
-    })
+BROWSER_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
+
+BROWSER_HEADERS = {
+    "User-Agent": BROWSER_UA,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+    "Accept-Encoding": "identity",
+}
+
+
+def fetch(url: str, timeout: int = TIMEOUT, browser: bool = True):
+    """Returns (status, text, error). Never raises.
+
+    Defaults to a browser-shaped header set. SEC wants the contact UA, so
+    data.sec.gov keeps it; everything else does better looking like Chrome.
+    """
+    if "sec.gov" in url or not browser:
+        headers = {"User-Agent": UA,
+                   "Accept": "text/html,application/json,application/xhtml+xml,*/*",
+                   "Accept-Encoding": "identity"}
+    else:
+        headers = dict(BROWSER_HEADERS)
+    req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=timeout, context=_ctx()) as r:
             raw = r.read(4_000_000)
@@ -225,6 +260,122 @@ def edgar_to_text(payload: str) -> tuple:
                      f"{accs[i] if i < len(accs) else ''}  "
                      f"{docs[i] if i < len(docs) else ''}")
     return "\n".join(lines), (dates[0] if dates else None)
+
+
+# ---------------------------------------------------------------------- feeds
+
+def _tag(block: str, name: str):
+    m = re.search(rf"<{name}[^>]*>(.*?)</{name}>", block, re.S | re.I)
+    if not m:
+        return None
+    v = m.group(1).strip()
+    v = re.sub(r"^<!\[CDATA\[(.*?)\]\]>$", r"\1", v, flags=re.S).strip()
+    for a, b in (("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"), ("&quot;", '"'),
+                 ("&#39;", "'"), ("&apos;", "'"), ("&nbsp;", " ")):
+        v = v.replace(a, b)
+    return v or None
+
+
+def _to_iso(raw: str):
+    if not raw:
+        return None
+    try:
+        import email.utils as _eu
+        dt = _eu.parsedate_to_datetime(raw)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=_dt.timezone.utc)
+        return dt.astimezone(_dt.timezone.utc).isoformat(timespec="seconds")
+    except Exception:
+        pass
+    m = re.match(r"(\d{4}-\d{2}-\d{2})", raw.strip())
+    return m.group(1) + "T00:00:00+00:00" if m else None
+
+
+def parse_feed(xml: str, feed_name: str = None) -> list:
+    """RSS or Atom into dated, linked items. Every item keeps its URL, which is
+    what lets the timeline cite a source the reader can actually open."""
+    items = re.findall(r"<item\b.*?</item>", xml or "", re.S | re.I) or \
+        re.findall(r"<entry\b.*?</entry>", xml or "", re.S | re.I)
+    out = []
+    for block in items:
+        title = _tag(block, "title")
+        link = _tag(block, "link")
+        if not link:
+            m = re.search(r'<link[^>]*href="([^"]+)"', block, re.I)
+            link = m.group(1) if m else None
+        pub = _tag(block, "pubDate") or _tag(block, "published") or \
+            _tag(block, "updated") or _tag(block, "dc:date")
+        publisher = _tag(block, "source")
+        if not publisher and title and " - " in title:
+            publisher = title.rsplit(" - ", 1)[1].strip()
+        if title and publisher and title.endswith(" - " + publisher):
+            title = title[: -(len(publisher) + 3)].strip()
+        summary = _tag(block, "description") or _tag(block, "summary")
+        if summary:
+            summary = re.sub(r"<[^>]+>", " ", summary)
+            summary = re.sub(r"\s+", " ", summary).strip()[:400]
+            # aggregators echo the headline back as the description; drop it
+            flat = lambda s: re.sub(r"[^a-z0-9]+", "", (s or "").lower())
+            if title and flat(summary).startswith(flat(title)[:60]):
+                summary = None
+        if not title:
+            continue
+        out.append({"title": title, "url": link,
+                    "publisher": publisher or feed_name,
+                    "published": _to_iso(pub), "summary": summary or None})
+    return out
+
+
+def news_path(slug: str) -> str:
+    return os.path.join(evidence.evidence_dir(slug), "news.json")
+
+
+def load_news(slug: str) -> list:
+    return store._read(news_path(slug), [])
+
+
+def _relevant(title: str, aliases: list) -> bool:
+    """A headline counts as on-target only if it actually names the company.
+    Keyword feeds return plenty of accidental matches; this ranks them down
+    rather than discarding them, so nothing disappears silently."""
+    t = (title or "").lower()
+    return any(a.lower() in t for a in (aliases or []) if a)
+
+
+def merge_news(slug: str, items: list, aliases: list = None,
+               keep: int = 400) -> int:
+    """Accumulate feed items, deduplicated on normalised headline. Returns the
+    count of genuinely new stories."""
+    existing = load_news(slug)
+    seen = {re.sub(r"[^a-z0-9]+", "", (r.get("title") or "").lower())
+            for r in existing}
+    stamp = evidence.now_utc()
+    added = 0
+    for it in items:
+        key = re.sub(r"[^a-z0-9]+", "", (it.get("title") or "").lower())
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        rec = dict(it)
+        rec["first_seen"] = stamp
+        rec["relevant"] = _relevant(it.get("title"), aliases)
+        existing.append(rec)
+        added += 1
+    # re-tag everything, so tuning the alias list fixes the back catalogue too
+    if aliases:
+        for r in existing:
+            r["relevant"] = _relevant(r.get("title"), aliases)
+    existing.sort(key=lambda r: r.get("published") or r.get("first_seen") or "",
+                  reverse=True)
+    os.makedirs(evidence.evidence_dir(slug), exist_ok=True)
+    store._write(news_path(slug), existing[:keep])
+    return added
+
+
+def google_news_url(name: str, query: str = None) -> str:
+    q = urllib.parse.quote_plus(query or f'"{name}"')
+    return (f"https://news.google.com/rss/search?q={q}"
+            "&hl=en-US&gl=US&ceid=US:en")
 
 
 def resolve_cik(name: str):
@@ -296,9 +447,19 @@ def sweep(slug: str, only: str = None, quiet: bool = True) -> dict:
             results.append(row)
             continue
 
-        as_of = None
+        as_of, fresh_news = None, 0
         if src.get("parser") == "edgar":
             text, as_of = edgar_to_text(body)
+        elif src.get("parser") == "feed":
+            items = parse_feed(body, src.get("name"))
+            fresh_news = merge_news(slug, items, m.get("aliases"))
+            if items and items[0].get("published"):
+                as_of = items[0]["published"][:10]
+            text = "\n".join(
+                f"{(i.get('published') or '?')[:10]}  {i.get('publisher') or ''}  "
+                f"{i.get('title')}  {i.get('url') or ''}" for i in items)
+            row["items"] = len(items)
+            row["new_stories"] = fresh_news
         else:
             text = html_to_text(body)
 

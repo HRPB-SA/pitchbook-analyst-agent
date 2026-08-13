@@ -57,5 +57,44 @@
     "sources": 0,
     "counts": {},
     "results": []
+  },
+  {
+    "slug": "openai",
+    "started_at": "2026-08-13T18:47:53+00:00",
+    "finished_at": "2026-08-13T18:47:54+00:00",
+    "sources": 2,
+    "counts": {
+      "new": 2
+    },
+    "results": [
+      {
+        "id": "news",
+        "name": "OpenAI news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22OpenAI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-13T18:47:54+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 96,
+        "outcome": "new",
+        "evidence_id": "-q-22openai-22-hl-en-us-gl-us-ceid-us-en-4038e63d",
+        "chars": 35091,
+        "as_of": "2026-08-13"
+      },
+      {
+        "id": "site-feed",
+        "name": "OpenAI site feed",
+        "kind": "newsroom",
+        "url": "https://openai.com/news/rss.xml",
+        "checked_at": "2026-08-13T18:47:54+00:00",
+        "http": 200,
+        "items": 1129,
+        "new_stories": 1109,
+        "outcome": "new",
+        "evidence_id": "https-openai-com-news-rss-xml-050055ba",
+        "chars": 147888,
+        "as_of": "2026-08-13"
+      }
+    ]
   }
 ]

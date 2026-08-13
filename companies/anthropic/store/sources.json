@@ -66,8 +66,22 @@
       "enabled": true,
       "url": "https://anthropic.com/docs",
       "parser": "html"
+    },
+    {
+      "id": "news",
+      "name": "Anthropic news",
+      "kind": "press",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://news.google.com/rss/search?q=%22Anthropic%22+OR+%22Claude+AI%22&hl=en-US&gl=US&ceid=US:en",
+      "parser": "feed"
     }
   ],
   "created": "2026-08-13T17:54:59+00:00",
-  "probed": "2026-08-13T18:02:24+00:00"
+  "probed": "2026-08-13T18:02:24+00:00",
+  "news_query": "\"Anthropic\" OR \"Claude AI\"",
+  "aliases": [
+    "anthropic",
+    "claude"
+  ]
 }

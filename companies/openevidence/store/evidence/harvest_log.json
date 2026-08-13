@@ -100,5 +100,66 @@
         "as_of": null
       }
     ]
+  },
+  {
+    "slug": "openevidence",
+    "started_at": "2026-08-13T18:48:25+00:00",
+    "finished_at": "2026-08-13T18:48:54+00:00",
+    "sources": 4,
+    "counts": {
+      "unchanged": 2,
+      "unreachable": 1,
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "OpenEvidence newsroom",
+        "kind": "newsroom",
+        "url": "https://openevidence.com/news",
+        "checked_at": "2026-08-13T18:48:26+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-openevidence-com-news-07d281ed",
+        "chars": 567,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "OpenEvidence blog",
+        "kind": "blog",
+        "url": "https://openevidence.com/blog",
+        "checked_at": "2026-08-13T18:48:52+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "TimeoutError: The read operation timed out"
+      },
+      {
+        "id": "about",
+        "name": "OpenEvidence about",
+        "kind": "other",
+        "url": "https://openevidence.com/about",
+        "checked_at": "2026-08-13T18:48:53+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-openevidence-com-about-f0dd2543",
+        "chars": 12344,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "OpenEvidence news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22OpenEvidence%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-13T18:48:54+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 97,
+        "outcome": "new",
+        "evidence_id": "penevidence-22-hl-en-us-gl-us-ceid-us-en-487b4b29",
+        "chars": 41980,
+        "as_of": "2026-05-13"
+      }
+    ]
   }
 ]

@@ -66,8 +66,30 @@
       "enabled": false,
       "url": "https://mistral.ai/docs",
       "parser": "html"
+    },
+    {
+      "id": "news",
+      "name": "Mistral AI news",
+      "kind": "press",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://news.google.com/rss/search?q=%22Mistral+AI%22&hl=en-US&gl=US&ceid=US:en",
+      "parser": "feed"
+    },
+    {
+      "id": "site-feed",
+      "name": "Mistral AI site feed",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://mistral.ai/rss.xml",
+      "parser": "feed"
     }
   ],
   "created": "2026-08-13T17:54:59+00:00",
-  "probed": "2026-08-13T18:03:15+00:00"
+  "probed": "2026-08-13T18:03:15+00:00",
+  "news_query": "\"Mistral AI\"",
+  "aliases": [
+    "mistral"
+  ]
 }

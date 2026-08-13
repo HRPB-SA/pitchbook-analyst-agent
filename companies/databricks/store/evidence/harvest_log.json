@@ -248,5 +248,145 @@
         "as_of": null
       }
     ]
+  },
+  {
+    "slug": "databricks",
+    "started_at": "2026-08-13T18:47:33+00:00",
+    "finished_at": "2026-08-13T18:47:48+00:00",
+    "sources": 10,
+    "counts": {
+      "unchanged": 7,
+      "changed": 1,
+      "new": 2
+    },
+    "results": [
+      {
+        "id": "sec-submissions",
+        "name": "SEC EDGAR submissions",
+        "kind": "filing",
+        "url": "https://data.sec.gov/submissions/CIK0001587468.json",
+        "checked_at": "2026-08-13T18:47:34+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "a-sec-gov-submissions-cik0001587468-json-90958b0c",
+        "chars": 1233,
+        "as_of": "2025-12-31"
+      },
+      {
+        "id": "newsroom",
+        "name": "Databricks, Inc. newsroom",
+        "kind": "newsroom",
+        "url": "https://databricks.com/newsroom",
+        "checked_at": "2026-08-13T18:47:35+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-newsroom-f0a916ae",
+        "chars": 8413,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Databricks, Inc. blog",
+        "kind": "blog",
+        "url": "https://databricks.com/blog",
+        "checked_at": "2026-08-13T18:47:36+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "169ba1d8ce0bb80b",
+        "previous_seen": "2026-08-13T18:04:43+00:00",
+        "delta_chars": -30,
+        "evidence_id": "https-databricks-com-blog-add5987b",
+        "chars": 9028,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Databricks, Inc. pricing",
+        "kind": "pricing",
+        "url": "https://databricks.com/pricing",
+        "checked_at": "2026-08-13T18:47:37+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-pricing-1e91b141",
+        "chars": 8835,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Databricks, Inc. careers",
+        "kind": "careers",
+        "url": "https://databricks.com/careers",
+        "checked_at": "2026-08-13T18:47:38+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-careers-0e36e2dd",
+        "chars": 9809,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Databricks, Inc. home",
+        "kind": "other",
+        "url": "https://databricks.com/",
+        "checked_at": "2026-08-13T18:47:39+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-9142afd1",
+        "chars": 10136,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Databricks, Inc. about",
+        "kind": "other",
+        "url": "https://databricks.com/about",
+        "checked_at": "2026-08-13T18:47:40+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-about-ab8715a8",
+        "chars": 8512,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Databricks, Inc. docs",
+        "kind": "docs",
+        "url": "https://databricks.com/documentation",
+        "checked_at": "2026-08-13T18:47:42+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-documentation-415f3ddf",
+        "chars": 4175,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Databricks news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Databricks%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-13T18:47:43+00:00",
+        "http": 200,
+        "items": 94,
+        "new_stories": 91,
+        "outcome": "new",
+        "evidence_id": "2databricks-22-hl-en-us-gl-us-ceid-us-en-6da0ac46",
+        "chars": 35697,
+        "as_of": "2026-08-13"
+      },
+      {
+        "id": "site-feed",
+        "name": "Databricks site feed",
+        "kind": "newsroom",
+        "url": "https://databricks.com/rss.xml",
+        "checked_at": "2026-08-13T18:47:48+00:00",
+        "http": 200,
+        "items": 10,
+        "new_stories": 6,
+        "outcome": "new",
+        "evidence_id": "https-databricks-com-rss-xml-7e2ef84b",
+        "chars": 2148,
+        "as_of": "2026-08-12"
+      }
+    ]
   }
 ]

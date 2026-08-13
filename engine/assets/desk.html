@@ -152,6 +152,95 @@ tr.clk{cursor:pointer} tr.clk:hover td{background:var(--panel)}
 .mfill.low{background:var(--rust)} .mfill.mid{background:var(--amber)}
 .mnum{font-family:var(--mono);font-size:.68rem;color:var(--muted)}
 
+/* ═══ briefing ═══ */
+.brief{background:var(--surface);border:1px solid var(--edge);border-radius:6px;
+  padding:1.1rem 1.25rem;margin:.9rem 0 0;box-shadow:var(--shadow)}
+.brief .oneline{font-size:1.16rem;line-height:1.4;color:var(--navy);margin:0 0 1rem;
+  padding-bottom:.9rem;border-bottom:1px solid var(--hair)}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:1.1rem 1.6rem}
+.bgrid section h4{font-family:var(--mono);font-size:.6rem;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--green);margin:0 0 .3rem;font-weight:400}
+.bgrid section p{margin:0;font-size:.9rem;line-height:1.55}
+.risks{margin:.9rem 0 0;padding-top:.9rem;border-top:1px solid var(--hair)}
+.risks h4{font-family:var(--mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--rust);margin:0 0 .4rem;font-weight:400}
+.risks ul{margin:0;padding-left:1.1rem}
+.risks li{font-size:.88rem;margin-bottom:.3rem}
+.byline{font-family:var(--mono);font-size:.6rem;color:var(--rail);margin-top:.9rem;
+  padding-top:.6rem;border-top:1px solid var(--hair)}
+
+/* ═══ derived analysis ═══ */
+.anal{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:.6rem}
+.acard{background:var(--surface);border:1px solid var(--edge);border-left-width:3px;
+  border-left-color:var(--rail);border-radius:5px;padding:.65rem .8rem}
+.acard.good{border-left-color:var(--green)} .acard.warn{border-left-color:var(--amber)}
+.acard .al{font-family:var(--mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.15rem}
+.acard .av{font-size:1.06rem;color:var(--navy);font-weight:700;font-family:var(--mono);
+  font-variant-numeric:tabular-nums;margin-bottom:.25rem}
+.acard .aw{font-size:.79rem;color:var(--ink);line-height:1.45}
+.acard .ac{font-size:.76rem;color:var(--muted);font-style:italic;margin-top:.3rem}
+
+/* ═══ score ═══ */
+.scorewrap{display:grid;grid-template-columns:minmax(190px,240px) 1fr;gap:1.4rem;
+  background:var(--surface);border:1px solid var(--edge);border-radius:6px;
+  padding:1.1rem 1.25rem;box-shadow:var(--shadow)}
+@media(max-width:760px){.scorewrap{grid-template-columns:1fr}}
+.bigscore{text-align:center;padding:.6rem 0}
+.bigscore .n{font-family:var(--mono);font-size:3rem;line-height:1;color:var(--navy);
+  font-weight:700;font-variant-numeric:tabular-nums}
+.bigscore .band{display:inline-block;margin-top:.5rem;font-family:var(--mono);font-size:.66rem;
+  letter-spacing:.12em;text-transform:uppercase;padding:.18rem .55rem;border-radius:3px;
+  background:var(--green);color:var(--surface);font-weight:700}
+.bigscore .bandtext{font-size:.8rem;color:var(--muted);margin-top:.5rem;line-height:1.4}
+.bigscore .asof{font-family:var(--mono);font-size:.62rem;color:var(--rail);margin-top:.5rem}
+.dimrow{display:grid;grid-template-columns:2.2rem 1fr 2.6rem;gap:.6rem;align-items:center;
+  padding:.4rem 0;border-bottom:1px solid var(--hair)}
+.dimrow:last-child{border-bottom:none}
+.dimrow .dc{font-family:var(--mono);font-size:.68rem;color:var(--slate);font-weight:700}
+.dimrow .dn{font-size:.85rem;color:var(--ink)}
+.dimrow .dp{font-size:.76rem;color:var(--muted);line-height:1.35}
+.dimrow .dw{font-family:var(--mono);font-size:.6rem;color:var(--rail)}
+.dimrow .dv{font-family:var(--mono);font-size:.88rem;color:var(--navy);font-weight:700;
+  text-align:right;font-variant-numeric:tabular-nums}
+.dimbar{height:5px;background:var(--band);border-radius:3px;margin-top:.25rem;overflow:hidden}
+.dimbar i{display:block;height:100%;background:var(--green);border-radius:3px}
+.dimbar.pen i{background:var(--rust)}
+details.method{margin-top:.8rem;border-top:1px solid var(--hair);padding-top:.7rem}
+details.method summary{cursor:pointer;font-family:var(--mono);font-size:.64rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);list-style:none}
+details.method summary::-webkit-details-marker{display:none}
+details.method summary::before{content:"▸ ";color:var(--rail)}
+details.method[open] summary::before{content:"▾ "}
+.mbody{font-size:.84rem;margin-top:.7rem}
+.mbody ul{padding-left:1.1rem;margin:.3rem 0 .8rem}
+.mbody li{margin-bottom:.22rem}
+.bandtable{display:grid;grid-template-columns:auto auto 1fr;gap:.25rem .8rem;
+  font-size:.8rem;margin:.4rem 0 .8rem}
+.bandtable .bt{font-family:var(--mono);font-size:.68rem;color:var(--navy);font-weight:700}
+.bandtable .br{font-family:var(--mono);font-size:.68rem;color:var(--rail)}
+.bandtable .bd{color:var(--muted)}
+.bandtable .now{background:var(--band);border-radius:3px}
+
+/* ═══ news ═══ */
+.news{display:flex;flex-direction:column;gap:.35rem}
+.nitem{background:var(--surface);border:1px solid var(--edge);border-radius:5px;
+  padding:.55rem .75rem}
+.nitem:hover{border-color:var(--green)}
+.nitem a.nt{color:var(--navy);font-weight:700;font-size:.9rem;text-decoration:none;
+  line-height:1.35;display:block}
+.nitem a.nt:hover{text-decoration:underline}
+.nmeta{font-family:var(--mono);font-size:.63rem;color:var(--rail);margin-top:.22rem;
+  display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+.nsum{font-size:.8rem;color:var(--muted);margin-top:.25rem;line-height:1.45}
+.offtarget{opacity:.55}
+
+/* ═══ glossary ═══ */
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:.5rem}
+.gitem{background:var(--panel);border-radius:5px;padding:.55rem .75rem}
+.gitem b{color:var(--navy);font-size:.85rem;display:block;margin-bottom:.15rem}
+.gitem span{font-size:.82rem;color:var(--ink);line-height:1.45}
+
 /* ═══ facts ═══ */
 .catblock{background:var(--surface);border:1px solid var(--edge);border-radius:5px;margin-bottom:.6rem;overflow:hidden}
 .catblock>summary{list-style:none;cursor:pointer;padding:.55rem .8rem;display:flex;
@@ -394,13 +483,18 @@ const DATA = __DATA__;
 const $ = id => document.getElementById(id);
 const esc = s => String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const CO = Object.fromEntries(DATA.companies.map(c=>[c.slug,c]));
+const LABELS = DATA.labels||{};
 let current = DATA.companies.length ? DATA.companies[0].slug : null;
 let view = "overview";
 
 /* ────────── helpers ────────── */
 function fmt(v){
   if(v==null) return "—";
-  if(typeof v==="number") return Number.isInteger(v)?v.toLocaleString():String(v);
+  if(typeof v==="number"){
+    // years are not quantities: 2013, never 2,013
+    if(Number.isInteger(v)&&v>=1900&&v<=2100) return String(v);
+    return Number.isInteger(v)?v.toLocaleString():String(v);
+  }
   if(typeof v==="object") return JSON.stringify(v);
   return String(v);
 }
@@ -451,14 +545,17 @@ function renderOverview(){
   const ev=cs.reduce((a,c)=>a+c.evidence.records,0);
   const stale=cs.reduce((a,c)=>a+c.n_stale,0);
 
-  const feed=DATA.feed.length? DATA.feed.slice(0,14).map(f=>`
-    <div class="fitem">
-      <span class="st ${esc(f.outcome)}">${esc(f.outcome)}</span>
-      <span><b class="cname">${esc(f.name)}</b> <span class="dim">${esc(f.source||"")}</span>
-        ${f.delta?`<span class="mono dim"> ${f.delta>0?"+":""}${f.delta} chars</span>`:""}</span>
-      <span class="fw">${esc(ago(f.at))}</span>
+  const feed=DATA.feed.length? DATA.feed.slice(0,18).map(f=>`
+    <div class="nitem">
+      ${f.url?`<a class="nt" href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a>`
+             :`<span class="nt">${esc(f.title)}</span>`}
+      <div class="nmeta">
+        <b style="color:var(--green);cursor:pointer" data-slug="${esc(f.slug)}">${esc(f.name)}</b>
+        <span>${esc(f.publisher||"")}</span>
+        <span>${esc((f.at||"").slice(0,10))}</span>
+        <span>${esc(ago(f.at))}</span></div>
     </div>`).join("")
-    : `<div class="empty">No harvest activity recorded yet. Run
+    : `<div class="empty">No news collected yet. Run
        <span class="mono">python3 -m engine harvest --all</span>.</div>`;
 
   $("v-overview").innerHTML=`
@@ -481,14 +578,16 @@ function renderOverview(){
         <div class="tm">2 categories or fewer</div></div>
     </div>
 
-    <h3>Live feed — what the harvester saw move</h3>
-    <div class="feed">${feed}</div>
+    <h3>What is happening across coverage</h3>
+    <p class="sub">Every story the daily sweep collected, newest first, across all
+      ${cs.length} companies. Click a company name to open it.</p>
+    <div class="news">${feed}</div>
 
     <h3>Every company</h3>
     <div class="scroll"><table>
       <thead><tr><th>Company</th><th>Group</th><th class="r">Facts</th><th>Coverage</th>
         <th class="r">Stale</th><th class="r">Flagged</th><th class="r">Conflicts</th>
-        <th>Triggers</th><th class="r">Evidence</th><th class="r">Sources</th><th class="r">Updated</th></tr></thead>
+        <th>Triggers</th><th class="r">News</th><th class="r">Evidence</th><th class="r">Sources</th><th class="r">Updated</th></tr></thead>
       <tbody>${cs.map(c=>`
         <tr class="clk" data-slug="${esc(c.slug)}" tabindex="0">
           <td><span class="cname">${esc(c.name)}</span><span class="cslug">${esc(c.slug)}</span></td>
@@ -499,11 +598,13 @@ function renderOverview(){
           <td class="r" style="${c.n_flagged?"color:var(--amber)":""}">${c.n_flagged||"—"}</td>
           <td class="r" style="${c.n_conflicts?"color:var(--rust)":""}">${c.n_conflicts||"—"}</td>
           <td class="mono" style="font-size:.72rem">${c.n_armed?c.n_armed+" armed":""}${c.n_armed&&c.n_fired?" · ":""}${c.n_fired?c.n_fired+" fired":""}${!c.n_armed&&!c.n_fired?"—":""}</td>
-          <td class="r">${c.evidence.records||"—"}</td>
+          <td class="r">${c.n_news_rel||"—"}</td><td class="r">${c.evidence.records||"—"}</td>
           <td class="r">${c.harvest.sources.length||"—"}</td>
           <td class="r dim">${esc(c.updated||"—")}</td>
         </tr>`).join("")}</tbody>
     </table></div>`;
+  $("v-overview").querySelectorAll(".nmeta b[data-slug]").forEach(b=>
+    b.onclick=()=>openCompany(b.dataset.slug));
   $("v-overview").querySelectorAll("tr.clk").forEach(tr=>{
     const go=()=>openCompany(tr.dataset.slug);
     tr.onclick=go;
@@ -514,13 +615,141 @@ function renderOverview(){
 /* ────────── company ────────── */
 function factRow(f){
   return `<div class="frow">
-    <div class="fk">${esc(f.field)}</div>
+    <div class="fk">${esc(f.label||f.field)}
+      <span style="display:block;color:var(--rail);font-size:.64rem">${esc(f.field)}</span></div>
     <div><div class="fval">${esc(fmt(f.value))}${flagBadges(f.flags)}</div>
       <div class="fmeta">${tierBadge(f.tier)}
         <span>${esc(f.as_of||"—")}</span>
         ${f.stale?`<span class="stale-t">STALE ${f.age}d · ${esc(f.decay)}</span>`:""}
         <span class="fsrc">${esc(f.source||"")}</span></div>
       ${f.note?`<div class="fnote">${esc(f.note)}</div>`:""}</div></div>`;
+}
+
+/* what the business is, in plain words */
+function briefBlock(c){
+  const b=c.briefing||{};
+  if(!b.one_liner) return "";
+  return `<div class="brief">
+    <p class="oneline">${esc(b.one_liner)}</p>
+    <div class="bgrid">
+      ${b.what_it_does?`<section><h4>What it does</h4><p>${esc(b.what_it_does)}</p></section>`:""}
+      ${b.how_it_makes_money?`<section><h4>How it makes money</h4><p>${esc(b.how_it_makes_money)}</p></section>`:""}
+      ${b.why_it_matters?`<section><h4>Why it matters</h4><p>${esc(b.why_it_matters)}</p></section>`:""}
+      ${b.competitive_position?`<section><h4>Who it competes with</h4><p>${esc(b.competitive_position)}</p></section>`:""}
+    </div>
+    ${(b.key_risks||[]).length?`<div class="risks"><h4>What could go wrong</h4>
+      <ul>${b.key_risks.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>`:""}
+    <div class="byline">Desk summary, written ${esc(b.updated||"")}. Narrative, not a sourced
+      fact — check any figure against the record below before using it.</div>
+  </div>`;
+}
+
+/* metrics the store implies but does not state */
+function analysisBlock(c){
+  if(!(c.analysis||[]).length) return "";
+  return `<h3>What the numbers imply</h3>
+    <p class="sub">Computed from the stored facts. The arithmetic is shown so you can check it.</p>
+    <div class="anal">${c.analysis.map(a=>`
+      <div class="acard ${esc(a.tone||"")}">
+        <div class="al">${esc(a.label)}</div>
+        <div class="av">${esc(a.value)}</div>
+        <div class="aw">${esc(a.workings)}</div>
+        ${a.caveat?`<div class="ac">${esc(a.caveat)}</div>`:""}
+      </div>`).join("")}</div>`;
+}
+
+/* quality score, with the rubric explained in place */
+function scoreBlock(c){
+  const s=c.scores||{};
+  if(!s.has) return "";
+  const A=DATA.aibq, band=s.band||{};
+  const dims=(s.dimensions||[]).filter(d=>!d.is_penalty);
+  const cra=(s.dimensions||[]).find(d=>d.is_penalty);
+  return `<h3>Quality score — AIBQ ${esc(A.version)}</h3>
+  <div class="scorewrap">
+    <div class="bigscore">
+      <div class="n">${esc(s.composite)}</div>
+      ${s.delta!=null?`<div class="mono" style="font-size:.72rem;margin-top:.3rem;
+        color:${s.delta<0?"var(--rust)":"var(--green)"}">
+        ${s.delta<0?"▼":"▲"} ${Math.abs(s.delta).toFixed(2)} from ${esc(s.prior)}</div>`:""}
+      <div class="band">${esc(band.tier||"—")}</div>
+      <div class="bandtext">${esc(band.plain||"")}</div>
+      <div class="asof">as of ${esc(s.as_of||"?")}${s.tier?" · "+esc(s.tier):""}</div>
+    </div>
+    <div>
+      ${dims.map(d=>`
+        <div class="dimrow">
+          <span class="dc">${esc(d.code)}</span>
+          <span><span class="dn">${esc(d.name)}</span>
+            <span class="dw"> · ${esc(d.weight)}% weight</span>
+            <div class="dp">${esc(d.plain||"")}</div>
+            <div class="dimbar"><i style="width:${Math.max(0,Math.min(100,(d.value||0)*10))}%"></i></div>
+          </span>
+          <span class="dv">${esc(d.value)}</span>
+        </div>`).join("")}
+      ${cra?`<div class="dimrow">
+        <span class="dc">CRA</span>
+        <span><span class="dn">${esc(A.cra.name)}</span>
+          <div class="dp">${esc(A.cra.plain)}</div>
+          <div class="dimbar pen"><i style="width:${Math.min(100,Math.abs(cra.value||0)*40)}%"></i></div></span>
+        <span class="dv">${cra.value?("−"+esc(cra.value)):"0"}</span></div>`:""}
+      ${s.note?`<div class="fnote" style="margin-top:.6rem">${esc(s.note)}</div>`:""}
+      ${s.source_dims||s.source?`<div class="fmeta"><span class="fsrc">${esc(s.source_dims||s.source)}</span></div>`:""}
+
+      <details class="method">
+        <summary>How this score is built</summary>
+        <div class="mbody">
+          <p><b>${esc(A.formula)}</b></p>
+          <p>Each dimension is scored 0 to 10, weighted, and summed. A penalty is then
+            subtracted if weakness appears in several dimensions at once.</p>
+          <p style="margin-top:.7rem"><b>What each dimension contains</b></p>
+          ${A.dimensions.map(d=>`<p style="margin:.4rem 0 0"><b>${esc(d.code)} — ${esc(d.name)} (${d.weight}%)</b><br>
+            <span class="dim">${esc(d.plain)}</span><br>
+            <span class="dim" style="font-size:.76rem">${esc(d.subs.join(" · "))}</span></p>`).join("")}
+          <p style="margin-top:.8rem"><b>${esc(A.cra.name)}</b></p>
+          <ul>${A.cra.rules.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>
+          <p><b>Score bands</b></p>
+          <div class="bandtable">${A.bands.map(b=>`
+            <span class="bt ${b.tier===band.tier?"now":""}">${esc(b.tier)}</span>
+            <span class="br ${b.tier===band.tier?"now":""}">${b.lo}–${b.hi}</span>
+            <span class="bd ${b.tier===band.tier?"now":""}">${esc(b.plain)}</span>`).join("")}</div>
+          <p><b>Rules that govern a change</b></p>
+          <ul>${A.rules.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>
+          <p><b>${esc(A.dai.name)}</b> — ${esc(A.dai.plain)}</p>
+          <ul>${A.dai.levels.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>
+          <p class="dim">${esc(A.dai.band)}</p>
+          <p class="dim" style="margin-top:.7rem">Rubric ${esc(A.version)}, effective
+            ${esc(A.effective)}. Mirrored from the NEXUS scoring framework.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+  ${(s.history||[]).length?`<h3>How the score has moved</h3>
+    <div class="tline">${s.history.slice().reverse().map(h=>`
+      <div class="tev mark"><div class="td">${esc(h.as_of)}</div>
+        <div class="tt">${esc(h.value)}${h.note?` — ${esc(h.note)}`:""}</div></div>`).join("")}</div>`:""}`;
+}
+
+/* what is being said about the company right now */
+function newsBlock(c){
+  const n=(c.news||[]);
+  if(!n.length) return "";
+  const rel=n.filter(x=>x.relevant), off=n.filter(x=>!x.relevant);
+  const item=x=>`<div class="nitem ${x.relevant?"":"offtarget"}">
+    ${x.url?`<a class="nt" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`
+           :`<span class="nt">${esc(x.title)}</span>`}
+    <div class="nmeta"><span>${esc(x.publisher||"")}</span>
+      <span>${esc((x.published||"").slice(0,10))}</span>
+      <span>${esc(ago(x.published))}</span></div>
+    ${x.summary?`<div class="nsum">${esc(x.summary.slice(0,240))}</div>`:""}
+  </div>`;
+  return `<h3>What is being said — ${c.n_news_rel} stories</h3>
+    <p class="sub">Collected from news feeds each day. Every headline links to its source.
+      Anything not naming the company is dimmed and listed last.</p>
+    <div class="news">${rel.slice(0,25).map(item).join("")}
+      ${off.length?`<details class="method"><summary>${off.length} loosely matched stories</summary>
+        <div class="news" style="margin-top:.5rem">${off.slice(0,12).map(item).join("")}</div></details>`:""}
+    </div>`;
 }
 
 function renderCompany(slug){
@@ -561,17 +790,24 @@ function renderCompany(slug){
       <button class="btn" onclick="copy('python3 -m engine digest ${esc(c.slug)}','Command copied')">Trend digest</button>
     </div>
 
-    ${c.headline.length?`<h3>Key figures</h3><div class="tiles">${c.headline.map(t=>`
+    ${briefBlock(c)}
+
+    ${c.headline.length?`<h3>Where it stands</h3><div class="tiles">${c.headline.map(t=>`
       <div class="tile ${t.stale?"stale":""}" title="${esc(t.source||"")}">
         <div class="tl">${esc(t.label)}</div>
         <div class="tv">${esc(t.prefix)}${esc(fmt(t.value))}${esc(t.suffix)}</div>
         <div class="tm">${tierBadge(t.tier)}<span>${esc(t.as_of||"")}</span>${flagBadges(t.flags)}</div>
       </div>`).join("")}</div>`:""}
 
-    ${ladders.length?`<h3>Series</h3><div class="sparks">${ladders.map(([k,pts])=>{
+    ${analysisBlock(c)}
+
+    ${scoreBlock(c)}
+
+    ${ladders.length?`<h3>How the numbers have moved</h3><div class="sparks">${ladders.map(([k,pts])=>{
       const last=pts[pts.length-1],first=pts[0];
       const chg=first.value?Math.round(100*(last.value-first.value)/Math.abs(first.value)):null;
-      return `<div class="spark"><div class="sl">${esc(k)}</div>
+      const nice=(LABELS[k]||k);
+      return `<div class="spark"><div class="sl">${esc(nice)}</div>
         <div class="sv">${esc(fmt(last.value))}
           ${chg!=null?`<span class="mono" style="font-size:.66rem;color:${chg>=0?"var(--green)":"var(--rust)"}"> ${chg>=0?"+":""}${chg}%</span>`:""}</div>
         ${sparkSVG(pts)}
@@ -590,19 +826,30 @@ function renderCompany(slug){
       <div class="callout"><b>${c.n_conflicts} unresolved conflict(s).</b>
         Both values ship or neither.<pre class="out">${esc(JSON.stringify(c.conflicts,null,1))}</pre></div>`:""}
 
-    ${c.timeline.length?`<h3>Timeline</h3><div class="tline">${c.timeline.slice(0,40).map(t=>`
+    ${newsBlock(c)}
+
+    ${c.timeline.length?`<h3>Timeline</h3>
+      <p class="sub">Company events and stored marks alongside the news, newest first.
+        Where a line came from a story, the headline links to it.</p>
+      <div class="tline">${c.timeline.slice(0,45).map(t=>`
       <div class="tev ${esc(t.kind)}">
-        <div class="td">${esc(t.date)} · ${esc(t.kind)}${t.tier?" · "+esc(t.tier):""}</div>
-        <div class="tt">${esc(t.text)}</div>
-        ${t.source?`<div class="fmeta"><span class="fsrc">${esc(t.source)}</span></div>`:""}
+        <div class="td">${esc(t.date)} · ${esc(t.kind)}${t.tier?" · "+esc(t.tier):""}${t.publisher?" · "+esc(t.publisher):""}</div>
+        <div class="tt">${t.url?`<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.text)}</a>`:esc(t.text)}</div>
+        ${t.source&&!t.url?`<div class="fmeta"><span class="fsrc">${esc(t.source)}</span></div>`:""}
       </div>`).join("")}</div>`:""}
 
-    <h3>All stored facts</h3>
+    ${(c.briefing&&(c.briefing.glossary||[]).length)?`<h3>Terms used on this page</h3>
+      <div class="gloss">${c.briefing.glossary.map(g=>
+        `<div class="gitem"><b>${esc(g.term)}</b><span>${esc(g.definition)}</span></div>`).join("")}</div>`:""}
+
+    <h3>The full record — every stored fact</h3>
+    <p class="sub">The sourced store behind everything above. Each entry carries its value,
+      its date, its quality tier and where it came from.</p>
     <div style="margin-bottom:.5rem">
       <input type="text" id="cofilter" placeholder="Filter this company's facts…" style="max-width:340px">
     </div>
     <div id="cofacts">${DATA.categories.filter(cat=>byCat[cat]&&cat!=="triggers").map(cat=>`
-      <details class="catblock" ${["valuation","financials","financing"].includes(cat)?"open":""}>
+      <details class="catblock">
         <summary>${esc(cat.replace(/_/g," "))}<span class="n">${byCat[cat].length}</span></summary>
         ${byCat[cat].map(factRow).join("")}
       </details>`).join("")}</div>

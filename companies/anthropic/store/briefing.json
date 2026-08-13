@@ -1,0 +1,31 @@
+{
+  "slug": "anthropic",
+  "updated": "2026-08-13",
+  "author": "desk",
+  "note": "Desk-written plain-English summary, not a tiered fact. Written to help a reader understand the business quickly; verify any figure against the fact store before using it in a report.",
+  "one_liner": "Builds Claude, a family of AI assistants sold mainly to businesses.",
+  "what_it_does": "Anthropic trains large AI models and sells access to them. Its models are used through a developer interface, through its own Claude apps, and through the big cloud providers. The company was founded by former OpenAI researchers and positions safety research as central rather than adjacent to the product.",
+  "how_it_makes_money": "Mostly by charging per unit of text processed through its interface, plus enterprise contracts and consumer subscriptions. Revenue is concentrated in business customers rather than consumers, which is the reverse of its closest competitor.",
+  "why_it_matters": "It is the main commercial alternative to OpenAI at the frontier, and its enterprise weighting makes its revenue mix look different in ways that matter for durability.",
+  "competitive_position": "Competes with OpenAI, Google and Meta on model quality, and increasingly with open-weight models on price. Its enterprise and coding share is disproportionately strong.",
+  "key_risks": [
+    "Training costs are enormous and rise with each model generation.",
+    "Heavy dependence on cloud partners for compute, which is both a lifeline and a concentration risk.",
+    "Model quality leads are short-lived; each release resets the comparison.",
+    "Regulation of frontier models could land unevenly across jurisdictions."
+  ],
+  "glossary": [
+    {
+      "term": "Gross vs net revenue",
+      "definition": "Anthropic reports revenue gross; OpenAI reports net. The two are not comparable without adjustment. This desk equalises at 39.75%."
+    },
+    {
+      "term": "Frontier model",
+      "definition": "The largest, most capable models at the leading edge of what is currently possible."
+    },
+    {
+      "term": "Token",
+      "definition": "A chunk of text, roughly three-quarters of a word. AI usage is billed per token."
+    }
+  ]
+}

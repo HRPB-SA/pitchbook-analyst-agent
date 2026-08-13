@@ -66,8 +66,31 @@
       "enabled": false,
       "url": "https://openai.com/docs",
       "parser": "html"
+    },
+    {
+      "id": "news",
+      "name": "OpenAI news",
+      "kind": "press",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://news.google.com/rss/search?q=%22OpenAI%22&hl=en-US&gl=US&ceid=US:en",
+      "parser": "feed"
+    },
+    {
+      "id": "site-feed",
+      "name": "OpenAI site feed",
+      "kind": "newsroom",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://openai.com/news/rss.xml",
+      "parser": "feed"
     }
   ],
   "created": "2026-08-13T17:54:59+00:00",
-  "probed": "2026-08-13T18:02:32+00:00"
+  "probed": "2026-08-13T18:02:32+00:00",
+  "news_query": "\"OpenAI\"",
+  "aliases": [
+    "openai",
+    "chatgpt"
+  ]
 }

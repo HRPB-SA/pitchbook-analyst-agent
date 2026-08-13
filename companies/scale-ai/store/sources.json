@@ -66,8 +66,22 @@
       "enabled": true,
       "url": "https://scale.com/docs",
       "parser": "html"
+    },
+    {
+      "id": "news",
+      "name": "Scale AI news",
+      "kind": "press",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://news.google.com/rss/search?q=%22Scale+AI%22+OR+%22Alexandr+Wang%22&hl=en-US&gl=US&ceid=US:en",
+      "parser": "feed"
     }
   ],
   "created": "2026-08-13T17:54:59+00:00",
-  "probed": "2026-08-13T18:03:57+00:00"
+  "probed": "2026-08-13T18:03:57+00:00",
+  "news_query": "\"Scale AI\" OR \"Alexandr Wang\"",
+  "aliases": [
+    "scale ai",
+    "alexandr wang"
+  ]
 }

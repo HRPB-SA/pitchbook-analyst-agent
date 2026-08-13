@@ -66,8 +66,21 @@
       "enabled": false,
       "url": "https://perplexity.ai/docs",
       "parser": "html"
+    },
+    {
+      "id": "news",
+      "name": "Perplexity news",
+      "kind": "press",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://news.google.com/rss/search?q=%22Perplexity+AI%22&hl=en-US&gl=US&ceid=US:en",
+      "parser": "feed"
     }
   ],
   "created": "2026-08-13T17:54:59+00:00",
-  "probed": "2026-08-13T18:02:49+00:00"
+  "probed": "2026-08-13T18:02:49+00:00",
+  "news_query": "\"Perplexity AI\"",
+  "aliases": [
+    "perplexity"
+  ]
 }

@@ -66,8 +66,22 @@
       "enabled": true,
       "url": "https://elevenlabs.io/docs",
       "parser": "html"
+    },
+    {
+      "id": "news",
+      "name": "ElevenLabs news",
+      "kind": "press",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://news.google.com/rss/search?q=%22ElevenLabs%22&hl=en-US&gl=US&ceid=US:en",
+      "parser": "feed"
     }
   ],
   "created": "2026-08-13T17:54:59+00:00",
-  "probed": "2026-08-13T18:04:09+00:00"
+  "probed": "2026-08-13T18:04:09+00:00",
+  "news_query": "\"ElevenLabs\"",
+  "aliases": [
+    "elevenlabs",
+    "eleven labs"
+  ]
 }

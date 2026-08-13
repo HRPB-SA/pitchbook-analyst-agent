@@ -66,8 +66,23 @@
       "enabled": false,
       "url": "https://x.ai/docs",
       "parser": "html"
+    },
+    {
+      "id": "news",
+      "name": "xAI news",
+      "kind": "press",
+      "frequency": "daily",
+      "enabled": true,
+      "url": "https://news.google.com/rss/search?q=%22xAI%22+OR+%22Grok%22+Musk&hl=en-US&gl=US&ceid=US:en",
+      "parser": "feed"
     }
   ],
   "created": "2026-08-13T17:54:59+00:00",
-  "probed": "2026-08-13T18:03:53+00:00"
+  "probed": "2026-08-13T18:03:53+00:00",
+  "news_query": "\"xAI\" OR \"Grok\" Musk",
+  "aliases": [
+    "xai",
+    "grok",
+    "x.ai"
+  ]
 }

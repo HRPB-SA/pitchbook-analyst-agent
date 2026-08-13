@@ -25,7 +25,7 @@ import html
 import json
 import os
 
-from . import evidence, harvest, schema, store
+from . import briefing, evidence, harvest, schema, store
 
 ASSET = os.path.join(os.path.dirname(__file__), "assets", "desk.html")
 OUT_DEFAULT = os.path.join(store.REPO, "Report Automation", "dashboard", "desk.html")
@@ -71,7 +71,7 @@ def _iso(d):
 
 def _fact_row(cat, path, f, today):
     return {
-        "cat": cat, "field": path,
+        "cat": cat, "field": path, "label": briefing.label(cat, path),
         "value": f.get("value"),
         "as_of": f.get("as_of"),
         "age": schema.fact_age_days(f, today),
@@ -176,15 +176,19 @@ def _headline(profile):
     return tiles
 
 
-def _timeline(profile, trigs):
-    """Events, deals, trigger fires and valuation marks on one dated spine."""
+def _timeline(profile, trigs, news=None):
+    """Events, deals, trigger fires, valuation marks and news on one dated
+    spine. News items carry the URL they came from, so every line the reader
+    might question can be opened."""
     items = []
 
-    def add(date, kind, text, source=None, tier=None, note=None):
+    def add(date, kind, text, source=None, tier=None, note=None, url=None,
+            publisher=None):
         if not date:
             return
-        items.append({"date": str(date), "kind": kind, "text": text,
-                      "source": source, "tier": tier, "note": note})
+        items.append({"date": str(date)[:10], "kind": kind, "text": text,
+                      "source": source, "tier": tier, "note": note,
+                      "url": url, "publisher": publisher})
 
     ev = profile.get("events")
     if isinstance(ev, dict):
@@ -211,6 +215,13 @@ def _timeline(profile, trigs):
         if t.get("fired_on"):
             add(t["fired_on"], "trigger", "Trigger fired: " + t["condition"][:130],
                 t.get("source"), None, t.get("note"))
+
+    for n in (news or [])[:60]:
+        if not n.get("relevant"):
+            continue
+        add(n.get("published") or n.get("first_seen"), "news", n.get("title"),
+            n.get("publisher"), None, n.get("summary"), n.get("url"),
+            n.get("publisher"))
 
     items.sort(key=lambda x: x["date"], reverse=True)
     return items
@@ -347,6 +358,10 @@ def collect(today=None):
         _mark_ladder_staleness(facts)
 
         trigs = _triggers(profile)
+        news = harvest.load_news(slug)
+        brief = briefing.load(slug)
+        derived = briefing.analysis(profile)
+        score = briefing.scores(profile)
         man = harvest.load_manifest(slug)
         hlog = harvest.load_log(slug)
         last_run = hlog[-1] if hlog else None
@@ -355,22 +370,21 @@ def collect(today=None):
         eidx_sorted = sorted(eidx, key=lambda r: r.get("retrieved_at") or "",
                              reverse=True)
 
-        # cross-company feed: what the harvester actually saw move
-        if last_run:
-            for r in last_run.get("results", []):
-                if r.get("outcome") in ("new", "changed"):
-                    feed.append({
-                        "slug": slug, "name": ent.get("name", slug),
-                        "at": r.get("checked_at"), "source": r.get("name"),
-                        "kind": r.get("kind"), "outcome": r.get("outcome"),
-                        "url": r.get("url"), "evidence_id": r.get("evidence_id"),
-                        "delta": r.get("delta_chars"),
-                    })
+        # cross-company feed: the actual news, newest first
+        for n in news[:25]:
+            if not n.get("relevant") or not n.get("published"):
+                continue
+            feed.append({
+                "slug": slug, "name": ent.get("name", slug),
+                "at": n.get("published"), "title": n.get("title"),
+                "publisher": n.get("publisher"), "url": n.get("url"),
+                "summary": n.get("summary"),
+            })
 
         for f in facts:
             search.append({
                 "slug": slug, "name": ent.get("name", slug),
-                "cat": f["cat"], "field": f["field"],
+                "cat": f["cat"], "field": f["field"], "label": f["label"],
                 "value": f["value"], "as_of": f["as_of"], "tier": f["tier"],
                 "source": f["source"], "note": f["note"],
                 "stale": f["stale"], "flags": f["flags"],
@@ -388,9 +402,20 @@ def collect(today=None):
             "domain": man.get("domain"), "cik": man.get("cik"),
             "updated": profile.get("_updated"),
             "identity": _identity(profile),
+            "briefing": brief,
+            "analysis": derived,
+            "scores": score,
             "headline": _headline(profile),
             "ladders": _ladders(profile),
-            "timeline": _timeline(profile, trigs),
+            "timeline": _timeline(profile, trigs, news),
+            "news": [{"title": n.get("title"), "url": n.get("url"),
+                      "publisher": n.get("publisher"),
+                      "published": n.get("published"),
+                      "summary": n.get("summary"),
+                      "relevant": bool(n.get("relevant"))}
+                     for n in news[:70]],
+            "n_news": len(news),
+            "n_news_rel": sum(1 for n in news if n.get("relevant")),
             "triggers": trigs,
             "conflicts": conflicts,
             "facts": facts,
@@ -427,10 +452,13 @@ def collect(today=None):
 
     companies.sort(key=lambda c: (c["group"] != "frontier_five", -c["n_facts"]))
     feed.sort(key=lambda f: f.get("at") or "", reverse=True)
+    feed = feed[:80]
 
     return {
         "generated": today.isoformat(),
         "generated_at": evidence.now_utc(),
+        "aibq": briefing.AIBQ,
+        "labels": briefing.LABELS,
         "categories": list(schema.CATEGORIES),
         "cat_labels": {k: k.replace("_", " ") for k in schema.CATEGORIES},
         "templates": _templates(),
@@ -439,7 +467,7 @@ def collect(today=None):
         "companies": companies,
         "reports": reports,
         "search": search,
-        "feed": feed[:120],
+        "feed": feed,
     }
 
 

@@ -1,0 +1,31 @@
+{
+  "slug": "databricks",
+  "updated": "2026-08-13",
+  "author": "desk",
+  "note": "Desk-written plain-English summary, not a tiered fact. Written to help a reader understand the business quickly; verify any figure against the fact store before using it in a report.",
+  "one_liner": "Sells the software companies use to store their data and build AI on top of it.",
+  "what_it_does": "Databricks runs a platform where a company keeps all of its data in one place and then analyses it, builds reports from it, and trains AI models on it. Its pitch is that you no longer need separate systems for storing raw data and for querying it. The company calls that combined approach a lakehouse. It grew out of Apache Spark, an open-source tool for processing very large datasets that Databricks' founders wrote at Berkeley.",
+  "how_it_makes_money": "Customers pay for what they use rather than a flat licence. The more data a company processes, the larger the bill. That model means revenue tends to grow as a customer's own usage grows, without a new sale.",
+  "why_it_matters": "It is one of the few private companies with real, audited-scale revenue rather than promise. It is also the clearest test of whether a data platform can become an AI platform before a cloud provider does it instead.",
+  "competitive_position": "Competes most directly with Snowflake, a public company doing something similar from the data-warehouse side, and with the big cloud providers' own tools. Databricks' revenue has now passed Snowflake's.",
+  "key_risks": [
+    "Its three largest partners are also its three largest competitors: Amazon, Microsoft and Google all resell it and all sell rivals to it.",
+    "Gross margin has been falling as AI workloads consume more expensive compute.",
+    "The valuation assumes it keeps compounding at a rate very few companies sustain.",
+    "No IPO before 2027 on management's own account, which lengthens the wait for a return."
+  ],
+  "glossary": [
+    {
+      "term": "Lakehouse",
+      "definition": "One system that both stores raw data cheaply and queries it quickly. Historically those were two separate products."
+    },
+    {
+      "term": "Run-rate",
+      "definition": "The most recent period's revenue multiplied out to a full year. A snapshot of current pace, not a forecast."
+    },
+    {
+      "term": "Net revenue retention",
+      "definition": "What last year's customers spend this year, including growth and losses. Above 100% means existing customers alone grow revenue."
+    }
+  ]
+}

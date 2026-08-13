@@ -150,5 +150,134 @@
         "as_of": null
       }
     ]
+  },
+  {
+    "slug": "cohere",
+    "started_at": "2026-08-13T18:48:19+00:00",
+    "finished_at": "2026-08-13T18:48:25+00:00",
+    "sources": 8,
+    "counts": {
+      "changed": 6,
+      "unchanged": 1,
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Cohere newsroom",
+        "kind": "newsroom",
+        "url": "https://cohere.com/newsroom",
+        "checked_at": "2026-08-13T18:48:20+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "5856adec55e17659",
+        "previous_seen": "2026-08-13T18:05:36+00:00",
+        "delta_chars": -34,
+        "evidence_id": "https-cohere-com-newsroom-6cc9b060",
+        "chars": 8799,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Cohere blog",
+        "kind": "blog",
+        "url": "https://cohere.com/blog",
+        "checked_at": "2026-08-13T18:48:21+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "d46b5de614f7b39a",
+        "previous_seen": "2026-08-13T18:05:37+00:00",
+        "delta_chars": -34,
+        "evidence_id": "https-cohere-com-blog-075cbcea",
+        "chars": 9518,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Cohere pricing",
+        "kind": "pricing",
+        "url": "https://cohere.com/pricing",
+        "checked_at": "2026-08-13T18:48:22+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "1c568210fbc55ecf",
+        "previous_seen": "2026-08-13T18:05:38+00:00",
+        "delta_chars": -34,
+        "evidence_id": "https-cohere-com-pricing-63e5eaad",
+        "chars": 13003,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Cohere careers",
+        "kind": "careers",
+        "url": "https://cohere.com/careers",
+        "checked_at": "2026-08-13T18:48:22+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "89dc9ec85dfd815c",
+        "previous_seen": "2026-08-13T18:05:39+00:00",
+        "delta_chars": -34,
+        "evidence_id": "https-cohere-com-careers-0ef62e06",
+        "chars": 10364,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Cohere home",
+        "kind": "other",
+        "url": "https://cohere.com/",
+        "checked_at": "2026-08-13T18:48:23+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "537e80a3281e8dc6",
+        "previous_seen": "2026-08-13T18:05:40+00:00",
+        "delta_chars": -34,
+        "evidence_id": "https-cohere-com-e365a305",
+        "chars": 9427,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Cohere about",
+        "kind": "other",
+        "url": "https://cohere.com/about",
+        "checked_at": "2026-08-13T18:48:24+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "73fab69976d18b80",
+        "previous_seen": "2026-08-13T18:05:41+00:00",
+        "delta_chars": -34,
+        "evidence_id": "https-cohere-com-about-4f3b3fa5",
+        "chars": 8591,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Cohere docs",
+        "kind": "docs",
+        "url": "https://cohere.com/docs",
+        "checked_at": "2026-08-13T18:48:24+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-docs-081c07b3",
+        "chars": 1361,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Cohere news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Cohere%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-13T18:48:25+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 100,
+        "outcome": "new",
+        "evidence_id": "-q-22cohere-22-hl-en-us-gl-us-ceid-us-en-7955b3d9",
+        "chars": 37915,
+        "as_of": "2026-08-13"
+      }
+    ]
   }
 ]

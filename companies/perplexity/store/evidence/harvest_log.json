@@ -57,5 +57,30 @@
     "sources": 0,
     "counts": {},
     "results": []
+  },
+  {
+    "slug": "perplexity",
+    "started_at": "2026-08-13T18:47:56+00:00",
+    "finished_at": "2026-08-13T18:47:57+00:00",
+    "sources": 1,
+    "counts": {
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "news",
+        "name": "Perplexity news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Perplexity%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-13T18:47:57+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 99,
+        "outcome": "new",
+        "evidence_id": "2perplexity-22-hl-en-us-gl-us-ceid-us-en-9e322be1",
+        "chars": 39116,
+        "as_of": "2026-08-12"
+      }
+    ]
   }
 ]

@@ -57,5 +57,30 @@
     "sources": 0,
     "counts": {},
     "results": []
+  },
+  {
+    "slug": "xai-spacex",
+    "started_at": "2026-08-13T18:47:54+00:00",
+    "finished_at": "2026-08-13T18:47:55+00:00",
+    "sources": 1,
+    "counts": {
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "news",
+        "name": "xAI news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22xAI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-13T18:47:55+00:00",
+        "http": 200,
+        "items": 102,
+        "new_stories": 100,
+        "outcome": "new",
+        "evidence_id": "rch-q-22xai-22-hl-en-us-gl-us-ceid-us-en-8dd12db2",
+        "chars": 38727,
+        "as_of": "2026-08-12"
+      }
+    ]
   }
 ]

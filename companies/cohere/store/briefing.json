@@ -1,0 +1,27 @@
+{
+  "slug": "cohere",
+  "updated": "2026-08-13",
+  "author": "desk",
+  "note": "Desk-written plain-English summary, not a tiered fact. Written to help a reader understand the business quickly; verify any figure against the fact store before using it in a report.",
+  "one_liner": "Sells AI models to large enterprises, especially where data cannot leave the building.",
+  "what_it_does": "Cohere builds language models aimed squarely at business use, with an emphasis on deployment inside a customer's own infrastructure. It concentrates on banking, healthcare, telecoms and government, where privacy rules make public interfaces difficult.",
+  "how_it_makes_money": "Enterprise licences and private deployments, plus a developer interface. Fewer, larger contracts than a consumer-facing peer.",
+  "why_it_matters": "It is the test of whether a mid-sized lab can survive by serving regulated industries rather than competing at the frontier.",
+  "competitive_position": "Competes with the frontier labs' enterprise offerings and with open-weight models a customer can host free. Its advantage is deployment flexibility, not raw model quality.",
+  "key_risks": [
+    "It is outspent on training by an order of magnitude.",
+    "Open-weight models are a free substitute for the privacy use case.",
+    "Enterprise sales cycles are long and expensive.",
+    "Revenue is well behind the frontier labs on a similar valuation basis."
+  ],
+  "glossary": [
+    {
+      "term": "Private deployment",
+      "definition": "Running the model inside the customer's own environment so their data never leaves it."
+    },
+    {
+      "term": "Retrieval-augmented generation",
+      "definition": "Letting a model look things up in a company's own documents before answering, rather than relying on memory."
+    }
+  ]
+}
