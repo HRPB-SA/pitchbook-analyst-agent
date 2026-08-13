@@ -161,6 +161,17 @@ language model reading a source and writing down a number is a step where
 errors enter invisibly. Nothing in the current design catches a number that
 was misread.
 
+**How big this problem actually is.** Measured rates of citation error in
+deployed language models run between 11% and 57% depending on model and task,
+and independent testing of automated research reports found that 10 to 20% of
+claims could not be verified against the very sources the report cited — with
+dates the single most common thing to be wrong (*Cited but Not Verified*, 2026;
+*DeepFact*, 2026). Two failures hide inside that: a **fabricated source** that
+does not exist, and a **drifted claim** where the source is real but does not
+say what the report says it says. The second is more dangerous, because
+everything looks correct from the outside. Both are caught by storing the
+quoted span, and by nothing short of it.
+
 **The idea.** Under the fact store, add a layer that keeps **the raw material
 itself**. Every fact points to an evidence record: the archived text, the URL,
 the date it was retrieved, a content hash, and — this is the important part —
@@ -189,6 +200,15 @@ to apply.
 *Claims become clickable.* Every figure in the finished report can carry a
 hidden pointer back to the sentence that produced it. That is the difference
 between a report that cites and a report that can be audited.
+
+**One design rule that is easy to get wrong.** Check the material **when it
+arrives, not when it is reviewed.** Recent testing found that verifiers which
+correctly identify a misleading source during a focused check will still let
+that same source be absorbed into a long research task later on — attention
+degrades over a long run in a way it does not during a short one (2026). The
+implication for us is specific: quality judgment belongs in the intake step,
+where each piece of evidence is assessed alone, not in a final review pass
+where it is one of hundreds of things competing for attention.
 
 **What gets built.** `engine/evidence.py`; an `evidence/` store per company;
 an extra required field on the Fact shape; a `verify` command that re-checks
@@ -225,6 +245,16 @@ scrutiny is the single most damaging error a research note can contain,
 because it invites the reader to distrust everything else. It is also the
 error most amenable to being solved permanently by a machine. A system that
 can never contradict itself has an advantage no human desk has.
+
+**This is the emerging best practice, not just a house preference.** The
+recommendation now converging across people who build these systems is almost
+word for word the idea above: do not let the drafting model produce numerals at
+all. Draft against a typed store of facts, substitute the values at render
+time, then compare every numeral in the finished document back against the
+store. The reasoning is that a model writing a number from memory is
+generating text, not retrieving data, and the two are indistinguishable on the
+page. Removing the model's ability to type a digit removes the whole class of
+error rather than trying to catch it afterward.
 
 **What gets built.** Reference resolution in `engine/compose.py`; a numeric
 extraction and consistency check in `engine/qa.py` promoted to FAIL; a claims
@@ -338,6 +368,19 @@ of how you actually write, richer than the current profile. Second, a
 **critic**: a pass that reads the draft against the fingerprint, scores it, and
 rewrites the parts that miss — before the build, not after.
 
+**Why a separate pass, rather than better instructions.** This is the crucial
+design point, and it has good evidence behind it. A study of 15 million
+research abstracts found that after 2023 a set of roughly 320 words surged in
+frequency — *delves* appearing 28 times more often than before, *underscores*
+about 11 times more often (*Science Advances*, 2025). The follow-up work
+concluded the cause is the training process that makes models agreeable and
+helpful, not the source material (COLING, 2025). That matters practically:
+**you cannot instruct these habits away, because they come from the same
+mechanism that makes the model follow instructions.** A model told to avoid its
+tells will avoid them for a paragraph and drift back. The only reliable fix is
+a separate pass, with different instructions, that reads the finished draft and
+rewrites it.
+
 ### What the fingerprint should measure
 
 The current profile measures sentence and paragraph length, evidence density,
@@ -393,18 +436,39 @@ The tells worth engineering against, in order of how much they give the game
 away:
 
 - **Trailing analysis bolted onto a sentence.** A statement, then a comma, then
-  a clause explaining its significance. Once you see this you cannot unsee it,
-  and it appears at several times the human rate. The fix is to split it: state
-  the fact, then state the meaning in its own sentence. The gate already
-  detects this; the critic should also fix it.
+  a clause explaining its significance — "the round closed at $188 billion,
+  reflecting continued investor appetite." This is the strongest measured tell
+  in the research: machine writing produces these trailing clauses at **two to
+  five times the human rate** (Reinhart and colleagues, 2024). The fix is
+  mechanical — split it in two. State the fact. Then state what it means, in
+  its own sentence, with somebody doing something.
+- **Nouns made out of verbs.** "The acquisition of" instead of "acquired."
+  Runs at roughly one and a half to two times the human rate. Converting them
+  back to verbs shortens the sentence and forces an actor into it.
+- **A useful surprise: the passive voice is not the tell.** Machine writing
+  uses the actorless passive at about *half* the human rate. Blanket advice to
+  avoid the passive is therefore counterproductive here — the house position
+  that it is legitimate when the actor is unknown or irrelevant is correct, and
+  should stay.
 - **Uniform paragraph size.** Four to six sentences, every time. Real writing
   has one-sentence paragraphs where the point deserves the space.
+- **Flat rhythm.** The measurable version of "it reads like a machine" is low
+  variation in sentence length. Human analytical writing swings widely; machine
+  writing clusters near its own average. This converts directly into two build
+  checks worth adding: **require at least one sentence under eight words in
+  every 150**, and **flag any three consecutive sentences whose lengths sit
+  within three words of each other.**
 - **Everything in threes.** Three examples, three adjectives, three clauses.
   Occasionally, on purpose, is rhetoric. Constantly is a habit.
 - **"Not just X, but Y."** And its relatives. Almost always deletable.
 - **Stacked hedging.** "May potentially suggest." Pick one, or quantify it.
 - **Summary sentences that summarize nothing new.** The paragraph-closing
   restatement is the single largest source of bloat.
+
+One more mechanical note worth knowing: models overuse the em dash partly
+because it is cheaper to produce than the words it replaces. The house budget
+of no more than eight per document is well placed, and the reason it works is
+that it forces the sentence to be rebuilt rather than punctuated.
 
 And the affirmative version, which matters more: **specificity is the strongest
 signal of a human expert.** A machine writes "significant growth." A person
@@ -473,18 +537,37 @@ drafter marks a claim as needing visual proof; the designer reads the claim,
 identifies its logical shape, and selects the exhibit form that demonstrates
 it.
 
-**Claim shape to chart form.** The mapping is more mechanical than it looks:
+**Claim shape to chart form.** The mapping is more mechanical than it looks.
+The reliable method — the one the *Financial Times* built its internal chart
+guide around — is to ignore the data's subject entirely and ask what
+**relationship** the sentence is asserting. There are only about nine, and each
+has a correct answer:
 
-| The claim is about | Show it as |
+| The claim asserts | Show it as |
 |---|---|
 | Ranking — who is bigger | Horizontal bars, sorted, values labeled |
-| Change over time | A line; bars only if the periods are few and discrete |
-| Two quantities at different scales | Bars plus a line on a second axis |
-| Composition changing | Stacked area or a small set of paired columns |
-| A range of possible values | A football-field bar per method |
-| Distribution across a group | Dots on a line, each labeled |
+| Change over time | A line; bars only when the periods are few and discrete |
+| Change between two points, across many companies | A slope chart — two columns, a line per company |
+| Spread across a group | Dots on a single axis with a median line. **Not bars** |
+| Composition | Stacked bars, and only with four components or fewer |
+| Magnitude against a benchmark | Bars with the benchmark as a reference line |
+| A range of possible values | A football-field bar per valuation method |
 | One number against a threshold | A single labeled marker, not a gauge |
-| Two variables related | A scatter — **except where embargoed, and the embargo here is absolute and enforced in code** |
+| Two variables related | A scatter — **except where embargoed, and that embargo is absolute and enforced in code** |
+
+Two of these are worth calling out because they are commonly done wrong. Spread
+across a group — the shape of any comparison of companies on a multiple —
+should be **dots, never bars**, because bars imply a quantity building up from
+zero and what is actually being shown is a position in a range. And the slope
+chart is badly underused: when the claim is "these five companies all moved,
+and two moved the other way," nothing else shows it as fast.
+
+**The one to be careful with.** A chart with two different scales, one on each
+side, makes any two lines appear related — and the apparent relationship is an
+artifact of where you chose to put the axes. Serious desks avoid it for that
+reason. The house chart factory offers this type and it is occasionally the
+honest choice, but it should require a stated reason, and the caption should
+never describe the two series as moving together.
 
 **Conventions that separate professional exhibits from ordinary ones.**
 
@@ -503,6 +586,20 @@ it.
 - **Never truncate an axis on a bar chart.** Bar length encodes magnitude; a
   cut axis is a false statement. Lines may start above zero when the variation
   is the point, and should say so.
+- **Notate actual, forecast, and prior period consistently.** There is an
+  international standard for this now (ISO 24896, developed from the business
+  charting rules known as IBCS): the same visual treatment always means the
+  same thing, so solid always means actual and hatched always means forecast,
+  in every exhibit. The model templates already do the spreadsheet version of
+  this by suffixing years as `2023A` and `2024F`. Use the same convention in
+  the charts and the two artifacts start speaking one language.
+
+Worth knowing where errors actually cluster: when *The Economist* audited its
+own charting mistakes publicly, the failures grouped into three kinds — the
+wrong axis choice, an encoding too weak to show the point, and a chart type
+that did not match the claim. All three are decisions made before any data is
+plotted, which is precisely why chart selection should be automated from the
+claim rather than left to the end.
 
 **The check worth adding.** The build should verify that every exhibit is
 mentioned in the text, that its caption states a finding rather than a label,
@@ -663,7 +760,16 @@ specialist, which is also the right register for the reports themselves.
 ## What senior writing looks like
 
 The difference between a junior and a senior research note is not vocabulary
-and it is not length. It is four habits.
+and it is not length. Writing researchers have a precise name for it: juniors
+**tell what they know**, in roughly the order they found it out, while seniors
+**transform** it, reorganizing everything around the decision the reader has to
+make (Bereiter and Scardamalia, 1987). The note is not a record of the
+research. It is an argument built for somebody else's purpose.
+
+That distinction is useful to us because it is testable by machine. If the
+order of a draft's sections matches the order the facts were gathered, it is
+knowledge-telling and needs restructuring. In practice it shows up as four
+habits.
 
 **A senior analyst takes a position.** A junior note assembles facts and lets
 the reader conclude. A senior note says what it thinks and accepts that it
@@ -686,6 +792,13 @@ that the writer could not tell what mattered.
 **A senior analyst closes facing a decision.** The last paragraph of a junior
 note summarizes. The last paragraph of a senior note tells the reader what
 would change the answer, and by when.
+
+**One test worth automating.** Read the first sentence of every paragraph, in
+order, and nothing else. The argument should stand on its own and make sense.
+If it does not, the paragraphs are not opening on their points. This is a
+standard exercise among investment-writing editors, it takes a machine no
+effort at all, and it catches structural weakness that sentence-level checking
+never will.
 
 ## Grammar and rhythm
 
@@ -784,6 +897,17 @@ skipped. Calibration in particular is what separates a research operation from
 a content operation: it is the willingness to write down a prediction with a
 number attached, and then check.
 
+**How to grade the output itself.** The workable method is a scoring sheet
+applied by a separate model acting as an examiner — rating each report on
+factual accuracy, citation accuracy, completeness, source quality, and whether
+it actually answered the question. Start with about twenty real past requests
+rather than building a large test set up front; twenty is enough to expose the
+obvious failures. Two warnings apply. A model grading another model's evidence
+work is itself unreliable, so its scores are a signal and not a verdict. And
+public benchmarks for this are contaminated, because the systems being tested
+can search for the answers — so keep a small set of your own cases that never
+gets published or shared.
+
 ---
 
 ## The honest caveats
@@ -801,7 +925,23 @@ reason.
 **The human touchpoint should not be automated away.** Two remain: picking what
 to write in the morning, and reading it before it ships. Both are cheap. Both
 are where the responsibility for being right actually sits. A system that
-removes them is not more automated, it is unaccountable.
+removes them is not more automated, it is unaccountable. There is also an
+outside expectation forming around this — financial regulators have begun
+naming model fabrication and bias as risks that firms are expected to test for
+and document, with a human able to override, and the long-standing supervisory
+guidance on model risk already requires documented validation and outcome
+review. Even for work that is not formally regulated, that is a sensible bar to
+hold to, and the validation log already does most of it.
+
+**Splitting work across many agents costs more than it looks.** Running a
+research task across several cooperating agents produces substantially better
+results than a single one, but at roughly fifteen times the token cost, and it
+introduces its own failure modes: agents duplicating each other's work when
+their instructions are vague, and agents searching indefinitely for a fact that
+does not exist. The practical response is to scale the effort to the question —
+one agent for a simple lookup, a handful for a comparison, a larger fan-out
+only for a genuine survey — and to give every agent an explicit stopping
+condition.
 
 **Private companies are not public companies.** Most of the technique in
 published research assumes audited quarterly filings. The companies covered
@@ -810,3 +950,46 @@ freeze-on-conflict rule, and the visible-vintage requirement more important
 here than they would be on a public desk — not less. The right response to
 thin information is to be scrupulous about what is known, not to fill the gap
 with confident prose.
+
+---
+
+## What this draws on
+
+The house standard (README.md, style/STYLE.md, style/WRITING_STYLES_RESEARCH.md)
+supplies the editorial positions; this note does not restate them. The outside
+work cited above, for anyone who wants to check it:
+
+**On machine-writing tells.** Kobak and colleagues, "Delving into LLM-assisted
+writing," *Science Advances* (2025) — the 15-million-abstract study behind the
+excess-vocabulary finding. Reinhart and colleagues (2024) — the grammatical
+comparison that measured participial clauses, nominalizations, and the
+lower-than-human passive rate. "Why Does ChatGPT 'Delve' So Much?" (COLING,
+2025) — traces the habits to the preference-training step, which is why a
+post-drafting pass is required rather than better instructions.
+
+**On research writing.** Bereiter and Scardamalia (1987) on knowledge-telling
+versus knowledge-transforming. Gopen and Swan on where readers expect
+information to sit in a sentence — the basis of the house flow rule. The ICD
+203 estimative-language standard used by intelligence analysts, already adopted
+here. Susan Weiner's investment-writing guidance for the first-sentence test.
+
+**On exhibits.** The *Financial Times* Visual Vocabulary for the
+relationship-to-chart mapping. ISO 24896, developed from the IBCS business
+charting rules, for consistent actual-versus-forecast notation. Wilke,
+*Fundamentals of Data Visualization*, on direct labeling and annotation. *The
+Economist*, "Mistakes, we've drawn a few" (2019), on where charting errors
+actually cluster.
+
+**On automated research pipelines.** Anthropic's engineering write-up on
+multi-agent research systems (2025) for the orchestration pattern, its cost,
+and its named failure modes. "Cited but Not Verified" and "DeepFact" (2026) for
+the measured citation-error and unverifiable-claim rates. The 2026 work showing
+that verification degrades over long research runs, which is the argument for
+gating at ingestion. ResearchRubrics and related work on rubric-based grading
+of report-length output, with the caveats about judge reliability and benchmark
+contamination.
+
+**On the regulatory floor.** FINRA's 2026 regulatory oversight report on
+generative-AI fabrication and bias as testable risks, and the supervisory
+guidance on model risk management (SR 11-7) on documented validation and human
+override.
