@@ -25,7 +25,7 @@ import html
 import json
 import os
 
-from . import briefing, evidence, harvest, schema, store
+from . import briefing, evidence, harvest, intake, market, schema, store
 
 ASSET = os.path.join(os.path.dirname(__file__), "assets", "desk.html")
 OUT_DEFAULT = os.path.join(store.REPO, "Report Automation", "dashboard", "desk.html")
@@ -458,6 +458,11 @@ def collect(today=None):
         "generated": today.isoformat(),
         "generated_at": evidence.now_utc(),
         "aibq": briefing.AIBQ,
+        "market": {"quotes": market.load_quotes(),
+                   "themes": market.load_themes(),
+                   "summary": market.summary(),
+                   "watchlist": market.WATCHLIST},
+        "intake": intake.recent(30),
         "labels": briefing.LABELS,
         "categories": list(schema.CATEGORIES),
         "cat_labels": {k: k.replace("_", " ") for k in schema.CATEGORIES},

@@ -235,6 +235,47 @@ details.method[open] summary::before{content:"▾ "}
 .nsum{font-size:.8rem;color:var(--muted);margin-top:.25rem;line-height:1.45}
 .offtarget{opacity:.55}
 
+/* ═══ market ═══ */
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:.55rem}
+.q{background:var(--surface);border:1px solid var(--edge);border-radius:5px;padding:.6rem .7rem;
+  box-shadow:var(--shadow);border-left-width:3px;border-left-color:var(--rail)}
+.q.up{border-left-color:var(--green)} .q.down{border-left-color:var(--rust)}
+.q .qt{display:flex;justify-content:space-between;align-items:baseline;gap:.4rem}
+.q .tk{font-family:var(--mono);font-size:.8rem;font-weight:700;color:var(--navy)}
+.q .ch{font-family:var(--mono);font-size:.78rem;font-weight:700}
+.q .ch.up{color:var(--green)} .q .ch.down{color:var(--rust)}
+.q .px{font-family:var(--mono);font-size:1.14rem;color:var(--ink);margin:.15rem 0;
+  font-variant-numeric:tabular-nums}
+.q .qn{font-size:.75rem;color:var(--muted)}
+.q .qm{font-family:var(--mono);font-size:.6rem;color:var(--rail);margin-top:.3rem;
+  display:flex;gap:.5rem;flex-wrap:wrap}
+.q .qw{font-size:.72rem;color:var(--muted);margin-top:.35rem;line-height:1.4;
+  padding-top:.35rem;border-top:1px solid var(--hair)}
+.moat{font-family:var(--mono);font-size:.56rem;padding:.04rem .26rem;border-radius:2px;
+  border:1px solid var(--edge);color:var(--muted)}
+.moat.Wide{color:var(--green);border-color:var(--green)}
+.moat.Narrow{color:var(--teal);border-color:var(--teal)}
+.themegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:.8rem}
+.theme{background:var(--surface);border:1px solid var(--edge);border-radius:6px;overflow:hidden}
+.theme h4{margin:0;padding:.55rem .8rem;background:var(--panel);font-family:var(--mono);
+  font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--slate);font-weight:400;
+  display:flex;justify-content:space-between;gap:.5rem}
+.theme .tw{padding:.45rem .8rem;font-size:.76rem;color:var(--muted);border-bottom:1px solid var(--hair)}
+.theme ol{margin:0;padding:.3rem .8rem .6rem 1.5rem}
+.theme li{margin:.3rem 0;font-size:.83rem;line-height:1.4}
+.theme li a{color:var(--ink);text-decoration:none}
+.theme li a:hover{color:var(--green);text-decoration:underline}
+.theme li .tm{font-family:var(--mono);font-size:.6rem;color:var(--rail);display:block}
+
+/* ═══ section jump nav ═══ */
+.jump{position:sticky;top:var(--top-h);z-index:9;background:var(--ground);
+  border-bottom:1px solid var(--edge);margin:0 -1.5rem 1rem;padding:.5rem 1.5rem;
+  display:flex;gap:.3rem;overflow-x:auto}
+.jump button{font-family:var(--mono);font-size:.63rem;letter-spacing:.06em;padding:.26rem .55rem;
+  border:1px solid var(--edge);border-radius:999px;color:var(--muted);white-space:nowrap;
+  background:var(--surface)}
+.jump button:hover{border-color:var(--green);color:var(--navy)}
+
 /* ═══ glossary ═══ */
 .gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:.5rem}
 .gitem{background:var(--panel);border-radius:5px;padding:.55rem .75rem}
@@ -344,40 +385,40 @@ mark{background:color-mix(in srgb,var(--green) 26%,transparent);color:inherit;bo
 
 /* ═══════════════════ THE DINOSAUR ═══════════════════
    Walks the foot of a company page, tracking scroll progress. */
-#dino{position:fixed;left:var(--rail-w);right:0;bottom:0;height:96px;z-index:25;pointer-events:none;
+#dino{position:fixed;left:var(--rail-w);right:0;bottom:0;height:104px;z-index:25;pointer-events:none;
   opacity:0;transition:opacity .35s}
 body.dino-on #dino{opacity:1}
-body.dino-on main{padding-bottom:9rem}
+body.dino-on main{padding-bottom:10rem}
 @media(max-width:860px){#dino{left:0}}
 /* content passes cleanly under the strip instead of colliding with the dino */
 #dino::before{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(to top,var(--ground) 0,var(--ground) 46%,transparent 100%)}
 #dino .ground{position:absolute;left:1.5rem;right:1.5rem;bottom:17px;height:1px;
   background:repeating-linear-gradient(90deg,var(--edge) 0 7px,transparent 7px 15px)}
-#dinowrap{position:absolute;bottom:13px;left:1.5rem;width:76px;height:64px;
+#dinowrap{position:absolute;bottom:8px;left:1.5rem;width:104px;height:74px;
   transform:translateX(var(--dx,0px)) scaleX(var(--dir,1));
   transition:transform .28s cubic-bezier(.4,.1,.3,1);transform-origin:center bottom}
-#dino svg{width:76px;height:64px;overflow:visible}
-.d-body{animation:bob 620ms ease-in-out infinite;transform-origin:38px 52px}
-.d-legF{animation:legF 620ms ease-in-out infinite;transform-origin:31px 46px}
-.d-legB{animation:legB 620ms ease-in-out infinite;transform-origin:44px 46px}
-.d-tail{animation:tail 1240ms ease-in-out infinite;transform-origin:55px 34px}
-.d-head{animation:head 1240ms ease-in-out infinite;transform-origin:26px 25px}
-.d-eye{animation:blink 4200ms step-end infinite;transform-origin:18px 21px}
+#dino svg{width:104px;height:74px;overflow:visible}
+.d-body{animation:bob 660ms ease-in-out infinite;transform-origin:45px 46px}
+.d-legF{animation:legF 660ms ease-in-out infinite;transform-origin:44px 41px}
+.d-legB{animation:legB 660ms ease-in-out infinite;transform-origin:60px 41px}
+.d-tail{animation:tail 1320ms ease-in-out infinite;transform-origin:63px 42px}
+.d-head{animation:head 1320ms ease-in-out infinite;transform-origin:33px 28px}
+.d-eye{animation:blink 4600ms step-end infinite;transform-origin:19.5px 18.6px}
 #dinowrap:not(.walking) .d-body,#dinowrap:not(.walking) .d-legF,
 #dinowrap:not(.walking) .d-legB{animation-play-state:paused}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.2px)}}
-@keyframes legF{0%,100%{transform:rotate(15deg)}50%{transform:rotate(-15deg)}}
-@keyframes legB{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(15deg)}}
-@keyframes tail{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-2.6px) rotate(.6deg)}}
+@keyframes legF{0%,100%{transform:rotate(19deg)}50%{transform:rotate(-19deg)}}
+@keyframes legB{0%,100%{transform:rotate(-19deg)}50%{transform:rotate(19deg)}}
+@keyframes tail{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
 @keyframes head{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2.5deg)}}
 @keyframes blink{0%,94%{transform:scaleY(1)}95%,98%{transform:scaleY(.12)}99%,100%{transform:scaleY(1)}}
 .d-puff{opacity:0}
 #dinowrap.walking .d-puff{animation:puff 620ms ease-out infinite}
 @keyframes puff{0%{opacity:.5;transform:translate(0,0) scale(.5)}
   100%{opacity:0;transform:translate(13px,-7px) scale(1.5)}}
-#dinoflag{position:absolute;bottom:76px;left:1.5rem;
-  transform:translateX(var(--dx,0px)) translateX(-50%) translateX(38px);
+#dinoflag{position:absolute;bottom:82px;left:1.5rem;
+  transform:translateX(var(--dx,0px)) translateX(-50%) translateX(30px);
   font-family:var(--mono);font-size:.6rem;letter-spacing:.04em;
   color:var(--slate);background:var(--surface);border:1px solid var(--edge);border-radius:4px;
   padding:.14rem .4rem;white-space:nowrap;opacity:0;box-shadow:var(--shadow);
@@ -416,6 +457,7 @@ footer{margin-left:var(--rail-w);padding:1.2rem 1.5rem 2rem;border-top:1px solid
 <div class="rail">
   <nav>
     <button data-view="overview" aria-current="true"><span class="ic">▤</span>Overview</button>
+    <button data-view="market"><span class="ic">◈</span>Markets &amp; signals</button>
     <button data-view="search"><span class="ic">⌕</span>Search</button>
     <button data-view="request"><span class="ic">✎</span>Request a report</button>
     <button data-view="add"><span class="ic">＋</span>Add a company</button>
@@ -427,6 +469,7 @@ footer{margin-left:var(--rail-w);padding:1.2rem 1.5rem 2rem;border-top:1px solid
 <main>
   <section class="view" id="v-overview"></section>
   <section class="view" id="v-company" hidden></section>
+  <section class="view" id="v-market" hidden></section>
   <section class="view" id="v-search" hidden></section>
   <section class="view" id="v-request" hidden></section>
   <section class="view" id="v-add" hidden></section>
@@ -442,36 +485,82 @@ footer{margin-left:var(--rail-w);padding:1.2rem 1.5rem 2rem;border-top:1px solid
   <div class="ground"></div>
   <div id="dinoflag"></div>
   <div id="dinowrap">
-    <svg viewBox="0 0 76 64" fill="none">
+    <svg viewBox="0 0 104 74" fill="none">
+      <defs>
+        <linearGradient id="dskin" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="var(--dino-2)"/>
+          <stop offset="0.55" stop-color="var(--dino)"/>
+          <stop offset="1" stop-color="var(--dino-2)"/>
+        </linearGradient>
+      </defs>
+
+      <!-- tail: thick at the hip, tapering, held horizontal as a counterweight -->
       <g class="d-tail">
-        <path d="M50 40 C63 39 71 31 75 22 C68 28 60 32 51 33 Z" fill="var(--dino-2)"/>
+        <path d="M62 40 C74 38 86 33 99 25 C97 31 92 37 84 41 C76 45 68 46 62 45 Z"
+              fill="url(#dskin)"/>
+        <path d="M66 41.5 C76 40 85 36 94 30" stroke="var(--dino-2)" stroke-width="1"
+              stroke-linecap="round" opacity=".55"/>
       </g>
-      <g class="d-legB"><rect x="39" y="44" width="11" height="15" rx="5.5" fill="var(--dino-2)"/>
-        <path d="M37 56 h14 a2.6 2.6 0 0 1 0 5.2 h-14 Z" fill="var(--dino-2)"/></g>
-      <g class="d-body">
-        <!-- fat, round-bellied body -->
-        <path d="M13 45 C7 33 12 19 28 16 C45 13 59 21 60 35 C61 47 50 54 34 54
-                 C23 54 17 52 13 45 Z" fill="var(--dino)"/>
-        <path d="M22 47 C22 38 29 34 37 34 C46 34 52 39 51 47 C49 52 41 54 33 53
-                 C27 52 23 51 22 47 Z" fill="var(--dino-belly)" opacity=".9"/>
-        <!-- back spikes -->
-        <path d="M30 16 l4 -6 l4 7 Z M39 17 l5 -6 l3 7 Z M48 21 l6 -4 l2 7 Z"
+
+      <!-- far leg, set back and darker for depth -->
+      <g class="d-legB">
+        <path d="M60 40 C66 40 68 46 66 51 L62 58 L57 58 L59 50 C57 46 56 42 60 40 Z"
               fill="var(--dino-2)"/>
-        <g class="d-head">
-          <path d="M25 31 C15 31 8 26 8 20 C8 13 15 8 25 9 C34 10 38 15 38 21
-                   C38 27 33 31 25 31 Z" fill="var(--dino)"/>
-          <circle class="d-eye" cx="18" cy="21" r="2.5" fill="#12161F"/>
-          <circle cx="10.5" cy="16.5" r="1.15" fill="#12161F" opacity=".55"/>
-          <path d="M10 25 C14 27.5 19 27.5 22 26" stroke="var(--dino-2)" stroke-width="1.5"
-                stroke-linecap="round"/>
-        </g>
-        <!-- tiny arm -->
-        <path d="M31 38 a4 4 0 0 1 6 2.6" stroke="var(--dino-2)" stroke-width="2.8"
-              stroke-linecap="round"/>
+        <path d="M55 58 h11 a2.4 2.4 0 0 1 0 4.6 h-13 Z" fill="var(--dino-2)"/>
       </g>
-      <g class="d-legF"><rect x="26" y="44" width="11" height="15" rx="5.5" fill="var(--dino)"/>
-        <path d="M24 56 h14 a2.6 2.6 0 0 1 0 5.2 h-14 Z" fill="var(--dino)"/></g>
-      <circle class="d-puff" cx="54" cy="58" r="3.4" fill="var(--rail)"/>
+
+      <g class="d-body">
+        <!-- torso: deep chest, rounded belly, hips at the tail base -->
+        <path d="M26 40 C20 33 22 22 32 18 C44 13 58 16 64 25 C69 32 68 41 63 45
+                 C56 50 44 51 36 48 C31 46 28 44 26 40 Z" fill="url(#dskin)"/>
+        <!-- belly plates -->
+        <path d="M33 45 C36 49 45 50 53 48 C58 47 61 45 62 43
+                 C58 47 48 48 40 46 C36 45 34 44 33 45 Z" fill="var(--dino-belly)" opacity=".9"/>
+        <path d="M36 46.5 h3 M41 47.6 h3 M46 48 h3 M51 47.6 h3"
+              stroke="var(--dino-2)" stroke-width=".7" opacity=".5" stroke-linecap="round"/>
+        <!-- dorsal scutes -->
+        <path d="M34 18.5 l2.5 -4 l2.5 4 Z M41 16.5 l2.5 -4.5 l2.5 4.5 Z
+                 M48 17 l2.5 -4 l2.5 4.5 Z M55 20 l2.5 -3.5 l2 4.5 Z"
+              fill="var(--dino-2)"/>
+        <!-- neck and head: longer snout, brow ridge, jaw line -->
+        <g class="d-head">
+          <path d="M28 34 C22 33 17 30 14 26 C11 21 12 16 17 13
+                   C22 10 30 11 34 15 C37 18 38 23 36 27 C34 31 31 34 28 34 Z"
+                fill="url(#dskin)"/>
+          <!-- snout -->
+          <path d="M14 22 C10 21 6 20 4 19 C5 22 7 25 11 26 C13 26.5 14 25 14 22 Z"
+                fill="var(--dino)"/>
+          <!-- jaw -->
+          <path d="M6 21.5 C10 24 16 26 22 26.5" stroke="var(--dino-2)"
+                stroke-width="1.2" stroke-linecap="round" opacity=".8"/>
+          <!-- teeth -->
+          <path d="M8 22.6 l1 1.4 l1 -1.1 M11 23.6 l1 1.4 l1 -1.2"
+                stroke="#FFFFFF" stroke-width=".8" stroke-linecap="round" opacity=".85"/>
+          <!-- brow ridge and eye -->
+          <path d="M15 15.5 C18 14 22 14.5 24 16.5" stroke="var(--dino-2)"
+                stroke-width="1.6" stroke-linecap="round"/>
+          <ellipse class="d-eye" cx="19.5" cy="18.6" rx="2.1" ry="2.3" fill="#F7F4EC"/>
+          <ellipse cx="19.2" cy="18.6" rx="1" ry="2.1" fill="#12161F"/>
+          <!-- nostril -->
+          <circle cx="8.5" cy="20" r=".8" fill="#12161F" opacity=".7"/>
+        </g>
+        <!-- near arm with claws -->
+        <path d="M37 36 C41 36 44 38 45 41" stroke="var(--dino)" stroke-width="3.4"
+              stroke-linecap="round"/>
+        <path d="M45 41 l2.5 1.6 M45.4 41.6 l1.4 2.6" stroke="var(--dino-2)"
+              stroke-width="1.1" stroke-linecap="round"/>
+      </g>
+
+      <!-- near leg: thigh, shin, three-toed foot -->
+      <g class="d-legF">
+        <path d="M42 40 C49 40 52 46 50 52 L46 60 L40 60 L43 51 C40 47 38 41 42 40 Z"
+              fill="var(--dino)"/>
+        <path d="M38 60 h12 a2.6 2.6 0 0 1 0 5 h-14 Z" fill="var(--dino)"/>
+        <path d="M36.5 63 l-3 1.4 M37 65 l-2.6 .6" stroke="var(--dino-2)"
+              stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+
+      <circle class="d-puff" cx="72" cy="63" r="3.6" fill="var(--rail)"/>
     </svg>
   </div>
 </div>
@@ -926,6 +1015,77 @@ function harvestBlock(c){
       </tr>`;}).join("")}</tbody></table></div>`;
 }
 
+/* ────────── markets and signals ────────── */
+function renderMarket(){
+  const M=DATA.market||{}, q=(M.quotes||{}).quotes||[], th=(M.themes||{}).themes||[];
+  const sum=M.summary||{};
+  const pct=v=>(v==null?"—":(v>=0?"+":"")+v.toFixed(2)+"%");
+  const cap=v=>v==null?"—":(v>=1e6?"$"+(v/1e6).toFixed(2)+"T":"$"+(v/1e3).toFixed(0)+"B");
+
+  const quotes=q.length?`<div class="qgrid">${q.map(r=>{
+    const d=r.day_pct, up=d>=0;
+    return `<div class="q ${up?"up":"down"}">
+      <div class="qt"><span class="tk">${esc(r.ticker)}</span>
+        <span class="ch ${up?"up":"down"}">${esc(pct(d))}</span></div>
+      <div class="px">$${esc((r.last_close||0).toFixed(2))}</div>
+      <div class="qn">${esc(r.name)}</div>
+      <div class="qm">
+        <span>${esc(cap(r.market_cap_mm))}</span>
+        ${r.price_to_sales?`<span>${r.price_to_sales.toFixed(1)}x sales</span>`:""}
+        ${r.moat?`<span class="moat ${esc(r.moat)}">${esc(r.moat)} moat</span>`:""}
+      </div>
+      ${r.price_to_fair_value?`<div class="qm"><span>${r.price_to_fair_value<1?"below":"above"} fair value (${r.price_to_fair_value.toFixed(2)}x)</span>
+        ${r.below_52w_high_pct!=null?`<span>${r.below_52w_high_pct.toFixed(0)}% off high</span>`:""}</div>`:""}
+      <div class="qw">${esc(r.why||"")}</div>
+    </div>`;}).join("")}</div>`
+   :`<div class="empty">No quotes stored. The daily run pulls these from Morningstar.</div>`;
+
+  $("v-market").innerHTML=`
+    <h1>Markets &amp; signals</h1>
+    <p class="sub">The listed proxies for this coverage, and the themes that move it.
+      Quotes are last close from Morningstar, not live intraday — the retrieval time is
+      stamped below so you always know how old the number is.</p>
+
+    <div class="tiles">
+      <div class="tile"><div class="tl">Watchlist</div><div class="tv">${q.length}</div>
+        <div class="tm">public AI complex</div></div>
+      <div class="tile"><div class="tl">Advancing</div>
+        <div class="tv" style="color:var(--green)">${sum.advancing??"—"}</div>
+        <div class="tm">on the day</div></div>
+      <div class="tile"><div class="tl">Declining</div>
+        <div class="tv" style="color:var(--rust)">${sum.declining??"—"}</div>
+        <div class="tm">on the day</div></div>
+      ${sum.biggest_move?`<div class="tile"><div class="tl">Biggest move</div>
+        <div class="tv" style="color:${sum.biggest_move.day_pct>=0?"var(--green)":"var(--rust)"}">
+          ${esc(sum.biggest_move.ticker)}</div>
+        <div class="tm">${esc(pct(sum.biggest_move.day_pct))}</div></div>`:""}
+      <div class="tile"><div class="tl">Theme feeds</div><div class="tv">${th.length}</div>
+        <div class="tm">standing subjects</div></div>
+    </div>
+    <p class="sub mono" style="font-size:.68rem;margin-top:.5rem">
+      Quotes retrieved ${esc((sum.retrieved_at||"—").replace("T"," ").replace("+00:00"," UTC"))}
+      · ${esc(sum.source||"")}</p>
+
+    <h3>The public proxies</h3>
+    ${quotes}
+
+    <h3>What is moving in AI</h3>
+    <p class="sub">Seven standing subjects, swept with the company harvest. Each headline
+      links out. These are the questions this coverage lives or dies on.</p>
+    <div class="themegrid">${th.map(t=>`
+      <div class="theme">
+        <h4><span>${esc(t.key)}</span><span>${t.count||0} stories${t.new?` · ${t.new} new`:""}</span></h4>
+        <div class="tw">${esc(t.why||"")}</div>
+        ${t.error?`<div class="tw" style="color:var(--rust)">Unreachable: ${esc(t.error)}</div>`:""}
+        <ol>${(t.items||[]).slice(0,8).map(i=>`
+          <li>${i.url?`<a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a>`
+                     :esc(i.title)}
+            <span class="tm">${esc(i.publisher||"")} · ${esc(ago(i.published))}</span></li>`).join("")}</ol>
+      </div>`).join("")}</div>
+    <p class="sub mono" style="font-size:.68rem;margin-top:.8rem">
+      Themes retrieved ${esc((sum.themes_retrieved_at||"—").replace("T"," ").replace("+00:00"," UTC"))}</p>`;
+}
+
 /* ────────── search ────────── */
 const SFACETS={tier:null,cat:null,slug:null,stale:false};
 function renderSearch(){
@@ -1212,12 +1372,13 @@ function renderRail(){
 }
 function go(v){
   view=v;
-  ["overview","company","search","request","add"].forEach(x=>$("v-"+x).hidden=(x!==v));
+  ["overview","company","market","search","request","add"].forEach(x=>$("v-"+x).hidden=(x!==v));
   document.querySelectorAll(".rail nav button").forEach(b=>
     b.setAttribute("aria-current",String(b.dataset.view===v)));
   document.body.classList.toggle("dino-on",v==="company");
   if(v==="request") renderRequest();
   if(v==="add") renderAdd();
+  if(v==="market") renderMarket();
   if(v==="search") renderSearch();
   if(v==="overview") renderOverview();
   renderRail();
@@ -1241,7 +1402,7 @@ let lastX=0, walkTimer=null, sayTimer=null;
 function moveDino(){
   if(!document.body.classList.contains("dino-on")) return;
   const wrap=$("dinowrap"), flag=$("dinoflag");
-  const track=$("dino").clientWidth-24-76-24;   // padding both sides + body width
+  const track=$("dino").clientWidth-24-104-24;   // padding both sides + body width
   const max=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
   const p=Math.min(1,Math.max(0,window.scrollY/max));
   const x=Math.round(p*Math.max(0,track));

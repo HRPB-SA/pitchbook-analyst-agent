@@ -65,6 +65,162 @@
         "decay": "PERMANENT"
       },
       "why": "newer as_of (2026-08-10 > 2026-07-10) at tier T2 vs T2"
+    },
+    {
+      "date": "2026-08-13",
+      "field": "valuation.post_money_bn",
+      "old": {
+        "value": 134,
+        "as_of": "2026-02-09",
+        "source": "Series L, company PR Dec 2025 + PitchBook deal 313367-68T",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "held flat across two closes"
+      },
+      "new": {
+        "value": 190,
+        "as_of": "2026-08-13",
+        "source": "company announcement Aug 13, 2026 (reported by Bloomberg, CNBC, Forbes, Reuters — one underlying source)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "COMPLETED. Round closed at $190B post, above the $188B announced level of Jul 16. Led by existing investors Coatue, Blackstone, MGX and accounts advised by T. Rowe Price."
+      },
+      "why": "newer as_of (2026-08-13 > 2026-02-09) at tier T2 vs T2"
+    },
+    {
+      "date": "2026-08-13",
+      "field": "valuation.rumored_round",
+      "old": {
+        "value": "Term sheet signed for a strategic round at $188B post, led by Coatue with new and existing investors; ~$3B size (press); company expects close later this summer; funds NOT in hand as of Aug 10",
+        "as_of": "2026-08-10",
+        "source": "company announcement Jul 17, 2026 + PitchBook financing note Aug 7, 2026 (deal 334745-56T, Announced/In Progress); size per press reports",
+        "tier": "T2",
+        "decay": "VOLATILE",
+        "flags": [
+          "do-not-adopt"
+        ],
+        "note": "Progressed from Rumor/Speculation ($165-175B talks, Jul 7 note) to Announced/In Progress at $188B. Announced above the talked range. Base case still anchors on the $134B completed mark until close."
+      },
+      "new": {
+        "value": "Resolved. The Coatue-led round closed Aug 13, 2026 at $190B post with $5B raised.",
+        "as_of": "2026-08-13",
+        "source": "company announcement Aug 13, 2026",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "Supersedes the Jul 17 term-sheet entry. The announced $188B level was not the final mark."
+      },
+      "why": "newer as_of (2026-08-13 > 2026-08-10) at tier T2 vs T2"
+    },
+    {
+      "date": "2026-08-13",
+      "field": "financing.last_completed_deal",
+      "old": {
+        "value": "Series L $7.0B ($5.0B equity led by Insight/JPM Growth/Fidelity + Microsoft and ~44 others, $2.0B debt)",
+        "as_of": "2026-02-09",
+        "source": "PitchBook deal 313367-68T + company PR",
+        "tier": "T2",
+        "decay": "STABLE"
+      },
+      "new": {
+        "value": "$5.0B strategic round at $190B post (Aug 13, 2026), led by Coatue, Blackstone, MGX and accounts advised by T. Rowe Price",
+        "as_of": "2026-08-13",
+        "source": "company announcement Aug 13, 2026",
+        "tier": "T2",
+        "decay": "STABLE"
+      },
+      "why": "newer as_of (2026-08-13 > 2026-02-09) at tier T2 vs T2"
+    },
+    {
+      "date": "2026-08-13",
+      "field": "financing.equity_raised_bn",
+      "old": {
+        "value": 20.2,
+        "as_of": "2026-07-10",
+        "source": "PitchBook 21-deal decomposition, 12 completed equity rounds A-L",
+        "tier": "T2",
+        "decay": "STABLE",
+        "flags": [
+          "est."
+        ],
+        "note": "equity ~= $20.2-20.4B within rounding"
+      },
+      "new": {
+        "value": 25.2,
+        "as_of": "2026-08-13",
+        "source": "PitchBook 21-deal decomposition ($20.2B equity through Series L) plus the $5.0B announced Aug 13, 2026",
+        "tier": "T2",
+        "decay": "STABLE",
+        "flags": [
+          "est.",
+          "VERIFY"
+        ],
+        "note": "Equity only, per house ruling R1. Awaiting PitchBook's deal record for the closed round to confirm the equity/debt split."
+      },
+      "why": "newer as_of (2026-08-13 > 2026-07-10) at tier T2 vs T2"
+    },
+    {
+      "date": "2026-08-13",
+      "field": "financing.total_raised_bn",
+      "old": {
+        "value": 29.5,
+        "as_of": "2026-07-10",
+        "source": "PitchBook Total Raised $29,515.7M, 21 tracked deals",
+        "tier": "T2",
+        "decay": "STABLE"
+      },
+      "new": {
+        "value": 34.5,
+        "as_of": "2026-08-13",
+        "source": "PitchBook Total Raised $29,515.7M (as of 2026-08-12) plus the $5.0B announced Aug 13, 2026",
+        "tier": "T2",
+        "decay": "STABLE",
+        "flags": [
+          "est.",
+          "VERIFY"
+        ],
+        "note": "Arithmetic addition pending PitchBook's refreshed Total Raised field."
+      },
+      "why": "newer as_of (2026-08-13 > 2026-07-10) at tier T2 vs T2"
+    },
+    {
+      "date": "2026-08-13",
+      "field": "financing.active_investors",
+      "old": {
+        "value": 152,
+        "as_of": "2026-08-10",
+        "source": "PitchBook profile",
+        "tier": "T2",
+        "decay": "STABLE"
+      },
+      "new": {
+        "value": 153,
+        "as_of": "2026-08-12",
+        "source": "PitchBook profile",
+        "tier": "T2",
+        "decay": "QUARTERLY",
+        "note": "Excludes new entrants from the Aug 13 close not yet recorded by PitchBook."
+      },
+      "why": "newer as_of (2026-08-12 > 2026-08-10) at tier T2 vs T2"
+    },
+    {
+      "date": "2026-08-13",
+      "field": "financials.fcf_status",
+      "old": {
+        "value": "Positive, TTM and FY2025 bases; magnitude undisclosed",
+        "as_of": "2026-02-09",
+        "source": "company PR",
+        "tier": "T2",
+        "decay": "QUARTERLY"
+      },
+      "new": {
+        "value": "Cash-flow positive on an adjusted basis over the trailing twelve months",
+        "as_of": "2026-08-13",
+        "source": "company announcement Aug 13, 2026",
+        "tier": "T2",
+        "decay": "QUARTERLY",
+        "note": "Adjusted basis; magnitude undisclosed. 'Adjusted' is the company's own framing and is not a GAAP measure."
+      },
+      "why": "newer as_of (2026-08-13 > 2026-02-09) at tier T2 vs T2"
     }
   ]
 }

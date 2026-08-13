@@ -17,10 +17,12 @@ Commands:
     dashboard [out.html]          render the desk dashboard from the store
     sources <slug> <domain> [cik] create/extend the harvest source manifest
     harvest <slug>|--all          sweep sources, archive evidence, log outcomes
+    intake                        route uploads/ (links + documents) to companies
+    model <slug> [type]           build the financial model workbook (2022-2032)
 """
 from __future__ import annotations
 import json, sys
-from . import store, trends, style, compose, charts, qa, desk, harvest, evidence
+from . import store, trends, style, compose, charts, qa, desk, harvest, evidence, intake, model
 
 
 def main(argv=None):
@@ -149,6 +151,21 @@ def main(argv=None):
             for row in harvest.status_all():
                 print(f"{row['slug']:<14} sources={row['sources']:<3} "
                       f"last={row['last_run'] or 'never'}")
+
+    elif cmd == "intake":
+        res = intake.route_uploads()
+        s_ = res["summary"]
+        print(f"links {s_['links_filed']}/{s_['links']} filed · "
+              f"documents {s_['documents_filed']}/{s_['documents']} filed")
+
+    elif cmd == "model":
+        slug = args[0]
+        kind = args[1] if len(args) > 1 else "operating"
+        info = model.build(slug, kind)
+        print(f"wrote {info['path']}")
+        print(f"  {info['years']} · {info['sourced']} sourced inputs, "
+              f"{info['assumed']} assumptions ({info['ratio']:.0%} sourced) "
+              f"-> {info['grade'].upper()}")
 
     elif cmd == "dashboard":
         out, data = desk.build(args[0] if args else None)
