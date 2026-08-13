@@ -1,0 +1,438 @@
+<title>HRPB Research Desk</title>
+<style>
+  :root {
+    --navy:#1F2A44; --slate:#35506E; --green:#1C5D46; --rust:#8F3421;
+    --amber:#8A6410; --muted:#63708A; --ink:#232B3A;
+    --ground:#FBFBFC; --panel:#F2F5F9; --band:#E9EEF5; --edge:#D5DBE4; --hair:#E4E9F0;
+    --rail:#97A3B8; --on:#1F2A44; --on-ink:#FFFFFF;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --navy:#C8D4E8; --slate:#9FB3D0; --green:#7FC4A6; --rust:#D89178; --amber:#D6AE5C;
+    --muted:#8E9BB2; --ink:#DCE3EF; --ground:#12161F; --panel:#1A202C; --band:#1E2533;
+    --edge:#333C4D; --hair:#262E3C; --rail:#5C6880; --on:#C8D4E8; --on-ink:#12161F;}}
+  :root[data-theme="dark"]{
+    --navy:#C8D4E8; --slate:#9FB3D0; --green:#7FC4A6; --rust:#D89178; --amber:#D6AE5C;
+    --muted:#8E9BB2; --ink:#DCE3EF; --ground:#12161F; --panel:#1A202C; --band:#1E2533;
+    --edge:#333C4D; --hair:#262E3C; --rail:#5C6880; --on:#C8D4E8; --on-ink:#12161F;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--serif);
+       font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .mono{font-family:var(--mono)}
+  header.top{border-bottom:2px solid var(--navy);padding:1.5rem 1.6rem 1.1rem;
+             display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;align-items:baseline}
+  .brand{font-size:1.3rem;font-weight:700;color:var(--navy)}
+  .brand em{font-style:normal;color:var(--green)}
+  .sub{color:var(--muted);font-size:.82rem;font-family:var(--mono)}
+  .stats{margin-left:auto;display:flex;gap:.4rem;flex-wrap:wrap}
+  .pill{font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;padding:.2rem .55rem;
+        border:1px solid var(--edge);border-radius:999px;color:var(--muted);white-space:nowrap}
+  .pill b{color:var(--navy);font-weight:700}
+  .pill.warn b{color:var(--rust)}
+  nav.tabs{display:flex;gap:0;border-bottom:1px solid var(--edge);padding:0 1.6rem;
+           background:var(--ground);position:sticky;top:0;z-index:10;overflow-x:auto}
+  nav.tabs button{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;background:none;border:none;border-bottom:2px solid transparent;
+    color:var(--muted);padding:.85rem 1rem;cursor:pointer;white-space:nowrap}
+  nav.tabs button[aria-selected="true"]{color:var(--navy);border-bottom-color:var(--green)}
+  nav.tabs button:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+  main{padding:1.6rem}
+  .panel[hidden]{display:none}
+  h2{font-size:1.15rem;color:var(--navy);margin:0 0 .3rem}
+  .hint{color:var(--muted);font-size:.86rem;margin:0 0 1.1rem;max-width:70ch}
+
+  .scroll{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;min-width:820px;font-size:.88rem}
+  th{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+     color:var(--muted);font-weight:400;text-align:left;padding:0 .7rem .5rem 0;
+     border-bottom:1px solid var(--navy);white-space:nowrap}
+  td{padding:.5rem .7rem .5rem 0;border-bottom:1px solid var(--hair);vertical-align:top}
+  th.r,td.r{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.82rem}
+  tr.co{cursor:pointer}
+  tr.co:hover td{background:var(--panel)}
+  tr.co:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+  .co-name{color:var(--navy);font-weight:700}
+  .co-slug{font-family:var(--mono);font-size:.7rem;color:var(--rail);display:block}
+  .grp{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
+       padding:.1rem .4rem;border:1px solid var(--edge);border-radius:2px;color:var(--muted)}
+  .grp.f5{color:var(--green);border-color:var(--green)}
+
+  .bar{display:inline-block;height:6px;border-radius:1px;background:var(--green);vertical-align:middle}
+  .bartrack{display:inline-block;width:70px;height:6px;background:var(--band);border-radius:1px;
+            vertical-align:middle;margin-right:.45rem}
+  .thin{color:var(--rust);font-weight:700}
+  .ok{color:var(--green)}
+  .warnv{color:var(--amber)}
+
+  .tier{font-family:var(--mono);font-size:.6rem;padding:.08rem .3rem;border-radius:2px;
+        border:1px solid var(--edge);color:var(--muted)}
+  .tier.T1{color:var(--green);border-color:var(--green)}
+  .tier.T2{color:var(--slate);border-color:var(--slate)}
+  .flag{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;padding:.08rem .3rem;
+        border-radius:2px;background:var(--rust);color:var(--ground);margin-left:.25rem}
+  .flag.est{background:var(--muted)}
+  .stalechip{font-family:var(--mono);font-size:.58rem;color:var(--amber)}
+
+  .cols{display:grid;grid-template-columns:minmax(200px,270px) 1fr;gap:1.6rem;align-items:start}
+  @media (max-width:760px){.cols{grid-template-columns:1fr}}
+  .colist{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--edge)}
+  .colist button{text-align:left;background:none;border:none;border-bottom:1px solid var(--hair);
+    padding:.6rem .5rem;cursor:pointer;font-family:var(--serif);font-size:.9rem;color:var(--ink);
+    display:flex;justify-content:space-between;gap:.5rem;align-items:baseline}
+  .colist button[aria-current="true"]{background:var(--panel);color:var(--navy);font-weight:700;
+    box-shadow:inset 2px 0 0 var(--green)}
+  .colist button:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+  .colist .n{font-family:var(--mono);font-size:.7rem;color:var(--rail)}
+
+  .cat{margin-bottom:1.5rem}
+  .cat h3{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;
+          color:var(--muted);margin:0 0 .4rem;padding-bottom:.3rem;border-bottom:1px solid var(--edge);
+          font-weight:400}
+  .frow{display:grid;grid-template-columns:minmax(130px,190px) 1fr;gap:.4rem 1rem;
+        padding:.45rem 0;border-bottom:1px solid var(--hair)}
+  @media (max-width:620px){.frow{grid-template-columns:1fr;gap:.15rem}}
+  .fk{font-family:var(--mono);font-size:.74rem;color:var(--slate);word-break:break-word}
+  .fv{min-width:0}
+  .fval{color:var(--ink)}
+  .fmeta{font-family:var(--mono);font-size:.66rem;color:var(--muted);margin-top:.15rem;
+         display:flex;flex-wrap:wrap;gap:.3rem .6rem;align-items:center}
+  .fnote{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:.15rem}
+
+  .trig{border-left:2px solid var(--edge);padding:.5rem 0 .5rem .8rem;margin-bottom:.6rem}
+  .trig.armed{border-left-color:var(--amber)}
+  .trig.fired{border-left-color:var(--green)}
+  .trig .st{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+  .trig.armed .st{color:var(--amber)} .trig.fired .st{color:var(--green)}
+
+  .empty{background:var(--panel);border:1px dashed var(--edge);padding:1.4rem;
+         color:var(--muted);font-size:.9rem;text-align:center}
+
+  label{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;
+        text-transform:uppercase;color:var(--muted);margin:1.1rem 0 .4rem}
+  select,textarea,input[type=text]{width:100%;font:inherit;font-size:.9rem;padding:.5rem .6rem;
+    background:var(--ground);color:var(--ink);border:1px solid var(--edge);border-radius:3px}
+  textarea{min-height:5.5rem;resize:vertical}
+  select:focus,textarea:focus,input:focus,button:focus-visible{outline:2px solid var(--green);outline-offset:1px}
+  .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.5rem}
+  .tcard{text-align:left;background:var(--ground);border:1px solid var(--edge);border-radius:3px;
+         padding:.6rem .7rem;cursor:pointer;color:var(--ink);font-family:var(--serif)}
+  .tcard[aria-pressed="true"]{border-color:var(--green);background:var(--panel);
+         box-shadow:inset 0 0 0 1px var(--green)}
+  .tcard b{display:block;color:var(--navy);font-size:.88rem}
+  .tcard span{font-size:.75rem;color:var(--muted)}
+  .row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}
+  button.action{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;padding:.55rem .9rem;
+    border:1px solid var(--edge);background:var(--ground);color:var(--ink);border-radius:3px;cursor:pointer}
+  button.action.primary{background:var(--green);border-color:var(--green);color:var(--ground);font-weight:700}
+  pre.out{background:var(--panel);border:1px solid var(--edge);border-radius:3px;padding:.9rem;
+    font-family:var(--mono);font-size:.74rem;line-height:1.55;white-space:pre-wrap;word-break:break-word;
+    max-height:22rem;overflow:auto;margin:.8rem 0 0;color:var(--ink)}
+  .steps{counter-reset:s;margin:1.2rem 0 0;padding:0;list-style:none}
+  .steps li{counter-increment:s;display:flex;gap:.7rem;padding:.4rem 0;font-size:.87rem;color:var(--ink)}
+  .steps li::before{content:counter(s);font-family:var(--mono);font-size:.66rem;color:var(--green);
+    border:1px solid var(--green);border-radius:999px;width:1.35rem;height:1.35rem;flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center}
+  .flash{position:fixed;left:50%;bottom:1.4rem;transform:translateX(-50%);background:var(--navy);
+    color:var(--ground);font-family:var(--mono);font-size:.74rem;padding:.5rem .9rem;border-radius:3px;
+    opacity:0;pointer-events:none;transition:opacity .18s}
+  .flash.show{opacity:1}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  footer{padding:1.4rem 1.6rem 3rem;border-top:1px solid var(--edge);margin-top:2rem;
+    font-family:var(--mono);font-size:.7rem;color:var(--muted);line-height:1.7}
+</style>
+
+<header class="top">
+  <div>
+    <div class="brand">HRPB <em>Research Desk</em></div>
+    <div class="sub">Fact store view · generated 2026-08-13</div>
+  </div>
+  <div class="stats">
+    <span class="pill">Companies <b>13</b></span>
+    <span class="pill">Facts <b>130</b></span>
+    <span class="pill warn">Thin coverage <b>8</b></span>
+    <span class="pill">Stale <b>27</b></span>
+    <span class="pill">Triggers armed <b>9</b></span>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button role="tab" id="t-cov" aria-selected="true" aria-controls="p-cov">Coverage</button>
+  <button role="tab" id="t-co" aria-selected="false" aria-controls="p-co">Company</button>
+  <button role="tab" id="t-req" aria-selected="false" aria-controls="p-req">Request a report</button>
+</nav>
+
+<main>
+  <section class="panel" id="p-cov" role="tabpanel" aria-labelledby="t-cov">
+    <h2>Coverage</h2>
+    <p class="hint">Every company in the universe, what the store actually holds on each, and
+      what is stale or waiting. Click a row to open it. Thin coverage is the gap worth closing
+      first — a report can only be as good as the column marked Facts.</p>
+    <div class="scroll"><table>
+      <thead><tr>
+        <th>Company</th><th>Group</th><th class="r">Facts</th><th>Coverage</th>
+        <th class="r">Stale</th><th class="r">Flagged</th><th class="r">Conflicts</th>
+        <th>Triggers</th><th>Headline</th><th class="r">Updated</th>
+      </tr></thead>
+      <tbody id="covbody"></tbody>
+    </table></div>
+  </section>
+
+  <section class="panel" id="p-co" role="tabpanel" aria-labelledby="t-co" hidden>
+    <div class="cols">
+      <div>
+        <h2>Companies</h2>
+        <p class="hint" style="margin-bottom:.7rem">Select to inspect.</p>
+        <div class="colist" id="colist"></div>
+      </div>
+      <div id="codetail"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="p-req" role="tabpanel" aria-labelledby="t-req" hidden>
+    <div class="cols">
+      <div>
+        <h2>Request a report</h2>
+        <p class="hint">Composes the request file and the launch prompt. This page cannot run the
+          pipeline itself — it hands you the instruction, and the engine does the rest.</p>
+        <label for="rq-co">Company</label>
+        <select id="rq-co"></select>
+        <label>Template</label>
+        <div class="tgrid" id="rq-tpl"></div>
+        <label for="rq-idea">The question this note answers</label>
+        <textarea id="rq-idea" placeholder="What changed, why it matters, and what you want the note to settle."></textarea>
+        <label for="rq-rigor">Rigor (1-5)</label>
+        <input type="text" id="rq-rigor" value="4" inputmode="numeric">
+        <label for="rq-charts">Charts</label>
+        <input type="text" id="rq-charts" value="3" inputmode="numeric">
+        <label><input type="checkbox" id="rq-model" style="width:auto;margin-right:.4rem">
+          <span style="font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:.9rem;color:var(--ink)">Companion operating model (xlsx)</span></label>
+        <div class="row">
+          <button class="action primary" id="rq-copy" type="button">Copy launch prompt</button>
+          <button class="action" id="rq-json" type="button">Copy request JSON</button>
+        </div>
+      </div>
+      <div>
+        <h2>What you send</h2>
+        <p class="hint">Paste the prompt into a Claude Code session on this repo, or commit the
+          JSON to <span class="mono">Report Automation/requests/queue/</span> and let the
+          scheduled run pick it up.</p>
+        <pre class="out" id="rq-out"></pre>
+        <ol class="steps">
+          <li>Pick the company and the format.</li>
+          <li>Copy the launch prompt.</li>
+          <li>Paste it into a session on <span class="mono">pitchbook-analyst-agent</span>.</li>
+          <li>The engine runs research, store, trends, compose, charts, build, validate, ship.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Generated by <span class="mono">python3 -m engine dashboard</span> from companies/*/store/.
+  This page is a view, never a source — edit the store, then regenerate.<br>
+  Roadmap: Report Automation/docs/AUTOMATION_ROADMAP.md
+</footer>
+
+<div class="flash" id="flash"></div>
+
+<script>
+const DATA = {"generated":"2026-08-13","categories":["identity","valuation","financing","financials","headcount","products","customers","leadership","investors","competition","deals_ma","ipo_status","scores","events","triggers"],"templates":[{"id":"vertical_analyst_note","name":"Vertical analyst note","blurb":"Default. 4-10pp, master format."},{"id":"company_update","name":"Company update","blurb":"6-10pp. What changed since the last note."},{"id":"initiation_note","name":"Initiation note","blurb":"30-40pp. First full coverage."},{"id":"rush_note","name":"Rush note","blurb":"4-8pp. One dated event, fast."},{"id":"earnings_note","name":"Earnings note","blurb":"4-8pp. Against a print."},{"id":"one_pager","name":"One-pager","blurb":"1-2pp. Thesis, risk, verdict."},{"id":"sector_overview","name":"Sector overview","blurb":"10-16pp. Across companies."}],"companies":[{"slug":"databricks","name":"Databricks, Inc.","group":"frontier_five","sector":"AI-PLAT","pbid":"59199-40","updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"Databricks, Inc.","as_of":"2026-07-10","age":34,"tier":"T2","decay":"PERMANENT","source":"validation pack, July 10, 2026","flags":[],"note":null,"stale":false},{"cat":"identity","field":"pb_entity_id","value":"59199-40","as_of":"2026-07-09","age":35,"tier":"T2","decay":"STABLE","source":"PitchBook profile","flags":[],"note":null,"stale":false},{"cat":"identity","field":"hq","value":"San Francisco (+46 offices)","as_of":"2026-06-09","age":65,"tier":"T2","decay":"STABLE","source":"PitchBook","flags":[],"note":null,"stale":false},{"cat":"identity","field":"ceo","value":"Ali Ghodsi","as_of":"2026-07-10","age":34,"tier":"T2","decay":"STABLE","source":"validation pack, July 10, 2026","flags":[],"note":null,"stale":false},{"cat":"identity","field":"sector","value":"AI-PLAT (lakehouse / data + AI platform)","as_of":"2026-07-10","age":34,"tier":"T2","decay":"STABLE","source":"validation pack, July 10, 2026","flags":[],"note":null,"stale":false},{"cat":"identity","field":"founded","value":2013,"as_of":"2026-08-10","age":3,"tier":"T2","decay":"PERMANENT","source":"PitchBook profile","flags":[],"note":null,"stale":false},{"cat":"identity","field":"business_status","value":"Generating Revenue; Privately Held (backing); Venture Capital-Backed","as_of":"2026-08-10","age":3,"tier":"T2","decay":"STABLE","source":"PitchBook profile","flags":[],"note":null,"stale":false},{"cat":"valuation","field":"post_money_bn","value":134,"as_of":"2026-02-09","age":185,"tier":"T2","decay":"STABLE","source":"Series L, company PR Dec 2025 + PitchBook deal 313367-68T","flags":[],"note":"held flat across two closes","stale":false},{"cat":"valuation","field":"rumored_round","value":"Term sheet signed for a strategic round at $188B post, led by Coatue with new and existing investors; ~$3B size (press); company expects close later this summer; funds NOT in hand as of Aug 10","as_of":"2026-08-10","age":3,"tier":"T2","decay":"VOLATILE","source":"company announcement Jul 17, 2026 + PitchBook financing note Aug 7, 2026 (deal 334745-56T, Announced/In Progress); size per press reports","flags":["do-not-adopt"],"note":"Progressed from Rumor/Speculation ($165-175B talks, Jul 7 note) to Announced/In Progress at $188B. Announced above the talked range. Base case still anchors on the $134B completed mark until close.","stale":false},{"cat":"valuation","field":"pb_last_known_valuation_bn","value":188,"as_of":"2026-07-16","age":28,"tier":"T2","decay":"VOLATILE","source":"PitchBook Last Known Valuation field, deal 334745-56T (Announced/In Progress)","flags":["do-not-adopt"],"note":"Announced basis, not a completed mark; PB deal date Jul 16 vs company announcement Jul 17, trivial date skew noted","stale":true},{"cat":"valuation","field":"valuation_ladder_bn[0]","value":62,"as_of":"2024-12-15","age":606,"tier":"T3","decay":"STABLE","source":"press reports of the $10B round","flags":[],"note":null,"stale":false},{"cat":"valuation","field":"valuation_ladder_bn[1]","value":100,"as_of":"2025-09-30","age":317,"tier":"T3","decay":"STABLE","source":"press reports of the $1B round","flags":[],"note":null,"stale":false},{"cat":"valuation","field":"valuation_ladder_bn[2]","value":134,"as_of":"2026-02-09","age":185,"tier":"T2","decay":"STABLE","source":"company PR + PitchBook deal 313367-68T","flags":[],"note":"last COMPLETED mark; $188B announced Jul 2026 excluded until close","stale":false},{"cat":"financing","field":"total_raised_bn","value":29.5,"as_of":"2026-07-10","age":34,"tier":"T2","decay":"STABLE","source":"PitchBook Total Raised $29,515.7M, 21 tracked deals","flags":[],"note":null,"stale":false},{"cat":"financing","field":"equity_raised_bn","value":20.2,"as_of":"2026-07-10","age":34,"tier":"T2","decay":"STABLE","source":"PitchBook 21-deal decomposition, 12 completed equity rounds A-L","flags":["est."],"note":"equity ~= $20.2-20.4B within rounding","stale":false},{"cat":"financing","field":"debt_raised_bn","value":9.3,"as_of":"2026-07-10","age":34,"tier":"T2","decay":"STABLE","source":"PitchBook deal records: 4 debt deals + embedded","flags":["est."],"note":null,"stale":false},{"cat":"financing","field":"last_completed_deal","value":"Series L $7.0B ($5.0B equity led by Insight/JPM Growth/Fidelity + Microsoft and ~44 others, $2.0B debt)","as_of":"2026-02-09","age":185,"tier":"T2","decay":"STABLE","source":"PitchBook deal 313367-68T + company PR","flags":[],"note":null,"stale":false},{"cat":"financing","field":"active_investors","value":152,"as_of":"2026-08-10","age":3,"tier":"T2","decay":"STABLE","source":"PitchBook profile","flags":[],"note":null,"stale":false},{"cat":"financing","field":"series_l_pre_money_bn","value":129,"as_of":"2026-08-07","age":6,"tier":"T2","decay":"STABLE","source":"PitchBook financing note","flags":[],"note":null,"stale":false},{"cat":"financing","field":"series_l_participants_note","value":"Series L $5B equity led by Insight, J.P. Morgan Growth Equity, Fidelity; Microsoft + 48 other investors; $2B loan from undisclosed lenders","as_of":"2026-08-07","age":6,"tier":"T2","decay":"STABLE","source":"PitchBook financing note","flags":[],"note":"PB note now says 48 other investors; July pack carried ~44; PB revision, not a new close","stale":false},{"cat":"financials","field":"run_rate_ladder_bn[0]","value":4.0,"as_of":"2025-09-30","age":317,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":"+50% YoY","stale":false},{"cat":"financials","field":"run_rate_ladder_bn[1]","value":4.8,"as_of":"2025-12-31","age":225,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":"+55% YoY","stale":false},{"cat":"financials","field":"run_rate_ladder_bn[2]","value":5.4,"as_of":"2026-02-09","age":185,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":"+65% YoY","stale":false},{"cat":"financials","field":"run_rate_ladder_bn[3]","value":6.9,"as_of":"2026-06-16","age":58,"tier":"T2","decay":"QUARTERLY","source":"company disclosure (analyst session)","flags":[],"note":"+80% YoY","stale":false},{"cat":"financials","field":"growth_yoy_pct_ladder[0]","value":50,"as_of":"2025-09-30","age":317,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":null,"stale":false},{"cat":"financials","field":"growth_yoy_pct_ladder[1]","value":55,"as_of":"2025-12-31","age":225,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":null,"stale":false},{"cat":"financials","field":"growth_yoy_pct_ladder[2]","value":65,"as_of":"2026-02-09","age":185,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":null,"stale":false},{"cat":"financials","field":"growth_yoy_pct_ladder[3]","value":80,"as_of":"2026-06-16","age":58,"tier":"T2","decay":"QUARTERLY","source":"company disclosure","flags":[],"note":null,"stale":false},{"cat":"financials","field":"gross_margin_pct_ladder[0]","value":80,"as_of":"2025-12-31","age":225,"tier":"T2","decay":"QUARTERLY","source":"company (prior level, 'above 80%')","flags":["est."],"note":null,"stale":false},{"cat":"financials","field":"gross_margin_pct_ladder[1]","value":74,"as_of":"2026-06-16","age":58,"tier":"T2","decay":"QUARTERLY","source":"company disclosure; guided to decline further on agent-driven compute","flags":[],"note":null,"stale":false},{"cat":"financials","field":"fcf_status","value":"Positive, TTM and FY2025 bases; magnitude undisclosed","as_of":"2026-02-09","age":185,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":null,"stale":true},{"cat":"financials","field":"pb_ttm_field_note","value":"PitchBook revenue field still $6,900M TTM 4Q2026 (period end 2026-12-31) = forward-window projection, NOT run-rate. Ruling 4 holds; not adopted.","as_of":"2026-08-10","age":3,"tier":"T2","decay":"PERMANENT","source":"PitchBook profile, re-verified this pull","flags":[],"note":null,"stale":false},{"cat":"headcount","field":"employees_ladder[0]","value":9000,"as_of":"2026-06-09","age":65,"tier":"T2","decay":"QUARTERLY","source":"PitchBook","flags":[],"note":null,"stale":false},{"cat":"products","field":"ai_products_run_rate_bn","value":1.7,"as_of":"2026-06-16","age":58,"tier":"T2","decay":"QUARTERLY","source":"company disclosure","flags":[],"note":"largest, fastest line; $1.0B Dec-25 -> $1.4B Feb-26 -> $1.7B Jun-26","stale":false},{"cat":"products","field":"dbsql_run_rate_bn","value":1.5,"as_of":"2026-06-16","age":58,"tier":"T2","decay":"QUARTERLY","source":"press reports of company disclosure","flags":[],"note":"data warehousing, doubled YoY","stale":false},{"cat":"products","field":"lakebase","value":"Thousands of customers in first six months; revenue growing at 2x the DW product's pace at equivalent stage","as_of":"2026-02-09","age":185,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":null,"stale":true},{"cat":"products","field":"ai_capital_focus","value":"New capital earmarked for AI capabilities: Genie (business-data assistant suite, debuted Mar 2026), Unity AI Gateway, Lakebase (database for AI agents)","as_of":"2026-07-17","age":27,"tier":"T2","decay":"QUARTERLY","source":"company announcement via press reports","flags":[],"note":null,"stale":false},{"cat":"customers","field":"nrr_pct","value":">140%","as_of":"2026-02-09","age":185,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":null,"stale":true},{"cat":"customers","field":"orgs","value":20000,"as_of":"2026-02-09","age":185,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":"20,000+ organizations","stale":true},{"cat":"customers","field":"customers_1m_plus","value":800,"as_of":"2026-02-09","age":185,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":"800+","stale":true},{"cat":"customers","field":"customers_10m_plus","value":70,"as_of":"2026-02-09","age":185,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":"70+","stale":true},{"cat":"customers","field":"fortune500_pct","value":">60%","as_of":"2026-02-09","age":185,"tier":"T2","decay":"QUARTERLY","source":"company PR","flags":[],"note":null,"stale":true},{"cat":"leadership","field":"ceo","value":"Ali Ghodsi","as_of":"2026-07-10","age":34,"tier":"T2","decay":"STABLE","source":"validation pack, July 10, 2026","flags":[],"note":null,"stale":false},{"cat":"leadership","field":"naveen_rao_status","value":"Departed Sep 12, 2025 to found AI-hardware startup; advisory role retained; Databricks investing","as_of":"2025-09-12","age":335,"tier":"T3","decay":"STABLE","source":"press reports","flags":[],"note":"digested; residual key-person watch on the AI line","stale":false},{"cat":"competition","field":"snowflake_mkt_cap_bn","value":91.1,"as_of":"2026-07-07","age":37,"tier":"T3","decay":"VOLATILE","source":"market data aggregators","flags":[],"note":null,"stale":true},{"cat":"competition","field":"snowflake_fwd_product_rev_bn","value":5.84,"as_of":"2026-05-27","age":78,"tier":"T1","decay":"QUARTERLY","source":"Snowflake 8-K, Q1 FY27 guide, +31%","flags":[],"note":null,"stale":false},{"cat":"competition","field":"vs_snowflake","value":"Databricks revenue has overtaken Snowflake; gap ~$1.6B and widening","as_of":"2026-06-30","age":44,"tier":"T3","decay":"QUARTERLY","source":"third-party analyst data","flags":["est."],"note":null,"stale":false},{"cat":"competition","field":"private_valuation_rank","value":"Trails only Anthropic, OpenAI, Tether, ByteDance among private companies at the announced $188B","as_of":"2026-07-17","age":27,"tier":"T2","decay":"VOLATILE","source":"PitchBook data via PitchBook news","flags":["est."],"note":null,"stale":true},{"cat":"deals_ma","field":"acquisitions_count","value":19,"as_of":"2026-07-10","age":34,"tier":"T3","decay":"STABLE","source":"aggregated company disclosures + press","flags":["est."],"note":null,"stale":false},{"cat":"deals_ma","field":"latest","value":"Panther (security, 3rd security deal; terms undisclosed; $1.4B is Panther's 2021 mark, not a price)","as_of":"2026-06-16","age":58,"tier":"T2","decay":"STABLE","source":"company announcement + press","flags":[],"note":null,"stale":false},{"cat":"ipo_status","field":"s1_status","value":"No S-1 on file; Form D / D/A only (latest 2025-12-31)","as_of":"2026-07-10","age":34,"tier":"T1","decay":"VOLATILE","source":"SEC EDGAR submissions API, CIK 0001587468","flags":[],"note":null,"stale":true},{"cat":"ipo_status","field":"window","value":"2026 publicly ruled out by CEO; 2027 earliest","as_of":"2026-06-04","age":70,"tier":"T2","decay":"VOLATILE","source":"company (CEO television interview)","flags":[],"note":null,"stale":true},{"cat":"ipo_status","field":"prediction_market","value":"'No Databricks IPO by Dec 31, 2027' priced 0.54","as_of":"2026-07-07","age":37,"tier":"T3","decay":"VOLATILE","source":"prediction-market aggregator","flags":["est."],"note":null,"stale":true},{"cat":"scores","field":"aibq_composite","value":8.81,"as_of":"2026-07-10","age":34,"tier":"T2","decay":"QUARTERLY","source":"internal re-score (this desk)","flags":[],"note":"Elite band; prior 8.92; CE 8.9 / RQ 9.0 / CI 8.0 / GO 8.9 / MD 9.0, CRA 0","stale":false},{"cat":"scores","field":"aibq_dimensions","value":{"CE":8.9,"RQ":9.0,"CI":8.0,"GO":8.9,"MD":9.0,"CRA":0.0},"as_of":"2026-07-10","age":34,"tier":"T2","decay":"QUARTERLY","source":"internal re-score (this desk)","flags":[],"note":null,"stale":false},{"cat":"events","field":"stream[0]","value":"Series L first close >$4B at $134B","as_of":"2025-12-15","age":241,"tier":"T2","decay":"PERMANENT","source":"company PR","flags":[],"note":null,"stale":false},{"cat":"events","field":"stream[1]","value":"Series L final close $7.0B total at $134B","as_of":"2026-02-09","age":185,"tier":"T2","decay":"PERMANENT","source":"PitchBook deal record","flags":[],"note":null,"stale":false},{"cat":"events","field":"stream[2]","value":"Panther acquisition announced","as_of":"2026-06-16","age":58,"tier":"T2","decay":"PERMANENT","source":"company + press","flags":[],"note":null,"stale":false},{"cat":"events","field":"stream[3]","value":"Run-rate $6.9B (+80%) disclosed at Data + AI Summit","as_of":"2026-06-16","age":58,"tier":"T2","decay":"PERMANENT","source":"company disclosure","flags":[],"note":null,"stale":false},{"cat":"events","field":"stream[4]","value":"Term sheet signed: strategic round at $188B post led by Coatue (~$3B per press); close expected later this summer","as_of":"2026-07-17","age":27,"tier":"T2","decay":"PERMANENT","source":"company announcement + PitchBook deal record","flags":[],"note":null,"stale":false},{"cat":"triggers","field":"named[0]","value":{"condition":"Next quarterly print (expected Sep-Oct 2026): gross margin vs the 70% efficiency gate; ~4-point cushion at 74%","status":"armed"},"as_of":"2026-07-10","age":34,"tier":"T2","decay":"STABLE","source":"validation pack, July 10, 2026","flags":[],"note":null,"stale":false},{"cat":"triggers","field":"named[1]","value":{"condition":"$165-175B round: closes (adopt and re-mark) or lapses (rumor retired)","status":"fired","fired_on":"2026-07-17"},"as_of":"2026-08-10","age":3,"tier":"T2","decay":"STABLE","source":"company announcement + PitchBook deal 334745-56T","flags":[],"note":"Fired in the third direction: firmed to ANNOUNCED at $188B, above the talked range; close still pending","stale":false},{"cat":"triggers","field":"named[2]","value":{"condition":"Coatue round close (expected 'later this summer'): on completion, adopt $188B as the mark and re-run valuation","status":"armed"},"as_of":"2026-08-10","age":3,"tier":"T2","decay":"STABLE","source":"company announcement Jul 17, 2026","flags":[],"note":null,"stale":false},{"cat":"triggers","field":"named[3]","value":{"condition":"S-1 filing at SEC EDGAR CIK 0001587468 (none on file as of Jul 10, 2026)","status":"armed"},"as_of":"2026-07-10","age":34,"tier":"T1","decay":"STABLE","source":"validation pack, July 10, 2026","flags":[],"note":null,"stale":false},{"cat":"triggers","field":"named[4]","value":{"condition":"Metrics refresh: NRR / customer counts are Feb 2026 vintage; stale after Sep 2026 disclosure","status":"armed"},"as_of":"2026-07-10","age":34,"tier":"T2","decay":"STABLE","source":"validation pack, July 10, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":7,"valuation":6,"financing":7,"financials":12,"headcount":1,"products":4,"customers":5,"leadership":2,"competition":4,"deals_ma":2,"ipo_status":3,"scores":2,"events":5,"triggers":5},"n_facts":65,"n_cats":14,"n_stale":13,"n_flagged":0,"n_conflicts":0,"conflicts":[],"triggers":[{"condition":"Next quarterly print (expected Sep-Oct 2026): gross margin vs the 70% efficiency gate; ~4-point cushion at 74%","status":"armed","fired_on":null,"as_of":"2026-07-10","source":"validation pack, July 10, 2026","note":null},{"condition":"$165-175B round: closes (adopt and re-mark) or lapses (rumor retired)","status":"fired","fired_on":"2026-07-17","as_of":"2026-08-10","source":"company announcement + PitchBook deal 334745-56T","note":"Fired in the third direction: firmed to ANNOUNCED at $188B, above the talked range; close still pending"},{"condition":"Coatue round close (expected 'later this summer'): on completion, adopt $188B as the mark and re-run valuation","status":"armed","fired_on":null,"as_of":"2026-08-10","source":"company announcement Jul 17, 2026","note":null},{"condition":"S-1 filing at SEC EDGAR CIK 0001587468 (none on file as of Jul 10, 2026)","status":"armed","fired_on":null,"as_of":"2026-07-10","source":"validation pack, July 10, 2026","note":null},{"condition":"Metrics refresh: NRR / customer counts are Feb 2026 vintage; stale after Sep 2026 disclosure","status":"armed","fired_on":null,"as_of":"2026-07-10","source":"validation pack, July 10, 2026","note":null}],"n_armed":4,"n_fired":1,"headline":{"valuation_bn":{"value":188,"as_of":"2026-07-16","tier":"T2"},"run_rate_bn":{"value":6.9,"as_of":"2026-06-16","tier":"T2"},"growth_pct":{"value":80,"as_of":"2026-06-16","tier":"T2"},"employees":{"value":9000,"as_of":"2026-06-09","tier":"T2"},"raised_bn":{"value":20.2,"as_of":"2026-07-10","tier":"T2"}},"snapshots":["2026-07-10.json","2026-08-10.json"]},{"slug":"anthropic","name":"Anthropic","group":"frontier_five","sector":"AI-INFRA","pbid":"466959-97","updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"Anthropic","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"identity","field":"pb_entity_id","value":"466959-97","as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"PitchBook profile","flags":[],"note":null,"stale":false},{"cat":"identity","field":"sector","value":"AI-INFRA (frontier lab)","as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"valuation","field":"post_money_bn","value":965,"as_of":"2026-05-28","age":77,"tier":"T2","decay":"VOLATILE","source":"Series H $65B (Dragoneer/Sequoia/Greenoaks/Altimeter), confirmed on PitchBook Jul 16","flags":[],"note":null,"stale":true},{"cat":"financing","field":"total_raised_bn","value":161.3,"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"PitchBook total raised $161.254B, confirmed live","flags":[],"note":null,"stale":false},{"cat":"financing","field":"equity_raised_bn","value":124.3,"as_of":"2026-07-02","age":42,"tier":"T2","decay":"STABLE","source":"canonical decomposition: excludes $34.5B chip bonds + $2.5B revolver","flags":[],"note":null,"stale":false},{"cat":"financing","field":"debt_raised_bn","value":37.0,"as_of":"2026-07-02","age":42,"tier":"T2","decay":"STABLE","source":"PB 334763-02T ($34.5B tranched chip bonds) + 295197-04T ($2.5B revolver)","flags":[],"note":null,"stale":false},{"cat":"financials","field":"run_rate_ladder_bn[0]","value":47,"as_of":"2026-05-15","age":90,"tier":"T2","decay":"QUARTERLY","source":"company-announced run-rate (gross basis)","flags":["VERIFY"],"note":"GROSS basis (incl. cloud partner sales); equalized net ~$28.3B at 39.75% (Ruling 5); STALE past quarterly decay","stale":false},{"cat":"financials","field":"fy2025_revenue_bn","value":9.0,"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"PitchBook financials","flags":[],"note":null,"stale":false},{"cat":"financials","field":"pb_ttm_field_note","value":"PB revenue field $55B TTM 4Q2027 (period end 2027-12-31) = forward projection, NOT run-rate. Do not adopt.","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"financials","field":"first_operating_profit","value":"~$559M expected Q2 2026","as_of":"2026-05-28","age":77,"tier":"T3","decay":"QUARTERLY","source":"press reports","flags":["VERIFY"],"note":null,"stale":false},{"cat":"headcount","field":"employees_ladder[0]","value":5000,"as_of":"2026-04-21","age":114,"tier":"T2","decay":"QUARTERLY","source":"PitchBook","flags":[],"note":null,"stale":true},{"cat":"customers","field":"nrr_pct","value":"140%+","as_of":"2026-05-15","age":90,"tier":"T2","decay":"QUARTERLY","source":"company-announced","flags":[],"note":null,"stale":false},{"cat":"customers","field":"business_customers","value":"300K+","as_of":"2026-05-15","age":90,"tier":"T2","decay":"QUARTERLY","source":"company-announced","flags":[],"note":null,"stale":false},{"cat":"customers","field":"acv_1m_plus","value":"1,000+","as_of":"2026-05-15","age":90,"tier":"T2","decay":"QUARTERLY","source":"company-announced","flags":[],"note":null,"stale":false},{"cat":"customers","field":"claude_code_arr_bn","value":2.5,"as_of":"2026-05-15","age":90,"tier":"T2","decay":"QUARTERLY","source":"company-announced","flags":[],"note":"54% coding share","stale":false},{"cat":"ipo_status","field":"s1_status","value":"Confidential S-1 filed Jun 1, 2026","as_of":"2026-06-01","age":73,"tier":"T2","decay":"VOLATILE","source":"press + PitchBook","flags":[],"note":null,"stale":true},{"cat":"ipo_status","field":"window","value":"October 2026 expected (PitchBook financing note, refreshed Jul 6)","as_of":"2026-07-16","age":28,"tier":"T2","decay":"VOLATILE","source":"PitchBook","flags":[],"note":null,"stale":true},{"cat":"scores","field":"aibq_composite","value":8.2,"as_of":"2026-05-27","age":78,"tier":"T2","decay":"QUARTERLY","source":"internal AIBQ v3.0 (this desk)","flags":[],"note":"Strong band / S5 / AI-INFRA","stale":false},{"cat":"triggers","field":"named[0]","value":{"condition":"Anthropic S-1 public filing / October 2026 pricing vs OpenAI sequencing","status":"armed"},"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"triggers","field":"named[1]","value":{"condition":"Run-rate refresh: $47B gross is May vintage, past quarterly decay; SEC gross-to-net restatement exposure 20-40%","status":"armed"},"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":3,"valuation":1,"financing":3,"financials":4,"headcount":1,"customers":4,"ipo_status":2,"scores":1,"triggers":2},"n_facts":21,"n_cats":9,"n_stale":4,"n_flagged":2,"n_conflicts":0,"conflicts":[],"triggers":[{"condition":"Anthropic S-1 public filing / October 2026 pricing vs OpenAI sequencing","status":"armed","fired_on":null,"as_of":"2026-07-16","source":"canonical refresh, July 16, 2026","note":null},{"condition":"Run-rate refresh: $47B gross is May vintage, past quarterly decay; SEC gross-to-net restatement exposure 20-40%","status":"armed","fired_on":null,"as_of":"2026-07-16","source":"canonical refresh, July 16, 2026","note":null}],"n_armed":2,"n_fired":0,"headline":{"valuation_bn":{"value":965,"as_of":"2026-05-28","tier":"T2"},"run_rate_bn":{"value":47,"as_of":"2026-05-15","tier":"T2"},"employees":{"value":5000,"as_of":"2026-04-21","tier":"T2"},"raised_bn":{"value":124.3,"as_of":"2026-07-02","tier":"T2"}},"snapshots":["2026-07-16.json"]},{"slug":"openai","name":"OpenAI","group":"frontier_five","sector":"AI-INFRA","pbid":"149504-14","updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"OpenAI","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"identity","field":"pb_entity_id","value":"149504-14","as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"PitchBook profile","flags":[],"note":null,"stale":false},{"cat":"identity","field":"sector","value":"AI-INFRA (frontier lab)","as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"valuation","field":"post_money_bn","value":852,"as_of":"2026-03-31","age":135,"tier":"T2","decay":"VOLATILE","source":"$122B round at $730B pre, confirmed on PitchBook Jul 16","flags":[],"note":null,"stale":true},{"cat":"financing","field":"total_raised_bn","value":186.4,"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"PitchBook $186.4365B","flags":[],"note":null,"stale":false},{"cat":"financing","field":"equity_raised_bn","value":181.2,"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical: excludes $5.2365B debt (incl. $520M Jul-8 deal 338367-43T)","flags":[],"note":null,"stale":false},{"cat":"financing","field":"debt_raised_bn","value":5.2,"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"PitchBook debt decomposition","flags":[],"note":null,"stale":false},{"cat":"financials","field":"run_rate_ladder_bn[0]","value":25,"as_of":"2026-06-12","age":62,"tier":"T3","decay":"QUARTERLY","source":"desk estimate, net basis","flags":["est.","VERIFY"],"note":"NET basis; PB $30B TTM 4Q2026 is a forward projection (Ruling 4)","stale":false},{"cat":"financials","field":"fy2025_leak","value":"Rev $13.07B / op loss $20.92B / group loss $60.35B incl. $41.55B FV swing; $17.2B paid to MSFT","as_of":"2026-06-16","age":58,"tier":"T3","decay":"STABLE","source":"press reports of audited FY2025 (verified leak)","flags":[],"note":null,"stale":false},{"cat":"financials","field":"gross_margin_2025_pct","value":33,"as_of":"2026-02-27","age":167,"tier":"T3","decay":"STABLE","source":"investor documents (press-reported)","flags":[],"note":"13pp miss vs 46% plan","stale":false},{"cat":"financials","field":"infra_obligations_tn","value":1.15,"as_of":"2026-02-27","age":167,"tier":"T3","decay":"STABLE","source":"investor documents (press-reported), 7 vendors","flags":[],"note":null,"stale":false},{"cat":"headcount","field":"employees_ladder[0]","value":4500,"as_of":"2026-03-21","age":145,"tier":"T2","decay":"QUARTERLY","source":"PitchBook","flags":[],"note":null,"stale":true},{"cat":"leadership","field":"altman_pb_listing","value":"PB lists Altman as 'Co-Founder, Co-CEO & Board Member', persistent 5+ weeks across a live refresh","as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"PitchBook profile","flags":["VERIFY"],"note":"either a real governance change or a durable data error; resolve before media use","stale":false},{"cat":"ipo_status","field":"s1_status","value":"Confidential S-1 filed Jun 8, 2026","as_of":"2026-06-08","age":66,"tier":"T2","decay":"VOLATILE","source":"press + PitchBook","flags":[],"note":null,"stale":true},{"cat":"ipo_status","field":"window","value":"September 2026 (PitchBook, note refreshed Jul 9) vs media 2027-lean; CONFLICT FROZEN, both branches live","as_of":"2026-07-16","age":28,"tier":"T2","decay":"VOLATILE","source":"PitchBook + press","flags":["DISPUTED"],"note":null,"stale":true},{"cat":"scores","field":"aibq_composite","value":4.53,"as_of":"2026-05-27","age":78,"tier":"T2","decay":"QUARTERLY","source":"internal AIBQ v3.0 (this desk)","flags":[],"note":"Developing band / S5 / AI-INFRA","stale":false},{"cat":"triggers","field":"named[0]","value":{"condition":"OpenAI roadshow range vs the $852B mark; Sep (PB) vs 2027 (media) sequencing conflict","status":"armed"},"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"triggers","field":"named[1]","value":{"condition":"Altman Co-CEO listing on PitchBook: governance change or data error","status":"armed"},"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":3,"valuation":1,"financing":3,"financials":4,"headcount":1,"leadership":1,"ipo_status":2,"scores":1,"triggers":2},"n_facts":18,"n_cats":9,"n_stale":4,"n_flagged":3,"n_conflicts":0,"conflicts":[],"triggers":[{"condition":"OpenAI roadshow range vs the $852B mark; Sep (PB) vs 2027 (media) sequencing conflict","status":"armed","fired_on":null,"as_of":"2026-07-16","source":"canonical refresh, July 16, 2026","note":null},{"condition":"Altman Co-CEO listing on PitchBook: governance change or data error","status":"armed","fired_on":null,"as_of":"2026-07-16","source":"canonical refresh, July 16, 2026","note":null}],"n_armed":2,"n_fired":0,"headline":{"valuation_bn":{"value":852,"as_of":"2026-03-31","tier":"T2"},"run_rate_bn":{"value":25,"as_of":"2026-06-12","tier":"T3"},"employees":{"value":4500,"as_of":"2026-03-21","tier":"T2"},"raised_bn":{"value":181.2,"as_of":"2026-07-16","tier":"T2"}},"snapshots":["2026-07-16.json"]},{"slug":"xai-spacex","name":"xAI (within SpaceX, SPCX)","group":"frontier_five","sector":"AI-INFRA","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"xAI (within SpaceX, ticker SPCX)","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"identity","field":"structure","value":"All-stock merger into SpaceX completed Feb 2, 2026 at $250B; SPCX listed Jun 12, 2026","as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"valuation","field":"post_money_bn","value":1250,"as_of":"2026-07-16","age":28,"tier":"T3","decay":"VOLATILE","source":"SOTP residual estimate: implied AI segment ~$1.10-1.41T at the ~$1.77T Jul-15 tape (midpoint carried)","flags":["est."],"note":"was ~$1.4-1.7T at the $2.11T Jun-12 close; method in rush note","stale":true},{"cat":"valuation","field":"spcx_market_cap_tn","value":1.79,"as_of":"2026-07-15","age":29,"tier":"T3","decay":"VOLATILE","source":"market tape, level DISPUTED ~$132-141/sh","flags":["est.","DISPUTED"],"note":null,"stale":true},{"cat":"financing","field":"equity_raised_bn","value":47.16,"as_of":"2026-02-02","age":192,"tier":"T2","decay":"STABLE","source":"pre-merger cumulative","flags":[],"note":null,"stale":false},{"cat":"financials","field":"run_rate_ladder_bn[0]","value":3.2,"as_of":"2025-12-31","age":225,"tier":"T1","decay":"QUARTERLY","source":"SEC S-1: AI segment FY2025 revenue (xAI + X)","flags":[],"note":"~$1.25B ex-X-ads (~6.7% of company revenue)","stale":true},{"cat":"financials","field":"segment_detail","value":"AI segment FY25: $3.2B rev, -$6.36B op, capex $12.7B; Q1-26 $818M rev, -$2.47B op, capex $7.7B (76% of group)","as_of":"2026-05-20","age":85,"tier":"T1","decay":"QUARTERLY","source":"SEC S-1 + Q1 filing","flags":[],"note":null,"stale":false},{"cat":"ipo_status","field":"listing","value":"Public within SPCX since Jun 12, 2026; broke $135 IPO price Jul 15, 2026 (named trigger fired)","as_of":"2026-07-15","age":29,"tier":"T2","decay":"VOLATILE","source":"cross-confirmed press (event T2; level disputed)","flags":[],"note":null,"stale":true},{"cat":"ipo_status","field":"next_print","value":"SPCX Q2 2026 earnings Aug 6, 2026: first public frontier-AI-adjacent print; first lockup tranche same day","as_of":"2026-07-16","age":28,"tier":"T2","decay":"VOLATILE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":true},{"cat":"scores","field":"aibq_composite","value":4.49,"as_of":"2026-05-27","age":78,"tier":"T2","decay":"QUARTERLY","source":"internal AIBQ v3.0 (this desk)","flags":[],"note":"Developing band / S4 / AI-INFRA","stale":false},{"cat":"triggers","field":"named[0]","value":{"condition":"SPCX 30-day VWAP vs $135 IPO price","status":"fired","fired_on":"2026-07-15"},"as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"triggers","field":"named[1]","value":{"condition":"SPCX Q2 2026 print Aug 6 + first lockup tranche; staged unlocks through Dec 2026","status":"armed"},"as_of":"2026-07-16","age":28,"tier":"T3","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":2,"valuation":2,"financing":1,"financials":2,"ipo_status":2,"scores":1,"triggers":2},"n_facts":12,"n_cats":7,"n_stale":5,"n_flagged":1,"n_conflicts":0,"conflicts":[],"triggers":[{"condition":"SPCX 30-day VWAP vs $135 IPO price","status":"fired","fired_on":"2026-07-15","as_of":"2026-07-16","source":"canonical refresh, July 16, 2026","note":null},{"condition":"SPCX Q2 2026 print Aug 6 + first lockup tranche; staged unlocks through Dec 2026","status":"armed","fired_on":null,"as_of":"2026-07-16","source":"canonical refresh, July 16, 2026","note":null}],"n_armed":1,"n_fired":1,"headline":{"valuation_bn":{"value":1250,"as_of":"2026-07-16","tier":"T3"},"run_rate_bn":{"value":3.2,"as_of":"2025-12-31","tier":"T1"},"raised_bn":{"value":47.16,"as_of":"2026-02-02","tier":"T2"}},"snapshots":["2026-07-16.json"]},{"slug":"ssi","name":"Safe Superintelligence (SSI)","group":"frontier_five","sector":"AI-INFRA","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"Safe Superintelligence (SSI)","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"identity","field":"sector","value":"AI-INFRA (pre-revenue frontier lab)","as_of":"2026-07-16","age":28,"tier":"T2","decay":"STABLE","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false},{"cat":"valuation","field":"post_money_bn","value":31,"as_of":"2026-06-12","age":62,"tier":"T3","decay":"VOLATILE","source":"canonical ~$30-32B, midpoint carried; NOT re-pulled at the Jul 16 refresh","flags":["est.","VERIFY"],"note":null,"stale":true},{"cat":"financing","field":"equity_raised_bn","value":3,"as_of":"2026-06-12","age":62,"tier":"T2","decay":"STABLE","source":"canonical","flags":[],"note":null,"stale":false},{"cat":"financials","field":"run_rate_ladder_bn[0]","value":0,"as_of":"2026-06-12","age":62,"tier":"T2","decay":"QUARTERLY","source":"pre-revenue","flags":[],"note":null,"stale":false},{"cat":"scores","field":"aibq_composite","value":2.3,"as_of":"2026-05-27","age":78,"tier":"T2","decay":"QUARTERLY","source":"internal AIBQ v3.0 (this desk)","flags":[],"note":"Distressed band / S1 / AI-INFRA","stale":false}],"cats":{"identity":2,"valuation":1,"financing":1,"financials":1,"scores":1},"n_facts":6,"n_cats":5,"n_stale":1,"n_flagged":1,"n_conflicts":0,"conflicts":[],"triggers":[],"n_armed":0,"n_fired":0,"headline":{"valuation_bn":{"value":31,"as_of":"2026-06-12","tier":"T3"},"run_rate_bn":{"value":0,"as_of":"2026-06-12","tier":"T2"},"raised_bn":{"value":3,"as_of":"2026-06-12","tier":"T2"}},"snapshots":["2026-07-16.json"]},{"slug":"perplexity","name":"Perplexity","group":"coverage","sector":"AI-APP","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"Perplexity","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":1},"n_facts":1,"n_cats":1,"n_stale":0,"n_flagged":0,"n_conflicts":0,"conflicts":[],"triggers":[],"n_armed":0,"n_fired":0,"headline":{},"snapshots":[]},{"slug":"scale-ai","name":"Scale AI","group":"coverage","sector":"AI-INFRA","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"Scale AI","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":1},"n_facts":1,"n_cats":1,"n_stale":0,"n_flagged":0,"n_conflicts":0,"conflicts":[],"triggers":[],"n_armed":0,"n_fired":0,"headline":{},"snapshots":[]},{"slug":"coreweave","name":"CoreWeave","group":"coverage","sector":"AI-INFRA","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"CoreWeave","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":1},"n_facts":1,"n_cats":1,"n_stale":0,"n_flagged":0,"n_conflicts":0,"conflicts":[],"triggers":[],"n_armed":0,"n_fired":0,"headline":{},"snapshots":[]},{"slug":"cursor","name":"Cursor (Anysphere)","group":"coverage","sector":"AI-APP","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"Cursor (Anysphere)","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":1},"n_facts":1,"n_cats":1,"n_stale":0,"n_flagged":0,"n_conflicts":0,"conflicts":[],"triggers":[],"n_armed":0,"n_fired":0,"headline":{},"snapshots":[]},{"slug":"mistral","name":"Mistral AI","group":"coverage","sector":"AI-INFRA","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"Mistral AI","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":1},"n_facts":1,"n_cats":1,"n_stale":0,"n_flagged":0,"n_conflicts":0,"conflicts":[],"triggers":[],"n_armed":0,"n_fired":0,"headline":{},"snapshots":[]},{"slug":"elevenlabs","name":"ElevenLabs","group":"coverage","sector":"AI-APP","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"ElevenLabs","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":1},"n_facts":1,"n_cats":1,"n_stale":0,"n_flagged":0,"n_conflicts":0,"conflicts":[],"triggers":[],"n_armed":0,"n_fired":0,"headline":{},"snapshots":[]},{"slug":"cohere","name":"Cohere","group":"coverage","sector":"AI-INFRA","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"Cohere","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":1},"n_facts":1,"n_cats":1,"n_stale":0,"n_flagged":0,"n_conflicts":0,"conflicts":[],"triggers":[],"n_armed":0,"n_fired":0,"headline":{},"snapshots":[]},{"slug":"openevidence","name":"OpenEvidence","group":"coverage","sector":"AI-APP","pbid":null,"updated":"2026-08-10","facts":[{"cat":"identity","field":"name","value":"OpenEvidence","as_of":"2026-07-16","age":28,"tier":"T2","decay":"PERMANENT","source":"canonical refresh, July 16, 2026","flags":[],"note":null,"stale":false}],"cats":{"identity":1},"n_facts":1,"n_cats":1,"n_stale":0,"n_flagged":0,"n_conflicts":0,"conflicts":[],"triggers":[],"n_armed":0,"n_fired":0,"headline":{},"snapshots":[]}]};
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------------------------------------------------------------- tabs */
+const TABS = [["t-cov","p-cov"],["t-co","p-co"],["t-req","p-req"]];
+TABS.forEach(([t,p]) => $(t).onclick = () => {
+  TABS.forEach(([tt,pp]) => {
+    const on = tt === t;
+    $(tt).setAttribute("aria-selected", on ? "true" : "false");
+    $(pp).hidden = !on;
+  });
+});
+
+/* ------------------------------------------------------------ coverage */
+function fmtVal(v) {
+  if (v == null) return "—";
+  if (typeof v === "number") return String(v);
+  if (typeof v === "object") return JSON.stringify(v);
+  return String(v);
+}
+function headlineStr(h) {
+  const bits = [];
+  if (h.valuation_bn != null) bits.push("$" + fmtVal(h.valuation_bn.value) + "B val");
+  if (h.run_rate_bn != null) bits.push("$" + fmtVal(h.run_rate_bn.value) + "B run-rate");
+  if (h.growth_pct != null) bits.push("+" + fmtVal(h.growth_pct.value) + "%");
+  if (h.employees != null) bits.push(fmtVal(h.employees.value) + " staff");
+  return bits.length ? bits.join(" · ") : "—";
+}
+const MAXF = Math.max(...DATA.companies.map(c => c.n_facts), 1);
+
+function renderCoverage() {
+  $("covbody").innerHTML = DATA.companies.map(c => {
+    const pct = Math.round(100 * c.n_facts / MAXF);
+    const thin = c.n_cats <= 2;
+    return `<tr class="co" tabindex="0" data-slug="${esc(c.slug)}">
+      <td><span class="co-name">${esc(c.name)}</span><span class="co-slug">${esc(c.slug)}</span></td>
+      <td><span class="grp ${c.group === "frontier_five" ? "f5" : ""}">${esc(c.group === "frontier_five" ? "Frontier 5" : "Coverage")}</span></td>
+      <td class="r ${thin ? "thin" : ""}">${c.n_facts}</td>
+      <td><span class="bartrack"><span class="bar" style="width:${pct}%"></span></span>
+          <span class="mono" style="font-size:.7rem;color:var(--muted)">${c.n_cats}/${DATA.categories.length} cats</span></td>
+      <td class="r ${c.n_stale ? "warnv" : ""}">${c.n_stale || "—"}</td>
+      <td class="r ${c.n_flagged ? "warnv" : ""}">${c.n_flagged || "—"}</td>
+      <td class="r ${c.n_conflicts ? "thin" : ""}">${c.n_conflicts || "—"}</td>
+      <td class="mono" style="font-size:.72rem">${c.n_armed ? c.n_armed + " armed" : ""}${c.n_armed && c.n_fired ? " · " : ""}${c.n_fired ? c.n_fired + " fired" : ""}${!c.n_armed && !c.n_fired ? "—" : ""}</td>
+      <td style="font-size:.8rem;color:var(--muted)">${esc(headlineStr(c.headline))}</td>
+      <td class="r" style="color:var(--muted)">${esc(c.updated || "—")}</td>
+    </tr>`;
+  }).join("");
+  document.querySelectorAll("tr.co").forEach(tr => {
+    const go = () => { selectCompany(tr.dataset.slug); $("t-co").click(); };
+    tr.onclick = go;
+    tr.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } };
+  });
+}
+
+/* ------------------------------------------------------------- company */
+let current = DATA.companies.length ? DATA.companies[0].slug : null;
+
+function renderList() {
+  $("colist").innerHTML = DATA.companies.map(c =>
+    `<button type="button" data-slug="${esc(c.slug)}" aria-current="${c.slug === current}">
+       <span>${esc(c.name)}</span><span class="n">${c.n_facts}</span></button>`).join("");
+  document.querySelectorAll("#colist button").forEach(b =>
+    b.onclick = () => selectCompany(b.dataset.slug));
+}
+
+function factRow(f) {
+  const flags = f.flags.map(x =>
+    `<span class="flag ${x === "est." ? "est" : ""}">${esc(x)}</span>`).join("");
+  return `<div class="frow">
+    <div class="fk">${esc(f.field)}</div>
+    <div class="fv">
+      <div class="fval">${esc(fmtVal(f.value))}${flags}</div>
+      <div class="fmeta">
+        <span class="tier ${esc(f.tier || "")}">${esc(f.tier || "—")}</span>
+        <span>${esc(f.as_of || "—")}</span>
+        ${f.stale ? `<span class="stalechip">STALE ${f.age}d · ${esc(f.decay)}</span>` : ""}
+        <span style="color:var(--rail)">${esc(f.source || "")}</span>
+      </div>
+      ${f.note ? `<div class="fnote">${esc(f.note)}</div>` : ""}
+    </div></div>`;
+}
+
+function selectCompany(slug) {
+  current = slug;
+  renderList();
+  const c = DATA.companies.find(x => x.slug === slug);
+  if (!c) return;
+  const el = $("codetail");
+
+  if (!c.n_facts) {
+    el.innerHTML = `<h2>${esc(c.name)}</h2>
+      <p class="hint">${esc(c.slug)} · ${esc(c.sector || "")}</p>
+      <div class="empty"><b>No facts stored.</b><br>
+      This company is in the universe but the store is empty. Run a research pass and snapshot
+      before requesting a report on it.</div>`;
+    return;
+  }
+
+  const byCat = {};
+  c.facts.forEach(f => (byCat[f.cat] = byCat[f.cat] || []).push(f));
+
+  let html = `<h2>${esc(c.name)}</h2>
+    <p class="hint">${esc(c.slug)}${c.pbid ? " · PitchBook " + esc(c.pbid) : ""}${c.sector ? " · " + esc(c.sector) : ""}
+      · ${c.n_facts} facts · updated ${esc(c.updated || "?")}
+      ${c.snapshots.length ? " · " + c.snapshots.length + " snapshot(s)" : ""}</p>`;
+
+  if (c.triggers.length) {
+    html += `<div class="cat"><h3>Triggers</h3>` + c.triggers.map(t =>
+      `<div class="trig ${esc(t.status)}">
+         <div class="st">${esc(t.status)}${t.fired_on ? " · " + esc(t.fired_on) : ""}</div>
+         <div style="font-size:.88rem">${esc(t.condition)}</div>
+         ${t.source ? `<div class="fmeta"><span style="color:var(--rail)">${esc(t.source)}</span></div>` : ""}
+       </div>`).join("") + `</div>`;
+  }
+
+  if (c.n_conflicts) {
+    html += `<div class="cat"><h3>Frozen conflicts</h3>
+      <div class="empty" style="text-align:left;border-color:var(--rust);color:var(--ink)">
+      ${c.n_conflicts} unresolved conflict(s). Both values ship or neither.
+      <pre class="out" style="margin-top:.6rem">${esc(JSON.stringify(c.conflicts, null, 1))}</pre></div></div>`;
+  }
+
+  DATA.categories.forEach(cat => {
+    const rows = byCat[cat];
+    if (!rows || !rows.length || cat === "triggers") return;
+    html += `<div class="cat"><h3>${esc(cat.replace(/_/g, " "))} <span style="color:var(--rail)">${rows.length}</span></h3>`
+          + rows.map(factRow).join("") + `</div>`;
+  });
+
+  el.innerHTML = html;
+}
+
+/* ------------------------------------------------------------- request */
+const state = { template: "vertical_analyst_note" };
+
+function renderReq() {
+  $("rq-co").innerHTML = DATA.companies.map(c =>
+    `<option value="${esc(c.slug)}"${c.slug === current ? " selected" : ""}>${esc(c.name)}${c.n_facts ? "" : "  (store empty)"}</option>`).join("");
+  $("rq-tpl").innerHTML = DATA.templates.map(t =>
+    `<button class="tcard" type="button" data-id="${esc(t.id)}" aria-pressed="${t.id === state.template}">
+       <b>${esc(t.name)}</b><span>${esc(t.blurb)}</span></button>`).join("");
+  document.querySelectorAll("#rq-tpl .tcard").forEach(b => b.onclick = () => {
+    state.template = b.dataset.id; renderReq(); paint();
+  });
+}
+
+function buildRequest() {
+  const slug = $("rq-co").value;
+  const today = DATA.generated;
+  return {
+    id: `${slug}-${state.template.replace(/_/g, "-")}-${today}`,
+    submitted: today,
+    idea: $("rq-idea").value.trim() || "(state the question this note answers)",
+    template: state.template,
+    companies: [slug],
+    rigor: Number($("rq-rigor").value) || 4,
+    deadline: null,
+    extras: { charts: Number($("rq-charts").value) || 3, model: $("rq-model").checked },
+    source: "desk"
+  };
+}
+
+function buildPrompt(req) {
+  return `Run the report pipeline in CLAUDE.md for this request.\n\n`
+    + `Request (write it to "Report Automation/requests/queue/${req.id}.json" first):\n`
+    + JSON.stringify(req, null, 2) + `\n\n`
+    + `Work all eight stages in order: intake, research, store, trends, compose, charts, build, `
+    + `validate, ship. Follow style/STYLE.md and the writing standard in README.md. `
+    + `Do not ship until every box in the Report Ship gate is true.`;
+}
+
+function paint() { $("rq-out").textContent = buildPrompt(buildRequest()); }
+
+function flash(msg) {
+  const f = $("flash"); f.textContent = msg; f.classList.add("show");
+  clearTimeout(f._t); f._t = setTimeout(() => f.classList.remove("show"), 1600);
+}
+async function copy(text, msg) {
+  try { await navigator.clipboard.writeText(text); flash(msg); }
+  catch { flash("Copy blocked — select the text and copy manually"); }
+}
+$("rq-copy").onclick = () => copy(buildPrompt(buildRequest()), "Launch prompt copied");
+$("rq-json").onclick = () => copy(JSON.stringify(buildRequest(), null, 2) + "\n", "Request JSON copied");
+["rq-co","rq-idea","rq-rigor","rq-charts","rq-model"].forEach(id => {
+  $(id).addEventListener("input", paint);
+  $(id).addEventListener("change", paint);
+});
+
+/* --------------------------------------------------------------- boot */
+renderCoverage();
+renderList();
+if (current) selectCompany(current);
+renderReq();
+paint();
+</script>

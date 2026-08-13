@@ -14,10 +14,11 @@ Commands:
     build <report_dir>            build report (docx + pdf + QA gate)
     qa <file.docx|blocks.json>    run QA gates on an artifact
     validate <blocks.json>        validate block grammar
+    dashboard [out.html]          render the desk dashboard from the store
 """
 from __future__ import annotations
 import json, sys
-from . import store, trends, style, compose, charts, qa
+from . import store, trends, style, compose, charts, qa, desk
 
 
 def main(argv=None):
@@ -108,6 +109,17 @@ def main(argv=None):
     elif cmd == "validate":
         compose.load_blocks(args[0])
         print("blocks valid")
+
+    elif cmd == "dashboard":
+        out, data = desk.build(args[0] if args else None)
+        cos = data["companies"]
+        thin = [c["slug"] for c in cos if c["n_cats"] <= 2]
+        print(f"wrote {out}")
+        print(f"  {len(cos)} companies, {sum(c['n_facts'] for c in cos)} facts, "
+              f"{sum(c['n_stale'] for c in cos)} stale, "
+              f"{sum(c['n_armed'] for c in cos)} triggers armed")
+        if thin:
+            print(f"  thin coverage ({len(thin)}): {', '.join(thin)}")
 
     else:
         print(__doc__)
