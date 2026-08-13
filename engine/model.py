@@ -301,8 +301,10 @@ def build(slug: str, kind: str = "operating", out: str = None) -> dict:
     tax = f"Inputs!$D${r}"
     r += 1
     put(ws, f"B{r}", "Exit multiple on revenue")
-    inp.assumed_cell(ws, f"D{r}", 12.0, "Exit multiple",
-                     "Applied to terminal-year revenue in the exit-multiple method.", F_MULT)
+    inp.assumed_cell(ws, f"D{r}", 8.0, "Exit multiple",
+                     "Applied to terminal-year revenue. A company growing at the terminal "
+                     "rate is a mature business, so this is deliberately well below what "
+                     "the company commands today as a high-growth private.", F_MULT)
     exit_x = f"Inputs!$D${r}"
     r += 1
     put(ws, f"B{r}", "Headcount (latest)")
@@ -452,10 +454,17 @@ def build(slug: str, kind: str = "operating", out: str = None) -> dict:
     for c in cols:
         put(ws, f"{c}{r}", f"=-MAX(0,{c}{ebit_row})*{tax}", fmt=F_CUR)
     r += 1
+    put(ws, f"B{r}", "Capital expenditure and working capital (% of revenue)")
+    put(ws, f"D{r}", 0.04, fmt=F_PCT, font=_f(10, False, BLUE_IN), fill="FFFDE7",
+        note=("ASSUMPTION\nCapex and working capital\n\nBasis: software businesses are "
+              "asset-light; 4% of revenue covers capitalised development and working "
+              "capital swings. Raise it for anyone building their own data centres."))
+    capex_pct = f"Model!$D${r}"
+    r += 1
     put(ws, f"B{r}", "Capital expenditure and working capital")
     capex_row = r
     for c in cols:
-        put(ws, f"{c}{r}", f"=-{c}{rev_row}*0.06", fmt=F_CUR)
+        put(ws, f"{c}{r}", f"=-{c}{rev_row}*{capex_pct}", fmt=F_CUR)
     r += 1
     fcf_row = r
     put(ws, f"B{r}", "Free cash flow", font=_f(10, True))
@@ -510,8 +519,16 @@ def build(slug: str, kind: str = "operating", out: str = None) -> dict:
     put(ws, f"D{r}", f"=Model!{last}{rev_row}*{exit_x}*{last}{disc_row}", fmt=F_CUR)
     tv_exit = f"D{r}"
     r += 1
-    put(ws, f"B{r}", "Terminal value used (average of the two)")
-    put(ws, f"D{r}", f"=AVERAGE({tv_perp},{tv_exit})", fmt=F_CUR)
+    put(ws, f"B{r}", "Spread between the two methods")
+    put(ws, f"D{r}", f"=IF(MIN({tv_perp},{tv_exit})=0,0,"
+                     f"MAX({tv_perp},{tv_exit})/MIN({tv_perp},{tv_exit}))", fmt=F_MULT,
+        note=("When the two methods disagree by more than about 1.5x, averaging them "
+              "hides the disagreement rather than resolving it. Use the perpetuity "
+              "figure and treat the multiple as a cross-check."))
+    spread_row = r
+    r += 1
+    put(ws, f"B{r}", "Terminal value used (perpetuity; multiple is the cross-check)")
+    put(ws, f"D{r}", f"={tv_perp}", fmt=F_CUR, font=_f(10, True))
     tv_used = f"D{r}"
     r += 2
 
@@ -590,6 +607,10 @@ def build(slug: str, kind: str = "operating", out: str = None) -> dict:
         ("Any negative revenue?", f"=IF(SUMPRODUCT(--(Model!D{rev_row}:{last}{rev_row}<0))>0,1,0)"),
         ("Discount rate at or below terminal growth?", f"=IF({wacc}<={tg},1,0)"),
         ("Enterprise value non-positive?", f"=IF({ev_cell}<=0,1,0)"),
+        ("Terminal methods disagree by more than 1.5x?",
+         f"=IF(Valuation!$D${spread_row}>1.5,1,0)"),
+        ("Terminal value more than 75% of enterprise value?",
+         f"=IF({ev_cell}=0,0,IF({tv_used}/{ev_cell}>0.75,1,0))"),
     ]
     for lbl, formula in checks:
         put(ws, f"B{r}", lbl, font=_f(10))

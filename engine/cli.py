@@ -19,10 +19,11 @@ Commands:
     harvest <slug>|--all          sweep sources, archive evidence, log outcomes
     intake                        route uploads/ (links + documents) to companies
     model <slug> [type]           build the financial model workbook (2022-2032)
+    modelcheck <workbook.xlsx>    recompute a built model and run its sanity gates
 """
 from __future__ import annotations
 import json, sys
-from . import store, trends, style, compose, charts, qa, desk, harvest, evidence, intake, model
+from . import store, trends, style, compose, charts, qa, desk, harvest, evidence, intake, model, model_check
 
 
 def main(argv=None):
@@ -166,6 +167,11 @@ def main(argv=None):
         print(f"  {info['years']} · {info['sourced']} sourced inputs, "
               f"{info['assumed']} assumptions ({info['ratio']:.0%} sourced) "
               f"-> {info['grade'].upper()}")
+
+    elif cmd == "modelcheck":
+        res = model_check.check(args[0])
+        print(model_check.report(res))
+        return 0 if res.get("ok") else 2
 
     elif cmd == "dashboard":
         out, data = desk.build(args[0] if args else None)
