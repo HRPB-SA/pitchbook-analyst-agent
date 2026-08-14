@@ -1,4 +1,4 @@
-# Ten more recommendations
+# Recommendations for the research desk
 
 *Written 2026-08-13, after building the harvester, the intake router, the model
 factory and the market layer, and running a full-universe backfill. Companion
@@ -11,9 +11,9 @@ what actually broke while building it.*
 
 Four numbers frame everything below.
 
-**190 facts across 13 companies, up from 130.** The PitchBook backfill added
-funding histories reaching back to 2018. Thin coverage fell from eight
-companies to two.
+**239 facts across 13 companies, up from 130.** The PitchBook backfill added
+funding histories reaching back to 2018. Twelve of thirteen companies now
+carry a dated valuation ladder; thin coverage went to zero.
 
 **Zero of thirteen models are research-grade.** Every one is labelled
 illustrative. The best, Databricks, is 37% sourced. Nine companies have no
@@ -319,3 +319,169 @@ the store, and it is a day's work.
 quarter it runs. It is also the only one that cannot be started retroactively —
 you can backfill facts, but you cannot backfill a prediction you never wrote
 down.
+
+---
+
+# Five more, after finding the second system
+
+*Added 2026-08-14. The backfill is complete — 239 facts, twelve of thirteen
+companies carrying a dated valuation ladder. While checking connector access I
+found something the repo does not know about itself, and it changes the shape
+of the next five recommendations.*
+
+## What the Notion connector actually reaches
+
+**Layer H Ventures is connected and readable.** The workspace holds a Command
+Center, a Companies database, a Market Map, an LP Deck, a Fund Overview, a
+Fundraising page, a dated Daily Deal Brief, and individual company pages for
+names outside this repo's coverage — Klaimee, Ember Robotics, Sapiom.
+
+**NEXUS is not.** Every search returns Layer H. NEXUS appears only as a
+reference *inside* Layer H materials. The only NEXUS content available here is
+the static GitHub mirror in `NEXUS Intelligence/`, extracted 2026-08-11.
+
+This matters because CLAUDE.md states the opposite arrangement: NEXUS is
+mirrored, Layer H is "not mirrored here." The live access runs the other way.
+
+---
+
+## 11. Enforce the research-to-fundraising boundary in code
+
+**Start here, because it is the only recommendation with legal exposure.**
+
+Layer H's own Fundraising page carries an open question — whether PitchBook
+data may be cited in LP materials, and how the AIBQ framework may be described
+given where its author works. That question is Harrison's to resolve with
+compliance, not mine to answer. But the systems should not be able to violate
+the answer by accident while it is open.
+
+Right now they can. This repo produces PitchBook-sourced research with
+PitchBook deal IDs in the source line of hundreds of facts. Layer H raises
+money from outside investors. Nothing prevents a figure sourced
+`PitchBook deal 284541-22T` from being copied into an LP memo.
+
+**The recommendation.** Give every Fact an `external_use` field, defaulted to
+the restrictive value, and derive it from the source tier: vendor-licensed data
+is `internal_only`; company announcements, filings and press are `citable`.
+Then:
+
+- The report builder already renders a References list. Extend the gate so a
+  report marked for external distribution fails if it carries any
+  `internal_only` fact.
+- Add an audience of `lp` to the request builder, which forces that gate on.
+- Have the dashboard show, per company, how much of its profile is citable
+  externally. For most of this universe the answer will be uncomfortable, and
+  that is the point of measuring it.
+
+This does not decide the compliance question. It makes the answer enforceable
+once it exists, and it makes the current exposure visible while it is not.
+
+---
+
+## 12. Reconcile the two scoring frameworks, or explicitly keep them apart
+
+There are now two proprietary scoring systems in the same person's work. AIBQ
+scores five weighted dimensions from 0 to 10 with a compounding risk penalty,
+built for frontier labs. Layer H's Command Center describes five 0-2 durability
+scores, and its LP deck describes AIBQ as "scoring durability versus
+model-commoditization risk."
+
+Those are either the same framework at two resolutions, or two frameworks with
+one name. Both are defensible; the ambiguity is not, particularly in a document
+shown to investors.
+
+**The recommendation.** Write the mapping down. If the 0-2 durability scores
+are a compressed AIBQ, publish the compression rule so a Layer H score can be
+derived from an AIBQ score rather than assigned independently — one framework,
+two resolutions, with the coarse one computed from the fine one. If they are
+genuinely different instruments for different stages, give them distinct names
+in every artifact and stop describing both as AIBQ.
+
+The embargo travels with whichever framework carries the name. A quality score
+must never be related to a valuation in either system.
+
+---
+
+## 13. One universe, two portfolios, shared identifiers
+
+This repo tracks thirteen late-stage AI companies. Layer H tracks early-stage
+names in a separate Companies database. They are different portfolios by
+design, and they will overlap: a company Layer H scouts at seed is a company
+this desk may cover at Series D, and the frontier labs are the competitive
+context for everything Layer H looks at.
+
+Today they share nothing — not identifiers, not scores, not source records.
+
+**The recommendation.** A shared identifier spine, not a merged database. Every
+company in either system carries the same key: PitchBook ID where one exists,
+domain otherwise. Then:
+
+- When Layer H adds a company, the desk's harvester can pick it up with no new
+  configuration — the source manifest generator already works from a domain.
+- When the desk stores a fact about a company Layer H is diligencing, it is
+  findable rather than duplicated.
+- Recommendation 11's `external_use` flag travels with the fact, so the
+  boundary holds across both systems rather than only inside this one.
+
+Keep the portfolios separate. Share the plumbing.
+
+---
+
+## 14. Two daily jobs doing one job
+
+The desk runs a harvest at 11:12 UTC: sweep sources, triage news, verify,
+store, rebuild, commit. Layer H produces a Daily Deal Brief. Both are daily,
+both read the market, both end in a written artifact.
+
+Running them as two unrelated jobs means the same story gets read twice and
+filed twice, and neither knows what the other found.
+
+**The recommendation.** One collection pass, two publications. The harvest
+already produces a relevance-tagged news pool across the AI complex and seven
+thematic feeds. That pool is the raw material for both outputs: the desk's
+tracker digest filters it to covered companies, and the Deal Brief filters it
+to early-stage financings and new entrants. The scoring, the source tiering and
+the evidence locker are shared; only the last step differs.
+
+The practical test of whether this is working: a company that appears in the
+Deal Brief on Monday and gets covered by the desk in September should have one
+continuous evidence trail, not two that start on different days.
+
+---
+
+## 15. Replace the NEXUS mirror with a scheduled re-extraction
+
+The mirror was extracted 2026-08-11 and is already three days old. The AIBQ
+rubric this session used to explain every score on the dashboard came from it.
+When the rubric changes in Notion, the dashboard will keep explaining the old
+one, confidently and without any indication that it is stale.
+
+That is exactly the failure the desk's decay classes exist to prevent, applied
+to everything except the governance layer itself.
+
+**The recommendation.** Two parts.
+
+*Short term, make the staleness visible.* The mirror carries an extraction
+date. Surface it wherever mirrored content is used — the scoring panel should
+say "rubric v3.0, mirrored 2026-08-11" rather than presenting it as current.
+Treat a mirror older than thirty days as a flagged gap in the validation log.
+
+*Properly, schedule the re-extraction.* CLAUDE.md already specifies the
+recipe and the commit message convention (`nexus: <date> intelligence mirror
+refresh`). It is not automated. It should run on the same cadence as the
+tracker, from a session that holds the NEXUS Notion connection — which this
+session does not, and that gap is itself worth resolving before the rest.
+
+The governance layer is the one part of the system that must never be stale,
+because everything else defers to it.
+
+---
+
+## Revised starting order
+
+The original three still stand — revenue estimation, identifier provenance,
+the prediction ledger. Recommendation 11 now goes ahead of all of them.
+
+It is a day of work, it is the only item on either list with legal exposure
+rather than merely analytical cost, and the question it protects against is
+already open on a page in the workspace.
