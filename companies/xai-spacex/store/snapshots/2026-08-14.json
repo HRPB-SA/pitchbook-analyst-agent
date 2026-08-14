@@ -1,0 +1,72 @@
+{
+  "financing": {
+    "last_completed_deal": {
+      "value": "Merger/Acquisition $250000M (round n/a)",
+      "as_of": "2026-02-03",
+      "source": "PitchBook deal 320646-07T",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "raised_to_date_bn": {
+      "value": 47.163,
+      "as_of": "2026-02-03",
+      "source": "PitchBook Raised to Date, deal 320646-07T",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "deal_history": {
+      "value": "2024-01-11 Early Stage VC $135M; 2024-05-26 Early Stage VC $6,000M @ $24.0B post; 2024-12-24 Later Stage VC $6,000M @ $50.0B post; 2025-01-01 Later Stage VC $28M; 2025-06-01 Later Stage VC $10,000M @ $75.0B post; 2025-06-20 General Corporate Purpose $5,000M; 2025-12-29 Secondary Transaction - Private; 2026-01-07 Later Stage VC $20,000M @ $230.0B post; 2026-02-03 Merger/Acquisition $250,000M @ $250.0B post",
+      "as_of": "2026-08-14",
+      "source": "PitchBook deal history",
+      "tier": "T2",
+      "decay": "STABLE",
+      "note": "9 tracked deals."
+    }
+  },
+  "valuation": {
+    "valuation_ladder_bn": [
+      {
+        "value": 24.0,
+        "as_of": "2024-05-26",
+        "source": "PitchBook deal 250364-53T (Early Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "2nd Round; deal size $6,000M"
+      },
+      {
+        "value": 50.0,
+        "as_of": "2024-12-24",
+        "source": "PitchBook deal 275999-77T (Later Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "3rd Round; deal size $6,000M"
+      },
+      {
+        "value": 75.0,
+        "as_of": "2025-06-01",
+        "source": "PitchBook deal 285233-05T (Later Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "5th Round; deal size $10,000M"
+      },
+      {
+        "value": 230.0,
+        "as_of": "2026-01-07",
+        "source": "PitchBook deal 299882-17T (Later Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "6th Round; deal size $20,000M"
+      },
+      {
+        "value": 250.0,
+        "as_of": "2026-02-03",
+        "source": "PitchBook deal 320646-07T (Merger/Acquisition)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "None; deal size $250,000M"
+      }
+    ]
+  },
+  "_provenance": "PitchBook funding-history backfill, retrieved 2026-08-13 via pitchbook_get_company_deals. Parsed by engine/pb_extract.py from the persisted tool response (mcp-PitchBook_Premium-pitchbook_get_company_deals-1786720245090.txt). Completed deals only enter the valuation ladder; rumoured and announced-but-unclosed rounds are stored separately and flagged, per house ruling R2.",
+  "_snapshot_date": "2026-08-14"
+}

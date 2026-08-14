@@ -1,0 +1,40 @@
+{
+  "financing": {
+    "last_completed_deal": {
+      "value": "General Corporate Purpose $2600M (round n/a)",
+      "as_of": "2026-07-31",
+      "source": "PitchBook deal 339333-13T",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "raised_to_date_bn": {
+      "value": 37.287,
+      "as_of": "2026-07-31",
+      "source": "PitchBook Raised to Date, deal 339333-13T",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "deal_history": {
+      "value": "2025-03-28 IPO $1,500M @ $18.6B post; 2025-03-31 PIPE $350M; 2025-05-21 Debt Refinancing $2,000M; 2025-07-22 Debt Refinancing $1,750M; 2025-07-28 Debt - Acquisition $2,600M; 2025-09-29 General Corporate Purpose $3,000M; 2026-01-26 PIPE $2,000M; 2026-04-09 General Corporate Purpose $1,750M; 2026-04-16 Debt Refinancing $1,000M; 2026-05-06 General Corporate Purpose $3,100M; 2026-06-11 General Corporate Purpose $3,573M; 2026-07-31 General Corporate Purpose $2,600M",
+      "as_of": "2026-08-14",
+      "source": "PitchBook deal history",
+      "tier": "T2",
+      "decay": "STABLE",
+      "note": "12 tracked deals."
+    }
+  },
+  "valuation": {
+    "valuation_ladder_bn": [
+      {
+        "value": 18.564,
+        "as_of": "2025-03-28",
+        "source": "PitchBook deal 276460-93T (IPO)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "None; deal size $1,500M"
+      }
+    ]
+  },
+  "_provenance": "PitchBook funding-history backfill, retrieved 2026-08-13 via pitchbook_get_company_deals. Parsed by engine/pb_extract.py from the persisted tool response (mcp-PitchBook_Premium-pitchbook_get_company_deals-1786712481935.txt). Completed deals only enter the valuation ladder; rumoured and announced-but-unclosed rounds are stored separately and flagged, per house ruling R2.",
+  "_snapshot_date": "2026-08-14"
+}

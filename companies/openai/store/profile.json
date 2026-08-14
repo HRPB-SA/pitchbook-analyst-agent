@@ -30,7 +30,56 @@
       "source": "$122B round at $730B pre, confirmed on PitchBook Jul 16",
       "tier": "T2",
       "decay": "VOLATILE"
-    }
+    },
+    "valuation_ladder_bn": [
+      {
+        "value": 86.0,
+        "as_of": "2024-01-19",
+        "source": "PitchBook deal 248325-58T (Secondary Transaction - Private)",
+        "tier": "T2",
+        "decay": "STABLE"
+      },
+      {
+        "value": 157.0,
+        "as_of": "2024-10-02",
+        "source": "PitchBook deal 243849-70T (Later Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "8th Round; deal size $6,600M"
+      },
+      {
+        "value": 157.0,
+        "as_of": "2024-12-24",
+        "source": "PitchBook deal 297374-23T (Secondary Transaction - Private)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "None; deal size $1,600M"
+      },
+      {
+        "value": 300.0,
+        "as_of": "2025-03-31",
+        "source": "PitchBook deal 278597-80T (Later Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "10th Round; deal size $40,000M"
+      },
+      {
+        "value": 500.0,
+        "as_of": "2025-10-03",
+        "source": "PitchBook deal 308864-98T (Secondary Transaction - Private)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "None; deal size $6,600M"
+      },
+      {
+        "value": 852.0,
+        "as_of": "2026-03-31",
+        "source": "PitchBook deal 320989-60T (Later Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "12th Round; deal size $122,000M"
+      }
+    ]
   },
   "financing": {
     "total_raised_bn": {
@@ -53,6 +102,28 @@
       "source": "PitchBook debt decomposition",
       "tier": "T2",
       "decay": "STABLE"
+    },
+    "last_completed_deal": {
+      "value": "Debt - General $520M (round n/a)",
+      "as_of": "2026-07-08",
+      "source": "PitchBook deal 338367-43T",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "raised_to_date_bn": {
+      "value": 186.436,
+      "as_of": "2026-07-08",
+      "source": "PitchBook Raised to Date, deal 338367-43T",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "deal_history": {
+      "value": "2024-09-30 Secondary Transaction - Private; 2024-10-02 Later Stage VC $6,600M @ $157.0B post; 2024-10-03 Debt - General $4,000M; 2024-12-24 Secondary Transaction - Private $1,600M @ $157.0B post; 2025-01-08 Later Stage VC $6M; 2025-02-25 Secondary Transaction - Private $8M; 2025-03-31 Later Stage VC $40,000M @ $300.0B post; 2025-10-03 Secondary Transaction - Private $6,600M @ $500.0B post; 2025-12-11 Later Stage VC; 2026-03-31 Later Stage VC $122,000M @ $852.0B post; 2026-06-08 IPO; 2026-07-08 Debt - General $520M",
+      "as_of": "2026-08-14",
+      "source": "PitchBook deal history",
+      "tier": "T2",
+      "decay": "STABLE",
+      "note": "14 tracked deals."
     }
   },
   "financials": {
@@ -162,5 +233,5 @@
       }
     ]
   },
-  "_updated": "2026-08-10"
+  "_updated": "2026-08-14"
 }
