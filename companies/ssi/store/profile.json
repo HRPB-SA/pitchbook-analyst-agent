@@ -14,6 +14,14 @@
       "source": "canonical refresh, July 16, 2026",
       "tier": "T2",
       "decay": "STABLE"
+    },
+    "ceo": {
+      "value": "Ilya Sutskever (CEO and Chief Scientist); Daniel Gross was CEO at the 2024 and 2025 rounds",
+      "as_of": "2026-07-27",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook deal records 340484-77T and 284541-22T",
+      "note": "Leadership changed between the 2025 round and the 2026 round."
     }
   },
   "valuation": {
@@ -27,7 +35,25 @@
         "est.",
         "VERIFY"
       ]
-    }
+    },
+    "valuation_ladder_bn": [
+      {
+        "value": 5.0,
+        "as_of": "2024-09-04",
+        "tier": "T2",
+        "source": "PitchBook deal 271260-55T (Early Stage VC)",
+        "decay": "STABLE",
+        "note": "1st Round; $1B led by GV, a16z and Sequoia; post status Actual"
+      },
+      {
+        "value": 32.0,
+        "as_of": "2025-04-11",
+        "tier": "T2",
+        "source": "PitchBook deal 284541-22T (Early Stage VC)",
+        "decay": "STABLE",
+        "note": "2nd Round; $6B led by Greenoaks; up round; post status Actual"
+      }
+    ]
   },
   "financing": {
     "equity_raised_bn": {
@@ -36,6 +62,31 @@
       "source": "canonical",
       "tier": "T2",
       "decay": "STABLE"
+    },
+    "last_completed_deal": {
+      "value": "$6.0B early-stage round at $32B post (2025-04-11), led by Greenoaks",
+      "as_of": "2025-04-11",
+      "tier": "T2",
+      "source": "PitchBook deal 284541-22T",
+      "decay": "STABLE"
+    },
+    "raised_to_date_bn": {
+      "value": 7.0,
+      "as_of": "2025-04-11",
+      "tier": "T2",
+      "source": "PitchBook Raised to Date, deal 284541-22T",
+      "decay": "STABLE"
+    },
+    "rumored_round": {
+      "value": "Closed on $5B of an undisclosed target from Nvidia, announced 2026-07-27; no valuation disclosed",
+      "as_of": "2026-07-27",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "source": "PitchBook deal 340484-77T (status Announced/In Progress)",
+      "note": "Ruling R2: announced but not settled. No post-money disclosed, so no new mark."
     }
   },
   "financials": {
@@ -57,5 +108,5 @@
       "note": "Distressed band / S1 / AI-INFRA"
     }
   },
-  "_updated": "2026-08-10"
+  "_updated": "2026-08-14"
 }

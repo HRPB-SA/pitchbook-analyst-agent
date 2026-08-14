@@ -1,0 +1,72 @@
+{
+  "financing": {
+    "last_completed_deal": {
+      "value": "Later Stage VC $700M (7th Round)",
+      "as_of": "2025-09-24",
+      "source": "PitchBook deal 297333-55T",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "raised_to_date_bn": {
+      "value": 1.64,
+      "as_of": "2025-09-24",
+      "source": "PitchBook Raised to Date, deal 297333-55T",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "deal_history": {
+      "value": "2020-01-01 Early Stage VC $5M; 2021-09-07 Early Stage VC $40M @ $0.2B post; 2021-12-17 Early Stage VC $125M; 2022-03-09 Accelerator/Incubator; 2022-07-01 Accelerator/Incubator; 2023-06-02 Later Stage VC $270M @ $2.1B post; 2023-08-22 Secondary Transaction - Private $63M @ $3.0B post; 2024-07-22 Later Stage VC $500M @ $5.5B post; 2025-03-16 Secondary Transaction - Private; 2025-06-17 Later Stage VC; 2025-09-24 Later Stage VC $700M @ $7.0B post; 2026-04-24 Later Stage VC $600M @ $20.0B post",
+      "as_of": "2026-08-14",
+      "source": "PitchBook deal history",
+      "tier": "T2",
+      "decay": "STABLE",
+      "note": "12 tracked deals."
+    }
+  },
+  "valuation": {
+    "valuation_ladder_bn": [
+      {
+        "value": 0.2,
+        "as_of": "2021-09-07",
+        "source": "PitchBook deal 179690-05T (Early Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "2nd Round; deal size $40M"
+      },
+      {
+        "value": 2.1,
+        "as_of": "2023-06-02",
+        "source": "PitchBook deal 206805-79T (Later Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "4th Round; deal size $270M"
+      },
+      {
+        "value": 2.952,
+        "as_of": "2023-08-22",
+        "source": "PitchBook deal 234287-38T (Secondary Transaction - Private)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "None; deal size $63M"
+      },
+      {
+        "value": 5.5,
+        "as_of": "2024-07-22",
+        "source": "PitchBook deal 249762-25T (Later Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "5th Round; deal size $500M"
+      },
+      {
+        "value": 7.0,
+        "as_of": "2025-09-24",
+        "source": "PitchBook deal 297333-55T (Later Stage VC)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "7th Round; deal size $700M"
+      }
+    ]
+  },
+  "_provenance": "PitchBook funding-history backfill, retrieved 2026-08-13 via pitchbook_get_company_deals. Parsed by engine/pb_extract.py from the persisted tool response (mcp-PitchBook_Premium-pitchbook_get_company_deals-1786717738141.txt). Completed deals only enter the valuation ladder; rumoured and announced-but-unclosed rounds are stored separately and flagged, per house ruling R2.",
+  "_snapshot_date": "2026-08-14"
+}
