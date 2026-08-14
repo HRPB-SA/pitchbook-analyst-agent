@@ -1,15 +1,28 @@
 {
-  "slug": "scale-ai",
-  "identity": {
-    "name": {
-      "value": "Scale AI",
-      "as_of": "2026-07-16",
-      "source": "canonical refresh, July 16, 2026",
+  "financing": {
+    "last_completed_deal": {
+      "value": "Later Stage VC $14300M (8th Round)",
+      "as_of": "2025-06-12",
+      "source": "PitchBook deal 297541-36T",
       "tier": "T2",
-      "decay": "PERMANENT"
+      "decay": "STABLE"
+    },
+    "raised_to_date_bn": {
+      "value": 15.903,
+      "as_of": "2025-06-12",
+      "source": "PitchBook Raised to Date, deal 297541-36T",
+      "tier": "T2",
+      "decay": "STABLE"
+    },
+    "deal_history": {
+      "value": "2016-08-22 Accelerator/Incubator $0M; 2018-05-04 Early Stage VC $19M @ $0.1B post; 2019-08-05 Later Stage VC $100M @ $1.0B post; 2020-12-01 Later Stage VC $155M @ $3.5B post; 2021-04-13 Later Stage VC $325M @ $7.3B post; 2021-07-14 Secondary Transaction - Private; 2021-10-21 Secondary Transaction - Private $2M; 2024-07-15 Later Stage VC $1,000M @ $14.0B post; 2025-06-12 Later Stage VC $14,300M @ $29.0B post",
+      "as_of": "2026-08-14",
+      "source": "PitchBook deal history",
+      "tier": "T2",
+      "decay": "STABLE",
+      "note": "9 tracked deals."
     }
   },
-  "_updated": "2026-08-14",
   "valuation": {
     "valuation_ladder_bn": [
       {
@@ -62,28 +75,6 @@
       }
     ]
   },
-  "financing": {
-    "last_completed_deal": {
-      "value": "Later Stage VC $14300M (8th Round)",
-      "as_of": "2025-06-12",
-      "source": "PitchBook deal 297541-36T",
-      "tier": "T2",
-      "decay": "STABLE"
-    },
-    "raised_to_date_bn": {
-      "value": 15.903,
-      "as_of": "2025-06-12",
-      "source": "PitchBook Raised to Date, deal 297541-36T",
-      "tier": "T2",
-      "decay": "STABLE"
-    },
-    "deal_history": {
-      "value": "2016-08-22 Accelerator/Incubator $0M; 2018-05-04 Early Stage VC $19M @ $0.1B post; 2019-08-05 Later Stage VC $100M @ $1.0B post; 2020-12-01 Later Stage VC $155M @ $3.5B post; 2021-04-13 Later Stage VC $325M @ $7.3B post; 2021-07-14 Secondary Transaction - Private; 2021-10-21 Secondary Transaction - Private $2M; 2024-07-15 Later Stage VC $1,000M @ $14.0B post; 2025-06-12 Later Stage VC $14,300M @ $29.0B post",
-      "as_of": "2026-08-14",
-      "source": "PitchBook deal history",
-      "tier": "T2",
-      "decay": "STABLE",
-      "note": "9 tracked deals."
-    }
-  }
+  "_provenance": "PitchBook funding-history backfill, retrieved 2026-08-13 via pitchbook_get_company_deals. Parsed by engine/pb_extract.py from the persisted tool response (mcp-PitchBook_Premium-pitchbook_get_company_deals-1786712472859.txt). Completed deals only enter the valuation ladder; rumoured and announced-but-unclosed rounds are stored separately and flagged, per house ruling R2.",
+  "_snapshot_date": "2026-08-14"
 }

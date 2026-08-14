@@ -1,15 +1,4 @@
 {
-  "slug": "mistral",
-  "identity": {
-    "name": {
-      "value": "Mistral AI",
-      "as_of": "2026-07-16",
-      "source": "canonical refresh, July 16, 2026",
-      "tier": "T2",
-      "decay": "PERMANENT"
-    }
-  },
-  "_updated": "2026-08-14",
   "valuation": {
     "valuation_ladder_bn": [
       {
@@ -83,5 +72,7 @@
       "source": "PitchBook deal 301053-43T",
       "note": "Unconfirmed; status never advanced."
     }
-  }
+  },
+  "_provenance": "PitchBook funding-history backfill, retrieved 2026-08-13 via pitchbook_get_company_deals. Parsed by engine/pb_extract.py from the persisted tool response (inline response). Completed deals only enter the valuation ladder; rumoured and announced-but-unclosed rounds are stored separately and flagged, per house ruling R2.",
+  "_snapshot_date": "2026-08-14"
 }

@@ -1,27 +1,4 @@
 {
-  "slug": "coreweave",
-  "identity": {
-    "name": {
-      "value": "CoreWeave",
-      "as_of": "2026-07-16",
-      "source": "canonical refresh, July 16, 2026",
-      "tier": "T2",
-      "decay": "PERMANENT"
-    }
-  },
-  "_updated": "2026-08-14",
-  "valuation": {
-    "valuation_ladder_bn": [
-      {
-        "value": 18.564,
-        "as_of": "2025-03-28",
-        "source": "PitchBook deal 276460-93T (IPO)",
-        "tier": "T2",
-        "decay": "STABLE",
-        "note": "None; deal size $1,500M"
-      }
-    ]
-  },
   "financing": {
     "last_completed_deal": {
       "value": "General Corporate Purpose $2600M (round n/a)",
@@ -45,5 +22,19 @@
       "decay": "STABLE",
       "note": "12 tracked deals."
     }
-  }
+  },
+  "valuation": {
+    "valuation_ladder_bn": [
+      {
+        "value": 18.564,
+        "as_of": "2025-03-28",
+        "source": "PitchBook deal 276460-93T (IPO)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "note": "None; deal size $1,500M"
+      }
+    ]
+  },
+  "_provenance": "PitchBook funding-history backfill, retrieved 2026-08-13 via pitchbook_get_company_deals. Parsed by engine/pb_extract.py from the persisted tool response (mcp-PitchBook_Premium-pitchbook_get_company_deals-1786712481935.txt). Completed deals only enter the valuation ladder; rumoured and announced-but-unclosed rounds are stored separately and flagged, per house ruling R2.",
+  "_snapshot_date": "2026-08-14"
 }

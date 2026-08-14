@@ -200,7 +200,8 @@ def build(slug: str, kind: str = "operating", out: str = None) -> dict:
     gr = _series(profile, "financials", "growth_yoy_pct_ladder")
     gm = _fact(profile, "financials", "gross_margin_pct_ladder", "gross_margin_pct")
     emp = _fact(profile, "headcount", "employees_ladder", "employees")
-    val = _fact(profile, "valuation", "post_money_bn", "pb_last_known_valuation_bn")
+    val = _fact(profile, "valuation", "post_money_bn", "valuation_ladder_bn",
+            "pb_last_known_valuation_bn")
     eq = _fact(profile, "financing", "equity_raised_bn")
     nrr = _fact(profile, "customers", "nrr_pct")
 
@@ -283,12 +284,21 @@ def build(slug: str, kind: str = "operating", out: str = None) -> dict:
         inp.assumed_cell(ws, f"D{r}", 0, "Valuation", "No mark in the store.", F_CUR)
     val_ref = f"Inputs!$D${r}"
     r += 1
-    put(ws, f"B{r}", "Equity raised to date ($M)")
+    total_raised = _fact(profile, "financing", "raised_to_date_bn", "total_raised_bn")
     if eq:
+        put(ws, f"B{r}", "Equity raised to date ($M)")
         inp.sourced_cell(ws, f"D{r}", eq["value"] * 1000, eq,
                          "Equity raised (equity only, house ruling R1)", F_CUR)
+        equity_known = True
+    elif total_raised:
+        put(ws, f"B{r}", "Total raised to date, equity AND debt ($M)")
+        inp.sourced_cell(ws, f"D{r}", total_raised["value"] * 1000, total_raised,
+                         "Total raised (includes debt — NOT an equity figure)", F_CUR)
+        equity_known = False
     else:
+        put(ws, f"B{r}", "Equity raised to date ($M)")
         inp.assumed_cell(ws, f"D{r}", 0, "Equity raised", "Not in the store.", F_CUR)
+        equity_known = False
     eq_ref = f"Inputs!$D${r}"
     r += 1
     put(ws, f"B{r}", "Discount rate (cost of capital)")
@@ -549,9 +559,17 @@ def build(slug: str, kind: str = "operating", out: str = None) -> dict:
     put(ws, f"D{r}", f"=IF(Model!{cols[n_hist-1]}{rev_row}=0,0,"
                      f"D{mark_row}/Model!{cols[n_hist-1]}{rev_row})", fmt=F_MULT)
     r += 1
-    put(ws, f"B{r}", "Stored mark per dollar of equity raised")
-    put(ws, f"D{r}", f"=IF({eq_ref}=0,0,D{mark_row}/{eq_ref})", fmt=F_MULT,
-        note="Equity only. Debt informs risk, never this ratio (house ruling R1).")
+    if equity_known:
+        put(ws, f"B{r}", "Stored mark per dollar of equity raised")
+        put(ws, f"D{r}", f"=IF({eq_ref}=0,0,D{mark_row}/{eq_ref})", fmt=F_MULT,
+            note="Equity only. Debt informs risk, never this ratio (house ruling R1).")
+    else:
+        put(ws, f"B{r}", "Stored mark per dollar of equity raised")
+        put(ws, f"D{r}", "not computed", font=_f(10, False, GREY, italic=True),
+            note=("House ruling R1: capital efficiency uses EQUITY ONLY. The store "
+                  "holds only a combined equity-and-debt figure for this company, so "
+                  "this ratio is deliberately left blank rather than computed from a "
+                  "number that includes debt."))
     r += 1
 
     # --------------------------------------------------------------- Outputs
