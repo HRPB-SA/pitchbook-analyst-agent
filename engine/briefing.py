@@ -121,10 +121,10 @@ def analysis(profile: dict) -> list:
         out.append({"label": label_, "value": value, "workings": workings,
                     "caveat": caveat, "tone": tone})
 
-    val = _latest(profile, "valuation", "pb_last_known_valuation_bn", "post_money_bn")
-    rr = _latest(profile, "financials", "run_rate_ladder_bn", "run_rate_bn")
-    eq = _latest(profile, "financing", "equity_raised_bn")
-    emp = _latest(profile, "headcount", "employees_ladder", "employees")
+    val, val_path = preferred(profile, "valuation_bn")
+    rr, _ = preferred(profile, "run_rate_bn")
+    eq, _ = preferred(profile, "equity_raised_bn")
+    emp, _ = preferred(profile, "employees")
     v, r, e, h = _num(val), _num(rr), _num(eq), _num(emp)
 
     if v and r:
@@ -187,6 +187,13 @@ def analysis(profile: dict) -> list:
                 tone="warn" if age > 120 else "neutral")
         except Exception:
             pass
+
+    for sup in superseded_by_desk(profile, "valuation_bn"):
+        add("A figure the desk did not adopt", f"${sup['value']}B",
+            f"{sup['path']} dated {sup['as_of']} — {sup['reason']}. "
+            f"Source: {sup['source']}.",
+            "Shown so the disagreement is visible rather than hidden. The headline "
+            "figure above is the one the desk stands behind.", tone="warn")
 
     rum = _latest(profile, "valuation", "rumored_round")
     if rum:
@@ -315,13 +322,15 @@ def scores(profile: dict) -> dict:
     if schema.is_fact(dims) and isinstance(dims.get("value"), dict):
         rows = []
         for code, val in dims["value"].items():
-            meta = DIM_BY_CODE.get(code)
+            # CRA is a penalty, not a weighted dimension, so it lives outside
+            # the dimensions list and needs its own description.
+            meta = DIM_BY_CODE.get(code) or (AIBQ["cra"] if code == "CRA" else None)
             rows.append({
                 "code": code,
-                "name": meta["name"] if meta else code,
-                "plain": meta["plain"] if meta else None,
-                "weight": meta["weight"] if meta else None,
-                "subs": meta["subs"] if meta else [],
+                "name": (meta or {}).get("name") or code,
+                "plain": (meta or {}).get("plain"),
+                "weight": (meta or {}).get("weight"),
+                "subs": (meta or {}).get("subs") or [],
                 "value": val,
                 "is_penalty": code == "CRA",
             })
@@ -343,3 +352,78 @@ def scores(profile: dict) -> dict:
 
 def load(slug: str) -> dict:
     return store._read(os.path.join(store.company_dir(slug), "briefing.json"), {})
+
+
+# ------------------------------------------------------- preferred resolution
+
+# Flags that disqualify a fact from being shown as the headline value. A figure
+# the desk has explicitly declined to adopt must never be the number a reader
+# sees first, however recent it is.
+BLOCKING_FLAGS = ("do-not-adopt", "DISPUTED")
+
+# Preference order per concept. The desk's own adopted value wins, then the
+# newest completed mark, then the vendor field. Vendors lag announcements.
+PREFERENCE = {
+    "valuation_bn": [("valuation", "post_money_bn"),
+                     ("valuation", "valuation_ladder_bn"),
+                     ("valuation", "pb_last_known_valuation_bn")],
+    "run_rate_bn": [("financials", "run_rate_ladder_bn"),
+                    ("financials", "run_rate_bn")],
+    "growth_pct": [("financials", "growth_yoy_pct_ladder"),
+                   ("financials", "growth_yoy_pct")],
+    "gross_margin_pct": [("financials", "gross_margin_pct_ladder"),
+                         ("financials", "gross_margin_pct")],
+    "employees": [("headcount", "employees_ladder"), ("headcount", "employees")],
+    "equity_raised_bn": [("financing", "equity_raised_bn")],
+    "total_raised_bn": [("financing", "raised_to_date_bn"),
+                        ("financing", "total_raised_bn")],
+}
+
+
+def blocked(fact) -> bool:
+    return any(f in BLOCKING_FLAGS for f in (fact.get("flags") or []))
+
+
+def preferred(profile: dict, concept: str, allow_blocked: bool = False):
+    """The value the desk stands behind for a concept, and where it came from.
+
+    One resolver used by the dashboard, the derived analysis and the model
+    factory, so all three cannot disagree about what a company is worth.
+    """
+    for cat, field in PREFERENCE.get(concept, []):
+        blk = profile.get(cat)
+        if not isinstance(blk, dict):
+            continue
+        v = blk.get(field)
+        if isinstance(v, list) and v:
+            v = v[-1]
+        if not schema.is_fact(v):
+            continue
+        if blocked(v) and not allow_blocked:
+            continue
+        return v, f"{cat}.{field}"
+    return None, None
+
+
+def superseded_by_desk(profile: dict, concept: str):
+    """Any candidate the resolver passed over, so the reason stays visible."""
+    chosen, chosen_path = preferred(profile, concept)
+    if not chosen:
+        return []
+    out = []
+    for cat, field in PREFERENCE.get(concept, []):
+        if f"{cat}.{field}" == chosen_path:
+            continue
+        blk = profile.get(cat)
+        if not isinstance(blk, dict):
+            continue
+        v = blk.get(field)
+        if isinstance(v, list) and v:
+            v = v[-1]
+        if schema.is_fact(v) and v.get("value") != chosen.get("value"):
+            out.append({"path": f"{cat}.{field}", "value": v.get("value"),
+                        "as_of": v.get("as_of"), "source": v.get("source"),
+                        "flags": v.get("flags") or [],
+                        "reason": ("flagged do-not-adopt" if blocked(v)
+                                   else "lower preference")})
+    return out

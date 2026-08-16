@@ -276,6 +276,24 @@ details.method[open] summary::before{content:"▾ "}
   background:var(--surface)}
 .jump button:hover{border-color:var(--green);color:var(--navy)}
 
+/* ═══ due-diligence tables ═══ */
+.ddtable td a{color:var(--green);word-break:break-all;font-size:.72rem}
+.srcurl{max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+.chartbox{background:var(--surface);border:1px solid var(--edge);border-radius:6px;
+  padding:1rem 1.1rem;box-shadow:var(--shadow)}
+.chartbox h4{margin:0 0 .1rem;font-size:.92rem;color:var(--navy)}
+.chartbox .csub{font-size:.76rem;color:var(--muted);margin-bottom:.6rem}
+.chartbox svg{width:100%;height:220px;overflow:visible}
+.chartbox svg text{font-family:var(--mono);font-size:9px;fill:var(--muted)}
+.chartbox svg .vlabel{fill:var(--navy);font-weight:700;font-size:9.5px}
+.reportbar{position:sticky;top:calc(var(--top-h) + 0px);z-index:8;background:var(--band);
+  border:1px solid var(--edge);border-radius:6px;padding:.6rem .8rem;margin:.9rem 0 0;
+  display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.reportbar .rl{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted)}
+.reportbar select{width:auto;min-width:190px;font-size:.82rem;padding:.32rem .5rem}
+.dlnote{font-size:.74rem;color:var(--muted);margin-left:auto}
+
 /* ═══ glossary ═══ */
 .gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:.5rem}
 .gitem{background:var(--panel);border-radius:5px;padding:.55rem .75rem}
@@ -714,6 +732,322 @@ function factRow(f){
       ${f.note?`<div class="fnote">${esc(f.note)}</div>`:""}</div></div>`;
 }
 
+
+/* ────────── report generation ──────────
+   Assembles a full due-diligence profile from the stored data and hands it to
+   the viewer as a Word-openable document. Word reads HTML with the Office
+   namespace natively, so no zip library is needed and every figure keeps the
+   source and date it carries in the store. */
+
+const REPORT_KINDS = {
+  dd:      {name:"Due diligence profile", blurb:"Everything on file. The long one."},
+  brief:   {name:"Investment brief",      blurb:"Business, numbers, risks, verdict."},
+  onepage: {name:"One-page summary",      blurb:"Figures and the headline only."},
+  sources: {name:"Source register",       blurb:"Every source with its link and date."},
+};
+
+function docStyles(){
+  return `<style>
+    @page{size:8.5in 11in;margin:1in}
+    body{font-family:Georgia,serif;font-size:11pt;line-height:1.45;color:#232B3A}
+    h1{font-size:22pt;color:#1F2A44;margin:0 0 4pt}
+    h2{font-size:14pt;color:#1F2A44;margin:20pt 0 6pt;border-bottom:1pt solid #D5DBE4;padding-bottom:3pt}
+    h3{font-size:11pt;color:#35506E;margin:14pt 0 4pt}
+    .sub{color:#63708A;font-style:italic;margin:0 0 14pt}
+    .kicker{font-family:Consolas,monospace;font-size:8pt;letter-spacing:2pt;
+      text-transform:uppercase;color:#1C5D46;margin:0 0 6pt}
+    table{border-collapse:collapse;width:100%;margin:8pt 0 14pt;font-size:9.5pt;
+      table-layout:fixed;word-wrap:break-word;overflow-wrap:break-word}
+    th{background:#F2F5F9;color:#1F2A44;text-align:left;padding:5pt 6pt;
+      border-bottom:1pt solid #1F2A44;font-family:Consolas,monospace;font-size:8pt;
+      letter-spacing:1pt;text-transform:uppercase;font-weight:normal}
+    td{padding:4pt 6pt;border-bottom:.5pt solid #E4E9F0;vertical-align:top}
+    .num{text-align:right;font-family:Consolas,monospace;white-space:nowrap}
+    .val{text-align:right;font-family:Consolas,monospace;font-size:9pt}
+    .dt{font-family:Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+    .src{color:#63708A;font-size:8pt}
+    a{color:#35506E;text-decoration:none}
+    a.lnk{font-family:Consolas,monospace;font-size:8pt;color:#35506E}
+    .tile{display:inline-block;border:1pt solid #D5DBE4;padding:6pt 9pt;margin:0 6pt 6pt 0;min-width:120pt}
+    .tile .l{font-family:Consolas,monospace;font-size:7.5pt;letter-spacing:1pt;
+      text-transform:uppercase;color:#63708A}
+    .tile .v{font-size:15pt;color:#1F2A44;font-weight:bold;font-family:Consolas,monospace}
+    .tile .m{font-size:7.5pt;color:#63708A;font-family:Consolas,monospace}
+    .warn{border-left:3pt solid #8F3421;padding-left:8pt;color:#8F3421}
+    .foot{margin-top:24pt;padding-top:8pt;border-top:1pt solid #D5DBE4;
+      font-family:Consolas,monospace;font-size:8pt;color:#63708A}
+    ul{margin:4pt 0 10pt 16pt} li{margin-bottom:3pt}
+  </style>`;
+}
+
+/* Where a link came from, in words. Google News wraps every story in a very long
+   redirect, so printing the raw address wrecks the page and tells the reader
+   nothing. Print the publisher instead and keep the address behind the link. */
+function site(url){
+  if(!url) return "";
+  try{
+    const h=new URL(url).hostname.replace(/^www\./,"");
+    return h==="news.google.com" ? "via Google News" : h;
+  }catch(e){ return url.slice(0,40); }
+}
+function link(url, label){
+  if(!url) return esc(label||"");
+  return `<a class="lnk" href="${esc(url)}">${esc(label||site(url))}</a>`;
+}
+
+function buildReport(c, kind){
+  const b=c.briefing||{}, s=c.scores||{}, A=DATA.aibq;
+  const today=DATA.generated;
+  const P=[];
+  const tile=t=>`<span class="tile"><span class="l">${esc(t.label)}</span><br>
+    <span class="v">${esc(t.prefix)}${esc(fmt(t.value))}${esc(t.suffix)}</span><br>
+    <span class="m">${esc(t.as_of||"")} · ${esc(t.tier||"")}</span></span>`;
+
+  P.push(`<p class="kicker">HRPB Research Desk · ${esc(REPORT_KINDS[kind].name)}</p>`);
+  P.push(`<h1>${esc(c.name)}</h1>`);
+  P.push(`<p class="sub">${esc(b.one_liner||"")}</p>`);
+  P.push(`<p class="src">${esc(c.slug)}${c.pbid?" · PitchBook "+esc(c.pbid):""}${c.sector?" · "+esc(c.sector):""}
+    ${c.domain?" · "+esc(c.domain):""}<br>
+    Prepared ${esc(today)} from ${c.n_facts} stored facts and ${c.evidence.records} evidence records.
+    Store last updated ${esc(c.updated||"?")}.</p>`);
+
+  // ── where it stands ────────────────────────────────────────────────────────
+  if(c.headline.length){
+    P.push(`<h2>Where it stands</h2>`);
+    P.push(c.headline.map(tile).join(""));
+    const sup=c.headline.flatMap(t=>(t.superseded||[]).map(x=>({t,x})));
+    if(sup.length) P.push(`<p class="warn">Figures the desk did not adopt: ${
+      sup.map(({t,x})=>`${esc(t.label)} $${esc(x.value)}B from ${esc(x.path)} (${esc(x.reason)})`).join("; ")}.</p>`);
+  }
+
+  if(kind==="onepage"){
+    if((b.key_risks||[]).length)
+      P.push(`<h2>What could go wrong</h2><ul>${b.key_risks.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`);
+    return P.join("\n");
+  }
+
+  // ── the business ───────────────────────────────────────────────────────────
+  if(kind!=="sources" && b.what_it_does){
+    P.push(`<h2>The business</h2>`);
+    P.push(`<h3>What it does</h3><p>${esc(b.what_it_does)}</p>`);
+    P.push(`<h3>How it makes money</h3><p>${esc(b.how_it_makes_money||"")}</p>`);
+    P.push(`<h3>Why it matters</h3><p>${esc(b.why_it_matters||"")}</p>`);
+    P.push(`<h3>Who it competes with</h3><p>${esc(b.competitive_position||"")}</p>`);
+  }
+
+  // ── what the numbers imply ────────────────────────────────────────────────
+  if(kind!=="sources" && (c.analysis||[]).length){
+    P.push(`<h2>What the numbers imply</h2>`);
+    P.push(`<table>
+      <col style="width:21%"><col style="width:16%"><col style="width:63%">
+      <tr><th>Measure</th><th>Value</th><th>How it is calculated</th></tr>
+      ${c.analysis.map(a=>`<tr><td>${esc(a.label)}</td>
+        <td class="val">${esc(a.value)}</td>
+        <td>${esc(a.workings)}${a.caveat?` <span class="src">${esc(a.caveat)}</span>`:""}</td></tr>`).join("")}</table>`);
+  }
+
+  // ── funding record ────────────────────────────────────────────────────────
+  const pts=(c.ladders||{})["valuation.valuation_ladder_bn"]||[];
+  if(kind!=="sources" && pts.length){
+    P.push(`<h2>Funding record</h2>`);
+    P.push(`<table>
+      <col style="width:12%"><col style="width:14%"><col style="width:10%">
+      <col style="width:38%"><col style="width:26%">
+      <tr><th>Date</th><th>Post-money</th><th>Step-up</th><th>Round</th><th>Source</th></tr>
+      ${pts.map((p,i)=>{const prev=i?pts[i-1].value:null;
+        return `<tr><td class="dt">${esc(p.as_of)}</td>
+          <td class="num">$${p.value>=10?p.value.toFixed(0):p.value.toFixed(2)}B</td>
+          <td class="num">${prev?(p.value/prev).toFixed(2)+"x":"—"}</td>
+          <td>${esc(p.note||"")}</td>
+          <td class="src">${esc(p.source||"")}</td></tr>`;}).join("")}</table>`);
+  }
+
+  // ── quality score ─────────────────────────────────────────────────────────
+  if(kind==="dd" && s.has){
+    P.push(`<h2>Quality score — AIBQ ${esc(A.version)}</h2>`);
+    P.push(`<p><b>${esc(s.composite)}</b> — ${esc((s.band||{}).tier||"")}. ${esc((s.band||{}).plain||"")}
+      <span class="src">as of ${esc(s.as_of||"")}</span></p>`);
+    P.push(`<table>
+      <col style="width:28%"><col style="width:10%"><col style="width:9%"><col style="width:53%">
+      <tr><th>Dimension</th><th>Weight</th><th>Score</th><th>What it measures</th></tr>
+      ${(s.dimensions||[]).map(d=>`<tr><td>${esc(d.code)} — ${esc(d.name)}</td>
+        <td class="num">${d.weight?d.weight+"%":"—"}</td>
+        <td class="num">${esc(d.value)}</td>
+        <td>${esc(d.plain||"")}</td></tr>`).join("")}</table>`);
+    P.push(`<p class="src">${esc(A.formula)}. Rubric ${esc(A.version)}, effective ${esc(A.effective)}.</p>`);
+  }
+
+  // ── triggers and risks ────────────────────────────────────────────────────
+  if(kind!=="sources" && (c.triggers||[]).length){
+    P.push(`<h2>What we are watching</h2>`);
+    P.push(`<table>
+      <col style="width:16%"><col style="width:56%"><col style="width:28%">
+      <tr><th>Status</th><th>Condition</th><th>Source</th></tr>
+      ${c.triggers.map(t=>`<tr><td>${esc(t.status)}${t.fired_on?" "+esc(t.fired_on):""}</td>
+        <td>${esc(t.condition)}</td><td class="src">${esc(t.source||"")}</td></tr>`).join("")}</table>`);
+  }
+  if(kind!=="sources" && (b.key_risks||[]).length){
+    P.push(`<h2>What could go wrong</h2><ul>${b.key_risks.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`);
+  }
+
+  // ── timeline ──────────────────────────────────────────────────────────────
+  if(kind==="dd" && (c.timeline||[]).length){
+    P.push(`<h2>Timeline</h2>`);
+    P.push(`<table>
+      <col style="width:11%"><col style="width:9%"><col style="width:56%"><col style="width:24%">
+      <tr><th>Date</th><th>Kind</th><th>What happened</th><th>Source</th></tr>
+      ${c.timeline.slice(0,45).map(t=>`<tr><td class="dt">${esc(t.date)}</td><td>${esc(t.kind)}</td>
+        <td>${esc(t.text)}</td>
+        <td class="src">${t.url?link(t.url,t.publisher||site(t.url)):esc(t.source||"")}</td></tr>`).join("")}</table>`);
+  }
+
+  // ── the full record ───────────────────────────────────────────────────────
+  if(kind==="dd"){
+    P.push(`<h2>The full record</h2>`);
+    const byCat={}; c.facts.forEach(f=>(byCat[f.cat]=byCat[f.cat]||[]).push(f));
+    DATA.categories.forEach(cat=>{
+      const rows=byCat[cat]; if(!rows||!rows.length) return;
+      P.push(`<h3>${esc(cat.replace(/_/g," "))}</h3>`);
+      P.push(`<table>
+        <col style="width:19%"><col style="width:33%"><col style="width:11%">
+        <col style="width:7%"><col style="width:30%">
+        <tr><th>Field</th><th>Value</th><th>As of</th><th>Tier</th><th>Source</th></tr>
+        ${rows.map(f=>`<tr><td>${esc(f.label||f.field)}</td>
+          <td>${esc(fmt(f.value))}${(f.flags||[]).length?" ["+esc(f.flags.join(", "))+"]":""}</td>
+          <td class="dt">${esc(f.as_of||"")}</td><td>${esc(f.tier||"")}</td>
+          <td class="src">${esc(f.source||"")}</td></tr>`).join("")}</table>`);
+    });
+  }
+
+  // ── sources ───────────────────────────────────────────────────────────────
+  if(kind==="dd"||kind==="sources"){
+    P.push(`<h2>Sources</h2>`);
+    const ev=(c.evidence.recent||[]).map(r=>({w:r.source,k:r.kind,d:(r.retrieved_at||"").slice(0,10),u:r.url}));
+    const nw=(c.news||[]).filter(n=>n.relevant&&n.url).slice(0,30)
+      .map(n=>({w:n.title,k:n.publisher||"press",d:(n.published||"").slice(0,10),u:n.url,p:n.publisher}));
+    const all=[...ev,...nw].sort((a,b)=>(b.d||"").localeCompare(a.d||""));
+    P.push(`<table>
+      <col style="width:48%"><col style="width:16%"><col style="width:12%"><col style="width:24%">
+      <tr><th>Source</th><th>Kind</th><th>Date</th><th>Link</th></tr>
+      ${all.map(r=>`<tr><td>${esc(r.w||"")}</td><td>${esc(r.k||"")}</td><td class="dt">${esc(r.d||"")}</td>
+        <td class="src">${r.u?link(r.u,r.p||site(r.u)):""}</td></tr>`).join("")}</table>`);
+  }
+
+  P.push(`<p class="foot">Generated ${esc(DATA.generated_at||today)} by the HRPB research desk
+    from its own fact store. Every figure carries the source and date it was stored with.
+    Facts flagged do-not-adopt or DISPUTED are excluded from headline figures and shown
+    separately. This document is internal research; check the source tier before external use.</p>`);
+  return P.join("\n");
+}
+
+function reportDoc(c, kind){
+  return `<html xmlns:o="urn:schemas-microsoft-com:office:office"
+    xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+    <head><meta charset="utf-8"><title>${esc(c.name)} — ${esc(REPORT_KINDS[kind].name)}</title>
+    ${docStyles()}</head><body>${buildReport(c,kind)}</body></html>`;
+}
+
+async function downloadReport(slug, kind){
+  const c=CO[slug]; if(!c) return;
+  const html=reportDoc(c,kind);
+  const fname=`${c.slug}_${kind}_${DATA.generated}.doc`;
+  if(window.claude&&window.claude.downloads&&window.claude.downloads.save){
+    try{
+      await window.claude.downloads.save({filename:fname, data:html});
+      flash("Report saved — opens in Word");
+    }catch(e){
+      flash(e&&e.code==="user_rejected"?"Download declined":"Download unavailable — opening preview");
+      previewReport(html, fname);
+    }
+  } else { previewReport(html, fname); }
+}
+
+function previewReport(html, fname){
+  const w=window.open("","_blank");
+  if(w){ w.document.write(html); w.document.close(); }
+  else flash("Allow pop-ups to preview the report");
+}
+
+/* a dated valuation history, drawn rather than listed */
+function valuationChart(c){
+  const pts=(c.ladders||{})["valuation.valuation_ladder_bn"]||[];
+  if(pts.length<2) return "";
+  const W=760,H=200,PL=52,PR=16,PT=18,PB=28;
+  const vals=pts.map(p=>p.value), hi=Math.max(...vals), lo=0;
+  const ts=pts.map(p=>new Date(p.as_of).getTime());
+  const t0=Math.min(...ts), t1=Math.max(...ts), span=(t1-t0)||1;
+  const X=t=>PL+((t-t0)/span)*(W-PL-PR);
+  const Y=v=>H-PB-((v-lo)/((hi-lo)||1))*(H-PT-PB);
+  const d=pts.map((p,i)=>`${i?"L":"M"}${X(ts[i]).toFixed(1)},${Y(p.value).toFixed(1)}`).join(" ");
+  const area=`${d} L${X(t1).toFixed(1)},${H-PB} L${X(t0).toFixed(1)},${H-PB} Z`;
+  const ticks=[0,.25,.5,.75,1].map(f=>lo+f*(hi-lo));
+  return `<div class="chartbox">
+    <h4>Valuation history</h4>
+    <div class="csub">Completed rounds only. Announced and rumoured rounds are excluded
+      by house rule and appear in the record below.</div>
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Valuation history">
+      ${ticks.map(t=>`<line x1="${PL}" x2="${W-PR}" y1="${Y(t)}" y2="${Y(t)}"
+        stroke="var(--hair)" stroke-width="1"/>
+        <text x="${PL-6}" y="${Y(t)+3}" text-anchor="end">$${t>=10?t.toFixed(0):t.toFixed(1)}B</text>`).join("")}
+      <path d="${area}" fill="var(--green)" opacity=".10"/>
+      <path d="${d}" fill="none" stroke="var(--green)" stroke-width="2"
+        stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+      ${pts.map((p,i)=>`<circle cx="${X(ts[i]).toFixed(1)}" cy="${Y(p.value).toFixed(1)}"
+        r="3.5" fill="var(--surface)" stroke="var(--green)" stroke-width="2"/>
+        <text class="vlabel" x="${X(ts[i]).toFixed(1)}" y="${(Y(p.value)-9).toFixed(1)}"
+          text-anchor="middle">$${p.value>=10?p.value.toFixed(0):p.value.toFixed(1)}B</text>
+        <text x="${X(ts[i]).toFixed(1)}" y="${H-PB+14}" text-anchor="middle">${esc((p.as_of||"").slice(0,7))}</text>`).join("")}
+    </svg>
+  </div>`;
+}
+
+/* every source behind the profile, with the link */
+function sourcesTable(c){
+  const rows=[];
+  (c.evidence.recent||[]).forEach(r=>rows.push({
+    what:r.source, kind:r.kind, when:(r.retrieved_at||"").slice(0,10),
+    url:r.url, detail:`${(r.chars||0).toLocaleString()} chars, read ${r.seen}x`}));
+  (c.news||[]).filter(n=>n.relevant&&n.url).slice(0,20).forEach(n=>rows.push({
+    what:n.title, kind:"press", when:(n.published||"").slice(0,10),
+    url:n.url, pub:n.publisher||"", detail:n.publisher||""}));
+  if(!rows.length) return "";
+  rows.sort((a,b)=>(b.when||"").localeCompare(a.when||""));
+  return `<h3>Every source, with its link</h3>
+    <p class="sub">Each row is something the desk actually read. Click through to the
+      original. Dates are when it was retrieved or published.</p>
+    <div class="scroll"><table class="ddtable">
+      <thead><tr><th>Source</th><th>Kind</th><th class="r">Date</th><th>Detail</th><th>Link</th></tr></thead>
+      <tbody>${rows.slice(0,60).map(r=>`<tr>
+        <td style="max-width:330px">${esc(r.what||"")}</td>
+        <td><span class="grp">${esc(r.kind||"")}</span></td>
+        <td class="r dim">${esc(r.when||"")}</td>
+        <td class="dim" style="font-size:.76rem">${esc(r.detail||"")}</td>
+        <td>${r.url?`<a class="srcurl" href="${esc(r.url)}" target="_blank" rel="noopener"
+          title="${esc(r.url)}">${esc(r.pub||site(r.url))} &#8599;</a>`:"—"}</td>
+      </tr>`).join("")}</tbody></table></div>`;
+}
+
+/* the funding record as a table an investor can read */
+function fundingTable(c){
+  const pts=(c.ladders||{})["valuation.valuation_ladder_bn"]||[];
+  const rows=c.facts.filter(f=>f.cat==="financing"&&!f.field.includes("["));
+  if(!pts.length&&!rows.length) return "";
+  return `<h3>Funding record</h3>
+    ${pts.length?`<div class="scroll"><table class="ddtable">
+      <thead><tr><th class="r">Date</th><th class="r">Post-money</th><th class="r">Step-up</th>
+        <th>Round</th><th>Source</th></tr></thead>
+      <tbody>${pts.map((p,i)=>{
+        const prev=i?pts[i-1].value:null;
+        const step=prev?((p.value/prev)):null;
+        return `<tr>
+          <td class="r">${esc(p.as_of)}</td>
+          <td class="r" style="color:var(--navy);font-weight:700">$${p.value>=10?p.value.toFixed(0):p.value.toFixed(2)}B</td>
+          <td class="r" style="color:${step&&step>=1?"var(--green)":"var(--rust)"}">${step?step.toFixed(2)+"x":"—"}</td>
+          <td style="font-size:.8rem">${esc(p.note||"")}</td>
+          <td class="dim" style="font-size:.74rem">${esc(p.source||"")}</td></tr>`;}).join("")}</tbody></table></div>`:""}
+    ${rows.length?`<div style="margin-top:.6rem">${rows.map(factRow).join("")}</div>`:""}`;
+}
+
 /* what the business is, in plain words */
 function briefBlock(c){
   const b=c.briefing||{};
@@ -873,10 +1207,22 @@ function renderCompany(slug){
       <br>${idBits}
       <br><span class="mono dim">${c.n_facts} facts · ${c.n_cats}/${DATA.categories.length} categories · store updated ${esc(c.updated||"?")} · ${c.evidence.records} evidence records${c.evidence.latest?" · last read "+esc(ago(c.evidence.latest)):""}</span>
     </p>
-    <div class="btnrow" style="margin-top:0">
-      <button class="btn primary" onclick="startRequest('${esc(c.slug)}')">Request a report on ${esc(c.name)}</button>
+    <div class="reportbar">
+      <span class="rl">Download report</span>
+      <select id="rk-${esc(c.slug)}">
+        ${Object.entries(REPORT_KINDS).map(([k,v])=>
+          `<option value="${esc(k)}">${esc(v.name)} — ${esc(v.blurb)}</option>`).join("")}
+      </select>
+      <button class="btn primary" onclick="downloadReport('${esc(c.slug)}',
+        document.getElementById('rk-${esc(c.slug)}').value)">Generate Word document</button>
+      <button class="btn" onclick="previewReport(reportDoc(CO['${esc(c.slug)}'],
+        document.getElementById('rk-${esc(c.slug)}').value),'preview')">Preview</button>
+      <span class="dlnote">Built from ${c.n_facts} stored facts. Every figure carries its source and date.</span>
+    </div>
+    <div class="btnrow" style="margin-top:.6rem">
+      <button class="btn" onclick="startRequest('${esc(c.slug)}')">Commission a written note</button>
       <button class="btn" onclick="copy('python3 -m engine harvest ${esc(c.slug)}','Command copied')">Harvest now</button>
-      <button class="btn" onclick="copy('python3 -m engine digest ${esc(c.slug)}','Command copied')">Trend digest</button>
+      <button class="btn" onclick="copy('python3 -m engine model ${esc(c.slug)}','Command copied')">Rebuild model</button>
     </div>
 
     ${briefBlock(c)}
@@ -886,9 +1232,16 @@ function renderCompany(slug){
         <div class="tl">${esc(t.label)}</div>
         <div class="tv">${esc(t.prefix)}${esc(fmt(t.value))}${esc(t.suffix)}</div>
         <div class="tm">${tierBadge(t.tier)}<span>${esc(t.as_of||"")}</span>${flagBadges(t.flags)}</div>
+        ${(t.superseded||[]).length?`<div class="tm" style="color:var(--rust)">
+          not adopted: ${t.superseded.map(x=>esc(x.value)).join(", ")}</div>`:""}
       </div>`).join("")}</div>`:""}
 
+    ${(c.ladders||{})["valuation.valuation_ladder_bn"]?`<h3>Valuation over time</h3>
+      ${valuationChart(c)}`:""}
+
     ${analysisBlock(c)}
+
+    ${fundingTable(c)}
 
     ${scoreBlock(c)}
 
@@ -930,6 +1283,8 @@ function renderCompany(slug){
     ${(c.briefing&&(c.briefing.glossary||[]).length)?`<h3>Terms used on this page</h3>
       <div class="gloss">${c.briefing.glossary.map(g=>
         `<div class="gitem"><b>${esc(g.term)}</b><span>${esc(g.definition)}</span></div>`).join("")}</div>`:""}
+
+    ${sourcesTable(c)}
 
     <h3>The full record — every stored fact</h3>
     <p class="sub">The sourced store behind everything above. Each entry carries its value,

@@ -24,6 +24,7 @@ import glob
 import html
 import json
 import os
+import re
 
 from . import briefing, evidence, harvest, intake, market, schema, store
 
@@ -116,10 +117,27 @@ def _ladders(profile):
                     "note": f.get("note")}
                    for f in v if schema.is_fact(f)
                    and isinstance(f.get("value"), (int, float))]
+            pts = _dedupe_points(pts)
             if len(pts) >= 2:
                 pts.sort(key=lambda p: p["as_of"] or "")
                 out[f"{cat}.{field}"] = pts
     return out
+
+
+def _dedupe_points(pts):
+    """One point per (date, value).
+
+    A refresh that re-reads the same round writes the same mark again. That is
+    one event observed twice, not two events, and a chart or a funding table
+    that draws it twice is wrong. Keep the entry carrying the most explanation.
+    """
+    best = {}
+    for p in pts:
+        key = (p.get("as_of"), p.get("value"))
+        prev = best.get(key)
+        if prev is None or len(p.get("note") or "") > len(prev.get("note") or ""):
+            best[key] = p
+    return list(best.values())
 
 
 def _identity(profile):
@@ -139,40 +157,53 @@ def _identity(profile):
     return out
 
 
+# Headline tiles resolve through briefing.preferred(), so the number a reader
+# sees first is always the one the desk stands behind — never a vendor field the
+# desk has explicitly declined to adopt.
 HEADLINE_SPEC = [
-    ("Valuation", "valuation", ("pb_last_known_valuation_bn", "post_money_bn",
-                                "valuation_ladder_bn"), "$", "B"),
-    ("Run-rate", "financials", ("run_rate_ladder_bn", "run_rate_bn"), "$", "B"),
-    ("Growth YoY", "financials", ("growth_yoy_pct_ladder", "growth_yoy_pct"), "", "%"),
-    ("Gross margin", "financials", ("gross_margin_pct_ladder", "gross_margin_pct"), "", "%"),
-    ("Headcount", "headcount", ("employees_ladder", "employees"), "", ""),
-    ("Equity raised", "financing", ("equity_raised_bn", "total_raised_bn"), "$", "B"),
-    ("Net revenue retention", "customers", ("nrr_pct",), "", ""),
-    ("Customers", "customers", ("orgs", "customers"), "", ""),
+    ("Valuation", "valuation_bn", "$", "B"),
+    ("Run-rate", "run_rate_bn", "$", "B"),
+    ("Growth YoY", "growth_pct", "", "%"),
+    ("Gross margin", "gross_margin_pct", "", "%"),
+    ("Headcount", "employees", "", ""),
+    ("Equity raised", "equity_raised_bn", "$", "B"),
+    ("Total raised", "total_raised_bn", "$", "B"),
+]
+EXTRA_TILES = [
+    ("Net revenue retention", "customers", "nrr_pct", "", ""),
+    ("Customers", "customers", "orgs", "", ""),
 ]
 
 
 def _headline(profile):
     tiles = []
-    for label, cat, fields, pre, suf in HEADLINE_SPEC:
+    for label, concept, pre, suf in HEADLINE_SPEC:
+        v, path = briefing.preferred(profile, concept)
+        if not v:
+            continue
+        tiles.append({
+            "label": label, "value": v.get("value"), "prefix": pre, "suffix": suf,
+            "as_of": v.get("as_of"), "tier": v.get("tier"),
+            "source": v.get("source"), "note": v.get("note"),
+            "flags": v.get("flags") or [], "field": path,
+            "superseded": briefing.superseded_by_desk(profile, concept),
+        })
+    for label, cat, field, pre, suf in EXTRA_TILES:
         blk = profile.get(cat)
         if not isinstance(blk, dict):
             continue
-        for field in fields:
-            v = blk.get(field)
-            if isinstance(v, list) and v:
-                v = v[-1]
-            if not schema.is_fact(v):
-                continue
-            val = v.get("value")
-            tiles.append({
-                "label": label, "value": val, "prefix": pre, "suffix": suf,
-                "as_of": v.get("as_of"), "tier": v.get("tier"),
-                "source": v.get("source"), "note": v.get("note"),
-                "flags": v.get("flags") or [],
-                "field": f"{cat}.{field}",
-            })
-            break
+        v = blk.get(field)
+        if isinstance(v, list) and v:
+            v = v[-1]
+        if not schema.is_fact(v) or briefing.blocked(v):
+            continue
+        tiles.append({
+            "label": label, "value": v.get("value"), "prefix": pre, "suffix": suf,
+            "as_of": v.get("as_of"), "tier": v.get("tier"),
+            "source": v.get("source"), "note": v.get("note"),
+            "flags": v.get("flags") or [], "field": f"{cat}.{field}",
+            "superseded": [],
+        })
     return tiles
 
 
@@ -227,22 +258,49 @@ def _timeline(profile, trigs, news=None):
     return items
 
 
+def _trigger_key(condition):
+    """A trigger is the thing being watched, not the sentence describing it.
+
+    The store is append-only, so each refresh re-states every standing trigger
+    with a new date and possibly a new status. Restating it does not create a
+    second trigger. Match on the stable head of the condition, before the first
+    colon or bracket, where refreshes park their changing detail ("none on file
+    as of Jul 10" becoming "as of Aug 13").
+    """
+    head = re.split(r"[:(]", condition or "", 1)[0]
+    return re.sub(r"[^a-z0-9 ]", "", head.lower()).strip()
+
+
 def _triggers(profile):
-    out = []
+    """Current state of each watched condition, newest observation winning.
+
+    History stays in the store; a reader wants to know what is armed now.
+    """
     blk = profile.get("triggers")
     if not isinstance(blk, dict):
-        return out
+        return []
+    seen = {}
     for item in blk.get("named") or []:
         if not schema.is_fact(item):
             continue
         v = item.get("value")
         if not isinstance(v, dict):
             continue
-        out.append({"condition": v.get("condition", ""),
-                    "status": (v.get("status") or "armed").lower(),
-                    "fired_on": v.get("fired_on"), "as_of": item.get("as_of"),
-                    "source": item.get("source"), "note": item.get("note")})
-    return out
+        row = {"condition": v.get("condition", ""),
+               "status": (v.get("status") or "armed").lower(),
+               "fired_on": v.get("fired_on"), "as_of": item.get("as_of"),
+               "source": item.get("source"), "note": item.get("note")}
+        key = _trigger_key(row["condition"])
+        prev = seen.get(key)
+        if prev is None or (row["as_of"] or "") >= (prev["as_of"] or ""):
+            if prev is not None:
+                row["restated"] = prev.get("restated", 0) + 1
+            seen[key] = row
+        elif prev is not None:
+            prev["restated"] = prev.get("restated", 0) + 1
+    order = {"fired": 0, "armed": 1, "expired": 2}
+    return sorted(seen.values(),
+                  key=lambda r: (order.get(r["status"], 3), r["as_of"] or ""))
 
 
 def _sources_index(facts):

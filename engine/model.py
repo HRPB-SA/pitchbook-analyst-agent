@@ -200,8 +200,7 @@ def build(slug: str, kind: str = "operating", out: str = None) -> dict:
     gr = _series(profile, "financials", "growth_yoy_pct_ladder")
     gm = _fact(profile, "financials", "gross_margin_pct_ladder", "gross_margin_pct")
     emp = _fact(profile, "headcount", "employees_ladder", "employees")
-    val = _fact(profile, "valuation", "post_money_bn", "valuation_ladder_bn",
-            "pb_last_known_valuation_bn")
+    val, _val_path = briefing.preferred(profile, "valuation_bn")
     eq = _fact(profile, "financing", "equity_raised_bn")
     nrr = _fact(profile, "customers", "nrr_pct")
 
