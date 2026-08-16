@@ -1,4 +1,31 @@
 {
   "open": [],
-  "resolved": []
+  "resolved": [],
+  "closed": [
+    {
+      "opened": "2026-08-16",
+      "field": "financing.last_completed_deal",
+      "held": {
+        "value": "Later Stage VC $700M (7th Round)",
+        "as_of": "2025-09-24",
+        "source": "PitchBook deal 297333-55T",
+        "tier": "T2",
+        "decay": "STABLE",
+        "flags": [
+          "DISPUTED"
+        ]
+      },
+      "challenger": {
+        "value": "$700M Series D1 at $7.0B post (2025-09-24), led by Radical Ventures, Kensington Capital Partners and Inovia Capital",
+        "as_of": "2025-09-24",
+        "tier": "T2",
+        "decay": "STABLE",
+        "source": "PitchBook deal 297333-55T",
+        "note": "Pre-money $6.3B. AMD Ventures and 14 others participated."
+      },
+      "rule": "freeze-on-conflict: challenger not (newer AND >= tier); surfaced, not chosen",
+      "closed_on": "2026-08-16",
+      "why": "not a disagreement: the two values state the same figure"
+    }
+  ]
 }

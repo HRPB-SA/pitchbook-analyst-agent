@@ -1,0 +1,128 @@
+{
+  "_provenance": "Raised by engine/watch.py on 2026-08-16: four outlets carried a $2 trillion valuation against a stored $965B. Checked against PitchBook profile 466959-97 (retrieved 2026-08-16). Last Known Valuation is unchanged at $965B, dated 2026-05-28, so the $2T is not a transaction. What the check turned up instead is larger than the figure that triggered it: Anthropic has been in IPO registration since 2026-06-01, with an expected October 2026 listing. The desk had no IPO status on file.",
+  "ipo_status": {
+    "status": {
+      "value": "In IPO registration. Confidentially filed 2026-06-01; expected listing October 2026",
+      "as_of": "2026-06-01",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "source": "PitchBook profile 466959-97, Ownership Status and deal 325962-01T (IPO, Announced/In Progress)",
+      "note": "A confidential filing is not public, so the S-1 itself cannot be read yet. When it becomes public it will be the first audited look at these numbers and supersedes every T2 and T3 figure on this page."
+    },
+    "expected_date": {
+      "value": "October 2026",
+      "as_of": "2026-07-28",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "flags": [
+        "est."
+      ],
+      "source": "PitchBook financing status note dated 2026-07-28"
+    }
+  },
+  "valuation": {
+    "rumored_post_money_bn": {
+      "value": 2000.0,
+      "as_of": "2026-08-13",
+      "tier": "T3",
+      "decay": "VOLATILE",
+      "flags": [
+        "do-not-adopt",
+        "est."
+      ],
+      "source": "Press reports including the New York Post, Aug 13 2026",
+      "note": "A listing expectation, not a transaction. Ruling R2: it never anchors. Worth watching because it is roughly twice the last completed mark, and the gap between the two is the market's estimate of what the IPO adds."
+    }
+  },
+  "financing": {
+    "raised_to_date_bn": {
+      "value": 161.254,
+      "as_of": "2026-06-09",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook profile 466959-97, Total Raised $161,254.0M",
+      "note": "Includes debt. Ruling R1: capital efficiency is computed on equity only, so this figure is not the denominator."
+    },
+    "debt_raised_bn": {
+      "value": 34.5,
+      "as_of": "2026-06-09",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook deal 334763-02T (Debt - General)",
+      "note": "Raised to buy Alphabet-developed chips. Debt informs risk and never enters capital efficiency. At this size it is the single largest thing on the balance sheet that a valuation multiple does not see."
+    },
+    "rumored_round": {
+      "value": "Reportedly seeking venture funding from Advanced Micro Devices as of 2026-07-22; no size or valuation disclosed",
+      "as_of": "2026-07-22",
+      "tier": "T3",
+      "decay": "VOLATILE",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "source": "PitchBook financing status note dated 2026-07-28",
+      "note": "Ruling R2. Also note deal 340292-53T, an 11th-round Later Stage VC carrying no date, which is consistent with a round in progress."
+    }
+  },
+  "financials": {
+    "pb_revenue_ttm_bn": {
+      "value": 71.0,
+      "as_of": "2027-12-31",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook Revenue field, fiscal period TTM 4Q2027",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "note": "House ruling R3, and unusually clear here: the period ends 2027-12-31, sixteen months after this reading. It is a forecast wearing a revenue label."
+    }
+  },
+  "identity": {
+    "employees": {
+      "value": 5000,
+      "as_of": "2026-04-21",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook profile 466959-97"
+    },
+    "status": {
+      "value": "Anthropic PBC, a public benefit corporation. In IPO registration since 2026-06-01",
+      "as_of": "2026-06-01",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook profile 466959-97",
+      "note": "The public-benefit structure obliges the board to weigh a public mission alongside shareholder return, which is a live governance question for a listing."
+    }
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "Anthropic S-1 becomes public (expected around an October 2026 listing): the first audited numbers; supersedes every T2 and T3 figure on this page",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T2",
+        "source": "PitchBook deal 325962-01T + financing status note 2026-07-28"
+      },
+      {
+        "value": {
+          "condition": "Reported AMD funding (2026-07-22): terms disclosed and completed, or retired",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T3",
+        "source": "PitchBook financing status note dated 2026-07-28"
+      },
+      {
+        "value": {
+          "condition": "IPO prices at or near the reported $2T expectation, roughly twice the $965B last mark, or prices below it",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T3",
+        "source": "desk, on press reports of a $2T listing valuation"
+      }
+    ]
+  },
+  "_snapshot_date": "2026-08-16"
+}

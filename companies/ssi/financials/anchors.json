@@ -1,0 +1,22 @@
+{
+  "slug": "ssi",
+  "workbook": "ssi_model_2026-08-16.xlsx",
+  "built": "2026-08-16",
+  "anchors": {
+    "valuation_bn": {
+      "value": 31,
+      "as_of": "2026-06-12",
+      "path": "valuation.post_money_bn"
+    },
+    "run_rate_bn": {
+      "value": 0,
+      "as_of": "2026-06-12",
+      "path": "financials.run_rate_ladder_bn"
+    },
+    "equity_raised_bn": {
+      "value": 3,
+      "as_of": "2026-06-12",
+      "path": "financing.equity_raised_bn"
+    }
+  }
+}

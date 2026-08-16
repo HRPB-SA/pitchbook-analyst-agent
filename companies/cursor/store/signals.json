@@ -1,6 +1,6 @@
 {
   "slug": "cursor",
-  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "scanned_at": "2026-08-16T23:50:17+00:00",
   "window_days": 120,
   "documents": 113,
   "signals": [
@@ -21,6 +21,7 @@
       "first_reported": "2026-04-18",
       "last_reported": "2026-04-20",
       "already_held_as": null,
+      "already_declined": null,
       "reports": [
         {
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObHlYbXBZNFl4dFkxY24wNGoxOHFoaTJhQnNMa1o5MTcxN21IR2ZFSFFoRWJEaVdoeFNNZlhzS3A5X0dXWWF6Y2hMZ0MtUUNmd3QtalRaU2g2Ti14OUFuM09Ub2ZQQ2VadWNFdlU5dE1OQXB5MEhJN3k4OWtjYlp4Yi1yUFhodzg?oc=5",
@@ -65,6 +66,7 @@
         "as_of": "2026-04-17",
         "source": "PitchBook deal 324491-14T (Later Stage VC, 7th round)"
       },
+      "already_declined": null,
       "reports": [
         {
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObHlYbXBZNFl4dFkxY24wNGoxOHFoaTJhQnNMa1o5MTcxN21IR2ZFSFFoRWJEaVdoeFNNZlhzS3A5X0dXWWF6Y2hMZ0MtUUNmd3QtalRaU2g2Ti14OUFuM09Ub2ZQQ2VadWNFdlU5dE1OQXB5MEhJN3k4OWtjYlp4Yi1yUFhodzg?oc=5",
@@ -108,6 +110,7 @@
         "as_of": "2025-11-13",
         "source": "PitchBook deal 312975-01T (Later Stage VC)"
       },
+      "already_declined": null,
       "reports": [
         {
           "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1BQ2IwcmFjZ0MyMHJvbEZZSGstTmMxNEZOcGo4cGR1cnM2NFJya3pZUmNocFJpdkk3Q1lyaDRMc2hwWmNwa1ZhdXlJTl9LNnFfdHlJSWJJdGpEMkk?oc=5",
@@ -115,6 +118,85 @@
           "when": "2026-05-12",
           "kind": "news",
           "quote": "$29B Valuation"
+        }
+      ]
+    },
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 60.0,
+      "verdict": "confirms",
+      "gap_pct": 0.0,
+      "held": {
+        "value": 60.0,
+        "as_of": "2026-08-14",
+        "tier": "T2",
+        "source": "SpaceX acquisition of Anysphere, completed Aug 14 2026; PitchBook deal 328599-64T",
+        "path": "valuation.post_money_bn"
+      },
+      "n_reports": 19,
+      "n_publishers": 18,
+      "publishers": [
+        "Ars Technica",
+        "Briefs Finance",
+        "Business Insider",
+        "CBS News",
+        "Investing.com",
+        "OpenTools",
+        "Pasquale Pillitteri",
+        "Pluang"
+      ],
+      "first_reported": "2026-06-16",
+      "last_reported": "2026-08-16",
+      "already_held_as": {
+        "value": 60.0,
+        "as_of": "2026-08-14",
+        "source": "SpaceX acquisition completed Aug 14 2026; PitchBook deal 328599-64T"
+      },
+      "already_declined": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbmJGYlFSN096NUtDRG1jN0gzX0Y4T1ByOXM3R1U3OXJGZzc2UWFUeVNURGRrQUkxazVxTW1zS21JR0didURMWTZlSU5ONjZ1VTRjNDBJc09TeWFiam42Wi02c05QM2pobWV6TDdIOE52VDJIVHQ1WnB4ZTdlY1dzOGcza1dfSnVLNTVRUUlwcHpFQQ?oc=5",
+          "publisher": "Briefs Finance",
+          "when": "2026-08-16",
+          "kind": "news",
+          "quote": "$60 Billion Acquisition"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE82WThOall6Q3FjQ0tRYVJXYnN5cjVBaTBHWUZkS2M4MzVSRngxTXkwUjVZRXFoUUhma2lRNnlYRWdHaS1NeS1LLXUxN25wZjBSaktsWXhLUlcxcjJvNERWd1RSaE9zWThsazEyU081ZHFTTEcyNnA4?oc=5",
+          "publisher": "Pluang",
+          "when": "2026-08-15",
+          "kind": "news",
+          "quote": "$60B acquisition"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUFJ3ejRFUUVIRmQ4Q3VjdGduS1Y0MVpTalF4WGJ0NmM3VXBZQzc2TF9QUVVFNWNsX0MtMk5GQWtXT3VDT0FaVTliOF9FdUlyUzRQWmpOZ2R1WWlyTzBUZ2xHZlMyWGZmVkZGeF91Y1hZbHY0b3J6cUx2ZVZ6VHN2WWZyLTlKQQ?oc=5",
+          "publisher": "driveteslacanada.ca",
+          "when": "2026-08-15",
+          "kind": "news",
+          "quote": "$60 Billion Acquisition"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcFUzNXQ3V0xTWHZKVmNmV09WUGYtYlViWURJd3Y5bE4zWXVYNnREbWhERW9uYXBIWnV0SzF6a1A4MnNtTGpzNFhsRENWUnZRWllsSzN5ZmUxRHFVbXpscThyemRfbFJoQ2hQOGl5VTBOT25qb2d4bHdaR2lYbVhqdHFuQldCUk4za3FDbWdnY0FzenJuNElsamhyRQ?oc=5",
+          "publisher": "SatellitePro ME",
+          "when": "2026-08-15",
+          "kind": "news",
+          "quote": "$60bn acquisition"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOV3NZci1HWTNwVU44LVk1aWxpa0FwSDlPdG1JdnBIWVJCbTNScVZiRXpWV1VxbW9uMjg2ZVhZdG1uaWpNbGhWeHU0aG01a1pPQ09oa2MtckphMzJROEZ0bEJreGhER1h2R0dSY0RyaDNHM3dyZXp2YWtmSEhKY3R5b1NpeEhHVDlzN0tuZVZPNkNlSnd2bW5GY3R4RUtNdFp3U0x3Ukk4UQ?oc=5",
+          "publisher": "The American Bazaar",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "$60 billion acquisition"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMGkwRG1hNTJmVkJ6TGlKZHhQQmNXQlAwaURJRXk0MEpnbjFNLXYyamstcVp1Qnc3NkJUTWVCOGxzV1JmVFVSZ2hzTmFJdjBDMmJWcW9Fc1pCejdfOXF3TVRVczNUNWF4OEhlWGttUzBjU05EcVBESVY5SUxsYzhfRFpqcEliWGpGd0FldmtzUWtkbDdPS0x2aFZ6TEwxbi0wUHpKTk1Cblk4b2daX1ZOUWlYZjZoS3VzVTIzTlA0a0dBaUFadHo2Zw?oc=5",
+          "publisher": "Seeking Alpha",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "$60B acquisition"
         }
       ]
     },
@@ -144,6 +226,7 @@
         "as_of": "2026-04-18",
         "source": "The Next Web, Apr 18 2026, reporting $2B ARR"
       },
+      "already_declined": null,
       "reports": [
         {
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVy1jZUJ6d19vQ29LYmVoelg4N3JycXd0dG05aFIxUjFVZF9ZclRqTzRVbTd3ZE9ZdTRwWS1YUm45R2RzM0x4cndTdUc2bWZEWnpxbDZXR0I3UTlybWZLNktLa1JBY1I2aGlsRG9nUDRyaFZtLUFoLXBZVmpka2s2TXBjblFPcEF3NXJ6NnBTTTBJTFdsVVRGZw?oc=5",

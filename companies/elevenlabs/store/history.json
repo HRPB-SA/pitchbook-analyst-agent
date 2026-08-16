@@ -1,3 +1,23 @@
 {
-  "superseded": []
+  "superseded": [
+    {
+      "date": "2026-08-16",
+      "field": "financing.raised_to_date_bn",
+      "old": {
+        "value": 0.85,
+        "as_of": "2026-02-04",
+        "source": "PitchBook Raised to Date, deal 319110-94T",
+        "tier": "T2",
+        "decay": "STABLE"
+      },
+      "new": {
+        "value": 0.8504,
+        "as_of": "2026-07-03",
+        "tier": "T2",
+        "decay": "STABLE",
+        "source": "PitchBook company profile 509315-23, Total Raised $850.436M"
+      },
+      "why": "newer as_of (2026-07-03 > 2026-02-04) at tier T2 vs T2"
+    }
+  ]
 }

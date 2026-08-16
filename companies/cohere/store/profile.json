@@ -7,9 +7,23 @@
       "source": "canonical refresh, July 16, 2026",
       "tier": "T2",
       "decay": "PERMANENT"
+    },
+    "employees": {
+      "value": 650,
+      "as_of": "2026-07-29",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook company profile 443089-09"
+    },
+    "hq": {
+      "value": "Toronto, Canada (7 other offices)",
+      "as_of": "2026-08-10",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook company profile 443089-09"
     }
   },
-  "_updated": "2026-08-14",
+  "_updated": "2026-08-16",
   "valuation": {
     "valuation_ladder_bn": [
       {
@@ -52,7 +66,19 @@
         "decay": "STABLE",
         "note": "7th Round; deal size $700M"
       }
-    ]
+    ],
+    "rumored_post_money_bn": {
+      "value": 20.0,
+      "as_of": "2026-04-24",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "flags": [
+        "do-not-adopt",
+        "est."
+      ],
+      "source": "PitchBook deal 328836-88T (Later Stage VC / Series E, status Announced/In Progress)",
+      "note": "$600M reportedly being raised from Schwarz Group and undisclosed others, pre-money estimated $19.4B. PitchBook marks both the status as in-progress and the valuation as Estimated, so two separate reasons not to adopt it."
+    }
   },
   "financing": {
     "last_completed_deal": {
@@ -64,8 +90,8 @@
     },
     "raised_to_date_bn": {
       "value": 1.64,
-      "as_of": "2025-09-24",
-      "source": "PitchBook Raised to Date, deal 297333-55T",
+      "as_of": "2026-04-24",
+      "source": "PitchBook company profile 443089-09, Total Raised $1,640.0M",
       "tier": "T2",
       "decay": "STABLE"
     },
@@ -77,5 +103,41 @@
       "decay": "STABLE",
       "note": "12 tracked deals."
     }
+  },
+  "financials": {
+    "pb_revenue_ttm_bn": {
+      "value": 0.2649,
+      "as_of": "2026-12-31",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook Revenue field, fiscal period TTM 4Q2026",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "note": "House ruling R3: a forward-window projection, not a run-rate. Cohere has no dated company revenue print on file, which is the binding gap in its coverage."
+    }
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "Series E at an implied $20B: completes (adopt and re-mark, a 2.9x step-up) or lapses",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T2",
+        "source": "PitchBook deal 328836-88T, financing note dated 2026-05-07",
+        "note": "Announced 2026-04-24 and still unsettled at the 2026-08-10 profile update. The longer it stays open the more the terms are worth checking."
+      },
+      {
+        "value": {
+          "condition": "First dated company revenue print: nothing on file, so no multiple can be computed",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T2",
+        "source": "desk"
+      }
+    ]
   }
 }

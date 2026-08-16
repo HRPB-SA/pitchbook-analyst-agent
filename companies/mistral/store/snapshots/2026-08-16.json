@@ -1,0 +1,79 @@
+{
+  "_provenance": "Raised by engine/watch.py on 2026-08-16: Yahoo Finance carried a $23bn valuation against a stored $13.664B. Checked against PitchBook profile 527294-17 (retrieved 2026-08-16). The figure is the rumoured EUR3B round at a EUR20B post, still 'in talks' at PitchBook's 2026-08-11 update; Last Known Valuation is unchanged at $13.664B. The store already carried this as prose. Recorded as a number so the desk's refusal can be matched against the story each time it runs, instead of the same rumour being raised as a fresh question.",
+  "valuation": {
+    "rumored_post_money_bn": {
+      "value": 23.0,
+      "as_of": "2026-06-12",
+      "tier": "T3",
+      "decay": "VOLATILE",
+      "flags": [
+        "do-not-adopt",
+        "est."
+      ],
+      "source": "PitchBook deal 335364-85T (Later Stage VC, status Rumor/Speculation)",
+      "note": "In talks for roughly EUR3B at a EUR20B post-money, about $23B at the rate implied by PitchBook's own $3.483B deal-size conversion. Ruling R2: a rumoured round is a forward signal only."
+    }
+  },
+  "financing": {
+    "raised_to_date_bn": {
+      "value": 4.0102,
+      "as_of": "2026-03-30",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook company profile 527294-17, Total Raised $4,010.235M"
+    }
+  },
+  "financials": {
+    "pb_revenue_ttm_bn": {
+      "value": 1.1665,
+      "as_of": "2026-12-31",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook Revenue field, fiscal period TTM 4Q2026",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "note": "House ruling R3: a forward-window projection, not a run-rate."
+    }
+  },
+  "identity": {
+    "employees": {
+      "value": 1000,
+      "as_of": "2026-05-19",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook company profile 527294-17"
+    },
+    "hq": {
+      "value": "Paris, France",
+      "as_of": "2026-08-11",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook company profile 527294-17"
+    }
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "EUR3B round at a EUR20B post: completes (adopt, a 1.7x step-up) or lapses",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T3",
+        "source": "PitchBook deal 335364-85T"
+      },
+      {
+        "value": {
+          "condition": "Reported Apple acquisition interest (2025-07-13): advances beyond Upcoming status or is retired",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T3",
+        "source": "PitchBook deal 301053-43T",
+        "note": "Thirteen months at Upcoming with no terms. Age is itself evidence about how firm it was."
+      }
+    ]
+  },
+  "_snapshot_date": "2026-08-16"
+}

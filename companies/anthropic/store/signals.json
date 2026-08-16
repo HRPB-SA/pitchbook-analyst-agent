@@ -1,6 +1,6 @@
 {
   "slug": "anthropic",
-  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "scanned_at": "2026-08-16T23:50:17+00:00",
   "window_days": 120,
   "documents": 175,
   "signals": [
@@ -9,7 +9,7 @@
       "label": "valuation",
       "unit": "$B",
       "claimed": 2000.0,
-      "verdict": "disagrees",
+      "verdict": "declined",
       "gap_pct": 107.3,
       "held": {
         "value": 965.0,
@@ -18,18 +18,27 @@
         "source": "Series H $65B (Dragoneer/Sequoia/Greenoaks/Altimeter), confirmed on PitchBook Jul 16",
         "path": "valuation.post_money_bn"
       },
-      "n_reports": 5,
-      "n_publishers": 5,
+      "n_reports": 4,
+      "n_publishers": 4,
       "publishers": [
         "Benzinga",
         "Fortune",
         "New York Post",
-        "PYMNTS.com",
-        "Seeking Alpha"
+        "PYMNTS.com"
       ],
       "first_reported": "2026-08-13",
       "last_reported": "2026-08-14",
       "already_held_as": null,
+      "already_declined": {
+        "path": "valuation.rumored_post_money_bn",
+        "value": 2000.0,
+        "as_of": "2026-08-13",
+        "note": "A listing expectation, not a transaction. Ruling R2: it never anchors. Worth watching because it is roughly twice the last completed mark, and the gap between the two is the market's estimate of what the IPO adds.",
+        "flags": [
+          "do-not-adopt",
+          "est."
+        ]
+      },
       "reports": [
         {
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObXZWcjRWclgycUlCeVpPY0xBVUdwMW5tZldBYjJjTkdGZ2YxYkNlMkF3eFpwNHhXYUJRTlFLeHIwUGw4RkpoRVl1dmsxRnFfaHZCc0FlMTZqQnl5dlJIU1ozZHBPcUVzbkozUzBuUU9YcnlCYU11WW1DQkxrZTI4bldBQnI?oc=5",
@@ -44,13 +53,6 @@
           "when": "2026-08-13",
           "kind": "news",
           "quote": "$2 trillion valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcVRfTGpnaWJ3dkxuV2pYTU1DOWpxQnJvSkRpWENyZWs0ZlN0RjdSdjlDQy13SGJjTHdkY3c3NlU4TGZjTHlJZk5rdHdGU01UUXRRYklLQ3pFY242NmZaajdKMWpUTFlnbi1DdnUxRHBLcTQ0a24zZDlFNjRyc1RsaUE5aUZReXlKUjdVNFlCR0JSREMtVzQ2TDVaWHRac0hnYW03Ukx3?oc=5",
-          "publisher": "Seeking Alpha",
-          "when": "2026-08-13",
-          "kind": "news",
-          "quote": "$2T valuation"
         },
         {
           "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQZDUwWTZuN3V0NlY5NlV5NGtCdTVraFJMSUY5a0wtRS1ZR0owQVJOLWJvcTI1a2Y2Y01zdDltcExqcjdyRUF1UUdid3ZxN3AtcWhFeG5lZHdhY2g5OXUtTWpid0VuRXkyX1poUXh1dGttRjVlTGVlOUhlbUJTYUMyaW80MkdzOTVJQllvMWZ5NHlsWTZfQ3NuQS1CTmFwMWR6cm56VTZxY0gxaEp0LS15dUt1QjRMODl3M3RwdjRJTkZ3cGdydW1IUlZoOXJUWVY0M0JzM0hDam5VZkNzLWw1Rnl3U3RCa2J3YnFDQW5kVnpQUGdFYTRzTDJhTlpNUU5CWll4Nlh1NXlQcU5oTHMweEx3bUtVNDFDX1pZNmdvdjlRenhCTTNVZzFn?oc=5",
@@ -73,7 +75,7 @@
       "label": "valuation",
       "unit": "$B",
       "claimed": 1500.0,
-      "verdict": "disagrees",
+      "verdict": "declined",
       "gap_pct": 55.4,
       "held": {
         "value": 965.0,
@@ -90,6 +92,16 @@
       "first_reported": "2026-08-14",
       "last_reported": "2026-08-14",
       "already_held_as": null,
+      "already_declined": {
+        "path": "valuation.reported_ipo_expectation_bn",
+        "value": 1500.0,
+        "as_of": "2026-08-14",
+        "note": "Ruling R2: a listing expectation never anchors.",
+        "flags": [
+          "do-not-adopt",
+          "est."
+        ]
+      },
       "reports": [
         {
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNHJGR3E3M2ZGcEdReHI2emUzRWFSU0xiQTRFLVhacTJpcm5GVlBEaXFVZmNZNTJYWGRBZTF0OHVPMm4yQ21sNnBCSUoyMzZqbEdDUXhzZEo4MW8zZDZ5WmhQdzJpM1hKM3V6ei1qMndNU3pFdjFoUzJnVV9WekM4VFB3WV9hRDJVa1gzd3ZtSUdhZmNlUnVB?oc=5",
@@ -97,171 +109,10 @@
           "when": "2026-08-14",
           "kind": "news",
           "quote": "$1.5 trillion valuation"
-        }
-      ]
-    },
-    {
-      "concept": "valuation_bn",
-      "label": "valuation",
-      "unit": "$B",
-      "claimed": 6.0,
-      "verdict": "disagrees",
-      "gap_pct": -99.4,
-      "held": {
-        "value": 965.0,
-        "as_of": "2026-05-28",
-        "tier": "T2",
-        "source": "Series H $65B (Dragoneer/Sequoia/Greenoaks/Altimeter), confirmed on PitchBook Jul 16",
-        "path": "valuation.post_money_bn"
-      },
-      "n_reports": 1,
-      "n_publishers": 1,
-      "publishers": [
-        "The Times of Israel"
-      ],
-      "first_reported": "2026-08-13",
-      "last_reported": "2026-08-13",
-      "already_held_as": null,
-      "reports": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTzdxZ0xkVmVsbTdrc01Dei1wVzJWNUZadzM5Q21VRVFGMDRTTjcxZVU3UXBIdDltUHhIYVpBcWk3SzhLdENKelo4R2xNclVUX3BqbC1fQWNPMFBsdmNlZXI2a0txQUZCWjRkWlROZGNSUkVpQll5M2ZUdXVOYU5XZ0VFWGRzdzVFN2o2dnJVbGdIbTY5MnktVks0V2lnLV9ZRHFBa01NRE9hRnpjV0NV0gG0AUFVX3lxTFB2VjB1SU9weTdCTmg2YXFIOEJ0cThzWk9QZXV6RVY4Tjk5dU1vLVgzM3dPV3Fia0RaVG9tUDdrblh6LUlZbVEyNlRHMmdSN21pWXk2QzFZclBISmliRGh1RW5EZW9LeU9lR1hFUU1jUmQ3THhMNGx6czYzRWVKU0E5dHdobU1EcHJDbENHdXhSWFRyU3FmZV8xNDBmTHQ0VlRBZmZ0NzViUVhUWl9YME8zbm11RA?oc=5",
-          "publisher": "The Times of Israel",
-          "when": "2026-08-13",
-          "kind": "news",
-          "quote": "$6B valuation"
         }
       ]
     }
   ],
-  "open": 3,
-  "needs_attention": [
-    {
-      "concept": "valuation_bn",
-      "label": "valuation",
-      "unit": "$B",
-      "claimed": 2000.0,
-      "verdict": "disagrees",
-      "gap_pct": 107.3,
-      "held": {
-        "value": 965.0,
-        "as_of": "2026-05-28",
-        "tier": "T2",
-        "source": "Series H $65B (Dragoneer/Sequoia/Greenoaks/Altimeter), confirmed on PitchBook Jul 16",
-        "path": "valuation.post_money_bn"
-      },
-      "n_reports": 5,
-      "n_publishers": 5,
-      "publishers": [
-        "Benzinga",
-        "Fortune",
-        "New York Post",
-        "PYMNTS.com",
-        "Seeking Alpha"
-      ],
-      "first_reported": "2026-08-13",
-      "last_reported": "2026-08-14",
-      "already_held_as": null,
-      "reports": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObXZWcjRWclgycUlCeVpPY0xBVUdwMW5tZldBYjJjTkdGZ2YxYkNlMkF3eFpwNHhXYUJRTlFLeHIwUGw4RkpoRVl1dmsxRnFfaHZCc0FlMTZqQnl5dlJIU1ozZHBPcUVzbkozUzBuUU9YcnlCYU11WW1DQkxrZTI4bldBQnI?oc=5",
-          "publisher": "Fortune",
-          "when": "2026-08-14",
-          "kind": "news",
-          "quote": "$2 trillion valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQMWpQOHk4dDNNRzBlVnVFU0d5aWlCNmY1aHlmR2hOVGk1bFlBQmg3UVp6TUFwRDFTVExsUDFNdlg5TFNzOGQ2TjI1SHhsVGxxb0dkamhjX2hjM1RJZThsMUtfVXBxbDBpODdMWW5CcGpZYnFPaFpOQTZ1azNVTmFwa3E2MnM4SDBodWxuZmw3alhzQzhSQ2xDVjcxb091S2hpNlhGeVltMjhVV1I4MFNaY295RmlvWDZNVXU0Z0lNSndpRy1m?oc=5",
-          "publisher": "New York Post",
-          "when": "2026-08-13",
-          "kind": "news",
-          "quote": "$2 trillion valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcVRfTGpnaWJ3dkxuV2pYTU1DOWpxQnJvSkRpWENyZWs0ZlN0RjdSdjlDQy13SGJjTHdkY3c3NlU4TGZjTHlJZk5rdHdGU01UUXRRYklLQ3pFY242NmZaajdKMWpUTFlnbi1DdnUxRHBLcTQ0a24zZDlFNjRyc1RsaUE5aUZReXlKUjdVNFlCR0JSREMtVzQ2TDVaWHRac0hnYW03Ukx3?oc=5",
-          "publisher": "Seeking Alpha",
-          "when": "2026-08-13",
-          "kind": "news",
-          "quote": "$2T valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQZDUwWTZuN3V0NlY5NlV5NGtCdTVraFJMSUY5a0wtRS1ZR0owQVJOLWJvcTI1a2Y2Y01zdDltcExqcjdyRUF1UUdid3ZxN3AtcWhFeG5lZHdhY2g5OXUtTWpid0VuRXkyX1poUXh1dGttRjVlTGVlOUhlbUJTYUMyaW80MkdzOTVJQllvMWZ5NHlsWTZfQ3NuQS1CTmFwMWR6cm56VTZxY0gxaEp0LS15dUt1QjRMODl3M3RwdjRJTkZ3cGdydW1IUlZoOXJUWVY0M0JzM0hDam5VZkNzLWw1Rnl3U3RCa2J3YnFDQW5kVnpQUGdFYTRzTDJhTlpNUU5CWll4Nlh1NXlQcU5oTHMweEx3bUtVNDFDX1pZNmdvdjlRenhCTTNVZzFn?oc=5",
-          "publisher": "Benzinga",
-          "when": "2026-08-13",
-          "kind": "news",
-          "quote": "$2 Trillion Valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOczF0TkV3bWxTOEVNVTRPWmZSRUc2eGwxbVdUaTJPZ3lyNmYtdFhleTEzZzFfemdkM3lLQ0dyeGdiQ0UwdXJocm95ZGxxQVNzNXBVV1FYWDM4Y0pfQ2dkQ3BLLXFpbk5wSXFJV2dQVmZzNlYzNHdxVUh3UGJvVkJrSHJERlNpazFuemptdU9rZlhMNU5sMFlmdDl0QVhBSDdTVjBFVWI2UE5iRHJYcXY3WWZRaw?oc=5",
-          "publisher": "PYMNTS.com",
-          "when": "2026-08-13",
-          "kind": "news",
-          "quote": "$2 Trillion Valuation"
-        }
-      ]
-    },
-    {
-      "concept": "valuation_bn",
-      "label": "valuation",
-      "unit": "$B",
-      "claimed": 1500.0,
-      "verdict": "disagrees",
-      "gap_pct": 55.4,
-      "held": {
-        "value": 965.0,
-        "as_of": "2026-05-28",
-        "tier": "T2",
-        "source": "Series H $65B (Dragoneer/Sequoia/Greenoaks/Altimeter), confirmed on PitchBook Jul 16",
-        "path": "valuation.post_money_bn"
-      },
-      "n_reports": 1,
-      "n_publishers": 1,
-      "publishers": [
-        "Business Insider"
-      ],
-      "first_reported": "2026-08-14",
-      "last_reported": "2026-08-14",
-      "already_held_as": null,
-      "reports": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNHJGR3E3M2ZGcEdReHI2emUzRWFSU0xiQTRFLVhacTJpcm5GVlBEaXFVZmNZNTJYWGRBZTF0OHVPMm4yQ21sNnBCSUoyMzZqbEdDUXhzZEo4MW8zZDZ5WmhQdzJpM1hKM3V6ei1qMndNU3pFdjFoUzJnVV9WekM4VFB3WV9hRDJVa1gzd3ZtSUdhZmNlUnVB?oc=5",
-          "publisher": "Business Insider",
-          "when": "2026-08-14",
-          "kind": "news",
-          "quote": "$1.5 trillion valuation"
-        }
-      ]
-    },
-    {
-      "concept": "valuation_bn",
-      "label": "valuation",
-      "unit": "$B",
-      "claimed": 6.0,
-      "verdict": "disagrees",
-      "gap_pct": -99.4,
-      "held": {
-        "value": 965.0,
-        "as_of": "2026-05-28",
-        "tier": "T2",
-        "source": "Series H $65B (Dragoneer/Sequoia/Greenoaks/Altimeter), confirmed on PitchBook Jul 16",
-        "path": "valuation.post_money_bn"
-      },
-      "n_reports": 1,
-      "n_publishers": 1,
-      "publishers": [
-        "The Times of Israel"
-      ],
-      "first_reported": "2026-08-13",
-      "last_reported": "2026-08-13",
-      "already_held_as": null,
-      "reports": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTzdxZ0xkVmVsbTdrc01Dei1wVzJWNUZadzM5Q21VRVFGMDRTTjcxZVU3UXBIdDltUHhIYVpBcWk3SzhLdENKelo4R2xNclVUX3BqbC1fQWNPMFBsdmNlZXI2a0txQUZCWjRkWlROZGNSUkVpQll5M2ZUdXVOYU5XZ0VFWGRzdzVFN2o2dnJVbGdIbTY5MnktVks0V2lnLV9ZRHFBa01NRE9hRnpjV0NV0gG0AUFVX3lxTFB2VjB1SU9weTdCTmg2YXFIOEJ0cThzWk9QZXV6RVY4Tjk5dU1vLVgzM3dPV3Fia0RaVG9tUDdrblh6LUlZbVEyNlRHMmdSN21pWXk2QzFZclBISmliRGh1RW5EZW9LeU9lR1hFUU1jUmQ3THhMNGx6czYzRWVKU0E5dHdobU1EcHJDbENHdXhSWFRyU3FmZV8xNDBmTHQ0VlRBZmZ0NzViUVhUWl9YME8zbm11RA?oc=5",
-          "publisher": "The Times of Israel",
-          "when": "2026-08-13",
-          "kind": "news",
-          "quote": "$6B valuation"
-        }
-      ]
-    }
-  ]
+  "open": 0,
+  "needs_attention": []
 }

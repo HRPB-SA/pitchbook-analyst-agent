@@ -1,0 +1,225 @@
+{
+  "slug": "anthropic",
+  "computed": "2026-08-16",
+  "ladders": {},
+  "derived": {
+    "ev_multiple": {
+      "value": 20.5,
+      "basis": "$965B / $47B run-rate (as of 2026-05-15)",
+      "label": "Derived"
+    },
+    "capital_efficiency": {
+      "value": 0.38,
+      "basis": "$47B run-rate / $124.3B EQUITY-ONLY (Ruling 1)",
+      "label": "Derived"
+    },
+    "usd_per_aibq_pt_bn": {
+      "value": 117.7,
+      "basis": "$965B / 8.2 AIBQ",
+      "label": "Derived"
+    }
+  },
+  "snapshot_delta": {
+    "from": "2026-08-16.1.json",
+    "to": "2026-08-16.json",
+    "changes": [
+      {
+        "field": "identity.employees",
+        "from": null,
+        "to": 5000
+      },
+      {
+        "field": "identity.status",
+        "from": null,
+        "to": "Anthropic PBC, a public benefit corporation. In IPO registration since 2026-06-01"
+      },
+      {
+        "field": "valuation.rumored_post_money_bn",
+        "from": null,
+        "to": 2000.0
+      },
+      {
+        "field": "financing.debt_raised_bn",
+        "from": null,
+        "to": 34.5
+      },
+      {
+        "field": "financing.raised_to_date_bn",
+        "from": null,
+        "to": 161.254
+      },
+      {
+        "field": "financing.rumored_round",
+        "from": null,
+        "to": "Reportedly seeking venture funding from Advanced Micro Devices as of 2026-07-22; no size or valuation disclosed"
+      },
+      {
+        "field": "financials.pb_revenue_ttm_bn",
+        "from": null,
+        "to": 71.0
+      },
+      {
+        "field": "ipo_status.expected_date",
+        "from": null,
+        "to": "October 2026"
+      },
+      {
+        "field": "ipo_status.status",
+        "from": null,
+        "to": "In IPO registration. Confidentially filed 2026-06-01; expected listing October 2026"
+      },
+      {
+        "field": "triggers.named",
+        "from": "0 item(s)",
+        "to": "+3 new: [{'condition': 'Anthropic S-1 becomes public (expected around an October 2026 listing): th"
+      }
+    ]
+  },
+  "staleness": {
+    "stale": [
+      {
+        "field": "identity.employees",
+        "as_of": "2026-04-21",
+        "age_days": 117,
+        "value": 5000,
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "valuation.post_money_bn",
+        "as_of": "2026-05-28",
+        "age_days": 80,
+        "value": 965,
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "financing.rumored_round",
+        "as_of": "2026-07-22",
+        "age_days": 25,
+        "value": "Reportedly seeking venture funding from Advanced Micro Devices as of 2026-07-22; no size or valuation disclosed",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "headcount.employees_ladder[0]",
+        "as_of": "2026-04-21",
+        "age_days": 117,
+        "value": 5000,
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "ipo_status.s1_status",
+        "as_of": "2026-06-01",
+        "age_days": 76,
+        "value": "Confidential S-1 filed Jun 1, 2026",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "ipo_status.window",
+        "as_of": "2026-07-16",
+        "age_days": 31,
+        "value": "October 2026 expected (PitchBook financing note, refreshed Jul 6)",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "ipo_status.status",
+        "as_of": "2026-06-01",
+        "age_days": 76,
+        "value": "In IPO registration. Confidentially filed 2026-06-01; expected listing October 2026",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "ipo_status.expected_date",
+        "as_of": "2026-07-28",
+        "age_days": 19,
+        "value": "October 2026",
+        "decay": "VOLATILE"
+      }
+    ],
+    "flagged": [
+      {
+        "field": "financing.debt_raised_bn",
+        "flag": "DISPUTED",
+        "value": 37.0,
+        "as_of": "2026-07-02"
+      },
+      {
+        "field": "financials.run_rate_ladder_bn[0]",
+        "flag": "VERIFY",
+        "value": 47,
+        "as_of": "2026-05-15"
+      },
+      {
+        "field": "financials.first_operating_profit",
+        "flag": "VERIFY",
+        "value": "~$559M expected Q2 2026",
+        "as_of": "2026-05-28"
+      }
+    ]
+  },
+  "open_conflicts": [
+    {
+      "opened": "2026-08-16",
+      "field": "financing.debt_raised_bn",
+      "held": {
+        "value": 37.0,
+        "as_of": "2026-07-02",
+        "source": "PB 334763-02T ($34.5B tranched chip bonds) + 295197-04T ($2.5B revolver)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "flags": [
+          "DISPUTED"
+        ]
+      },
+      "challenger": {
+        "value": 34.5,
+        "as_of": "2026-06-09",
+        "tier": "T2",
+        "decay": "STABLE",
+        "source": "PitchBook deal 334763-02T (Debt - General)",
+        "note": "Raised to buy Alphabet-developed chips. Debt informs risk and never enters capital efficiency. At this size it is the single largest thing on the balance sheet that a valuation multiple does not see."
+      },
+      "rule": "freeze-on-conflict: challenger not (newer AND >= tier); surfaced, not chosen"
+    }
+  ],
+  "triggers": [
+    {
+      "trigger": {
+        "condition": "Anthropic S-1 public filing / October 2026 pricing vs OpenAI sequencing",
+        "status": "armed"
+      },
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026"
+    },
+    {
+      "trigger": {
+        "condition": "Run-rate refresh: $47B gross is May vintage, past quarterly decay; SEC gross-to-net restatement exposure 20-40%",
+        "status": "armed"
+      },
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026"
+    },
+    {
+      "trigger": {
+        "condition": "Anthropic S-1 becomes public (expected around an October 2026 listing): the first audited numbers; supersedes every T2 and T3 figure on this page",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "PitchBook deal 325962-01T + financing status note 2026-07-28"
+    },
+    {
+      "trigger": {
+        "condition": "Reported AMD funding (2026-07-22): terms disclosed and completed, or retired",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "PitchBook financing status note dated 2026-07-28"
+    },
+    {
+      "trigger": {
+        "condition": "IPO prices at or near the reported $2T expectation, roughly twice the $965B last mark, or prices below it",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "desk, on press reports of a $2T listing valuation"
+    }
+  ]
+}

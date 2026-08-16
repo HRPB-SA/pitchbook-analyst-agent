@@ -1,0 +1,22 @@
+{
+  "slug": "xai-spacex",
+  "workbook": "xai-spacex_model_2026-08-16.xlsx",
+  "built": "2026-08-16",
+  "anchors": {
+    "valuation_bn": {
+      "value": 1250,
+      "as_of": "2026-07-16",
+      "path": "valuation.post_money_bn"
+    },
+    "run_rate_bn": {
+      "value": 3.2,
+      "as_of": "2025-12-31",
+      "path": "financials.run_rate_ladder_bn"
+    },
+    "equity_raised_bn": {
+      "value": 47.16,
+      "as_of": "2026-02-02",
+      "path": "financing.equity_raised_bn"
+    }
+  }
+}

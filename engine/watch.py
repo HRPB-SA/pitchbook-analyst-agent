@@ -45,10 +45,18 @@ _MONEY = r"(?:US)?\$\s?([\d,]+(?:\.\d+)?)\s?(trillion|billion|million|bn|mn|[tbm
 CLAIMS = [
     {"concept": "valuation_bn", "label": "valuation", "unit": "$B",
      "patterns": [
-         rf"valu\w*\s+(?:at|of|to)\s+(?:about\s+|around\s+|nearly\s+|over\s+)?{_MONEY}",
+         # "valued at $190B", and also "value the company at $2 trillion",
+         # where a short object sits between the verb and the price
+         rf"valu\w*\s+(?:\w+\s+){{0,3}}?(?:at|of|to)\s+"
+         rf"(?:about\s+|around\s+|nearly\s+|over\s+)?{_MONEY}",
          rf"{_MONEY}\s+(?:post-money\s+)?valuation",
          rf"valuation\s+(?:of|at|to|reaches?|tops?|hits?)\s+(?:about\s+|around\s+)?{_MONEY}",
          rf"at\s+a\s+{_MONEY}\s+(?:post-money|pre-money|valuation)",
+         # a price paid for the whole company is a valuation of it; the buyer
+         # guard keeps the acquirer's own page clear of the target's price
+         rf"{_MONEY}\s+(?:all-stock\s+|all-cash\s+)?"
+         rf"(?:acquisition|takeover|buyout)",
+         rf"(?:acquir\w+|buy\w*|purchas\w+)\s+(?:\w+\s+){{0,4}}?for\s+{_MONEY}",
      ]},
     {"concept": "run_rate_bn", "label": "revenue run-rate", "unit": "$B",
      "patterns": [
@@ -68,6 +76,13 @@ _HEADCOUNT = re.compile(
     r"(?:headcount|employees|staff|workforce)\s*(?:of|is|at|:|to|now)?\s*"
     r"(?:about\s+|around\s+|over\s+|nearly\s+)?([\d,]{3,})"
     r"|([\d,]{3,})\s+(?:employees|staff members|full-time)", re.I)
+
+# "BBVA scaled ChatGPT Enterprise to 100,000 employees" is a customer story on
+# OpenAI's own feed. The number counts the people a product reached, not the
+# people who work there. Reach and staff are different measurements that
+# happen to be counted in the same unit.
+_REACH = re.compile(
+    r"\b(?:to|across|for|reaching|serving|covering|among)\s*$", re.I)
 
 
 def _to_bn(amount: str, scale: str) -> float | None:
@@ -109,6 +124,8 @@ def extract(text: str, aliases=None, require_near=False) -> list[dict]:
     def keep(m, concept, label, unit, value):
         if require_near and not _about_company(text, m.start(), m.end(), aliases):
             return
+        if concept == "valuation_bn" and _company_is_buyer(text, aliases, m.start()):
+            return
         out.append({"concept": concept, "label": label, "unit": unit,
                     "value": value, "quote": _tidy(m.group(0))})
 
@@ -128,6 +145,8 @@ def extract(text: str, aliases=None, require_near=False) -> list[dict]:
         # a bare four-digit number next to "workforce" is far more often a year
         if 1900 <= n <= 2100 and "," not in (raw or ""):
             continue
+        if m.group(2) and _REACH.search(text[max(0, m.start() - 24):m.start()]):
+            continue                       # rolled out to N employees
         if 50 <= n <= 5_000_000:
             keep(m, "employees", "headcount", "", n)
     # one reading per (concept, value) per document
@@ -138,6 +157,34 @@ def extract(text: str, aliases=None, require_near=False) -> list[dict]:
             seen.add(key)
             uniq.append(c)
     return uniq
+
+
+# When a company is the buyer, the valuation in the headline is the seller's.
+# "Anthropic in talks to buy Decart for $6 billion" is not a reading of
+# Anthropic. Six outlets carried that story and every one of them would have
+# been filed as a 99% collapse in Anthropic's value.
+_AS_BUYER = re.compile(
+    r"\b(?:to\s+)?(?:acquir\w+|buy|buys|buying|bought|purchase[sd]?|"
+    r"invest\w*\s+in|back\w*|take[sn]?\s+a\s+stake|eyes?|pursu\w+)\b", re.I)
+
+
+def _company_is_buyer(text: str, aliases, upto: int) -> bool:
+    """Whether the company is named as the acquirer ahead of this figure.
+
+    The window runs forward from the company's name through to the figure,
+    because the buying verb sits between the two and is often the first word
+    of the matched phrase itself.
+    """
+    low = (text or "").lower()
+    for a in (aliases or []):
+        if not a:
+            continue
+        for m in re.finditer(r"(?<!\w)" + re.escape(a.lower()) + r"(?!\w)", low):
+            if m.end() > upto:
+                break
+            if _AS_BUYER.search(low[m.end():min(upto + 40, m.end() + 90)]):
+                return True
+    return False
 
 
 def _tidy(s: str) -> str:
@@ -182,6 +229,32 @@ def _in_history(profile, concept, value):
             continue
         if abs((value - v) / abs(v)) < MATERIAL:
             return {"value": v, "as_of": f.get("as_of"), "source": f.get("source")}
+    return None
+
+
+def _declined(profile, value):
+    """Whether the desk has already seen this figure and refused it.
+
+    Three of the first four valuation disagreements this module raised were
+    rounds that had been announced but not closed, which house ruling R2 says
+    never anchor anything. The desk had already looked at each and written it
+    down as not-adopted. Reporting those as open questions would train a
+    reader to ignore the panel. Having decided is different from not knowing.
+    """
+    for cat, blk in profile.items():
+        if not isinstance(blk, dict):
+            continue
+        for field, v in blk.items():
+            for f in (v if isinstance(v, list) else [v]):
+                if not schema.is_fact(f) or not briefing.blocked(f):
+                    continue
+                fv = f.get("value")
+                if not isinstance(fv, (int, float)) or not fv:
+                    continue
+                if abs((value - fv) / abs(fv)) < MATERIAL:
+                    return {"path": f"{cat}.{field}", "value": fv,
+                            "as_of": f.get("as_of"), "note": f.get("note"),
+                            "flags": f.get("flags") or []}
     return None
 
 
@@ -287,6 +360,11 @@ def scan(slug: str, days: int = 120) -> dict:
         historic = _in_history(profile, concept, value)
         if historic and verdict in ("disagrees", "newer", "drifts", "unheld"):
             verdict = "history"
+        declined = (_declined(profile, value)
+                    if verdict in ("disagrees", "newer", "drifts", "unheld",
+                                   "context") else None)
+        if declined:
+            verdict = "declined"
         # A round size has nothing to compare against, so it is only news when
         # it is recent. Report it as context rather than a disagreement.
         if concept == "round_size_bn":
@@ -302,6 +380,7 @@ def scan(slug: str, days: int = 120) -> dict:
             "publishers": sorted(g["publishers"])[:8],
             "first_reported": g["first"], "last_reported": g["last"],
             "already_held_as": historic,
+            "already_declined": declined,
             "reports": g["reports"][:6],
         })
 
@@ -321,7 +400,7 @@ def scan(slug: str, days: int = 120) -> dict:
 
 
 _RANK = {"disagrees": 0, "newer": 1, "unheld": 2, "drifts": 3,
-         "context": 4, "history": 5, "confirms": 6}
+         "context": 4, "declined": 5, "history": 6, "confirms": 7}
 
 
 def _is_feed(record, feeds):
@@ -388,7 +467,7 @@ def render(result: dict) -> str:
     lines = [f"{result['slug']}: {result['documents']} documents, "
              f"{len(result['signals'])} figures found, {result['open']} open"]
     for s in result["signals"]:
-        if s["verdict"] in ("confirms", "history"):
+        if s["verdict"] in ("confirms", "history", "declined"):
             continue
         held = s["held"]
         held_txt = (f"held {held['value']:g} ({held['as_of']}, {held['tier']})"

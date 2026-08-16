@@ -1,15 +1,42 @@
 {
   "slug": "elevenlabs",
-  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "scanned_at": "2026-08-16T23:50:17+00:00",
   "window_days": 120,
   "documents": 94,
   "signals": [
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 0.5,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "ElevenLabs blog"
+      ],
+      "first_reported": "2026-08-16",
+      "last_reported": "2026-08-16",
+      "already_held_as": null,
+      "already_declined": null,
+      "reports": [
+        {
+          "url": "https://elevenlabs.io/blog",
+          "publisher": "ElevenLabs blog",
+          "when": "2026-08-16",
+          "kind": "blog",
+          "quote": "raises $500M"
+        }
+      ]
+    },
     {
       "concept": "valuation_bn",
       "label": "valuation",
       "unit": "$B",
       "claimed": 22.0,
-      "verdict": "disagrees",
+      "verdict": "declined",
       "gap_pct": 100.0,
       "held": {
         "value": 11.0,
@@ -18,27 +45,38 @@
         "source": "PitchBook deal 319110-94T (Later Stage VC)",
         "path": "valuation.valuation_ladder_bn"
       },
-      "n_reports": 7,
-      "n_publishers": 7,
+      "n_reports": 8,
+      "n_publishers": 8,
       "publishers": [
         "Bloomberg.com",
         "Briefs Finance",
-        "Dealroom",
         "GuruFocus",
+        "Investing.com",
         "Reuters",
         "Tech Funding News",
+        "Tech Times",
         "sifted.eu"
       ],
       "first_reported": "2026-07-02",
-      "last_reported": "2026-07-03",
+      "last_reported": "2026-07-05",
       "already_held_as": null,
+      "already_declined": {
+        "path": "valuation.rumored_post_money_bn",
+        "value": 22.0,
+        "as_of": "2026-07-03",
+        "note": "An undisclosed investor is in talks to sell a stake, implying a $22B post-money. Planned close September 2026. Ruling R2: an unclosed transaction is a forward signal, never the base case. A secondary sets a price between shareholders, not a price the company raised at.",
+        "flags": [
+          "do-not-adopt",
+          "est."
+        ]
+      },
       "reports": [
         {
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONlZGWk5RYm1fVXRBMWxpaUhRSW01Zll4V0E1XzN1SWRBUVNvZU5DSGpuSFE2bU5YbDJUMWJqRlJFRlQtY29SWkgtLS04ekxHREJvRG4zNnptaWVaY3lyNHB3WVZIZFUybTZqdmlVRVpON0thaWVGbU1FT3RQN2pQU0JBT04xXzhONTY1elptNlJtbzNrV3cya3E5cGFqNndQRzF1c2NsYjdLdVNpeGV3?oc=5",
-          "publisher": "Dealroom",
-          "when": "2026-07-03",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOXJ3SWttQWRkRjRWZ2RDN3dkN3g5MWJWdEstMmJUekNlQ2FMc05hdF91U3NpNy1NaEx2Wnp4eXJBcmpldnlvTXFHMDAwaEZJb282TnVTTFZiSEE0bXV3Nk1ZTUlHRnppMkdxYmo0MkJiRU1xVE9DZ29EV1dNbGMtVldZSmlaWXE4MlRWODV6bTViSWlERUJHQkItcURIMXRPMW0yUDZ6dGlrM3dESXdGQWo1aVpOZVFCNEZvMEowdGI4OVhlVjBmSTMtdmZmQQ?oc=5",
+          "publisher": "Tech Times",
+          "when": "2026-07-05",
           "kind": "news",
-          "quote": "$22B valuation"
+          "quote": "Valuation Doubles to $22 Billion"
         },
         {
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTU85azVnV1p4NUY0aXFLOG9JZzM4d01IQlU3cUdYUFltNndfWTVTOEVJZXl3YkhmWTFQWkNCa2I2eXFEajIwX3VIV2g2ZGppUjZ2RF9jcS1OaElpVDlncXJnV05pLW5fa0ZQbVdHeEZ5RWF6OWtYeHFvek9HM3V4TVNibFF3aFluejNQUDlmVVVTQ0hZMk1DOTBXdkNIR1RQMl8zRVIyZEdXNEswMW1meA?oc=5",
@@ -69,11 +107,11 @@
           "quote": "$22 Billion Valuation"
         },
         {
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeVUyVDBrTFBPUGFUZm5JaWxEZ014UDFRMkZ1UEVXM3lEUVhHbEV5elhtUXUtS1RLUGdnNmNSUVh3Ym5WYVBTVEcwaFc1MU9ubnJpX3BrNjF3WjZUbjBHbVFEWEU1N3dyajZPMFJLZEVjR28xYWFieldMUnZZeFNkSUdJaHZvOVZ0QnR2eGl5QlI5YW9UOURKa3pTOGZlZFQzVGJFRjBheElrUDdkT2FDdTVWV3VwNFVVSWIxUjB0UQ?oc=5",
-          "publisher": "Reuters",
-          "when": "2026-07-02",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOMURSXzljcEh3U205cS1RNjNXWVc5NDdHMVMyRTl0UW52ak5kYmxodlVUWVIweVU0QWJEVkxTTVNRSWpVaW91TXdhNnNpdVRpVkVyMEl0dS1fUW5qaDNlLUlzZHp6emV2UEE4SWc2YWxXSFl2WHE4WTV0Vnltbk1XakVONmx6TWNoNzc5cm9IWmVOaHNic0ZXWjREb01ZWlloaWlsNkZGa3lSQTFQdFNjVGNSLXJRM3FGVzZyWHpaa3NtVkM3R2tPNFBVNmE?oc=5",
+          "publisher": "Investing.com",
+          "when": "2026-07-03",
           "kind": "news",
-          "quote": "$22 billion valuation"
+          "quote": "valuing AI voice startup at $22 billion"
         }
       ]
     },
@@ -82,9 +120,15 @@
       "label": "revenue run-rate",
       "unit": "$B",
       "claimed": 0.5,
-      "verdict": "unheld",
+      "verdict": "confirms",
       "gap_pct": 0.0,
-      "held": null,
+      "held": {
+        "value": 0.5,
+        "as_of": "2026-08-16",
+        "tier": "T2",
+        "source": "ElevenLabs blog, Aug 16 2026, reporting $500M ARR",
+        "path": "financials.run_rate_ladder_bn"
+      },
       "n_reports": 6,
       "n_publishers": 6,
       "publishers": [
@@ -97,7 +141,12 @@
       ],
       "first_reported": "2026-05-05",
       "last_reported": "2026-08-16",
-      "already_held_as": null,
+      "already_held_as": {
+        "value": 0.5,
+        "as_of": "2026-08-16",
+        "source": "ElevenLabs blog, Aug 16 2026, reporting $500M ARR"
+      },
+      "already_declined": null,
       "reports": [
         {
           "url": "https://elevenlabs.io/blog",
@@ -144,32 +193,6 @@
       ]
     },
     {
-      "concept": "round_size_bn",
-      "label": "round size",
-      "unit": "$B",
-      "claimed": 0.5,
-      "verdict": "context",
-      "gap_pct": 0.0,
-      "held": null,
-      "n_reports": 1,
-      "n_publishers": 1,
-      "publishers": [
-        "ElevenLabs blog"
-      ],
-      "first_reported": "2026-08-16",
-      "last_reported": "2026-08-16",
-      "already_held_as": null,
-      "reports": [
-        {
-          "url": "https://elevenlabs.io/blog",
-          "publisher": "ElevenLabs blog",
-          "when": "2026-08-16",
-          "kind": "blog",
-          "quote": "raises $500M"
-        }
-      ]
-    },
-    {
       "concept": "valuation_bn",
       "label": "valuation",
       "unit": "$B",
@@ -195,6 +218,7 @@
         "as_of": "2026-02-04",
         "source": "PitchBook deal 319110-94T (Later Stage VC)"
       },
+      "already_declined": null,
       "reports": [
         {
           "url": "https://elevenlabs.io/blog",
@@ -206,80 +230,6 @@
       ]
     }
   ],
-  "open": 2,
-  "needs_attention": [
-    {
-      "concept": "valuation_bn",
-      "label": "valuation",
-      "unit": "$B",
-      "claimed": 22.0,
-      "verdict": "disagrees",
-      "gap_pct": 100.0,
-      "held": {
-        "value": 11.0,
-        "as_of": "2026-02-04",
-        "tier": "T2",
-        "source": "PitchBook deal 319110-94T (Later Stage VC)",
-        "path": "valuation.valuation_ladder_bn"
-      },
-      "n_reports": 7,
-      "n_publishers": 7,
-      "publishers": [
-        "Bloomberg.com",
-        "Briefs Finance",
-        "Dealroom",
-        "GuruFocus",
-        "Reuters",
-        "Tech Funding News",
-        "sifted.eu"
-      ],
-      "first_reported": "2026-07-02",
-      "last_reported": "2026-07-03",
-      "already_held_as": null,
-      "reports": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONlZGWk5RYm1fVXRBMWxpaUhRSW01Zll4V0E1XzN1SWRBUVNvZU5DSGpuSFE2bU5YbDJUMWJqRlJFRlQtY29SWkgtLS04ekxHREJvRG4zNnptaWVaY3lyNHB3WVZIZFUybTZqdmlVRVpON0thaWVGbU1FT3RQN2pQU0JBT04xXzhONTY1elptNlJtbzNrV3cya3E5cGFqNndQRzF1c2NsYjdLdVNpeGV3?oc=5",
-          "publisher": "Dealroom",
-          "when": "2026-07-03",
-          "kind": "news",
-          "quote": "$22B valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTU85azVnV1p4NUY0aXFLOG9JZzM4d01IQlU3cUdYUFltNndfWTVTOEVJZXl3YkhmWTFQWkNCa2I2eXFEajIwX3VIV2g2ZGppUjZ2RF9jcS1OaElpVDlncXJnV05pLW5fa0ZQbVdHeEZ5RWF6OWtYeHFvek9HM3V4TVNibFF3aFluejNQUDlmVVVTQ0hZMk1DOTBXdkNIR1RQMl8zRVIyZEdXNEswMW1meA?oc=5",
-          "publisher": "Bloomberg.com",
-          "when": "2026-07-03",
-          "kind": "news",
-          "quote": "$22 Billion Valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQc0pTaVFrVHZMNGZmcHFDcUNsblplSGM4RXVxYkZrb0JBbS1zMjk4YU5HQW1qcm1Ua1FrNF9aalYwTUNRSGl4M3ZTTFpkRjdmdHFpOV9NZEJhUnYxd0h6aHhmWGtiQms5aG5NaXVlMC0tczdjZm9xTl9xNXBxdUNNMlB2ZUJjOW5ubHVFNnVwRE5QVGNRQzhqcGVn?oc=5",
-          "publisher": "sifted.eu",
-          "when": "2026-07-03",
-          "kind": "news",
-          "quote": "$22bn valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPal9rbXlFX0dZVHJJUUsxM0lHaFY4LXJWOUNORTBIRVJrQWFZOFhnQkYzY0ZMVTFEWFl5RlZYSFFVeVdrZU5wRU1oUjJiMnBCbzRwSjRpOTZkWkJsaFllQndxSlp5aUozdm12ZTZUOVdHMjQ4UmY1SHhLUUYzNDFRYmZhSTFVMDhWSmZYT3A1cTZnTGJZc2hrU2tUNm43WnJjUTlHVlNDd1RCUGIyZFVfQ1B6MkJoU2tiSVZSM0RRTGU1LWpKbXc?oc=5",
-          "publisher": "Tech Funding News",
-          "when": "2026-07-03",
-          "kind": "news",
-          "quote": "$22B valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPem9TblRNc0JNTllsSHRGR2tSbGpOVnlhV1Y5bW5PZnZsMk94OVZFNmphQXNRV3hBcm9DcmlaaE1ZTVJRR2hZTjVoY2ZFOWZyWF94Nnh2NWtDaEJuVTducjlfMWpPWjd2T1BTenducWgzZ09pZ3hlN3l3aGItQVplY2R2eFNOVmE3bHdWam5MeHlTamdDYzJQT0JaQzZ0QTg?oc=5",
-          "publisher": "GuruFocus",
-          "when": "2026-07-03",
-          "kind": "news",
-          "quote": "$22 Billion Valuation"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeVUyVDBrTFBPUGFUZm5JaWxEZ014UDFRMkZ1UEVXM3lEUVhHbEV5elhtUXUtS1RLUGdnNmNSUVh3Ym5WYVBTVEcwaFc1MU9ubnJpX3BrNjF3WjZUbjBHbVFEWEU1N3dyajZPMFJLZEVjR28xYWFieldMUnZZeFNkSUdJaHZvOVZ0QnR2eGl5QlI5YW9UOURKa3pTOGZlZFQzVGJFRjBheElrUDdkT2FDdTVWV3VwNFVVSWIxUjB0UQ?oc=5",
-          "publisher": "Reuters",
-          "when": "2026-07-02",
-          "kind": "news",
-          "quote": "$22 billion valuation"
-        }
-      ]
-    }
-  ]
+  "open": 0,
+  "needs_attention": []
 }

@@ -1,0 +1,75 @@
+{
+  "slug": "elevenlabs",
+  "computed": "2026-08-16",
+  "ladders": {},
+  "derived": {},
+  "snapshot_delta": {
+    "from": "2026-08-14.json",
+    "to": "2026-08-16.json",
+    "changes": [
+      {
+        "field": "identity.employees",
+        "from": null,
+        "to": 530
+      },
+      {
+        "field": "identity.hq",
+        "from": null,
+        "to": "New York, NY (7 other offices)"
+      },
+      {
+        "field": "valuation.rumored_post_money_bn",
+        "from": null,
+        "to": 22.0
+      },
+      {
+        "field": "financing.last_completed_deal",
+        "from": "Later Stage VC $500M (5th Round)",
+        "to": "$500M Series D at $11.0B post (2026-02-04), led by Andreessen Horowitz, Sequoia Capital and ICONIQ Growth"
+      },
+      {
+        "field": "financing.raised_to_date_bn",
+        "from": 0.85,
+        "to": 0.8504
+      },
+      {
+        "field": "financials.pb_revenue_ttm_bn",
+        "from": null,
+        "to": 0.6
+      },
+      {
+        "field": "financials.run_rate_ladder_bn",
+        "from": "0 item(s)",
+        "to": "+1 new: [0.5]"
+      },
+      {
+        "field": "triggers.named",
+        "from": "0 item(s)",
+        "to": "+1 new: [{'condition': 'Secondary sale at an implied $22B: closes by the stated September 2026 dat"
+      }
+    ]
+  },
+  "staleness": {
+    "stale": [
+      {
+        "field": "valuation.rumored_post_money_bn",
+        "as_of": "2026-07-03",
+        "age_days": 44,
+        "value": 22.0,
+        "decay": "VOLATILE"
+      }
+    ],
+    "flagged": []
+  },
+  "open_conflicts": [],
+  "triggers": [
+    {
+      "trigger": {
+        "condition": "Secondary sale at an implied $22B: closes by the stated September 2026 date (re-mark) or lapses (retire the signal)",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "PitchBook deal 337891-51T, financing note dated 2026-08-05"
+    }
+  ]
+}

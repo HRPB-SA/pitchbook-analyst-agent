@@ -9,7 +9,7 @@
       "decay": "PERMANENT"
     }
   },
-  "_updated": "2026-08-14",
+  "_updated": "2026-08-16",
   "valuation": {
     "valuation_ladder_bn": [
       {
@@ -72,8 +72,8 @@
     },
     "raised_to_date_bn": {
       "value": 15.903,
-      "as_of": "2025-06-12",
-      "source": "PitchBook Raised to Date, deal 297541-36T",
+      "as_of": "2026-07-31",
+      "source": "PitchBook profile 163154-17, Total Raised $15,902.859M",
       "tier": "T2",
       "decay": "STABLE"
     },
@@ -84,6 +84,89 @@
       "tier": "T2",
       "decay": "STABLE",
       "note": "9 tracked deals."
+    },
+    "secondary": {
+      "value": "Outlander VC, Kindling Capital, Justin Kan and 10 other investors sold their stakes to Meta Platforms and Golden Falcon Capital; date undisclosed",
+      "as_of": "2026-07-31",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook deal 314132-86T (Secondary Transaction - Private, Completed) and financing note dated 2026-07-31",
+      "note": "Completed, but with no disclosed date or price, so it sets no mark. It does move ownership further toward Meta."
     }
+  },
+  "financials": {
+    "pb_revenue_ttm_bn": {
+      "value": 2.0,
+      "as_of": "2026-12-31",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook Revenue field, fiscal period TTM 4Q2026",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "note": "House ruling R3: a forward-window projection, not a run-rate."
+    }
+  },
+  "headcount": {
+    "employees_ladder": [
+      {
+        "value": 1300,
+        "as_of": "2026-05-18",
+        "tier": "T2",
+        "decay": "QUARTERLY",
+        "source": "PitchBook profile 163154-17, Employees field"
+      }
+    ],
+    "site_band": {
+      "value": 1000,
+      "as_of": "2026-08-16",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "flags": [
+        "do-not-adopt",
+        "est."
+      ],
+      "source": "Scale AI newsroom page, employees band",
+      "note": "The company's own page shows a rounded band rather than a count. Recorded so the figure is on the record as considered, not adopted: a band cannot be compared with a dated count."
+    }
+  },
+  "leadership": {
+    "ceo": {
+      "value": "Francis deSouza (appointed CEO 2026-08; previously a Google Cloud executive)",
+      "as_of": "2026-08-16",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "Scale AI newsroom announcement, carried by five outlets 2026-08-13 to 2026-08-16",
+      "note": "Succeeds Jason Droege, who had been interim CEO and Chief Strategy Officer since Alexandr Wang's departure to Meta. PitchBook still showed the interim arrangement at its 2026-08-10 update. A permanent chief executive after a long interim period is a governance input, not just a personnel note."
+    },
+    "prior_ceo": {
+      "value": "Jason Droege, Interim CEO and Chief Strategy Officer",
+      "as_of": "2026-08-10",
+      "tier": "T2",
+      "decay": "PERMANENT",
+      "source": "PitchBook profile 163154-17, Primary Contact"
+    }
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "New CEO's first strategic move: Scale AI's revenue concentration shifted after Meta took a stake and its largest AI-lab customers began insourcing labelling",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T2",
+        "source": "desk, on the deSouza appointment"
+      },
+      {
+        "value": {
+          "condition": "First valuation mark since June 2025: the $29B is fourteen months old and predates both the Meta stake and the leadership change",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T2",
+        "source": "PitchBook Last Known Valuation dated 2025-06-12"
+      }
+    ]
   }
 }

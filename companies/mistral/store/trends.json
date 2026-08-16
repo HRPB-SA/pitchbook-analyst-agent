@@ -1,0 +1,94 @@
+{
+  "slug": "mistral",
+  "computed": "2026-08-16",
+  "ladders": {},
+  "derived": {},
+  "snapshot_delta": {
+    "from": "2026-08-14.json",
+    "to": "2026-08-16.json",
+    "changes": [
+      {
+        "field": "identity.employees",
+        "from": null,
+        "to": 1000
+      },
+      {
+        "field": "identity.hq",
+        "from": null,
+        "to": "Paris, France"
+      },
+      {
+        "field": "valuation.rumored_post_money_bn",
+        "from": null,
+        "to": 23.0
+      },
+      {
+        "field": "financing.raised_to_date_bn",
+        "from": 4.01,
+        "to": 4.0102
+      },
+      {
+        "field": "financials.pb_revenue_ttm_bn",
+        "from": null,
+        "to": 1.1665
+      },
+      {
+        "field": "triggers.named",
+        "from": "0 item(s)",
+        "to": "+2 new: [{'condition': 'EUR3B round at a EUR20B post: completes (adopt, a 1.7x step-up) or lapses'"
+      }
+    ]
+  },
+  "staleness": {
+    "stale": [
+      {
+        "field": "valuation.rumored_post_money_bn",
+        "as_of": "2026-06-12",
+        "age_days": 65,
+        "value": 23.0,
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "financing.rumored_round",
+        "as_of": "2026-06-12",
+        "age_days": 65,
+        "value": "In talks for ~EUR3B from Samsung Electronics and others at a EUR20B post-money, as of 2026-06-12",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "financing.ma_interest",
+        "as_of": "2025-07-13",
+        "age_days": 399,
+        "value": "Reported in talks to be acquired by Apple, announced 2025-07-13; deal status Upcoming, no terms",
+        "decay": "VOLATILE"
+      }
+    ],
+    "flagged": [
+      {
+        "field": "financing.ma_interest",
+        "flag": "VERIFY",
+        "value": "Reported in talks to be acquired by Apple, announced 2025-07-13; deal status Upcoming, no terms",
+        "as_of": "2025-07-13"
+      }
+    ]
+  },
+  "open_conflicts": [],
+  "triggers": [
+    {
+      "trigger": {
+        "condition": "EUR3B round at a EUR20B post: completes (adopt, a 1.7x step-up) or lapses",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "PitchBook deal 335364-85T"
+    },
+    {
+      "trigger": {
+        "condition": "Reported Apple acquisition interest (2025-07-13): advances beyond Upcoming status or is retired",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "PitchBook deal 301053-43T"
+    }
+  ]
+}

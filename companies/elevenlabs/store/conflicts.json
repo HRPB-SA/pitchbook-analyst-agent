@@ -1,4 +1,31 @@
 {
   "open": [],
-  "resolved": []
+  "resolved": [],
+  "closed": [
+    {
+      "opened": "2026-08-16",
+      "field": "financing.last_completed_deal",
+      "held": {
+        "value": "Later Stage VC $500M (5th Round)",
+        "as_of": "2026-02-04",
+        "source": "PitchBook deal 319110-94T",
+        "tier": "T2",
+        "decay": "STABLE",
+        "flags": [
+          "DISPUTED"
+        ]
+      },
+      "challenger": {
+        "value": "$500M Series D at $11.0B post (2026-02-04), led by Andreessen Horowitz, Sequoia Capital and ICONIQ Growth",
+        "as_of": "2026-02-04",
+        "tier": "T2",
+        "decay": "STABLE",
+        "source": "PitchBook deal 319110-94T",
+        "note": "Pre-money $10.5B. Salesforce Ventures and 44 others participated. Proceeds to research, product and expansion into India, Japan, Singapore, Brazil and Mexico."
+      },
+      "rule": "freeze-on-conflict: challenger not (newer AND >= tier); surfaced, not chosen",
+      "closed_on": "2026-08-16",
+      "why": "not a disagreement: the two values state the same figure"
+    }
+  ]
 }

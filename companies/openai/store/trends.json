@@ -1,0 +1,215 @@
+{
+  "slug": "openai",
+  "computed": "2026-08-16",
+  "ladders": {
+    "run_rate_ladder_bn": {
+      "points": 2,
+      "first": [
+        "2026-06-12",
+        25.0
+      ],
+      "last": [
+        "2026-08-13",
+        40.0
+      ],
+      "direction": "rising",
+      "steps": [
+        {
+          "from": "2026-06-12",
+          "to": "2026-08-13",
+          "delta": 15.0,
+          "pct": 60.0
+        }
+      ]
+    }
+  },
+  "derived": {
+    "ev_multiple": {
+      "value": 21.3,
+      "basis": "$852B / $40B run-rate (as of 2026-08-13)",
+      "label": "Derived"
+    },
+    "capital_efficiency": {
+      "value": 0.22,
+      "basis": "$40B run-rate / $181.2B EQUITY-ONLY (Ruling 1)",
+      "label": "Derived"
+    },
+    "usd_per_aibq_pt_bn": {
+      "value": 188.1,
+      "basis": "$852B / 4.53 AIBQ",
+      "label": "Derived"
+    }
+  },
+  "snapshot_delta": {
+    "from": "2026-08-14.json",
+    "to": "2026-08-16.json",
+    "changes": [
+      {
+        "field": "identity.status",
+        "from": null,
+        "to": "OpenAI OpCo, LLC. In IPO registration since 2026-06-08. Generating revenue, not profitable"
+      },
+      {
+        "field": "financing.debt_raised_bn",
+        "from": null,
+        "to": 0.52
+      },
+      {
+        "field": "financials.pb_revenue_ttm_bn",
+        "from": null,
+        "to": 41.3
+      },
+      {
+        "field": "financials.run_rate_ladder_bn",
+        "from": "0 item(s)",
+        "to": "+1 new: [40.0]"
+      },
+      {
+        "field": "ipo_status.expected_date",
+        "from": null,
+        "to": "September 2026"
+      },
+      {
+        "field": "ipo_status.status",
+        "from": null,
+        "to": "In IPO registration. Confidentially filed 2026-06-08; expected listing September 2026"
+      },
+      {
+        "field": "triggers.named",
+        "from": "0 item(s)",
+        "to": "+2 new: [{'condition': 'OpenAI S-1 becomes public (expected around a September 2026 listing): firs"
+      }
+    ]
+  },
+  "staleness": {
+    "stale": [
+      {
+        "field": "valuation.post_money_bn",
+        "as_of": "2026-03-31",
+        "age_days": 138,
+        "value": 852,
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "headcount.employees_ladder[0]",
+        "as_of": "2026-03-21",
+        "age_days": 148,
+        "value": 4500,
+        "decay": "QUARTERLY"
+      },
+      {
+        "field": "ipo_status.s1_status",
+        "as_of": "2026-06-08",
+        "age_days": 69,
+        "value": "Confidential S-1 filed Jun 8, 2026",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "ipo_status.window",
+        "as_of": "2026-07-16",
+        "age_days": 31,
+        "value": "September 2026 (PitchBook, note refreshed Jul 9) vs media 2027-lean; CONFLICT FROZEN, both branches live",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "ipo_status.status",
+        "as_of": "2026-06-08",
+        "age_days": 69,
+        "value": "In IPO registration. Confidentially filed 2026-06-08; expected listing September 2026",
+        "decay": "VOLATILE"
+      },
+      {
+        "field": "ipo_status.expected_date",
+        "as_of": "2026-07-09",
+        "age_days": 38,
+        "value": "September 2026",
+        "decay": "VOLATILE"
+      }
+    ],
+    "flagged": [
+      {
+        "field": "financing.debt_raised_bn",
+        "flag": "DISPUTED",
+        "value": 5.2,
+        "as_of": "2026-07-16"
+      },
+      {
+        "field": "financials.run_rate_ladder_bn[1]",
+        "flag": "VERIFY",
+        "value": 40.0,
+        "as_of": "2026-08-13"
+      },
+      {
+        "field": "leadership.altman_pb_listing",
+        "flag": "VERIFY",
+        "value": "PB lists Altman as 'Co-Founder, Co-CEO & Board Member', persistent 5+ weeks across a live refresh",
+        "as_of": "2026-07-16"
+      },
+      {
+        "field": "ipo_status.window",
+        "flag": "DISPUTED",
+        "value": "September 2026 (PitchBook, note refreshed Jul 9) vs media 2027-lean; CONFLICT FROZEN, both branches live",
+        "as_of": "2026-07-16"
+      }
+    ]
+  },
+  "open_conflicts": [
+    {
+      "opened": "2026-08-16",
+      "field": "financing.debt_raised_bn",
+      "held": {
+        "value": 5.2,
+        "as_of": "2026-07-16",
+        "source": "PitchBook debt decomposition",
+        "tier": "T2",
+        "decay": "STABLE",
+        "flags": [
+          "DISPUTED"
+        ]
+      },
+      "challenger": {
+        "value": 0.52,
+        "as_of": "2026-07-08",
+        "tier": "T2",
+        "decay": "STABLE",
+        "source": "PitchBook deal 338367-43T (Debt - General)",
+        "note": "Ruling R1: debt informs risk and never enters capital efficiency."
+      },
+      "rule": "freeze-on-conflict: challenger not (newer AND >= tier); surfaced, not chosen"
+    }
+  ],
+  "triggers": [
+    {
+      "trigger": {
+        "condition": "OpenAI roadshow range vs the $852B mark; Sep (PB) vs 2027 (media) sequencing conflict",
+        "status": "armed"
+      },
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026"
+    },
+    {
+      "trigger": {
+        "condition": "Altman Co-CEO listing on PitchBook: governance change or data error",
+        "status": "armed"
+      },
+      "as_of": "2026-07-16",
+      "source": "canonical refresh, July 16, 2026"
+    },
+    {
+      "trigger": {
+        "condition": "OpenAI S-1 becomes public (expected around a September 2026 listing): first audited revenue, and the first chance to test the $40B run-rate print",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "PitchBook deal 332047-63T + financing status note 2026-07-09"
+    },
+    {
+      "trigger": {
+        "condition": "Run-rate confirmation: the $40B is press-sourced at T3 and flagged VERIFY. Replace with a company print or the S-1 figure",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "desk"
+    }
+  ]
+}

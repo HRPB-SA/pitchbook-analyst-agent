@@ -1,0 +1,87 @@
+{
+  "_provenance": "Raised by engine/watch.py on 2026-08-16: seven outlets carried $22B against a stored $11B. Checked against PitchBook profile 509315-23 (retrieved 2026-08-16). The $22B is a secondary transaction at Rumor/Speculation status — an undisclosed holder in talks to sell, planned close September 2026. House ruling R2: it does not anchor. The $11B Series D mark stands. Recorded here as a numbered forward signal so the desk's refusal is on the record rather than repeated each time the story runs.",
+  "valuation": {
+    "rumored_post_money_bn": {
+      "value": 22.0,
+      "as_of": "2026-07-03",
+      "tier": "T2",
+      "decay": "VOLATILE",
+      "flags": [
+        "do-not-adopt",
+        "est."
+      ],
+      "source": "PitchBook deal 337891-51T (Secondary Transaction - Private, status Rumor/Speculation)",
+      "note": "An undisclosed investor is in talks to sell a stake, implying a $22B post-money. Planned close September 2026. Ruling R2: an unclosed transaction is a forward signal, never the base case. A secondary sets a price between shareholders, not a price the company raised at."
+    }
+  },
+  "financing": {
+    "raised_to_date_bn": {
+      "value": 0.8504,
+      "as_of": "2026-07-03",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook company profile 509315-23, Total Raised $850.436M"
+    },
+    "last_completed_deal": {
+      "value": "$500M Series D at $11.0B post (2026-02-04), led by Andreessen Horowitz, Sequoia Capital and ICONIQ Growth",
+      "as_of": "2026-02-04",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook deal 319110-94T",
+      "note": "Pre-money $10.5B. Salesforce Ventures and 44 others participated. Proceeds to research, product and expansion into India, Japan, Singapore, Brazil and Mexico."
+    }
+  },
+  "financials": {
+    "run_rate_ladder_bn": [
+      {
+        "value": 0.5,
+        "as_of": "2026-08-16",
+        "tier": "T2",
+        "decay": "QUARTERLY",
+        "source": "ElevenLabs blog, Aug 16 2026, reporting $500M ARR",
+        "note": "A company print. Six outlets carried it the same day."
+      }
+    ],
+    "pb_revenue_ttm_bn": {
+      "value": 0.6,
+      "as_of": "2026-12-31",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook Revenue field, fiscal period TTM 4Q2026",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "note": "House ruling R3: a PitchBook TTM field is a forward-window projection, not a run-rate. Never enters the ladder."
+    }
+  },
+  "identity": {
+    "employees": {
+      "value": 530,
+      "as_of": "2026-06-17",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook company profile 509315-23"
+    },
+    "hq": {
+      "value": "New York, NY (7 other offices)",
+      "as_of": "2026-08-14",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook company profile 509315-23"
+    }
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "Secondary sale at an implied $22B: closes by the stated September 2026 date (re-mark) or lapses (retire the signal)",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T2",
+        "source": "PitchBook deal 337891-51T, financing note dated 2026-08-05"
+      }
+    ]
+  },
+  "_snapshot_date": "2026-08-16"
+}

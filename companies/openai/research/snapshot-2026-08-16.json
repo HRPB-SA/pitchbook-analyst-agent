@@ -1,0 +1,70 @@
+{
+  "_provenance": "Raised by engine/watch.py on 2026-08-16: two outlets reported a run-rate above $40B against a stored $25B dated 2026-06-12. Checked against PitchBook profile 149504-14 (retrieved 2026-08-16), whose TTM 4Q2026 revenue field reads $41.3B. Those two are close but not independent confirmation of each other: PitchBook's TTM is a forward window under ruling R3 and the press figure is a company-sourced print, so only the press figure enters the ladder, at T3. The headcount signal in the same scan was a false positive; PitchBook still reads 4,500 and no change is recorded.",
+
+  "financials": {
+    "run_rate_ladder_bn": [
+      {
+        "value": 40.0, "as_of": "2026-08-13", "tier": "T3", "decay": "QUARTERLY",
+        "flags": ["VERIFY"],
+        "source": "Press reports, Aug 13-14 2026, that annualised revenue tops $40B",
+        "note": "Reported by two outlets on consecutive days, both framing it against the coming listing. Ruling R4 governs any comparison with Anthropic: OpenAI reports net, Anthropic gross, and the two are never compared raw."
+      }
+    ],
+    "pb_revenue_ttm_bn": {
+      "value": 41.3, "as_of": "2026-12-31", "tier": "T2", "decay": "QUARTERLY",
+      "source": "PitchBook Revenue field, fiscal period TTM 4Q2026",
+      "flags": ["do-not-adopt"],
+      "note": "House ruling R3: a forward-window projection, not a run-rate. Kept because its closeness to the $40B press print is a weak corroboration of direction, not of level."
+    }
+  },
+
+  "ipo_status": {
+    "status": {
+      "value": "In IPO registration. Confidentially filed 2026-06-08; expected listing September 2026",
+      "as_of": "2026-06-08", "tier": "T2", "decay": "VOLATILE",
+      "source": "PitchBook profile 149504-14, Ownership Status and deal 332047-63T (IPO, Announced/In Progress)",
+      "note": "Confidential, so the S-1 cannot be read yet. Both OpenAI and Anthropic are now in registration within a week of each other, and both listings would price against the same set of public comparables."
+    },
+    "expected_date": {
+      "value": "September 2026", "as_of": "2026-07-09", "tier": "T2",
+      "decay": "VOLATILE", "flags": ["est."],
+      "source": "PitchBook financing status note dated 2026-07-09"
+    }
+  },
+
+  "financing": {
+    "debt_raised_bn": {
+      "value": 0.52, "as_of": "2026-07-08", "tier": "T2", "decay": "STABLE",
+      "source": "PitchBook deal 338367-43T (Debt - General)",
+      "note": "Ruling R1: debt informs risk and never enters capital efficiency."
+    }
+  },
+
+  "identity": {
+    "status": {
+      "value": "OpenAI OpCo, LLC. In IPO registration since 2026-06-08. Generating revenue, not profitable",
+      "as_of": "2026-06-08", "tier": "T2", "decay": "STABLE",
+      "source": "PitchBook profile 149504-14, Business Status and Ownership Status"
+    }
+  },
+
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "OpenAI S-1 becomes public (expected around a September 2026 listing): first audited revenue, and the first chance to test the $40B run-rate print",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16", "tier": "T2",
+        "source": "PitchBook deal 332047-63T + financing status note 2026-07-09"
+      },
+      {
+        "value": {
+          "condition": "Run-rate confirmation: the $40B is press-sourced at T3 and flagged VERIFY. Replace with a company print or the S-1 figure",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16", "tier": "T3", "source": "desk"
+      }
+    ]
+  }
+}

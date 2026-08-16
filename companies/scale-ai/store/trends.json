@@ -1,0 +1,70 @@
+{
+  "slug": "scale-ai",
+  "computed": "2026-08-16",
+  "ladders": {},
+  "derived": {},
+  "snapshot_delta": {
+    "from": "2026-08-14.json",
+    "to": "2026-08-16.json",
+    "changes": [
+      {
+        "field": "financing.secondary",
+        "from": null,
+        "to": "Outlander VC, Kindling Capital, Justin Kan and 10 other investors sold their stakes to Meta Platforms and Golden Falcon Capital; date undisclosed"
+      },
+      {
+        "field": "financials.pb_revenue_ttm_bn",
+        "from": null,
+        "to": 2.0
+      },
+      {
+        "field": "headcount.employees_ladder",
+        "from": "0 item(s)",
+        "to": "+1 new: [1300]"
+      },
+      {
+        "field": "headcount.site_band",
+        "from": null,
+        "to": 1000
+      },
+      {
+        "field": "leadership.ceo",
+        "from": null,
+        "to": "Francis deSouza (appointed CEO 2026-08; previously a Google Cloud executive)"
+      },
+      {
+        "field": "leadership.prior_ceo",
+        "from": null,
+        "to": "Jason Droege, Interim CEO and Chief Strategy Officer"
+      },
+      {
+        "field": "triggers.named",
+        "from": "0 item(s)",
+        "to": "+2 new: [{'condition': \"New CEO's first strategic move: Scale AI's revenue concentration shifted a"
+      }
+    ]
+  },
+  "staleness": {
+    "stale": [],
+    "flagged": []
+  },
+  "open_conflicts": [],
+  "triggers": [
+    {
+      "trigger": {
+        "condition": "New CEO's first strategic move: Scale AI's revenue concentration shifted after Meta took a stake and its largest AI-lab customers began insourcing labelling",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "desk, on the deSouza appointment"
+    },
+    {
+      "trigger": {
+        "condition": "First valuation mark since June 2025: the $29B is fourteen months old and predates both the Meta stake and the leadership change",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "PitchBook Last Known Valuation dated 2025-06-12"
+    }
+  ]
+}

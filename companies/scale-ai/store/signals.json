@@ -1,6 +1,6 @@
 {
   "slug": "scale-ai",
-  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "scanned_at": "2026-08-16T23:50:17+00:00",
   "window_days": 120,
   "documents": 43,
   "signals": [
@@ -9,9 +9,15 @@
       "label": "headcount",
       "unit": "",
       "claimed": 1000,
-      "verdict": "unheld",
-      "gap_pct": 0.0,
-      "held": null,
+      "verdict": "declined",
+      "gap_pct": -23.1,
+      "held": {
+        "value": 1300.0,
+        "as_of": "2026-05-18",
+        "tier": "T2",
+        "source": "PitchBook profile 163154-17, Employees field",
+        "path": "headcount.employees_ladder"
+      },
       "n_reports": 2,
       "n_publishers": 2,
       "publishers": [
@@ -21,6 +27,16 @@
       "first_reported": "2026-08-16",
       "last_reported": "2026-08-16",
       "already_held_as": null,
+      "already_declined": {
+        "path": "headcount.site_band",
+        "value": 1000,
+        "as_of": "2026-08-16",
+        "note": "The company's own page shows a rounded band rather than a count. Recorded so the figure is on the record as considered, not adopted: a band cannot be compared with a dated count.",
+        "flags": [
+          "do-not-adopt",
+          "est."
+        ]
+      },
       "reports": [
         {
           "url": "https://scale.com/press",
@@ -39,6 +55,6 @@
       ]
     }
   ],
-  "open": 1,
+  "open": 0,
   "needs_attention": []
 }

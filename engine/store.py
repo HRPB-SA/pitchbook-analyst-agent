@@ -112,7 +112,84 @@ def add_snapshot(slug, payload, as_of=None):
 
 
 def _values_equal(a, b):
+    """Whether two stored values say the same thing.
+
+    Exact equality freezes conflicts that are not conflicts. A refresh
+    restating $4.01B as $4.0102B is the same figure carried to another
+    decimal, and describing the same round as "Later Stage VC $500M (5th
+    Round)" rather than "$500M Series D at $11.0B post" is the same deal in
+    more words. Freezing those buries the real disagreements the mechanism
+    exists to surface.
+
+    Numbers match within a tenth of a percent. Text matches when one
+    description contains the other's substance. Anything else is a genuine
+    disagreement and freezes as before.
+    """
+    if isinstance(a, bool) or isinstance(b, bool):
+        return a is b
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        if a == b:
+            return True
+        return bool(a) and abs((b - a) / abs(a)) < 0.001
+    if isinstance(a, str) and isinstance(b, str):
+        if a == b:
+            return True
+        ka, kb = _key_terms(a), _key_terms(b)
+        # one description restating the other keeps every figure and name the
+        # shorter one carried
+        return bool(ka) and bool(kb) and (ka <= kb or kb <= ka)
     return json.dumps(a, sort_keys=True) == json.dumps(b, sort_keys=True)
+
+
+def _key_terms(text):
+    """The load-bearing tokens of a description: its figures and its names."""
+    import re as _re
+    out = set()
+    for m in _re.finditer(r"\$?\d[\d,]*\.?\d*\s*[MBK]?\b", text):
+        tok = m.group(0).strip().replace(",", "").rstrip(".")
+        # a round ordinal ("5th") is phrasing; a money figure is substance
+        if tok and not _re.fullmatch(r"\d{1,2}", tok):
+            out.add(tok.upper())
+    return out
+
+
+def reconcile_conflicts(slug):
+    """Re-test open conflicts and close the ones that were never conflicts.
+
+    Freezing is deliberately hard to undo, which is right for a genuine
+    disagreement and wrong for one opened by a rule that has since been
+    corrected. Nothing is decided here: a conflict closes only when the two
+    values turn out to say the same thing. Real disagreements stay frozen.
+    """
+    conflicts = load_conflicts(slug)
+    profile = load_profile(slug)
+    keep, closed = [], []
+    for c in conflicts.get("open") or []:
+        held, chal = c.get("held") or {}, c.get("challenger") or {}
+        if _values_equal(held.get("value"), chal.get("value")):
+            closed.append(c)
+        else:
+            keep.append(c)
+    if not closed:
+        return {"slug": slug, "closed": 0, "open": len(keep)}
+    conflicts["open"] = keep
+    conflicts.setdefault("closed", []).extend(
+        dict(c, closed_on=_dt.date.today().isoformat(),
+             why="not a disagreement: the two values state the same figure")
+        for c in closed)
+    still = {c["field"] for c in keep}
+    for c in closed:
+        cat, field = c["field"].split(".", 1)
+        fact = (profile.get(cat) or {}).get(field)
+        if schema.is_fact(fact) and c["field"] not in still:
+            flags = [f for f in (fact.get("flags") or []) if f != "DISPUTED"]
+            if flags:
+                fact["flags"] = flags
+            else:
+                fact.pop("flags", None)
+    save_profile(slug, profile)
+    _write(os.path.join(company_dir(slug), "conflicts.json"), conflicts)
+    return {"slug": slug, "closed": len(closed), "open": len(keep)}
 
 
 def merge_snapshot(slug, snap):

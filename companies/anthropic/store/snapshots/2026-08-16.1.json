@@ -1,0 +1,44 @@
+{
+  "_provenance": "Second pass on 2026-08-16. The first recorded a reported $2T listing expectation; the same scan then surfaced Business Insider carrying $1.5 trillion. Both are expectations for the same unpriced listing, and neither is a transaction. Recording the spread rather than one number, because the spread is the honest reading: the market does not know, and the width of the disagreement is itself the information.",
+  "valuation": {
+    "reported_ipo_expectation_bn": [
+      {
+        "value": 1500.0,
+        "as_of": "2026-08-14",
+        "tier": "T3",
+        "decay": "VOLATILE",
+        "flags": [
+          "do-not-adopt",
+          "est."
+        ],
+        "source": "Business Insider, Aug 14 2026",
+        "note": "Ruling R2: a listing expectation never anchors."
+      },
+      {
+        "value": 2000.0,
+        "as_of": "2026-08-13",
+        "tier": "T3",
+        "decay": "VOLATILE",
+        "flags": [
+          "do-not-adopt",
+          "est."
+        ],
+        "source": "New York Post and three other outlets, Aug 13 2026",
+        "note": "Ruling R2: a listing expectation never anchors."
+      }
+    ],
+    "ipo_expectation_spread": {
+      "value": "Reported listing expectations run $1.5T to $2.0T against a $965B last completed mark, so between 1.6 and 2.1 times",
+      "as_of": "2026-08-16",
+      "tier": "T3",
+      "decay": "VOLATILE",
+      "flags": [
+        "do-not-adopt",
+        "est."
+      ],
+      "source": "Press reports, Aug 13-14 2026",
+      "note": "A $500B spread on an unpriced listing is not a forecast, it is a measure of how little is known. The S-1 closes it."
+    }
+  },
+  "_snapshot_date": "2026-08-16"
+}

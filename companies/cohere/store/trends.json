@@ -1,0 +1,73 @@
+{
+  "slug": "cohere",
+  "computed": "2026-08-16",
+  "ladders": {},
+  "derived": {},
+  "snapshot_delta": {
+    "from": "2026-08-14.json",
+    "to": "2026-08-16.json",
+    "changes": [
+      {
+        "field": "identity.employees",
+        "from": null,
+        "to": 650
+      },
+      {
+        "field": "identity.hq",
+        "from": null,
+        "to": "Toronto, Canada (7 other offices)"
+      },
+      {
+        "field": "valuation.rumored_post_money_bn",
+        "from": null,
+        "to": 20.0
+      },
+      {
+        "field": "financing.last_completed_deal",
+        "from": "Later Stage VC $700M (7th Round)",
+        "to": "$700M Series D1 at $7.0B post (2025-09-24), led by Radical Ventures, Kensington Capital Partners and Inovia Capital"
+      },
+      {
+        "field": "financials.pb_revenue_ttm_bn",
+        "from": null,
+        "to": 0.2649
+      },
+      {
+        "field": "triggers.named",
+        "from": "0 item(s)",
+        "to": "+2 new: [{'condition': 'Series E at an implied $20B: completes (adopt and re-mark, a 2.9x step-up)"
+      }
+    ]
+  },
+  "staleness": {
+    "stale": [
+      {
+        "field": "valuation.rumored_post_money_bn",
+        "as_of": "2026-04-24",
+        "age_days": 114,
+        "value": 20.0,
+        "decay": "VOLATILE"
+      }
+    ],
+    "flagged": []
+  },
+  "open_conflicts": [],
+  "triggers": [
+    {
+      "trigger": {
+        "condition": "Series E at an implied $20B: completes (adopt and re-mark, a 2.9x step-up) or lapses",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "PitchBook deal 328836-88T, financing note dated 2026-05-07"
+    },
+    {
+      "trigger": {
+        "condition": "First dated company revenue print: nothing on file, so no multiple can be computed",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "desk"
+    }
+  ]
+}
