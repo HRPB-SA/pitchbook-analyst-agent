@@ -971,19 +971,137 @@ function reportDoc(c, kind){
     ${docStyles()}</head><body>${buildReport(c,kind)}</body></html>`;
 }
 
+/* ── writing a real .docx ──────────────────────────────────────────────────
+   A .docx is a zip of XML parts. Word will render an HTML part directly if
+   the document references it as an altChunk, which is how this report keeps
+   its tables and styling without anyone hand-writing WordprocessingML.
+
+   The zip is written with no compression, so the only real work is a CRC.
+   That keeps this to a few dozen lines and avoids shipping a zip library
+   inside a page that has to stay self-contained. */
+
+const CRC_TABLE = (()=>{const t=new Uint32Array(256);
+  for(let n=0;n<256;n++){let c=n;
+    for(let k=0;k<8;k++) c = c&1 ? 0xEDB88320 ^ (c>>>1) : c>>>1;
+    t[n]=c>>>0;} return t;})();
+
+function crc32(bytes){
+  let c=0xFFFFFFFF;
+  for(let i=0;i<bytes.length;i++) c = CRC_TABLE[(c ^ bytes[i]) & 0xFF] ^ (c>>>8);
+  return (c ^ 0xFFFFFFFF)>>>0;
+}
+
+function zipStore(files){
+  const enc=new TextEncoder(), chunks=[], central=[];
+  let offset=0;
+  const u16=n=>[n&0xFF,(n>>8)&0xFF];
+  const u32=n=>[n&0xFF,(n>>8)&0xFF,(n>>16)&0xFF,(n>>>24)&0xFF];
+  for(const f of files){
+    const name=enc.encode(f.name), body=enc.encode(f.data), crc=crc32(body);
+    const local=[...u32(0x04034b50),...u16(20),...u16(0),...u16(0),
+      ...u16(0),...u16(0x21),   // fixed date/time: the output is reproducible
+      ...u32(crc),...u32(body.length),...u32(body.length),
+      ...u16(name.length),...u16(0)];
+    chunks.push(new Uint8Array(local), name, body);
+    central.push({name, crc, len:body.length, offset});
+    offset += local.length + name.length + body.length;
+  }
+  const dir=[];
+  for(const e of central){
+    dir.push(...u32(0x02014b50),...u16(20),...u16(20),...u16(0),...u16(0),
+      ...u16(0),...u16(0x21),...u32(e.crc),...u32(e.len),...u32(e.len),
+      ...u16(e.name.length),...u16(0),...u16(0),...u16(0),...u16(0),
+      ...u32(0),...u32(e.offset));
+    dir.push(...e.name);
+  }
+  const dirBytes=new Uint8Array(dir);
+  const end=new Uint8Array([...u32(0x06054b50),...u16(0),...u16(0),
+    ...u16(central.length),...u16(central.length),
+    ...u32(dirBytes.length),...u32(offset),...u16(0)]);
+  const total=chunks.reduce((n,c)=>n+c.length,0)+dirBytes.length+end.length;
+  const out=new Uint8Array(total); let p=0;
+  for(const c of chunks){ out.set(c,p); p+=c.length; }
+  out.set(dirBytes,p); p+=dirBytes.length;
+  out.set(end,p);
+  return out;
+}
+
+function docxBlob(html){
+  return zipStore([
+    {name:"[Content_Types].xml", data:
+      `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+<Default Extension="htm" ContentType="text/html"/>
+<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>
+</Types>`},
+    {name:"_rels/.rels", data:
+      `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
+</Relationships>`},
+    {name:"word/_rels/document.xml.rels", data:
+      `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+<Relationship Id="htmlChunk" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk" Target="report.htm"/>
+</Relationships>`},
+    {name:"word/document.xml", data:
+      `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+ xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+<w:body><w:altChunk r:id="htmlChunk"/><w:sectPr><w:pgSz w:w="12240" w:h="15840"/>
+<w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440"/></w:sectPr></w:body>
+</w:document>`},
+    {name:"word/report.htm", data:html},
+  ]);
+}
+
 async function downloadReport(slug, kind){
   const c=CO[slug]; if(!c) return;
   const html=reportDoc(c,kind);
-  const fname=`${c.slug}_${kind}_${DATA.generated}.doc`;
-  if(window.claude&&window.claude.downloads&&window.claude.downloads.save){
-    try{
-      await window.claude.downloads.save({filename:fname, data:html});
-      flash("Report saved — opens in Word");
-    }catch(e){
-      flash(e&&e.code==="user_rejected"?"Download declined":"Download unavailable — opening preview");
-      previewReport(html, fname);
+  const stem=`${c.slug}_${kind}_${DATA.generated}`;
+  const downloads = window.claude && window.claude.use
+    ? await window.claude.use("downloads") : null;
+  if(!downloads){ previewReport(html, stem); return; }
+  try{
+    await downloads.save({filename:`${stem}.docx`, data:docxBlob(html).buffer});
+    flash("Report saved. Open it in Word.");
+    return;
+  }catch(e){
+    const code=(e&&e.code)||"";
+    if(code==="declined"){ flash("Download declined"); return; }
+    if(code==="extension_not_enabled"){
+      // Word documents are not enabled for this viewer; the report itself is
+      // unchanged, so hand over the readable version rather than nothing.
+      try{
+        await downloads.save({filename:`${stem}.md`, data:reportMarkdown(c,kind)});
+        flash("Word files are not enabled here. Saved as Markdown instead.");
+        return;
+      }catch(_){ /* fall through to preview */ }
     }
-  } else { previewReport(html, fname); }
+    flash("Could not save the file. Opening a preview you can print.");
+    previewReport(html, stem);
+  }
+}
+
+/* the same report as plain text, for when Word files cannot be saved */
+function reportMarkdown(c, kind){
+  const div=document.createElement("div");
+  div.innerHTML=buildReport(c,kind);
+  const lines=[];
+  div.querySelectorAll("h1,h2,h3,p,li,table,.tile").forEach(el=>{
+    const t=(el.innerText||"").trim(); if(!t) return;
+    if(el.tagName==="H1") lines.push(`# ${t}`);
+    else if(el.tagName==="H2") lines.push(`\n## ${t}`);
+    else if(el.tagName==="H3") lines.push(`\n### ${t}`);
+    else if(el.tagName==="LI") lines.push(`- ${t}`);
+    else if(el.tagName==="TABLE"){
+      el.querySelectorAll("tr").forEach(tr=>lines.push(
+        "| " + [...tr.children].map(td=>(td.innerText||"").trim().replace(/\|/g,"/")).join(" | ") + " |"));
+      lines.push("");
+    } else lines.push(t);
+  });
+  return lines.join("\n");
 }
 
 function previewReport(html, fname){
