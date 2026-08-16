@@ -334,16 +334,94 @@ def load_news(slug: str) -> list:
     return store._read(news_path(slug), [])
 
 
-def _relevant(title: str, aliases: list) -> bool:
+# Company names that are also ordinary English words. Only these need their
+# grammar checked: "Scale AI" the company and "to scale AI" the activity read
+# identically to a substring test, and thirty-one of the fifty-eight stories
+# once filed under Scale AI were other companies raising money "to scale AI".
+# Names that are not English words ("ElevenLabs", "Databricks") never have
+# this problem, and running the same tests over them costs real stories:
+# "IBM and ElevenLabs" and "The CNN-Perplexity Lawsuit" are exactly the
+# partnership and litigation headlines the desk most wants.
+# Two different ambiguities, needing two different tests. A name that is also
+# a verb can be read as an action ("to scale AI"). A name that is also a
+# describing word can be read as a modifier ("rack-scale AI"). Applying the
+# verb test to a noun is what wrongly threw out "to Perplexity's AI Platform",
+# where "to" introduces a destination rather than an infinitive.
+_VERB_NAMES = {"scale", "cohere", "glean", "figure", "abridge", "harvey"}
+_MODIFIER_NAMES = {"scale", "character", "runway", "stability", "inflection",
+                   "adept", "sierra", "together"}
+
+# What makes a verb-like name read as a verb: an infinitive or modal in front
+# of it, or a collective subject doing the action.
+_VERB_LEAD = ("to", "can", "cannot", "could", "should", "must", "help", "helps",
+              "helping", "helped", "enterprises", "retailers", "companies",
+              "organizations", "organisations", "businesses", "teams", "banks",
+              "customers", "leaders", "cios", "cfos", "ctos", "you", "we", "they",
+              "institutions", "agencies", "firms", "hospitals", "brands")
+
+
+def _relevant(title: str, aliases: list, deny: list = None) -> bool:
     """A headline counts as on-target only if it actually names the company.
-    Keyword feeds return plenty of accidental matches; this ranks them down
-    rather than discarding them, so nothing disappears silently."""
-    t = (title or "").lower()
-    return any(a.lower() in t for a in (aliases or []) if a)
+
+    Keyword feeds return plenty of accidental matches. A manifest can deny a
+    pattern outright once someone has seen it go wrong. Beyond that, only
+    names that double as ordinary words get their grammar tested, because for
+    every other name the tests reject more good stories than bad ones.
+    """
+    t = (title or "")
+    if not t:
+        return False
+    low = t.lower()
+    for pat in (deny or []):
+        try:
+            if re.search(pat, t, re.I):
+                return False
+        except re.error:
+            continue
+    for a in (aliases or []):
+        if not a:
+            continue
+        al = a.lower()
+        head = al.split()[0] if al.split() else ""
+        verby, modifiery = head in _VERB_NAMES, head in _MODIFIER_NAMES
+        for m in re.finditer(r"(?<!\w)" + re.escape(al) + r"(?!\w)", low):
+            if modifiery:
+                after = low[m.end():m.end() + 2]
+                if after.startswith("-") and len(after) > 1 and after[1].isalpha():
+                    continue                  # Scale AI-Native
+                if low[:m.start()].endswith("-"):
+                    continue                  # rack-scale AI, full-scale AI
+            if verby:
+                # an adverb may sit between the marker and the verb:
+                # "to responsibly scale AI"
+                lead = re.search(r"([\w']+)(?:\s+\w+ly)?\s*$", low[:m.start()])
+                if lead and lead.group(1) in _VERB_LEAD:
+                    continue                  # to scale AI, enterprises scale AI
+            return True
+    return False
+
+
+def retag_news(slug: str) -> dict:
+    """Re-apply the relevance test to everything already stored.
+
+    Tuning the test has to fix the back catalogue, not just the next sweep.
+    Nothing is deleted: a story that stops being relevant stays on file with
+    the tag turned off, so the change is reversible and auditable.
+    """
+    man = load_manifest(slug)
+    aliases, deny = man.get("aliases") or [], man.get("alias_deny") or []
+    news = load_news(slug)
+    was = sum(1 for r in news if r.get("relevant"))
+    for r in news:
+        r["relevant"] = _relevant(r.get("title"), aliases, deny)
+    now = sum(1 for r in news if r.get("relevant"))
+    store._write(news_path(slug), news)
+    return {"slug": slug, "stories": len(news), "was": was, "now": now,
+            "dropped": was - now}
 
 
 def merge_news(slug: str, items: list, aliases: list = None,
-               keep: int = 400) -> int:
+               keep: int = 400, deny: list = None) -> int:
     """Accumulate feed items, deduplicated on normalised headline. Returns the
     count of genuinely new stories."""
     existing = load_news(slug)
@@ -358,13 +436,13 @@ def merge_news(slug: str, items: list, aliases: list = None,
         seen.add(key)
         rec = dict(it)
         rec["first_seen"] = stamp
-        rec["relevant"] = _relevant(it.get("title"), aliases)
+        rec["relevant"] = _relevant(it.get("title"), aliases, deny)
         existing.append(rec)
         added += 1
     # re-tag everything, so tuning the alias list fixes the back catalogue too
     if aliases:
         for r in existing:
-            r["relevant"] = _relevant(r.get("title"), aliases)
+            r["relevant"] = _relevant(r.get("title"), aliases, deny)
     existing.sort(key=lambda r: r.get("published") or r.get("first_seen") or "",
                   reverse=True)
     os.makedirs(evidence.evidence_dir(slug), exist_ok=True)
@@ -452,7 +530,8 @@ def sweep(slug: str, only: str = None, quiet: bool = True) -> dict:
             text, as_of = edgar_to_text(body)
         elif src.get("parser") == "feed":
             items = parse_feed(body, src.get("name"))
-            fresh_news = merge_news(slug, items, m.get("aliases"))
+            fresh_news = merge_news(slug, items, m.get("aliases"),
+                                    deny=m.get("alias_deny"))
             if items and items[0].get("published"):
                 as_of = items[0]["published"][:10]
             text = "\n".join(

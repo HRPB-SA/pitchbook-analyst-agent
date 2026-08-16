@@ -341,6 +341,30 @@ details.method[open] summary::before{content:"▾ "}
 
 /* ═══ trigger / conflict ═══ */
 .trig{border-left:2px solid var(--edge);padding:.45rem 0 .45rem .75rem;margin-bottom:.5rem}
+/* needs-a-decision panel */
+.okpanel{border:1px solid var(--edge);border-left:3px solid var(--green);border-radius:5px;
+  padding:.7rem .9rem;margin:1rem 0;font-size:.86rem;color:var(--ink2);background:var(--card)}
+.cnt{display:inline-block;background:var(--rust);color:#fff;border-radius:9px;font-size:.7rem;
+  padding:.05rem .45rem;vertical-align:middle;margin-left:.35rem;font-family:var(--mono)}
+.attn{display:grid;gap:.6rem;margin:.5rem 0 1.1rem}
+.acard{border:1px solid var(--edge);border-radius:6px;padding:.7rem .85rem;background:var(--card)}
+.acard.bad{border-left:3px solid var(--rust)}
+.acard.warn{border-left:3px solid #B4802A}
+.acard.info{border-left:3px solid var(--slate)}
+.ahead{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.5rem;flex-wrap:wrap}
+.atag{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+  padding:.1rem .4rem;border-radius:3px;border:1px solid var(--edge)}
+.atag.bad{color:var(--rust);border-color:var(--rust)}
+.atag.warn{color:#8A6117;border-color:#B4802A}
+.atag.info{color:var(--slate)}
+.anum{display:flex;gap:1.6rem;flex-wrap:wrap;margin-bottom:.45rem}
+.anum>div{display:flex;flex-direction:column;min-width:90px}
+.al{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+.av{font-family:var(--mono);font-size:1.15rem;font-weight:600;color:var(--ink)}
+.am{font-family:var(--mono);font-size:.66rem;color:var(--ink3)}
+.awhy{font-size:.83rem;color:var(--ink2);line-height:1.5}
+.asrc{margin-top:.45rem;font-size:.73rem;font-family:var(--mono)}
+.asrc a{color:var(--slate)}
 .trig.armed{border-left-color:var(--amber)} .trig.fired{border-left-color:var(--green)}
 .callout{border:1px solid var(--rust);border-left-width:3px;border-radius:4px;padding:.7rem .85rem;
   background:var(--surface);margin-bottom:.6rem}
@@ -1028,6 +1052,58 @@ function sourcesTable(c){
 }
 
 /* the funding record as a table an investor can read */
+/* What the world reported against what the desk holds. The panel exists
+   because the desk once showed $188B for three weeks while every outlet
+   carried $190B; the headline was in the news store the whole time and
+   nothing put the two side by side. */
+const ATT_KIND = {
+  disagrees: {label:"Reported figure differs", cls:"bad",
+    why:"Outlets carry a figure materially different from the one on file."},
+  estimate:  {label:"Shown figure is an estimate", cls:"warn",
+    why:"A firmer measurement exists and disagrees. Settle which stands."},
+  newer:     {label:"Newer figure reported", cls:"warn",
+    why:"A later report differs from the stored value, if only slightly."},
+  unheld:    {label:"Reported, nothing on file", cls:"info",
+    why:"The desk has no stored view on a figure now in circulation."},
+};
+
+function attentionBlock(c){
+  const a=c.attention||{}; const items=a.items||[];
+  if(!items.length) return `<div class="okpanel">Nothing outstanding. Every figure
+    reported in the last ${esc(String(a.window||120))} days agrees with the store
+    ${a.scanned_at?`<span class="dim">(checked ${esc(a.scanned_at.slice(0,10))} across
+    ${esc(String(a.documents||0))} documents)</span>`:""}.</div>`;
+  return `<h3>Needs a decision <span class="cnt">${items.length}</span></h3>
+    <p class="sub">Figures the desk has not settled. Nothing here changes the store on
+      its own: adopting a number is a judgment about tier, date and whether a round
+      actually closed, so each row waits for a person.
+      ${a.scanned_at?`Last checked ${esc(a.scanned_at.slice(0,10))} across
+      ${esc(String(a.documents||0))} documents.`:""}</p>
+    <div class="attn">${items.map(i=>{
+      const k=ATT_KIND[i.kind]||{label:i.kind,cls:"info",why:""};
+      return `<div class="acard ${k.cls}">
+        <div class="ahead"><span class="atag ${k.cls}">${esc(k.label)}</span>
+          <span class="dim">${esc(i.what)}</span></div>
+        <div class="anum">
+          <div><span class="al">Reported</span>
+            <span class="av">${esc(i.unit==="$B"?"$":"")}${esc(fmt(i.reported))}${esc(i.unit==="$B"?"B":"")}</span>
+            <span class="am">${i.outlets?esc(String(i.outlets))+" outlet"+(i.outlets>1?"s":""):"—"}${
+              i.last_reported?" · "+esc(i.last_reported):""}</span></div>
+          <div><span class="al">On file</span>
+            <span class="av">${i.held==null?"—":esc(i.unit==="$B"?"$":"")+esc(fmt(i.held))+esc(i.unit==="$B"?"B":"")}</span>
+            <span class="am">${i.held_as_of?esc(i.held_as_of):""}${i.held_tier?" · "+esc(i.held_tier):""}${
+              i.held_path?" · "+esc(i.held_path):""}</span></div>
+          ${i.gap_pct!=null?`<div><span class="al">Difference</span>
+            <span class="av">${i.gap_pct>0?"+":""}${esc(String(i.gap_pct))}%</span>
+            <span class="am">against the stored figure</span></div>`:""}
+        </div>
+        <div class="awhy">${esc(i.note||k.why)}</div>
+        ${(i.reports||[]).length?`<div class="asrc">${i.reports.map(r=>
+          `<a href="${esc(r.url||"#")}" target="_blank" rel="noopener" title="${esc(r.quote||"")}">
+            ${esc(r.publisher||site(r.url))}</a><span class="dim"> ${esc(r.when||"")}</span>`).join(" · ")}</div>`:""}
+      </div>`;}).join("")}</div>`;
+}
+
 function fundingTable(c){
   const pts=(c.ladders||{})["valuation.valuation_ladder_bn"]||[];
   const rows=c.facts.filter(f=>f.cat==="financing"&&!f.field.includes("["));
@@ -1263,6 +1339,8 @@ function renderCompany(slug){
         <div style="font-size:.87rem;margin-top:.2rem">${esc(t.condition)}</div>
         ${t.source?`<div class="fmeta"><span class="fsrc">${esc(t.source)}</span></div>`:""}
       </div>`).join("")}`:""}
+
+    ${attentionBlock(c)}
 
     ${c.n_conflicts?`<h3>Frozen conflicts</h3>
       <div class="callout"><b>${c.n_conflicts} unresolved conflict(s).</b>

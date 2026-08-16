@@ -1,0 +1,181 @@
+{
+  "slug": "openai",
+  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "window_days": 120,
+  "documents": 209,
+  "signals": [
+    {
+      "concept": "run_rate_bn",
+      "label": "revenue run-rate",
+      "unit": "$B",
+      "claimed": 40.0,
+      "verdict": "disagrees",
+      "gap_pct": 60.0,
+      "held": {
+        "value": 25.0,
+        "as_of": "2026-06-12",
+        "tier": "T3",
+        "source": "desk estimate, net basis",
+        "path": "financials.run_rate_ladder_bn"
+      },
+      "n_reports": 2,
+      "n_publishers": 2,
+      "publishers": [
+        "Bloomberg.com",
+        "Yahoo Finance"
+      ],
+      "first_reported": "2026-08-13",
+      "last_reported": "2026-08-13",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPb205UG5jQmltLXVzbFdMNXJlRUl0Q1JHMFItQ3NQQ19aZ2tNNUxUY2ZrTHFZSWVxd2gydjFnOU5MRnIyamNEUGV2WGhrOUpqbnotRlNRS1hST3pSLUwwaDBwQXo2RnZpcjVlUUJhNGlQakNxc3VUTWhtcHVHTmswWE5VQXYtUmJ3V0MxZ3BhbzVuTDROSmRn?oc=5",
+          "publisher": "Yahoo Finance",
+          "when": "2026-08-13",
+          "kind": "news",
+          "quote": "Run Rate Tops $40 Billion"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRFBTR1VKWUlRMkNjY2g4YUU1M2Ruc0lIQWdEUklmb2x0VmhPbEgweWdweDBwWGNPX0FDZFhHcEtuWW41NnQ2cDRVV0lUX3JtS0FmV3NoTVZuQW5BN2ZSMGViVG9Xd0JJN3pScHA3b0UzSzBFUUVBWDZRV2lVMVpwU1ozUlRrMkNadTNKVTg3SGl2MGduajJnakVLb2hkQWlxSG9xaW1Cc18?oc=5",
+          "publisher": "Bloomberg.com",
+          "when": "2026-08-13",
+          "kind": "news",
+          "quote": "Annualized Revenue Tops $40 Billion"
+        }
+      ]
+    },
+    {
+      "concept": "employees",
+      "label": "headcount",
+      "unit": "",
+      "claimed": 100000,
+      "verdict": "disagrees",
+      "gap_pct": 2122.2,
+      "held": {
+        "value": 4500.0,
+        "as_of": "2026-03-21",
+        "tier": "T2",
+        "source": "PitchBook",
+        "path": "headcount.employees_ladder"
+      },
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "OpenAI site feed"
+      ],
+      "first_reported": "2026-06-11",
+      "last_reported": "2026-06-11",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://openai.com/index/bbva",
+          "publisher": "OpenAI site feed",
+          "when": "2026-06-11",
+          "kind": "news",
+          "quote": "100,000 employees"
+        }
+      ]
+    },
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 2.0,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "TechCrunch"
+      ],
+      "first_reported": "2026-08-12",
+      "last_reported": "2026-08-12",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLWloUTdtYTlOZTdjeVZ5d2tFd2wxbzJzWlJFR1R5Y3hURjVzQk1zaUE5Z2dOdFNtN0k2V0VOREpFeVFYeFhwMVFXVWxiUzJ1Zm1WbGRETFdZcXNwZll1bDBNN2pGQmZEMENSczhfZU1XcVlGY0o3UVJXWmlnVi0wS3MxNHJ5bE9ZN3VuN0dMX0h2YmhtYldrSVAtOE82RmNlUGNsN2Q0QQ?oc=5",
+          "publisher": "TechCrunch",
+          "when": "2026-08-12",
+          "kind": "news",
+          "quote": "raises $2B"
+        }
+      ]
+    }
+  ],
+  "open": 2,
+  "needs_attention": [
+    {
+      "concept": "run_rate_bn",
+      "label": "revenue run-rate",
+      "unit": "$B",
+      "claimed": 40.0,
+      "verdict": "disagrees",
+      "gap_pct": 60.0,
+      "held": {
+        "value": 25.0,
+        "as_of": "2026-06-12",
+        "tier": "T3",
+        "source": "desk estimate, net basis",
+        "path": "financials.run_rate_ladder_bn"
+      },
+      "n_reports": 2,
+      "n_publishers": 2,
+      "publishers": [
+        "Bloomberg.com",
+        "Yahoo Finance"
+      ],
+      "first_reported": "2026-08-13",
+      "last_reported": "2026-08-13",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPb205UG5jQmltLXVzbFdMNXJlRUl0Q1JHMFItQ3NQQ19aZ2tNNUxUY2ZrTHFZSWVxd2gydjFnOU5MRnIyamNEUGV2WGhrOUpqbnotRlNRS1hST3pSLUwwaDBwQXo2RnZpcjVlUUJhNGlQakNxc3VUTWhtcHVHTmswWE5VQXYtUmJ3V0MxZ3BhbzVuTDROSmRn?oc=5",
+          "publisher": "Yahoo Finance",
+          "when": "2026-08-13",
+          "kind": "news",
+          "quote": "Run Rate Tops $40 Billion"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRFBTR1VKWUlRMkNjY2g4YUU1M2Ruc0lIQWdEUklmb2x0VmhPbEgweWdweDBwWGNPX0FDZFhHcEtuWW41NnQ2cDRVV0lUX3JtS0FmV3NoTVZuQW5BN2ZSMGViVG9Xd0JJN3pScHA3b0UzSzBFUUVBWDZRV2lVMVpwU1ozUlRrMkNadTNKVTg3SGl2MGduajJnakVLb2hkQWlxSG9xaW1Cc18?oc=5",
+          "publisher": "Bloomberg.com",
+          "when": "2026-08-13",
+          "kind": "news",
+          "quote": "Annualized Revenue Tops $40 Billion"
+        }
+      ]
+    },
+    {
+      "concept": "employees",
+      "label": "headcount",
+      "unit": "",
+      "claimed": 100000,
+      "verdict": "disagrees",
+      "gap_pct": 2122.2,
+      "held": {
+        "value": 4500.0,
+        "as_of": "2026-03-21",
+        "tier": "T2",
+        "source": "PitchBook",
+        "path": "headcount.employees_ladder"
+      },
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "OpenAI site feed"
+      ],
+      "first_reported": "2026-06-11",
+      "last_reported": "2026-06-11",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://openai.com/index/bbva",
+          "publisher": "OpenAI site feed",
+          "when": "2026-06-11",
+          "kind": "news",
+          "quote": "100,000 employees"
+        }
+      ]
+    }
+  ]
+}

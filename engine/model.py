@@ -675,9 +675,66 @@ def build(slug: str, kind: str = "operating", out: str = None) -> dict:
                               f"{slug}_model_{_dt.date.today().isoformat()}.xlsx")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     wb.save(out)
-    return {"path": out, "sourced": len(inp.sourced), "assumed": len(inp.assumed),
+    info = {"path": out, "sourced": len(inp.sourced), "assumed": len(inp.assumed),
             "ratio": pct, "raw_rows": raw_rows, "years": f"{HIST_START}-{FORECAST_END}",
             "grade": "research" if pct >= 0.5 else "illustrative"}
+    _record_anchors(slug, out, profile)
+    return info
+
+
+# --------------------------------------------------------------- freshness
+
+# The figures a model is pinned to. When one of these moves in the store, the
+# workbook on disk is describing a company that no longer exists.
+ANCHOR_CONCEPTS = ("valuation_bn", "run_rate_bn", "growth_pct",
+                   "gross_margin_pct", "employees", "equity_raised_bn")
+
+
+def _anchor_path(slug):
+    return os.path.join(store.COMPANIES, slug, "financials", "anchors.json")
+
+
+def _anchors(profile):
+    out = {}
+    for concept in ANCHOR_CONCEPTS:
+        fact, path = briefing.preferred(profile, concept)
+        if fact:
+            out[concept] = {"value": fact.get("value"), "as_of": fact.get("as_of"),
+                            "path": path}
+    return out
+
+
+def _record_anchors(slug, path, profile):
+    store._write(_anchor_path(slug), {
+        "slug": slug, "workbook": os.path.basename(path),
+        "built": _dt.date.today().isoformat(), "anchors": _anchors(profile)})
+
+
+def stale(slugs=None) -> list:
+    """Models whose anchor figures have moved since the workbook was built.
+
+    A model is a photograph of a set of numbers. When the desk adopts a new
+    valuation the photograph does not update itself, and a stale workbook is
+    more dangerous than a missing one because it looks finished.
+    """
+    if slugs is None:
+        slugs = [e["slug"] for e in store.universe()["companies"]]
+    out = []
+    for slug in slugs:
+        rec = store._read(_anchor_path(slug), {})
+        if not rec.get("anchors"):
+            continue
+        now = _anchors(store.load_profile(slug))
+        moved = []
+        for concept, was in rec["anchors"].items():
+            is_ = now.get(concept)
+            if is_ and is_.get("value") != was.get("value"):
+                moved.append({"concept": concept, "was": was.get("value"),
+                              "now": is_.get("value"), "as_of": is_.get("as_of")})
+        if moved:
+            out.append({"slug": slug, "workbook": rec.get("workbook"),
+                        "built": rec.get("built"), "moved": moved})
+    return out
 
 
 def _find_row(ws, _):

@@ -96,5 +96,91 @@
         "as_of": "2026-08-13"
       }
     ]
+  },
+  {
+    "slug": "openai",
+    "started_at": "2026-08-16T23:33:41+00:00",
+    "finished_at": "2026-08-16T23:33:42+00:00",
+    "sources": 2,
+    "counts": {
+      "changed": 1,
+      "unchanged": 1
+    },
+    "results": [
+      {
+        "id": "news",
+        "name": "OpenAI news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22OpenAI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:33:42+00:00",
+        "http": 200,
+        "items": 104,
+        "new_stories": 65,
+        "outcome": "changed",
+        "previous_hash": "4038e63d9dbf1408",
+        "previous_seen": "2026-08-13T18:47:54+00:00",
+        "delta_chars": 2299,
+        "evidence_id": "-q-22openai-22-hl-en-us-gl-us-ceid-us-en-55b55e1b",
+        "chars": 37390,
+        "as_of": "2026-08-16"
+      },
+      {
+        "id": "site-feed",
+        "name": "OpenAI site feed",
+        "kind": "newsroom",
+        "url": "https://openai.com/news/rss.xml",
+        "checked_at": "2026-08-16T23:33:42+00:00",
+        "http": 200,
+        "items": 1129,
+        "new_stories": 870,
+        "outcome": "unchanged",
+        "evidence_id": "https-openai-com-news-rss-xml-050055ba",
+        "chars": 147888,
+        "as_of": "2026-08-13"
+      }
+    ]
+  },
+  {
+    "slug": "openai",
+    "started_at": "2026-08-16T23:34:48+00:00",
+    "finished_at": "2026-08-16T23:34:49+00:00",
+    "sources": 2,
+    "counts": {
+      "changed": 1,
+      "unchanged": 1
+    },
+    "results": [
+      {
+        "id": "news",
+        "name": "OpenAI news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22OpenAI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:34:49+00:00",
+        "http": 200,
+        "items": 104,
+        "new_stories": 0,
+        "outcome": "changed",
+        "previous_hash": "55b55e1b12c3bff7",
+        "previous_seen": "2026-08-16T23:33:42+00:00",
+        "delta_chars": 41,
+        "evidence_id": "-q-22openai-22-hl-en-us-gl-us-ceid-us-en-f8ceebe2",
+        "chars": 37431,
+        "as_of": "2026-08-16"
+      },
+      {
+        "id": "site-feed",
+        "name": "OpenAI site feed",
+        "kind": "newsroom",
+        "url": "https://openai.com/news/rss.xml",
+        "checked_at": "2026-08-16T23:34:49+00:00",
+        "http": 200,
+        "items": 1129,
+        "new_stories": 870,
+        "outcome": "unchanged",
+        "evidence_id": "https-openai-com-news-rss-xml-050055ba",
+        "chars": 147888,
+        "as_of": "2026-08-13"
+      }
+    ]
   }
 ]

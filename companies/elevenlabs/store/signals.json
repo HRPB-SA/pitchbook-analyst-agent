@@ -1,0 +1,285 @@
+{
+  "slug": "elevenlabs",
+  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "window_days": 120,
+  "documents": 94,
+  "signals": [
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 22.0,
+      "verdict": "disagrees",
+      "gap_pct": 100.0,
+      "held": {
+        "value": 11.0,
+        "as_of": "2026-02-04",
+        "tier": "T2",
+        "source": "PitchBook deal 319110-94T (Later Stage VC)",
+        "path": "valuation.valuation_ladder_bn"
+      },
+      "n_reports": 7,
+      "n_publishers": 7,
+      "publishers": [
+        "Bloomberg.com",
+        "Briefs Finance",
+        "Dealroom",
+        "GuruFocus",
+        "Reuters",
+        "Tech Funding News",
+        "sifted.eu"
+      ],
+      "first_reported": "2026-07-02",
+      "last_reported": "2026-07-03",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONlZGWk5RYm1fVXRBMWxpaUhRSW01Zll4V0E1XzN1SWRBUVNvZU5DSGpuSFE2bU5YbDJUMWJqRlJFRlQtY29SWkgtLS04ekxHREJvRG4zNnptaWVaY3lyNHB3WVZIZFUybTZqdmlVRVpON0thaWVGbU1FT3RQN2pQU0JBT04xXzhONTY1elptNlJtbzNrV3cya3E5cGFqNndQRzF1c2NsYjdLdVNpeGV3?oc=5",
+          "publisher": "Dealroom",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22B valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTU85azVnV1p4NUY0aXFLOG9JZzM4d01IQlU3cUdYUFltNndfWTVTOEVJZXl3YkhmWTFQWkNCa2I2eXFEajIwX3VIV2g2ZGppUjZ2RF9jcS1OaElpVDlncXJnV05pLW5fa0ZQbVdHeEZ5RWF6OWtYeHFvek9HM3V4TVNibFF3aFluejNQUDlmVVVTQ0hZMk1DOTBXdkNIR1RQMl8zRVIyZEdXNEswMW1meA?oc=5",
+          "publisher": "Bloomberg.com",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22 Billion Valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQc0pTaVFrVHZMNGZmcHFDcUNsblplSGM4RXVxYkZrb0JBbS1zMjk4YU5HQW1qcm1Ua1FrNF9aalYwTUNRSGl4M3ZTTFpkRjdmdHFpOV9NZEJhUnYxd0h6aHhmWGtiQms5aG5NaXVlMC0tczdjZm9xTl9xNXBxdUNNMlB2ZUJjOW5ubHVFNnVwRE5QVGNRQzhqcGVn?oc=5",
+          "publisher": "sifted.eu",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22bn valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPal9rbXlFX0dZVHJJUUsxM0lHaFY4LXJWOUNORTBIRVJrQWFZOFhnQkYzY0ZMVTFEWFl5RlZYSFFVeVdrZU5wRU1oUjJiMnBCbzRwSjRpOTZkWkJsaFllQndxSlp5aUozdm12ZTZUOVdHMjQ4UmY1SHhLUUYzNDFRYmZhSTFVMDhWSmZYT3A1cTZnTGJZc2hrU2tUNm43WnJjUTlHVlNDd1RCUGIyZFVfQ1B6MkJoU2tiSVZSM0RRTGU1LWpKbXc?oc=5",
+          "publisher": "Tech Funding News",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22B valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPem9TblRNc0JNTllsSHRGR2tSbGpOVnlhV1Y5bW5PZnZsMk94OVZFNmphQXNRV3hBcm9DcmlaaE1ZTVJRR2hZTjVoY2ZFOWZyWF94Nnh2NWtDaEJuVTducjlfMWpPWjd2T1BTenducWgzZ09pZ3hlN3l3aGItQVplY2R2eFNOVmE3bHdWam5MeHlTamdDYzJQT0JaQzZ0QTg?oc=5",
+          "publisher": "GuruFocus",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22 Billion Valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeVUyVDBrTFBPUGFUZm5JaWxEZ014UDFRMkZ1UEVXM3lEUVhHbEV5elhtUXUtS1RLUGdnNmNSUVh3Ym5WYVBTVEcwaFc1MU9ubnJpX3BrNjF3WjZUbjBHbVFEWEU1N3dyajZPMFJLZEVjR28xYWFieldMUnZZeFNkSUdJaHZvOVZ0QnR2eGl5QlI5YW9UOURKa3pTOGZlZFQzVGJFRjBheElrUDdkT2FDdTVWV3VwNFVVSWIxUjB0UQ?oc=5",
+          "publisher": "Reuters",
+          "when": "2026-07-02",
+          "kind": "news",
+          "quote": "$22 billion valuation"
+        }
+      ]
+    },
+    {
+      "concept": "run_rate_bn",
+      "label": "revenue run-rate",
+      "unit": "$B",
+      "claimed": 0.5,
+      "verdict": "unheld",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 6,
+      "n_publishers": 6,
+      "publishers": [
+        "Barchart.com",
+        "CNBC",
+        "ElevenLabs blog",
+        "SiliconANGLE",
+        "The Futurum Group",
+        "pulse2.com"
+      ],
+      "first_reported": "2026-05-05",
+      "last_reported": "2026-08-16",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://elevenlabs.io/blog",
+          "publisher": "ElevenLabs blog",
+          "when": "2026-08-16",
+          "kind": "blog",
+          "quote": "$500M ARR"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNc1Z3OUJ1Z3dOcTh6eHBOLWptZ0d5UmMzS1l0UzIxNmZCRFdKcHVhNVlTUkR0UWt0Q2NJMmxXYzNJcW1VOG93dm9SSmI1aVZ4WVczWmpoSm52VHp2QnVLN25GTGExR3draHZIVlIya3lIUHVFVTZkb2UybU92T3VTLWJOd3ItREdCV0szdnBEXzZXdF9pVkNIUmpqTUFkZDlJenlBRmxBWm50d0tpQ21wZDA5OGxYeVpmc0VBUTFMcjgycmFaV2xqcG9ORFRlaUg4b0RacUIxbkZCakQ2MFN0VUlPR0F2VWFuRnJ5WGJkdHk3cGpzVHl2QjVoRzg4TzJF?oc=5",
+          "publisher": "Barchart.com",
+          "when": "2026-06-17",
+          "kind": "news",
+          "quote": "$500 Million in Annual Recurring Revenue"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdHowaUl1azFveWNjSFlQdDZUQS1mUWxyaFBGMGFmXzVJOThiUVJLeDdocmo4N2dNZG5Yanl5Qmc5ejFSMXdSRlB0U1YzcFlIeEc5TUJ1djA4bHVOMXQxNXBhSnVDck9ULVVLa0IwRFZBZU5zYnpJcjlENjJDMTFWY282eU5hczV6aksxbWVFLUluaTRrLWwwdDB6aDNmZDA?oc=5",
+          "publisher": "The Futurum Group",
+          "when": "2026-05-06",
+          "kind": "news",
+          "quote": "$500M ARR"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNdEhkRFQzTnR5TEU1RGdYMUQ1ektIRUV1M1EzR3A5TGxVczgyTFhkX0xaUUFOdmZJOVR5NnplR0NJWU05VWtlbUlseEt1YUF1bHJfLVVHSlN3TF85RkFrX2wtUWZTQWZ6V1NHMHRSTnk2SXI5Sy1ubWJsWDFNbjl0VGJCdXlvSUtDb0JuRGdsYi1HWXppVVVvLXk1dW9IWTVyVUxMRW96YUVjX21JbjdQUjZZeVctaUNCdWk0VDNZVWVnUknSAcgBQVVfeXFMT2ZqZmZGS2lJSDQyb0JuODNaWUxiVjlicnRzZ1ZWam9KYml0QWd3Nl9lTU9UMC1xWGRvTXo1dUI0M0RsbFYxd2FrTXc5SDhmanFPR3phMFZqWk5FV1Y4Ymo4SHJyWDVyNHE4VVRHdVpneDVsVy1aTzEyV1pETGRvczZFNWFFUEFBWTNFU2EweFdMcmJnUUx0RFdHZklJN1VhMzF6VnkzYVNPbGRDOUxPWVhlRzlndXF1Z1VnQmtHVlozSHJfUWR0Y2Q?oc=5",
+          "publisher": "pulse2.com",
+          "when": "2026-05-06",
+          "kind": "news",
+          "quote": "$500 Million ARR"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWnhUY011NzlGMGtDa3hVNmFXQ3VycEt6WVJoOWVlaVhFdTZxZnR0TGx6UGtCMU1rS1R0aU5GQ3U4S1ByVnMtOTAtM29TLUt0dHdIZzB5N1VpZWoxNGdwclJXLUJZMjBCX1ZMUGVPZDZLTUk2M0prMEZ4WUxQREhFZXV2aUM2NkpFMmtXN0FEWDNlLXJJdnpIa1J0bFFCWXp6YUJJZ0Jqbw?oc=5",
+          "publisher": "SiliconANGLE",
+          "when": "2026-05-05",
+          "kind": "news",
+          "quote": "annualized revenue tops $500M"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNNV9aMWhFSi0xOTFxbTRheE1McGlUR0dlaElmM1JUYkZZS2ZfSzFDc1VFSHR4NFpxYnB0YUdsWWdVX0IweEp1Q0xBNGxpMkQ0LVY3YVRob2dhOERlMDBXNkV3MTNVdmZ5VEtsZVItcXBfWlJsMUpYMnlqdDViSV9QMWVSZ3pCV1I1bmZINkx1WEk1cjMzMk9weFlPX3RBenJtcm94S0kyRmdtVnZvMlNIMW1kcWtmaWw2VVVoa3ZkV19Wdw?oc=5",
+          "publisher": "CNBC",
+          "when": "2026-05-05",
+          "kind": "news",
+          "quote": "$500M in ARR"
+        }
+      ]
+    },
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 0.5,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "ElevenLabs blog"
+      ],
+      "first_reported": "2026-08-16",
+      "last_reported": "2026-08-16",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://elevenlabs.io/blog",
+          "publisher": "ElevenLabs blog",
+          "when": "2026-08-16",
+          "kind": "blog",
+          "quote": "raises $500M"
+        }
+      ]
+    },
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 11.0,
+      "verdict": "confirms",
+      "gap_pct": 0.0,
+      "held": {
+        "value": 11.0,
+        "as_of": "2026-02-04",
+        "tier": "T2",
+        "source": "PitchBook deal 319110-94T (Later Stage VC)",
+        "path": "valuation.valuation_ladder_bn"
+      },
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "ElevenLabs blog"
+      ],
+      "first_reported": "2026-08-16",
+      "last_reported": "2026-08-16",
+      "already_held_as": {
+        "value": 11.0,
+        "as_of": "2026-02-04",
+        "source": "PitchBook deal 319110-94T (Later Stage VC)"
+      },
+      "reports": [
+        {
+          "url": "https://elevenlabs.io/blog",
+          "publisher": "ElevenLabs blog",
+          "when": "2026-08-16",
+          "kind": "blog",
+          "quote": "$11B valuation"
+        }
+      ]
+    }
+  ],
+  "open": 2,
+  "needs_attention": [
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 22.0,
+      "verdict": "disagrees",
+      "gap_pct": 100.0,
+      "held": {
+        "value": 11.0,
+        "as_of": "2026-02-04",
+        "tier": "T2",
+        "source": "PitchBook deal 319110-94T (Later Stage VC)",
+        "path": "valuation.valuation_ladder_bn"
+      },
+      "n_reports": 7,
+      "n_publishers": 7,
+      "publishers": [
+        "Bloomberg.com",
+        "Briefs Finance",
+        "Dealroom",
+        "GuruFocus",
+        "Reuters",
+        "Tech Funding News",
+        "sifted.eu"
+      ],
+      "first_reported": "2026-07-02",
+      "last_reported": "2026-07-03",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONlZGWk5RYm1fVXRBMWxpaUhRSW01Zll4V0E1XzN1SWRBUVNvZU5DSGpuSFE2bU5YbDJUMWJqRlJFRlQtY29SWkgtLS04ekxHREJvRG4zNnptaWVaY3lyNHB3WVZIZFUybTZqdmlVRVpON0thaWVGbU1FT3RQN2pQU0JBT04xXzhONTY1elptNlJtbzNrV3cya3E5cGFqNndQRzF1c2NsYjdLdVNpeGV3?oc=5",
+          "publisher": "Dealroom",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22B valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTU85azVnV1p4NUY0aXFLOG9JZzM4d01IQlU3cUdYUFltNndfWTVTOEVJZXl3YkhmWTFQWkNCa2I2eXFEajIwX3VIV2g2ZGppUjZ2RF9jcS1OaElpVDlncXJnV05pLW5fa0ZQbVdHeEZ5RWF6OWtYeHFvek9HM3V4TVNibFF3aFluejNQUDlmVVVTQ0hZMk1DOTBXdkNIR1RQMl8zRVIyZEdXNEswMW1meA?oc=5",
+          "publisher": "Bloomberg.com",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22 Billion Valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQc0pTaVFrVHZMNGZmcHFDcUNsblplSGM4RXVxYkZrb0JBbS1zMjk4YU5HQW1qcm1Ua1FrNF9aalYwTUNRSGl4M3ZTTFpkRjdmdHFpOV9NZEJhUnYxd0h6aHhmWGtiQms5aG5NaXVlMC0tczdjZm9xTl9xNXBxdUNNMlB2ZUJjOW5ubHVFNnVwRE5QVGNRQzhqcGVn?oc=5",
+          "publisher": "sifted.eu",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22bn valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPal9rbXlFX0dZVHJJUUsxM0lHaFY4LXJWOUNORTBIRVJrQWFZOFhnQkYzY0ZMVTFEWFl5RlZYSFFVeVdrZU5wRU1oUjJiMnBCbzRwSjRpOTZkWkJsaFllQndxSlp5aUozdm12ZTZUOVdHMjQ4UmY1SHhLUUYzNDFRYmZhSTFVMDhWSmZYT3A1cTZnTGJZc2hrU2tUNm43WnJjUTlHVlNDd1RCUGIyZFVfQ1B6MkJoU2tiSVZSM0RRTGU1LWpKbXc?oc=5",
+          "publisher": "Tech Funding News",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22B valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPem9TblRNc0JNTllsSHRGR2tSbGpOVnlhV1Y5bW5PZnZsMk94OVZFNmphQXNRV3hBcm9DcmlaaE1ZTVJRR2hZTjVoY2ZFOWZyWF94Nnh2NWtDaEJuVTducjlfMWpPWjd2T1BTenducWgzZ09pZ3hlN3l3aGItQVplY2R2eFNOVmE3bHdWam5MeHlTamdDYzJQT0JaQzZ0QTg?oc=5",
+          "publisher": "GuruFocus",
+          "when": "2026-07-03",
+          "kind": "news",
+          "quote": "$22 Billion Valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeVUyVDBrTFBPUGFUZm5JaWxEZ014UDFRMkZ1UEVXM3lEUVhHbEV5elhtUXUtS1RLUGdnNmNSUVh3Ym5WYVBTVEcwaFc1MU9ubnJpX3BrNjF3WjZUbjBHbVFEWEU1N3dyajZPMFJLZEVjR28xYWFieldMUnZZeFNkSUdJaHZvOVZ0QnR2eGl5QlI5YW9UOURKa3pTOGZlZFQzVGJFRjBheElrUDdkT2FDdTVWV3VwNFVVSWIxUjB0UQ?oc=5",
+          "publisher": "Reuters",
+          "when": "2026-07-02",
+          "kind": "news",
+          "quote": "$22 billion valuation"
+        }
+      ]
+    }
+  ]
+}

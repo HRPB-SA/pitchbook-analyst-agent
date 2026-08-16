@@ -1,0 +1,101 @@
+{
+  "slug": "cohere",
+  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "window_days": 120,
+  "documents": 125,
+  "signals": [
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 20.0,
+      "verdict": "disagrees",
+      "gap_pct": 185.7,
+      "held": {
+        "value": 7.0,
+        "as_of": "2025-09-24",
+        "tier": "T2",
+        "source": "PitchBook deal 297333-55T (Later Stage VC)",
+        "path": "valuation.valuation_ladder_bn"
+      },
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "Axios"
+      ],
+      "first_reported": "2026-04-24",
+      "last_reported": "2026-04-24",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBsWklEN3pFa202R3huaHRBRVJQWE5odG1TQkhNYUdJN3RkMWQxQU43TUllc1ZVY1pzdWhUMXZsWlNUdDhhNlp6cXFmdXRTQTl6RWdxX2gyNnFaOUQ0SmczS1NFUE1GSV9CcVEtblktUzNoQzR5bk5Vbw?oc=5",
+          "publisher": "Axios",
+          "when": "2026-04-24",
+          "kind": "news",
+          "quote": "valued at around $20B"
+        }
+      ]
+    },
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 0.6,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "The Information"
+      ],
+      "first_reported": "2026-04-24",
+      "last_reported": "2026-04-24",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdE95emZOd2NTVnRvZFNZQVBNN01PUkhmbUpFYXZVWnk2eHdSN2pXNGlwRHY0ajRIQ3pFTHFYSnFNVlZpS1ZlZEZEemlGQ19QYjE3U2lLR05pd3I0WnZaRlhIN3ZNQjhOdkdrbjVtdEdteHpTNk9DRG1ZTERKal9WZ0h5RW16Mm9uWkEzYlV3SkZDT3oyX1dRWmlOYjl2Wm9UdW03Y2VoWFpEazMyMlJzb25R?oc=5",
+          "publisher": "The Information",
+          "when": "2026-04-24",
+          "kind": "news",
+          "quote": "Raise $600 Million"
+        }
+      ]
+    }
+  ],
+  "open": 1,
+  "needs_attention": [
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 20.0,
+      "verdict": "disagrees",
+      "gap_pct": 185.7,
+      "held": {
+        "value": 7.0,
+        "as_of": "2025-09-24",
+        "tier": "T2",
+        "source": "PitchBook deal 297333-55T (Later Stage VC)",
+        "path": "valuation.valuation_ladder_bn"
+      },
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "Axios"
+      ],
+      "first_reported": "2026-04-24",
+      "last_reported": "2026-04-24",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBsWklEN3pFa202R3huaHRBRVJQWE5odG1TQkhNYUdJN3RkMWQxQU43TUllc1ZVY1pzdWhUMXZsWlNUdDhhNlp6cXFmdXRTQTl6RWdxX2gyNnFaOUQ0SmczS1NFUE1GSV9CcVEtblktUzNoQzR5bk5Vbw?oc=5",
+          "publisher": "Axios",
+          "when": "2026-04-24",
+          "kind": "news",
+          "quote": "valued at around $20B"
+        }
+      ]
+    }
+  ]
+}

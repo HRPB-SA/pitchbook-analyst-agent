@@ -26,7 +26,8 @@ import json
 import os
 import re
 
-from . import briefing, evidence, harvest, intake, market, schema, store
+from . import (briefing, evidence, harvest, intake, market, schema, store,
+               watch)
 
 ASSET = os.path.join(os.path.dirname(__file__), "assets", "desk.html")
 OUT_DEFAULT = os.path.join(store.REPO, "Report Automation", "dashboard", "desk.html")
@@ -258,6 +259,52 @@ def _timeline(profile, trigs, news=None):
     return items
 
 
+ATTENTION_CONCEPTS = ("valuation_bn", "run_rate_bn", "growth_pct",
+                      "gross_margin_pct", "employees")
+
+
+def _attention(slug, profile):
+    """Everything about this company that a person still has to settle.
+
+    Three kinds, in the order they matter: a figure reported that the store
+    disagrees with, a figure on show that rests on an estimate when something
+    firmer exists, and a figure reported that the store has no view on at all.
+    """
+    items = []
+    sig = watch.load(slug)
+    for s in sig.get("signals", []):
+        if s.get("verdict") not in ("disagrees", "newer", "unheld"):
+            continue
+        held = s.get("held") or {}
+        items.append({
+            "kind": s["verdict"], "what": s["label"],
+            "reported": s["claimed"], "unit": s.get("unit", ""),
+            "held": held.get("value"), "held_as_of": held.get("as_of"),
+            "held_tier": held.get("tier"), "held_path": held.get("path"),
+            # a difference against nothing is not zero, it is undefined
+            "gap_pct": s.get("gap_pct") if held.get("value") is not None else None,
+            "outlets": s.get("n_publishers", 0),
+            "publishers": s.get("publishers", []),
+            "last_reported": s.get("last_reported"),
+            "reports": s.get("reports", [])[:4],
+        })
+    for concept in ATTENTION_CONCEPTS:
+        for w in briefing.resolution_warnings(profile, concept):
+            items.append({"kind": "estimate", "what": w["concept"],
+                          "reported": w["against"], "unit": "",
+                          "held": w["shown"], "held_as_of": w["shown_as_of"],
+                          "held_tier": w["shown_tier"],
+                          "held_path": w["shown_path"],
+                          "gap_pct": None, "outlets": 0, "publishers": [],
+                          "last_reported": w["against_as_of"],
+                          "note": w["note"], "reports": []})
+    rank = {"disagrees": 0, "estimate": 1, "newer": 2, "unheld": 3}
+    items.sort(key=lambda i: (rank.get(i["kind"], 9), -(i["outlets"] or 0)))
+    return {"items": items, "n": len(items),
+            "scanned_at": sig.get("scanned_at"),
+            "documents": sig.get("documents", 0)}
+
+
 def _trigger_key(condition):
     """A trigger is the thing being watched, not the sentence describing it.
 
@@ -476,6 +523,7 @@ def collect(today=None):
             "n_news_rel": sum(1 for n in news if n.get("relevant")),
             "triggers": trigs,
             "conflicts": conflicts,
+            "attention": _attention(slug, profile),
             "facts": facts,
             "cats": cats,
             "sources_index": _sources_index(facts),

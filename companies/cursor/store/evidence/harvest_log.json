@@ -212,5 +212,186 @@
         "as_of": "2026-08-13"
       }
     ]
+  },
+  {
+    "slug": "cursor",
+    "started_at": "2026-08-16T23:33:52+00:00",
+    "finished_at": "2026-08-16T23:33:55+00:00",
+    "sources": 6,
+    "counts": {
+      "changed": 4,
+      "unchanged": 1,
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "blog",
+        "name": "Cursor (Anysphere) blog",
+        "kind": "blog",
+        "url": "https://cursor.com/blog",
+        "checked_at": "2026-08-16T23:33:52+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "ef0299e58ebfcfdc",
+        "previous_seen": "2026-08-13T18:48:07+00:00",
+        "delta_chars": -102,
+        "evidence_id": "https-cursor-com-blog-6f8e3537",
+        "chars": 9326,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Cursor (Anysphere) pricing",
+        "kind": "pricing",
+        "url": "https://cursor.com/pricing",
+        "checked_at": "2026-08-16T23:33:53+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cursor-com-pricing-bd75bc00",
+        "chars": 9779,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Cursor (Anysphere) careers",
+        "kind": "careers",
+        "url": "https://cursor.com/careers",
+        "checked_at": "2026-08-16T23:33:53+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "8a9304f9f8d692fb",
+        "previous_seen": "2026-08-13T18:48:08+00:00",
+        "delta_chars": -14,
+        "evidence_id": "https-cursor-com-careers-818be72f",
+        "chars": 23991,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Cursor (Anysphere) home",
+        "kind": "other",
+        "url": "https://cursor.com/",
+        "checked_at": "2026-08-16T23:33:54+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "b3356e4e29bdb5de",
+        "previous_seen": "2026-08-13T18:48:08+00:00",
+        "delta_chars": -36,
+        "evidence_id": "https-cursor-com-42fe53a7",
+        "chars": 20065,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Cursor (Anysphere) docs",
+        "kind": "docs",
+        "url": "https://cursor.com/docs",
+        "checked_at": "2026-08-16T23:33:54+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "f591f488665dd188",
+        "previous_seen": "2026-08-13T18:48:09+00:00",
+        "delta_chars": -34,
+        "evidence_id": "https-cursor-com-docs-61053eea",
+        "chars": 5486,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Cursor Anysphere news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Anysphere%22+OR+%22Cursor+AI%22+OR+%22Cursor%22+coding&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:33:55+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 97,
+        "outcome": "new",
+        "evidence_id": "rsor-22-coding-hl-en-us-gl-us-ceid-us-en-04ce79cf",
+        "chars": 33912,
+        "as_of": "2026-08-14"
+      }
+    ]
+  },
+  {
+    "slug": "cursor",
+    "started_at": "2026-08-16T23:34:57+00:00",
+    "finished_at": "2026-08-16T23:35:22+00:00",
+    "sources": 6,
+    "counts": {
+      "unchanged": 4,
+      "unreachable": 2
+    },
+    "results": [
+      {
+        "id": "blog",
+        "name": "Cursor (Anysphere) blog",
+        "kind": "blog",
+        "url": "https://cursor.com/blog",
+        "checked_at": "2026-08-16T23:34:57+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cursor-com-blog-6f8e3537",
+        "chars": 9326,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Cursor (Anysphere) pricing",
+        "kind": "pricing",
+        "url": "https://cursor.com/pricing",
+        "checked_at": "2026-08-16T23:35:08+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
+      },
+      {
+        "id": "careers",
+        "name": "Cursor (Anysphere) careers",
+        "kind": "careers",
+        "url": "https://cursor.com/careers",
+        "checked_at": "2026-08-16T23:35:09+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cursor-com-careers-818be72f",
+        "chars": 23991,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Cursor (Anysphere) home",
+        "kind": "other",
+        "url": "https://cursor.com/",
+        "checked_at": "2026-08-16T23:35:20+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
+      },
+      {
+        "id": "docs",
+        "name": "Cursor (Anysphere) docs",
+        "kind": "docs",
+        "url": "https://cursor.com/docs",
+        "checked_at": "2026-08-16T23:35:21+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cursor-com-docs-61053eea",
+        "chars": 5486,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Cursor Anysphere news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Anysphere%22+OR+%22Cursor+AI%22+OR+%22Cursor%22+coding&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:35:22+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 0,
+        "outcome": "unchanged",
+        "evidence_id": "rsor-22-coding-hl-en-us-gl-us-ceid-us-en-04ce79cf",
+        "chars": 33912,
+        "as_of": "2026-08-14"
+      }
+    ]
   }
 ]

@@ -1,0 +1,160 @@
+{
+  "slug": "cursor",
+  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "window_days": 120,
+  "documents": 113,
+  "signals": [
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 2.0,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 2,
+      "n_publishers": 2,
+      "publishers": [
+        "Tech Funding News",
+        "The Next Web"
+      ],
+      "first_reported": "2026-04-18",
+      "last_reported": "2026-04-20",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObHlYbXBZNFl4dFkxY24wNGoxOHFoaTJhQnNMa1o5MTcxN21IR2ZFSFFoRWJEaVdoeFNNZlhzS3A5X0dXWWF6Y2hMZ0MtUUNmd3QtalRaU2g2Ti14OUFuM09Ub2ZQQ2VadWNFdlU5dE1OQXB5MEhJN3k4OWtjYlp4Yi1yUFhodzg?oc=5",
+          "publisher": "Tech Funding News",
+          "when": "2026-04-20",
+          "kind": "news",
+          "quote": "raise $2B"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVy1jZUJ6d19vQ29LYmVoelg4N3JycXd0dG05aFIxUjFVZF9ZclRqTzRVbTd3ZE9ZdTRwWS1YUm45R2RzM0x4cndTdUc2bWZEWnpxbDZXR0I3UTlybWZLNktLa1JBY1I2aGlsRG9nUDRyaFZtLUFoLXBZVmpka2s2TXBjblFPcEF3NXJ6NnBTTTBJTFdsVVRGZw?oc=5",
+          "publisher": "The Next Web",
+          "when": "2026-04-18",
+          "kind": "news",
+          "quote": "raise $2B"
+        }
+      ]
+    },
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 50.0,
+      "verdict": "history",
+      "gap_pct": -16.7,
+      "held": {
+        "value": 60.0,
+        "as_of": "2026-08-14",
+        "tier": "T2",
+        "source": "SpaceX acquisition of Anysphere, completed Aug 14 2026; PitchBook deal 328599-64T",
+        "path": "valuation.post_money_bn"
+      },
+      "n_reports": 2,
+      "n_publishers": 2,
+      "publishers": [
+        "Tech Funding News",
+        "The Next Web"
+      ],
+      "first_reported": "2026-04-18",
+      "last_reported": "2026-04-20",
+      "already_held_as": {
+        "value": 50.0,
+        "as_of": "2026-04-17",
+        "source": "PitchBook deal 324491-14T (Later Stage VC, 7th round)"
+      },
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObHlYbXBZNFl4dFkxY24wNGoxOHFoaTJhQnNMa1o5MTcxN21IR2ZFSFFoRWJEaVdoeFNNZlhzS3A5X0dXWWF6Y2hMZ0MtUUNmd3QtalRaU2g2Ti14OUFuM09Ub2ZQQ2VadWNFdlU5dE1OQXB5MEhJN3k4OWtjYlp4Yi1yUFhodzg?oc=5",
+          "publisher": "Tech Funding News",
+          "when": "2026-04-20",
+          "kind": "news",
+          "quote": "$50B valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVy1jZUJ6d19vQ29LYmVoelg4N3JycXd0dG05aFIxUjFVZF9ZclRqTzRVbTd3ZE9ZdTRwWS1YUm45R2RzM0x4cndTdUc2bWZEWnpxbDZXR0I3UTlybWZLNktLa1JBY1I2aGlsRG9nUDRyaFZtLUFoLXBZVmpka2s2TXBjblFPcEF3NXJ6NnBTTTBJTFdsVVRGZw?oc=5",
+          "publisher": "The Next Web",
+          "when": "2026-04-18",
+          "kind": "news",
+          "quote": "$50B valuation"
+        }
+      ]
+    },
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 29.0,
+      "verdict": "history",
+      "gap_pct": -51.7,
+      "held": {
+        "value": 60.0,
+        "as_of": "2026-08-14",
+        "tier": "T2",
+        "source": "SpaceX acquisition of Anysphere, completed Aug 14 2026; PitchBook deal 328599-64T",
+        "path": "valuation.post_money_bn"
+      },
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "tech-insider.org"
+      ],
+      "first_reported": "2026-05-12",
+      "last_reported": "2026-05-12",
+      "already_held_as": {
+        "value": 29.3,
+        "as_of": "2025-11-13",
+        "source": "PitchBook deal 312975-01T (Later Stage VC)"
+      },
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1BQ2IwcmFjZ0MyMHJvbEZZSGstTmMxNEZOcGo4cGR1cnM2NFJya3pZUmNocFJpdkk3Q1lyaDRMc2hwWmNwa1ZhdXlJTl9LNnFfdHlJSWJJdGpEMkk?oc=5",
+          "publisher": "tech-insider.org",
+          "when": "2026-05-12",
+          "kind": "news",
+          "quote": "$29B Valuation"
+        }
+      ]
+    },
+    {
+      "concept": "run_rate_bn",
+      "label": "revenue run-rate",
+      "unit": "$B",
+      "claimed": 2.0,
+      "verdict": "confirms",
+      "gap_pct": 0.0,
+      "held": {
+        "value": 2.0,
+        "as_of": "2026-04-18",
+        "tier": "T3",
+        "source": "The Next Web, Apr 18 2026, reporting $2B ARR",
+        "path": "financials.run_rate_ladder_bn"
+      },
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "The Next Web"
+      ],
+      "first_reported": "2026-04-18",
+      "last_reported": "2026-04-18",
+      "already_held_as": {
+        "value": 2.0,
+        "as_of": "2026-04-18",
+        "source": "The Next Web, Apr 18 2026, reporting $2B ARR"
+      },
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVy1jZUJ6d19vQ29LYmVoelg4N3JycXd0dG05aFIxUjFVZF9ZclRqTzRVbTd3ZE9ZdTRwWS1YUm45R2RzM0x4cndTdUc2bWZEWnpxbDZXR0I3UTlybWZLNktLa1JBY1I2aGlsRG9nUDRyaFZtLUFoLXBZVmpka2s2TXBjblFPcEF3NXJ6NnBTTTBJTFdsVVRGZw?oc=5",
+          "publisher": "The Next Web",
+          "when": "2026-04-18",
+          "kind": "news",
+          "quote": "$2B ARR"
+        }
+      ]
+    }
+  ],
+  "open": 0,
+  "needs_attention": []
+}

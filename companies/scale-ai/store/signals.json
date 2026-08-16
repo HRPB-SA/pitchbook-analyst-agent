@@ -1,0 +1,44 @@
+{
+  "slug": "scale-ai",
+  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "window_days": 120,
+  "documents": 43,
+  "signals": [
+    {
+      "concept": "employees",
+      "label": "headcount",
+      "unit": "",
+      "claimed": 1000,
+      "verdict": "unheld",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 2,
+      "n_publishers": 2,
+      "publishers": [
+        "Scale AI about",
+        "Scale AI newsroom"
+      ],
+      "first_reported": "2026-08-16",
+      "last_reported": "2026-08-16",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://scale.com/press",
+          "publisher": "Scale AI newsroom",
+          "when": "2026-08-16",
+          "kind": "newsroom",
+          "quote": "Employees 1,000"
+        },
+        {
+          "url": "https://scale.com/about",
+          "publisher": "Scale AI about",
+          "when": "2026-08-16",
+          "kind": "other",
+          "quote": "Employees 1,000"
+        }
+      ]
+    }
+  ],
+  "open": 1,
+  "needs_attention": []
+}

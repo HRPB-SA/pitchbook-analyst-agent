@@ -1,0 +1,141 @@
+{
+  "_provenance": "Detected by engine/watch.py on 2026-08-16: four outlets reported a $60B figure against a stored $29.3B. Verified against PitchBook profile 519419-89 and deal 328599-64T (retrieved 2026-08-16), then against press confirming the close. House ruling R2 governs: the June 16 definitive agreement was announced-but-unsettled and did not anchor anything; the August 14 completion does. PitchBook still read 'Announced/In Progress' at its 2026-08-08 update, so the completion is carried from the company announcement and the SEC Form 8-K it cites, not from the vendor field.",
+  "identity": {
+    "status": {
+      "value": "Acquired by SpaceX (NAS: SPCX); operates as a wholly owned unit of the SpaceXAI division",
+      "as_of": "2026-08-14",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "SpaceX and Cursor announcements, Aug 14 2026, citing SEC Form 8-K",
+      "note": "Independent-company coverage ends here. Cursor's economics now sit inside SpaceX."
+    },
+    "employees": {
+      "value": 700,
+      "as_of": "2026-06-17",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook company profile 519419-89, Employees field"
+    }
+  },
+  "valuation": {
+    "post_money_bn": {
+      "value": 60.0,
+      "as_of": "2026-08-14",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "SpaceX acquisition of Anysphere, completed Aug 14 2026; PitchBook deal 328599-64T",
+      "note": "An acquisition price, not a venture mark. All-stock: roughly 391 million SpaceX Class A shares. It stops moving now, so the usual valuation decay does not apply."
+    },
+    "valuation_ladder_bn": [
+      {
+        "value": 50.0,
+        "as_of": "2026-04-17",
+        "tier": "T2",
+        "decay": "STABLE",
+        "source": "PitchBook deal 324491-14T (Later Stage VC, 7th round)",
+        "flags": [
+          "est."
+        ],
+        "note": "$2B led by Andreessen Horowitz and Thrive Capital, with Nvidia and Battery Ventures. PitchBook records the $50B as a pre-money estimate, not an actual."
+      },
+      {
+        "value": 60.0,
+        "as_of": "2026-08-14",
+        "tier": "T2",
+        "decay": "STABLE",
+        "source": "SpaceX acquisition completed Aug 14 2026; PitchBook deal 328599-64T",
+        "note": "Acquisition price. Definitive agreement Jun 16 2026, completed Aug 14 2026."
+      }
+    ]
+  },
+  "financing": {
+    "raised_to_date_bn": {
+      "value": 3.376,
+      "as_of": "2026-06-16",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook company profile 519419-89, Total Raised $3,375.999M"
+    },
+    "last_completed_deal": {
+      "value": "Acquisition by SpaceX for $60B all-stock, completed 2026-08-14 (definitive agreement 2026-06-16)",
+      "as_of": "2026-08-14",
+      "tier": "T2",
+      "decay": "STABLE",
+      "source": "PitchBook deal 328599-64T + SpaceX announcement"
+    }
+  },
+  "financials": {
+    "run_rate_ladder_bn": [
+      {
+        "value": 2.0,
+        "as_of": "2026-04-18",
+        "tier": "T3",
+        "decay": "QUARTERLY",
+        "source": "The Next Web, Apr 18 2026, reporting $2B ARR",
+        "flags": [
+          "VERIFY"
+        ],
+        "note": "Press figure, not a company print. Carried as the only dated run-rate on file."
+      }
+    ],
+    "pb_revenue_ttm_bn": {
+      "value": 4.0,
+      "as_of": "2026-12-31",
+      "tier": "T2",
+      "decay": "QUARTERLY",
+      "source": "PitchBook Revenue field, fiscal period TTM 4Q2026",
+      "flags": [
+        "do-not-adopt"
+      ],
+      "note": "House ruling R3: a PitchBook TTM field is a forward-window projection, not a run-rate. It never enters the ladder and never anchors a multiple."
+    }
+  },
+  "deals_ma": {
+    "acquirer": {
+      "value": "SpaceX (NAS: SPCX)",
+      "as_of": "2026-08-14",
+      "tier": "T2",
+      "decay": "PERMANENT",
+      "source": "SpaceX announcement Aug 14 2026 citing SEC Form 8-K"
+    },
+    "consideration": {
+      "value": "All-stock: approximately 391 million SpaceX Class A shares for $60B",
+      "as_of": "2026-08-14",
+      "tier": "T2",
+      "decay": "PERMANENT",
+      "source": "SpaceX SEC Form 8-K as reported Aug 14-15 2026",
+      "note": "All-stock means the price a seller actually realises tracks SpaceX shares, not the headline $60B."
+    },
+    "rationale": {
+      "value": "Cursor's team joins the SpaceXAI division to work on Grok and related products; Cursor gains access to SpaceX compute including the Colossus supercomputer",
+      "as_of": "2026-08-14",
+      "tier": "T3",
+      "decay": "STABLE",
+      "source": "Cursor statement on X, Aug 14 2026"
+    }
+  },
+  "triggers": {
+    "named": [
+      {
+        "value": {
+          "condition": "SpaceX acquisition of Cursor: completes (adopt the $60B price and close independent coverage) or lapses",
+          "status": "fired"
+        },
+        "as_of": "2026-08-14",
+        "tier": "T2",
+        "source": "SpaceX and Cursor announcements, Aug 14 2026",
+        "note": "Fired on completion. The June 16 agreement was held out of the base case under ruling R2 until this date."
+      },
+      {
+        "value": {
+          "condition": "Coverage decision: Cursor is no longer an independent company. Fold into the xAI/SpaceX profile or retire the standalone page by the next refresh",
+          "status": "armed"
+        },
+        "as_of": "2026-08-16",
+        "tier": "T2",
+        "source": "desk, on the Aug 14 2026 completion"
+      }
+    ]
+  },
+  "_snapshot_date": "2026-08-16"
+}

@@ -279,5 +279,347 @@
         "as_of": "2026-08-13"
       }
     ]
+  },
+  {
+    "slug": "cohere",
+    "started_at": "2026-08-16T23:34:02+00:00",
+    "finished_at": "2026-08-16T23:34:08+00:00",
+    "sources": 8,
+    "counts": {
+      "unchanged": 6,
+      "changed": 1,
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Cohere newsroom",
+        "kind": "newsroom",
+        "url": "https://cohere.com/newsroom",
+        "checked_at": "2026-08-16T23:34:03+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-newsroom-6cc9b060",
+        "chars": 8799,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Cohere blog",
+        "kind": "blog",
+        "url": "https://cohere.com/blog",
+        "checked_at": "2026-08-16T23:34:04+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-blog-075cbcea",
+        "chars": 9518,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Cohere pricing",
+        "kind": "pricing",
+        "url": "https://cohere.com/pricing",
+        "checked_at": "2026-08-16T23:34:05+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-pricing-63e5eaad",
+        "chars": 13003,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Cohere careers",
+        "kind": "careers",
+        "url": "https://cohere.com/careers",
+        "checked_at": "2026-08-16T23:34:05+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "0ef62e06f63edf28",
+        "previous_seen": "2026-08-13T18:48:22+00:00",
+        "delta_chars": 0,
+        "evidence_id": "https-cohere-com-careers-93629d16",
+        "chars": 10364,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Cohere home",
+        "kind": "other",
+        "url": "https://cohere.com/",
+        "checked_at": "2026-08-16T23:34:06+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-e365a305",
+        "chars": 9427,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Cohere about",
+        "kind": "other",
+        "url": "https://cohere.com/about",
+        "checked_at": "2026-08-16T23:34:07+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-about-4f3b3fa5",
+        "chars": 8591,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Cohere docs",
+        "kind": "docs",
+        "url": "https://cohere.com/docs",
+        "checked_at": "2026-08-16T23:34:07+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-docs-081c07b3",
+        "chars": 1361,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Cohere news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Cohere%22+AI&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:34:08+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 29,
+        "outcome": "new",
+        "evidence_id": "22cohere-22-ai-hl-en-us-gl-us-ceid-us-en-6f9b1808",
+        "chars": 37672,
+        "as_of": "2026-08-14"
+      }
+    ]
+  },
+  {
+    "slug": "cohere",
+    "started_at": "2026-08-16T23:34:18+00:00",
+    "finished_at": "2026-08-16T23:34:23+00:00",
+    "sources": 8,
+    "counts": {
+      "unchanged": 7,
+      "changed": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Cohere newsroom",
+        "kind": "newsroom",
+        "url": "https://cohere.com/newsroom",
+        "checked_at": "2026-08-16T23:34:19+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-newsroom-6cc9b060",
+        "chars": 8799,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Cohere blog",
+        "kind": "blog",
+        "url": "https://cohere.com/blog",
+        "checked_at": "2026-08-16T23:34:20+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-blog-075cbcea",
+        "chars": 9518,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Cohere pricing",
+        "kind": "pricing",
+        "url": "https://cohere.com/pricing",
+        "checked_at": "2026-08-16T23:34:21+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-pricing-63e5eaad",
+        "chars": 13003,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Cohere careers",
+        "kind": "careers",
+        "url": "https://cohere.com/careers",
+        "checked_at": "2026-08-16T23:34:21+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "93629d1616f93c70",
+        "previous_seen": "2026-08-16T23:34:05+00:00",
+        "delta_chars": 0,
+        "evidence_id": "https-cohere-com-careers-0ef62e06",
+        "chars": 10364,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Cohere home",
+        "kind": "other",
+        "url": "https://cohere.com/",
+        "checked_at": "2026-08-16T23:34:22+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-e365a305",
+        "chars": 9427,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Cohere about",
+        "kind": "other",
+        "url": "https://cohere.com/about",
+        "checked_at": "2026-08-16T23:34:22+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-about-4f3b3fa5",
+        "chars": 8591,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Cohere docs",
+        "kind": "docs",
+        "url": "https://cohere.com/docs",
+        "checked_at": "2026-08-16T23:34:23+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-docs-081c07b3",
+        "chars": 1361,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Cohere news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Cohere%22+AI&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:34:23+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 0,
+        "outcome": "unchanged",
+        "evidence_id": "22cohere-22-ai-hl-en-us-gl-us-ceid-us-en-6f9b1808",
+        "chars": 37672,
+        "as_of": "2026-08-14"
+      }
+    ]
+  },
+  {
+    "slug": "cohere",
+    "started_at": "2026-08-16T23:35:29+00:00",
+    "finished_at": "2026-08-16T23:35:44+00:00",
+    "sources": 8,
+    "counts": {
+      "unchanged": 5,
+      "unreachable": 1,
+      "changed": 2
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Cohere newsroom",
+        "kind": "newsroom",
+        "url": "https://cohere.com/newsroom",
+        "checked_at": "2026-08-16T23:35:29+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-newsroom-6cc9b060",
+        "chars": 8799,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Cohere blog",
+        "kind": "blog",
+        "url": "https://cohere.com/blog",
+        "checked_at": "2026-08-16T23:35:41+00:00",
+        "http": 0,
+        "outcome": "unreachable",
+        "error": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
+      },
+      {
+        "id": "pricing",
+        "name": "Cohere pricing",
+        "kind": "pricing",
+        "url": "https://cohere.com/pricing",
+        "checked_at": "2026-08-16T23:35:41+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-pricing-63e5eaad",
+        "chars": 13003,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Cohere careers",
+        "kind": "careers",
+        "url": "https://cohere.com/careers",
+        "checked_at": "2026-08-16T23:35:42+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-careers-0ef62e06",
+        "chars": 10364,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Cohere home",
+        "kind": "other",
+        "url": "https://cohere.com/",
+        "checked_at": "2026-08-16T23:35:42+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-e365a305",
+        "chars": 9427,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Cohere about",
+        "kind": "other",
+        "url": "https://cohere.com/about",
+        "checked_at": "2026-08-16T23:35:43+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "4f3b3fa5ff7f07ca",
+        "previous_seen": "2026-08-16T23:34:22+00:00",
+        "delta_chars": 0,
+        "evidence_id": "https-cohere-com-about-7c72c32f",
+        "chars": 8591,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Cohere docs",
+        "kind": "docs",
+        "url": "https://cohere.com/docs",
+        "checked_at": "2026-08-16T23:35:43+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-cohere-com-docs-081c07b3",
+        "chars": 1361,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Cohere news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Cohere%22+AI&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:35:44+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 2,
+        "outcome": "changed",
+        "previous_hash": "6f9b1808f82236f9",
+        "previous_seen": "2026-08-16T23:34:23+00:00",
+        "delta_chars": 557,
+        "evidence_id": "22cohere-22-ai-hl-en-us-gl-us-ceid-us-en-1c8b88bc",
+        "chars": 38229,
+        "as_of": "2026-08-14"
+      }
+    ]
   }
 ]

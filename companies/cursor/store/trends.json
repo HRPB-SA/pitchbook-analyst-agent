@@ -1,0 +1,111 @@
+{
+  "slug": "cursor",
+  "computed": "2026-08-16",
+  "ladders": {},
+  "derived": {
+    "ev_multiple": {
+      "value": 30.0,
+      "basis": "$60B / $2B run-rate (as of 2026-04-18)",
+      "label": "Derived"
+    }
+  },
+  "snapshot_delta": {
+    "from": "2026-08-14.json",
+    "to": "2026-08-16.json",
+    "changes": [
+      {
+        "field": "identity.employees",
+        "from": null,
+        "to": 700
+      },
+      {
+        "field": "identity.status",
+        "from": null,
+        "to": "Acquired by SpaceX (NAS: SPCX); operates as a wholly owned unit of the SpaceXAI division"
+      },
+      {
+        "field": "valuation.post_money_bn",
+        "from": null,
+        "to": 60.0
+      },
+      {
+        "field": "valuation.valuation_ladder_bn",
+        "from": "5 item(s)",
+        "to": "+2 new: [50.0, 60.0]"
+      },
+      {
+        "field": "financing.last_completed_deal",
+        "from": "Later Stage VC $2300M (6th Round)",
+        "to": "Acquisition by SpaceX for $60B all-stock, completed 2026-08-14 (definitive agreement 2026-06-16)"
+      },
+      {
+        "field": "financials.pb_revenue_ttm_bn",
+        "from": null,
+        "to": 4.0
+      },
+      {
+        "field": "financials.run_rate_ladder_bn",
+        "from": "0 item(s)",
+        "to": "+1 new: [2.0]"
+      },
+      {
+        "field": "deals_ma.acquirer",
+        "from": null,
+        "to": "SpaceX (NAS: SPCX)"
+      },
+      {
+        "field": "deals_ma.consideration",
+        "from": null,
+        "to": "All-stock: approximately 391 million SpaceX Class A shares for $60B"
+      },
+      {
+        "field": "deals_ma.rationale",
+        "from": null,
+        "to": "Cursor's team joins the SpaceXAI division to work on Grok and related products; Cursor gains access to SpaceX compute including the Colossus supercomputer"
+      },
+      {
+        "field": "triggers.named",
+        "from": "0 item(s)",
+        "to": "+2 new: [{'condition': 'SpaceX acquisition of Cursor: completes (adopt the $60B price and close in"
+      }
+    ]
+  },
+  "staleness": {
+    "stale": [
+      {
+        "field": "financials.run_rate_ladder_bn[0]",
+        "as_of": "2026-04-18",
+        "age_days": 120,
+        "value": 2.0,
+        "decay": "QUARTERLY"
+      }
+    ],
+    "flagged": [
+      {
+        "field": "financials.run_rate_ladder_bn[0]",
+        "flag": "VERIFY",
+        "value": 2.0,
+        "as_of": "2026-04-18"
+      }
+    ]
+  },
+  "open_conflicts": [],
+  "triggers": [
+    {
+      "trigger": {
+        "condition": "SpaceX acquisition of Cursor: completes (adopt the $60B price and close independent coverage) or lapses",
+        "status": "fired"
+      },
+      "as_of": "2026-08-14",
+      "source": "SpaceX and Cursor announcements, Aug 14 2026"
+    },
+    {
+      "trigger": {
+        "condition": "Coverage decision: Cursor is no longer an independent company. Fold into the xAI/SpaceX profile or retire the standalone page by the next refresh",
+        "status": "armed"
+      },
+      "as_of": "2026-08-16",
+      "source": "desk, on the Aug 14 2026 completion"
+    }
+  ]
+}

@@ -258,5 +258,237 @@
         "as_of": "2026-08-13"
       }
     ]
+  },
+  {
+    "slug": "anthropic",
+    "started_at": "2026-08-16T23:33:37+00:00",
+    "finished_at": "2026-08-16T23:33:41+00:00",
+    "sources": 8,
+    "counts": {
+      "changed": 4,
+      "unchanged": 3,
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Anthropic newsroom",
+        "kind": "newsroom",
+        "url": "https://anthropic.com/news",
+        "checked_at": "2026-08-16T23:33:38+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "6da09d548d5a4894",
+        "previous_seen": "2026-08-13T18:47:48+00:00",
+        "delta_chars": -32,
+        "evidence_id": "https-anthropic-com-news-60a75a99",
+        "chars": 3603,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Anthropic blog",
+        "kind": "blog",
+        "url": "https://anthropic.com/blog",
+        "checked_at": "2026-08-16T23:33:38+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "6da09d548d5a4894",
+        "previous_seen": "2026-08-13T18:47:49+00:00",
+        "delta_chars": -32,
+        "evidence_id": "https-anthropic-com-blog-60a75a99",
+        "chars": 3603,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Anthropic pricing",
+        "kind": "pricing",
+        "url": "https://anthropic.com/pricing",
+        "checked_at": "2026-08-16T23:33:39+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "9e3b481e3450d014",
+        "previous_seen": "2026-08-13T18:47:50+00:00",
+        "delta_chars": -1,
+        "evidence_id": "https-anthropic-com-pricing-aebe4b0d",
+        "chars": 33647,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Anthropic careers",
+        "kind": "careers",
+        "url": "https://anthropic.com/careers",
+        "checked_at": "2026-08-16T23:33:39+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-careers-7d30054e",
+        "chars": 10203,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Anthropic home",
+        "kind": "other",
+        "url": "https://anthropic.com/",
+        "checked_at": "2026-08-16T23:33:39+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-5a20e936",
+        "chars": 5279,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Anthropic about",
+        "kind": "other",
+        "url": "https://anthropic.com/company",
+        "checked_at": "2026-08-16T23:33:39+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-company-1546d694",
+        "chars": 7852,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Anthropic docs",
+        "kind": "docs",
+        "url": "https://anthropic.com/docs",
+        "checked_at": "2026-08-16T23:33:40+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "f17e5e6430d2921f",
+        "previous_seen": "2026-08-13T18:47:52+00:00",
+        "delta_chars": -19,
+        "evidence_id": "https-anthropic-com-docs-156dd60e",
+        "chars": 3904,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Anthropic news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Anthropic%22+OR+%22Claude+AI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:33:41+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 79,
+        "outcome": "new",
+        "evidence_id": "22claude-ai-22-hl-en-us-gl-us-ceid-us-en-09f2c312",
+        "chars": 40141,
+        "as_of": "2026-08-14"
+      }
+    ]
+  },
+  {
+    "slug": "anthropic",
+    "started_at": "2026-08-16T23:34:45+00:00",
+    "finished_at": "2026-08-16T23:34:48+00:00",
+    "sources": 8,
+    "counts": {
+      "unchanged": 8
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Anthropic newsroom",
+        "kind": "newsroom",
+        "url": "https://anthropic.com/news",
+        "checked_at": "2026-08-16T23:34:45+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-news-60a75a99",
+        "chars": 3603,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Anthropic blog",
+        "kind": "blog",
+        "url": "https://anthropic.com/blog",
+        "checked_at": "2026-08-16T23:34:45+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-blog-60a75a99",
+        "chars": 3603,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Anthropic pricing",
+        "kind": "pricing",
+        "url": "https://anthropic.com/pricing",
+        "checked_at": "2026-08-16T23:34:46+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-pricing-aebe4b0d",
+        "chars": 33647,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Anthropic careers",
+        "kind": "careers",
+        "url": "https://anthropic.com/careers",
+        "checked_at": "2026-08-16T23:34:46+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-careers-7d30054e",
+        "chars": 10203,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Anthropic home",
+        "kind": "other",
+        "url": "https://anthropic.com/",
+        "checked_at": "2026-08-16T23:34:46+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-5a20e936",
+        "chars": 5279,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Anthropic about",
+        "kind": "other",
+        "url": "https://anthropic.com/company",
+        "checked_at": "2026-08-16T23:34:46+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-company-1546d694",
+        "chars": 7852,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Anthropic docs",
+        "kind": "docs",
+        "url": "https://anthropic.com/docs",
+        "checked_at": "2026-08-16T23:34:48+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-anthropic-com-docs-156dd60e",
+        "chars": 3904,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Anthropic news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Anthropic%22+OR+%22Claude+AI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:34:48+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 0,
+        "outcome": "unchanged",
+        "evidence_id": "22claude-ai-22-hl-en-us-gl-us-ceid-us-en-09f2c312",
+        "chars": 40141,
+        "as_of": "2026-08-14"
+      }
+    ]
   }
 ]

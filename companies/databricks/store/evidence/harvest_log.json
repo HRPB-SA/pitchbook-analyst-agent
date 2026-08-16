@@ -388,5 +388,289 @@
         "as_of": "2026-08-12"
       }
     ]
+  },
+  {
+    "slug": "databricks",
+    "started_at": "2026-08-16T23:33:28+00:00",
+    "finished_at": "2026-08-16T23:33:37+00:00",
+    "sources": 10,
+    "counts": {
+      "unchanged": 7,
+      "changed": 3
+    },
+    "results": [
+      {
+        "id": "sec-submissions",
+        "name": "SEC EDGAR submissions",
+        "kind": "filing",
+        "url": "https://data.sec.gov/submissions/CIK0001587468.json",
+        "checked_at": "2026-08-16T23:33:29+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "a-sec-gov-submissions-cik0001587468-json-90958b0c",
+        "chars": 1233,
+        "as_of": "2025-12-31"
+      },
+      {
+        "id": "newsroom",
+        "name": "Databricks, Inc. newsroom",
+        "kind": "newsroom",
+        "url": "https://databricks.com/newsroom",
+        "checked_at": "2026-08-16T23:33:30+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-newsroom-f0a916ae",
+        "chars": 8413,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Databricks, Inc. blog",
+        "kind": "blog",
+        "url": "https://databricks.com/blog",
+        "checked_at": "2026-08-16T23:33:30+00:00",
+        "http": 200,
+        "outcome": "changed",
+        "previous_hash": "add5987b20e31416",
+        "previous_seen": "2026-08-13T18:47:36+00:00",
+        "delta_chars": -12,
+        "evidence_id": "https-databricks-com-blog-90e94cf5",
+        "chars": 9016,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Databricks, Inc. pricing",
+        "kind": "pricing",
+        "url": "https://databricks.com/pricing",
+        "checked_at": "2026-08-16T23:33:31+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-pricing-1e91b141",
+        "chars": 8835,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Databricks, Inc. careers",
+        "kind": "careers",
+        "url": "https://databricks.com/careers",
+        "checked_at": "2026-08-16T23:33:33+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-careers-0e36e2dd",
+        "chars": 9809,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Databricks, Inc. home",
+        "kind": "other",
+        "url": "https://databricks.com/",
+        "checked_at": "2026-08-16T23:33:33+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-9142afd1",
+        "chars": 10136,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Databricks, Inc. about",
+        "kind": "other",
+        "url": "https://databricks.com/about",
+        "checked_at": "2026-08-16T23:33:34+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-about-ab8715a8",
+        "chars": 8512,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Databricks, Inc. docs",
+        "kind": "docs",
+        "url": "https://databricks.com/documentation",
+        "checked_at": "2026-08-16T23:33:36+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-documentation-415f3ddf",
+        "chars": 4175,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Databricks news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Databricks%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:33:36+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 38,
+        "outcome": "changed",
+        "previous_hash": "6da0ac4684692d85",
+        "previous_seen": "2026-08-13T18:47:43+00:00",
+        "delta_chars": 1330,
+        "evidence_id": "2databricks-22-hl-en-us-gl-us-ceid-us-en-371fb51c",
+        "chars": 37027,
+        "as_of": "2026-08-13"
+      },
+      {
+        "id": "site-feed",
+        "name": "Databricks site feed",
+        "kind": "newsroom",
+        "url": "https://databricks.com/rss.xml",
+        "checked_at": "2026-08-16T23:33:37+00:00",
+        "http": 200,
+        "items": 10,
+        "new_stories": 3,
+        "outcome": "changed",
+        "previous_hash": "7e2ef84b3d23f8f2",
+        "previous_seen": "2026-08-13T18:47:48+00:00",
+        "delta_chars": -110,
+        "evidence_id": "https-databricks-com-rss-xml-f7cf995d",
+        "chars": 2038,
+        "as_of": "2026-08-14"
+      }
+    ]
+  },
+  {
+    "slug": "databricks",
+    "started_at": "2026-08-16T23:34:36+00:00",
+    "finished_at": "2026-08-16T23:34:45+00:00",
+    "sources": 10,
+    "counts": {
+      "unchanged": 9,
+      "changed": 1
+    },
+    "results": [
+      {
+        "id": "sec-submissions",
+        "name": "SEC EDGAR submissions",
+        "kind": "filing",
+        "url": "https://data.sec.gov/submissions/CIK0001587468.json",
+        "checked_at": "2026-08-16T23:34:37+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "a-sec-gov-submissions-cik0001587468-json-90958b0c",
+        "chars": 1233,
+        "as_of": "2025-12-31"
+      },
+      {
+        "id": "newsroom",
+        "name": "Databricks, Inc. newsroom",
+        "kind": "newsroom",
+        "url": "https://databricks.com/newsroom",
+        "checked_at": "2026-08-16T23:34:38+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-newsroom-f0a916ae",
+        "chars": 8413,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Databricks, Inc. blog",
+        "kind": "blog",
+        "url": "https://databricks.com/blog",
+        "checked_at": "2026-08-16T23:34:39+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-blog-90e94cf5",
+        "chars": 9016,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Databricks, Inc. pricing",
+        "kind": "pricing",
+        "url": "https://databricks.com/pricing",
+        "checked_at": "2026-08-16T23:34:40+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-pricing-1e91b141",
+        "chars": 8835,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Databricks, Inc. careers",
+        "kind": "careers",
+        "url": "https://databricks.com/careers",
+        "checked_at": "2026-08-16T23:34:41+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-careers-0e36e2dd",
+        "chars": 9809,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Databricks, Inc. home",
+        "kind": "other",
+        "url": "https://databricks.com/",
+        "checked_at": "2026-08-16T23:34:41+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-9142afd1",
+        "chars": 10136,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Databricks, Inc. about",
+        "kind": "other",
+        "url": "https://databricks.com/about",
+        "checked_at": "2026-08-16T23:34:42+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-about-ab8715a8",
+        "chars": 8512,
+        "as_of": null
+      },
+      {
+        "id": "docs",
+        "name": "Databricks, Inc. docs",
+        "kind": "docs",
+        "url": "https://databricks.com/documentation",
+        "checked_at": "2026-08-16T23:34:43+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-documentation-415f3ddf",
+        "chars": 4175,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Databricks news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Databricks%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:34:44+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 0,
+        "outcome": "changed",
+        "previous_hash": "371fb51c99d2a41b",
+        "previous_seen": "2026-08-16T23:33:36+00:00",
+        "delta_chars": 59,
+        "evidence_id": "2databricks-22-hl-en-us-gl-us-ceid-us-en-cef90ba6",
+        "chars": 37086,
+        "as_of": "2026-08-13"
+      },
+      {
+        "id": "site-feed",
+        "name": "Databricks site feed",
+        "kind": "newsroom",
+        "url": "https://databricks.com/rss.xml",
+        "checked_at": "2026-08-16T23:34:45+00:00",
+        "http": 200,
+        "items": 10,
+        "new_stories": 0,
+        "outcome": "unchanged",
+        "evidence_id": "https-databricks-com-rss-xml-f7cf995d",
+        "chars": 2038,
+        "as_of": "2026-08-14"
+      }
+    ]
   }
 ]

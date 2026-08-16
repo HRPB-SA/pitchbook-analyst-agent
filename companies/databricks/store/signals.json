@@ -1,0 +1,310 @@
+{
+  "slug": "databricks",
+  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "window_days": 120,
+  "documents": 117,
+  "signals": [
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 5.0,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 24,
+      "n_publishers": 24,
+      "publishers": [
+        "Benzinga",
+        "Bloomberg.com",
+        "Briefs Finance",
+        "CNBC",
+        "HedgeCo.Net",
+        "NewsCord",
+        "PYMNTS.com",
+        "Seeking Alpha"
+      ],
+      "first_reported": "2026-08-13",
+      "last_reported": "2026-08-14",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPai1QYWk1cGc1czdIRHBEaXFSaGpjLTRVMkJWY1JPS0J0V24ybHUxSGMya005MXJ4TTBNbUhRZ3lsME5UM2pZOHMwVWVINnBwS0xuM0RPVl9pU2tDR1RmU3pPaDVaLTJ1WGdfall5cDI5SnlaVjVGbW1fWmNsdWFoN2F1d1B5NUtlMGFTWlJ3?oc=5",
+          "publisher": "Sovereign Wealth Fund Institute | SWFI",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "Raises $5 Billion"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQOThQSlhNQTJIQVZrVkNidGlQblVMSy04YTlmRVBBMmZTcTdneTdKaG1vM0QyNmRMcDdtOWx3ZGNxR2hmVGlLT242ZGN1bG41b2NET19sUmJxbHlOamdhTDNzRDF6QkJNYmlITndrR1BUN3VuRlZEcFpvVkVib29YQWJjVW50ZEVpU09fTF9HakhQMHl3Qzh5OHJ0M2lRYkdZQWc1aDF1c0pYclZTM1Q2TGhuUkYtSHRYeUIydzdHNUROVWd0MFpUSA?oc=5",
+          "publisher": "HedgeCo.Net",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "Closes $5 Billion Round"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNbjI2RUN2VTBrMHFhUk83QWZSeGRldFVQQ0YwZzR0OUZTaDFub3JZcldsSDBhdnQ4QnVyV1d6YlNiYnRZZjRMekswbFRnejFvNVFqaGdKY21NX3l5Y2ItdVZxMFgyX3FCQ0dRbEEwaHY0THg1T2g0NXFsVXNMWGg2QjlLdjVEbFVYbGJjN2RSRVQ4MEx6QjFEcmJSbllSRXBrUDNrVGdXSUQ5cEhPOXlzM3pUR2pRclpzU2hKM1J4REhkVGs?oc=5",
+          "publisher": "Tech Times",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "Raises $5B"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSWtwNGltdEVadXJkOXBic3ZmQ1JLYktTMEhZTUZJVm1ZRkJLb0tFaFVVellKb3I0ajloQTZZWEtCYTZhTnBrYUFNZ3ZtbGdTMGlRbDdiWkQyX2FOV01BeW4zQU5iSW1XSnlwaVZteG00bVh1ZWZYS0YwOHhnQkstbl81bTdvaE9ZNDl5bktHZFRKRjB0N2JaZ3FvOGN3RDRkb25XdElR?oc=5",
+          "publisher": "siliconrepublic.com",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "$5bn raise"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQd0ZwRlhrLUVQV0xjZm9CakZwVVhVMlFoNDE2LW5qMHhhV2Z0SUpnTzI1SEgtSEloOTJtR18zT1ZXUEJxOGFUa1Nfb0NYa2k2UkVmbG1jeWxlZWJfRFZiWVhjdmFrdTBfU3dFdzVjTFlpSVdKYW5vQllaYVliRlNjMHV4SGc2cm8zVlUzZTlMQkJpeGstb0d5Qy1SLTltZ01waG9ZTm9GUHA?oc=5",
+          "publisher": "TNGlobal",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "closes $5B funding"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdW9XR1NOY3Z4b2RXR1RVMmktV2VyNHNxUFJTaXNUcE41a01rQkhLYlVOY052OEY2QTBYQmd3bGUxa3Jib3kxRWtzVUxJWm5CMFFaMmpoS0lIZjAzb0xmUXFIZGhwNlphVElzZ0g1dmNLRjAxenBSSGgtQkVQUHFpT3pvVVlpVEZJM1RDMGhBUkp1Z3A1TXlJUXEyU09IekFfLUY4bFRfVVQ3SDg?oc=5",
+          "publisher": "Tech Funding News",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "$5B round"
+        }
+      ]
+    },
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 1.0,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "TechCrunch"
+      ],
+      "first_reported": "2026-08-13",
+      "last_reported": "2026-08-13",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOWFRZbnRBV05rYm1nay1kVm1KSWlkdld5WXQyUnVvaWp5VlFhM3ZpdzFkekNaTG1kelhvN1BKQmZXVGFjRDR3Nk9uY2JtVkwwMGx6b2FCXzZ6dFRub3NON3lzQ29FM2p5dWdYSTcwR1lBRHpZbnlBLVNGc0pUZ0JiVzE4NjdReEpHd0h2d2Qzd1U4Z0YxS1VhQmhacHJIekd6QkRHdG0tcDl0VFhjREVNQ2lzbW9GeHBaVzdnYlhCQQ?oc=5",
+          "publisher": "TechCrunch",
+          "when": "2026-08-13",
+          "kind": "news",
+          "quote": "raise $1B"
+        }
+      ]
+    },
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 188.0,
+      "verdict": "history",
+      "gap_pct": -1.1,
+      "held": {
+        "value": 190.0,
+        "as_of": "2026-08-13",
+        "tier": "T2",
+        "source": "company announcement Aug 13, 2026 (reported by Bloomberg, CNBC, Forbes, Reuters — one underlying source)",
+        "path": "valuation.post_money_bn"
+      },
+      "n_reports": 4,
+      "n_publishers": 4,
+      "publishers": [
+        "Databricks",
+        "TechCrunch",
+        "WSJ",
+        "reuters.com"
+      ],
+      "first_reported": "2026-07-16",
+      "last_reported": "2026-07-17",
+      "already_held_as": {
+        "value": 190,
+        "as_of": "2026-08-13",
+        "source": "company announcement Aug 13, 2026"
+      },
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPeTZYXzU2Ulg4YjhrV0lhMl9vV2ExWm5TZXl5VDI0TEI2UDRmbXhqMmRWQTR3dEFNY1pEWi15dGlZY2JHczJQOGdPQzBLNHNyaW5EOUUxX3VVNWN0ZlYweUEzS1QyYTdHNTBvRTFYaDByMFhidFE5U2FXUm5uOTh4STZTYmFCZkh4LVA1UUl3VlNWY28xWkt0ZW1jNXljbjd0Wm9aRUJ2bUpZQU9FSUZ3?oc=5",
+          "publisher": "TechCrunch",
+          "when": "2026-07-17",
+          "kind": "news",
+          "quote": "$188B valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOc1cwd3JpUk9WLXZhRGZ4N0REZ2YwbDlxN0lpVExTMG5icE04aEhWalp5OHNaUWhUSkRBRzFHV3R4TW9TeDZFXzlRWXgxVjlpQmFKbXIwc3FrUFNycE5IRG9FSlBZZjNSbVRqYmNXakR3MFZ1SncyTkhiNFl5amVLRmNCWlBMbDFtNmpzWVU2cUJzYURrNzQ5ZHdidGFxRVJ6RUJhQm5GTEs5ck00blRfeG5HbUtRSTdNTjJBZUFiRmRtWTg?oc=5",
+          "publisher": "reuters.com",
+          "when": "2026-07-17",
+          "kind": "news",
+          "quote": "$188 billion valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRjU4RDl2RkctN0s4LUlqNEtzNDBEa2prLUdpZmNPN1N5LTFhQU5vS2cwSW9YdFdzdUgtVVdLdnVYdE5ELXF2X2pLSVZPMVVxSnlSOFlBQk1YU3REMkJKbzE0SEl5OXBpTTRQRmNNNU9abl9pZDd2cTZoTjFROG5RZ2lfQV9iajdhVHlfY1pxZUxPQzhOZFcyZTFrSGNfZnZnS3JiNlVadGNfc1hWZk9DelVsX0lDLXZ2eFlDc0hwX20?oc=5",
+          "publisher": "Databricks",
+          "when": "2026-07-16",
+          "kind": "news",
+          "quote": "$188 Billion Valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQc3MxVXZCSTl5Z0NoM1RxNjcwOVZVZk1IY0VoQ01vOXVTcEhzcFdXei05TTRUeS1Pdm1fYlBEMFQtQzRlcHBLODN0X2ppOVMzVGh4LW02cDFGNDltVllqbV9GbHFIeVZYaWNobTA1YmdScHVvc09OZjh0WWliUkd3LUJaZzBzV0FiOFIybDhtZ2RuRnhWdHVSZ25SSFVzZVVwYWNwQURIVWlHckJHNkZ4TjBn?oc=5",
+          "publisher": "WSJ",
+          "when": "2026-07-16",
+          "kind": "news",
+          "quote": "$188 Billion Valuation"
+        }
+      ]
+    },
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 190.0,
+      "verdict": "confirms",
+      "gap_pct": 0.0,
+      "held": {
+        "value": 190.0,
+        "as_of": "2026-08-13",
+        "tier": "T2",
+        "source": "company announcement Aug 13, 2026 (reported by Bloomberg, CNBC, Forbes, Reuters — one underlying source)",
+        "path": "valuation.post_money_bn"
+      },
+      "n_reports": 30,
+      "n_publishers": 28,
+      "publishers": [
+        "AI Insider",
+        "Axios",
+        "Benzinga",
+        "Bloomberg.com",
+        "Briefs Finance",
+        "CNBC",
+        "Constellation Research",
+        "FinSMEs"
+      ],
+      "first_reported": "2026-08-13",
+      "last_reported": "2026-08-14",
+      "already_held_as": {
+        "value": 190,
+        "as_of": "2026-08-13",
+        "source": "company announcement Aug 13, 2026"
+      },
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORnZLTXVXb3FDMXJCY04zYnhxVXpBN0E4MFNwczM4cmVONURlQ3NXbnBHR1dvcjBqaGFReFpYQUN3cXQ1NHVqbXRERFVfUVZaRW0zU0xjTldYcHJNc1FVNktranMtOWVqSUlTZFhFako3QktiWWh4UFBzUUd1YlF3M2pMRFF0SEVVbFVYSEEzQzd4QVhBVm9yQ1d0anJBSW5CeUI0aTZGOU9EZzcySXBMWUZzcF9CcHA1R1pSVkZCZHJ5QQ?oc=5",
+          "publisher": "AI Insider",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "$190B Valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNemdBbVZ1VC1oU0VKYjRkd0lRNkc0M2QzRklCZERmSzAxNXNCNU9lUEFGcVN5S2dONFBSUmFnLU42Rkg4cFFmcVdSbHZqUkRjMzFpUFRZNHpfQmZiOE9vM1M2LVpJVzI1OElDRmhvV0J5RDNvUXBGLWg3d0pwMEltekxsM19SVVFsTWVGOUVKcVlIUVdLT0pPU1J5aTNUOV9iQXltazF3YXBSQ28tam9CXzZZVTJfNWlLY0pQcVFuUDdvcllWSFdJT1hnclhkZw?oc=5",
+          "publisher": "Benzinga",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "$190 Billion Valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSWtwNGltdEVadXJkOXBic3ZmQ1JLYktTMEhZTUZJVm1ZRkJLb0tFaFVVellKb3I0ajloQTZZWEtCYTZhTnBrYUFNZ3ZtbGdTMGlRbDdiWkQyX2FOV01BeW4zQU5iSW1XSnlwaVZteG00bVh1ZWZYS0YwOHhnQkstbl81bTdvaE9ZNDl5bktHZFRKRjB0N2JaZ3FvOGN3RDRkb25XdElR?oc=5",
+          "publisher": "siliconrepublic.com",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "valuation hits $190bn"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQd0ZwRlhrLUVQV0xjZm9CakZwVVhVMlFoNDE2LW5qMHhhV2Z0SUpnTzI1SEgtSEloOTJtR18zT1ZXUEJxOGFUa1Nfb0NYa2k2UkVmbG1jeWxlZWJfRFZiWVhjdmFrdTBfU3dFdzVjTFlpSVdKYW5vQllaYVliRlNjMHV4SGc2cm8zVlUzZTlMQkJpeGstb0d5Qy1SLTltZ01waG9ZTm9GUHA?oc=5",
+          "publisher": "TNGlobal",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "$190B valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdW9XR1NOY3Z4b2RXR1RVMmktV2VyNHNxUFJTaXNUcE41a01rQkhLYlVOY052OEY2QTBYQmd3bGUxa3Jib3kxRWtzVUxJWm5CMFFaMmpoS0lIZjAzb0xmUXFIZGhwNlphVElzZ0g1dmNLRjAxenBSSGgtQkVQUHFpT3pvVVlpVEZJM1RDMGhBUkp1Z3A1TXlJUXEyU09IekFfLUY4bFRfVVQ3SDg?oc=5",
+          "publisher": "Tech Funding News",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "$190B valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTmtCeUZSSGtSeHZKdUZMNm1fRHJsVjVSaU1TZFg1UWRwY05CZHFTQklLNnVOTWRYR0ZZbl9SNmU2Nm9ZOWxzVmdfX1pQaDV1ZW5KcTRFVjctVHNKU09ialRGcU9PZUlremdPaXJHOEkxYTE4R3RKMjZrbTlhY202WUQyTUdHV2RKVmh5QTZhWG43MkVWSE1Cck1pX3ctMzh5RzluM1AtQUx1ejNrbHFGc1hvZnk0UE9vSmdNQlZ4SjFla3lsb3Q3VzAzUmJ6elc2WjFzeDhuaw?oc=5",
+          "publisher": "NewsCord",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "$190 Billion Valuation"
+        }
+      ]
+    },
+    {
+      "concept": "run_rate_bn",
+      "label": "revenue run-rate",
+      "unit": "$B",
+      "claimed": 7.0,
+      "verdict": "confirms",
+      "gap_pct": 0.0,
+      "held": {
+        "value": 7.0,
+        "as_of": "2026-08-13",
+        "tier": "T2",
+        "source": "company announcement Aug 13, 2026",
+        "path": "financials.run_rate_ladder_bn"
+      },
+      "n_reports": 5,
+      "n_publishers": 5,
+      "publishers": [
+        "SiliconANGLE",
+        "TNGlobal",
+        "au.finance.yahoo.com",
+        "pulse2.com",
+        "saastr.com"
+      ],
+      "first_reported": "2026-08-13",
+      "last_reported": "2026-08-14",
+      "already_held_as": {
+        "value": 6.9,
+        "as_of": "2026-06-16",
+        "source": "company disclosure (analyst session)"
+      },
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQd0ZwRlhrLUVQV0xjZm9CakZwVVhVMlFoNDE2LW5qMHhhV2Z0SUpnTzI1SEgtSEloOTJtR18zT1ZXUEJxOGFUa1Nfb0NYa2k2UkVmbG1jeWxlZWJfRFZiWVhjdmFrdTBfU3dFdzVjTFlpSVdKYW5vQllaYVliRlNjMHV4SGc2cm8zVlUzZTlMQkJpeGstb0d5Qy1SLTltZ01waG9ZTm9GUHA?oc=5",
+          "publisher": "TNGlobal",
+          "when": "2026-08-14",
+          "kind": "news",
+          "quote": "run-rate tops $7B"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZVkyaW1SV2M0bTcxdVlfNVFQeE8wQjZLREFGQjVJM3E1SkpNX2J2NFJFQjd2OVJqd3U3YmNJRmlseVNwenpkNUlnMTZrR1ZsUmo0eDQ5ZUd2WkVpWkREd282akFhX0dldHFFcGs4Y012dzZhclBoZ0Y0TlJkZjRSU2xoNjhMcDZ2SS1hbWpCSkFyLUJ4YlYw?oc=5",
+          "publisher": "SiliconANGLE",
+          "when": "2026-08-13",
+          "kind": "news",
+          "quote": "annualized revenue tops $7B"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZDNUdGV4bWh1VFQ5MkxoaER3OE1Qa0RTMDBxUENPTExaZGg1c19sbnF5eGFVYWJpWm4zNzFFdVJZbTllR2x6UE1INEFmRHRrblc3OGltUUxxQ1NVOVliZHVqdHJrX0FmV2g1eGttYzBTNm90aXV1b3BKZTlNXzM2cE5lLU1TVVI2aWZYZEpsUGN5d010a3l3dk9pb2RqSjVOZGFIV2NiaG5ndVHSAbABQVVfeXFMT05hd0RmSVkxdkxpamxMMVNtOVBmZWR3ZWtnenh4ZkJEc2d5bUwyR3l1dUh3UkVsRjJzYXlOaFd2MUtJRS1vZmpfRnBFYTNCUmE0bkRERmRrWjYtNUtXMGQ5Z29VTDdDTTlXa0t5MzBoUkZhakw5RnhMTnRwM3B1N3UtQ1g1M2RFNTRoZUNTRFBnbF9hUVVkdnFZMzBkX2d6UTBWVGZnMjF6VmZMYmRpeGM?oc=5",
+          "publisher": "pulse2.com",
+          "when": "2026-08-13",
+          "kind": "news",
+          "quote": "Run-Rate Tops $7 Billion"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSWxvUlA1VVpjNnFQQS1EaVRoblNBZVBsN2JmU0xUT2hIRURuRzh2WThUSlVSWTVJbXdQZW9sR2Y5eFE2WVdQaDNYLTB6Mzh4SEZKRlZGTjZhOVg4UjFoUXpPeWlTV2ZPTmZwbFphQjNmYVF6cW4xUjFuNUNKY1RoUDNWaFFDMms?oc=5",
+          "publisher": "au.finance.yahoo.com",
+          "when": "2026-08-13",
+          "kind": "news",
+          "quote": "$7B run-rate"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQREl5b1F0d2stUDNscDFZV3ZiRnVvS0lDUkxCdnFORk5zY1VDUTdyM2p4THNJeWhoYW5XbjVSRFc2ZWJtY0xFWUFZT1ZnTUtZeFFkejVJZ1FtRW9JdG9zcDhUVVBrM1B0Y25xZjZtT1E1UWlJcVctelZYSVlQazB1eDRSSElRZi11aHhSaEZndGFZbFV6RnJqa1ZwbVpRcVVFZWM4S0ctVnNwLVA5aE45SzNzYzhObWloTE13YlVlR1h0b0l3bzVMeGQ4VHkxSk5lUi1j?oc=5",
+          "publisher": "saastr.com",
+          "when": "2026-08-13",
+          "kind": "news",
+          "quote": "$7B ARR"
+        }
+      ]
+    }
+  ],
+  "open": 0,
+  "needs_attention": []
+}

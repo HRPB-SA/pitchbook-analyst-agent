@@ -82,5 +82,55 @@
         "as_of": "2026-08-12"
       }
     ]
+  },
+  {
+    "slug": "perplexity",
+    "started_at": "2026-08-16T23:33:44+00:00",
+    "finished_at": "2026-08-16T23:33:45+00:00",
+    "sources": 1,
+    "counts": {
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "news",
+        "name": "Perplexity news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Perplexity+AI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:33:45+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 64,
+        "outcome": "new",
+        "evidence_id": "rplexity-ai-22-hl-en-us-gl-us-ceid-us-en-537fe5bb",
+        "chars": 38692,
+        "as_of": "2026-08-03"
+      }
+    ]
+  },
+  {
+    "slug": "perplexity",
+    "started_at": "2026-08-16T23:34:50+00:00",
+    "finished_at": "2026-08-16T23:34:50+00:00",
+    "sources": 1,
+    "counts": {
+      "unchanged": 1
+    },
+    "results": [
+      {
+        "id": "news",
+        "name": "Perplexity news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Perplexity+AI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:34:50+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 0,
+        "outcome": "unchanged",
+        "evidence_id": "rplexity-ai-22-hl-en-us-gl-us-ceid-us-en-537fe5bb",
+        "chars": 38692,
+        "as_of": "2026-08-03"
+      }
+    ]
   }
 ]

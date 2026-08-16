@@ -110,5 +110,80 @@
         "as_of": "2026-07-27"
       }
     ]
+  },
+  {
+    "slug": "ssi",
+    "started_at": "2026-08-16T23:33:43+00:00",
+    "finished_at": "2026-08-16T23:33:44+00:00",
+    "sources": 2,
+    "counts": {
+      "unchanged": 1,
+      "new": 1
+    },
+    "results": [
+      {
+        "id": "home",
+        "name": "Safe Superintelligence (SSI) home",
+        "kind": "other",
+        "url": "https://ssi.inc/",
+        "checked_at": "2026-08-16T23:33:44+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-ssi-inc-772c4478",
+        "chars": 1522,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Safe Superintelligence news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Safe+Superintelligence%22+OR+%22Sutskever%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:33:44+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 36,
+        "outcome": "new",
+        "evidence_id": "22sutskever-22-hl-en-us-gl-us-ceid-us-en-46216eb5",
+        "chars": 39273,
+        "as_of": "2026-07-27"
+      }
+    ]
+  },
+  {
+    "slug": "ssi",
+    "started_at": "2026-08-16T23:34:49+00:00",
+    "finished_at": "2026-08-16T23:34:50+00:00",
+    "sources": 2,
+    "counts": {
+      "unchanged": 2
+    },
+    "results": [
+      {
+        "id": "home",
+        "name": "Safe Superintelligence (SSI) home",
+        "kind": "other",
+        "url": "https://ssi.inc/",
+        "checked_at": "2026-08-16T23:34:50+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-ssi-inc-772c4478",
+        "chars": 1522,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Safe Superintelligence news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Safe+Superintelligence%22+OR+%22Sutskever%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:34:50+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 0,
+        "outcome": "unchanged",
+        "evidence_id": "22sutskever-22-hl-en-us-gl-us-ceid-us-en-46216eb5",
+        "chars": 39273,
+        "as_of": "2026-07-27"
+      }
+    ]
   }
 ]

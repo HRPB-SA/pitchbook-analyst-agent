@@ -1,0 +1,101 @@
+{
+  "slug": "mistral",
+  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "window_days": 120,
+  "documents": 85,
+  "signals": [
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 23.0,
+      "verdict": "disagrees",
+      "gap_pct": 68.3,
+      "held": {
+        "value": 13.664,
+        "as_of": "2025-09-09",
+        "tier": "T2",
+        "source": "PitchBook deal 297624-16T (Later Stage VC, Series C)",
+        "path": "valuation.valuation_ladder_bn"
+      },
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "Yahoo Finance"
+      ],
+      "first_reported": "2026-06-15",
+      "last_reported": "2026-06-15",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSTY2V210MHJGOFdCZ2dqS2FYOGtqQmF6Y1lpUVl0YVc5WGM4OEVOcWkzNHNLZlVubTR0Vm93ZXVDb1RrYVpaVEllYXpuZFE0T3lIbUN2am41cHpEUUhwMEZralc2clhFQ1U0QXBIWDJzaGhfV0w1QnFlelFNbk5YTHJFQjdpdnhnM2hYTW1IYlkxeXdVTXlpcmlfUnFrd1lH?oc=5",
+          "publisher": "Yahoo Finance",
+          "when": "2026-06-15",
+          "kind": "news",
+          "quote": "$23bn valuation"
+        }
+      ]
+    },
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 3.5,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "SiliconANGLE"
+      ],
+      "first_reported": "2026-06-12",
+      "last_reported": "2026-06-12",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQOEhESjZxZW41c3BjcjNRY1Axd09waTJRM1phMThWamRnaWd4WGk2ZkpEM3BEOVRoY3VaZEZpZWxmcnVGMVJPZjBLaDNNRTNoVVhJVlNvcThZNjZSX08tQVRIdy1YcE1feWN3OHlPaWNGYXRCYWQ5WjBkckZhV19pQ3BBYkVkS2FBbDVWcElBM0ViMjRKSFBsUTNYNlkyZ1hWN211aEJn?oc=5",
+          "publisher": "SiliconANGLE",
+          "when": "2026-06-12",
+          "kind": "news",
+          "quote": "$3.5B funding round"
+        }
+      ]
+    }
+  ],
+  "open": 1,
+  "needs_attention": [
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 23.0,
+      "verdict": "disagrees",
+      "gap_pct": 68.3,
+      "held": {
+        "value": 13.664,
+        "as_of": "2025-09-09",
+        "tier": "T2",
+        "source": "PitchBook deal 297624-16T (Later Stage VC, Series C)",
+        "path": "valuation.valuation_ladder_bn"
+      },
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "Yahoo Finance"
+      ],
+      "first_reported": "2026-06-15",
+      "last_reported": "2026-06-15",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSTY2V210MHJGOFdCZ2dqS2FYOGtqQmF6Y1lpUVl0YVc5WGM4OEVOcWkzNHNLZlVubTR0Vm93ZXVDb1RrYVpaVEllYXpuZFE0T3lIbUN2am41cHpEUUhwMEZralc2clhFQ1U0QXBIWDJzaGhfV0w1QnFlelFNbk5YTHJFQjdpdnhnM2hYTW1IYlkxeXdVTXlpcmlfUnFrd1lH?oc=5",
+          "publisher": "Yahoo Finance",
+          "when": "2026-06-15",
+          "kind": "news",
+          "quote": "$23bn valuation"
+        }
+      ]
+    }
+  ]
+}

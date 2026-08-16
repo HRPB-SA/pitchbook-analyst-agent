@@ -1,0 +1,106 @@
+{
+  "slug": "ssi",
+  "scanned_at": "2026-08-16T23:39:13+00:00",
+  "window_days": 120,
+  "documents": 79,
+  "signals": [
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 0.02,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "calcalistech.com"
+      ],
+      "first_reported": "2026-08-11",
+      "last_reported": "2026-08-11",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9hZDJDX1I0QjIwVUx0VGEwcXFPNlVMQW1RZFU0bVVoSGNhc24yQ2s3bVlrWTFLaVRyWWhEQ285MUVXdTA3aEw0QkxZV0dlTnYyVkFqWktUaEFkbFFfRjJqRHNZaU5lTmtl?oc=5",
+          "publisher": "calcalistech.com",
+          "when": "2026-08-11",
+          "kind": "news",
+          "quote": "raise $20 million"
+        }
+      ]
+    },
+    {
+      "concept": "round_size_bn",
+      "label": "round size",
+      "unit": "$B",
+      "claimed": 5.0,
+      "verdict": "context",
+      "gap_pct": 0.0,
+      "held": null,
+      "n_reports": 1,
+      "n_publishers": 1,
+      "publishers": [
+        "calcalistech.com"
+      ],
+      "first_reported": "2026-07-27",
+      "last_reported": "2026-07-27",
+      "already_held_as": null,
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1PRXRNUXhxclpEelRnQjUzN3liaURDT1VBSURkMFpQTG5ibUwyMVdfS2dNNllVREowSGdsbHhuZ0drMnhYSlFVdFdUT3JZMHR6TndGRGJTeXRvX2FNcnJ3bEE5ZVRWNlU?oc=5",
+          "publisher": "calcalistech.com",
+          "when": "2026-07-27",
+          "kind": "news",
+          "quote": "raises $5 billion"
+        }
+      ]
+    },
+    {
+      "concept": "valuation_bn",
+      "label": "valuation",
+      "unit": "$B",
+      "claimed": 32.0,
+      "verdict": "history",
+      "gap_pct": 3.2,
+      "held": {
+        "value": 31.0,
+        "as_of": "2026-06-12",
+        "tier": "T3",
+        "source": "canonical ~$30-32B, midpoint carried; NOT re-pulled at the Jul 16 refresh",
+        "path": "valuation.post_money_bn"
+      },
+      "n_reports": 2,
+      "n_publishers": 2,
+      "publishers": [
+        "StartupHub.ai",
+        "Tech in Asia"
+      ],
+      "first_reported": "2026-06-06",
+      "last_reported": "2026-07-28",
+      "already_held_as": {
+        "value": 32.0,
+        "as_of": "2025-04-11",
+        "source": "PitchBook deal 284541-22T (Early Stage VC)"
+      },
+      "reports": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYndJZ09UQWtMS3dGUU5yQzlMVGJYSmpUbkVIT0hibG4tYXFKWWVWTEZYRk1aZmFhTHdEWDU1bEFIbkxpVEJuY0IxNV8tQ0gzNC0xRUt1dGkxMW9xc2lCMHJVUGlqUFZXTjVLQTc3SGpoTTltYmFnNFBFNzFZMDdxdQ?oc=5",
+          "publisher": "Tech in Asia",
+          "when": "2026-07-28",
+          "kind": "news",
+          "quote": "$32b valuation"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSGVTbmp1TExwZlhSb0VoMGR1UGJld0U2dVplcWFYaGxsbnU3UENwX0NHSFpZZ1ZMUWsxUEdBYVE0LW5MTUlScnpROE5URGFuWTNMREFYZzlLUDYxZkNPMkhodFlweUxNV1dBVWc0TTc3SjlmVjZZb1JVVUstcWc5ZzQ2MUxfc2NES1NLYUY4V0tncW0zY0pmVmVIX0x2RF8yNTVnOTRib0h6QQ?oc=5",
+          "publisher": "StartupHub.ai",
+          "when": "2026-06-06",
+          "kind": "news",
+          "quote": "$32B Valuation"
+        }
+      ]
+    }
+  ],
+  "open": 0,
+  "needs_attention": []
+}

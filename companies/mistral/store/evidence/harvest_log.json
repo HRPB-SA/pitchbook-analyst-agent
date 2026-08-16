@@ -248,5 +248,235 @@
         "as_of": "2026-08-11"
       }
     ]
+  },
+  {
+    "slug": "mistral",
+    "started_at": "2026-08-16T23:33:55+00:00",
+    "finished_at": "2026-08-16T23:33:59+00:00",
+    "sources": 8,
+    "counts": {
+      "unchanged": 7,
+      "changed": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Mistral AI newsroom",
+        "kind": "newsroom",
+        "url": "https://mistral.ai/news",
+        "checked_at": "2026-08-16T23:33:55+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-news-93c72ec0",
+        "chars": 11681,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Mistral AI blog",
+        "kind": "blog",
+        "url": "https://mistral.ai/news",
+        "checked_at": "2026-08-16T23:33:56+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-news-93c72ec0",
+        "chars": 11681,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Mistral AI pricing",
+        "kind": "pricing",
+        "url": "https://mistral.ai/pricing",
+        "checked_at": "2026-08-16T23:33:56+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-pricing-bbf850cb",
+        "chars": 10786,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Mistral AI careers",
+        "kind": "careers",
+        "url": "https://mistral.ai/careers",
+        "checked_at": "2026-08-16T23:33:57+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-careers-3d612ede",
+        "chars": 8714,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Mistral AI home",
+        "kind": "other",
+        "url": "https://mistral.ai/",
+        "checked_at": "2026-08-16T23:33:57+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-b2203723",
+        "chars": 7947,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Mistral AI about",
+        "kind": "other",
+        "url": "https://mistral.ai/about",
+        "checked_at": "2026-08-16T23:33:58+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-about-2f533faf",
+        "chars": 6070,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Mistral AI news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Mistral+AI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:33:59+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 10,
+        "outcome": "changed",
+        "previous_hash": "4fff354bbd44b962",
+        "previous_seen": "2026-08-13T18:48:14+00:00",
+        "delta_chars": -206,
+        "evidence_id": "2mistral-ai-22-hl-en-us-gl-us-ceid-us-en-02f2f84d",
+        "chars": 34687,
+        "as_of": "2026-08-11"
+      },
+      {
+        "id": "site-feed",
+        "name": "Mistral AI site feed",
+        "kind": "newsroom",
+        "url": "https://mistral.ai/rss.xml",
+        "checked_at": "2026-08-16T23:33:59+00:00",
+        "http": 200,
+        "items": 80,
+        "new_stories": 0,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-rss-xml-1863dad3",
+        "chars": 9047,
+        "as_of": "2026-08-11"
+      }
+    ]
+  },
+  {
+    "slug": "mistral",
+    "started_at": "2026-08-16T23:35:22+00:00",
+    "finished_at": "2026-08-16T23:35:26+00:00",
+    "sources": 8,
+    "counts": {
+      "unchanged": 7,
+      "changed": 1
+    },
+    "results": [
+      {
+        "id": "newsroom",
+        "name": "Mistral AI newsroom",
+        "kind": "newsroom",
+        "url": "https://mistral.ai/news",
+        "checked_at": "2026-08-16T23:35:22+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-news-93c72ec0",
+        "chars": 11681,
+        "as_of": null
+      },
+      {
+        "id": "blog",
+        "name": "Mistral AI blog",
+        "kind": "blog",
+        "url": "https://mistral.ai/news",
+        "checked_at": "2026-08-16T23:35:23+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-news-93c72ec0",
+        "chars": 11681,
+        "as_of": null
+      },
+      {
+        "id": "pricing",
+        "name": "Mistral AI pricing",
+        "kind": "pricing",
+        "url": "https://mistral.ai/pricing",
+        "checked_at": "2026-08-16T23:35:23+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-pricing-bbf850cb",
+        "chars": 10786,
+        "as_of": null
+      },
+      {
+        "id": "careers",
+        "name": "Mistral AI careers",
+        "kind": "careers",
+        "url": "https://mistral.ai/careers",
+        "checked_at": "2026-08-16T23:35:24+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-careers-3d612ede",
+        "chars": 8714,
+        "as_of": null
+      },
+      {
+        "id": "home",
+        "name": "Mistral AI home",
+        "kind": "other",
+        "url": "https://mistral.ai/",
+        "checked_at": "2026-08-16T23:35:24+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-b2203723",
+        "chars": 7947,
+        "as_of": null
+      },
+      {
+        "id": "about",
+        "name": "Mistral AI about",
+        "kind": "other",
+        "url": "https://mistral.ai/about",
+        "checked_at": "2026-08-16T23:35:25+00:00",
+        "http": 200,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-about-2f533faf",
+        "chars": 6070,
+        "as_of": null
+      },
+      {
+        "id": "news",
+        "name": "Mistral AI news",
+        "kind": "press",
+        "url": "https://news.google.com/rss/search?q=%22Mistral+AI%22&hl=en-US&gl=US&ceid=US:en",
+        "checked_at": "2026-08-16T23:35:26+00:00",
+        "http": 200,
+        "items": 100,
+        "new_stories": 0,
+        "outcome": "changed",
+        "previous_hash": "02f2f84dd63af063",
+        "previous_seen": "2026-08-16T23:33:59+00:00",
+        "delta_chars": -29,
+        "evidence_id": "2mistral-ai-22-hl-en-us-gl-us-ceid-us-en-bbf4806a",
+        "chars": 34658,
+        "as_of": "2026-08-11"
+      },
+      {
+        "id": "site-feed",
+        "name": "Mistral AI site feed",
+        "kind": "newsroom",
+        "url": "https://mistral.ai/rss.xml",
+        "checked_at": "2026-08-16T23:35:26+00:00",
+        "http": 200,
+        "items": 80,
+        "new_stories": 0,
+        "outcome": "unchanged",
+        "evidence_id": "https-mistral-ai-rss-xml-1863dad3",
+        "chars": 9047,
+        "as_of": "2026-08-11"
+      }
+    ]
   }
 ]

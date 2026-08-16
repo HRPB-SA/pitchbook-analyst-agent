@@ -14,6 +14,8 @@ Commands:
     build <report_dir>            build report (docx + pdf + QA gate)
     qa <file.docx|blocks.json>    run QA gates on an artifact
     validate <blocks.json>        validate block grammar
+    watch <slug>|--all            compare what was reported with what we hold
+    refresh [slug|--all]          harvest, re-file, compare, rebuild the page
     dashboard [out.html]          render the desk dashboard from the store
     sources <slug> <domain> [cik] create/extend the harvest source manifest
     harvest <slug>|--all          sweep sources, archive evidence, log outcomes
@@ -23,7 +25,8 @@ Commands:
 """
 from __future__ import annotations
 import json, sys
-from . import store, trends, style, compose, charts, qa, desk, harvest, evidence, intake, model, model_check
+from . import (store, trends, style, compose, charts, qa, desk, harvest,
+               evidence, intake, model, model_check, watch)
 
 
 def main(argv=None):
@@ -172,6 +175,56 @@ def main(argv=None):
         res = model_check.check(args[0])
         print(model_check.report(res))
         return 0 if res.get("ok") else 2
+
+    elif cmd == "watch":
+        slugs = ([e["slug"] for e in store.universe()["companies"]]
+                 if (not args or args[0] == "--all") else [args[0]])
+        total = 0
+        for slug in slugs:
+            res = watch.scan(slug)
+            total += res["open"]
+            if res["open"] or len(slugs) == 1:
+                print(watch.render(res))
+        print(f"\n{total} figures await a decision across {len(slugs)} companies")
+
+    elif cmd == "refresh":
+        # The whole chain in one command: read the world, re-file what came
+        # back, compare it with what we hold, rebuild the page. Each stage
+        # feeds the next, so a figure reported this morning reaches the
+        # dashboard's attention panel by the end of this run.
+        named = [a for a in args if not a.startswith("--")]
+        slugs = named or [e["slug"] for e in store.universe()["companies"]]
+        print(f"refreshing {len(slugs)} companies")
+        swept = {"changed": 0, "new": 0, "unchanged": 0, "unreachable": 0}
+        if "--no-fetch" not in args:
+            for slug in slugs:
+                try:
+                    counts = harvest.sweep(slug, quiet=True).get("counts") or {}
+                except Exception as exc:                        # a dead source
+                    print(f"  {slug}: harvest failed ({exc})")  # is a gap, not a stop
+                    continue
+                for k, v in counts.items():
+                    swept[k] = swept.get(k, 0) + v
+        retag = [harvest.retag_news(s) for s in slugs]
+        moved = sum(r["dropped"] for r in retag)
+        stories = sum(r["now"] for r in retag)
+        print(f"  harvest: {swept['changed']} sources changed, {swept['new']} new, "
+              f"{swept['unreachable']} unreachable")
+        print(f"  news: {stories} stories on file for these companies"
+              + (f" · re-filing moved {moved}" if moved else ""))
+        open_items = 0
+        for slug in slugs:
+            open_items += watch.scan(slug)["open"]
+        print(f"  checked against the store: {open_items} figures await a decision")
+        stale_models = model.stale(slugs)
+        if stale_models:
+            print(f"  models built on figures that have since moved: "
+                  f"{', '.join(m['slug'] for m in stale_models)}")
+        out, data = desk.build()
+        print(f"  wrote {out}")
+        if open_items:
+            print(f"\nOpen the dashboard and settle {open_items} figure(s); "
+                  f"run `python3 -m engine watch --all` for the detail.")
 
     elif cmd == "dashboard":
         out, data = desk.build(args[0] if args else None)

@@ -380,16 +380,25 @@ PREFERENCE = {
 }
 
 
+# An estimate is a placeholder until something measured replaces it.
+ESTIMATE_FLAGS = ("est.", "est", "VERIFY")
+TIER_STRENGTH = {"T1": 4, "T2": 3, "T3": 2, "T4": 1}
+
+
 def blocked(fact) -> bool:
     return any(f in BLOCKING_FLAGS for f in (fact.get("flags") or []))
 
 
-def preferred(profile: dict, concept: str, allow_blocked: bool = False):
-    """The value the desk stands behind for a concept, and where it came from.
+def is_estimate(fact) -> bool:
+    return any(f in ESTIMATE_FLAGS for f in (fact.get("flags") or []))
 
-    One resolver used by the dashboard, the derived analysis and the model
-    factory, so all three cannot disagree about what a company is worth.
-    """
+
+def _tier(fact) -> int:
+    return TIER_STRENGTH.get((fact or {}).get("tier"), 0)
+
+
+def _candidates(profile: dict, concept: str):
+    """Every stored fact that could answer a concept, in desk-preference order."""
     for cat, field in PREFERENCE.get(concept, []):
         blk = profile.get(cat)
         if not isinstance(blk, dict):
@@ -397,12 +406,60 @@ def preferred(profile: dict, concept: str, allow_blocked: bool = False):
         v = blk.get(field)
         if isinstance(v, list) and v:
             v = v[-1]
-        if not schema.is_fact(v):
+        if schema.is_fact(v):
+            yield v, f"{cat}.{field}"
+
+
+def preferred(profile: dict, concept: str, allow_blocked: bool = False):
+    """The value the desk stands behind for a concept, and where it came from.
+
+    One resolver used by the dashboard, the derived analysis and the model
+    factory, so all three cannot disagree about what a company is worth.
+
+    Field order carries the desk's preference and this function does not
+    second-guess it. Where an estimate leads and a stronger-tier measurement
+    disagrees, resolution_warnings() raises it for a person to settle. That
+    is deliberate: the two cases look identical in the store and resolve
+    opposite ways. Safe Superintelligence carries a "~$30-32B midpoint"
+    marked est. ahead of a $32.0B actual, where the actual is right and the
+    estimate is a loose restatement of the same round. xAI carries a $1.25T
+    estimate ahead of a $250B actual five months older, where the estimate is
+    right because the company combined with SpaceX in between. Nothing in the
+    store distinguishes them; only knowing what happened does.
+    """
+    ranked = [(v, p) for v, p in _candidates(profile, concept)
+              if allow_blocked or not blocked(v)]
+    return ranked[0] if ranked else (None, None)
+
+
+def resolution_warnings(profile: dict, concept: str) -> list:
+    """Where the figure on show rests on weaker evidence than something else.
+
+    Not an error and not automatically fixable. A prompt to look.
+    """
+    chosen, chosen_path = preferred(profile, concept)
+    if not chosen or not is_estimate(chosen):
+        return []
+    out = []
+    for v, path in _candidates(profile, concept):
+        if path == chosen_path or blocked(v) or is_estimate(v):
             continue
-        if blocked(v) and not allow_blocked:
-            continue
-        return v, f"{cat}.{field}"
-    return None, None
+        if _tier(v) > _tier(chosen) and v.get("value") != chosen.get("value"):
+            out.append({
+                "concept": concept, "shown": chosen.get("value"),
+                "shown_path": chosen_path, "shown_tier": chosen.get("tier"),
+                "shown_as_of": chosen.get("as_of"),
+                "shown_flags": chosen.get("flags") or [],
+                "against": v.get("value"), "against_path": path,
+                "against_tier": v.get("tier"), "against_as_of": v.get("as_of"),
+                "against_source": v.get("source"),
+                "note": (f"The figure on show is an estimate "
+                         f"({', '.join(chosen.get('flags') or [])}). "
+                         f"A {v.get('tier')} measurement of "
+                         f"{v.get('value')} dated {v.get('as_of')} disagrees. "
+                         f"Settle which stands before either is quoted."),
+            })
+    return out
 
 
 def superseded_by_desk(profile: dict, concept: str):
@@ -411,19 +468,16 @@ def superseded_by_desk(profile: dict, concept: str):
     if not chosen:
         return []
     out = []
-    for cat, field in PREFERENCE.get(concept, []):
-        if f"{cat}.{field}" == chosen_path:
+    for v, path in _candidates(profile, concept):
+        if path == chosen_path or v.get("value") == chosen.get("value"):
             continue
-        blk = profile.get(cat)
-        if not isinstance(blk, dict):
-            continue
-        v = blk.get(field)
-        if isinstance(v, list) and v:
-            v = v[-1]
-        if schema.is_fact(v) and v.get("value") != chosen.get("value"):
-            out.append({"path": f"{cat}.{field}", "value": v.get("value"),
-                        "as_of": v.get("as_of"), "source": v.get("source"),
-                        "flags": v.get("flags") or [],
-                        "reason": ("flagged do-not-adopt" if blocked(v)
-                                   else "lower preference")})
+        if blocked(v):
+            reason = "flagged do-not-adopt"
+        elif is_estimate(v) and _tier(chosen) > _tier(v):
+            reason = f"an estimate, outranked by a {chosen.get('tier')} measurement"
+        else:
+            reason = "lower preference"
+        out.append({"path": path, "value": v.get("value"),
+                    "as_of": v.get("as_of"), "source": v.get("source"),
+                    "flags": v.get("flags") or [], "reason": reason})
     return out
