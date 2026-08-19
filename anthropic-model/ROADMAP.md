@@ -56,3 +56,4 @@ VOLATILE data (run-rate, comps marks, SPCX tape) re-pulled at Steps 8–10 befor
 
 - 2026-08-19 · Session 1: branch created, data pack v1.0 written (incl. $65B run-rate refresh,
   proposed canonical update), Step 1 issued. Awaiting Harrison's Step-1 completion + scope confirm.
+- 2026-08-19 · Session 1b: full workbook built via openpyxl (build_model.py) in CFI house format from Harrison's two templates; all 1,384 formulas evaluated clean via the formulas library (container LibreOffice broken); Bear/Base/Bull sweep validated. Steps 1–10 now delivered as a reviewable build — teaching continues tab-by-tab against it.
