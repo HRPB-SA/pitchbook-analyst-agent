@@ -1,0 +1,4 @@
+  File "/home/user/pitchbook-analyst-agent/entry-fee/model/build/sweep_a.py", line 105
+    ((f'{r['relmult_live']:+.1%}' if isinstance(r['relmult_live'], (int, float)) else 'n/a'))
+            ^^^^^^^^^^^^
+SyntaxError: f-string: f-string: unmatched '['

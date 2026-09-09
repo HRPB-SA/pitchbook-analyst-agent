@@ -343,8 +343,8 @@ def build_b00(sh):
     D(47, "REV1B", "Revenue milestone threshold ($1B net revenue)", "$M", "spec section 7.4", 1000, 1000, 1000, nf=NUM, lo=1000, hi=1000)
     D(48, "COST_DEBT", "Cost of debt for purchased clusters: SPV A2 5.75% if SW_GF_BACKSTOP = Yes, else neocloud unsecured midpoint 9.375% (VI: OEM equipment financing 7-8% shown as the range)", "fraction", "G04 (L-059 T1; L-044 T3; equipment AJ)",
       f'=IF(SW_GF_BACKSTOP="Yes",{R("SPV_A2")},{R("NEO_MID")})', f'=IF(SW_GF_BACKSTOP="Yes",{R("SPV_A2")},{R("NEO_MID")})', f'=IF(SW_GF_BACKSTOP="Yes",{R("SPV_A2")},{R("NEO_MID")})', nf=PCT2, lo=f"={R('SPV_A2')}", hi=f"={R('NEO2')}")
-    sh.put("A50", "Unit constants: hours per year; $ per $M; seconds per hour; tokens per MTok; GPUs per 1,000; MW per GW; $ per $K; unit one; unit zero; 20% tolerance for the section 7.4 magnitude check; 'near' band for the xAI reference (0.5x-2x)", kind="note")
-    for col, v, k in (("D", 8760, "HOURS"), ("E", 1000000, "MPERUSD"), ("F", 3600, "SECPERHR"), ("G", 1000000, "TOKPERMTOK"), ("H", 1000, "KGPU"), ("I", 1000, "MWPERGW"), ("J", 1000, "KPERUNIT"), ("K", 1, "UNITONE"), ("L", 0, "UNITZERO"), ("M", 0.20, "TOL20"), ("N", 0.5, "NEAR_LO"), ("O", 2.0, "NEAR_HI")):
+    sh.put("A50", "Unit constants: hours per year; $ per $M; seconds per hour; tokens per MTok; GPUs per 1,000; MW per GW; $ per $K; unit one; unit zero; 20% tolerance for the section 7.4 magnitude check; 'near' band for the xAI reference (0.5x-2x); 60% utilization for the G20 x1.67 line; 5% relative tolerance for the G20 checks", kind="note")
+    for col, v, k in (("D", 8760, "HOURS"), ("E", 1000000, "MPERUSD"), ("F", 3600, "SECPERHR"), ("G", 1000000, "TOKPERMTOK"), ("H", 1000, "KGPU"), ("I", 1000, "MWPERGW"), ("J", 1000, "KPERUNIT"), ("K", 1, "UNITONE"), ("L", 0, "UNITZERO"), ("M", 0.20, "TOL20"), ("N", 0.5, "NEAR_LO"), ("O", 2.0, "NEAR_HI"), ("P", 0.6, "UTIL60"), ("Q", 0.05, "G20TOL")):
         sh.put(f"{col}50", v, kind="input", nf=GEN, key=k)
 
     sh.section(52, "TIME-SERIES AJ DRIVERS BY SCENARIO (live row = CHOOSE on SW_GF; scenario rows yellow)", ncols=10)
@@ -533,7 +533,7 @@ def build_b05(sh):
         sh.put(f"D{rr}", f"={R('CW_GB200')}/C{rr}", kind="formula", nf=CNT2, bold=True, key=f"G20_OD_{k}"); sh.put(f"E{rr}", f"={R('NEO_P25')}/C{rr}", kind="formula", nf=CNT2, key=f"G20_C24_{k}"); sh.put(f"F{rr}", f"={R('GB300_EX')}/C{rr}", kind="formula", nf=CNT2, key=f"G20_C40_{k}")
         sh.put(f"G{rr}", f"=D{rr}/{R('UTIL60')}", kind="formula", nf=CNT2); sh.put(f"H{rr}", f"=E{rr}/{R('UTIL60')}", kind="formula", nf=CNT2)
         if chk:
-            sh.put(f"I{rr}", f'=IF(ABS(D{rr}-{R(chk)})<={R("G20TOL")},"PASS","FAIL: "&TEXT(D{rr},"0.00"))', kind="formula", bold=True, key=f"PF_{chk}")
+            sh.put(f"I{rr}", f'=IF(ABS(D{rr}-{R(chk)})<={R(chk)}*{R("G20TOL")},"PASS","FAIL: "&TEXT(D{rr},"0.00"))', kind="formula", bold=True, key=f"PF_{chk}")
         sh.put(f"J{rr}", "L-164 · confirmed · T2; rates L-104 T1 / L-105 T3", kind="note")
     sh.put("A9", "Frontier proprietary models are not benchmarked; the dense-405B case is the closer proxy for them (flag). Print any $/MTok as an ESTIMATE with the throughput, the rate and the utilization in the sentence.", kind="note")
     for s in (1, 2, 3):
