@@ -1,0 +1,28 @@
+{
+  "open": [
+    {
+      "opened": "2026-08-16",
+      "field": "financing.debt_raised_bn",
+      "held": {
+        "value": 37.0,
+        "as_of": "2026-07-02",
+        "source": "PB 334763-02T ($34.5B tranched chip bonds) + 295197-04T ($2.5B revolver)",
+        "tier": "T2",
+        "decay": "STABLE",
+        "flags": [
+          "DISPUTED"
+        ]
+      },
+      "challenger": {
+        "value": 34.5,
+        "as_of": "2026-06-09",
+        "tier": "T2",
+        "decay": "STABLE",
+        "source": "PitchBook deal 334763-02T (Debt - General)",
+        "note": "Raised to buy Alphabet-developed chips. Debt informs risk and never enters capital efficiency. At this size it is the single largest thing on the balance sheet that a valuation multiple does not see."
+      },
+      "rule": "freeze-on-conflict: challenger not (newer AND >= tier); surfaced, not chosen"
+    }
+  ],
+  "resolved": []
+}
