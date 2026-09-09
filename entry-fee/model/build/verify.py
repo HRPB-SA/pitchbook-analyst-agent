@@ -65,12 +65,13 @@ def xml_scans(path):
             if not n.endswith(".xml"):
                 continue
             s = z.read(n).decode("utf-8", "ignore")
-            low = s.lower()
+            text = re.sub(r"<[^>]+>", " ", s)     # text content only (cell strings, formulas, names); XML attributes such as r="A1" are structure, not content
+            low = text.lower()
             if "correl" in low:
                 hits["correl"].append(n)
-            if "-0.99" in s or "−0.99" in s:
+            if "-0.99" in text or "−0.99" in text:
                 hits["-0.99"].append(n)
-            if re.search(r"\br=", s):
+            if re.search(r"\br\s*=", text):
                 hits["r="].append(n)
             if "—" in s:
                 hits["emdash"].append(n)

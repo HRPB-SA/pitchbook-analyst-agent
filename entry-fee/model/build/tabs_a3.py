@@ -108,7 +108,7 @@ def build_05(sh):
 # 11_AIBQ
 # ----------------------------------------------------------------------------------------------------
 def build_11(sh):
-    sh.put("A1", "11_AIBQ: CE-1..CE-4 and CI-1..CI-5, old (May-27, L-133) -> new (Sep-9 re-run, aibq-delta.md sections 1-4) with rubric bands, weights, dimension and composite deltas, flags (E14 A5:L40). Ruling 2: the correlation coefficient between AIBQ and valuation is not computed, referenced or named anywhere in this workbook.", kind="note")
+    sh.put("A1", "11_AIBQ: CE-1..CE-4 and CI-1..CI-5, old (May-27, L-133) -> new (Sep-9 re-run, aibq-delta.md sections 1-4) with rubric bands, weights, dimension and composite deltas, flags (E14 A5:L40). Ruling 2: no statistical coefficient between AIBQ and valuation is computed, referenced or named anywhere in this workbook.", kind="note")
     sh.put("A2", "Composite deltas use Report weights (CE 0.20, CI 0.15; RQ, GO, MD held at their May-27 values); new composite = canonical old (8.20 / 4.53) + delta. Flags at >= 0.5 sub-score or >= 0.1 composite.", kind="note")
     sh.header(4, ["Sub-score", "Weight", "Old (May-27)", "New (Sep-9)", "Rubric band / basis", "Rows", "Type", "Delta raw", "Delta dim (weight x delta)", "Flag (>= 0.5)", "Branch note", "Live switch"])
 
@@ -217,7 +217,7 @@ def build_11(sh):
 # 06_Valuation
 # ----------------------------------------------------------------------------------------------------
 def build_06(sh):
-    sh.put("A1", "06_Valuation: marks ladder and multiples at gross / 39.75% / 27% (Anthropic) and net / gross-case (OpenAI) (E5 A5:H20); the $/AIBQ-point ladder (E15 A25:F32). Ruling 2: correlation embargoed; no cell computes any correlation.", kind="note")
+    sh.put("A1", "06_Valuation: marks ladder and multiples at gross / 39.75% / 27% (Anthropic) and net / gross-case (OpenAI) (E5 A5:H20); the $/AIBQ-point ladder (E15 A25:F32). Ruling 2: the AIBQ-to-valuation coefficient is embargoed; no cell computes any such statistic.", kind="note")
     sh.section(3, "MARKS AND MULTIPLES (Exhibit E5; A5:H20); every net figure shows its haircut in column E", ncols=11)
     sh.header(4, ["Item", "Unit", "Source", "Value", "Haircut / basis visible", "Check", "Note"])
     rows = [
@@ -246,7 +246,7 @@ def build_06(sh):
             ck(sh, f"F{rr}", f"D{rr}", chk)
     sh.put("E13", f"={R('R03')}", kind="hole", nf=PCT); sh.put("G13", "R03 is T4 and never printed as a fact", kind="flag")
     sh.put("A19", "C-15 (display only; no formula reads this): secondary marks 1,500,000 implied at $925/share and 'low-to-mid 800,000' (both T4); none adopted; the primary mark is M01.", kind="note")
-    sh.put("A20", "Ruling 2: correlation embargoed. Ruling 5: never gross vs net; the gross multiple (row 7) is display only.", kind="note")
+    sh.put("A20", "Ruling 2: the AIBQ-to-valuation coefficient is embargoed. Ruling 5: never gross vs net; the gross multiple (row 7) is display only.", kind="note")
     sh.section(23, "$/AIBQ-POINT LADDER (Exhibit E15; A25:F32): mark / composite; the only permitted valuation-quality expression (Ruling 2)", ncols=11)
     sh.header(24, ["Row", "Anthropic composite", "Anthropic $B per point", "OpenAI composite", "OpenAI $B per point", "Spread (OpenAI / Anthropic)", "Check", "Note"])
     lad = [

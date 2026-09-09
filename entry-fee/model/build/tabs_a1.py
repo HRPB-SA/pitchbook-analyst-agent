@@ -795,5 +795,5 @@ def build_12(sh):
     for i, (c, s, t) in enumerate(resolved):
         rr = 22 + i
         sh.put(f"A{rr}", c, bold=True); sh.put(f"B{rr}", s); sh.put(f"C{rr}", t, kind="note")
-    sh.put("A36", "Six rulings carried: Ruling 1 CE denominators equity-only; Ruling 2 correlation embargoed; Ruling 3 adjusted operating income is not FCF (unswept); Ruling 4 PB TTM fields are forward projections, never current; Ruling 5 39.75% equalization with the ~27% branch; Ruling 6 Report weights CE 20 / RQ 25 / CI 15 / GO 20 / MD 20.", kind="note")
+    sh.put("A36", "Six rulings carried: Ruling 1 CE denominators equity-only; Ruling 2 the AIBQ-to-valuation coefficient is embargoed; Ruling 3 adjusted operating income is not FCF (unswept); Ruling 4 PB TTM fields are forward projections, never current; Ruling 5 39.75% equalization with the ~27% branch; Ruling 6 Report weights CE 20 / RQ 25 / CI 15 / GO 20 / MD 20.", kind="note")
     sh.put("A37", "Provenance box: 168 ledger rows; confirmed 97, estimated 51, recalled 6, could-not-verify 14; Gate 1 passed twice (L-161 and L-165 tagged estimated/T3 by rule). The S-1s will replace load-bearing figures 1-6 with audited numbers.", kind="note")

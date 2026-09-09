@@ -459,8 +459,8 @@ def build_09(sh):
     # Branch grid placed at AF97:AP102 (columns beyond the schedule's AD) so rows 98-102 stay clear of the schedule header at row 100.
     cols = ["AF", "AG", "AH", "AI", "AJ", "AK", "AL", "AM", "AN", "AO", "AP"]
     sh.put("AF96", "E10 BRANCH GRID (see section header at A96)", kind="header")
-    for j, h in enumerate(["Branch", "Google leg 2027", "Google leg 2028", "Gap 2027 low", "Gap 2027 high", "Gap 2028 low", "Gap 2028 high", "Gap 2028 midpoint", "Check 2027", "Check 2028", "Tier"]):
-        sh.put(f"{cols[j]}97", h, kind="header")
+    for j, h in enumerate(["Branch", "Google leg 2027", "Google leg 2028", "Gap 2027 low", "Gap 2027 high", "Gap 2028 low", "Gap 2028 high", "Gap 2028 midpoint", "Check 2027 low / 2028 low or mid", "Check 2028 low / mid", "Tier", "Check 2027 high", "Check 2028 high"]):
+        sh.put(f"{(cols + ['AQ', 'AR'])[j]}97", h, kind="header")
     sh.put("A98", "Branch grid printed at AF97:AP102 (five branches); the row-98 cells below link its first row.", kind="note")
     for i, (rr0, lab, leg27, leg28, c27, c28, tier) in enumerate(branches):
         rr = 98 + i
@@ -470,11 +470,11 @@ def build_09(sh):
         sh.put(f"AK{rr}", f"=$I$82-$I$85-AH{rr}", kind="formula", nf=NUM); sh.put(f"AL{rr}", f"=$I$83-$I$85-AH{rr}", kind="formula", nf=NUM)
         sh.put(f"AM{rr}", f"=AVERAGE(AK{rr},AL{rr})", kind="formula", nf=NUM, key=f"BR_MID28_{i}")
         if c27:
-            ck(sh, f"AN{rr}", f"AI{rr}", c27[0]); sh.put(f"AN{rr}", f'=IF(AND(ABS(AI{rr}-{R("CHK_"+c27[0])})<={R("TOL_"+c27[0])},ABS(AJ{rr}-{R("CHK_"+c27[1])})<={R("TOL_"+c27[1])}),"PASS","FAIL")', kind="formula", bold=True, key=f"PF_{c27[0]}")
+            ck(sh, f"AN{rr}", f"AI{rr}", c27[0]); ck(sh, f"AQ{rr}", f"AJ{rr}", c27[1])
         if c28:
             lo, hi, mid = c28
             if lo:
-                sh.put(f"AO{rr}", f'=IF(AND(ABS(AK{rr}-{R("CHK_"+lo)})<={R("TOL_"+lo)},ABS(AL{rr}-{R("CHK_"+hi)})<={R("TOL_"+hi)}),"PASS","FAIL")', kind="formula", bold=True, key=f"PF_{lo}")
+                ck(sh, f"AO{rr}", f"AK{rr}", lo); ck(sh, f"AR{rr}", f"AL{rr}", hi)
             if mid:
                 ck(sh, f"AO{rr}", f"AM{rr}", mid)
         sh.put(f"AP{rr}", tier, kind="note")
@@ -639,4 +639,7 @@ def build_04(sh):
     sh.put("F34", "=D34", kind="formula", nf=NUM, key="H1A_PL"); ck(sh, "G34", "F34", "H1A")
     sh.put("F35", "=D35", kind="formula", nf=MULT2); ck(sh, "G35", "F35", "Q2Q1")
     sh.put("A41", "2025A OpenAI: reported operating loss 20,920 and group loss 60,350 incl. the 41,550 fair-value swing (O02, recalled T3) are displayed on 01_Data and not reconstructed here; 2023A-2024A read HOLE.", kind="note")
+    sh.put("A42", "RECONCILIATION (OpenAI 2026E): the derived operating result incl. training (row 29, G) is built from ledger rows only (L4 = inference 14,100 per L-083; L5 = comp + retention); the H1-2026 actual operating loss annualized (E40 x 2) is far larger. The gap is a HOLE (SBC, other compute inside the 50,000 plan, other opex), not allocated:", kind="note")
+    sh.put("D42", "=G29", kind="formula", nf=NUM); sh.put("E42", f"=E40*{R('QPY')}/2", kind="formula", nf=NUM); sh.put("F42", "=D42-E42", kind="hole", nf=NUM, key="OAI_2026_RECON"); sh.put("G42", "derived minus annualized actual (HOLE)", kind="note")
+    sh.put("A43", "2025A OpenAI: derived L4 + L5 (8,777 + 750) against the reported operating loss 20,920 (O02) likewise leaves the training and other opex of 2025 as HOLE.", kind="note")
     sh.ws.freeze_panes = "D5"
