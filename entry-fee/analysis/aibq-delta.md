@@ -1,0 +1,90 @@
+# AIBQ v3.0 Delta: Compute Independence (CI-1..CI-5) and Capital Efficiency (CE-1..CE-4) re-run on the Sep-9 ledger
+Agent 2 (Analyst), 2026-09-09. Rubric: `prior/nexus/aibq-pbq-scoring-framework.md` §1 (v3.0, effective 2026-05-26). Weights (Report configuration, Ruling 6): CE 20 / RQ 25 / CI 15 / GO 20 / MD 20. Dimension score = weighted sub-scores (CE: 40/25/20/15; CI: 30/25/20/15/10). Prior sub-scores are the May-27 vintage as carried in `prior/v4-reconstruction.md` §7 and anchored by ledger row L-133 (recalled, T4). RQ, GO and MD are NOT re-scored here (outside the brief); ledger events that touch them are listed in §6 for the NEXUS scorer.
+
+**Embargo compliance.** The cross-company quality-valuation correlation coefficient is not computed, reconstructed or referenced anywhere in this file. The only permitted expression is the $/AIBQ-point ladder (§5).
+
+**Baseline caveat (read first).** The v3.0 changelog states that the May-27 sub-scores were "decomposed from" the v2.2 dimension scores and are "not independently validated yet." The re-run below is therefore the first rubric-based validation of CE and CI for both companies. Some moves are data-driven (a ledger row changed the input); some are method-driven (the prior sub-score was not reproducible from the rubric on any input). Each move is labelled. The rubric's single-event and daily caps (1.0 raw per dimension per day; ±0.50 composite per event per day) govern event-driven updates; this is a report-time re-baseline and must be logged in the Daily Scores DB as such, with the 24-hour cooling period before external citation.
+
+---
+
+## 1. Anthropic: Capital Efficiency (CE, weight 20%)
+
+Inputs that moved: run-rate $47,000 → $65,000 gross [L-032 · confirmed · T2 · end-Jul-2026]; equity-only raised unchanged $124,254 [L-007 · estimated · T2]; first quarterly operating profit, projected $559, sign confirmed [L-034 · confirmed · T2 · Q2-2026]; GM 2026 44-60% [L-119 · recalled · T4]; debt: $2,500 revolver [L-014 · T2], $15,000 expansion nearing final [L-042 · T3], $34,500 lease SPV off-balance-sheet [L-044 · T3]; Series H 17.33% acquired [L-015 · T2].
+
+| Sub-score | Weight | Old | New | Rubric basis for the new score | Ledger row(s) that move it | Type | Δ raw | Δ dimension (weight × Δ) | Flag |
+|---|---|---|---|---|---|---|---|---|---|
+| CE-1 Primary efficiency (S5: Efficiency Index; pre-FCF fallback: ARR / equity raised) | 40% | 10.0 | **8.0** | Index = min(growth/100, 1.0) × 0.4 + min(FCF/Rev, 0.30) × 0.3 + GM × 0.3 = 1.0 × 0.4 + 0 × 0.3 + 0.50 × 0.3 = **0.55**. Band ">0.50" = 7-8; the 9-10 band requires "+FCF+", which Ruling 3 keeps unswept (operating profit is not FCF). Cross-check on the ratio: net run-rate $39,162 / $124,254 = **0.315x** → 7-8 band (0.3-0.5x); only the raw gross ratio (0.523x) reaches 9-10, and Ruling 5 forbids the raw gross basis | L-032, L-007, L-126 (basis), L-034 (no TTM FCF+) | Method-driven: the prior 10.0 is not reproducible from the rubric on any ledger input without counting a projected operating profit as TTM FCF+ | −2.0 | −0.80 | **≥0.5 sub-score: FLAG.** Alternative reading (count Q2 op profit as the FCF+ trigger): 9.0, Δ −1.0. C-13 switch: at the ~27% haircut the ratio is 0.382x, still 7-8 |
+| CE-2 Gross margin quality | 25% | 4.0 | **5.0** | 2025 ~40% (3-4 band); 2026 T4 range 44-60% straddles 3-4 and 5-6; Q2 arithmetic (op profit $559 on $11,600 with AJ quarterly opex $3,000-5,000) implies 31-48% gross-basis GM, 51-80% net-basis. Score the lower edge of 50-65% on the net basis. AI-INFRA +1.0 sector adjustment NOT applied (>50% not confirmed at T1/T2) | L-119 (T4), L-034 (T2), L-033 (T2), L-126 | Data-driven, weak tier | +1.0 | +0.25 | **≥0.5: FLAG (T4 input).** Alternative: hold 4.0 pending the S-1 |
+| CE-3 Burn trajectory (QoQ) | 20% | 9.0 | 9.0 | Q1 ≈ $5,000 revenue → Q2 $11,600 with a positive operating result: "Improving >50%" band 9-10. Unchanged; the T2 confirmation replaces the prior T3 | L-034, L-129 | Confirmed | 0 | 0 | none |
+| CE-4 Capital structure health | 15% | 8.0 | **7.0** | Runway >24 months ($65,000 Series H closed May-28; operating profit); dilution 17.33% (<20%); debt: on-balance-sheet $2,500 today, $15,000 facility nearing final, plus a $34,500 five-year lease obligation (≈ $6,900/yr) and a 20-yr Riot lease. "Minimal debt" (7-8) no longer holds cleanly; "manageable" (5-6) is too harsh while facilities are undrawn. Score 7.0 | L-042 (T3), L-044 (T3), L-136 (T2), L-015 | Data-driven, T3 inputs | −1.0 | −0.15 | **≥0.5: FLAG (T3).** Switch: if the $15,000 facility does not close, hold 8.0 |
+| **CE dimension** | | **8.00** | **7.30** | 0.4×8 + 0.25×5 + 0.2×9 + 0.15×7 = 3.20 + 1.25 + 1.80 + 1.05 | | | | **−0.70** | Composite impact −0.70 × 0.20 = **−0.14** (≥0.1: FLAG) |
+
+Reading: the data improved (run-rate +38%, CE ratio up from 0.228x to 0.315x equalized, first operating profit) while the score falls 0.7. The fall is a method correction, not a business deterioration: −0.80 comes from re-applying the rubric to CE-1; the data-driven moves net to +0.10 (CE-2 +0.25, CE-4 −0.15). The report must say this in one sentence or the score will be read as a downgrade.
+
+## 2. Anthropic: Compute Independence (CI, weight 15%)
+
+Inputs that moved: four new neocloud contracts in August (Riot, Volta, Nscale, Lambda) [L-135, L-136, L-137 · T2; L-048 · T3]; AWS 5 GW [L-072 · T1]; Google 5 GW plus Broadcom TPU schedule [L-073 · T2; L-049 · T1]; AMD 2 GW MI450 [L-043 · T1]; SpaceX 90-day termination [L-046 · T1]; Fluidstack $50,000 DC build [L-076 · T1]; no PPAs attributable to Anthropic [L-131 · could-not-verify · T3]; structural finding that neither lab owns meaningful GPU fleets [L-132 · T1].
+
+| Sub-score | Weight | Old | New | Rubric basis | Rows | Type | Δ raw | Δ dim | Flag |
+|---|---|---|---|---|---|---|---|---|---|
+| CI-1 Provider diversification | 30% | 6.0 | **7.0** | Providers under contract: AWS, Google Cloud, Azure, SpaceX, Nscale, Lambda, Volta, Riot, Fluidstack (nine). "Four+ providers, well-balanced" = 7-8; balance unverified (AWS >$100,000/10 yr is the largest and share of current consumption is undisclosed), so 7.0 not 8.0 | L-072, L-073, L-074, L-046, L-135, L-136, L-137, L-048, L-076 | Data-driven, T1/T2 | +1.0 | +0.30 | **≥0.5: FLAG** (balance unverified) |
+| CI-2 Infrastructure ownership | 25% | 4.0 | **5.0** | Fluidstack: "building data centers" with Anthropic's $50,000 (T1) plus Riot powered shell (chips in a leased shell) and TPU systems leased from an SPV: between "leased racks in colocation" (3-4) and "owned inference racks in partner DCs" (5-6). No custom ASIC in development at Anthropic (uses Google/Broadcom TPU, Trainium, Nvidia, AMD). Score 5.0 | L-076, L-136, L-044, L-132 | Data-driven, T1/T3 | +1.0 | +0.25 | **≥0.5: FLAG** (ownership structure of the Fluidstack sites undisclosed) |
+| CI-3 Energy independence | 20% | 5.0 | **4.0** | No PPA attributable to Anthropic found; power procured by partners (SpaceX turbines, Volta hydropower, Oracle-campus fuel cells): "Energy awareness but no direct contracts" = 3-4. The prior 5.0 ("1-2 PPAs, <30% of needs") has no supporting row | L-131 (could-not-verify, T3) | Method/absence-driven | −1.0 | −0.20 | **≥0.5: FLAG** (absence of evidence at T3) |
+| CI-4 Supply-chain resilience | 15% | 5.0 | **6.0** | Four active chip families: Nvidia (via SpaceX, Nscale, Lambda, Volta), Google TPU (Broadcom), AWS Trainium, AMD MI450 from 2027: top of "Multiple active (NVIDIA + AMD or custom)" = 5-6. Not 7-8 because none of the custom silicon is Anthropic's own and all are TSMC-fabbed | L-043, L-049, L-072, L-135 | Data-driven, T1/T2 | +1.0 | +0.15 | **≥0.5: FLAG** (rubric interpretation) |
+| CI-5 Contractual lock-in | 10% | 5.0 | 5.0 | Non-exclusive throughout; SpaceX terminable on 90 days (pulls toward 7-8) offset by a 10-yr AWS minimum and a 20-yr Riot lease (pulls toward 3-4). Net unchanged | L-046, L-072, L-136 | Confirmed | 0 | 0 | none |
+| **CI dimension** | | **5.05** (sub-score base) / 5.8 (canonical after the un-decomposed SpaceX revision) | **5.55** | 0.3×7 + 0.25×5 + 0.2×4 + 0.15×6 + 0.1×5 = 2.10 + 1.25 + 0.80 + 0.90 + 0.50 | | | | **+0.50** vs 5.05 / **−0.25** vs 5.8 | Composite +0.075 vs the sub-score base; −0.04 vs the 5.8 canonical |
+
+Reading: the August neocloud spree and AMD move CI up on diversification and ownership; the absence of any power contract moves it down. Against the canonical 5.8 (which was raised for the SpaceX deal without re-issued sub-scores) the re-run is slightly lower, because the rubric does not reward a 90-day-terminable contract as "independence."
+
+## 3. OpenAI: Capital Efficiency (CE, weight 20%)
+
+Inputs that moved: run-rate ~$25,000 (est.) → >$40,000 [L-065 · confirmed · T2 · July-2026; basis unstated, C-16]; equity-only $181,216.5 unchanged [L-022]; GM 33% (2025) [L-083 · T3]; Q1→Q2 operating loss $9,300 → $12,300 incl. SBC [L-066 · T2]; Mar-2026 round $121,300 equity at 14.23% dilution [L-020 · T2]; burn plan 2026 $25,000-27,000 [L-082 · T3]; 20-yr site leases as a non-investment-grade tenant [L-061 · T1].
+
+| Sub-score | Weight | Old | New | Rubric basis | Rows | Type | Δ raw | Δ dim | Flag |
+|---|---|---|---|---|---|---|---|---|---|
+| CE-1 Primary efficiency | 40% | 3.0 | **5.0** | Ratio: $40,000 / $181,216.5 = **0.221x** → 5-6 band (0.2-0.3x); the prior 3.0 matched $25,000 / $181,216.5 = 0.138x (0.1-0.2x band). Index cross-check: 1.0 × 0.4 + 0 + 0.33 × 0.3 = 0.50 (borderline 5-6 / 7-8). Score 5.0 | L-065, L-022 | Data-driven, T2 | +2.0 | +0.80 | **≥0.5: FLAG.** C-16 switch: if the $40,000 is gross and a 20% share (T4) applies, net $32,000 → 0.177x → 3-4 band → 4.0 |
+| CE-2 Gross margin quality | 25% | 3.5 | 3.5 | 33% (2025) = 3-4 band. 2026E inference $14,100 on FY2026E revenue $32,400-45,500 (31-44% of revenue) implies an improving GM but no GM datapoint exists | L-083 (T3), L-066 | Unchanged | 0 | 0 | none |
+| CE-3 Burn trajectory | 20% | 3.0 | 3.0 | Operating loss worsened 32% QoQ (Q1 $9,300 → Q2 $12,300): "Worsening 10-50%" = 3-4. Confirmed at T2 | L-066 | Confirmed | 0 | 0 | none |
+| CE-4 Capital structure health | 15% | 2.5 | **3.0** | On-balance-sheet debt $5,220 (minimal); runway >24 months after the $122,000 round against a $25,000-27,000 burn; dilution 14.23%. By the letter that is 7-8. The prior 2.5 treated the obligation stack as debt-like ("debt >2x ARR"): documented-$ commitments $480,400 are 12x the run-rate and the 20-yr leases are signed by a tenant the landlord calls non-investment-grade. Hold that interpretation; credit the round: 3.0 | L-020, L-023, L-082, L-061 | Data-driven, interpretive | +0.5 | +0.075 | **≥0.5: FLAG** (interpretation: commitments treated as debt-like) |
+| **CE dimension** | | **3.05** | **3.925 ≈ 3.9** | 0.4×5 + 0.25×3.5 + 0.2×3 + 0.15×3 = 2.00 + 0.875 + 0.60 + 0.45 | | | | **+0.875** | Composite +0.875 × 0.20 = **+0.175** (≥0.1: FLAG). Gross-case (CE-1 = 4.0): CE 3.525, composite +0.095 |
+
+## 4. OpenAI: Compute Independence (CI, weight 15%)
+
+Inputs that moved: Microsoft exclusivity ended (non-exclusive IP; any cloud) [L-051 · T1 · 2026-04-27]; SB Energy 8.75 GW-IT of 20-yr and 15-yr leases as tenant [L-061 · T1]; Broadcom custom XPU 1.3 GW in 2027 [L-050 · T1]; Cerebras 750 MW dedicated [L-149 · T1]; AMD 6 GW [L-060 · T1]; Nvidia LOI retired in favour of $30,000 equity plus a $105,000 RVG [L-075 · T2; L-061 · T1]; Microsoft still the largest single channel ($24,100 of a $50,000 2026 compute plan ≈ 48%) [L-054 · T1; L-078 · T2]; no PPAs in the ledger.
+
+| Sub-score | Weight | Old | New | Rubric basis | Rows | Type | Δ raw | Δ dim | Flag |
+|---|---|---|---|---|---|---|---|---|---|
+| CI-1 Provider diversification | 30% | 5.5 | **6.0** | Azure, Oracle, AWS, CoreWeave, Cerebras, SB Energy sites, any-cloud permitted: five-plus providers. Balance: Microsoft ≈ 48% of the 2026 compute plan (derived), so "no one >50%" just holds: 5-6 band, top. Oracle's $60,000/yr from 2027 will rebalance | L-051, L-054, L-078, L-058, L-064, L-149 | Data-driven, T1/T2 | +0.5 | +0.15 | none |
+| CI-2 Infrastructure ownership | 25% | 3.0 | **6.0** | 20-yr leases on 8.0 GW-IT plus 15-yr on 753 MW as tenant (T1), self-build plans (WSJ), custom ASIC in development with a dated 2027 deployment (T1 vendor), dedicated Cerebras capacity (T1): well above "leased racks in colocation" (3-4); not "owned DCs" (7-8) because SB Energy and Oracle own the sites and Nvidia guarantees the residual value. Score 6.0. Three distinct events (Cerebras S-1/A May-11; SB Energy leases Aug-17; Broadcom schedule Sep-2), each within the 1.0 single-event cap if logged separately | L-061, L-050, L-149, L-132 | Data-driven, T1 | +3.0 | +0.75 | **≥0.5: FLAG.** Must be logged as three events or as a re-baseline |
+| CI-3 Energy independence | 20% | 4.0 | 4.0 | No OpenAI PPA in the ledger; power sits with Oracle campuses (fuel cells, T4) and SB Energy (an energy developer, lease terms undisclosed): "Energy awareness but no direct contracts" = 3-4. Upside to 5-6 if the SB Energy leases bundle power (undisclosed) | L-079, L-061 | Unchanged | 0 | 0 | none |
+| CI-4 Supply-chain resilience | 15% | 6.0 | **7.0** | Nvidia + AMD 6 GW (T1) + Broadcom custom XPU on a dated schedule (T1) + Cerebras wafer-scale (T1): "Multiple + custom reducing dependency" = 7-8, low end (custom silicon not yet deployed; TSMC single foundry) | L-050, L-060, L-149 | Data-driven, T1 | +1.0 | +0.15 | **≥0.5: FLAG** |
+| CI-5 Contractual lock-in | 10% | 4.0 | **4.5** | Exclusivity gone (T1) pulls up; minimums ($300,000 Oracle, ~$138,000 AWS, 20-yr leases) with exit costs far above $1B pull down. Net +0.5 | L-051, L-064, L-061 | Data-driven, offsetting | +0.5 | +0.05 | none |
+| **CI dimension** | | **4.50** | **5.60** | 0.3×6 + 0.25×6 + 0.2×4 + 0.15×7 + 0.1×4.5 = 1.80 + 1.50 + 0.80 + 1.05 + 0.45 | | | | **+1.10** | Composite +1.10 × 0.15 = **+0.165** (≥0.1: FLAG) |
+
+## 5. Composite impact and the $/AIBQ-point ladder (the only permitted valuation expression)
+
+Composite deltas use dimension deltas × Report weights; RQ, GO, MD held at their May-27 values (out of scope). Old composites are the canonical 8.20 and 4.53 [L-133 · recalled · T4]; the sub-score-derived reconstructions are 8.05 (Anthropic, CI 5.05) / 8.17 (CI 5.8) and 4.50 (OpenAI), which is the known 8.20-vs-8.06 canonical/live gap (frozen conflict #6 in the v4 map). Deltas are applied to the canonical figures so the report and NEXUS agree on the move, not on the base.
+
+| Company | CE Δ dim | CE composite Δ | CI Δ dim | CI composite Δ | Total composite Δ | Old composite | New composite | Quality tier | Mark | $/AIBQ-pt old | $/AIBQ-pt new |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Anthropic (sub-score base, CI 5.05) | −0.70 | −0.140 | +0.50 | +0.075 | **−0.065** | 8.20 | **8.13** | Strong (unchanged) | $965,000 [L-005] | $118B/pt | **$119B/pt** |
+| Anthropic (canonical base, CI 5.8) | −0.70 | −0.140 | −0.25 | −0.038 | −0.178 | 8.20 | 8.02 | Strong | | | $120B/pt |
+| OpenAI (net case) | +0.875 | +0.175 | +1.10 | +0.165 | **+0.340** | 4.53 | **4.87** | Developing (unchanged; <5.0) | $852,000 [L-019] | $188B/pt | **$175B/pt** |
+| OpenAI (C-16 gross case) | +0.475 | +0.095 | +1.10 | +0.165 | +0.260 | 4.53 | 4.79 | Developing | | | $178B/pt |
+
+Ladder spread (OpenAI $/pt ÷ Anthropic $/pt): 1.60x on May-27 scores at the standing marks → **1.47x** on the re-run. The market pays $56B more per quality point for OpenAI than for Anthropic on the new scores, down from $70B. The ladder narrows because OpenAI's CE and CI improved on ledger evidence while its mark stood still (the Aug-10 tender was at $852,000 [L-067]); the coefficient behind the ladder remains embargoed and is not reported.
+
+Flags summary (≥0.5 at sub-score or ≥0.1 at composite): Anthropic CE-1 (−2.0, method), CE-2 (+1.0, T4), CE-4 (−1.0, T3), CI-1 (+1.0), CI-2 (+1.0), CI-3 (−1.0, absence), CI-4 (+1.0), CE composite (−0.14); OpenAI CE-1 (+2.0), CE-4 (+0.5, interpretive), CI-2 (+3.0), CI-4 (+1.0), CE composite (+0.175), CI composite (+0.165), total (+0.34, exceeds the ±0.50 aggregate event cap only if booked as one event: book as a re-baseline).
+
+## 6. Out-of-scope dimension events the ledger surfaced (for the NEXUS scorer, not re-scored here)
+
+| Company | Dimension / sub-score | Event | Row | Direction |
+|---|---|---|---|---|
+| Both | GO-3 IPO readiness | Confidential S-1 filed (Anthropic Jun-1; OpenAI Jun-8); no public S-1 as of Sep-9 | L-039, L-003, L-004, L-001, L-002 | Up to the 9-10 band once public; hold until the flip |
+| OpenAI | GO-5 C-suite stability | Simo, Lightcap, CRO, CMO, Weil, Peebles, head of DCs departed Apr-Aug 2026; second CRO in under a year | L-089 · T2; L-070 · T3 | Down (multiple C-suite exits trailing 12 months) |
+| OpenAI | GO-4 Regulatory | Musk v. Altman dismissed (time-barred); NYT summary judgment pending | L-087 · T2; L-088 · T4 | Up (major litigation won at trial court; appeal pending) |
+| OpenAI | GO-2 Corporate structure | PBC recap completed Oct-2025; Microsoft stake below 27% undisclosed | L-071 · T1; L-053 · T4 | Up (conversion complete; −1.0 modifier lifts) |
+| Anthropic | GO-4 Regulatory | Bartz settlement approved; new music-publisher suits (Sony/Warner Chappell) | L-086 · T2 | Mixed |
+| Anthropic | RQ-3 / RQ-5 | >1,000 customers at >$1M annualized; list-price ladder held (Opus 5 $5/$25, Fable 5.1 $10/$50) | L-139 · T1; L-084 · T1 | Up |
+| OpenAI | RQ-3 | Ads at $1,000 run-rate; >1B active users, >2M businesses | L-081 · T2; L-080 · T2 | Mixed (consumer weight) |
+| OpenAI | MD-3 Talent | Retention bonuses; executive exodus | L-093 · T3; L-089 · T2 | Down |
