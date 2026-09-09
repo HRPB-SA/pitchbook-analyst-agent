@@ -44,3 +44,24 @@ Capital-structure cross-checks:
 
 ## Figures from the old draft that must NOT appear without a fresh row
 $47B (Anthropic run-rate, May) except as history · ~$25B OpenAI net run-rate · $161.3B Anthropic total raised · "$34.5B chip bonds tranched Superpriority / 1st Lien / 2nd Lien" as Anthropic-issued debt · 34.1x vs 34.1x · 1.65x CE advantage · $118B and $188B per AIBQ point as current (scores are May-27 vintage; marks unchanged, so the ladder is unchanged but must be dated) · $1.15T "obligations across 7 vendors" as a verified total · Nvidia "$100B / 10 GW" · "Fast Mode ~3x cheaper" · Altman "Co-CEO" · OpenAI capex $190B 2026E · $38B cap as confirmed (it is T3) · 20% revenue-share percentage (T4 only) · 27% Microsoft stake as current (decreased per 10-K).
+
+## Addendum after the second research pass (written 2026-09-09, still before any draft or model)
+
+New rows L-150 to L-168 change the following, derived here independently from the ledger:
+
+| Item | Before | After | Rows |
+|---|---|---|---|
+| Anthropic Q2-2026 result | "first quarterly operating profit, projected $559M" | positive ADJUSTED operating income (non-GAAP; excludes SBC; includes training per relays; definition unpublished); projected $559M on $10.9B = ~5.1% adjusted margin | L-151 (T2), L-152 (T3), L-034 |
+| Anthropic Q1-2026 revenue | ~$5.0B derived | $4.73B (T2); H1 ≈ $16.2B+ (gross presumed) | L-151 |
+| FY2026E gross recognized (linear ramp from July $65B run-rate to YE $100B / $120B; flat case) | 57,850 / 62,850 / 49,100 | 4,730 + 11,600 + Q3 + Q4: 57,580 / 62,580 / 48,830 (arithmetic: each case moves by the 270 change in Q1) | L-151, L-032, L-035 |
+| Google Cloud commitment value | unpriced (5 GW) | ~$200B over five years ≈ $40B/yr, T3 single-outlet, page not opened, [VERIFY]; Alphabet 10-Q, Google release, Broadcom 10-Q silent at T1 | L-155, L-153, L-154, L-156 |
+| Anthropic 2028 commitments vs envelope | priced ≈ $53.4B vs envelope $65.7-68.0B; Google via $/MW-yr proxy | priced $53.4B + Google reported $40B = $93.4B vs $65.7-68.0B: excess ≈ $25-28B/yr at T3 before AMD 2 GW and before Broadcom's 2028 line of sight | as above plus L-036, L-119, L-125 |
+| Reported-$ Anthropic stack | documented-$ $324.1B | documented-$ unchanged; reported-$ incl. Google $200B = $524.1B [VERIFY] | L-155 |
+| Microsoft funding to OpenAI | not in ledger | $13.0B committed, $11.9B funded at Jun 30, 2026 (T1); equals PB's $1B + $2B + $10B | L-157 |
+| Microsoft / Foundation stakes at recap | ~27% T4 | ~27% (~$135B) / 26% / 47%, T2 verbatim; post-March-2026 dilution undisclosed | L-159, L-054 |
+| Base rates | none in ledger | Bessemer growth endurance ~70% private, ~80% public (T3); AWS operating margin 9.9% (2014) → 25.4% (2016) → 27-30% (2018-23) → 37.0% (2024) → 35.4% (2025) (T1) | L-161, L-162 |
+| Serving cost per million output tokens (derived) | analyst judgment only | DeepSeek-class MoE on GB200 at 13,386 output tok/s/GPU = 48.2M tok/GPU-hr → ≈ $0.22 at $10.50/GPU-hr on-demand, $0.05-0.08 at $2.40-4.00 contracted; dense 405B at 138-224 tok/s/GPU → ≈ $13-21 on-demand | L-164, L-104, L-105 |
+| $15B facility | "nears finalizing" | not closed as of Sep 9 | L-160 |
+| Powered-shell rent anchors | $1.76M (Core Scientific-AMD), $2.4M (Riot) per MW-yr | plus Beacon Point $19.6B / 704 MW / 15 yr ≈ $1.86M per MW-yr (T1, Hut 8) | L-167 |
+
+Gate 3 consequence: any sentence in the draft calling the Q2 result an "operating profit" without "adjusted" fails; any FY2026E figure still built on Q1 ≈ 5,000 fails; the §5 exhibit must show the Google leg at the reported $40B/yr as a flagged T3 branch, not only the $/MW-yr proxy.
