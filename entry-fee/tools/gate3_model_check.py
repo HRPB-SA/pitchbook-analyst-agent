@@ -57,14 +57,14 @@ for f in FILES:
     nm = names(wbf); print("  sheets:", wbf.sheetnames)
     missing = [s for s in SWITCHES if s not in nm] if "entry-fee" in f.name else [s for s in ["SW_GF", "SW_GF_BACKSTOP", "SW_GF_REGION", "SW_SSI"] if s not in nm]
     print("  named ranges:", len(nm), "· missing switches:", missing)
-    lb = {k: v for k, v in nm.items() if re.match(r"LB\d\d", k)}
+    lb = {k: v for k, v in nm.items() if re.match(r"LB_?\d\d", k)}
     print("  LB names:", sorted(lb))
     for k, ref in sorted(lb.items()):
         try:
             v = cell_by_name(wbv, ref)
         except Exception as e:
             v = f"ERR {e}"
-        exp = EXPECT.get(k[:4]); flag = "" if exp is None else ("OK" if (isinstance(v, (int, float)) and abs(v - exp) < 1) else f"MISMATCH expected {exp}")
+        exp = EXPECT.get(k.replace("_","")[:4]); flag = "" if exp is None else ("OK" if (isinstance(v, (int, float)) and abs(v - exp) < 1) else f"MISMATCH expected {exp}")
         print(f"    {k} = {v}  {flag}")
     # colour discipline + hardcodes in formulas
     blue_inputs = black_formula = blue_formula = nonblue_input = 0; hard = []

@@ -343,6 +343,7 @@ def build_b00(sh):
     D(47, "REV1B", "Revenue milestone threshold ($1B net revenue)", "$M", "spec section 7.4", 1000, 1000, 1000, nf=NUM, lo=1000, hi=1000)
     D(48, "COST_DEBT", "Cost of debt for purchased clusters: SPV A2 5.75% if SW_GF_BACKSTOP = Yes, else neocloud unsecured midpoint 9.375% (VI: OEM equipment financing 7-8% shown as the range)", "fraction", "G04 (L-059 T1; L-044 T3; equipment AJ)",
       f'=IF(SW_GF_BACKSTOP="Yes",{R("SPV_A2")},{R("NEO_MID")})', f'=IF(SW_GF_BACKSTOP="Yes",{R("SPV_A2")},{R("NEO_MID")})', f'=IF(SW_GF_BACKSTOP="Yes",{R("SPV_A2")},{R("NEO_MID")})', nf=PCT2, lo=f"={R('SPV_A2')}", hi=f"={R('NEO2')}")
+    D(49, "TH_LAG", "Frontier-threshold lag (years): Full and VI judge the first frontier-class run against G14 of (year - lag); VI lag 1 because its owned cluster is bought in Y2 and lands Y2-Y3, so the Y3 run is judged against the Y2 frontier it was bought to train (AJ, flagged)", "yrs", "AJ · spec section 7.4 milestone reasoning ('VI Y3 because the owned cluster lands Y2-Y3')", 0, 0, 1, nf=CNT, lo=0, hi=1, hole=True)
     sh.put("A50", "Unit constants: hours per year; $ per $M; seconds per hour; tokens per MTok; GPUs per 1,000; MW per GW; $ per $K; unit one; unit zero; 20% tolerance for the section 7.4 magnitude check; 'near' band for the xAI reference (0.5x-2x); 60% utilization for the G20 x1.67 line; 5% relative tolerance for the G20 checks", kind="note")
     for col, v, k in (("D", 8760, "HOURS"), ("E", 1000000, "MPERUSD"), ("F", 3600, "SECPERHR"), ("G", 1000000, "TOKPERMTOK"), ("H", 1000, "KGPU"), ("I", 1000, "MWPERGW"), ("J", 1000, "KPERUNIT"), ("K", 1, "UNITONE"), ("L", 0, "UNITZERO"), ("M", 0.20, "TOL20"), ("N", 0.5, "NEAR_LO"), ("O", 2.0, "NEAR_HI"), ("P", 0.6, "UTIL60"), ("Q", 0.05, "G20TOL")):
         sh.put(f"{col}50", v, kind="input", nf=GEN, key=k)
@@ -493,8 +494,8 @@ def build_b04(sh):
         if s == 1:
             th = {y: f"={d('LEAN_THRESH', s)}" for y in YRS}
         else:
-            th = {y: f"={YB[y]}{r}" for y in YRS}
-        line(sh, r + 1, "TRN_TH", s, "Frontier-class threshold for the milestone (Lean: prior-generation class 170, AJ; Full and VI: current-year G14)", "$M", "LEAN_THRESH / G14", th)
+            th = {y: f"={R('GROK4')}*{R('GROWTH')}^({R(f'YB|{y}')}-{R('UNITONE')}-{d('TH_LAG', s)})" for y in YRS}
+        line(sh, r + 1, "TRN_TH", s, "Frontier-class threshold for the milestone (Lean: prior-generation class 170, AJ; Full: current-year G14; VI: G14 lagged by TH_LAG)", "$M", "LEAN_THRESH / G14 / TH_LAG", th)
         if s == 1:
             line(sh, r + 2, "TRN_DEM", s, "Training demand = runs x threshold x (G16 + G17) (Lean; capped by cluster size below)", "$M", "RUNS, G16, G17", {y: f"={dy('RUNS', s, y)}*{YB[y]}{r+1}*({d('G16', s)}+{d('G17', s)})" for y in YRS})
         else:

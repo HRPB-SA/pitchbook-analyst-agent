@@ -98,12 +98,14 @@ def main():
         results[name] = run_state(name, st)
     with open(os.path.join(HERE, "sweep_a.json"), "w") as f:
         json.dump(results, f, indent=1, default=str)
-    print(f"{'state':<26} {'recalc':<8} {'errs':>4} {'fails':>5} {'scen':<5} {'FY26A':>8} {'gap28lo':>10} {'gap28hi':>10} {'gleg28':>9} {'rel':>7} {'sign'} {'CEratio':>8} {'compA':>6} {'compO':>6}")
+    print("state | recalc | errs | fails | scen | FY26A | gap28lo | gap28hi | gleg28 | rel | sign | CEratio | compA | compO")
     for k, r in results.items():
-        f = lambda v, w: (f"{v:{w}.0f}" if isinstance(v, (int, float)) else f"{str(v):>{w}}")
-        print(f"{k:<26} {str(r['recalc_status']):<8} {r['cached_errors']:>4} {str(r['failcount']):>5} {str(r['scenario']):<5} {f(r['FY26A'],8)} {f(r['gap28_lo'],10)} {f(r['gap28_hi'],10)} {f(r['google_leg28'],9)} "
-              f"{(f'{r['relmult_live']:+.1%}' if isinstance(r['relmult_live'], (int, float)) else 'n/a'):>7} {r['relmult_sign']:>4} {(f'{r['CE_ratio']:.2f}x' if isinstance(r['CE_ratio'], (int, float)) else 'n/a'):>8} "
-              f"{(f'{r['comp_A_live']:.3f}' if isinstance(r['comp_A_live'], (int, float)) else 'n/a'):>6} {(f'{r['comp_O_live']:.3f}' if isinstance(r['comp_O_live'], (int, float)) else 'n/a'):>6}")
+        def f(v, fmt):
+            try:
+                return format(v, fmt)
+            except Exception:
+                return str(v)
+        print(" | ".join([k, str(r["recalc_status"]), str(r["cached_errors"]), str(r["failcount"]), str(r["scenario"]), f(r["FY26A"], ",.0f"), f(r["gap28_lo"], ",.0f"), f(r["gap28_hi"], ",.0f"), f(r["google_leg28"], ",.0f"), f(r["relmult_live"], "+.1%"), r["relmult_sign"], f(r["CE_ratio"], ".2f"), f(r["comp_A_live"], ".3f"), f(r["comp_O_live"], ".3f")]))
 
 
 if __name__ == "__main__":

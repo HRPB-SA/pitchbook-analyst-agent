@@ -1593,7 +1593,7 @@ Agent 3 (Writer), 2026-09-09. One row per numeric figure as printed in the body 
 | 1588 | $3B | Year-1 cash out / Entrant seeds and Series A-C of 2025-2026: $300M to $3B (L-0 | §12 / E18b | L-097, L-102 | confirmed | T2 | row(s) as cited |
 | 1589 | 2,500-4,000 | Cumulative to first frontier-class model / 2,500-4,000 (Y2) | §12 / E18b |  |  |  | exhibit note / caption |
 | 1590 | 12,000-18,000 | Cumulative to first frontier-class model / 12,000-18,000 (Y2) | §12 / E18b |  |  |  | exhibit note / caption |
-| 1591 | 25,000-40,000 | Cumulative to first frontier-class model / 25,000-40,000 (Y3; the owned cluster lands Y2-Y3) | §12 / E18b |  |  |  | exhibit note / caption |
+| 1591 | 56,811 | Cumulative to first frontier-class model / 56,811 at Base (Y3); pre-model band 25,000-40,000 superseded (tie-out §2.8) | §12 / E18b |  |  |  | exhibit note / caption |
 | 1592 | $7.0B | Cumulative to first frontier-class model / SSI $7.0B raised with zero revenue; TML $2.0B seed; Reflecti | §12 / E18b |  |  |  | exhibit note / caption |
 | 1593 | $2.0B | Cumulative to first frontier-class model / SSI $7.0B raised with zero revenue; TML $2.0B seed; Reflecti | §12 / E18b |  |  |  | exhibit note / caption |
 | 1594 | $2.2B | Cumulative to first frontier-class model / SSI $7.0B raised with zero revenue; TML $2.0B seed; Reflecti | §12 / E18b |  |  |  | exhibit note / caption |
@@ -1604,7 +1604,7 @@ Agent 3 (Writer), 2026-09-09. One row per numeric figure as printed in the body 
 | 1599 | 30-50% | Cumulative to first $1B of net revenue / 5,000-8,000 (Y4 if reached; probability 30-50%, AJ) | §12 / E18b |  |  |  | derived / analyst judgment |
 | 1600 | 20,000-30,000 | Cumulative to first $1B of net revenue / 20,000-30,000 (Y3; 60-80%) | §12 / E18b |  |  |  | exhibit note / caption |
 | 1601 | 60-80% | Cumulative to first $1B of net revenue / 20,000-30,000 (Y3; 60-80%) | §12 / E18b |  |  |  | exhibit note / caption |
-| 1602 | 40,000-60,000 | Cumulative to first $1B of net revenue / 40,000-60,000 (Y4; 60-80%) | §12 / E18b |  |  |  | exhibit note / caption |
+| 1602 | 81,229 | Cumulative to first $1B of net revenue / 81,229 at Base (Y4; 60-80%); pre-model band 40,000-60,000 superseded (tie-out §2.8) | §12 / E18b |  |  |  | exhibit note / caption |
 | 1603 | $1.2B | Cumulative to first $1B of net revenue / Mistral: $7.5B raised for a $1.2B FY2026 projection; TML "a  | §12 / E18b |  |  |  | exhibit note / caption |
 | 1604 | $2B | Cumulative to first $1B of net revenue / Mistral: $7.5B raised for a $1.2B FY2026 projection; TML "a  | §12 / E18b |  |  |  | exhibit note / caption |
 | 1605 | $41.3B | Cumulative to first $1B of net revenue / Mistral: $7.5B raised for a $1.2B FY2026 projection; TML "a  | §12 / E18b |  |  |  | exhibit note / caption |
@@ -1714,7 +1714,7 @@ Agent 3 (Writer), 2026-09-09. One row per numeric figure as printed in the body 
 | 1709 | $8-40B | A lean fast-follower can buy a frontier-class model for $2.5-4B and re | §12 |  |  |  | section reference or context (rows in the section or exhibit) |
 | 1710 | $12-18B | A full-frontier entrant needs $12-18B to its first frontier model and  | §12 |  |  |  | section reference or context (rows in the section or exhibit) |
 | 1711 | $60-100B | A full-frontier entrant needs $12-18B to its first frontier model and  | §12 |  |  |  | section reference or context (rows in the section or exhibit) |
-| 1712 | $80-150B | A vertically integrated entrant needs $80-150B, cannot buy custom sili | §12 |  |  |  | section reference or context (rows in the section or exhibit) |
+| 1712 | $57B / $81B / $80-150B | A vertically integrated entrant needs about $57B to its first frontier-class model and $81B to its first $1B of net revenue at Base, $80-150B to breakeven | §12 |  |  |  | section reference or context (rows in the section or exhibit) |
 | 1713 | $3B | A vertically integrated entrant needs $80-150B, cannot buy custom sili | §12 |  |  |  | section reference or context (rows in the section or exhibit) |
 | 1714 | $41B | A vertically integrated entrant needs $80-150B, cannot buy custom sili | §12 |  |  |  | section reference or context (rows in the section or exhibit) |
 | 1715 | $250B | A vertically integrated entrant needs $80-150B, cannot buy custom sili | §12 |  |  |  | section reference or context (rows in the section or exhibit) |

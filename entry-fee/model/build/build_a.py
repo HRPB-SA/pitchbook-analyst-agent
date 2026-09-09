@@ -49,6 +49,20 @@ def build():
     tabs_a3.build_10(sheets["10_Financing"])
     tabs_a3.build_13(sheets["13_OutsideView"])
     tabs_a3.build_08(sheets["08_Output"])
+    # Excel-legal names: LB01..LB10 collide with cell references (column LB); rename to LB_01..LB_10 in every formula and name.
+    import re
+    from openpyxl.workbook.defined_name import DefinedName
+    pat = re.compile(r"(?<![A-Za-z0-9_'!$])LB(\d\d)([ab]?)(?![A-Za-z0-9_(])")
+    for ws in wb.worksheets:
+        for row in ws.iter_rows():
+            for c in row:
+                if isinstance(c.value, str) and c.value.startswith("="):
+                    c.value = pat.sub(lambda m: f"LB_{m.group(1)}{m.group(2)}", c.value)
+    for n in list(wb.defined_names.keys()):
+        if pat.fullmatch(n):
+            dn = wb.defined_names[n]; del wb.defined_names[n]
+            nn = pat.sub(lambda m: f"LB_{m.group(1)}{m.group(2)}", n)
+            wb.defined_names[nn] = DefinedName(nn, attr_text=dn.attr_text)
     for ws in wb.worksheets:
         ws.sheet_properties.tabColor = "1F3864" if ws.title in ("00_Assumptions", "01_Data", "12_Conflicts") else "4472C4"
     wb.save(OUT)

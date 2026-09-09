@@ -1,6 +1,6 @@
 # Gate 3 record (orchestrator), 2026-09-09 — HARD VERIFICATION GATE (harrison-execution) plus the six validation gates
 
-Status legend: PASS · PASS-WITH-FIX (defect found and corrected before ship) · PENDING (workbook side, awaiting the Model agent's Workbook B and tie-out)
+Status legend: PASS · PASS-WITH-FIX (defect found and corrected before ship) · PENDING was used while the Model agent's Workbook B and tie-out were outstanding; all rows are now asserted
 
 ## A. Report side
 
@@ -35,9 +35,9 @@ Status legend: PASS · PASS-WITH-FIX (defect found and corrected before ship) ·
 | Recalculation | recalc.py (LibreOffice): status success, total_errors 0; requote.py restored quoted sheet names; verify.py: 0 cached errors; typed constants outside 00/01 are the 13 switch selectors only; literals in formulas only 0/1/2; XML scans clean | PASS |
 | Spec §9 reproduction | dump_checks.py: every listed check PASS at Base defaults; live cells: FY2026E 57,580 / 62,580 / 48,830; OpenAI 32,400 / 38,119; documented-$ 324,100 / 358,600 / 524,100 / 480,400 / 690,000; 2028 gap −25,355 to −27,655; 2027 gap −21,930; envelope 65,700 / 68,000; CE 0.3152 / 0.2207 / 1.428x; multiples 24.64x / 21.3x; $/pt 118.4 / 174.9; spread 1.478x; Anthropic 2029-2030 231,276 / 266,446 | PASS: matches the report |
 | Colour discipline | 2,462 formulas black, 0 blue; 675 numeric inputs blue, 0 not blue | PASS |
-| Named ranges | all 14 switches present; LB01-LB10 present with cached values matching the derivation (LB01 65,000; LB02 40,000; LB03 124,254; LB04 181,216.5; LB08 24,100) | PASS |
-| Switch and scenario sweep | Model agent | PENDING |
-| Workbook B (greenfield) | Model agent | PENDING |
-| tie-out.md (every exhibit ↔ range with values) | Model agent, then orchestrator re-run of tools/gate3_check.py with the tie-out present | PENDING |
+| Named ranges | all 14 switches present; LB_01-LB_10 present (renamed from LB01-LB10, which Excel reads as cell references; tie-out §2.11; report §14 header updated) with cached values matching the derivation (LB01 65,000; LB02 40,000; LB03 124,254; LB04 181,216.5; LB08 24,100) | PASS |
+| Switch and scenario sweep | build/sweep_a.py: every scenario and switch state recalculated by LibreOffice on a temp copy (tie-out §7 and Appendix B); formulas-library cross-check 0 mismatches on both files (Appendix A); orchestrator re-run of tools/gate3_model_check.py: A 2,462 formulas / 0 errors, B 1,793 / 0 errors, XML embargo and dash scans 0, colour discipline A 2,462 black / 675 blue and B 1,793 black / 558 blue | PASS |
+| Workbook B (greenfield) | build_b.py: 10 tabs; check cells G20 / 1 GW / power / crossover PASS; reference-class checks PASS for all three scenarios; VI cumulative to first frontier model 56,811 and to first $1B 81,229 fall outside the Analyst's pre-model bands (25,000-40,000; 40,000-60,000) because the spec's own line items sum above the band once phased by year (tie-out §2.8). Resolution: the report prints the workbook figures and states the superseded bands (Exhibit 18b, §12 verdict). Milestone rule and Lean training cap are AJ, flagged (tie-out §2.9-2.10). Riot start default 2027-01-01 stated as an assumption in §5 with the 2028 sensitivity (tie-out §2.1); AIBQ 8.135 printed as 8.13 with the unrounded value (tie-out §2.2) | PASS-WITH-FIX |
+| tie-out.md (every exhibit ↔ range with values) | tie-out §3 maps E1-E18 to ranges with Base values; orchestrator re-run of tools/gate3_check.py with the tie-out present: 836 figures extracted, 95 not found by literal string; a tolerant re-match (units normalized, 0.6% tolerance) against tie-out, ledger, model-spec and the blind derivation leaves 3, all derived and traceable: 43,550 (65,000 net of the 33% grid midpoint), 33.4M (L-149's 33,445,026 warrant shares rounded), 31,500 (Exhibit 3's 2030 priced run from the Exhibit 6 terms) | PASS |
 
-Gate 3 verdict: report side PASS (with three fixes applied); workbook side PASS for Workbook A, PENDING for the sweep, Workbook B and the tie-out. The report does not ship until the pending rows are asserted.
+Gate 3 verdict: PASS. Report side PASS with three fixes; workbook side PASS with the Workbook B reconciliation applied to the report text (six edits: Exhibit 18b VI cells, §12 verdict sentence, §14 named-range header, §11 unrounded composite, §5 Riot start assumption). docx rebuilt and validated; PDF re-rendered (57 pages, contents populated); gate3_check.py re-run clean on dashes, rulings, conflicts and forbidden patterns.

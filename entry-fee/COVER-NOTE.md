@@ -1,4 +1,4 @@
-# The $100 Billion Entry Fee v5.0 — cover note (DRAFT, to be finalized at Gate 3)
+# The $100 Billion Entry Fee v5.0: cover note
 
 Harrison Rolfes · PitchBook Institutional Research · refresh run September 9, 2026 · four-agent build (Researcher, Analyst, Writer, Model) with three orchestrator gates
 
@@ -24,7 +24,7 @@ Thesis tested: frontier AI cost architecture is structurally incompatible with i
 | OpenAI run-rate | ~$25B est. | >$40B (July), basis unstated, T2 | L-065, L-158 |
 | Anthropic total raised (PB) | $161.254B incl. $34.5B "chip bonds" | $126.754B; the $34.5B is SPV lessor debt (Apollo-led, Broadcom/Google-supported), removed by PB; equity-only $124.254B unchanged | L-006, L-044, C-01 |
 | Anthropic compute commitments | "$80B+ across 6 partners" | $324.1B documented-$ across eight counterparties (AWS >$100B, Fluidstack $50B, Nscale ~$45B, SpaceX ~$45B, Lambda $35B, Azure $30B, Volta $10B, Riot $9.1B) plus Google reported ~$200B (T3) and unpriced AMD 2 GW | L-072 to L-077, L-135 to L-138, L-155 |
-| Nvidia–OpenAI | "$100B / 10 GW commitment" | $30B invested in the March round; "$100B probably not in the cards" (Huang); $105B residual-value guaranty on 4.25 GW-IT of Ohio leases (SB Energy S-1, T1) | L-075, L-061 |
+| Nvidia-OpenAI | "$100B / 10 GW commitment" | $30B invested in the March round; "$100B probably not in the cards" (Huang); $105B residual-value guaranty on 4.25 GW-IT of Ohio leases (SB Energy S-1, T1) | L-075, L-061 |
 | OpenAI IPO window | Sep 2026 (PB) vs 2027 (Friar lean) | No public S-1 on EDGAR (T1); Friar Aug 19: "will be a public company in 2027" or sooner; the September leg is closed by the 15-day rule | L-002, L-068 |
 | Anthropic IPO window | Oct 2026 | No public S-1 as of Sep 9; prospectus "after Labor Day" slipped; Forbes Sep 7: mid-October; PB still October | L-001, L-040 |
 | OpenAI quarterly P&L | none | Q1 $5.7B / −$9.3B; Q2 $6.7B / −$12.3B incl. SBC (WSJ, T2) | L-066 |
@@ -49,5 +49,19 @@ Anthropic gross margin at T2 (only T4 ratios; the S-1 settles it) · Anthropic 2
 ## Tooling flags this run
 NEXUS via Notion unavailable (MCP bound to the Layer H workspace); Bigdata.com search not exposed; Aiera not connected; cnbc.com, forbes.com, axios.com, theinformation.com, blogs.microsoft.com and web.archive.org blocked to the fetcher (syndications, PitchBook news index chunks and SEC filings via curl substituted); the v4.0 outline, companion Excel and 28-tab model could not be located in any reachable store (map reconstructed and flagged in prior/v4-reconstruction.md).
 
-## Deliverables (paths filled at Gate 3)
-research/ · analysis/ · report/ · model/ · prior/ · report/changelog.md · model/tie-out.md · this note.
+## Gate results
+Gate 1 PASS (168 ledger rows; three T3 rows relabelled from confirmed to estimated). Gate 2 PASS. Gate 3 PASS: ten load-bearing figures re-derived blind and reconciled; docx validated and PDF rendered (57 pages); Workbook A 2,462 formulas / 0 errors, Workbook B 1,793 / 0 errors; every exhibit mapped to a range in model/tie-out.md; embargo scan clean in the report and both workbooks; MNPI/COI checkpoint clear (author to confirm the personal-holdings line before external release). Full record: analysis/GATE3.md.
+
+## Model deviations the reader should know (model/tie-out.md §2)
+1. Workbook B, vertically integrated scenario: cumulative capital to the first frontier-class model is $56.8B and to the first $1B of net revenue $81.2B at Base, above the Analyst's pre-model bands ($25-40B and $40-60B). The report prints the workbook figures and names the superseded bands; the cause is that the build, purchased GPUs, ASIC program and headcount all land before year three once phased.
+2. Riot's 191 MW lease is counted from January 2027 in the priced run although its 20-year term to June 2048 implies a mid-2028 start (about $0.5B of 2027 run; switch cell on Workbook A 00_Assumptions row 70).
+3. OpenAI's bottom-up 2026E P&L cannot reach the sworn H1 operating loss from inference and people alone; the $37.1B gap is printed as a reconciliation row, not allocated.
+4. Named ranges are LB_01-LB_10 (Excel rejects LB01-LB10 as cell references).
+
+## Deliverables (repository branch claude/happy-tesla-a03izp, directory entry-fee/; copies of the five files marked * in /mnt/user-data/outputs/)
+- report/entry-fee-v5.docx*, report/entry-fee-v5.pdf*, report/entry-fee-v5.md, report/figure-register.md, report/changelog.md*
+- model/entry-fee-v5.xlsx* (Workbook A, 14 tabs), model/greenfield-entry-cost.xlsx* (Workbook B, 10 tabs), model/tie-out.md*, model/build/ (rebuild scripts)
+- research/evidence-ledger.md, conflicts.md, superseded.md, research-log.md, addendum-2026-09-09.md, SEED-LIST.md
+- analysis/outline-v5.md, argument-map.md, writer-brief.md, model-spec.md, aibq-delta.md, cost-stack-reconciliation.md, GATE2.md, GATE3.md
+- prior/v4-reconstruction.md (the flagged reconstruction of the map), tools/ (gate scripts, blind derivation, MNPI/COI note, agent prompts)
+- this note (COVER-NOTE.md)

@@ -101,3 +101,12 @@ Sections dropped from the v4 map: v4 §3 "The free-tier subsidy" (no external so
 
 ## 4. Rules applied in v5 that v4 did not carry
 Provenance inline on first appearance (value, as-of, status); T3/T4 flags in the sentence (Rigor 5); frozen conflicts rendered with both branches and a named switch; no PitchBook TTM field as current; no gross-vs-net comparison without the equalization; equity-only CE; no correlation coefficient; no breakeven years; no "20%" as the Microsoft share; no em-dashes; the reported Google value never inside documented-$; the Q2 result always "adjusted" and never "free cash flow".
+
+
+## Gate 3 reconciliation edits (orchestrator, 2026-09-09, after the Model agent's tie-out)
+- Exhibit 18b, vertically integrated: cumulative to first frontier-class model now 56,811 at Base (was the pre-model band 25,000-40,000); cumulative to first $1B of net revenue 81,229 (was 40,000-60,000). Both bands are stated as superseded with the reason (tie-out §2.8).
+- §12 verdict sentence restated on the workbook figures ($57B to the first frontier model, $81B to the first $1B of revenue, $80-150B to breakeven beyond year five).
+- §14 load-bearing table header: named ranges LB_01-LB_10 (Excel rejects LB01-LB10 as cell references).
+- §11: Anthropic facility-closes composite 8.13 shown with its unrounded 8.135.
+- §5: Riot counted from January 2027 stated as the third assumption behind the 2028 priced run, with the 2028-start sensitivity (about $0.5B lower in 2027) and the switch cell.
+- figure-register.md rows updated to match.
