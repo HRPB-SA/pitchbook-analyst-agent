@@ -204,6 +204,31 @@ def rebuild(p_el, new_text, mode):
             cur = key; buf += item[1]
     flush()
 
+
+def rebuild_full(p_el, new_text, mode):
+    """Whole-paragraph replacement: strike the entire old text, then append the new text (redline),
+    or replace outright (clean). Non-text runs (endnote refs) are kept at the end."""
+    atoms = extract(p_el)
+    old_chars = [a for a in atoms if a[0] == 'c']
+    rp = old_chars[0][2] if old_chars else None
+    xs = [a[1] for a in atoms if a[0] == 'x']
+    for ch in list(p_el):
+        if ch.tag != w('pPr'):
+            p_el.remove(ch)
+    if mode == 'redline':
+        buf = ''; cur = None
+        for c in old_chars:
+            if cur is not None and c[2] is not cur and buf:
+                p_el.append(make_run(buf, cur, 'del')); buf = ''
+            cur = c[2]; buf += c[1]
+        if buf: p_el.append(make_run(buf.rstrip() , cur, 'del'))
+        p_el.append(make_run(' ', rp, None))
+        p_el.append(make_run(curly(new_text), rp, 'ins'))
+    else:
+        p_el.append(make_run(curly(new_text), rp, None))
+    for el in xs:
+        p_el.append(el)
+
 def para_text(p_el):
     return ''.join(a[1] for a in extract(p_el) if a[0] == 'c')
 
@@ -236,7 +261,10 @@ def apply(edits, mode, src, dst):
     for idx, new in edits.get('paras', {}).items():
         p = paras[idx]
         old = para_text(p._p)
-        rebuild(p._p, new, mode)
+        if idx in edits.get('full', []):
+            rebuild_full(p._p, new, mode)
+        else:
+            rebuild(p._p, new, mode)
         log.append((f"p{idx}", wc(old), wc(new)))
     for (ti, ri, ci), new in edits.get('cells', {}).items():
         cell = doc.tables[ti].rows[ri].cells[ci]

@@ -86,4 +86,5 @@ EDITS = {
  'delete_rows': [(2,6)],
  'insert_rows': [(1, 6, ["Lambda", "GPU cloud", "~350 MW; $35B deal"])],
  'delete_paras': [61],
+ 'full': [99],
 }
