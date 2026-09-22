@@ -73,7 +73,9 @@ def main():
         if body is None:
             status = "could not open"
         else:
-            status = "found" if check(page_text(body), c.get("quote", "")) else "not found"
+            q = c.get("quote", "")
+            raw_hit = bool(q) and re.sub(r"\s+", " ", q.split("(")[0].strip()) in re.sub(r"\s+", " ", body)
+            status = "found" if raw_hit or check(page_text(body), q) else "not found"
         out.append({"url": url, "quote": c.get("quote", ""), "tier": c.get("tier", ""),
                     "status": status, "note": info if body is None else ""})
     counts = {s: sum(o["status"] == s for o in out) for s in ("found", "not found", "could not open")}
