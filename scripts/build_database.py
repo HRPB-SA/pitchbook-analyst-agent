@@ -129,21 +129,24 @@ def main():
                          (r.get("lead_partner_source") or {}).get("verbatim", ""), "", "enriched"))
             n_enr += 1
 
-    # 3. S-1 lane (T1 filing labels)
+    # 3. S-1 lane (T1 filing labels; downgrade to T2-inferred if no verbatim quote backs the fund entity)
     for f in sorted((study / "labels").glob("s1_*.jsonl")):
         for line in f.read_text().splitlines():
             if not line.strip():
                 continue
             r = json.loads(line)
+            has_quote = bool(r.get("entity_verbatim") or r.get("partner_verbatim"))
+            tier = "T1" if has_quote else "T2-inferred"
+            lane = "s1_filing" if has_quote else "s1_filing_inferred"
             fid = firm_id(r["firm"], "", "s1")
-            fund = fund_id(fid, r.get("fund_family") or r.get("fund_entity"), tier="T1")
+            fund = fund_id(fid, r.get("fund_family") or r.get("fund_entity"), tier=tier)
             cid = company_id(r.get("company"))
             pid = get_or_create_partner(fid, r["director_partner"]) if r.get("director_partner") else None
             for dp in r.get("dated_purchases") or [{"date": ""}]:
                 cur.execute("INSERT INTO investments (firm_id, fund_id, company_id, partner_id, deal_date, "
                             "source_url, tier, verbatim, accessed, evidence_lane) VALUES (?,?,?,?,?,?,?,?,?,?)",
-                            (fid, fund, cid, pid, dp.get("date", ""), r.get("filing_url"), "T1",
-                             r.get("entity_verbatim") or r.get("partner_verbatim"), r.get("accessed"), "s1_filing"))
+                            (fid, fund, cid, pid, dp.get("date", ""), r.get("filing_url"), tier,
+                             r.get("entity_verbatim") or r.get("partner_verbatim"), r.get("accessed"), lane))
                 n_s1 += 1
 
     con.commit()
