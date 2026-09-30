@@ -2,7 +2,7 @@
  "agent": "verify-compute",
  "role": "Source Re-deriver",
  "started": "2026-09-30T19:18:59Z",
- "finished": "2026-09-30T19:48:41Z",
+ "finished": "2026-09-30T19:53:26Z",
  "answers": [
   {
    "claim_id": "OPS-COM-e7a4c2",
@@ -83,7 +83,7 @@
     "chips": "Next-generation Google TPUs; Google-built TPUs supplied through Broadcom plus Google Cloud services.",
     "term": "Not stated by the parties. The Information: five years. Leaked S-1: payments Apr 2026 to Jul 2033. Capacity expected online starting 2027.",
     "stated_by": "Anthropic, Google Cloud (PR Newswire) and Broadcom (SEC Form 8-K), all 2026-04-06; $200B by The Information 2026-05-05; $111.1B by Reuters on the confidential prospectus 2026-09-29.",
-    "notes": "Company announcements plus one SEC filing (Broadcom 8-K, which gives GW only); no filed contract and no official dollar value. On 2026-04-24 Google also said it would invest up to $40B in Anthropic ($10B now, $30B on performance targets), which is separate from the compute purchase. The gigawatt figure moved from 'multiple' to 3.5 to 5 between April and May."
+    "notes": "Company announcements plus one SEC filing (Broadcom 8-K, which gives GW only); no filed contract and no official dollar value. On 2026-04-24 Google also said it would invest up to $40B in Anthropic ($10B now, $30B on performance targets), which is separate from the compute purchase. The gigawatt figure moved from 'multiple' to 3.5 to 5 between April and May. Earlier Google deal for context (Anthropic, 2025-10-23): up to one million TPUs, 'worth tens of billions of dollars', well over a gigawatt online in 2026; the April 2026 post says it builds on that."
    },
    "verdict_hint": "CONFLICT",
    "sources": [
@@ -124,6 +124,15 @@
      "supports": "Google Cloud now providing a fresh 5 gigawatts of capacity over the next five years, with room to scale."
     },
     {
+     "url": "https://www.anthropic.com/news/higher-limits-spacex",
+     "publisher": "Anthropic",
+     "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+     "published": "2026-05-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Agreement to use all compute at Colossus 1: more than 300 megawatts, over 220,000 NVIDIA GPUs within the month."
+    },
+    {
      "url": "https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/anthropic-commits-spending-us200-billion-googles-cloud-and-chips-report",
      "publisher": "The Business Times (Reuters text)",
      "title": "Anthropic commits to spending US$200 billion on Google's cloud and chips: report",
@@ -131,6 +140,24 @@
      "tier": "T2",
      "opened": true,
      "supports": "Committed to spend US$200B with Google Cloud over five years, The Information reported; Reuters could not verify."
+    },
+    {
+     "url": "https://www.reuters.com/business/anthropic-commits-spending-200-billion-googles-cloud-chips-information-reports-2026-05-05/",
+     "publisher": "Reuters",
+     "title": "Anthropic commits to spending $200 billion on Google's cloud and chips, the Information reports",
+     "published": "2026-05-06",
+     "tier": "T2",
+     "opened": false,
+     "supports": "Original URL blocked; Reuters text read in the Business Times copy."
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-commits-spending-200-billion-googles-cloud-chips",
+     "publisher": "The Information",
+     "title": "Anthropic Commits to Spending $200 Billion on Google's Cloud and Chips",
+     "published": "2026-05-05",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Teaser: Anthropic plans to spend about $200 billion with Google over five years; deal begins next year; no official dollar figure."
     },
     {
      "url": "https://www.anthropic.com/news/series-h",
@@ -158,6 +185,15 @@
      "tier": "T4",
      "opened": true,
      "supports": "Re-report: about $200B over five years for 5 GW of TPU capacity, deal begins in 2027."
+    },
+    {
+     "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+     "publisher": "Anthropic",
+     "title": "Expanding our use of Google Cloud TPUs and Services",
+     "published": "2025-10-23",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Up to one million TPUs; worth tens of billions of dollars; well over a gigawatt of capacity online in 2026."
     }
    ],
    "conflicts": [
@@ -209,6 +245,15 @@
      "supports": "Anthropic to spend more than $100 billion over ten years on AWS; up to 5 GW; Trainium2-4 and Graviton."
     },
     {
+     "url": "https://www.anthropic.com/news/higher-limits-spacex",
+     "publisher": "Anthropic",
+     "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+     "published": "2026-05-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Agreement to use all compute at Colossus 1: more than 300 megawatts, over 220,000 NVIDIA GPUs within the month."
+    },
+    {
      "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
      "publisher": "Reuters (syndicated copy on Lufkin Daily News)",
      "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
@@ -229,7 +274,7 @@
     "chips": "Not stated in the announcement. The Information (via BigGo, 2026-09-06) says Anthropic separately signed purchase agreements for Broadcom/Google TPUs and AMD chips to be used in these data centers; Bloomberg (2026-05-29) says TPU sites are in New York, Texas, Louisiana and Indiana.",
     "term": "No term stated. Sites in Texas and New York 'coming online throughout 2026'; 'more sites to come'.",
     "stated_by": "Anthropic company announcement, 2025-11-12 (repeated by TechCrunch the same day).",
-    "notes": "Company announcement only; no filed contract and no partner filing quantifies it. Not established whether Fluidstack-linked leases elsewhere (e.g. Hut 8 River Bend, TeraWulf) count toward the $50B. Anthropic's 2026-05-06 post still lists it as 'Our $50 billion investment in American AI infrastructure with Fluidstack'."
+    "notes": "Company announcement only; no filed contract and no partner filing quantifies it. Not established whether Fluidstack-linked leases elsewhere count toward the $50B. Related Fluidstack/Anthropic capacity outside the TX/NY description: Hut 8 (release 2025-12-17) announced an initial 245 MW at River Bend, Louisiana within a framework of at least 245 MW and up to 2,295 MW of utility capacity across sites; press (Tech Times) adds a 15-year, $7.0B Fluidstack lease backed by a Google guarantee. Anthropic's 2026-05-06 post still lists it as 'Our $50 billion investment in American AI infrastructure with Fluidstack'."
    },
    "verdict_hint": "PARTIAL",
    "sources": [
@@ -252,6 +297,15 @@
      "supports": "Anthropic committing $50B with Fluidstack to build U.S. facilities in Texas and New York, online throughout 2026."
     },
     {
+     "url": "https://www.anthropic.com/news/higher-limits-spacex",
+     "publisher": "Anthropic",
+     "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+     "published": "2026-05-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Agreement to use all compute at Colossus 1: more than 300 megawatts, over 220,000 NVIDIA GPUs within the month."
+    },
+    {
      "url": "https://finance.biggo.com/news/28be15e2-a525-4cce-94e8-f7b6c822bc19",
      "publisher": "BigGo Finance (re-report of The Information)",
      "title": "Anthropic Secures $517 Billion in Compute Contracts Over 11 Months Ahead of IPO",
@@ -268,6 +322,24 @@
      "tier": "T2",
      "opened": true,
      "supports": "SPV buys Google TPUs and leases to Anthropic; sites in NY, TX, LA, IN; Broadcom backstops the largest portions."
+    },
+    {
+     "url": "https://www.prnewswire.com/news-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack-302644377.html",
+     "publisher": "Hut 8 (PR Newswire)",
+     "title": "Hut 8 Announces AI Infrastructure Partnership with Anthropic and Fluidstack",
+     "published": "2025-12-17",
+     "tier": "T1",
+     "opened": true,
+     "supports": "River Bend initial 245 MW; three tranches totaling at least 245 MW and up to 2,295 MW of utility capacity across sites."
+    },
+    {
+     "url": "https://www.techtimes.com/articles/321209/20260721/former-bitcoin-miner-hut-8-fully-contracts-beacon-point-ai-campus-196b.htm",
+     "publisher": "Tech Times",
+     "title": "Former Bitcoin Miner Hut 8 Fully Contracts Beacon Point AI Campus at $19.6B",
+     "published": "2026-07-21",
+     "tier": "T3",
+     "opened": true,
+     "supports": "River Bend: 15-year, $7.0B lease with Fluidstack for 245 MW, Google guarantee; part of arrangement up to 2.295 GW with Anthropic."
     }
    ],
    "conflicts": []
@@ -281,7 +353,7 @@
     "chips": "NVIDIA GPUs: H100, H200 and GB200 at Colossus 1 (SpaceXAI release); Colossus II mostly Blackwell per press.",
     "term": "Payments 'through May 2029' (S-1); either party may terminate on 90 days' notice (S-1 and SpaceX letter of 2026-06-01). Musk on X (2026-05-28): current arrangement is a 180-day lease with 90-day mutual cancellation rights after that. Start: Colossus 1 capacity 'within the month' of 2026-05-06; more on Colossus 2 in June.",
     "stated_by": "Anthropic and SpaceXAI releases (2026-05-06, capacity only, no price); SpaceX Form S-1 filed 2026-05-20 ($1.25B/month); Anthropic's confidential prospectus via Reuters (2026-09-29, up to $84.5B).",
-    "notes": "The S-1 is a public SEC filing; the compute agreement itself was not filed as an exhibit (SpaceX told the SEC on 2026-06-01 it is an ordinary-course contract not required under Item 601(b)(10); the SEC staff letter of 2026-05-29 asked what consideration was given to filing it). The $84.5B figure is a media report of a confidential filing. The gap ($45B vs $84.5B) is unexplained in the sources; it may reflect extra Colossus II capacity beyond the $1.25B/month base (my inference)."
+    "notes": "The S-1 is a public SEC filing; the compute agreement itself was not filed as an exhibit (SpaceX told the SEC on 2026-06-01 it is an ordinary-course contract not required under Item 601(b)(10); the SEC staff letter of 2026-05-29 asked what consideration was given to filing it). An Anthropic spokesperson confirmed the $1.25B/month figure to Business Insider (2026-05-20); WIRED puts Colossus and Colossus II together at more than one gigawatt (Anthropic's share not quantified); the first two months (May-June) were discounted. The $84.5B figure is a media report of a confidential filing. The gap ($45B vs $84.5B) is unexplained in the sources; it may reflect extra Colossus II capacity beyond the $1.25B/month base (my inference)."
    },
    "verdict_hint": "CONFLICT",
    "sources": [
@@ -329,6 +401,24 @@
      "tier": "T3",
      "opened": true,
      "supports": "$1.25B per month through May 2029 with discounted first two months; either side may terminate on 90 days notice."
+    },
+    {
+     "url": "https://www.businessinsider.com/spacex-ipo-anthropic-paying-ai-compute-2026-5",
+     "publisher": "Business Insider",
+     "title": "Anthropic Is Paying SpaceX $1.25 Billion a Month for AI Compute",
+     "published": "2026-05-20",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic pays $1.25B a month through May 2029, discounted May and June, 90-day termination; Anthropic spokesperson confirmed the tally."
+    },
+    {
+     "url": "https://www.wired.com/story/spacex-ipo-anthropic-compute-finances-risks/",
+     "publisher": "WIRED",
+     "title": "SpaceX IPO Filing Reveals Anthropic Is Paying $15 Billion a Year to Access Its Data Centers",
+     "published": "2026-05-20",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic gets GPUs at Colossus and Colossus II, a pair of data centers with more than one gigawatt of computing power."
     },
     {
      "url": "https://uk.finance.yahoo.com/news/elon-musk-says-spacex-only-170549212.html",
@@ -379,12 +469,12 @@
    "claim_id": "OPS-COM-bda5ab",
    "found": {
     "usd_m": 44600,
-    "usd_basis": "Nscale's S-1 says the GPU Services Agreements 'provide for aggregate payments to us of up to approximately $44.6 billion' (a maximum, stated by the vendor). Bloomberg and most press round it to ~$45B over six years. No Anthropic statement found.",
+    "usd_basis": "Nscale's S-1 says the GPU Services Agreements 'provide for aggregate payments to us of up to approximately $44.6 billion' (a maximum, stated by the vendor; the S-1 was read through a summarising fetcher, which returned the 'up to' wording in two of three extractions and confirmed it when asked directly). Bloomberg and most press round it to ~$45B over six years. No Anthropic statement found.",
     "gw": "About 460 MW (0.46 GW) at the Monarch Compute Campus, Mason County, West Virginia (Bloomberg via WV News and Tech Times); the S-1 excerpt I could read gives no MW.",
     "chips": "NVIDIA Vera Rubin NVL72 GPUs (Nscale S-1).",
     "term": "Six years (Bloomberg); S-1 excerpt gives no term. Agreements dated 2026-08-25; capacity expected to start powering Anthropic in late 2027 (TechCrunch, source-based).",
     "stated_by": "Nscale Ltd Form S-1 filed 2026-09-18 (Recent Developments); first reported by Bloomberg 2026-08-26; Aker ASA regulatory disclosure of a $45B contract (per Tech Times); West Virginia governor reacted 2026-08-27.",
-    "notes": "Vendor-side SEC disclosure (S-1, filed but not yet effective) plus media; the contracts themselves are not shown to be filed exhibits. Microsoft had a 1.35 GW non-binding LOI at the same campus that it did not convert (Tech Times, Bloomberg-sourced). I found no Anthropic press release."
+    "notes": "Vendor-side SEC disclosure (Nscale's S-1, filed 2026-09-18) plus media; the contracts themselves are not shown to be filed exhibits. Microsoft had a 1.35 GW non-binding LOI at the same campus that it did not convert (Tech Times, Bloomberg-sourced). I found no Anthropic press release."
    },
    "verdict_hint": "FOUND",
    "sources": [
@@ -396,6 +486,15 @@
      "tier": "T1",
      "opened": true,
      "supports": "On August 25, 2026 entered GPU Services Agreements with Anthropic; aggregate payments of up to approximately $44.6 billion."
+    },
+    {
+     "url": "https://www.bloomberg.com/news/articles/2026-08-26/anthropic-to-pay-nscale-45-billion-for-ai-computing-power",
+     "publisher": "Bloomberg",
+     "title": "Anthropic to Pay Nscale $45 Billion for AI Computing Power",
+     "published": "2026-08-26",
+     "tier": "T2",
+     "opened": false,
+     "supports": "Headline seen via news search; page blocked (403). Content read via TechCrunch, WV News and Tech Times re-reports."
     },
     {
      "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
@@ -450,6 +549,15 @@
      "supports": "$35B cloud deal with Lambda for a ~350 MW Texas data center (Hut 8, Nueces County), per a source; WSJ said Nvidia holds the lease."
     },
     {
+     "url": "https://www.reuters.com/technology/anthropic-signs-35-billion-cloud-deal-with-nvidia-backed-lambda-source-says-2026-08-31/",
+     "publisher": "Reuters",
+     "title": "Anthropic signs $35 billion cloud deal with Nvidia-backed Lambda, source says",
+     "published": "2026-08-31",
+     "tier": "T2",
+     "opened": false,
+     "supports": "Original URL blocked; Reuters text read in The Standard HK copy."
+    },
+    {
      "url": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
      "publisher": "CoinDesk",
      "title": "Hut 8's Texas power site sits inside Anthropic's $35 billion AI deal",
@@ -475,6 +583,15 @@
      "tier": "T4",
      "opened": true,
      "supports": "FT identified Nvidia as tenant at Hut 8 1 GW Beacon Point; WSJ first reported the Anthropic-Lambda transaction."
+    },
+    {
+     "url": "https://www.reuters.com/technology/nvidia-behind-50-billion-lease-texas-data-center-ft-reports-2026-07-28/",
+     "publisher": "Reuters (citing FT)",
+     "title": "Nvidia behind $50 billion lease on Texas data center, FT reports",
+     "published": "2026-07-28",
+     "tier": "T2",
+     "opened": false,
+     "supports": "Headline only (page blocked); the FT finding is repeated in the Reuters text of the Lambda story."
     }
    ],
    "conflicts": []
@@ -589,6 +706,15 @@
      "supports": "Commitment initially up to one gigawatt with NVIDIA Grace Blackwell and Vera Rubin; NVIDIA up to $10B, Microsoft up to $5B invest."
     },
     {
+     "url": "https://www.anthropic.com/news/higher-limits-spacex",
+     "publisher": "Anthropic",
+     "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+     "published": "2026-05-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Agreement to use all compute at Colossus 1: more than 300 megawatts, over 220,000 NVIDIA GPUs within the month."
+    },
+    {
      "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
      "publisher": "Reuters (syndicated copy on Lufkin Daily News)",
      "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
@@ -606,7 +732,7 @@
     "usd_m": 19000,
     "usd_basis": "'Expected to generate approximately $19 billion of contracted revenue over the initial lease term' (TeraWulf, contracted lease revenue for the 20-year initial term). Payment obligations 'expected to be supported by an investment-grade credit'.",
     "gw": 0.401,
-    "chips": "Not specified: a lease of data-center capacity (about 401 MW of critical IT load for HPC); the tenant supplies its own compute hardware.",
+    "chips": "Not specified: the filing describes a lease of about 401 MW of critical IT load for high-performance computing; no chip or hardware is named.",
     "term": "20 years from delivery of each phase, plus two five-year renewal options. Delivery in phases beginning late 2027 (press release: second half of 2027) and reaching full 401 MW by early 2028.",
     "stated_by": "TeraWulf press release and Form 8-K, both 2026-07-06 (landlord Raylan Data LLC; Hawesville, Kentucky).",
     "notes": "Filed disclosure (8-K reports the executed lease; dollar figure comes from the press release attached to the filing). Anthropic PBC is named as tenant. The 8-K was filed the same day as TeraWulf's sale of its Abernathy JV stake to Fluidstack (~$530M)."
@@ -681,7 +807,7 @@
      "published": "2026-09-13",
      "tier": "T3",
      "opened": true,
-     "supports": "Headline only (paywalled): Anthropic strikes $13.7B compute deal with RUM Group."
+     "supports": "Teaser: signed a computing deal worth $13.7 billion over six years with Rum Group, per a person familiar with the matter."
     }
    ],
    "conflicts": []
@@ -690,7 +816,7 @@
    "claim_id": "OPS-COM-e4c257",
    "found": {
     "usd_m": 11600,
-    "usd_basis": "'Approximately $11.6 billion in aggregate' committed by Anthropic under Project Plans 2 and 3 of a Master Services Agreement dated 2026-05-05 (Akamai 8-K). Subject to Akamai meeting delivery/availability requirements and to termination rights (TechCrunch reading of the 8-K). The possible +$9B expansion (to ~$20B total) is an option tied to warrant vesting, not committed.",
+    "usd_basis": "'Approximately $11.6 billion in aggregate' committed by Anthropic under Project Plans 2 and 3, entered 2026-09-18 under a Master Services Agreement dated 2026-05-05 (Akamai 8-K: 'Anthropic has committed to pay the Company approximately $11.6 billion in the aggregate under the Project Plans'). Subject to Akamai meeting delivery/availability requirements and to termination rights (TechCrunch reading of the 8-K). The possible +$9B expansion (to ~$20B total) is an option tied to warrant vesting, not committed.",
     "gw": "Not disclosed for the Anthropic contract; Akamai said its $14.4B portfolio of large multi-year cloud contracts signed this year needs 95-105 MW in total (10-30 MW per site).",
     "chips": "CPU-based distributed cloud infrastructure (dedicated cloud computing capacity and managed services), not GPUs.",
     "term": "Seven-year initial term for each Project Plan from its service start date; Akamai expects revenue from H2 2027 ($150-300M in 2027) and an annual pace near $1.7B by end-2028 (TechCrunch, investor call).",
@@ -754,7 +880,7 @@
     "non_cancelable_share": "About 80% 'non-cancelable or requires payment regardless of usage' (roughly $414B by my arithmetic). Breakdown per Reuters: Broadcom-related equipment leases ~$161.2B (largely non-cancelable; neither party can terminate except on default); Google at least $111.1B (Apr 2026-Jul 2033, shortfall top-up); Amazon $110B (May 2026-Apr 2036, similar terms); xAI/SpaceX up to $84.5B through 2029 (largely cancelable on 90 days' notice); Microsoft $31.4B (Nov 2026-May 2033, non-cancelable except uncured Microsoft breach); AMD capacity expected to exceed $20B (AMD also to buy up to $5B of Anthropic stock).",
     "information_total_usd_m": 517000,
     "information_gw": "At least 14.8 GW of capacity contracted in 11 months (since Oct 2025), on top of 1-2 GW already held; Amazon+Google 11 GW (>$300B over 10 years); Microsoft $30B/1 GW; SpaceX up to $45B; Lambda+Nscale $80B (as re-reported by Chosunbiz/BigGo, which garble the MW figure); Fluidstack $50B. I could not find any source for a $531B figure (517 + 13.7 RUM = 530.7 is arithmetic only).",
-    "notes": "(1) Prospectus: 'at least $518 billion over a decade ... with six partners' (Google, Amazon, Microsoft, Broadcom, xAI, AMD; components sum to 498.2 + AMD >20 = ~518), a mix of minimum/non-cancelable commitments and 'up to' ceilings, not a single funded amount; it is a confidential S-1 (filed June 1, 2026) seen by Reuters, not on EDGAR. Reuters' separate exclusive (2026-09-29): end-2025 non-cancellable hosting commitments $54.6B; by early 2026 total long-term commitments >$417B covering 3.5 GW. (2) The Information (2026-09-06, paywalled; opened only via re-reports): up to $517B, compiled from company announcements and reports, 'mostly across the next decade'; it is an aggregate of announced/reported deals, well above the ~$180B of server-leasing spend through 2029 shown to investors in Dec 2025. (3) Other: Anthropic's own GW list (May 2026): Amazon up to 5 GW, Google+Broadcom 5 GW, Microsoft/NVIDIA $30B, Fluidstack $50B. Deals after the prospectus cut-off (RUM $13.7B, Akamai $11.6B, TeraWulf ~$19B, Lambda $35B, Nscale ~$44.6B) are not in the six-partner $518B; the Information's $517B and the prospectus's $518B are different constructions that happen to land close."
+    "notes": "(1) Prospectus: 'at least $518 billion over a decade ... with six partners' (Google, Amazon, Microsoft, Broadcom, xAI, AMD; components sum to 498.2 + AMD >20 = ~518), a mix of minimum/non-cancelable commitments and 'up to' ceilings, not a single funded amount; it is a confidential S-1 (filed June 1, 2026) seen by Reuters, not on EDGAR. Reuters' separate exclusive (2026-09-29): end-2025 non-cancellable hosting commitments $54.6B; by early 2026 total long-term commitments >$417B covering 3.5 GW. (2) The Information (2026-09-06, paywalled; opened only via re-reports): up to $517B, compiled from company announcements and reports, 'mostly across the next decade'; it is an aggregate of announced/reported deals, well above the ~$180B of server-leasing spend through 2029 shown to investors in Dec 2025. (3) Other: Anthropic's own GW list (May 2026): Amazon up to 5 GW, Google+Broadcom 5 GW, Microsoft/NVIDIA $30B, Fluidstack $50B. Deals outside the six-partner $518B (RUM $13.7B, Akamai $11.6B, TeraWulf ~$19B, Lambda $35B, Nscale ~$44.6B; also Riot $9.1B per Bloomberg 2026-08-10, Volta $10B and CoreWeave per press) are not in the prospectus total; the Information's $517B and the prospectus's $518B are different constructions that happen to land close."
    },
    "verdict_hint": "PARTIAL",
    "sources": [
@@ -766,6 +892,15 @@
      "tier": "T2",
      "opened": true,
      "supports": "At least $518B over a decade with six partners, about 80% non-cancelable or payable regardless of usage (confidential prospectus)."
+    },
+    {
+     "url": "https://www.reuters.com/business/anthropics-518-billion-ai-buildout-hinges-largely-deals-that-cannot-be-canceled-2026-09-29/",
+     "publisher": "Reuters",
+     "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
+     "published": "2026-09-29",
+     "tier": "T2",
+     "opened": false,
+     "supports": "Original Reuters URL blocked to my fetchers; full text read in the Lufkin Daily News syndicated copy."
     },
     {
      "url": "https://wncy.com/2026/09/29/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners/",
@@ -2567,276 +2702,405 @@
   },
   {
    "seq": 65,
+   "type": "open",
+   "text": "Opened Business Insider and WIRED (May 20, 2026): Anthropic spokesperson confirmed $1.25B/month; discounted May-June; 90-day termination; Colossus+Colossus II >1 GW combined",
+   "url": "https://www.businessinsider.com/spacex-ipo-anthropic-paying-ai-compute-2026-5",
+   "event_id": "OPS-COM-37026d"
+  },
+  {
+   "seq": 66,
+   "type": "note",
+   "text": "Other Anthropic-linked deals seen but not asked (not in the six-partner prospectus total): Riot $9.1B/191 MW (Bloomberg Aug 10), Volta $10B, CoreWeave, AMD 2 GW; recorded in the totals notes only",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 67,
+   "type": "note",
+   "text": "Search count in stats is approximate: about 62 Google News/Bing RSS query batches plus about 18 EDGAR full-text queries; the WebSearch tool was not used"
+  },
+  {
+   "seq": 68,
+   "type": "open",
+   "text": "Opened Anthropic Oct 23, 2025 post on Google TPUs: up to one million TPUs, tens of billions of dollars, well over 1 GW in 2026 (prior deal, context for the Apr 2026 expansion)",
+   "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+   "event_id": "OPS-COM-21eade"
+  },
+  {
+   "seq": 69,
+   "type": "open",
+   "text": "Read meta-description teasers of The Information pages (paywalled): $200B over five years with Google (May 5), $13.7B over six years with Rum Group per a person familiar (Sep 13)",
+   "url": "https://www.theinformation.com/articles/anthropic-strikes-13-7-billion-compute-deal-trump-linked-rum-group",
+   "event_id": "OPS-COM-43a89f"
+  },
+  {
+   "seq": 70,
+   "type": "search",
+   "text": "Google News RSS batch: Amazon 5 GW / $100B / Trainium April 2026 (2 queries)",
+   "event_id": "OPS-COM-191007"
+  },
+  {
+   "seq": 71,
+   "type": "search",
+   "text": "Google News RSS batch: Fluidstack $50B Texas New York, Hut 8 River Bend, Fluidstack statement (3 queries)",
+   "event_id": "OPS-COM-c23f8d"
+  },
+  {
+   "seq": 72,
+   "type": "search",
+   "text": "Google News RSS + EDGAR full-text batch: SpaceX S-1 Anthropic Colossus $1.25B/month, amended S-1 capacity, Musk 180-day post (5 queries)",
+   "event_id": "OPS-COM-37026d"
+  },
+  {
+   "seq": 73,
+   "type": "search",
+   "text": "Google News RSS + EDGAR batch: Nscale Monarch Compute Campus, Anthropic $45B, Nscale S-1 (4 queries)",
+   "event_id": "OPS-COM-bda5ab"
+  },
+  {
+   "seq": 74,
+   "type": "search",
+   "text": "Google News RSS + EDGAR batch: Lambda, Hut 8 Beacon Point, Nvidia lease, FT, confirmation checks (6 queries)",
+   "event_id": "OPS-COM-0a90d6"
+  },
+  {
+   "seq": 75,
+   "type": "search",
+   "text": "Google News RSS + EDGAR batch: Broadcom AI XPV Platform, Apollo, Blackstone, Broadcom 10-Q backstop (6 queries)",
+   "event_id": "OPS-COM-5723ea"
+  },
+  {
+   "seq": 76,
+   "type": "search",
+   "text": "Google News RSS batch: Microsoft NVIDIA Anthropic $30B Azure partnership (1 query)",
+   "event_id": "OPS-COM-846861"
+  },
+  {
+   "seq": 77,
+   "type": "search",
+   "text": "Google News RSS + EDGAR batch: TeraWulf Justified Data Kentucky lease, 8-K (2 queries)",
+   "event_id": "OPS-COM-51b596"
+  },
+  {
+   "seq": 78,
+   "type": "search",
+   "text": "Google News RSS + EDGAR batch: RUM Group Maysville Georgia, Northern Data, 8-K, confirmation checks (5 queries)",
+   "event_id": "OPS-COM-43a89f"
+  },
+  {
+   "seq": 79,
+   "type": "search",
+   "text": "Google News RSS + EDGAR batch: Akamai $11.6B, $1.8B May deal, 8-K project plans (4 queries)",
+   "event_id": "OPS-COM-e4c257"
+  },
+  {
+   "seq": 80,
+   "type": "search",
+   "text": "Google News RSS batch: Google TPU deal value, $40B investment, $200B report, Series H (7 queries)",
+   "event_id": "OPS-COM-21eade"
+  },
+  {
+   "seq": 81,
+   "type": "search",
+   "text": "Google News RSS batch: prospectus $518B, The Information $517B, $531B variants, leaked S-1 coverage (11 queries)",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 82,
+   "type": "search",
+   "text": "Wayback Machine fetches of Anthropic pricing/docs pages (2024-11 to 2026-02) and Google News checks for 3.5 Haiku price moves (5 fetches, 2 queries)",
+   "event_id": "OPS-PRI-d76d7f"
+  },
+  {
+   "seq": 83,
+   "type": "open",
+   "text": "Opened Hut 8 Dec 17, 2025 release: River Bend initial 245 MW; partnership framework at least 245 MW, up to 2,295 MW utility capacity (Fluidstack/Anthropic, Louisiana)",
+   "url": "https://www.prnewswire.com/news-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack-302644377.html",
+   "event_id": "OPS-COM-c23f8d"
+  },
+  {
+   "seq": 84,
+   "type": "note",
+   "text": "SEC.gov blocks direct scripted downloads, so SEC documents (Broadcom 8-K/10-Q, SpaceX letters, Nscale S-1, RUM 8-K, Akamai 8-K) were read through a summarising fetcher; quotes are as returned and were re-queried for key wording"
+  },
+  {
+   "seq": 85,
+   "type": "verify",
+   "text": "Reuters prospectus figures re-verified against the full Reuters wire text carried by Lufkin Daily News (supersedes the earlier re-report-only flag): $518B, ~80%, Google 111.1B, Amazon 110B, Microsoft 31.4B, Broadcom leases 161.2B, xAI up to 84.5B, AMD >20B",
+   "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 86,
    "type": "found",
    "text": "OPS-COM-e7a4c2: value 161200 USD m (PARTIAL)",
    "event_id": "OPS-COM-e7a4c2"
   },
   {
-   "seq": 66,
+   "seq": 87,
    "type": "found",
    "text": "OPS-COM-21eade: value None USD m (CONFLICT)",
    "event_id": "OPS-COM-21eade"
   },
   {
-   "seq": 67,
+   "seq": 88,
    "type": "flag",
    "text": "OPS-COM-21eade: 2 conflict(s) recorded between sources",
    "event_id": "OPS-COM-21eade"
   },
   {
-   "seq": 68,
+   "seq": 89,
    "type": "found",
    "text": "OPS-COM-191007: value 100000 USD m (FOUND)",
    "event_id": "OPS-COM-191007"
   },
   {
-   "seq": 69,
+   "seq": 90,
    "type": "found",
    "text": "OPS-COM-c23f8d: value 50000 USD m (PARTIAL)",
    "event_id": "OPS-COM-c23f8d"
   },
   {
-   "seq": 70,
+   "seq": 91,
    "type": "found",
    "text": "OPS-COM-37026d: value 45000 USD m (CONFLICT)",
    "event_id": "OPS-COM-37026d"
   },
   {
-   "seq": 71,
+   "seq": 92,
    "type": "flag",
    "text": "OPS-COM-37026d: 2 conflict(s) recorded between sources",
    "event_id": "OPS-COM-37026d"
   },
   {
-   "seq": 72,
+   "seq": 93,
    "type": "found",
    "text": "OPS-COM-bda5ab: value 44600 USD m (FOUND)",
    "event_id": "OPS-COM-bda5ab"
   },
   {
-   "seq": 73,
+   "seq": 94,
    "type": "found",
    "text": "OPS-COM-0a90d6: value 35000 USD m (PARTIAL)",
    "event_id": "OPS-COM-0a90d6"
   },
   {
-   "seq": 74,
+   "seq": 95,
    "type": "found",
    "text": "OPS-COM-5723ea: value 35000 USD m (FOUND)",
    "event_id": "OPS-COM-5723ea"
   },
   {
-   "seq": 75,
+   "seq": 96,
    "type": "flag",
    "text": "OPS-COM-5723ea: 1 conflict(s) recorded between sources",
    "event_id": "OPS-COM-5723ea"
   },
   {
-   "seq": 76,
+   "seq": 97,
    "type": "found",
    "text": "OPS-COM-846861: value 30000 USD m (FOUND)",
    "event_id": "OPS-COM-846861"
   },
   {
-   "seq": 77,
+   "seq": 98,
    "type": "found",
    "text": "OPS-COM-51b596: value 19000 USD m (FOUND)",
    "event_id": "OPS-COM-51b596"
   },
   {
-   "seq": 78,
+   "seq": 99,
    "type": "found",
    "text": "OPS-COM-43a89f: value 13700 USD m (PARTIAL)",
    "event_id": "OPS-COM-43a89f"
   },
   {
-   "seq": 79,
+   "seq": 100,
    "type": "found",
    "text": "OPS-COM-e4c257: value 11600 USD m (FOUND)",
    "event_id": "OPS-COM-e4c257"
   },
   {
-   "seq": 80,
+   "seq": 101,
    "type": "found",
    "text": "OPS-COM-a6eaa7: value 518000 USD m (PARTIAL)",
    "event_id": "OPS-COM-a6eaa7"
   },
   {
-   "seq": 81,
+   "seq": 102,
    "type": "flag",
    "text": "OPS-COM-a6eaa7: 2 conflict(s) recorded between sources",
    "event_id": "OPS-COM-a6eaa7"
   },
   {
-   "seq": 82,
+   "seq": 103,
    "type": "found",
    "text": "OPS-PRI-e1af19: $0.25/$1.25 per MTok, released 2024-03-13 (FOUND)",
    "event_id": "OPS-PRI-e1af19"
   },
   {
-   "seq": 83,
+   "seq": 104,
    "type": "found",
    "text": "OPS-PRI-4f98c5: $3.0/$15.0 per MTok, released 2024-03-04 (FOUND)",
    "event_id": "OPS-PRI-4f98c5"
   },
   {
-   "seq": 84,
+   "seq": 105,
    "type": "found",
    "text": "OPS-PRI-ceacd1: $15.0/$75.0 per MTok, released 2024-03-04 (FOUND)",
    "event_id": "OPS-PRI-ceacd1"
   },
   {
-   "seq": 85,
+   "seq": 106,
    "type": "found",
    "text": "OPS-PRI-4922e9: $3.0/$15.0 per MTok, released 2024-06-20 (FOUND)",
    "event_id": "OPS-PRI-4922e9"
   },
   {
-   "seq": 86,
+   "seq": 107,
    "type": "found",
    "text": "OPS-PRI-d76d7f: $1.0/$5.0 per MTok, released 2024-11-04 (FOUND)",
    "event_id": "OPS-PRI-d76d7f"
   },
   {
-   "seq": 87,
+   "seq": 108,
    "type": "found",
    "text": "OPS-PRI-46a566: $3.0/$15.0 per MTok, released 2025-02-24 (FOUND)",
    "event_id": "OPS-PRI-46a566"
   },
   {
-   "seq": 88,
+   "seq": 109,
    "type": "found",
    "text": "OPS-PRI-11024e: $15.0/$75.0 per MTok, released 2025-05-22 (FOUND)",
    "event_id": "OPS-PRI-11024e"
   },
   {
-   "seq": 89,
+   "seq": 110,
    "type": "found",
    "text": "OPS-PRI-3cacec: $3.0/$15.0 per MTok, released 2025-05-22 (FOUND)",
    "event_id": "OPS-PRI-3cacec"
   },
   {
-   "seq": 90,
+   "seq": 111,
    "type": "found",
    "text": "OPS-PRI-8e796e: $15.0/$75.0 per MTok, released 2025-08-05 (FOUND)",
    "event_id": "OPS-PRI-8e796e"
   },
   {
-   "seq": 91,
+   "seq": 112,
    "type": "found",
    "text": "OPS-PRI-4faae8: $3.0/$15.0 per MTok, released 2025-09-29 (FOUND)",
    "event_id": "OPS-PRI-4faae8"
   },
   {
-   "seq": 92,
+   "seq": 113,
    "type": "found",
    "text": "OPS-PRI-e6612c: $1.0/$5.0 per MTok, released 2025-10-15 (FOUND)",
    "event_id": "OPS-PRI-e6612c"
   },
   {
-   "seq": 93,
+   "seq": 114,
    "type": "found",
    "text": "OPS-PRI-27b2a8: $5.0/$25.0 per MTok, released 2025-11-24 (FOUND)",
    "event_id": "OPS-PRI-27b2a8"
   },
   {
-   "seq": 94,
+   "seq": 115,
    "type": "found",
    "text": "OPS-PRI-1718c6: $5.0/$25.0 per MTok, released 2026-02-05 (FOUND)",
    "event_id": "OPS-PRI-1718c6"
   },
   {
-   "seq": 95,
+   "seq": 116,
    "type": "found",
    "text": "OPS-PRI-f1019d: $3.0/$15.0 per MTok, released 2026-02-17 (FOUND)",
    "event_id": "OPS-PRI-f1019d"
   },
   {
-   "seq": 96,
+   "seq": 117,
    "type": "found",
    "text": "OPS-PRI-2e6641: $25.0/$125.0 per MTok, released 2026-04-07 (FOUND)",
    "event_id": "OPS-PRI-2e6641"
   },
   {
-   "seq": 97,
+   "seq": 118,
    "type": "found",
    "text": "OPS-PRI-3a256f: $5.0/$25.0 per MTok, released 2026-04-16 (FOUND)",
    "event_id": "OPS-PRI-3a256f"
   },
   {
-   "seq": 98,
+   "seq": 119,
    "type": "found",
    "text": "OPS-PRI-9883ec: $5.0/$25.0 per MTok, released 2026-05-28 (FOUND)",
    "event_id": "OPS-PRI-9883ec"
   },
   {
-   "seq": 99,
+   "seq": 120,
    "type": "found",
    "text": "OPS-PRI-42e96b: $10.0/$50.0 per MTok, released 2026-06-09 (FOUND)",
    "event_id": "OPS-PRI-42e96b"
   },
   {
-   "seq": 100,
+   "seq": 121,
    "type": "found",
    "text": "OPS-PRI-c360e0: $10.0/$50.0 per MTok, released 2026-06-09 (FOUND)",
    "event_id": "OPS-PRI-c360e0"
   },
   {
-   "seq": 101,
+   "seq": 122,
    "type": "found",
    "text": "OPS-PRI-0c0a69: $2.0/$10.0 per MTok, released 2026-06-30 (FOUND)",
    "event_id": "OPS-PRI-0c0a69"
   },
   {
-   "seq": 102,
+   "seq": 123,
    "type": "found",
    "text": "OPS-PRI-fe68cd: $5.0/$25.0 per MTok, released 2026-07-24 (FOUND)",
    "event_id": "OPS-PRI-fe68cd"
   },
   {
-   "seq": 103,
+   "seq": 124,
    "type": "found",
    "text": "OPS-PRI-4cb1f2: $10.0/$50.0 per MTok, released 2026-09-01 (FOUND)",
    "event_id": "OPS-PRI-4cb1f2"
   },
   {
-   "seq": 104,
+   "seq": 125,
    "type": "found",
    "text": "OPS-PRI-026aed: $10.0/$50.0 per MTok, released 2026-09-01 (FOUND)",
    "event_id": "OPS-PRI-026aed"
   },
   {
-   "seq": 105,
+   "seq": 126,
    "type": "found",
    "text": "OPS-PRI-38ef44: $4.0/$20.0 per MTok, released 2026-09-22 (FOUND)",
    "event_id": "OPS-PRI-38ef44"
   },
   {
-   "seq": 106,
+   "seq": 127,
    "type": "found",
    "text": "OPS-PRI-f9fd47: $2.0/$10.0 per MTok, released 2026-09-28 (FOUND)",
    "event_id": "OPS-PRI-f9fd47"
   },
   {
-   "seq": 107,
+   "seq": 128,
    "type": "verify",
    "text": "Cross-checked prices three ways: launch post vs docs model page vs archived pricing tables; release dates vs API release notes and deprecations page"
   },
   {
-   "seq": 108,
+   "seq": 129,
    "type": "verify",
    "text": "Cross-checked Anthropic, Amazon, Microsoft, Apollo, TeraWulf, Akamai, RUM, Nscale statements against counterparty SEC filings where a filing exists"
   },
   {
-   "seq": 109,
+   "seq": 130,
    "type": "message",
    "text": "Handoff: 38 answers written; main disagreements are Google $ (200B vs >=111.1B), SpaceX/xAI ($45B vs up to $84.5B), prospectus vs The Information totals; $531B figure untraceable",
    "to": "orchestrator"
   }
  ],
  "stats": {
-  "searches": 66,
-  "pages_opened": 147,
+  "searches": 80,
+  "pages_opened": 152,
   "claims_answered": 38,
   "flags": 12
  }
