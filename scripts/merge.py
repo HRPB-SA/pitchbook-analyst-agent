@@ -268,6 +268,8 @@ def merge_cluster(members, conflicts_out):
     # HIGH needs at least one T1/T2 origin: a T3/T4 scoop repeated by other T3/T4 outlets is still one chain
     if prim["confidence"] == "HIGH" and not t12:
         prim["confidence"] = "MEDIUM"; prim["confidence_note"] = "Capped from HIGH: no T1/T2 origin among the sources."
+    elif prim["confidence"] == "HIGH" and prim["single_chain_suspected"] and TIER_RANK[prim["source"]["tier"]] > 1:
+        prim["confidence"] = "MEDIUM"; prim["confidence_note"] = "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
     return prim
 
 def build_events(outs, conflicts_out):
@@ -320,9 +322,13 @@ def apply_corrections(events):
     def priced_round(e):
         cats = set(e["category"]); oth = e["extracted"].get("other") or {}
         avc = f"{oth.get('announced_vs_closed') or ''} {oth.get('status') or ''}"
+        txt = f"{e['headline']} {e['summary']} {e.get('notes') or ''}"
         if not (cats & {"funding", "debt"}): return False
         if re.search(r"target|expectation|talks|unconfirmed|indication", avc, re.I): return False
-        if re.search(r"\b(in talks|talks to|seeking|weighs|considering|secondary|perpetual|indications?)\b", e["headline"], re.I) and not re.search(r"series [a-h]|closes?|raises?|raised", e["headline"], re.I): return False
+        # talks, floated targets, implied or undisclosed valuations are never a priced round, whatever else the headline says
+        if re.search(r"\b(in (early )?talks|talks to|seeking|weighs|considering|floated)\b", e["headline"], re.I): return False
+        if re.search(r"\b(implying|implies|implied)\b|valuation (was |is )?(not (disclosed|stated)|unstated)|no valuation|pre/post[- ]money unstated|valuation is a floated", txt, re.I): return False
+        if re.search(r"\b(secondary|perpetual|indications?)\b", e["headline"], re.I) and not re.search(r"series [a-h]|closes?|raised", e["headline"], re.I): return False
         return True
     for e in events:
         ex = e["extracted"]; oth = ex.setdefault("other", {})
@@ -336,9 +342,11 @@ def apply_corrections(events):
             per = str(ex.get("revenue_period") or "")
             by_key = any(re.search(r"project|expect|guid|forecast", k, re.I) and has_num(val, rr) for k, val in oth.items())
             if re.search(r"project|forecast|guid|expect|target|plan\b|estimate", per, re.I) or by_key:
-                oth["projected_run_rate_usd_m"] = rr; ex["revenue_run_rate_usd_m"] = None
-                log(e, "R-PROJ", "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
-                    {"extracted.revenue_run_rate_usd_m": {"was": rr, "now": None}, "extracted.other.projected_run_rate_usd_m": {"was": None, "now": rr}})
+                est = bool(re.search(r"\bestimat", f"{e['headline']} {per}", re.I)) and not re.search(r"project|forecast|guid|expect|target", per, re.I)
+                key = "estimated_run_rate_usd_m" if est else "projected_run_rate_usd_m"
+                oth[key] = rr; ex["revenue_run_rate_usd_m"] = None
+                log(e, "R-PROJ", ("An analyst estimate of the current run-rate, not a company-reported figure." if est else "The run-rate here is a projection or guidance, not a reported run-rate.") + f" Moved to other.{key} so it cannot be read as reported.",
+                    {"extracted.revenue_run_rate_usd_m": {"was": rr, "now": None}, f"extracted.other.{key}": {"was": None, "now": rr}})
         am = ex.get("amount_usd_m")
         if am:
             oth_txt = f"{oth.get('announced_vs_closed') or ''} {oth.get('status') or ''}"
@@ -382,6 +390,12 @@ def build_metrics(events, outs):
         if ex.get("amount_usd_m") and ({"funding", "debt"} & set(e["category"])) and not ({"compute", "acquisition", "investment", "legal"} & set(e["category"])):
             kind = "debt" if "debt" in e["category"] else "equity"
             m["capital"].append({"date": e["date"], "usd_m": ex["amount_usd_m"], "kind": kind, "label": e["headline"], "event_id": e["id"], "tier": e["source"]["tier"], "confidence": e["confidence"], "notes": e.get("notes")})
+    def cap_table_confidence():
+        for name, rows_ in m.items():
+            if not isinstance(rows_, list): continue
+            for r in rows_:
+                if isinstance(r, dict) and isinstance(r.get("confidence"), str) and r["confidence"].upper().startswith("HIGH") and r.get("tier") in ("T3", "T4", "T5"):
+                    r["confidence_desk"] = r["confidence"]; r["confidence"] = "MEDIUM"; r["confidence_note"] = "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
     # desk tables (richer, already structured)
     rv = outs.get("desk-revenue", {})
     m["run_rate_desk"] = rv.get("run_rate_series", [])
@@ -432,6 +446,7 @@ def build_metrics(events, outs):
             continue
         last[k] = r["date"]; dedup.append(r)
     m["valuation"] = dedup
+    cap_table_confidence()
     return m
 
 def norm_name(n):

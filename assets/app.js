@@ -87,6 +87,7 @@ async function loadAll() {
   const missing = [];
   for (const [f, d, e] of res) { state.data[f] = d; if (!d && !['audit', 'health', 'certify'].includes(f)) missing.push(f); }
   if (!state.data.events) throw new Error(`Could not load data/events.json (${missing.join(', ')} missing). Run scripts/merge.py first.`);
+  state.computeBasis = new Map((state.data.metrics?.compute || []).filter(r => r.event_id).map(r => [r.event_id, r.usd_basis || '']));
   for (const e of state.data.events) { state.evIndex.set(e.id, e); for (const m of e.merged_ids || []) if (!state.evIndex.has(m)) state.evIndex.set(m, e); }
   return missing;
 }
@@ -261,16 +262,20 @@ function sourceLine(src) { if (!src?.url) return el('span', { class: 'muted', te
 function extractChips(ex, e) {
   const out = [];
   if (!ex) return out;
-  const o = ex.other || {}, upTo = e && /\bup to\b/i.test(e.headline || '');
-  if (ex.amount_usd_m) out.push(chip(`${upTo ? 'up to ' : ''}${fmt.usd(ex.amount_usd_m)}`, 'num'));
+  const o = ex.other || {}, text = e ? `${e.headline || ''} ${e.summary || ''}` : '';
+  const basis = e ? (state.computeBasis?.get(e.id) || '') : '';
+  const preC = /up to/i.test(basis) ? 'up to ' : '', pre = preC || (e && /\bup to\b/i.test(e.headline || '')) ? 'up to ' : '';   // the headline's 'up to' qualifies the amount chip, not the compute chip
+  const post = /unconfirmed|reported/i.test(basis) && !/contract/i.test(basis) ? ' (unconfirmed)' : '';
+  if (ex.amount_usd_m) out.push(chip(`${pre}${fmt.usd(ex.amount_usd_m)}${post}`, 'num'));
   if (o.amount_target_usd_m) out.push(chip(`target or cap ${fmt.usd(o.amount_target_usd_m)}`, 'num'));
   if (ex.valuation_post_usd_m) out.push(chip(`post ${fmt.usd(ex.valuation_post_usd_m)}`, 'num'));
-  if (o.valuation_reference_usd_m) out.push(chip(`reference mark ${fmt.usd(o.valuation_reference_usd_m)}`, 'num'));
+  if (o.valuation_reference_usd_m && /valu|ipo|target|secondary|mark|trillion|tender|buyback|notes|convertible/i.test(text)) out.push(chip(`reference mark ${fmt.usd(o.valuation_reference_usd_m)}`, 'num'));
   if (ex.revenue_run_rate_usd_m) out.push(chip(`run-rate ${fmt.usd(ex.revenue_run_rate_usd_m)}`, 'num'));
   if (o.projected_run_rate_usd_m) out.push(chip(`projected run-rate ${fmt.usd(o.projected_run_rate_usd_m)}`, 'num'));
+  if (o.estimated_run_rate_usd_m) out.push(chip(`estimated run-rate ${fmt.usd(o.estimated_run_rate_usd_m)}`, 'num'));
   if (ex.revenue_period_usd_m) out.push(chip(`${ex.revenue_period || 'rev'} ${fmt.usd(ex.revenue_period_usd_m)}`, 'num'));
   if (ex.margin_pct != null) out.push(chip(`${ex.margin_type || 'margin'} ${ex.margin_pct}%`, 'num'));
-  if (ex.compute?.usd_m) out.push(chip(`compute ${fmt.usd(ex.compute.usd_m)}${ex.compute.gw ? ' · ' + ex.compute.gw + ' GW' : ''}`, 'num'));
+  if (ex.compute?.usd_m) out.push(chip(`compute ${preC}${fmt.usd(ex.compute.usd_m)}${post}${ex.compute.gw ? ' · ' + ex.compute.gw + ' GW' : ''}`, 'num'));
   else if (ex.compute?.gw) out.push(chip(`${ex.compute.gw} GW`, 'num'));
   if (ex.product?.price_in_per_mtok != null) out.push(chip(`$${ex.product.price_in_per_mtok}/$${ex.product.price_out_per_mtok} per Mtok`, 'num'));
   if (ex.headcount) out.push(chip(`${fmt.num(ex.headcount)} staff`, 'num'));
@@ -304,6 +309,7 @@ function openEvent(id) {
   if (ex.valuation_post_usd_m) add('Post-money', fmt.usd(ex.valuation_post_usd_m));
   if (ex.other?.valuation_reference_usd_m) add('Reference mark (not a priced round)', fmt.usd(ex.other.valuation_reference_usd_m));
   if (ex.other?.projected_run_rate_usd_m) add('Projected run-rate (not reported)', fmt.usd(ex.other.projected_run_rate_usd_m));
+  if (ex.other?.estimated_run_rate_usd_m) add('Analyst estimate of run-rate (not company-reported)', fmt.usd(ex.other.estimated_run_rate_usd_m));
   if (ex.valuation_pre_usd_m) add('Pre-money', fmt.usd(ex.valuation_pre_usd_m));
   if (ex.revenue_run_rate_usd_m) add('Run-rate', fmt.usd(ex.revenue_run_rate_usd_m));
   if (ex.revenue_period_usd_m) add('Period revenue', `${fmt.usd(ex.revenue_period_usd_m)} (${ex.revenue_period || 'period n/a'})`);
@@ -321,7 +327,7 @@ function openEvent(id) {
   if (e.notes) add('Notes', e.notes);
   if (e.audit) add('Independent audit', el('div', {}, el('span', { class: 'chip ' + ({ SUPPORTED: 'ok', PARTLY: 'warn', UNOPENABLE: '' }[e.audit.verdict] || 'bad'), text: e.audit.verdict }), ' ', el('span', { class: 'small', text: e.audit.note || '' }),
     ...(e.audit.figure_issues || []).map(f => el('div', { class: 'small muted', text: `${f.field}: claimed ${f.claimed}; page says ${f.page_says}${f.basis_note ? ' (' + f.basis_note + ')' : ''}` }))));
-  if (e.corrections?.length) add('Corrected after audit', el('div', {}, ...e.corrections.map(c => el('div', { class: 'small', style: { marginBottom: '4px' } }, el('b', { text: `${c.id} (audit ${c.audit_id}): ` }), c.reason, ...Object.entries(c.changed || {}).filter(([k]) => k !== 'summary').map(([k, v]) => el('div', { class: 'mono small muted', text: `${k.replace('extracted.', '')}: ${JSON.stringify(v.was)} → ${JSON.stringify(v.now)}` })), c.changed?.summary ? el('div', { class: 'mono small muted', text: 'summary text corrected' }) : ''))));
+  if (e.corrections?.length) add('Corrected after audit', el('div', {}, ...e.corrections.map(c => el('div', { class: 'small', style: { marginBottom: '4px' } }, el('b', { text: c.audit_id ? `${c.id} (audit ${c.audit_id}): ` : `${c.id} (automatic rule): ` }), c.reason, ...Object.entries(c.changed || {}).filter(([k]) => k !== 'summary').map(([k, v]) => el('div', { class: 'mono small muted', text: `${k.replace('extracted.', '')}: ${JSON.stringify(v.was)} → ${JSON.stringify(v.now)}` })), c.changed?.summary ? el('div', { class: 'mono small muted', text: 'summary text corrected' }) : ''))));
   add('Found by', (e.agents || [e.agent]).join(', '));
   add('Event id', el('code', { text: e.id }));
   openDrawer(el('div', {}, el('div', { class: 'eyebrow', text: fmt.date(e.date) }), el('h2', { text: e.headline, style: { margin: '6px 0 8px' } }), el('p', { class: 'ink2', text: e.summary, style: { marginBottom: '14px' } }), kv));
@@ -333,7 +339,7 @@ function renderOverview(root) {
   const { metrics: M = {}, thesis: T, ledger: L, agent_log: A, model: MD, compute: C } = state.data;
   root.replaceChildren();
   const tiles = el('div', { class: 'grid cols-4' });
-  const roundPts = (M.rounds || []).filter(r => r.post_usd_m > 0 && r.status !== 'talks' && r.additive !== false).map(r => ({ date: r.date, usd_m: r.post_usd_m, label: `${r.round}: ${fmt.usd(r.size_usd_m)} raised${r.press_post_usd_m && r.press_post_usd_m !== r.post_usd_m ? ` (press reported ${fmt.usd(r.press_post_usd_m)} post)` : ''}`, event_id: r.event_id, tier: r.tier || 'T2', confidence: ((r.press_post_usd_m && r.press_post_usd_m !== r.post_usd_m) || (r.press_size_usd_m && r.press_size_usd_m !== r.size_usd_m)) ? 'DISPUTED' : (r.confidence || 'HIGH') }));
+  const roundPts = (M.rounds || []).filter(r => r.post_usd_m > 0 && r.status !== 'talks' && r.additive !== false).map(r => ({ date: r.date, usd_m: r.post_usd_m, label: `${r.round}: ${fmt.usd(r.size_usd_m)} raised${r.press_post_usd_m && r.press_post_usd_m !== r.post_usd_m ? ` (press reported ${fmt.usd(r.press_post_usd_m)} post)` : ''}`, event_id: r.event_id, tier: r.tier || 'T2', confidence: ((r.press_post_usd_m && r.press_post_usd_m !== r.post_usd_m) || (r.press_size_usd_m && r.press_size_usd_m !== r.size_usd_m) || (L?.claims || []).some(c => c.kind === 'round' && c.verdict === 'MISMATCH' && String(c.claim).startsWith(r.round))) ? 'DISPUTED' : (r.confidence || 'HIGH') }));
   const valSeries = roundPts.length >= 5 ? roundPts : (M.valuation || []);
   const val = latest(valSeries, r => r.usd_m);
   const rr = latest(M.run_rate_desk?.length ? M.run_rate_desk.map(r => ({ ...r, usd_m: r.run_rate_usd_m })) : M.run_rate, r => r.usd_m);
@@ -392,7 +398,7 @@ function renderOverview(root) {
   root.append(g);
   // flags + recent
   const g2 = el('div', { class: 'grid cols-2 section' });
-  const flags = (A?.log || []).filter(r => r.type === 'flag').slice(-8).reverse();
+  const flags = (A?.log || []).filter(r => r.type === 'flag' && r.agent !== 'certifier').slice(-8).reverse();   // the Certifier's findings are tracked on the Sources tab; several are resolved by the time they read here
   const fl = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Signs raised by the desk' }), el('button', { class: 'tablebtn', type: 'button', text: 'Agents floor →', onclick: () => showTab('agents') })), el('div', { class: 'flags-list' }, ...(flags.length ? flags.map(f => el('div', { class: 'f' }, el('div', { class: 'who', text: `${A.agents[f.agent]?.name || f.agent} · ${fmt.time(f.t)}` }), el('div', {}, f.text, f.event_id && state.evIndex.has(f.event_id) ? el('span', {}, ' ', evLink(f.event_id, '↗')) : ''))) : [el('div', { class: 'empty', text: 'No flags yet' })])));
   const recent = [...(state.data.events || [])].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 12);
   const rc = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Most recent events' }), el('button', { class: 'tablebtn', type: 'button', text: 'Full timeline →', onclick: () => showTab('timeline') })), el('div', { class: 'evlist' }, ...recent.map(e => evLink(e.id))));
@@ -441,7 +447,7 @@ function renderTimeline(root) {
         el('div', { class: 'd', text: fmt.dmy(e.date) }),
         el('div', {}, el('div', { class: 'h', text: e.headline }), el('div', { class: 's', text: e.summary }),
           el('div', { class: 'meta' }, ...e.category.slice(0, 4).map(c => chip(c, 'cat')), ...extractChips(e.extracted, e), e.single_chain_suspected ? chip('likely one reporting chain', 'conf VERIFY') : ''),
-          el('div', { class: 'src' }, sourceLine(e.source), e.corroboration?.length ? ` · +${e.corroboration.length} corroborating` : '')),
+          el('div', { class: 'src' }, sourceLine(e.source), e.single_chain_suspected ? ` · ${e.distinct_outlets || (e.corroboration?.length || 0) + 1} outlets, likely one chain` : (e.corroboration?.length ? ` · +${e.corroboration.length} corroborating` : ''))),
         el('div', { class: 'right' }, tierChip(e.source.tier), confChip(e.confidence), e.audit ? el('span', { class: 'chip ' + ({ SUPPORTED: 'ok', PARTLY: 'warn', UNOPENABLE: '' }[e.audit.verdict] || 'bad'), title: 'Independent audit: ' + (e.audit.note || ''), text: 'audit ' + e.audit.verdict.toLowerCase().replace('_', ' ') }) : '')));
     }
     if (rows.length > tl.shown) frag.append(el('button', { class: 'btn showmore', type: 'button', text: `Show ${Math.min(200, rows.length - tl.shown)} more (${tl.shown} of ${rows.length} shown)`, onclick: () => { tl.shown += 200; list(true); } }));
@@ -619,8 +625,8 @@ function renderModel(root) {
     const c1 = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Revenue build by segment' }), el('span', { class: 'small muted', text: '* = revenue press-reported (leaked draft, no public S-1), no segment split reported; E = estimate' }))); const c1c = el('div', { class: 'chart' }); c1.append(c1c);
     columnChart(c1c, { data: Y.map(y => ({ label: yl(y), values: isA(y) ? [{ name: 'Revenue, press-reported (no segment split)', value: R.revenue[y], color: 'var(--muted)' }] : segs.map((s, i) => ({ name: segLabels[s] || s, value: R[`seg_${s}`][y], color: SERIES[i] })) })), yFmt: v => fmt.usd(v) });
     c1.append(legend([{ name: 'Reported revenue, no split', color: 'var(--muted)', rect: true }, ...segs.map((s, i) => ({ name: segLabels[s] || s, color: SERIES[i], rect: true }))]));
-    const c2 = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Margin path, 2026E–2030E' }), el('span', { class: 'small muted', text: 'gross, operating (ex/incl training), FCF · 2024A–2025A in the table' }))); const c2c = el('div', { class: 'chart' }); c2.append(c2c);
-    const YF = Y.filter(y => y >= 2026);   // 2024A-2025A margins (down to -800%) stay in the table: on one axis they flatten every forward line
+    const c2 = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Margin path, 2026E–2030E' }), el('span', { class: 'small muted', text: 'gross, operating (ex/incl training), FCF · 2024*–2025* in the table' }))); const c2c = el('div', { class: 'chart' }); c2.append(c2c);
+    const YF = Y.filter(y => y >= 2026);   // 2024*-2025* margins (down to -800%) stay in the table: on one axis they flatten every forward line
     const pts = key => YF.map(y => ({ x: new Date(`${y}-07-01`), y: R[key][y], date: `${y}` }));
     lineChart(c2c, { series: [{ name: 'Gross', color: 'var(--s1)', points: pts('gross_margin') }, { name: 'Op ex-training', color: 'var(--s3)', points: pts('om_ex_training') }, { name: 'Op incl-training', color: 'var(--s2)', points: YF.map(y => ({ x: new Date(`${y}-07-01`), y: R.revenue[y] ? R.op_income_incl_training[y] / R.revenue[y] : 0, date: `${y}` })) }, { name: 'FCF', color: 'var(--s7)', points: pts('fcf_margin') }], yFmt: v => fmt.pct(v), xTicks: 5, xFmt: d3.utcFormat('%Y') });
     c2.append(legend([{ name: 'Gross margin', color: 'var(--s1)' }, { name: 'Operating, ex-training', color: 'var(--s3)' }, { name: 'Operating, incl. training', color: 'var(--s2)' }, { name: 'FCF margin', color: 'var(--s7)' }]));
@@ -642,7 +648,7 @@ function renderModel(root) {
       tb.append(el('tr', {}, el('td', { class: kind === 'pct' ? 'sub' : kind, text: label }), ...Y.map(y => cell(R[key][y], kind, key, y))));
     }
     tbl.append(tb);
-    main.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Income statement and cash flow build' }), el('span', { class: 'small muted', text: `${scen} scenario · gross revenue basis · * = revenue and operating loss press-reported from a leaked draft (no public S-1); italic grey = model split, not reported` })), el('div', { class: 'tablewrap' }, tbl)));
+    main.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Income statement and cash flow build' }), el('span', { class: 'small muted', text: `${scen} scenario · gross revenue basis · * = revenue and operating loss press-reported from a leaked draft (no public S-1); gross margin is The Information (T3, paying-user scope) with cost of revenue and gross profit derived from it; italic grey = model split, not reported` })), el('div', { class: 'tablewrap' }, tbl)));
     // sensitivity
     const revs = [0.6, 0.8, 1, 1.25, 1.5].map(f => R.revenue[2030] * f), mults = [12, 18, 25, 32, 40];
     const st = el('table', { class: 'data sens' }, el('thead', {}, el('tr', {}, el('th', { text: '2030 revenue ↓ · terminal EV/FCF →' }), ...mults.map(m => el('th', { class: 'num', text: `${m}x` })))));
@@ -788,7 +794,7 @@ function renderNetwork(root) {
     // side: public companies
     const pub = ENT.filter(e => e.public && e.ticker).sort((a, b) => (b.degree || 0) - (a.degree || 0));
     side.replaceChildren(el('div', { class: 'card-h' }, el('h3', { text: 'Public companies attached' }), el('span', { class: 'small muted', text: `${pub.length}` })),
-      el('div', { class: 'tablewrap', style: { maxHeight: '540px', overflow: 'auto' } }, el('table', { class: 'data', style: { tableLayout: 'fixed', width: '100%' } }, el('colgroup', {}, el('col', { style: { width: '22%' } }), el('col', { style: { width: '30%' } }), el('col', { style: { width: '34%' } }), el('col', { style: { width: '14%' } })), el('thead', {}, el('tr', {}, el('th', { text: 'Ticker' }), el('th', { text: 'Company' }), el('th', { text: 'Role' }), el('th', { class: 'num', text: 'Events' }))), el('tbody', {}, ...pub.map(e => el('tr', { style: { cursor: 'pointer' }, onclick: () => showEntity(e) }, el('td', { class: 'mono', text: e.ticker }), el('td', { text: e.name }), el('td', { class: 'small', text: (e.types || []).slice(0, 3).join(', ') }), el('td', { class: 'num', text: String(e.degree || 0) })))))));
+      el('div', { class: 'tablewrap', style: { maxHeight: '540px', overflow: 'auto' } }, el('table', { class: 'data net-table', style: { tableLayout: 'fixed', width: '100%' } }, el('colgroup', {}, el('col', { style: { width: '22%' } }), el('col', { style: { width: '30%' } }), el('col', { style: { width: '34%' } }), el('col', { style: { width: '14%' } })), el('thead', {}, el('tr', {}, el('th', { text: 'Ticker' }), el('th', { text: 'Company' }), el('th', { text: 'Role' }), el('th', { class: 'num', text: 'Events' }))), el('tbody', {}, ...pub.map(e => el('tr', { style: { cursor: 'pointer' }, onclick: () => showEntity(e) }, el('td', { class: 'mono', text: e.ticker }), el('td', { text: e.name }), el('td', { class: 'small', text: (e.types || []).slice(0, 3).join(', ') }), el('td', { class: 'num', text: String(e.degree || 0) })))))));
   }
   function showEntity(e) {
     const evs = (e.event_ids || []).map(id => state.evIndex.get(id)).filter(Boolean).sort((a, b) => a.date.localeCompare(b.date));
@@ -1011,7 +1017,8 @@ function moreTable(headers, rows, mapRow, limit) {
 function compactJson(v) {
   let o = v; if (typeof v === 'string') { try { o = JSON.parse(v); } catch { return v; } }
   if (!o || typeof o !== 'object') return String(o ?? '');
-  return Object.entries(o).filter(([, x]) => x != null && x !== '').map(([k, x]) => `${k.replace(/_usd_m$/, '').replace(/_/g, ' ')} ${/_usd_m$/.test(k) && typeof x === 'number' ? fmt.usd(x) : Array.isArray(x) ? x.join('/') : x}`).join(' · ');
+  const one = x => x == null || x === '' ? '' : Array.isArray(x) ? x.map(one).filter(Boolean).join(' / ') : typeof x === 'object' ? Object.entries(x).filter(([, y]) => y != null && y !== '').map(([k, y]) => `${k.replace(/_usd_m$/, '').replace(/_/g, ' ')} ${/_usd_m$/.test(k) && typeof y === 'number' ? fmt.usd(y) : one(y)}`).join(', ') : String(x);
+  return Object.entries(o).filter(([, x]) => x != null && x !== '').map(([k, x]) => `${k.replace(/_usd_m$/, '').replace(/_/g, ' ')} ${/_usd_m$/.test(k) && typeof x === 'number' ? fmt.usd(x) : one(x)}`).join(' · ');
 }
 function renderSources(root) {
   root.replaceChildren();
@@ -1041,7 +1048,7 @@ function renderSources(root) {
   if (L.claims?.length) {
     const VC = { MATCH: 'ok', PARTIAL: 'warn', NOTED: '', MISMATCH: 'bad', UNTRACEABLE: 'bad' }, cs = L.claims_summary || {};
     root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: `Re-derivation ledger (${L.claims.length} load-bearing claims)` }), el('span', { class: 'small muted', text: `re-derived from source by agents that never saw the draft · ${cs.MATCH ?? 0} match · ${cs.PARTIAL ?? 0} partial · ${cs.NOTED ?? 0} noted (text, side by side) · ${cs.MISMATCH ?? 0} mismatch (frozen) · ${cs.UNTRACEABLE ?? 0} untraceable` })),
-      moreTable(['Claim', 'Draft', 'Re-derived', 'Verdict', 'Tier', 'Origins', 'Confidence', 'Note'], L.claims, c => el('tr', {},
+      moreTable(['Claim', 'Draft', 'Re-derived', 'Verdict', 'Tier', 'Outlets', 'Confidence', 'Note'], L.claims, c => el('tr', {},
         el('td', {}, c.event_id && state.evIndex.has(c.event_id) ? evLink(c.event_id, c.claim) : c.claim), el('td', { class: 'mono small', text: compactJson(c.draft) }),
         el('td', { class: 'mono small' }, compactJson(c.rederived_obj || c.rederived), ...(c.sources || []).slice(0, 2).map(u => el('span', {}, ' ', el('a', { href: u, target: '_blank', rel: 'noopener', text: fmt.domain(u) })))),
         el('td', {}, el('span', { class: 'chip ' + (VC[c.verdict] || ''), text: c.verdict })), el('td', {}, tierChip(c.tier || 'T4')), el('td', { class: 'num', text: String(c.cross_check ?? '') }), el('td', {}, confChip(c.confidence || 'MEDIUM')), el('td', { class: 'small', text: c.red_team || '' })), 20)));

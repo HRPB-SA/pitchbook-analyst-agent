@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T21:44:49Z",
+ "generated": "2026-09-30T22:12:32Z",
  "raw_events": 1094,
  "merged_events": 691,
  "tiers": {
@@ -10,8 +10,8 @@
   "T5": 1
  },
  "confidence": {
-  "HIGH": 459,
-  "MEDIUM": 201,
+  "HIGH": 448,
+  "MEDIUM": 212,
   "DISPUTED": 13,
   "VERIFY": 8,
   "LOW": 10
@@ -8005,6 +8005,28 @@
  ],
  "corrections": [
   {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20210528-series-a",
+   "headline": "Series A: $124M led by Jaan Tallinn",
+   "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20230203-google-300m-10pct",
+   "headline": "Google reportedly invests $300M for ~10% of Anthropic",
+   "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
+  {
    "id": "R-AMT",
    "audit_id": null,
    "event_id": "evt-20231027-google-up-to-2b",
@@ -8042,10 +8064,43 @@
    "audit_id": null,
    "event_id": "evt-20240501-revenue-projection-850m",
    "headline": "Reported: >$850M annualized revenue targeted by end-2024",
-   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
    "changed": [
     "extracted.revenue_run_rate_usd_m",
     "extracted.other.projected_run_rate_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20240701-pb-series-d-1-2b-21b",
+   "headline": "PitchBook: Series D closes at $1.2B, $21.0B post-money",
+   "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20240923-40b-valuation-talks",
+   "headline": "Reported early talks to raise at up to $40B valuation",
+   "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20241122-amazon-additional-4b",
+   "headline": "Amazon invests another $4B; AWS becomes primary training partner",
+   "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
    ]
   },
   {
@@ -8097,7 +8152,7 @@
    "audit_id": null,
    "event_id": "evt-20251202-ft-anthropic-hires-wilson-sonsini-for-ipo",
    "headline": "FT: Anthropic hires Wilson Sonsini for possible 2026 IPO",
-   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
    "changed": [
     "extracted.revenue_run_rate_usd_m",
     "extracted.other.projected_run_rate_usd_m"
@@ -8108,7 +8163,7 @@
    "audit_id": null,
    "event_id": "evt-20251203-amodei-dealbook-revenue-guidance",
    "headline": "Amodei: revenue heading to $8-10B by end-2025; warns of 'YOLO' spending",
-   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
    "changed": [
     "extracted.revenue_run_rate_usd_m",
     "extracted.other.projected_run_rate_usd_m"
@@ -8119,10 +8174,21 @@
    "audit_id": null,
    "event_id": "evt-20260502-semianalysis-44b-estimate",
    "headline": "SemiAnalysis estimates Anthropic ARR above $44B in May 2026",
-   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+   "reason": "An analyst estimate of the current run-rate, not a company-reported figure. Moved to other.estimated_run_rate_usd_m so it cannot be read as reported.",
    "changed": [
     "extracted.revenue_run_rate_usd_m",
-    "extracted.other.projected_run_rate_usd_m"
+    "extracted.other.estimated_run_rate_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "headline": "Series H page: Amazon 5GW, Google/Broadcom 5GW, SpaceX Colossus signed",
+   "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
    ]
   },
   {
@@ -8185,7 +8251,7 @@
    "audit_id": null,
    "event_id": "evt-20260813-ipo-october-2t-quartz",
    "headline": "Quartz: investors expect October IPO at $2T or more",
-   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
    "changed": [
     "extracted.revenue_run_rate_usd_m",
     "extracted.other.projected_run_rate_usd_m"
@@ -8240,7 +8306,7 @@
    "audit_id": null,
    "event_id": "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
    "headline": "The Information via Fool: $130B+ raise, longer lockups, 10b5-1 plans",
-   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
    "changed": [
     "extracted.revenue_run_rate_usd_m",
     "extracted.other.projected_run_rate_usd_m"
@@ -8306,7 +8372,7 @@
    "audit_id": null,
    "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
    "headline": "WSJ: Anthropic pushes IPO to November, after Q3 results",
-   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
    "changed": [
     "extracted.revenue_run_rate_usd_m",
     "extracted.other.projected_run_rate_usd_m"
@@ -8328,7 +8394,7 @@
    "audit_id": null,
    "event_id": "evt-20260919-nyt-100b-year-end-projection",
    "headline": "NYT: Anthropic on track to exceed $100B annualized revenue by end-2026",
-   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+   "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
    "changed": [
     "extracted.revenue_run_rate_usd_m",
     "extracted.other.projected_run_rate_usd_m"

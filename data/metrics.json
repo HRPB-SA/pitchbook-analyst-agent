@@ -1,15 +1,6 @@
 {
  "valuation": [
   {
-   "date": "2021-05-28",
-   "usd_m": 461.0,
-   "pre_usd_m": 337.0,
-   "label": "Series A: $124M led by Jaan Tallinn",
-   "event_id": "evt-20210528-series-a",
-   "tier": "T1",
-   "confidence": "HIGH"
-  },
-  {
    "date": "2022-04-29",
    "usd_m": 3000.0,
    "pre_usd_m": 2020.0,
@@ -19,13 +10,13 @@
    "confidence": "HIGH"
   },
   {
-   "date": "2023-02-03",
-   "usd_m": 5000.0,
-   "pre_usd_m": null,
-   "label": "Google reportedly invests $300M for ~10% of Anthropic",
-   "event_id": "evt-20230203-google-300m-10pct",
-   "tier": "T3",
-   "confidence": "MEDIUM"
+   "date": "2023-05-23",
+   "usd_m": 4550.0,
+   "pre_usd_m": 4100.0,
+   "label": "Anthropic raises $450M Series C led by Spark Capital",
+   "event_id": "evt-20230523-series-c-450m",
+   "tier": "T1",
+   "confidence": "HIGH"
   },
   {
    "date": "2024-01-11",
@@ -35,24 +26,6 @@
    "event_id": "evt-20240111-series-d-menlo",
    "tier": "T3",
    "confidence": "MEDIUM"
-  },
-  {
-   "date": "2024-07-01",
-   "usd_m": 21000.0,
-   "pre_usd_m": 19800.0,
-   "label": "PitchBook: Series D closes at $1.2B, $21.0B post-money",
-   "event_id": "evt-20240701-pb-series-d-1-2b-21b",
-   "tier": "T2",
-   "confidence": "HIGH"
-  },
-  {
-   "date": "2024-11-22",
-   "usd_m": 54000.0,
-   "pre_usd_m": 46000.0,
-   "label": "Amazon invests another $4B; AWS becomes primary training partner",
-   "event_id": "evt-20241122-amazon-additional-4b",
-   "tier": "T1",
-   "confidence": "HIGH"
   },
   {
    "date": "2025-03-03",
@@ -78,15 +51,6 @@
    "pre_usd_m": 350000.0,
    "label": "Anthropic raises $30B Series G at $380B post-money",
    "event_id": "evt-20260212-series-g-30b-380b",
-   "tier": "T1",
-   "confidence": "HIGH"
-  },
-  {
-   "date": "2026-05-28",
-   "usd_m": 965000.0,
-   "pre_usd_m": 900000.0,
-   "label": "Series H page: Amazon 5GW, Google/Broadcom 5GW, SpaceX Colossus signed",
-   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
    "tier": "T1",
    "confidence": "HIGH"
   }
@@ -121,15 +85,17 @@
    "usd_m": 2000.0,
    "event_id": "evt-20250516-run-rate-2b",
    "tier": "T3",
-   "confidence": "HIGH",
-   "source": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
+   "confidence": "MEDIUM",
+   "source": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+   "confidence_desk": "HIGH",
+   "confidence_note": "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
   },
   {
    "date": "2025-05-30",
    "usd_m": 3000.0,
    "event_id": "evt-20250530-run-rate-3b",
    "tier": "T2",
-   "confidence": "HIGH",
+   "confidence": "MEDIUM",
    "source": "https://finance.yahoo.com/news/exclusive-anthropic-hits-3-billion-200202733.html"
   },
   {
@@ -403,9 +369,11 @@
    "basis": "recognized, gross; \"more than $11.5 billion\", 14x YoY (Bloomberg Aug 14, CNBC Aug 15; FT; Fortune/Reuters prospectus)",
    "source_url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html",
    "tier": "T3",
-   "confidence": "HIGH",
+   "confidence": "MEDIUM",
    "event_id": "evt-20260814-q2-2026-rev-11-5b-first-report",
-   "note": "Quarter x4 = ~$46B, consistent with run-rate $30B (Apr) to $47B (May) to $65B (Jul); +5.5% vs $10.9B projection"
+   "note": "Quarter x4 = ~$46B, consistent with run-rate $30B (Apr) to $47B (May) to $65B (Jul); +5.5% vs $10.9B projection",
+   "confidence_desk": "HIGH",
+   "confidence_note": "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
   },
   {
    "period": "Q2 2026",
@@ -543,8 +511,10 @@
    "label": "Anthropic says annualized revenue topped $2B in Q1 2025",
    "event_id": "evt-20250516-run-rate-2b",
    "tier": "T3",
-   "confidence": "HIGH",
-   "notes": "SiliconANGLE paraphrases a company disclosure first reported by CNBC (May 16; CNBC returned 403). Reuters' May 30 exclusive independently says the run-rate 'crossed $2 billion around the end of March' and was 'nearly $1 billion' in December 2024. The '$2B' is a floor ('topped'). The $1.4B figure relayed by Maginative (The Information) most plausibly reflects an earlier as-of date - see conflicts. | CNBC original returned 403 to the prior agent; figure is a floor (topped $2B). Independently matched by Reuters May 30 (crossed $2B around end of March). | Sources: one T3 relay of CNBC (CNBC original returned 403) plus the PitchBook debt record. A revolver is committed capacity, not proceeds: PB nonetheless adds the $2.5B to 'Raised to Date' (126,754 includes it). The Sep-2026 ~$15B pre-IPO revolver is described by Bloomberg/Forbes as an expansion from this $2.5B facility; whether it replaces it is undisclosed (see evt-20260903). | CNBC's original ('Anthropic closes $2.5 billion credit facility...', May 16) is in Google News RSS and on NBC local sites but returned 403; single opened source."
+   "confidence": "MEDIUM",
+   "notes": "SiliconANGLE paraphrases a company disclosure first reported by CNBC (May 16; CNBC returned 403). Reuters' May 30 exclusive independently says the run-rate 'crossed $2 billion around the end of March' and was 'nearly $1 billion' in December 2024. The '$2B' is a floor ('topped'). The $1.4B figure relayed by Maginative (The Information) most plausibly reflects an earlier as-of date - see conflicts. | CNBC original returned 403 to the prior agent; figure is a floor (topped $2B). Independently matched by Reuters May 30 (crossed $2B around end of March). | Sources: one T3 relay of CNBC (CNBC original returned 403) plus the PitchBook debt record. A revolver is committed capacity, not proceeds: PB nonetheless adds the $2.5B to 'Raised to Date' (126,754 includes it). The Sep-2026 ~$15B pre-IPO revolver is described by Bloomberg/Forbes as an expansion from this $2.5B facility; whether it replaces it is undisclosed (see evt-20260903). | CNBC's original ('Anthropic closes $2.5 billion credit facility...', May 16) is in Google News RSS and on NBC local sites but returned 403; single opened source.",
+   "confidence_desk": "HIGH",
+   "confidence_note": "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
   },
   {
    "date": "2025-07-29",
@@ -2198,11 +2168,13 @@
    "source_url": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
    "publisher": "SiliconANGLE (relaying CNBC)",
    "tier": "T3",
-   "confidence": "HIGH",
+   "confidence": "MEDIUM",
    "event_id": "evt-20250516-rr-2b-q1-2025-cnbc",
    "reported": "2025-05-16",
    "use_in_model": true,
-   "note": "Reuters May 30: crossed $2B around end of March"
+   "note": "Reuters May 30: crossed $2B around end of March",
+   "confidence_desk": "HIGH",
+   "confidence_note": "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
   },
   {
    "date": "2025-05-02",
@@ -5286,8 +5258,10 @@
    "source_url": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
    "published": "2026-09-29",
    "tier": "T3",
-   "confidence": "HIGH",
-   "note": "Repeated by InvestmentNews, Stocktwits, SiliconANGLE (derivative)."
+   "confidence": "MEDIUM",
+   "note": "Repeated by InvestmentNews, Stocktwits, SiliconANGLE (derivative).",
+   "confidence_desk": "HIGH",
+   "confidence_note": "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
   },
   {
    "metric": "Commitment: Amazon",
@@ -5297,8 +5271,10 @@
    "source_url": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
    "published": "2026-09-29",
    "tier": "T3",
-   "confidence": "HIGH",
-   "note": "Amazon is also investor ($190.4B carrying value, T1) and sales channel (47%)."
+   "confidence": "MEDIUM",
+   "note": "Amazon is also investor ($190.4B carrying value, T1) and sales channel (47%).",
+   "confidence_desk": "HIGH",
+   "confidence_note": "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
   },
   {
    "metric": "Commitment: Microsoft",
@@ -5308,8 +5284,10 @@
    "source_url": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
    "published": "2026-09-29",
    "tier": "T3",
-   "confidence": "HIGH",
-   "note": "Microsoft also a strategic investor (Nov 2025, scout)."
+   "confidence": "MEDIUM",
+   "note": "Microsoft also a strategic investor (Nov 2025, scout).",
+   "confidence_desk": "HIGH",
+   "confidence_note": "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
   },
   {
    "metric": "Commitment: Broadcom-related equipment leases",
@@ -5319,8 +5297,10 @@
    "source_url": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
    "published": "2026-09-29",
    "tier": "T3",
-   "confidence": "HIGH",
-   "note": "Largest single line; counterparty structure (SPV lessor financing, scout-2026q2) not described in opened coverage."
+   "confidence": "MEDIUM",
+   "note": "Largest single line; counterparty structure (SPV lessor financing, scout-2026q2) not described in opened coverage.",
+   "confidence_desk": "HIGH",
+   "confidence_note": "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
   },
   {
    "metric": "Commitment: SpaceX/xAI",
@@ -5759,8 +5739,10 @@
    "source_url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
    "published": "2026-05-20",
    "tier": "T3",
-   "confidence": "HIGH",
-   "note": "Projection, not actual: actual Q2 revenue was $11.5B. Motley Fool's Sep 3 'posted $10.9B' repeats this projection."
+   "confidence": "MEDIUM",
+   "note": "Projection, not actual: actual Q2 revenue was $11.5B. Motley Fool's Sep 3 'posted $10.9B' repeats this projection.",
+   "confidence_desk": "HIGH",
+   "confidence_note": "Capped from HIGH: a T3+ source needs a T1/T2 origin for HIGH."
   },
   {
    "metric": "Operating profit projection",

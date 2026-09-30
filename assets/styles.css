@@ -395,5 +395,5 @@ table.model .neg { color: var(--critical); }
 .data td.modeled, td.modeled { color: var(--muted); font-style: italic; }
 
 .node text { paint-order: stroke; stroke: var(--chart-surface); stroke-width: 3px; stroke-linejoin: round; }
-.data td.small, .data td { overflow-wrap: anywhere; }
-.data td.mono { white-space: nowrap; overflow-wrap: normal; }
+.net-table td { overflow-wrap: anywhere; }
+.net-table td.mono { white-space: nowrap; overflow-wrap: normal; }

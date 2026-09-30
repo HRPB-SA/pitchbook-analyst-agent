@@ -344,7 +344,7 @@
   ],
   "extracted": {
    "amount_usd_m": 124.0,
-   "valuation_post_usd_m": 461.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": 337.0,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -510,7 +510,8 @@
     "pitchbook_deal_id": "173059-39T",
     "pb_shares_acquired": 2416584,
     "pb_total_investors": 7,
-    "pb_percent_acquired": 26.9
+    "pb_percent_acquired": 26.9,
+    "valuation_reference_usd_m": 461.0
    }
   },
   "confidence": "HIGH",
@@ -527,7 +528,24 @@
   ],
   "distinct_outlets": 5,
   "independent_sources": 5,
-  "single_chain_suspected": false
+  "single_chain_suspected": false,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 461.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 461.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20211201-hhh-assistant-paper",
@@ -2421,7 +2439,7 @@
   ],
   "extracted": {
    "amount_usd_m": 300.0,
-   "valuation_post_usd_m": 5000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -2469,7 +2487,8 @@
     "share_price_usd": null,
     "announced_vs_closed": "reported (FT), terms not confirmed by companies",
     "pitchbook_deal_id": null,
-    "stake_pct_reported": 10
+    "stake_pct_reported": 10,
+    "valuation_reference_usd_m": 5000.0
    }
   },
   "confidence": "MEDIUM",
@@ -2484,7 +2503,24 @@
   ],
   "distinct_outlets": 2,
   "independent_sources": 2,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 5000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 5000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20230221-anthrop-llc-trademark-suit-settled",
@@ -8040,7 +8076,7 @@
    {
     "id": "R-PROJ",
     "audit_id": null,
-    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
     "changed": {
      "extracted.revenue_run_rate_usd_m": {
       "was": 850.0,
@@ -9395,7 +9431,7 @@
   ],
   "extracted": {
    "amount_usd_m": 1200.0,
-   "valuation_post_usd_m": 21000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": 19800.0,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -9480,7 +9516,8 @@
     "pb_total_investors": 43,
     "pb_new_investors": 38,
     "press_size_usd_m": 750,
-    "press_post_usd_m": 18400
+    "press_post_usd_m": 18400,
+    "valuation_reference_usd_m": 21000.0
    }
   },
   "confidence": "HIGH",
@@ -9492,7 +9529,24 @@
   "merged_ids": [],
   "distinct_outlets": 4,
   "independent_sources": 4,
-  "single_chain_suspected": false
+  "single_chain_suspected": false,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 21000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 21000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20240716-android-app",
@@ -10642,7 +10696,7 @@
   ],
   "extracted": {
    "amount_usd_m": null,
-   "valuation_post_usd_m": 40000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -10679,7 +10733,8 @@
    "customers": null,
    "other": {
     "funding_to_date_cited": "~$7.6B including forward commitments (SiliconANGLE)",
-    "outcome": "no round closed in 2024; $60B-valuation talks reported Jan 2025 and Series E at $61.5B post closed Mar 3, 2025 (outside period)"
+    "outcome": "no round closed in 2024; $60B-valuation talks reported Jan 2025 and Series E at $61.5B post closed Mar 3, 2025 (outside period)",
+    "valuation_reference_usd_m": 40000.0
    }
   },
   "confidence": "MEDIUM",
@@ -10691,7 +10746,24 @@
   "merged_ids": [],
   "distinct_outlets": 2,
   "independent_sources": 2,
-  "single_chain_suspected": false
+  "single_chain_suspected": false,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 40000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 40000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20240927-cma-clears-amazon-anthropic-partnership",
@@ -12006,7 +12078,7 @@
   ],
   "extracted": {
    "amount_usd_m": 4000.0,
-   "valuation_post_usd_m": 54000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": 46000.0,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -12099,7 +12171,8 @@
     "cumulative_amazon_investment_usd_m": 8000,
     "cash_burn_2024_projected_gt_usd_m": 2700,
     "amazon_additional_investment_usd_m": 4000,
-    "total_raised_usd_m": 13700
+    "total_raised_usd_m": 13700,
+    "valuation_reference_usd_m": 54000.0
    }
   },
   "confidence": "HIGH",
@@ -12118,7 +12191,24 @@
   ],
   "distinct_outlets": 6,
   "independent_sources": 6,
-  "single_chain_suspected": false
+  "single_chain_suspected": false,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 54000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 54000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20241125-model-context-protocol",
@@ -19746,7 +19836,7 @@
     "openai_2025_projection_usd_m": "more than 12000 total revenue (vs 3700 in 2024)"
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "Reuters exclusive from unnamed sources; the Yahoo and Investing.com pages are copies of the same Reuters text (not independent). The end-of-March >$2B level matches Anthropic's own 'topped $2B in Q1' disclosure. Next datapoint ($4B, The Information, Jul 1 2025) is outside the window. | Annualized (projected run-rate) - Reuters itself notes OpenAI figures in the same story are fiscal-year totals and not comparable. Sources anonymous; consistent with company $2B Q1 disclosure. Yahoo and Investing.com pages are copies of one Reuters text.",
   "agent": "scout-2025h1",
   "agents": [
@@ -19758,7 +19848,8 @@
   ],
   "distinct_outlets": 1,
   "independent_sources": 1,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20250601-windsurf-claude-access-cut-off",
@@ -28249,7 +28340,7 @@
    {
     "id": "R-PROJ",
     "audit_id": null,
-    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
     "changed": {
      "extracted.revenue_run_rate_usd_m": {
       "was": 26000.0,
@@ -28467,7 +28558,7 @@
    {
     "id": "R-PROJ",
     "audit_id": null,
-    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
     "changed": {
      "extracted.revenue_run_rate_usd_m": {
       "was": 9000.0,
@@ -37717,7 +37808,7 @@
     "cnbc_rss_title": "Mar 27 'Cybersecurity stocks fall on report Anthropic is testing a powerful new model' (403)"
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "Fortune article timestamped Mar 26, 10:27 PM ET. Another search snippet cited a 7.5% CrowdStrike drop; CoinDesk (opened) says 4-6%, so the range is reported as CoinDesk states it.",
   "agent": "scout-2026q1",
   "agents": [
@@ -37726,7 +37817,8 @@
   "merged_ids": [],
   "distinct_outlets": 2,
   "independent_sources": 2,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20260326-dow-preliminary-injunction",
@@ -38337,7 +38429,7 @@
     "cnbc_rss_title": "Mar 31 'Anthropic leaks part of Claude Code's internal source code' (403)"
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "TechCrunch piece is dated Apr 1; discovery on Tuesday Mar 31. The mechanism of the leak (packaging error) is per TechCrunch's 'accidentally included in a recent release'.",
   "agent": "scout-2026q1",
   "agents": [
@@ -38346,7 +38438,8 @@
   "merged_ids": [],
   "distinct_outlets": 1,
   "independent_sources": 1,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20260401-anthropic-overbroad-dmca-takedowns-of-8100-github-repos",
@@ -41770,7 +41863,7 @@
    "headcount": null,
    "customers": null,
    "other": {
-    "projected_run_rate_usd_m": 44000.0
+    "estimated_run_rate_usd_m": 44000.0
    }
   },
   "confidence": "LOW",
@@ -41787,13 +41880,13 @@
    {
     "id": "R-PROJ",
     "audit_id": null,
-    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+    "reason": "An analyst estimate of the current run-rate, not a company-reported figure. Moved to other.estimated_run_rate_usd_m so it cannot be read as reported.",
     "changed": {
      "extracted.revenue_run_rate_usd_m": {
       "was": 44000.0,
       "now": null
      },
-     "extracted.other.projected_run_rate_usd_m": {
+     "extracted.other.estimated_run_rate_usd_m": {
       "was": null,
       "now": 44000.0
      }
@@ -42762,7 +42855,7 @@
     "status": "Company notice; no SEC/FINRA action found in opened sources"
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "TechCrunch (opened) lists Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar and Upmarket; both preferred and common transfers require board approval; Anthropic was reportedly raising at $900B; Forge and Sydecar disputed their inclusion. Axios, CoinDesk, Decrypt carried it. | Sets the ground rules for every 'secondary mark' below: priced trades are rare and mostly SPV/derivative, and Anthropic disclaims them. The '>$1T demand' is a platform claim, not Anthropic's. Note the 2024 FTX sale purchaser list (T1) included vehicles such as Hiive Anthropic Series I/II and Forge funds, i.e. the estate sales pre-date this policy. | Named platforms: Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar, Upmarket. The >$1T aggregate demand is a claim by Unicorns Exchange, not Anthropic. Form D SPV filings for Anthropic exposure (HII Anthropic Series-02, Granada Anthropic SPV, Inflection Ventures Anthropic Fund I, WU Anthropic LP) appear on EDGAR May-Jun (not opened). | Named: Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar, Upmarket. WebSearch snippets (not opened) say tokenized products tied to Anthropic fell ~40% in a day and implied valuations reached ~$1.6T vs $965B Series H. Securities-law exposure for unauthorized resale/tokens is an inference.",
   "agent": "desk-governance",
   "agents": [
@@ -42778,7 +42871,8 @@
   ],
   "distinct_outlets": 1,
   "independent_sources": 1,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20260513-claude-for-small-business",
@@ -44548,7 +44642,7 @@
   ],
   "extracted": {
    "amount_usd_m": 65000.0,
-   "valuation_post_usd_m": 965000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": 900000.0,
    "revenue_run_rate_usd_m": 47000.0,
    "revenue_period_usd_m": null,
@@ -44892,7 +44986,8 @@
      "GIC",
      "ICONIQ",
      "XN"
-    ]
+    ],
+    "valuation_reference_usd_m": 965000.0
    }
   },
   "confidence": "HIGH",
@@ -44915,7 +45010,24 @@
   ],
   "distinct_outlets": 5,
   "independent_sources": 5,
-  "single_chain_suspected": false
+  "single_chain_suspected": false,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 965000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 965000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20260529-samsung-skhynix-micron",
@@ -48457,7 +48569,7 @@
    "product": {},
    "people": []
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "Menlo gives no stake size; TechCrunch (scout-2024) and Business Insider headlines put Menlo's Anthropic stake near $14B. Menlo is also the source of the market-share reports.",
   "agent": "desk-ecosystem",
   "agents": [
@@ -48466,7 +48578,8 @@
   "merged_ids": [],
   "distinct_outlets": 1,
   "independent_sources": 1,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20260624-alibaba-distillation-allegation",
@@ -53751,7 +53864,7 @@
    {
     "id": "R-PROJ",
     "audit_id": null,
-    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
     "changed": {
      "extracted.revenue_run_rate_usd_m": {
       "was": 110000.0,
@@ -53844,7 +53957,7 @@
     "valuation_reference_usd_m": 965000.0
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "PERIOD revenue (recognized, gross of cloud-partner resale), not run-rate. Bloomberg Aug 14 and CNBC Aug 15 headlines seen in Google News RSS (not opened); the opened summary is dated Aug 21. Corroborated by TNW (Sep 15; \"quarterly revenue passed $11.5bn\") and the Fortune/Reuters prospectus coverage ($11.5B). Q2 2025 implied ~$0.82B. | Bloomberg original not opened. Earliest opened source for the Q2 $11.5B revenue figure (CNBC's Aug 15 report, linked from Fortune, returned 403). The expected end-August public filing never materialised - the prospectus remained confidential and leaked on Sep 28; see the no-public-S-1 event. | Bloomberg original (Aug 20) not opened. Figure later matched by the leaked prospectus ($11.5B Q2; Q1 $4.73B per Fortune). OpenAI 'Q2 revenue $6.2B' (quarterly) is not comparable with its ~$40B run-rate quoted the same week.",
   "agent": "desk-revenue",
   "agents": [
@@ -53859,6 +53972,7 @@
   "distinct_outlets": 4,
   "independent_sources": 4,
   "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document.",
   "corrections": [
    {
     "id": "R-VAL",
@@ -57067,7 +57181,7 @@
    {
     "id": "R-PROJ",
     "audit_id": null,
-    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
     "changed": {
      "extracted.revenue_run_rate_usd_m": {
       "was": 65000.0,
@@ -60457,7 +60571,7 @@
    {
     "id": "R-PROJ",
     "audit_id": null,
-    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
     "changed": {
      "extracted.revenue_run_rate_usd_m": {
       "was": 110000.0,
@@ -60564,7 +60678,7 @@
    {
     "id": "R-PROJ",
     "audit_id": null,
-    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+    "reason": "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as reported.",
     "changed": {
      "extracted.revenue_run_rate_usd_m": {
       "was": 100000.0,
@@ -62956,7 +63070,7 @@
     "eval_awareness": "potential model awareness of evaluation efforts limits safety assessment"
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "Quotes are verbatim from Reuters' text as opened (Yahoo copy; Investing.com copy). Page counts rest on Reuters alone (Gizmodo repeats). TechCrunch says 'nearly a third' and Fortune (Edwards) 'more than one-third': 80/261 = 30.7% (desk arithmetic). The Reuters piece also mentions researcher Evan Hubinger's >10% estimate of AI killing humans within a decade - attribution to the prospectus vs a public statement is unclear, so it is not recorded as a prospectus disclosure.",
   "agent": "desk-s1",
   "agents": [
@@ -62965,7 +63079,8 @@
   "merged_ids": [],
   "distinct_outlets": 4,
   "independent_sources": 4,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20260928-prospectus-risk-factors",
@@ -63324,7 +63439,7 @@
     "board_size_reported_elsewhere": 7
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "Two Reuters copies agree. Board table is partial (four outside directors named plus the two Amodeis; Reuters' Founder LLC story says four of seven seats are LTBT-elected). Liddell is ex-Microsoft CFO and ex-deputy White House chief of staff; Narasimhan (Novartis CEO) was appointed by the LTBT per Anthropic (scout-2026q2).",
   "agent": "desk-s1",
   "agents": [
@@ -63333,7 +63448,8 @@
   "merged_ids": [],
   "distinct_outlets": 1,
   "independent_sources": 1,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20260928-reuters-draft-prospectus-2025-financials",
@@ -64336,7 +64452,7 @@
     "insurance_mentioned": false
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "Two Reuters copies and SecurityWeek agree on the quoted language. The FTC probe of AI labs (headline Sep 30, not opened) and an OpenAI suit over rogue agents are context, not Anthropic prospectus disclosures. No copyright, music-publisher, Reddit or Pentagon litigation language appeared in any opened prospectus coverage - see open items.",
   "agent": "desk-s1",
   "agents": [
@@ -64345,7 +64461,8 @@
   "merged_ids": [],
   "distinct_outlets": 2,
   "independent_sources": 2,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
@@ -64439,7 +64556,7 @@
     "other_share_classes": "four other classes with various functions or limits, incl. minimal voting rights for strategic partners (JPost)"
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "Reuters' own review of the draft prospectus (JPost copy, TNW/Crypto Briefing summaries) agrees with The Information's independent scoop (50.1%, three founders minimum, 3+4 board split). The '~2% economic each' comes only from The Information (Aug 18/Sep 25). Post-IPO LTBT powers beyond electing four directors ('gradually gain more authority over board composition', Crypto Briefing) not detailed in opened text. TNW says three co-founders are unnamed; JPost names Dario, Daniela, Tom Brown and Chris Olah.",
   "agent": "desk-s1",
   "agents": [
@@ -64448,7 +64565,8 @@
   "merged_ids": [],
   "distinct_outlets": 5,
   "independent_sources": 5,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20260929-reuters-47pct-cloud-channel-mix",
@@ -64728,7 +64846,7 @@
     "first_reported": "New York Post exclusive"
    }
   },
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "notes": "Anthropic had not responded at publication. CNBC, CBS, The Verge headlines seen (CNBC 403).",
   "agent": "scout-2026q3",
   "agents": [
@@ -64737,7 +64855,8 @@
   "merged_ids": [],
   "distinct_outlets": 1,
   "independent_sources": 1,
-  "single_chain_suspected": true
+  "single_chain_suspected": true,
+  "confidence_note": "Capped from HIGH: likely one reporting chain and the primary source is not a T1 document."
  },
  {
   "id": "evt-20260930-independent-leaderboards-snapshot",

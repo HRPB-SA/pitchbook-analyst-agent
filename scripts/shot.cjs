@@ -8,7 +8,7 @@ const srv = http.createServer((req, res) => { let p = decodeURIComponent(req.url
 (async () => {
   await new Promise(r => srv.listen(0, r)); const port = srv.address().port;
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || undefined });
-  const errors = [];
+  const errors = []; const heights = {}; const HF = path.join(ROOT, 'dist', 'qa-heights.json'); let prev = {}; try { prev = JSON.parse(fs.readFileSync(HF, 'utf8')); } catch {}
   const tabs = ['overview', 'timeline', 'topics', 'model', 'compute', 'thesis', 'network', 'agents', 'sources'];
   for (const [w, h, name] of [[1440, 1000, 'desk'], [400, 860, 'phone']]) {
     for (const theme of ['light', 'dark']) {
@@ -23,12 +23,17 @@ const srv = http.createServer((req, res) => { let p = decodeURIComponent(req.url
         if (t === 'agents') { const btn = await page.$('.floor-ctl .btn.primary'); if (btn) { await btn.click(); await page.waitForTimeout(2500); } }
         const sw = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
         if (sw) errors.push(`[${name}/${theme}/${t}] horizontal overflow`);
+        // a table may scroll inside its own frame, but not be 4x wider than it (a squeezed-column regression once put the evidence ledger 15,000 px wide)
+        const wide = await page.evaluate(() => [...document.querySelectorAll('.panel.active .tablewrap')].map(w => { const tb = w.querySelector('table'); return tb ? { r: tb.scrollWidth / Math.max(1, w.clientWidth), h: (w.closest('.card')?.querySelector('h3')?.textContent || '').slice(0, 40) } : null; }).filter(x => x && x.r > 4));
+        for (const x of wide) errors.push(`[${name}/${theme}/${t}] table ${x.r.toFixed(1)}x wider than its frame: ${x.h}`);
+        const ph = await page.evaluate(() => document.documentElement.scrollHeight); heights[`${name}/${theme}/${t}`] = ph;
+        if (prev[`${name}/${theme}/${t}`] && ph > prev[`${name}/${theme}/${t}`] * 1.4 && ph > 3000) errors.push(`[${name}/${theme}/${t}] page height grew ${prev[`${name}/${theme}/${t}`]} -> ${ph}`);
         if (theme === 'light' || t === 'overview' || t === 'agents') await page.screenshot({ path: path.join(OUT, `${name}-${theme}-${t}.png`), fullPage: name === 'desk' && t !== 'timeline' });
       }
       await ctx.close();
     }
   }
-  await browser.close(); srv.close();
+  await browser.close(); srv.close(); try { fs.writeFileSync(HF, JSON.stringify(heights)); } catch {}
   fs.writeFileSync(path.join(OUT, 'errors.txt'), errors.join('\n'));
   console.log(errors.length ? `ERRORS (${errors.length}):\n` + errors.slice(0, 40).join('\n') : 'no console/page errors, no overflow');
 })();
