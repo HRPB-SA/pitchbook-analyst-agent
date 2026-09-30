@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T22:12:33Z",
+ "generated": "2026-09-30T22:39:41Z",
  "bull": [
   {
    "claim": "Demand is outrunning compute: gross run-rate rose from $9B to above $65B in seven months, and every revenue plan the record can test was met or beaten.",
@@ -366,13 +366,54 @@
   "one_liner": "BEARISH at the reported $2T IPO target, which needs the bull case. NEUTRAL near $1.5T. LEAN BULLISH only at or below about $1.07T, which includes Series H at $965B.",
   "horizon": "12-24 months after listing",
   "rationale": [
-   "Reference class first: top-1,000 firms (1950-2015), AWS and Nvidia data center; 19 of 4,472 five-year periods above $25B compounded real sales at 30%, and 1 of 1,810 above $50B, Anthropic's FY2026 base; the Base Rate Book gives the median most of the weight beyond three years and all three scenarios sit above it, even the bear at 26% a year, so I weight it heavily for 2029-2030 growth and margins, lightly for 2026-2027, where H1 actuals are in hand.",
-   "At base margins every mark needs growth beyond that class: $262B, $420B and $568B of 2030 revenue (47%, 66% and 79% a year from FY2026), or $147B, $243B and $333B at bull margins, as both analysts compute; Series H passes only because delivering the $195B 2028 plan leaves 11% to 16% a year for 2029-2030, against AWS's 13% to 20% in 2023-2025 and 37% in Q2 2026.",
-   "At $2T the price is 59% above the adjusted base value of $1.26T (engine $1.19T, less 10.6% for SBC as a cost, plus 8.9% date roll and $100B net cash), about halfway to the adjusted bull value of $2.77T, and above every single-variable base value I ran (top $1.78T at 30x); bands are LEAN BULLISH to about $1.07T, NEUTRAL to $1.6T, LEAN BEARISH to $1.8T, BEARISH above.",
-   "The base case follows the company plan, an inside-view anchor, but its adds of $5B to $6B a month sit below today's $7B, so I read it as central, not a cap; Series H is 23% below it and equals the plan less 9% to 13%, yet I stop at LEAN BULLISH because 2029-2030 growth 15 and 10 points lower takes 26% off value.",
+   "Reference class first, top-1,000 firms (1950-2015) with AWS and Nvidia data center: 19 of 4,472 five-year periods above $25B compounded real sales at 30% a year or more, and in the above-$50B class, where Anthropic's $55.8B FY2026 base sits, 1 of 1,810 did; the median gets most of the weight beyond three years and all three scenarios sit above it, so I weight it heavily for 2029-2030 growth and margins, lightly for 2026-2027, where H1 actuals are in hand.",
+   "At base margins every mark needs growth beyond that class: $262B, $420B and $568B of 2030 revenue (47%, 66% and 79% a year from FY2026), or $147B, $243B and $333B at bull margins, as both analysts compute; Series H passes only because delivering the $195B 2028 plan leaves 16% a year (model basis) or 11% (adjusted basis) for 2029-2030, against AWS's 13% to 20% in 2023-2025 and 37% in Q2 2026.",
+   "At $2T the price is 59% above the adjusted base of $1.26T (engine $1.19T, less 10.6% for SBC as a cost, plus 8.9% date roll and $100B net cash) and above every single-variable case; the bands (LEAN BULLISH to about $1.07T, NEUTRAL to $1.6T, LEAN BEARISH to $1.8T, BEARISH above) are a judgment from those cases, not odds, and NEUTRAL runs above the base because my base takes the lower margin reading, so favorable cases outrun adverse ones.",
+   "The base case follows the company plan, an inside-view anchor, but its $5B to $6B monthly adds sit below today's $7B, so I read it as central, not a cap; Series H is 23% below the adjusted base and matches FY2028 revenue 9% (model basis, training and capex held) to 18% (adjusted basis, scaled with revenue) under the plan, yet I stop at LEAN BULLISH because 2029-2030 growth 15 and 10 points lower takes 26% off value.",
    "The cost side is fixed while revenue is not: about 80% of at least $518B of compute (8.0x the $65B run-rate) is non-cancelable, firm payments of about $53B in 2028 are 27% of plan revenue but 56% of the bear's, most large clients reportedly lack long-term contracts (one Reuters chain), two clouds carried 47% of FY2025 sales, two customers 12% each, and Opus list prices fell 73% in 14 months.",
    "Information quality caps conviction: no public S-1, FY2024 revenue is implied, FY2025 is one readable Reuters review, no GAAP gross margin exists, and $559M was a May 20 projection; I use the Modeler's reading of $0.56 because held through H2 it implies a margin near 20% against a profit warning (WSJ via PYMNTS, T3), and the other reading adds 20% to 29% to base value, one notch.",
-   "Strongest argument for the side I reject: revenue plans were beaten 2.1x for FY2025 and the 2028 plan rose 2.8x in nine months, $2T needs only a 26% to 42% beat, and Nvidia data center grew +117% YoY in Q2 FY2027 and AWS +37% YoY in Q2 2026 (T1 releases I fetched, not in the record); but both sell into the same build-out, so they test the cycle, not Anthropic."
+   "Strongest argument for the side I reject: plans were beaten 2.1x for FY2025 and the 2028 plan rose 2.8x in nine months, $2T needs FY2028 revenue 26% (adjusted basis, training and capex held) to 42% (model basis, scaled) above the plan, and Nvidia data center grew +117% YoY in Q2 FY2027 and AWS +37% YoY in Q2 2026 (T1 releases, fetched, outside the record); but both sell into the same build-out, so they test the cycle, not Anthropic."
+  ],
+  "rationale_ids": [
+   [
+    "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+    "evt-20260814-q2-2026-rev-11-5b-first-report"
+   ],
+   [
+    "evt-20260528-series-h-compute-agreements-memory-partners",
+    "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t",
+    "evt-20260918-wsj-ipo-pushed-to-november",
+    "evt-20260817-reuters-2028-190-200b-forecast"
+   ],
+   [
+    "evt-20260918-wsj-ipo-pushed-to-november",
+    "evt-20260928-reuters-draft-prospectus-2025-financials",
+    "evt-20260528-series-h-compute-agreements-memory-partners",
+    "evt-20260212-series-g-30b-380b"
+   ],
+   [
+    "evt-20260817-reuters-2028-190-200b-forecast",
+    "evt-20260817-rr-65b-end-july",
+    "evt-20260528-series-h-compute-agreements-memory-partners"
+   ],
+   [
+    "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+    "evt-20260929-reuters-47pct-cloud-channel-mix",
+    "evt-20250805-claude-opus-4-1",
+    "evt-20260922-claude-opus-5-5-launch-2"
+   ],
+   [
+    "evt-20260601-confidential-draft-s1",
+    "evt-20260928-reuters-draft-prospectus-2025-financials",
+    "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
+    "evt-20260610-pitchbook-gm-44pct-compute-cost"
+   ],
+   [
+    "evt-20250415-proj-2025-2-2b-2027-12b",
+    "evt-20260928-reuters-draft-prospectus-2025-financials",
+    "evt-20251104-information-gross-margin-path-to-77pct",
+    "evt-20260817-reuters-2028-190-200b-forecast"
+   ]
   ],
   "what_flips": [
    "Q3 2026 revenue of $19B or more, above the bull path's $17.9B, by Nov 30, together with an S-1 GAAP gross margin of 60% or more: moves $2T to LEAN BEARISH and $1.5T to LEAN BULLISH.",
@@ -381,6 +422,37 @@
    "A contractual-obligations table showing a non-cancelable share under 60% or 2027 payments under $45B: the fixed-cost argument shrinks and every mark moves one notch up.",
    "A roadshow range implying about $1.07T or less moves the IPO call to LEAN BULLISH; a listing at $1.8T or more that still trades above the offer 90 days later and after the first lock-up release shows the bearish leg was wrong.",
    "Claude removed as Cursor's default after the SpaceX close, or a SpaceX notice on Colossus after the 180-day mark near Oct 30: coding share was rented, and Series H moves to NEUTRAL."
+  ],
+  "what_flips_ids": [
+   [
+    "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+    "evt-20260918-wsj-ipo-pushed-to-november",
+    "evt-20260913-ft-adj-op-profit-gm-above-80pct"
+   ],
+   [
+    "evt-20260817-rr-65b-end-july",
+    "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+    "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue"
+   ],
+   [
+    "evt-20260929-reuters-47pct-cloud-channel-mix",
+    "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+    "evt-20260305-pitchbook-ranking-note-nrr-gm-path"
+   ],
+   [
+    "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+    "evt-20260928-reuters-draft-prospectus-2025-financials"
+   ],
+   [
+    "evt-20260918-wsj-ipo-pushed-to-november",
+    "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t",
+    "evt-20260827-information-prospectus-after-labor-day-insider-sales"
+   ],
+   [
+    "evt-20260616-spacex-cursor",
+    "evt-20260528-spacex-lease-length-dispute",
+    "evt-20260520-spacex-s1-anthropic-colossus-contract"
+   ]
   ],
   "house_view_check": [
    "Valuation-quality paradox: extends. The same $65B run-rate is 14.8x at Series H and 30.8x at the $2T target while the quality evidence between them is unchanged (no GAAP margin, no retention), and Reuters cites Palantir at 53x expected 2026 revenue; quality cannot be ranked until the S-1 sets one basis.",
@@ -394,19 +466,36 @@
     "mark": "series_h",
     "ev_usd_m": 965000,
     "call": "LEAN BULLISH",
-    "why": "Needs $262B of 2030 revenue (47% a year, inside the 0.0% bin), but this case differs: $16.2B of H1 revenue and a $65B run-rate are in hand, and after the $195B plan only 11% to 16% a year is needed; the price is 23% below the adjusted base, so LEAN BULLISH with the plan as the test, base-case return about +28% a year."
+    "why": "Needs $262B of 2030 revenue (47% a year, inside the 0.0% bin), but this case differs: $16.2B of H1 revenue and a $65B run-rate are in hand, and after the $195B plan only 16% a year (model basis) or 11% (adjusted basis) is needed; the price is 23% below the adjusted base, so LEAN BULLISH with the plan as the test, base-case return about +28% a year.",
+    "event_ids": [
+     "evt-20260528-series-h-compute-agreements-memory-partners",
+     "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+     "evt-20260817-rr-65b-end-july",
+     "evt-20260817-reuters-2028-190-200b-forecast"
+    ]
    },
    {
     "mark": "secondary",
     "ev_usd_m": 1500000,
     "call": "NEUTRAL",
-    "why": "Needs $420B (66% a year) or a 9% to 17% beat of the 2028 plan, sits 19% above the adjusted base and inside favorable single-variable values ($1.52T to $1.63T with Compute Economist margins, $1.57T at 26x), so NEUTRAL; the mark is a thin reported high, not a clearing price, and base-case return is about +3% a year."
+    "why": "Needs $420B (66% a year) or FY2028 revenue 9% (adjusted basis, training and capex held) to 17% (model basis, scaled) above the plan, sits 19% above the adjusted base and inside favorable single-variable values ($1.52T to $1.63T with Compute Economist margins, $1.57T at 26x), so NEUTRAL; the mark is a thin reported high, not a clearing price, and base-case return is about +3% a year.",
+    "event_ids": [
+     "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t",
+     "evt-20260925-founders-voting-control",
+     "evt-20260709-secondary-market-indications-1-2t",
+     "evt-20260817-reuters-2028-190-200b-forecast"
+    ]
    },
    {
     "mark": "ipo_target",
     "ev_usd_m": 2000000,
     "call": "BEARISH",
-    "why": "Needs $568B (79% a year, above the bull path's $448B at base margins), a 26% to 42% beat of the 2028 plan, or bull margins and revenue together; it sits 59% above the adjusted base (47% if the whole raise is primary cash) and above every single-variable base value, so BEARISH; base-case return is about -11% a year and the bull analyst would not chase it."
+    "why": "Needs $568B (79% a year, above the bull path's $448B at base margins), FY2028 revenue 26% (adjusted basis, training and capex held) to 42% (model basis, scaled) above the plan, or bull margins and revenue together; it sits 59% above the adjusted base (47% if the whole raise is primary cash) and above every single-variable base value, so BEARISH; base-case return is about -11% a year and the bull analyst would not chase it.",
+    "event_ids": [
+     "evt-20260918-wsj-ipo-pushed-to-november",
+     "evt-20260813-ipo-october-2t-quartz",
+     "evt-20260817-reuters-2028-190-200b-forecast"
+    ]
    }
   ],
   "position_check": [
@@ -461,7 +550,7 @@
    "bull": 2,
    "bear": 4,
    "edge": "bear",
-   "note": "Scored at the reported $2T: 30.8x gross run-rate, $568B of 2030 revenue at base margins, 59% above the adjusted base. At Series H the edge flips to the bull: 23% below the adjusted base and plan revenue less 9% to 13%."
+   "note": "Scored at the reported $2T: 30.8x gross run-rate, $568B of 2030 revenue at base margins, 59% above the adjusted base. At Series H the edge flips to the bull: 23% below the adjusted base and matched by FY2028 revenue 9% to 18% under the plan (ends defined in rationale 4)."
   },
   {
    "dimension": "governance",
@@ -475,7 +564,7 @@
    "bull": 3,
    "bear": 3,
    "edge": "even",
-   "note": "Fixed dollars are small: Bartz $1.5B (final Jul 20), $150M of DoD ARR lost, run-rate up from $14B to $65B through the Pentagon fight. The exposure is discretion: an 18-day model recall, the Mythos 5.1 hold, an FTC probe (Sep 30, single source), a 2-1 D.C. Circuit loss."
+   "note": "Fixed dollars are small: Bartz $1.5B (final Jul 20), $150M of DoD ARR lost, run-rate up from $14B to $65B through the Pentagon fight. The exposure is discretion: an 18-day model recall, the Mythos 5.1 hold, an FTC probe (Sep 30; Reuters citing a senior agency official, not an FTC release), a 2-1 D.C. Circuit loss."
   },
   {
    "dimension": "IPO mechanics",
