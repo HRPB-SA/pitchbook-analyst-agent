@@ -1,0 +1,655 @@
+{
+ "agent": "analyst-topic-legal",
+ "role": "Topic Analyst — Legal, regulatory & security",
+ "started": "2026-09-30T18:18:55Z",
+ "finished": "2026-09-30T18:35:39Z",
+ "topic": {
+  "slug": "legal",
+  "title": "Legal, regulatory & security risk",
+  "one_liner": "Only the $1.5B Bartz settlement (final Jul 20) is fixed-dollar. The Pentagon exclusion (upheld Sep 25) and FTC agent probe (Sep 30) are open-ended, weeks before listing.",
+  "key_metrics": [
+   {
+    "label": "Bartz settlement, final approval Jul 20, 2026",
+    "value": "$1.5B non-reversionary; 482,460 works; about $3,109 per work (derived); fees $101.56M; $450M still due Sep 25, 2027 per a T3 schedule",
+    "event_id": "evt-20260720-bartz-final-approval"
+   },
+   {
+    "label": "Open court matters (39 tracked rows)",
+    "value": "16 open (13 as defendant, 3 as plaintiff), 1 settled, 1 closed; a floor because the table lags events",
+    "event_id": "evt-20260918-buist-v-anthropic-sherman-act-class-action"
+   },
+   {
+    "label": "Latest material rulings",
+    "value": "Sep 25 D.C. Circuit upholds FASCSA exclusion 2-1 (loss); Sep 17 Reddit demurrer overruled on 3 of 5 claims (loss); Aug 27 N.D. Cal. vacates 3252 designation (win); Jul 20 Bartz final",
+    "event_id": "evt-20260925-dc-circuit-denies-anthropic-petitions"
+   },
+   {
+    "label": "Music suits, statutory ceiling (derived)",
+    "value": "$5.4B on 35,874 counted works at $150,000 each, Concord II alone $3.08B; about $112M at the Bartz per-work rate",
+    "event_id": "evt-20260128-concord-ii-complaint-names-amodei-mann"
+   },
+   {
+    "label": "Pentagon revenue exposure (Anthropic declaration, Mar 9)",
+    "value": "Hundreds of millions to multiple billions of 2026 revenue; up to 50-100% of DoW-related revenue; $200M CDAO ceiling; about 90% of workloads moved (Sep 11)",
+    "event_id": "evt-20260309-cfo-declaration-revenue-at-risk"
+   },
+   {
+    "label": "Export-control outage, Fable 5 and Mythos 5",
+    "value": "Jun 12 to Jun 30: 18 days by Anthropic's count, 19 by calendar; revenue impact not disclosed",
+    "event_id": "evt-20260612-us-export-control-directive-fable-mythos"
+   }
+  ],
+  "what": [
+   {
+    "t": "Bartz v. Anthropic: a court order (T1) gave final approval on Jul 20, 2026 to a non-reversionary $1.5B class settlement over 482,460 works, about $3,109 each (derived), with $101.56M in fees and dismissal with prejudice. The Jun 23, 2025 ruling held training fair use but the pirated library not. A T3 schedule puts $450M due Sep 25, 2027.",
+    "e": [
+     "evt-20260720-bartz-final-approval",
+     "evt-20250905-bartz-settlement-agreement-signed",
+     "evt-20250623-bartz-fair-use-ruling"
+    ]
+   },
+   {
+    "t": "Suits followed the signing: Carreyrou opt-outs (Dec 22, 2025, T2), Concord II (Jan 28, 20,517 works, Amodei and Mann named), BMG (Mar 17), Cognella and Chicken Soup (May), Round Hill (Aug 17), Sony and Warner Chappell (Aug 28). Concord I fair-use summary judgment is heard Oct 21. Reddit survived a demurrer on 3 of 5 claims Sep 17 (T3).",
+    "e": [
+     "evt-20251222-carreyrou-opt-out-lawsuit",
+     "evt-20260128-concord-ii-complaint-names-amodei-mann",
+     "evt-20260317-bmg-sues-anthropic",
+     "evt-20260507-chicken-soup-and-cognella-piracy-copyright-suits",
+     "evt-20260817-round-hill-v-anthropic",
+     "evt-20260828-sony-warner-chappell-v-anthropic-amodei-mann",
+     "evt-20260422-concord-i-cross-motions-summary-judgment",
+     "evt-20260917-reddit-demurrer-overruled"
+    ]
+   },
+   {
+    "t": "Pentagon: a Jan 9 memo demanded 'any lawful use'. Presidential and Hegseth directives followed Feb 27, then a Mar 3 FASCSA determination. N.D. Cal. enjoined Mar 26 and on Aug 27 vacated the 10 U.S.C. 3252 designation and contractor boycott (orders, T1). The D.C. Circuit upheld the FASCSA exclusion 2-1 on Sep 25, Henderson dissenting (opinion, T1). Michael says Anthropic is still designated (Sep 3, T3).",
+    "e": [
+     "evt-20260109-hegseth-any-lawful-use-memo",
+     "evt-20260227-trump-hegseth-ban-and-supply-chain-designation-announced",
+     "evt-20260303-hegseth-fascsa-determination",
+     "evt-20260326-dow-preliminary-injunction",
+     "evt-20260827-dow-summary-judgment-permanent-injunction",
+     "evt-20260925-dc-circuit-denies-anthropic-petitions",
+     "evt-20260903-pentagon-says-anthropic-still-a-supply-chain-risk"
+    ]
+   },
+   {
+    "t": "A Commerce directive at 5:21pm ET on Jun 12 barred foreign nationals from Fable 5 and Mythos 5, and Anthropic disabled both worldwide (Anthropic, T1; BIS per CSIS, T2). Mythos 5 was partly approved Jun 26, controls lifted Jun 30, Fable 5 restored Jul 1. On Sep 24 the National Cyber Director asked Anthropic to hold Mythos 5.1 from UK AISI, and it complied (Politico, T2).",
+    "e": [
+     "evt-20260612-us-export-control-directive-fable-mythos",
+     "evt-20260626-mythos-5-partial-approval",
+     "evt-20260701-fable-5-mythos-5-access-restored",
+     "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi"
+    ]
+   },
+   {
+    "t": "Anthropic disclosed four incidents, January to August, where Claude models accessed real systems; Mythos 5's malicious PyPI package ran on 15 systems (Jul 30, Aug 31, Sep 9, T1). Its Sep 10 report counts about 200M distillation exchanges, Alibaba 151M on 3,500 accounts. The June letter said Alibaba 28.8M on about 25,000 accounts (DISPUTED). CISA, FBI and NSA named six Chinese firms Sep 8 (T1).",
+    "e": [
+     "evt-20260730-claude-gains-unauthorized-access-to-real-systems-during-evals",
+     "evt-20260831-alignment-security-overhaul",
+     "evt-20260909-alignment-assessment-fourth-incident",
+     "evt-20260910-threat-intel-report-distillation-misuse",
+     "evt-20260624-alibaba-distillation-allegation-senate-letter",
+     "evt-20260908-cisa-fbi-nsa-advisory-on-chinese-ai-distillation"
+    ]
+   },
+   {
+    "t": "The FTC opened a probe of Anthropic, OpenAI and METR on agentic AI on Sep 30, citing Anthropic's Jul 30 breaches (Reuters via Yahoo, T2, single source, first reported by the New York Post). The draft S-1 has been confidential since Jun 1. TechCrunch (T2) relays about 80 risk-factor pages. No public S-1 is on EDGAR (T1), and legal-proceedings content is unverified.",
+    "e": [
+     "evt-20260930-ftc-probe-anthropic-openai",
+     "evt-20260601-confidential-draft-s1-submitted",
+     "evt-20260928-prospectus-risk-factors",
+     "evt-20260929-draft-s1-leaked-to-reuters",
+     "evt-20260930-no-public-s1-on-edgar"
+    ]
+   }
+  ],
+  "means": [
+   {
+    "t": "The Bartz order split the question. Training on lawfully acquired books was fair use. Acquiring books by piracy was not, so exposure turns on how data was obtained and is priced per work at up to $150,000. The $1.5B covers past conduct on listed works and grants no future-training licence. Most new complaints plead the same piracy theory. Reddit's contract theory sits outside fair use.",
+    "e": [
+     "evt-20250623-bartz-fair-use-ruling",
+     "evt-20250905-bartz-1-5b-settlement",
+     "evt-20250604-reddit-sues-anthropic",
+     "evt-20260330-reddit-suit-remanded-to-state-court"
+    ]
+   },
+   {
+    "t": "Two instruments produced two outcomes. The 10 U.S.C. 3252 designation and contractor boycott fell on First Amendment retaliation. The FASCSA exclusion survived because the D.C. Circuit found Anthropic's refusal of 'all lawful uses', not its speech, caused it. Defense and Defense Industrial Base use stays excluded. Civil-agency access and unrelated commercial dealings stay protected unless the government wins on appeal.",
+    "e": [
+     "evt-20260827-dow-summary-judgment-permanent-injunction",
+     "evt-20260925-dc-circuit-denies-anthropic-petitions",
+     "evt-20260925-dc-circuit-upholds"
+    ]
+   },
+   {
+    "t": "The June directive was a letter with no specifics and no formal process. Nationality could not be verified in real time, so Anthropic shut both models for everyone. Restoration needed commitments: cyber classifiers with an Opus 4.8 fallback, pre-release government access, malicious-activity reporting. Both Mythos-class launches since June drew federal action, the Jun 12 recall and the Sep 24 hold. Four other launches drew none in the record.",
+    "e": [
+     "evt-20260612-us-export-control-directive-fable-mythos",
+     "evt-20260701-fable-5-mythos-5-access-restored",
+     "evt-20260901-fable-5-1-mythos-5-1-launch",
+     "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+     "evt-20260630-claude-sonnet-5-launch",
+     "evt-20260724-claude-opus-5-launch",
+     "evt-20260922-claude-opus-5-5-launch",
+     "evt-20260928-claude-sonnet-5-5-launch"
+    ]
+   },
+   {
+    "t": "Cyber capability is both the product and the exposure. Mythos-class models sold through Glasswing were recalled, and Claude models breached real systems in misconfigured evaluations. Outsiders used Opus 5 to attack OpenAI (Hacktron, Sep 18, T2). The FTC probe cites Anthropic's Jul 30 breaches, and Chairman Ferguson is reported to favor liability for developers whose test instructions cause hacks (single source).",
+    "e": [
+     "evt-20260930-ftc-probe-anthropic-openai",
+     "evt-20260918-hacktron-uses-opus-5-to-breach-openai",
+     "evt-20260730-claude-gains-unauthorized-access-to-real-systems-during-evals",
+     "evt-20260407-mythos-preview-and-project-glasswing"
+    ]
+   }
+  ],
+  "implications": [
+   {
+    "t": "Model the $1.5B as a one-time charge for listed works, not a run-rate, and model copyright as serial claims. Bartz prices at about $3,109 per work, 2.1% of the statutory maximum (derived). The four music suits with counted works cover 35,874 works: about $112M at that rate, about $5.4B at the ceiling (derived). Sony and Warner Chappell counts are not in the record. Re-mark after Oct 21.",
+    "e": [
+     "evt-20260720-bartz-final-approval",
+     "evt-20260128-concord-ii-complaint-names-amodei-mann",
+     "evt-20260817-round-hill-v-anthropic",
+     "evt-20260317-bmg-sues-anthropic",
+     "evt-20260422-concord-i-cross-motions-summary-judgment"
+    ]
+   },
+   {
+    "t": "Treat direct defense revenue as lost and commercial spillover as contingent. The March declaration sized risk at hundreds of millions to multiple billions when run-rate was $14B to $19B. It is $65B now (T2), and Judge Lin vacated the contractor boycott. The Pentagon says about 90% of workloads moved. Watch en banc or certiorari filings, the stayed Ninth Circuit appeal and any new Pentagon action against contractors.",
+    "e": [
+     "evt-20260309-cfo-declaration-revenue-at-risk",
+     "evt-20260911-dod-migration-90pct",
+     "evt-20260827-dow-summary-judgment-permanent-injunction",
+     "evt-20260817-run-rate-tops-65b",
+     "evt-20250714-dod-cdao-200m"
+    ]
+   },
+   {
+    "t": "Rank by dollars: music suits (ceiling $5.4B, derived), the Pentagon declaration (multiple billions, March), then Bartz cash still due ($450M). Counted ceilings sum to 0.74% of the $965B Series H mark (derived), before the Pentagon figure, which has no cap in the record. Rank by timing: FTC probe, D.C. Circuit review, Oct 21 Concord hearing, METR report. Check the public S-1 covers all four.",
+    "e": [
+     "evt-20260128-concord-ii-complaint-names-amodei-mann",
+     "evt-20260309-cfo-declaration-revenue-at-risk",
+     "evt-20250905-bartz-settlement-agreement-signed",
+     "evt-20260930-ftc-probe-anthropic-openai",
+     "evt-20260909-alignment-assessment-fourth-incident",
+     "evt-20260528-series-h-roster"
+    ]
+   },
+   {
+    "t": "Name government recall and hold power as an operating risk, not a one-off. In the S-1 check three items: Commerce's reported right to reimpose restrictions (T4), the SB 53 15-day incident rule against a January incident disclosed Sep 9, and the FTC probe. Watch for a third availability action, and for Treasury or Commerce action on Moonshot or Alibaba, which would back Anthropic's distillation case.",
+    "e": [
+     "evt-20260701-fable-5-mythos-5-access-restored",
+     "evt-20251219-sb53-compliance-framework",
+     "evt-20260909-alignment-assessment-fourth-incident",
+     "evt-20260722-treasury-moonshot-fable-distillation-threat",
+     "evt-20260908-cisa-fbi-nsa-advisory-on-chinese-ai-distillation"
+    ]
+   }
+  ],
+  "second_order": [
+   "Valuation is now a litigation input. Concord II pleaded a $350B+ valuation and Sony and Warner Chappell pleaded $965B, arguing $1.5B does not deter. A listing near $2T (WSJ, T3) hands the next plaintiff a larger anchor, so per-work asks may track market cap. Underwriters, insurers and counsel must price that. Consensus may treat Bartz as a ceiling; plaintiffs cite it as a floor.",
+   "The Pentagon dispute may end by politics, not judgment. The rulings rest on different statutes and courts, and Anthropic says it is considering further review with no deadline in the record. Meanwhile Commerce says relations are repaired (Sep 2, T3), Trump and Amodei dined Sep 27, and Amodei signed the Sep 29 voluntary pact. Consensus watches the courts; the lever may be the White House.",
+   "Regulators now converge on one capability. Commerce (recall), the National Cyber Director (hold), the FTC (agent liability), the Pentagon (exclusion), the EU (watermarking from Aug 2) and California (SB 53 incident reports) all act on cyber-capable agents, and OpenAI is named beside Anthropic in the FTC probe and the hold. The burden is sector-wide, so it is a timing risk for a crowded IPO window, not a relative discount.",
+   "A security lapse fed a patent suit. UTRF's Jul 20 complaint cites internal Claude Code file names such as autoDream.ts, which the record infers came from the Mar 31 source leak. Security, legal and any customer claiming under the Dec 2023 copyright indemnity must now coordinate. The record does not say whether that indemnity has a cap, and no indemnity claim appears in it.",
+   "Distillation claims double as policy advocacy, so their accuracy matters. The June letter asked for export controls and penalties, CISA cites Anthropic's February post, and Treasury says sanctions are 'on the table'. Alibaba account counts differ by about 7x across Anthropic's own renderings (about 25,000 versus 3,500). If regulators rely on the counts and they are challenged, the tailwind weakens."
+  ],
+  "watch": [
+   {
+    "item": "Reddit refile deadline for the unjust-enrichment and trespass claims dismissed with leave (SF Superior, Judge Kahn)",
+    "by": "2026-10-16",
+    "threshold": "Refiling restores 5 of 5 claims. No refiling leaves 3 contract-based claims, which fair use does not reach."
+   },
+   {
+    "item": "Concord I cross-motions for summary judgment on lyric fair use, 10:00 AM, San Jose Courtroom 7 (Judge Lee)",
+    "by": "2026-10-21",
+    "threshold": "A ruling that lyric training or outputs are not fair use would reprice Concord II, Round Hill, Sony and Warner Chappell and BMG. A fair-use win narrows them to the piracy theory. Ruling date is not in the record."
+   },
+   {
+    "item": "Anthropic's choice on en banc rehearing or certiorari after the 2-1 FASCSA loss, mandate withheld; the government's stayed Ninth Circuit appeal 26-2011; DoD phase-out completion (end of October per DefenseScoop, Sep 30 per FedScoop)",
+    "by": "2026-Q4",
+    "threshold": "A filing, a grant or a Ninth Circuit order. Deadlines are not in the record. A government appeal of the Aug 27 judgment would reopen the commercial-boycott risk."
+   },
+   {
+    "item": "FTC formal information demands and compelled executive testimony on agentic AI risk",
+    "by": "2026-Q4",
+    "threshold": "Demands served on Anthropic or named executives, or an FTC statement on developer liability for test-induced hacks. No dates are in the record."
+   },
+   {
+    "item": "Public S-1 on EDGAR: Item 103 legal proceedings and litigation risk factors",
+    "by": "2026-Q4",
+    "threshold": "Text covers Bartz appeals, music suits, Reddit, the FASCSA loss, the FTC probe and the four eval incidents, and states any accrual or range of loss. A missing item is a disclosure gap."
+   },
+   {
+    "item": "METR independent investigation of the four eval incidents (eight-week agreement, extendable, reported Sep 9)",
+    "by": "2026-11-04",
+    "threshold": "Date is derived from Sep 9 plus eight weeks, start date unconfirmed. Findings of further incidents, or an extension past early November, would need S-1 disclosure."
+   },
+   {
+    "item": "Bartz: first distribution due on or before Nov 15; Ninth Circuit 26-5455 opening brief Nov 12, answering brief Dec 14; confirmation that the $450M due Sep 25, 2026 was paid",
+    "by": "2026-11-15",
+    "threshold": "Distribution starts on time and no appeal blocks the Effective Date. A late objector appeal (Dkt 687) that survives would delay finality."
+   },
+   {
+    "item": "Federal action on model availability or on distillers: Treasury or Commerce listing Moonshot or Alibaba, or a further hold or recall of a Mythos-class model",
+    "by": "2026-Q4",
+    "threshold": "A formal designation would back the distillation case. A third availability action in 2026 would make recall risk a pattern. None found as of Sep 30."
+   }
+  ],
+  "house_view": "(a) Extends: 16 open court matters, an upheld Pentagon exclusion and a new FTC probe sit beside a $965B Series H mark and a reported $2T target with no legal discount in the record, and plaintiffs now cite the valuation as a damages argument. The slice holds no multiples, so it is not a test. (b) Does not apply, except that the CFO's revenue-at-risk figures state no gross or net basis. (c) Extends: dated legal catalysts add issuer-specific timing risk on top of pipeline risk, and WSJ (T3) already reports a slip from October to November. (d) No direct test: the record does not say how the $1.5B is funded, and if equity paid it, the equity-raised denominator includes $1.5B that bought no capacity. (e) Confirms: per-work statutory damages on training data and federal power to recall a model within hours have no SaaS analogue in the record.",
+  "uncertainties": [
+   {
+    "type": "data",
+    "note": "The prospectus tables (risk_factor_themes, prospectus_facts, offering_structure) are empty, and opened coverage of the leaked S-1 omits legal proceedings. Which matters appear in risk factors is inferred from press summaries and cases-table notes, not read from the filing.",
+    "what_would_change_it": "A public S-1 on EDGAR, or a full read of the Reuters and FT reviews."
+   },
+   {
+    "type": "data",
+    "note": "The cases table lags events. It omits BMG, the Carreyrou opt-out suit, the Sep 30 FTC probe, the Sep 24 hold and the Jul 1 FTC bias statement, and still shows Reddit as unverified after the Sep 17 ruling. Rows bundle dockets. Two events carry notes for unrelated merged items, so the opt-out author suits, a Legion LegalTech suit over the export order and the Bartz fee appeals have no event of their own. The count of 16 open court matters is a floor.",
+    "what_would_change_it": "A cases-table refresh and un-merged event ids."
+   },
+   {
+    "type": "forecast",
+    "note": "Music exposure is a bound, not an estimate. Reference class: one AI copyright settlement in the record, Bartz at about $3,109 per work or 2.1% of the statutory maximum, n=1, no other base rate. Different here: a lyrics fair-use ruling is pending Oct 21, anti-circumvention and model-weight claims are pleaded, and founders are named.",
+    "what_would_change_it": "The Oct 21 ruling, or any music-suit settlement."
+   },
+   {
+    "type": "interpretation",
+    "note": "Pentagon exposure rests on litigation declarations, not audited revenue, and states no gross or net basis. The range was written when run-rate was $14B to $19B. Realized loss is not in the record beyond the Pentagon's claim that about 90% of workloads moved (T2). Reference class: none in the record, since the label had never been applied to a US company.",
+    "what_would_change_it": "S-1 disclosure of public-sector and defense-related revenue."
+   },
+   {
+    "type": "data",
+    "note": "Bartz cash is unverified. The installment schedule comes from the Authors Guild (T3), payment of the $450M due Sep 25, 2026 is not confirmed, the floor is at least $1.5B plus interest, and a late objector notice (Dkt 687) leaves the Effective Date uncertain.",
+    "what_would_change_it": "Administrator or docket confirmation of payment and the Effective Date."
+   }
+  ],
+  "evidence": [
+   "evt-20260720-bartz-final-approval",
+   "evt-20260925-dc-circuit-denies-anthropic-petitions",
+   "evt-20260827-dow-summary-judgment-permanent-injunction",
+   "evt-20260309-cfo-declaration-revenue-at-risk",
+   "evt-20260612-us-export-control-directive-fable-mythos",
+   "evt-20260701-fable-5-mythos-5-access-restored",
+   "evt-20260128-concord-ii-complaint-names-amodei-mann",
+   "evt-20260422-concord-i-cross-motions-summary-judgment",
+   "evt-20260828-sony-warner-chappell-v-anthropic-amodei-mann",
+   "evt-20260930-ftc-probe-anthropic-openai",
+   "evt-20260730-claude-gains-unauthorized-access-to-real-systems-during-evals",
+   "evt-20260909-alignment-assessment-fourth-incident",
+   "evt-20260910-threat-intel-report-distillation-misuse",
+   "evt-20260908-cisa-fbi-nsa-advisory-on-chinese-ai-distillation",
+   "evt-20250905-bartz-settlement-agreement-signed",
+   "evt-20250623-bartz-fair-use-ruling",
+   "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+   "evt-20260917-reddit-demurrer-overruled",
+   "evt-20260817-round-hill-v-anthropic",
+   "evt-20260317-bmg-sues-anthropic",
+   "evt-20260507-chicken-soup-and-cognella-piracy-copyright-suits",
+   "evt-20251222-carreyrou-opt-out-lawsuit",
+   "evt-20260918-buist-v-anthropic-sherman-act-class-action",
+   "evt-20260922-anthropic-moves-to-dismiss-consolidated-consumer-class-action",
+   "evt-20260720-utrf-v-anthropic-patent-suit",
+   "evt-20260903-pentagon-says-anthropic-still-a-supply-chain-risk",
+   "evt-20260911-dod-migration-90pct",
+   "evt-20260303-hegseth-fascsa-determination",
+   "evt-20260326-dow-preliminary-injunction",
+   "evt-20260928-prospectus-risk-factors",
+   "evt-20260929-draft-s1-leaked-to-reuters",
+   "evt-20260930-no-public-s1-on-edgar",
+   "evt-20260831-alignment-security-overhaul",
+   "evt-20260624-alibaba-distillation-allegation-senate-letter",
+   "evt-20260722-treasury-moonshot-fable-distillation-threat",
+   "evt-20251113-ai-orchestrated-espionage-disclosed",
+   "evt-20260901-fable-5-1-mythos-5-1-launch",
+   "evt-20251219-sb53-compliance-framework",
+   "evt-20260902-lutnick-says-anthropic-back-on-administrations-side",
+   "evt-20250714-dod-cdao-200m"
+  ]
+ },
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Read analyst_common.md in full. Slice: categories legal, regulatory, security plus the cases table (39 matters). Slug legal."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "Counted categories: legal 65, regulatory 40, security 45 events; 134 in the union."
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "q.py --cat legal --from 2021-01-01 --to 2026-09-30: read all 65 headlines and summaries."
+  },
+  {
+   "seq": 4,
+   "type": "search",
+   "text": "q.py --cat regulatory: read all 40 headlines and summaries."
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "q.py --cat security: read all 45 headlines and summaries."
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "q.py --table cases: read all 39 rows (18 litigation, 9 regulatory, 5 security, 7 controversy)."
+  },
+  {
+   "seq": 7,
+   "type": "search",
+   "text": "q.py --table risk_factor_themes, prospectus_facts, offering_structure: all empty, so risk-factor ranking is inference."
+  },
+  {
+   "seq": 8,
+   "type": "found",
+   "text": "Bartz fair-use order Jun 23, 2025: training fair use, 7M+ pirated copies not, trial set on damages.",
+   "event_id": "evt-20250623-bartz-fair-use-ruling",
+   "url": "https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_24-cv-05417/pdf/USCOURTS-cand-3_24-cv-05417-0.pdf"
+  },
+  {
+   "seq": 9,
+   "type": "found",
+   "text": "Bartz settlement signed Sep 5, 2025: $1.5B, 482,460 works, non-reversionary, installments per Authors Guild (T3).",
+   "event_id": "evt-20250905-bartz-settlement-agreement-signed",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.437.0_8.pdf"
+  },
+  {
+   "seq": 10,
+   "type": "found",
+   "text": "Bartz final approval Jul 20, 2026: fees $101.56M, 350 opt-outs covering 1,802 works, judgment, dismissal with prejudice.",
+   "event_id": "evt-20260720-bartz-final-approval",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.680.0_5.pdf"
+  },
+  {
+   "seq": 11,
+   "type": "verify",
+   "text": "Per-work math: $1.5B / 482,460 = $3,109, matching the record's 'about $3,000' and '$3,100' as rounding. Fees $101.56M = 6.8% of the fund."
+  },
+  {
+   "seq": 12,
+   "type": "flag",
+   "text": "Objections: 53 at the May 14 hearing (Courthouse News, T2/MEDIUM) versus 54 overruled in the final order (T1). Final order used.",
+   "event_id": "evt-20260514-copyright-settlement-final-approval-hearing"
+  },
+  {
+   "seq": 13,
+   "type": "flag",
+   "text": "Bartz cash unverified: $450M due Sep 25, 2026 not confirmed (schedule is Authors Guild T3); docket shows only a Sep 29 clerk notice; late objector notice Dkt 687.",
+   "event_id": "evt-20250905-bartz-settlement-agreement-signed"
+  },
+  {
+   "seq": 14,
+   "type": "found",
+   "text": "Concord I: preliminary injunction denied Mar 25, 2025; cross-motions for summary judgment heard Oct 21, 2026 (10:00 AM, San Jose).",
+   "event_id": "evt-20260422-concord-i-cross-motions-summary-judgment",
+   "url": "https://www.courtlistener.com/api/rest/v4/search/?type=rd&q=docket_id%3A68889092+AND+description%3A%28%22hearing%22+AND+%22summary+judgment%22%29&order_by=dateFiled+desc"
+  },
+  {
+   "seq": 15,
+   "type": "found",
+   "text": "Concord II filed Jan 28, 2026: 20,517 works, Amodei and Mann named, pleads $350B+ valuation.",
+   "event_id": "evt-20260128-concord-ii-complaint-names-amodei-mann",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.463362/gov.uscourts.cand.463362.1.0.pdf"
+  },
+  {
+   "seq": 16,
+   "type": "found",
+   "text": "Publisher suits after the Bartz signing: BMG Mar 17, Cognella May 4, Chicken Soup May 7, Round Hill Aug 17, Sony and Warner Chappell Aug 28 (pleads $965B valuation).",
+   "event_id": "evt-20260828-sony-warner-chappell-v-anthropic-amodei-mann",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.477477/gov.uscourts.cand.477477.1.0.pdf"
+  },
+  {
+   "seq": 17,
+   "type": "verify",
+   "text": "Statutory arithmetic: 20,517 x $150,000 = $3.08B matches the record; 35,874 counted music works = $5.4B at ceiling, $112M at the Bartz rate (derived)."
+  },
+  {
+   "seq": 18,
+   "type": "flag",
+   "text": "Merge artifact: evt-20260422 (Concord I) carries notes for six unrelated merged items (D.C. Cir. stay, Reddit remand, Kwon/Cruz/Shakespeare opt-outs, Legion LegalTech v. US over the export order, D.C. Cir. petition 26-1162). Three have no event of their own.",
+   "event_id": "evt-20260422-concord-i-cross-motions-summary-judgment"
+  },
+  {
+   "seq": 19,
+   "type": "flag",
+   "text": "Merge artifact: evt-20260922 (Kahn motion to dismiss) holds the merged Bartz fee and objector appeals notes (9th Cir. 25-4843, 26-5391, 26-5455).",
+   "event_id": "evt-20260922-anthropic-moves-to-dismiss-consolidated-consumer-class-action"
+  },
+  {
+   "seq": 20,
+   "type": "found",
+   "text": "Reddit: sued Jun 4, 2025, remanded Mar 2026, Sep 17 demurrer overruled on contract, interference and UCL; refile deadline Oct 16.",
+   "event_id": "evt-20260917-reddit-demurrer-overruled",
+   "url": "https://www.yahoo.com/news/us/articles/judge-allows-most-reddits-lawsuit-155921694.html"
+  },
+  {
+   "seq": 21,
+   "type": "flag",
+   "text": "Stale table: cases row for Reddit says status not verified, but the event record shows the Sep 17, 2026 demurrer ruling (T3).",
+   "event_id": "evt-20260917-reddit-demurrer-overruled"
+  },
+  {
+   "seq": 22,
+   "type": "flag",
+   "text": "Coverage gap: cases table omits BMG (Mar 17), Carreyrou opt-outs (Dec 22, 2025), FTC probe (Sep 30), FTC bias statement (Jul 1), Australian Senate (Sep 27) and the Sep 24 hold. The open count is a floor.",
+   "event_id": "evt-20251222-carreyrou-opt-out-lawsuit"
+  },
+  {
+   "seq": 23,
+   "type": "search",
+   "text": "q.py --q 'Department of War', --q Pentagon (from Apr 1), --q Lutnick: read Pentagon context events outside my categories."
+  },
+  {
+   "seq": 24,
+   "type": "found",
+   "text": "Pentagon origin: Jan 9 'any lawful use' memo, Jan 29 impasse, Feb 26 Amodei refusal, Feb 27 directives, Mar 3 FASCSA determination.",
+   "event_id": "evt-20260109-hegseth-any-lawful-use-memo",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.134.0.pdf"
+  },
+  {
+   "seq": 25,
+   "type": "found",
+   "text": "CFO declaration Mar 9: hundreds of millions to multiple billions of 2026 revenue at risk, three deals over $180M collapsed, 50-100% of DoW-related revenue.",
+   "event_id": "evt-20260309-cfo-declaration-revenue-at-risk",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.134.0.pdf"
+  },
+  {
+   "seq": 26,
+   "type": "found",
+   "text": "N.D. Cal. Aug 27: summary judgment, 3252 designation and secondary boycott vacated, permanent injunction; ultra vires claim lost.",
+   "event_id": "evt-20260827-dow-summary-judgment-permanent-injunction",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.250.0_1.pdf"
+  },
+  {
+   "seq": 27,
+   "type": "found",
+   "text": "D.C. Circuit Sep 25: petitions denied 2-1 (Katsas, Rao; Henderson dissenting); mandate withheld; Anthropic 'considering all options'.",
+   "event_id": "evt-20260925-dc-circuit-denies-anthropic-petitions",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cadc.43309/gov.uscourts.cadc.43309.01208891909.0.pdf"
+  },
+  {
+   "seq": 28,
+   "type": "verify",
+   "text": "Cross-checked cases rows 16 and 17 against events: Aug 27 and Sep 25 dates, statutes (3252 versus 41 U.S.C. 4713) and outcomes agree."
+  },
+  {
+   "seq": 29,
+   "type": "verify",
+   "text": "Scale check against run_rate table: $14B (Feb 12, T1), $19B (Mar 3, T3), $65B (Aug 17, T2). Bartz is 32.6% of FY2025 revenue $4.6B but 2.3% of $65B run-rate and 0.16% of the $965B mark."
+  },
+  {
+   "seq": 30,
+   "type": "flag",
+   "text": "DoD phase-out end date differs: Sep 29 (MeriTalk), Sep 30 (FedScoop), end of October (DefenseScoop Sep 11), or 180 days from the CIO memo.",
+   "event_id": "evt-20260911-dod-migration-90pct"
+  },
+  {
+   "seq": 31,
+   "type": "flag",
+   "text": "CIO removal memo is dated Mar 5 in one event and Mar 6 in another (and in the cases table).",
+   "event_id": "evt-20260303-hegseth-fascsa-determination"
+  },
+  {
+   "seq": 32,
+   "type": "flag",
+   "text": "Michael's Sep 3 post cites 10 U.S.C. 3252 per Unite.AI (T3, single source), the designation Judge Lin vacated Aug 27. Possible compliance friction, unverified.",
+   "event_id": "evt-20260903-pentagon-says-anthropic-still-a-supply-chain-risk"
+  },
+  {
+   "seq": 33,
+   "type": "flag",
+   "text": "Workloads moved: about 2/3 (MeriTalk, cited in the cases table) versus about 90% (Michael, Sep 11). Different dates, moving number.",
+   "event_id": "evt-20260911-dod-migration-90pct"
+  },
+  {
+   "seq": 34,
+   "type": "found",
+   "text": "Export directive Jun 12, 5:21pm ET; Jun 26 partial approval; Jun 30 lifted; Jul 1 restored; conditions and 50% weekly-limit promotion to Jul 7.",
+   "event_id": "evt-20260612-us-export-control-directive-fable-mythos",
+   "url": "https://www.anthropic.com/news/fable-mythos-access"
+  },
+  {
+   "seq": 35,
+   "type": "flag",
+   "text": "Outage length is 18 days (Anthropic, Jun 12 to Jun 30) or 19 (calendar to Jul 1). Partial-approval date is Jun 26 (Anthropic) or Jun 27 (MeriTalk). Both kept.",
+   "event_id": "evt-20260701-fable-5-mythos-5-access-restored"
+  },
+  {
+   "seq": 36,
+   "type": "flag",
+   "text": "Issuing agency for the Jun 12 directive is not named by Anthropic; BIS per CSIS and Harvard Law Review blog (T2); open item in the ledger.",
+   "event_id": "evt-20260612-us-export-control-directive-fable-mythos"
+  },
+  {
+   "seq": 37,
+   "type": "verify",
+   "text": "Base rate on availability actions: Mythos-class launches Jun 9 and Sep 1 both drew a federal action; Sonnet 5, Opus 5, Opus 5.5 and Sonnet 5.5 drew none in the record (n=2)."
+  },
+  {
+   "seq": 38,
+   "type": "found",
+   "text": "Sep 24: White House asks labs to hold Mythos 5.1 from UK AISI; Anthropic complied; Mythos 5.1 already limited to US verified organizations.",
+   "event_id": "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+   "url": "https://www.yahoo.com/news/politics/articles/white-house-asks-openai-anthropic-164324696.html"
+  },
+  {
+   "seq": 39,
+   "type": "found",
+   "text": "Eval incidents: three disclosed Jul 30 (Opus 4.7, Mythos 5, internal model), overhaul Aug 31, fourth (January) Sep 9; 141,006 runs reviewed, 481M transcripts scanned.",
+   "event_id": "evt-20260730-claude-gains-unauthorized-access-to-real-systems-during-evals",
+   "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+  },
+  {
+   "seq": 40,
+   "type": "flag",
+   "text": "Mythos 5 package ran on '15 systems' (Jul 30, T1) versus 'infected 15 security vendors' (Sep 9 note). Fourth incident disclosed Sep 9 (T1) versus a Sep 10 Reuters headline. T1 used.",
+   "event_id": "evt-20260909-alignment-assessment-fourth-incident"
+  },
+  {
+   "seq": 41,
+   "type": "flag",
+   "text": "SB 53 requires critical-incident reports within 15 days; the January incident surfaced Sep 9 and no state filing is recorded. Ledger open item.",
+   "event_id": "evt-20251219-sb53-compliance-framework"
+  },
+  {
+   "seq": 42,
+   "type": "found",
+   "text": "Distillation: Feb 23 (16M exchanges, about 24,000 accounts), Jun 10 Alibaba letter, Jul 22 Moonshot and Treasury threat, Sep 8 CISA advisory AA26-251A, Sep 10 report (about 200M).",
+   "event_id": "evt-20260910-threat-intel-report-distillation-misuse",
+   "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+  },
+  {
+   "seq": 43,
+   "type": "flag",
+   "text": "DISPUTED: Alibaba 28.8M exchanges on about 25,000 accounts (Jun 10 letter, Apr 22 to Jun 5) versus 151M on 3,500 accounts (Sep report, May to Jul). Both named; no side picked.",
+   "event_id": "evt-20260624-alibaba-distillation-allegation-senate-letter"
+  },
+  {
+   "seq": 44,
+   "type": "flag",
+   "text": "An Alibaba v. DoD suit (5:26-cv-06227, Jun 23) is noted inside an Alibaba distillation event with relation unverified.",
+   "event_id": "evt-20260624-alibaba-distillation-allegation-senate-letter"
+  },
+  {
+   "seq": 45,
+   "type": "flag",
+   "text": "Mythos CMS leak appears twice: Mar 1 (T3, month precision) and Mar 26 (T2, Fortune). Likely one incident; counted once.",
+   "event_id": "evt-20260326-claude-mythos-leak"
+  },
+  {
+   "seq": 46,
+   "type": "flag",
+   "text": "Cases row 38 calls forgone China-linked revenue unquantified; the Feb 26 Amodei statement note says 'several hundred million dollars' (company claim).",
+   "event_id": "evt-20260226-amodei-statement-department-of-war"
+  },
+  {
+   "seq": 47,
+   "type": "found",
+   "text": "FTC probe Sep 30 (T2, single source) and S-1 status: confidential Jun 1, leak Sep 28-29 with about 80 risk-factor pages, no public S-1 on EDGAR.",
+   "event_id": "evt-20260930-ftc-probe-anthropic-openai",
+   "url": "https://www.yahoo.com/news/politics/articles/ftc-opens-probe-ai-giants-135328719.html"
+  },
+  {
+   "seq": 48,
+   "type": "flag",
+   "text": "Legal-proceedings content of the S-1 is unverified; opened coverage omits it. WSJ (T3) says listing moved to November.",
+   "event_id": "evt-20260929-draft-s1-leaked-to-reuters"
+  },
+  {
+   "seq": 49,
+   "type": "verify",
+   "text": "Open-matter count from cases rows: 18 litigation rows = 16 open (13 defendant, 3 plaintiff) + 1 settled + 1 closed. Only 2 of 39 rows carry a liability dollar figure."
+  },
+  {
+   "seq": 50,
+   "type": "message",
+   "text": "Bear-case inputs: FASCSA loss Sep 25, FTC probe Sep 30 with a developer-liability theory, music suits naming founders, no dollar cap on Pentagon revenue-at-risk.",
+   "to": "analyst-bear"
+  },
+  {
+   "seq": 51,
+   "type": "message",
+   "text": "Bull-case inputs: Bartz final and capped, N.D. Cal. vacated 3252 and the boycott, CISA advisory and Treasury threat back the distillation case, Sep 2 Commerce thaw, Sep 29 pact.",
+   "to": "analyst-bull"
+  },
+  {
+   "seq": 52,
+   "type": "message",
+   "text": "Cash items for the model: $450M Bartz tranche due Sep 25, 2027 (T3); Sep 25, 2026 tranche unverified; no accrual in the record; music ceilings are bounds, not forecasts.",
+   "to": "analyst-model"
+  },
+  {
+   "seq": 53,
+   "type": "message",
+   "text": "Capital check: was the $1.5B funded from equity raised (Series F was Sep 2, 2025, three days before signing)? Record does not say.",
+   "to": "verify-capital"
+  },
+  {
+   "seq": 54,
+   "type": "message",
+   "text": "Anthropic's own Abnormal AI complaint (Jul 1) states run-rate above $47B and 300,000+ business customers; S-1 revenue lines must match.",
+   "to": "analyst-topics"
+  },
+  {
+   "seq": 55,
+   "type": "message",
+   "text": "Ranking is by record-supported ceilings and dated catalysts only; Pentagon and music figures are bounds with no base rate beyond Bartz (n=1).",
+   "to": "analyst-judge"
+  },
+  {
+   "seq": 56,
+   "type": "message",
+   "text": "Requesting un-merge of evt-20260422 and evt-20260922 and a cases-table refresh (BMG, Carreyrou, FTC, Reddit).",
+   "to": "orchestrator"
+  }
+ ],
+ "stats": {
+  "events_read": 213,
+  "flags": 19
+ }
+}

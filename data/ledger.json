@@ -1,20 +1,20 @@
 {
- "generated": "2026-09-30T18:24:13Z",
- "raw_events": 892,
- "merged_events": 636,
+ "generated": "2026-09-30T18:36:39Z",
+ "raw_events": 914,
+ "merged_events": 641,
  "tiers": {
   "T1": 372,
-  "T2": 158,
+  "T2": 161,
   "T3": 96,
-  "T4": 9,
+  "T4": 11,
   "T5": 1
  },
  "confidence": {
-  "HIGH": 469,
-  "MEDIUM": 149,
+  "HIGH": 471,
+  "MEDIUM": 151,
   "DISPUTED": 6,
   "VERIFY": 6,
-  "LOW": 6
+  "LOW": 7
  },
  "categories": {
   "governance": 53,
@@ -31,16 +31,16 @@
   "compute": 48,
   "security": 45,
   "legal": 65,
-  "customer": 83,
+  "customer": 89,
   "partnership": 127,
   "valuation": 33,
   "pricing": 58,
   "international": 47,
   "regulatory": 40,
-  "revenue": 33,
-  "financials": 30,
+  "revenue": 41,
+  "financials": 32,
   "secondary": 8,
-  "competition": 43,
+  "competition": 44,
   "ipo": 29,
   "debt": 7,
   "acquisition": 15
@@ -49,9 +49,9 @@
   "2021": 6,
   "2022": 16,
   "2023": 47,
-  "2024": 67,
+  "2024": 68,
   "2025": 173,
-  "2026": 327
+  "2026": 331
  },
  "opened_share": 0.998,
  "cross_agent_conflicts": [
@@ -63,6 +63,24 @@
    "source_b": "https://www.anthropic.com/news/anthropic-amazon",
    "note": "cross-agent numeric mismatch (scout-2023 vs desk-ecosystem)",
    "event_id": "evt-20230925-amazon-up-to-4b"
+  },
+  {
+   "topic": "The Information: Anthropic projects $70B revenue, $17B cash flow in 2028 · revenue_period_usd_m",
+   "value_a": 3800.0,
+   "source_a": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+   "value_b": 70000.0,
+   "source_b": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+   "note": "cross-agent numeric mismatch (scout-2025h2 vs desk-revenue)",
+   "event_id": "evt-20251104-information-2028-revenue-projections"
+  },
+  {
+   "topic": "The Information: Anthropic projects $70B revenue, $17B cash flow in 2028 · margin_pct",
+   "value_a": 50.0,
+   "source_a": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+   "value_b": 77.0,
+   "source_b": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+   "note": "cross-agent numeric mismatch (scout-2025h2 vs desk-revenue)",
+   "event_id": "evt-20251104-information-2028-revenue-projections"
   }
  ],
  "agent_conflicts": [

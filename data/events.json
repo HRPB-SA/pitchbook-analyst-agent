@@ -5833,16 +5833,22 @@
    "customers": null,
    "other": {
     "projection_end_2024_annualized_usd_m": 850,
-    "prior_projection_end_2024_usd_m": 500
+    "prior_projection_end_2024_usd_m": 500,
+    "target_end_2024_annualized_usd_m": 850,
+    "prior_target_end_2024_usd_m": 500,
+    "crunchbase_oct_2023_arr_target_usd_m": 200
    }
   },
   "confidence": "MEDIUM",
-  "notes": "Single-source chain (The Information) with no independent confirmation; figures are run-rate/projections, not audited revenue. Crunchbase News separately cites an 'aiming for $200M ARR as of October' target, which is a goal rather than an actual — see conflicts.",
+  "notes": "Single-source chain (The Information) with no independent confirmation; figures are run-rate/projections, not audited revenue. Crunchbase News separately cites an 'aiming for $200M ARR as of October' target, which is a goal rather than an actual — see conflicts. | Run-rate (annualized) basis, told to investors; single chain (The Information) with no T1/T2 confirmation. Crunchbase News (Dec 21 2023) separately cites a $200M ARR target as of October 2023, a target not an actual. The 2024 end target ($850M) proved close to the ~$1B actually reached (company: ~$1B at start of 2025).",
   "agent": "scout-2023",
   "agents": [
+   "desk-revenue",
    "scout-2023"
   ],
-  "merged_ids": [],
+  "merged_ids": [
+   "evt-20231226-rr-100m-2023-850m-target"
+  ],
   "independent_sources": 2
  },
  {
@@ -10409,6 +10415,69 @@
   "independent_sources": 3
  },
  {
+  "id": "evt-20241122-burn-2024-gt-2-7b",
+  "date": "2024-11-22",
+  "date_precision": "day",
+  "headline": "Anthropic projected to burn more than $2.7B cash in 2024",
+  "summary": "TechCrunch, citing The Information, stated Anthropic was projected to burn more than $2.7B in cash in 2024 alongside a further $4B from Amazon.",
+  "category": [
+   "financials"
+  ],
+  "source": {
+   "url": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/",
+   "publisher": "TechCrunch",
+   "title": "Anthropic raises an additional $4B from Amazon, makes AWS its primary cloud partner",
+   "published": "2024-11-22",
+   "tier": "T2",
+   "opened": true
+  },
+  "corroboration": [],
+  "extracted": {
+   "amount_usd_m": null,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": null,
+   "revenue_period_usd_m": null,
+   "revenue_period": null,
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [],
+   "headcount": null,
+   "customers": null,
+   "other": {
+    "cash_burn_2024_projected_gt_usd_m": 2700,
+    "amazon_additional_investment_usd_m": 4000,
+    "total_raised_usd_m": 13700
+   }
+  },
+  "confidence": "MEDIUM",
+  "notes": "Projection (cash burn, not net loss). The Information original headline dated 2024-07-24 seen only in Google News RSS (paywalled, not opened). Later WSJ-derived T4 summaries put actual 2024 burn at $5.6B - a large gap vs this mid-year projection and vs the prospectus FY2024 operating loss of $2.98B (different metrics).",
+  "agent": "desk-revenue",
+  "agents": [
+   "desk-revenue"
+  ],
+  "merged_ids": [],
+  "independent_sources": 1
+ },
+ {
   "id": "evt-20241125-model-context-protocol",
   "date": "2024-11-25",
   "date_precision": "day",
@@ -14712,79 +14781,6 @@
   "independent_sources": 3
  },
  {
-  "id": "evt-20250415-aws-gtm-team-projections",
-  "date": "2025-04-15",
-  "date_precision": "day",
-  "headline": "Anthropic builds AWS sales team; Reuters-cited projections $2.2B (2025), $12B (2027)",
-  "summary": "TechCrunch reported Anthropic is hiring a Head of Amazon GTM Partnership to chase multi-billion-dollar AWS revenue opportunities and, citing Reuters, that it projects $2.2 billion revenue in 2025 and aims for $12 billion in 2027.",
-  "category": [
-   "financials",
-   "partnership",
-   "revenue"
-  ],
-  "source": {
-   "url": "https://techcrunch.com/2025/04/15/anthropic-forms-a-new-team-to-grow-its-aws-business/",
-   "publisher": "TechCrunch",
-   "title": "Anthropic forms a new team to grow its AWS business",
-   "published": "2025-04-15",
-   "tier": "T2",
-   "opened": true
-  },
-  "corroboration": [],
-  "extracted": {
-   "amount_usd_m": null,
-   "valuation_post_usd_m": null,
-   "valuation_pre_usd_m": null,
-   "revenue_run_rate_usd_m": null,
-   "revenue_period_usd_m": 2200.0,
-   "revenue_period": "FY2025 (projection)",
-   "margin_pct": null,
-   "margin_type": null,
-   "compute": {
-    "partner": null,
-    "chips": null,
-    "gw": null,
-    "usd_m": null,
-    "term": null
-   },
-   "product": {
-    "name": null,
-    "type": null,
-    "price_in_per_mtok": null,
-    "price_out_per_mtok": null,
-    "context_window": null
-   },
-   "governance": null,
-   "moat": null,
-   "strategy": null,
-   "people": [],
-   "entities": [
-    {
-     "name": "Amazon Web Services",
-     "type": "cloud",
-     "public": true,
-     "ticker": "AMZN"
-    }
-   ],
-   "headcount": null,
-   "customers": null,
-   "other": {
-    "target_revenue_2027_usd_m": 12000,
-    "projection_source": "Reuters, as cited by TechCrunch",
-    "amazon_capital_committed_usd_m": 8000,
-    "bedrock_customers": "tens of thousands (per TechCrunch)"
-   }
-  },
-  "confidence": "DISPUTED",
-  "notes": "2027 figure ($12B) conflicts with The Information's $34.5B headline (Feb 12) - see conflicts; likely base vs optimistic case but unverified. Reuters original not opened.",
-  "agent": "scout-2025h1",
-  "agents": [
-   "scout-2025h1"
-  ],
-  "merged_ids": [],
-  "independent_sources": 1
- },
- {
   "id": "evt-20250415-claude-research-google-workspace",
   "date": "2025-04-15",
   "date_precision": "day",
@@ -14867,6 +14863,85 @@
   ],
   "merged_ids": [],
   "independent_sources": 2
+ },
+ {
+  "id": "evt-20250415-proj-2025-2-2b-2027-12b",
+  "date": "2025-04-15",
+  "date_precision": "day",
+  "headline": "Reuters-cited projections: $2.2B revenue in 2025, $12B in 2027",
+  "summary": "TechCrunch, citing Reuters, reported Anthropic aimed for $12B of revenue in 2027, up from a projected $2.2B in 2025, while building a dedicated AWS go-to-market team.",
+  "category": [
+   "financials",
+   "partnership",
+   "revenue"
+  ],
+  "source": {
+   "url": "https://techcrunch.com/2025/04/15/anthropic-forms-a-new-team-to-grow-its-aws-business/",
+   "publisher": "TechCrunch (citing Reuters)",
+   "title": "Anthropic forms a new team to grow its AWS business",
+   "published": "2025-04-15",
+   "tier": "T2",
+   "opened": true
+  },
+  "corroboration": [],
+  "extracted": {
+   "amount_usd_m": null,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": null,
+   "revenue_period_usd_m": 2200.0,
+   "revenue_period": "FY2025 (projection, as of Apr 2025)",
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [
+    {
+     "name": "Amazon Web Services",
+     "type": "cloud",
+     "public": true,
+     "ticker": "AMZN"
+    }
+   ],
+   "headcount": null,
+   "customers": null,
+   "other": {
+    "fy2027_projection_usd_m": 12000,
+    "alt_fy2027_projection_usd_m": 34500,
+    "alt_source": "The Information Feb 12 2025 headline (paywalled, not opened)",
+    "target_revenue_2027_usd_m": 12000,
+    "projection_source": "Reuters, as cited by TechCrunch",
+    "amazon_capital_committed_usd_m": 8000,
+    "bedrock_customers": "tens of thousands (per TechCrunch)"
+   }
+  },
+  "confidence": "MEDIUM",
+  "notes": "Forward projection from investor materials; scenario unstated (The Information Feb 12 2025 headline gave $34.5B for 2027 - possibly an optimistic case; see conflicts). Outcome: recognized FY2025 revenue was ~$4.6B and exit run-rate ~$9B, i.e. 2x-4x this projection. TechCrunch gives no AWS revenue-split detail. | 2027 figure ($12B) conflicts with The Information's $34.5B headline (Feb 12) - see conflicts; likely base vs optimistic case but unverified. Reuters original not opened.",
+  "agent": "desk-revenue",
+  "agents": [
+   "desk-revenue",
+   "scout-2025h1"
+  ],
+  "merged_ids": [
+   "evt-20250415-aws-gtm-team-projections"
+  ],
+  "independent_sources": 1
  },
  {
   "id": "evt-20250417-goodfire-series-a",
@@ -15765,6 +15840,7 @@
    "financials",
    "governance",
    "people",
+   "revenue",
    "secondary",
    "valuation"
   ],
@@ -15783,7 +15859,7 @@
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 1400.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "annualized, as-of uncertain (published May 2 2025)",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -15821,13 +15897,15 @@
    }
   },
   "confidence": "MEDIUM",
-  "notes": "Single-outlet report (opened via WebFetch summary): $56.09 per share; expected to close by end of May 2025. No second source opened. | Secondhand relay of a paywalled The Information report; revenue figure ($1.4B) conflicts with the company-disclosed '>$2B in Q1' (see conflicts). Times of India (May 3) rewrite is in Google News RSS, not opened.",
+  "notes": "Single-outlet report (opened via WebFetch summary): $56.09 per share; expected to close by end of May 2025. No second source opened. | As-of date ambiguous: Reuters (May 30) and the company (May 16) both say run-rate already exceeded $2B by end-March 2025, so $1.4B most plausibly reflects an earlier as-of date (roughly Feb-early Mar) republished in May. Excluded from model series (use_in_model=false). | Secondhand relay of a paywalled The Information report; revenue figure ($1.4B) conflicts with the company-disclosed '>$2B in Q1' (see conflicts). Times of India (May 3) rewrite is in Google News RSS, not opened.",
   "agent": "desk-governance",
   "agents": [
    "desk-governance",
+   "desk-revenue",
    "scout-2025h1"
   ],
   "merged_ids": [
+   "evt-20250502-rr-1-4b-info-maginative",
    "evt-20250502-employee-share-buyback"
   ],
   "independent_sources": 1
@@ -16332,6 +16410,7 @@
   "headline": "Anthropic says annualized revenue topped $2B in Q1 2025",
   "summary": "Alongside the credit facility, Anthropic disclosed that annualized revenue topped $2 billion in the first quarter, up more than 100% year over year, with customers paying at least $100,000 having grown eightfold.",
   "category": [
+   "customer",
    "debt",
    "financials",
    "revenue"
@@ -16357,7 +16436,7 @@
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 2000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "annualized run-rate, Q1 2025 (company disclosure via CNBC)",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -16423,7 +16502,7 @@
     }
    ],
    "headcount": null,
-   "customers": null,
+   "customers": "customers paying >=$100K: 8x YoY",
    "other": {
     "run_rate_basis": "annualized, first quarter 2025 ('topped $2 billion')",
     "yoy_growth_pct_gt": 100,
@@ -16436,12 +16515,14 @@
    }
   },
   "confidence": "HIGH",
-  "notes": "SiliconANGLE paraphrases a company disclosure first reported by CNBC (May 16; CNBC returned 403). Reuters' May 30 exclusive independently says the run-rate 'crossed $2 billion around the end of March' and was 'nearly $1 billion' in December 2024. The '$2B' is a floor ('topped'). The $1.4B figure relayed by Maginative (The Information) most plausibly reflects an earlier as-of date - see conflicts. | CNBC's original ('Anthropic closes $2.5 billion credit facility...', May 16) is in Google News RSS and on NBC local sites but returned 403; single opened source.",
+  "notes": "SiliconANGLE paraphrases a company disclosure first reported by CNBC (May 16; CNBC returned 403). Reuters' May 30 exclusive independently says the run-rate 'crossed $2 billion around the end of March' and was 'nearly $1 billion' in December 2024. The '$2B' is a floor ('topped'). The $1.4B figure relayed by Maginative (The Information) most plausibly reflects an earlier as-of date - see conflicts. | CNBC original returned 403 to the prior agent; figure is a floor (topped $2B). Independently matched by Reuters May 30 (crossed $2B around end of March). | CNBC's original ('Anthropic closes $2.5 billion credit facility...', May 16) is in Google News RSS and on NBC local sites but returned 403; single opened source.",
   "agent": "scout-2025h1",
   "agents": [
+   "desk-revenue",
    "scout-2025h1"
   ],
   "merged_ids": [
+   "evt-20250516-rr-2b-q1-2025-cnbc",
    "evt-20250516-credit-facility-2-5b"
   ],
   "independent_sources": 2
@@ -17335,7 +17416,7 @@
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 3000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "annualized run-rate, end of May 2025",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -17367,16 +17448,20 @@
     },
     "driver": "code generation",
     "attribution": "two sources familiar with the matter",
-    "openai_2025_projection_per_reuters": "more than $12 billion total revenue, up from $3.7 billion"
+    "openai_2025_projection_per_reuters": "more than $12 billion total revenue, up from $3.7 billion",
+    "openai_2025_projection_usd_m": "more than 12000 total revenue (vs 3700 in 2024)"
    }
   },
   "confidence": "HIGH",
-  "notes": "Reuters exclusive from unnamed sources; the Yahoo and Investing.com pages are copies of the same Reuters text (not independent). The end-of-March >$2B level matches Anthropic's own 'topped $2B in Q1' disclosure. Next datapoint ($4B, The Information, Jul 1 2025) is outside the window.",
+  "notes": "Reuters exclusive from unnamed sources; the Yahoo and Investing.com pages are copies of the same Reuters text (not independent). The end-of-March >$2B level matches Anthropic's own 'topped $2B in Q1' disclosure. Next datapoint ($4B, The Information, Jul 1 2025) is outside the window. | Annualized (projected run-rate) - Reuters itself notes OpenAI figures in the same story are fiscal-year totals and not comparable. Sources anonymous; consistent with company $2B Q1 disclosure. Yahoo and Investing.com pages are copies of one Reuters text.",
   "agent": "scout-2025h1",
   "agents": [
+   "desk-revenue",
    "scout-2025h1"
   ],
-  "merged_ids": [],
+  "merged_ids": [
+   "evt-20250530-rr-3b-reuters"
+  ],
   "independent_sources": 2
  },
  {
@@ -18577,7 +18662,8 @@
   "summary": "SiliconANGLE, relaying a Financial Times report, said Amazon was weighing a new multibillion-dollar investment in Anthropic, that Anthropic caps Amazon's ownership below 33%, and that Claude's annualized revenue exceeded $4B, up from $3B in May.",
   "category": [
    "funding",
-   "investment"
+   "investment",
+   "revenue"
   ],
   "source": {
    "url": "https://siliconangle.com/2025/07/10/report-amazon-weighing-new-multibillion-dollar-investment-anthropic/",
@@ -18592,6 +18678,11 @@
     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm",
     "publisher": "Amazon.com, Inc. Form 10-Q (Sep 30, 2025)",
     "tier": "T1"
+   },
+   {
+    "url": "https://www.theinformation.com/articles/anthropic-revenue-hits-4-billion-annual-pace-competition-cursor-intensifies",
+    "publisher": "The Information (headline only; paywalled)",
+    "tier": "T3"
    }
   ],
   "extracted": {
@@ -18600,7 +18691,7 @@
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 4000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "annualized run-rate, ~Jul 2025 (more than $4B)",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -18641,17 +18732,22 @@
     "amazon_invested_reported_usd_m": 13800,
     "basis_note": "The $13.8B figure equals the estimated fair value of Amazon's Anthropic convertible notes at Dec 31 2024 per Amazon's 10-Q; cost was $5.3B through Q4 2024 and $8.0B in total by Q4 2025",
     "google_invested": "over $3B",
-    "run_rate_note": "run-rate 'exceeding $4B', up from $3B in May (lower bound)"
+    "run_rate_note": "run-rate 'exceeding $4B', up from $3B in May (lower bound)",
+    "prior_point_usd_m": 3000,
+    "amazon_prior_investment_usd_m": 13800
    }
   },
   "confidence": "HIGH",
-  "notes": "FT original not fetched; report-stage only. Outcome: Amazon invested a further $1.3B note in Q2 2025 and $1.4B in Q4 2025 (10-Q), completing its $8B commitment; no separate new multibillion investment is evidenced in the opened sources.",
+  "notes": "FT original not fetched; report-stage only. Outcome: Amazon invested a further $1.3B note in Q2 2025 and $1.4B in Q4 2025 (10-Q), completing its $8B commitment; no separate new multibillion investment is evidenced in the opened sources. | Independent of The Information Jul 1 2025 \"$4B annual pace\" headline (paywalled, headline only). FT original not opened. Bracketed by company T1 points ($1B start-2025, >$5B Aug-2025).",
   "agent": "scout-2025h2",
   "agents": [
+   "desk-revenue",
    "scout-2025h2"
   ],
-  "merged_ids": [],
-  "independent_sources": 2
+  "merged_ids": [
+   "evt-20250710-rr-4b-ft-siliconangle"
+  ],
+  "independent_sources": 3
  },
  {
   "id": "evt-20250714-dod-cdao-200m",
@@ -20993,6 +21089,7 @@
   "headline": "Anthropic raises $13B Series F at $183B post-money",
   "summary": "Anthropic raised $13B in a Series F led by ICONIQ and co-led by Fidelity Management & Research and Lightspeed Venture Partners at a $183B post-money valuation, citing run-rate revenue above $5B in August 2025 versus about $1B at the start of 2025.",
   "category": [
+   "customer",
    "funding",
    "investment",
    "other",
@@ -21025,7 +21122,7 @@
    "valuation_pre_usd_m": 170000.0,
    "revenue_run_rate_usd_m": 5000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "run-rate, August 2025 (over $5B)",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -21217,19 +21314,22 @@
     "total_raised_to_date_usd_m": 33700,
     "total_raised_note": "$33.7B since 2021 per Crunchbase News",
     "prior_round": "$3.5B at $61.5B post (Mar 2025)",
-    "total_raised_conflict": "Crunchbase: $33.7B since 2021 (post-Series F); Bloomberg (Aug 21, pre-round): '$14.3B over 12 rounds' - bases differ"
+    "total_raised_conflict": "Crunchbase: $33.7B since 2021 (post-Series F); Bloomberg (Aug 21, pre-round): '$14.3B over 12 rounds' - bases differ",
+    "claude_code_run_rate_usd_m_gt": 500
    }
   },
   "confidence": "HIGH",
-  "notes": "Matches KNOWN CANONICAL ($13B / $183B post). Pre-money $170B is derived (183-13), not stated by the company. Run-rate '$5B+' is an Anthropic-stated lower bound as of August 2025. Crunchbase News notes summer-2025 reporting of talks at a $170B valuation, consistent with derived pre-money. | Post cites >300,000 business customers and run-rate above $5B by Aug 2025; Claude Code above $500M run-rate. | T1 only opened (TechCrunch 'raises $13B Series F at $183B valuation' seen as RSS headline). Funding belongs to desk-deals; usage stats recorded for the adoption ledger.",
+  "notes": "Matches KNOWN CANONICAL ($13B / $183B post). Pre-money $170B is derived (183-13), not stated by the company. Run-rate '$5B+' is an Anthropic-stated lower bound as of August 2025. Crunchbase News notes summer-2025 reporting of talks at a $170B valuation, consistent with derived pre-money. | Post cites >300,000 business customers and run-rate above $5B by Aug 2025; Claude Code above $500M run-rate. | Company-stated run-rate (annualized; gross of cloud-partner resale per company reporting convention); Aug 2025 figure is a lower bound (\"over $5 billion\"). | T1 only opened (TechCrunch 'raises $13B Series F at $183B valuation' seen as RSS headline). Funding belongs to desk-deals; usage stats recorded for the adoption ledger.",
   "agent": "scout-2025h2",
   "agents": [
    "desk-ecosystem",
    "desk-product",
+   "desk-revenue",
    "scout-2025h2"
   ],
   "merged_ids": [
    "evt-20250902-series-f-roster",
+   "evt-20250902-rr-5b-series-f-customers",
    "evt-20250902-series-f-usage-stats"
   ],
   "independent_sources": 3
@@ -23143,97 +23243,6 @@
   "independent_sources": 5
  },
  {
-  "id": "evt-20251015-run-rate-7b-2026-target",
-  "date": "2025-10-15",
-  "date_precision": "day",
-  "headline": "Reuters-attributed: Anthropic run-rate near $7B, eyes up to $26B in 2026",
-  "summary": "Reports attributed to Reuters said Anthropic's annualized revenue was close to $7B in mid-October, on track for about $9B by end-2025, with 2026 targets reaching up to $26B.",
-  "category": [
-   "financials",
-   "revenue"
-  ],
-  "source": {
-   "url": "https://www.tipranks.com/news/anthropic-targets-26-billion-revenue-by-2026-as-ai-demand-accelerates",
-   "publisher": "TipRanks",
-   "title": "Anthropic Targets $26 Billion Revenue by 2026 as AI Demand Accelerates",
-   "published": "2025-10-16",
-   "tier": "T4",
-   "opened": true
-  },
-  "corroboration": [
-   {
-    "url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
-    "publisher": "TechCrunch/The Information (2026 ARR target $20-26B)",
-    "tier": "T3"
-   },
-   {
-    "url": "https://finance.yahoo.com/news/anthropic-plans-ipo-early-2026-004854547.html",
-    "publisher": "Reuters via Yahoo Finance (Dec 2: ~$26B run-rate next year)",
-    "tier": "T2"
-   },
-   {
-    "url": "https://siliconangle.com/2025/10/23/anthropic-strikes-multibillion-dollar-deal-google-access-million-tpus/",
-    "publisher": "SiliconANGLE (Oct 23: run rate approaching $7B)",
-    "tier": "T2"
-   },
-   {
-    "url": "https://fortune.com/2025/12/04/how-anthropic-grew-what-the-183-billion-giant-faces-next/",
-    "publisher": "Fortune (Dec 4: year-end run-rate nearly $10B)",
-    "tier": "T2"
-   }
-  ],
-  "extracted": {
-   "amount_usd_m": null,
-   "valuation_post_usd_m": null,
-   "valuation_pre_usd_m": null,
-   "revenue_run_rate_usd_m": 7000.0,
-   "revenue_period_usd_m": null,
-   "revenue_period": null,
-   "margin_pct": null,
-   "margin_type": null,
-   "compute": {
-    "partner": null,
-    "chips": null,
-    "gw": null,
-    "usd_m": null,
-    "term": null
-   },
-   "product": {
-    "name": null,
-    "type": null,
-    "price_in_per_mtok": null,
-    "price_out_per_mtok": null,
-    "context_window": null
-   },
-   "governance": null,
-   "moat": null,
-   "strategy": null,
-   "people": [],
-   "entities": [],
-   "headcount": null,
-   "customers": null,
-   "other": {
-    "year_end_2025_target_usd_m": 9000,
-    "target_2026_usd_m": {
-     "base": 20000,
-     "upside": 26000
-    },
-    "business_customers": "roughly 300,000",
-    "claude_code_annualized": "nearly $1B",
-    "openai_context": "OpenAI run-rate $13B in August, expecting over $20B by year-end",
-    "original_report": "Reuters exclusive 'Anthropic aims to nearly triple annualized revenue in 2026, sources say' (Oct 15; Google News RSS title only)"
-   }
-  },
-  "confidence": "MEDIUM",
-  "notes": "The Oct ~$7B figure is now supported by TipRanks (T4) and SiliconANGLE's Oct 23 'approaching $7B'; Reuters original blocked. Year-end forecasts: ~$9B (Reuters via TipRanks, Oct), $8-10B (Amodei, Dec 3), nearly $10B (Fortune, Dec 4) - consistent, not treated as a conflict. The 2026 $20-26B range is independently supported by The Information (Nov 4) and Reuters (Dec 2).",
-  "agent": "scout-2025h2",
-  "agents": [
-   "scout-2025h2"
-  ],
-  "merged_ids": [],
-  "independent_sources": 5
- },
- {
   "id": "evt-20251016-agent-skills",
   "date": "2025-10-16",
   "date_precision": "day",
@@ -23333,6 +23342,105 @@
    "evt-20251016-agent-skills-launch"
   ],
   "independent_sources": 3
+ },
+ {
+  "id": "evt-20251016-rr-7b-ye9b-2026-26b",
+  "date": "2025-10-16",
+  "date_precision": "day",
+  "headline": "Run-rate close to $7B in Oct 2025; YE2025 target ~$9B; 2026 target up to $26B",
+  "summary": "TipRanks and SiliconANGLE reported Anthropic annualized revenue close to $7B in October 2025, about 80% from business clients, with a ~$9B year-end target and up to $26B in 2026.",
+  "category": [
+   "customer",
+   "financials",
+   "revenue"
+  ],
+  "source": {
+   "url": "https://www.tipranks.com/news/anthropic-targets-26-billion-revenue-by-2026-as-ai-demand-accelerates",
+   "publisher": "TipRanks",
+   "title": "Anthropic targets $26 billion revenue by 2026 as AI demand accelerates",
+   "published": "2025-10-16",
+   "tier": "T4",
+   "opened": true
+  },
+  "corroboration": [
+   {
+    "url": "https://siliconangle.com/2025/10/23/anthropic-strikes-multibillion-dollar-deal-google-access-million-tpus/",
+    "publisher": "SiliconANGLE",
+    "tier": "T2"
+   },
+   {
+    "url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+    "publisher": "TechCrunch/The Information (2026 ARR target $20-26B)",
+    "tier": "T3"
+   },
+   {
+    "url": "https://finance.yahoo.com/news/anthropic-plans-ipo-early-2026-004854547.html",
+    "publisher": "Reuters via Yahoo Finance (Dec 2: ~$26B run-rate next year)",
+    "tier": "T2"
+   },
+   {
+    "url": "https://fortune.com/2025/12/04/how-anthropic-grew-what-the-183-billion-giant-faces-next/",
+    "publisher": "Fortune (Dec 4: year-end run-rate nearly $10B)",
+    "tier": "T2"
+   }
+  ],
+  "extracted": {
+   "amount_usd_m": null,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": 7000.0,
+   "revenue_period_usd_m": null,
+   "revenue_period": "annualized run-rate, Oct 2025 (close to $7B)",
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [],
+   "headcount": null,
+   "customers": "300,000+ firms; business clients ~80% of sales",
+   "other": {
+    "ye2025_target_usd_m": 9000,
+    "target_2026_upside_usd_m": 26000,
+    "claude_code_annualized_usd_m_approx": 1000,
+    "openai_run_rate_aug_2025_usd_m": 13000,
+    "year_end_2025_target_usd_m": 9000,
+    "target_2026_usd_m": {
+     "base": 20000,
+     "upside": 26000
+    },
+    "business_customers": "roughly 300,000",
+    "claude_code_annualized": "nearly $1B",
+    "openai_context": "OpenAI run-rate $13B in August, expecting over $20B by year-end",
+    "original_report": "Reuters exclusive 'Anthropic aims to nearly triple annualized revenue in 2026, sources say' (Oct 15; Google News RSS title only)"
+   }
+  },
+  "confidence": "MEDIUM",
+  "notes": "TipRanks (T4) relays a Reuters exclusive of Oct 15 (Google News RSS title only; Reuters not opened); SiliconANGLE Oct 23 independently says \"approaching $7B\". $26B is the 2026 annualized-run-rate upside; $20B base per The Information (Nov 4). | The Oct ~$7B figure is now supported by TipRanks (T4) and SiliconANGLE's Oct 23 'approaching $7B'; Reuters original blocked. Year-end forecasts: ~$9B (Reuters via TipRanks, Oct), $8-10B (Amodei, Dec 3), nearly $10B (Fortune, Dec 4) - consistent, not treated as a conflict. The 2026 $20-26B range is independently supported by The Information (Nov 4) and Reuters (Dec 2).",
+  "agent": "desk-revenue",
+  "agents": [
+   "desk-revenue",
+   "scout-2025h2"
+  ],
+  "merged_ids": [
+   "evt-20251015-run-rate-7b-2026-target"
+  ],
+  "independent_sources": 5
  },
  {
   "id": "evt-20251020-claude-for-life-sciences",
@@ -24478,16 +24586,28 @@
     ],
     "claude_code_annualized": "approaching $1B",
     "openai_2025_api_revenue_projection_usd_m": 1800,
-    "valuation_chatter": "a new raise could target $300-400B"
+    "valuation_chatter": "a new raise could target $300-400B",
+    "gross_margin_2025e_pct": 50,
+    "api_revenue_2025e_usd_m": 3800,
+    "ye2025_arr_target_usd_m": 9000,
+    "arr_2026_target_usd_m": [
+     20000,
+     26000
+    ],
+    "claude_code_annualized_usd_m_approx": 1000,
+    "claude_code_july_2025_usd_m_approx": 400
    }
   },
-  "confidence": "MEDIUM",
-  "notes": "Single-outlet scoop (The Information) relayed by TechCrunch; T3. The $3.8B is described as expected API revenue for 2025 and is not comparable to the ~$9B exit run-rate (different basis: calendar-year recognized API revenue vs annualized run-rate incl. subscriptions). Verify scope.",
+  "confidence": "DISPUTED",
+  "notes": "Single-outlet scoop (The Information) relayed by TechCrunch; T3. The $3.8B is described as expected API revenue for 2025 and is not comparable to the ~$9B exit run-rate (different basis: calendar-year recognized API revenue vs annualized run-rate incl. subscriptions). Verify scope. | Single-outlet scoop (The Information paywalled, not opened). $3.8B is expected 2025 API revenue only (not total) and is not comparable to the ~$9B exit run-rate. The -94% gross margin refers to 2024 (\"last year\"). 2028 cash flow $17B is the company plan for breakeven/positive cash flow.",
   "agent": "scout-2025h2",
   "agents": [
+   "desk-revenue",
    "scout-2025h2"
   ],
-  "merged_ids": [],
+  "merged_ids": [
+   "evt-20251104-info-2028-70b-gm-77"
+  ],
   "independent_sources": 1
  },
  {
@@ -25257,6 +25377,7 @@
   "summary": "The Financial Times reported that Anthropic hired Wilson Sonsini and held early informal talks with banks about an IPO as early as 2026 while seeking a private round above $300B, which Anthropic said it had not decided on.",
   "category": [
    "ipo",
+   "revenue",
    "valuation"
   ],
   "source": {
@@ -25288,9 +25409,9 @@
    "amount_usd_m": null,
    "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
-   "revenue_run_rate_usd_m": null,
+   "revenue_run_rate_usd_m": 26000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "projected 2026 annualized run-rate (as of Dec 2025)",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -25326,7 +25447,7 @@
     }
    ],
    "headcount": null,
-   "customers": null,
+   "customers": "300,000+ business and enterprise customers",
    "other": {
     "law_firm": "Wilson Sonsini (adviser to Anthropic since 2022)",
     "banks": "early, informal talks; no underwriter chosen",
@@ -25336,16 +25457,20 @@
     "anthropic_response": "has not decided when or even if it will go public",
     "openai_context": "OpenAI reportedly preparing a larger IPO at up to $1T with filings possible in H2 2026",
     "deutsche_bank_note": "Anthropic subscription revenue up nearly 7x in 2025 (Fortune)",
-    "cfo": "Krishna Rao (former Airbnb executive) is CFO (Fortune)"
+    "cfo": "Krishna Rao (former Airbnb executive) is CFO (Fortune)",
+    "valuation_then_usd_m": 183000
    }
   },
   "confidence": "HIGH",
-  "notes": "FT original is paywalled and not fetched; Reuters wire (Dec 2) carries it, TechCrunch/Fortune are Dec 3. Plans unconfirmed by Anthropic. The same Reuters text says Anthropic projects a run-rate of about $26B next year. Date: the checklist cites the FT report as Dec 3, but the Reuters wire copy and the FT listing in Google News RSS are dated Dec 2 (US time); TechCrunch and Fortune are Dec 3. Dec 2 used.",
+  "notes": "FT original is paywalled and not fetched; Reuters wire (Dec 2) carries it, TechCrunch/Fortune are Dec 3. Plans unconfirmed by Anthropic. The same Reuters text says Anthropic projects a run-rate of about $26B next year. Date: the checklist cites the FT report as Dec 3, but the Reuters wire copy and the FT listing in Google News RSS are dated Dec 2 (US time); TechCrunch and Fortune are Dec 3. Dec 2 used. | Projection of run-rate (not recognized revenue) for 2026; superseded by actuals: run-rate was already $30B by April 2026 (company) and $65B by July 2026 (Bloomberg).",
   "agent": "scout-2025h2",
   "agents": [
+   "desk-revenue",
    "scout-2025h2"
   ],
-  "merged_ids": [],
+  "merged_ids": [
+   "evt-20251202-reuters-ft-2026-26b"
+  ],
   "independent_sources": 3
  },
  {
@@ -25449,7 +25574,7 @@
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 9000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "year-end 2025 run-rate guidance midpoint ($8-10B)",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -25487,16 +25612,20 @@
      10000
     ],
     "basis": "'revenue' per CEO; TechCrunch does not say run-rate vs recognized",
-    "event": "NYT DealBook Summit (Dec 3, 2025)"
+    "event": "NYT DealBook Summit (Dec 3, 2025)",
+    "uncertainty_quote": "20 billion or 50 billion next year - very uncertain"
    }
   },
   "confidence": "HIGH",
-  "notes": "revenue_run_rate_usd_m=9000 is the midpoint of the CEO's $8-10B range, treated as year-end run-rate; basis not specified in the article. TechCrunch write-up is Dec 4; interview was Dec 3 per Bloomberg/NYT/BI headlines in RSS.",
+  "notes": "revenue_run_rate_usd_m=9000 is the midpoint of the CEO's $8-10B range, treated as year-end run-rate; basis not specified in the article. TechCrunch write-up is Dec 4; interview was Dec 3 per Bloomberg/NYT/BI headlines in RSS. | CEO \"revenue\" is year-end run-rate style, not recognized revenue: the leaked prospectus shows FY2024 recognized revenue ~$0.4B and FY2025 ~$4.6B. Interview Dec 3; write-up Dec 4.",
   "agent": "scout-2025h2",
   "agents": [
+   "desk-revenue",
    "scout-2025h2"
   ],
-  "merged_ids": [],
+  "merged_ids": [
+   "evt-20251204-amodei-dealbook-8-10b"
+  ],
   "independent_sources": 2
  },
  {
@@ -25809,16 +25938,22 @@
     "break_even_vs_openai": "two years ahead of OpenAI",
     "ye2025_run_rate_forecast": "nearly $10B (Fortune); ~$9B (Reuters via TipRanks, Oct); $8-10B (Amodei, Dec 3)",
     "revenue_2028_usd_m": 70000,
-    "amodei_quote": "'Can you buy so many data centers that you over-leverage yourself? All I'll say is, some people are trying.'"
+    "amodei_quote": "'Can you buy so many data centers that you over-leverage yourself? All I'll say is, some people are trying.'",
+    "breakeven_year": 2028,
+    "ye2025_run_rate_usd_m_approx": 10000,
+    "headcount_late_2023_approx": 500
    }
   },
   "confidence": "MEDIUM",
-  "notes": "Figures relayed by Fortune from reporting (The Information/WSJ Nov 4/Nov 10 headlines seen in RSS, not opened). Headcount is the only absolute employee count found for H2 2025.",
+  "notes": "Figures relayed by Fortune from reporting (The Information/WSJ Nov 4/Nov 10 headlines seen in RSS, not opened). Headcount is the only absolute employee count found for H2 2025. | Figures relayed from underlying reporting (The Information / WSJ Nov 2025 headlines, not opened). Cash burn = cash consumed minus generated (FCF-style), projected at the time; WSJ-derived T4 summaries later say $3B burned in 2025 and $5.6B in 2024.",
   "agent": "scout-2025h2",
   "agents": [
+   "desk-revenue",
    "scout-2025h2"
   ],
-  "merged_ids": [],
+  "merged_ids": [
+   "evt-20251204-fortune-burn-2-8b-breakeven-2028"
+  ],
   "independent_sources": 1
  },
  {
@@ -27844,6 +27979,76 @@
   "independent_sources": 1
  },
  {
+  "id": "evt-20260122-info-gm-cut-40pct-rr-9b",
+  "date": "2026-01-22",
+  "date_precision": "day",
+  "headline": "The Information: 2025 gross margin projection cut to ~40%; run-rate ~$4B (Jul) to ~$9B (YE)",
+  "summary": "TipRanks, citing The Information, reported Anthropic cut its 2025 gross margin projection to about 40% from about 50% because inference costs on Google and Amazon clouds ran roughly 23% above plan, while run-rate rose from about $4B in July to about $9B at year-end 2025.",
+  "category": [
+   "financials",
+   "revenue"
+  ],
+  "source": {
+   "url": "https://www.tipranks.com/news/ai-startup-anthropic-warns-of-profit-margin-pressure-as-costs-surge",
+   "publisher": "TipRanks (citing The Information)",
+   "title": "AI Startup Anthropic Warns of Profit Margin Pressure as Costs Surge",
+   "published": "2026-01-22",
+   "tier": "T4",
+   "opened": true
+  },
+  "corroboration": [
+   {
+    "url": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625",
+    "publisher": "PitchBook analyst note (Mar 5 2026)",
+    "tier": "T3"
+   }
+  ],
+  "extracted": {
+   "amount_usd_m": null,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": 9000.0,
+   "revenue_period_usd_m": null,
+   "revenue_period": "run-rate at year-end 2025 (~$9B; ~$4B in July 2025)",
+   "margin_pct": 40.0,
+   "margin_type": "gross margin, 2025E (cut from ~50%); ~38% incl. free-user inference (per PitchBook footnote)",
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [],
+   "headcount": null,
+   "customers": null,
+   "other": {
+    "inference_cost_overrun_pct": 23,
+    "prior_gm_target_pct": 50,
+    "gm_2024_pct_paying_customers_only": -94
+   }
+  },
+  "confidence": "MEDIUM",
+  "notes": "T4 relay of a paywalled The Information report (Sri Muppidi, Jan 22 2026). PitchBook note footnote adds: the -94% 2024 margin covers paying customers only and including free-user inference would cut 2025 to ~38%. Year-end $9B is corroborated by Anthropic itself (Apr 6 post: ~$9B at end-2025).",
+  "agent": "desk-revenue",
+  "agents": [
+   "desk-revenue"
+  ],
+  "merged_ids": [],
+  "independent_sources": 2
+ },
+ {
   "id": "evt-20260126-adolescence-of-technology-essay",
   "date": "2026-01-26",
   "date_precision": "day",
@@ -29807,6 +30012,7 @@
   "headline": "Anthropic raises $30B Series G at $380B post-money",
   "summary": "Anthropic announced a $30 billion Series G at a $380 billion post-money valuation led by GIC and Coatue, co-led by D. E. Shaw Ventures, Dragoneer, Founders Fund, ICONIQ and MGX, and including a portion of previously announced Microsoft and NVIDIA investments, alongside a $14 billion run-rate revenue disclosure.",
   "category": [
+   "customer",
    "funding",
    "investment",
    "other",
@@ -29833,6 +30039,11 @@
     "tier": "T2"
    },
    {
+    "url": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625",
+    "publisher": "PitchBook analyst note (repeats Series G metrics)",
+    "tier": "T3"
+   },
+   {
     "url": "https://techcrunch.com/2026/03/09/anthropic-launches-code-review-tool-to-check-flood-of-ai-generated-code/",
     "publisher": "TechCrunch (repeats Claude Code run-rate >$2.5B and enterprise subscriptions 4x; same underlying Anthropic disclosure)",
     "tier": "T2"
@@ -29849,7 +30060,7 @@
    "valuation_pre_usd_m": 350000.0,
    "revenue_run_rate_usd_m": 14000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "run-rate, Feb 2026 (company)",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -29994,25 +30205,30 @@
     "claude_code_github_share": "Anthropic cites a recent analysis: 4% of all GitHub public commits authored by Claude Code, double the share a month earlier",
     "blackstone_stake": "Reuters (Feb 12, opened via Yahoo): earlier that week Reuters reported Blackstone was increasing its stake in Anthropic to about $1 billion",
     "reuters_lead_wording": "Reuters: 'co-led by investors including D. E. Shaw Ventures, ICONIQ and MGX'; 'also included a portion of previously announced investments from Microsoft and Nvidia' (consistent with Anthropic's release)",
+    "claude_code_run_rate_usd_m_gt": 2500,
+    "claude_code_enterprise_share": "over half of Claude Code revenue",
+    "claude_code_github_commit_share_pct": 4,
+    "claude_code_business_subscriptions": "4x since start of 2026",
     "claude_code_weekly_active_users": "doubled since Jan 1 2026",
     "claude_code_share_of_github_public_commits_pct": 4,
-    "claude_code_business_subscriptions": "4x since start of 2026",
     "claude_code_enterprise_share_of_revenue": "over half"
    }
   },
   "confidence": "HIGH",
-  "notes": "Round size, valuation, leads/co-leads and the Microsoft/NVIDIA 'portion' language confirmed by three sources (Anthropic; TechCrunch; Reuters). Pre-money $350B is derived ($380B - $30B). Microsoft/NVIDIA amounts inside the round are undisclosed. Run-rate $14B is Anthropic's own figure (run-rate, not period revenue). Reuters adds a Blackstone stake of about $1B (separate Reuters report, not opened). | Post cites run-rate $14B, Claude Code $2.5B, 500+ customers at $1M+ and 8 of the Fortune 10. PitchBook lists Commonwealth Bank of Australia (not named in the post) and NVIDIA (named only via the Microsoft/NVIDIA portion) with Investor Since 2026-02-12. | Figures verified verbatim in the Anthropic post and repeated by SiliconANGLE, which adds that revenue was reportedly expected to exceed $30B by year-end 2026 (actual run-rate passed $30B by Apr 6). Funding/valuation belong to desk-deals.",
+  "notes": "Round size, valuation, leads/co-leads and the Microsoft/NVIDIA 'portion' language confirmed by three sources (Anthropic; TechCrunch; Reuters). Pre-money $350B is derived ($380B - $30B). Microsoft/NVIDIA amounts inside the round are undisclosed. Run-rate $14B is Anthropic's own figure (run-rate, not period revenue). Reuters adds a Blackstone stake of about $1B (separate Reuters report, not opened). | Post cites run-rate $14B, Claude Code $2.5B, 500+ customers at $1M+ and 8 of the Fortune 10. PitchBook lists Commonwealth Bank of Australia (not named in the post) and NVIDIA (named only via the Microsoft/NVIDIA portion) with Investor Since 2026-02-12. | Company-stated run-rate (annualized; gross convention). Claude Code enterprise share \"over half of all Claude Code revenue\"; 4% of public GitHub commits; business subscriptions 4x since start of 2026. | Figures verified verbatim in the Anthropic post and repeated by SiliconANGLE, which adds that revenue was reportedly expected to exceed $30B by year-end 2026 (actual run-rate passed $30B by Apr 6). Funding/valuation belong to desk-deals.",
   "agent": "scout-2026q1",
   "agents": [
    "desk-ecosystem",
    "desk-product",
+   "desk-revenue",
    "scout-2026q1"
   ],
   "merged_ids": [
    "evt-20260212-series-g-roster",
+   "evt-20260212-rr-14b-series-g-customers",
    "evt-20260212-series-g-run-rate-14b-claude-code-2-5b"
   ],
-  "independent_sources": 4
+  "independent_sources": 5
  },
  {
   "id": "evt-20260213-chris-liddell-board",
@@ -31854,7 +32070,7 @@
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 19000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "run-rate, early Mar 2026 (Bloomberg: nears $20B)",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -31896,16 +32112,20 @@
     "february_addition_usd_bn": 6,
     "basis": "annualized run-rate, not period revenue",
     "bloomberg_headline_rss": "Mar 3 'Anthropic Nears $20 Billion Revenue Run Rate Amid Pentagon Feud' (paywalled; not opened)",
-    "reuters_breakingviews_rss": "Mar 11 'Anthropic gives lesson in AI revenue hallucination' (not opened; likely critiques run-rate methodology)"
+    "reuters_breakingviews_rss": "Mar 11 'Anthropic gives lesson in AI revenue hallucination' (not opened; likely critiques run-rate methodology)",
+    "february_addition_usd_m": 6000
    }
   },
   "confidence": "MEDIUM",
-  "notes": "Two independent secondary reports and Anthropic's own $14B anchor agree on the path; the Bloomberg original and any Anthropic statement were not opened. $19B vs Bloomberg's 'nears $20B' is within 10%. Run-rate basis, not GAAP revenue.",
+  "notes": "Two independent secondary reports and Anthropic's own $14B anchor agree on the path; the Bloomberg original and any Anthropic statement were not opened. $19B vs Bloomberg's 'nears $20B' is within 10%. Run-rate basis, not GAAP revenue. | Second-hand: Bloomberg Mar 3 original (\"Anthropic Nears $20 Billion Revenue Run Rate Amid Pentagon Feud\") paywalled, headline only; Amodei confirmation came via investor Brad Gerstner account. VentureBeat (May 8) also lists Mar 2026 $19B. Run-rate basis.",
   "agent": "scout-2026q1",
   "agents": [
+   "desk-revenue",
    "scout-2026q1"
   ],
-  "merged_ids": [],
+  "merged_ids": [
+   "evt-20260304-rr-19b-bloomberg"
+  ],
   "independent_sources": 3
  },
  {
@@ -32605,6 +32825,78 @@
   "agent": "desk-legal",
   "agents": [
    "desk-legal"
+  ],
+  "merged_ids": [],
+  "independent_sources": 2
+ },
+ {
+  "id": "evt-20260309-cfo-declaration-public-sector",
+  "date": "2026-03-09",
+  "date_precision": "day",
+  "headline": "CFO declaration: Pentagon actions threaten hundreds of millions to billions; public-sector ARR 4x",
+  "summary": "Reuters reported Anthropic executive declarations that the Pentagon blacklisting put \"multiple billions\" of 2026 revenue at risk, including hundreds of millions from DoD work, with $150M of ARR lost immediately and more than $500M of public-sector ARR expected in 2026.",
+  "category": [
+   "customer",
+   "revenue"
+  ],
+  "source": {
+   "url": "https://finance.yahoo.com/news/anthropic-executives-pentagon-blacklisting-could-015740870.html",
+   "publisher": "Reuters (via Yahoo Finance)",
+   "title": "Anthropic executives say Pentagon blacklisting could cut billions in revenue",
+   "published": "2026-03-09",
+   "tier": "T2",
+   "opened": true
+  },
+  "corroboration": [
+   {
+    "url": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625",
+    "publisher": "PitchBook analyst note (federal ban ~$200M, ~1.4% of ARR)",
+    "tier": "T3"
+   }
+  ],
+  "extracted": {
+   "amount_usd_m": null,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": null,
+   "revenue_period_usd_m": null,
+   "revenue_period": null,
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [],
+   "headcount": null,
+   "customers": "public-sector customer run-rate 4x Dec 2025 to Jan 2026; >$500M public-sector ARR expected in 2026; 100+ enterprise customers voiced concern",
+   "other": {
+    "dod_arr_lost_immediately_usd_m": 150,
+    "cfo_revenue_at_risk_2026": "hundreds of millions (DoD) to multiple billions",
+    "public_sector_arr_2026_expected_usd_m_gt": 500,
+    "pipeline_eliminated_usd_m_gt": 100,
+    "financial_institution_negotiations_disrupted_usd_m": 180
+   }
+  },
+  "confidence": "HIGH",
+  "notes": "Sworn-declaration figures from CFO Krishna Rao, public-sector head Thiyagu Ramasamy and CCO Paul Smith in court filings; court PDF itself not re-opened this run. PitchBook estimated the federal ban at ~$200M revenue (~1.4% of ARR), the same order of magnitude.",
+  "agent": "desk-revenue",
+  "agents": [
+   "desk-revenue"
   ],
   "merged_ids": [],
   "independent_sources": 2
@@ -34587,6 +34879,7 @@
   "summary": "Anthropic announced an expanded Google and Broadcom partnership for multiple gigawatts of next-generation TPU capacity coming online from 2027, disclosing run-rate revenue above $30B (about $9B at end-2025) and 1,000+ customers spending over $1M annualized.",
   "category": [
    "compute",
+   "customer",
    "other",
    "partnership",
    "revenue"
@@ -34604,6 +34897,11 @@
     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
     "publisher": "SEC EDGAR (Broadcom 8-K, Item 8.01, 2026-04-06)",
     "tier": "T1"
+   },
+   {
+    "url": "https://my.pitchbook.com/news-center/pb6061938316164774282",
+    "publisher": "PitchBook news (citing Bloomberg: >$30B by late March)",
+    "tier": "T2"
    }
   ],
   "extracted": {
@@ -34612,7 +34910,7 @@
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 30000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "run-rate, late Mar / early Apr 2026 (company: surpassed $30B)",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -34671,22 +34969,25 @@
    "customers": ">1,000 business customers each spending >$1M annualized (>500 in Feb 2026)",
    "other": {
     "run_rate_prior": "~$9B at end-2025",
-    "basis": "run-rate, company-announced"
+    "basis": "run-rate, company-announced",
+    "prior_usd_m": 9000
    }
   },
   "confidence": "HIGH",
-  "notes": "Broadcom 8-K (T1) says Anthropic, beginning 2027, will access ~3.5 GW through Broadcom as part of the multiple GW of TPU capacity it committed, and that consumption 'is dependent on Anthropic's continued commercial success' (no dollar figures). Run-rate >$30B is company-stated (gross basis). The Series H page later cites 5 GW Google/Broadcom TPU capacity. | Broadcom 8-K (T1) sets the expanded collaboration at ~3.5GW of TPU capacity 2027-2031 and says Anthropic's consumption depends on its continued commercial success. Run-rate ($30B vs ~$9B at end-2025) for desk-revenue; compute terms with desk-compute. | Single T1 statement; RSS shows Bloomberg 'Anthropic Tops $30 Billion Run Rate, Seals Deal With Broadcom' (Apr 6) and VentureBeat (May 8) - headlines only, not opened. Gross-vs-net basis per METHODOLOGY (Anthropic reports gross of cloud resale).",
+  "notes": "Broadcom 8-K (T1) says Anthropic, beginning 2027, will access ~3.5 GW through Broadcom as part of the multiple GW of TPU capacity it committed, and that consumption 'is dependent on Anthropic's continued commercial success' (no dollar figures). Run-rate >$30B is company-stated (gross basis). The Series H page later cites 5 GW Google/Broadcom TPU capacity. | Company run-rate (annualized; gross of cloud-partner resale per company convention). Bloomberg Apr 6 headline \"Tops $30 Billion Run Rate, Seals Deal With Broadcom\" and PitchBook/Bloomberg \"more than $30B by late March\" corroborate (PitchBook news read via MCP). As-of is late March/early April. | Broadcom 8-K (T1) sets the expanded collaboration at ~3.5GW of TPU capacity 2027-2031 and says Anthropic's consumption depends on its continued commercial success. Run-rate ($30B vs ~$9B at end-2025) for desk-revenue; compute terms with desk-compute. | Single T1 statement; RSS shows Bloomberg 'Anthropic Tops $30 Billion Run Rate, Seals Deal With Broadcom' (Apr 6) and VentureBeat (May 8) - headlines only, not opened. Gross-vs-net basis per METHODOLOGY (Anthropic reports gross of cloud resale).",
   "agent": "scout-2026q2",
   "agents": [
    "desk-ecosystem",
    "desk-product",
+   "desk-revenue",
    "scout-2026q2"
   ],
   "merged_ids": [
+   "evt-20260406-rr-30b-1000-customers-1m",
    "evt-20260406-google-broadcom-tpus",
    "evt-20260406-run-rate-30b-1000-customers-1m"
   ],
-  "independent_sources": 2
+  "independent_sources": 3
  },
  {
   "id": "evt-20260407-mythos-preview-and-project-glasswing",
@@ -35538,6 +35839,84 @@
    "evt-20260410-coreweave-multi-year-agreement"
   ],
   "independent_sources": 2
+ },
+ {
+  "id": "evt-20260413-openai-memo-gross-vs-net-arr",
+  "date": "2026-04-13",
+  "date_precision": "day",
+  "headline": "OpenAI memo accuses Anthropic of inflating ARR via gross accounting of cloud-partner sales",
+  "summary": "PitchBook reported OpenAI CRO Denise Dresser told staff Anthropic boosts headline ARR by booking cloud-partner (Amazon, Google) revenue-share arrangements gross, while PitchBook analyst Harrison Rolfes said neither company reports on a basis that would survive a Big Four audit.",
+  "category": [
+   "competition",
+   "revenue"
+  ],
+  "source": {
+   "url": "https://my.pitchbook.com/news-center/pb7236696778701751508",
+   "publisher": "PitchBook News (read via PitchBook MCP)",
+   "title": "OpenAI's ARR attack reveals who's on the defense",
+   "published": "2026-04-13",
+   "tier": "T2",
+   "opened": true
+  },
+  "corroboration": [
+   {
+    "url": "https://quasa.io/media/anthropic-hits-30b-arr-superforecaster-peter-wildeford-now-sees-openai-anthropic-combined-run-rate-at-240b-by-end-of-2026",
+    "publisher": "quasa.io (aggregator; $8B / $22B; chunk read via PitchBook MCP)",
+    "tier": "T5"
+   },
+   {
+    "url": "https://www.aicerts.ai/news/anthropic-revenue-soars-past-30b-amid-accounting-debate/",
+    "publisher": "aicerts.ai (aggregator; $8B gap; chunk read via PitchBook MCP)",
+    "tier": "T5"
+   }
+  ],
+  "extracted": {
+   "amount_usd_m": null,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": null,
+   "revenue_period_usd_m": null,
+   "revenue_period": null,
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [],
+   "headcount": null,
+   "customers": null,
+   "other": {
+    "alleged_overstatement_usd_m": 8000,
+    "alleged_comparable_run_rate_usd_m": 22000,
+    "headline_run_rate_usd_m": 30000,
+    "openai_run_rate_end_mar_usd_m": 24000,
+    "anthropic_position": "principal in the transaction; cloud partners are distribution channels (Reuters)",
+    "pitchbook_quote": "both companies are in an ARR accounting arms race ... neither is reporting on a basis that would survive a Big Four audit"
+   }
+  },
+  "confidence": "HIGH",
+  "notes": "The ~$8B overstatement and $22B \"comparable\" figures appear only in aggregators (quasa.io Apr 21, aicerts May 9) retrieved via PitchBook MCP; The Verge memo not opened. Reuters (Jun 11 via Economic Times, chunk read via PitchBook MCP) confirms OpenAI told investors Anthropic books the full customer payment as revenue and routes part to partners; Anthropic says it is the principal. S-1 data later implied only ~7.6% (see conflicts).",
+  "agent": "desk-revenue",
+  "agents": [
+   "desk-revenue"
+  ],
+  "merged_ids": [],
+  "independent_sources": 3
  },
  {
   "id": "evt-20260414-narasimhan-board",
@@ -36943,77 +37322,6 @@
   "independent_sources": 1
  },
  {
-  "id": "evt-20260429-900b-round-preemptive-offers",
-  "date": "2026-04-29",
-  "date_precision": "day",
-  "headline": "Anthropic fielding ~$50B raise offers at $850-900B valuation",
-  "summary": "Bloomberg-sourced reports said Anthropic received preemptive offers for a $40-50B round at an $850-900B valuation, with a May board decision expected and run-rate revenue 'closer to $40B'.",
-  "category": [
-   "funding",
-   "valuation"
-  ],
-  "source": {
-   "url": "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
-   "publisher": "TechCrunch",
-   "title": "Sources: Anthropic could raise a new $50B round at a valuation of $900B",
-   "published": "2026-04-29",
-   "tier": "T3",
-   "opened": true
-  },
-  "corroboration": [],
-  "extracted": {
-   "amount_usd_m": 50000.0,
-   "valuation_post_usd_m": null,
-   "valuation_pre_usd_m": null,
-   "revenue_run_rate_usd_m": 40000.0,
-   "revenue_period_usd_m": null,
-   "revenue_period": null,
-   "margin_pct": null,
-   "margin_type": null,
-   "compute": {
-    "partner": null,
-    "chips": null,
-    "gw": null,
-    "usd_m": null,
-    "term": null
-   },
-   "product": {
-    "name": null,
-    "type": null,
-    "price_in_per_mtok": null,
-    "price_out_per_mtok": null,
-    "context_window": null
-   },
-   "governance": null,
-   "moat": null,
-   "strategy": null,
-   "people": [],
-   "entities": [],
-   "headcount": null,
-   "customers": null,
-   "other": {
-    "valuation_range_usd_m": [
-     850000,
-     900000
-    ],
-    "round_range_usd_m": [
-     40000,
-     50000
-    ],
-    "prior_round": "Series G $30B at $380B post (Feb 2026)",
-    "decision_venue": "board meeting in May"
-   }
-  },
-  "confidence": "MEDIUM",
-  "notes": "Pre-announcement talks, not a closed round; ended as the $65B Series H at $965B post (May 28). Run-rate 'closer to $40B' on Apr 29 sits between the $30B (Apr 6/20) and $47B (May) company statements. Bloomberg/CNBC/Reuters headlines seen (blocked). Earlier $800B offers: Business Insider/Bloomberg Apr 15.",
-  "agent": "scout-2026q2",
-  "agents": [
-   "scout-2026q2"
-  ],
-  "merged_ids": [],
-  "independent_sources": 1
- },
- {
   "id": "evt-20260429-rsp-v32-ltbt-powers",
   "date": "2026-04-29",
   "date_precision": "day",
@@ -37083,6 +37391,89 @@
    "desk-governance"
   ],
   "merged_ids": [],
+  "independent_sources": 1
+ },
+ {
+  "id": "evt-20260429-rr-40b-techcrunch",
+  "date": "2026-04-29",
+  "date_precision": "day",
+  "headline": "TechCrunch: run-rate closer to $40B per person with knowledge of financials",
+  "summary": "TechCrunch reported that, per one person with knowledge of the financials, Anthropic run-rate was closer to $40B at end-April, versus the $30B-plus announced earlier in the month and about $9B at end-2025.",
+  "category": [
+   "funding",
+   "revenue",
+   "valuation"
+  ],
+  "source": {
+   "url": "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
+   "publisher": "TechCrunch",
+   "title": "Sources: Anthropic could raise a new $50B round at a valuation of $900B",
+   "published": "2026-04-29",
+   "tier": "T3",
+   "opened": true
+  },
+  "corroboration": [],
+  "extracted": {
+   "amount_usd_m": 50000.0,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": 40000.0,
+   "revenue_period_usd_m": null,
+   "revenue_period": "run-rate, ~end-Apr 2026 (closer to $40B)",
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [],
+   "headcount": null,
+   "customers": null,
+   "other": {
+    "round_talks_usd_m": [
+     40000,
+     50000
+    ],
+    "valuation_talks_usd_m": [
+     850000,
+     900000
+    ],
+    "valuation_range_usd_m": [
+     850000,
+     900000
+    ],
+    "round_range_usd_m": [
+     40000,
+     50000
+    ],
+    "prior_round": "Series G $30B at $380B post (Feb 2026)",
+    "decision_venue": "board meeting in May"
+   }
+  },
+  "confidence": "MEDIUM",
+  "notes": "Single anonymous source; run-rate basis; sits between the company $30B (Apr 6) and $47B (May). Bloomberg/CNBC versions seen only as headlines. | Pre-announcement talks, not a closed round; ended as the $65B Series H at $965B post (May 28). Run-rate 'closer to $40B' on Apr 29 sits between the $30B (Apr 6/20) and $47B (May) company statements. Bloomberg/CNBC/Reuters headlines seen (blocked). Earlier $800B offers: Business Insider/Bloomberg Apr 15.",
+  "agent": "desk-revenue",
+  "agents": [
+   "desk-revenue",
+   "scout-2026q2"
+  ],
+  "merged_ids": [
+   "evt-20260429-900b-round-preemptive-offers"
+  ],
   "independent_sources": 1
  },
  {
@@ -37174,6 +37565,65 @@
   "agent": "scout-2026q2",
   "agents": [
    "scout-2026q2"
+  ],
+  "merged_ids": [],
+  "independent_sources": 1
+ },
+ {
+  "id": "evt-20260502-semianalysis-44b-estimate",
+  "date": "2026-05-02",
+  "date_precision": "day",
+  "headline": "SemiAnalysis estimates Anthropic ARR above $44B in May 2026",
+  "summary": "OfficeChai relayed a SemiAnalysis report estimating Anthropic annualized run-rate revenue had surged to over $44B in May 2026, without disclosing the methodology.",
+  "category": [
+   "revenue"
+  ],
+  "source": {
+   "url": "https://officechai.com/ai/anthropics-arr-has-touched-44-billion-says-semi-analysis-report/",
+   "publisher": "OfficeChai (citing SemiAnalysis)",
+   "title": "Anthropic's ARR has touched $44 billion, says Semi Analysis report",
+   "published": "2026-05-02",
+   "tier": "T4",
+   "opened": true
+  },
+  "corroboration": [],
+  "extracted": {
+   "amount_usd_m": null,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": 44000.0,
+   "revenue_period_usd_m": null,
+   "revenue_period": "run-rate estimate, May 2026 (SemiAnalysis)",
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [],
+   "headcount": null,
+   "customers": null,
+   "other": {}
+  },
+  "confidence": "LOW",
+  "notes": "Third-party analyst estimate (not company or Bloomberg); excluded from the model series in favour of the company >$47B (May 28). Brief lists \"$44B early May\" - this is its only located source.",
+  "agent": "desk-revenue",
+  "agents": [
+   "desk-revenue"
   ],
   "merged_ids": [],
   "independent_sources": 1
@@ -37494,7 +37944,7 @@
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 30000.0,
    "revenue_period_usd_m": null,
-   "revenue_period": null,
+   "revenue_period": "run-rate, Apr 2026",
    "margin_pct": null,
    "margin_type": null,
    "compute": {
@@ -37534,16 +37984,20 @@
       "name": "Dario Amodei",
       "role": "CEO, Anthropic"
      }
-    ]
+    ],
+    "claude_code_weekly_hours_per_developer": 20
    }
   },
   "confidence": "MEDIUM",
-  "notes": "Run-rate path (VentureBeat): Jan 2024 $87M; Dec 2024 $1B; end-2025 $9B; Feb 2026 $14B; Mar 2026 $19B; Apr 2026 $30B. Claude Code: $1B annualized within six months of launch, >$2.5B in Feb 2026; >1,000 customers over $1M/yr. Event date May 6 (Wednesday; CNBC/NYT headlines May 6, VentureBeat text says Wednesday). '80x' is an annualized growth multiple, not a revenue ratio. The brief's '$44B early May' is still not found; Apr 29 Bloomberg/TechCrunch said ~$40B and Anthropic's T1 page says >$47B by mid-May.",
+  "notes": "Run-rate path (VentureBeat): Jan 2024 $87M; Dec 2024 $1B; end-2025 $9B; Feb 2026 $14B; Mar 2026 $19B; Apr 2026 $30B. Claude Code: $1B annualized within six months of launch, >$2.5B in Feb 2026; >1,000 customers over $1M/yr. Event date May 6 (Wednesday; CNBC/NYT headlines May 6, VentureBeat text says Wednesday). '80x' is an annualized growth multiple, not a revenue ratio. The brief's '$44B early May' is still not found; Apr 29 Bloomberg/TechCrunch said ~$40B and Anthropic's T1 page says >$47B by mid-May. | The Jan 2024 $87M point is single-source (VentureBeat). 80x is an annualized growth multiple for Q1 2026, not a revenue ratio. Over 1,000 customers >$1M annualized, doubled since Feb.",
   "agent": "scout-2026q2",
   "agents": [
+   "desk-revenue",
    "scout-2026q2"
   ],
-  "merged_ids": [],
+  "merged_ids": [
+   "evt-20260508-rr-path-venturebeat-80x"
+  ],
   "independent_sources": 1
  },
  {

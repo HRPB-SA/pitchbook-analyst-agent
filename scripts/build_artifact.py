@@ -15,7 +15,7 @@ head = re.search(r"<head>(.*?)</head>", html, re.S).group(1)
 body = re.search(r"<body>(.*?)</body>", html, re.S).group(1)
 title = re.search(r"<title>.*?</title>", head, re.S).group(0)
 links = "\n".join(m.group(0) for m in re.finditer(r"<link[^>]+>", head) if "styles.css" not in m.group(0))
-d3 = re.search(r"<script src=\"https://cdnjs[^\"]+\"></script>", head).group(0)
+d3 = '<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>'  # the artifact host allows cdnjs; the repo vendors the same build
 body = body.replace('<script src="assets/app.js"></script>', "<script>\n" + js.replace("</script>", "<\\/script>") + "\n</script>")
 out = f"{title}\n{links}\n<style>\n{css}\n</style>\n{d3}\n{body}"
 os.makedirs(os.path.join(ROOT, "dist"), exist_ok=True)

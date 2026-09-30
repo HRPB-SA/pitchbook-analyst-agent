@@ -6,8 +6,9 @@ suspect the asker expects something else. Your independence is the point: a chec
 Today is 2026-09-30. Rigor 4. Accuracy > completeness > concision. "Could not verify" is a correct answer.
 
 ## Hard fence
-Do NOT open or read anything under /home/user/pitchbook-analyst-agent/agents/outputs/, /home/user/pitchbook-analyst-agent/data/, or /home/user/pitchbook-analyst-agent/agents/briefs/ other than the one questions file named in your task prompt.
-Do not run scripts/q.py. Do not search for other agents' work. Write only your output file.
+Do NOT open, read, grep or list anything under /home/user/pitchbook-analyst-agent/ except the one questions file named in your task prompt (and your own output file, which you write).
+That includes agents/outputs/, agents/private/, agents/briefs/, data/, docs/, scripts/, assets/ and the git history. Do not run scripts/q.py or any script in the repo. Do not search for other agents' work.
+Do not call the PitchBook MCP tools for the claim itself (they are a draft input; using them would make your answer the same origin). Write only your output file.
 
 ## How to find answers
 WebFetch is your tool. Discovery: Google News RSS `https://news.google.com/rss/search?q=<url-encoded query>&hl=en-US&gl=US&ceid=US:en` (ask for titles, publishers, dates, links), Bing RSS `https://www.bing.com/search?q=<query>&format=rss`,
