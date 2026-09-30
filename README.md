@@ -7,6 +7,25 @@ dashboard's **Agents floor** tab.
 **State of the world at build time (2026-09-30):** Anthropic is private. Confidential S-1 filed Jun 1 2026. Listing timing is reported as October (PitchBook note) or
 November (WSJ): treated as disputed. Last priced round: Series H, $65B at $965B post-money (May 28 2026). Re-run the pipeline when the public S-1 appears.
 
+## What the desk concluded (as of 2026-09-30)
+
+**Call (Judge, 12-24 months after listing): BEARISH at the reported ~$2T IPO target, NEUTRAL near $1.5T, LEAN BULLISH only at or below about $1.07T (which includes Series H at $965B).**
+The call is price-conditional: no IPO price range exists (no public S-1). Reasoning and what would flip it are on the Bull / Bear tab; thesis-breakers carry a metric, threshold and date.
+
+| Model scenario (gross revenue basis) | 2026E | 2028E | 2030E | 2030E FCF margin | DCF EV (engine) |
+|---|---|---|---|---|---|
+| Bear | $50.0B | $95.4B | $127.2B | 15.9% | $0.18T |
+| Base (follows the company plan; an inside-view anchor) | $55.8B | $195.5B | $328.1B | 28.4% | $1.19T |
+| Bull | $60.0B | $257.6B | $447.9B | 36.2% | $2.64T |
+
+At the base FCF margin the reverse-DCF needs 2030 revenue of $262B (Series H $965B, 47% a year from FY2026), $420B (secondary mark ~$1.5T, 66%) and $568B ($2T target, 79%). The outside view (top-1,000 firms above $25B, AWS, Nvidia data center) says growth persistence is weak: every scenario, including the bear, sits above it.
+
+What the record cannot carry, stated plainly:
+- No public S-1 exists. Every FY2024/FY2025 financial is press-reported from a leaked draft prospectus (Reuters readable; FT and NYT blocked). FY2024 revenue is implied from "+1,088%".
+- Anthropic books revenue gross of cloud-partner resale. The desk's canonical 39.75% equalization haircut reproduces exactly from the Jul 16 marks (it is fitted, not measured); the record's own evidence is about 7.6% (platform fees) and PitchBook's 6-10%. Both are offered in the Model tab; the verdict is unchanged under either.
+- Run-rate is not recognized revenue; year-end $100B+ run-rates and the $559M Q2 operating profit are projections; "up to" compute figures are not contracted ($592.1B announced, $217.9B on T1/T2 documents, about 80% of the $518B prospectus plan non-cancelable).
+- Independent checks: a cold audit of 48 sampled events found every core fact supported but only 49% fully supported (8 corrections applied, logged); four independent re-derivers checked 121 load-bearing claims (72 match, 33 text-compared, 6 partial, 7 mismatches frozen with both values shown, 3 untraceable).
+
 ## What is in here
 
 | Path | What |
