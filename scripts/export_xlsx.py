@@ -47,6 +47,8 @@ for line in [
     "Confidence: HIGH, MEDIUM, LOW, VERIFY (open check), DISPUTED (frozen conflict; both values shown, neither chosen).",
     "Basis: Anthropic reports revenue gross of cloud-partner resale; run-rate is not recognized revenue; 'up to' is not contracted; debt is not equity raised.",
     "PitchBook TTM 4Q2026 / 4Q2027 revenue fields are forward projections, not current revenue.",
+    "Licence: this workbook contains licensed PitchBook Premium fields (round sizes, valuations, investors, analyst notes). Check your licence before sharing it.",
+    "MNPI screen: the S-1 is confidential. Figures attributed to a leaked or reported prospectus are press-reported (T2/T3), not confirmed by the company. Run your compliance review before acting on them. Not investment advice.",
     f"Events: {len(E)} merged from {L.get('raw_events')} raw findings across {len(D('agent_log.json')['agents'])} agents.",
 ]: ws0.append([line])
 ws0.column_dimensions["A"].width = 150
