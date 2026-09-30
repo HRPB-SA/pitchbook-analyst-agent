@@ -955,5 +955,593 @@
   "bear": "Share loss, faster deflation and compute overbuild together. Coding and agents are the swing: SpaceX agreed to buy Cursor for $60B (T1), OpenAI priced Sol at $2/$10 and Luna at $0.10/$0.50 (T3), and Claude Code and agents fall to 16% of 2030 revenue (base 24%). List prices keep falling about 40% a year (Opus -73% in 14 months) and volume does not outrun it, so the run-rate plateaus near $72B into 2027 and revenue grows +59%, +20%, +17%, +14%. About 80% of the $518B of commitments is non-cancelable, so compute cost holds near $63-72B a year while revenue is $80-127B: gross margin 42% in 2027, cumulative FCF trough -$25.9B in 2028, FCF positive in 2029. The IPO does not clear near $2T and the market pays 15x FCF. DCF EV $176B.",
   "base": "Capacity-gated growth to the company plan. Revenue follows the T2 projection (FY2028 $195.5B against $190-200B) because the prospectus says demand is limited by compute; contracted capacity arrives roughly on schedule (base needs about 11 GW by Dec 2028 against 15.8 GW announced). Price deflation is offset by volume and by a shift to agents. Gross margin climbs to 64% in 2028 (plan 77%), training rises to $35B, cloud partners keep 10-12% of revenue, and FCF turns positive in 2027 ($13.7B) and reaches 28.4% of revenue in 2030. The IPO clears and the market pays 20x FCF. DCF EV $1,189B.",
   "bull": "Agents and capacity at full utilization. The year-end 2026 run-rate reaches $120B (the FT figure), the 15.8 GW of announced capacity is used in full, and revenue per dollar of compute is about 29% above base as work moves to agents and to frontier tiers priced at $10/$50. Claude Code and agents reach 31% of 2030 revenue. The company meets its own margin targets (65% in 2027, 75% in 2028) and the above-80% adjusted margin becomes a reported one by 2030. FY2030 revenue is $448B, FCF margin 36.2%, compute spend $155B. The raise of $100B or more is absorbed and the market holds 26x FCF. DCF EV $2,635B."
+ },
+ "notes": [
+  "Basis: every revenue, margin and cost line is on the gross basis Anthropic books (recognized, principal, cloud-partner share in marketing expense). Net revenue appears only in the revenue_net row and in the EV/net multiples, through the haircut. No line mixes bases.",
+  "Outside view first (see outside_view). Reference class: AWS, Nvidia data center and the top-1,000 firms with sales above $25B. Base rates say growth regresses fast (year-to-year correlation 0.30) and margins persist (0.72 over five years). Base regresses growth hard but stays far above every precedent. I state that as the main risk, not as a base rate.",
+  "Anchors from the record: FY2024 revenue $386M and FY2025 $4,590M, recognized and gross, from a leaked draft prospectus (Reuters, Fortune; T2/T3; no public S-1), with FY2024 implied from +1,088%. H1 2026 actual $16.23B. Run-rate $9B (Dec 2025), $14B (Feb 12), above $30B (Apr 6), above $47B (May), above $65B (Jul 31).",
+  "Tie-out: with gross margin -94% and 40%, training $1,691M and $4,576M, and non-compute opex $926M and $5,320M, the engine reproduces the prospectus operating losses exactly: -$2,980M (FY2024) and -$8,060M (FY2025). Training is derived as compute and infrastructure less inference cost of revenue. The split of non-compute opex into R&D, S&M, G&A and SBC is my assumption.",
+  "FY2026 arithmetic, base: Q1 $4.73B + Q2 $11.50B + Q3 $17.23B + Q4 $22.38B = $55.84B, entered as $55.8B. Q3 and Q4 integrate a run-rate path of $60.6B at end-June (implied by Q2 actual), $65B at Jul 31, then +$7B a month to $100B. If recognized revenue runs 5% above the run-rate integral, as Q1 did by 13-20%, FY2026 is $57.4B (+2.9%). Cross-check: SemiAnalysis's roughly $1B Q3 EBIT at a 6% margin (T4) implies Q3 revenue near $16.7B. Bear and bull arithmetic is in sources.revenue_2026.",
+  "Run-rate is not revenue: FY2024 recognized was 0.39x of its $1B exit run-rate and FY2025 0.51x of $9B. Base FY2026 is 0.56x of the $100B exit. Base FY2027 of $127.8B needs a Dec 2027 run-rate near $160B and FY2028 of $195.5B needs about $235B (smooth-path arithmetic).",
+  "The desk-derived FY2026 of $64-72B is not used: Q3 of $20-23B needs an average Q3 run-rate of $80-92B, against $65B at Jul 31. PitchBook's $35-44B (Jun 10) is stale against $16.2B of H1 actual. The revenue topic in topics.json (19:27Z) reaches the same Q3 thresholds: $17-18B is on path, under $16B is a stall.",
+  "Swing drivers. (a) Price deflation vs volume: Opus list -73% in 14 months, Sonnet 5 at $2/$10, OpenAI Luna at $0.10/$0.50 (T3); bear needs volume to fall short of deflation. (b) Coding and agent share: Menlo 54% of enterprise coding (T3, an Anthropic investor), SpaceX buying Cursor (T1); bear cuts Claude Code and agents to 16% of 2030 revenue, bull lifts them to 31%. (c) Gross margin: cost per GW-year by chip mix and partner share; 2030 bear 58%, base 70%, bull 80%. (d) Compute capex and non-cancelable commitments: about 80% of $518B. (e) IPO absorption and terminal multiple: 15x, 20x, 26x.",
+  "Equalization: 0.3975 stays the default in all three scenarios and equalization_alt carries 0.076 with PitchBook's 6-10%. The record contradicts the canonical size: at 39.75% Q2 2026 implies $4.6B paid to cloud partners, against The Information's $1.9B forecast for all of 2026 and $351M in FY2025 (7.6% of revenue). The 39.75% also reproduces exactly as the haircut that ties $965B over $47B gross to $852B over $25B at 34.1x. It is a fitted parameter and cannot be used as evidence that the two multiples are equal. Base EV / FY2026 net revenue for Series H, secondary, IPO target: 28.7x, 44.6x, 59.5x at 39.75%; 18.7x, 29.1x, 38.8x at 7.6%. EV / FY2027 net revenue: 12.5x, 19.5x, 26.0x at 39.75%; 8.2x, 12.7x, 16.9x at 7.6%. Gross multiples on the same revenue: 17.3x, 26.9x, 35.8x (FY2026) and 7.6x, 11.7x, 15.7x (FY2027).",
+  "Presentation conflict: the dashboard labels cogs_other 'cloud share, hosting, other'. The prospectus books the partner share in marketing expense, so here it sits in S&M and cogs_other is support, payment processing and non-inference hosting.",
+  "Gross margin: base 48%, 57%, 64%, 68%, 70%. It sits 6 pts under the 63% target for 2027 (VERIFY) and 13 pts under the 77% target for 2028, because the company missed its FY2025 plan by 10 pts and margins persist. The above-80% company-adjusted figure is before partner share and training, and no GAAP margin exists. Each 5 pts across 2027-2030 moves base DCF EV by 14%. Would change on an S-1 cost-of-revenue line with a training split, or Q3 adjusted operating income with a dollar amount and a GAAP bridge.",
+  "Reconciliation to known breakevens. (1) Adjusted operating income positive in Q2 2026 and expected in Q3 (T3): base FY2026 operating income incl. training plus SBC is $0.9B with Q1 negative, so Q2-Q4 positive is consistent; the $559M is a May projection, not an actual. (2) Cash-flow positive in 2028 (The Information; Fortune; T3/T2): base FCF turns positive in 2027 ($13.7B) because FY2027 revenue is 2.3x the $55B of the dated plan; bear turns positive in 2029, matching the T4 'profitability including training in 2028-2029'. (3) +$17B of cash flow in 2028 on $70B revenue (24% margin): base 2028 FCF is $37.0B on $195.5B (18.9%), lower in margin because gross margin is 64% against 77%, with similar training dollars ($35B against about $30B). (4) The -$25B 2027 FCF trough is unverified and is not reproduced: base 2027 FCF is $13.7B and bear is -$9.1B; printing -$25B in base would need 2027 gross margin near 24% or about $39B of extra prepayments. The bear's cumulative trough is -$25.9B in 2028. (5) 'Biggest loss in 2026' (T4 summaries): base FY2026 operating income incl. training is -$1.8B against -$8.06B in FY2025, because revenue is 3.1x the January plan.",
+  "Engine limit, no NOL carryforward: cash tax is overstated after losses. Cumulative pre-tax losses (operating income incl. training below zero, 2024-2030): base $12.9B, bear $21.9B, bull $11.0B; x 21% = $2.7B, $4.6B, $2.3B of nominal tax. PV at 12% is $2.2B (0.2% of base EV), $2.8B (1.6% of bear EV) and $1.9B (bull).",
+  "Engine limit, EV is treated as equity value. Net cash is ignored: $20.28B of cash at end-2025 (T2) plus Series G $30B and about $50B of new Series H cash (T1), part of which was previously committed Microsoft, NVIDIA and hyperscaler money, is roughly +$100B, about 10% of the Series H mark. Debt is ignored: a $2.5B revolver (drawn amount undisclosed) and a $15B pre-IPO revolver (capacity). The $34.5B TPU notes are lessor debt and sit in lease cost.",
+  "Engine limit, valuation date: discounting runs to end-2025 while the marks are mid-2026 prices. A mid-year convention would lift base EV by (1.12)^0.5 - 1 = 5.8% (about $69B). Rolling the date to Sep 30 2026 lifts it about 8.9% before interim FCF.",
+  "Engine limit, no dilution from IPO primary proceeds. A raise of $100B at $2T is 5% new shares and $130B is 6.5%; value per share is unchanged if priced at fair value. SBC is expensed, not counted as share growth.",
+  "Engine limit, terminal value is 89% of base EV and rests on a 2030 FCF in a year when revenue still grows 22.5%. Base DCF EV at 15x, 20x, 30x: $924B, $1,189B, $1,717B (-22%, +44%). Bear: $176B, $233B, $347B. Bull: $1,623B, $2,083B, $3,004B.",
+  "Engine limit, segments: the rows for 2024 and 2025 use the 2026 mix because the interpolation clips at t = 0, so they are not actuals. FY2025 actual: 47% through marketplaces, $3.8B usage-based and $0.789B subscription. Segment splits are assumptions; the record has no 2026 segment revenue.",
+  "Engine limit, FY2025 cash: engine FCF for FY2025 is -$6.7B (accrual operating loss plus estimated SBC) against about -$2.8B of reported cash burn (Fortune, T2, a projection at the time) and about -$3.0B (T4). The gap of about $3.9B is working capital and non-cash items the engine does not model, such as accrued costs owed to cloud partners, deferred revenue and the Bartz accrual. It does not touch the DCF, which starts in 2026.",
+  "Engine limit, operating level only: the prospectus net loss of $42B includes about $34B of non-cash remeasurement of convertible financing, which the engine excludes. Amazon's 10-Q carries its notes at $97.9B at Jun 30 2026 against $45.8B at Dec 31 2025, so 2026 remeasurement charges will also be large and non-cash.",
+  "Consistency check on compute: base cost of revenue plus training for 2026-2030 is $501B, plus $27B of capex, against at least $518B of commitments over about ten years and $592B announced bottom-up. If a ten-year schedule is back-loaded so that 50-60% falls in the first five years (assumption), $259-355B is committed for 2026-2030, and base needs roughly $150-240B more capacity than was announced by Sep 2026. Contracts signed in the last 11 months total up to $517B, so the pace exists. Bear spends $316B, bull $522B.",
+  "Capacity check (assumption-heavy): at about $21B of run-rate per GW (T4 blog, capacity not company-stated), base Dec 2028 needs about 11 GW and Dec 2030 about 17 GW against 15.8 GW announced, 13.0 GW of it 'up to'. Bull earns about 29% more revenue per dollar of compute than base, roughly $27B per GW. Cost per GW-year from contracts (value / term / GW, desk arithmetic): Nscale about $16B, Volta about $12.5B, Google TPU about $8B (The Information), powered shells (TeraWulf, Riot) about $2.4B with the tenant supplying chips.",
+  "Mix (display only, no valuation effect): channel first, then product. FY2025 actual: marketplaces 47%, usage-based 82.8%, subscriptions 17.2%; Claude Code run-rate above $2.5B was 18% of $14B in Feb 2026 (T1). Base 2026: cloud resale 52%, Claude Code and agents 20%, API direct 17%, consumer 5%, seats 3%, government and other 3%. Base 2030: cloud resale 56% (partner payouts rise to 11.6% of 2027E revenue in The Information's plan), Claude Code and agents 24%, API direct 11%, seats 4%, consumer 3%, government 2%. Bear 2030: cloud 62%, Claude Code 16%. Bull 2030: cloud 50%, Claude Code 31%, seats 5%.",
+  "Base DCF EV sensitivities, one at a time (base $1,189B). FY2027 growth -40 pts and FY2028 -15 pts (FY2028 revenue $146B, -26%): -39%. FY2029 growth -15 pts and FY2030 -10 pts (FY2030 revenue -18%): -26%. Terminal 15x: -22%; 30x: +44%. Gross margin -5 pts in 2027-2030: -14%; +5 pts: +14%. Capex x3: -18%. Training +25%: -11%. Discount rate 10%: +9%; 14%: -8%. Tax 15%: +7%; 25%: -5%. Opex +2 pts of revenue in 2027-2030: -6%.",
+  "The verdict is most sensitive to three assumptions: growth persistence in 2027-2028, the terminal FCF multiple (15x to 30x) and the 2027-2030 gross margin path. Capex and prepayments are the least-sourced fourth.",
+  "Reverse DCF at the base FCF margin (28.4% in 2030, 20x, 12%): Series H $965B needs 2030 revenue of $262B (47% CAGR from FY2026), the secondary mark of $1.5T needs $420B (66%) and the $2T IPO target needs $568B (79%). Base 2030 revenue is $328B, so Series H sits below the base DCF (-19% vs DCF), the secondary mark above (+26%) and the IPO target well above (+68%). At the bull margin the IPO target needs $333B, inside bull 2030 revenue of $448B.",
+  "What would change each assumption. FY2026 revenue: Q3 revenue, which WSJ says investors see before a November listing (under $16B moves toward bear, $17-18B is base, above $19B is bull). Growth in 2027-2028: the next run-rate print (below $79B at end-September is under the base path, above $87B is on the $120B path), energized-GW dates for the 2027 campuses, and any 2027 guidance in the public S-1. Haircut: the S-1 revenue-recognition note and H1 2026 marketplace share and fees; a fee ratio near 39.75% would be the first evidence for the canonical figure. Gross margin: an S-1 cost-of-revenue line with a training split. Training and capex: the S-1 cash-flow statement and contractual-obligations schedule by year. Terminal multiple and IPO absorption: pricing, first-day trading and the first lock-up. Deflation: the Haiku 5.5 price and the next Opus price. Share: Cursor's weight after the SpaceX deal and any customer above 10% of revenue.",
+  "Plausibility flags: bull 2030 operating margin including training is 48.2% (Nvidia FY2026 GAAP operating margin is 60.4%, AWS 2025 35.4%). Bull revenue of $448B is large against any plausible AI software market: Menlo's 2025 enterprise generative-AI spend was $37B (3.2x in a year), and a market doubling every year reaches about $1.2T in 2030, where bull is 38% and base 28%. Base FCF margin peaks at 28.4%, under the 45% threshold."
+ ],
+ "log": [
+  {
+   "seq": 1,
+   "type": "search",
+   "text": "Snapshot of 18 desk tables with q.py (run_rate_desk, period_revenue, margins, customers, mix, projections, comparables, compute, compute_costs, compute_totals, capital_summary, rounds, pricing, plans, market_share, prospectus_facts, offering_structure, headcount_desk) at 19:20Z.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "q.py --cat revenue,financials (79 events), --cat compute (76 events), --cat ipo (40 events), each read at headline level.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "q.py --conflicts (158 rows) and --open (237 rows); read every row that touches revenue, margin, compute, equalization or marks.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 4,
+   "type": "found",
+   "text": "FY2025 revenue $4.59B, operating loss $8.06B, compute and infrastructure $7.33B, cash $20.28B. Leaked draft prospectus, no public S-1.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials"
+  },
+  {
+   "seq": 5,
+   "type": "found",
+   "text": "FY2024 revenue about $386M (implied by +1,088%), operating loss $2.98B, compute about $2.44B.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20241231-fy2024-financials-leaked-s1"
+  },
+  {
+   "seq": 6,
+   "type": "found",
+   "text": "Q1 2026 revenue $4.73B and Q2 2026 $11.5B recognized; H1 $16.23B.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus"
+  },
+  {
+   "seq": 7,
+   "type": "found",
+   "text": "Run-rate above $65B at Jul 31, the last verified point; nothing later is verified.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260817-rr-65b-end-july"
+  },
+  {
+   "seq": 8,
+   "type": "found",
+   "text": "Series H $65B at $965B post-money; run-rate above $47B in May (T1).",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners"
+  },
+  {
+   "seq": 9,
+   "type": "found",
+   "text": "Company 2028 revenue projection of $190-200B; basis not stated.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260817-reuters-2028-190-200b-forecast"
+  },
+  {
+   "seq": 10,
+   "type": "found",
+   "text": "Year-end 2026 run-rate of $100-120B is an investor projection; IPO target $2T or more.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260813-ipo-october-2t-quartz"
+  },
+  {
+   "seq": 11,
+   "type": "found",
+   "text": "FY2025 gross margin about 40%, 10 pts under plan; inference cost 23% above plan.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260121-information-gross-margin-2025-40pct"
+  },
+  {
+   "seq": 12,
+   "type": "found",
+   "text": "PitchBook 44% gross margin comes from a compute cost of $0.56 per revenue dollar; definitions not stated.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260610-pitchbook-gm-44pct-compute-cost"
+  },
+  {
+   "seq": 13,
+   "type": "found",
+   "text": "Company-adjusted gross margin above 80% before partner share and training; Q2 adjusted operating income positive, no dollar amount.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct"
+  },
+  {
+   "seq": 14,
+   "type": "found",
+   "text": "47% of FY2025 sales through Amazon and Google marketplaces; platforms kept about 16 cents per dollar, about $351M, 7.6% of revenue.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix"
+  },
+  {
+   "seq": 15,
+   "type": "found",
+   "text": "Cloud-partner payouts of $0.36B (2025), $1.9B (2026E) and $6.4B (2027E) in the February 2026 plan.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260217-information-80b-cloud-spend-through-2029"
+  },
+  {
+   "seq": 16,
+   "type": "found",
+   "text": "At least $518B of commitments over about ten years, about 80% non-cancelable.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  },
+  {
+   "seq": 17,
+   "type": "found",
+   "text": "Up to $517B and 14.8 GW of contracts signed in 11 months; a maximum value, not spend.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260907-information-up-to-517b-compute-contracts-in-11-months"
+  },
+  {
+   "seq": 18,
+   "type": "found",
+   "text": "Secondary indications near $1.2T; trades up to $1.5T come from a T4 source. Both are thin.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260709-secondary-market-indications-1-2t"
+  },
+  {
+   "seq": 19,
+   "type": "found",
+   "text": "Opus 5.5 list price $4/$20, -20% vs Opus 5; the pricing table shows -73% vs Opus 4.1.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260922-claude-opus-5-5-launch"
+  },
+  {
+   "seq": 20,
+   "type": "found",
+   "text": "OpenAI priced Sol at $2/$10 and Luna at $0.10/$0.50 on the day Opus 5.5 launched (T3).",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260922-openai-gpt-6-sol-luna-price-war"
+  },
+  {
+   "seq": 21,
+   "type": "found",
+   "text": "SpaceX agreed to buy Cursor for $60B, a named Claude coding customer; distribution risk for Claude Code.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260616-spacex-cursor"
+  },
+  {
+   "seq": 22,
+   "type": "found",
+   "text": "Menlo: 40% of enterprise API dollars and 54% of coding at Dec 2025; Menlo is an Anthropic investor.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20251209-menlo-genai-enterprise"
+  },
+  {
+   "seq": 23,
+   "type": "found",
+   "text": "Anthropic's own report: one frontier model needs a 2 GW site in 2027 and 5 GW in 2028; used to cross-check training cost.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20250721-build-ai-in-america"
+  },
+  {
+   "seq": 24,
+   "type": "found",
+   "text": "The $559M operating profit and $10.9B revenue are a May 20 projection, not actuals.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260520-q2-projection-10-9b-559m-op-profit"
+  },
+  {
+   "seq": 25,
+   "type": "found",
+   "text": "OpenAI run-rate about $40B in August and nearly $70B in September; basis not stated in the Axios piece.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260929-openai-arr-nearing-70b-axios"
+  },
+  {
+   "seq": 26,
+   "type": "open",
+   "text": "Nvidia FY2024 release: data center $47.5B (+217%), GAAP gross margin 72.7% vs 56.9%.",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2024",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 27,
+   "type": "open",
+   "text": "Nvidia FY2025 release: data center $115.2B (+142%), GAAP gross margin 75.0%.",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 28,
+   "type": "open",
+   "text": "Nvidia FY2026 release: data center $193.7B (+68%), gross margin 71.1%, GAAP operating income $130.4B on $215.9B.",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 29,
+   "type": "open",
+   "text": "Amazon Q4 2025 release: AWS $128.7B (+20%), operating income $45.6B vs $39.8B.",
+   "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 30,
+   "type": "open",
+   "text": "Amazon Q4 2024 release: AWS $107.6B (+19%); 2023 $90.757B; operating income $39.8B vs $24.6B.",
+   "url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 31,
+   "type": "open",
+   "text": "Amazon Q4 2022 and 2021 releases: AWS $80.1B (+29%) and $62.2B (+37%); Q4 2020 release: $45.4B and $35.0B, operating income $13.5B and $9.2B.",
+   "url": "https://ir.aboutamazon.com/news-release/news-release-details/2023/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 32,
+   "type": "note",
+   "text": "Amazon releases for 2015-2018 returned 404, so the AWS series starts in 2019; earlier years are not used.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 33,
+   "type": "search",
+   "text": "WebSearch 1 of 4: Mauboussin Base Rate Book on sales growth persistence; found a hosted copy of the Credit Suisse HOLT paper.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 34,
+   "type": "open",
+   "text": "Base Rate Book (Sep 26 2016): sales growth by size decile 1950-2015, persistence r = 0.30, margin persistence r = 0.72 over five years. PDF text extracted locally.",
+   "url": "https://sorfis.com/wp-content/uploads/2021/09/The-Base-Rate-Book-Integrating-the-Past-to-Better-Anticipate-the-Future-September-2016.pdf",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 35,
+   "type": "open",
+   "text": "Epoch AI: LLM inference prices fall 9x to 900x a year at constant capability, 40x for GPT-4-level PhD science questions.",
+   "url": "https://epoch.ai/data-insights/llm-inference-price-trends",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 36,
+   "type": "search",
+   "text": "Google News RSS: SpaceX raised $75B at listing and $85.7B with the greenshoe; SK Hynix $26.5B ranks second (headlines only).",
+   "url": "https://news.google.com/rss/search?q=SpaceX+IPO+raised+billion+largest+IPO+ever&hl=en-US&gl=US&ceid=US:en",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 37,
+   "type": "note",
+   "text": "Not used: Bing RSS queries returned unrelated results, the Wikipedia AWS page has no annual table, the Wikipedia largest-IPO page returned 404, and a Google redirect for a Reuters IPO article returned no text.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 38,
+   "type": "found",
+   "text": "Revenue topic merged at 19:27Z (topics.json): same Q3 thresholds, FY2026 straight-line $56-60B, and the same finding that 39.75% reproduces the $965B/$47B vs $852B/$25B tie.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260817-rr-65b-end-july"
+  },
+  {
+   "seq": 39,
+   "type": "flag",
+   "text": "Canonical 39.75% haircut is contradicted in size by the record: platform fees $351M (7.6% of FY2025 revenue), PitchBook 6-10%, and $4.6B per quarter implied at 39.75% against The Information's $1.9B for all of 2026. Kept as default; 0.076 carried as alt.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix"
+  },
+  {
+   "seq": 40,
+   "type": "flag",
+   "text": "0.3975 is a fitted parameter: 1 - (965/47)/(852/25) = 0.3975, the haircut that ties the two multiples at 34.1x. It is not evidence that the multiples are equal.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 41,
+   "type": "flag",
+   "text": "FY2024 and FY2025 recognized revenue come from press reports of a leaked DRAFT prospectus (T2/T3), not a public S-1; FY2024 is implied from +1,088%.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials"
+  },
+  {
+   "seq": 42,
+   "type": "flag",
+   "text": "PitchBook TTM 4Q2025 ($10.0B), 4Q2026 ($65B) and 4Q2027 ($71B) are exit-run-rate proxies and forward fields. Not used as revenue.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series"
+  },
+  {
+   "seq": 43,
+   "type": "flag",
+   "text": "Year-end 2026 run-rates of $100-120B (FT, Quartz, WSJ, NYT) are projections. Used only to bound the base and bull paths, never as actuals.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260919-nyt-100b-year-end-projection"
+  },
+  {
+   "seq": 44,
+   "type": "flag",
+   "text": "The $559M Q2 2026 operating profit is a May projection, not an actual. The actual is positive adjusted operating income with no dollar amount.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260520-q2-projection-10-9b-559m-op-profit"
+  },
+  {
+   "seq": 45,
+   "type": "flag",
+   "text": "Secondary marks of $1.2T to $1.5T are thin, indicative and T3/T4. They are carried as a mark, not as evidence of value.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t"
+  },
+  {
+   "seq": 46,
+   "type": "flag",
+   "text": "Desk-derived FY2026 revenue of $64-72B is inconsistent with the run-rate arithmetic: Q3 of $20-23B needs an average Q3 run-rate of $80-92B against $65B at Jul 31. My range is $50.0-60.0B.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260610-pitchbook-fy2026-recognized-35-44b"
+  },
+  {
+   "seq": 47,
+   "type": "flag",
+   "text": "Q1 2026 recognized revenue ($4.73B) is 13-20% above a straight-line integral of the run-rate points ($4.0-4.2B). Recognized actuals are used for H1 and only H2 is integrated.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus"
+  },
+  {
+   "seq": 48,
+   "type": "flag",
+   "text": "Gross margin definitions conflict: above 80% company-adjusted, about 40% for FY2025, about 44% for Q2 2026E, and 63% for 2027E is not in any opened source. Base sits below the targets.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct"
+  },
+  {
+   "seq": 49,
+   "type": "flag",
+   "text": "The -$25B 2027 FCF trough and the 2025 breakeven excluding training are not in any opened source; T4 summaries disagree. Not reproduced; base 2027 FCF is positive.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260406-wsj-investor-docs-secondary-summaries"
+  },
+  {
+   "seq": 50,
+   "type": "flag",
+   "text": "Dashboard row label puts 'cloud share' under cost of revenue other, but the prospectus books the partner share in marketing expense. Partner fees are modeled in S&M.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 51,
+   "type": "flag",
+   "text": "Base compute cost for 2026-2030 ($501B) exceeds what a back-loaded schedule puts in these five years out of the $518B floor and the $592B announced; base needs $150-240B of additional capacity contracts.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  },
+  {
+   "seq": 52,
+   "type": "flag",
+   "text": "Bull 2030 operating margin including training is 48.2% and bull needs about 29% more revenue per dollar of compute than base. Stretch, flagged, not a base input.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 53,
+   "type": "flag",
+   "text": "OpenAI comps mix dates and bases: $852B valuation is from May, run-rates are $40B (Aug) and nearly $70B (Sep), net of Microsoft share, basis unstated in Axios. Do not plot against Anthropic's gross figures without the bridge.",
+   "url": "",
+   "to": "",
+   "event_id": "evt-20260929-openai-arr-nearing-70b-axios"
+  },
+  {
+   "seq": 54,
+   "type": "flag",
+   "text": "Engine segment rows for 2024 and 2025 use the 2026 mix (interpolation clips at t = 0), so they are not actuals.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 55,
+   "type": "flag",
+   "text": "Engine FY2025 FCF ($-6.7B) is accrual-based and differs from reported cash burn of about $2.8-3.0B by about $3.9B. No DCF effect.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 56,
+   "type": "verify",
+   "text": "Engine tie-out: the assumptions reproduce the prospectus operating losses exactly, -$2,980M (FY2024) and -$8,060M (FY2025).",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 57,
+   "type": "verify",
+   "text": "Haircut arithmetic: 965/47 = 20.5x gross, 852/25 = 34.1x net, so the tying haircut is 0.3975; 0.3975 x $11.5B = $4.6B in Q2.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 58,
+   "type": "verify",
+   "text": "Q2 actual x 4 = $46B against the run-rate path $30B (Apr) to $47B (May) to $65B (Jul): consistent. The implied end-June run-rate is $60.6B.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 59,
+   "type": "verify",
+   "text": "Q3 cross-check: SemiAnalysis's roughly $1B EBIT at a 6% margin (T4) implies Q3 revenue near $16.7B; base Q3 is $17.2B.",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 60,
+   "type": "verify",
+   "text": "Base FY2028 revenue $195.5B against Reuters' $190-200B company projection (T2).",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 61,
+   "type": "verify",
+   "text": "Derived figures: Nvidia data center FY2023 = $47.5B / 3.17 = $15.0B; AWS operating margins computed from Amazon's segment figures (26.3%, 29.8%, 29.8%, 28.5%, 27.1%, 37.0%, 35.4%).",
+   "url": "",
+   "to": "",
+   "event_id": ""
+  },
+  {
+   "seq": 62,
+   "type": "message",
+   "text": "Base compute cost for 2026-2030 is $501B against the $518B floor; cost per GW-year by contract: Nscale about $16B, Volta about $12.5B, Google TPU about $8B. Please test my capacity check (about 11 GW by Dec 2028) against your GW timeline.",
+   "url": "",
+   "to": "analyst-compute",
+   "event_id": ""
+  },
+  {
+   "seq": 63,
+   "type": "message",
+   "text": "Bull definition for your case: year-end 2026 run-rate $120B, revenue per dollar of compute 29% above base, gross margin 80% in 2030, 26x terminal; DCF EV $2.64T.",
+   "url": "",
+   "to": "analyst-bull",
+   "event_id": ""
+  },
+  {
+   "seq": 64,
+   "type": "message",
+   "text": "Bear definition for your case: run-rate plateau near $72B, compute cost $63-72B a year on non-cancelable commitments, gross margin 42% in 2027, cumulative FCF trough -$25.9B in 2028, 15x terminal; DCF EV $0.18T.",
+   "url": "",
+   "to": "analyst-bear",
+   "event_id": ""
+  },
+  {
+   "seq": 65,
+   "type": "message",
+   "text": "DCF EV bear $0.18T, base $1.19T, bull $2.64T. Most sensitive inputs: 2027-2028 growth, terminal multiple 15x-30x, 2027-2030 gross margin. Net cash (+about $100B) and the mid-year convention (+5.8%) are not applied.",
+   "url": "",
+   "to": "analyst-judge",
+   "event_id": ""
+  },
+  {
+   "seq": 66,
+   "type": "message",
+   "text": "Please re-derive Q3 2026 revenue from the run-rate path: Q3 of $20-23B needs an average run-rate of $80-92B; my range is $16.3-17.9B and FY2026 is $50.0-60.0B.",
+   "url": "",
+   "to": "verify-operating",
+   "event_id": ""
+  },
+  {
+   "seq": 67,
+   "type": "message",
+   "text": "The desk-derived FY2026 revenue of $64-72B conflicts with the run-rate arithmetic. Please restate it or source Q3 and Q4.",
+   "url": "",
+   "to": "desk-revenue",
+   "event_id": ""
+  },
+  {
+   "seq": 68,
+   "type": "message",
+   "text": "Public S-1 items that would move my inputs: cost of revenue with a training split, the cash-flow statement, the contractual-obligations schedule by year, H1 2026 marketplace share and fees, and the customer note.",
+   "url": "",
+   "to": "desk-s1",
+   "event_id": ""
+  },
+  {
+   "seq": 69,
+   "type": "message",
+   "text": "0.3975 kept as the default everywhere; flagged as contradicted in size and as a fitted parameter. The dashboard label 'cloud share' under cogs_other conflicts with the prospectus treatment.",
+   "url": "",
+   "to": "orchestrator",
+   "event_id": ""
+  }
+ ],
+ "stats": {
+  "events_read": 163,
+  "flags": 17
  }
 }

@@ -1,17 +1,17 @@
 {
- "generated": "2026-09-30T18:55:45Z",
+ "generated": "2026-09-30T19:56:01Z",
  "summary": {
-  "PASS": 7,
+  "PASS": 10,
   "WARN": 1,
   "FAIL": 1,
-  "PENDING": 6
+  "PENDING": 3
  },
  "gates": [
   {
    "id": "G1",
    "name": "Record: >= 300 deduped events, each with a source URL, every year 2021 to 2026 present",
    "status": "PASS",
-   "detail": "669 events; 0 without a URL; years 2021\u20132026"
+   "detail": "691 events; 0 without a URL; years 2021\u20132026"
   },
   {
    "id": "G2",
@@ -29,7 +29,7 @@
    "id": "G4",
    "name": "Conflicts are frozen, not resolved: every conflict row shows both values and a source or note",
    "status": "PASS",
-   "detail": "124 conflicts in the ledger (0 incomplete); 20 events carry a DISPUTED/VERIFY/LOW tag"
+   "detail": "158 conflicts in the ledger (0 incomplete); 27 events carry a DISPUTED/VERIFY/LOW tag"
   },
   {
    "id": "G5",
@@ -46,8 +46,8 @@
   {
    "id": "G7",
    "name": "Compute: commitments table reconciles to the totals shown",
-   "status": "PENDING",
-   "detail": "data/compute.json not built yet"
+   "status": "PASS",
+   "detail": "17 rows sum to $592.1B vs stated total $592.1B; waterfall present; unit economics present"
   },
   {
    "id": "G8",
@@ -58,14 +58,14 @@
   {
    "id": "G9",
    "name": "Topics: ten topic analyses, each with >= 12 evidence ids",
-   "status": "PENDING",
-   "detail": "5 topics built; thin evidence: none"
+   "status": "PASS",
+   "detail": "10 topics built; thin evidence: none"
   },
   {
    "id": "G10",
    "name": "Independent re-derivation of load-bearing claims reconciled",
-   "status": "PENDING",
-   "detail": "no claims ledger yet"
+   "status": "PASS",
+   "detail": "121 claims: {'MISMATCH': 4, 'UNTRACEABLE': 20, 'PARTIAL': 5, 'NOTED': 30, 'MATCH': 62}. MISMATCH rows are frozen with both values shown."
   },
   {
    "id": "G11",
@@ -77,7 +77,7 @@
    "id": "G12",
    "name": "Agent log is the real log: agents known, time-ordered, nothing in the future, every active agent has an output file",
    "status": "PASS",
-   "detail": "4228 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
+   "detail": "5324 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
   },
   {
    "id": "G13",
