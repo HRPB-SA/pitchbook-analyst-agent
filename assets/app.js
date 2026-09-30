@@ -336,8 +336,8 @@ function renderOverview(root) {
   const tile = (label, value, sub, opts = {}) => { const t = el('div', { class: 'tile' }, el('div', { class: 'label', text: label }), el('div', { class: 'value', text: value }), el('div', { class: 'sub' }, ...sub)); if (opts.spark) { const s = el('div', { class: 'spark' }); t.append(s); sparkline(s, opts.spark); } if (opts.onclick) { t.style.cursor = 'pointer'; t.addEventListener('click', opts.onclick); } return t; };
   tiles.append(
     tile('Last post-money valuation', val ? fmt.usd(val.usd_m) : '—', val ? [fmt.date(val.date), tierChip(val.tier), confChip(val.confidence)] : ['no data'], { onclick: val ? () => openEvent(val.event_id) : null, spark: valSeries.map(r => Math.log10(r.usd_m)) }),
-    tile('Annualized run-rate revenue', rr ? fmt.usd(rr.usd_m) : '—', rr ? [fmt.date(rr.date), rr.tier ? tierChip(rr.tier) : '', rr.confidence ? confChip(rr.confidence) : '', rr.basis ? chip(rr.basis) : ''] : ['no data'], { onclick: rr?.event_id ? () => openEvent(rr.event_id) : null, spark: (M.run_rate_desk?.length ? M.run_rate_desk.map(r => r.run_rate_usd_m) : (M.run_rate || []).map(r => r.usd_m)) }),
-    tile(q ? `${q.period} revenue (${q.kind})` : 'Latest quarterly revenue', q ? fmt.usd(q.usd_m) : '—', q ? [q.basis ? chip(q.basis) : '', q.tier ? tierChip(q.tier) : '', q.confidence ? confChip(q.confidence) : ''] : ['no data']),
+    tile('Annualized run-rate revenue', rr ? fmt.usd(rr.usd_m) : '—', rr ? [fmt.date(rr.date), rr.tier ? tierChip(rr.tier) : '', rr.confidence ? confChip(rr.confidence) : '', rr.basis ? Object.assign(chip(String(rr.basis).slice(0, 44) + (String(rr.basis).length > 44 ? '…' : '')), { title: rr.basis }) : ''] : ['no data'], { onclick: rr?.event_id ? () => openEvent(rr.event_id) : null, spark: (M.run_rate_desk?.length ? M.run_rate_desk.map(r => r.run_rate_usd_m) : (M.run_rate || []).map(r => r.usd_m)) }),
+    tile(q ? `${q.period} revenue (${q.kind})` : 'Latest quarterly revenue', q ? fmt.usd(q.usd_m) : '—', q ? [q.basis ? Object.assign(chip(String(q.basis).slice(0, 44) + (String(q.basis).length > 44 ? '…' : '')), { title: q.basis }) : '', q.tier ? tierChip(q.tier) : '', q.confidence ? confChip(q.confidence) : ''] : ['no data']),
     tile('Equity raised (ex-debt)', cs.equity_only_usd_m ? fmt.usd(cs.equity_only_usd_m) : '—', [cs.debt_usd_m ? `+ ${fmt.usd(cs.debt_usd_m)} debt` : '', cs.basis_note ? chip('basis noted') : '']),
     tile('Compute commitments (announced)', ct.usd_m_announced ? fmt.usd(ct.usd_m_announced) : '—', [ct.usd_m_contracted ? `${fmt.usd(ct.usd_m_contracted)} contracted` : '', ct.gw_announced ? fmt.gw(ct.gw_announced) : '']),
     tile('Headcount', hc ? fmt.num(hc.headcount) : '—', hc ? [fmt.date(hc.date), hc.tier ? tierChip(hc.tier) : '', hcLater.length ? el('span', { class: 'chip conf DISPUTED', title: 'Later figures differ by more than 20%; all are T4 estimates', text: `disputed: ${hcLater.map(r => fmt.num(r.headcount)).join(' / ')} (T4)` }) : ''] : ['no data']),
@@ -547,7 +547,7 @@ function renderModel(root) {
       const inp = el('input', { type: 'range', min, max, step, id: 'sl-' + label.replace(/\W+/g, '-') }); inp.value = get();
       const out = el('output', { text: fmtF(get()) });
       inp.addEventListener('input', () => { set(parseFloat(inp.value)); out.textContent = fmtF(parseFloat(inp.value)); draw(); });
-      side.append(el('div', { class: 'ctl' }, el('label', { text: label }), out, inp, src ? el('div', { class: 'src', text: src }) : ''));
+      side.append(el('div', { class: 'ctl' }, el('label', { text: label }), out, inp, src ? el('details', { class: 'src' }, el('summary', { text: 'source and basis' }), el('div', { text: src })) : ''));
     };
     const S = MD.sources || {};
     side.append(el('h4', { text: 'Revenue' }));
@@ -597,9 +597,10 @@ function renderModel(root) {
     const c1 = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Revenue build by segment' }), el('span', { class: 'small muted', text: 'A = actual, E = estimate' }))); const c1c = el('div', { class: 'chart' }); c1.append(c1c);
     columnChart(c1c, { data: Y.map(y => ({ label: `${y}${isA(y) ? 'A' : 'E'}`, values: segs.map((s, i) => ({ name: segLabels[s] || s, value: R[`seg_${s}`][y], color: SERIES[i] })) })), yFmt: v => fmt.usd(v) });
     c1.append(legend(segs.map((s, i) => ({ name: segLabels[s] || s, color: SERIES[i], rect: true }))));
-    const c2 = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Margin path' }), el('span', { class: 'small muted', text: 'gross, operating (ex/incl training), FCF' }))); const c2c = el('div', { class: 'chart' }); c2.append(c2c);
-    const pts = key => Y.map(y => ({ x: new Date(`${y}-12-31`), y: R[key][y], date: `${y}-12-31` }));
-    lineChart(c2c, { series: [{ name: 'Gross', color: 'var(--s1)', points: pts('gross_margin') }, { name: 'Op ex-training', color: 'var(--s3)', points: pts('om_ex_training') }, { name: 'Op incl-training', color: 'var(--s2)', points: Y.map(y => ({ x: new Date(`${y}-12-31`), y: R.revenue[y] ? R.op_income_incl_training[y] / R.revenue[y] : 0, date: `${y}-12-31` })) }, { name: 'FCF', color: 'var(--s7)', points: pts('fcf_margin') }], yFmt: v => fmt.pct(v), xTicks: 7 });
+    const c2 = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Margin path, 2026E–2030E' }), el('span', { class: 'small muted', text: 'gross, operating (ex/incl training), FCF · 2024A–2025A in the table' }))); const c2c = el('div', { class: 'chart' }); c2.append(c2c);
+    const YF = Y.filter(y => y >= 2026);   // 2024A-2025A margins (down to -800%) stay in the table: on one axis they flatten every forward line
+    const pts = key => YF.map(y => ({ x: new Date(`${y}-12-31`), y: R[key][y], date: `${y}-12-31` }));
+    lineChart(c2c, { series: [{ name: 'Gross', color: 'var(--s1)', points: pts('gross_margin') }, { name: 'Op ex-training', color: 'var(--s3)', points: pts('om_ex_training') }, { name: 'Op incl-training', color: 'var(--s2)', points: YF.map(y => ({ x: new Date(`${y}-12-31`), y: R.revenue[y] ? R.op_income_incl_training[y] / R.revenue[y] : 0, date: `${y}-12-31` })) }, { name: 'FCF', color: 'var(--s7)', points: pts('fcf_margin') }], yFmt: v => fmt.pct(v), xTicks: 7 });
     c2.append(legend([{ name: 'Gross margin', color: 'var(--s1)' }, { name: 'Operating, ex-training', color: 'var(--s3)' }, { name: 'Operating, incl. training', color: 'var(--s2)' }, { name: 'FCF margin', color: 'var(--s7)' }]));
     g.append(c1, c2); main.append(g);
     const g2 = el('div', { class: 'grid section' });
