@@ -2,7 +2,7 @@
  "agent": "analyst-topic-moat",
  "role": "Topic Analyst — Moat, competition and market position",
  "started": "2026-09-30T19:19:16Z",
- "finished": "2026-09-30T19:46:20Z",
+ "finished": "2026-09-30T19:47:22Z",
  "topic": {
   "slug": "moat",
   "title": "Moat, competition and market position",
@@ -152,16 +152,18 @@
     ]
    },
    {
-    "t": "The price premium sits on gated models. Opus 5.5 at $4/$20 claims Fable 5.1 performance at a list price 60% lower, 21 days after Fable 5.1 shipped at $10/$50, a tier Washington froze and held. Talent and research rest on company statements: Karpathy joined May 19 (T2), researchers quit publicly Feb 9 and Sep 8, and Claude writing over 80% of merged code is Anthropic's claim.",
+    "t": "Pricing power shows in terms, not list prices. Opus 5.5 at $4/$20 claims Fable 5.1 performance at a list price 60% lower, 21 days after Fable 5.1 shipped at $10/$50, a tier Washington froze and held. Anthropic added weekly limits, moved Enterprise to $20 seats plus API-rate usage and put Fable on usage credits. Talent flows both ways: Karpathy joined May 19 (T2) and two researchers quit publicly.",
     "e": [
      "evt-20260922-claude-opus-5-5-launch",
      "evt-20260901-fable-5-1-mythos-5-1-launch",
      "evt-20260612-bis-directive-fable-mythos-compute-angle",
      "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+     "evt-20250728-claude-weekly-rate-limits",
+     "evt-20260416-enterprise-seat-plus-usage-repricing",
+     "evt-20260719-fable-5-plan-promotion-ends",
      "evt-20260519-karpathy-joins",
      "evt-20260209-sharma-resigns",
-     "evt-20260908-coxon-resigns",
-     "evt-20260604-when-ai-builds-itself-pause-option"
+     "evt-20260908-coxon-resigns"
     ]
    }
   ],
@@ -196,8 +198,8 @@
    }
   ],
   "second_order": [
-   "Premium pricing and government gating sit on the same models. Fable and Mythos at $10/$50 were frozen Jun 12, and Mythos 5.1 was held from UK AISI Sep 24 with OpenAI's Astra, while Opus 5.5 at $4/$20 claims Fable 5.1 performance. Commerce and the White House now shape release timing at both labs. Consensus may read $10/$50 as pricing power; it is gated access.",
-   "Distillation can make the lead a wasting asset. Disclosed exchanges rose from 16M+ on Feb 23 to nearly 200M on Sep 10. On Jul 22, 21 days after Fable's Jul 1 return, the White House said Moonshot distilled it for Kimi K3 and Treasury said sanctions were possible; experts doubted the claim. The draft prospectus, paraphrased, ties demand to continuous releases, so the 21-day median release gap may be the cost of staying ahead. Rank alone is no moat.",
+   "Research is published, so talent is the moat question. Anthropic released its Constitution under CC0 (Jan 22) and circuit-tracing tools (May 29, 2025), so methods can be copied, and people move both ways: Karpathy joined May 19, researchers quit Feb 9 and Sep 8. Anthropic says Claude writes over 80% of its merged code. If that speeds research, velocity compounds. With no attrition series, consensus credits research leadership without a retention measure.",
+   "Distillation can make the lead a wasting asset. Disclosed exchanges rose from 16M+ on Feb 23 to nearly 200M on Sep 10. On Jul 22, 21 days after Fable's return, the White House said Moonshot distilled it for Kimi K3 and Treasury said sanctions were possible; experts doubted the claim. The draft prospectus, paraphrased, ties demand to continuous releases, so the 21-day median release gap may be the cost of staying ahead.",
    "Intermediaries route on price and quality each release. Named partners that disclose other vendors carry rivals: Copilot (Gemini, o1), Harvey (OpenAI, Gemini), Xcode 26.3 (Codex), Alexa+ (Nova), DuckDuckGo (OpenAI). Menlo's mid-2025 survey had 11% of respondents switching vendors (T3), and TechCrunch's Ramp read says businesses flip between labs as models launch. Until retention is disclosed, the $1M customer count does not show lock-in.",
    "Cursor is the first case of a rival owning a top coding channel. SpaceX collects $1.25B a month from Anthropic for Colossus (T1), builds Grok and agreed to buy Cursor, closing reported Aug 15, unverified. One employee put Cursor at 40% to 50% of Anthropic revenue early on (T3, LOW). If Claude stays Cursor's default two quarters after closing, coding share was earned. If not, it was rented.",
    "Open-weight pressure shows in tokens, not enterprise dollars. Open models held 13% of enterprise workloads in Jul 2025 (Menlo, T3) and 6.4% of AI spenders in Sep (Ramp via FourWeekMBA, T4), yet Chinese models carried over 45% of OpenRouter traffic and Claude's token share fell to 13.3% from 29.1% (T4). If tokens lead dollars, deflation reaches enterprise next. Consensus may read dollar share as the whole market."
@@ -336,7 +338,13 @@
    "evt-20260709-musk-wont-cut-off-anthropic-colossus",
    "evt-20250902-series-f-13b-183b",
    "evt-20260309-cfo-declaration-revenue-at-risk",
-   "evt-20260706-terawulf-kentucky-19b-lease"
+   "evt-20260706-terawulf-kentucky-19b-lease",
+   "evt-20260122-claude-constitution",
+   "evt-20250529-circuit-tracing-open-source",
+   "evt-20260604-when-ai-builds-itself-pause-option",
+   "evt-20250728-claude-weekly-rate-limits",
+   "evt-20260416-enterprise-seat-plus-usage-repricing",
+   "evt-20260719-fable-5-plan-promotion-ends"
   ]
  },
  "log": [
