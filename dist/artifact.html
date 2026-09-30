@@ -141,6 +141,9 @@ code { font-family: var(--font-mono); font-size: 12px; background: var(--surface
 .chip.conf.MEDIUM { background: var(--surface-3); }
 .chip.conf.LOW, .chip.conf.VERIFY { background: rgba(250,178,25,.2); color: var(--ink); }
 .chip.conf.DISPUTED { background: rgba(208,59,59,.16); color: var(--ink); }
+.chip.ok { background: rgba(12,163,12,.14); color: var(--good-text); }
+.chip.warn { background: rgba(250,178,25,.2); color: var(--ink); }
+.chip.bad { background: rgba(208,59,59,.16); color: var(--ink); }
 .chip.num { font-family: var(--font-mono); background: var(--accent-soft); color: var(--ink); }
 .chip .sw { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
 .pill-btn { border: 1px solid var(--line-2); background: var(--surface); border-radius: 999px; padding: 4px 10px; font-size: 12px; color: var(--ink-2); transition: all var(--dur-1); }
@@ -213,7 +216,16 @@ table.data td.num, table.data th.num { text-align: right; font-family: var(--fon
 .topic-card .n { font-family: var(--font-mono); color: var(--muted); font-size: 11px; }
 .topic-card h3 { font-family: var(--font-display); font-size: 17px; margin-top: 2px; }
 .topic-card .ol { color: var(--ink-2); margin-top: 6px; font-size: 13px; }
-.topic-card .km { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.topic-card .km { display: grid; gap: 4px; margin-top: 10px; }
+.topic-card .ml { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 12px; line-height: 1.4; color: var(--ink-2); overflow-wrap: anywhere; }
+.topic-card .ml b { font-weight: 600; color: var(--ink); }
+.topic-card .ol { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.metric-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 8px; margin-bottom: 14px; }
+.mt { display: block; min-width: 0; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 8px 10px; background: var(--surface-2); color: var(--ink); text-decoration: none; }
+.mt.link:hover, .mt.link:focus-visible { border-color: var(--ink-2); }
+.mt .l { font-size: 11px; line-height: 1.35; color: var(--muted); overflow-wrap: anywhere; }
+.mt .v { font-size: 13px; line-height: 1.4; margin-top: 2px; overflow-wrap: anywhere; }
+.mt .s { font-size: 11px; color: var(--ink-2); margin-top: 3px; overflow-wrap: anywhere; }
 .beat { display: grid; grid-template-columns: 130px 1fr; gap: 8px 14px; }
 .beat .l { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding-top: 3px; }
 .beat .b { font-size: 13.5px; }
@@ -512,13 +524,13 @@ function rerenderCharts() { state.rendered = {}; showTab(state.tab, true); }
 
 /* ---------------- data ---------------- */
 async function loadAll() {
-  const files = ['events','metrics','entities','topics','model','compute','thesis','agent_log','ledger','audit','health'];
+  const files = ['events','metrics','entities','topics','model','compute','thesis','agent_log','ledger','audit','health','certify'];
   const res = await Promise.all(files.map(async f => {
     try { const r = await fetch(`data/${f}.json`, { cache: 'no-store' }); if (!r.ok) throw new Error(`${r.status}`); return [f, await r.json()]; }
     catch (e) { return [f, null, e]; }
   }));
   const missing = [];
-  for (const [f, d, e] of res) { state.data[f] = d; if (!d && !['audit', 'health'].includes(f)) missing.push(f); }
+  for (const [f, d, e] of res) { state.data[f] = d; if (!d && !['audit', 'health', 'certify'].includes(f)) missing.push(f); }
   if (!state.data.events) throw new Error(`Could not load data/events.json (${missing.join(', ')} missing). Run scripts/merge.py first.`);
   for (const e of state.data.events) { state.evIndex.set(e.id, e); for (const m of e.merged_ids || []) if (!state.evIndex.has(m)) state.evIndex.set(m, e); }
   return missing;
@@ -741,6 +753,9 @@ function openEvent(id) {
   if (ex.customers) add('Customers', String(ex.customers));
   if (ex.other && Object.keys(ex.other).length) add('Other', el('pre', { class: 'small mono', style: { whiteSpace: 'pre-wrap', margin: 0 }, text: JSON.stringify(ex.other, null, 1).slice(0, 1200) }));
   if (e.notes) add('Notes', e.notes);
+  if (e.audit) add('Independent audit', el('div', {}, el('span', { class: 'chip ' + ({ SUPPORTED: 'ok', PARTLY: 'warn', UNOPENABLE: '' }[e.audit.verdict] || 'bad'), text: e.audit.verdict }), ' ', el('span', { class: 'small', text: e.audit.note || '' }),
+    ...(e.audit.figure_issues || []).map(f => el('div', { class: 'small muted', text: `${f.field}: claimed ${f.claimed}; page says ${f.page_says}${f.basis_note ? ' (' + f.basis_note + ')' : ''}` }))));
+  if (e.corrections?.length) add('Corrected after audit', el('div', {}, ...e.corrections.map(c => el('div', { class: 'small', style: { marginBottom: '4px' } }, el('b', { text: `${c.id} (audit ${c.audit_id}): ` }), c.reason, ...Object.entries(c.changed || {}).filter(([k]) => k !== 'summary').map(([k, v]) => el('div', { class: 'mono small muted', text: `${k.replace('extracted.', '')}: ${JSON.stringify(v.was)} → ${JSON.stringify(v.now)}` })), c.changed?.summary ? el('div', { class: 'mono small muted', text: 'summary text corrected' }) : ''))));
   add('Found by', (e.agents || [e.agent]).join(', '));
   add('Event id', el('code', { text: e.id }));
   openDrawer(el('div', {}, el('div', { class: 'eyebrow', text: fmt.date(e.date) }), el('h2', { text: e.headline, style: { margin: '6px 0 8px' } }), el('p', { class: 'ink2', text: e.summary, style: { marginBottom: '14px' } }), kv));
@@ -759,7 +774,9 @@ function renderOverview(root) {
   const q = (M.period_revenue || []).filter(r => /Q[1-4]\s*20\d\d/.test(r.period || '') && /actual|prelim/i.test(r.kind || '')).sort((a, b) => a.period.replace(/(Q\d)\s*(\d{4})/, '$2$1').localeCompare(b.period.replace(/(Q\d)\s*(\d{4})/, '$2$1'))).pop();
   const cs = M.capital_summary || {};
   const ct = M.compute_totals || {};
-  const hc = latest(M.headcount_desk?.length ? M.headcount_desk : M.headcount, r => r.headcount);
+  const hcAll = (M.headcount_desk?.length ? M.headcount_desk : M.headcount || []).map(r => ({ ...r, date: /^\d{4}-\d{2}-\d{2}/.test(String(r.date)) ? String(r.date).slice(0, 10) : /^\d{4}-\d{2}/.test(String(r.date)) ? String(r.date).slice(0, 7) + '-01' : r.date }));
+  const hc = latest(hcAll.filter(r => /^T[123]$/.test(r.tier || 'T3')), r => r.headcount) || latest(hcAll, r => r.headcount);   // a headline KPI rests on T1-T3 only
+  const hcLater = hc ? hcAll.filter(r => r.date > hc.date && r.headcount && Math.abs(r.headcount - hc.headcount) / hc.headcount > 0.2) : [];
   const os = M.offering_structure || {};
   const tile = (label, value, sub, opts = {}) => { const t = el('div', { class: 'tile' }, el('div', { class: 'label', text: label }), el('div', { class: 'value', text: value }), el('div', { class: 'sub' }, ...sub)); if (opts.spark) { const s = el('div', { class: 'spark' }); t.append(s); sparkline(s, opts.spark); } if (opts.onclick) { t.style.cursor = 'pointer'; t.addEventListener('click', opts.onclick); } return t; };
   tiles.append(
@@ -768,7 +785,7 @@ function renderOverview(root) {
     tile(q ? `${q.period} revenue (${q.kind})` : 'Latest quarterly revenue', q ? fmt.usd(q.usd_m) : '—', q ? [q.basis ? chip(q.basis) : '', q.tier ? tierChip(q.tier) : '', q.confidence ? confChip(q.confidence) : ''] : ['no data']),
     tile('Equity raised (ex-debt)', cs.equity_only_usd_m ? fmt.usd(cs.equity_only_usd_m) : '—', [cs.debt_usd_m ? `+ ${fmt.usd(cs.debt_usd_m)} debt` : '', cs.basis_note ? chip('basis noted') : '']),
     tile('Compute commitments (announced)', ct.usd_m_announced ? fmt.usd(ct.usd_m_announced) : '—', [ct.usd_m_contracted ? `${fmt.usd(ct.usd_m_contracted)} contracted` : '', ct.gw_announced ? fmt.gw(ct.gw_announced) : '']),
-    tile('Headcount', hc ? fmt.num(hc.headcount) : '—', hc ? [fmt.date(hc.date), hc.tier ? tierChip(hc.tier) : ''] : ['no data']),
+    tile('Headcount', hc ? fmt.num(hc.headcount) : '—', hc ? [fmt.date(hc.date), hc.tier ? tierChip(hc.tier) : '', hcLater.length ? el('span', { class: 'chip conf DISPUTED', title: 'Later figures differ by more than 20%; all are T4 estimates', text: `disputed: ${hcLater.map(r => fmt.num(r.headcount)).join(' / ')} (T4)` }) : ''] : ['no data']),
     tile('IPO', os.timing ? os.timing.split('·')[0].trim().slice(0, 28) : 'Confidential S-1', [os.exchange || '', os.target_valuation_usd_m ? `target ${fmt.usd(os.target_valuation_usd_m)}` : '', os.target_raise_usd_m ? `raise up to ${fmt.usd(os.target_raise_usd_m)}` : '']),
     tile('Record', `${fmt.num((state.data.events || []).length)} events`, [L ? `${fmt.num(L.raw_events)} raw · ${Object.keys(A?.agents || {}).length} agents` : '', L ? chip(`${Math.round((L.opened_share || 0) * 100)}% opened`) : ''], { onclick: () => showTab('sources') }),
   );
@@ -853,7 +870,7 @@ function renderTimeline(root) {
         el('div', {}, el('div', { class: 'h', text: e.headline }), el('div', { class: 's', text: e.summary }),
           el('div', { class: 'meta' }, ...e.category.slice(0, 4).map(c => chip(c, 'cat')), ...extractChips(e.extracted)),
           el('div', { class: 'src' }, sourceLine(e.source), e.corroboration?.length ? ` · +${e.corroboration.length} corroborating` : '')),
-        el('div', { class: 'right' }, tierChip(e.source.tier), confChip(e.confidence))));
+        el('div', { class: 'right' }, tierChip(e.source.tier), confChip(e.confidence), e.audit ? el('span', { class: 'chip ' + ({ SUPPORTED: 'ok', PARTLY: 'warn', UNOPENABLE: '' }[e.audit.verdict] || 'bad'), title: 'Independent audit: ' + (e.audit.note || ''), text: 'audit ' + e.audit.verdict.toLowerCase().replace('_', ' ') }) : '')));
     }
     if (rows.length > tl.shown) frag.append(el('button', { class: 'btn showmore', type: 'button', text: `Show ${Math.min(200, rows.length - tl.shown)} more (${tl.shown} of ${rows.length} shown)`, onclick: () => { tl.shown += 200; list(true); } }));
     if (!rows.length) frag.append(el('div', { class: 'empty', text: 'Nothing matches these filters.' }));
@@ -864,6 +881,11 @@ function renderTimeline(root) {
 }
 
 /* ---------------- TOPICS ---------------- */
+function metricTile(k) {
+  const linked = k.event_id && state.evIndex.has(k.event_id);
+  const body = [el('div', { class: 'l', text: k.label }), el('div', { class: 'v', text: String(k.value ?? '') }), k.note ? el('div', { class: 's', text: k.note }) : ''];
+  return linked ? el('a', { class: 'mt link', href: '#timeline', title: 'Open the source event', onclick: ev => { ev.preventDefault(); openEvent(k.event_id); } }, ...body) : el('div', { class: 'mt' }, ...body);
+}
 function renderTopics(root) {
   root.replaceChildren();
   const T = state.data.topics?.topics || [];
@@ -872,7 +894,7 @@ function renderTopics(root) {
   const detail = el('div', { class: 'section' });
   T.forEach((t, i) => {
     const card = el('div', { class: 'card topic-card', role: 'button', tabindex: '0' }, el('div', { class: 'n', text: String(i + 1).padStart(2, '0') }), el('h3', { text: t.title }), el('div', { class: 'ol', text: t.one_liner }),
-      el('div', { class: 'km' }, ...(t.key_metrics || []).slice(0, 4).map(k => chip(`${k.label}: ${k.value}`, 'num'))));
+      el('div', { class: 'km' }, ...(t.key_metrics || []).slice(0, 3).map(k => el('div', { class: 'ml' }, el('b', { text: k.label + ': ' }), String(k.value ?? '')))));
     const open = () => { $$('.topic-card', grid).forEach(c => c.style.borderColor = ''); card.style.borderColor = 'var(--accent)'; showTopic(t); detail.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
     card.addEventListener('click', open); card.addEventListener('keydown', ev => { if (ev.key === 'Enter') open(); });
     grid.append(card);
@@ -881,7 +903,7 @@ function renderTopics(root) {
   function showTopic(t) {
     detail.replaceChildren(el('div', { class: 'card' },
       el('div', { class: 'eyebrow', text: 'Topic' }), el('h2', { text: t.title, style: { margin: '4px 0 6px' } }), el('p', { class: 'ink2', text: t.one_liner, style: { marginBottom: '14px' } }),
-      el('div', { class: 'km', style: { display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '14px' } }, ...(t.key_metrics || []).map(k => k.event_id && state.evIndex.has(k.event_id) ? el('a', { href: '#timeline', onclick: ev => { ev.preventDefault(); openEvent(k.event_id); }, style: { textDecoration: 'none' } }, chip(`${k.label}: ${k.value}`, 'num')) : chip(`${k.label}: ${k.value}`, 'num'))),
+      el('div', { class: 'metric-grid' }, ...(t.key_metrics || []).map(metricTile)),
       threeBeat(t),
       t.second_order?.length ? el('div', { class: 'section' }, el('div', { class: 'eyebrow', text: 'Second-order' }), el('ul', { style: { margin: '6px 0 0 18px', padding: 0 } }, ...t.second_order.map(s => el('li', { text: s })))) : '',
       t.watch?.length ? el('div', { class: 'section' }, el('div', { class: 'eyebrow', text: 'What to watch' }), el('div', { class: 'tablewrap' }, el('table', { class: 'data' }, el('thead', {}, el('tr', {}, el('th', { text: 'Item' }), el('th', { text: 'Threshold' }), el('th', { text: 'Observable by' }))), el('tbody', {}, ...t.watch.map(w => el('tr', {}, el('td', { text: w.item }), el('td', { class: 'small', text: w.threshold || '' }), el('td', { class: 'mono', text: w.by || '—' }))))))) : '',
@@ -975,6 +997,19 @@ function renderModel(root) {
     sl('FY2026 revenue ($B, gross)', () => A.revenue_2026 / 1000, v => A.revenue_2026 = v * 1000, 30, 90, 1, v => `$${v}B`, S.revenue_2026);
     [2027, 2028, 2029, 2030].forEach(y => sl(`${y} growth`, () => A.growth[y], v => A.growth[y] = v, -0.2, 2, 0.01, v => fmt.pct(v), y === 2027 ? S.growth : null));
     sl('Gross→net equalization haircut', () => A.equalization_haircut, v => A.equalization_haircut = v, 0, 0.6, 0.0025, v => fmt.pct(v, 1), S.equalization);
+    {
+      // the desk's canonical haircut and what the record's own evidence implies are both offered; neither is chosen silently
+      const alt = MD.assumptions?.[scen]?.equalization_alt || MD.assumptions?.base?.equalization_alt, canon = MD.assumptions?.[scen]?.equalization_haircut ?? 0.3975;
+      if (alt?.platform_fee_pct_fy2025 != null) {
+        const slider = side.querySelector('#sl-Gross-net-equalization-haircut'), outEl = slider?.previousElementSibling;
+        const setH = v => { A.equalization_haircut = v; if (slider) { slider.value = v; outEl.textContent = fmt.pct(v, 1); } draw(); };
+        side.append(el('div', { class: 'ctl', style: { display: 'block' } }, el('div', { class: 'small muted', text: 'Two bases for the same haircut (conflict kept open):' }),
+          el('div', { style: { display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '4px' } },
+            el('button', { class: 'btn', type: 'button', text: `Desk canonical ${fmt.pct(canon, 2)}`, onclick: () => setH(canon) }),
+            el('button', { class: 'btn', type: 'button', text: `Record evidence ${fmt.pct(alt.platform_fee_pct_fy2025, 1)} (platform fees)`, onclick: () => setH(alt.platform_fee_pct_fy2025) })),
+          alt.note ? el('div', { class: 'src', text: alt.note }) : ''));
+      }
+    }
     side.append(el('h4', { text: 'Margins' }));
     [2026, 2027, 2028, 2029, 2030].forEach(y => sl(`${y} gross margin`, () => A.gross_margin[y], v => A.gross_margin[y] = v, -0.5, 0.9, 0.01, v => fmt.pct(v), y === 2026 ? S.gross_margin : null));
     sl('Inference share of cost of revenue', () => A.inference_share_of_cogs, v => A.inference_share_of_cogs = v, 0.3, 0.95, 0.01, v => fmt.pct(v), S.inference_share);
@@ -1010,7 +1045,7 @@ function renderModel(root) {
     lineChart(c2c, { series: [{ name: 'Gross', color: 'var(--s1)', points: pts('gross_margin') }, { name: 'Op ex-training', color: 'var(--s3)', points: pts('om_ex_training') }, { name: 'Op incl-training', color: 'var(--s2)', points: Y.map(y => ({ x: new Date(`${y}-12-31`), y: R.revenue[y] ? R.op_income_incl_training[y] / R.revenue[y] : 0, date: `${y}-12-31` })) }, { name: 'FCF', color: 'var(--s7)', points: pts('fcf_margin') }], yFmt: v => fmt.pct(v), xTicks: 7 });
     c2.append(legend([{ name: 'Gross margin', color: 'var(--s1)' }, { name: 'Operating, ex-training', color: 'var(--s3)' }, { name: 'Operating, incl. training', color: 'var(--s2)' }, { name: 'FCF margin', color: 'var(--s7)' }]));
     g.append(c1, c2); main.append(g);
-    const g2 = el('div', { class: 'grid cols-2 section' });
+    const g2 = el('div', { class: 'grid section' });
     const c3 = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Free cash flow and cumulative' }))); const c3c = el('div', { class: 'chart' }); c3.append(c3c);
     columnChart(c3c, { data: Y.map(y => ({ label: `${y}${isA(y) ? 'A' : 'E'}`, values: [{ name: 'FCF', value: R.fcf[y], color: R.fcf[y] < 0 ? 'var(--s8)' : 'var(--s3)' }] })), yFmt: v => fmt.usd(v), stacked: false, negOK: true, labelTop: false });
     c3.append(el('div', { class: 'chart-foot' }, el('span', { text: `Cumulative FCF 2024–2030: ${fmt.usd(R.cum_fcf[2030])} · trough ${fmt.usd(R.cum_fcf[trough])} (${trough})` })));
@@ -1018,7 +1053,7 @@ function renderModel(root) {
     const mt = el('table', { class: 'data' }, el('thead', {}, el('tr', {}, el('th', { text: 'Mark' }), el('th', { class: 'num', text: 'EV' }), el('th', { class: 'num', text: 'EV/2026E rev' }), el('th', { class: 'num', text: 'EV/2027E rev' }), el('th', { class: 'num', text: 'EV/2027E net' }), el('th', { class: 'num', text: 'Req. 2030 rev' }), el('th', { class: 'num', text: '2026→30 CAGR' }), el('th', { class: 'num', text: 'vs DCF' }))),
       el('tbody', {}, ...O.valuation.marks.map(m => el('tr', {}, el('td', { text: m.label }), el('td', { class: 'num', text: fmt.usd(m.ev) }), el('td', { class: 'num', text: m.ev_rev_2026.toFixed(1) + 'x' }), el('td', { class: 'num', text: m.ev_rev_2027.toFixed(1) + 'x' }), el('td', { class: 'num', text: m.ev_net_2027.toFixed(1) + 'x' }), el('td', { class: 'num', text: m.req2030rev ? fmt.usd(m.req2030rev) : 'n/a (FCF ≤ 0)' }), el('td', { class: 'num', text: m.req_cagr != null ? fmt.pct(m.req_cagr) : '—' }), el('td', { class: `num ${m.vs_dcf < 0 ? '' : 'neg'}`, text: (m.vs_dcf >= 0 ? '+' : '') + fmt.pct(m.vs_dcf) })))));
     c4.append(el('div', { class: 'tablewrap' }, mt), el('div', { class: 'small muted', style: { marginTop: '6px' }, text: 'Required 2030 revenue solves EV = PV(FCF 2026–2029) + PV(2030 FCF × (1 + terminal multiple)) at the model FCF margin. EV treated as equity value (net cash ignored).' }));
-    g2.append(c3, c4); main.append(g2);
+    g2.append(c3); main.append(g2); c4.classList.add('section'); main.append(c4);
     // P&L table
     const tbl = el('table', { class: 'data model' }); const th = el('tr', {}, el('th', { text: '$M' }), ...Y.map(y => el('th', { class: 'num', text: `${y}${isA(y) ? 'A' : 'E'}` }))); tbl.append(el('thead', {}, th));
     const tb = el('tbody'); const cell = (v, kind) => el('td', { class: `num ${v < 0 ? 'neg' : ''}`, text: kind === 'pct' ? fmt.pct(v) : fmt.usd(v) });
@@ -1228,7 +1263,7 @@ class Floor {
       fig.append('circle').attr('class', 'head').attr('cx', 0).attr('cy', 20).attr('r', 8);
       fig.append('g').attr('class', 'arm').attr('transform', 'translate(10,35) rotate(-30)').append('line').attr('x1', 0).attr('y1', 0).attr('x2', 0).attr('y2', 11).attr('stroke', col);
       d.append('text').attr('class', 'st').attr('x', 8).attr('y', 11).text('idle');
-      d.append('text').attr('class', 'n').attr('x', 8).attr('y', 58).text(shortName(a.name));
+      d.append('text').attr('class', 'n').attr('x', 8).attr('y', 58).text(shortName(a.name, id));
       d.append('text').attr('class', 'r').attr('x', 8).attr('y', 70).text(a.wave === 'orchestrator' ? 'dispatch & merge' : a.wave);
       d.append('text').attr('class', 'cnt').attr('x', p.w - 8).attr('y', 70).attr('text-anchor', 'end').text('');
       const fb = d.append('g').attr('class', 'flagbadge').attr('transform', `translate(${p.w - 10},8)`).style('display', 'none');
@@ -1275,7 +1310,7 @@ class Floor {
       case 'verify': this.setStatus(id, 'cross-checking', 'working'); break;
       case 'note': this.setStatus(id, 'noting', 'working'); break;
       case 'flag': st.flags++; this.setStatus(id, 'sign raised', 'working'); this.updateDesk(id); this.raiseSign(id, r, animate); this.flagsList.prepend(el('div', { class: 'f' }, el('div', { class: 'who', text: `${this.agents[id]?.name || id} · ${fmt.time(r.t)}` }), el('div', {}, r.text, r.event_id && state.evIndex.has(r.event_id) ? el('span', {}, ' ', evLink(r.event_id, '↗')) : ''))); while (this.flagsList.children.length > 60) this.flagsList.lastChild.remove(); break;
-      case 'message': this.setStatus(id, `msg → ${shortName(this.agents[r.to]?.name || r.to || '')}`, 'working'); if (animate && r.to) this.sendDot(id, r.to); break;
+      case 'message': this.setStatus(id, `msg → ${shortName(this.agents[r.to]?.name || r.to || '', r.to)}`, 'working'); if (animate && r.to) this.sendDot(id, r.to); break;
       case 'done': this.setStatus(id, 'done', 'done'); break;
     }
     this.feed.append(this.feedRow(r)); while (this.feed.children.length > 300) this.feed.firstChild.remove(); this.feed.scrollTop = this.feed.scrollHeight;
@@ -1343,7 +1378,14 @@ class Floor {
   onShow() { /* nothing; replay is user-initiated */ }
 }
 function initials(n) { return (n || '?').replace(/[·—-]/g, ' ').split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase(); }
-function shortName(n) { return (n || '').replace('Timeline Scout · ', 'Scout ').replace('Source Re-deriver · ', 'Re-derive ').replace('Analyst · ', 'Analyst ').replace(' Desk', '').replace(' & People', '').replace(' & Regulatory', '').slice(0, 16); }
+const SHORT = {
+  'scout-2021-2022': 'Scout 2021–22', 'scout-2023': 'Scout 2023', 'scout-2024': 'Scout 2024', 'scout-2025h1': 'Scout 2025 H1', 'scout-2025h2': 'Scout 2025 H2', 'scout-2026q1': 'Scout 2026 Q1', 'scout-2026q2': 'Scout 2026 Q2', 'scout-2026q3': 'Scout 2026 Q3',
+  'desk-deals': 'Deal Desk', 'desk-compute': 'Compute Desk', 'desk-product': 'Product Desk', 'desk-revenue': 'Revenue Desk', 'desk-governance': 'Governance', 'desk-legal': 'Legal & Reg.', 'desk-ecosystem': 'Ecosystem', 'desk-s1': 'Prospectus',
+  'verify-capital': 'Re-derive Cap.', 'verify-operating': 'Re-derive Ops', 'verify-prospectus': 'Re-derive Prosp.', 'verify-compute': 'Re-derive Comp.', 'verify-audit-1': 'Auditor 1', 'verify-audit-2': 'Auditor 2',
+  'analyst-topic-capital': 'Capital Analyst', 'analyst-topic-revenue': 'Revenue Analyst', 'analyst-topic-compute': 'Compute Analyst', 'analyst-topic-product': 'Product Analyst', 'analyst-topic-moat': 'Moat Analyst',
+  'analyst-topic-governance': 'Gov. Analyst', 'analyst-topic-legal': 'Legal Analyst', 'analyst-topic-government': 'Policy Analyst', 'analyst-topic-people': 'People Analyst', 'analyst-topic-ecosystem': 'Ecosys. Analyst',
+  'analyst-model': 'Modeler', 'analyst-compute': 'Compute Econ.', 'analyst-bull': 'Bull Analyst', 'analyst-bear': 'Bear Analyst', 'analyst-judge': 'Judge', 'certifier': 'Certifier', 'orchestrator': 'Orchestrator' };
+function shortName(n, id) { if (id && SHORT[id]) return SHORT[id]; const s = (n || '').replace('Timeline Scout · ', 'Scout ').replace('Source Re-deriver · ', 'Re-derive ').replace('Analyst · ', 'Analyst ').replace(' Desk', '').replace(' & People', '').replace(' & Regulatory', ''); return s.length > 16 ? s.slice(0, 15) + '…' : s; }
 function renderAgents(root) {
   root.replaceChildren();
   const A = state.data.agent_log;
@@ -1354,6 +1396,18 @@ function renderAgents(root) {
 }
 
 /* ---------------- SOURCES & LEDGER ---------------- */
+function moreTable(headers, rows, mapRow, limit) {
+  const tbody = el('tbody'); let shown = 0;
+  const btn = el('button', { class: 'btn showmore', type: 'button' }); btn.addEventListener('click', () => draw(rows.length));
+  const draw = n => { const f = document.createDocumentFragment(); rows.slice(shown, n).forEach(r => f.append(mapRow(r))); tbody.append(f); shown = Math.min(n, rows.length); btn.hidden = shown >= rows.length; btn.textContent = `Show all ${rows.length} (${shown} shown)`; };
+  draw(limit || 15);
+  return el('div', {}, el('div', { class: 'tablewrap' }, el('table', { class: 'data' }, el('thead', {}, el('tr', {}, ...headers.map(h => el('th', { text: h })))), tbody)), btn);
+}
+function compactJson(v) {
+  let o = v; if (typeof v === 'string') { try { o = JSON.parse(v); } catch { return v; } }
+  if (!o || typeof o !== 'object') return String(o ?? '');
+  return Object.entries(o).filter(([, x]) => x != null && x !== '').map(([k, x]) => `${k.replace(/_usd_m$/, '').replace(/_/g, ' ')} ${/_usd_m$/.test(k) && typeof x === 'number' ? fmt.usd(x) : Array.isArray(x) ? x.join('/') : x}`).join(' · ');
+}
 function renderSources(root) {
   root.replaceChildren();
   const L = state.data.ledger, E = state.data.events || [];
@@ -1371,28 +1425,39 @@ function renderSources(root) {
       el('div', { style: { marginTop: '10px' } }, ...Object.entries(AU.verdicts || {}).map(([k, v]) => el('div', { class: 'bar-row' }, el('span', { class: 'mono small', text: k }), el('div', { class: 'b' }, el('i', { style: { width: `${100 * v / AU.n}%`, background: k === 'SUPPORTED' ? 'var(--s3)' : k === 'PARTLY' ? 'var(--s4)' : 'var(--s8)' } })), el('span', { class: 'num mono small', text: String(v) }))))),
     el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'What the auditors found wrong' }), el('span', { class: 'small muted', text: 'kept in the open' })),
       el('div', { class: 'flags-list' }, ...((AU.problems || []).slice(0, 12).map(p => el('div', { class: 'f' }, el('div', { class: 'who', text: `${p.verdict} · ${p.tier} · ${p.category}` }), el('div', {}, `${p.headline} — ${p.note || ''}`, p.event_id && state.evIndex.has(p.event_id) ? el('span', {}, ' ', evLink(p.event_id, '↗')) : '')))), ...((AU.problems || []).length ? [] : [el('div', { class: 'empty', text: 'No problems recorded.' })])))));
+  if (L.corrections?.length) root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: `Corrections applied after the audit (${L.corrections.length})` }), el('span', { class: 'small muted', text: 'unsupported figures removed or relabelled; no facts added; agent outputs untouched' })),
+    moreTable(['Event', 'Audit item', 'Fields changed', 'Why'], L.corrections, c => el('tr', {}, el('td', {}, state.evIndex.has(c.event_id) ? evLink(c.event_id, c.headline) : c.headline), el('td', { class: 'mono small', text: c.audit_id || '' }), el('td', { class: 'mono small', text: (c.changed || []).map(x => x.replace('extracted.', '')).join(', ') }), el('td', { class: 'small', text: c.reason || '' })), 8)));
+  const CT = state.data.certify;
+  if (CT?.gates?.length) root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Ship gates' }), el('span', { class: 'small muted', text: `${CT.summary.PASS} pass · ${CT.summary.WARN} warn · ${CT.summary.FAIL} fail · ${CT.summary.PENDING} pending · ${fmt.date(CT.generated.slice(0, 10))} ${fmt.time(CT.generated)} UTC` })),
+    el('div', { class: 'tablewrap' }, el('table', { class: 'data' }, el('thead', {}, el('tr', {}, el('th', { text: 'Gate' }), el('th', { text: 'Status' }), el('th', { text: 'Detail' }))),
+      el('tbody', {}, ...CT.gates.map(g => el('tr', {}, el('td', { text: `${g.id} · ${g.name}` }), el('td', {}, el('span', { class: 'chip ' + ({ PASS: 'ok', WARN: 'warn', FAIL: 'bad', PENDING: '' }[g.status] || ''), text: g.status })), el('td', { class: 'small', text: g.detail }))))))));
   if (HL) root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Mechanical checks on the record' }), el('span', { class: 'small muted', text: `${HL.fails} fails · ${HL.warns} warnings` })),
     el('div', { class: 'tablewrap' }, el('table', { class: 'data' }, el('thead', {}, el('tr', {}, el('th', { text: 'Check' }), el('th', { class: 'num', text: 'Count' }), el('th', { text: 'Result' }))), el('tbody', {}, ...HL.checks.map(c => el('tr', {}, el('td', { text: c.check }), el('td', { class: 'num', text: String(c.count) }), el('td', {}, chip(c.severity, c.severity === 'OK' ? 'conf HIGH' : c.severity === 'FAIL' ? 'conf DISPUTED' : c.severity === 'WARN' ? 'conf LOW' : 'conf MEDIUM')))))))));
   if (L.claims?.length) {
-    const t = el('table', { class: 'data' }, el('thead', {}, el('tr', {}, ...['Claim', 'Value', 'Tier', 'Cross-check', 'Confidence', 'Red-team note'].map(h => el('th', { text: h })))), el('tbody', {}, ...L.claims.map(c => el('tr', {}, el('td', {}, c.event_id && state.evIndex.has(c.event_id) ? evLink(c.event_id, c.claim) : c.claim), el('td', { class: 'mono', text: c.value }), el('td', {}, tierChip(c.tier || 'T4')), el('td', { class: 'small', text: c.cross_check || '' }), el('td', {}, confChip(c.confidence || 'MEDIUM')), el('td', { class: 'small', text: c.red_team || '' })))));
-    root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Validation ledger' }), el('span', { class: 'small muted', text: 'one line per load-bearing claim' })), el('div', { class: 'tablewrap' }, t)));
+    const VC = { MATCH: 'ok', PARTIAL: 'warn', MISMATCH: 'bad', UNTRACEABLE: 'bad' }, cs = L.claims_summary || {};
+    root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: `Re-derivation ledger (${L.claims.length} load-bearing claims)` }), el('span', { class: 'small muted', text: `re-derived from source by agents that never saw the draft · ${cs.MATCH ?? 0} match · ${cs.PARTIAL ?? 0} partial · ${cs.MISMATCH ?? 0} mismatch (frozen) · ${cs.UNTRACEABLE ?? 0} untraceable` })),
+      moreTable(['Claim', 'Draft', 'Re-derived', 'Verdict', 'Tier', 'Origins', 'Confidence', 'Note'], L.claims, c => el('tr', {},
+        el('td', {}, c.event_id && state.evIndex.has(c.event_id) ? evLink(c.event_id, c.claim) : c.claim), el('td', { class: 'mono small', text: compactJson(c.draft) }),
+        el('td', { class: 'mono small' }, compactJson(c.rederived), ...(c.sources || []).slice(0, 2).map(u => el('span', {}, ' ', el('a', { href: u, target: '_blank', rel: 'noopener', text: fmt.domain(u) })))),
+        el('td', {}, el('span', { class: 'chip ' + (VC[c.verdict] || ''), text: c.verdict })), el('td', {}, tierChip(c.tier || 'T4')), el('td', { class: 'num', text: String(c.cross_check ?? '') }), el('td', {}, confChip(c.confidence || 'MEDIUM')), el('td', { class: 'small', text: c.red_team || '' })), 20)));
   }
   const conf = [...(L.cross_agent_conflicts || []), ...(L.agent_conflicts || [])];
   if (conf.length) {
-    const t = el('table', { class: 'data' }, el('thead', {}, el('tr', {}, ...['Topic', 'Value A', 'Value B', 'Note', 'Raised by'].map(h => el('th', { text: h })))), el('tbody', {}, ...conf.slice(0, 200).map(c => el('tr', {}, el('td', { text: c.topic }), el('td', { class: 'small' }, String(c.value_a ?? ''), ' ', c.source_a ? el('a', { href: c.source_a, target: '_blank', rel: 'noopener', text: fmt.domain(c.source_a) }) : ''), el('td', { class: 'small' }, String(c.value_b ?? ''), ' ', c.source_b ? el('a', { href: c.source_b, target: '_blank', rel: 'noopener', text: fmt.domain(c.source_b) }) : ''), el('td', { class: 'small', text: c.note || '' }), el('td', { class: 'mono small', text: c.agent || 'merge' })))));
-    root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: `Frozen conflicts (${conf.length})` }), el('span', { class: 'small muted', text: 'both values shown, neither chosen' })), el('div', { class: 'tablewrap' }, t)));
+    const lk = u => u ? el('a', { href: u, target: '_blank', rel: 'noopener', text: fmt.domain(u) }) : '';
+    root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: `Frozen conflicts (${conf.length})` }), el('span', { class: 'small muted', text: 'both values shown, neither chosen' })),
+      moreTable(['Topic', 'Value A', 'Value B', 'Note', 'Raised by'], conf, c => el('tr', {}, el('td', { text: c.topic }), el('td', { class: 'small' }, String(c.value_a ?? ''), ' ', lk(c.source_a)), el('td', { class: 'small' }, String(c.value_b ?? ''), ' ', lk(c.source_b)), el('td', { class: 'small', text: c.note || '' }), el('td', { class: 'mono small', text: c.agent || 'merge' })), 10)));
   }
-  if (L.open_items?.length) {
-    const t = el('table', { class: 'data' }, el('thead', {}, el('tr', {}, ...['Claim', 'Why unverified', 'Best lead', 'Agent'].map(h => el('th', { text: h })))), el('tbody', {}, ...L.open_items.slice(0, 200).map(o => el('tr', {}, el('td', { text: o.claim }), el('td', { class: 'small', text: o.why_unverified || '' }), el('td', { class: 'small' }, /^https?:/.test(o.best_lead || '') ? el('a', { href: o.best_lead, target: '_blank', rel: 'noopener', text: fmt.domain(o.best_lead) }) : (o.best_lead || '')), el('td', { class: 'mono small', text: o.agent || '' })))));
-    root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: `Open items (${L.open_items.length})` }), el('span', { class: 'small muted', text: 'ships only with the flag visible' })), el('div', { class: 'tablewrap' }, t)));
-  }
+  if (L.open_items?.length) root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: `Open items (${L.open_items.length})` }), el('span', { class: 'small muted', text: 'ships only with the flag visible' })),
+    moreTable(['Claim', 'Why unverified', 'Best lead', 'Agent'], L.open_items, o => el('tr', {}, el('td', { text: o.claim }), el('td', { class: 'small', text: o.why_unverified || '' }), el('td', { class: 'small' }, /^https?:/.test(o.best_lead || '') ? el('a', { href: o.best_lead, target: '_blank', rel: 'noopener', text: fmt.domain(o.best_lead) }) : (o.best_lead || '')), el('td', { class: 'mono small', text: o.agent || '' })), 10)));
   root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Method and disclosures' })),
     el('div', { class: 'small ink2' }, ...(L.method || [
       'Tier ladder: T1 primary documents (filings, dockets, anthropic.com, partner releases) · T2 Bloomberg/Reuters/WSJ/FT/CNBC and PitchBook fields · T3 single-outlet scoops and PitchBook notes · T4 aggregators · T5 social. An event inherits the tier of its weakest load-bearing source.',
       'Freeze-on-conflict: sources that disagree by more than 10% at comparable tiers are shown as DISPUTED with both values; the desk never picks silently.',
       'Basis discipline: Anthropic reports revenue gross of cloud-partner resale; comparables on a net basis are equalized with a stated haircut, never compared raw. PitchBook TTM revenue fields are forward projections, not current run-rate.',
-      'All inputs are public. Model portfolio disclosure per the desk\'s project context: Anthropic 6% overweight, OpenAI 2% underweight.',
-      'Bigdata.com was not called (retired in the tool registry); PitchBook Premium, web search and page fetches were the live sources.',
+      'Inputs: public web sources (company posts, filings, dockets, press) and licensed PitchBook Premium content (round sizes, valuations, investors, team data, analyst notes). The PitchBook content is not public: check your licence before sharing this page or its data files.',
+      'MNPI screen: the S-1 is confidential. Any figure attributed to a leaked or reported prospectus is press-reported (T2/T3), not confirmed by the company, and is labelled as such where it appears. Nothing here was obtained from an insider. Run your compliance review before acting on reported-prospectus figures.',
+      'Conflict of interest: the desk\'s model portfolio (project context dated Feb 27 2026; re-verify before relying on it) is overweight Anthropic (6%) and underweight OpenAI (2%). The analysis does not treat that position as evidence. This page is decision support, not investment advice.',
+      'Tools: PitchBook Premium, web page fetches and news-feed queries were the live sources. Bigdata.com was not used (subscription paused in the desk\'s tool registry).',
     ]).map(p => el('p', { text: p, style: { marginBottom: '6px' } })))));
 }
 
@@ -1407,7 +1472,7 @@ async function boot() {
     const missing = await loadAll();
     $('#loading').hidden = true;
     const os = state.data.metrics?.offering_structure || {};
-    const pill = $('#ipoPill'); pill.replaceChildren(el('span', { class: 'dot' }), el('span', { text: `Private · S-1 confidential (Jun 1 2026) · ${os.timing ? os.timing.split('·')[0].trim() : 'listing timing per record'}` }));
+    const pill = $('#ipoPill'); pill.replaceChildren(el('span', { class: 'dot' }), el('span', { text: `Private · S-1 confidential (Jun 1 2026) · ${/dispute/i.test(os.timing || '') ? 'listing timing disputed (Oct vs Nov)' : (os.timing ? String(os.timing).split(/[·;.]/)[0].trim().slice(0, 48) : 'listing timing per record')}` }));
     const gen = state.data.ledger?.generated || state.data.agent_log?.generated; $('#asof').textContent = `record as of ${gen ? fmt.date(gen.slice(0, 10)) + ' ' + fmt.time(gen) + ' UTC' : '—'}`;
     const E = state.data.events || []; $('#railStats').textContent = `${E.length.toLocaleString()} events · ${E.filter(e => e.source.tier === 'T1').length} primary · ${E.filter(e => e.confidence === 'DISPUTED').length} disputed`;
     if (missing.length) { const w = $('#loadError'); w.hidden = false; w.textContent = `Some data files are missing (${missing.join(', ')}); those desks show an empty state.`; }
