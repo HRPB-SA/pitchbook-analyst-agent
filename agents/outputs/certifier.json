@@ -1,0 +1,1070 @@
+{
+ "agent": "certifier",
+ "role": "Certifier",
+ "started": "2026-09-30T20:44:31Z",
+ "finished": "2026-09-30T21:23:22Z",
+ "verdict": "NEEDS WORK",
+ "rederived": [
+  {
+   "fact": "F1",
+   "value": "Series H: $65B raised at $965B post-money ($900B pre-money, arithmetic and The Information); led by Altimeter, Dragoneer, Greenoaks, Sequoia; co-led by Capital Group, Coatue, D1, GIC, ICONIQ, XN; announced 2026-05-28. Includes $15B of previously committed hyperscaler money (incl. $5B Amazon). Prior round ~$380B (Series G, Feb 2026), not independently opened.",
+   "as_of": "2026-05-28",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/series-h",
+     "publisher": "Anthropic",
+     "tier": "T1",
+     "opened": true,
+     "supports": "raised $65 billion in Series H, valuing the company at $965 billion post-money"
+    },
+    {
+     "url": "https://www.theinformation.com/briefings/anthropic-raises-65-billion-900-billion-valuation-micron-samsung-invest",
+     "publisher": "The Information",
+     "tier": "T2",
+     "opened": false,
+     "supports": "raised $65 billion at a valuation of $900 billion before the financing (RSS snippet only)"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Anthropic",
+     "publisher": "Wikipedia",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Series H $65B, $965B post-money, May 2026; cites Reuters 2026-05-28"
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+     "publisher": "Amazon 10-Q (SEC)",
+     "tier": "T1",
+     "opened": true,
+     "supports": "$5.0B Series G and $5.0B Series H nonvoting preferred; $8.0B convertible notes still notes"
+    }
+   ],
+   "single_source": false
+  },
+  {
+   "fact": "F2",
+   "value": "Latest MEASURED run-rate: >$65B annualized at end of July 2026 (reported 2026-08-17 by Bloomberg/TechCrunch, CNBC 'confirmed'; prior >$47B mid-May, company-stated in Series H post). A >$100B figure (NYT/Bloomberg/Axios, 2026-09-18) is an expectation for 2026 ('expected to generate more than $100B in annualized revenue this year'), not a measured run-rate. Bloomberg/TechCrunch first, CNBC 'confirmed' and Reuters 'source says', all from the same investor update (one update, several confirming people). Basis is GROSS: Anthropic books full marketplace sales, partner cut as expense (Axios 2026-09-03; CTech/Reuters 2026-09-30). The Axios Sep 18 'now pacing' wording cites the NYT as its source (Axios via Yahoo Finance, opened), so the $100B+ claim is one origin (NYT), and it is a projection.",
+   "as_of": "2026-07-31",
+   "sources": [
+    {
+     "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+     "publisher": "TechCrunch (citing Bloomberg)",
+     "tier": "T2",
+     "opened": true,
+     "supports": "run rate surpassed $65 billion at the end of July; $47B in May"
+    },
+    {
+     "url": "https://www.anthropic.com/news/series-h",
+     "publisher": "Anthropic",
+     "tier": "T1",
+     "opened": true,
+     "supports": "our run-rate revenue crossed $47 billion earlier this month (May 2026)"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-annualized-revenue-top-100-220623178.html",
+     "publisher": "Bloomberg via Yahoo Finance",
+     "tier": "T2",
+     "opened": true,
+     "supports": "expected to generate more than $100 billion in annualized revenue this year"
+    },
+    {
+     "url": "https://www.cnbc.com/video/2026/08/18/anthropic-tells-investors-annualized-revenue-run-rate-climbed-to-65-billion-in-july.html",
+     "publisher": "CNBC",
+     "tier": "T2",
+     "opened": false,
+     "supports": "run rate hit $65 billion at the end of July, CNBC confirmed (RSS snippet)"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios via Yahoo Finance",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic records full value of partner sales; net basis would be 6-10% hit"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-tops-100-billion-revenue-224001996.html",
+     "publisher": "Axios via Yahoo Finance",
+     "tier": "T2",
+     "opened": true,
+     "supports": "pacing to generate more than $100 billion, citing the New York Times"
+    }
+   ],
+   "single_source": false
+  },
+  {
+   "fact": "F3",
+   "value": "FY2025 (calendar 2025) revenue ~$4.6B (nearly $4.6B; $4.59B in one report), ~12x FY2024 (~$0.38-0.40B implied); FY2025 operating loss ~$8.06B; net loss ~$42B incl. ~$34B non-cash charge; compute/infrastructure spend $7.33B. Basis: reported by Reuters (exclusive, 2026-09-28) and FT from a CONFIDENTIAL/LEAKED DRAFT prospectus (261 pages); NOT a public S-1 on EDGAR. Revenue is booked gross of cloud-partner fees ($351M distribution fees on $2.16B marketplace sales = 7.6% of revenue).",
+   "as_of": "2026-09-28",
+   "sources": [
+    {
+     "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+     "publisher": "TechCrunch (Reuters/FT review)",
+     "tier": "T2",
+     "opened": true,
+     "supports": "FY2025 revenue nearly $4.6B, twelvefold; operating loss more than $8B"
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder",
+     "tier": "T3",
+     "opened": true,
+     "supports": "revenue ~$4.6B, FY2024 ~$383M implied, operating loss $8.06B, net loss ~$42B"
+    },
+    {
+     "url": "https://ca.finance.yahoo.com/news/anthropic-routes-47-sales-amazon-213011817.html",
+     "publisher": "Reuters via Yahoo Finance Canada",
+     "tier": "T2",
+     "opened": true,
+     "supports": "47% of sales via Amazon/Google; ~$351M distribution fees, ~16 cents per dollar"
+    },
+    {
+     "url": "https://www.calcalistech.com/ctechnews/article/r8sh14ux4",
+     "publisher": "CTech (Reuters)",
+     "tier": "T3",
+     "opened": true,
+     "supports": "records full marketplace contract value as revenue; platforms' share as marketing expense"
+    },
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE",
+     "tier": "T3",
+     "opened": true,
+     "supports": "FY2025 $4.6B vs ~$400M FY2024; net loss $42B incl $34B accounting charge"
+    }
+   ],
+   "single_source": true
+  },
+  {
+   "fact": "F4",
+   "value": "Confidential draft registration statement submitted and announced by Anthropic 2026-06-01; NO public S-1 on EDGAR as of 2026-09-30 (EDGAR company search: no match; press: 'not yet made public on SEC EDGAR'); draft prospectus leaked to Reuters/FT 2026-09-28. Reported target: raise up to ~$100B at ~$2T+ valuation (bankers to investors, NYT 2026-08-21; WSJ 2026-09-18). Timing: delayed from October to NOVEMBER 2026 (WSJ 2026-09-18, to show Q3 results). Exchange: Nasdaq (Bloomberg 2026-09-13, 'person familiar'). No price range, no share count.",
+   "as_of": "2026-09-30",
+   "sources": [
+    {
+     "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
+     "publisher": "TechCrunch",
+     "tier": "T2",
+     "opened": true,
+     "supports": "submitted a draft registration statement to the SEC; blog post Monday"
+    },
+    {
+     "url": "https://au.finance.yahoo.com/news/anthropic-delays-ipo-staging-november-221211879.html",
+     "publisher": "WSJ via Yahoo Finance AU",
+     "tier": "T2",
+     "opened": true,
+     "supports": "targeting a November debut; ~$2 trillion, raise up to $100 billion"
+    },
+    {
+     "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-choose-nasdaq-much-180359465.html",
+     "publisher": "Bloomberg via Yahoo Finance",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic PBC has picked Nasdaq as its listing venue (person familiar)"
+    },
+    {
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=anthropic&type=S-1&dateb=&owner=include&count=40&action=getcompany",
+     "publisher": "SEC EDGAR",
+     "tier": "T1",
+     "opened": true,
+     "supports": "company search returned 'No matching companies' (no public S-1/DRS visible)"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-518-billion-commitment-165731037.html",
+     "publisher": "Forkast via Yahoo Finance",
+     "tier": "T3",
+     "opened": true,
+     "supports": "document has not yet been made public on SEC EDGAR; confidential filing June 1"
+    }
+   ],
+   "single_source": false
+  },
+  {
+   "fact": "F5",
+   "value": "Total compute/infrastructure commitments in the draft prospectus: at least $518B over ~10 years with six partners; ~80% ($~414B) non-cancelable or payable regardless of use (so ~$104B is not firm). Named: Google $111.1B, Amazon $110B (>$100B AWS over a decade), Microsoft $31.4B, Broadcom $161.2B (equipment leases), SpaceX $84.5B (earlier reported 'up to ~$45B'). Independent aggregate of announced deals: $517B (The Information, 2026-09-06). GW: no single disclosed total; aggregate of announcements is ~14-15 GW+ (Amazon+Google ~11 GW, Microsoft ~1 GW, AMD 2 GW, plus SpaceX/neoclouds); Series H post adds 5 GW Amazon and 5 GW Google/Broadcom TPU. 'Up to' items: Akamai $11.6B firm / ~$20B possible; Amazon investment up to $33B.",
+   "as_of": "2026-09-29",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-518-billion-commitment-165731037.html",
+     "publisher": "Forkast via Yahoo Finance",
+     "tier": "T3",
+     "opened": true,
+     "supports": "$518B; Google $111.1B, Amazon $110B, Microsoft $31.4B, Broadcom $161.2B; ~80% non-cancelable"
+    },
+    {
+     "url": "https://247wallst.com/investing/2026/09/13/anthropic-locks-down-517-billion-in-compute-ahead-of-ipo-and-its-still-not-enough/",
+     "publisher": "24/7 Wall St (citing The Information)",
+     "tier": "T3",
+     "opened": true,
+     "supports": "$517B aggregate of reported and announced deals; Amazon+Google ~11 GW"
+    },
+    {
+     "url": "https://www.msn.com/en-us/technology/tech-companies/anthropic-s-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/ar-AA2dcMW5",
+     "publisher": "Reuters on MSN",
+     "tier": "T2",
+     "opened": false,
+     "supports": "expects to spend at least $518 billion over a decade with six partners (RSS snippet)"
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder",
+     "tier": "T3",
+     "opened": true,
+     "supports": "cloud/compute/infrastructure commitments $518 billion over coming years"
+    },
+    {
+     "url": "https://www.anthropic.com/news/series-h",
+     "publisher": "Anthropic",
+     "tier": "T1",
+     "opened": true,
+     "supports": "five gigawatts new Amazon capacity; five gigawatts next-generation TPU (Google/Broadcom)"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+     "publisher": "Anthropic",
+     "tier": "T1",
+     "opened": true,
+     "supports": "more than $100 billion over ten years to AWS; up to 5GW of new capacity"
+    }
+   ],
+   "single_source": false
+  },
+  {
+   "fact": "F6",
+   "value": "Most recent reported GM is basis-dependent and the two figures are NOT comparable: (a) FY2025 gross margin ~40% (Reuters Breakingviews 2026-09-29, from the prospectus; snippet only); (b) 2026 company-adjusted gross margin 'above 80%' BEFORE revenue shared with distribution partners and BEFORE model-training costs (FT 2026-09-13/14, relayed by TNW 2026-09-15). A PitchBook analyst estimate of 44% is circulating (MSN 2026-09-01). No audited 2026 GM exists.",
+   "as_of": "2026-09-29",
+   "sources": [
+    {
+     "url": "https://www.reuters.com/commentary/breakingviews/anthropics-2-trln-goal-is-ais-biggest-moonshot-2026-09-29/",
+     "publisher": "Reuters Breakingviews",
+     "tier": "T2",
+     "opened": false,
+     "supports": "posted big growth and a 40% gross margin last year (RSS snippet)"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+     "publisher": "The Next Web (citing FT, CNBC)",
+     "tier": "T3",
+     "opened": true,
+     "supports": "above 80% before partner revenue share and before model training costs"
+    },
+    {
+     "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-could-public-weeks-5-110301607.html",
+     "publisher": "Motley Fool via Yahoo Finance",
+     "tier": "T3",
+     "opened": true,
+     "supports": "gross margins projected in the high 70s"
+    }
+   ],
+   "single_source": false
+  },
+  {
+   "fact": "F7",
+   "value": "NO public 'equalization ruling' found (Google News RSS, Bing News RSS, 1 WebSearch). The only sourced net-vs-gross adjustment is small: Axios 2026-09-03 (unnamed source) says moving Anthropic to a net basis 'would only amount to about a 6%-10% hit'; the draft prospectus gives $351M cloud-partner distribution fees on ~$4.6B FY2025 revenue = 7.6% (Reuters/CTech 2026-09-29/30). I found nothing supporting a 39.75% haircut; it cannot be sourced by me.",
+   "as_of": "2026-09-30",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios via Yahoo Finance",
+     "tier": "T2",
+     "opened": true,
+     "supports": "net basis 'would only amount to about a 6%-10% hit' (unnamed source)"
+    },
+    {
+     "url": "https://ca.finance.yahoo.com/news/anthropic-routes-47-sales-amazon-213011817.html",
+     "publisher": "Reuters via Yahoo Finance Canada",
+     "tier": "T2",
+     "opened": true,
+     "supports": "collected approximately $351 million in distribution fees, ~16 cents per dollar"
+    },
+    {
+     "url": "https://www.calcalistech.com/ctechnews/article/r8sh14ux4",
+     "publisher": "CTech (Reuters)",
+     "tier": "T3",
+     "opened": true,
+     "supports": "full marketplace contract value as revenue; platform share as marketing expense"
+    }
+   ],
+   "single_source": false
+  },
+  {
+   "fact": "F8",
+   "value": "Bartz v. Anthropic PBC (N.D. Cal., 3:24-cv-05417): $1.5B class settlement (~$3,000 per work, ~500,000 works); final approval granted 2026-07-20 (Monday) by Judge Araceli Martinez-Olguin per the settlement administrator site; press dated 2026-07-20/21. Fee award cut (~$101.6M). First payments expected on or before 2026-11-15.",
+   "as_of": "2026-07-20",
+   "sources": [
+    {
+     "url": "https://www.anthropiccopyrightsettlement.com/",
+     "publisher": "Settlement administrator (court-authorized site)",
+     "tier": "T1",
+     "opened": true,
+     "supports": "On July 20, 2026, the Court granted final approval"
+    },
+    {
+     "url": "https://www.techtimes.com/articles/321156/20260721/anthropic-copyright-settlement-gets-final-approval-3000-per-book-no-binding-precedent.htm",
+     "publisher": "TechTimes",
+     "tier": "T3",
+     "opened": true,
+     "supports": "$1.5 billion; about $3,000 per work; Judge Martinez-Olguin; 3:24-cv-05417"
+    },
+    {
+     "url": "https://www.ibtimes.co.uk/anthropic-historic-settlement-pirated-books-1810392",
+     "publisher": "IBTimes UK",
+     "tier": "T3",
+     "opened": true,
+     "supports": "$1.5 billion settlement final approval; fees cut by the judge"
+    }
+   ],
+   "single_source": false
+  }
+ ],
+ "rederived_provenance": {
+  "own": 8,
+  "from_ledger": 0,
+  "note": "F1-F8 all re-derived with my own fetches before opening any deliverable; ledger not used",
+  "pages_note": "41 publisher or primary pages opened, plus 22 Google/Bing RSS discovery feeds and 1 WebSearch; reuters.com, nytimes.com, axios.com, cnbc.com, forbes.com, seekingalpha.com and msn.com were blocked, so facts that rest on them are marked opened=false or single origin"
+ },
+ "reconciliation": [
+  {
+   "fact": "F1",
+   "deliverable_says": "Series H $65B at $965B post-money ($900B pre, derived), 2026-05-28; leads Altimeter, Dragoneer, Greenoaks, Sequoia; co-leads Capital Group, Coatue, D1, GIC, ICONIQ, XN",
+   "where": "data/metrics.json rounds; Overview tile 'Last post-money valuation'; ledger CAP-ROU-20299f",
+   "agrees": true,
+   "note": "Matches Anthropic's post and The Information's $900B pre-money. The $15B of previously committed hyperscaler money is noted in capital_summary."
+  },
+  {
+   "fact": "F2",
+   "deliverable_says": "$65.0B run-rate at Jul 31 2026, T2 HIGH, gross; $100B-$120B year-end figures are investor projections, not used",
+   "where": "Overview tile 'Annualized run-rate revenue'; metrics.run_rate_desk; model notes",
+   "agrees": true,
+   "note": "Agrees. The Sep 18 '$100B pace' traces to one origin (NYT). Timeline chips still print projected run-rates as 'run-rate $X' (B-3)."
+  },
+  {
+   "fact": "F3",
+   "deliverable_says": "FY2025 revenue $4.59B (+1,088%), FY2024 $386M implied; recognized, gross of cloud resale; leaked draft prospectus via Reuters, no public S-1",
+   "where": "metrics.period_revenue; Topics tab revenue card; Model notes",
+   "agrees": true,
+   "note": "Numbers agree within 1%. Labelling gap on the Model tab (B-4); ledger shows HIGH with 9-10 'origins' for one leaked document (B-2)."
+  },
+  {
+   "fact": "F4",
+   "deliverable_says": "Private; confidential draft S-1 submitted Jun 1 2026; no public S-1 on EDGAR; target about $2T, raise up to $100B (WSJ, T3); Nasdaq; timing 'disputed (Oct vs Nov)'",
+   "where": "Overview status pill and IPO tile; metrics.offering_structure; ledger CAP-IPO-9d6ced",
+   "agrees": true,
+   "note": "Facts agree. The newest reporting (WSJ and NYT Sep 18, Reuters Sep 29) says November or later; 'Oct vs Nov' understates that. The IPO tile text is truncated (B-5)."
+  },
+  {
+   "fact": "F5",
+   "deliverable_says": "Announced $592.1B ($455.7B contracted, $89.6B up to, $46.8B unconfirmed); S-1 $518.2B, 79.8% non-cancelable ($413.7B); 15.845 GW of which 13.0 'up to'; The Information $517B and 14.8 GW carried as a second origin",
+   "where": "data/compute.json totals; Compute tab tiles and ledger; Overview compute tile",
+   "agrees": true,
+   "note": "Agrees with my $518B, about 80% and 14-15 GW; 'up to' and contracted are kept apart on the Compute tab. The Overview tile drops the 'incl. up to' wording (N-4)."
+  },
+  {
+   "fact": "F6",
+   "deliverable_says": "No GAAP margin: FY2025 about 40% (The Information, T3); Q2 2026 about 44% compute-only (PitchBook); above 80% adjusted before partner share and training (FT, T3)",
+   "where": "metrics.margins; model sources.gross_margin; Thesis bear claim 3",
+   "agrees": true,
+   "note": "Agrees with my two scopes. Reuters Breakingviews (Sep 29) also says '40% gross margin last year'; I could not open it to see whether the prospectus states it (question, not a finding)."
+  },
+  {
+   "fact": "F7",
+   "deliverable_says": "Desk canonical 39.75% is a fitted value (1 - (965/47)/(852/25)); record evidence 7.6% ($351M / $4.59B) and PitchBook 6-10%; both shown, neither used as evidence",
+   "where": "Model tab haircut slider and notes; Compute tab row 'Revenue per GW-year, net'; Thesis bear claim 8",
+   "agrees": true,
+   "note": "Agrees: I found no public 'ruling'; the only sourced adjustments are 6-10% (Axios, unnamed source) and 7.6% (prospectus fees). The Model tab still defaults to 39.75% and its tile states no haircut (N-1)."
+  },
+  {
+   "fact": "F8",
+   "deliverable_says": "Bartz $1.5B, final approval 2026-07-20 (T1); about $3,109 per work; fees $101.56M",
+   "where": "Topics legal card; Thesis bull claim 9; event evt-20260720-bartz-final-approval",
+   "agrees": true,
+   "note": "Matches the settlement administrator's site ('On July 20, 2026, the Court granted final approval'); some outlets print Jul 21."
+  }
+ ],
+ "recomputed": [
+  {
+   "item": "base FY2026 revenue $M (Q1 4,730 + Q2 11,500 + Q3 17,230 + Q4 22,380 on the run-rate path)",
+   "deliverable": 55800,
+   "recomputed": 55840,
+   "within_tolerance": true
+  },
+  {
+   "item": "base FY2027 revenue $M",
+   "deliverable": 127782,
+   "recomputed": 127782.0,
+   "within_tolerance": true
+  },
+  {
+   "item": "base FY2028 revenue $M",
+   "deliverable": 195506.5,
+   "recomputed": 195506.5,
+   "within_tolerance": true
+  },
+  {
+   "item": "base FY2030 revenue $M",
+   "deliverable": 328108.7,
+   "recomputed": 328108.7,
+   "within_tolerance": true
+  },
+  {
+   "item": "base 2028 gross profit $M",
+   "deliverable": 125124.1,
+   "recomputed": 125124.1,
+   "within_tolerance": true
+  },
+  {
+   "item": "base 2028 free cash flow $M",
+   "deliverable": 36980.6,
+   "recomputed": 36980.6,
+   "within_tolerance": true
+  },
+  {
+   "item": "base 2030 free cash flow $M",
+   "deliverable": 93129.2,
+   "recomputed": 93129.2,
+   "within_tolerance": true
+  },
+  {
+   "item": "base DCF EV $M",
+   "deliverable": 1188641.5,
+   "recomputed": 1188641.5,
+   "within_tolerance": true
+  },
+  {
+   "item": "bear DCF EV $M",
+   "deliverable": 175600.7,
+   "recomputed": 175600.7,
+   "within_tolerance": true
+  },
+  {
+   "item": "bull DCF EV $M",
+   "deliverable": 2635341.1,
+   "recomputed": 2635341.1,
+   "within_tolerance": true
+  },
+  {
+   "item": "base reverse-DCF required 2030 revenue, Series H $M",
+   "deliverable": 262000,
+   "recomputed": 261985.3,
+   "within_tolerance": true
+  },
+  {
+   "item": "base reverse-DCF required 2030 revenue, secondary $1.5T $M",
+   "deliverable": 420000,
+   "recomputed": 420167.1,
+   "within_tolerance": true
+  },
+  {
+   "item": "base reverse-DCF required 2030 revenue, IPO target $2T $M",
+   "deliverable": 568000,
+   "recomputed": 568000.6,
+   "within_tolerance": true
+  },
+  {
+   "item": "base required 2026-30 CAGR, Series H / secondary / IPO (%)",
+   "deliverable": "47 / 66 / 79",
+   "recomputed": "47.2 / 65.7 / 78.6",
+   "within_tolerance": true
+  },
+  {
+   "item": "bull required 2030 revenue at $2T $M",
+   "deliverable": 333000,
+   "recomputed": 333403.5,
+   "within_tolerance": true
+  },
+  {
+   "item": "Series H vs base DCF (%)",
+   "deliverable": -19,
+   "recomputed": -18.8,
+   "within_tolerance": true
+  },
+  {
+   "item": "EV / FY2027 net revenue at Series H, 39.75% haircut (x)",
+   "deliverable": 12.5,
+   "recomputed": 12.53,
+   "within_tolerance": true
+  },
+  {
+   "item": "EV / FY2027 net revenue at Series H, 7.6% haircut (x)",
+   "deliverable": 8.2,
+   "recomputed": 8.17,
+   "within_tolerance": true
+  },
+  {
+   "item": "JS engine vs model.json, all scenarios (values compared / max rel diff)",
+   "deliverable": "690 (certify.json G6)",
+   "recomputed": "672 / 0",
+   "within_tolerance": true
+  },
+  {
+   "item": "Thesis: +16% a year for 2029-30 after the $195.5B plan, Series H",
+   "deliverable": 16,
+   "recomputed": 15.8,
+   "within_tolerance": true
+  },
+  {
+   "item": "Thesis: base-case return if price converges to DCF, Series H / IPO target (% a year)",
+   "deliverable": "+24 / -14",
+   "recomputed": "+24.3 / -13.6",
+   "within_tolerance": true
+  },
+  {
+   "item": "Thesis: $2T over $65B, net at 7.6%, net at 39.75% (x)",
+   "deliverable": "30.8 / 33.3 / 51.1",
+   "recomputed": "30.77 / 33.30 / 51.07",
+   "within_tolerance": true
+  },
+  {
+   "item": "Judge: adjusted base value $B ((1,189 - 126 SBC-as-cost) x 1.0887 + 100)",
+   "deliverable": 1257,
+   "recomputed": 1257,
+   "within_tolerance": true
+  },
+  {
+   "item": "Judge: adjusted bull value $B",
+   "deliverable": 2770,
+   "recomputed": 2769,
+   "within_tolerance": true
+  },
+  {
+   "item": "Judge: Series H vs adjusted base (%)",
+   "deliverable": -23,
+   "recomputed": -23.2,
+   "within_tolerance": true
+  },
+  {
+   "item": "Judge: base-case return a year, Series H / secondary / IPO (%)",
+   "deliverable": "+28 / +3 / -11",
+   "recomputed": "+27.8 / +2.5 / -11.2",
+   "within_tolerance": true
+  },
+  {
+   "item": "Judge: Series H equals 2028 plan revenue less (%)",
+   "deliverable": "9 to 13",
+   "recomputed": "13 (model basis) to 16 (adjusted basis); 9 not reproduced",
+   "within_tolerance": false
+  },
+  {
+   "item": "Compute: rows sum / contracted / up to / unconfirmed / T1-T2 / S-1 coverage ($B)",
+   "deliverable": "592.1 / 455.7 / 89.6 / 46.8 / 217.9 / 237.8",
+   "recomputed": "592.1 / 455.7 / 89.6 / 46.8 / 217.9 / 237.8",
+   "within_tolerance": true
+  },
+  {
+   "item": "Compute: S-1 non-cancelable share",
+   "deliverable": 0.7983,
+   "recomputed": 0.7983,
+   "within_tolerance": true
+  },
+  {
+   "item": "Compute: GW announced (13.0 up-to ceilings + 2.845 floors)",
+   "deliverable": 15.845,
+   "recomputed": 15.845,
+   "within_tolerance": true
+  },
+  {
+   "item": "Platform fee share of FY2025 revenue ($351M / $4.59B)",
+   "deliverable": 0.076,
+   "recomputed": 0.0765,
+   "within_tolerance": true
+  },
+  {
+   "item": "Q2 2026 partner payout implied by a 39.75% haircut ($B) vs $0.351B for all FY2025",
+   "deliverable": "4.6",
+   "recomputed": 4.57,
+   "within_tolerance": true
+  },
+  {
+   "item": "Sensitivity if Axios 'pacing $100B' were current: FY2026 revenue $B (base 55.8, bull 60.0)",
+   "deliverable": "not modelled",
+   "recomputed": "61.2 to 64.1 (information only)",
+   "within_tolerance": true
+  }
+ ],
+ "blocking": [
+  {
+   "id": "B-1",
+   "where": "data/thesis.json ('verdict' key); Thesis tab; Overview verdict badge; data/certify.json G8 and G15; Sources tab 'Ship gates'",
+   "issue": "The dashboard carries no verdict. The Thesis tab renders 'Verdict pending', the Overview shows no verdict badge, G8 is PENDING, and the Sources tab still shows G15 FAIL from 20:12Z (404 on /data/thesis.json) that my fresh run at 21:00Z does not reproduce. The Judge finished at 21:20:33Z (agents/outputs/analyst-judge.json: BEARISH overall, Series H LEAN BULLISH, $1.5T NEUTRAL, $2T BEARISH) but data/thesis.json was last built at 20:42:55Z. I reviewed the Judge file: structure, event ids and thesis-breakers pass and its numbers reproduce except one range (N-3), but I cannot certify what the dashboard will show until it is merged.",
+   "evidence": "python3 -c \"print('verdict' in json.load(open('data/thesis.json')))\" -> False at 21:21Z; Thesis screenshot 'Verdict pending'; certify.json G8: 'data/thesis.json has no judge verdict yet'; my UI run 21:00Z: no console errors, no overflow",
+   "smallest_fix": "Merge the final Judge file (verdict, scorecard, thesis_breakers, unresolved, consensus) into data/thesis.json, re-run scripts/certify.py and scripts/shot.cjs so G8 and G15 are current, show the by-mark calls in the badge (BEARISH is only the $2T leg), then re-certify."
+  },
+  {
+   "id": "B-2",
+   "where": "scripts/merge.py line 248 (independent_sources); Sources tab tile 'Multi-source events: two or more independent origins'; Sources tab re-derivation ledger columns TIER / ORIGINS / CONFIDENCE; event evt-20260913-altman-openai-no-2026-ipo; Overview tile 'Annualized run-rate revenue' (T2 HIGH)",
+   "issue": "One source is counted as many confirmations and leaked-draft figures carry T1 or HIGH. independent_sources counts distinct domains, so Reuters syndication copies count as separate origins (evt-20260928-reuters-draft-prospectus-2025-financials shows 10). Ledger rows show 'Prospectus: Net loss = $42B' and 'Cash = $20.28B' as T1, 5-6 origins, HIGH, while their own notes say Reuters is the only readable origin; FY2024 revenue $386M (implied from +1,088%, other reports say $381M, $383M, $400M) shows HIGH with 9 origins. The Sources tab disclosure says reported-prospectus figures are T2/T3. One T3 event (Altman, OpenAI no 2026 IPO) is HIGH with no corroboration and is used in both the bull and bear cases. The Overview itself contradicts its headline tile: the run-rate tile says T2 HIGH while the Overview's 'Signs raised' panel says the $65B 'traces to one investor update ... single-chain'.",
+   "evidence": "Ledger note: 'SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin' (OPS-PRO-b86e59, OPS-PRO-f960bc); merge.py: independent_sources = len({domain(primary)} | {domain(c.url) for c in cor}); OPS-PER-f71902 MATCH T2 9 origins HIGH; Sources disclosure: 'press-reported (T2/T3)'; Overview sign (Bull Analyst 20:37): 'the $65B run-rate traces to one investor update. Both are single-chain'",
+   "smallest_fix": "Count origins, not domains (collapse syndications of one outlet or one document); rename the tile and column to 'distinct outlets' until then; cap prospectus-derived ledger rows at T2 and MEDIUM; add the Next Web / Business Insider Sep 13 corroboration to the Altman event or drop it to MEDIUM."
+  },
+  {
+   "id": "B-3",
+   "where": "Timeline cards and event drawer (assets/app.js extractChips and openEvent); events evt-20260918-wsj-ipo-pushed-to-november, evt-20260813-ipo-october-2t-quartz, evt-20260919-nyt-100b-year-end-projection, evt-20260926-nvidia-ipo-anchor-10b, evt-20260928-reuters-draft-prospectus-2025-financials, evt-20240501-revenue-projection-850m, evt-20251203-amodei-dealbook-revenue-guidance and others",
+   "issue": "Targets, caps and projections print as plain values. Five events show a projected or guided run-rate as 'run-rate $X' (WSJ Sep 18 and Quartz Aug 13: $110B; NYT: $100B). Seven events show a reported IPO target or secondary mark as 'post $1.2T to $2.00T' although nothing priced; amount chips print caps ('$25.0B' for Amazon's $5B plus up to $20B; '$100B' IPO raise target). The event data says 'reported target; no public S-1 or pricing date' and 'projected_year_end_annualized_revenue'; the chips drop it.",
+   "evidence": "Timeline card text for WSJ Sep 18: '$100B | post $2.00T | run-rate $110B'; event other.announced_vs_closed = 'reported target; no public S-1 or pricing date'; Overview 'Signs raised' says year-end $100B-$120B run-rates are projections and 'neither is used as an actual'",
+   "smallest_fix": "In extractChips and the drawer prefix 'target', 'projected' or 'up to' from the event's own other.* fields (or null valuation_post and revenue_run_rate on those 12 events); add 'up to' to amount chips when the headline says so."
+  },
+  {
+   "id": "B-4",
+   "where": "Model tab: table 'Income statement and cash flow build' (columns 2024A, 2025A), 'Revenue build by segment' and 'Free cash flow and cumulative' charts, KPI 'Cumulative FCF trough'; assets/app.js isA()",
+   "issue": "Every 2024 and 2025 row is labelled 'A = actual' because revenue is present. Only revenue ($386M, $4.59B), compute ($7.33B), opex ($12.65B) and operating loss are press-reported from a leaked draft; R&D $1.5B, S&M $918M, G&A $1.6B, SBC $1.4B, the segment split (cloud resale $2.4B = 52% vs the reported 47% = $2.16B; consumer $230M vs $789M subscription) and FCF of -$6.7B (Fortune's Dec 2025 burn projection was about -$2.8B) are the model's own splits. Model notes 3, 18 and 19 say so; the table does not, and the Sources page promises prospectus figures are 'labelled as such where it appears'. The -$10.6B cumulative FCF trough includes the modelled FY2024-25 FCF.",
+   "evidence": "Model tab header '2024A 2025A' with legend 'A = actual, E = estimate'; model note 18: 'the rows for 2024 and 2025 use the 2026 mix ... so they are not actuals'; note 3: 'The split of non-compute opex ... is my assumption'; note 19: engine FCF FY2025 -$6.7B vs about -$2.8B reported",
+   "smallest_fix": "Label the two columns '2024*/2025* press-reported, leaked draft (Reuters, Fortune), no public S-1', blank the segment, opex-split and FCF cells for 2024-25 (or tag them 'model split'), and compute the cumulative FCF from 2026."
+  },
+  {
+   "id": "B-5",
+   "where": "Overview tab: tile 'IPO' and tile 'Compute commitments (announced)' (assets/app.js renderOverview)",
+   "issue": "The IPO tile's headline value reads 'DISPUTED sequence, not a cle' (the first 28 characters of a long timing string) and its sub-line prints 'Nasdaqtarget $2.00Traise up to $100B'; the compute tile prints '$456B contracted or disclosed$218B on T1/T2 documents15.85 GW'. Truncated and run-together text on the first screen, desktop and phone.",
+   "evidence": "os.timing.split('\u00b7')[0].trim().slice(0, 28) on metrics.offering_structure.timing = 'DISPUTED sequence, not a clean split: ...'; Overview screenshot desktop and phone",
+   "smallest_fix": "Set the IPO tile value to 'Confidential S-1 \u00b7 Nov 2026 (reported)' from a short field, join sub-line parts with ' \u00b7 ', and add 'incl. $89.6B up to' to the compute tile."
+  }
+ ],
+ "non_blocking": [
+  {
+   "id": "N-1",
+   "where": "Model tab KPI '2027E EV/revenue at $965B: 7.6x, 12.5x net-equalized'; haircut slider default",
+   "issue": "The default net multiple uses the fitted 39.75% and the tile names no haircut; 7.6% (record evidence) gives 8.2x. The slider panel does show both and warns the value is fitted, so 39.75% is not used as evidence, but the headline tile is single-basis.",
+   "suggestion": "Show '12.5x at 39.75% (fitted) | 8.2x at 7.6% (record)' in the tile, or default the slider to 7.6%."
+  },
+  {
+   "id": "N-2",
+   "where": "Judge by_mark and rationale vs Model tab 'What each mark requires' and Thesis at-price table",
+   "issue": "The verdict quotes an 'adjusted base' of $1.26T (date roll +8.9%, +$100B net cash, SBC as a cost -10.6%) and -23% / +19% / +59%; the Model tab and the Thesis at-price text show the unadjusted $1.19T and -19% / +26% / +68%. I reproduce both sets, but a reader sees two distances on one page with no bridge.",
+   "suggestion": "Add an 'adjusted base value' row with the three adjustments to the Model tab and name the basis in each by_mark 'why'."
+  },
+  {
+   "id": "N-3",
+   "where": "Judge by_mark: Series H 'plan revenue less 9% to 13%'; secondary '9% to 17% beat'; IPO '26% to 42% beat'",
+   "issue": "I reproduce -13% (model basis) and -16% (adjusted basis) for Series H, +17% and +13% for the secondary mark, +41% and +22% for the IPO mark depending on method; the 9% and 26% ends are not reproducible from the file.",
+   "suggestion": "State the method (whole-path rescale vs growth shift, adjusted or not) next to each range."
+  },
+  {
+   "id": "N-4",
+   "where": "Overview tile 'Compute commitments (announced) $592B'",
+   "issue": "The headline $592B and '15.85 GW' carry no 'up to' qualifier on the Overview (the Compute tab says 'incl. $89.6B up to and $46.8B unconfirmed; 13 GW are up to ceilings'). The only company-level source, the leaked S-1, says at least $518B, about 80% non-cancelable.",
+   "suggestion": "Lead the tile with '$518B S-1 plan, 80% non-cancelable (press-reported)' and show $592B as 'announced, all bases incl. up to'."
+  },
+  {
+   "id": "N-5",
+   "where": "Overview tile 'Equity raised (ex-debt) $124B' and chart 'Capital raised by year' (caption 'incl. converted notes')",
+   "issue": "$10.0B of the $124.3B is convertible notes (Amazon $8.0B, Google $2.0B). Amazon's 10-Q says the notes are still outstanding at Jun 30 2026 ($97.9B fair value) and convert to nonvoting common on an IPO, so 'converted' is wrong and the tile counts convertible debt as equity. The desk's strict priced-equity sensitivity ($113.5B) is in capital_summary but not on the tile.",
+   "suggestion": "Caption 'incl. $10.0B of convertible notes, still notes until an IPO' and show $113.5B as the strict figure."
+  },
+  {
+   "id": "N-6",
+   "where": "Overview 'Post-money valuation by round' chart and table view; metrics.rounds; Timeline events evt-20240701-pb-series-d-1-2b-21b, evt-20220429-pb-series-b-980m-reconcile, evt-20250502-employee-buyback-61-5b",
+   "issue": "Series B ($3.0B), Series D ($21.0B) and the Amazon notes ($54.0B post, which no source states) are plotted and tabled with no DISPUTED flag; the rounds table tags them T1/HIGH or T2 and the Series D and Series B events are HIGH, while the ledger marks all three MISMATCH/DISPUTED. The event 'run-rate $1.4B' (May 2025) is MEDIUM against a ledger MISMATCH ($3B at May's end). Ledger verdicts do not flow back into event confidence.",
+   "suggestion": "Write the ledger verdict into the rounds rows and the linked events (DISPUTED chip) and show the chip in the table view."
+  },
+  {
+   "id": "N-7",
+   "where": "Model tab row 'of which cloud share, hosting, other'",
+   "issue": "Model note 9 says partner share sits in S&M (prospectus: marketing expense), so the row label is wrong by the model's own note.",
+   "suggestion": "Rename to 'of which support, payments, non-inference hosting'."
+  },
+  {
+   "id": "N-8",
+   "where": "Overview status pill on every tab: 'listing timing disputed (Oct vs Nov)'",
+   "issue": "Reports after Sep 18 (WSJ, NYT) and Sep 29 (Reuters, Fortune) say November or after the midterms; October reports predate them. The pill presents an old split as live.",
+   "suggestion": "'November 2026 reported (WSJ, Reuters); October reports superseded; no public S-1'."
+  },
+  {
+   "id": "N-9",
+   "where": "Overview tiles",
+   "issue": "Five of eight tiles do not link to an event or table row; the headcount tile dates 2,500 to Jan 30 2026 while the ledger has Fortune Aug 25 'more than 2,500'; 'Pages opened 100%' is 99.9% (one unopened source).",
+   "suggestion": "Link each tile to its row or event; refresh the headcount date; show 99.9%."
+  },
+  {
+   "id": "N-10",
+   "where": "Network tab; Agents floor; chart axes; Compute charts",
+   "issue": "Network labels overlap and the ROLE column is cut ('chip, clou'); Agents-floor sign bubbles are overprinted by 'NEW' tags and clipped; time axes read 'Jan 27' for January 2027; Compute bars read '$0K / $45.0B'; two different '73%' numbers sit in the gross-margin bridge (central GM of realized revenue vs the list-price memo bar).",
+   "suggestion": "Polish only; use year ticks, '$0 contracted / $45.0B up to', and label the memo bar basis."
+  },
+  {
+   "id": "N-11",
+   "where": "Thesis tab",
+   "issue": "The conflict-of-interest and not-investment-advice lines appear on the Sources tab but not next to the call; the Judge's 'Consistency with the standing position' card will carry the position once merged.",
+   "suggestion": "Add a one-line disclosure under the verdict badge."
+  },
+  {
+   "id": "N-12",
+   "where": "Sources tab audit (G11 WARN)",
+   "issue": "Only 49% of the 47 audited events are fully supported (100% on the core fact). The same label errors I found in B-3 exist in unsampled events, so the 8 corrections do not generalize.",
+   "suggestion": "Run a second audit pass over events with amount, post-money or run-rate fields and apply the fix by rule."
+  },
+  {
+   "id": "N-13",
+   "where": "dist/artifact.html",
+   "issue": "Built 19:00Z; assets/app.js changed at 20:43Z and thesis.json will change again. Publishing it as is would ship a stale page.",
+   "suggestion": "Rebuild with scripts/build_artifact.py after the verdict merge."
+  },
+  {
+   "id": "N-14",
+   "where": "Model tab gross-margin path vs Compute tab gross-margin bridge",
+   "issue": "Same scope (before partner share and training) gives 48% for 2026E on the Model tab and 73% central on the Compute tab; the FT says above 80%. The gap is disclosed in compute.json model_cross_check and the Judge's unresolved list, not on the Model tab.",
+   "suggestion": "Add a one-line cross-reference under the Model gross-margin sliders."
+  },
+  {
+   "id": "N-15",
+   "where": "Open questions I could not source",
+   "issue": "(a) Reuters Breakingviews Sep 29 says '40% gross margin last year': I could not open it to see whether the prospectus states a margin, which would contradict 'No GAAP margin is public'. (b) I found no 'equalization ruling' in any public source; if one exists it is not in the record the desk cites.",
+   "suggestion": "Ask the desk for the origin and date of the 39.75% ruling; open the Breakingviews piece."
+  },
+  {
+   "id": "N-16",
+   "where": "Thesis bear claim 7, Judge unresolved list: 'FTC probe (Sep 30, single source)'",
+   "issue": "By the evening of Sep 30 the Bing News feed lists the FTC probe from CNBC, Reuters, USA Today and others (I saw headlines only, not the pages). 'Single source' may be stale; the record should say whether the FTC or a second outlet confirmed it.",
+   "suggestion": "Open the CNBC and Reuters pieces and update the event's corroboration and the 'single source' wording."
+  }
+ ],
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Started. Read the certifier brief; step 1 (re-derive F1-F8 from outside sources) before opening any deliverable."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "Google News RSS: Anthropic funding round valuation; IPO S-1; run-rate; Bartz; $518B compute (discovery only)",
+   "url": "https://news.google.com/rss/search?q=Anthropic+funding+round+valuation&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 3,
+   "type": "open",
+   "text": "Anthropic newsroom (no funding/IPO items in the newest 5-20 posts)",
+   "url": "https://www.anthropic.com/news"
+  },
+  {
+   "seq": 4,
+   "type": "open",
+   "text": "Anthropic Series H post: $65B, $965B post-money, run-rate >$47B, $15B prior hyperscaler commitments",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 5,
+   "type": "found",
+   "text": "F1 Series H $65B at $965B post / $900B pre (2026-05-28); leads Altimeter, Dragoneer, Greenoaks, Sequoia",
+   "event_id": "F1"
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "Bing News RSS: Series H pre-money -> The Information: $900B before the financing",
+   "url": "https://www.theinformation.com/briefings/anthropic-raises-65-billion-900-billion-valuation-micron-samsung-invest"
+  },
+  {
+   "seq": 7,
+   "type": "open",
+   "text": "SEC EDGAR company search for Anthropic: 'No matching companies' (no public S-1 or DRS visible)",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=anthropic&type=S-1&dateb=&owner=include&count=40&action=getcompany"
+  },
+  {
+   "seq": 8,
+   "type": "open",
+   "text": "TechCrunch (Loizos) on the prospectus: FY2025 rev ~$4.6B, op loss >$8B, $518B commitments, Q2 2026 $11.5B",
+   "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/"
+  },
+  {
+   "seq": 9,
+   "type": "open",
+   "text": "The Decoder: FY2025 $4.6B, FY2024 ~$383M implied, op loss $8.06B, net loss ~$42B (~$34B non-cash)",
+   "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/"
+  },
+  {
+   "seq": 10,
+   "type": "found",
+   "text": "F3 FY2025 revenue ~$4.6B from a confidential/leaked draft prospectus (Reuters+FT); one underlying document; not public",
+   "event_id": "F3"
+  },
+  {
+   "seq": 11,
+   "type": "open",
+   "text": "Bloomberg via Yahoo 2026-09-18: $100B annualized is 'expected ... this year' (projection)",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-annualized-revenue-top-100-220623178.html"
+  },
+  {
+   "seq": 12,
+   "type": "open",
+   "text": "TechCrunch 2026-08-17: run rate surpassed $65B at end of July (Bloomberg), $47B in May",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+  },
+  {
+   "seq": 13,
+   "type": "found",
+   "text": "F2 latest measured run-rate $65B (end-July 2026); $100B+ is a projection; basis gross",
+   "event_id": "F2"
+  },
+  {
+   "seq": 14,
+   "type": "open",
+   "text": "WSJ via Yahoo AU 2026-09-18: IPO pushed from October to November; ~$2T valuation, up to $100B raise",
+   "url": "https://au.finance.yahoo.com/news/anthropic-delays-ipo-staging-november-221211879.html"
+  },
+  {
+   "seq": 15,
+   "type": "open",
+   "text": "Bloomberg via Yahoo 2026-09-13: Nasdaq chosen as listing venue",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-choose-nasdaq-much-180359465.html"
+  },
+  {
+   "seq": 16,
+   "type": "open",
+   "text": "TechCrunch 2026-06-01: Anthropic submitted a draft registration statement (confidential)",
+   "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/"
+  },
+  {
+   "seq": 17,
+   "type": "found",
+   "text": "F4 confidential DRS (2026-06-01), no public S-1, target ~$2T/up to $100B, November, Nasdaq",
+   "event_id": "F4"
+  },
+  {
+   "seq": 18,
+   "type": "open",
+   "text": "Forkast/Yahoo 2026-09-29: $518B = Google $111.1B, Amazon $110B, Microsoft $31.4B, Broadcom $161.2B; ~80% non-cancelable",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-518-billion-commitment-165731037.html"
+  },
+  {
+   "seq": 19,
+   "type": "open",
+   "text": "24/7 Wall St citing The Information 2026-09-06: $517B aggregate; Amazon+Google ~11 GW; Microsoft ~1 GW; AMD 2 GW",
+   "url": "https://247wallst.com/investing/2026/09/13/anthropic-locks-down-517-billion-in-compute-ahead-of-ipo-and-its-still-not-enough/"
+  },
+  {
+   "seq": 20,
+   "type": "found",
+   "text": "F5 $518B at least, ~80% non-cancelable; GW has no single disclosed total (~14-15 GW aggregate of announcements)",
+   "event_id": "F5"
+  },
+  {
+   "seq": 21,
+   "type": "open",
+   "text": "The Next Web 2026-09-15 (FT/CNBC): gross margin 'above 80%' before partner revenue share and model training",
+   "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo"
+  },
+  {
+   "seq": 22,
+   "type": "flag",
+   "text": "F6 gross margin figures are not comparable: FY2025 ~40% (Breakingviews snippet, could not open) vs 2026 adjusted >80% before partner share and training",
+   "event_id": "F6"
+  },
+  {
+   "seq": 23,
+   "type": "open",
+   "text": "Axios via Yahoo 2026-09-03: Anthropic books gross, OpenAI net; net basis would be a 6-10% hit",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html"
+  },
+  {
+   "seq": 24,
+   "type": "open",
+   "text": "Reuters via Yahoo Canada 2026-09-29: 47% of sales via Amazon/Google; $351M distribution fees (~16c per $)",
+   "url": "https://ca.finance.yahoo.com/news/anthropic-routes-47-sales-amazon-213011817.html"
+  },
+  {
+   "seq": 25,
+   "type": "search",
+   "text": "WebSearch (1 of 4): equalization / gross-net haircut ruling OpenAI vs Anthropic -> nothing found"
+  },
+  {
+   "seq": 26,
+   "type": "flag",
+   "text": "F7 I can find no public equalization ruling; sourced haircut is 6-10% (Axios) and 7.6% ($351M/$4.6B); 39.75% unsourced by me",
+   "event_id": "F7"
+  },
+  {
+   "seq": 27,
+   "type": "open",
+   "text": "Bartz settlement administrator site: 'On July 20, 2026, the Court granted final approval'",
+   "url": "https://www.anthropiccopyrightsettlement.com/"
+  },
+  {
+   "seq": 28,
+   "type": "open",
+   "text": "TechTimes 2026-07-21: $1.5B, ~$3,000 per work, Judge Martinez-Olguin, 3:24-cv-05417",
+   "url": "https://www.techtimes.com/articles/321156/20260721/anthropic-copyright-settlement-gets-final-approval-3000-per-book-no-binding-precedent.htm"
+  },
+  {
+   "seq": 29,
+   "type": "found",
+   "text": "F8 Bartz $1.5B, final approval 2026-07-20 (press says Monday; some outlets print Jul 21)",
+   "event_id": "F8"
+  },
+  {
+   "seq": 30,
+   "type": "note",
+   "text": "Blocked pages (403 or fetch refused): reuters.com, nytimes.com, axios.com, cnbc.com, forbes.com, marketplace.org, seekingalpha.com, msn.com; relied on RSS snippets where flagged opened=false"
+  },
+  {
+   "seq": 31,
+   "type": "note",
+   "text": "Step 1 was saved at 20:57Z, before any deliverable was opened (rederived: 8 facts, all my own, none taken from the ledger). Before that I had only listed filenames in agents/outputs to find my output path; no draft contents were read."
+  },
+  {
+   "seq": 32,
+   "type": "open",
+   "text": "Read data/model.json, scripts/model.py and computeModel() in assets/app.js (engine logic, assumptions, sources, notes)"
+  },
+  {
+   "seq": 33,
+   "type": "verify",
+   "text": "Recomputed bear/base/bull from the assumptions with my own code: 282 values (revenue, GP, opex, training, OI, tax, capex, FCF, cum FCF, DCF EV, PV split, reverse-DCF per mark) vs data/model.json: 0 mismatches"
+  },
+  {
+   "seq": 34,
+   "type": "verify",
+   "text": "Ran the dashboard's own JS computeModel() on model.json in node: 672 values compared, max relative difference 0 (parity with the Python twin holds)"
+  },
+  {
+   "seq": 35,
+   "type": "verify",
+   "text": "Base FY2026: Q1 4.73 + Q2 11.50 + Q3 17.23 + Q4 22.38 = $55.84B on a run-rate path of $60.6B (end-Jun), $65B (Jul 31), +$7B a month to $100B; model says $55.8B. If Axios's 'pacing $100B' were already current on Sep 18, FY2026 would be $61-64B (bull is $60B)",
+   "event_id": "F2"
+  },
+  {
+   "seq": 36,
+   "type": "verify",
+   "text": "Reverse DCF recomputed by hand. Base: Series H needs $262B of 2030 revenue (47.2% CAGR), secondary $420B (65.7%), IPO target $568B (78.6%); bear $675B/$1,047B/$1,394B; bull $147B/$243B/$333B. All match model.json and the Thesis tab text"
+  },
+  {
+   "seq": 37,
+   "type": "verify",
+   "text": "Thesis at-price numbers reproduce: Series H 19% under base DCF, +16% a year after the plan, +24% a year if base holds, $2T -14% a year, 30.8x/33.3x/51.1x net multiples, 14.8x and 7.6x; the $229B FY2028 figure reproduces at $229.2-229.8B"
+  },
+  {
+   "seq": 38,
+   "type": "verify",
+   "text": "Base DCF sensitivities reproduce: 15x/20x/30x = $924B/$1,189B/$1,717B; terminal value 88.9% of EV; sensitivity grid (e.g. $328B and 25x = $1.45T) matches the Model tab"
+  },
+  {
+   "seq": 39,
+   "type": "verify",
+   "text": "Compute table arithmetic reproduces: 17 rows sum to $592.1B; contracted $455.7B; up to $89.6B; unconfirmed $46.8B; T1/T2 $217.9B; S-1 coverage $237.8B; non-cancelable 413.7/518.2 = 79.8%; 15.845 GW = 13.0 up-to + 2.845"
+  },
+  {
+   "seq": 40,
+   "type": "verify",
+   "text": "Haircut arithmetic: $351M / $4.59B = 7.6%; 39.75% of Q2 $11.5B = $4.57B paid to partners in one quarter vs $351M for all FY2025; net multiple at $2T: 33.3x at 7.6%, 51.1x at 39.75%"
+  },
+  {
+   "seq": 41,
+   "type": "found",
+   "text": "Desk record agrees with my F1-F8 within tolerance (see reconciliation); the disagreements are in labelling and counting, not in the numbers"
+  },
+  {
+   "seq": 42,
+   "type": "flag",
+   "text": "Model tab: the 2024A and 2025A columns (and the segment and FCF charts) are labelled 'A = actual' from one test (revenue present). Only revenue, compute, opex and operating loss are press-reported; R&D, S&M, G&A, SBC, segment splits and FCF are the model's own splits. Model notes 3, 18 and 19 say so; the table does not"
+  },
+  {
+   "seq": 43,
+   "type": "flag",
+   "text": "Overview IPO tile prints 'DISPUTED sequence, not a cle' (first 28 characters of the timing string) and sub-lines run together ('Nasdaqtarget $2.00Traise up to $100B'; same on the compute tile)"
+  },
+  {
+   "seq": 44,
+   "type": "flag",
+   "text": "Timeline and event drawer: 5 events print projected or guided run-rates as 'run-rate $X' (e.g. $110B on Sep 18) and 7 events print reported targets or secondary marks as 'post $X' (e.g. post $2.00T); the event data itself says 'reported target' and 'projected'"
+  },
+  {
+   "seq": 45,
+   "type": "flag",
+   "text": "Counting and tiers: events.independent_sources counts distinct domains (merge.py line 248) and the Sources tab calls it 'independent origins'; ledger rows show T1 / 6 origins / HIGH for 'Net loss = $42B' while their own note says Reuters is the only readable origin",
+   "event_id": "F3"
+  },
+  {
+   "seq": 46,
+   "type": "flag",
+   "text": "evt-20260913-altman-openai-no-2026-ipo is T3 with HIGH and no corroboration (The Next Web and Business Insider carried it the same day, but the record does not show them)"
+  },
+  {
+   "seq": 47,
+   "type": "open",
+   "text": "Fresh screenshots (desktop and phone, light and dark, 9 tabs) via scripts/shot.cjs into my own qa dir at 21:00Z: no console errors, no horizontal page overflow; extra full-page phone and dark captures checked for overflow and truncation"
+  },
+  {
+   "seq": 48,
+   "type": "verify",
+   "text": "Read Overview, Model, Compute, Topics, Thesis, Agents, Network and Timeline captures: Agents floor shows desks, signs (with overlapping 'NEW' tags) and messages; Network labels overlap; Thesis tab says 'Verdict pending'"
+  },
+  {
+   "seq": 49,
+   "type": "open",
+   "text": "Sources tab text with every 'Show all' expanded: tiers, audit (49% fully supported, 100% core fact), 14 corrections, ship gates (G15 FAIL is stale), PitchBook licence, MNPI screen, conflict of interest and not-investment-advice all present"
+  },
+  {
+   "seq": 50,
+   "type": "verify",
+   "text": "Spot-checked T1 facts against source: Anthropic Apr 6 (run-rate >$30B from ~$9B; >1,000 customers over $1M), Anthropic Apr 20 (>$100B to AWS over ten years, up to 5GW, $5B plus up to $20B), Amazon 10-Q (notes $97.9B, preferred $92.5B, facility up to $20.0B), Opus 5.5 at $4/$20 on Sep 22: all match the record",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+  },
+  {
+   "seq": 51,
+   "type": "open",
+   "text": "Judge draft agents/outputs/analyst-judge.json read at 21:13Z (complete, valid, being rewritten: log and stats removed at 21:13:43Z): BEARISH overall; Series H LEAN BULLISH, $1.5T NEUTRAL, $2T BEARISH; data/thesis.json still has no verdict key"
+  },
+  {
+   "seq": 52,
+   "type": "verify",
+   "text": "Judge numbers: adjusted base (1,189 - 126 SBC-as-cost) x 1.0887 + 100 = $1,257B and adjusted bull $2,769B reproduce; -23%/+19%/+59% vs adjusted base reproduce; returns +28%/+3%/-11% a year reproduce; 'plan less 9% to 13%' does not (I get -13% model basis, -16% adjusted)"
+  },
+  {
+   "seq": 53,
+   "type": "verify",
+   "text": "Judge's 8 thesis-breakers each carry metric, threshold and observable_by date; every cited event id exists; COI appears only as a 'consistency with the standing position' check, not as evidence"
+  },
+  {
+   "seq": 54,
+   "type": "verify",
+   "text": "Judge's outside-record facts checked against T1 pages: NVIDIA Q2 FY2027 data center $89.0B, +117% YoY, GAAP gross margin 75.0% (Aug 26); Amazon Q2 2026 AWS $42.2B, +37% YoY, operating margin 39.4% (Jul 30). Both match the verdict text",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+  },
+  {
+   "seq": 55,
+   "type": "verify",
+   "text": "Amazon Q2 2026 release (AWS +37%, 39.4% margin)",
+   "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx"
+  },
+  {
+   "seq": 56,
+   "type": "verify",
+   "text": "Anthropic Opus 5.5 page: $4 and $20 per million tokens, Sep 22 (matches pricing table and bear claim 5)",
+   "url": "https://www.anthropic.com/claude-opus-5-5"
+  },
+  {
+   "seq": 57,
+   "type": "search",
+   "text": "Bing News RSS: FTC probe of Anthropic, OpenAI, METR on Sep 29-30 -> CNBC, Reuters, USA Today, NDTV and others; the Thesis and Judge call it 'single source'",
+   "url": "https://www.bing.com/news/search?q=FTC+probe+Anthropic+OpenAI+METR+autonomous+AI+agents&format=rss"
+  },
+  {
+   "seq": 58,
+   "type": "flag",
+   "text": "Timeline events evt-20240701-pb-series-d-1-2b-21b (HIGH) and evt-20220429-pb-series-b-980m-reconcile (HIGH) stay HIGH while the ledger marks Series D and Series B MISMATCH/DISPUTED; evt-20250502 shows 'run-rate $1.4B' (ledger: $3B at May's end, MISMATCH) at MEDIUM; ledger verdicts do not flow back to event confidence"
+  },
+  {
+   "seq": 59,
+   "type": "open",
+   "text": "Judge file final at 21:20:33Z (62 log rows, stats present): same calls as the draft (BEARISH at $2T, NEUTRAL at $1.5T, LEAN BULLISH at Series H); Series H why now says how this case differs from the base rate; 8 thesis-breakers complete; 19 cited event ids exist; its message to me gives 'plan test -9% to -13%, +9% to +17%, +26% to +42%' without a method"
+  },
+  {
+   "seq": 60,
+   "type": "verify",
+   "text": "Judge R5: firm 2028 payments $53B = 27% of plan revenue ($195.5B) and 56% of the bear's $95.4B: reproduces. R3 bands (1.257T x 0.85 = 1.07T; single-variable 30x $1,775B; 26x $1,568B): reproduce"
+  },
+  {
+   "seq": 61,
+   "type": "note",
+   "text": "Not done: I could not open reuters.com, nytimes.com, axios.com, cnbc.com or forbes.com (blocked), so the Reuters Breakingviews 40% gross margin and the NYT '$100B this year' wording rest on RSS snippets and on Bloomberg and Axios relays; marked opened=false or single origin"
+  },
+  {
+   "seq": 62,
+   "type": "message",
+   "text": "Orchestrator: verdict NEEDS WORK with 5 blocking items. Worst two: B-1 the dashboard carries no verdict (thesis.json has no verdict key; Thesis tab says 'Verdict pending'; gates G8 pending and G15 stale FAIL) and B-4 the Model tab prints 2024A/2025A as 'actual' with modelled splits and no press-reported label. Re-run me after thesis.json is rebuilt and certify.py is re-run",
+   "to": "orchestrator"
+  }
+ ],
+ "stats": {
+  "pages_opened": 41,
+  "facts_rederived": 8,
+  "blocking": 5,
+  "non_blocking": 16
+ }
+}
