@@ -2911,7 +2911,7 @@
    "kind": "round",
    "claim": "Series D: $1.2B at $21.0B post (2024-07-01)",
    "draft": "{\"date\": \"2024-07-01\", \"size_usd_m\": 1200, \"pre_usd_m\": 19800, \"post_usd_m\": 21000, \"leads\": [\"Menlo Ventures\"]}",
-   "rederived": "{\"date\": \"2023-12-21 (first reported 'in talks'); no company announcement of a close\", \"size_usd_m\": 750, \"pre_usd_m\": 15000, \"post_usd_m\": 18400, \"leads\": [\"Menlo Ventures (led, per The Information/Reuters/CNBC/Bloomberg reports)\"]}",
+   "rederived": "{\"date\": \"2023-12-21 (first reported 'in talks'); no company announcement of a close\", \"size_usd_m\": 750, \"pre_usd_m\": 15000, \"post_usd_m\": null, \"reported_headline_valuation_usd_m\": 18400, \"leads\": [\"Menlo Ventures (led, per The Information/Reuters/CNBC/Bloom",
    "verdict": "MISMATCH",
    "compared": [
     {
@@ -2928,11 +2928,6 @@
      "field": "pre_usd_m",
      "ok": false,
      "detail": "19800 vs 15000 (24.2% apart)"
-    },
-    {
-     "field": "post_usd_m",
-     "ok": false,
-     "detail": "21000 vs 18400 (12.4% apart)"
     }
    ],
    "tier": "T1",
@@ -2984,6 +2979,41 @@
    "event_id": null
   },
   {
+   "claim_id": "CAP-ROU-9220f5",
+   "group": "capital",
+   "kind": "round",
+   "claim": "Google Apr-2026: up to $40B ($10B now): $40.0B at n/a post (2026-04-24)",
+   "draft": "{\"date\": \"2026-04-24\", \"size_usd_m\": 40000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Alphabet\"]}",
+   "rederived": "{\"date\": \"2026-04-24 (Bloomberg-first report; I found no Google or Anthropic release stating the dollar terms)\", \"size_usd_m\": 10000, \"up_to_total_usd_m\": 40000, \"contingent_usd_m\": 30000, \"pre_usd_m\": null, \"post_usd_m\": null, \"reported_valuation_usd_m\": 3500",
+   "verdict": "MISMATCH",
+   "compared": [
+    {
+     "field": "date",
+     "ok": true,
+     "detail": "2026-04-24 vs 2026-04-24 (Bloomberg-first report; I found no Google or Anthropic release stating the dollar terms) (0 days apart)"
+    },
+    {
+     "field": "size_usd_m",
+     "ok": false,
+     "detail": "40000 vs 10000 (75.0% apart)"
+    }
+   ],
+   "tier": "T1",
+   "cross_check": 6,
+   "confidence": "DISPUTED",
+   "sources": [
+    "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+    "https://thenextweb.com/news/google-40-billion-anthropic-investment-gemini",
+    "https://finance.yahoo.com/sectors/technology/articles/google-investing-40-billion-anthropic-163805773.html",
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+   ],
+   "draft_sources": [
+    "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"
+   ],
+   "red_team": "Frozen: draft and re-derivation disagree beyond tolerance; neither is adopted. FUNDED $10B 'now' plus up to $30B CONTINGENT (total up to $40B), single-origin Bloomberg reporting repeated by TechCrunch, 9to5Google, The Next Web and Yahoo Finance (all 2026-04-24): '$10 billion now in cash at a $350 billion valuation' an",
+   "event_id": null
+  },
+  {
    "claim_id": "CAP-ROU-cda9a7",
    "group": "capital",
    "kind": "round",
@@ -3004,16 +3034,89 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 2,
+   "cross_check": 3,
    "confidence": "DISPUTED",
    "sources": [
     "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
-    "https://news.crunchbase.com/venture/biggest-vc-startup-funding-deals-ispottv-biofourmis/"
+    "https://news.crunchbase.com/venture/biggest-vc-startup-funding-deals-ispottv-biofourmis/",
+    "https://siliconangle.com/2022/04/29/ai-research-company-anthropic-raises-580m-funding/"
    ],
    "draft_sources": [
     "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai"
    ],
    "red_team": "Frozen: draft and re-derivation disagree beyond tolerance; neither is adopted. Company-announced (Anthropic post dated 2022-04-29). Equity Series B; no debt, convertible or secondary component mentioned. Other named participants: Caroline Ellison, Jim McClave, Nishad Singh, Jaan Tallinn, Center for Emerging Risk Resea",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-e8fe9a",
+   "group": "capital",
+   "kind": "round",
+   "claim": "Amazon Apr-2026: $5B now + up to $20B facility: $25.0B at n/a post (2026-04-20)",
+   "draft": "{\"date\": \"2026-04-20\", \"size_usd_m\": 25000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Amazon\"]}",
+   "rederived": "{\"date\": \"2026-04-20\", \"size_usd_m\": 5000, \"up_to_additional_usd_m\": 20000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Amazon (sole investor)\"]}",
+   "verdict": "MISMATCH",
+   "compared": [
+    {
+     "field": "date",
+     "ok": true,
+     "detail": "2026-04-20 vs 2026-04-20 (0 days apart)"
+    },
+    {
+     "field": "size_usd_m",
+     "ok": false,
+     "detail": "25000 vs 5000 (80.0% apart)"
+    }
+   ],
+   "tier": "T1",
+   "cross_check": 2,
+   "confidence": "DISPUTED",
+   "sources": [
+    "https://www.anthropic.com/news/anthropic-amazon-compute",
+    "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+    "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm"
+   ],
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-amazon-compute"
+   ],
+   "red_team": "Frozen: draft and re-derivation disagree beyond tolerance; neither is adopted. FUNDED $5.0B plus a CONDITIONAL facility of up to $20.0B. Anthropic post (2026-04-20): 'Amazon is investing $5 billion in Anthropic today, with up to an additional $20 billion in the future'; builds on the $8B previously invested; Anthropic",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-TOT-827c44",
+   "group": "capital",
+   "kind": "total",
+   "claim": "Total raised: $124.3B equity + $2.5B debt",
+   "draft": "{\"equity_only_usd_m\": 124254, \"debt_usd_m\": 2500, \"total_usd_m\": 126754}",
+   "rederived": "{\"equity_only_usd_m\": 140154, \"equity_only_range_usd_m\": {\"low\": 123654, \"base\": 140154, \"alt_if_April_hyperscaler_money_is_inside_Series_H\": 125154}, \"priced_rounds_only_usd_m\": 113404, \"debt_usd_m\": 15000, \"debt_usd_m_confirmed_closed_only\": 2500, \"total_usd",
+   "verdict": "MISMATCH",
+   "compared": [
+    {
+     "field": "equity_only_usd_m",
+     "ok": false,
+     "detail": "124254 vs 140154 (11.3% apart)"
+    },
+    {
+     "field": "debt_usd_m",
+     "ok": false,
+     "detail": "2500 vs 15000 (83.3% apart)"
+    },
+    {
+     "field": "total_usd_m",
+     "ok": false,
+     "detail": "126754 vs 155154 (18.3% apart)"
+    }
+   ],
+   "tier": "T1",
+   "cross_check": 7,
+   "confidence": "DISPUTED",
+   "sources": [
+    "https://www.anthropic.com/news/series-h",
+    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+    "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+    "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation"
+   ],
+   "draft_sources": [],
+   "red_team": "Re-deriver found sources that disagree: Base equity-only 140,154 ($M): April-2026 Amazon $5B and Google $10B counted in addition to Series G/H vs Alternative 125,154 ($M): same money counted inside the $65B Series H Frozen: draft and re-derivation disagree beyond tolerance; neither is adopted. Method: sum of FUNDED primary capital (cash equity and convertible notes) through 2026-09-30, deduplicated, excluding secondaries, non-cash conversions and unfunded 'up to' commitments. BASE equity-only = 140,154 ($M), of which priced round",
    "event_id": null
   },
   {
@@ -3052,336 +3155,25 @@
    "event_id": "evt-20250502-rr-1-4b-info-maginative"
   },
   {
-   "claim_id": "CAP-DEB-4ae801",
-   "group": "capital",
-   "kind": "debt",
-   "claim": "Revolvers ($2.5B May 2025; ~$15B pre-IPO) and the $34.5B chip-bond claim",
-   "draft": "{\"revolver_2025_usd_m\": 2500, \"revolver_2026_usd_m\": 15000}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-IPO-9d6ced",
-   "group": "capital",
-   "kind": "ipo",
-   "claim": "IPO structure and timing",
-   "draft": "{\"target_raise_usd_m\": 100000, \"target_valuation_usd_m\": 2000000, \"exchange\": \"Nasdaq\", \"founder_vote_pct\": 50.1}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://www.anthropic.com/news/confidential-draft-s1-sec",
-    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-1f3e39",
-   "group": "capital",
-   "kind": "round",
-   "claim": "FTX/Alameda estate sale #2 (secondary): $452M at n/a post (2024-06-02)",
-   "draft": "{\"date\": \"2024-06-02\", \"size_usd_m\": 452, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": []}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://bitcoinist.com/ftx-offloads-anthropic-shares-in-450-million-sale/"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-467407",
-   "group": "capital",
-   "kind": "round",
-   "claim": "Employee buyback #1 (secondary): n/a at $61.5B post (2025-05-02)",
-   "draft": "{\"date\": \"2025-05-02\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": 61500, \"leads\": []}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-5c3794",
-   "group": "capital",
-   "kind": "round",
-   "claim": "FTX/Alameda estate sale #1 (secondary): $884M at n/a post (2024-03-22)",
-   "draft": "{\"date\": \"2024-03-22\", \"size_usd_m\": 884.109327, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": []}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T1",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.10241.1.pdf"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-7d2fef",
-   "group": "capital",
-   "kind": "round",
-   "claim": "Pre-IPO revolving credit facility: $15.0B at n/a post (2026-09-03)",
-   "draft": "{\"date\": \"2026-09-03\", \"size_usd_m\": 15000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\"]}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T2",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-9220f5",
-   "group": "capital",
-   "kind": "round",
-   "claim": "Google Apr-2026: up to $40B ($10B now): $40.0B at n/a post (2026-04-24)",
-   "draft": "{\"date\": \"2026-04-24\", \"size_usd_m\": 40000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Alphabet\"]}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T2",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-94451d",
-   "group": "capital",
-   "kind": "round",
-   "claim": "Revolving credit facility (5-year): $2.5B at n/a post (2025-05-16)",
-   "draft": "{\"date\": \"2025-05-16\", \"size_usd_m\": 2500, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\"]}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
    "claim_id": "CAP-ROU-b6e2c9",
    "group": "capital",
    "kind": "round",
    "claim": "Secondary: undisclosed seller to Homeroom Fund, Lakeside Capital: n/a at n/a post (2025-01-15)",
    "draft": "{\"date\": \"2025-01-15\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": []}",
-   "rederived": "",
+   "rederived": "{\"date\": null, \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Homeroom Fund and Lakeside Capital (buyers as named in the question; not verified)\"]}",
    "verdict": "UNTRACEABLE",
    "compared": [],
-   "tier": "T2",
-   "cross_check": 0,
+   "tier": "T1",
+   "cross_check": 1,
    "confidence": "VERIFY",
-   "sources": [],
+   "sources": [
+    "https://efts.sec.gov/LATEST/search-index?q=%22Homeroom%20Fund%22",
+    "https://efts.sec.gov/LATEST/search-index?q=%22Lakeside%20Capital%22%20Anthropic"
+   ],
    "draft_sources": [
     "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json"
    ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-cbf591",
-   "group": "capital",
-   "kind": "round",
-   "claim": "IPO (confidential draft S-1): n/a at n/a post (2026-06-01)",
-   "draft": "{\"date\": \"2026-06-01\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\", \"Goldman Sachs\", \"JPMorgan (reported)\"]}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T1",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://www.anthropic.com/news/confidential-draft-s1-sec"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-d1e7d9",
-   "group": "capital",
-   "kind": "round",
-   "claim": "TPU chip-lease SPV notes (lessor debt; not Anthropic-issued): $34.5B at n/a post (2026-06-09)",
-   "draft": "{\"date\": \"2026-06-09\", \"size_usd_m\": 34500, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Apollo Global Management\", \"Blackstone\"]}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://epochai.substack.com/p/will-financing-bottleneck-ai-compute"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-e8fe9a",
-   "group": "capital",
-   "kind": "round",
-   "claim": "Amazon Apr-2026: $5B now + up to $20B facility: $25.0B at n/a post (2026-04-20)",
-   "draft": "{\"date\": \"2026-04-20\", \"size_usd_m\": 25000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Amazon\"]}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T1",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://www.anthropic.com/news/anthropic-amazon-compute"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-f3735c",
-   "group": "capital",
-   "kind": "round",
-   "claim": "Microsoft / NVIDIA strategic (up to): $15.0B at n/a post (2025-11-18)",
-   "draft": "{\"date\": \"2025-11-18\", \"size_usd_m\": 15000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"NVIDIA\", \"Microsoft\"]}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T1",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-ROU-f4bfd5",
-   "group": "capital",
-   "kind": "round",
-   "claim": "11th round: AMD strategic equity (up to): $5.0B at n/a post (2026-07-22)",
-   "draft": "{\"date\": \"2026-07-22\", \"size_usd_m\": 5000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"AMD\"]}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T1",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [
-    "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
-   ],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-STR-217799",
-   "group": "capital",
-   "kind": "strategic",
-   "claim": "Google: strategic investment",
-   "draft": "{}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-STR-3990a3",
-   "group": "capital",
-   "kind": "strategic",
-   "claim": "Amazon: strategic investment",
-   "draft": "{}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-STR-e47494",
-   "group": "capital",
-   "kind": "strategic",
-   "claim": "Microsoft and Nvidia: strategic investment",
-   "draft": "{}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
-   "event_id": null
-  },
-  {
-   "claim_id": "CAP-TOT-827c44",
-   "group": "capital",
-   "kind": "total",
-   "claim": "Total raised: $124.3B equity + $2.5B debt",
-   "draft": "{\"equity_only_usd_m\": 124254, \"debt_usd_m\": 2500, \"total_usd_m\": 126754}",
-   "rederived": "",
-   "verdict": "UNTRACEABLE",
-   "compared": [],
-   "tier": "T3",
-   "cross_check": 0,
-   "confidence": "VERIFY",
-   "sources": [],
-   "draft_sources": [],
-   "red_team": "No independent answer; the draft figure stays flagged until one is found.",
+   "red_team": "No independent answer; the draft figure stays flagged until one is found. UNTRACEABLE. Searched Google News RSS five ways ('Homeroom Fund', 'Lakeside Capital' + Anthropic, combined, etc.), EDGAR full-text search ('Homeroom Fund' + Anthropic, 'Lakeside Capital' + Anthropic, and both names together: 0 hits each) an",
    "event_id": null
   },
   {
@@ -3467,6 +3259,41 @@
     "https://www.anthropic.com/news/anthropic-series-c"
    ],
    "red_team": "Number agrees; the date differs beyond tolerance. Company-announced (Anthropic post 2023-05-23: 'We have raised $450 million in Series C funding led by Spark Capital with participation from Google, Salesforce Ventures, Sound Ventures, Zoom Ventures, and others'). Equity; no debt/convertibl",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-d1e7d9",
+   "group": "capital",
+   "kind": "round",
+   "claim": "TPU chip-lease SPV notes (lessor debt; not Anthropic-issued): $34.5B at n/a post (2026-06-09)",
+   "draft": "{\"date\": \"2026-06-09\", \"size_usd_m\": 34500, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Apollo Global Management\", \"Blackstone\"]}",
+   "rederived": "{\"date\": \"2026-06-05 (financing wrapped up per Bloomberg); first reported 2026-05-28\", \"size_usd_m\": 35000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Apollo Global Management (anchor lender)\", \"Blackstone (anchor lender)\"], \"tranches_usd_m\": {\"A1_super",
+   "verdict": "PARTIAL",
+   "compared": [
+    {
+     "field": "date",
+     "ok": false,
+     "detail": "2026-06-09 vs 2026-06-05 (financing wrapped up per Bloomberg); first reported 2026-05-28 (4 days apart)"
+    },
+    {
+     "field": "size_usd_m",
+     "ok": true,
+     "detail": "34500 vs 35000 (1.4% apart)"
+    }
+   ],
+   "tier": "T2",
+   "cross_check": 5,
+   "confidence": "VERIFY",
+   "sources": [
+    "https://www.investing.com/news/company-news/apollo-blackstone-finalize-35-billion-ai-chip-financing-for-anthropic-4729436",
+    "https://finance.yahoo.com/sectors/technology/articles/apollo-blackstone-lend-35b-against-220610560.html",
+    "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
+    "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html"
+   ],
+   "draft_sources": [
+    "https://epochai.substack.com/p/will-financing-bottleneck-ai-compute"
+   ],
+   "red_team": "Re-deriver found sources that disagree: Total about $35B; A2 tranche $24B vs Total about $36B; A2 tranche $25B Number agrees; the date differs beyond tolerance. DEBT raised by a special-purpose vehicle (the LESSOR), not by Anthropic: the SPV raises debt plus equity, buys Google TPUs (co-designed with Broadcom) and leases them to Anthropic; lease payments service the notes. Per Bloomberg (via Invest",
    "event_id": null
   },
   {
@@ -3589,6 +3416,72 @@
    ],
    "red_team": "Re-deriver found sources that disagree: $87M at the start of 2024 (company) vs ~$100M annualized around Sep 2023 with ~$200M projected for end-2023 (The Information) Number agrees; the date differs beyond tolerance. Outlet reports around the turn of the year were projections, not actuals: The Information (2023-12-26) said Anthropic projected more than $850M annualized by end-2024 (earlier $500M). No outlet-reported current run-rate for January 2024 was",
    "event_id": "evt-20260508-rr-path-venturebeat-80x"
+  },
+  {
+   "claim_id": "CAP-STR-217799",
+   "group": "capital",
+   "kind": "strategic",
+   "claim": "Google: strategic investment",
+   "draft": "{}",
+   "rederived": "{\"amount_usd_m\": 13750, \"funded_vs_up_to\": \"REPORTED FUNDED (press/court-filing based; Alphabet's filings never name Anthropic): more than $3.0B through early 2025 (NYT court documents via Yahoo Finance, 2025-03-11; FT 2025-01-22) + $0.75B convertible debt loa",
+   "verdict": "NOTED",
+   "compared": [],
+   "tier": "T1",
+   "cross_check": 10,
+   "confidence": "VERIFY",
+   "sources": [
+    "https://finance.yahoo.com/news/google-given-anthropic-more-funding-012105683.html",
+    "https://www.androidpolice.com/court-documents-google-invested-ai-startup-anthropic/",
+    "https://www.siliconrepublic.com/start-ups/google-anthropic-1bn-investment",
+    "https://news.crunchbase.com/ai/google-anthropic-openai-funding-wars/"
+   ],
+   "draft_sources": [],
+   "red_team": "Re-deriver found sources that disagree: Alphabet's filings do not name Anthropic; $124.3B is the carrying value of all measurement-alternative non-marketable equity securities, 'primarily' one private company vs 'Alphabet disclosed in a July 23 SEC filing that its Anthropic stake is worth roughly $124.3 billion' No number to compare mechanically: draft and re-derived text shown side by side. Basis: Google's investment history is not in any primary document by name; tranches rely on FT, WSJ, NYT/court-filing and Bloomberg reporting (T2/T3). The Anthropic posts of 2023-02-03 and 2025-10-23 (up to one million TPUs, 'tens of billio",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-STR-3990a3",
+   "group": "capital",
+   "kind": "strategic",
+   "claim": "Amazon: strategic investment",
+   "draft": "{}",
+   "rederived": "{\"amount_usd_m\": 18000, \"funded_vs_up_to\": \"FUNDED through 2026-06-30: $18.0B = $8.0B convertible notes (Q3 2023 to Q4 2025) + $10.0B nonvoting preferred stock (Q2 2026: $5.0B Series G + $5.0B Series H). UP TO / not funded: a further $15.0B conditional facilit",
+   "verdict": "NOTED",
+   "compared": [],
+   "tier": "T1",
+   "cross_check": 4,
+   "confidence": "MEDIUM",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+    "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm",
+    "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000086/amzn-20250630.htm"
+   ],
+   "draft_sources": [],
+   "red_team": "Re-deriver found sources that disagree: Mid-to-high teens percent ownership (Fortune, from Amazon filings) vs About 19.7% (Motley Fool arithmetic: carrying value / last valuation) No number to compare mechanically: draft and re-derived text shown side by side. Basis: amounts are cash invested per Amazon's 10-Ks and 10-Qs (primary); Anthropic's Nov-2024 post ('total $8 billion') and Apr-2026 post ('$5 billion today, up to an additional $20 billion in the future') agree. Non-cash conversions of not",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-STR-e47494",
+   "group": "capital",
+   "kind": "strategic",
+   "claim": "Microsoft and Nvidia: strategic investment",
+   "draft": "{}",
+   "rederived": "{\"amount_usd_m\": 15000, \"funded_vs_up_to\": \"'UP TO' at announcement: NVIDIA up to $10B and Microsoft up to $5B (total up to $15B), per Anthropic's and Microsoft's own posts of 2025-11-18. Funded since: NOT QUANTIFIED by any primary source. Anthropic's Series G",
+   "verdict": "NOTED",
+   "compared": [],
+   "tier": "T1",
+   "cross_check": 7,
+   "confidence": "VERIFY",
+   "sources": [
+    "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+    "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+    "https://techxplore.com/news/2025-11-nvidia-microsoft-invest-billion-ai.html",
+    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+   ],
+   "draft_sources": [],
+   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. Gigawatts: 'up to one gigawatt' of compute initially on NVIDIA systems, and up to one gigawatt of additional capacity contracted on Azure, per the posts. The $30B Azure figure is Anthropic's purchase commitment, not an investment. The 'circ",
+   "event_id": null
   },
   {
    "claim_id": "OPS-CUS-4d7394",
@@ -4301,6 +4194,80 @@
    "event_id": null
   },
   {
+   "claim_id": "CAP-DEB-4ae801",
+   "group": "capital",
+   "kind": "debt",
+   "claim": "Revolvers ($2.5B May 2025; ~$15B pre-IPO) and the $34.5B chip-bond claim",
+   "draft": "{\"revolver_2025_usd_m\": 2500, \"revolver_2026_usd_m\": 15000}",
+   "rederived": "{\"revolver_2025_usd_m\": 2500, \"revolver_2026_usd_m\": 15000, \"chip_bonds_usd_m\": 35000, \"anthropic_issued_chip_bonds_usd_m\": 0, \"chip_bonds_description\": \"The description 'Anthropic issued chip-purchase bonds in June 2026' is WRONG. The June 2026 instrument was",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "revolver_2025_usd_m",
+     "ok": true,
+     "detail": "2500 vs 2500 (0.0% apart)"
+    },
+    {
+     "field": "revolver_2026_usd_m",
+     "ok": true,
+     "detail": "15000 vs 15000 (0.0% apart)"
+    }
+   ],
+   "tier": "T2",
+   "cross_check": 5,
+   "confidence": "MEDIUM",
+   "sources": [
+    "https://www.nbcmiami.com/news/business/money-report/anthropic-closes-2-5-billion-credit-facility-as-wall-street-continues-plunging-money-into-ai-boom/3616460/",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-targets-10b-credit-facility-173031496.html",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+    "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-choose-nasdaq-much-180359465.html"
+   ],
+   "draft_sources": [],
+   "red_team": "Re-deriver found sources that disagree: Pre-IPO revolver $15B, 'set to finalize' (Bloomberg 2026-09-03) vs Headlines 'secures' and 'locks in' a $15B credit line (Dealroom, Forbes 2026-09-04/07; not opened) (1) May 2025: $2.5B five-year REVOLVING credit facility announced 2025-05-16; banks: Morgan Stanley, Barclays, Citibank, Goldman Sachs, JPMorgan, Royal Bank of Canada, MUFG; CFO Krishna Rao quoted by CNBC. (2) 2026 pre-IPO revolver: Bloombe",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-IPO-9d6ced",
+   "group": "capital",
+   "kind": "ipo",
+   "claim": "IPO structure and timing",
+   "draft": "{\"target_raise_usd_m\": 100000, \"target_valuation_usd_m\": 2000000, \"exchange\": \"Nasdaq\", \"founder_vote_pct\": 50.1}",
+   "rederived": "{\"public_s1\": false, \"public_s1_evidence\": \"No public S-1 as of 2026-09-30 (checked 15:26 EDT and re-checked 16:03 EDT): EDGAR company search 'anthropic' lists only 35 SPV/fund vehicles (no issuer 'Anthropic PBC'); full-text search for 'Anthropic' in S-1, S-1/",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "target_raise_usd_m",
+     "ok": true,
+     "detail": "100000 vs 100000 (0.0% apart)"
+    },
+    {
+     "field": "target_valuation_usd_m",
+     "ok": true,
+     "detail": "2000000 vs 2000000 (0.0% apart)"
+    },
+    {
+     "field": "founder_vote_pct",
+     "ok": true,
+     "detail": "50.1 vs 50.1 (0.0% apart)"
+    }
+   ],
+   "tier": "T1",
+   "cross_check": 21,
+   "confidence": "MEDIUM",
+   "sources": [
+    "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&dateRange=custom&startdt=2026-09-25&enddt=2026-09-30&forms=S-1,S-1/A,DRS,DRS/A,424B4,424B1,F-1",
+    "https://www.sec.gov/cgi-bin/browse-edgar?company=anthropic&type=&dateb=&owner=include&count=40&action=getcompany",
+    "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=S-1&company=&dateb=&owner=include&start=0&count=100&output=atom",
+    "https://www.anthropic.com/news/confidential-draft-s1-sec"
+   ],
+   "draft_sources": [
+    "https://www.anthropic.com/news/confidential-draft-s1-sec",
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "red_team": "Re-deriver found sources that disagree: Valuation about $2 trillion vs Valuation as high as $2.3 trillion; Mid-October IPO marketing launch (Reuters 2026-09-04/07); 'as soon as October' (Bloomberg 2026-09-13) vs November debut, past an expected October target (WSJ 2026-09-18); after the midterms (Reuters/FT draft-prospectus coverage 2026-09-28/29) Status as of 2026-09-30: only a CONFIDENTIAL draft S-1 exists (submission announced 2026-06-01, shares and price not set). What circulated on 2026-09-28/29 was a draft prospectus reviewed by Reuters and the FT and described as leaked and no",
+   "event_id": null
+  },
+  {
    "claim_id": "CAP-ROU-0ec616",
    "group": "capital",
    "kind": "round",
@@ -4333,6 +4300,40 @@
     "https://finance.yahoo.com/news/google-agrees-invest-2-billion-195316710.html"
    ],
    "red_team": "Neither Anthropic nor Google published a release for the Oct-2023 package, so this rests on WSJ reporting (single origin, T2/T3). Basis: announced 'up to' commitment ($500M upfront, $1.5B later), not a funded total; funded amounts by tranch",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-1f3e39",
+   "group": "capital",
+   "kind": "round",
+   "claim": "FTX/Alameda estate sale #2 (secondary): $452M at n/a post (2024-06-02)",
+   "draft": "{\"date\": \"2024-06-02\", \"size_usd_m\": 452, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": []}",
+   "rederived": "{\"date\": \"2024-06-01 (reported by The Block; exact filing or closing date not stated in the article)\", \"size_usd_m\": 450, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"G Squared (about $135M for about 4.5M shares, largest buyer)\", \"about 20 other buyers, m",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "date",
+     "ok": true,
+     "detail": "2024-06-02 vs 2024-06-01 (reported by The Block; exact filing or closing date not stated in the article) (1 days apart)"
+    },
+    {
+     "field": "size_usd_m",
+     "ok": true,
+     "detail": "452 vs 450 (0.4% apart)"
+    }
+   ],
+   "tier": "T3",
+   "cross_check": 3,
+   "confidence": "MEDIUM",
+   "sources": [
+    "https://www.theblock.co/news/markets/2024-06-01-ftx-offloads-remaining-anthropic-shares-as-bankruptcy-cost-surpasses-700-million-298010",
+    "https://www.theblock.co/news/markets/2024-06-01-ftx-offloads-remaining-anthropic-shares-as-bankruptcy-cost-surpasses-700-million-298010",
+    "https://dailycoin.com/ftx-cashes-out-of-anthropic-rakes-in-800m-profit/"
+   ],
+   "draft_sources": [
+    "https://bitcoinist.com/ftx-offloads-anthropic-shares-in-450-million-sale/"
+   ],
+   "red_team": "SECONDARY sale by the FTX estate of its REMAINING Anthropic shares; proceeds to the estate, not to Anthropic. The Block (2024-06-01, updated 06-02): 'FTX sold the remaining 15 million shares for about $30 each, netting over $450 million'; s",
    "event_id": null
   },
   {
@@ -4414,6 +4415,67 @@
    "event_id": null
   },
   {
+   "claim_id": "CAP-ROU-467407",
+   "group": "capital",
+   "kind": "round",
+   "claim": "Employee buyback #1 (secondary): n/a at $61.5B post (2025-05-02)",
+   "draft": "{\"date\": \"2025-05-02\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": 61500, \"leads\": []}",
+   "rederived": "{\"date\": \"2025-05-02 (reported by The Information; expected to close by end of May 2025)\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"reported_valuation_usd_m\": 61500, \"price_per_share_usd\": 56.09, \"leads\": [\"Anthropic (company repurchase from",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "date",
+     "ok": true,
+     "detail": "2025-05-02 vs 2025-05-02 (reported by The Information; expected to close by end of May 2025) (0 days apart)"
+    }
+   ],
+   "tier": "T3",
+   "cross_check": 2,
+   "confidence": "MEDIUM",
+   "sources": [
+    "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/",
+    "https://techfundingnews.com/slug-anthropic-employee-tender-350b-valuation-20b-round/"
+   ],
+   "draft_sources": [
+    "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/"
+   ],
+   "red_team": "SECONDARY/company buyback, not capital raised: Anthropic buying back shares from current employees. Per The Information via Maginative (2025-05-02): valuation $61.5B (equal to the Series E post-money announced 2025-03-03), $56.09 per share,",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-5c3794",
+   "group": "capital",
+   "kind": "round",
+   "claim": "FTX/Alameda estate sale #1 (secondary): $884M at n/a post (2024-03-22)",
+   "draft": "{\"date\": \"2024-03-22\", \"size_usd_m\": 884.109327, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": []}",
+   "rederived": "{\"date\": \"2024-03-22 (court filings, reported 2024-03-25); a New York bankruptcy judge had authorised the sales in Feb 2024\", \"size_usd_m\": 884, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"ATIC Third International Investment Company (Abu Dhabi; $500M for",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "date",
+     "ok": true,
+     "detail": "2024-03-22 vs 2024-03-22 (court filings, reported 2024-03-25); a New York bankruptcy judge had authorised the sales in Feb 2024 (0 days apart)"
+    },
+    {
+     "field": "size_usd_m",
+     "ok": true,
+     "detail": "884.109327 vs 884 (0.0% apart)"
+    }
+   ],
+   "tier": "T3",
+   "cross_check": 3,
+   "confidence": "MEDIUM",
+   "sources": [
+    "https://www.theblock.co/news/business/2024-03-25-ftx-to-sell-two-thirds-of-anthropic-stake-for-884-million-with-buyers-including-jane-street-and-funds-managed-by-fidelity-284480",
+    "https://finance.yahoo.com/news/ftx-sell-884m-anthropic-shares-165056460.html"
+   ],
+   "draft_sources": [
+    "https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.10241.1.pdf"
+   ],
+   "red_team": "SECONDARY sale by the FTX/Alameda bankruptcy estate of about two-thirds of its Anthropic stake; proceeds went to the estate, NOT to Anthropic, so it adds no capital to Anthropic. Terms per The Block (2024-03-25): $884M for 29.5M shares to 2",
+   "event_id": null
+  },
+  {
    "claim_id": "CAP-ROU-65af9e",
    "group": "capital",
    "kind": "round",
@@ -4454,6 +4516,101 @@
     "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
    ],
    "red_team": "Re-derivation landed on the same publisher as the draft: one origin, not two. Company-announced (Anthropic post 2025-09-02): 'completed a Series F fundraising of $13 billion led by ICONIQ ... values Anthropic at $183 billion post-money'. Pre-money of $170B is DERIVED (183 - 13), not stated. Post names other significa",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-7d2fef",
+   "group": "capital",
+   "kind": "round",
+   "claim": "Pre-IPO revolving credit facility: $15.0B at n/a post (2026-09-03)",
+   "draft": "{\"date\": \"2026-09-03\", \"size_usd_m\": 15000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\"]}",
+   "rederived": "{\"date\": \"NOT CONFIRMED: Bloomberg 2026-09-03 said Anthropic was 'set to finalize' the facility; still 'finalizing' per Bloomberg 2026-09-13; no closing report found through 2026-09-30\", \"size_usd_m\": 15000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Mo",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "size_usd_m",
+     "ok": true,
+     "detail": "15000 vs 15000 (0.0% apart)"
+    }
+   ],
+   "tier": "T2",
+   "cross_check": 2,
+   "confidence": "MEDIUM",
+   "sources": [
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-targets-10b-credit-facility-173031496.html",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-follows-spacexs-playbook-15-142807849.html",
+    "https://www.thedailystar.net/news/technology/news/anthropic-ipo-timetable-shifts-towards-mid-october-sources-say-4266961"
+   ],
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+   ],
+   "red_team": "DEBT (revolver), reported by Bloomberg and not confirmed closed. Timeline: 2026-08-18 Bloomberg: facility 'set to climb past $10 billion' (from the $2.5B five-year facility), final size 'fluid', lead banks Morgan Stanley, Goldman Sachs and ",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-94451d",
+   "group": "capital",
+   "kind": "round",
+   "claim": "Revolving credit facility (5-year): $2.5B at n/a post (2025-05-16)",
+   "draft": "{\"date\": \"2025-05-16\", \"size_usd_m\": 2500, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\"]}",
+   "rederived": "{\"date\": \"2025-05-16\", \"size_usd_m\": 2500, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\", \"Barclays\", \"Citibank\", \"Goldman Sachs\", \"JPMorgan\", \"Royal Bank of Canada\", \"Mitsubishi UFJ Financial Group (MUFG)\"]}",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "date",
+     "ok": true,
+     "detail": "2025-05-16 vs 2025-05-16 (0 days apart)"
+    },
+    {
+     "field": "size_usd_m",
+     "ok": true,
+     "detail": "2500 vs 2500 (0.0% apart)"
+    }
+   ],
+   "tier": "T2",
+   "cross_check": 3,
+   "confidence": "HIGH",
+   "sources": [
+    "https://www.nbcmiami.com/news/business/money-report/anthropic-closes-2-5-billion-credit-facility-as-wall-street-continues-plunging-money-into-ai-boom/3616460/",
+    "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-targets-10b-credit-facility-173031496.html",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+   ],
+   "draft_sources": [
+    "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
+   ],
+   "red_team": "DEBT, not equity: a five-year revolving credit facility of $2.5B, closed/announced 2025-05-16 (CNBC). Banks named as underwriting it: Morgan Stanley, Barclays, Citibank, Goldman Sachs, JPMorgan, Royal Bank of Canada, MUFG (individual lead-a",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-cbf591",
+   "group": "capital",
+   "kind": "round",
+   "claim": "IPO (confidential draft S-1): n/a at n/a post (2026-06-01)",
+   "draft": "{\"date\": \"2026-06-01\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\", \"Goldman Sachs\", \"JPMorgan (reported)\"]}",
+   "rederived": "{\"date\": \"2026-06-01\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"reported_target_raise_usd_m\": 100000, \"reported_target_valuation_usd_m\": 2000000, \"leads\": [\"Morgan Stanley (reported lead-left)\", \"Goldman Sachs\", \"JPMorgan Chase\", \"Citigroup ",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "date",
+     "ok": true,
+     "detail": "2026-06-01 vs 2026-06-01 (0 days apart)"
+    }
+   ],
+   "tier": "T1",
+   "cross_check": 7,
+   "confidence": "HIGH",
+   "sources": [
+    "https://www.anthropic.com/news/confidential-draft-s1-sec",
+    "https://www.advisorhub.com/anthropic-picks-morgan-stanley-goldman-sachs-to-lead-ipo/",
+    "https://www.tradingkey.com/analysis/stocks/us-stocks/262123046-anthropic-plans-add-citigroup-as-top-tier-ipo-underwriter-tradingkey",
+    "https://www.citybiz.co/article/899334/morgan-stanley-goldman-sachs-near-lead-roles-in-anthropics-potential-2-trillion/"
+   ],
+   "draft_sources": [
+    "https://www.anthropic.com/news/confidential-draft-s1-sec"
+   ],
+   "red_team": "NOT A COMPLETED RAISE: no IPO has been priced. Anthropic's Rule 135 notice (2026-06-01): 'Anthropic, PBC confidentially submitted a draft registration statement on Form S-1 to the U.S. Securities and Exchange Commission'; 'The number of sha",
    "event_id": null
   },
   {
@@ -4541,6 +4698,76 @@
     "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
    ],
    "red_team": "Company-announced (Anthropic post 2026-02-12): $30B Series G at $380B post-money, led by GIC and Coatue, co-led by D. E. Shaw Ventures, Dragoneer, Founders Fund, ICONIQ and MGX. Pre-money $350B is arithmetic (380 - 30) and is corroborated b",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-f3735c",
+   "group": "capital",
+   "kind": "round",
+   "claim": "Microsoft / NVIDIA strategic (up to): $15.0B at n/a post (2025-11-18)",
+   "draft": "{\"date\": \"2025-11-18\", \"size_usd_m\": 15000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"NVIDIA\", \"Microsoft\"]}",
+   "rederived": "{\"date\": \"2025-11-18\", \"size_usd_m\": 15000, \"up_to_components_usd_m\": {\"NVIDIA\": 10000, \"Microsoft\": 5000}, \"pre_usd_m\": null, \"post_usd_m\": null, \"reported_valuation_usd_m\": 350000, \"leads\": [\"NVIDIA (up to $10B)\", \"Microsoft (up to $5B)\"]}",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "date",
+     "ok": true,
+     "detail": "2025-11-18 vs 2025-11-18 (0 days apart)"
+    },
+    {
+     "field": "size_usd_m",
+     "ok": true,
+     "detail": "15000 vs 15000 (0.0% apart)"
+    }
+   ],
+   "tier": "T1",
+   "cross_check": 6,
+   "confidence": "MEDIUM",
+   "sources": [
+    "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+    "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+    "https://techxplore.com/news/2025-11-nvidia-microsoft-invest-billion-ai.html",
+    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+   ],
+   "draft_sources": [
+    "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+   ],
+   "red_team": "'UP TO' commitments, not funded at announcement. Anthropic's and Microsoft's own posts (2025-11-18): 'NVIDIA and Microsoft are committing to invest up to $10 billion and up to $5 billion respectively in Anthropic', alongside Anthropic's com",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-f4bfd5",
+   "group": "capital",
+   "kind": "round",
+   "claim": "11th round: AMD strategic equity (up to): $5.0B at n/a post (2026-07-22)",
+   "draft": "{\"date\": \"2026-07-22\", \"size_usd_m\": 5000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"AMD\"]}",
+   "rederived": "{\"date\": \"2026-07-22\", \"size_usd_m\": 5000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"AMD (sole strategic investor)\"]}",
+   "verdict": "MATCH",
+   "compared": [
+    {
+     "field": "date",
+     "ok": true,
+     "detail": "2026-07-22 vs 2026-07-22 (0 days apart)"
+    },
+    {
+     "field": "size_usd_m",
+     "ok": true,
+     "detail": "5000 vs 5000 (0.0% apart)"
+    }
+   ],
+   "tier": "T1",
+   "cross_check": 7,
+   "confidence": "HIGH",
+   "sources": [
+    "https://www.globenewswire.com/news-release/2026/07/22/3331418/0/en/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus.html",
+    "https://www.marketbeat.com/articles/amds-5-billion-anthropic-deal-could-redraw-the-ai-chip-battle/",
+    "https://www.crnasia.com/news/2026/components-and-peripherals/amd-bought-into-anthropic-instead-of-giving-shares-away",
+    "https://mlq.ai/news/amd-commits-up-to-5-billion-to-anthropic-will-deploy-2gw-of-instinct-mi450-gpus/"
+   ],
+   "draft_sources": [
+    "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+   ],
+   "red_team": "Announced 'up to' commitment, NOT funded. AMD's own release (GlobeNewswire 2026-07-22, Advancing AI 2026): 'AMD has committed to make a strategic equity investment of up to $5 billion in Anthropic', alongside up to 2 GW of Instinct MI450-se",
    "event_id": null
   },
   {
@@ -6657,10 +6884,10 @@
   }
  ],
  "claims_summary": {
-  "MISMATCH": 4,
-  "UNTRACEABLE": 20,
-  "PARTIAL": 5,
-  "NOTED": 30,
-  "MATCH": 62
+  "MISMATCH": 7,
+  "UNTRACEABLE": 3,
+  "PARTIAL": 6,
+  "NOTED": 33,
+  "MATCH": 72
  }
 }
