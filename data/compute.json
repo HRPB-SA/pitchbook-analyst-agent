@@ -2,7 +2,7 @@
  "agent": "analyst-compute",
  "role": "Compute Economist",
  "started": "2026-09-30T19:19:29Z",
- "finished": "2026-09-30T19:54:53Z",
+ "finished": "2026-09-30T19:58:22Z",
  "one_liner": "Commitments total $592.1B and 15.8 GW, $455.7B contracted and $89.6B up to; the prospectus shows $518.2B with about 80% non-cancelable. Central gross margin 73% of realized revenue after partner share and before training (range 56% to 83%). Cost per GW-year runs from $2B (shell) to $50B (SpaceX).",
  "tier_note": "Every derived or modeled figure in this file is T3 unless a row says otherwise. Sourced figures carry event ids or table rows.",
  "commitments": [
@@ -14,7 +14,7 @@
    "gw": 5.0,
    "term": "Apr 2026 to Jul 2033 (S-1 window); capacity online from 2027",
    "status": "contracted",
-   "financing": "Take-or-pay: Anthropic pays any spend shortfall. Google invests up to $40B and backstops lessors.",
+   "financing": "Take-or-pay: Anthropic pays any spend shortfall. Google announced up to $40B of investment ($10B now, $30B on targets) and backstops lessors.",
    "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
    "source_url": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
    "chip_class": "TPU",
@@ -65,7 +65,7 @@
    "gw": 1.0,
    "term": "non-cancelable through May 2033 (S-1 coverage)",
    "status": "contracted",
-   "financing": "NVIDIA up to $10B and Microsoft up to $5B invested; funded amounts undisclosed.",
+   "financing": "NVIDIA committed up to $10B and Microsoft up to $5B of investment; funded amounts undisclosed.",
    "event_id": "evt-20251118-microsoft-nvidia-anthropic-partnership",
    "source_url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
    "chip_class": "NVIDIA GPU",
@@ -174,7 +174,7 @@
    "gw_basis": "not stated for this deal (campus 250 MW, phase 1 120 to 180 MW)",
    "tier": "T1 (amount); T3 (tenant identity, The Information and MarketBeat)",
    "cancelable": "unknown",
-   "note": "Implies about $11.8 per GPU-hour if 22,000 GPUs is the whole scope. verify-compute reports the GPU count is RUM's existing fleet, not contract scope (pending)."
+   "note": "Implies about $11.8 per GPU-hour if 22,000 GPUs is the whole scope. verify-compute reports 22,000 is RUM's existing Hopper fleet and the contract scope is not stated (pending)."
   },
   {
    "partner": "Volta Infra",
@@ -311,7 +311,7 @@
   "s1_non_cancelable_share": 0.7983,
   "usd_m_information_reference": 517000,
   "gw_information_reference": 14.8,
-  "note": "Announced ($592.1B) is the sum of the 13 priced rows on every basis, equal to the compute desk's total. Contracted ($455.7B) means a signed obligation with a stated dollar figure that is neither a ceiling nor unconfirmed. Of it, $217.9B is documented at T1 or T2 (AWS, Microsoft, the $34.5B closed chip notes inside the Broadcom line, TeraWulf, Riot, RUM, Akamai) and $237.8B comes from prospectus coverage (Google $111.1B and the rest of the Broadcom-related line, $126.7B), which is T3 second-hand. Up to ($89.6B) is SpaceX, cancellable on 90 days' notice, and Nscale, conditional on its financing. Reported and unconfirmed ($46.8B) is Lambda, Volta and Akamai plan 1. GW 15.845 is 13.0 'up to' ceilings (AWS 5.0, Google 5.0, AMD 2.0, Microsoft 1.0) plus 2.845 of floors, IT load and press figures. Campus-level capacity that is not Anthropic's share is left out: Hut 8 Beacon Point 704 MW, RUM campus 250 MW, Project Rainier 2.2 GW, SpaceX fleet 1.4 GW. Not summed, as overlaps or non-commitments: the $50B Fluidstack program, Hut 8 River Bend $7.0B, the $10B Broadcom direct order, the $34.5B SPV notes, Rainier $11B, ERock power, and talks. Reconcile to the prospectus: $518.2B is Google 111.1 + Amazon 110.0 + Microsoft 31.4 + Broadcom-related leases 161.2 + SpaceX up to 84.5 + AMD over 20.0. The desk sum sits $73.9B above it: -70.9 on four lines (SpaceX -39.5, AMD -20.0 because the desk table has no AMD dollar figure, AWS -10.0, Microsoft -1.4) and +144.8 for seven names outside the six partners (Nscale 44.6, Lambda 35.0, TeraWulf 19.0, RUM 13.7, Akamai 13.4, Volta 10.0, Riot 9.1). The Information's $517B is a maximum contract value for deals signed since Oct 2025 (T3), 0.2% below the prospectus total, and measures something else. Count the S-1 figure as the anchor for fixed obligations and the desk sum as the anchor for everything announced."
+  "note": "Announced ($592.1B) is the sum of the 13 priced rows on every basis, equal to the compute desk's total. Contracted ($455.7B) means a signed obligation with a stated dollar figure that is neither a ceiling nor unconfirmed. Of it, $217.9B is documented at T1 or T2 (AWS, Microsoft, the $34.5B of closed chip notes that the desk carves out of the Broadcom line, TeraWulf, Riot, RUM, Akamai) and $237.8B comes from prospectus coverage (Google $111.1B and the rest of the Broadcom-related line, $126.7B), which is T3 second-hand. Up to ($89.6B) is SpaceX, cancellable on 90 days' notice, and Nscale, conditional on its financing. Reported and unconfirmed ($46.8B) is Lambda, Volta and Akamai plan 1. GW 15.845 is 13.0 'up to' ceilings (AWS 5.0, Google 5.0, AMD 2.0, Microsoft 1.0) plus 2.845 of floors, IT load and press figures. Campus-level capacity that is not Anthropic's share is left out: Hut 8 Beacon Point 704 MW, RUM campus 250 MW, Project Rainier 2.2 GW, SpaceX fleet 1.4 GW. Not summed, as overlaps or non-commitments: the $50B Fluidstack program, Hut 8 River Bend $7.0B, the $10B Broadcom direct order, the $34.5B SPV notes, Rainier $11B, ERock power, and talks. Reconcile to the prospectus: $518.2B is Google 111.1 + Amazon 110.0 + Microsoft 31.4 + Broadcom-related leases 161.2 + SpaceX up to 84.5 + AMD over 20.0. The desk sum sits $73.9B above it: -70.9 on four lines (SpaceX -39.5, AMD -20.0 because the desk table has no AMD dollar figure, AWS -10.0, Microsoft -1.4) and +144.8 for seven names outside the six partners (Nscale 44.6, Lambda 35.0, TeraWulf 19.0, RUM 13.7, Akamai 13.4, Volta 10.0, Riot 9.1). The Information's $517B is a maximum contract value for deals signed since Oct 2025 (T3), 0.2% below the prospectus total, and measures something else. Count the S-1 figure as the anchor for fixed obligations and the desk sum as the anchor for everything announced."
  },
  "reconciliation": {
   "desk_to_prospectus": {
@@ -834,7 +834,7 @@
     "share": 0.4267
    },
    {
-    "group": "Four clouds and lessors with non-cancelable wording",
+    "group": "Four counterparties with non-cancelable or must-pay wording (Google, Amazon, Microsoft, Broadcom-related lessors)",
     "usd_m": 413700,
     "share": 0.7983
    }
@@ -1167,7 +1167,7 @@
    "label": "Memo: after training (PitchBook scope)",
    "value": 0.396,
    "total": true,
-   "note": "PitchBook scope (about 44%): 1 minus $0.56 of compute per revenue dollar. All compute including training, before partner share."
+   "note": "PitchBook's about 44% equals 1 minus $0.56 of compute per revenue dollar. Its scope is not stated; read here as all compute including training, before partner share."
   }
  ],
  "gross_margin_bridge_note": "Estimate, tier T3 (modeled). No bar is a company disclosure. Unit: $1 of list-price revenue, 2026E at Q2 and Q3 2026 scale. Central gross margin is 73% of realized gross revenue (range 56% to 83%), or 66 cents per $1 of list, after cloud-partner share and before training and stock compensation. The partner share is deducted here although the prospectus books it as marketing expense, so the S-1 gross margin, when reported, may sit about 8 points higher. Three scopes stay separate. Company-adjusted above 80% is before partner share and before training (first memo bar, 81%). PitchBook's about 44% counts all compute including training and equals 1 minus $0.56 (second memo bar). The Information's -94% for FY2024 and about 40% for FY2025 count paying-user costs only, a prior-year scope not drawn. Reading $0.56 as all compute is an interpretation: it is the only reading that fits the FT's above 80%, because partner share of about 0.08 cannot close a 0.36 gap. Training and other compute is then at least $0.36 per revenue dollar in Q2 2026E. Cache is sized outside the bars: if cache reads were billed at standard input rates, list-equivalent revenue would be about 3.5x to 5.5x realized (33% to 60% cache-read share of spend, inferred from Anthropic's Fable 5.1 cost claims), so uncached list price is a poor base. What would move the bars: batch and fast-mode volume and the Sep 2026 cache cuts (discounts); marketplace share, now 47% of sales (partner share); chip mix, utilization and the July end of SpaceX's ramp discount (inference); the S-1's cost of revenue, gross profit and free-tier cost (all bars). Bars add to the gross margin exactly.",
@@ -1280,16 +1280,16 @@
     "tier": "T3"
    },
    {
-    "metric": "Simple payback on one TPU-class GW",
-    "value": "1.8 years central; 1.3 to 2.2 years across $46B to $28B per GW",
-    "basis": "All-in $44.5B per GW over a 5-year lease ($34.5B chips + $2B a year x 5 for shell and power) / (revenue per GW x 73% gross margin). Before non-compute opex and financing cost. Break-even at the 5-year term needs about $12B of revenue per GW-year.",
+    "metric": "Simple payback on one GW of compute",
+    "value": "1.5 years on TPU-class cost (1.1 to 1.8 across $46B to $28B per GW); 2.2 years at the blended Q2 cost",
+    "basis": "TPU-class: all-in $44.5B per GW over a 5-year lease ($34.5B chips + $2B a year x 5 for shell and power). Blended: $13.6B per GW-year x 5. Divided by revenue per GW x 89%, the share left after partner share and other cost of revenue, because the GW's own cost is the compute. Before R&D, sales and G&A and before financing cost. Break-even at a 5-year term needs about $10B of revenue per GW-year on TPU-class cost and $15B at the blended cost.",
     "source_url": "https://finance.yahoo.com/sectors/technology/articles/broadcom-apollo-blackstone-launch-35-144624131.html",
     "tier": "T3"
    },
    {
     "metric": "Revenue per GW implied by forecasts",
     "value": "$12B to $23B per GW",
-    "basis": "Reuters' 2028 forecast $190B to $200B (midpoint $195B) / 15.8 GW = $12.3B. FT's end-2027 run-rate of about $360B / 15.8 GW = $22.7B. Assumes all 15.8 GW is live; at 10 GW live the figures are $19.5B and $36B. Payback at $12B per GW is 5.0 years, close to the lease term.",
+    "basis": "Reuters' 2028 forecast $190B to $200B (midpoint $195B) / 15.8 GW = $12.3B. FT's end-2027 run-rate of about $360B / 15.8 GW = $22.7B. Assumes all 15.8 GW is live; at 10 GW live the figures are $19.5B and $36B. Payback at $12B per GW is 4.1 years, close to the lease term.",
     "source_url": "https://www.investing.com/news/stock-market-news/anthropic-ipo-valuation-hinges-on-190200-billion-2028-revenue-forecast-sources-say-4862222",
     "tier": "T3"
    },
@@ -1660,7 +1660,7 @@
  "narrative": {
   "what": [
    {
-    "t": "Compute desk tally, Sep 30: $592.1B across 13 priced deals and 15.8 GW. $217.9B is firm and documented at T1 or T2. $89.6B is cancellable or conditional (SpaceX, Nscale). $46.8B is reported but unconfirmed. $237.8B comes from prospectus coverage only. 13.0 GW is 'up to'. Anthropic has disclosed no total.",
+    "t": "Compute desk tally, Sep 30: $592.1B across 13 priced deals and 15.8 GW. $217.9B is firm and documented at T1 or T2. $89.6B is cancellable or conditional (SpaceX, Nscale). $46.8B is reported but unconfirmed. $237.8B comes from prospectus coverage only. 13.0 GW is 'up to'. Campus capacity that is not Anthropic's share (Beacon Point 704 MW, RUM 250 MW) is excluded. Anthropic has disclosed no total.",
     "e": [
      "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
      "evt-20260520-spacex-s1-anthropic-colossus-contract",
@@ -1691,6 +1691,14 @@
     ]
    },
    {
+    "t": "SpaceX S-1 (T1): $1.25B a month through May 2029 for Colossus and Colossus II, terminable by either party on 90 days' notice, first two months discounted. Musk says the firm period is 180 days (T2). Prospectus coverage says up to $84.5B (T3). Firm exposure is 90 to 180 days of fees, $3.75B to $7.5B (derived), 8% to 17% of the $45B nominal.",
+    "e": [
+     "evt-20260520-spacex-s1-anthropic-colossus-contract",
+     "evt-20260528-spacex-lease-length-dispute",
+     "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+    ]
+   },
+   {
     "t": "Compute and infrastructure spend was $7.33B in FY2025, 58% of opex and $1.60 per revenue dollar (Reuters on the draft prospectus, T2). The ratio was $0.71 in Q1 2026 and is projected at $0.56 for Q2 (WSJ projections via PYMNTS, T3). Q2 revenue was $11.5B and run-rate passed $65B at end-July (Bloomberg, T2).",
     "e": [
      "evt-20260928-reuters-draft-prospectus-2025-financials",
@@ -1700,7 +1708,7 @@
     ]
    },
    {
-    "t": "Gross margin comes in separate scopes. FY2024 at -94% and FY2025 at about 40% count paying-user costs only (The Information, T3). PitchBook estimates about 44% for Q2 2026 with all compute including training (T3). The FT reports above 80% for Q2 and Q3 2026 before partner share and training (T3). The prospectus books partner share as marketing expense.",
+    "t": "Gross margin comes in separate scopes. FY2024 at -94% counts paying-user costs only, and FY2025 at about 40% is about 38% with free-user inference (The Information, PitchBook, T3). PitchBook's about 44% for Q2 2026 is 1 minus $0.56 of compute per revenue dollar, scope unstated. The FT reports above 80% for Q2 and Q3 2026 before partner share and training (T3).",
     "e": [
      "evt-20251104-information-gross-margin-path-to-77pct",
      "evt-20260121-information-gross-margin-2025-40pct",
@@ -1766,6 +1774,15 @@
     ]
    },
    {
+    "t": "Training sits outside the company's gross margin and inside the stricter breakeven. Adjusted operating profit before training was first positive in Q2 2026 (FT, T3). Profitability with training as cost of goods sold is put at 2028 to 2029 by secondary WSJ summaries (T4). Training and other compute is at least $0.36 per revenue dollar in Q2 2026E (derived). Whether the $559M Q2 projection includes training is disputed.",
+    "e": [
+     "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+     "evt-20260406-wsj-investor-docs-secondary-summaries",
+     "evt-20260520-q2-projection-10-9b-559m-op-profit",
+     "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue"
+    ]
+   },
+   {
     "t": "Counterparty concentration is high. Google-linked TPU supply (Google Cloud plus Broadcom-related leases) is 52.6% of the S-1 lines, Amazon 21.2%, SpaceX 16.3%, Microsoft 6.1%, AMD 3.9%. Amazon and Google also carried 47% of FY2025 sales. Google backstops lessors with exposure up to about $44B (FT, T3). The flexible supplier, SpaceX, is also a rival.",
     "e": [
      "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
@@ -1784,7 +1801,7 @@
     ]
    },
    {
-    "t": "Next four quarters, Q4 2026 to Q3 2027: commitment-implied payments of $40B to $75B (base $56B), 2.2x Q2's annualized compute cost of $25.8B. The risk is timing, with capacity landing before revenue. SpaceX's ramp discount ended in July (T5 commentary) and compute costs ramp in H2 2026 (WSJ). To hold $0.56, revenue must reach about $100B annualized by mid-2027.",
+    "t": "Next four quarters (Q4 2026 to Q3 2027): commitment-implied payments of $40B to $75B, base $56B, 2.2x Q2's annualized compute cost of $25.8B. Capacity lands before revenue. SpaceX's ramp discount was due to end in July (T5 commentary), and the company warned infrastructure spending could stop profit lasting the year (WSJ via PYMNTS, T3). Holding $0.56 needs about $100B of annualized revenue by mid-2027 on the base schedule.",
     "e": [
      "evt-20260520-q2-projection-10-9b-559m-op-profit",
      "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
@@ -1803,7 +1820,7 @@
     ]
    },
    {
-    "t": "Keep debt and equity apart. The $34.5B chip notes are lessor debt, and Anthropic's liability is the lease stream inside the $161.2B line. PitchBook's total moves by $34.5B with the treatment, and a second package would take SPV financing to about $70.5B. For scale, $413.7B is fixed and $104.5B flexible, against about $50B of new Series H cash, a $15B revolver and an IPO reported at up to $100B.",
+    "t": "Keep debt and equity apart. The $34.5B chip notes are lessor debt; Anthropic's liability is the lease stream inside the $161.2B line. PitchBook's total moves by $34.5B with the treatment, and a second package would take SPV financing to about $70.5B. For scale: $413.7B carries non-cancelable wording and $104.5B does not; against it stand about $50B of new Series H cash, a $15B revolver and an IPO reported at up to $100B.",
     "e": [
      "evt-20260930-pb-total-raised-bonds-removed",
      "evt-20260609-tpu-financing-34-5b-closed",
@@ -1812,7 +1829,7 @@
     ]
    },
    {
-    "t": "List-price deflation is the main threat to revenue per GW. Opus list fell 73% in 14 months and cache reads are 2.5% to 5% of input on the newest models. Payback on a TPU-class GW is 1.8 years at today's revenue per GW and about 5 years at the $12B per GW implied by Reuters' 2028 forecast, the lease term. Second-order: price cuts lower revenue per GW before capacity costs fall.",
+    "t": "List-price deflation is the main threat to revenue per GW. Opus list fell 73% in 14 months and cache reads are 2.5% to 5% of input on the newest models. Simple payback on a TPU-class GW is 1.5 years at today's revenue per GW and about 4 years at the $12B implied by Reuters' 2028 forecast, against a five-year lease. Second-order: price cuts land before capacity costs fall.",
     "e": [
      "evt-20260922-claude-opus-5-5-launch",
      "evt-20260901-fable-5-1-mythos-5-1-launch",
@@ -1820,7 +1837,7 @@
     ]
    },
    {
-    "t": "Diversification is real and costly: four chip families, 15 named counterparties and all capacity leased or rented. It cuts single-vendor risk, yet Google-linked supply is 52.6% and NVIDIA sits under Azure, SpaceX, Nscale, Lambda, Volta and RUM. Custom silicon hiring, Samsung talks and ERock's 470 MW power order are the only owned-asset signals. Second-order: lessors, hosts and vendor equity marks carry Anthropic demand risk.",
+    "t": "Diversification is real and costly: Claude runs on three hyperscaler clouds, four chip families and 15 named counterparties. Yet Google-linked supply is 52.6%, and NVIDIA sits under Azure, SpaceX, Nscale, Lambda, Volta and RUM. No owned data center or chip inventory appears in the record; custom silicon hiring and ERock's 470 MW power order are the only owned-asset signals. Second-order: lessors, hosts and vendor equity marks carry Anthropic demand risk.",
     "e": [
      "evt-20260805-custom-silicon-team-hiring",
      "evt-20260702-samsung-custom-chip-talks",
@@ -1836,6 +1853,166 @@
   "A second ~$36B chip package would put lessor financing near $70.5B, more than 40% of the $161.2B lease line. How rating agencies, PitchBook and the S-1 classify it changes the reported debt load by that amount without changing the obligation.",
   "Milestone gating correlates failure. Amazon's facility, AMD's equity, Google's $30B and Nscale's financing all open on delivery or targets, so a delivery slip delays capital and capacity together, while a demand slip hits the non-cancelable core and supplier equity marks at once.",
   "Custom silicon would lower the chip share (81% to 85% of a GPU rental dollar) but adds design and fab commitments that are not in the record."
+ ],
+ "training_vs_inference": {
+  "split_evidence": [
+   {
+    "period": "FY2025",
+    "what": "compute and infrastructure $7.33B, of which training about $4.1B (The Information, projection, T4) and inference and other about $3.2B",
+    "tier": "T4",
+    "event_ids": [
+     "evt-20260928-reuters-draft-prospectus-2025-financials",
+     "evt-20260121-information-gross-margin-2025-40pct"
+    ]
+   },
+   {
+    "period": "Feb 2026",
+    "what": "about half of compute to training and half to inference; inference margins above 50% (stylized, Amodei)",
+    "tier": "T2",
+    "event_ids": [
+     "evt-20260213-amodei-dwarkesh-compute-economics"
+    ]
+   },
+   {
+    "period": "2026E (Jan 2026 forecast)",
+    "what": "about $12B of training plus about $7B to run models, 63% training",
+    "tier": "T3",
+    "event_ids": [
+     "evt-20260127-info-2026-18b-2027-55b-forecast"
+    ]
+   },
+   {
+    "period": "Q2 2026E (derived)",
+    "what": "inference at most $0.20 per revenue dollar and training plus other compute at least $0.36, from $0.56 total and the FT's above 80%",
+    "tier": "T3",
+    "event_ids": [
+     "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
+     "evt-20260913-ft-adj-op-profit-gm-above-80pct"
+    ]
+   },
+   {
+    "period": "2026 to 2029 (PitchBook)",
+    "what": "training above $12B in 2026, about $23B in 2027, about $30B in 2028, above $100B over the four years",
+    "tier": "T3",
+    "event_ids": [
+     "evt-20260916-pitchbook-s1-preview-gross-vs-net"
+    ]
+   }
+  ],
+  "trend": "Training share of compute looks to be 56% in FY2025 and at least 64% in Q2 2026E while compute per revenue dollar fell from $1.60 to $0.56. Training dollars rise every year in the forecasts; inference cost per revenue dollar falls. The record has no cost-per-token series.",
+  "breakeven_definitions": [
+   {
+    "definition": "1. Adjusted operating profit before training-cost and stock-compensation effects",
+    "treatment_of_training": "excluded",
+    "timing": "first positive quarter Q2 2026, expected again Q3 2026 (FT, T3); dollar amount undisclosed",
+    "event_ids": [
+     "evt-20260913-ft-adj-op-profit-gm-above-80pct"
+    ]
+   },
+   {
+    "definition": "2. Profitability with training treated as cost of goods sold",
+    "treatment_of_training": "included",
+    "timing": "2028 to 2029 per secondary WSJ summaries (T4); SiliconANGLE (T3) confirms two definitions without years",
+    "event_ids": [
+     "evt-20260406-wsj-investor-docs-secondary-summaries"
+    ]
+   },
+   {
+    "definition": "WSJ May 20 projection: +$559M operating profit on $10.9B Q2 revenue",
+    "treatment_of_training": "disputed: T5 commentary says included, SBC excluded; the margin table files it under definition 1",
+    "timing": "projection, not a reported result",
+    "event_ids": [
+     "evt-20260520-q2-projection-10-9b-559m-op-profit",
+     "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue"
+    ]
+   }
+  ],
+  "plausibility_check": "FY2025 operating expenses excluding compute were $5.32B, or $1.3B a quarter. If the $559M includes all compute, Q2 2026E non-compute opex is about $4.2B. If it excludes training, about $8.2B. Included is the more plausible reading, which leaves it disputed rather than resolved."
+ },
+ "revenue_context": [
+  {
+   "line": "FY2025 recognized revenue",
+   "value": "$4.59B, about 12x FY2024 (about $386M)",
+   "basis": "Gross of cloud-partner resale. Usage-based $3.8B (82.8%) and subscriptions $789M (17.2%). Draft prospectus via Reuters.",
+   "source_url": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625",
+   "tier": "T2",
+   "event_ids": [
+    "evt-20260928-reuters-draft-prospectus-2025-financials"
+   ]
+  },
+  {
+   "line": "Channel: cloud marketplaces",
+   "value": "$2.16B, 47% of FY2025 sales (32% in FY2024, 11% in FY2023); platforms kept about $351M",
+   "basis": "Sold through Amazon and Google. Direct and other is about $2.43B (53%, derived, includes direct subscriptions). Booked gross with the platform share in marketing expense.",
+   "source_url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "tier": "T2",
+   "event_ids": [
+    "evt-20260929-reuters-47pct-cloud-channel-mix"
+   ]
+  },
+  {
+   "line": "Customer concentration",
+   "value": "two unnamed customers, about 12% each (about $1.1B combined)",
+   "basis": "Most large clients have no long-term contracts and could cut spending. Names undisclosed.",
+   "source_url": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625",
+   "tier": "T2",
+   "event_ids": [
+    "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+   ]
+  },
+  {
+   "line": "Receivables",
+   "value": "$909M at Dec 31, 2025; cloud partners collect 60% (42% in 2024)",
+   "basis": "Partners' billing reach grows with channel share.",
+   "source_url": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/",
+   "tier": "T3",
+   "event_ids": [
+    "evt-20260929-reuters-47pct-cloud-channel-mix"
+   ]
+  },
+  {
+   "line": "Q1 and Q2 2026 revenue",
+   "value": "$4.73B and $11.5B; H1 $16.23B; Q2 about 14x year on year",
+   "basis": "Recognized, gross. The Q1 figure is preliminary. The Q2 figure replaces the $10.9B WSJ projection.",
+   "source_url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+   "tier": "T2",
+   "event_ids": [
+    "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+    "evt-20260814-q2-2026-rev-11-5b-first-report"
+   ]
+  },
+  {
+   "line": "Run-rate",
+   "value": "above $65B at end-July 2026; about $9B at end-2025; above $47B in May",
+   "basis": "Annualized, gross, not recognized revenue. Bloomberg via TechCrunch.",
+   "source_url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "tier": "T2",
+   "event_ids": [
+    "evt-20260817-rr-65b-end-july"
+   ]
+  },
+  {
+   "line": "Forward revenue views",
+   "value": "run-rate $100B to $120B by end-2026 and about $360B by end-2027; FY2028 revenue $190B to $200B",
+   "basis": "Investor and backer projections (FT, T3) and two people familiar (Reuters, T2). Basis and scenario unstated. Not results.",
+   "source_url": "https://www.investing.com/news/stock-market-news/anthropic-ipo-valuation-hinges-on-190200-billion-2028-revenue-forecast-sources-say-4862222",
+   "tier": "T3",
+   "event_ids": [
+    "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+    "evt-20260817-reuters-2028-190-200b-forecast"
+   ]
+  },
+  {
+   "line": "Revenue against compute",
+   "value": "revenue per GW-year $28B to $46B gross; compute per revenue dollar $1.60 (FY2025), $0.71 (Q1 2026), $0.56 (Q2 2026E)",
+   "basis": "See unit_economics and revenue_per_gw. The ratio definitions are not stated in the relays.",
+   "source_url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+   "tier": "T3",
+   "event_ids": [
+    "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
+    "evt-20260928-reuters-draft-prospectus-2025-financials"
+   ]
+  }
  ],
  "cost_datapoints": [
   {
@@ -2116,7 +2293,7 @@
   "events_read": 172,
   "flags": 10
  },
- "generated": "2026-09-30T19:56:01Z",
+ "generated": "2026-09-30T20:01:58Z",
  "validation": {
   "dropped_ids": 0
  }

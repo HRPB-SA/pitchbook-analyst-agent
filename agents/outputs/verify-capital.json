@@ -2,7 +2,7 @@
  "agent": "verify-capital",
  "role": "Source Re-deriver",
  "started": "2026-09-30T19:14:27Z",
- "finished": "2026-09-30T19:56:07Z",
+ "finished": "2026-09-30T20:00:37Z",
  "answers": [
   {
    "claim_id": "CAP-ROU-28fa1c",
@@ -1317,6 +1317,1167 @@
     }
    ],
    "conflicts": []
+  },
+  {
+   "claim_id": "CAP-TOT-827c44",
+   "found": {
+    "equity_only_usd_m": 140154,
+    "equity_only_range_usd_m": {
+     "low": 123654,
+     "base": 140154,
+     "alt_if_April_hyperscaler_money_is_inside_Series_H": 125154
+    },
+    "priced_rounds_only_usd_m": 113404,
+    "debt_usd_m": 15000,
+    "debt_usd_m_confirmed_closed_only": 2500,
+    "total_usd_m": 155154,
+    "spv_lessor_notes_excluded_usd_m": 35000,
+    "unfunded_up_to_commitments_excluded_usd_m": {
+     "Amazon_facility_remaining": 15000,
+     "Google_contingent_remaining": 20000,
+     "AMD": 5000,
+     "Microsoft_NVIDIA_unfunded_remainder": "up to 15000 less an undisclosed portion already inside Series G"
+    },
+    "components": [
+     {
+      "component": "Series A",
+      "date": "2021-05-28",
+      "amount_usd_m": 124,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced (Anthropic post)."
+     },
+     {
+      "component": "Series B",
+      "date": "2022-04-29",
+      "amount_usd_m": 580,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced (Anthropic post)."
+     },
+     {
+      "component": "Series C",
+      "date": "2023-05-23",
+      "amount_usd_m": 450,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced; Google took part (amount undisclosed)."
+     },
+     {
+      "component": "Amazon convertible note #1",
+      "date": "2023-09 (announced 2023-09-25)",
+      "amount_usd_m": 1250,
+      "class": "convertible note",
+      "counted_in_equity_only": true,
+      "basis": "Amazon 10-Q Q3-23: funded in Q3 2023."
+     },
+     {
+      "component": "Google cumulative Feb-2023 (~$300M), Oct-2023 package (up to $2B) and Jan-2025 (>$1B) tranches",
+      "date": "2023-02-03 to 2025-01-22",
+      "amount_usd_m": 3000,
+      "class": "equity/convertible (instrument by tranche not disclosed)",
+      "counted_in_equity_only": true,
+      "basis": "Lower bound: NYT court-filing story (2025-03-11) says Google's investment 'now exceeds $3 billion'; sub-tranches are press-reported and not counted separately to avoid double counting."
+     },
+     {
+      "component": "Google $750M convertible debt loan (agreed 2023, to be funded in 2025)",
+      "date": "2025 (per NYT court documents)",
+      "amount_usd_m": 750,
+      "class": "convertible debt",
+      "counted_in_equity_only": true,
+      "basis": "Funded status not independently confirmed; in the low case this is excluded."
+     },
+     {
+      "component": "Series D (reported, no company announcement)",
+      "date": "2023-12-21 reported in talks; close unconfirmed",
+      "amount_usd_m": 750,
+      "class": "priced equity (reported)",
+      "counted_in_equity_only": true,
+      "basis": "The Information/Reuters/CNBC: $750M led by Menlo at $15B pre-money; close not confirmed. Excluded in the low case."
+     },
+     {
+      "component": "Amazon convertible note #2",
+      "date": "2024-03-27",
+      "amount_usd_m": 2750,
+      "class": "convertible note",
+      "counted_in_equity_only": true,
+      "basis": "Amazon release and 10-Q Q1-24."
+     },
+     {
+      "component": "Amazon convertible note #3 (announced $4B: $1.3B Q4-2024, $1.3B Q2-2025, $1.4B Q4-2025)",
+      "date": "2024-11-22 announced; funded 2024-Q4 to 2025-Q4",
+      "amount_usd_m": 4000,
+      "class": "convertible note",
+      "counted_in_equity_only": true,
+      "basis": "Amazon 10-K FY24, 10-Q Q2-25, 10-K FY25."
+     },
+     {
+      "component": "Series E",
+      "date": "2025-03-03",
+      "amount_usd_m": 3500,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced."
+     },
+     {
+      "component": "Series F",
+      "date": "2025-09-02",
+      "amount_usd_m": 13000,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced."
+     },
+     {
+      "component": "Series G (includes a portion of the Nov-2025 Microsoft/NVIDIA commitments)",
+      "date": "2026-02-12",
+      "amount_usd_m": 30000,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced; Microsoft/NVIDIA portion not quantified, so those commitments are NOT added again."
+     },
+     {
+      "component": "Amazon $5.0B Series G nonvoting preferred",
+      "date": "2026-04 (announced 2026-04-20)",
+      "amount_usd_m": 5000,
+      "class": "equity (Series G-priced preferred)",
+      "counted_in_equity_only": true,
+      "basis": "Amazon 10-Q Q2-26. Counted as additional to the $30B and $65B headlines (its own 10-Q labels it Series G, separate from the $5.0B Series H); ALT case treats it as inside Series H."
+     },
+     {
+      "component": "Google $10B at a reported $350B valuation",
+      "date": "2026-04-24 (Bloomberg)",
+      "amount_usd_m": 10000,
+      "class": "equity/notes (instrument not disclosed)",
+      "counted_in_equity_only": true,
+      "basis": "Bloomberg-reported 'now in cash'; Alphabet's Q2-26 non-marketable purchases of $21.1B are consistent; ALT case treats it as inside Series H."
+     },
+     {
+      "component": "Series H (includes $15B previously committed hyperscaler money: Amazon $5B per SEC, rest unattributed)",
+      "date": "2026-05-28",
+      "amount_usd_m": 65000,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced; includes hyperscaler option money, so those option exercises are NOT added again."
+     },
+     {
+      "component": "DEBT: 5-year revolving credit facility (committed, drawn amount undisclosed)",
+      "date": "2025-05-16",
+      "amount_usd_m": 2500,
+      "class": "debt (revolver)",
+      "counted_in_equity_only": false,
+      "basis": "CNBC; superseded by the expansion below if that closes"
+     },
+     {
+      "component": "DEBT: pre-IPO revolver expansion (reported near-final, NOT confirmed closed)",
+      "date": "reported 2026-09-03",
+      "amount_usd_m": 15000,
+      "class": "debt (revolver)",
+      "counted_in_equity_only": false,
+      "basis": "Bloomberg; expands (does not add to) the $2.5B facility; counted as the debt figure here"
+     },
+     {
+      "component": "MEMO: TPU chip-lease SPV notes (lessor debt, NOT Anthropic-issued)",
+      "date": "2026-06-05",
+      "amount_usd_m": 35000,
+      "class": "SPV debt (excluded)",
+      "counted_in_equity_only": false,
+      "basis": "Bloomberg/FT: SPV buys Google TPUs and leases to Anthropic; not Anthropic capital"
+     },
+     {
+      "component": "Microsoft/NVIDIA 'up to' $15B (Nov 2025): unfunded remainder",
+      "date": "2025-11-18",
+      "amount_usd_m": 15000,
+      "class": "up-to commitment; funded portion sits inside Series G (amount undisclosed)",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "Amazon conditional facility remaining",
+      "date": "2026-04-20",
+      "amount_usd_m": 15000,
+      "class": "up-to: $20.0B facility less $5.0B used in Series H; convertible-note draws as compute milestones are met",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "Google contingent commitment remaining (Alphabet 10-Q Q2-26)",
+      "date": "2026-04-24",
+      "amount_usd_m": 20000,
+      "class": "up-to: $30B contingent at announcement, $20.0B left at 2026-06-30",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "AMD strategic equity 'up to' $5B",
+      "date": "2026-07-22",
+      "amount_usd_m": 5000,
+      "class": "up-to, milestone-based, not funded",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "FTX estate sale #1 (secondary)",
+      "date": "2024-03-22",
+      "amount_usd_m": 884,
+      "class": "secondary: proceeds to the estate, not Anthropic",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "FTX estate sale #2 (secondary)",
+      "date": "2024-06-01",
+      "amount_usd_m": 450,
+      "class": "secondary: proceeds to the estate, not Anthropic",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "Employee buyback (May 2025) and tender (Feb-Apr 2026)",
+      "date": "2025-05 / 2026-02..04",
+      "amount_usd_m": null,
+      "class": "secondary/company repurchase: size undisclosed, not capital raised",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "Amazon note-to-preferred conversions (Q1-25, Q3-25, Q1-26)",
+      "date": "2025-2026",
+      "amount_usd_m": null,
+      "class": "non-cash conversions of notes already counted",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     }
+    ],
+    "pitchbook_total_raised_definition": "UNTRACEABLE from public sources",
+    "notes": "Method: sum of FUNDED primary capital (cash equity and convertible notes) through 2026-09-30, deduplicated, excluding secondaries, non-cash conversions and unfunded 'up to' commitments. BASE equity-only = 140,154 ($M), of which priced rounds A-H (incl. the press-only Series D) = 113,404. RANGE: ALT = 125,154 if Amazon's April $5B and Google's April $10B are counted inside the Series H $65B rather than in addition to it (Amazon's 10-Q labels its April $5B 'Series G' and its option money 'Series H', which supports the additive base, but Anthropic's Series H post links its '$5 billion from Amazon' to the April announcement, so this cannot be settled from public sources); LOW = 123,654 if, in addition, the press-only Series D ($750M) and the unconfirmed Google 2025 $750M are dropped. Debt: the only Anthropic-borrowed debt found is the revolver: $2.5B confirmed closed (May 2025) and $15B reported near-final (Sep 2026; expands, does not add to, the $2.5B; committed capacity, drawn amount unknown). TOTAL incl. committed revolver capacity = 155,154 (or 142,654 using only the confirmed $2.5B). The $35B TPU SPV notes are lessor debt and are not included. Overlaps handled: Series G already contains a portion of Microsoft/NVIDIA money; Series H already contains the $15B of hyperscaler option money; Amazon notes converted to preferred are not double counted. Uncertain inputs: Series D close (press-only), Google amounts (Alphabet never names Anthropic; figures are press/court-filing based, lower bound '>$3B'), Microsoft/NVIDIA funded amounts (undisclosed). WHAT PITCHBOOK 'TOTAL RAISED' INCLUDES: UNTRACEABLE. It is a PitchBook-only field; pitchbook.com's public profile and article pages returned 403 to my fetches, and a WebSearch restricted to pitchbook.com found no public definition (whether it counts debt, convertible notes, strategic 'up to' amounts or secondaries). One unverified lead: a web-search summary (page not opened) of a PitchBook article says Anthropic's 'fundraising total reached $69.1 billion'; I could not open it, so I cannot say what it covers or its date. Best lead: PitchBook's in-platform field definition or data dictionary."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/series-h",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+     "published": "2026-05-28",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Series H $65B includes $15B of previously committed hyperscaler investments, including $5B from Amazon."
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $30B Series G at $380B valuation",
+     "published": "2026-02-12",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Series G $30B includes a portion of previously announced Microsoft and NVIDIA investments."
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises Series F at $183B post-money valuation",
+     "published": "2025-09-02",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Series F $13B."
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises Series E at $61.5B post-money valuation",
+     "published": "2025-03-03",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Series E $3.5B."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+     "publisher": "SEC EDGAR (Amazon.com Inc 10-Q)",
+     "title": "Amazon 10-Q for quarter ended 2026-06-30",
+     "published": "2026-07-31",
+     "tier": "T1",
+     "opened": true,
+     "supports": "From Q3 2023 to Q4 2025, invested $8.0B in convertible notes; Q2 2026 $5.0B Series G and $5.0B Series H preferred."
+    },
+    {
+     "url": "https://finance.yahoo.com/news/google-given-anthropic-more-funding-012105683.html",
+     "publisher": "Yahoo Finance (citing NYT court documents)",
+     "title": "Google has given Anthropic more funding than previously known, show new filings",
+     "published": "2025-03-11",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Google's investment now exceeds $3 billion; another $750 million via convertible debt in 2025."
+    },
+    {
+     "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+     "publisher": "TechCrunch (citing Bloomberg)",
+     "title": "Google to invest up to $40B in Anthropic in cash and compute",
+     "published": "2026-04-24",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Google $10 billion now, another $30 billion on performance targets (Bloomberg)."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+     "publisher": "SEC EDGAR (Alphabet Inc 10-Q)",
+     "title": "Alphabet 10-Q for quarter ended 2026-06-30",
+     "published": "2026-07-23",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Purchases of non-marketable securities $22,051M for six months; $20.0B milestone-contingent commitments remain."
+    },
+    {
+     "url": "https://news.crunchbase.com/ai/unicorn-anthropic-funding-menlo-goog-amzn/",
+     "publisher": "Crunchbase News (citing The Information)",
+     "title": "Anthropic Reportedly In Talks To Raise $750M At $18B-Plus Valuation",
+     "published": "2023-12-21",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Series D reported: $750M, Menlo-led, $15B pre-money (press-only)."
+    },
+    {
+     "url": "https://www.nbcmiami.com/news/business/money-report/anthropic-closes-2-5-billion-credit-facility-as-wall-street-continues-plunging-money-into-ai-boom/3616460/",
+     "publisher": "CNBC (copy on NBC 6 South Florida)",
+     "title": "Anthropic closes $2.5 billion credit facility as Wall Street continues plunging money into AI boom",
+     "published": "2025-05-16",
+     "tier": "T2",
+     "opened": true,
+     "supports": "$2.5B five-year revolving credit facility (May 2025)."
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+     "publisher": "Yahoo Finance (citing Bloomberg)",
+     "title": "Anthropic Nears Finalizing $15 Billion Pre-IPO Credit Facility",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Revolver set to be expanded to $15B (Bloomberg, 2026-09-03); not confirmed closed."
+    },
+    {
+     "url": "https://www.investing.com/news/company-news/apollo-blackstone-finalize-35-billion-ai-chip-financing-for-anthropic-4729436",
+     "publisher": "Investing.com (citing Bloomberg)",
+     "title": "Apollo, Blackstone finalize $35 billion AI chip financing for Anthropic",
+     "published": "2026-06-05",
+     "tier": "T2",
+     "opened": true,
+     "supports": "$35B SPV notes buy chips and lease them to Anthropic; lessor debt, not Anthropic-issued."
+    },
+    {
+     "url": "https://pitchbook.com/profiles/company/466959-97",
+     "publisher": "PitchBook (public profile)",
+     "title": "Anthropic 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+     "published": "unknown (access date 2026-09-30)",
+     "tier": "T4",
+     "opened": false,
+     "supports": "Profile page returned HTTP 403; could not read the 'Total Raised' field or any definition."
+    },
+    {
+     "url": "https://pitchbook.com/news/articles/anthropic-bests-openai-in-valuation-race-hitting-965b-with-series-h",
+     "publisher": "PitchBook (news)",
+     "title": "Anthropic bests OpenAI in valuation race, hitting $965B with Series H - PitchBook",
+     "published": "unknown",
+     "tier": "T4",
+     "opened": false,
+     "supports": "Not opened (403). A web-search summary attributes 'fundraising total reached $69.1 billion' to PitchBook coverage; unverified lead only."
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "Base equity-only 140,154 ($M): April-2026 Amazon $5B and Google $10B counted in addition to Series G/H",
+     "source_a": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+     "value_b": "Alternative 125,154 ($M): same money counted inside the $65B Series H",
+     "source_b": "https://www.anthropic.com/news/series-h",
+     "note": "Amazon's 10-Q labels the April $5B 'Series G' and separately records $5B of 'Series H' under its option, supporting the additive view; Anthropic's Series H post counts '$5 billion from Amazon' within $15B of previously committed hyperscaler money and links it to the April announcement. The public record does not settle which treatment PitchBook or Anthropic uses."
+    }
+   ]
+  },
+  {
+   "claim_id": "CAP-DEB-4ae801",
+   "found": {
+    "revolver_2025_usd_m": 2500,
+    "revolver_2026_usd_m": 15000,
+    "chip_bonds_usd_m": 35000,
+    "anthropic_issued_chip_bonds_usd_m": 0,
+    "chip_bonds_description": "The description 'Anthropic issued chip-purchase bonds in June 2026' is WRONG. The June 2026 instrument was about $35B of notes issued by a special-purpose vehicle (the lessor), not by Anthropic: the SPV raised debt (plus equity), bought Google TPUs (co-designed with Broadcom) and leases them to Anthropic. Tranches per Bloomberg: A1 $6B super-senior (~T+100bp), A2 $24B first-lien (5.75% coupon), B $4.5B second-lien (8.5%); senior tranches rated investment grade; Broadcom gives residual-value support covering any shortfall for A1/A2 holders; Apollo and Blackstone anchored, about half syndicated; closed 2026-06-05 (first reported 2026-05-28 at about $36B, A2 $25B). Correct label: 'TPU chip-lease SPV notes (lessor debt; not Anthropic-issued)'.",
+    "notes": "(1) May 2025: $2.5B five-year REVOLVING credit facility announced 2025-05-16; banks: Morgan Stanley, Barclays, Citibank, Goldman Sachs, JPMorgan, Royal Bank of Canada, MUFG; CFO Krishna Rao quoted by CNBC. (2) 2026 pre-IPO revolver: Bloomberg (2026-08-18) first had it above $10B with Morgan Stanley, Goldman Sachs and JPMorgan each asked for about $1.25B; Bloomberg (2026-09-03) said Anthropic was 'set to finalize expanding its revolving credit facility to $15 billion', Morgan Stanley leading, Goldman Sachs, JPMorgan and Citigroup in prominent roles, Barclays and Wells Fargo in key positions (others incl. Bank of America, Deutsche Bank, RBC, UBS). DATE FINALIZED: NOT CONFIRMED; Reuters (2026-09-07) and Bloomberg (2026-09-13) still describe it as being finalized, and I found no signing or closing report or filing through 2026-09-30, so the $15B is a reported near-final size, not a closed facility; it expands the 2025 facility rather than adding to it. Drawn amounts undisclosed for both revolvers. (3) See chip_bonds_description; Google separately backstops data-center lease projects (FT, 2026-08-03: 10 projects, 2.4 GW, up to $44B exposure, $815M recorded), a different arrangement from the Apollo/Blackstone notes."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.nbcmiami.com/news/business/money-report/anthropic-closes-2-5-billion-credit-facility-as-wall-street-continues-plunging-money-into-ai-boom/3616460/",
+     "publisher": "CNBC (copy on NBC 6 South Florida)",
+     "title": "Anthropic closes $2.5 billion credit facility as Wall Street continues plunging money into AI boom",
+     "published": "2025-05-16",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic closes $2.5B five-year revolver; MS, Barclays, Citi, GS, JPM, RBC, MUFG; CFO quote."
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-targets-10b-credit-facility-173031496.html",
+     "publisher": "Yahoo Finance (citing Bloomberg)",
+     "title": "Anthropic targets $10B+ credit facility ahead of planned public debut",
+     "published": "2026-08-18",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Pre-IPO revolver targeting $10B+; lead banks Morgan Stanley, Goldman Sachs, JPMorgan (Bloomberg)."
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+     "publisher": "Yahoo Finance (citing Bloomberg)",
+     "title": "Anthropic Nears Finalizing $15 Billion Pre-IPO Credit Facility",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Set to finalize expanding its revolving credit facility to $15 billion; details could still change (Bloomberg)."
+    },
+    {
+     "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-choose-nasdaq-much-180359465.html",
+     "publisher": "Yahoo Finance (Bloomberg)",
+     "title": "Anthropic Said to Choose Nasdaq for Much-Anticipated IPO Listing",
+     "published": "2026-09-13",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic was finalizing a $15 billion revolving credit facility (Bloomberg, 2026-09-13)."
+    },
+    {
+     "url": "https://www.thedailystar.net/news/technology/news/anthropic-ipo-timetable-shifts-towards-mid-october-sources-say-4266961",
+     "publisher": "The Daily Star (Reuters exclusive)",
+     "title": "Anthropic IPO timetable shifts towards mid-October, sources say",
+     "published": "2026-09-07",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Seeking to finalise a revolving credit facility of about $15 billion (Reuters, 2026-09-07)."
+    },
+    {
+     "url": "https://www.investing.com/news/company-news/apollo-blackstone-finalize-35-billion-ai-chip-financing-for-anthropic-4729436",
+     "publisher": "Investing.com (citing Bloomberg)",
+     "title": "Apollo, Blackstone finalize $35 billion AI chip financing for Anthropic",
+     "published": "2026-06-05",
+     "tier": "T2",
+     "opened": true,
+     "supports": "A special-purpose vehicle will purchase the chips and lease them to Anthropic; A1 $6B, A2 $24B, B $4.5B notes."
+    },
+    {
+     "url": "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
+     "publisher": "Yahoo Finance",
+     "title": "Pricing details emerge on $36B private credit deal for Anthropic",
+     "published": "2026-06-02",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Issuer is an SPV purchasing TPUs to lease to Anthropic; Broadcom residual value support."
+    },
+    {
+     "url": "https://the-decoder.com/google-moves-billions-in-anthropic-chip-risk-off-its-balance-sheet/",
+     "publisher": "The Decoder (citing FT)",
+     "title": "Google moves billions in Anthropic chip risk off its balance sheet",
+     "published": "2026-08-04",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Compute SPV bought about one million TPUs for $35 billion in June 2026 (FT)."
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "Pre-IPO revolver $15B, 'set to finalize' (Bloomberg 2026-09-03)",
+     "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+     "value_b": "Headlines 'secures' and 'locks in' a $15B credit line (Dealroom, Forbes 2026-09-04/07; not opened)",
+     "source_b": "https://www.forbes.com/sites/jonmarkman/2026/09/07/anthropic-delays-ipo-to-mid-october-locks-in-15-billion-credit-line/",
+     "note": "Secondary headlines overstate a near-final report; no signing or closing date was found."
+    }
+   ]
+  },
+  {
+   "claim_id": "CAP-IPO-9d6ced",
+   "found": {
+    "public_s1": false,
+    "public_s1_evidence": "No public S-1 as of 2026-09-30 15:26 EDT: EDGAR company search 'anthropic' lists only 35 SPV/fund vehicles (no issuer 'Anthropic PBC'); full-text search for 'Anthropic' in S-1, S-1/A, DRS, DRS/A, 424B1, 424B4 and F-1 filed 2026-09-25 to 09-30 returns 0 hits (the only earlier S-1 hits mentioning 'Anthropic, PBC' are other issuers: SpaceX, NSCALE, Figma, Idea Acquisition); the live 'latest S-1 filings' feed shows no Anthropic entry. Press agrees: Forkast (2026-09-26) 'As of September 26, the SEC EDGAR database contains no public Anthropic filing'; Yahoo Finance (2026-09-29) 'the document has not yet been made public on SEC EDGAR'.",
+    "confidential_submission_date": "2026-06-01 (Anthropic's Rule 135 notice: 'confidentially submitted a draft registration statement on Form S-1'; the notice states no separate submission date; CNBC headline 2026-06-01 'Anthropic confidentially files IPO prospectus')",
+    "target_raise_usd_m": 100000,
+    "target_raise_alternatives_usd_m": {
+     "The Information (March 2026): bankers expect": 60000,
+     "Bloomberg (2026-09-13): match or exceed SpaceX's June IPO of": 86300
+    },
+    "target_valuation_usd_m": 2000000,
+    "exchange": "Nasdaq (Bloomberg 2026-09-13: 'picked Nasdaq as its listing venue', per 'someone with knowledge'; Business Insider reported it earlier). FT (2026-09-08) only says trading 'in New York'. Not stated in any coverage of the leaked prospectus I opened.",
+    "timing_reports": [
+     {
+      "outlet": "Bloomberg",
+      "date": "2026-06-03",
+      "report": "Weighing going public 'as soon as October' (via AdvisorHub)."
+     },
+     {
+      "outlet": "Reuters (exclusive)",
+      "date": "2026-09-04",
+      "report": "IPO marketing now mid-October at earliest; prospectus expected toward end of September (previously as early as September); schedule 'could shift again' (opened via The Daily Star copy dated 2026-09-07)."
+     },
+     {
+      "outlet": "Financial Times",
+      "date": "2026-09-08",
+      "report": "Registration filing 'as early as next week', roadshow near end of September, trading 'late September or early October' (via citybiz); assignments not finalized."
+     },
+     {
+      "outlet": "Reuters (exclusive)",
+      "date": "2026-09-11",
+      "report": "Seeking up to $100B at about $2T; IPO expected to be completed before the November US midterm elections; Nvidia in talks to anchor with up to $10B (via Investing.com)."
+     },
+     {
+      "outlet": "Bloomberg",
+      "date": "2026-09-13",
+      "report": "Picks Nasdaq; IPO 'could take place as soon as October' (via Yahoo Finance and Briefs Finance)."
+     },
+     {
+      "outlet": "WSJ",
+      "date": "2026-09-18",
+      "report": "Targeting a November debut, pushed past an expected October target; extra time lets Anthropic present Q3 results; ~$2T valuation, up to $100B raise (via Investing.com and Yahoo Finance)."
+     },
+     {
+      "outlet": "Reuters and FT (draft-prospectus reporting)",
+      "date": "2026-09-28/29",
+      "report": "Coverage of the leaked draft says the IPO may come after the US midterm elections in November / 'hopes to go public in November' (via The Decoder, TradingKey, SiliconANGLE)."
+     }
+    ],
+    "underwriters": [
+     "Morgan Stanley (lead left per FT 2026-09-08)",
+     "Goldman Sachs (stabilization agent per FT; co-lead per Bloomberg 2026-06-03)",
+     "JPMorgan Chase",
+     "Citigroup (Bloomberg 2026-08-21: to be invited; FT: senior role)",
+     "Barclays (FT: senior role)"
+    ],
+    "founder_vote_pct": 50.1,
+    "founder_voting_structure": "Per Reuters' review of the draft prospectus (via The Next Web and TradingKey, 2026-09-29/30): 'Founder LLC', made up of seven co-founders, holds a single special Class F share carrying 50.1% of the vote on director elections and other matters put to shareholders; control persists until two or fewer founders remain; public shares are Class A; co-founders have pledged 80% of their stakes to charity. The Information (2026-09-24/25, via TechCrunch) reported the proposal earlier ('a combined 50.1% of the vote'; each founder about 2% economic stake).",
+    "notes": "Status as of 2026-09-30: only a CONFIDENTIAL draft S-1 exists (submission announced 2026-06-01, shares and price not set). What circulated on 2026-09-28/29 was a draft prospectus reviewed by Reuters and the FT and described as leaked and not publicly filed (SiliconANGLE, The Decoder, TradingKey/Reuters, Yahoo Finance, TokenPost; TechCrunch's 2026-09-28 piece says only that the FT and Reuters 'reviewed the filing' without stating its status); one Yahoo Finance headline ('Anthropic's S-1 Is Here') is misleading, since its own text says the document 'has not yet been made public on SEC EDGAR'. Raise and valuation are reported targets from unnamed sources, not company statements: raise 'up to $100 billion' and valuation 'around $2 trillion' (Reuters 2026-09-11, WSJ 2026-09-18, NYT headline 2026-08-21 not opened); Anthropic's own notice gives neither. Class naming beyond Class F (founder) and Class A (public) is not given in the coverage I could open."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&dateRange=custom&startdt=2026-09-25&enddt=2026-09-30&forms=S-1,S-1/A,DRS,DRS/A,424B4,424B1,F-1",
+     "publisher": "SEC EDGAR full-text search",
+     "title": "EDGAR FTS: 'Anthropic' in S-1/S-1A/DRS/424B/F-1 forms, 2026-09-25 to 2026-09-30 (0 hits)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Full-text search for 'Anthropic' in S-1/DRS/424B/F-1 filed 2026-09-25 to 09-30: 0 hits."
+    },
+    {
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=anthropic&type=&dateb=&owner=include&count=40&action=getcompany",
+     "publisher": "SEC EDGAR company search",
+     "title": "EDGAR company search 'anthropic' (35 SPV/fund entities, no issuer 'Anthropic PBC')",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company search 'anthropic': 35 SPV/fund entities, no issuer 'Anthropic PBC'."
+    },
+    {
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=S-1&company=&dateb=&owner=include&start=0&count=100&output=atom",
+     "publisher": "SEC EDGAR latest-filings feed",
+     "title": "EDGAR latest S-1 filings feed, Wed 30 Sep 2026 15:26 EDT (no Anthropic entry)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Live latest-filings feed (2026-09-30 15:26 EDT) lists no Anthropic S-1."
+    },
+    {
+     "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+     "publisher": "Anthropic",
+     "title": "Anthropic confidential draft S-1 submission (Rule 135 notice)",
+     "published": "2026-06-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Anthropic, PBC confidentially submitted a draft registration statement on Form S-1 to the SEC."
+    },
+    {
+     "url": "https://forkast.news/the-anthropic-s-1-that-was-expected-after-labor-day-still-hasnt-arrived/",
+     "publisher": "Forkast",
+     "title": "The Anthropic S-1 That Was Expected After Labor Day Still Hasn't Arrived",
+     "published": "2026-09-26",
+     "tier": "T4",
+     "opened": true,
+     "supports": "As of September 26, the SEC EDGAR database contains no public Anthropic filing."
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-518-billion-commitment-165731037.html",
+     "publisher": "Yahoo Finance",
+     "title": "Anthropic's S-1 Is Here. The $518 Billion Commitment Is the Real Story.",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "The document has not yet been made public on SEC EDGAR."
+    },
+    {
+     "url": "https://www.tokenpost.com/news/business/25098",
+     "publisher": "TokenPost",
+     "title": "Anthropic Confirms Confidential IPO Filing as Offering Terms Remain Undisclosed",
+     "published": "2026-09-28",
+     "tier": "T4",
+     "opened": true,
+     "supports": "A confidential S-1 is not a public IPO prospectus; no share count, price range or listing date."
+    },
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE",
+     "title": "Leaked Anthropic IPO filing reveals $8B operating loss, rapid revenue growth",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Article describes the S-1 as a confidential document that was leaked; up to $100B raise, $2T+ valuation."
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-founder-llc-voting-control-ipo",
+     "publisher": "The Next Web (citing Reuters)",
+     "title": "Anthropic founders to keep 50.1% of votes after IPO through Founder LLC",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "A draft IPO filing reviewed by Reuters; Founder LLC holds a single Class F share with 50.1% of the vote."
+    },
+    {
+     "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262193185-anthropic-ipo-ai-openai-reveals-revenue-amazon-google-tradingkey",
+     "publisher": "TradingKey (citing Reuters)",
+     "title": "Anthropic IPO: What Investors Need to Know After Draft Prospectus Leak",
+     "published": "2026-09-30",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Founder LLC, seven co-founders, special Class F share entitling it to 50.1% of the voting power."
+    },
+    {
+     "url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/",
+     "publisher": "TechCrunch (citing The Information)",
+     "title": "Anthropic's founders seek voting control ahead of IPO",
+     "published": "2026-09-25",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Founders seek a combined 50.1% of the vote; each about 2% economic stake (The Information)."
+    },
+    {
+     "url": "https://www.investing.com/news/company-news/nvidia-in-talks-to-invest-up-to-10-billion-in-anthropic-ipo--reuters-4898582",
+     "publisher": "Investing.com (citing Reuters)",
+     "title": "Nvidia in talks to invest up to $10 billion in Anthropic IPO - Reuters",
+     "published": "2026-09-11",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic is seeking to raise as much as $100 billion at a valuation of around $2 trillion (Reuters)."
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/anthropic-delays-ipo-staging-to-november-amid-ai-fears-wsj-says-4907941",
+     "publisher": "Investing.com (citing WSJ)",
+     "title": "Anthropic delays IPO staging to November amid AI fears, WSJ says",
+     "published": "2026-09-18",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic is targeting a November debut, pushing back past an expected October target (WSJ)."
+    },
+    {
+     "url": "https://www.thedailystar.net/news/technology/news/anthropic-ipo-timetable-shifts-towards-mid-october-sources-say-4266961",
+     "publisher": "The Daily Star (Reuters exclusive)",
+     "title": "Anthropic IPO timetable shifts towards mid-October, sources say",
+     "published": "2026-09-07",
+     "tier": "T2",
+     "opened": true,
+     "supports": "IPO marketing mid-October at earliest; prospectus end of September (Reuters)."
+    },
+    {
+     "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-choose-nasdaq-much-180359465.html",
+     "publisher": "Yahoo Finance (Bloomberg)",
+     "title": "Anthropic Said to Choose Nasdaq for Much-Anticipated IPO Listing",
+     "published": "2026-09-13",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic PBC has picked Nasdaq as its listing venue (Bloomberg)."
+    },
+    {
+     "url": "https://www.citybiz.co/article/899334/morgan-stanley-goldman-sachs-near-lead-roles-in-anthropics-potential-2-trillion/",
+     "publisher": "citybiz (citing FT)",
+     "title": "Morgan Stanley, Goldman Sachs Near Lead Roles in Anthropic's Potential $2 Trillion IPO",
+     "published": "2026-09-08",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Morgan Stanley lead left; Goldman stabilization agent; JPMorgan, Citigroup, Barclays senior roles (FT)."
+    },
+    {
+     "url": "https://www.advisorhub.com/anthropic-picks-morgan-stanley-goldman-sachs-to-lead-ipo/",
+     "publisher": "AdvisorHub (citing Bloomberg)",
+     "title": "Anthropic Picks Morgan Stanley, Goldman Sachs to Lead IPO",
+     "published": "2026-06-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Morgan Stanley and Goldman Sachs to lead; JPMorgan also on the deal (Bloomberg, 2026-06-03)."
+    },
+    {
+     "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262123046-anthropic-plans-add-citigroup-as-top-tier-ipo-underwriter-tradingkey",
+     "publisher": "TradingKey (citing Bloomberg)",
+     "title": "Anthropic Set to Add Citi as Top IPO Underwriter for Mega Listing",
+     "published": "2026-08-20",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Plans to invite Citigroup into the core underwriting team (Bloomberg)."
+    },
+    {
+     "url": "https://247wallst.com/investing/2026/09/12/nvidia-may-invest-up-to-10-billion-in-anthropics-2-3-trillion-ipo/",
+     "publisher": "24/7 Wall St. (citing Reuters)",
+     "title": "Nvidia May Invest Up to $10 Billion in Anthropic's $2.3 Trillion IPO",
+     "published": "2026-09-12",
+     "tier": "T4",
+     "opened": true,
+     "supports": "24/7 Wall St. attributes 'as high as $2.3 trillion' to Reuters (single outlet; Reuters copies say about $2T)."
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder (citing FT/Reuters)",
+     "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and 'existential' risks",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "FT and Reuters reviewed the S-1; not publicly disclosed; expected November after midterms."
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "Valuation about $2 trillion",
+     "source_a": "https://www.investing.com/news/company-news/nvidia-in-talks-to-invest-up-to-10-billion-in-anthropic-ipo--reuters-4898582",
+     "value_b": "Valuation as high as $2.3 trillion",
+     "source_b": "https://247wallst.com/investing/2026/09/12/nvidia-may-invest-up-to-10-billion-in-anthropics-2-3-trillion-ipo/",
+     "note": "Both attribute to Reuters; the Reuters-syndicated copies (Investing.com, Pulse 2.0) say about $2T and Pulse 2.0 says the article does not mention $2.3T. Use about $2T (WSJ and FT agree: about $2T, above $2T possible)."
+    },
+    {
+     "value_a": "Mid-October IPO marketing launch (Reuters 2026-09-04/07); 'as soon as October' (Bloomberg 2026-09-13)",
+     "source_a": "https://www.thedailystar.net/news/technology/news/anthropic-ipo-timetable-shifts-towards-mid-october-sources-say-4266961",
+     "value_b": "November debut, past an expected October target (WSJ 2026-09-18); after the midterms (Reuters/FT draft-prospectus coverage 2026-09-28/29)",
+     "source_b": "https://www.investing.com/news/stock-market-news/anthropic-delays-ipo-staging-to-november-amid-ai-fears-wsj-says-4907941",
+     "note": "Sequential updates: October reports precede the WSJ November report. The FT (2026-09-08) also had 'late September or early October' trading, earlier than Reuters' mid-October marketing. As of 2026-09-30 the latest reports say November."
+    },
+    {
+     "value_a": "No public S-1 on EDGAR as of 2026-09-30 15:26 EDT",
+     "source_a": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&dateRange=custom&startdt=2026-09-25&enddt=2026-09-30&forms=S-1,S-1/A,DRS,DRS/A,424B4,424B1,F-1",
+     "value_b": "Headline: 'Anthropic's S-1 Is Here' (Yahoo Finance 2026-09-29)",
+     "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-518-billion-commitment-165731037.html",
+     "note": "The headline refers to the leaked draft prospectus; the article's own text says the document has not been made public on EDGAR. Verdict hint is PARTIAL: filing status and the submission notice are confirmed, while raise, valuation, exchange, underwriters and timing are press-reported targets that shift between outlets."
+    }
+   ]
+  },
+  {
+   "claim_id": "CAP-STR-3990a3",
+   "found": {
+    "amount_usd_m": 18000,
+    "funded_vs_up_to": "FUNDED through 2026-06-30: $18.0B = $8.0B convertible notes (Q3 2023 to Q4 2025) + $10.0B nonvoting preferred stock (Q2 2026: $5.0B Series G + $5.0B Series H). UP TO / not funded: a further $15.0B conditional facility (of a $20.0B facility announced April 2026; draws in new convertible notes, or common stock after an IPO, as compute-delivery milestones are met; expires 30 months after a liquidity event). Maximum if fully drawn: $33.0B. No additional Anthropic funding is disclosed after 2026-06-30 (Amazon's Q3 2026 10-Q is not yet filed).",
+    "dates": [
+     {
+      "tranche": "Convertible note #1",
+      "period": "Q3 2023 (announced 2023-09-25 as 'up to $4B')",
+      "amount_usd_m": 1250
+     },
+     {
+      "tranche": "Convertible note #2",
+      "period": "Q1 2024 (2024-03-27)",
+      "amount_usd_m": 2750
+     },
+     {
+      "tranche": "Convertible note #3, part 1",
+      "period": "Q4 2024 (announced 2024-11-22 as $4B)",
+      "amount_usd_m": 1300
+     },
+     {
+      "tranche": "Convertible note #3, part 2",
+      "period": "Q2 2025",
+      "amount_usd_m": 1300
+     },
+     {
+      "tranche": "Convertible note #3, part 3",
+      "period": "Q4 2025",
+      "amount_usd_m": 1400
+     },
+     {
+      "tranche": "Series G nonvoting preferred",
+      "period": "Q2 2026 (April; announced 2026-04-20 with the up-to-$20B facility)",
+      "amount_usd_m": 5000
+     },
+     {
+      "tranche": "Series H nonvoting preferred (option exercise)",
+      "period": "Q2 2026 (round announced 2026-05-28); cut facility to $15.0B",
+      "amount_usd_m": 5000
+     }
+    ],
+    "ownership_or_carrying_value": "Carrying value at 2026-06-30 (Amazon 10-Q): nonvoting preferred stock about $92.5B plus convertible notes at fair value about $97.9B = about $190.4B (unrealized gain on notes in AOCI $92.0B); at 2025-12-31: $14.8B preferred + $45.8B notes = $60.6B. Q2 2026 'upward adjustments relating to equity investments in private companies' were $50.5B ($62.8B for six months), primarily Anthropic. OWNERSHIP: Amazon does not disclose a percentage; its notes are subject to an 'ownership cap, which may be waived at our election'. Reported estimates: 'somewhere in the mid-to-high teens' (Fortune, 2026-06-04, from Amazon's filings); the Motley Fool (2026-09-15) computes about 19.7% by dividing the $190.4B carrying value by the $965B Series H valuation, which is arithmetic, not a reported ownership figure.",
+    "notes": "Basis: amounts are cash invested per Amazon's 10-Ks and 10-Qs (primary); Anthropic's Nov-2024 post ('total $8 billion') and Apr-2026 post ('$5 billion today, up to an additional $20 billion in the future') agree. Non-cash conversions of notes into preferred (Q1 2025, Q3 2025, Q1 2026; gains of about $3.3B, $2.3B and $4.5B reclassified) are not additional investment. Amazon's Q2 2026 10-Q also discloses Anthropic's commitment of more than $100B over 10 years to AWS. The Motley Fool's '$13 billion committed so far' (initial $4B + second $4B + third $5B) is a different cut of the same data and is not an Amazon figure."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+     "publisher": "SEC EDGAR (Amazon.com Inc 10-Q)",
+     "title": "Amazon 10-Q for quarter ended 2026-06-30",
+     "published": "2026-07-31",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Invested $8.0B in convertible notes; $5.0B Series G and $5.0B Series H preferred in Q2 2026; preferred $92.5B, notes $97.9B."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm",
+     "publisher": "SEC EDGAR (Amazon.com Inc 10-Q)",
+     "title": "Amazon 10-Q for quarter ended 2026-03-31",
+     "published": "2026-04-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "From Q3 2023 to Q4 2025, invested $8.0 billion in convertible notes; $20.0 billion facility."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+     "publisher": "SEC EDGAR (Amazon.com Inc 10-K)",
+     "title": "Amazon 10-K for FY2025",
+     "published": "2026-02-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Invested $2.7 billion in convertible notes in 2025."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000086/amzn-20250630.htm",
+     "publisher": "SEC EDGAR (Amazon.com Inc 10-Q)",
+     "title": "Amazon 10-Q for quarter ended 2025-06-30",
+     "published": "2025-08-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Q2 2025 invested $1.3 billion in a new convertible note; additional $1.4 billion by Q4 2025."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.htm",
+     "publisher": "SEC EDGAR (Amazon.com Inc 10-K)",
+     "title": "Amazon 10-K for FY2024",
+     "published": "2025-02-07",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Q3 2023 $1.25B, Q1 2024 $2.75B, Q4 2024 $1.3B third note; $2.7B more by Q4 2025."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000083/amzn-20240331.htm",
+     "publisher": "SEC EDGAR (Amazon.com Inc 10-Q)",
+     "title": "Amazon 10-Q for quarter ended 2024-03-31",
+     "published": "2024-05-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "In Q1 2024, we invested $2.75 billion in a second convertible note."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000018/amzn-20230930.htm",
+     "publisher": "SEC EDGAR (Amazon.com Inc 10-Q)",
+     "title": "Amazon 10-Q for quarter ended 2023-09-30",
+     "published": "2023-10-27",
+     "tier": "T1",
+     "opened": true,
+     "supports": "In September 2023 we invested in a $1.25 billion note convertible to equity."
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-amazon-trainium",
+     "publisher": "Anthropic",
+     "title": "Anthropic and Amazon: $4B new investment, AWS primary cloud and training partner",
+     "published": "2024-11-22",
+     "tier": "T1",
+     "opened": true,
+     "supports": "New $4 billion investment from Amazon brings total to $8 billion; minority investor."
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+     "publisher": "Anthropic",
+     "title": "Anthropic and Amazon expand collaboration (Apr 2026)",
+     "published": "2026-04-20",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Amazon is investing $5 billion today, with up to an additional $20 billion in the future."
+    },
+    {
+     "url": "https://fortune.com/2026/06/04/amazon-google-billions-anthropic-ipo/",
+     "publisher": "Fortune",
+     "title": "Amazon and Google have billions riding on Anthropic. The IPO will finally reveal how much.",
+     "published": "2026-06-04",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Estimates based on its filings put its stake somewhere in the mid-to-high teens; Amazon does not disclose its percentage."
+    },
+    {
+     "url": "https://www.fool.com/investing/2026/09/15/10k-investment-amazon-worth-anthropic-trillion/",
+     "publisher": "The Motley Fool",
+     "title": "What a $10,000 Investment in Amazon Now Would Be Worth if Its Anthropic Stake Gets Marked at $2 Trillion",
+     "published": "2026-09-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Computes roughly 19.7% from $190.4B carrying value over the $965B valuation (estimate)."
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "Mid-to-high teens percent ownership (Fortune, from Amazon filings)",
+     "source_a": "https://fortune.com/2026/06/04/amazon-google-billions-anthropic-ipo/",
+     "value_b": "About 19.7% (Motley Fool arithmetic: carrying value / last valuation)",
+     "source_b": "https://www.fool.com/investing/2026/09/15/10k-investment-amazon-worth-anthropic-trillion/",
+     "note": "Neither is a company-disclosed ownership percentage; carrying value includes notes at fair value and need not equal a pro-rata share of the $965B post-money. Amazon says it does not disclose ownership."
+    }
+   ]
+  },
+  {
+   "claim_id": "CAP-STR-217799",
+   "found": {
+    "amount_usd_m": 13750,
+    "funded_vs_up_to": "REPORTED FUNDED (press/court-filing based; Alphabet's filings never name Anthropic): more than $3.0B through early 2025 (NYT court documents via Yahoo Finance, 2025-03-11; FT 2025-01-22) + $0.75B convertible debt loan due to be funded in 2025 (court documents; funded status unconfirmed) + $10.0B in April 2026 (Bloomberg: 'now in cash') = about $13.75B. Possibly a further about $10B via an option in the Series H (INFERENCE from Alphabet's 10-Q: $21.1B of Q2-2026 non-marketable purchases and remaining contingent commitments falling to $20.0B from $30B; not stated by any source), which would make the total about $23.75B. UP TO / not funded: $30B contingent on performance targets at announcement (Bloomberg, 2026-04-24), $20.0B still outstanding at 2026-06-30 per Alphabet's 10-Q ('future capital funding commitments with a private company contingent upon ... milestones through 2030', unnamed); headline 'up to $40B'.",
+    "dates": [
+     {
+      "date": "2023-02-03",
+      "amount_usd_m": 300,
+      "note": "About $300M for roughly 10% (FT); NYT cites about $5B valuation. Instrument not stated."
+     },
+     {
+      "date": "2023-05-23",
+      "amount_usd_m": null,
+      "note": "Google named as a participant in the $450M Series C; amount undisclosed."
+     },
+     {
+      "date": "2023-10-27",
+      "amount_usd_m": 2000,
+      "note": "'Up to' $2B: $500M upfront + $1.5B over time (WSJ via Crunchbase); a $750M convertible debt loan 'agreed upon in 2023' was still to be funded in 2025 (court documents)."
+     },
+     {
+      "date": "2025-01-22",
+      "amount_usd_m": 1000,
+      "note": "'More than $1bn' new investment (FT via Silicon Republic); Google total 'more than $3 billion'."
+     },
+     {
+      "date": "2025 (per court documents, reported 2025-03-11)",
+      "amount_usd_m": 750,
+      "note": "Convertible debt loan to be funded in 2025."
+     },
+     {
+      "date": "2026-04-24",
+      "amount_usd_m": 10000,
+      "note": "$10B now at a reported $350B valuation; up to $30B more on performance targets; Google Cloud 5 GW over five years (Bloomberg)."
+     }
+    ],
+    "ownership_or_carrying_value": "OWNERSHIP: about 14% (court filings, reported 2025-03-11 by NYT), contractually capped at 15%, no voting rights, board seat or observer rights (Android Police/NYT; Fortune 2026-06-04 repeats 'roughly 14% ... hard-capped at 15%' and The Next Web 2026-04-24 'approximately 14%'); no post-2026-rounds percentage has been disclosed. CARRYING VALUE: Alphabet's 10-Q Q2-26 shows non-marketable equity securities under the measurement alternative of $124.3B at 2026-06-30 (vs $64.1B at 2025-12-31), footnoted as 'primarily' one unnamed private company (press, e.g. Startup Fortune and Fortune, identify it as Anthropic, but the line covers all such securities, so it is an upper bound, not an Anthropic-only figure); Q2-26 gross unrealized gains on such securities were $77.5B. Alphabet does not name Anthropic in its FY25 10-K or Q1/Q2-26 10-Qs.",
+    "notes": "Basis: Google's investment history is not in any primary document by name; tranches rely on FT, WSJ, NYT/court-filing and Bloomberg reporting (T2/T3). The Anthropic posts of 2023-02-03 and 2025-10-23 (up to one million TPUs, 'tens of billions of dollars' of compute) and 2026-04-06 (multi-GW TPU capacity) contain no Google investment amount. Do not confuse the Apr-2026 'up to $40B' (cash equity/notes) with Google's compute and chip-financing commitments (TPU leases via the Apollo/Blackstone SPV, data-center backstops), which are separate. The $5B that Anthropic's Series H post attributes to Amazon is the only named hyperscaler amount in that round."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/news/google-given-anthropic-more-funding-012105683.html",
+     "publisher": "Yahoo Finance (citing NYT court documents)",
+     "title": "Google has given Anthropic more funding than previously known, show new filings",
+     "published": "2025-03-11",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Google's investment now exceeds $3 billion; owns a 14% stake; another $750 million via convertible debt."
+    },
+    {
+     "url": "https://www.androidpolice.com/court-documents-google-invested-ai-startup-anthropic/",
+     "publisher": "Android Police (summarising NYT/court filings)",
+     "title": "Court documents show Google is heavily invested in AI startup Anthropic",
+     "published": "2025-03-11",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Legally cannot own more than 15%; no voting rights; $750 million convertible debt agreed in 2023."
+    },
+    {
+     "url": "https://www.siliconrepublic.com/start-ups/google-anthropic-1bn-investment",
+     "publisher": "Silicon Republic (citing FT)",
+     "title": "Google reportedly pumps $1bn more into Anthropic",
+     "published": "2025-01-22",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Google is reportedly investing more than $1bn into Anthropic (FT, 2025-01-22)."
+    },
+    {
+     "url": "https://news.crunchbase.com/ai/google-anthropic-openai-funding-wars/",
+     "publisher": "Crunchbase News (citing WSJ)",
+     "title": "Google To Invest $2B In Anthropic As AI Funding Wars Heat Up",
+     "published": "2023-10-27",
+     "tier": "T3",
+     "opened": true,
+     "supports": "$500 million upfront plus an additional $1.5 billion over time (WSJ, 2023-10-27)."
+    },
+    {
+     "url": "https://news.crunchbase.com/ai-robotics/funding-ai-google-anthropic/",
+     "publisher": "Crunchbase News (citing FT)",
+     "title": "Google Invests $300M In Anthropic As Tech's AI Arms Race Heats Up",
+     "published": "2023-02-03",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Google invests $300 million for a 10% stake (FT)."
+    },
+    {
+     "url": "https://fortune.com/2023/02/04/google-invests-300m-anthropic-openai-rival-making-chatgpt-challenger-claude-ai-chatbot-battle/",
+     "publisher": "Fortune (citing FT and NYT)",
+     "title": "Google is investing $300M in an OpenAI challenger that will take on ChatGPT while focusing on A.I. safety",
+     "published": "2023-02-04",
+     "tier": "T2",
+     "opened": true,
+     "supports": "About $5 billion valuation per NYT."
+    },
+    {
+     "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+     "publisher": "TechCrunch (citing Bloomberg)",
+     "title": "Google to invest up to $40B in Anthropic in cash and compute",
+     "published": "2026-04-24",
+     "tier": "T2",
+     "opened": true,
+     "supports": "$10 billion now at a $350 billion valuation; another $30 billion on performance targets (Bloomberg)."
+    },
+    {
+     "url": "https://thenextweb.com/news/google-40-billion-anthropic-investment-gemini",
+     "publisher": "The Next Web (citing Bloomberg)",
+     "title": "Google to invest up to $40B in Anthropic as Claude outsells Gemini in the enterprise market it needs most",
+     "published": "2026-04-24",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Existing stake approximately 14%, contractually capped at 15%, no voting rights or board seats."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+     "publisher": "SEC EDGAR (Alphabet Inc 10-Q)",
+     "title": "Alphabet 10-Q for quarter ended 2026-06-30",
+     "published": "2026-07-23",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Carrying value $124.3B, 'primarily' a private company; $20.0B milestone-contingent commitments; purchases $22,051M six months."
+    },
+    {
+     "url": "https://fortune.com/2026/06/04/amazon-google-billions-anthropic-ipo/",
+     "publisher": "Fortune",
+     "title": "Amazon and Google have billions riding on Anthropic. The IPO will finally reveal how much.",
+     "published": "2026-06-04",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Roughly 14% in straight equity, hard-capped contractually at 15%."
+    },
+    {
+     "url": "https://startupfortune.com/alphabets-124-billion-anthropic-stake-reshapes-how-investors-should-read-googles-earnings/",
+     "publisher": "Startup Fortune",
+     "title": "Alphabet's $124 billion Anthropic stake reshapes how investors should read Google's earnings",
+     "published": "2026-07-23",
+     "tier": "T4",
+     "opened": true,
+     "supports": "States Alphabet's Anthropic stake is worth $124.3B (over-attribution: the 10-Q does not name Anthropic)."
+    },
+    {
+     "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+     "publisher": "Anthropic",
+     "title": "Expanding our use of Google Cloud TPUs and services",
+     "published": "2025-10-23",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Up to one million TPUs; tens of billions of dollars; no Google investment amount."
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "Alphabet's filings do not name Anthropic; $124.3B is the carrying value of all measurement-alternative non-marketable equity securities, 'primarily' one private company",
+     "source_a": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+     "value_b": "'Alphabet disclosed in a July 23 SEC filing that its Anthropic stake is worth roughly $124.3 billion'",
+     "source_b": "https://startupfortune.com/alphabets-124-billion-anthropic-stake-reshapes-how-investors-should-read-googles-earnings/",
+     "note": "The secondary article over-attributes; the 10-Q (filed 2026-07-23) gives the $124.3B figure but never names Anthropic. Treat it as an upper-bound proxy."
+    }
+   ]
+  },
+  {
+   "claim_id": "CAP-STR-e47494",
+   "found": {
+    "amount_usd_m": 15000,
+    "funded_vs_up_to": "'UP TO' at announcement: NVIDIA up to $10B and Microsoft up to $5B (total up to $15B), per Anthropic's and Microsoft's own posts of 2025-11-18. Funded since: NOT QUANTIFIED by any primary source. Anthropic's Series G post (2026-02-12) says the round 'includes a portion of the previously announced investments from Microsoft and NVIDIA' with no amounts. Microsoft's FY26-Q4 release (2026-07-29) records 'a $3.2 billion gain from our investment in Anthropic' (no invested amount); TechCrunch says Microsoft 'invested $5 billion in November 2025' (loose wording, not verified against a filing). Neither company names Anthropic in its 10-K/10-Qs I searched (Microsoft FY26 10-K and 10-Qs; Nvidia FY26 10-K and Q1/Q2 FY27 10-Qs: 0 hits); Nvidia reports only aggregates ($99B equity investments and $25B commitments at 2026-07-26). Separate, unconfirmed: Reuters (2026-09-11) says Nvidia is in talks to invest up to $10B as an Anthropic IPO anchor.",
+    "dates": [
+     {
+      "date": "2025-11-18",
+      "event": "Announcement: NVIDIA up to $10B, Microsoft up to $5B; Anthropic commits to purchase $30B of Azure compute and to contract additional capacity up to 1 GW; initial NVIDIA compute commitment up to 1 GW on Grace Blackwell and Vera Rubin systems."
+     },
+     {
+      "date": "2026-02-12",
+      "event": "Series G includes 'a portion' of these investments (amounts undisclosed)."
+     },
+     {
+      "date": "2026-07-29",
+      "event": "Microsoft discloses a $3.2B gain on its Anthropic investment for the quarter ended 2026-06-30."
+     }
+    ],
+    "ownership_or_carrying_value": "No ownership percentage or carrying value is disclosed for Microsoft or Nvidia. Microsoft's Q4 FY26 release shows only a $3.2B gain; TechCrunch notes Microsoft does not routinely revalue the stake each quarter and gives no ownership figure. VALUATION CITED: neither company post states one; the press figure is about $350B ('Sources told CNBC', via AFP/Tech Xplore 2025-11-18; CNBC headline 'valued in range of $350 billion', not opened), basis pre/post not stated; it equals the Series G pre-money announced in February 2026.",
+    "notes": "Gigawatts: 'up to one gigawatt' of compute initially on NVIDIA systems, and up to one gigawatt of additional capacity contracted on Azure, per the posts. The $30B Azure figure is Anthropic's purchase commitment, not an investment. The 'circular' structure (investors' money returning as compute spend) is described by TechCrunch. The two 'up to' amounts should not be added to Series G (they are partly inside it). Tier: company posts T1; funded-since facts are T1 (Anthropic Series G post, Microsoft release) but unquantified."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+     "publisher": "Anthropic",
+     "title": "Microsoft, NVIDIA and Anthropic announce strategic partnerships",
+     "published": "2025-11-18",
+     "tier": "T1",
+     "opened": true,
+     "supports": "NVIDIA and Microsoft are committing to invest up to $10 billion and up to $5 billion respectively in Anthropic."
+    },
+    {
+     "url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+     "publisher": "Microsoft",
+     "title": "Microsoft, NVIDIA and Anthropic announce strategic partnerships",
+     "published": "2025-11-18",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Anthropic has committed to purchase $30 billion of Azure compute capacity and to contract additional capacity up to one gigawatt."
+    },
+    {
+     "url": "https://techxplore.com/news/2025-11-nvidia-microsoft-invest-billion-ai.html",
+     "publisher": "Tech Xplore (AFP)",
+     "title": "Nvidia, Microsoft invest $15 billion in AI startup Anthropic",
+     "published": "2025-11-18",
+     "tier": "T3",
+     "opened": true,
+     "supports": "$350 billion valuation cited by sources told CNBC; Nvidia up to $10 billion, Microsoft up to $5 billion (AFP)."
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $30B Series G at $380B valuation",
+     "published": "2026-02-12",
+     "tier": "T1",
+     "opened": true,
+     "supports": "This round also includes a portion of the previously announced investments from Microsoft and NVIDIA."
+    },
+    {
+     "url": "https://news.microsoft.com/source/2026/07/29/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results-4/",
+     "publisher": "Microsoft",
+     "title": "Microsoft Cloud and AI strength fuels fourth quarter results",
+     "published": "2026-07-29",
+     "tier": "T1",
+     "opened": true,
+     "supports": "These include a $3.2 billion gain from our investment in Anthropic."
+    },
+    {
+     "url": "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
+     "publisher": "TechCrunch",
+     "title": "Microsoft logs $3.2B from Anthropic investment, but OpenAI was a mixed bag",
+     "published": "2026-07-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Microsoft does not routinely update the value of its Anthropic investment; invested $5 billion in November 2025 (article wording)."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+     "publisher": "SEC EDGAR (NVIDIA Corp 10-Q)",
+     "title": "NVIDIA 10-Q for quarter ended 2026-07-26",
+     "published": "2026-08-26",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Equity investments of $99 billion and equity investment commitments of $25 billion; Anthropic not named."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+     "publisher": "SEC EDGAR (Microsoft Corp 10-K)",
+     "title": "Microsoft 10-K for fiscal year ended 2026-06-30",
+     "published": "2026-07-29",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Word search for 'Anthropic' in the FY26 10-K returned no match."
+    },
+    {
+     "url": "https://www.investing.com/news/company-news/nvidia-in-talks-to-invest-up-to-10-billion-in-anthropic-ipo--reuters-4898582",
+     "publisher": "Investing.com (citing Reuters)",
+     "title": "Nvidia in talks to invest up to $10 billion in Anthropic IPO - Reuters",
+     "published": "2026-09-11",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Nvidia is in talks to become an anchor investor in the IPO, potentially as much as $10 billion (Reuters, 2026-09-11)."
+    }
+   ],
+   "conflicts": []
   }
  ],
  "log": [
@@ -2077,7 +3238,7 @@
  "stats": {
   "searches": 20,
   "pages_opened": 78,
-  "claims_answered": 22,
+  "claims_answered": 28,
   "flags": 10
  }
 }

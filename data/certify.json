@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-30T19:56:01Z",
+ "generated": "2026-09-30T20:01:27Z",
  "summary": {
-  "PASS": 10,
+  "PASS": 12,
   "WARN": 1,
   "FAIL": 1,
-  "PENDING": 3
+  "PENDING": 1
  },
  "gates": [
   {
@@ -34,14 +34,14 @@
   {
    "id": "G5",
    "name": "Model: bear/base/bull present, every driver traced to an event id or table row",
-   "status": "PENDING",
-   "detail": "data/model.json not built yet"
+   "status": "PASS",
+   "detail": "scenarios missing: none; 33 drivers traced; unresolved ids 0; drivers without a trace none; outside-view block present"
   },
   {
    "id": "G6",
    "name": "Model engine parity: scripts/model.py == computeModel() in assets/app.js",
-   "status": "PENDING",
-   "detail": "no model"
+   "status": "PASS",
+   "detail": "parity ok: 690 values match across 3 scenarios"
   },
   {
    "id": "G7",
