@@ -89,15 +89,6 @@
    "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
    "tier": "T1",
    "confidence": "HIGH"
-  },
-  {
-   "date": "2026-09-25",
-   "usd_m": 1500000.0,
-   "pre_usd_m": null,
-   "label": "Anthropic asks shareholders to approve 50.1% founder voting control",
-   "event_id": "evt-20260925-founders-voting-control",
-   "tier": "T2",
-   "confidence": "HIGH"
   }
  ],
  "run_rate": [
@@ -180,14 +171,6 @@
    "tier": "T1",
    "confidence": "HIGH",
    "source": "https://www.anthropic.com/news/statement-dario-amodei-american-ai-leadership"
-  },
-  {
-   "date": "2025-12-03",
-   "usd_m": 9000.0,
-   "event_id": "evt-20251203-amodei-dealbook-revenue-guidance",
-   "tier": "T2",
-   "confidence": "HIGH",
-   "source": "https://techcrunch.com/2025/12/04/anthropic-ceo-weighs-in-on-ai-bubble-talk-and-risk-taking-among-competitors/"
   },
   {
    "date": "2025-12-03",
@@ -278,14 +261,6 @@
    "source": "https://storage.courtlistener.com/recap/gov.uscourts.cand.473631/gov.uscourts.cand.473631.1.0_1.pdf"
   },
   {
-   "date": "2026-08-13",
-   "usd_m": 110000.0,
-   "event_id": "evt-20260813-ipo-october-2t-quartz",
-   "tier": "T3",
-   "confidence": "MEDIUM",
-   "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html"
-  },
-  {
    "date": "2026-08-17",
    "usd_m": 65000.0,
    "event_id": "evt-20260817-rr-65b-end-july",
@@ -308,14 +283,6 @@
    "tier": "T3",
    "confidence": "MEDIUM",
    "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
-  },
-  {
-   "date": "2026-09-18",
-   "usd_m": 110000.0,
-   "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
-   "tier": "T3",
-   "confidence": "MEDIUM",
-   "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html"
   },
   {
    "date": "2026-09-29",
@@ -540,16 +507,6 @@
    "notes": "DISPUTED: PB $980M vs T1 $580M (gap $400M, +69%). Pre/post and announced/closed do not explain it: pre+size=post holds inside PB, and shares x price = 87.30M x $11.2261 = $980M, so PB models a single 87.3M-share Series B at one price. Most plausible (unverified) reading: PB aggregates later Series B-priced closings on top of the April 2022 $580M; a $400M delta is the same order as Google's Feb-2023 investment (FT: $300M for ~10%; $300M/$3.0B post = 10%), but PB does not list Google in the Series B investor list and first dates Alphabet at the 2023-06-30 Series C (investors file), so the link is NOT established. Resolution needs PB deal participants/cap table or the S-1 capitalization table. FTX-estate filing: 29,465,891 of its ~44.5M shares were sold in Mar 2024 at $30.0045 (see FTX event); Protos (opened) quotes the estate filing: 44,539,240 Series B preferred at $11.2261 = $500M, which matches the DOJ-stated ~$500M and PB's Series B price; Protos dates the purchase Oct 5 2021 vs DOJ '2022' (timeline conflict, see conflicts). PB also carries the same $11.2261 on Series C although its valuations rise 37% (post-B $3.0B to pre-C $4.1B): either +98M FD shares between rounds or a PB price/share-count error."
   },
   {
-   "date": "2023-12-20",
-   "usd_m": 750.0,
-   "kind": "equity",
-   "label": "Anthropic in talks for $750M Menlo-led round; valuation disputed",
-   "event_id": "evt-20231220-menlo-750m-talks",
-   "tier": "T2",
-   "confidence": "HIGH",
-   "notes": "Talks only in 2023; the round closed in January 2024 (scout-2024). $15B pre + $0.75B = $15.75B post, which is >10% below the $18.4B figure, so both are recorded in conflicts. Menlo reportedly used an SPV (Forbes, Jan 2024, not opened). Headcount ~300 is Crunchbase's estimate (T3). | Talks-stage. $15.0B pre + $0.75B = $15.75B post, which is 14% below the $18.4B/'above $18B' figure, so pre/post does not reconcile the two press numbers; Reuters itself says 'final valuation could go above $18 billion'. Closed later (Series D; see evt-20240513 and evt-20240701). Crunchbase's $7.6B 'total funding' at this date counts Amazon/Google commitments (basis differs from PB)."
-  },
-  {
    "date": "2024-01-11",
    "usd_m": 750.0,
    "kind": "equity",
@@ -578,16 +535,6 @@
    "tier": "T2",
    "confidence": "HIGH",
    "notes": "DISPUTED (size +60%, post-money +14% vs press). Arithmetic inside PB is consistent (40.44M sh x $30.0045 = $1.213B; 19.8+1.2=21.0; 700M FD shares). The price per share matches T1 (FTX docket), so the valuation gap is a fully-diluted share-count basis difference (PB 700M vs 613M implied by $18.4B) and the $450M size gap is later D closings (D-2/D-3) - both consistent with 'announced vs closed', but unverified by any opened Anthropic document (no Anthropic release for Series D exists). Retail vehicles (Fundrise, MicroVentures) appear among 43 investors."
-  },
-  {
-   "date": "2025-01-07",
-   "usd_m": 2000.0,
-   "kind": "equity",
-   "label": "WSJ: Anthropic in talks to raise $2B at $60B, led by Lightspeed",
-   "event_id": "evt-20250107-series-e-talks-60b",
-   "tier": "T2",
-   "confidence": "MEDIUM",
-   "notes": "Report of talks, not a closed deal; superseded by the Mar 3 announcement ($3.5B at $61.5B post). WSJ/Reuters/NYT/CNBC versions of the Jan 7 scoop appear in Google News RSS but were not opened (paywalled/blocked)."
   },
   {
    "date": "2025-05-16",
@@ -686,7 +633,7 @@
    "label": "PitchBook ledger totals $126.754B; $34.5B chip bonds no longer included",
    "event_id": "evt-20260930-pb-total-raised-bonds-removed",
    "tier": "T2",
-   "confidence": "HIGH",
+   "confidence": "VERIFY",
    "notes": "FLAG. Arithmetic: 161,254 - 126,754 = 34,500 exactly. The Sep-30 extract contains no record for deal 334763-02T, so PB removed or reclassified it; the reason is not stated anywhere I could open (pitchbook.com profile/news pages return 403; search snippet shows PitchBook saying Anthropic 'has raised $127 billion'). Press explains why it should not count: the notes are issued by a lessor SPV and Anthropic only leases (5-year lease; Broadcom backstop), although a 'chip bonds' label makes it look like Anthropic debt. The $161.254B figure is therefore an over-count; use $126.754B (incl. $2.5B revolver) or $124.254B (equity only)."
   }
  ],

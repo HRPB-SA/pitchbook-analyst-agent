@@ -2,7 +2,7 @@
  "agent": "certifier",
  "role": "Certifier",
  "started": "2026-09-30T20:44:31Z",
- "finished": "2026-09-30T21:23:57Z",
+ "finished": "2026-09-30T21:37:40Z",
  "verdict": "NEEDS WORK",
  "rederived": [
   {
@@ -319,7 +319,7 @@
   "own": 8,
   "from_ledger": 0,
   "note": "F1-F8 all re-derived with my own fetches before opening any deliverable; ledger not used",
-  "pages_note": "41 publisher or primary pages opened, plus 22 Google/Bing RSS discovery feeds and 1 WebSearch; reuters.com, nytimes.com, axios.com, cnbc.com, forbes.com, seekingalpha.com and msn.com were blocked, so facts that rest on them are marked opened=false or single origin"
+  "pages_note": "43 publisher or primary pages opened (including the Base Rate Book PDF), plus 22 Google/Bing RSS discovery feeds and 1 WebSearch; reuters.com, nytimes.com, axios.com, cnbc.com, forbes.com, seekingalpha.com and msn.com were blocked, so facts that rest on them are marked opened=false or single origin"
  },
  "reconciliation": [
   {
@@ -577,22 +577,39 @@
    "deliverable": "not modelled",
    "recomputed": "61.2 to 64.1 (information only)",
    "within_tolerance": true
+  },
+  {
+   "item": "Base Rate Book p.32: above $25B five-year periods / at 30% or more / above 45%",
+   "deliverable": "4,472 / 19 / 1",
+   "recomputed": "4,472 / 19 (10+5+3+1) / 1",
+   "within_tolerance": true
+  },
+  {
+   "item": "Base Rate Book p.32: above $50B five-year periods / at 30% or more",
+   "deliverable": "1,810 / 1",
+   "recomputed": "1,810 / 1",
+   "within_tolerance": true
+  },
+  {
+   "item": "Judge R5: firm 2028 payments $53B as share of plan revenue $195.5B / of bear revenue $95.4B",
+   "deliverable": "27% / 56%",
+   "recomputed": "27.1% / 55.6%",
+   "within_tolerance": true
+  },
+  {
+   "item": "Judge R3 bands: 0.85 x $1,257B; single-variable base at 30x and 26x ($B)",
+   "deliverable": "1.07T; 1,780; 1,570",
+   "recomputed": "1,068; 1,775; 1,568",
+   "within_tolerance": true
   }
  ],
  "blocking": [
   {
-   "id": "B-1",
-   "where": "data/thesis.json ('verdict' key); Thesis tab; Overview verdict badge; data/certify.json G8 and G15; Sources tab 'Ship gates'",
-   "issue": "The dashboard carries no verdict. The Thesis tab renders 'Verdict pending', the Overview shows no verdict badge, G8 is PENDING, and the Sources tab still shows G15 FAIL from 20:12Z (404 on /data/thesis.json) that my fresh run at 21:00Z does not reproduce. The Judge finished at 21:20:33Z (agents/outputs/analyst-judge.json: BEARISH overall, Series H LEAN BULLISH, $1.5T NEUTRAL, $2T BEARISH) but data/thesis.json was last built at 20:42:55Z. I reviewed the Judge file: structure, event ids and thesis-breakers pass and its numbers reproduce except one range (N-3), but I cannot certify what the dashboard will show until it is merged.",
-   "evidence": "python3 -c \"print('verdict' in json.load(open('data/thesis.json')))\" -> False at 21:21Z; Thesis screenshot 'Verdict pending'; certify.json G8: 'data/thesis.json has no judge verdict yet'; my UI run 21:00Z: no console errors, no overflow",
-   "smallest_fix": "Merge the final Judge file (verdict, scorecard, thesis_breakers, unresolved, consensus) into data/thesis.json, re-run scripts/certify.py and scripts/shot.cjs so G8 and G15 are current, show the by-mark calls in the badge (BEARISH is only the $2T leg), then re-certify."
-  },
-  {
    "id": "B-2",
    "where": "scripts/merge.py line 248 (independent_sources); Sources tab tile 'Multi-source events: two or more independent origins'; Sources tab re-derivation ledger columns TIER / ORIGINS / CONFIDENCE; event evt-20260913-altman-openai-no-2026-ipo; Overview tile 'Annualized run-rate revenue' (T2 HIGH)",
-   "issue": "One source is counted as many confirmations and leaked-draft figures carry T1 or HIGH. independent_sources counts distinct domains, so Reuters syndication copies count as separate origins (evt-20260928-reuters-draft-prospectus-2025-financials shows 10). Ledger rows show 'Prospectus: Net loss = $42B' and 'Cash = $20.28B' as T1, 5-6 origins, HIGH, while their own notes say Reuters is the only readable origin; FY2024 revenue $386M (implied from +1,088%, other reports say $381M, $383M, $400M) shows HIGH with 9 origins. The Sources tab disclosure says reported-prospectus figures are T2/T3. One T3 event (Altman, OpenAI no 2026 IPO) is HIGH with no corroboration and is used in both the bull and bear cases. The Overview itself contradicts its headline tile: the run-rate tile says T2 HIGH while the Overview's 'Signs raised' panel says the $65B 'traces to one investor update ... single-chain'.",
-   "evidence": "Ledger note: 'SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin' (OPS-PRO-b86e59, OPS-PRO-f960bc); merge.py: independent_sources = len({domain(primary)} | {domain(c.url) for c in cor}); OPS-PER-f71902 MATCH T2 9 origins HIGH; Sources disclosure: 'press-reported (T2/T3)'; Overview sign (Bull Analyst 20:37): 'the $65B run-rate traces to one investor update. Both are single-chain'",
-   "smallest_fix": "Count origins, not domains (collapse syndications of one outlet or one document); rename the tile and column to 'distinct outlets' until then; cap prospectus-derived ledger rows at T2 and MEDIUM; add the Next Web / Business Insider Sep 13 corroboration to the Altman event or drop it to MEDIUM."
+   "issue": "One source is counted as many confirmations and leaked-draft figures carry T1 or HIGH. independent_sources counts distinct domains, so nine outlets that re-report one Reuters/FT review (TechCrunch, Fortune, SiliconANGLE, The Register, The Decoder, TradingKey, KuCoin, PYMNTS, 404k Research) count as ten 'independent' sources on evt-20260928-reuters-draft-prospectus-2025-financials, and syndicated copies of one Reuters story (Yahoo, Investing.com, The Star, Global Banking & Finance) count separately in the ledger. Ledger rows show 'Prospectus: Net loss = $42B' and 'Cash = $20.28B' as T1, 5-6 origins, HIGH, while their own notes say Reuters is the only readable origin; FY2024 revenue $386M (implied from +1,088%, other reports say $381M, $383M, $400M) shows HIGH with 9 origins. The Sources tab disclosure says reported-prospectus figures are T2/T3. One T3 event (Altman, OpenAI no 2026 IPO) is HIGH with no corroboration and is used in both the bull and bear cases. The desk's own log contradicts the Overview run-rate tile (T2 HIGH): a Bull Analyst sign in data/agent_log.json, shown on the Overview until newer signs pushed it off, says the $65B 'traces to one investor update ... single-chain'.",
+   "evidence": "Ledger note: 'SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin' (OPS-PRO-b86e59, OPS-PRO-f960bc); merge.py: independent_sources = len({domain(primary)} | {domain(c.url) for c in cor}); OPS-PER-f71902 MATCH T2 9 origins HIGH; Sources disclosure: 'press-reported (T2/T3)'; agent_log sign (Bull Analyst 20:37:31Z): 'the $65B run-rate traces to one investor update'",
+   "smallest_fix": "Count origins, not domains (re-reports and syndications of one underlying document or one outlet count once); rename the tile and column to 'distinct outlets' until then; cap prospectus-derived ledger rows at T2 and MEDIUM; add the Next Web / Business Insider Sep 13 corroboration to the Altman event or drop it to MEDIUM."
   },
   {
    "id": "B-3",
@@ -604,16 +621,9 @@
   {
    "id": "B-4",
    "where": "Model tab: table 'Income statement and cash flow build' (columns 2024A, 2025A), 'Revenue build by segment' and 'Free cash flow and cumulative' charts, KPI 'Cumulative FCF trough'; assets/app.js isA()",
-   "issue": "Every 2024 and 2025 row is labelled 'A = actual' because revenue is present. Only revenue ($386M, $4.59B), compute ($7.33B), opex ($12.65B) and operating loss are press-reported from a leaked draft; R&D $1.5B, S&M $918M, G&A $1.6B, SBC $1.4B, the segment split (cloud resale $2.4B = 52% vs the reported 47% = $2.16B; consumer $230M vs $789M subscription) and FCF of -$6.7B (Fortune's Dec 2025 burn projection was about -$2.8B) are the model's own splits. Model notes 3, 18 and 19 say so; the table does not, and the Sources page promises prospectus figures are 'labelled as such where it appears'. The -$10.6B cumulative FCF trough includes the modelled FY2024-25 FCF.",
+   "issue": "Every 2024 and 2025 row is labelled 'A = actual' because revenue is present. Only revenue ($386M, $4.59B), compute ($7.33B), opex ($12.65B) and operating loss are press-reported from a leaked draft; R&D $1.5B, S&M $918M, G&A $1.6B, SBC $1.4B, the segment split (cloud resale $2.4B = 52% vs the reported 47% = $2.16B; consumer plus seats $368M vs reported subscription revenue $789M) and FCF of -$6.7B (Fortune's Dec 2025 burn projection was about -$2.8B) are the model's own splits. Model notes 3, 18 and 19 say so; the table does not, and the Sources page promises prospectus figures are 'labelled as such where it appears'. The -$10.6B cumulative FCF trough includes the modelled FY2024-25 FCF.",
    "evidence": "Model tab header '2024A 2025A' with legend 'A = actual, E = estimate'; model note 18: 'the rows for 2024 and 2025 use the 2026 mix ... so they are not actuals'; note 3: 'The split of non-compute opex ... is my assumption'; note 19: engine FCF FY2025 -$6.7B vs about -$2.8B reported",
    "smallest_fix": "Label the two columns '2024*/2025* press-reported, leaked draft (Reuters, Fortune), no public S-1', blank the segment, opex-split and FCF cells for 2024-25 (or tag them 'model split'), and compute the cumulative FCF from 2026."
-  },
-  {
-   "id": "B-5",
-   "where": "Overview tab: tile 'IPO' and tile 'Compute commitments (announced)' (assets/app.js renderOverview)",
-   "issue": "The IPO tile's headline value reads 'DISPUTED sequence, not a cle' (the first 28 characters of a long timing string) and its sub-line prints 'Nasdaqtarget $2.00Traise up to $100B'; the compute tile prints '$456B contracted or disclosed$218B on T1/T2 documents15.85 GW'. Truncated and run-together text on the first screen, desktop and phone.",
-   "evidence": "os.timing.split('\u00b7')[0].trim().slice(0, 28) on metrics.offering_structure.timing = 'DISPUTED sequence, not a clean split: ...'; Overview screenshot desktop and phone",
-   "smallest_fix": "Set the IPO tile value to 'Confidential S-1 \u00b7 Nov 2026 (reported)' from a short field, join sub-line parts with ' \u00b7 ', and add 'incl. $89.6B up to' to the compute tile."
   }
  ],
  "non_blocking": [
@@ -626,7 +636,7 @@
   {
    "id": "N-2",
    "where": "Judge by_mark and rationale vs Model tab 'What each mark requires' and Thesis at-price table",
-   "issue": "The verdict quotes an 'adjusted base' of $1.26T (date roll +8.9%, +$100B net cash, SBC as a cost -10.6%) and -23% / +19% / +59%; the Model tab and the Thesis at-price text show the unadjusted $1.19T and -19% / +26% / +68%. I reproduce both sets, but a reader sees two distances on one page with no bridge.",
+   "issue": "The verdict now defines its 'adjusted base' of $1.26T in rationale 3 (engine $1.19T, -10.6% SBC as a cost, +8.9% date roll, +$100B net cash) and quotes -23% / +19% / +59%; I reproduce all of it. The Model tab and the Thesis at-price text still show the unadjusted $1.19T and -19% / +26% / +68%, so a reader sees two distances on one page with no bridge row.",
    "suggestion": "Add an 'adjusted base value' row with the three adjustments to the Model tab and name the basis in each by_mark 'why'."
   },
   {
@@ -638,7 +648,7 @@
   {
    "id": "N-4",
    "where": "Overview tile 'Compute commitments (announced) $592B'",
-   "issue": "The headline $592B and '15.85 GW' carry no 'up to' qualifier on the Overview (the Compute tab says 'incl. $89.6B up to and $46.8B unconfirmed; 13 GW are up to ceilings'). The only company-level source, the leaked S-1, says at least $518B, about 80% non-cancelable.",
+   "issue": "Sub-lines on the Overview compute tile are now separated, but the headline $592B and '15.85 GW' still carry no 'up to' qualifier (the Compute tab says 'incl. $89.6B up to and $46.8B unconfirmed; 13 GW are up to ceilings'). The only company-level source, the leaked S-1, says at least $518B, about 80% non-cancelable.",
    "suggestion": "Lead the tile with '$518B S-1 plan, 80% non-cancelable (press-reported)' and show $592B as 'announced, all bases incl. up to'."
   },
   {
@@ -661,9 +671,9 @@
   },
   {
    "id": "N-8",
-   "where": "Overview status pill on every tab: 'listing timing disputed (Oct vs Nov)'",
-   "issue": "Reports after Sep 18 (WSJ, NYT) and Sep 29 (Reuters, Fortune) say November or after the midterms; October reports predate them. The pill presents an old split as live.",
-   "suggestion": "'November 2026 reported (WSJ, Reuters); October reports superseded; no public S-1'."
+   "where": "Overview status pill on every tab ('listing timing disputed (Oct vs Nov)'); Overview IPO tile ('Nasdaq')",
+   "issue": "Reports after Sep 18 (WSJ, NYT) and Sep 29 (Reuters, Fortune) say November or after the midterms; October reports predate them. The pill presents an old split as live. The tile also prints 'Nasdaq' without a qualifier although it rests on Bloomberg citing a person familiar (Sep 13), not on a company statement.",
+   "suggestion": "'November 2026 reported (WSJ, Reuters); October reports superseded; no public S-1', and 'Nasdaq (reported)'."
   },
   {
    "id": "N-9",
@@ -673,15 +683,15 @@
   },
   {
    "id": "N-10",
-   "where": "Network tab; Agents floor; chart axes; Compute charts; Sources ledger RE-DERIVED column; Overview 'Equity raised' chip",
-   "issue": "Network labels overlap and the ROLE column is cut ('chip, clou'); Agents-floor sign bubbles are overprinted by 'NEW' tags and clipped; time axes read 'Jan 27' for January 2027; Compute bars read '$0K / $45.0B'; two different '73%' numbers sit in the gross-margin bridge (central GM of realized revenue vs the list-price memo bar). The Sources ledger prints truncated raw JSON in RE-DERIVED cells for long rows (Series D, Amazon notes, total raised) because scripts/reconcile.py cuts json.dumps(...)[:260]; the same truncation makes the Overview equity chip fall back to 'disputed in re-derivation' instead of showing the independent $140.2B.",
-   "suggestion": "Polish only; use year ticks, '$0 contracted / $45.0B up to', label the memo bar basis, and store rederived as an object (no truncation) so the chip can show the independent figure."
+   "where": "Network tab; Agents floor; chart axes; Compute charts; Sources ledger RE-DERIVED column",
+   "issue": "Network labels overlap and the ROLE column is cut ('chip, clou'); Agents-floor sign bubbles are overprinted by 'NEW' tags and clipped; time axes read 'Jan 27' for January 2027; Compute bars read '$0K / $45.0B'; two different '73%' numbers sit in the gross-margin bridge; the Sources ledger still prints truncated raw JSON in RE-DERIVED cells for long rows because scripts/reconcile.py cuts json.dumps(...)[:260] (the new rederived_obj field is used by the equity chip only).",
+   "suggestion": "Polish only; use year ticks, '$0 contracted / $45.0B up to', label the memo bar basis, and render rederived_obj in the ledger cells."
   },
   {
    "id": "N-11",
    "where": "Thesis tab",
-   "issue": "The conflict-of-interest and not-investment-advice lines appear on the Sources tab but not next to the call; the Judge's 'Consistency with the standing position' card will carry the position once merged.",
-   "suggestion": "Add a one-line disclosure under the verdict badge."
+   "issue": "The Thesis tab now carries the position in 'Consistency with the standing position' (labelled 'a check for the decision-maker, not evidence for the call'), so the conflict of interest sits next to the call. 'Not investment advice' still appears only on the Sources tab.",
+   "suggestion": "Add a one-line 'decision support, not investment advice' under the verdict banner."
   },
   {
    "id": "N-12",
@@ -691,14 +701,14 @@
   },
   {
    "id": "N-13",
-   "where": "dist/artifact.html",
-   "issue": "Built 19:00Z; assets/app.js changed at 20:43Z and thesis.json will change again. Publishing it as is would ship a stale page.",
-   "suggestion": "Rebuild with scripts/build_artifact.py after the verdict merge."
+   "where": "Overview verdict banner; dist/artifact.html",
+   "issue": "The Thesis banner now shows the call at each price as chips, but the Overview banner still shows only 'BEARISH' plus the one-liner and the first rationale paragraph; BEARISH is the $2T leg (Series H is LEAN BULLISH). Also dist/artifact.html was built at 19:00Z, before app.js (21:24Z) and thesis.json (21:21Z) changed; publishing it would ship a stale page.",
+   "suggestion": "Show the three call chips on the Overview banner; rebuild dist/artifact.html with scripts/build_artifact.py after the last merge."
   },
   {
    "id": "N-14",
    "where": "Model tab gross-margin path vs Compute tab gross-margin bridge",
-   "issue": "Same scope (before partner share and training) gives 48% for 2026E on the Model tab and 73% central on the Compute tab; the FT says above 80%. The gap is disclosed in compute.json model_cross_check and the Judge's unresolved list, not on the Model tab.",
+   "issue": "On the same scope (before partner share and training) the Model tab has 48% for 2026E while the Compute tab's memo bar has 81% (73% after partner share) and the FT says above 80%; a 33-point gap. It is disclosed in compute.json model_cross_check and the Judge's unresolved list, not on the Model tab.",
    "suggestion": "Add a one-line cross-reference under the Model gross-margin sliders."
   },
   {
@@ -710,8 +720,20 @@
   {
    "id": "N-16",
    "where": "Thesis bear claim 7, Judge unresolved list: 'FTC probe (Sep 30, single source)'",
-   "issue": "By the evening of Sep 30 the Bing News feed lists the FTC probe from CNBC, Reuters, USA Today and others (I saw headlines only, not the pages). 'Single source' may be stale; the record should say whether the FTC or a second outlet confirmed it.",
-   "suggestion": "Open the CNBC and Reuters pieces and update the event's corroboration and the 'single source' wording."
+   "issue": "By the evening of Sep 30 the Bing News feed lists the FTC probe from CNBC, Reuters, USA Today and others (headlines only), and Crypto Briefing (opened) says Reuters cites 'a senior agency official' with no formal FTC statement. 'Single source' in the Thesis and Judge text may be stale, but it is still one official-source chain, not a filing.",
+   "suggestion": "Open the CNBC and Reuters pieces, update the event's corroboration, and say 'Reuters citing a senior FTC official, not an FTC release'."
+  },
+  {
+   "id": "N-17",
+   "where": "Judge verdict text on the Thesis tab (rationale, what_flips, by_mark)",
+   "issue": "The verdict sentences carry no event ids; traceability runs through the bull and bear claims above and the ids on the 8 thesis-breakers. Rationale 1 reads 'and 1 of 1,810 above $50B, Anthropic's FY2026 base' (it means: in the above-$50B size class, Anthropic's FY2026 base, 1 of 1,810 five-year periods reached 30%). I checked the counts against the Base Rate Book p.32 (4,472 and 19 above $25B; 1,810 and 1 above $50B) and they match.",
+   "suggestion": "Add event_ids to each rationale and by_mark item and reword the sentence."
+  },
+  {
+   "id": "N-18",
+   "where": "Judge rationale 3 and by_mark secondary: call bands",
+   "issue": "The bands are LEAN BULLISH up to $1.07T (85% of the $1.257T adjusted base), NEUTRAL to $1.6T (127%), LEAN BEARISH to $1.8T, BEARISH above. They are set from single-variable cases, not symmetrically around the base, so a mark 19% above the adjusted base ($1.5T) is NEUTRAL while one 15% below is only LEAN BULLISH. The verdict says the bands come from 'single-variable values', not odds; an IC will ask why the neutral zone leans upward.",
+   "suggestion": "Say in one sentence why the neutral zone sits above the base value (e.g. bull-tail asymmetry or plan beats), or make the bands symmetric."
   }
  ],
  "log": [
@@ -1056,15 +1078,69 @@
   },
   {
    "seq": 62,
+   "type": "note",
+   "text": "The repo moved while I worked: commits b6c2d3a (21:23Z, verdict merged, gates re-run) and cd50680 (21:24Z, Overview tiles). I re-ran the UI dump and screenshots at HEAD cd50680 (data built 21:21:51Z) and re-checked every finding against it"
+  },
+  {
+   "seq": 63,
+   "type": "verify",
+   "text": "Resolved and verified at HEAD: verdict in data/thesis.json; gates 14 PASS, 1 WARN (G11), 0 FAIL, 0 PENDING; IPO tile and compute tile text fixed; equity chip shows the independent range; Thesis tab renders the verdict, call chips, position check, scorecard and 8 breakers"
+  },
+  {
+   "seq": 64,
+   "type": "flag",
+   "text": "Still open at HEAD: Model tab 2024A/2025A labelling (B-4), domain-counted origins and T1/HIGH on leaked-draft ledger rows (B-2), target and projection chips on Timeline cards (B-3); Timeline, Topics, Model and Compute text is byte-identical to my first pass"
+  },
+  {
+   "seq": 65,
+   "type": "verify",
+   "text": "Base Rate Book (Credit Suisse, 2016, PDF p.32) read with pypdf: above $25B 4,472 five-year periods, 19 at 30% or more, 1 above 45%; above $50B 1,810 periods, 1 at 30% or more. The Judge's reference-class numbers match",
+   "url": "https://sorfis.com/wp-content/uploads/2021/09/The-Base-Rate-Book-Integrating-the-Past-to-Better-Anticipate-the-Future-September-2016.pdf"
+  },
+  {
+   "seq": 66,
+   "type": "verify",
+   "text": "Judgment review of the filed verdict: reference class and base rate come first; Series H is LEAN BULLISH despite needing 47% a year and the text says why (H1 actuals in hand, 11-16% a year after the plan); both cases are held to the same standard in the scorecard; 8 of 8 thesis-breakers have metric, threshold and date; 11 unresolved items; the position appears only as a consistency check"
+  },
+  {
+   "seq": 67,
+   "type": "verify",
+   "text": "Crypto Briefing (opened): the FTC probe of Sep 30 rests on Reuters citing a senior agency official, with no formal FTC statement; 'single source' is an official-source chain, not a filing",
+   "url": "https://cryptobriefing.com/ftc-probes-anthropic-openai-metr-ai-harms/"
+  },
+  {
+   "seq": 68,
+   "type": "verify",
+   "text": "Final re-check at 21:38Z against HEAD cd50680 (no new commits since 21:24Z): B-2, B-3 and B-4 still hold; B-1 and B-5 stay resolved. Verdict stays NEEDS WORK with 3 blocking items"
+  },
+  {
+   "seq": 69,
    "type": "message",
-   "text": "Orchestrator: verdict NEEDS WORK with 5 blocking items. Worst two: B-1 the dashboard carries no verdict (thesis.json has no verdict key; Thesis tab says 'Verdict pending'; gates G8 pending and G15 stale FAIL) and B-4 the Model tab prints 2024A/2025A as 'actual' with modelled splits and no press-reported label. Re-run me after thesis.json is rebuilt and certify.py is re-run",
+   "text": "Orchestrator: at HEAD cd50680 verdict is NEEDS WORK with 3 blocking items (B-2, B-3, B-4); B-1 and B-5 are resolved and verified. Worst: B-4 (Model tab prints 2024A/2025A as 'actual' with modelled splits and no press-reported label), then B-2 (domain-counted origins and T1/HIGH on leaked-draft rows). Each fix is small; re-run me after they land",
    "to": "orchestrator"
   }
  ],
  "stats": {
-  "pages_opened": 41,
+  "pages_opened": 43,
   "facts_rederived": 8,
-  "blocking": 5,
-  "non_blocking": 16
+  "blocking": 3,
+  "non_blocking": 18
+ },
+ "resolved_since_first_pass": [
+  {
+   "id": "B-1",
+   "resolved_at": "2026-09-30T21:23:31Z (commit b6c2d3a)",
+   "verified": "data/thesis.json now has the verdict (generated 21:21:44Z); certify.json shows 14 PASS, 1 WARN (G11), 0 FAIL, 0 PENDING; my fresh screenshots at HEAD cd50680 render the Thesis tab with the BEARISH badge, three call chips, rationale, by-mark table, position check, scorecard and 8 thesis-breakers; no console errors, no overflow"
+  },
+  {
+   "id": "B-5",
+   "resolved_at": "2026-09-30T21:24:32Z (commit cd50680)",
+   "verified": "Overview IPO tile now reads 'Confidential S-1' with a 'timing disputed: Oct vs Nov' chip, 'target $2.00T (reported)' and 'raise up to $100B (WSJ)'; compute tile sub-lines are separate; equity chip now says 'disputed: independent check $124B to $140B'"
+  }
+ ],
+ "certified_against": {
+  "git_head": "cd50680 Overview tiles: spacing, IPO status, independent total-raised range; verdict banner shows the call at each price",
+  "data_built": "2026-09-30T21:21:51Z",
+  "ui_run": "2026-09-30T21:38Z (repo HEAD cd50680 unchanged since 21:24:32Z)"
  }
 }

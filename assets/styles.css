@@ -391,3 +391,5 @@ table.model .neg { color: var(--critical); }
 .evt .h, .evt .s, .evt .src, .evt .src a { overflow-wrap: anywhere; }
 .chip { max-width: 100%; }
 @media (max-width: 820px) { .chip { white-space: normal; } .tl-month { top: 0; } }
+
+.data td.modeled, td.modeled { color: var(--muted); font-style: italic; }

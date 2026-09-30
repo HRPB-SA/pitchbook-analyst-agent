@@ -192,6 +192,17 @@ def is_dup(a, b):
     if j >= 0.6: return True
     return False
 
+def origin_name(publisher, url):
+    """The outlet that did the reporting, not the host that displays it: 'Reuters (via Yahoo Finance, Echo Wang)' -> 'reuters'."""
+    p = (publisher or "").strip()
+    if p:
+        p = re.split(r"\s+via\s+|\(|:|;|\s+-\s+|,", p, 1)[0].strip().lower()
+        p = re.sub(r"^the\s+", "", p)
+        if p: return p[:40]
+    return domain(url)
+
+CHAIN_RE = re.compile(r"\b(leak|leaked|draft (prospectus|s-1)|reviewed by|according to|citing|people familiar|persons? familiar|sources familiar|anonymous|first reported by|reportedly)\b", re.I)
+
 def merge_cluster(members, conflicts_out):
     members = sorted(members, key=lambda e: (TIER_RANK[e["source"]["tier"]], CONF_RANK[e["confidence"]], -len(e["summary"])))
     prim = json.loads(json.dumps(members[0]))
@@ -239,13 +250,24 @@ def merge_cluster(members, conflicts_out):
             prim["notes"] = ((prim.get("notes") or "") + " | " + m["notes"]).strip(" |")
     if disputed:
         prim["confidence"] = "DISPUTED"
-    else:
-        # independent corroboration upgrades confidence
-        doms = {domain(prim["source"]["url"])} | {domain(c["url"]) for c in cor}
-        doms.discard("")
-        if len(doms) >= 2 and TIER_RANK[prim["source"]["tier"]] <= 2 and CONF_RANK[prim["confidence"]] > 1:
+    # origins, not hosts: re-reports and syndicated copies of one story are one confirmation
+    outlets = {origin_name(prim["source"].get("publisher"), prim["source"]["url"])} | {origin_name(c.get("publisher"), c["url"]) for c in cor}
+    outlets.discard("")
+    t12 = set()
+    if TIER_RANK[prim["source"]["tier"]] <= 2: t12.add(origin_name(prim["source"].get("publisher"), prim["source"]["url"]))
+    t12 |= {origin_name(c.get("publisher"), c["url"]) for c in cor if TIER_RANK.get(c.get("tier"), 9) <= 2}
+    t12.discard("")
+    if not disputed:
+        # corroboration upgrades confidence only when at least two T1/T2 origins report it
+        if len(t12) >= 2 and TIER_RANK[prim["source"]["tier"]] <= 2 and CONF_RANK[prim["confidence"]] > 1:
             prim["confidence"] = "HIGH"
-    prim["independent_sources"] = len({domain(prim["source"]["url"])} | {domain(c["url"]) for c in cor} - {""})
+    prim["distinct_outlets"] = len(outlets)
+    prim["independent_sources"] = len(outlets)   # legacy key; the dashboard labels it "distinct outlets" (not proven independent)
+    text = " ".join([prim["headline"], prim["summary"], prim.get("notes") or ""] + [c.get("publisher") or "" for c in cor])
+    prim["single_chain_suspected"] = bool(CHAIN_RE.search(text)) and len(t12) < 2
+    # HIGH needs at least one T1/T2 origin: a T3/T4 scoop repeated by other T3/T4 outlets is still one chain
+    if prim["confidence"] == "HIGH" and not t12:
+        prim["confidence"] = "MEDIUM"; prim["confidence_note"] = "Capped from HIGH: no T1/T2 origin among the sources."
     return prim
 
 def build_events(outs, conflicts_out):
@@ -288,15 +310,43 @@ def apply_corrections(events):
         alias[e["id"]] = e
         for mid in e.get("merged_ids", []): alias[mid] = e
     done = []
-    # automatic rule: a valuation attached to an event that is not a financing is a reference mark (last round price, reported target), not that event's post-money
-    fin = {"funding", "valuation", "debt"}
+    # automatic rules: a value that is a reference mark, a projection or a target must not sit in a field that reads as a priced, reported or closed figure
+    def log(e, rid, reason, chg):
+        e.setdefault("corrections", []).append({"id": rid, "audit_id": None, "reason": reason, "changed": chg})
+        done.append({"id": rid, "audit_id": None, "event_id": e["id"], "headline": e["headline"], "reason": reason, "changed": list(chg)})
+    def has_num(v, n):
+        try: return abs(float(str(v).replace(",", "")) - n) < 1
+        except Exception: return False
+    def priced_round(e):
+        cats = set(e["category"]); oth = e["extracted"].get("other") or {}
+        avc = f"{oth.get('announced_vs_closed') or ''} {oth.get('status') or ''}"
+        if not (cats & {"funding", "debt"}): return False
+        if re.search(r"target|expectation|talks|unconfirmed|indication", avc, re.I): return False
+        if re.search(r"\b(in talks|talks to|seeking|weighs|considering|secondary|perpetual|indications?)\b", e["headline"], re.I) and not re.search(r"series [a-h]|closes?|raises?|raised", e["headline"], re.I): return False
+        return True
     for e in events:
-        v = (e.get("extracted") or {}).get("valuation_post_usd_m")
-        if v and not (fin & set(e["category"])):
-            ex = e["extracted"]; ex.setdefault("other", {})["valuation_reference_usd_m"] = v; ex["valuation_post_usd_m"] = None
-            chg = {"extracted.valuation_post_usd_m": {"was": v, "now": None}, "extracted.other.valuation_reference_usd_m": {"was": None, "now": v}}
-            e.setdefault("corrections", []).append({"id": "R-VAL", "audit_id": None, "reason": "A valuation on an event that is not a financing is a reference mark (last round price or reported target), not this event's post-money. Moved to other.valuation_reference_usd_m.", "changed": chg})
-            done.append({"id": "R-VAL", "audit_id": None, "event_id": e["id"], "headline": e["headline"], "reason": "Reference valuation moved out of the post-money field (event is not a financing).", "changed": list(chg)})
+        ex = e["extracted"]; oth = ex.setdefault("other", {})
+        v = ex.get("valuation_post_usd_m")
+        if v and not priced_round(e):
+            oth["valuation_reference_usd_m"] = v; ex["valuation_post_usd_m"] = None
+            log(e, "R-VAL", "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+                {"extracted.valuation_post_usd_m": {"was": v, "now": None}, "extracted.other.valuation_reference_usd_m": {"was": None, "now": v}})
+        rr = ex.get("revenue_run_rate_usd_m")
+        if rr:
+            per = str(ex.get("revenue_period") or "")
+            by_key = any(re.search(r"project|expect|guid|forecast", k, re.I) and has_num(val, rr) for k, val in oth.items())
+            if re.search(r"project|forecast|guid|expect|target|plan\b|estimate", per, re.I) or by_key:
+                oth["projected_run_rate_usd_m"] = rr; ex["revenue_run_rate_usd_m"] = None
+                log(e, "R-PROJ", "The run-rate here is a projection or guidance, not a reported run-rate. Moved to other.projected_run_rate_usd_m so it cannot be read as an actual.",
+                    {"extracted.revenue_run_rate_usd_m": {"was": rr, "now": None}, "extracted.other.projected_run_rate_usd_m": {"was": None, "now": rr}})
+        am = ex.get("amount_usd_m")
+        if am:
+            oth_txt = f"{oth.get('announced_vs_closed') or ''} {oth.get('status') or ''}"
+            tgt = any(re.search(r"target_raise|amount_target|up_to|cap", k, re.I) and has_num(val, am) for k, val in oth.items())
+            if tgt or re.search(r"\btalks\b|unconfirmed|reported target", oth_txt, re.I) or re.search(r"\b(weighs|in talks|seeking to raise|target(s|ed)? (a )?raise)\b", e["headline"], re.I):
+                oth["amount_target_usd_m"] = am; ex["amount_usd_m"] = None
+                log(e, "R-AMT", "The amount is a reported target, cap or talks figure, not a closed or announced amount. Moved to other.amount_target_usd_m.",
+                    {"extracted.amount_usd_m": {"was": am, "now": None}, "extracted.other.amount_target_usd_m": {"was": None, "now": am}})
     for c in cs:
         e = alias.get(c.get("event_id"))
         if not e: print("!! correction", c.get("id"), "targets missing event", c.get("event_id"), file=sys.stderr); continue

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T21:23:31Z",
+ "generated": "2026-09-30T21:43:59Z",
  "summary": {
   "PASS": 14,
   "WARN": 1,
@@ -17,7 +17,7 @@
    "id": "G2",
    "name": "Mechanical health checks (dates, schema, duplicate ids, tier/confidence consistency)",
    "status": "PASS",
-   "detail": "0 fails, 2 warns"
+   "detail": "0 fails, 1 warns"
   },
   {
    "id": "G3",
@@ -29,7 +29,7 @@
    "id": "G4",
    "name": "Conflicts are frozen, not resolved: every conflict row shows both values and a source or note",
    "status": "PASS",
-   "detail": "158 conflicts in the ledger (0 incomplete); 27 events carry a DISPUTED/VERIFY/LOW tag"
+   "detail": "158 conflicts in the ledger (0 incomplete); 31 events carry a DISPUTED/VERIFY/LOW tag"
   },
   {
    "id": "G5",
@@ -77,7 +77,7 @@
    "id": "G12",
    "name": "Agent log is the real log: agents known, time-ordered, nothing in the future, every active agent has an output file",
    "status": "PASS",
-   "detail": "5897 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
+   "detail": "5912 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
   },
   {
    "id": "G13",

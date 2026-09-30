@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T21:24:32Z",
+ "generated": "2026-09-30T21:42:29Z",
  "summary": {
   "MISMATCH": 7,
   "UNTRACEABLE": 3,
@@ -620,7 +620,7 @@
    },
    "verdict": "UNTRACEABLE",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 4,
    "confidence": "VERIFY",
    "sources": [
@@ -873,7 +873,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 3,
+   "cross_check": 2,
    "confidence": "VERIFY",
    "sources": [
     "https://www.anthropic.com/news/claude-3-family",
@@ -1080,7 +1080,7 @@
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
-   "cross_check": 7,
+   "cross_check": 6,
    "confidence": "VERIFY",
    "sources": [
     "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
@@ -1143,7 +1143,7 @@
    "draft_sources": [
     "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. PYMNTS (2026-03-04): 'enterprises accounted for 80% of Anthropic's business and that the company finds them to be a relatively stable source of income'; the article has no churn or multiyear-contract data and does not name the event. From t",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. PYMNTS (2026-03-04): 'enterprises accounted for 80% of Anthropic's business and that the company finds them to be a relatively stable source of income'; the article has no churn or multiyear-contract data and does not name the event. From t",
    "event_id": null
   },
   {
@@ -1160,7 +1160,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 5,
    "confidence": "MEDIUM",
    "sources": [
@@ -1172,7 +1172,7 @@
    "draft_sources": [
     "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. Reuters 2026-09-28 (Echo Wang): 'nearly a quarter of its revenue came from two customers last year'; Reuters 2026-09-29 (Echo Wang and Krystal Hu): 'two unnamed customers each generated 12% of revenue last year'. TechCrunch (2026-09-28) say",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. Reuters 2026-09-28 (Echo Wang): 'nearly a quarter of its revenue came from two customers last year'; Reuters 2026-09-29 (Echo Wang and Krystal Hu): 'two unnamed customers each generated 12% of revenue last year'. TechCrunch (2026-09-28) say",
    "event_id": null
   },
   {
@@ -1198,7 +1198,7 @@
    "draft_sources": [
     "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
    ],
-   "red_team": "Re-derivation landed on the same publisher as the draft: one origin, not two. No number to compare mechanically: draft and re-derived text shown side by side. Verbatim: 'Eight of the Fortune 10 are now Claude customers.' Company-reported; 'customer' is not defined (no spend threshold). Same post: run-rate revenue $14bn; customers over $1M annualized exceeds 500; customers spending over $100,000 u",
+   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. Verbatim: 'Eight of the Fortune 10 are now Claude customers.' Company-reported; 'customer' is not defined (no spend threshold). Same post: run-rate revenue $14bn; customers over $1M annualized exceeds 500; customers spending over $100,000 u",
    "event_id": null
   },
   {
@@ -1253,7 +1253,7 @@
    "draft_sources": [
     "https://www.anthropic.com/news/google-broadcom-partnership-compute"
    ],
-   "red_team": "Re-derivation landed on the same publisher as the draft: one origin, not two. No number to compare mechanically: draft and re-derived text shown side by side. Verbatim: 'Over 500 business customers were each spending over $1 million on an annualized basis. Today that number exceeds 1,000' (the 500 figure refers to the Series G announcement of 2026-02-12, where Anthropic said 'a dozen' customers d",
+   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. Verbatim: 'Over 500 business customers were each spending over $1 million on an annualized basis. Today that number exceeds 1,000' (the 500 figure refers to the Series G announcement of 2026-02-12, where Anthropic said 'a dozen' customers d",
    "event_id": null
   },
   {
@@ -1282,7 +1282,7 @@
    "draft_sources": [
     "https://www.tipranks.com/news/anthropic-targets-26-billion-revenue-by-2026-as-ai-demand-accelerates"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. Reuters: 'enterprise customers account for about 80% of its revenue' with 'more than 300,000 business and enterprise customers'. Amodei repeated '80%' (PYMNTS, 2026-03-04). A later Yahoo Finance piece (2026-08-21) says enterprise API usage ",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. Reuters: 'enterprise customers account for about 80% of its revenue' with 'more than 300,000 business and enterprise customers'. Amodei repeated '80%' (PYMNTS, 2026-03-04). A later Yahoo Finance piece (2026-08-21) says enterprise API usage ",
    "event_id": null
   },
   {
@@ -1427,7 +1427,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. Single origin (FT; ft.com refused so the FT article itself was not opened). Reuters wrote that it 'could not immediately verify the report'. TNW says CNBC confirmed the profit information with two people familiar; I could not confirm CNBC r",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. Single origin (FT; ft.com refused so the FT article itself was not opened). Reuters wrote that it 'could not immediately verify the report'. TNW says CNBC confirmed the profit information with two people familiar; I could not confirm CNBC r",
    "event_id": null
   },
   {
@@ -1485,7 +1485,7 @@
    "draft_sources": [
     "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo"
    ],
-   "red_team": "Re-deriver found sources that disagree: No dollar amount for Q2 adjusted operating profit (Reuters brief of FT; TNW; techi; Dealroom; Bloomberg) vs 'roughly $559 million in adjusted operating profit' for Q2, attributed to the FT No number to compare mechanically: draft and re-derived text shown side by side. No primary outlet I could open gives a number. Bloomberg: 'positive adjusted operating income', first time; Anthropic declined comment. Reuters' brief of the FT, TNW, techi.com and Dealroom all say no amount. Two low-tier aggregator posts (",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: No dollar amount for Q2 adjusted operating profit (Reuters brief of FT; TNW; techi; Dealroom; Bloomberg) vs 'roughly $559 million in adjusted operating profit' for Q2, attributed to the FT No number to compare mechanically: draft and re-derived text shown side by side. No primary outlet I could open gives a number. Bloomberg: 'positive adjusted operating income', first time; Anthropic declined comment. Reuters' brief of the FT, TNW, techi.com and Dealroom all say no amount. Two low-tier aggregator posts (",
    "event_id": null
   },
   {
@@ -1543,7 +1543,7 @@
    "draft_sources": [
     "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. Single origin: The Information (paywalled; I opened only the headline page). Re-reporters TechCrunch and MLQ give -94%; TipRanks (Vince Condarcuri) adds the with-free-users variant of -109%. BigGo (2026-02-25) and SemiAnalysis (2026-05-27, ",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. Single origin: The Information (paywalled; I opened only the headline page). Re-reporters TechCrunch and MLQ give -94%; TipRanks (Vince Condarcuri) adds the with-free-users variant of -109%. BigGo (2026-02-25) and SemiAnalysis (2026-05-27, ",
    "event_id": null
   },
   {
@@ -1618,7 +1618,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 6,
    "confidence": "MEDIUM",
    "sources": [
@@ -1630,7 +1630,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). Arithmetic cross-check: revenue ~$4.59bn less $12.65bn total operating expenses =",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). Arithmetic cross-check: revenue ~$4.59bn less $12.65bn total operating expenses =",
    "event_id": null
   },
   {
@@ -1647,7 +1647,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 6,
    "confidence": "VERIFY",
    "sources": [
@@ -1659,7 +1659,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: yes (Bloomberg; Reuters with its own source) but NOT reported as a prospectus figure. USD millions, annualized revenue run-rate at end of July 2026: $65bn, up from $47bn in May and ~$9bn at end-2025 (Reuter",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: yes (Bloomberg; Reuters with its own source) but NOT reported as a prospectus figure. USD millions, annualized revenue run-rate at end of July 2026: $65bn, up from $47bn in May and ~$9bn at end-2025 (Reuter",
    "event_id": null
   },
   {
@@ -1676,7 +1676,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 6,
    "confidence": "MEDIUM",
    "sources": [
@@ -1688,7 +1688,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, FY2025 total operating expenses (appears to include cost of revenue",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, FY2025 total operating expenses (appears to include cost of revenue",
    "event_id": null
   },
   {
@@ -1705,7 +1705,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 5,
    "confidence": "MEDIUM",
    "sources": [
@@ -1717,7 +1717,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, 'roughly $34 billion', non-cash accounting charge in FY2025 (fair-v",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, 'roughly $34 billion', non-cash accounting charge in FY2025 (fair-v",
    "event_id": null
   },
   {
@@ -1734,7 +1734,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 6,
    "confidence": "MEDIUM",
    "sources": [
@@ -1746,7 +1746,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, operating loss FY2025 (positive number = loss). Cross-check: $4.59b",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, operating loss FY2025 (positive number = loss). Cross-check: $4.59b",
    "event_id": null
   },
   {
@@ -1763,7 +1763,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 6,
    "confidence": "VERIFY",
    "sources": [
@@ -1775,7 +1775,7 @@
    "draft_sources": [
     "https://www.tradingkey.com/analysis/stocks/us-stocks/262190854-anthropic-ipo-prospectus-revealed-tradingkey"
    ],
-   "red_team": "Re-deriver found sources that disagree: +1,088% revenue growth in 2025 (implies FY2024 ~ $386m on $4.59bn) vs +1,050% ('Revenue jumps 1,050%' in a Fortune India headline; equals growth from a rounded $0.4bn to $4.6bn); FY2024 revenue about $400m (SiliconANGLE, rounded) vs FY2024 revenue implied ~$386m by +1,088% (Fortune) and $381m (The Information, Jan 2026, pre-filing) No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed; only a rounded secondary statement exists. Rounded, secondary figure: no outlet printed the exact FY2024 revenue. Derivation: $4.59bn / (1 + 10.88) = ~$386m; 'twelve-fold' gives ~$380-385m. T",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: +1,088% revenue growth in 2025 (implies FY2024 ~ $386m on $4.59bn) vs +1,050% ('Revenue jumps 1,050%' in a Fortune India headline; equals growth from a rounded $0.4bn to $4.6bn); FY2024 revenue about $400m (SiliconANGLE, rounded) vs FY2024 revenue implied ~$386m by +1,088% (Fortune) and $381m (The Information, Jan 2026, pre-filing) No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed; only a rounded secondary statement exists. Rounded, secondary figure: no outlet printed the exact FY2024 revenue. Derivation: $4.59bn / (1 + 10.88) = ~$386m; 'twelve-fold' gives ~$380-385m. T",
    "event_id": null
   },
   {
@@ -1792,7 +1792,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 6,
    "confidence": "MEDIUM",
    "sources": [
@@ -1804,7 +1804,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, FY2025 compute and infrastructure spend, ~58% of the $12.65bn total",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, FY2025 compute and infrastructure spend, ~58% of the $12.65bn total",
    "event_id": null
   },
   {
@@ -1821,8 +1821,8 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
-   "cross_check": 8,
+   "tier": "T2",
+   "cross_check": 7,
    "confidence": "MEDIUM",
    "sources": [
     "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
@@ -1833,7 +1833,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, 'nearly $4.6 billion' (FY2025 revenue per the draft S-1; Reuters do",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, 'nearly $4.6 billion' (FY2025 revenue per the draft S-1; Reuters do",
    "event_id": null
   },
   {
@@ -1850,7 +1850,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 9,
    "confidence": "VERIFY",
    "sources": [
@@ -1862,7 +1862,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
    ],
-   "red_team": "Re-deriver found sources that disagree: >$11.5bn Q2 2026 revenue (Bloomberg 2026-08-14; FT per TechCrunch 2026-09-28) vs $10.9bn projected Q2 2026 revenue (WSJ 2026-05-20); >$11.5bn Q2 2026 revenue (Bloomberg 2026-08-14) vs 'approximately $15.3 billion' Q2 revenue (BigGo headline dated 2026-05-20) No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: yes for the figure (Bloomberg and FT) but NOT reported as a prospectus figure. USD millions, 'more than $11.5bn', preliminary Q2 2026 (April-June). Provenance caveat: TechCrunch credits this to the FT, and ",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: >$11.5bn Q2 2026 revenue (Bloomberg 2026-08-14; FT per TechCrunch 2026-09-28) vs $10.9bn projected Q2 2026 revenue (WSJ 2026-05-20); >$11.5bn Q2 2026 revenue (Bloomberg 2026-08-14) vs 'approximately $15.3 billion' Q2 revenue (BigGo headline dated 2026-05-20) No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: yes for the figure (Bloomberg and FT) but NOT reported as a prospectus figure. USD millions, 'more than $11.5bn', preliminary Q2 2026 (April-June). Provenance caveat: TechCrunch credits this to the FT, and ",
    "event_id": null
   },
   {
@@ -1879,7 +1879,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 4,
    "confidence": "MEDIUM",
    "sources": [
@@ -1891,7 +1891,7 @@
    "draft_sources": [
     "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: no (Fortune and The Decoder both re-report Reuters; Reuters original unopened). USD millions, operating loss FY2024 (positive number = loss). Both outlets attribute to Reuters' reading of the draft prospect",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: no (Fortune and The Decoder both re-report Reuters; Reuters original unopened). USD millions, operating loss FY2024 (positive number = loss). Both outlets attribute to Reuters' reading of the draft prospect",
    "event_id": null
   },
   {
@@ -1908,7 +1908,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 9,
    "confidence": "VERIFY",
    "sources": [
@@ -1920,7 +1920,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
    ],
-   "red_team": "Re-deriver found sources that disagree: No dollar amount for adjusted operating income (Reuters brief of FT; TNW; techi; Dealroom; Bloomberg) vs 'roughly $559 million in adjusted operating profit' for Q2 attributed to the FT No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: yes (Bloomberg for Q2; FT for Q2/Q3; CNBC reportedly confirmed) but NOT reported as a prospectus figure. Basis: adjusted (definition not given by any accessible report), unaudited, from shareholder/investor",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: No dollar amount for adjusted operating income (Reuters brief of FT; TNW; techi; Dealroom; Bloomberg) vs 'roughly $559 million in adjusted operating profit' for Q2 attributed to the FT No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: yes (Bloomberg for Q2; FT for Q2/Q3; CNBC reportedly confirmed) but NOT reported as a prospectus figure. Basis: adjusted (definition not given by any accessible report), unaudited, from shareholder/investor",
    "event_id": null
   },
   {
@@ -1937,7 +1937,7 @@
    },
    "verdict": "NOTED",
    "compared": [],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 6,
    "confidence": "VERIFY",
    "sources": [
@@ -1949,7 +1949,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html"
    ],
-   "red_team": "No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: no (FT only; Reuters, TNW and techi re-report it and Reuters could not verify); NOT reported as a prospectus figure. Non-GAAP management view: 'gross margins above 80% before accounting for revenue shared w",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. No number to compare mechanically: draft and re-derived text shown side by side. SECOND OUTLET WITH OWN REPORTING: no (FT only; Reuters, TNW and techi re-report it and Reuters could not verify); NOT reported as a prospectus figure. Non-GAAP management view: 'gross margins above 80% before accounting for revenue shared w",
    "event_id": null
   },
   {
@@ -2075,8 +2075,8 @@
      "detail": "50.1 vs 50.1 (0.0% apart)"
     }
    ],
-   "tier": "T1",
-   "cross_check": 21,
+   "tier": "T2",
+   "cross_check": 26,
    "confidence": "MEDIUM",
    "sources": [
     "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&dateRange=custom&startdt=2026-09-25&enddt=2026-09-30&forms=S-1,S-1/A,DRS,DRS/A,424B4,424B1,F-1",
@@ -2088,7 +2088,7 @@
     "https://www.anthropic.com/news/confidential-draft-s1-sec",
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "Re-deriver found sources that disagree: Valuation about $2 trillion vs Valuation as high as $2.3 trillion; Mid-October IPO marketing launch (Reuters 2026-09-04/07); 'as soon as October' (Bloomberg 2026-09-13) vs November debut, past an expected October target (WSJ 2026-09-18); after the midterms (Reuters/FT draft-prospectus coverage 2026-09-28/29) Status as of 2026-09-30: only a CONFIDENTIAL draft S-1 exists (submission announced 2026-06-01, shares and price not set). What circulated on 2026-09-28/29 was a draft prospectus reviewed by Reuters and the FT and described as leaked and no",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: Valuation about $2 trillion vs Valuation as high as $2.3 trillion; Mid-October IPO marketing launch (Reuters 2026-09-04/07); 'as soon as October' (Bloomberg 2026-09-13) vs November debut, past an expected October target (WSJ 2026-09-18); after the midterms (Reuters/FT draft-prospectus coverage 2026-09-28/29) Status as of 2026-09-30: only a CONFIDENTIAL draft S-1 exists (submission announced 2026-06-01, shares and price not set). What circulated on 2026-09-28/29 was a draft prospectus reviewed by Reuters and the FT and described as leaked and no",
    "event_id": null
   },
   {
@@ -2245,7 +2245,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 4,
+   "cross_check": 5,
    "confidence": "HIGH",
    "sources": [
     "https://www.anthropic.com/news/series-h",
@@ -2289,7 +2289,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 1,
+   "cross_check": 2,
    "confidence": "MEDIUM",
    "sources": [
     "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems",
@@ -2298,7 +2298,7 @@
    "draft_sources": [
     "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems"
    ],
-   "red_team": "Re-derivation landed on the same publisher as the draft: one origin, not two. Company-announced (Anthropic post dated 2021-05-28: 'raises $124 million'); equity Series A; the post mentions no debt, convertible note or secondary component. Other named participants: James McClave, Dustin Moskovitz, Center for Emerging ",
+   "red_team": "Company-announced (Anthropic post dated 2021-05-28: 'raises $124 million'); equity Series A; the post mentions no debt, convertible note or secondary component. Other named participants: James McClave, Dustin Moskovitz, Center for Emerging ",
    "event_id": null
   },
   {
@@ -2328,7 +2328,7 @@
     }
    ],
    "tier": "T3",
-   "cross_check": 2,
+   "cross_check": 3,
    "confidence": "MEDIUM",
    "sources": [
     "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/",
@@ -2427,8 +2427,8 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 1,
-   "confidence": "MEDIUM",
+   "cross_check": 2,
+   "confidence": "HIGH",
    "sources": [
     "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
     "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
@@ -2436,7 +2436,7 @@
    "draft_sources": [
     "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
    ],
-   "red_team": "Re-derivation landed on the same publisher as the draft: one origin, not two. Company-announced (Anthropic post 2025-09-02): 'completed a Series F fundraising of $13 billion led by ICONIQ ... values Anthropic at $183 billion post-money'. Pre-money of $170B is DERIVED (183 - 13), not stated. Post names other significa",
+   "red_team": "Company-announced (Anthropic post 2025-09-02): 'completed a Series F fundraising of $13 billion led by ICONIQ ... values Anthropic at $183 billion post-money'. Pre-money of $170B is DERIVED (183 - 13), not stated. Post names other significa",
    "event_id": null
   },
   {
@@ -2519,7 +2519,7 @@
     }
    ],
    "tier": "T2",
-   "cross_check": 3,
+   "cross_check": 4,
    "confidence": "HIGH",
    "sources": [
     "https://www.nbcmiami.com/news/business/money-report/anthropic-closes-2-5-billion-credit-facility-as-wall-street-continues-plunging-money-into-ai-boom/3616460/",
@@ -2562,9 +2562,9 @@
      "detail": "2026-06-01 vs 2026-06-01 (0 days apart)"
     }
    ],
-   "tier": "T1",
-   "cross_check": 7,
-   "confidence": "HIGH",
+   "tier": "T2",
+   "cross_check": 8,
+   "confidence": "MEDIUM",
    "sources": [
     "https://www.anthropic.com/news/confidential-draft-s1-sec",
     "https://www.advisorhub.com/anthropic-picks-morgan-stanley-goldman-sachs-to-lead-ipo/",
@@ -2574,7 +2574,7 @@
    "draft_sources": [
     "https://www.anthropic.com/news/confidential-draft-s1-sec"
    ],
-   "red_team": "NOT A COMPLETED RAISE: no IPO has been priced. Anthropic's Rule 135 notice (2026-06-01): 'Anthropic, PBC confidentially submitted a draft registration statement on Form S-1 to the U.S. Securities and Exchange Commission'; 'The number of sha",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. NOT A COMPLETED RAISE: no IPO has been priced. Anthropic's Rule 135 notice (2026-06-01): 'Anthropic, PBC confidentially submitted a draft registration statement on Form S-1 to the U.S. Securities and Exchange Commission'; 'The number of sha",
    "event_id": null
   },
   {
@@ -2617,15 +2617,15 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 1,
-   "confidence": "MEDIUM",
+   "cross_check": 2,
+   "confidence": "HIGH",
    "sources": [
     "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation"
    ],
    "draft_sources": [
     "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation"
    ],
-   "red_team": "Re-derivation landed on the same publisher as the draft: one origin, not two. Company-announced (Anthropic post 2025-03-03): $3.5B at a $61.5B post-money valuation. Pre-money of $58.0B is DERIVED (61.5 - 3.5), not stated by the company. Other named participants: Bessemer Venture Partners, Cisco Investments, D1 Capita",
+   "red_team": "Company-announced (Anthropic post 2025-03-03): $3.5B at a $61.5B post-money valuation. Pre-money of $58.0B is DERIVED (61.5 - 3.5), not stated by the company. Other named participants: Bessemer Venture Partners, Cisco Investments, D1 Capita",
    "event_id": null
   },
   {
@@ -2674,7 +2674,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 3,
+   "cross_check": 4,
    "confidence": "HIGH",
    "sources": [
     "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
@@ -2806,7 +2806,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 5,
+   "cross_check": 4,
    "confidence": "MEDIUM",
    "sources": [
     "https://www.thestandard.com.hk/innovation/article/341478/Anthropic-signs-US35-billion-cloud-deal-with-Nvidia-backed-Lambda-source-says",
@@ -2849,7 +2849,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 3,
+   "cross_check": 4,
    "confidence": "HIGH",
    "sources": [
     "https://www.anthropic.com/news/anthropic-amazon-compute",
@@ -2887,7 +2887,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 9,
+   "cross_check": 11,
    "confidence": "HIGH",
    "sources": [
     "https://www.anthropic.com/news/higher-limits-spacex",
@@ -2925,7 +2925,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 3,
+   "cross_check": 4,
    "confidence": "MEDIUM",
    "sources": [
     "https://www.sec.gov/Archives/edgar/data/1830081/000121390026092801/ea0303131-8k_rumgroup.htm",
@@ -3047,7 +3047,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 3,
+   "cross_check": 4,
    "confidence": "HIGH",
    "sources": [
     "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
@@ -3088,7 +3088,7 @@
     }
    ],
    "tier": "T2",
-   "cross_check": 9,
+   "cross_check": 8,
    "confidence": "MEDIUM",
    "sources": [
     "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
@@ -3097,7 +3097,7 @@
     "https://finance.yahoo.com/technology/ai/articles/anthropic-1-518-billion-commitment-165731037.html"
    ],
    "draft_sources": [],
-   "red_team": "Re-deriver found sources that disagree: Prospectus (Reuters): at least $518B over a decade, six partners, ~80% non-cancelable vs The Information: up to $517B of contracts signed in 11 months, at least 14.8 GW; Prospectus figure 'by early 2026': >$417B covering 3.5 GW vs Prospectus figure later: at least $518B over a decade (1) Prospectus: 'at least $518 billion over a decade ... with six partners' (Google, Amazon, Microsoft, Broadcom, xAI, AMD; components sum to 498.2 + AMD >20 = ~518), a mix of minimum/non-cancelable commitments and 'up to' ceilings, not a s",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: Prospectus (Reuters): at least $518B over a decade, six partners, ~80% non-cancelable vs The Information: up to $517B of contracts signed in 11 months, at least 14.8 GW; Prospectus figure 'by early 2026': >$417B covering 3.5 GW vs Prospectus figure later: at least $518B over a decade (1) Prospectus: 'at least $518 billion over a decade ... with six partners' (Google, Amazon, Microsoft, Broadcom, xAI, AMD; components sum to 498.2 + AMD >20 = ~518), a mix of minimum/non-cancelable commitments and 'up to' ceilings, not a s",
    "event_id": null
   },
   {
@@ -3124,7 +3124,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 4,
+   "cross_check": 5,
    "confidence": "HIGH",
    "sources": [
     "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
@@ -3162,7 +3162,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 6,
+   "cross_check": 7,
    "confidence": "MEDIUM",
    "sources": [
     "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
@@ -3272,9 +3272,9 @@
      "detail": "-$2,980M vs -2980 (0.0% apart)"
     }
    ],
-   "tier": "T1",
-   "cross_check": 5,
-   "confidence": "HIGH",
+   "tier": "T2",
+   "cross_check": 6,
+   "confidence": "MEDIUM",
    "sources": [
     "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
     "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
@@ -3284,7 +3284,7 @@
    "draft_sources": [
     "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/"
    ],
-   "red_team": "SECOND OUTLET WITH OWN REPORTING: no (Fortune and The Decoder both re-report Reuters; Reuters original unopened). The two-decimal $2.98bn is NOT in the four Reuters wire copies I opened (Yahoo, Investing.com, The Star, Global Banking & Fina",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. SECOND OUTLET WITH OWN REPORTING: no (Fortune and The Decoder both re-report Reuters; Reuters original unopened). The two-decimal $2.98bn is NOT in the four Reuters wire copies I opened (Yahoo, Investing.com, The Star, Global Banking & Fina",
    "event_id": null
   },
   {
@@ -3320,7 +3320,7 @@
    "draft_sources": [
     "https://my.pitchbook.com/research-center/report/3f3cac2e-a62a-3ede-ac3c-e5a1a126fcdd"
    ],
-   "red_team": "TTM = FY2025 - (Q1 2025 + Q2 2025) + H1 2026 = 4.59 - (Q1 2025 + 0.787) + 16.23 = 20.03 - Q1 2025. Q1 2025 was not found; a run-rate-implied estimate is about $0.3-0.5B, giving about $19.5-19.7B; if Q1 2025 were anywhere from $0.2B to $0.6B",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. TTM = FY2025 - (Q1 2025 + Q2 2025) + H1 2026 = 4.59 - (Q1 2025 + 0.787) + 16.23 = 20.03 - Q1 2025. Q1 2025 was not found; a run-rate-implied estimate is about $0.3-0.5B, giving about $19.5-19.7B; if Q1 2025 were anywhere from $0.2B to $0.6B",
    "event_id": null
   },
   {
@@ -3356,7 +3356,7 @@
    "draft_sources": [
     "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
    ],
-   "red_team": "On WSJ's numbers ($4.8B + $11.6B) the sum is about $16.4B, so the plausible range is $16.2-16.4B; Bloomberg's 'more than $11.5B' for Q2 implies H1 is at least about $16.2B. Q2 is preliminary, so H1 is preliminary. Provenance: Q1/Q2 2026 fig",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. On WSJ's numbers ($4.8B + $11.6B) the sum is about $16.4B, so the plausible range is $16.2-16.4B; Bloomberg's 'more than $11.5B' for Q2 implies H1 is at least about $16.2B. Q2 is preliminary, so H1 is preliminary. Provenance: Q1/Q2 2026 fig",
    "event_id": null
   },
   {
@@ -3381,7 +3381,7 @@
     }
    ],
    "tier": "T3",
-   "cross_check": 6,
+   "cross_check": 5,
    "confidence": "MEDIUM",
    "sources": [
     "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
@@ -3392,7 +3392,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html"
    ],
-   "red_team": "Re-deriver found sources that disagree: $11.5B preliminary (Bloomberg; FT/S-1) vs $11.6B (WSJ, 2026-08-18, via The Next Web) Year-earlier quarter: $787M (14-fold). Earlier WSJ projection (2026-05-20): $10.9B. CNBC (2026-08-15) and Forbes (2026-08-17) pages were not openable. Provenance: Q1/Q2 2026 figures come from investor documents reported by Bloomberg and WSJ",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: $11.5B preliminary (Bloomberg; FT/S-1) vs $11.6B (WSJ, 2026-08-18, via The Next Web) Year-earlier quarter: $787M (14-fold). Earlier WSJ projection (2026-05-20): $10.9B. CNBC (2026-08-15) and Forbes (2026-08-17) pages were not openable. Provenance: Q1/Q2 2026 figures come from investor documents reported by Bloomberg and WSJ",
    "event_id": null
   },
   {
@@ -3417,8 +3417,8 @@
     }
    ],
    "tier": "T2",
-   "cross_check": 10,
-   "confidence": "HIGH",
+   "cross_check": 12,
+   "confidence": "MEDIUM",
    "sources": [
     "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html",
     "https://cryptoslate.com/anthropic-lost-42-billion-warned-ai-could-resist-shutdowns-but-traders-still-price-it-at-2-trillion/",
@@ -3428,7 +3428,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "Re-deriver found sources that disagree: $4.5B FY2025 revenue (The Information, Jan 2026 investor documents; Wikipedia infobox) vs ~$4.59B / 'nearly $4.6B' (draft S-1 via Reuters); 'roughly $10 billion in actual revenue during 2025' (IBTimes 2026-08-17) vs ~$4.59B recognized FY2025 revenue (draft S-1) Near-exact: $3.8B usage + $0.789B subscription = about $4.59B (Economic Times snippet also says $4.59B; page not opened). About 12x FY2024 (~$381-386M). Two customers were ~25% of 2025 revenue (12% each). Net loss ~$42B (about $34B non-cash",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: $4.5B FY2025 revenue (The Information, Jan 2026 investor documents; Wikipedia infobox) vs ~$4.59B / 'nearly $4.6B' (draft S-1 via Reuters); 'roughly $10 billion in actual revenue during 2025' (IBTimes 2026-08-17) vs ~$4.59B recognized FY2025 revenue (draft S-1) Near-exact: $3.8B usage + $0.789B subscription = about $4.59B (Economic Times snippet also says $4.59B; page not opened). About 12x FY2024 (~$381-386M). Two customers were ~25% of 2025 revenue (12% each). Net loss ~$42B (about $34B non-cash",
    "event_id": null
   },
   {
@@ -3454,7 +3454,7 @@
    ],
    "tier": "T2",
    "cross_check": 9,
-   "confidence": "HIGH",
+   "confidence": "MEDIUM",
    "sources": [
     "https://news.bitcoin.com/finance/anthropic-chases-2-trillion-ipo-42-billion-loss/",
     "https://cryptoslate.com/anthropic-lost-42-billion-warned-ai-could-resist-shutdowns-but-traders-still-price-it-at-2-trillion/",
@@ -3464,7 +3464,7 @@
    "draft_sources": [
     "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/"
    ],
-   "red_team": "Re-deriver found sources that disagree: $381M (The Information, 2026-01, investor documents) vs ~$386M (S-1-era: +1,088% growth / Bitcoin.com News); ~$400M rounded All FY2024 figures seen: ~$386M (S-1-era, implied by +1,088% and stated by Bitcoin.com News), $381M (The Information via Epoch), ~$383M (implied by a flat 12x of $4.59B), ~$400M (rounded by SiliconANGLE / 24/7 Wall St.). FY2024 operating lo",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: $381M (The Information, 2026-01, investor documents) vs ~$386M (S-1-era: +1,088% growth / Bitcoin.com News); ~$400M rounded All FY2024 figures seen: ~$386M (S-1-era, implied by +1,088% and stated by Bitcoin.com News), $381M (The Information via Epoch), ~$383M (implied by a flat 12x of $4.59B), ~$400M (rounded by SiliconANGLE / 24/7 Wall St.). FY2024 operating lo",
    "event_id": null
   },
   {
@@ -3490,7 +3490,7 @@
    ],
    "tier": "T2",
    "cross_check": 5,
-   "confidence": "HIGH",
+   "confidence": "MEDIUM",
    "sources": [
     "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
     "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/",
@@ -3500,7 +3500,7 @@
    "draft_sources": [
     "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
    ],
-   "red_team": "Re-deriver found sources that disagree: $4.73B (IBTimes / 24/7 Wall St., Bloomberg-era documents) vs $4.8B (WSJ 2026-05-20 via PYMNTS) WSJ's $4.8B (May 2026, from investor documents) is 1.5% above the $4.73B that later outlets use. Q1 2026 alone ($4.73B) already exceeds FY2025 (~$4.59B). OpenAI's Q1 revenue was reported at $5.7B (WSJ/The Information), i.e. above Anthropic'",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: $4.73B (IBTimes / 24/7 Wall St., Bloomberg-era documents) vs $4.8B (WSJ 2026-05-20 via PYMNTS) WSJ's $4.8B (May 2026, from investor documents) is 1.5% above the $4.73B that later outlets use. Q1 2026 alone ($4.73B) already exceeds FY2025 (~$4.59B). OpenAI's Q1 revenue was reported at $5.7B (WSJ/The Information), i.e. above Anthropic'",
    "event_id": null
   },
   {
@@ -4624,9 +4624,9 @@
      "detail": "$42B vs 42000 (0.0% apart)"
     }
    ],
-   "tier": "T1",
+   "tier": "T2",
    "cross_check": 6,
-   "confidence": "HIGH",
+   "confidence": "MEDIUM",
    "sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
     "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
@@ -4636,7 +4636,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, 'near-$42 billion' (FY2025 net loss per the draft S-1; Reuters does",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, 'near-$42 billion' (FY2025 net loss per the draft S-1; Reuters does",
    "event_id": null
   },
   {
@@ -4659,8 +4659,8 @@
      "detail": "$4.73B vs 4730 (0.0% apart)"
     }
    ],
-   "tier": "T1",
-   "cross_check": 6,
+   "tier": "T2",
+   "cross_check": 7,
    "confidence": "MEDIUM",
    "sources": [
     "https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/",
@@ -4671,7 +4671,7 @@
    "draft_sources": [
     "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
    ],
-   "red_team": "Re-deriver found sources that disagree: $4.73bn Q1 2026 revenue (Bloomberg, 2026-08-14, investor documents) vs $4.8bn Q1 2026 sales (WSJ, 2026-05-20, as quoted by Zitron) SECOND OUTLET WITH OWN REPORTING: yes for the figure (Bloomberg; WSJ gave ~$4.8bn in May) but NOT reported as a prospectus figure. USD millions, Q1 2026 (Jan-Mar) revenue $4.73bn. Provenance caveat: no outlet I opened attributes this figure",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. Re-deriver found sources that disagree: $4.73bn Q1 2026 revenue (Bloomberg, 2026-08-14, investor documents) vs $4.8bn Q1 2026 sales (WSJ, 2026-05-20, as quoted by Zitron) SECOND OUTLET WITH OWN REPORTING: yes for the figure (Bloomberg; WSJ gave ~$4.8bn in May) but NOT reported as a prospectus figure. USD millions, Q1 2026 (Jan-Mar) revenue $4.73bn. Provenance caveat: no outlet I opened attributes this figure",
    "event_id": null
   },
   {
@@ -4694,9 +4694,9 @@
      "detail": "$20.28B vs 20280 (0.0% apart)"
     }
    ],
-   "tier": "T1",
-   "cross_check": 5,
-   "confidence": "HIGH",
+   "tier": "T2",
+   "cross_check": 4,
+   "confidence": "MEDIUM",
    "sources": [
     "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
     "https://www.globalbankingandfinance.com/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging/",
@@ -4706,7 +4706,7 @@
    "draft_sources": [
     "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
    ],
-   "red_team": "SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, as of 2025-12-31 (before the $30bn Series G of Feb 2026 and $65bn S",
+   "red_team": "Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence. SECOND OUTLET WITH OWN REPORTING: not confirmed (Reuters is the only readable origin; the FT and NYT also saw the filing but their text was unreadable to me). USD millions, as of 2025-12-31 (before the $30bn Series G of Feb 2026 and $65bn S",
    "event_id": null
   },
   {
@@ -4731,7 +4731,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 4,
+   "cross_check": 5,
    "confidence": "HIGH",
    "sources": [
     "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
@@ -4772,7 +4772,7 @@
     }
    ],
    "tier": "T3",
-   "cross_check": 5,
+   "cross_check": 4,
    "confidence": "MEDIUM",
    "sources": [
     "https://www.pymnts.com/artificial-intelligence-2/2026/enterprises-drive-anthropic-run-rate-revenue-to-19-billion/",
@@ -4813,7 +4813,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 4,
+   "cross_check": 5,
    "confidence": "HIGH",
    "sources": [
     "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
@@ -4849,7 +4849,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 4,
+   "cross_check": 3,
    "confidence": "HIGH",
    "sources": [
     "https://finance.yahoo.com/news/exclusive-anthropic-aims-nearly-triple-170234463.html",
@@ -4961,7 +4961,7 @@
     }
    ],
    "tier": "T2",
-   "cross_check": 5,
+   "cross_check": 6,
    "confidence": "HIGH",
    "sources": [
     "https://www.investing.com/news/stock-market-news/anthropic-revenue-run-rate-tops-65-billion-source-says-4864031",
@@ -5003,7 +5003,7 @@
     }
    ],
    "tier": "T2",
-   "cross_check": 4,
+   "cross_check": 5,
    "confidence": "HIGH",
    "sources": [
     "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
@@ -5091,7 +5091,7 @@
     }
    ],
    "tier": "T1",
-   "cross_check": 5,
+   "cross_check": 6,
    "confidence": "HIGH",
    "sources": [
     "https://www.anthropic.com/news/google-broadcom-partnership-compute",

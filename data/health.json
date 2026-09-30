@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T21:21:51Z",
+ "generated": "2026-09-30T21:42:29Z",
  "events": 691,
  "by_year": {
   "2021": 6,
@@ -80,12 +80,9 @@
   },
   {
    "check": "valuation present without an amount or round wording",
-   "count": 2,
-   "severity": "WARN",
-   "sample": [
-    "evt-20260925-founders-voting-control",
-    "evt-20260928-reuters-draft-prospectus-2025-financials"
-   ]
+   "count": 0,
+   "severity": "OK",
+   "sample": []
   },
   {
    "check": "run-rate above $150B (implausible)",
@@ -101,28 +98,28 @@
   },
   {
    "check": "DISPUTED events (frozen conflicts)",
-   "count": 11,
+   "count": 13,
    "severity": "INFO",
    "sample": [
     "evt-20230523-series-c-valuation-reports",
     "evt-20230925-amazon-up-to-4b",
     "evt-20231027-google-up-to-2b",
-    "evt-20250212-the-information-34-5b-2027-projection",
-    "evt-20250502-amazon-10q-q1-2025-ladder",
-    "evt-20251104-information-gross-margin-path-to-77pct"
+    "evt-20231220-menlo-750m-talks",
+    "evt-20241231-fy2024-financials-leaked-s1",
+    "evt-20250212-the-information-34-5b-2027-projection"
    ]
   },
   {
    "check": "VERIFY events (open checks)",
-   "count": 6,
+   "count": 8,
    "severity": "INFO",
    "sample": [
     "evt-20230524-london-office",
     "evt-20240501-revenue-projection-850m",
     "evt-20250101-marshals-seized-ftx-exec-shares",
+    "evt-20250115-pb-secondary-homeroom-lakeside",
     "evt-20260327-google-texas-data-center-financing-report",
-    "evt-20260406-wsj-investor-docs-secondary-summaries",
-    "evt-20260825-wsj-30t-tam-investor-pitch"
+    "evt-20260406-wsj-investor-docs-secondary-summaries"
    ]
   },
   {
@@ -145,5 +142,5 @@
   }
  ],
  "fails": 0,
- "warns": 2
+ "warns": 1
 }

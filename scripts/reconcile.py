@@ -22,6 +22,18 @@ def dom(u):
     try: return urlparse(u).netloc.lower().replace("www.", "")
     except Exception: return ""
 
+SYNDICATORS = {"finance.yahoo.com", "news.yahoo.com", "yahoo.com", "ksl.com", "marketscreener.com", "investing.com", "msn.com", "tipranks.com", "stocktwits.com", "thestar.com.my", "globalbankingandfinance.com", "nasdaq.com", "benzinga.com"}
+
+def origin_name(publisher, url):
+    """The outlet that did the reporting, not the host that displays it: 'Reuters (via Yahoo Finance)' -> 'reuters'. Syndication hosts with no publisher add no origin."""
+    p = (publisher or "").strip()
+    if p:
+        p = re.split(r"\s+via\s+|\(|:|;|\s+-\s+|,", p, 1)[0].strip().lower()
+        p = re.sub(r"^the\s+", "", p)
+        if p: return p[:40]
+    d = dom(url)
+    return "" if d in SYNDICATORS else d
+
 def pure_num(v):
     """A number, or a short string that is essentially only a number with an optional unit. Anything else is text and is not compared."""
     if v is None or isinstance(v, bool): return None
@@ -97,15 +109,19 @@ for c in master:
         verdict = "PARTIAL"
     else:
         verdict = "MATCH"
-    doms_re = {dom(s["url"]) for s in srcs} - {""}
-    doms_dr = {dom(u) for u in c.get("draft_sources", [])} - {""}
+    doms_re = {origin_name(s.get("publisher"), s["url"]) for s in srcs} - {""}
+    doms_dr = {origin_name(None, u) for u in c.get("draft_sources", [])} - {""}
     indep = len(doms_re | doms_dr) if verdict == "MATCH" else len(doms_re)
     same_origin = bool(doms_re) and doms_re <= doms_dr
+    leak = bool(re.search(r"leak|draft (s-1|prospectus)|prospectus", " ".join([str(c.get("label") or ""), str(c.get("question") or ""), json.dumps(c.get("expect") or {}), str(found.get("notes") or ""), str(found.get("basis") or "")]), re.I))
     if verdict == "MATCH": conf = "HIGH" if indep >= 2 and best_tier <= 2 and not same_origin and hint != "PARTIAL" else "MEDIUM"
     elif verdict == "MISMATCH": conf = "DISPUTED"
     elif verdict == "NOTED": conf = "MEDIUM" if hint == "FOUND" and best_tier <= 3 else "VERIFY"
     else: conf = "VERIFY"
     red = []
+    if leak and best_tier < 2: best_tier = 2          # a figure read from a leaked draft is press-reported: never T1
+    if leak and conf == "HIGH": conf = "MEDIUM"
+    if leak and verdict in ("MATCH", "NOTED", "PARTIAL"): red.append("Press-reported from a leaked draft prospectus (Reuters/FT review; no public S-1): outlets that re-report it are one reporting chain, so the origin count overstates independence.")
     if same_origin: red.append("Re-derivation landed on the same publisher as the draft: one origin, not two.")
     if sources_disagree and a: red.append("Re-deriver found sources that disagree: " + "; ".join(f"{x.get('value_a')} vs {x.get('value_b')}" for x in (a.get("conflicts") or [])[:2]))
     if verdict == "MISMATCH": red.append("Frozen: draft and re-derivation disagree beyond tolerance; neither is adopted.")
