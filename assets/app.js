@@ -583,6 +583,9 @@ function renderModel(root) {
       }
     }
     side.append(el('h4', { text: 'Margins' }));
+    { const sc = state.data.compute?.model_cross_check?.fy2026_gross_margin_scope;
+      side.append(el('div', { class: 'small muted', style: { marginBottom: '8px', lineHeight: 1.45 } }, `Scope: gross margin here is after inference and other cost of revenue, before training and stock compensation; training is a separate line. `,
+        sc ? `The Compute tab reads 2026E at ${fmt.pct(sc.this_file_central_after_partner_share)} after partner share (${fmt.pct(sc.this_file_company_adjusted_before_partner_share)} before it, the company-adjusted scope) against ${fmt.pct(sc.model_base_gross_margin_2026)} here. The gap is how PitchBook's $0.56 Q2 compute-per-revenue-dollar is read (inference only here; all compute incl. training there). It is unresolved until the S-1 shows cost of revenue.` : '')); }
     [2026, 2027, 2028, 2029, 2030].forEach(y => sl(`${y} gross margin`, () => A.gross_margin[y], v => A.gross_margin[y] = v, -0.5, 0.9, 0.01, v => fmt.pct(v), y === 2026 ? S.gross_margin : null));
     sl('Inference share of cost of revenue', () => A.inference_share_of_cogs, v => A.inference_share_of_cogs = v, 0.3, 0.95, 0.01, v => fmt.pct(v), S.inference_share);
     side.append(el('h4', { text: 'Opex & compute' }));
