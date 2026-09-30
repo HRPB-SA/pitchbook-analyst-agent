@@ -76,6 +76,9 @@ Provide EVERY per-year key for 2024–2030 in every scenario (the browser engine
    or you must say exactly why it is not (they are dated; revenue has since far outrun the plan).
 6. **Verify by running the engine.** After writing the file run `python3 scripts/model.py` and read the printout; check revenue path, margins, cumulative FCF, DCF EV and the reverse-DCF CAGR
    for each mark. Iterate at most 3 times. Flag anything that looks implausible (e.g. FCF margin > 45%, revenue growth that implies >50% of a hypothetical market) in `notes` and `log` (type flag).
+6b. **State the engine's limits in `notes`, with a size estimate where you can:** no NOL carryforward (cash tax is overstated in the years after cumulative losses, size it as cumulative pre-tax losses × tax rate);
+   EV is treated as equity value (net cash and debt ignored; the record has the ~$15B revolver and any chip bonds); valuation date is end-2025 discounting (marks are mid-2026 prices, so a mid-year convention would raise PVs by roughly half a year of the discount rate);
+   no dilution from IPO primary proceeds; FCF-multiple terminal value in a hyper-growth year 2030 is a stress point, so show how the DCF EV moves between a 15x and a 30x terminal multiple.
 7. **No new facts.** Every number you did not choose yourself as an assumption is traceable. Assumptions are labelled as assumptions. No confidence percentages.
    Name what observation would change each major assumption.
 8. **Style.** Plain, short sentences. $14.2B, 27.1x, +47% YoY. No "it's worth noting", "importantly", "leverage" (verb), "unlock", "delve", "going forward", no em-dash asides.

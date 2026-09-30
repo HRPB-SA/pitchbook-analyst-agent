@@ -278,7 +278,7 @@ def build_metrics(events, outs):
         talks = re.search(r"\b(in talks|talks to|reportedly seeking|seeking to raise|discussing|considering|weighs|could value|would value|target(s|ed)? valuation|secondary[- ]market|up to \$?\d+(\.\d+)? ?(b|t)\b.*(ipo|listing))\b", text)
         ipo_only = ("ipo" in e["category"]) and not ({"funding", "secondary"} & set(e["category"]))
         filing = re.search(r"\b(s-1|prospectus|confidential(ly)? (submit|fil))\b", text)
-        if ex.get("valuation_post_usd_m") and not talks and not ipo_only and not filing and (({"funding", "secondary", "debt"} & set(e["category"])) or e["confidence"] in ("HIGH", "CANONICAL")):
+        if ex.get("valuation_post_usd_m") and not talks and not ipo_only and not filing and ({"funding", "valuation", "debt"} & set(e["category"])):   # a financing event; secondary-market marks live in the deals desk table
             m["valuation"].append({"date": e["date"], "usd_m": ex["valuation_post_usd_m"], "pre_usd_m": ex.get("valuation_pre_usd_m"), "label": e["headline"], "event_id": e["id"], "tier": e["source"]["tier"], "confidence": e["confidence"]})
         if ex.get("revenue_run_rate_usd_m") and e["source"]["tier"] in ("T1", "T2", "T3") and e["confidence"] in ("HIGH", "MEDIUM", "CANONICAL"):
             m["run_rate"].append({"date": e["date"], "usd_m": ex["revenue_run_rate_usd_m"], "event_id": e["id"], "tier": e["source"]["tier"], "confidence": e["confidence"], "source": e["source"]["url"]})

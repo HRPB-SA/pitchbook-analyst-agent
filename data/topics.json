@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T18:41:31Z",
+ "generated": "2026-09-30T18:48:34Z",
  "topics": [
   {
    "slug": "product",
@@ -28,7 +28,7 @@
     },
     {
      "label": "Claude Code run-rate, latest in record",
-     "value": "Over $2.5B on Feb 12 2026, about 18% of the $14B company run-rate; no later figure",
+     "value": "Over $2.5B on Feb 12 2026, at least 18% of the $14B company run-rate; no later figure",
      "event_id": "evt-20260212-series-g-30b-380b"
     },
     {
@@ -137,7 +137,7 @@
      ]
     },
     {
-     "t": "Interpretation: a release every three weeks means overlapping training, post-training and safety work, so R&D runs continuously. The leaked prospectus (Reuters, T2) shows FY2025 opex of $12.65B on revenue of $4.6B, and compute infrastructure spend of $7.33B with no definition in the record. Earliest retirement dates now sit 12 months after release, and recent models retired near them. The $518B compute plan is about 80% non-cancelable (T3).",
+     "t": "Interpretation: a release every three weeks means overlapping training, post-training and safety work, so R&D runs continuously. The leaked prospectus (Reuters, T2) shows FY2025 opex of $12.65B on revenue of $4.6B, and compute infrastructure spend of $7.33B with no definition in the record. Earliest retirement dates for five current models sit 12 months after release. The $518B compute plan is about 80% non-cancelable (T3).",
      "e": [
       "evt-20260928-reuters-draft-prospectus-2025-financials",
       "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
@@ -314,7 +314,7 @@
     "evt-20260522-glasswing-initial-update"
    ],
    "analyst": "analyst-topic-product",
-   "finished": "2026-09-30T18:41:29Z"
+   "finished": "2026-09-30T18:41:46Z"
   },
   {
    "slug": "legal",
@@ -470,7 +470,7 @@
      ]
     },
     {
-     "t": "Treat Pentagon workload revenue as largely lost and commercial spillover as contingent. The March declaration sized 2026 revenue risk at hundreds of millions to multiple billions when gross run-rate was $14B to $19B. Run-rate is $65B now (T2), and Judge Lin vacated the contractor boycott. The Pentagon says about 90% of workloads moved, though NSA use of Mythos is reported (T3). Watch en banc or certiorari.",
+     "t": "Treat Pentagon workload revenue as largely lost and commercial spillover as contingent. The March declaration sized 2026 revenue risk at hundreds of millions to multiple billions when run-rate was $14B (T1, gross) to $19B (T3). Run-rate is $65B now (T2, gross), and Judge Lin vacated the contractor boycott. The Pentagon says about 90% of workloads moved, though NSA use of Mythos is reported (T3).",
      "e": [
       "evt-20260309-cfo-declaration-revenue-at-risk",
       "evt-20260911-dod-migration-90pct",
@@ -496,13 +496,15 @@
      ]
     },
     {
-     "t": "Name government recall and hold power as an operating risk, not a one-off. In the S-1 check three items: Commerce's reported right to reimpose restrictions (T4), the SB 53 15-day incident rule against a January incident disclosed Sep 9, and the FTC probe. Watch for a third availability action, and for Treasury or Commerce action on Moonshot or Alibaba, which would back Anthropic's distillation case.",
+     "t": "Likely risk-factor topics, by cases-table notes: Bartz, music, publisher and opt-out suits, Reddit, the Pentagon label, the June recall, the FTC probe, eval incidents, distillation. Among these, press confirms only self-preservation, agentic legal risk and (T4, VERIFY) backlash language. Treat recall and hold power as an operating risk. Check the S-1 for Commerce's reported right to reimpose restrictions (T4) and SB 53 incident reporting.",
      "e": [
+      "evt-20260928-prospectus-risk-factors",
+      "evt-20260928-prospectus-risk-factors-80-of-261-pages",
+      "evt-20260930-ftc-probe-anthropic-openai",
+      "evt-20260822-cnbc-ai-and-data-center-backlash-risk-factor",
       "evt-20260701-fable-5-mythos-5-access-restored",
       "evt-20251219-sb53-compliance-framework",
-      "evt-20260909-alignment-assessment-fourth-incident",
-      "evt-20260722-treasury-moonshot-fable-distillation-threat",
-      "evt-20260908-cisa-fbi-nsa-advisory-on-chinese-ai-distillation"
+      "evt-20260929-draft-s1-leaked-to-reuters"
      ]
     }
    ],
@@ -510,8 +512,8 @@
     "Valuation is now a litigation input. Concord II pleaded a $350B+ valuation and Sony and Warner Chappell pleaded $965B, arguing $1.5B does not deter. A listing near $2T (WSJ, T3) hands the next plaintiff a larger anchor, so per-work asks may track market cap. Underwriters, insurers and counsel must price that. Consensus may treat Bartz as a ceiling; plaintiffs cite it as a floor.",
     "The Pentagon dispute may end by politics, not judgment. The rulings rest on different statutes and courts, and Anthropic is considering further review with no deadline in the record. Meanwhile Lutnick signals the security rift is over (Sep 2, T3), Trump and Amodei dined Sep 27 (date inferred), and Amodei signed the Sep 29 voluntary pact. Consensus watches the courts; the lever may be the White House.",
     "Regulators converge on one capability. Commerce (recall), the National Cyber Director (hold), the FTC (developer liability, single source), the Pentagon (exclusion), the EU (watermarking from Aug 2) and California (SB 53 incident reports) all act on cyber-capable agents. OpenAI is named beside Anthropic in the FTC probe and the hold, so the burden is sector-wide: a timing risk for a crowded IPO window, not a relative discount.",
-    "A security lapse fed a patent suit. UTRF's Jul 20 complaint cites internal Claude Code file names such as autoDream.ts, which the record infers came from the Mar 31 source leak. The leak response was itself an error: DMCA notices hit about 8,100 repositories and were mostly retracted. An operational slip now carries IP exposure, so security and legal need one playbook.",
-    "Distillation claims double as policy advocacy, so their accuracy matters. The June letter asked for export controls and penalties, CISA cites Anthropic's February post, and Treasury says sanctions are 'on the table'. Alibaba account counts differ by about 7x between the June letter (about 25,000) and the Sep report (3,500), over different windows. If regulators rely on the counts and they are challenged, the tailwind weakens."
+    "Security events now cross into legal and policy. UTRF's Jul 20 patent complaint cites internal Claude Code file names such as autoDream.ts, which the record infers came from the Mar 31 leak. Distillation claims drive policy asks, yet Alibaba account counts differ about 7x (derived) between the June letter and the September report, over different windows. Challenged counts would weaken the tailwind.",
+    "Advocacy has become a liability. Amodei's Sep 12 pacing essay is cited in the Buist antitrust complaint (Sep 18), Sacks called the push regulatory capture (Sep 13, T3), and WSJ (T3) ties the November slip to scrutiny after the CEO's pace warnings. A safety-first stance now carries antitrust and timing cost. Consensus may treat the policy stance as brand; the record shows legal and IPO consequences."
    ],
    "watch": [
     {
@@ -522,7 +524,7 @@
     {
      "item": "Concord I cross-motions for summary judgment on lyric fair use, 10:00 AM, San Jose Courtroom 7 (Judge Lee)",
      "by": "2026-10-21",
-     "threshold": "A ruling that lyric training or outputs are not fair use would reprice Concord II, Round Hill, Sony and Warner Chappell and BMG. A fair-use win narrows them to the piracy theory. Ruling date is not in the record."
+     "threshold": "A ruling that lyric training or outputs are not fair use would reprice Concord II, Round Hill, Sony and Warner Chappell and BMG and likely draw new filings; at least 10 have followed the Bartz signing (derived). A fair-use win narrows them to the piracy theory. Ruling date is not in the record."
     },
     {
      "item": "D.C. Circuit follow-up: Anthropic's choice on en banc rehearing or certiorari (mandate withheld), the government's stayed Ninth Circuit appeal 26-2011, and DoD phase-out completion (Sep 30 per FedScoop, end of October per DefenseScoop)",
@@ -555,7 +557,7 @@
      "threshold": "A formal designation would back the distillation case. A third availability action in 2026 would make recall risk a pattern. None found as of Sep 30."
     }
    ],
-   "house_view": "(a) Extends: 16 open court matters, an upheld Pentagon exclusion and a new FTC probe sit beside a $965B Series H mark and a reported $2T target with no legal discount mentioned in the record, though this slice holds no multiples and so does not test the belief. (b) Does not apply, except that the CFO's revenue-at-risk figures state no gross or net basis. (c) Extends: dated legal catalysts add issuer-specific timing risk to pipeline risk, and WSJ (T3) already reports a slip from October to November. (d) No direct test: the record does not say how the $1.5B is funded, and if equity paid it, the equity-raised denominator carries $1.5B that bought no capacity. (e) Confirms in part: per-work statutory damages on training data and a federal recall of a live model within hours are frontier-lab exposures that software-sector legal conventions would miss.",
+   "house_view": "(a) Extends: 16 open court matters, an upheld Pentagon exclusion and a new FTC probe sit beside a $965B Series H mark and a reported $2T target with no legal discount mentioned in the record, though this slice holds no multiples and so does not test the belief. (b) Does not apply, except that the CFO's revenue-at-risk figures state no gross or net basis. (c) Extends: dated legal catalysts add issuer-specific timing risk to pipeline risk, and the window has already slid to mid-October (Reuters Sep 4, T3), November (WSJ Sep 18, T3) and after the midterms (Reuters Sep 29, T2). (d) No direct test: the record does not say how the $1.5B is funded, and if equity paid it, the equity-raised denominator carries $1.5B that bought no capacity. (e) Confirms in part: per-work statutory damages on training data and a federal recall of a live model within hours are frontier-lab exposures that software-sector legal conventions would miss.",
    "uncertainties": [
     {
      "type": "data",
@@ -574,7 +576,7 @@
     },
     {
      "type": "interpretation",
-     "note": "Pentagon exposure rests on litigation declarations, not audited revenue, and states no gross or net basis. The range was written when gross run-rate was $14B to $19B. Realized loss is not in the record beyond the Pentagon's claim that about 90% of workloads moved (T2). Reference class: none in the record, since the label had never been applied to a US company.",
+     "note": "Pentagon exposure rests on litigation declarations, not audited revenue, and states no gross or net basis. The range was written when run-rate was $14B (T1, gross) to $19B (T3, basis unstated). Realized loss is not in the record beyond the Pentagon's claim that about 90% of workloads moved (T2). Reference class: none in the record, since the label had never been applied to a US company.",
      "what_would_change_it": "S-1 disclosure of public-sector and defense-related revenue."
     },
     {
@@ -625,10 +627,15 @@
     "evt-20260902-lutnick-says-anthropic-back-on-administrations-side",
     "evt-20250714-dod-cdao-200m",
     "evt-20260420-nsa-uses-mythos-despite-blacklist",
-    "evt-20260918-hacktron-uses-opus-5-to-breach-openai"
+    "evt-20260918-hacktron-uses-opus-5-to-breach-openai",
+    "evt-20260928-prospectus-risk-factors-80-of-261-pages",
+    "evt-20260918-wsj-ipo-pushed-to-november",
+    "evt-20260904-reuters-ipo-launch-shifts-toward-mid-october",
+    "evt-20260912-pace-the-frontier",
+    "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture"
    ],
    "analyst": "analyst-topic-legal",
-   "finished": "2026-09-30T18:41:12Z"
+   "finished": "2026-09-30T18:44:51Z"
   },
   {
    "slug": "government",
@@ -637,12 +644,12 @@
    "key_metrics": [
     {
      "label": "Countries with Anthropic offices (open at Sep 30 2026)",
-     "value": "11: US, UK, Ireland, Switzerland, Japan, India, France, Germany, Australia, Italy, South Korea. Singapore, due Oct 2026, would be the 12th.",
+     "value": "11 per the offices table: US, UK, Ireland, Switzerland, Japan, India, France, Germany, Australia, Italy, South Korea. Singapore, due Oct 2026, would be the 12th.",
      "event_id": "evt-20260916-singapore-office-plan"
     },
     {
      "label": "DoD CDAO agreement value",
-     "value": "$200M ceiling over two years (Jul 14, 2025). A ceiling, not committed spend. xAI, OpenAI and Google got the same ceiling.",
+     "value": "$200M ceiling over two years (Jul 14, 2025). A ceiling, not committed spend. xAI, OpenAI and Google got the same ceiling (DefenseScoop, T2).",
      "event_id": "evt-20250714-dod-cdao-200m"
     },
     {
@@ -661,14 +668,14 @@
      "event_id": "evt-20260612-us-export-control-directive-fable-mythos"
     },
     {
-     "label": "Federal revenue claims (litigation declaration)",
-     "value": "Public-sector ARR projected at several hundred million dollars for 2026 before the ban. 2026 revenue at risk put at hundreds of millions to multiple billions. Not audited.",
-     "event_id": "evt-20260309-cfo-declaration-revenue-at-risk"
+     "label": "Federal revenue claims (sworn declarations)",
+     "value": "Before the ban, 2026 public-sector ARR was expected at several hundred million dollars (court summary, T1), above $500M per Reuters (T2). $150M of DoD ARR was lost immediately. 2026 revenue at risk: hundreds of millions (DoD) to multiple billions. Not audited.",
+     "event_id": "evt-20260309-cfo-declaration-public-sector"
     }
    ],
    "what": [
     {
-     "t": "Federal build-out. Claude reached IL6 classified networks through Palantir and AWS on Nov 7, 2024 (T2). Claude Gov launched Jun 5, 2025 and Bedrock won FedRAMP High and DoD IL4/5 on Jun 11. The CDAO signed a two-year agreement with a $200M ceiling on Jul 14 (T1). GSA listing came Aug 5 and a $1 offer to all three branches Aug 12.",
+     "t": "Federal build-out. Claude reached IL6 classified networks through Palantir and AWS on Nov 7, 2024 (T2). Claude Gov launched Jun 5, 2025 and Bedrock won FedRAMP High and DoD IL4/5 on Jun 11. On Jul 14 Anthropic announced a two-year CDAO agreement with a $200M ceiling (T1). GSA listing came Aug 5 and a $1 offer to all three branches Aug 12.",
      "e": [
       "evt-20241107-palantir-aws-defense",
       "evt-20250605-claude-gov",
@@ -690,7 +697,7 @@
      ]
     },
     {
-     "t": "Two courts, two answers. N.D. Cal. granted summary judgment Aug 27 and vacated the 10 U.S.C. 3252 designation (T1). The D.C. Circuit denied Anthropic's petitions 2-1 on Sep 25 and left the FASCSA exclusion (T1). Under Secretary Michael said Sep 11 that about 90% of workloads had moved (DefenseScoop, T2, single source). Seven named vendors signed IL6 and IL7 deals May 1 (TechCrunch, T2).",
+     "t": "Two courts, two answers. N.D. Cal. granted summary judgment Aug 27 and vacated the 10 U.S.C. 3252 designation (T1). The D.C. Circuit denied Anthropic's petitions 2-1 on Sep 25 and upheld the FASCSA exclusion (T1). Under Secretary Michael said Sep 11 that about 90% of workloads had moved (DefenseScoop, T2, single source). Seven named vendors signed IL6 and IL7 deals May 1 (TechCrunch, T2).",
      "e": [
       "evt-20260827-dow-summary-judgment-permanent-injunction",
       "evt-20260925-dc-circuit-denies-anthropic-petitions",
@@ -699,7 +706,7 @@
      ]
     },
     {
-     "t": "Levers pulled in 2026. A Commerce directive at 5:21pm ET on Jun 12 barred foreign nationals from Fable 5 and Mythos 5, and Anthropic disabled both worldwide for 18 days (T1). On Sep 24 the White House asked Anthropic to hold Mythos 5.1 from UK AISI, and it complied (Politico, T2). The FTC opened an agent-risk probe Sep 30, first reported by the New York Post (Reuters, T2).",
+     "t": "Levers pulled in 2026. A Commerce directive on Jun 12 barred foreign nationals from Fable 5 and Mythos 5, and Anthropic disabled both worldwide for 18 days (T1). On Sep 24 the White House asked Anthropic to hold Mythos 5.1 from UK AISI, and it complied (Politico, T2). The FTC is opening an agent-risk probe, first reported by the New York Post and relayed by Reuters Sep 30 (T2).",
      "e": [
       "evt-20260612-us-export-control-directive-fable-mythos",
       "evt-20260701-fable-5-mythos-5-access-restored",
@@ -721,7 +728,7 @@
      ]
     },
     {
-     "t": "International. Offices: London May 2023 (VERIFY), Zurich Feb 2025, Tokyo Oct 29, Bengaluru Feb 16, Sydney Apr 27, Milan May 27, Seoul Jun 17, Singapore due October. Five sovereign MoUs since Feb 2025: UK, Japan, Rwanda, Australia, Korea. Anthropic says APAC run-rate grew over 10x and EMEA over 9x in a year, without dollars. Volta in Norway is the only non-US compute deal (T2).",
+     "t": "International. Offices opened: London May 2023 (VERIFY), Zurich Feb 2025, Tokyo Oct 29, 2025, Bengaluru Feb 16, Sydney Apr 27, Milan May 27 and Seoul Jun 17, 2026. Dublin, Paris and Munich lack opening dates. Sovereign MoUs: UK Feb 2025, Japan Oct 2025, Rwanda Feb 2026, Australia Mar 2026 and Korea Jun 2026 (all T1).",
      "e": [
       "evt-20230524-london-office",
       "evt-20250213-zurich-office-houlsby",
@@ -730,21 +737,21 @@
       "evt-20260427-sydney-office",
       "evt-20260527-milan-office",
       "evt-20260617-seoul-office",
-      "evt-20260916-singapore-office-plan",
+      "evt-20251107-paris-munich-offices",
+      "evt-20240514-dublin-office-plan",
       "evt-20250214-uk-mou",
       "evt-20260217-rwanda-government-mou",
-      "evt-20260331-australia-government-mou",
-      "evt-20251107-paris-munich-offices",
-      "evt-20260804-volta-10b-norway-compute-deal"
+      "evt-20260331-australia-government-mou"
      ]
     }
    ],
    "means": [
     {
-     "t": "Exposure is federal discretion, not contract revenue. The CDAO ceiling is at most $100M a year, under 1% of the $14B run-rate on Feb 12 (my arithmetic). In seven months the government pulled five levers: agency ban, contractor boycott, model suspension, foreign-access hold and an FTC probe. The court found no chance to respond to the designation, and the Jun 12 letter gave no specifics.",
+     "t": "Exposure is federal discretion, not contract revenue. On my arithmetic the CDAO ceiling is at most 0.7% of the $14B run-rate on Feb 12, and pre-ban public-sector ARR above $500M (Reuters, T2) is over 3.6%. In seven months the government pulled five levers: agency ban, contractor boycott, model suspension, foreign-access hold and an FTC probe. The Jun 12 letter gave no specifics.",
      "e": [
       "evt-20250714-dod-cdao-200m",
       "evt-20260212-series-g-30b-380b",
+      "evt-20260309-cfo-declaration-public-sector",
       "evt-20260827-dow-summary-judgment-permanent-injunction",
       "evt-20260612-us-export-control-directive-fable-mythos",
       "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
@@ -764,7 +771,7 @@
      ]
     },
     {
-     "t": "Evidence policy helps. The rules exempt small labs and bind OpenAI, Google and xAI alike. Anthropic published an SB 53 compliance framework before the law took effect. Its Feb 23 distillation post was cited by the Sep 8 CISA, FBI and NSA advisory on six Chinese labs. Treasury, Commerce and NSA used or sought Mythos (T2, T3). Claude reached No. 1 on the U.S. App Store Feb 28 (T2).",
+     "t": "Evidence policy helps. Anthropic published an SB 53 compliance framework before the law took effect. Its Feb 23 distillation post was cited by the Sep 8 CISA, FBI and NSA advisory on six Chinese labs. Treasury urged banks to test Mythos (T3), Commerce approved it for 100+ US institutions (T2), and NSA reportedly uses it (T3). Claude hit No. 1 on the App Store Feb 28 (T2).",
      "e": [
       "evt-20251219-sb53-compliance-framework",
       "evt-20260223-distillation-attacks-disclosed",
@@ -789,17 +796,19 @@
    ],
    "implications": [
     {
-     "t": "My read, an interpretation: policy is neither a moat nor a revenue liability yet. It is event risk. The realized loss is the DoD channel, while run-rate still rose $14B to $65B, a gross figure and not recognized revenue, with no counterfactual. Reprice tail events: another suspension, FTC findings, FASCSA spillover to contractors. Rules bind rivals equally, so the edge is enforcement discretion.",
+     "t": "My read (interpretation): policy is neither a moat nor a revenue liability yet. It is event risk. Realized loss is $150M of DoD ARR (Reuters, T2) plus delayed contractor deals, while run-rate still rose $14B to $65B (gross, not recognized revenue, no counterfactual). Reprice tails: another suspension, FTC findings, FASCSA spillover. Rules exempt small labs and, on their thresholds, bind rivals equally, so the edge is enforcement discretion.",
      "e": [
       "evt-20260817-rr-65b-end-july",
       "evt-20260212-series-g-30b-380b",
+      "evt-20260309-cfo-declaration-public-sector",
       "evt-20260612-us-export-control-directive-fable-mythos",
       "evt-20260930-ftc-probe-anthropic-openai",
-      "evt-20260925-dc-circuit-denies-anthropic-petitions"
+      "evt-20250908-anthropic-endorses-california-sb-53",
+      "evt-20251021-dario-statement-american-ai-leadership"
      ]
     },
     {
-     "t": "Legal map. The 3252 and FASCSA tracks point opposite ways, so the S-1 must describe two instruments. The D.C. Circuit result controls DoW and contractor use. Track the mandate, en banc or cert, the stayed Ninth Circuit appeal and any government appeal of the Aug 27 judgment. Treat the Sep 2 to Sep 29 thaw as White House and Commerce, not DoW.",
+     "t": "Legal map. The 3252 and FASCSA tracks point opposite ways, so the S-1 should describe two instruments. The D.C. Circuit result controls DoW and contractor use. Track the mandate, en banc or cert, the stayed Ninth Circuit appeal and any government appeal of the Aug 27 judgment. Treat the Sep 2 to Sep 29 thaw as White House and Commerce, not DoW.",
      "e": [
       "evt-20260827-dow-summary-judgment-permanent-injunction",
       "evt-20260925-dc-circuit-denies-anthropic-petitions",
@@ -810,13 +819,14 @@
      ]
     },
     {
-     "t": "International: treat MoUs as options, not revenue. Only Australia names dollars, A$3M in credits. Weight follows usage and partners. Singapore ranks second per capita. India is second by volume at 5.8% of Claude.ai use but 101st per working-age capita. Korean and Australian partners are also shareholders. Singapore opens in October; announce-to-open lags in the record run 33 to 237 days.",
+     "t": "International: treat MoUs as options, not revenue; only Australia names dollars (A$3M in credits). Anthropic says APAC run-rate rose over 10x and EMEA over 9x, with no dollars. India is second by volume at 5.8% of Claude.ai use but 101st per working-age capita. Volta, Norway, is the only named non-US compute site (T2). Singapore is due in October (Fortune, T2); announce-to-open lags run 33 to 237 days.",
      "e": [
       "evt-20260331-australia-government-mou",
+      "evt-20251029-tokyo-office-japan-aisi",
+      "evt-20251107-paris-munich-offices",
       "evt-20260216-economic-index-india-brief",
+      "evt-20260804-volta-10b-norway-compute-deal",
       "evt-20260916-singapore-office-plan",
-      "evt-20260617-seoul-office",
-      "evt-20260310-sydney-office-announced",
       "evt-20260713-india-localized-claude-pricing"
      ]
     },
@@ -831,17 +841,17 @@
     }
    ],
    "second_order": [
-    "The Pentagon exit moves classified reference workloads, including Palantir Maven, to OpenAI, Google and xAI. OpenAI's Feb 27 terms named prohibitions close to Anthropic's two exceptions, so the fight reads as control over who enforces limits, not the limits. Contractors must certify non-use. Consensus reads the Sep 27 dinner as settlement. DoW says the designation stands.",
-    "The Jun 12 and Sep 24 actions make foreign access to frontier models a US executive decision. UK AISI, Anthropic's deepest government partner abroad, felt it first. Japan, Australia and Korea MoUs promise shared model information that the same gate can block. This tests the thesis that MoUs are a distribution moat: the record shows no MoU dollars and two US gates.",
-    "Pacing advocacy opened a legal channel. The Buist complaint pleads Amodei's Sep 12 essay as evidence of agreement, and the desk's case note expects discovery into any industry working group. Altman endorsed the essay and Musk said Dario is right, and their companies are co-defendants. Consensus reads pacing as brand. The docket reads it as conduct.",
-    "The moat case weakens as rivals converge. OpenAI's Chris Lehane opposed SB 53 and an OpenAI-linked PAC network spends over $100M, yet by Sep 2026 OpenAI shared the pacing endorsement, the UN briefing, the White House hold and the FTC probe. When rules bind every large lab, the differentiator is how much discretion the executive applies to each.",
+    "The Pentagon exit moves classified reference workloads, including Palantir Maven, to OpenAI, Google and xAI. OpenAI's Feb 27 terms named prohibitions close to Anthropic's two exceptions, so the fight reads as control over who enforces limits, not the limits. Contractors must certify non-use. Coverage frames the Sep 27 dinner as a thaw. DoW says the designation stands.",
+    "The Jun 12 and Sep 24 actions make foreign access to frontier models a US executive decision. UK AISI, Anthropic's deepest government partner abroad, is the first ally held back by name. Japan, Australia and Korea MoUs cover safety evaluation and model information that the same gate can block. This tests whether sovereign MoUs are a durable channel: the record shows no MoU dollars and two US gates.",
+    "Pacing advocacy opened a legal channel. The Buist complaint cites Amodei's Sep 12 essay as evidence of agreement, and the desk's case note expects discovery into any industry working group. Altman endorsed the essay and Musk said Dario is right, and their companies are co-defendants. The public debate is about motive. The docket is about conduct.",
+    "The moat case weakens as rivals converge. OpenAI's Chris Lehane opposed SB 53 and an OpenAI-linked PAC network has over $100M, yet by Sep 2026 OpenAI shared the pacing endorsement, the UN briefing, the White House hold and the FTC probe. When rules bind every large lab, the differentiator is how much discretion the executive applies to each.",
     "Washington access did not insulate. A NAIAC seat (2022), a bipartisan advisory council (Aug 2025), a DC office (Mar 2026) and a PAC (Apr 2026) sit on either side of the Feb 27 ban. The thaw ran through Wiles, Bessent, Lutnick and Trump. New government-affairs hires on Aug 4 and Sep 7 add access; the record shows discretion outweighing it."
    ],
    "watch": [
     {
      "item": "October international calendar: Australian Senate inquiry hearing in Canberra on Oct 1 (Anthropic named as a safety-practice witness) and the Singapore office opening (12th country)",
      "by": "2026-10-31",
-     "threshold": "Base rate not in the record for foreign-legislature summons; Quartz headline (not opened) says both CEOs skip. A no-show without a written submission signals avoidance of non-US legislatures. Announce-to-open lags in the record: Tokyo 33 days, Sydney 48, Bengaluru 132, Seoul 237; Singapore needs 45 or fewer. A Singapore government MoU would be the sixth."
+     "threshold": "Base rate not in the record for foreign-legislature summons; a Quartz headline (not opened) says both CEOs skip. A no-show without a written submission signals avoidance of non-US legislatures. Announce-to-open lags in the record: Tokyo 33 days, Sydney 48, Bengaluru 132, Seoul 237; an opening by Oct 31 means 45 days or fewer. A Singapore government MoU would be the sixth."
     },
     {
      "item": "DoD completes removal of Anthropic workloads (Sep 29 or 30 per MeriTalk and FedScoop; end of October per DefenseScoop notes)",
@@ -861,7 +871,7 @@
     {
      "item": "House 'Great American AI Act' draft (Jun 4): introduction or markup, Anthropic's stated position, and the November midterms",
      "by": "2026-11-30",
-     "threshold": "No base rate for preemption bills in the record. A three-year freeze on state laws on how AI is built could freeze SB 53-type duties; codifying CAISI at $100M a year for 2027 to 2029 is a federal anchor. IPO timing may key off the midterms (Fortune, Yahoo)."
+     "threshold": "No base rate for preemption bills in the record. A three-year freeze on state laws on how AI is built could freeze SB 53-type duties; codifying CAISI at $100M a year for 2027 to 2029 is a federal anchor. IPO reports run from a listing days before the midterms (Reuters via Forbes, Sep 4) to after them (Fortune, Sep 29)."
     },
     {
      "item": "Sanctions or Entity List action on the six Chinese labs named in advisory AA26-251A (Bessent: 'on the table' Jul 22)",
@@ -871,7 +881,7 @@
     {
      "item": "First disclosed paid civil-agency contract after the one-year $1 term that began Aug 12, 2025, or any new DoD-adjacent award",
      "by": "2026-Q4",
-     "threshold": "Base rate not in the record: no paid federal contract is disclosed. A paid renewal shows civil demand survived the ban; none while the DoW exclusion stands would put federal revenue near zero."
+     "threshold": "Base rate not in the record: no paid federal contract is disclosed. A paid renewal shows civil demand survived the ban; none would leave federal revenue unproven beyond the pre-ban projection."
     },
     {
      "item": "Mythos 5.1 release to UK AISI after US review, and any White House AI safety board or policy-lead appointment (Trump weighing a 10-person board, Sep 29)",
@@ -883,12 +893,12 @@
    "uncertainties": [
     {
      "type": "data",
-     "note": "Federal revenue is not measured in the record. The CDAO agreement has no obligated amount. The several-hundred-million public-sector ARR and the 'hundreds of millions to multiple billions' at-risk range come from a CFO litigation declaration, not audited data. The revenue-mix, customer and prospectus tables are empty.",
+     "note": "Federal revenue is not audited or contracted in the record. The CDAO agreement has no obligated amount. Sworn declarations give $150M of DoD ARR lost immediately, 2026 public-sector ARR of several hundred million (court summary, T1) or above $500M (Reuters, T2), and revenue at risk from hundreds of millions to multiple billions. A PitchBook note (T3) puts the federal ban near $200M, about 1.4% of ARR. The revenue-mix, customer and prospectus tables are empty.",
      "what_would_change_it": "Public S-1 disclosure of federal and defense-contractor revenue, or a company statement that quantifies it."
     },
     {
      "type": "data",
-     "note": "Regional revenue is not in the record. Only growth multiples exist: APAC over 10x, EMEA over 9x, India doubled in four months. The offices table also undercounts: Anthropic said 12 cities on Nov 7, 2025 while the table shows 7, Paris, Munich and Dublin opening dates are missing, and London is VERIFY.",
+     "note": "Regional revenue is not in the record. Only growth multiples exist: APAC over 10x, EMEA over 9x, India doubled in four months. The offices table also undercounts: Anthropic said 12 cities on Nov 7, 2025 while the table shows 7, Paris, Munich and Dublin opening dates are missing, and London is VERIFY. Korean and Australian partners (Samsung, SK hynix, Naver, CBA) are also shareholders, so regional growth may include related-party revenue.",
      "what_would_change_it": "An S-1 geographic revenue note and properties section, or Anthropic office pages."
     },
     {
@@ -913,6 +923,7 @@
     "evt-20250714-dod-cdao-200m",
     "evt-20260227-trump-hegseth-ban-and-supply-chain-designation-announced",
     "evt-20260309-cfo-declaration-revenue-at-risk",
+    "evt-20260309-cfo-declaration-public-sector",
     "evt-20260612-us-export-control-directive-fable-mythos",
     "evt-20260701-fable-5-mythos-5-access-restored",
     "evt-20260911-dod-migration-90pct",
@@ -975,10 +986,26 @@
     "evt-20260212-series-g-30b-380b",
     "evt-20260528-series-h-roster",
     "evt-20260918-wsj-ipo-pushed-to-november",
-    "evt-20260310-sydney-office-announced"
+    "evt-20260310-sydney-office-announced",
+    "evt-20260904-reuters-ipo-launch-shifts-toward-mid-october",
+    "evt-20260311-anthropic-institute-launch",
+    "evt-20250827-national-security-advisory-council",
+    "evt-20220414-clark-naiac",
+    "evt-20260804-cuellar-chief-global-affairs-officer",
+    "evt-20260907-clifford-intl-affairs",
+    "evt-20260912-amodei-pace-the-frontier-call",
+    "evt-20260923-un-security-council",
+    "evt-20260927-australia-senate-calls-ceos-rogue-agent-inquiry",
+    "evt-20250117-ftc-ai-partnerships-report",
+    "evt-20260730-lin-summary-judgment-hearing",
+    "evt-20260613-amazon-jailbreak-report-jassy",
+    "evt-20260309-anthropic-sues-department-of-war-ndcal-and-dc-circuit",
+    "evt-20230524-london-office",
+    "evt-20250213-zurich-office-houlsby",
+    "evt-20240514-dublin-office-plan"
    ],
    "analyst": "analyst-topic-government",
-   "finished": "2026-09-30T18:38:06Z"
+   "finished": "2026-09-30T18:46:09Z"
   },
   {
    "slug": "people",
@@ -998,7 +1025,7 @@
     {
      "label": "Revenue per employee (two bases, not mixed)",
      "value": "Gross run-rate: $3.9M at end-2025 ($9B, company, over 2,300) and $5.6M on Feb 12, 2026 ($14B over 2,500 from Jan 30). Recognized FY2025: $2.0M ($4.6B per leaked prospectus over 2,300).",
-     "event_id": "evt-20260406-google-broadcom-tpu-3-5gw"
+     "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate"
     },
     {
      "label": "C-suite changes, last 12 months",
@@ -1090,7 +1117,7 @@
      "t": "Revenue per head rose because run-rate outran hiring. Run-rate went from about $100M in Sep 2023 (T3, basis unstated) to about $9B at end-2025 (company, gross, T1), roughly 90x, while staff grew 4.6x to at least 11.5x on the disputed base. That is $0.2M-$0.5M per head in late 2023 and $3.9M at end-2025. Recognized FY2025 is $2.0M per head, as recognized revenue trails run-rate in a fast-growing year.",
      "e": [
       "evt-20231226-revenue-run-rate-projection",
-      "evt-20260406-google-broadcom-tpu-3-5gw",
+      "evt-20260406-google-broadcom-tpu-30b-runrate",
       "evt-20251203-amodei-dealbook-revenue-guidance",
       "evt-20251202-fortune-headcount",
       "evt-20251204-fortune-headcount-burn-breakeven",
@@ -1140,7 +1167,7 @@
     {
      "t": "Hold revenue per head as provisional until the S-1 states headcount. Use $3.9M at end-2025 and $5.6M at Feb 2026, both gross run-rate. The 2,500 versus 5,000 split halves any 2026 figure: annualized Q2 recognized revenue of $46B is $18.4M per head at 2,500 and $9.2M at 5,000. The record has no Q2 headcount.",
      "e": [
-      "evt-20260406-google-broadcom-tpu-3-5gw",
+      "evt-20260406-google-broadcom-tpu-30b-runrate",
       "evt-20251204-fortune-headcount-burn-breakeven",
       "evt-20260212-series-g-30b-380b",
       "evt-20260130-sf-300-howard-lease",
@@ -1277,7 +1304,7 @@
     "evt-20260204-employee-tender-350b",
     "evt-20260827-information-prospectus-after-labor-day-insider-sales",
     "evt-20260512-secondary-market-warning",
-    "evt-20260406-google-broadcom-tpu-3-5gw",
+    "evt-20260406-google-broadcom-tpu-30b-runrate",
     "evt-20251203-amodei-dealbook-revenue-guidance",
     "evt-20231226-revenue-run-rate-projection",
     "evt-20260928-reuters-draft-prospectus-2025-financials",
@@ -1312,15 +1339,348 @@
    ],
    "analyst": "analyst-topic-people",
    "finished": "2026-09-30T18:41:07Z"
+  },
+  {
+   "slug": "ecosystem",
+   "title": "Ecosystem: investors, partners, customers, acquisitions",
+   "one_liner": "Amazon, Google and Microsoft are owed $252.5B of Anthropic's compute commitments (leaked prospectus, T3) against $18.0B of filing-verified equity funded and about $81B of announced ceilings.",
+   "key_metrics": [
+    {
+     "label": "Hyperscaler equity, funded vs announced ceilings",
+     "value": "$18.0B funded (Amazon 10-Q, T1) inside about $81B of ceilings: Amazon $33.0B, Google $43B, Microsoft $5B. Only Amazon's funding is filed.",
+     "event_id": "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo"
+    },
+    {
+     "label": "Public companies tied to Anthropic",
+     "value": "117 listed parents by ticker: 28 hold equity, 16 supply compute, chips or memory, 61 are named customers. Desk flags, not web-verified per row.",
+     "event_id": "evt-20260528-series-h-roster"
+    },
+    {
+     "label": "Compute owed to the three investor-hyperscalers",
+     "value": "$252.5B of $518B (48.7%): Amazon $110B, Google $111.1B, Microsoft $31.4B. About 80% of the total is non-cancelable (leaked prospectus, T3).",
+     "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+    },
+    {
+     "label": "Latest enterprise-share datapoint",
+     "value": "Anthropic 40% vs OpenAI 27% of enterprise LLM API dollars (Menlo, Dec 9 2025, T3, an Anthropic investor). Newer Ramp read: 43.8% vs 39.8% of businesses paying (Sep 9, T4).",
+     "event_id": "evt-20251209-menlo-genai-enterprise"
+    },
+    {
+     "label": "Two customers, share of FY2025 revenue",
+     "value": "Nearly 25%, names undisclosed (FT via TechCrunch, Sep 28, T2). No revenue split by cloud channel is in the record.",
+     "event_id": "evt-20260928-prospectus-risk-factors"
+    },
+    {
+     "label": "Direct Anthropic equity tickets verified",
+     "value": "2 of PitchBook's 35 investments (Goodfire, Sapiom), no check sizes. Largest outbound commitment is $300M to the Ode JV (T2).",
+     "event_id": "evt-20250417-goodfire-series-a-anthropic"
+    }
+   ],
+   "what": [
+    {
+     "t": "Amazon's 10-Q, Jul 31 (T1): $18.0B funded ($8.0B notes, $5.0B each in Series G and H), $15.0B facility left. Google: over $3B funded by Mar 2025, plus up to $40B, $10B now and $30B on targets (TechCrunch, Apr 24, T2). Microsoft up to $5B, Nvidia up to $10B (Nov 18, T1), AMD up to $5B (Jul 22, T1). Funded amounts for Google's new tranche, Microsoft, Nvidia and AMD are absent.",
+     "e": [
+      "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo",
+      "evt-20260420-amazon-5gw-25b-investment",
+      "evt-20260424-google-up-to-40b-investment",
+      "evt-20250311-google-14pct-stake",
+      "evt-20251118-microsoft-nvidia-anthropic-partnership",
+      "evt-20260722-amd-2gw-5b"
+     ]
+    },
+    {
+     "t": "Leaked prospectus, Sep 29 (total via Reuters, split via Stocktwits, T3): $518B of commitments, about 80% non-cancelable. Amazon $110B, Google $111.1B, Microsoft $31.4B, Broadcom-related leases $161.2B, SpaceX up to $84.5B. Amazon's $110B is 6.1x its $18.0B funded. Suppliers also grant Anthropic equity: Akamai's warrant for up to 5% at $111.33 (Sep 24, T1) and RUM's 50.8M shares at $0.01 (Sep 14, T3).",
+     "e": [
+      "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+      "evt-20260907-compute-contracts-517b-in-11-months",
+      "evt-20260924-akamai-11b",
+      "evt-20260914-rum-group-13-7b-georgia-deal",
+      "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo"
+     ]
+    },
+    {
+     "t": "Two customers were nearly 25% of 2025 revenue, unnamed (FT via TechCrunch, Sep 28, T2). Claude is on all three clouds: Bedrock reports over 100,000 customers (Apr 20, T1) and AWS Marketplace bills Claude Platform (May 11). Snowflake committed $200M (Dec 3, T1); Salesforce reportedly $300M of 2026 tokens (T3). Deloitte's 470,000 seats are 'available to'. No revenue split by channel is in the record.",
+     "e": [
+      "evt-20260928-prospectus-risk-factors",
+      "evt-20260420-amazon-5gw-25b-investment",
+      "evt-20260511-claude-platform-on-aws-launch",
+      "evt-20251118-claude-in-microsoft-foundry",
+      "evt-20251203-snowflake-200m-partnership",
+      "evt-20260601-salesforce-stake",
+      "evt-20251006-deloitte-470k-claude"
+     ]
+    },
+    {
+     "t": "Closed deals are small. Coefficient Bio ~$400M in stock (Apr 3, T2) and Stainless above $300M (May 18) are single-source; Bun, Vercept and Humanloop are unpriced. Decart (~$6B) and MatX (~$7B) talks lapsed (Sep 8, Aug 27). PitchBook's 35 investments include Anthology deals; direct tickets are verified only for Goodfire and Sapiom. The $100M Anthology Fund (Jul 17 2024) is Menlo's money.",
+     "e": [
+      "evt-20260403-coefficient-bio-acquisition",
+      "evt-20260518-stainless-acquisition",
+      "evt-20251203-bun-acquisition",
+      "evt-20260225-vercept-acquisition",
+      "evt-20250813-humanloop-acquihire",
+      "evt-20260908-decart-talks-ended",
+      "evt-20260827-matx-talks",
+      "evt-20240717-anthology-fund",
+      "evt-20250417-goodfire-series-a-anthropic",
+      "evt-20260809-sapiom-series-a"
+     ]
+    },
+    {
+     "t": "Menlo (Dec 9 2025, T3) has Anthropic at 40% of API dollars to OpenAI's 27%. a16z (Jan 30, T3) has OpenAI at 78% in production to Anthropic's 44%. Ramp card data (Aug 20, T3) has 44% to 40% in July, from 41% to 39% in May. Axios (Sep 29, T2, single source) puts OpenAI near $70B run-rate and Anthropic about $65B in July, on different revenue bases.",
+     "e": [
+      "evt-20251209-menlo-genai-enterprise",
+      "evt-20260130-a16z-enterprise-survey",
+      "evt-20260820-ramp-ai-index-anthropic-44pct-july",
+      "evt-20260929-openai-arr-nearing-70b-axios",
+      "evt-20250731-menlo-midyear-share",
+      "evt-20260513-ramp-ai-index-anthropic-overtakes-openai"
+     ]
+    },
+    {
+     "t": "By ticker, role and dollars. AMZN funder, cloud, channel: $18.0B funded, $110B owed. GOOGL: up to $40B, $111.1B owed. MSFT: up to $5B, $31.4B owed, $3.2B gain (Jul 29, T1). NVDA up to $10B. AMD up to $5B. AVGO $10B TPU order. Hosts: WULF $19B, RUM $13.7B, AKAM $11.6B, RIOT $9.1B, HUT $7.0B. Holders: CRM $3.0B (six months) and ZM $1.6B (quarter) gains. SPCX $1.25B a month.",
+     "e": [
+      "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo",
+      "evt-20260729-microsoft-anthropic-gain",
+      "evt-20251211-broadcom-anthropic-10b-tpu-customer",
+      "evt-20260706-terawulf-lease",
+      "evt-20260914-rum-group-13-7b-georgia-deal",
+      "evt-20260924-akamai-11b",
+      "evt-20260810-riot-9-1b-rockdale-lease",
+      "evt-20251217-hut8-river-bend",
+      "evt-20260827-salesforce-10q-anthropic",
+      "evt-20260826-zoom-10q-anthropic",
+      "evt-20260520-spacex-s1-anthropic-colossus-contract"
+     ]
+    }
+   ],
+   "means": [
+    {
+     "t": "Each hyperscaler is funder, compute seller and channel; Google and Microsoft are also rivals. The equity buys economics without control: Amazon holds non-voting preferred, Google reportedly had no board seat or vote, and an FT report says ownership is capped below 33%. Holders book the mark. Amazon's Q1 gain was $16.8B pre-tax against $30.3B net income, priced by rounds where hyperscalers supplied $15B of Series H's $65B.",
+     "e": [
+      "evt-20260429-amazon-q1-10q-anthropic-gain-16-8b",
+      "evt-20250710-amazon-weighs-new-investment",
+      "evt-20250311-google-14pct-stake",
+      "evt-20260528-series-h-roster",
+      "evt-20260309-microsoft-copilot-cowork"
+     ]
+    },
+    {
+     "t": "Circularity has two legs in the record: equity in from Amazon, Google, Microsoft, Nvidia and AMD, and compute out to the same names. Nvidia sits on both sides at Beacon Point: Lambda installs Nvidia GPUs for Anthropic while Nvidia pays Hut 8 rent (T3). No filing traces cash from an investment to a supplier invoice, so 'circular' is an inference, not a finding.",
+     "e": [
+      "evt-20260831-lambda-35b-cloud-deal-texas",
+      "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+      "evt-20260911-nvidia-ipo-anchor-talks",
+      "evt-20251118-microsoft-nvidia-anthropic-partnership",
+      "evt-20260722-amd-2gw-5b",
+      "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo"
+     ]
+    },
+    {
+     "t": "The share series measure four different things. Menlo surveyed usage, then estimated dollars. a16z surveyed production breadth. Ramp counts businesses with card spend. OpenRouter counts tokens. Anthropic leads on dollars and card adoption and trails on breadth. Its OpenRouter token share fell to 13.3% from 29.1% (T4). Menlo is an Anthropic investor and Anthropic repeats its 40%, so that figure is not independent.",
+     "e": [
+      "evt-20250731-menlo-midyear-share",
+      "evt-20251209-menlo-genai-enterprise",
+      "evt-20260130-a16z-enterprise-survey",
+      "evt-20260513-ramp-ai-index-anthropic-overtakes-openai",
+      "evt-20260623-menlo-3b-fund"
+     ]
+    },
+    {
+     "t": "PitchBook misstates the web both ways. Amazon shows from Nov 2024 not Sep 2023, Microsoft is missing, and Commonwealth Bank is dated Feb 2026 against Mar 2025 per Capital Brief. Its 35 Anthropic investments include Menlo-funded Anthology deals, employee angels (Sazabi), a credit pledge (Frontier) and a tenancy (Theseus). BioSpace says Basecamp wrongly named Anthropic.",
+     "e": [
+      "evt-20230925-amazon-up-to-4b",
+      "evt-20260729-microsoft-anthropic-gain",
+      "evt-20250314-commbank-investment",
+      "evt-20250318-graphite-series-b",
+      "evt-20260625-sazabi-seed-angels-incl-openai-anthropic-staff",
+      "evt-20260617-frontier-coalition",
+      "evt-20260810-theseus-infrastructure",
+      "evt-20260923-basecamp-research-140m-series-c"
+     ]
+    }
+   ],
+   "implications": [
+    {
+     "t": "Reprice 'up to' as options. Count only filed dollars as raised: Amazon's $18.0B. Treat Google's $30B as target-gated and Microsoft's $5B, Nvidia's $10B and AMD's $5B as unfunded until a filing says otherwise. Keep four $15B items apart: the Microsoft and Nvidia cap, Series H's hyperscaler share, Amazon's facility and the pre-IPO revolver. Capital efficiency counts equity only, never debt.",
+     "e": [
+      "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo",
+      "evt-20260424-google-up-to-40b-investment",
+      "evt-20251118-microsoft-nvidia-anthropic-partnership",
+      "evt-20260722-amd-2gw-5b",
+      "evt-20260528-series-h-roster",
+      "evt-20260903-credit-facility-15b-nears-final"
+     ]
+    },
+    {
+     "t": "Underwrite the supplier web as fixed obligations. The three investor-hyperscalers are owed $252.5B, 48.7% of $518B and 3.1x their equity ceilings. About 80% is non-cancelable, while SpaceX's contract is terminable on 90 days' notice. Test the public S-1 on two points: whether the supplier split holds, and whether $150.0B of named neocloud contracts fits in the roughly $19.8B left over.",
+     "e": [
+      "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+      "evt-20260520-spacex-s1-anthropic-colossus-contract",
+      "evt-20260826-nscale-45b-west-virginia-deal",
+      "evt-20260831-lambda-35b-cloud-deal-texas",
+      "evt-20260706-terawulf-lease"
+     ]
+    },
+    {
+     "t": "Chart shares by basis, never as one line. Tag each point survey, card spend or tokens, and mark Menlo as investor-published. Bulls can cite dollars and card adoption. Bears can cite breadth, 78% vs 44%, and token share. TechCrunch says OpenAI is gaining, but Ramp's May to July figures show Anthropic's lead widening from 2 to 4 points. June is missing.",
+     "e": [
+      "evt-20251209-menlo-genai-enterprise",
+      "evt-20260130-a16z-enterprise-survey",
+      "evt-20260820-ramp-ai-index-anthropic-44pct-july",
+      "evt-20260513-ramp-ai-index-anthropic-overtakes-openai"
+     ]
+    },
+    {
+     "t": "Rank public exposure by the share of own size the record gives, then by dollars. RUM: contract over 3x market cap (T3). Riot: $9.1B of $9.8B contracted revenue. Amazon: $16.8B Q1 pre-tax gain vs $30.3B net income. Salesforce: 45% of strategic portfolio. Broadcom: $10B order is 13.7% of AI backlog. Then Akamai, TeraWulf, Zoom, Microsoft, Alphabet, Nvidia. No market caps are computed.",
+     "e": [
+      "evt-20260914-rum-group-13-7b-georgia-deal",
+      "evt-20260810-riot-9-1b-rockdale-lease",
+      "evt-20260429-amazon-q1-10q-anthropic-gain-16-8b",
+      "evt-20260827-salesforce-10q-anthropic",
+      "evt-20251211-broadcom-anthropic-10b-tpu-customer",
+      "evt-20260924-akamai-11b",
+      "evt-20260706-terawulf-lease",
+      "evt-20260826-zoom-10q-anthropic",
+      "evt-20260729-microsoft-anthropic-gain"
+     ]
+    }
+   ],
+   "second_order": [
+    "An IPO near the reported $2T, 2.07x Series H, re-marks every holder again: TheStreet puts Amazon's stake at $300B to $400B against $190.4B carried. Sell-side and auditors must then separate Anthropic marks from AMZN, MSFT, CRM and ZM earnings. The gains recur each priced round, $9.5B in Q3 2025 and $16.8B in Q1 2026, so treating them as one-offs would be wrong.",
+    "Nvidia as IPO anchor, up to $10B or about 0.5% at $2T (Reuters, T3), would put a chip supplier in the book while Akamai and RUM already issue Anthropic warrants. Equity then flows both ways between Anthropic and its suppliers. That extends the IPO absorption worry: the price-sensitive float is smaller than the $100B raise, but price discovery is less clean. Underwriters will face related-party questions.",
+    "Cursor, Claude's largest coding channel at ARR above $2B, moves under SpaceX in a $60.0B deal. SpaceX rents Anthropic compute on 90-day terms and competes through Grok. Anthropic cut off Windsurf (Jun 2025) and OpenAI (Aug 2025) to avoid supplying rivals. A cut-off would confirm the channel-risk thesis. Continued access on both sides, as Musk's Jul 9 vow not to cut off Colossus hints, would show rivals trading as suppliers.",
+    "Each host contract re-rates a small cap in a day: Akamai +17% after hours, Riot +25% after hours, TeraWulf above 10%, RUM +11.6%, while CoreWeave and Nebius fell 5% to 7% on RUM. The missing piece is concentration: Riot's Anthropic lease is 93% of its contracted revenue. If the IPO slips, these names carry the sharpest single-counterparty risk.",
+    "Anthropic's six closed deals carry no reported price above about $400M, and two lapsed talks at $6B and $7B sat 50% above Decart's $4B May valuation and 75% above the $4B MatX sought. A $2T stock currency changes the math. A priced deal above $1B would break the pattern and a Decart or MatX revival would reverse the walk-aways. Consensus may be assuming tuck-ins continue."
+   ],
+   "watch": [
+    {
+     "item": "Amazon Q3 2026 results and 10-Q: Anthropic carrying value, gain and facility draws",
+     "by": "2026-10-31",
+     "threshold": "Carrying value above $190.4B or a pre-tax gain above Q1's $16.8B shows another up-mark. A draw on the $15.0B facility shows funding pace. Any ownership percentage would settle the 15% to 21% spread."
+    },
+    {
+     "item": "Microsoft fiscal Q1 and Alphabet Q3 results: Anthropic gains and funded dollars",
+     "by": "2026-10-31",
+     "threshold": "Microsoft funded dollars against the $5B cap, and a gain beyond the $3.2B booked in fiscal Q4. Alphabet funded dollars against the $10B first tranche and any word on the $30B target-gated tranche."
+    },
+    {
+     "item": "Anthropic public S-1: commitments by supplier, related-party note, beneficial ownership, Nvidia anchor",
+     "by": "2026-11-15",
+     "threshold": "Amazon near $110B, Google near $111.1B, Microsoft near $31.4B, SpaceX up to $84.5B, total near $518B. Room for $150.0B of neocloud deals. Nvidia named with a $5B or larger anchor would confirm the Sep 11 report."
+    },
+    {
+     "item": "Nvidia fiscal Q3 results: Anthropic stake carrying value and funded share of the $10B",
+     "by": "2026-11-30",
+     "threshold": "A funded amount well below $10B keeps the cap an option. A disclosed anchor allocation confirms supplier-as-anchor."
+    },
+    {
+     "item": "Claude availability inside Cursor after SpaceX's $60B deal (closing reported Aug 15, not opened)",
+     "by": "2026-10-31",
+     "threshold": "Any removal of Claude models, a default switch to an xAI model, or an Anthropic access restriction on Cursor."
+    },
+    {
+     "item": "Ramp AI Index October edition, plus any new Menlo enterprise update (none since Dec 9 2025)",
+     "by": "2026-10-15",
+     "threshold": "Anthropic's lead below the 4.0-point September gap (43.8% vs 39.8%), or OpenAI ahead. Menlo dollar share below 40% or OpenAI above 27%."
+    },
+    {
+     "item": "Holder and host quarterly filings: Zoom and Salesforce fiscal Q3 10-Qs, Akamai, Riot and TeraWulf results",
+     "by": "2026-12-15",
+     "threshold": "Salesforce's Anthropic share of strategic portfolio above 45%. Zoom carrying value above $3,134.5M. Akamai reaffirming $150M to $300M of 2027 revenue from the deal."
+    },
+    {
+     "item": "New distribution deals and acquisitions: Apple, Reliance or Schwab rollouts, Ode add-ons, Decart or MatX revival",
+     "by": "2026-12-31",
+     "threshold": "Any priced acquisition above $400M, the largest reported to date. A named Apple or Reliance agreement. A revived Decart or MatX deal."
+    }
+   ],
+   "house_view": "(a) Extends: the market prices unlike quality alike, and Nscale's reported $30B to $35B IPO target rests on $140.6M of H1 revenue and a $1.02B H1 loss, priced off one $44.6B Anthropic contract. (b) Extends without testing: Claude bills through AWS Marketplace and Azure commit drawdown and the FT cites revenue shared with distribution partners, so part of the gross run-rate is partner-billed, but with no channel mix in the record the desk's 39.75% haircut cannot be checked here and Axios's $70B OpenAI against $65B Anthropic mixes net and gross. (c) Extends: strategic buyers such as Nvidia, reported at up to $10B, and Amazon's $15.0B facility, open for 30 months after a liquidity event, make part of the book less price-sensitive than the $100B headline raise, yet the $2T ask is 2.07x the last mark. (d) Confirms with a wrinkle: $8.0B of Amazon's $18.0B entered as convertible notes, every 'up to' is unfunded, and the $15B revolver and $34.5B TPU SPV notes are debt, so only filed equity counts. (e) Confirms: seats, run-rate and contract value mean different things across software, cloud and hosting, since Deloitte's 470,000 is 'available to' and RUM's $13.7B is six-year contract value.",
+   "uncertainties": [
+    {
+     "type": "data",
+     "note": "Funded versus up-to. Only Amazon's $18.0B is filed. Google's $10B first tranche is reported as made but unconfirmed, and Microsoft, Nvidia and AMD funded amounts are absent. Amazon's ownership is 15% to 20% (TheStreet, T3), about 21% (Forkast, T4) or 19.7% by desk arithmetic; no filing states it.",
+     "what_would_change_it": "Alphabet, Microsoft and Nvidia filings, or the capitalization table in the public S-1."
+    },
+    {
+     "type": "data",
+     "note": "The $518B supplier split is a T3 relay of a leaked draft. It sums to $498.2B and leaves $19.8B, while named neocloud contracts total $150.0B. SpaceX is $40B, $45B or up to $84.5B by source. TeraWulf and Riot do not name Anthropic in their own releases, and Hut 8's River Bend lease names Fluidstack.",
+     "what_would_change_it": "The commitments table and related-party note in the public S-1."
+    },
+    {
+     "type": "interpretation",
+     "note": "Circularity is an inference. The record shows equity in and compute out for the same names, and warrants flowing back from Akamai and RUM, but no filing traces cash from an investment to an invoice. Amazon's 10-Q says its AWS commercial arrangement was amended, terms not given. A ~$34B non-cash investor-funding charge sits inside the leaked FY2025 net loss of $42B (T3); the record does not say which instruments.",
+     "what_would_change_it": "S-1 use-of-proceeds, related-party and financial-instrument notes."
+    },
+    {
+     "type": "data",
+     "note": "Share series are not like-for-like. Menlo is an Anthropic investor, and 40% of its $12.5B API pool is about $5.0B for 2025 against about $4.6B of total FY2025 revenue in the leaked prospectus (T2), on different bases. Ramp's May reading is 34.4% in one article and 41% in another, and the Sep read is T4. Channel concentration is unmeasured: two unnamed customers are nearly 25% of 2025 revenue and the record has no channel split.",
+     "what_would_change_it": "Ramp's primary tables, an independent spend survey, or the S-1 revenue split by product and channel."
+    },
+    {
+     "type": "forecast",
+     "note": "IPO re-mark. Reference class: the three priced rounds since Sep 2025 each lifted holders' marks, Amazon's preferred from $14.8B at Dec 2025 to $92.5B at Jun 2026. A base rate for mega-IPO pricing against the last private mark is not in the record. What differs: $2T is 2.07x Series H and timing slipped from October to November (WSJ, T3; Business Insider said October).",
+     "what_would_change_it": "The price range in the public S-1 and Q3 results shown before the roadshow."
+    }
+   ],
+   "evidence": [
+    "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo",
+    "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+    "evt-20260424-google-up-to-40b-investment",
+    "evt-20251118-microsoft-nvidia-anthropic-partnership",
+    "evt-20260420-amazon-5gw-25b-investment",
+    "evt-20260928-prospectus-risk-factors",
+    "evt-20260924-akamai-11b",
+    "evt-20260914-rum-group-13-7b-georgia-deal",
+    "evt-20260729-microsoft-anthropic-gain",
+    "evt-20260722-amd-2gw-5b",
+    "evt-20260911-nvidia-ipo-anchor-talks",
+    "evt-20251209-menlo-genai-enterprise",
+    "evt-20260130-a16z-enterprise-survey",
+    "evt-20260820-ramp-ai-index-anthropic-44pct-july",
+    "evt-20260513-ramp-ai-index-anthropic-overtakes-openai",
+    "evt-20260616-spacex-cursor",
+    "evt-20260826-zoom-10q-anthropic",
+    "evt-20260827-salesforce-10q-anthropic",
+    "evt-20260429-amazon-q1-10q-anthropic-gain-16-8b",
+    "evt-20260528-series-h-roster",
+    "evt-20260810-riot-9-1b-rockdale-lease",
+    "evt-20260918-nscale-files-nyse-ipo",
+    "evt-20260520-spacex-s1-anthropic-colossus-contract",
+    "evt-20260831-lambda-35b-cloud-deal-texas",
+    "evt-20251203-snowflake-200m-partnership",
+    "evt-20260504-enterprise-ai-services-jv",
+    "evt-20260504-astrix-cisco",
+    "evt-20240717-anthology-fund",
+    "evt-20260923-basecamp-research-140m-series-c",
+    "evt-20250417-goodfire-series-a-anthropic",
+    "evt-20260403-coefficient-bio-acquisition",
+    "evt-20260518-stainless-acquisition",
+    "evt-20260908-decart-talks-ended",
+    "evt-20260827-matx-talks",
+    "evt-20251211-broadcom-anthropic-10b-tpu-customer",
+    "evt-20260609-tpu-financing-34-5b-closed",
+    "evt-20260306-cloud-partners-keep-claude-available",
+    "evt-20260511-claude-platform-on-aws-launch",
+    "evt-20251118-claude-in-microsoft-foundry",
+    "evt-20260929-openai-arr-nearing-70b-axios",
+    "evt-20260223-ibm-cobol-selloff",
+    "evt-20260203-software-stocks-selloff-cowork-plugins"
+   ],
+   "analyst": "analyst-topic-ecosystem",
+   "finished": "2026-09-30T18:42:19Z"
   }
  ],
  "validation": {
+  "ecosystem": {
+   "evidence": 42,
+   "dropped_ids": 0
+  },
   "government": {
-   "evidence": 68,
+   "evidence": 85,
    "dropped_ids": 0
   },
   "legal": {
-   "evidence": 42,
+   "evidence": 47,
    "dropped_ids": 0
   },
   "people": {

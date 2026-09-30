@@ -2,7 +2,7 @@
  "agent": "verify-audit-2",
  "role": "Record Auditor",
  "started": "2026-09-30T18:37:36Z",
- "finished": "2026-09-30T18:43:42Z",
+ "finished": "2026-09-30T18:46:40Z",
  "results": [
   {
    "audit_id": "A-025",
@@ -228,6 +228,136 @@
    "evidence": "Since its founding at the beginning of 2021; co-founder and CEO Dario Amodei; co-founder and President Daniela Amodei",
    "note": "Page (Series B post dated 2022-04-29) confirms founding 'at the beginning of 2021', Dario as co-founder/CEO and Daniela as co-founder/President. Not on the page: the January 26, 2021 date, former-OpenAI origin, and the names Jack Clark, Jared Kaplan, Tom Brown, Chris Olah, Sam McCandlish, Ben Mann. Item date 2021-01-26 is a founding event date that this page cannot confirm beyond 'beginning of 2021'.",
    "page_is_primary": true
+  },
+  {
+   "audit_id": "A-037",
+   "verdict": "SUPPORTED",
+   "figure_checks": [],
+   "evidence": "25 authors listed, led by Elhage, Nanda, Olsson; Affiliation Anthropic; Published Dec 22, 2021",
+   "note": "Author list counts to 25. Page says 'Affiliation Anthropic' (not 'interpretability team'), reverse-engineers attention-only toy transformers, and introduces 'induction heads' that 'can explain in-context learning in these small models'. 'Foundational' is the producer's characterization; the paper calls its steps 'initial, very preliminary'.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-038",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "compute_partner",
+     "claimed": "SpaceX (Colossus / Colossus II)",
+     "page_says": "Shotwell named Google and Anthropic as outside users or potential users of SpaceX compute; Colossus II under construction",
+     "match": false,
+     "basis_note": "hedged: 'users or potential users', not a confirmed Anthropic arrangement; page never ties Anthropic to Colossus or Colossus II"
+    },
+    {
+     "field": "compute_gw",
+     "claimed": 1.4,
+     "page_says": "1.4 GW of nameplate compute capacity at end of June",
+     "match": true,
+     "basis_note": "SpaceX total nameplate capacity (not Anthropic's allocation); up from 1.0 GW in Q1"
+    },
+    {
+     "field": "compute_term",
+     "claimed": "capacity 1.4 GW at end-Q2; >2 GW by end-2026; ~10 GW 2027 aim",
+     "page_says": "end-June 1.4 GW; Musk: over two gigawatts by end of this year; 2027 'closer to 10 gigawatts ... than 5'",
+     "match": true,
+     "basis_note": "2027 figure is a Musk forecast, which the page says is planned deployment, not operating or contracted capacity"
+    }
+   ],
+   "evidence": "Gwynne Shotwell named Google and Anthropic as outside users or potential users of SpaceX compute",
+   "note": "Confirmed: $2.561B AI segment revenue (+247%), $14.1B Cloud Services Agreements 'contracted sales' in the quarter, 1.4 GW, >2 GW by end-2026, ~10 GW 2027 talk. Off: summary drops 'or potential' from users; only Colossus II is mentioned (under construction) with no Anthropic link; 'first public-company quarterly report' is not stated (page says Q2 Earnings and a June IPO). Yahoo Finance recap, not a SpaceX filing.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-039",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 35,
+     "page_says": "$35 million in a Series A round led by Dragonfly",
+     "match": true,
+     "basis_note": "Series A amount only; page puts total funding at $50M including a $15M seed"
+    }
+   ],
+   "evidence": "raised $35 million in a Series A round led by Dragonfly",
+   "note": "Published 9 Aug 2026. Page calls Anthropic 'the most notable name on the cap table'; Polsia's monthly Anthropic spend fell from $1.2M to approximately $100,000 (monthly basis, matches). Memeburn explainer cites no primary source.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-040",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 3500,
+     "page_says": "$3.5 billion",
+     "match": true,
+     "basis_note": "'has raised', i.e. closed round"
+    },
+    {
+     "field": "valuation_post_usd_m",
+     "claimed": 61500,
+     "page_says": "$61.5 billion post-money valuation",
+     "match": true,
+     "basis_note": "post-money, as stated"
+    },
+    {
+     "field": "valuation_pre_usd_m",
+     "claimed": 58000,
+     "page_says": "No pre-money stated on the page",
+     "match": false,
+     "basis_note": "derived, not stated: 61.5 post minus 3.5 raised = 58.0; page gives post-money only"
+    }
+   ],
+   "evidence": "Anthropic has raised $3.5 billion at a $61.5 billion post-money valuation.",
+   "note": "Everything in the summary is on the page (Mar 3, 2025; Lightspeed lead; Bessemer, Cisco Investments, D1, Fidelity, General Catalyst, Jane Street, Menlo, Salesforce Ventures; the seven customers, plus Codeium). Only gap is the pre-money field, which is arithmetic, not sourced.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-041",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "compute_partner",
+     "claimed": "AWS (Bedrock cross-region inference)",
+     "page_says": "runs on GitHub Copilot via Amazon Bedrock, leveraging Bedrock's cross-region inference",
+     "match": true,
+     "basis_note": "serving path for Claude 3.5 Sonnet in Copilot"
+    }
+   ],
+   "evidence": "Claude 3.5 Sonnet runs on GitHub Copilot via Amazon Bedrock, leveraging Bedrock's cross-region inference",
+   "note": "Confirmed: rollout in VS Code and GitHub.com, Copilot Chat public preview, Bedrock cross-region serving. Not on the page: Google Gemini 1.5 Pro and OpenAI o1 (zero mentions), and any 'multi-model Copilot' framing. The page is Anthropic's own post ('GitHub is releasing...'), not GitHub's announcement that the summary credits.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-042",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "Claude Security (Mythos 5 scans)",
+     "page_says": "Claude Security scans can now run on Claude Mythos 5",
+     "match": true,
+     "basis_note": "Enterprise plans, public beta"
+    },
+    {
+     "field": "product_price_in_per_mtok",
+     "claimed": 10,
+     "page_says": "No per-token price on page; 'billed as standard token usage under your existing plan'",
+     "match": false,
+     "basis_note": "figure not on this page (zero hits for $10 or 'per million'); would have to come from a pricing page"
+    },
+    {
+     "field": "product_price_out_per_mtok",
+     "claimed": 50,
+     "page_says": "No per-token price on page; 'billed as standard token usage under your existing plan'",
+     "match": false,
+     "basis_note": "figure not on this page (zero hits for $50 or 'per million')"
+    }
+   ],
+   "evidence": "scans with Mythos 5 are billed as standard token usage under your existing plan",
+   "note": "Confirmed (Aug 21, 2026): Enterprise Claude Security scans on Mythos 5 at standard token usage; Cyber Verification Program expansion (reduced safeguards for accepted teams); $35 million Defender Advantage Fund in Claude credits. The $10/$50 per-MTok prices appear nowhere on the page.",
+   "page_is_primary": true
   }
  ],
  "log": [
@@ -442,15 +572,137 @@
    "text": "A-036 PARTLY: founding year and two roles confirmed; date, OpenAI origin and co-founder list absent",
    "ts": "2026-09-30T18:43:42Z",
    "event_id": "A-036"
+  },
+  {
+   "seq": 29,
+   "type": "open",
+   "text": "Opened Transformer Circuits paper page (Published Dec 22, 2021); counted author list in raw text",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://transformer-circuits.pub/2021/framework/index.html",
+   "event_id": "A-037"
+  },
+  {
+   "seq": 30,
+   "type": "found",
+   "text": "A-037 SUPPORTED: 25 authors, Anthropic, Dec 22 2021, attention-only reverse engineering and induction heads",
+   "ts": "2026-09-30T18:46:39Z",
+   "event_id": "A-037"
+  },
+  {
+   "seq": 31,
+   "type": "open",
+   "text": "Opened Yahoo Finance SpaceX Q2 earnings recap by William Foxley (Aug 5, 2026); cross-checked raw text",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://finance.yahoo.com/technology/ai/articles/spacex-maps-path-toward-10-140021626.html",
+   "event_id": "A-038"
+  },
+  {
+   "seq": 32,
+   "type": "flag",
+   "text": "A-038 page says Shotwell named Google and Anthropic as \"users or potential users\"; summary says \"compute users\", and no Colossus link to Anthropic on page",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://finance.yahoo.com/technology/ai/articles/spacex-maps-path-toward-10-140021626.html",
+   "event_id": "A-038"
+  },
+  {
+   "seq": 33,
+   "type": "found",
+   "text": "A-038 PARTLY: SpaceX Q2 numbers match; Anthropic user status hedged, Colossus tie absent, \"first report\" unstated",
+   "ts": "2026-09-30T18:46:39Z",
+   "event_id": "A-038"
+  },
+  {
+   "seq": 34,
+   "type": "open",
+   "text": "Opened Memeburn Sapiom article (9 August 2026); cross-checked raw text for round, investors and Polsia figures",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://memeburn.com/sapiom-raises-35m-to-route-ai-agents-to-cheaper-models/",
+   "event_id": "A-039"
+  },
+  {
+   "seq": 35,
+   "type": "found",
+   "text": "A-039 SUPPORTED: Sapiom $35M Series A led by Dragonfly, Anthropic a backer, Polsia $1.2M to ~$100K monthly; page cites no primary source",
+   "ts": "2026-09-30T18:46:39Z",
+   "event_id": "A-039"
+  },
+  {
+   "seq": 36,
+   "type": "open",
+   "text": "Opened Anthropic Series E announcement (Mar 3, 2025); cross-checked raw text for amount, valuation, investors, customers",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+   "event_id": "A-040"
+  },
+  {
+   "seq": 37,
+   "type": "note",
+   "text": "A-040 page states post-money $61.5B only; pre-money $58B is derived (61.5 - 3.5), not on page",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+   "event_id": "A-040"
+  },
+  {
+   "seq": 38,
+   "type": "found",
+   "text": "A-040 PARTLY: $3.5B at $61.5B post-money, Lightspeed lead, investors and customers all confirmed; pre-money only derived",
+   "ts": "2026-09-30T18:46:39Z",
+   "event_id": "A-040"
+  },
+  {
+   "seq": 39,
+   "type": "open",
+   "text": "Opened Anthropic \"Claude 3.5 Sonnet on GitHub Copilot\" post (Oct 29, 2024); cross-checked raw text for Gemini, o1, multi-model",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://www.anthropic.com/news/github-copilot",
+   "event_id": "A-041"
+  },
+  {
+   "seq": 40,
+   "type": "flag",
+   "text": "A-041 summary says GitHub announced multi-model Copilot alongside Gemini 1.5 Pro and o1; page is Anthropic post with no mention of either",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://www.anthropic.com/news/github-copilot",
+   "event_id": "A-041"
+  },
+  {
+   "seq": 41,
+   "type": "found",
+   "text": "A-041 PARTLY: Claude 3.5 Sonnet on Copilot via Bedrock confirmed; Gemini/o1 and multi-model framing absent",
+   "ts": "2026-09-30T18:46:39Z",
+   "event_id": "A-041"
+  },
+  {
+   "seq": 42,
+   "type": "open",
+   "text": "Opened claude.com Mythos 5 defenders post (August 21, 2026); searched raw text for $10 and $50 prices",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
+   "event_id": "A-042"
+  },
+  {
+   "seq": 43,
+   "type": "flag",
+   "text": "A-042 claimed Mythos 5 prices $10/$50 per MTok are not on the page, which says only \"standard token usage under your existing plan\"",
+   "ts": "2026-09-30T18:46:39Z",
+   "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
+   "event_id": "A-042"
+  },
+  {
+   "seq": 44,
+   "type": "found",
+   "text": "A-042 PARTLY: Claude Security/Mythos 5 scans, CVP expansion and $35M fund confirmed; price figures absent",
+   "ts": "2026-09-30T18:46:39Z",
+   "event_id": "A-042"
   }
  ],
  "stats": {
-  "pages_opened": 12,
-  "supported": 8,
-  "partly": 4,
+  "pages_opened": 18,
+  "supported": 10,
+  "partly": 8,
   "not_supported": 0,
   "unopenable": 0,
   "date_mismatch": 0,
-  "flags": 4
+  "flags": 7
  }
 }

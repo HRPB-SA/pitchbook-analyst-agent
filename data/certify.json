@@ -1,17 +1,17 @@
 {
- "generated": "2026-09-30T18:40:29Z",
+ "generated": "2026-09-30T18:48:34Z",
  "summary": {
   "PASS": 7,
   "WARN": 0,
-  "FAIL": 0,
-  "PENDING": 8
+  "FAIL": 1,
+  "PENDING": 7
  },
  "gates": [
   {
    "id": "G1",
    "name": "Record: >= 300 deduped events, each with a source URL, every year 2021 to 2026 present",
    "status": "PASS",
-   "detail": "641 events; 0 without a URL; years 2021\u20132026"
+   "detail": "667 events; 0 without a URL; years 2021\u20132026"
   },
   {
    "id": "G2",
@@ -29,7 +29,7 @@
    "id": "G4",
    "name": "Conflicts are frozen, not resolved: every conflict row shows both values and a source or note",
    "status": "PASS",
-   "detail": "94 conflicts in the ledger (0 incomplete); 19 events carry a DISPUTED/VERIFY/LOW tag"
+   "detail": "96 conflicts in the ledger (0 incomplete); 20 events carry a DISPUTED/VERIFY/LOW tag"
   },
   {
    "id": "G5",
@@ -53,13 +53,13 @@
    "id": "G8",
    "name": "Thesis: verdict at each reference price; every thesis-breaker carries metric, threshold, date",
    "status": "PENDING",
-   "detail": "data/thesis.json not built yet"
+   "detail": "data/thesis.json has no judge verdict yet"
   },
   {
    "id": "G9",
    "name": "Topics: ten topic analyses, each with >= 12 evidence ids",
    "status": "PENDING",
-   "detail": "2 topics built; thin evidence: none"
+   "detail": "5 topics built; thin evidence: none"
   },
   {
    "id": "G10",
@@ -77,7 +77,7 @@
    "id": "G12",
    "name": "Agent log is the real log: agents known, time-ordered, nothing in the future, every active agent has an output file",
    "status": "PASS",
-   "detail": "3434 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
+   "detail": "3931 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
   },
   {
    "id": "G13",
@@ -93,9 +93,9 @@
   },
   {
    "id": "G15",
-   "name": "UI smoke: nine tabs x desktop/phone x light/dark",
-   "status": "PENDING",
-   "detail": "run: NODE_PATH=$(npm root -g) node scripts/shot.cjs"
+   "name": "UI smoke: nine tabs x desktop/phone x light/dark, no console errors, no horizontal overflow",
+   "status": "FAIL",
+   "detail": "[desk/light] console: Failed to load resource: the server responded with a status of 404 (Not Found) (+19 more)"
   }
  ]
 }

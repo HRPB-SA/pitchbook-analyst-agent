@@ -63,16 +63,15 @@ else:
 
 # G8 thesis
 T = load("data", "thesis.json")
-if not T or not T.get("judge"):
-    gate("G8", "Thesis: verdict at each reference price; every thesis-breaker carries metric, threshold, date", "PENDING", "data/thesis.json not built yet")
+if not T or not T.get("verdict"):
+    gate("G8", "Thesis: verdict at each reference price; every thesis-breaker carries metric, threshold, date", "PENDING", "data/thesis.json has no judge verdict yet")
 else:
-    j = T["judge"]; br = []
-    for side in ("bull", "bear", "judge"):
-        br += (T.get(side) or {}).get("thesis_breakers", [])
-    incomplete = [b for b in br if not (b.get("metric") and (b.get("threshold") is not None and b.get("threshold") != "") and b.get("date"))]
+    j = T["verdict"]; br = T.get("thesis_breakers") or []
+    incomplete = [b.get("metric") for b in br if not (b.get("metric") and b.get("threshold") not in (None, "") and b.get("observable_by"))]
     marks = {m.get("mark") for m in (j.get("by_mark") or [])}
-    gate("G8", "Thesis: verdict at each reference price; every thesis-breaker carries metric, threshold, date", "PASS" if {"series_h", "secondary", "ipo_target"} <= marks and not incomplete and j.get("call") else "FAIL",
-         f"call: {j.get('call')}; marks covered {sorted(marks)}; {len(br)} breakers, {len(incomplete)} incomplete")
+    ok = {"series_h", "secondary", "ipo_target"} <= marks and len(br) >= 6 and not incomplete and j.get("call") and len(T.get("bull") or []) >= 6 and len(T.get("bear") or []) >= 6
+    gate("G8", "Thesis: verdict at each reference price; every thesis-breaker carries metric, threshold, date", "PASS" if ok else "FAIL",
+         f"call: {j.get('call')}; marks covered {sorted(marks)}; {len(br)} breakers, incomplete: {incomplete or 'none'}; bull claims {len(T.get('bull') or [])}, bear claims {len(T.get('bear') or [])}")
 
 # G9 topics
 TP = load("data", "topics.json") or {}
