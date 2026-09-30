@@ -55,14 +55,18 @@ python3 scripts/certify.py           # mechanical ship gates -> data/certify.jso
 
 ## Deploy
 
-Static site, nothing to build. From the repository root:
+Static site, nothing to build. From the repository root (`pitchbook-analyst-agent/`):
 
 ```bash
 npm i -g vercel                      # once
-vercel --cwd . --prod=false          # preview deployment; add --prod only when you want it public
+vercel login                         # once
+vercel                               # preview deployment; when asked: link to a new project, framework "Other", output directory "."
+vercel --prod                        # only when you want it on the production URL
 ```
 
-The data files are public-facts derived from public sources and licensed PitchBook fields. **Check your PitchBook licence before publishing the site or the
+`.vercelignore` keeps `data/raw/`, `agents/`, `scripts/`, `docs/` and the spreadsheet out of the deployment; the site is `index.html`, `assets/` and `data/*.json`.
+
+The data files combine public sources and licensed PitchBook fields. **Check your PitchBook licence before publishing the site or the
 repository**: `data/raw/` (raw PitchBook pulls) is git-ignored on purpose, but valuations, round sizes, investor names and team data derived from those pulls
 appear in the dashboard.
 
