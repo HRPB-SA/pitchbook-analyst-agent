@@ -1042,6 +1042,9 @@ function renderModel(root) {
       }
     }
     side.append(el('h4', { text: 'Margins' }));
+    { const sc = state.data.compute?.model_cross_check?.fy2026_gross_margin_scope;
+      side.append(el('div', { class: 'small muted', style: { marginBottom: '8px', lineHeight: 1.45 } }, `Scope: gross margin here is after inference and other cost of revenue, before training and stock compensation; training is a separate line. `,
+        sc ? `The Compute tab reads 2026E at ${fmt.pct(sc.this_file_central_after_partner_share)} after partner share (${fmt.pct(sc.this_file_company_adjusted_before_partner_share)} before it, the company-adjusted scope) against ${fmt.pct(sc.model_base_gross_margin_2026)} here. The gap is how PitchBook's $0.56 Q2 compute-per-revenue-dollar is read (inference only here; all compute incl. training there). It is unresolved until the S-1 shows cost of revenue.` : '')); }
     [2026, 2027, 2028, 2029, 2030].forEach(y => sl(`${y} gross margin`, () => A.gross_margin[y], v => A.gross_margin[y] = v, -0.5, 0.9, 0.01, v => fmt.pct(v), y === 2026 ? S.gross_margin : null));
     sl('Inference share of cost of revenue', () => A.inference_share_of_cogs, v => A.inference_share_of_cogs = v, 0.3, 0.95, 0.01, v => fmt.pct(v), S.inference_share);
     side.append(el('h4', { text: 'Opex & compute' }));
@@ -1431,7 +1434,12 @@ class Floor {
   async poll() {
     try { const r = await fetch('data/agent_log.json', { cache: 'no-store' }); if (!r.ok) return; const d = await r.json(); if ((d.log || []).length > this.log.length) { const fresh = d.log.slice(this.log.length); this.log = d.log; this.agents = d.agents || this.agents; this.t1 = Date.parse(this.log[this.log.length - 1].t); for (const id of Object.keys(this.agents)) if (!this.desks[id]) { /* new agent: rebuild floor */ this.build(); this.seek(1); return; } this.renderRoster(); } } catch {}
   }
-  onShow() { /* nothing; replay is user-initiated */ }
+  onShow() {
+    // first visit: start the replay once so the floor is not an idle room; the reader can pause, scrub or change speed; skipped for reduced-motion users
+    if (this.autoStarted || this.playing || this.i > 0) return; this.autoStarted = true;
+    try { if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch {}
+    setTimeout(() => { if (!this.playing && this.i === 0) this.play(); }, 600);
+  }
 }
 function initials(n) { return (n || '?').replace(/[·—-]/g, ' ').split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase(); }
 const SHORT = {

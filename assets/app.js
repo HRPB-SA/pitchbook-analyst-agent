@@ -975,7 +975,12 @@ class Floor {
   async poll() {
     try { const r = await fetch('data/agent_log.json', { cache: 'no-store' }); if (!r.ok) return; const d = await r.json(); if ((d.log || []).length > this.log.length) { const fresh = d.log.slice(this.log.length); this.log = d.log; this.agents = d.agents || this.agents; this.t1 = Date.parse(this.log[this.log.length - 1].t); for (const id of Object.keys(this.agents)) if (!this.desks[id]) { /* new agent: rebuild floor */ this.build(); this.seek(1); return; } this.renderRoster(); } } catch {}
   }
-  onShow() { /* nothing; replay is user-initiated */ }
+  onShow() {
+    // first visit: start the replay once so the floor is not an idle room; the reader can pause, scrub or change speed; skipped for reduced-motion users
+    if (this.autoStarted || this.playing || this.i > 0) return; this.autoStarted = true;
+    try { if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch {}
+    setTimeout(() => { if (!this.playing && this.i === 0) this.play(); }, 600);
+  }
 }
 function initials(n) { return (n || '?').replace(/[·—-]/g, ' ').split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase(); }
 const SHORT = {
