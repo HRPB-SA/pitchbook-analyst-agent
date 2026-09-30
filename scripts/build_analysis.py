@@ -85,7 +85,12 @@ def thesis():
          "bull_outside_view": (bull or {}).get("outside_view"), "bear_outside_view": (bear or {}).get("outside_view"),
          "bull_concedes": (bull or {}).get("concedes"), "bear_concedes": (bear or {}).get("concedes")}
     if judge:
-        T["verdict"] = judge.get("verdict"); T["scorecard"] = judge.get("scorecard", []); T["consensus"] = judge.get("consensus"); T["unresolved"] = judge.get("unresolved", [])
+        vd = judge.get("verdict") or {}
+        if vd.get("rationale_ids"): vd["rationale_ids"] = [fix(x, st) for x in vd["rationale_ids"]]
+        for bm in vd.get("by_mark") or []:
+            if bm.get("event_ids"): bm["event_ids"] = fix(bm["event_ids"], st)
+        for wf in vd.get("what_flips_ids") or []: pass
+        T["verdict"] = vd; T["scorecard"] = judge.get("scorecard", []); T["consensus"] = judge.get("consensus"); T["unresolved"] = judge.get("unresolved", [])
         br = []
         for b in judge.get("thesis_breakers") or []:
             b = dict(b); b["event_id"] = (fix([b.get("event_id")], st) or [None])[0] if b.get("event_id") else None; br.append(b)
