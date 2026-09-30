@@ -56,7 +56,7 @@ def load(fn):
 
 master = (load(P("agents", "private", "claims_master.json")) or {}).get("claims", [])
 answers = {}
-for g in ("capital", "operating"):
+for g in ("capital", "operating", "prospectus", "compute"):
     d = load(P("agents", "outputs", f"verify-{g}.json"))
     for a in (d or {}).get("answers", []): answers[a.get("claim_id")] = a
 

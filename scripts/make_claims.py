@@ -16,8 +16,11 @@ PRIV, BRIEF = os.path.join(ROOT, "agents", "private"), os.path.join(ROOT, "agent
 os.makedirs(PRIV, exist_ok=True)
 claims = []
 
+import hashlib
 def add(group, kind, question, fields, expect, tol=None, draft_sources=(), draft_tier=None, label=None, event_id=None):
-    cid = f"{'CAP' if group == 'capital' else 'OPS'}-{sum(1 for c in claims if c['group'] == group) + 1:03d}"
+    # stable id: a re-run after a table changes keeps the ids of unchanged claims, so earlier re-derivations stay attached to them
+    cid = f"{'CAP' if group == 'capital' else 'OPS'}-{kind[:3].upper()}-{hashlib.sha1((group + kind + (label or question)[:160]).encode()).hexdigest()[:6]}"
+    if any(c['claim_id'] == cid for c in claims): cid += "x"
     claims.append({"claim_id": cid, "group": group, "kind": kind, "question": question, "fields": fields, "expect": expect, "tol": tol or {},
                    "draft_sources": [u for u in draft_sources if u], "draft_tier": draft_tier, "label": label, "event_id": event_id})
 
@@ -97,7 +100,11 @@ if not any(c["group"] == "operating" and c["kind"] == "headcount" for c in claim
     add("operating", "headcount", "Anthropic headcount: the most recent figure stated by the company or a named outlet, its date, and the trajectory over 2024-2026.", ["headcount", "date", "stated_by", "notes"], {}, {}, [], None, "Headcount")
 
 json.dump({"claims": claims}, open(os.path.join(PRIV, "claims_master.json"), "w"), indent=1, ensure_ascii=False)
-for g in ("capital", "operating"):
-    qs = [{"claim_id": c["claim_id"], "question": c["question"], "fields_to_return": c["fields"]} for c in claims if c["group"] == g]
-    json.dump({"auditor": f"verify-{g}", "as_of": "2026-09-30", "questions": qs}, open(os.path.join(BRIEF, f"questions_{g}.json"), "w"), indent=1, ensure_ascii=False)
-    print(f"{g}: {len(qs)} questions")
+FILES = {"capital": ("capital", {"round", "total", "debt", "ipo", "strategic"}),
+         "operating": ("operating", {"run_rate", "period_revenue", "headcount"}),
+         "prospectus": ("operating", {"margin", "customer", "prospectus"}),
+         "compute": ("operating", {"compute", "compute_total", "price"})}
+for name, (g, kinds) in FILES.items():
+    qs = [{"claim_id": c["claim_id"], "question": c["question"], "fields_to_return": c["fields"]} for c in claims if c["group"] == g and c["kind"] in kinds]
+    json.dump({"auditor": f"verify-{name}", "as_of": "2026-09-30", "questions": qs}, open(os.path.join(BRIEF, f"questions_{name}.json"), "w"), indent=1, ensure_ascii=False)
+    print(f"{name}: {len(qs)} questions")

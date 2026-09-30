@@ -1,0 +1,2397 @@
+{
+ "claims": [
+  {
+   "claim_id": "CAP-DEB-4ae801",
+   "group": "capital",
+   "kind": "debt",
+   "question": "Anthropic debt financings: (1) the May 2025 revolving credit facility (size, banks); (2) the 2026 pre-IPO revolving credit facility (size, lead banks, date finalized); (3) whether Anthropic issued chip-purchase bonds in June 2026 (amount, tranches, issuer) or whether that description is wrong, and what the correct description is.",
+   "fields": [
+    "revolver_2025_usd_m",
+    "revolver_2026_usd_m",
+    "chip_bonds_usd_m",
+    "chip_bonds_description",
+    "notes"
+   ],
+   "expect": {
+    "revolver_2025_usd_m": 2500,
+    "revolver_2026_usd_m": 15000
+   },
+   "tol": {
+    "revolver_2025_usd_m": 0.05,
+    "revolver_2026_usd_m": 0.1
+   },
+   "draft_sources": [],
+   "draft_tier": null,
+   "label": "Revolvers ($2.5B May 2025; ~$15B pre-IPO) and the $34.5B chip-bond claim",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-IPO-9d6ced",
+   "group": "capital",
+   "kind": "ipo",
+   "question": "Anthropic IPO as of Sep 30 2026: (1) has a public S-1 been filed (check SEC EDGAR) and when was the confidential draft submitted; (2) reported target raise and target valuation, and who reported them; (3) exchange; (4) reported timing (October vs November) with each outlet and date; (5) lead underwriters; (6) founder voting structure (class names, vote share).",
+   "fields": [
+    "public_s1",
+    "confidential_submission_date",
+    "target_raise_usd_m",
+    "target_valuation_usd_m",
+    "exchange",
+    "timing_reports",
+    "underwriters",
+    "founder_vote_pct",
+    "notes"
+   ],
+   "expect": {
+    "target_raise_usd_m": 100000,
+    "target_valuation_usd_m": 2000000,
+    "exchange": "Nasdaq",
+    "founder_vote_pct": 50.1
+   },
+   "tol": {
+    "target_raise_usd_m": 0.1,
+    "target_valuation_usd_m": 0.1,
+    "founder_vote_pct": 0.02
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/confidential-draft-s1-sec",
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+    "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
+    "https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-910036",
+    "https://thenextweb.com/news/anthropic-founder-llc-voting-control-ipo",
+    "https://www.investing.com/news/stock-market-news/factboxanthropic-ipo-prospectus-shows-key-executives-and-board-4921432",
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropic-warns-ai-may-001709847.html",
+    "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+    "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+    "https://finance.yahoo.com/markets/stocks/articles/anthropic-delays-ipo-mid-october-150657053.html",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+    "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html",
+    "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-could-come-september-191409974.html",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-moves-bolster-founder-control-214023999.html",
+    "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-pick-morgan-stanley-175802678.html",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html",
+    "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/",
+    "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+    "https://finance.yahoo.com/technology/ai/articles/nvidia-weighing-10-billion-stake-195701843.html",
+    "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%20PBC%22&forms=S-1",
+    "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-co-founders-lock-in-50-1-voting-control-via-founder-llc/",
+    "https://the-decoder.com/following-openai-anthropic-is-also-reportedly-postponing-its-ipo/",
+    "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/"
+   ],
+   "draft_tier": null,
+   "label": "IPO structure and timing",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-STR-3990a3",
+   "group": "capital",
+   "kind": "strategic",
+   "question": "Amazon's total investment in Anthropic through Sep 2026 (convertible notes vs equity; amounts and dates by tranche; carrying value in Amazon's latest filing) and Amazon's reported ownership range.",
+   "fields": [
+    "amount_usd_m",
+    "funded_vs_up_to",
+    "dates",
+    "ownership_or_carrying_value",
+    "notes"
+   ],
+   "expect": {},
+   "tol": {},
+   "draft_sources": [],
+   "draft_tier": null,
+   "label": "Amazon: strategic investment",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-STR-217799",
+   "group": "capital",
+   "kind": "strategic",
+   "question": "Google/Alphabet's total investment in Anthropic through Sep 2026 (amounts and dates by tranche; any 'up to' commitments) and reported ownership.",
+   "fields": [
+    "amount_usd_m",
+    "funded_vs_up_to",
+    "dates",
+    "ownership_or_carrying_value",
+    "notes"
+   ],
+   "expect": {},
+   "tol": {},
+   "draft_sources": [],
+   "draft_tier": null,
+   "label": "Google: strategic investment",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-STR-e47494",
+   "group": "capital",
+   "kind": "strategic",
+   "question": "The Nov 2025 Microsoft/Nvidia agreement: investment amounts ('up to' vs funded), the $30B Azure commitment, gigawatts, valuation cited, and what has been funded since.",
+   "fields": [
+    "amount_usd_m",
+    "funded_vs_up_to",
+    "dates",
+    "ownership_or_carrying_value",
+    "notes"
+   ],
+   "expect": {},
+   "tol": {},
+   "draft_sources": [],
+   "draft_tier": null,
+   "label": "Microsoft and Nvidia: strategic investment",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-RUN-b1fead",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2023-09? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2023-09-30",
+    "run_rate_usd_m": 100,
+    "basis": "unstated"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://www.tipranks.com/news/the-fly/anthropic-sees-850m-in-annualized-revenue-by-2024-end-the-information-says"
+   ],
+   "draft_tier": "T3",
+   "label": "Run-rate $100M (~2023-09-30)",
+   "event_id": "evt-20231226-rr-100m-2023-850m-target"
+  },
+  {
+   "claim_id": "OPS-RUN-b2aea0",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2024-01? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2024-01-31",
+    "run_rate_usd_m": 87,
+    "basis": "unstated"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth"
+   ],
+   "draft_tier": "T3",
+   "label": "Run-rate $87M (~2024-01-31)",
+   "event_id": "evt-20260508-rr-path-venturebeat-80x"
+  },
+  {
+   "claim_id": "OPS-RUN-189efe",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2024-12? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2024-12-31",
+    "run_rate_usd_m": 1000,
+    "basis": "gross"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+   ],
+   "draft_tier": "T1",
+   "label": "Run-rate $1.0B (~2024-12-31)",
+   "event_id": "evt-20250902-rr-5b-series-f-customers"
+  },
+  {
+   "claim_id": "OPS-RUN-df68e2",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2025-03? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-03-31",
+    "run_rate_usd_m": 2000,
+    "basis": "unstated"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
+   ],
+   "draft_tier": "T3",
+   "label": "Run-rate $2.0B (~2025-03-31)",
+   "event_id": "evt-20250516-rr-2b-q1-2025-cnbc"
+  },
+  {
+   "claim_id": "OPS-RUN-a56a47",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2025-05? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-05-02",
+    "run_rate_usd_m": 1400,
+    "basis": "unstated"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/"
+   ],
+   "draft_tier": "T3",
+   "label": "Run-rate $1.4B (~2025-05-02)",
+   "event_id": "evt-20250502-rr-1-4b-info-maginative"
+  },
+  {
+   "claim_id": "OPS-RUN-e4290a",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2025-07? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-07-10",
+    "run_rate_usd_m": 4000,
+    "basis": "unstated"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://siliconangle.com/2025/07/10/report-amazon-weighing-new-multibillion-dollar-investment-anthropic/"
+   ],
+   "draft_tier": "T2",
+   "label": "Run-rate $4.0B (~2025-07-10)",
+   "event_id": "evt-20250710-rr-4b-ft-siliconangle"
+  },
+  {
+   "claim_id": "OPS-RUN-91e239",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2025-10? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-10-15",
+    "run_rate_usd_m": 7000,
+    "basis": "unstated"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://www.tipranks.com/news/anthropic-targets-26-billion-revenue-by-2026-as-ai-demand-accelerates"
+   ],
+   "draft_tier": "T4",
+   "label": "Run-rate $7.0B (~2025-10-15)",
+   "event_id": "evt-20251016-rr-7b-ye9b-2026-26b"
+  },
+  {
+   "claim_id": "OPS-RUN-7b7aeb",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2026-02? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-02-12",
+    "run_rate_usd_m": 14000,
+    "basis": "gross"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+   ],
+   "draft_tier": "T1",
+   "label": "Run-rate $14.0B (~2026-02-12)",
+   "event_id": "evt-20260212-rr-14b-series-g-customers"
+  },
+  {
+   "claim_id": "OPS-RUN-2c99b0",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2026-03? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-03-03",
+    "run_rate_usd_m": 19000,
+    "basis": "gross"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/news/anthropic-arr-surges-19-billion-151028403.html"
+   ],
+   "draft_tier": "T3",
+   "label": "Run-rate $19.0B (~2026-03-03)",
+   "event_id": "evt-20260304-rr-19b-bloomberg"
+  },
+  {
+   "claim_id": "OPS-RUN-f70649",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2026-04? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-04-06",
+    "run_rate_usd_m": 30000,
+    "basis": "gross"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+   ],
+   "draft_tier": "T1",
+   "label": "Run-rate $30.0B (~2026-04-06)",
+   "event_id": "evt-20260406-rr-30b-1000-customers-1m"
+  },
+  {
+   "claim_id": "OPS-RUN-ad2e22",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2026-05? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-05-02",
+    "run_rate_usd_m": 44000,
+    "basis": "unstated"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://officechai.com/ai/anthropics-arr-has-touched-44-billion-says-semi-analysis-report/"
+   ],
+   "draft_tier": "T4",
+   "label": "Run-rate $44.0B (~2026-05-02)",
+   "event_id": "evt-20260502-semianalysis-44b-estimate"
+  },
+  {
+   "claim_id": "OPS-RUN-d33b7d",
+   "group": "operating",
+   "kind": "run_rate",
+   "question": "What annualized revenue run-rate did Anthropic (company, CFO/CEO, investor documents or a named outlet citing sources) state for around 2026-07? Give the figure in USD millions, the exact date it refers to, who stated it, and whether it is gross or net of cloud-partner resale. If several figures exist for that month, list each.",
+   "fields": [
+    "date",
+    "run_rate_usd_m",
+    "basis",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-07-31",
+    "run_rate_usd_m": 65000,
+    "basis": "gross"
+   },
+   "tol": {
+    "date": 20,
+    "run_rate_usd_m": 0.12
+   },
+   "draft_sources": [
+    "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+   ],
+   "draft_tier": "T2",
+   "label": "Run-rate $65.0B (~2026-07-31)",
+   "event_id": "evt-20260817-rr-65b-end-july"
+  },
+  {
+   "claim_id": "OPS-PER-e92fe0",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for FY2022: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 10,
+    "kind": "actual",
+    "basis": "PitchBook TTM 4Q2022 field; no primary source; contradicts company statement that first revenue came in 2023"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/profile/466959-97/company/profile"
+   ],
+   "draft_tier": "T2",
+   "label": "Revenue FY2022: $10M (actual)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PER-620695",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for FY2023: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 100,
+    "kind": "actual",
+    "basis": "PitchBook TTM 4Q2023 field = exit run-rate proxy (The Information: ~$100M annualized rate ~Sep 2023; Amodei: \"zero to $100 million\"); recognized FY2023 revenue not found"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/profile/466959-97/company/profile"
+   ],
+   "draft_tier": "T2",
+   "label": "Revenue FY2023: $100M (actual)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PER-f71902",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for FY2024: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 386,
+    "kind": "actual",
+    "basis": "GAAP recognized, gross of cloud-partner resale; $386M stated by KuCoin (T4, Reuters-derived) and implied by +1,088% growth to $4.59B (SiliconANGLE rounds to $400M); leaked DRAFT prospectus via Reuters, no public S-1"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/"
+   ],
+   "draft_tier": "T2",
+   "label": "Revenue FY2024: $386M (actual)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PER-2af222",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for FY2024: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 1000,
+    "kind": "actual",
+    "basis": "PitchBook TTM 4Q2024 field = year-end run-rate proxy (company: ~$1B at start of 2025; Amodei: $1B in 2024); NOT recognized revenue (2.6x the prospectus figure)"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/profile/466959-97/company/profile"
+   ],
+   "draft_tier": "T2",
+   "label": "Revenue FY2024: $1.0B (actual)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PER-b31930",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for FY2025: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 4590,
+    "kind": "actual",
+    "basis": "GAAP recognized, gross of cloud-partner resale ($3.8B usage-based + $789M subscription); 12x YoY (+1,088%); leaked DRAFT prospectus via Reuters"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Revenue FY2025: $4.6B (actual)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PER-87d017",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for FY2025: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 10000,
+    "kind": "actual",
+    "basis": "PitchBook TTM 4Q2025 field = exit run-rate proxy (brief says earlier value was $9.0B; revision history not retrievable); NOT recognized revenue (2.2x the prospectus figure)"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/profile/466959-97/company/profile"
+   ],
+   "draft_tier": "T2",
+   "label": "Revenue FY2025: $10.0B (actual)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PER-fc62ba",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for Q1 2026: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 4730,
+    "kind": "preliminary",
+    "basis": "recognized, gross; Fortune snapshot of leaked draft prospectus; WSJ/FT May 20 figure $4.8B (rounding)"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+   ],
+   "draft_tier": "T2",
+   "label": "Revenue Q1 2026: $4.7B (preliminary)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PER-88c333",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for Q2 2026: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 11500,
+    "kind": "preliminary",
+    "basis": "recognized, gross; \"more than $11.5 billion\", 14x YoY (Bloomberg Aug 14, CNBC Aug 15; FT; Fortune/Reuters prospectus)"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html"
+   ],
+   "draft_tier": "T3",
+   "label": "Revenue Q2 2026: $11.5B (preliminary)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PER-23f61c",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for H1 2026: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 16230,
+    "kind": "preliminary",
+    "basis": "derived sum of Q1 $4.73B and Q2 $11.5B (recognized, gross)"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+   ],
+   "draft_tier": "T2",
+   "label": "Revenue H1 2026: $16.2B (preliminary)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PER-225887",
+   "group": "operating",
+   "kind": "period_revenue",
+   "question": "Anthropic revenue for TTM 2Q2026 (Jul 2025-Jun 2026): amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
+   "fields": [
+    "usd_m",
+    "kind",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 19600,
+    "kind": "preliminary",
+    "basis": "DERIVED by desk: FY2025 $4.59B less Q1 2025 (~$0.38B, estimated from run-rate path) less Q2 2025 (~$0.82B = $11.5B/14) plus Q1 2026 $4.73B plus Q2 2026 $11.5B; recognized, gross"
+   },
+   "tol": {
+    "usd_m": 0.05
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/research-center/report/3f3cac2e-a62a-3ede-ac3c-e5a1a126fcdd"
+   ],
+   "draft_tier": "T3",
+   "label": "Revenue TTM 2Q2026 (Jul 2025-Jun 2026): $19.6B (preliminary)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-df2ba2",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic gross margin for FY2024: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "-94%",
+    "basis": "paying customers only (excludes free-user inference); estimate first reported by The Information Nov 4 2025 (\"negative 94% last year\")"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/"
+   ],
+   "draft_tier": "T3",
+   "label": "gross margin FY2024: -94%",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-7dca9b",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic gross margin for FY2025E (Nov 2025 projection): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "~50%",
+    "basis": "company projection per The Information via TechCrunch"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/"
+   ],
+   "draft_tier": "T3",
+   "label": "gross margin FY2025E (Nov 2025 projection): ~50%",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-ef2968",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic gross margin for FY2025 (revised Jan 2026): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "~40% (~38% including free-user inference)",
+    "basis": "The Information Jan 22 2026 via TipRanks: cut ~10pts because inference costs on Google/Amazon clouds ran ~23% above plan; ~38% figure per PitchBook footnote"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://www.tipranks.com/news/ai-startup-anthropic-warns-of-profit-margin-pressure-as-costs-surge"
+   ],
+   "draft_tier": "T4",
+   "label": "gross margin FY2025 (revised Jan 2026): ~40% (~38% including free-user inference)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-28a245",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic gross margin for FY2025 (WSJ investor docs, secondary): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "~40% (OpenAI 33%)",
+    "basis": "WSJ Apr 6 2026 as restated by AI Afterhours (T4); WSJ original not opened"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://aiafterhours.substack.com/p/openai-vs-anthropic-the-121-billion"
+   ],
+   "draft_tier": "T4",
+   "label": "gross margin FY2025 (WSJ investor docs, secondary): ~40% (OpenAI 33%)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-423184",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic gross margin for Q1 2026: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "compute cost $0.71 per $1 of revenue (implied ~29% on a compute-only basis)",
+    "basis": "PitchBook analyst estimate (Harrison Rolfes); not a company disclosure"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/news-center/pb8487822101662420642"
+   ],
+   "draft_tier": "T3",
+   "label": "gross margin Q1 2026: compute cost $0.71 per $1 of revenue (implied ~29% on a compute-only basis)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-9ea7f8",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic gross margin for Q2 2026E: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "compute cost $0.56 per $1 (implied ~44%; PitchBook \"roughly 44%\")",
+    "basis": "PitchBook analyst estimate on a conservative cost allocation"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/news-center/pb8487822101662420642"
+   ],
+   "draft_tier": "T3",
+   "label": "gross margin Q2 2026E: compute cost $0.56 per $1 (implied ~44%; PitchBook \"roughly 44%\")",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-9270b8",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic gross margin for Q2 2026 (investor materials): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": ">80% before revenue shared with distribution partners and before model-training costs",
+    "basis": "adjusted, company-provided (FT Sep 13 via Stocktwits/TNW); partner share is booked as a marketing expense (prospectus) so it is outside cost of revenue; not comparable to 40-44%"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
+   ],
+   "draft_tier": "T3",
+   "label": "gross margin Q2 2026 (investor materials): >80% before revenue shared with distribution partners and before model-training costs",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-d1d317",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic gross margin for FY2027E: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "63% (target)",
+    "basis": "analyst-compiled target in PitchBook Ranking the AI Giants; not located in an opened press/primary source"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625"
+   ],
+   "draft_tier": "T3",
+   "label": "gross margin FY2027E: 63% (target)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-363aa8",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic gross margin for FY2028E: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "77% (target)",
+    "basis": "company plan reported by The Information (Nov 2025) via TechCrunch"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/"
+   ],
+   "draft_tier": "T3",
+   "label": "gross margin FY2028E: 77% (target)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-bc29eb",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic operating income for FY2024: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "-$2,980M",
+    "basis": "GAAP operating loss; leaked draft prospectus (Fortune/Reuters)"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/"
+   ],
+   "draft_tier": "T2",
+   "label": "operating income FY2024: -$2,980M",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-fb8630",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic operating income for FY2025: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "-$8,060M (opex $12,650M vs revenue $4,590M; about -176% operating margin)",
+    "basis": "GAAP; leaked draft prospectus; compute and infrastructure $7.33B = 58% of opex"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "draft_tier": "T2",
+   "label": "operating income FY2025: -$8,060M (opex $12,650M vs revenue $4,590M; about -176% operating margin)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-f97435",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic operating income for Q2 2026 (projection, May 20): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "+$559M on $10.9B projected revenue",
+    "basis": "WSJ/FT reporting of investor slide decks (not financial statements); non-GAAP: per T5 commentary includes model-training costs, excludes stock-based compensation; compute discounts (SpaceX ramp) end in July"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/markets/stocks/articles/anthropic-track-first-profitable-quarter-124217577.html"
+   ],
+   "draft_tier": "T3",
+   "label": "operating income Q2 2026 (projection, May 20): +$559M on $10.9B projected revenue",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-a0098f",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic operating income for Q2 2026 (actual, adjusted): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "positive adjusted operating income; dollar amount undisclosed",
+    "basis": "adjusted: strips stock-based compensation and exceptional/one-time items (FT/Bloomberg via Stocktwits, TNW); GAAP operating result not reported"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo"
+   ],
+   "draft_tier": "T3",
+   "label": "operating income Q2 2026 (actual, adjusted): positive adjusted operating income; dollar amount undisclosed",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-MAR-61a382",
+   "group": "operating",
+   "kind": "margin",
+   "question": "Reported Anthropic operating income for Q3 2026E: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "second straight positive adjusted operating income expected; SemiAnalysis est. ~$1B GAAP EBIT (~6% margin)",
+    "basis": "company guidance to investors (FT) and a SemiAnalysis estimate relayed by valueaddvc (T4; SemiAnalysis page not opened)"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://valueaddvc.com/blog/is-anthropic-profitable-2026-losses-burn-rate-and-the-path-to-breakeven"
+   ],
+   "draft_tier": "T4",
+   "label": "operating income Q3 2026E: second straight positive adjusted operating income expected; SemiAnalysis est. ~$1B GAAP EBIT (~6% margin)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-CUS-4d7394",
+   "group": "operating",
+   "kind": "customer",
+   "question": "Anthropic customer metric 'business customers' around 2025-09-02: value, date, and who stated it.",
+   "fields": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "over 300,000"
+   },
+   "tol": {
+    "value": 0.1
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+   ],
+   "draft_tier": "T1",
+   "label": "business customers: over 300,000",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-CUS-803c68",
+   "group": "operating",
+   "kind": "customer",
+   "question": "Anthropic customer metric 'customers >$100K run-rate: growth' around 2025-05-16: value, date, and who stated it.",
+   "fields": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "8x YoY (Q1 2025); nearly 7x (Aug 2025); 7x (Feb 2026)"
+   },
+   "tol": {
+    "value": 0.1
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+   ],
+   "draft_tier": "T1",
+   "label": "customers >$100K run-rate: growth: 8x YoY (Q1 2025); nearly 7x (Aug 2025); 7x (Feb 2026)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-CUS-91af9c",
+   "group": "operating",
+   "kind": "customer",
+   "question": "Anthropic customer metric 'customers >=$1M annualized' around 2026-04-06: value, date, and who stated it.",
+   "fields": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "~12 (early 2024) -> over 500 (Feb 2026) -> over 1,000 (Apr 2026)"
+   },
+   "tol": {
+    "value": 0.1
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+   ],
+   "draft_tier": "T1",
+   "label": "customers >=$1M annualized: ~12 (early 2024) -> over 500 (Feb 2026) -> over 1,000 (Apr 2026)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-CUS-742b20",
+   "group": "operating",
+   "kind": "customer",
+   "question": "Anthropic customer metric 'Fortune 10 customers' around 2026-02-12: value, date, and who stated it.",
+   "fields": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "8 of the Fortune 10"
+   },
+   "tol": {
+    "value": 0.1
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+   ],
+   "draft_tier": "T1",
+   "label": "Fortune 10 customers: 8 of the Fortune 10",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-CUS-86b20f",
+   "group": "operating",
+   "kind": "customer",
+   "question": "Anthropic customer metric 'net revenue retention (NRR)' around 2026-06-10: value, date, and who stated it.",
+   "fields": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "140%+ (PitchBook conservative estimate; upper bound 170%); NOT disclosed by Anthropic"
+   },
+   "tol": {
+    "value": 0.1
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/research-center/report/f3db74ec-cfbb-311d-b38f-91ab1c845962"
+   ],
+   "draft_tier": "T3",
+   "label": "net revenue retention (NRR): 140%+ (PitchBook conservative estimate; upper bound 170%); NOT disclosed by Anthropic",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-CUS-63ee15",
+   "group": "operating",
+   "kind": "customer",
+   "question": "Anthropic customer metric 'logo churn / multiyear contracts' around 2026-03-05: value, date, and who stated it.",
+   "fields": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "logo churn <5%; >50% multiyear contracts; >60% of business customers use more than one Claude product (all analyst estimates)"
+   },
+   "tol": {
+    "value": 0.1
+   },
+   "draft_sources": [
+    "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625"
+   ],
+   "draft_tier": "T3",
+   "label": "logo churn / multiyear contracts: logo churn <5%; >50% multiyear contracts; >60% of business customers use more than one Claude product (all analyst estimates)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-CUS-693acb",
+   "group": "operating",
+   "kind": "customer",
+   "question": "Anthropic customer metric 'customer concentration' around 2026-09-29: value, date, and who stated it.",
+   "fields": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "two unnamed customers each ~12% of FY2025 revenue (nearly 25% combined); many large customers lack long-term contracts"
+   },
+   "tol": {
+    "value": 0.1
+   },
+   "draft_sources": [
+    "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
+   ],
+   "draft_tier": "T2",
+   "label": "customer concentration: two unnamed customers each ~12% of FY2025 revenue (nearly 25% combined); many large customers lack long-term contracts",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-CUS-949adf",
+   "group": "operating",
+   "kind": "customer",
+   "question": "Anthropic customer metric 'share of revenue from business/enterprise' around 2025-10-16: value, date, and who stated it.",
+   "fields": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "value": "~80% business/enterprise vs ~20% consumer"
+   },
+   "tol": {
+    "value": 0.1
+   },
+   "draft_sources": [
+    "https://www.tipranks.com/news/anthropic-targets-26-billion-revenue-by-2026-as-ai-demand-accelerates"
+   ],
+   "draft_tier": "T4",
+   "label": "share of revenue from business/enterprise: ~80% business/enterprise vs ~20% consumer",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-COM-a6eaa7",
+   "group": "operating",
+   "kind": "compute_total",
+   "question": "Totals reported for Anthropic's compute commitments as of Sep 2026: (1) the leaked prospectus total and the share that is non-cancelable, with the largest counterparties and amounts; (2) The Information's 'up to $517B / $531B in 11 months' figure and gigawatts; (3) any other total. State the basis (maximum contract value vs committed spend; years covered).",
+   "fields": [
+    "prospectus_total_usd_m",
+    "non_cancelable_share",
+    "information_total_usd_m",
+    "information_gw",
+    "notes"
+   ],
+   "expect": {
+    "prospectus_total_usd_m": 518000,
+    "information_total_usd_m": 517000
+   },
+   "tol": {
+    "prospectus_total_usd_m": 0.05,
+    "information_total_usd_m": 0.05
+   },
+   "draft_sources": [],
+   "draft_tier": null,
+   "label": "Compute commitment totals ($518B prospectus; $517B The Information)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-e1af19",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude 3 Haiku per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 0.25,
+    "price_out_per_mtok": 1.25,
+    "release_date": "2024-03-04"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-3-family"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude 3 Haiku: $0.25/$1.25 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-4f98c5",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude 3 Sonnet per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2024-03-04"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-3-family"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude 3 Sonnet: $3.0/$15.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-ceacd1",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude 3 Opus per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 15.0,
+    "price_out_per_mtok": 75.0,
+    "release_date": "2024-03-04"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-3-family"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude 3 Opus: $15.0/$75.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-4922e9",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude 3.5 Sonnet (Jun 2024; upgraded Oct 2024) per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2024-06-20"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-3-5-sonnet"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude 3.5 Sonnet (Jun 2024; upgraded Oct 2024): $3.0/$15.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-d76d7f",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude 3.5 Haiku per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 1.0,
+    "price_out_per_mtok": 5.0,
+    "release_date": "2024-11-04"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://techcrunch.com/2024/11/04/anthropic-hikes-the-price-of-its-haiku-model/"
+   ],
+   "draft_tier": "T2",
+   "label": "Claude 3.5 Haiku: $1.0/$5.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-46a566",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude 3.7 Sonnet per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2025-02-24"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-3-7-sonnet"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude 3.7 Sonnet: $3.0/$15.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-11024e",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Opus 4 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 15.0,
+    "price_out_per_mtok": 75.0,
+    "release_date": "2025-05-22"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-4"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Opus 4: $15.0/$75.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-3cacec",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Sonnet 4 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2025-05-22"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-4"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Sonnet 4: $3.0/$15.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-8e796e",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Opus 4.1 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 15.0,
+    "price_out_per_mtok": 75.0,
+    "release_date": "2025-08-05"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-opus-4-1"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Opus 4.1: $15.0/$75.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-4faae8",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Sonnet 4.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2025-09-29"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-sonnet-4-5"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Sonnet 4.5: $3.0/$15.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-e6612c",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Haiku 4.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 1.0,
+    "price_out_per_mtok": 5.0,
+    "release_date": "2025-10-15"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-haiku-4-5"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Haiku 4.5: $1.0/$5.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-27b2a8",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Opus 4.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2025-11-24"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-opus-4-5"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Opus 4.5: $5.0/$25.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-1718c6",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Opus 4.6 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-02-05"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-opus-4-6"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Opus 4.6: $5.0/$25.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-f1019d",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Sonnet 4.6 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2026-02-17"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-sonnet-4-6"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Sonnet 4.6: $3.0/$15.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-2e6641",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Mythos Preview per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 25.0,
+    "price_out_per_mtok": 125.0,
+    "release_date": "2026-04-07"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/glasswing"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Mythos Preview: $25.0/$125.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-3a256f",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Opus 4.7 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-04-16"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-opus-4-7"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Opus 4.7: $5.0/$25.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-9883ec",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Opus 4.8 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-05-28"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-opus-4-8"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Opus 4.8: $5.0/$25.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-42e96b",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Fable 5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-06-09"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Fable 5: $10.0/$50.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-c360e0",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Mythos 5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-06-09"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Mythos 5: $10.0/$50.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-0c0a69",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Sonnet 5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 2.0,
+    "price_out_per_mtok": 10.0,
+    "release_date": "2026-06-30"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-sonnet-5"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Sonnet 5: $2.0/$10.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-fe68cd",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Opus 5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-07-24"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/claude-opus-5"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Opus 5: $5.0/$25.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-4cb1f2",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Fable 5.1 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-09-01"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Fable 5.1: $10.0/$50.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-026aed",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Mythos 5.1 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-09-01"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Mythos 5.1: $10.0/$50.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-38ef44",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Opus 5.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 4.0,
+    "price_out_per_mtok": 20.0,
+    "release_date": "2026-09-22"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/claude-opus-5-5"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Opus 5.5: $4.0/$20.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRI-f9fd47",
+   "group": "operating",
+   "kind": "price",
+   "question": "Anthropic API list price for Claude Sonnet 5.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ],
+   "expect": {
+    "price_in_per_mtok": 2.0,
+    "price_out_per_mtok": 10.0,
+    "release_date": "2026-09-28"
+   },
+   "tol": {
+    "price_in_per_mtok": 0.02,
+    "price_out_per_mtok": 0.02,
+    "release_date": 3
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/claude-sonnet-5-5"
+   ],
+   "draft_tier": "T1",
+   "label": "Claude Sonnet 5.5: $2.0/$10.0 per Mtok",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-832aa6",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Revenue' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "nearly $4.6B ($4.59B per TradingKey); about 12x FY2024 (+1,088% per Fortune/TradingKey)"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Revenue = nearly $4.6B ($4.59B per TradingKey); about 12x FY2024 (+1,088% per Fortune/TradingKey)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-508ece",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Revenue' (FY2024): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "about $386M (derived from +1,088% growth); SiliconANGLE rounds to $400M"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://www.tradingkey.com/analysis/stocks/us-stocks/262190854-anthropic-ipo-prospectus-revealed-tradingkey"
+   ],
+   "draft_tier": "T3",
+   "label": "Prospectus: Revenue = about $386M (derived from +1,088% growth); SiliconANGLE rounds to $400M",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-3cbb5f",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Operating loss' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "$8.06B ('more than $8B', excluding writedowns)"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Operating loss = $8.06B ('more than $8B', excluding writedowns)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-a9e720",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Operating loss' (FY2024): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "$2.98B (about $3B)"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/"
+   ],
+   "draft_tier": "T3",
+   "label": "Prospectus: Operating loss = $2.98B (about $3B)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-b86e59",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Net loss' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "$42B"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Net loss = $42B",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-3b375d",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Non-cash financing charge' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "~$34B, 'reflected an increase in the estimated value of financing that could eventually turn into Anthropic shares, rather than money the company spent'"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Non-cash financing charge = ~$34B, 'reflected an increase in the estimated value of financing that could eventually turn into Anthropic shares, rather than money the company spent'",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-30af82",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Total operating expenses' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "$12.65B ('almost $13B' per TechCrunch/Fortune)"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Total operating expenses = $12.65B ('almost $13B' per TechCrunch/Fortune)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-63169f",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Compute and infrastructure spend' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "$7.33B, about 3x FY2024; more than half of total operating expenses"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Compute and infrastructure spend = $7.33B, about 3x FY2024; more than half of total operating expenses",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-f960bc",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Cash, cash equivalents and short-term investments' (Dec 31, 2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "$20.28B"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Cash, cash equivalents and short-term investments = $20.28B",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-f4166a",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Revenue' (Q1 2026): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "$4.73B"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+   ],
+   "draft_tier": "T3",
+   "label": "Prospectus: Revenue = $4.73B",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-9ac20e",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Revenue' (Q2 2026 (Apr-Jun)): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "$11.5B, about 14x year over year"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Revenue = $11.5B, about 14x year over year",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-b436b4",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Adjusted operating income' (Q2-Q3 2026): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "positive in Q2 2026 (first) and expected positive again in Q3 (second straight quarter); dollar amount not disclosed"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Adjusted operating income = positive in Q2 2026 (first) and expected positive again in Q3 (second straight quarter); dollar amount not disclosed",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-fceda7",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Gross margin (non-GAAP)' (Q2 2026 (management view)): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "above 80% before revenue shared with distribution partners; excludes stock-based compensation and model-training costs"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html"
+   ],
+   "draft_tier": "T3",
+   "label": "Prospectus: Gross margin (non-GAAP) = above 80% before revenue shared with distribution partners; excludes stock-based compensation and model-training costs",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-PRO-0287fc",
+   "group": "operating",
+   "kind": "prospectus",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Annualized revenue run-rate' (Jul 2026): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ],
+   "expect": {
+    "value": "above $65B at end-July 2026 (about $9B at end-2025; above $47B in May)"
+   },
+   "tol": {
+    "value": 0.08
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Prospectus: Annualized revenue run-rate = above $65B at end-July 2026 (about $9B at end-2025; above $47B in May)",
+   "event_id": null
+  },
+  {
+   "claim_id": "OPS-HEA-116f01",
+   "group": "operating",
+   "kind": "headcount",
+   "question": "Anthropic headcount: the most recent figure stated by the company or a named outlet, its date, and the trajectory over 2024-2026.",
+   "fields": [
+    "headcount",
+    "date",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {},
+   "tol": {},
+   "draft_sources": [],
+   "draft_tier": null,
+   "label": "Headcount",
+   "event_id": null
+  }
+ ]
+}

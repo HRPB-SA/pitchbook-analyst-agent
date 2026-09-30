@@ -25,6 +25,7 @@ Operating expenses = revenue × (R&D% + S&M% + G&A% + SBC%) excluding training c
 Operating income ex-training = GP − opex; incl.-training = that − training. Tax = rate × max(0, incl.-training OI). FCF = OI incl. training − tax + SBC − compute capex/prepayments.
 DCF EV = PV(FCF 2026–2029) + PV(2030 FCF × (1 + terminal_multiple_fcf)) at `discount_rate`, valued at end-2025. `marks` are the EVs to reverse-solve.
 Anthropic reports revenue GROSS of cloud-partner resale; `equalization_haircut` converts to a net basis comparable with OpenAI (canonical desk ruling: 39.75%).
+**Open methodology conflict you must carry, not resolve:** the record's own evidence is far below 39.75%: the leaked prospectus (Reuters, T2/T3) shows platform fees of about $351M, roughly 7.6% of FY2025 revenue, booked gross; PitchBook estimates a 6-10% effect of a net presentation; the S-1 figures and the OpenAI ~$8B gross-up claim rest on aggregators. Keep 0.3975 as the default (an inconsistent change is a defect), fill `equalization_alt`, report EV / net revenue at BOTH in `notes` and `sources.equalization`, and log a flag (type flag) that the canonical figure is contradicted in size by the record.
 
 ## 3. Output: ONE valid JSON file at agents/outputs/analyst-model.json
 ```
@@ -48,7 +49,8 @@ A = {
  "mix_2026": {"api_direct": x, "cloud_resale": x, "claude_code": x, "seats": x, "consumer": x, "gov_other": x},   // sums to 1
  "mix_2030": {same keys, sums to 1},
  "segment_labels": {"api_direct": "API direct", "cloud_resale": "Cloud-partner resale", "claude_code": "Claude Code & agents", "seats": "Enterprise & team seats", "consumer": "Consumer subscriptions", "gov_other": "Government & other"},
- "equalization_haircut": 0.3975,
+ "equalization_haircut": 0.3975,                                                                // desk canonical default (a prior decision; do not change it silently)
+ "equalization_alt": {"platform_fee_pct_fy2025": 0.076, "pitchbook_range": [0.06, 0.10], "note": "<source, tier, event ids>"},   // what the record's own evidence implies; shown as a second preset in the UI
  "gross_margin": {"2024": x, "2025": x, "2026": x, "2027": x, "2028": x, "2029": x, "2030": x},   // fractions; negative allowed; anchor on the record (WSJ investor-docs path −94% → 40% → 63% (2027E) → 77% (2028E) — confirm which years each applies to)
  "inference_share_of_cogs": x,
  "opex": {"rnd": {"2024..2030": pct_of_revenue}, "sm": {...}, "ga": {...}},                      // EXCLUDING training compute and SBC

@@ -46,6 +46,8 @@ AGENT_META = {
   "desk-s1": ("Prospectus Desk", "desk"),
   "verify-capital": ("Source Re-deriver · Capital", "verify"),
   "verify-operating": ("Source Re-deriver · Operating", "verify"),
+  "verify-prospectus": ("Source Re-deriver · Prospectus & Margins", "verify"),
+  "verify-compute": ("Source Re-deriver · Compute & Prices", "verify"),
   "verify-audit-1": ("Record Auditor · 1", "verify"),
   "verify-audit-2": ("Record Auditor · 2", "verify"),
   "analyst-topic-capital": ("Analyst · Capital", "analysis"),
@@ -270,6 +272,36 @@ def build_events(outs, conflicts_out):
     merged.sort(key=lambda e: (e["date"], e["headline"]))
     return merged, n
 
+def apply_corrections(events):
+    """Apply agents/corrections.json (orchestrator corrections after the independent audit). Never edits agent outputs; records was/now on the event."""
+    fn = os.path.join(ROOT, "agents", "corrections.json")
+    if not os.path.exists(fn): return []
+    try: cs = json.load(open(fn)).get("corrections", [])
+    except Exception as ex:
+        print("!! corrections.json unreadable:", ex, file=sys.stderr); return []
+    alias = {}
+    for e in events:
+        alias[e["id"]] = e
+        for mid in e.get("merged_ids", []): alias[mid] = e
+    done = []
+    for c in cs:
+        e = alias.get(c.get("event_id"))
+        if not e: print("!! correction", c.get("id"), "targets missing event", c.get("event_id"), file=sys.stderr); continue
+        changed = {}
+        for path, new in (c.get("set") or {}).items():
+            cur = e; keys = path.split(".")
+            for k in keys[:-1]:
+                if not isinstance(cur.get(k), dict): cur[k] = {}
+                cur = cur[k]
+            changed[path] = {"was": cur.get(keys[-1]), "now": new}; cur[keys[-1]] = new
+        if c.get("summary_replace"):
+            a, b = c["summary_replace"]
+            if a in e.get("summary", ""):
+                changed["summary"] = {"was": e["summary"], "now": e["summary"].replace(a, b)}; e["summary"] = e["summary"].replace(a, b)
+        e.setdefault("corrections", []).append({"id": c["id"], "audit_id": c.get("audit_id"), "reason": c.get("reason"), "changed": changed})
+        done.append({"id": c["id"], "audit_id": c.get("audit_id"), "event_id": e["id"], "headline": e["headline"], "reason": c.get("reason"), "changed": list(changed)})
+    return done
+
 def build_metrics(events, outs):
     m = {"valuation": [], "run_rate": [], "period_revenue": [], "capital": [], "headcount": [], "compute": [], "pricing": [], "margins": [], "customers": []}
     for e in events:
@@ -470,6 +502,7 @@ def main():
         print("no agent outputs found"); return
     conflicts = []
     events, n_raw = build_events(outs, conflicts)
+    applied = apply_corrections(events)
     metrics = build_metrics(events, outs)
     entities = build_entities(events, outs)
     alog = build_agent_log(outs, events)
@@ -487,7 +520,7 @@ def main():
               "tiers": dict(tiers), "confidence": dict(confs), "categories": dict(cats), "years": dict(sorted(years.items())),
               "opened_share": round(sum(1 for e in events if e["source"].get("opened")) / max(len(events), 1), 3),
               "cross_agent_conflicts": conflicts, "agent_conflicts": agent_conflicts, "open_items": open_items,
-              "claims": []}
+              "claims": [], "corrections": applied}
     id_map = {}
     for e in events:
         id_map[e["id"]] = e["id"]

@@ -1,0 +1,292 @@
+{
+ "auditor": "verify-compute",
+ "as_of": "2026-09-30",
+ "questions": [
+  {
+   "claim_id": "OPS-COM-a6eaa7",
+   "question": "Totals reported for Anthropic's compute commitments as of Sep 2026: (1) the leaked prospectus total and the share that is non-cancelable, with the largest counterparties and amounts; (2) The Information's 'up to $517B / $531B in 11 months' figure and gigawatts; (3) any other total. State the basis (maximum contract value vs committed spend; years covered).",
+   "fields_to_return": [
+    "prospectus_total_usd_m",
+    "non_cancelable_share",
+    "information_total_usd_m",
+    "information_gw",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-e1af19",
+   "question": "Anthropic API list price for Claude 3 Haiku per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-4f98c5",
+   "question": "Anthropic API list price for Claude 3 Sonnet per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-ceacd1",
+   "question": "Anthropic API list price for Claude 3 Opus per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-4922e9",
+   "question": "Anthropic API list price for Claude 3.5 Sonnet (Jun 2024; upgraded Oct 2024) per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-d76d7f",
+   "question": "Anthropic API list price for Claude 3.5 Haiku per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-46a566",
+   "question": "Anthropic API list price for Claude 3.7 Sonnet per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-11024e",
+   "question": "Anthropic API list price for Claude Opus 4 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-3cacec",
+   "question": "Anthropic API list price for Claude Sonnet 4 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-8e796e",
+   "question": "Anthropic API list price for Claude Opus 4.1 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-4faae8",
+   "question": "Anthropic API list price for Claude Sonnet 4.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-e6612c",
+   "question": "Anthropic API list price for Claude Haiku 4.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-27b2a8",
+   "question": "Anthropic API list price for Claude Opus 4.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-1718c6",
+   "question": "Anthropic API list price for Claude Opus 4.6 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-f1019d",
+   "question": "Anthropic API list price for Claude Sonnet 4.6 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-2e6641",
+   "question": "Anthropic API list price for Claude Mythos Preview per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-3a256f",
+   "question": "Anthropic API list price for Claude Opus 4.7 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-9883ec",
+   "question": "Anthropic API list price for Claude Opus 4.8 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-42e96b",
+   "question": "Anthropic API list price for Claude Fable 5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-c360e0",
+   "question": "Anthropic API list price for Claude Mythos 5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-0c0a69",
+   "question": "Anthropic API list price for Claude Sonnet 5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-fe68cd",
+   "question": "Anthropic API list price for Claude Opus 5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-4cb1f2",
+   "question": "Anthropic API list price for Claude Fable 5.1 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-026aed",
+   "question": "Anthropic API list price for Claude Mythos 5.1 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-38ef44",
+   "question": "Anthropic API list price for Claude Opus 5.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-f9fd47",
+   "question": "Anthropic API list price for Claude Sonnet 5.5 per million input and output tokens at launch, and any later changes, per Anthropic's own pricing or docs pages (state the date of the page).",
+   "fields_to_return": [
+    "price_in_per_mtok",
+    "price_out_per_mtok",
+    "release_date",
+    "later_changes",
+    "notes"
+   ]
+  }
+ ]
+}

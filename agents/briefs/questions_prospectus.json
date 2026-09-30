@@ -1,0 +1,366 @@
+{
+ "auditor": "verify-prospectus",
+ "as_of": "2026-09-30",
+ "questions": [
+  {
+   "claim_id": "OPS-MAR-df2ba2",
+   "question": "Reported Anthropic gross margin for FY2024: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-7dca9b",
+   "question": "Reported Anthropic gross margin for FY2025E (Nov 2025 projection): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-ef2968",
+   "question": "Reported Anthropic gross margin for FY2025 (revised Jan 2026): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-28a245",
+   "question": "Reported Anthropic gross margin for FY2025 (WSJ investor docs, secondary): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-423184",
+   "question": "Reported Anthropic gross margin for Q1 2026: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-9ea7f8",
+   "question": "Reported Anthropic gross margin for Q2 2026E: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-9270b8",
+   "question": "Reported Anthropic gross margin for Q2 2026 (investor materials): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-d1d317",
+   "question": "Reported Anthropic gross margin for FY2027E: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-363aa8",
+   "question": "Reported Anthropic gross margin for FY2028E: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-bc29eb",
+   "question": "Reported Anthropic operating income for FY2024: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-fb8630",
+   "question": "Reported Anthropic operating income for FY2025: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-f97435",
+   "question": "Reported Anthropic operating income for Q2 2026 (projection, May 20): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-a0098f",
+   "question": "Reported Anthropic operating income for Q2 2026 (actual, adjusted): value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-61a382",
+   "question": "Reported Anthropic operating income for Q3 2026E: value, basis (before or after partner revenue share; before or after training compute; GAAP or adjusted), who reported it and when.",
+   "fields_to_return": [
+    "value",
+    "basis",
+    "reported_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-CUS-4d7394",
+   "question": "Anthropic customer metric 'business customers' around 2025-09-02: value, date, and who stated it.",
+   "fields_to_return": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-CUS-803c68",
+   "question": "Anthropic customer metric 'customers >$100K run-rate: growth' around 2025-05-16: value, date, and who stated it.",
+   "fields_to_return": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-CUS-91af9c",
+   "question": "Anthropic customer metric 'customers >=$1M annualized' around 2026-04-06: value, date, and who stated it.",
+   "fields_to_return": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-CUS-742b20",
+   "question": "Anthropic customer metric 'Fortune 10 customers' around 2026-02-12: value, date, and who stated it.",
+   "fields_to_return": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-CUS-86b20f",
+   "question": "Anthropic customer metric 'net revenue retention (NRR)' around 2026-06-10: value, date, and who stated it.",
+   "fields_to_return": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-CUS-63ee15",
+   "question": "Anthropic customer metric 'logo churn / multiyear contracts' around 2026-03-05: value, date, and who stated it.",
+   "fields_to_return": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-CUS-693acb",
+   "question": "Anthropic customer metric 'customer concentration' around 2026-09-29: value, date, and who stated it.",
+   "fields_to_return": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-CUS-949adf",
+   "question": "Anthropic customer metric 'share of revenue from business/enterprise' around 2025-10-16: value, date, and who stated it.",
+   "fields_to_return": [
+    "value",
+    "date",
+    "stated_by",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-832aa6",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Revenue' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-508ece",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Revenue' (FY2024): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-3cbb5f",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Operating loss' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-a9e720",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Operating loss' (FY2024): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-b86e59",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Net loss' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-3b375d",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Non-cash financing charge' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-30af82",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Total operating expenses' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-63169f",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Compute and infrastructure spend' (FY2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-f960bc",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Cash, cash equivalents and short-term investments' (Dec 31, 2025): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-f4166a",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Revenue' (Q1 2026): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-9ac20e",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Revenue' (Q2 2026 (Apr-Jun)): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-b436b4",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Adjusted operating income' (Q2-Q3 2026): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-fceda7",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Gross margin (non-GAAP)' (Q2 2026 (management view)): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-0287fc",
+   "question": "What has been reported about Anthropic's draft IPO prospectus regarding 'Annualized revenue run-rate' (Jul 2026): value, who reported it (outlet, date), whether two outlets independently report it.",
+   "fields_to_return": [
+    "value",
+    "reported_by",
+    "date",
+    "notes"
+   ]
+  }
+ ]
+}

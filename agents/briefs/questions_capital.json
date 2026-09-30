@@ -1,0 +1,65 @@
+{
+ "auditor": "verify-capital",
+ "as_of": "2026-09-30",
+ "questions": [
+  {
+   "claim_id": "CAP-DEB-4ae801",
+   "question": "Anthropic debt financings: (1) the May 2025 revolving credit facility (size, banks); (2) the 2026 pre-IPO revolving credit facility (size, lead banks, date finalized); (3) whether Anthropic issued chip-purchase bonds in June 2026 (amount, tranches, issuer) or whether that description is wrong, and what the correct description is.",
+   "fields_to_return": [
+    "revolver_2025_usd_m",
+    "revolver_2026_usd_m",
+    "chip_bonds_usd_m",
+    "chip_bonds_description",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "CAP-IPO-9d6ced",
+   "question": "Anthropic IPO as of Sep 30 2026: (1) has a public S-1 been filed (check SEC EDGAR) and when was the confidential draft submitted; (2) reported target raise and target valuation, and who reported them; (3) exchange; (4) reported timing (October vs November) with each outlet and date; (5) lead underwriters; (6) founder voting structure (class names, vote share).",
+   "fields_to_return": [
+    "public_s1",
+    "confidential_submission_date",
+    "target_raise_usd_m",
+    "target_valuation_usd_m",
+    "exchange",
+    "timing_reports",
+    "underwriters",
+    "founder_vote_pct",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "CAP-STR-3990a3",
+   "question": "Amazon's total investment in Anthropic through Sep 2026 (convertible notes vs equity; amounts and dates by tranche; carrying value in Amazon's latest filing) and Amazon's reported ownership range.",
+   "fields_to_return": [
+    "amount_usd_m",
+    "funded_vs_up_to",
+    "dates",
+    "ownership_or_carrying_value",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "CAP-STR-217799",
+   "question": "Google/Alphabet's total investment in Anthropic through Sep 2026 (amounts and dates by tranche; any 'up to' commitments) and reported ownership.",
+   "fields_to_return": [
+    "amount_usd_m",
+    "funded_vs_up_to",
+    "dates",
+    "ownership_or_carrying_value",
+    "notes"
+   ]
+  },
+  {
+   "claim_id": "CAP-STR-e47494",
+   "question": "The Nov 2025 Microsoft/Nvidia agreement: investment amounts ('up to' vs funded), the $30B Azure commitment, gigawatts, valuation cited, and what has been funded since.",
+   "fields_to_return": [
+    "amount_usd_m",
+    "funded_vs_up_to",
+    "dates",
+    "ownership_or_carrying_value",
+    "notes"
+   ]
+  }
+ ]
+}

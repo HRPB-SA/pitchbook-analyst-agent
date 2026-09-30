@@ -1,17 +1,17 @@
 {
- "generated": "2026-09-30T18:48:34Z",
+ "generated": "2026-09-30T18:55:45Z",
  "summary": {
   "PASS": 7,
-  "WARN": 0,
+  "WARN": 1,
   "FAIL": 1,
-  "PENDING": 7
+  "PENDING": 6
  },
  "gates": [
   {
    "id": "G1",
    "name": "Record: >= 300 deduped events, each with a source URL, every year 2021 to 2026 present",
    "status": "PASS",
-   "detail": "667 events; 0 without a URL; years 2021\u20132026"
+   "detail": "669 events; 0 without a URL; years 2021\u20132026"
   },
   {
    "id": "G2",
@@ -29,7 +29,7 @@
    "id": "G4",
    "name": "Conflicts are frozen, not resolved: every conflict row shows both values and a source or note",
    "status": "PASS",
-   "detail": "96 conflicts in the ledger (0 incomplete); 20 events carry a DISPUTED/VERIFY/LOW tag"
+   "detail": "124 conflicts in the ledger (0 incomplete); 20 events carry a DISPUTED/VERIFY/LOW tag"
   },
   {
    "id": "G5",
@@ -70,14 +70,14 @@
   {
    "id": "G11",
    "name": "Independent audit of a random sample of the record",
-   "status": "PENDING",
-   "detail": "no audit scored yet"
+   "status": "WARN",
+   "detail": "48 events audited cold: 49% fully supported, 100% core fact supported, 1 unopenable; thresholds 80% / 92% on n>=40"
   },
   {
    "id": "G12",
    "name": "Agent log is the real log: agents known, time-ordered, nothing in the future, every active agent has an output file",
    "status": "PASS",
-   "detail": "3931 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
+   "detail": "4228 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
   },
   {
    "id": "G13",

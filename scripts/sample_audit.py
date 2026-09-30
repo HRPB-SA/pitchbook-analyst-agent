@@ -51,12 +51,14 @@ def sample():
 
 def score():
     E = {e["id"]: e for e in D("events.json")}; key = json.load(open(os.path.join(B, "audit_key.json")))
+    try: idm = D("id_map.json")
+    except Exception: idm = {}
     rows = []
     for n in (1, 2):
         fn = os.path.join(O, f"verify-audit-{n}.json")
         if not os.path.exists(fn): continue
         for r in json.load(open(fn)).get("results", []):
-            eid = key.get(r.get("audit_id"))
+            eid = key.get(r.get("audit_id")); eid = idm.get(eid, eid)
             if eid in E:
                 v, note = r.get("verdict"), r.get("note") or ""
                 orig = None
