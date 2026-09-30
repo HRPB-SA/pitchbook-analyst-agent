@@ -221,14 +221,6 @@
    "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
   },
   {
-   "date": "2026-04-20",
-   "usd_m": 30000.0,
-   "event_id": "evt-20260420-amazon-5gw-25b-investment",
-   "tier": "T1",
-   "confidence": "HIGH",
-   "source": "https://www.anthropic.com/news/anthropic-amazon-compute"
-  },
-  {
    "date": "2026-04-29",
    "usd_m": 40000.0,
    "event_id": "evt-20260429-rr-40b-techcrunch",
@@ -255,7 +247,7 @@
   {
    "date": "2026-06-01",
    "usd_m": 47000.0,
-   "event_id": "evt-20260601-confidential-draft-s1-submitted",
+   "event_id": "evt-20260601-confidential-draft-s1",
    "tier": "T1",
    "confidence": "HIGH",
    "source": "https://www.anthropic.com/news/confidential-draft-s1-sec"
@@ -663,6 +655,16 @@
    "tier": "T2",
    "confidence": "HIGH",
    "notes": "Closest thing to the checklist's '~$10B IPO debt' lead: the pre-IPO revolver rose from a $10B+ target (Aug 18) to $15B (Sep 3); no IPO-linked bond issuance found. Draws and pricing not disclosed. | Two sources agree on $15B; the 'final' close is stated only as 'being finalized' (Forbes) - tenor, pricing and draw terms not disclosed. Revolver is the only reported IPO-adjacent debt."
+  },
+  {
+   "date": "2026-09-30",
+   "usd_m": 34500.0,
+   "kind": "debt",
+   "label": "PitchBook ledger totals $126.754B; $34.5B chip bonds no longer included",
+   "event_id": "evt-20260930-pb-total-raised-bonds-removed",
+   "tier": "T2",
+   "confidence": "VERIFY",
+   "notes": "FLAG. Arithmetic: 161,254 - 126,754 = 34,500 exactly. The Sep-30 extract contains no record for deal 334763-02T, so PB removed or reclassified it; the reason is not stated anywhere I could open (pitchbook.com profile/news pages return 403; search snippet shows PitchBook saying Anthropic 'has raised $127 billion'). Press explains why it should not count: the notes are issued by a lessor SPV and Anthropic only leases (5-year lease; Broadcom backstop), although a 'chip bonds' label makes it look like Anthropic debt. The $161.254B figure is therefore an over-count; use $126.754B (incl. $2.5B revolver) or $124.254B (equity only)."
   }
  ],
  "headcount": [

@@ -39303,7 +39303,7 @@
    },
    {
     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-    "publisher": "Amazon Q2-2026 Form 10-Q (SEC)",
+    "publisher": "Amazon Q2 2026 10-Q: $5.0B Series G preferred; $20.0B facility",
     "tier": "T1"
    },
    {
@@ -39354,6 +39354,13 @@
      "ticker": "AMZN"
     },
     {
+     "name": "Amazon",
+     "type": "cloud",
+     "public": true,
+     "ticker": "AMZN",
+     "role_in_deal": "buyer"
+    },
+    {
      "name": "AWS Trainium3",
      "type": "chip",
      "public": true,
@@ -39368,6 +39375,7 @@
     "amazon_prior_investment_usd_m": 8000,
     "aws_commit_usd_m": 100000,
     "run_rate_note": ">$30B, up from ~$9B at end-2025",
+    "announced_vs_closed": "$5B invested Apr 2026 (10-Q: Series G nonvoting preferred); up to $20B facility (conditional)",
     "status": "contracted",
     "basis": "up to",
     "financing": "vendor-investment",
@@ -39382,15 +39390,17 @@
     "amazon_additional_up_to_usd_m": 20000
    }
   },
-  "confidence": "HIGH",
-  "notes": "T1 + TechCrunch agree: $5B invested now (Amazon total to $13B per TechCrunch = $8B prior + $5B), up to $20B more conditional, >$100B AWS spend over 10 years, up to 5 GW. TechCrunch says chips covered span Trainium2 through Trainium4. Series H page later counts $5B from Amazon inside $15B of previously committed hyperscaler money. CNBC/Reuters/AP/Bloomberg/WSJ/NYT headlines seen in RSS (blocked/not opened). | 'More than $100B over ten years' is a floor on Anthropic's AWS spend (contractual obligations under the 'amended commercial arrangement' per Amazon's Q2 10-Q); 5 GW is 'up to'. amount_usd_m=25,000 is $5B invested now plus up to $20B later; the $20B is NOT committed equity: Amazon's 10-Q describes a facility that becomes available only as AWS delivers compute milestones, so a portion of Amazon's 'investment' is effectively vendor financing recycled into AWS spend (circular). Series H counts $5B of Amazon inside the round. | Amazon 10-Q (T1): $5.0B Series G preferred plus a facility up to $20.0B, cut to $15.0B after a further $5.0B Series H purchase. Anthropic uses over one million Trainium2 chips. CNBC (Apr 20) carries the news but returned HTTP 403.",
+  "confidence": "DISPUTED",
+  "notes": "T1 + TechCrunch agree: $5B invested now (Amazon total to $13B per TechCrunch = $8B prior + $5B), up to $20B more conditional, >$100B AWS spend over 10 years, up to 5 GW. TechCrunch says chips covered span Trainium2 through Trainium4. Series H page later counts $5B from Amazon inside $15B of previously committed hyperscaler money. CNBC/Reuters/AP/Bloomberg/WSJ/NYT headlines seen in RSS (blocked/not opened). | T1 sentence: 'Amazon is investing $5 billion in Anthropic today, with up to an additional $20 billion in the future.' Amazon's 10-Q adds the mechanics: a financing arrangement 'not to exceed $20.0 billion that will expire 30 months after an Anthropic liquidity event, including an initial public offering'; $5.0B was later drawn as Series H preferred, leaving $15.0B. No valuation stated by Anthropic/Amazon. | 'More than $100B over ten years' is a floor on Anthropic's AWS spend (contractual obligations under the 'amended commercial arrangement' per Amazon's Q2 10-Q); 5 GW is 'up to'. amount_usd_m=25,000 is $5B invested now plus up to $20B later; the $20B is NOT committed equity: Amazon's 10-Q describes a facility that becomes available only as AWS delivers compute milestones, so a portion of Amazon's 'investment' is effectively vendor financing recycled into AWS spend (circular). Series H counts $5B of Amazon inside the round. | Amazon 10-Q (T1): $5.0B Series G preferred plus a facility up to $20.0B, cut to $15.0B after a further $5.0B Series H purchase. Anthropic uses over one million Trainium2 chips. CNBC (Apr 20) carries the news but returned HTTP 403.",
   "agent": "scout-2026q2",
   "agents": [
    "desk-compute",
+   "desk-deals",
    "desk-ecosystem",
    "scout-2026q2"
   ],
   "merged_ids": [
+   "evt-20260420-amazon-5b-up-to-20b",
    "evt-20260420-amazon-5gw-25b-investment",
    "evt-20260420-amazon-5gw"
   ],
@@ -39739,11 +39749,11 @@
   "independent_sources": 1
  },
  {
-  "id": "evt-20260424-google-up-to-40b-investment",
+  "id": "evt-20260424-google-up-to-40b",
   "date": "2026-04-24",
   "date_precision": "day",
-  "headline": "Google to invest up to $40B in Anthropic, plus 5GW capacity",
-  "summary": "TechCrunch, citing Bloomberg and Anthropic, reports Google will invest up to $40B in Anthropic ($10B now at a $350B valuation, $30B more on performance targets) alongside 5 GW of Google Cloud capacity over the next five years.",
+  "headline": "Google to invest up to $40B: $10B now at $350B valuation, $30B on milestones",
+  "summary": "TechCrunch reported Google will invest up to $40B in Anthropic, $10B immediately at a $350B valuation and $30B more if performance targets are met, with 5 GW of Google Cloud capacity over five years; the piece says Anthropic confirmed it.",
   "category": [
    "compute",
    "funding",
@@ -39792,7 +39802,7 @@
   "extracted": {
    "amount_usd_m": 40000.0,
    "valuation_post_usd_m": null,
-   "valuation_pre_usd_m": null,
+   "valuation_pre_usd_m": 350000.0,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
    "revenue_period": null,
@@ -39817,6 +39827,13 @@
    "strategy": null,
    "people": [],
    "entities": [
+    {
+     "name": "Alphabet (Google)",
+     "type": "cloud",
+     "public": true,
+     "ticker": "GOOGL",
+     "role_in_deal": "buyer"
+    },
     {
      "name": "Google Cloud",
      "type": "cloud",
@@ -39845,11 +39862,17 @@
    "headcount": null,
    "customers": null,
    "other": {
+    "lead_investors": [],
+    "participants": [],
+    "share_price_usd": null,
+    "announced_vs_closed": "$10B at signing; $30B contingent on performance targets",
+    "pitchbook_deal_id": null,
+    "funded_now_usd_m": 10000,
+    "contingent_usd_m": 30000,
     "status": "announced",
     "basis": "up to",
     "financing": "vendor-investment",
     "start": "2027-01",
-    "sites": [],
     "investment_now_usd_m": 10000,
     "investment_milestone_usd_m": 30000,
     "valuation_at_first_tranche_usd_m": 350000,
@@ -39863,14 +39886,16 @@
    }
   },
   "confidence": "HIGH",
-  "notes": "Investment amount is 'up to' and conditional ($30B on performance targets); the 5 GW is Google Cloud capacity with no stated dollar value (The Information's May 5 2026 headline says Anthropic committed to spend $200B on Google's cloud and chips - headline only, not opened). Anthropic's own pages confirm a '5 GW' Google/Google-Broadcom agreement but not the $40B figure; TechCrunch attributes the $10B/$30B structure to Anthropic and the headline to Bloomberg. | Single T2 opened (TechCrunch); Bloomberg, Reuters, CNBC, NYT, WSJ headlines seen in RSS but blocked here. $350B is the valuation TechCrunch attributes to the $10B first tranche (Series G post-money was $380B in Feb) - treat as reported, unverified. 'Up to' amount is conditional on performance targets. The Series H page says $15B of the round was previously committed hyperscaler money (Amazon $5B named); inference that the other ~$10B is Google's first tranche is NOT stated by Anthropic. | Single opened source (TechCrunch); Bloomberg, WSJ, Reuters, Ars Technica and Yahoo Finance carry it but were not opened (paywall/403 or not attempted). Mechanics with desk-deals. Note the $350B tranche valuation predates the $965B Series H.",
-  "agent": "desk-compute",
+  "notes": "Single opened T2 (Bloomberg/others blocked). The $350B equals the Series G pre-money/price (Series G post was $380B), i.e. the $10B tranche was priced at the Series G price - inference from equal numbers. Series H's T1 page counts '$15 billion of previously committed investments from hyperscalers, including $5 billion from Amazon'; the remaining ~$10B is plausibly this Google tranche but no opened source says so. Alphabet's filings (opened) do not name Anthropic, so funded amounts cannot be verified. | Investment amount is 'up to' and conditional ($30B on performance targets); the 5 GW is Google Cloud capacity with no stated dollar value (The Information's May 5 2026 headline says Anthropic committed to spend $200B on Google's cloud and chips - headline only, not opened). Anthropic's own pages confirm a '5 GW' Google/Google-Broadcom agreement but not the $40B figure; TechCrunch attributes the $10B/$30B structure to Anthropic and the headline to Bloomberg. | Single T2 opened (TechCrunch); Bloomberg, Reuters, CNBC, NYT, WSJ headlines seen in RSS but blocked here. $350B is the valuation TechCrunch attributes to the $10B first tranche (Series G post-money was $380B in Feb) - treat as reported, unverified. 'Up to' amount is conditional on performance targets. The Series H page says $15B of the round was previously committed hyperscaler money (Amazon $5B named); inference that the other ~$10B is Google's first tranche is NOT stated by Anthropic. | Single opened source (TechCrunch); Bloomberg, WSJ, Reuters, Ars Technica and Yahoo Finance carry it but were not opened (paywall/403 or not attempted). Mechanics with desk-deals. Note the $350B tranche valuation predates the $965B Series H.",
+  "agent": "desk-deals",
   "agents": [
    "desk-compute",
+   "desk-deals",
    "desk-ecosystem",
    "scout-2026q2"
   ],
   "merged_ids": [
+   "evt-20260424-google-up-to-40b-investment",
    "evt-20260424-google-up-to-40b-investment",
    "evt-20260424-google-40b"
   ],
@@ -41188,6 +41213,20 @@
     },
     {
      "name": "Hiive",
+     "type": "other",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "Forge Global",
+     "type": "other",
+     "public": true,
+     "ticker": "FRGE",
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "Hiive",
      "type": "partner",
      "public": false
     },
@@ -41218,19 +41257,23 @@
    "headcount": null,
    "customers": null,
    "other": {
+    "announced_vs_closed": "policy statement",
+    "secondary_demand_claim_usd": "over $1 trillion (Unicorns Exchange, 50+ inquiries, no completed trades)",
     "spv_policy": "SPV acquisition of Anthropic stock prohibited; transfers void",
     "status": "Company notice; no SEC/FINRA action found in opened sources"
    }
   },
   "confidence": "HIGH",
-  "notes": "TechCrunch (opened) lists Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar and Upmarket; both preferred and common transfers require board approval; Anthropic was reportedly raising at $900B; Forge and Sydecar disputed their inclusion. Axios, CoinDesk, Decrypt carried it. | Named platforms: Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar, Upmarket. The >$1T aggregate demand is a claim by Unicorns Exchange, not Anthropic. Form D SPV filings for Anthropic exposure (HII Anthropic Series-02, Granada Anthropic SPV, Inflection Ventures Anthropic Fund I, WU Anthropic LP) appear on EDGAR May-Jun (not opened). | Named: Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar, Upmarket. WebSearch snippets (not opened) say tokenized products tied to Anthropic fell ~40% in a day and implied valuations reached ~$1.6T vs $965B Series H. Securities-law exposure for unauthorized resale/tokens is an inference.",
+  "notes": "TechCrunch (opened) lists Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar and Upmarket; both preferred and common transfers require board approval; Anthropic was reportedly raising at $900B; Forge and Sydecar disputed their inclusion. Axios, CoinDesk, Decrypt carried it. | Sets the ground rules for every 'secondary mark' below: priced trades are rare and mostly SPV/derivative, and Anthropic disclaims them. The '>$1T demand' is a platform claim, not Anthropic's. Note the 2024 FTX sale purchaser list (T1) included vehicles such as Hiive Anthropic Series I/II and Forge funds, i.e. the estate sales pre-date this policy. | Named platforms: Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar, Upmarket. The >$1T aggregate demand is a claim by Unicorns Exchange, not Anthropic. Form D SPV filings for Anthropic exposure (HII Anthropic Series-02, Granada Anthropic SPV, Inflection Ventures Anthropic Fund I, WU Anthropic LP) appear on EDGAR May-Jun (not opened). | Named: Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar, Upmarket. WebSearch snippets (not opened) say tokenized products tied to Anthropic fell ~40% in a day and implied valuations reached ~$1.6T vs $965B Series H. Securities-law exposure for unauthorized resale/tokens is an inference.",
   "agent": "desk-governance",
   "agents": [
+   "desk-deals",
    "desk-governance",
    "desk-legal",
    "scout-2026q2"
   ],
   "merged_ids": [
+   "evt-20260512-secondary-platform-warning",
    "evt-20260512-secondary-market-warning",
    "evt-20260512-anthropic-declares-unauthorized-secondary-share-transfers-void"
   ],
@@ -43002,7 +43045,17 @@
   "corroboration": [
    {
     "url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/",
-    "publisher": "TechCrunch",
+    "publisher": "TechCrunch ($50B new, $15B hyperscaler)",
+    "tier": "T2"
+   },
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000121/zm-20260731.htm",
+    "publisher": "Zoom 10-Q cites 'Anthropic's financing round announced on May 28, 2026'",
+    "tier": "T1"
+   },
+   {
+    "url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+    "publisher": "PitchBook (deal 329489-02T)",
     "tier": "T2"
    },
    {
@@ -43090,6 +43143,90 @@
     {
      "name": "Altimeter Capital",
      "type": "investor",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "lead"
+    },
+    {
+     "name": "Dragoneer",
+     "type": "investor",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "lead"
+    },
+    {
+     "name": "Greenoaks",
+     "type": "investor",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "lead"
+    },
+    {
+     "name": "Sequoia Capital",
+     "type": "investor",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "lead"
+    },
+    {
+     "name": "Capital Group",
+     "type": "investor",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "Coatue",
+     "type": "investor",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "GIC",
+     "type": "investor",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "Micron",
+     "type": "chip",
+     "public": true,
+     "ticker": "MU",
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "Samsung",
+     "type": "chip",
+     "public": true,
+     "ticker": "005930.KS",
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "SK hynix",
+     "type": "chip",
+     "public": true,
+     "ticker": "000660.KS",
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "Amazon",
+     "type": "cloud",
+     "public": true,
+     "ticker": "AMZN",
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "Cooley",
+     "type": "law_firm",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "Altimeter Capital",
+     "type": "investor",
      "public": false
     },
     {
@@ -43167,6 +43304,47 @@
    "product": {},
    "people": [],
    "other": {
+    "lead_investors": [
+     "Altimeter Capital",
+     "Dragoneer",
+     "Greenoaks",
+     "Sequoia Capital"
+    ],
+    "participants": [
+     "Capital Group",
+     "Coatue",
+     "D1 Capital",
+     "GIC",
+     "ICONIQ",
+     "XN",
+     "AMP PBC",
+     "Baillie Gifford",
+     "Blackstone",
+     "Brookfield",
+     "D. E. Shaw Ventures",
+     "DST Global",
+     "Fidelity",
+     "General Catalyst",
+     "Insight",
+     "Jane Street",
+     "Lightspeed",
+     "MGX",
+     "NTTVC",
+     "NX1",
+     "Situational Awareness LP",
+     "T. Rowe Price",
+     "Temasek",
+     "Micron",
+     "Samsung",
+     "SK hynix"
+    ],
+    "share_price_usd": 589.0095,
+    "announced_vs_closed": "announced = PB close 2026-05-28; $15B pre-committed hyperscaler money inside the $65B",
+    "pitchbook_deal_id": "329489-02T",
+    "pb_total_investors": 74,
+    "pb_new_investors": 48,
+    "new_cash_usd_m": 50000,
+    "previously_committed_usd_m": 15000,
     "hyperscaler_previously_committed_usd_m": 15000,
     "amazon_portion_usd_m": 5000,
     "implied_new_cash_usd_m": 50000,
@@ -43182,20 +43360,22 @@
    "revenue_period": "run-rate, May 2026 (crossed $47B earlier in the month)"
   },
   "confidence": "HIGH",
-  "notes": "Run-rate cited at $47B \"earlier this month\". The $15B hyperscaler figure is consistent with Amazon $5B plus Google's $10B first tranche (TechCrunch Apr 24). Last priced round before the confidential S-1 (Jun 1 2026). | T1 + TechCrunch agree on $65B / $965B post (pre-money implied $900B; The Information headline says '$900B valuation' - pre-money vs post-money, not a conflict). T1 lists leads Altimeter, Dragoneer, Greenoaks, Sequoia; co-leads Capital Group, Coatue, D1, GIC, ICONIQ, XN; named investors incl. Blackstone, Brookfield, Fidelity, T. Rowe, Temasek, MGX, Jane Street, DST, General Catalyst, Insight, Lightspeed, Baillie Gifford, D.E. Shaw, NTTVC, NX1, AMP PBC, Situational Awareness LP, plus Micron, Samsung, SK hynix. Cloverdale and Salesforce Ventures (in the brief) do NOT appear on the T1 page - see conflicts. '$15B previously committed hyperscaler money incl. $5B Amazon' means roughly $50B is new cash. No share price disclosed. Run-rate >$47B 'earlier this month'. Latham (Blackstone counsel), Orrick and QIA/Samsung/SK hynix releases seen in RSS. Orrick (company counsel since 2021; team led by Laura Barr and Stephen Venuto) lists the same four leads and no Cloverdale/Salesforce Ventures; no Form D filed by Anthropic PBC itself on EDGAR, so the ~56-other-investors count is unverified. | Company run-rate (annualized; gross convention). No customer-tier metrics in the release. SemiAnalysis had estimated >$44B on May 2; Reuters (Aug 17) still cites $47B \"as recently as May\". | Funding/valuation are desk-deals territory; the run-rate is recorded here for the ARR ladder ($14B Feb 12 -> >$30B Apr 6 -> $47B May). Only the T1 post was opened; RSS shows CNBC, Bloomberg, VentureBeat and NYT coverage (headlines only, including VentureBeat 'hit a $30 billion revenue run rate after 80x growth' May 8 and Bloomberg 'annualized revenue to top $100 billion in 2026, NYT says' Sep 18) - second-source verification pending.",
+  "notes": "Run-rate cited at $47B \"earlier this month\". The $15B hyperscaler figure is consistent with Amazon $5B plus Google's $10B first tranche (TechCrunch Apr 24). Last priced round before the confidential S-1 (Jun 1 2026). | T1 + TechCrunch agree on $65B/$965B; pre-money $900B derived and equals PB. So ~$50B is new cash at closing and $15B had been committed earlier (Amazon $5B named) - PB counts the full $65B once, with no separate Amazon/Google line, so no double count. PB-only: $589.0095/share (no public corroboration found) and lead list naming Cloverdale and Salesforce Ventures (not on T1). PB 'shares acquired' 283.9M x $589.01 = $167B (2.57x $65B) and 17.33% 'percent acquired' vs 6.74% size/post: PB share/ownership fields for H do not reconcile to size - do not use. Amazon's 10-Q separately shows a $5.0B Series H preferred purchase under its option. | T1 + TechCrunch agree on $65B / $965B post (pre-money implied $900B; The Information headline says '$900B valuation' - pre-money vs post-money, not a conflict). T1 lists leads Altimeter, Dragoneer, Greenoaks, Sequoia; co-leads Capital Group, Coatue, D1, GIC, ICONIQ, XN; named investors incl. Blackstone, Brookfield, Fidelity, T. Rowe, Temasek, MGX, Jane Street, DST, General Catalyst, Insight, Lightspeed, Baillie Gifford, D.E. Shaw, NTTVC, NX1, AMP PBC, Situational Awareness LP, plus Micron, Samsung, SK hynix. Cloverdale and Salesforce Ventures (in the brief) do NOT appear on the T1 page - see conflicts. '$15B previously committed hyperscaler money incl. $5B Amazon' means roughly $50B is new cash. No share price disclosed. Run-rate >$47B 'earlier this month'. Latham (Blackstone counsel), Orrick and QIA/Samsung/SK hynix releases seen in RSS. Orrick (company counsel since 2021; team led by Laura Barr and Stephen Venuto) lists the same four leads and no Cloverdale/Salesforce Ventures; no Form D filed by Anthropic PBC itself on EDGAR, so the ~56-other-investors count is unverified. | Company run-rate (annualized; gross convention). No customer-tier metrics in the release. SemiAnalysis had estimated >$44B on May 2; Reuters (Aug 17) still cites $47B \"as recently as May\". | Funding/valuation are desk-deals territory; the run-rate is recorded here for the ARR ladder ($14B Feb 12 -> >$30B Apr 6 -> $47B May). Only the T1 post was opened; RSS shows CNBC, Bloomberg, VentureBeat and NYT coverage (headlines only, including VentureBeat 'hit a $30 billion revenue run rate after 80x growth' May 8 and Bloomberg 'annualized revenue to top $100 billion in 2026, NYT says' Sep 18) - second-source verification pending.",
   "agent": "desk-ecosystem",
   "agents": [
+   "desk-deals",
    "desk-ecosystem",
    "desk-product",
    "desk-revenue",
    "scout-2026q2"
   ],
   "merged_ids": [
+   "evt-20260528-series-h-65b-965b",
    "evt-20260528-series-h-65b-965b-post",
    "evt-20260528-rr-47b-series-h",
    "evt-20260528-series-h-run-rate-47b"
   ],
-  "independent_sources": 3
+  "independent_sources": 4
  },
  {
   "id": "evt-20260529-samsung-skhynix-micron",
@@ -43302,11 +43482,11 @@
   "independent_sources": 4
  },
  {
-  "id": "evt-20260601-confidential-draft-s1-submitted",
+  "id": "evt-20260601-confidential-draft-s1",
   "date": "2026-06-01",
   "date_precision": "day",
-  "headline": "Anthropic confidentially submits draft S-1 for proposed IPO",
-  "summary": "Anthropic announced under Rule 135 that it confidentially submitted a draft registration statement on Form S-1 to the SEC for an IPO of its common stock, with share count and price not yet set.",
+  "headline": "Anthropic confidentially submits draft Form S-1 to the SEC",
+  "summary": "Under Rule 135 Anthropic announced it confidentially submitted a draft Form S-1 for a proposed IPO of its common stock, with share count and price not set; PitchBook's IPO record lists Goldman Sachs, Morgan Stanley Wealth Management, J.P. Morgan Private Bank and Citigroup as advisers.",
   "category": [
    "ipo",
    "other",
@@ -43315,12 +43495,17 @@
   "source": {
    "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
    "publisher": "Anthropic",
-   "title": "Anthropic confidentially submits draft registration statement (Rule 135 notice)",
+   "title": "Anthropic confidentially submits draft registration statement (Rule 135)",
    "published": "2026-06-01",
    "tier": "T1",
    "opened": true
   },
   "corroboration": [
+   {
+    "url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+    "publisher": "PitchBook IPO record 325962-01T: 'Announced/In Progress', Common stock, Nasdaq October target, up to $100B, ~$2T",
+    "tier": "T2"
+   },
    {
     "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
     "publisher": "TechCrunch (Kirsten Korosec, Jun 1 9:36 AM PDT)",
@@ -43357,6 +43542,41 @@
    "entities": [
     {
      "name": "U.S. SEC",
+     "type": "other",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "Goldman Sachs",
+     "type": "bank",
+     "public": true,
+     "ticker": "GS",
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "Morgan Stanley",
+     "type": "bank",
+     "public": true,
+     "ticker": "MS",
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "J.P. Morgan",
+     "type": "bank",
+     "public": true,
+     "ticker": "JPM",
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "Citigroup",
+     "type": "bank",
+     "public": true,
+     "ticker": "C",
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "U.S. SEC",
      "type": "regulator",
      "public": false,
      "ticker": null
@@ -43371,6 +43591,11 @@
    "headcount": null,
    "customers": null,
    "other": {
+    "lead_investors": [],
+    "participants": [],
+    "share_price_usd": null,
+    "announced_vs_closed": "draft S-1 submitted 2026-06-01; no public S-1 as of 2026-09-30",
+    "pitchbook_deal_id": "325962-01T",
     "filing_type": "confidential draft registration statement (DRS) on Form S-1",
     "rule": "Securities Act Rule 135",
     "shares_and_price_set": false,
@@ -43382,14 +43607,16 @@
    }
   },
   "confidence": "HIGH",
-  "notes": "T1 + T2 agree. A confidential DRS is non-public; EDGAR shows no Anthropic-filed S-1 as of 2026-09-30 (see evt-20260930-no-public-s1-on-edgar). Anthropic's notice says the IPO is contingent on SEC review and market conditions. | T1 + TechCrunch agree. Submission date is the announcement date (Jun 1); EDGAR shows no public Anthropic S-1 in the May-Jun window (confidential). Later reporting (TNW Sep 15) says the prospectus was filed confidentially in June; a public/leaked prospectus surfaced Sep 28-29 (Q3 scope). | Starts the SEC review clock; litigation and regulatory matters in cases[] are the likely Item 103/risk-factor disclosures. Handoff to desk-s1.",
-  "agent": "desk-s1",
+  "notes": "T1 text: 'confidentially submitted a draft registration statement on Form S-1... This gives us the option to go public after the SEC completes its review... The number of shares to be offered and the price have not yet been set.' No exchange, underwriter or timing in the release. PitchBook's 'targeting an October listing on Nasdaq... up to $100 billion... ~$2 trillion' is its own note (PB page blocked), traced by scouts to press (Business Insider/Quartz/WSJ), not an Anthropic statement. | T1 + T2 agree. A confidential DRS is non-public; EDGAR shows no Anthropic-filed S-1 as of 2026-09-30 (see evt-20260930-no-public-s1-on-edgar). Anthropic's notice says the IPO is contingent on SEC review and market conditions. | T1 + TechCrunch agree. Submission date is the announcement date (Jun 1); EDGAR shows no public Anthropic S-1 in the May-Jun window (confidential). Later reporting (TNW Sep 15) says the prospectus was filed confidentially in June; a public/leaked prospectus surfaced Sep 28-29 (Q3 scope). | Starts the SEC review clock; litigation and regulatory matters in cases[] are the likely Item 103/risk-factor disclosures. Handoff to desk-s1.",
+  "agent": "desk-deals",
   "agents": [
+   "desk-deals",
    "desk-legal",
    "desk-s1",
    "scout-2026q2"
   ],
   "merged_ids": [
+   "evt-20260601-confidential-draft-s1-submitted",
    "evt-20260601-confidential-draft-s1-submitted",
    "evt-20260601-anthropic-confidential-draft-s1"
   ],
@@ -43832,17 +44059,17 @@
   "independent_sources": 2
  },
  {
-  "id": "evt-20260603-ipo-lead-banks-morgan-stanley-goldman-jpmorgan",
+  "id": "evt-20260603-ipo-banks-ms-gs-jpm",
   "date": "2026-06-03",
   "date_precision": "day",
-  "headline": "Bloomberg: Morgan Stanley, Goldman lead Anthropic IPO; JPMorgan also working",
-  "summary": "Bloomberg reported Anthropic picked Morgan Stanley and Goldman Sachs to lead its IPO with JPMorgan also working on the deal, a listing possible as soon as October, and more banks possibly to join.",
+  "headline": "Bloomberg: Morgan Stanley and Goldman lead Anthropic IPO, JPMorgan also in",
+  "summary": "Bloomberg, via Yahoo Finance, reported Anthropic picked Morgan Stanley and Goldman Sachs to lead its IPO with JPMorgan also participating and a listing possible as soon as October, which Anthropic had not confirmed.",
   "category": [
    "ipo"
   ],
   "source": {
    "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-pick-morgan-stanley-175802678.html",
-   "publisher": "Bloomberg (via Yahoo Finance, Vlad Schepkov)",
+   "publisher": "Bloomberg via Yahoo Finance",
    "title": "Anthropic said to pick Morgan Stanley, Goldman for IPO",
    "published": "2026-06-03",
    "tier": "T2",
@@ -43851,7 +44078,7 @@
   "corroboration": [
    {
     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html",
-    "publisher": "Quartz via Yahoo Finance (Aug 13: 'Morgan Stanley, Goldman Sachs, and JPMorgan are leading the offering')",
+    "publisher": "Quartz via Yahoo (Aug 13: MS, GS, JPM lead)",
     "tier": "T3"
    },
    {
@@ -43902,6 +44129,27 @@
      "name": "Morgan Stanley",
      "type": "bank",
      "public": true,
+     "ticker": "MS",
+     "role_in_deal": "lead"
+    },
+    {
+     "name": "Goldman Sachs",
+     "type": "bank",
+     "public": true,
+     "ticker": "GS",
+     "role_in_deal": "lead"
+    },
+    {
+     "name": "JPMorgan Chase",
+     "type": "bank",
+     "public": true,
+     "ticker": "JPM",
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "Morgan Stanley",
+     "type": "bank",
+     "public": true,
      "ticker": "MS"
     },
     {
@@ -43920,6 +44168,11 @@
    "headcount": null,
    "customers": null,
    "other": {
+    "lead_investors": [],
+    "participants": [],
+    "share_price_usd": null,
+    "announced_vs_closed": "reported; unconfirmed by Anthropic; 'details may still change'",
+    "pitchbook_deal_id": null,
     "lead_left_candidates": "Morgan Stanley and Goldman Sachs 'to lead'; JPMorgan 'will also work on the deal'",
     "additional_banks": "'Additional banks may join the group'",
     "size_or_exchange_stated": false,
@@ -43928,13 +44181,15 @@
    }
   },
   "confidence": "HIGH",
-  "notes": "Bloomberg scoop relayed on Yahoo; Anthropic has not itself named underwriters. Three banks repeated by Quartz (Aug 13) but no opened source names co-managers, bookrunner order or fees. Citigroup later reported as set to add a top underwriter role (Google News headline Aug 20, not opened). | Bloomberg scoop relayed on Yahoo; TechTimes (Jun 5) lists Morgan Stanley, Goldman Sachs and JPMorgan as lead underwriters. Exchange and size not stated. Anthropic has not itself named underwriters.",
-  "agent": "desk-s1",
+  "notes": "Underwriter roles remain reported, not announced. The same three banks plus Citigroup lead the ~$15B revolver (Bloomberg Sep 3), which per Bloomberg is typically finalized before lenders are told their IPO roles. Exchange and size not in this article. | Bloomberg scoop relayed on Yahoo; Anthropic has not itself named underwriters. Three banks repeated by Quartz (Aug 13) but no opened source names co-managers, bookrunner order or fees. Citigroup later reported as set to add a top underwriter role (Google News headline Aug 20, not opened). | Bloomberg scoop relayed on Yahoo; TechTimes (Jun 5) lists Morgan Stanley, Goldman Sachs and JPMorgan as lead underwriters. Exchange and size not stated. Anthropic has not itself named underwriters.",
+  "agent": "desk-deals",
   "agents": [
+   "desk-deals",
    "desk-s1",
    "scout-2026q2"
   ],
   "merged_ids": [
+   "evt-20260603-ipo-lead-banks-morgan-stanley-goldman-jpmorgan",
    "evt-20260603-ipo-banks-morgan-stanley-goldman-jpmorgan"
   ],
   "independent_sources": 3
@@ -44443,14 +44698,24 @@
     "tier": "T4"
    },
    {
-    "url": "https://www.digitimes.com/news/a20260609PD231/anthropic-broadcom-financing-capacity-tpu.html",
-    "publisher": "DIGITIMES (paywalled snippet)",
+    "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html",
+    "publisher": "Yahoo Finance (Aug 6): $35B closed June 2026; off-balance-sheet lease",
     "tier": "T3"
    },
    {
     "url": "https://www.fool.com/investing/2026/06/17/apollo-and-blackstone-just-closed-a-35-billion-pri/",
-    "publisher": "The Motley Fool",
+    "publisher": "Motley Fool (Jun 17): $35B closed; Broadcom guarantees $30B of tranches; Atlas SP $800M equity",
     "tier": "T4"
+   },
+   {
+    "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+    "publisher": "SiliconANGLE (prospectus: $161.2B Broadcom-related lease contracts)",
+    "tier": "T3"
+   },
+   {
+    "url": "https://www.digitimes.com/news/a20260609PD231/anthropic-broadcom-financing-capacity-tpu.html",
+    "publisher": "DIGITIMES (paywalled snippet)",
+    "tier": "T3"
    },
    {
     "url": "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
@@ -44511,6 +44776,41 @@
      "ticker": "GOOGL"
     },
     {
+     "name": "Apollo Global Management",
+     "type": "investor",
+     "public": true,
+     "ticker": "APO",
+     "role_in_deal": "lead"
+    },
+    {
+     "name": "Blackstone",
+     "type": "investor",
+     "public": true,
+     "ticker": "BX",
+     "role_in_deal": "lead"
+    },
+    {
+     "name": "Broadcom",
+     "type": "chip",
+     "public": true,
+     "ticker": "AVGO",
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "AI XPV Platform (SPV)",
+     "type": "other",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "buyer"
+    },
+    {
+     "name": "Google (TPU supplier)",
+     "type": "chip",
+     "public": true,
+     "ticker": "GOOGL",
+     "role_in_deal": "participant"
+    },
+    {
      "name": "Google",
      "type": "cloud",
      "public": true,
@@ -44541,22 +44841,38 @@
     "headline_size_usd_m": 35000,
     "issuer": "SPV (not Anthropic); Anthropic is lessee",
     "platform_scope_gw": ">20 GW for frontier labs through 2028 (Anthropic and OpenAI)",
-    "broadcom_supported_usd_m": 30000,
+    "announced_vs_closed": "closed ~2026-06-05/09 per press; funds drawn in ~16 stages over a bit more than a year (~$24B by summer 2027)",
+    "rates": {
+     "A1": "T+100bp",
+     "A2": "5.75%",
+     "B": "8.5%"
+    },
+    "broadcom_backstop_usd_m": 30000,
     "broadcom_max_exposure_usd_m": 29000,
+    "size_variants_usd_m": [
+     34500,
+     35000,
+     35500,
+     35800,
+     36000
+    ],
+    "broadcom_supported_usd_m": 30000,
     "revolver_2_5b": "unverified"
    }
   },
   "confidence": "HIGH",
-  "notes": "Four independent outlets agree on structure: $6B A1 + $24B A2 + $4.5B B = $34.5B (Apollo's own headline says 'initial $35 billion capital solution'; the $0.5B gap is unexplained - likely fees/equity, and price talk on Jun 2 was $35.5B with a $25B A2). These are lessor-SPV notes that Broadcom/Google credit-enhance because Anthropic has no credit rating; they are NOT Anthropic-issued bonds, but the 5-year lease payments are Anthropic's obligation (part of the $161.2B 'Broadcom-related equipment leases' in the prospectus coverage). Broadcom IR and Apollo originals were not reachable (503/404). The FT (Aug 4) sizes the broader Google/Broadcom/Apollo/Blackstone/Morgan Stanley structure at ~$200B of interconnected contracts, ~$150B tied to chips for Anthropic, with Google exposed to up to ~$44B. | Structure per Epoch AI: SPV 'AI XPV Platform' borrows, buys the racks and leases them to Anthropic (five-year lease); Broadcom can take over the lease or arrange rack sales on default (max reported exposure $29B); funds released in ~16 stages over a bit more than a year, ~$24B by summer 2027. Bloomberg (Jun 5 'Apollo wraps up $35B debt') and Digitimes (Jun 9, paywalled: 'completed a US$35 billion private credit financing... the firm announced') date the close; Bloomberg blocked. Not Anthropic-issued bonds - lessor SPV debt, which may explain PitchBook delisting. The brief's $2.5B revolver is NOT found in any opened source.",
+  "notes": "Four independent outlets agree on structure: $6B A1 + $24B A2 + $4.5B B = $34.5B (Apollo's own headline says 'initial $35 billion capital solution'; the $0.5B gap is unexplained - likely fees/equity, and price talk on Jun 2 was $35.5B with a $25B A2). These are lessor-SPV notes that Broadcom/Google credit-enhance because Anthropic has no credit rating; they are NOT Anthropic-issued bonds, but the 5-year lease payments are Anthropic's obligation (part of the $161.2B 'Broadcom-related equipment leases' in the prospectus coverage). Broadcom IR and Apollo originals were not reachable (503/404). The FT (Aug 4) sizes the broader Google/Broadcom/Apollo/Blackstone/Morgan Stanley structure at ~$200B of interconnected contracts, ~$150B tied to chips for Anthropic, with Google exposed to up to ~$44B. | Anthropic is the LESSEE, not the borrower/issuer (Epoch AI; Yahoo 'not corporate debt - off-balance-sheet leasing'); Motley Fool wrongly calls Anthropic 'Borrower/Lessee'. This is why it is not Anthropic's capital raise and why PitchBook's Anthropic total no longer includes it (see evt-20260930). Anthropic's own liability is the lease stream (prospectus: $161.2B of Broadcom-related lease contracts over the ~10-year $518B plan). Size variants $34.5B (Epoch), $35B (Apollo headline/Fool), $35.5B (price talk), $36B (Bloomberg May 28): final tranche sizing not from an opened primary source (Apollo release not located; Bloomberg 403). | Structure per Epoch AI: SPV 'AI XPV Platform' borrows, buys the racks and leases them to Anthropic (five-year lease); Broadcom can take over the lease or arrange rack sales on default (max reported exposure $29B); funds released in ~16 stages over a bit more than a year, ~$24B by summer 2027. Bloomberg (Jun 5 'Apollo wraps up $35B debt') and Digitimes (Jun 9, paywalled: 'completed a US$35 billion private credit financing... the firm announced') date the close; Bloomberg blocked. Not Anthropic-issued bonds - lessor SPV debt, which may explain PitchBook delisting. The brief's $2.5B revolver is NOT found in any opened source.",
   "agent": "desk-compute",
   "agents": [
    "desk-compute",
+   "desk-deals",
    "scout-2026q2"
   ],
   "merged_ids": [
+   "evt-20260609-chip-financing-34-5b-spv",
    "evt-20260609-tpu-financing-34-5b-closed"
   ],
-  "independent_sources": 7
+  "independent_sources": 8
  },
  {
   "id": "evt-20260609-claude-fable-5-mythos-5-launch",
@@ -47880,6 +48196,20 @@
     },
     {
      "name": "Caplight",
+     "type": "other",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "Rainmaker Securities",
+     "type": "other",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "adviser"
+    },
+    {
+     "name": "Caplight",
      "type": "partner",
      "public": false,
      "ticker": null
@@ -47898,6 +48228,8 @@
     "openai_on_caplight_usd_b": 908,
     "buyer_interest": "~5 prospective Anthropic buyers per 2 for OpenAI (Caplight CEO)",
     "liquidity_quote": "'Actual closings are few and far between given the near-total absence of willing sellers' (as reported)",
+    "announced_vs_closed": "indicative (asks/bids), not a priced round",
+    "vs_series_h_pct": 24.4,
     "secondary_indication_usd_m": 1200000,
     "series_h_post_money_usd_m": 965000,
     "openai_secondary_usd_m": 908000,
@@ -47906,13 +48238,15 @@
    }
   },
   "confidence": "MEDIUM",
-  "notes": "Indicative marks, not priced rounds. Quartz cites Business Insider for the $1.2T figure. Anthropic separately declared unauthorized secondary transfers void on May 12 (scout-2026q2). | Indicative marks, not priced rounds; later marks: ~$1.5T (TechCrunch Sep 25) and crypto-perp implied ~$1.8T (CCN Aug 17).",
+  "notes": "Indicative marks, not priced rounds. Quartz cites Business Insider for the $1.2T figure. Anthropic separately declared unauthorized secondary transfers void on May 12 (scout-2026q2). | +24% vs Series H post-money ($1.2T/$965B). Later marks: ~$1.5T (Business Insider via TechCrunch, Sep 25); crypto perpetuals implied ~$1.8T (CCN Aug 17, not opened). None is a priced round; Series H remains the last primary mark. | Indicative marks, not priced rounds; later marks: ~$1.5T (TechCrunch Sep 25) and crypto-perp implied ~$1.8T (CCN Aug 17).",
   "agent": "desk-s1",
   "agents": [
+   "desk-deals",
    "desk-s1",
    "scout-2026q3"
   ],
   "merged_ids": [
+   "evt-20260709-secondary-mark-1-2t",
    "evt-20260709-secondary-market-1-2t"
   ],
   "independent_sources": 1
@@ -48630,11 +48964,11 @@
   "independent_sources": 1
  },
  {
-  "id": "evt-20260722-amd-2gw-mi450-partnership",
+  "id": "evt-20260722-amd-equity-up-to-5b",
   "date": "2026-07-22",
   "date_precision": "day",
-  "headline": "AMD and Anthropic announce up-to-2 GW MI450 deal with AMD equity investment",
-  "summary": "AMD and Anthropic announced a strategic partnership to deploy up to 2 GW of AMD Instinct MI450-series GPUs on Helios racks, starting with 1 GW in 1H27, alongside an AMD strategic equity investment in Anthropic of up to $5B.",
+  "headline": "AMD to invest up to $5B in Anthropic alongside 2 GW MI450 deal",
+  "summary": "AMD and Anthropic announced up to 2 GW of Instinct MI450 GPUs from H1 2027 and an AMD strategic equity investment of up to $5B; Reuters says the investment is tied to deployment milestones and AMD is in talks on a backstop for Anthropic's data-center leases.",
   "category": [
    "compute",
    "investment",
@@ -48642,13 +48976,28 @@
   ],
   "source": {
    "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
-   "publisher": "AMD (press release)",
-   "title": "AMD and Anthropic Announce Strategic Partnership to Deploy Up to 2 Gigawatts of AMD Instinct MI450 Series GPUs",
+   "publisher": "AMD (investor relations)",
+   "title": "AMD and Anthropic announce strategic partnership to deploy up to 2 gigawatts of AMD Instinct MI450-series GPUs",
    "published": "2026-07-22",
    "tier": "T1",
    "opened": true
   },
   "corroboration": [
+   {
+    "url": "https://finance.yahoo.com/technology/ai/articles/amd-invest-5-billion-anthropic-123753765.html",
+    "publisher": "Reuters via Yahoo Finance",
+    "tier": "T2"
+   },
+   {
+    "url": "https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-amd-plans-171018268.html",
+    "publisher": "Yahoo Finance (Aug 13): AMD plans up to $5B senior notes to fund the Anthropic investment",
+    "tier": "T3"
+   },
+   {
+    "url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+    "publisher": "PitchBook 11th round 340292-53T 'Upcoming' (AMD)",
+    "tier": "T2"
+   },
    {
     "url": "https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/",
     "publisher": "TechCrunch",
@@ -48702,6 +49051,13 @@
      "name": "AMD",
      "type": "chip",
      "public": true,
+     "ticker": "AMD",
+     "role_in_deal": "buyer"
+    },
+    {
+     "name": "AMD",
+     "type": "chip",
+     "public": true,
      "ticker": "AMD"
     },
     {
@@ -48726,6 +49082,11 @@
    "headcount": null,
    "customers": null,
    "other": {
+    "lead_investors": [],
+    "participants": [],
+    "share_price_usd": null,
+    "announced_vs_closed": "committed 'up to $5B'; milestone-based; no funded amount",
+    "pitchbook_deal_id": "340292-53T",
     "amd_equity_investment_usd_m_up_to": 5000,
     "quotes": "Lisa Su; Tom Brown (Anthropic co-founder, Chief Compute Officer)",
     "software": "ROCm",
@@ -48739,18 +49100,20 @@
    }
   },
   "confidence": "HIGH",
-  "notes": "The '$5B' is AMD's equity investment INTO Anthropic (per AMD release); TechCrunch's Aug 26 recap labels it a '$5B deal', which blurs investment with compute spend. Checklist phrase 'venture-funding talks' resolved into an announced partnership. Dollar value of the compute purchase not disclosed. | The $5B is AMD's investment INTO Anthropic ('up to'), not compute spend; the dollar value of the GPU purchase/rental is not disclosed, nor are warrant or pricing terms (press blurs the two as a '$5B deal'). 2 GW is 'up to'; AMD's Q2 8-K adds no figures. Fifth chip family after TPU, Trainium, NVIDIA GPUs and (talks) custom silicon; the vendor-equity-for-purchases pattern mirrors Nvidia/Microsoft and Amazon. | Tom's Hardware headline mentions warrants in the structure (article body not rendered); CNBC (Jul 22) headline says up to $5B (403). AMD's Aug 4 results exhibit (SEC 8-K) repeats the partnership. \"Up to\" equity, not funded.",
-  "agent": "scout-2026q3",
+  "notes": "HIGH for the announced cap (T1: 'AMD has committed to make a strategic equity investment of up to $5 billion'). No valuation, price or warrant terms disclosed. PitchBook still shows an 'Upcoming' 11th round 'reportedly seeking venture funding from AMD... supported by an estimated $10 billion of debt financing': the AMD release and Reuters mention no $10B debt; closest items are Meta's reported talks to lease Anthropic up to $10B of compute over two years (Reuters) and the $10B+ revolver target - linkage unverified. Not additive to total raised until funded. | The '$5B' is AMD's equity investment INTO Anthropic (per AMD release); TechCrunch's Aug 26 recap labels it a '$5B deal', which blurs investment with compute spend. Checklist phrase 'venture-funding talks' resolved into an announced partnership. Dollar value of the compute purchase not disclosed. | The $5B is AMD's investment INTO Anthropic ('up to'), not compute spend; the dollar value of the GPU purchase/rental is not disclosed, nor are warrant or pricing terms (press blurs the two as a '$5B deal'). 2 GW is 'up to'; AMD's Q2 8-K adds no figures. Fifth chip family after TPU, Trainium, NVIDIA GPUs and (talks) custom silicon; the vendor-equity-for-purchases pattern mirrors Nvidia/Microsoft and Amazon. | Tom's Hardware headline mentions warrants in the structure (article body not rendered); CNBC (Jul 22) headline says up to $5B (403). AMD's Aug 4 results exhibit (SEC 8-K) repeats the partnership. \"Up to\" equity, not funded.",
+  "agent": "desk-deals",
   "agents": [
    "desk-compute",
+   "desk-deals",
    "desk-ecosystem",
    "scout-2026q3"
   ],
   "merged_ids": [
    "evt-20260722-amd-2gw-mi450-partnership",
+   "evt-20260722-amd-2gw-mi450-partnership",
    "evt-20260722-amd-2gw-5b"
   ],
-  "independent_sources": 4
+  "independent_sources": 5
  },
  {
   "id": "evt-20260722-treasury-moonshot-fable-distillation-threat",
@@ -48833,6 +49196,88 @@
   ],
   "merged_ids": [],
   "independent_sources": 1
+ },
+ {
+  "id": "evt-20260723-alphabet-10q-non-marketable-124b",
+  "date": "2026-07-23",
+  "date_precision": "day",
+  "headline": "Alphabet 10-Q: $124.3B private stakes; Anthropic not named",
+  "summary": "Alphabet's Q2 2026 10-Q reports non-marketable equity securities (measurement alternative) of $124.3B, of which $87.9B was remeasured in Q2, with no investee named; Bloomberg (via Yahoo/Motley Fool) says the figure primarily reflects Anthropic and that Alphabet has never disclosed its percentage.",
+  "category": [
+   "investment",
+   "valuation"
+  ],
+  "source": {
+   "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+   "publisher": "SEC EDGAR - Alphabet Inc. Form 10-Q (quarter ended 2026-06-30)",
+   "title": "Form 10-Q, Note 3 - Financial instruments",
+   "published": "2026-07-23",
+   "tier": "T1",
+   "opened": true
+  },
+  "corroboration": [
+   {
+    "url": "https://finance.yahoo.com/technology/ai/articles/alphabet-reportedly-values-anthropic-stake-212401877.html",
+    "publisher": "Yahoo Finance / Motley Fool (Sep 24 2026)",
+    "tier": "T3"
+   }
+  ],
+  "extracted": {
+   "amount_usd_m": 124300.0,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": null,
+   "revenue_period_usd_m": null,
+   "revenue_period": null,
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [
+    {
+     "name": "Alphabet (Google)",
+     "type": "cloud",
+     "public": true,
+     "ticker": "GOOGL",
+     "role_in_deal": "buyer"
+    }
+   ],
+   "headcount": null,
+   "customers": null,
+   "other": {
+    "lead_investors": [],
+    "participants": [],
+    "share_price_usd": null,
+    "announced_vs_closed": "aggregate of ALL private holdings; Anthropic share not disclosed",
+    "pitchbook_deal_id": null,
+    "remeasured_q2_usd_m": 87900,
+    "h1_gain_on_debt_and_equity_securities_usd_m": 135803
+   }
+  },
+  "confidence": "HIGH",
+  "notes": "CAUTION: '$124B Anthropic stake' headlines over-read the filing - $124.3B is the carrying value of all Alphabet non-marketable equity securities; Anthropic is not named in the 10-Q or FY2025 10-K as processed. The claim that it is 'primarily' Anthropic is Bloomberg's, not Alphabet's. H1-2026 'loss (gain) on debt and equity securities, net' was $(135.8)B vs $(11.4)B in H1 2025. Google's stake was 14% (Mar 2025, DOJ filings) before Series F/G/H dilution and its 2026 investments.",
+  "agent": "desk-deals",
+  "agents": [
+   "desk-deals"
+  ],
+  "merged_ids": [],
+  "independent_sources": 2
  },
  {
   "id": "evt-20260724-claude-opus-5-launch",
@@ -49061,6 +49506,97 @@
   "independent_sources": 1
  },
  {
+  "id": "evt-20260729-microsoft-3-2b-gain",
+  "date": "2026-07-29",
+  "date_precision": "day",
+  "headline": "Microsoft books $3.2B gain on its Anthropic investment in fiscal Q4",
+  "summary": "Microsoft's FY26 Q4 earnings release says results include a $3.2B gain from its investment in Anthropic, versus net OpenAI gains of $480M in the quarter and $4,963M for the full fiscal year.",
+  "category": [
+   "investment",
+   "valuation"
+  ],
+  "source": {
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+   "publisher": "SEC EDGAR - Microsoft Corp. 8-K Exhibit 99.1",
+   "title": "Microsoft Cloud strength drives fourth quarter results (FY26 Q4)",
+   "published": "2026-07-29",
+   "tier": "T1",
+   "opened": true
+  },
+  "corroboration": [
+   {
+    "url": "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
+    "publisher": "TechCrunch",
+    "tier": "T2"
+   }
+  ],
+  "extracted": {
+   "amount_usd_m": 3200.0,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": null,
+   "revenue_period_usd_m": null,
+   "revenue_period": null,
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": "Investor with Copilot/Foundry distribution and $30B Azure commitment",
+   "strategy": null,
+   "people": [],
+   "entities": [
+    {
+     "name": "Microsoft",
+     "type": "cloud",
+     "public": true,
+     "ticker": "MSFT",
+     "role_in_deal": "buyer"
+    },
+    {
+     "name": "Microsoft",
+     "type": "investor",
+     "public": true,
+     "ticker": "MSFT"
+    }
+   ],
+   "headcount": null,
+   "customers": null,
+   "other": {
+    "lead_investors": [],
+    "participants": [],
+    "share_price_usd": null,
+    "announced_vs_closed": "quarter ended 2026-06-30; gain reflects observable Series H pricing (inference)",
+    "pitchbook_deal_id": null,
+    "gain_usd_m": 3200,
+    "eps_effect_usd": 0.27
+   }
+  },
+  "confidence": "HIGH",
+  "notes": "Gain amount is T1. The release does not give cost basis or funded amount; the 10-K text processed does not name Anthropic. TechCrunch says Microsoft does not re-mark Anthropic every quarter (unlike OpenAI), consistent with measurement-alternative accounting triggered by an observable price (Series H). | Confirms Microsoft holds an Anthropic stake with marked-to-market gains; the stake size and instrument are not in the release. PitchBook's investor list omits Microsoft.",
+  "agent": "desk-deals",
+  "agents": [
+   "desk-deals",
+   "desk-ecosystem"
+  ],
+  "merged_ids": [
+   "evt-20260729-microsoft-anthropic-gain"
+  ],
+  "independent_sources": 2
+ },
+ {
   "id": "evt-20260729-microsoft-3-2b-gain-on-anthropic",
   "date": "2026-07-29",
   "date_precision": "day",
@@ -49131,58 +49667,6 @@
   "agent": "scout-2026q3",
   "agents": [
    "scout-2026q3"
-  ],
-  "merged_ids": [],
-  "independent_sources": 1
- },
- {
-  "id": "evt-20260729-microsoft-anthropic-gain",
-  "date": "2026-07-29",
-  "date_precision": "day",
-  "headline": "Microsoft reports a $3.2B gain from its Anthropic investment",
-  "summary": "Microsoft's fiscal Q4 2026 earnings release cited \"a $3.2 billion gain from our investment in Anthropic\" as a discrete item worth about $0.27 a share.",
-  "category": [
-   "investment"
-  ],
-  "source": {
-   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
-   "publisher": "SEC EDGAR (Microsoft 8-K ex99.1)",
-   "title": "Microsoft Cloud strength drives fourth quarter results",
-   "published": "2026-07-29",
-   "tier": "T1",
-   "opened": true
-  },
-  "corroboration": [],
-  "extracted": {
-   "amount_usd_m": 3200.0,
-   "moat": "Investor with Copilot/Foundry distribution and $30B Azure commitment",
-   "entities": [
-    {
-     "name": "Microsoft",
-     "type": "investor",
-     "public": true,
-     "ticker": "MSFT"
-    }
-   ],
-   "other": {
-    "gain_usd_m": 3200,
-    "eps_effect_usd": 0.27
-   },
-   "valuation_post_usd_m": null,
-   "valuation_pre_usd_m": null,
-   "revenue_run_rate_usd_m": null,
-   "revenue_period_usd_m": null,
-   "margin_pct": null,
-   "headcount": null,
-   "compute": {},
-   "product": {},
-   "people": []
-  },
-  "confidence": "HIGH",
-  "notes": "Confirms Microsoft holds an Anthropic stake with marked-to-market gains; the stake size and instrument are not in the release. PitchBook's investor list omits Microsoft.",
-  "agent": "desk-ecosystem",
-  "agents": [
-   "desk-ecosystem"
   ],
   "merged_ids": [],
   "independent_sources": 1
@@ -49477,13 +49961,14 @@
   "independent_sources": 2
  },
  {
-  "id": "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo",
+  "id": "evt-20260731-amazon-10q-q2-2026",
   "date": "2026-07-31",
   "date_precision": "day",
-  "headline": "Amazon 10-Q: Anthropic stake carried at $190.4B; notes convert at IPO",
-  "summary": "Amazon's Q2 10-Q carries its Anthropic nonvoting preferred at $92.5B and convertible notes at $97.9B, books $62.8B of first-half upward adjustments, and says the notes convert to nonvoting common stock if Anthropic completes an IPO, subject to an ownership cap.",
+  "headline": "Amazon 10-Q: $18B invested; Anthropic stake carried at $190.4B",
+  "summary": "Amazon's Q2 2026 10-Q shows $8.0B of convertible notes (Q3 2023-Q4 2025) plus $5.0B of Series G and $5.0B of Series H nonvoting preferred bought in Q2 2026, with preferred carried at ~$92.5B and notes at ~$97.9B fair value, and a $20.0B facility now down to $15.0B.",
   "category": [
    "compute",
+   "debt",
    "financials",
    "governance",
    "investment",
@@ -49492,8 +49977,8 @@
   ],
   "source": {
    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-   "publisher": "SEC EDGAR (Amazon.com 10-Q, acc. 0001018724-26-000026)",
-   "title": "Form 10-Q for the quarter ended 2026-06-30, Note 2",
+   "publisher": "SEC EDGAR - Amazon.com, Inc. Form 10-Q (quarter ended 2026-06-30)",
+   "title": "Form 10-Q, Note 2 - Non-Marketable Investments",
    "published": "2026-07-31",
    "tier": "T1",
    "opened": true
@@ -49542,6 +50027,13 @@
      "name": "Amazon",
      "type": "cloud",
      "public": true,
+     "ticker": "AMZN",
+     "role_in_deal": "buyer"
+    },
+    {
+     "name": "Amazon",
+     "type": "cloud",
+     "public": true,
      "ticker": "AMZN"
     },
     {
@@ -49566,6 +50058,17 @@
    "headcount": null,
    "customers": null,
    "other": {
+    "lead_investors": [],
+    "participants": [],
+    "share_price_usd": null,
+    "announced_vs_closed": "cost basis 8.0 (notes) + 5.0 (Series G) + 5.0 (Series H) = 18.0B",
+    "pitchbook_deal_id": null,
+    "carrying_total_usd_m": 190400,
+    "preferred_carrying_usd_m": 92500,
+    "notes_fair_value_usd_m": 97900,
+    "upward_adjustment_q2_usd_m": 50500,
+    "upward_adjustment_h1_usd_m": 62800,
+    "facility_remaining_usd_m": 15000,
     "nonvoting_preferred_carrying_usd_m_jun30_2026": 92500,
     "convertible_notes_carrying_usd_m_jun30_2026": 97900,
     "total_carrying_usd_m_jun30_2026": 190400,
@@ -49583,7 +50086,6 @@
     "financing": "vendor-investment",
     "start": "2026-06",
     "facility_usd_m": 20000,
-    "facility_remaining_usd_m": 15000,
     "draw_mechanics": "nothing available at inception; availability rises as AWS reaches compute-delivery milestones; draws = new Anthropic convertible notes (common stock after IPO, subject to an ownership cap)",
     "carrying_value_usd_m": {
      "convertible_notes": 97900,
@@ -49602,20 +50104,20 @@
     "notes_usd_m": 8000,
     "series_g_usd_m": 5000,
     "series_h_usd_m": 5000,
-    "preferred_carrying_usd_m": 92500,
-    "notes_fair_value_usd_m": 97900,
     "implied_stake_pct_desk_arithmetic": 19.7
    }
   },
   "confidence": "HIGH",
-  "notes": "T1 primary from a public filer, read through the WebFetch summarizer (large iXBRL document). Sum check: $92.5B + $97.9B = $190.4B, matching TheStreet's $190.4B (scout-2026q3); Q2 $50.5B + Q1 $12.3B (scout-2026q2) = $62.8B. Relevance to the prospectus: Amazon is a related party (investor, cloud supplier and sales channel); its notes converting into nonvoting common stock at IPO is consistent with TNW's 'strategic partner shares carry very few votes'. Possible link between Amazon's unrealized note gains and Anthropic's ~$34B non-cash FY2025 charge is an inference, not stated by any source. Second read (verbatim quotes) confirmed: preferred $14.8B -> $92.5B, $8.0B of notes invested Q3 2023-Q4 2025, $5.0B Series G and $5.0B Series H in Q2 2026, $50.5B Q2 / $62.8B six-month upward adjustments, facility expires 30 months after a liquidity event, notes convert to nonvoting common subject to the ownership cap; the $97.9B note carrying value comes from the first read and TheStreet (scout-2026q3). | Primary-source mechanics for the 'up to $20B more' in the Apr 20 announcement: it is vendor financing tied to AWS delivering compute, so investment dollars and AWS compute dollars are linked (circular). Amazon recognizes large non-cash gains on the marked-up stake ($62.8B upward adjustment on preferred in H1 2026). The >$100B/10-year AWS commitment and 5 GW are from Anthropic's post, not the 10-Q (which does not itemize Anthropic obligations in its commitments table). Whether Anthropic's AWS spend is netted against the facility is not disclosed. | Convertible notes fair value ~$97.9B (Dec 2025: $45.8B), preferred ~$92.5B (Dec 2025: $14.8B), AOCI unrealised gain on notes $92.0B; upward adjustments ~$50.5B in Q2 and $62.8B for six months. Facility expires 30 months after an Anthropic liquidity event incl. an IPO. Amazon also amended its AWS commercial arrangement (AWS chip performance obligations). Desk arithmetic (unverified): ($97.9B + $92.5B) / $965B Series H post-money is about 19.7%, treating all holdings at Series H pricing.",
-  "agent": "desk-s1",
+  "notes": "Verbatim: 'In Q2 2026, we invested $5.0 billion in Anthropic Series G nonvoting preferred stock'; 'we exercised our option to participate in subsequent Anthropic equity financings by investing $5.0 billion in Anthropic Series H nonvoting preferred stock, which reduced the amount available under the facility to $15.0 billion'; facility 'not to exceed $20.0 billion... expire 30 months after an Anthropic liquidity event, including an initial public offering'. Carrying total 92.5+97.9 = $190.4B (my arithmetic; TheStreet reported the same). OPEN: whether the two $5B purchases are inside the $30B Series G / $65B Series H or additional is not stated; Series H says $15B of 'previously committed hyperscaler' money incl. $5B Amazon. | T1 primary from a public filer, read through the WebFetch summarizer (large iXBRL document). Sum check: $92.5B + $97.9B = $190.4B, matching TheStreet's $190.4B (scout-2026q3); Q2 $50.5B + Q1 $12.3B (scout-2026q2) = $62.8B. Relevance to the prospectus: Amazon is a related party (investor, cloud supplier and sales channel); its notes converting into nonvoting common stock at IPO is consistent with TNW's 'strategic partner shares carry very few votes'. Possible link between Amazon's unrealized note gains and Anthropic's ~$34B non-cash FY2025 charge is an inference, not stated by any source. Second read (verbatim quotes) confirmed: preferred $14.8B -> $92.5B, $8.0B of notes invested Q3 2023-Q4 2025, $5.0B Series G and $5.0B Series H in Q2 2026, $50.5B Q2 / $62.8B six-month upward adjustments, facility expires 30 months after a liquidity event, notes convert to nonvoting common subject to the ownership cap; the $97.9B note carrying value comes from the first read and TheStreet (scout-2026q3). | Primary-source mechanics for the 'up to $20B more' in the Apr 20 announcement: it is vendor financing tied to AWS delivering compute, so investment dollars and AWS compute dollars are linked (circular). Amazon recognizes large non-cash gains on the marked-up stake ($62.8B upward adjustment on preferred in H1 2026). The >$100B/10-year AWS commitment and 5 GW are from Anthropic's post, not the 10-Q (which does not itemize Anthropic obligations in its commitments table). Whether Anthropic's AWS spend is netted against the facility is not disclosed. | Convertible notes fair value ~$97.9B (Dec 2025: $45.8B), preferred ~$92.5B (Dec 2025: $14.8B), AOCI unrealised gain on notes $92.0B; upward adjustments ~$50.5B in Q2 and $62.8B for six months. Facility expires 30 months after an Anthropic liquidity event incl. an IPO. Amazon also amended its AWS commercial arrangement (AWS chip performance obligations). Desk arithmetic (unverified): ($97.9B + $92.5B) / $965B Series H post-money is about 19.7%, treating all holdings at Series H pricing.",
+  "agent": "desk-deals",
   "agents": [
    "desk-compute",
+   "desk-deals",
    "desk-ecosystem",
    "desk-s1"
   ],
   "merged_ids": [
+   "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo",
    "evt-20260731-amazon-q2-10q-compute-milestone-facility",
    "evt-20260731-amazon-10q-anthropic"
   ],
@@ -61741,5 +62243,81 @@
   ],
   "merged_ids": [],
   "independent_sources": 3
+ },
+ {
+  "id": "evt-20260930-pb-total-raised-bonds-removed",
+  "date": "2026-09-30",
+  "date_precision": "day",
+  "headline": "PitchBook ledger totals $126.754B; $34.5B chip bonds no longer included",
+  "summary": "PitchBook's Sep 30 deal list sums to $126,754M (Series H 'Raised to Date') with no chip-financing record, versus $161,254M reported on Jul 16 when the $34.5B bonds (PB deal 334763-02T) were counted.",
+  "category": [
+   "debt",
+   "other"
+  ],
+  "source": {
+   "url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "publisher": "PitchBook (pitchbook_deals.json, 86 rows, 15 deal headers)",
+   "title": "PitchBook financing history for PBID 466959-97",
+   "published": "2026-09-30",
+   "tier": "T2",
+   "opened": true
+  },
+  "corroboration": [
+   {
+    "url": "https://epochai.substack.com/p/will-financing-bottleneck-ai-compute",
+    "publisher": "Epoch AI: SPV lessor notes, Anthropic is lessee",
+    "tier": "T3"
+   }
+  ],
+  "extracted": {
+   "amount_usd_m": 34500.0,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": null,
+   "revenue_period_usd_m": null,
+   "revenue_period": null,
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [],
+   "headcount": null,
+   "customers": null,
+   "other": {
+    "lead_investors": [],
+    "participants": [],
+    "share_price_usd": null,
+    "announced_vs_closed": "PB total $161,254M (Jul 16, per orchestrator brief) -> $126,754M (Sep 30 extract)",
+    "pitchbook_deal_id": null,
+    "pb_raised_to_date_usd_m": 126754,
+    "pb_prior_total_usd_m": 161254,
+    "removed_usd_m": 34500,
+    "removed_pb_deal_id": "334763-02T"
+   }
+  },
+  "confidence": "VERIFY",
+  "notes": "FLAG. Arithmetic: 161,254 - 126,754 = 34,500 exactly. The Sep-30 extract contains no record for deal 334763-02T, so PB removed or reclassified it; the reason is not stated anywhere I could open (pitchbook.com profile/news pages return 403; search snippet shows PitchBook saying Anthropic 'has raised $127 billion'). Press explains why it should not count: the notes are issued by a lessor SPV and Anthropic only leases (5-year lease; Broadcom backstop), although a 'chip bonds' label makes it look like Anthropic debt. The $161.254B figure is therefore an over-count; use $126.754B (incl. $2.5B revolver) or $124.254B (equity only).",
+  "agent": "desk-deals",
+  "agents": [
+   "desk-deals"
+  ],
+  "merged_ids": [],
+  "independent_sources": 2
  }
 ]

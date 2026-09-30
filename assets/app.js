@@ -329,7 +329,9 @@ function renderOverview(root) {
   const q = (M.period_revenue || []).filter(r => /Q[1-4]\s*20\d\d/.test(r.period || '') && /actual|prelim/i.test(r.kind || '')).sort((a, b) => a.period.replace(/(Q\d)\s*(\d{4})/, '$2$1').localeCompare(b.period.replace(/(Q\d)\s*(\d{4})/, '$2$1'))).pop();
   const cs = M.capital_summary || {};
   const ct = M.compute_totals || {};
-  const hc = latest(M.headcount_desk?.length ? M.headcount_desk : M.headcount, r => r.headcount);
+  const hcAll = (M.headcount_desk?.length ? M.headcount_desk : M.headcount || []).map(r => ({ ...r, date: /^\d{4}-\d{2}-\d{2}/.test(String(r.date)) ? String(r.date).slice(0, 10) : /^\d{4}-\d{2}/.test(String(r.date)) ? String(r.date).slice(0, 7) + '-01' : r.date }));
+  const hc = latest(hcAll.filter(r => /^T[123]$/.test(r.tier || 'T3')), r => r.headcount) || latest(hcAll, r => r.headcount);   // a headline KPI rests on T1-T3 only
+  const hcLater = hc ? hcAll.filter(r => r.date > hc.date && r.headcount && Math.abs(r.headcount - hc.headcount) / hc.headcount > 0.2) : [];
   const os = M.offering_structure || {};
   const tile = (label, value, sub, opts = {}) => { const t = el('div', { class: 'tile' }, el('div', { class: 'label', text: label }), el('div', { class: 'value', text: value }), el('div', { class: 'sub' }, ...sub)); if (opts.spark) { const s = el('div', { class: 'spark' }); t.append(s); sparkline(s, opts.spark); } if (opts.onclick) { t.style.cursor = 'pointer'; t.addEventListener('click', opts.onclick); } return t; };
   tiles.append(
@@ -338,7 +340,7 @@ function renderOverview(root) {
     tile(q ? `${q.period} revenue (${q.kind})` : 'Latest quarterly revenue', q ? fmt.usd(q.usd_m) : '—', q ? [q.basis ? chip(q.basis) : '', q.tier ? tierChip(q.tier) : '', q.confidence ? confChip(q.confidence) : ''] : ['no data']),
     tile('Equity raised (ex-debt)', cs.equity_only_usd_m ? fmt.usd(cs.equity_only_usd_m) : '—', [cs.debt_usd_m ? `+ ${fmt.usd(cs.debt_usd_m)} debt` : '', cs.basis_note ? chip('basis noted') : '']),
     tile('Compute commitments (announced)', ct.usd_m_announced ? fmt.usd(ct.usd_m_announced) : '—', [ct.usd_m_contracted ? `${fmt.usd(ct.usd_m_contracted)} contracted` : '', ct.gw_announced ? fmt.gw(ct.gw_announced) : '']),
-    tile('Headcount', hc ? fmt.num(hc.headcount) : '—', hc ? [fmt.date(hc.date), hc.tier ? tierChip(hc.tier) : ''] : ['no data']),
+    tile('Headcount', hc ? fmt.num(hc.headcount) : '—', hc ? [fmt.date(hc.date), hc.tier ? tierChip(hc.tier) : '', hcLater.length ? el('span', { class: 'chip conf DISPUTED', title: 'Later figures differ by more than 20%; all are T4 estimates', text: `disputed: ${hcLater.map(r => fmt.num(r.headcount)).join(' / ')} (T4)` }) : ''] : ['no data']),
     tile('IPO', os.timing ? os.timing.split('·')[0].trim().slice(0, 28) : 'Confidential S-1', [os.exchange || '', os.target_valuation_usd_m ? `target ${fmt.usd(os.target_valuation_usd_m)}` : '', os.target_raise_usd_m ? `raise up to ${fmt.usd(os.target_raise_usd_m)}` : '']),
     tile('Record', `${fmt.num((state.data.events || []).length)} events`, [L ? `${fmt.num(L.raw_events)} raw · ${Object.keys(A?.agents || {}).length} agents` : '', L ? chip(`${Math.round((L.opened_share || 0) * 100)}% opened`) : ''], { onclick: () => showTab('sources') }),
   );
