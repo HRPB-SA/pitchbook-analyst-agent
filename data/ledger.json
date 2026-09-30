@@ -1,0 +1,1906 @@
+{
+ "generated": "2026-09-30T18:24:13Z",
+ "raw_events": 892,
+ "merged_events": 636,
+ "tiers": {
+  "T1": 372,
+  "T2": 158,
+  "T3": 96,
+  "T4": 9,
+  "T5": 1
+ },
+ "confidence": {
+  "HIGH": 469,
+  "MEDIUM": 149,
+  "DISPUTED": 6,
+  "VERIFY": 6,
+  "LOW": 6
+ },
+ "categories": {
+  "governance": 53,
+  "other": 40,
+  "people": 55,
+  "funding": 28,
+  "investment": 63,
+  "research": 67,
+  "safety": 91,
+  "policy": 82,
+  "model": 40,
+  "product": 142,
+  "government": 87,
+  "compute": 48,
+  "security": 45,
+  "legal": 65,
+  "customer": 83,
+  "partnership": 127,
+  "valuation": 33,
+  "pricing": 58,
+  "international": 47,
+  "regulatory": 40,
+  "revenue": 33,
+  "financials": 30,
+  "secondary": 8,
+  "competition": 43,
+  "ipo": 29,
+  "debt": 7,
+  "acquisition": 15
+ },
+ "years": {
+  "2021": 6,
+  "2022": 16,
+  "2023": 47,
+  "2024": 67,
+  "2025": 173,
+  "2026": 327
+ },
+ "opened_share": 0.998,
+ "cross_agent_conflicts": [
+  {
+   "topic": "Amazon to invest up to $4B; AWS becomes primary cloud · amount_usd_m",
+   "value_a": 1250.0,
+   "source_a": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "value_b": 4000.0,
+   "source_b": "https://www.anthropic.com/news/anthropic-amazon",
+   "note": "cross-agent numeric mismatch (scout-2023 vs desk-ecosystem)",
+   "event_id": "evt-20230925-amazon-up-to-4b"
+  }
+ ],
+ "agent_conflicts": [
+  {
+   "topic": "Basecamp Research Series C: was Anthropic an investor?",
+   "value_a": "Anthropic (and Menlo Anthology Fund) named as backers; PitchBook lists Anthropic active minority investor since 2026-09-23",
+   "source_a": "https://tech.eu/2026/09/23/anthropic-and-nvidia-back-basecamp-research-in-140m-series-c/",
+   "value_b": "BioSpace editor's note (Sep 25): Basecamp's original press announcement \"incorrectly named Anthropic as an investor\"; corrected version omits it",
+   "source_b": "https://www.biospace.com/business/backed-by-nvidia-basecamp-bags-140m-to-advance-ai-designed-drugs",
+   "note": "DISPUTED. Treat Anthropic as not a direct investor until Basecamp or Anthropic confirms; PitchBook row likely inherited the erroneous release. Orchestrator premise (Anthropic invests in Basecamp) not verified.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Sazabi seed (Jun 2026): Anthropic as investor",
+   "value_a": "PitchBook lists Sazabi as an Anthropic minority investment, Investor Since 2026-06-26",
+   "source_a": "https://my.pitchbook.com/profile/1167711-76/company/profile",
+   "value_b": "PR Newswire Jun 25 2026: leads J2 Ventures, Village Global, Y Combinator; Anthropic appears only as an employer of 60+ angel investors",
+   "source_b": "https://www.prnewswire.com/news-releases/sazabi-raises-8-million-seed-round-to-build-the-ai-native-observability-platform-for-fast-moving-engineering-teams-302810085.html",
+   "note": "Not verified as a company-level Anthropic investment; probable PitchBook attribution of employee angels. Seed size $8M confirmed.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Frontier (carbon removal): equity investment?",
+   "value_a": "PitchBook: Frontier (Environmental Services (B2B)) active minority holding since 2026-06-17",
+   "source_a": "https://my.pitchbook.com/profile/1447125-67/company/profile",
+   "value_b": "TechCrunch Jun 17 2026: joining Frontier means pledging to buy carbon-removal credits; \"not an equity investment\"",
+   "source_b": "https://techcrunch.com/2026/06/17/anthropic-becomes-first-ai-startup-to-join-the-frontier-carbon-removal-coalition/",
+   "note": "PitchBook row is a classification artefact; exclude from any count of equity investments.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Theseus Infrastructure: Anthropic equity stake?",
+   "value_a": "PitchBook: Anthropic minority holding since 2026-08-10",
+   "source_a": "https://my.pitchbook.com/profile/1478729-98/company/profile",
+   "value_b": "Business Wire release (Aug 10 2026): Macquarie Asset Management and GIC own the platform and fund most project equity; Anthropic is anchor tenant/lessee",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-macquarie-asset-management-gic-120400841.html",
+   "note": "Conflict in role (owner vs tenant). Release gives no amounts; Anthropic equity not described.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Anthropic \"investments\" in Graphite and Astrix",
+   "value_a": "PitchBook credits Anthropic as investor in Graphite (2025-02-11) and Astrix (2024-12-03) with exits (Cursor Dec 2025; Cisco $400M May 2026)",
+   "source_a": "https://my.pitchbook.com/profile/466959-97/investor/profile",
+   "value_b": "TechCrunch Mar 2025: Anthropic participated via the Anthology Fund (Menlo); Cursor and Cisco exit articles do not name Anthropic",
+   "source_b": "https://techcrunch.com/2025/03/18/anthropic-backed-ai-powered-code-review-platform-graphite-raises-cash/",
+   "note": "PitchBook \"35 Anthropic investments\" includes Anthology Fund co-investments (Menlo-funded $100M); direct Anthropic tickets verified only for Goodfire and Sapiom.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Amazon: date of first investment",
+   "value_a": "PitchBook: Amazon.com Investor Since 2024-11-22",
+   "source_a": "https://my.pitchbook.com/profile/11919-79/investor/profile",
+   "value_b": "Anthropic: Amazon announced up to $4B on 2023-09-25; total $8B by 2024-11-22",
+   "source_b": "https://www.anthropic.com/news/anthropic-amazon",
+   "note": "PitchBook date reflects the later tranche; first announced investment is Sep 2023. Same pattern for Google (PitchBook 2023-06-30 vs Google Cloud deal Feb 2023 and Series C May 23 2023) and the 2023-06-30 cohort (Zoom announced May 16, SAP Jul 18, SKT Aug 15).",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Microsoft as Anthropic investor",
+   "value_a": "Anthropic: Microsoft to invest up to $5B (Nov 18 2025); Series G includes \"a portion\" of Microsoft/NVIDIA commitments. Microsoft's Jul 29 2026 release books \"a $3.2 billion gain from our investment in Anthropic\"",
+   "source_a": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+   "value_b": "PitchBook full list (308 rows) has no Microsoft row; NVIDIA appears (Investor Since 2026-02-12)",
+   "source_b": "https://my.pitchbook.com/profile/466959-97/investor/profile",
+   "note": "PitchBook omission: Microsoft holds an Anthropic investment with marked gains (T1) yet has no row. Funded amount still unknown; \"up to\" amounts (Microsoft $5B, NVIDIA $10B, Google $40B, AMD $5B, Amazon $15B remaining) are not funded amounts.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Menlo share metric: 32% to 40% step",
+   "value_a": "Mid-2025: Anthropic 32% of production enterprise LLM API USAGE (n=150)",
+   "source_a": "https://menlovc.com/perspective/2025-mid-year-llm-market-update/",
+   "value_b": "Dec 2025: Anthropic 40% of estimated DOLLARS from production API usage (n=495)",
+   "source_b": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+   "note": "Different bases and samples; the 8-point rise is not a clean like-for-like change. Menlo is an Anthropic investor and Anthology co-sponsor (conflict of interest).",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Who leads enterprise LLM adoption",
+   "value_a": "Menlo Dec 2025: Anthropic 40% of enterprise LLM API dollars vs OpenAI 27%",
+   "source_a": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+   "value_b": "a16z Jan 2026 (n=100 Global 2000): OpenAI 78% in production and ~56% wallet share; Anthropic 44% in production",
+   "source_b": "https://a16z.com/leaders-gainers-and-unexpected-winners-in-the-enterprise-ai-arms-race/",
+   "note": "DISPUTED by basis: API-dollar share (Menlo) vs breadth of production use and wallet share (a16z). Both agree Anthropic leads coding.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Ramp AI Index: Anthropic vs OpenAI share of businesses",
+   "value_a": "May 2026: Anthropic 34.4% vs OpenAI 32.3% (TechCrunch)",
+   "source_a": "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/",
+   "value_b": "Sep 2026: Anthropic 43.8% vs OpenAI 39.8%, only +0.34pp MoM (FourWeekMBA, secondary)",
+   "source_b": "https://fourweekmba.com/ai-ramp-ai-index-september-2026-anthropic-openai-spend/",
+   "note": "A +9pp move from May to Sep is inconsistent with a +0.34pp monthly change; denominators or definitions differ. Primary Ramp page unreadable. Keep both, tier T3/T4.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Decart deal size in talks",
+   "value_a": "~$6B (Reuters Aug 13, Fortune, Calcalist Aug 13, Verdict/Yahoo Sep 8)",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-ends-talks-potential-6bn-113759986.html",
+   "value_b": "$7B (Calcalist headline Aug 16 \"closes in on $7 billion Decart deal\" - headline only, unopened)",
+   "source_b": "https://news.google.com/rss/search?q=Anthropic+acquires&hl=en-US&gl=US&ceid=US:en",
+   "note": "Deal never signed; $6B is the consensus figure. The $7B headline may reflect a later price or confusion with the separate MatX ~$7B talks.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Deloitte Claude deployment size",
+   "value_a": "Anthropic Oct 6 2025: 470,000 people",
+   "source_a": "https://www.anthropic.com/news/deloitte-anthropic-partnership",
+   "value_b": "TechCrunch Jan 9 2026: \"500,000 employees\"",
+   "source_b": "https://techcrunch.com/2026/01/09/anthropic-adds-allianz-to-growing-list-of-enterprise-wins/",
+   "note": "Rounding in press; Anthropic's primary figure used.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Stainless acquisition price",
+   "value_a": "Anthropic post May 18 2026: no price disclosed",
+   "source_a": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+   "value_b": "The Information via TechCrunch/StartupHub: over $300M",
+   "source_b": "https://techcrunch.com/2026/05/18/anthropic-has-acquired-the-dev-tools-startup-used-by-openai-google-and-cloudflare/",
+   "note": "Not a numeric conflict; price is single-source reporting and unconfirmed by Anthropic.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Commonwealth Bank of Australia: when did it invest in Anthropic?",
+   "value_a": "PitchBook: Investor Since 2026-02-12 (Series G cohort); not named in the Series G post",
+   "source_a": "https://my.pitchbook.com/profile/14766-22/investor/profile",
+   "value_b": "Capital Brief (May 25 2026, T3): CBA invested in the March 2025 round that valued Anthropic at $61.5B, about a 15x return",
+   "source_b": "https://www.capitalbrief.com/newsletter/cba-finds-its-inner-macquarie-ce4b5046-b9f0-4177-98b3-7d30a2b3c9d8/",
+   "note": "Series E post (Mar 3 2025) names other investors but not CBA (it lists unnamed new and existing investors). PitchBook date may reflect a later top-up. Stake size unknown; AFR (Aug 23 2026) paper-gain story not opened.",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "topic": "Jay Kreps board start date",
+   "value_a": "2025-01 (brief)",
+   "source_a": "brief from orchestrator (no URL)",
+   "value_b": "2024-05-29",
+   "source_b": "https://www.anthropic.com/news/jay-kreps-appointed-to-board-of-directors",
+   "note": "T1 page dated and meta-stamped 2024-05-29; brief is wrong. Also he reportedly left 2026-05-22 (T5/T4 only).",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "Cuéllar Aug 2026 move",
+   "value_a": "Chief Global Affairs Officer plus a board seat (brief)",
+   "source_a": "brief from orchestrator (no URL)",
+   "value_b": "CGAO; stepped down from LTBT; no board seat stated",
+   "source_b": "https://www.anthropic.com/news/tino-cuellar",
+   "note": "anthropic.com/company (2026-09-30) and the Reuters factbox list no Cuéllar on the board.",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "Rahul Patil CTO start",
+   "value_a": "Sep 2025 (brief)",
+   "source_a": "brief from orchestrator (no URL)",
+   "value_b": "2025-10-07 announcement",
+   "source_b": "https://www.anthropic.com/news/rahul-patil-joins-anthropic",
+   "note": "TechCrunch reported the hire 2025-10-02 (scout lead); effective start may precede the post.",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "Hegseth supply-chain designation date",
+   "value_a": "2026-02-16 (Wikipedia, T4)",
+   "source_a": "https://en.wikipedia.org/wiki/Anthropic%E2%80%93United_States_Department_of_Defense_dispute",
+   "value_b": "2026-02-27 post on X; letters dated 2026-03-03, received 2026-03-04",
+   "source_b": "https://www.anthropic.com/news/statement-comments-secretary-war",
+   "note": "T1 Anthropic statement and the N.D. Cal. order agree; Wikipedia treated as wrong.",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "First court win in Pentagon dispute",
+   "value_a": "Aug 28, 2026 ruling was Anthropic's 'first court win' (TechCrunch headline)",
+   "source_a": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+   "value_b": "Preliminary injunction granted 2026-03-26 by the same judge",
+   "source_b": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.134.0.pdf",
+   "note": "T1 court order controls; the August ruling was the first merits win. DC Circuit then upheld the FASCSA designation 2026-09-25 (DISPUTED between tracks, not facts).",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "Late-2023 headcount",
+   "value_a": "fewer than 200",
+   "source_a": "https://fortune.com/article/anthropic-ceo-dario-amodei-openai-chatgpt-artificial-intelligence-safety-donald-trump/",
+   "value_b": "around 500 (brief says about 300)",
+   "source_b": "https://fortune.com/2025/12/04/how-anthropic-grew-what-the-183-billion-giant-faces-next/",
+   "note": "Two Fortune pieces two days apart disagree; DISPUTED.",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "2026 headcount",
+   "value_a": "about 2,500 worldwide (Jan 2026; 1,300 in SF)",
+   "source_a": "https://sfist.com/2026/01/30/anthropic-signs-lease-for-entire-27-story-downtown-tower/",
+   "value_b": "about 5,000 (Tracxn, March 2026; brief says 5,000 in Apr 2026); TrueUp about 3,000",
+   "source_b": "https://www.saastr.com/anthropic-only-has-5000-employees-almost-no-one-has-ever-been-this-efficient-thats-by-choice/",
+   "note": "5,000 rests only on a T4 aggregator; no T1/T2 figure found; prospectus coverage opened did not report headcount.",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "Trust-appointed directors as a board majority",
+   "value_a": "Majority of 7 on 2026-04-14 (T1)",
+   "source_a": "https://www.anthropic.com/news/narasimhan-board",
+   "value_b": "Six-member board from 2026-05-22 with 3 Trust-elected (Kreps left); Liddell's appointer unstated",
+   "source_b": "https://www.lesswrong.com/posts/sdCcsTt9hRpbX6obP/maybe-anthropic-s-long-term-benefit-trust-is-powerless",
+   "note": "LessWrong commenter argues Daniela Amodei may be counted as Trust-appointed; Reuters says post-IPO the Trust elects four directors. Unresolved.",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "UN Security Council briefing date",
+   "value_a": "2026-09-25 (Yahoo dateline)",
+   "source_a": "https://www.yahoo.com/news/politics/articles/sam-altman-dario-amodei-warn-203010526.html",
+   "value_b": "2026-09-23",
+   "source_b": "https://news.un.org/en/story/2026/09/1168414",
+   "note": "UN News and Reuters headlines date it 2026-09-23; Yahoo article published later.",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "Jacob Coxon resignation date",
+   "value_a": "2026-09-08 (X post per FREED)",
+   "source_a": "https://freed.tools/en/pages/anthropic-resignations",
+   "value_b": "'Tuesday, September 10' (CBS summary)",
+   "source_b": "https://www.cbsnews.com/news/anthropic-researcher-jacob-coxon-ai-warning/",
+   "note": "2026-09-08 is a Tuesday; 2026-09-10 is a Thursday; FREED date used.",
+   "agent": "desk-governance"
+  },
+  {
+   "topic": "Bartz fee award to class counsel",
+   "value_a": "$101,561,111 attorney's fees (plus $2,635,197.46 expenses, $18.22M cost reserve)",
+   "source_a": "https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.680.0_5.pdf",
+   "value_b": "~$122M awarded to plaintiffs' attorneys",
+   "source_b": "https://www.techtimes.com/articles/321156/20260721/anthropic-copyright-settlement-gets-final-approval-3000-per-book-no-binding-precedent.htm",
+   "note": "$122.4M equals fees + expenses + cost reserve; TechTimes conflated them. Court order (T1) controls; IBTimes UK converts to GBP 79.2M (= $101.6M).",
+   "agent": "desk-legal"
+  },
+  {
+   "topic": "Date of partial Mythos 5 redeployment approval",
+   "value_a": "June 26, 2026",
+   "source_a": "https://www.anthropic.com/news/redeploying-fable-5",
+   "value_b": "June 27, 2026",
+   "source_b": "https://www.meritalk.com/articles/commerce-lifts-export-restrictions-on-anthropic-ai-models/",
+   "note": "Company primary source used; MeriTalk may report the announcement date.",
+   "agent": "desk-legal"
+  },
+  {
+   "topic": "Bartz docket number",
+   "value_a": "3:24-cv-05417 (complaint/caption; task brief)",
+   "source_a": "https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.680.0_5.pdf",
+   "value_b": "4:24-cv-05417-AMO (ECF footer; CourtListener)",
+   "source_b": "https://www.courtlistener.com/api/rest/v4/search/?q=caseName%3A%28Bartz+Anthropic%29&type=r",
+   "note": "Same case; division/reassignment artifact (Judge Alsup to Judge Martinez-Olguin).",
+   "agent": "desk-legal"
+  },
+  {
+   "topic": "Alibaba distillation campaign size",
+   "value_a": "28.8M exchanges, ~25,000 fraudulent accounts, Apr 22-Jun 5 2026 (letter dated Jun 10 to Senate Banking)",
+   "source_a": "https://www.techtimes.com/articles/319105/20260625/alibaba-ran-largest-known-ai-theft-campaign-against-claude-anthropic-tells-senate.htm",
+   "value_b": "151M+ exchanges, 3,500+ fraudulent accounts, May-Jul 2026 (Sep 10 threat report)",
+   "source_b": "https://www.yahoo.com/news/us/articles/anthropic-accuses-chinese-ai-labs-122255005.html",
+   "note": "Different windows and possibly different clustering; both are secondary renderings of Anthropic statements; DISPUTED on account count.",
+   "agent": "desk-legal"
+  },
+  {
+   "topic": "Kahn v. Anthropic filing date",
+   "value_a": "2026-06-14 (complaint footer and CourtListener)",
+   "source_a": "https://storage.courtlistener.com/recap/gov.uscourts.cand.472161/gov.uscourts.cand.472161.1.0.pdf",
+   "value_b": "Monday 2026-06-15 (first reported by WSJ)",
+   "source_b": "https://gizmodo.com/anthropic-accused-of-misleading-users-over-soaring-ai-costs-in-new-lawsuit-2000772061",
+   "note": "Docket date used; press date is next business day.",
+   "agent": "desk-legal"
+  },
+  {
+   "topic": "Bartz opt-out deadline",
+   "value_a": "2026-02-09 (order Dkt 680 and settlement website)",
+   "source_a": "https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.680.0_5.pdf",
+   "value_b": "2026-01-29 (Authors Guild explainer)",
+   "source_b": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
+   "note": "Deadline was extended; court order controls.",
+   "agent": "desk-legal"
+  },
+  {
+   "topic": "Bartz works count",
+   "value_a": "482,460 works on the Works List (order Dkt 680)",
+   "source_a": "https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.680.0_5.pdf",
+   "value_b": "'approximately 500,000' works (brief; Authors Guild; TechCrunch 'nearly 500,000')",
+   "source_b": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+   "note": "Rounding; 482,460 is exact.",
+   "agent": "desk-legal"
+  },
+  {
+   "topic": "Which statute governs Anthropic's supply-chain exclusion",
+   "value_a": "10 U.S.C. 3252 designation: vacated by N.D. Cal. on 2026-08-27",
+   "source_a": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.251.0_2.pdf",
+   "value_b": "FASCSA 41 U.S.C. 4713 exclusion: upheld by D.C. Cir. on 2026-09-25",
+   "source_b": "https://storage.courtlistener.com/recap/gov.uscourts.cadc.43309/gov.uscourts.cadc.43309.01208891909.0.pdf",
+   "note": "Not a factual conflict: two instruments, opposite outcomes. Press headlines ('judge blocks' vs 'appeals court upholds') both correct; net operative effect is that DoW/contractor exclusion stands under FASCSA while broader presidential/Hegseth bans remain enjoined.",
+   "agent": "desk-legal"
+  },
+  {
+   "topic": "Sonnet 5 price after Sep 1 2026",
+   "value_a": "$3/$15 per MTok from Sep 1 (introductory $2/$10 through Aug 31)",
+   "source_a": "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/",
+   "value_b": "$2/$10 permanent; scheduled increase will not occur (finalized Aug 10, 2026)",
+   "source_b": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "note": "Not a true dispute: sequential announcements. T2 reported the launch-day schedule; Anthropic's pricing docs and release notes (Aug 10) supersede it. Use $2/$10 for the deflation curve; flag that launch-day coverage and Wikipedia-style secondary sources may still quote $3/$15.",
+   "agent": "desk-product"
+  },
+  {
+   "topic": "Fable 5 / Mythos 5 freeze window end date",
+   "value_a": "Restored Wednesday July 1, 2026 (global for Fable 5; Mythos 5 US organizations first)",
+   "source_a": "https://www.anthropic.com/news/redeploying-fable-5",
+   "value_b": "Window described as 'Jun 12 - Jul 7' (brief); third-party T4 article dated Jul 7 says 'Back After 19-Day Ban'",
+   "source_b": "https://techcrunch.com/2026/06/30/trump-drops-restrictions-on-anthropics-mythos-and-fable-models/",
+   "note": "Not a numeric conflict: Jul 7 is the last day of the initial 'up to 50% of weekly limits' paid-plan access after restoration; Anthropic (T1) and TechCrunch (T2) both give Jul 1 as the restoration date.",
+   "agent": "desk-product"
+  },
+  {
+   "topic": "Fable 5 GDPval-AA score",
+   "value_a": "1932 (VentureBeat, Jun 9 2026 launch coverage)",
+   "source_a": "https://venturebeat.com/ai/anthropic-brings-mythos-to-the-masses-with-claude-fable-5-its-most-powerful-generally-available-model-ever",
+   "value_b": "1723 (Anthropic Sep 1 2026 post, 'GDPval-AA v2')",
+   "source_b": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+   "note": "Different benchmark versions (v1 vs v2 re-scaling); 10.8% gap exceeds the 10% threshold but is a version artifact. Do not splice across posts.",
+   "agent": "desk-product"
+  },
+  {
+   "topic": "Claude Max 20x monthly price",
+   "value_a": "'From $100' for both Max tiers (claude.com/pricing fetched 2026-09-30)",
+   "source_a": "https://claude.com/pricing",
+   "value_b": "$200/month (Max 20x) on Help Center and Claude Code product page; $200 also in TechCrunch Apr 2025",
+   "source_b": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+   "note": "Presentation difference (tier selector shows 'From $100'), not a price change; $100 (5x) and $200 (20x) unchanged since 2025-04-09. Web prices only; mobile may differ.",
+   "agent": "desk-product"
+  },
+  {
+   "topic": "Opus 5.5 '40% less' claim basis",
+   "value_a": "'costs 40% less to run than Opus 5' at default settings (per-task, Anthropic launch post)",
+   "source_a": "https://www.anthropic.com/claude-opus-5-5",
+   "value_b": "Headline 'Matches Fable 5.1 ... and costs 40% less' / 'Fable-level performance' (newsroom blurb, ZDNET headline); VentureBeat '60% cheaper API price' vs Fable 5.1",
+   "source_b": "https://venturebeat.com/ai/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price",
+   "note": "Different baselines: 40% = per-task cost vs Opus 5; list-price deltas are -20% vs Opus 5 ($4/$20 vs $5/$25) and -60% vs Fable 5.1 ($4 vs $10). Use list prices for the deflation curve.",
+   "agent": "desk-product"
+  },
+  {
+   "topic": "Claude 3.5 Sonnet launch date",
+   "value_a": "June 20, 2024 (TechCrunch, brief)",
+   "source_a": "https://techcrunch.com/2024/06/20/anthropic-claims-its-latest-model-is-best-in-class/",
+   "value_b": "June 21, 2024 (date stamp on Anthropic launch post)",
+   "source_b": "https://www.anthropic.com/news/claude-3-5-sonnet",
+   "note": "One-day time-zone/stamp difference; event dated to launch day 2024-06-20.",
+   "agent": "desk-product"
+  },
+  {
+   "topic": "Claude Enterprise launch date",
+   "value_a": "September 4, 2024 (TechCrunch)",
+   "source_a": "https://techcrunch.com/2024/09/04/anthropic-launches-claude-enterprise-plan-to-compete-with-openai/",
+   "value_b": "September 10, 2024 (date label on claude.com/blog copy of the post)",
+   "source_b": "https://claude.com/blog/claude-for-enterprise",
+   "note": "claude.com re-stamped older posts after the Sep 2025 brand migration; prompt-caching copy shows 'August 14, 2025' but includes a Dec 17 2024 update line. T2/brief dates used.",
+   "agent": "desk-product"
+  },
+  {
+   "topic": "Founding date",
+   "value_a": "January 26, 2021 (entity date); Anthropic: 'beginning of 2021'",
+   "source_a": "https://www.highergov.com/awardee/anthropic-pbc-782300426/#overview",
+   "value_b": "December 2020",
+   "source_b": "https://research.contrary.com/company/anthropic",
+   "note": "TechCrunch (May 28, 2021) says the company was 'created a few months ago'. Likely explanation: founders left OpenAI in Dec 2020 and incorporated in Jan 2021. Event dated Jan 26, 2021 with MEDIUM confidence.",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "topic": "Series A round size and post-money",
+   "value_a": "$124M (announced); valuation undisclosed",
+   "source_a": "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems",
+   "value_b": "$80.2M in body / $90.9M in headline; $623.11M post-money (Forge Global secondary data, 'never confirmed')",
+   "source_b": "https://dealroom.co/news/145208-anthropics-124m-series-a-came-almost-entirely-from-tech-founders-not-vcs/",
+   "note": "Dealroom's own article title says '$124M'; its smaller figures appear to be tranche-level records. Announced total confirmed by T1 + TechCrunch, so event kept at HIGH; the $623M post-money is an unverified estimate and left null.",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "topic": "Series B / FTX investment transaction date",
+   "value_a": "April 2022 (announced Apr 29, 2022; DOJ: 'in April 2022')",
+   "source_a": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.590940/gov.uscourts.nysd.590940.315.0.pdf",
+   "value_b": "October 5, 2021 (Protos); '2021' (AFP)",
+   "source_b": "https://protos.com/anthropic-gamble-could-save-ftx-customers-from-total-ruin/",
+   "note": "Possible first close in late 2021 with announcement in April 2022; needs PitchBook deal-date confirmation or the FTX estate's Feb 2024 sale motion. Dealroom separately lists the round as $375.3M vs $580M announced.",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "topic": "When Claude v1 was trained",
+   "value_a": "Spring 2022",
+   "source_a": "https://www.anthropic.com/news/core-views-on-ai-safety",
+   "value_b": "Summer 2022 ('finished training')",
+   "source_b": "https://en.wikipedia.org/wiki/Anthropic",
+   "note": "T1 wording preferred; difference may be start vs finish of training.",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "topic": "Google's early-2023-disclosed investment: amount",
+   "value_a": "$300M for ~10% (FT, per Fortune/SiliconANGLE/Crunchbase)",
+   "source_a": "https://fortune.com/2023/02/04/google-invests-300m-anthropic-openai-rival-making-chatgpt-challenger-claude-ai-chatbot-battle",
+   "value_b": "'$400 million' (Tom's Guide headline; Reuters-style 'almost $400 mln' reporting)",
+   "source_b": "https://www.tomsguide.com/news/google-invests-dollar400-million-in-chatgpt-rival-anthropic-what-that-could-mean-for-you",
+   "note": "Out of this scout's period unless the deal closed in late 2022 (unverified); logged for scout-2023/desk-deals.",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "topic": "Number of OpenAI departures at founding",
+   "value_a": "Seven/eight co-founders (Dario & Daniela Amodei, Clark, Kaplan, Brown, Olah, McCandlish, Mann)",
+   "source_a": "https://en.wikipedia.org/wiki/Anthropic",
+   "value_b": "15 researchers left OpenAI to start Anthropic",
+   "source_b": "https://research.contrary.com/company/anthropic",
+   "note": "Not necessarily contradictory (co-founders vs total early departures); both T4. Anthropic's own count not found in an opened page.",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "topic": "Series C (May 2023) valuation",
+   "value_a": "$4.1B (post-money, per The Information)",
+   "source_a": "https://techcrunch.com/2023/05/23/anthropic-raises-350m-to-build-next-gen-ai-assistants/",
+   "value_b": "~$5B ('valued at about $5 billion in May')",
+   "source_b": "https://techcrunch.com/2023/09/25/amazon-to-invest-up-to-4-billion-in-ai-startup-anthropic",
+   "note": "Also ~$5B in VentureBeat (Sep 14, 2023) and $4.1B in Crunchbase News/CNBC (Dec 2023). Anthropic never disclosed. Likely basis difference: $4.1B was The Information's March 2023 post-money report; ~$5B may echo the FT-reported valuation attached to Google's Feb 2023 stake. Gap ~22% — DISPUTED.",
+   "agent": "scout-2023"
+  },
+  {
+   "topic": "Menlo-led $750M round (Dec 2023) valuation",
+   "value_a": "$15B pre-money ('not including the investment')",
+   "source_a": "https://finance.yahoo.com/news/anthropic-raise-750-mln-menlo-235104282.html",
+   "value_b": "$18.4B (per CNBC, as relayed by Crunchbase News)",
+   "source_b": "https://news.crunchbase.com/ai/unicorn-anthropic-funding-menlo-goog-amzn/",
+   "note": "$15B pre + $0.75B = $15.75B post, still ~14% below $18.4B, so pre/post basis does not reconcile the gap. Both are 'in talks' figures; the round closed in Jan 2024 (out of scope). DISPUTED.",
+   "agent": "scout-2023"
+  },
+  {
+   "topic": "2023 revenue run-rate",
+   "value_a": "~$100M annualized rate (told to investors ~Sep/Oct 2023)",
+   "source_a": "https://www.tipranks.com/news/the-fly/anthropic-sees-850m-in-annualized-revenue-by-2024-end-the-information-says",
+   "value_b": "'aiming for $200 million in annualized recurring revenue as of October'",
+   "source_b": "https://news.crunchbase.com/ai/unicorn-anthropic-funding-menlo-goog-amzn/",
+   "note": "Probably not a true conflict: value_a is a reported actual run-rate, value_b a stated target; both trace to The Information reporting. Neither confirmed by a T1/T2 source. Recorded so desk-revenue does not treat $200M as an actual.",
+   "agent": "scout-2023"
+  },
+  {
+   "topic": "Google Feb 2023 implied valuation vs Series C",
+   "value_a": "~$5B implied by FT-reported $300M for ~10%",
+   "source_a": "https://venturebeat.com/ai/google-invests-300-million-in-anthropic-as-race-to-compete-with-chatgpt-heats-up",
+   "value_b": "$4.1B Series C post-money (Mar–May 2023)",
+   "source_b": "https://techcrunch.com/2023/05/23/anthropic-raises-350m-to-build-next-gen-ai-assistants/",
+   "note": "Different transactions, so not strictly contradictory, but the sequence (higher implied value in Feb than the May priced round) suggests the FT stake/valuation arithmetic is approximate; treat the ~10% stake as unverified.",
+   "agent": "scout-2023"
+  },
+  {
+   "topic": "FY2024 revenue",
+   "value_a": "~$1.0B (PitchBook canonical figure supplied by orchestrator, T2, not opened)",
+   "source_a": "PitchBook (orchestrator-provided canonical figure)",
+   "value_b": "~$0.39-0.40B GAAP revenue (leaked S-1 reporting: SiliconANGLE '$400M'; Fortune '+1,088% to $4.6B' implies ~$387M)",
+   "source_b": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+   "note": "Gap >2x. Most likely a basis difference: ~$1.0B matches Anthropic's own statement of ~$1B run-rate entering 2025 (Series F release), whereas the prospectus figure is recognized FY revenue. Recorded as DISPUTED; desk-revenue/desk-s1 should reconcile against the actual S-1 when public.",
+   "agent": "scout-2024"
+  },
+  {
+   "topic": "FY2024 loss",
+   "value_a": "Net loss ~$5.3B (PitchBook canonical, not opened)",
+   "source_a": "PitchBook (orchestrator-provided canonical figure)",
+   "value_b": "Operating loss $2.98B (leaked S-1 reporting); separately, cash burn '>$2.7B projected' (The Information via TechCrunch, Nov 2024) and '$5.6B burned in 2024' (The Information, seen only in a search snippet, not opened)",
+   "source_b": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+   "note": "Different metrics: operating loss vs net loss vs cash burn. 2025 net loss ($42B) included a ~$34B non-operating accounting charge, so a 2024 net loss of ~$5.3B on a $2.98B operating loss is plausible if a similar charge existed. Not a pick; flagged for desk-revenue.",
+   "agent": "scout-2024"
+  },
+  {
+   "topic": "Implied valuation from FTX secondary sale",
+   "value_a": "~$18.4B post-money (Series D, Jan 2024; TechCrunch May 13, 2024 states $18.4B post-money)",
+   "source_a": "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/",
+   "value_b": "'Approximately $29.5 billion' derived by The Block from $884M for two-thirds of an assumed 8% stake",
+   "source_b": "https://www.theblock.co/post/284480/ftx-to-sell-two-thirds-of-anthropic-stake-for-884-million-with-buyers-including-jane-street-and-funds-managed-by-fidelity",
+   "note": "Methodology gap, not a market conflict: The Block assumes FTX's 2021 8% stake was undiluted; per-share price (~$30) cannot be converted to a valuation without the fully diluted share count. Series D figure retained; The Block's number should not be used.",
+   "agent": "scout-2024"
+  },
+  {
+   "topic": "Series D valuation wording",
+   "value_a": "$18.4B (widely reported; TechCrunch May 2024 'post-money')",
+   "source_a": "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/",
+   "value_b": "'$18 billion' (TechCrunch June 2026 retrospective)",
+   "source_b": "https://techcrunch.com/2026/06/23/after-betting-the-firm-on-anthropic-menlo-ventures-raises-victorious-3b-fund/",
+   "note": "Within 10% (rounding); no dispute. Recorded for completeness.",
+   "agent": "scout-2024"
+  },
+  {
+   "topic": "Anthropic annualized revenue, spring 2025",
+   "value_a": "$1.4B annualized ('recently reached', up ~40% since end of 2024) - The Information via Maginative, published May 2 2025",
+   "source_a": "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/",
+   "value_b": "More than $2B annualized around end of Q1 2025 (company disclosure via CNBC/SiliconANGLE May 16; Reuters May 30 says crossed $2B around end of March); $3B at end of May (Reuters May 30)",
+   "source_b": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+   "note": "Reuters' May 30 exclusive (two sources) says the run-rate crossed $2B around the end of March and was nearly $1B in December 2024, matching the company's '>$2B in Q1' disclosure; the $1.4B figure (The Information via Maginative) therefore most plausibly reflects an earlier as-of date (TechCrunch Mar 3 implies ~$1.3B in early March = ~$1B end-2024 +30% YTD), republished in May. As-of date of the $1.4B figure is not confirmed, so the discrepancy is recorded rather than resolved. desk-revenue to confirm from The Information text.",
+   "agent": "scout-2025h1"
+  },
+  {
+   "topic": "Anthropic 2027 revenue projection",
+   "value_a": "$34.5B in 2027 - The Information headline (Feb 12 2025; Reuters rewrite Feb 13 says 'potentially soaring')",
+   "source_a": "https://www.theinformation.com/articles/anthropic-projects-soaring-growth-to-34-5-billion-in-2027-revenue",
+   "value_b": "$12B in 2027, up from a projected $2.2B in 2025 - Reuters as cited by TechCrunch Apr 15 2025",
+   "source_b": "https://techcrunch.com/2025/04/15/anthropic-forms-a-new-team-to-grow-its-aws-business/",
+   "note": "Probably optimistic vs base scenarios of the same investor projections, but The Information text is paywalled and the Reuters originals are blocked, so scenario basis is unverified. Not picked.",
+   "agent": "scout-2025h1"
+  },
+  {
+   "topic": "Claude Gov announcement date",
+   "value_a": "Jun 6 2025 - Anthropic page as rendered",
+   "source_a": "https://www.anthropic.com/news/claude-gov-models-for-u-s-national-security-customers",
+   "value_b": "Jun 5 2025 - TechCrunch (and Nextgov, The Verge, FedScoop per Google News RSS)",
+   "source_b": "https://techcrunch.com/2025/06/05/anthropic-unveils-custom-ai-models-for-u-s-national-security-customers/",
+   "note": "One-day difference, probably timezone/render offset; event dated Jun 5.",
+   "agent": "scout-2025h1"
+  },
+  {
+   "topic": "LTBT appointment of Richard Fontaine date",
+   "value_a": "Jun 7 2025 - Anthropic page as rendered",
+   "source_a": "https://www.anthropic.com/news/national-security-expert-richard-fontaine-appointed-to-anthropic-s-long-term-benefit-trust",
+   "value_b": "Jun 6 2025 - TechCrunch",
+   "source_b": "https://techcrunch.com/2025/06/06/anthropic-appoints-a-national-security-expert-to-its-governing-trust/",
+   "note": "One-day difference, probably timezone/render offset; event dated Jun 6.",
+   "agent": "scout-2025h1"
+  },
+  {
+   "topic": "Bartz class certification date",
+   "value_a": "2025-07-17 (AAP; UNC 'mid-July'; Norton Rose 'July 2025')",
+   "source_a": "https://publishers.org/news/statement-on-proposed-settlement-of-1-5-billion-in-bartz-v-anthropic-class-action-suit/",
+   "value_b": "August 2025 (Wolters Kluwer Copyright Blog)",
+   "source_b": "https://legalblogs.wolterskluwer.com/copyright-blog/the-bartz-v-anthropic-settlement-understanding-americas-largest-copyright-settlement/",
+   "note": "Kluwer appears erroneous or refers to a later class-definition order; three sources and Reuters/Daily Journal Jul 17 headlines agree on July. Jul 17 kept.",
+   "agent": "scout-2025h2"
+  },
+  {
+   "topic": "Bun acquisition announcement date",
+   "value_a": "2025-12-02 (Bun blog; SiliconANGLE)",
+   "source_a": "https://bun.sh/blog/bun-joins-anthropic",
+   "value_b": "2025-12-03 (Anthropic page date)",
+   "source_b": "https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone",
+   "note": "One-day discrepancy, probably time-zone/publishing lag; Dec 2 used.",
+   "agent": "scout-2025h2"
+  },
+  {
+   "topic": "Chinese-controlled-entity sales ban date",
+   "value_a": "2025-09-04 (Anthropic page; FT headline 'Anthropic to stop selling AI services to majority Chinese-owned groups' dated Sep 4 per Wikipedia's reference list)",
+   "source_a": "https://www.anthropic.com/news/updating-restrictions-of-sales-to-unsupported-regions",
+   "value_b": "2025-09-05 (desk checklist lead; no opened source carries this date)",
+   "source_b": "orchestrator checklist (no URL)",
+   "note": "No opened source supports Sep 5; the primary Anthropic page and the FT reference are both Sep 4. Sep 4 used. No value dispute.",
+   "agent": "scout-2025h2"
+  },
+  {
+   "topic": "Total capital raised by Anthropic before Series F",
+   "value_a": "$14.3B over 12 rounds (Bloomberg, Aug 21 2025)",
+   "source_a": "https://siliconangle.com/2025/08/21/anthropic-reportedly-talks-raise-10b-new-funding-ai-boom-continues-apace/",
+   "value_b": "$33.7B since inception after Series F, i.e. about $20.7B before it (Crunchbase News, Sep 2 2025)",
+   "source_b": "https://news.crunchbase.com/venture/generative-ai-anthropic-funding-iconiq/",
+   "note": "Different counting bases (Bloomberg's venture-round tally vs Crunchbase including strategic convertible investments from Amazon/Google); not reconciled. Treat as DISPUTED until a cap table is sourced.",
+   "agent": "scout-2025h2"
+  },
+  {
+   "topic": "Amazon's investment in Anthropic: $13.8B vs $8B",
+   "value_a": "$13.8B 'invested' (SiliconANGLE relaying FT, Jul 10 2025)",
+   "source_a": "https://siliconangle.com/2025/07/10/report-amazon-weighing-new-multibillion-dollar-investment-anthropic/",
+   "value_b": "$5.3B cost through Q4 2024, $8.0B total by Q4 2025 (Amazon 10-Q)",
+   "source_b": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm",
+   "note": "RESOLVED: $13.8B is the estimated fair value of the convertible notes at 12/31/2024 per the 10-Q, not cost; $8B is cost.",
+   "agent": "scout-2025h2"
+  },
+  {
+   "topic": "Opt-out deadline for consumer training-data choice (Aug 2025 terms update)",
+   "value_a": "2025-10-08 (Anthropic page, current)",
+   "source_a": "https://www.anthropic.com/news/updates-to-our-consumer-terms",
+   "value_b": "2025-09-28 (TechCrunch, Aug 28 2025)",
+   "source_b": "https://techcrunch.com/2025/08/28/anthropic-users-face-a-new-choice-opt-out-or-share-your-data-for-ai-training/",
+   "note": "Likely the deadline was extended from Sep 28 to Oct 8 after launch; Anthropic's page shows the later date. Not numeric, low materiality.",
+   "agent": "scout-2025h2"
+  },
+  {
+   "topic": "Date of FT report on Anthropic IPO preparations",
+   "value_a": "2025-12-02 (Reuters wire copy on Yahoo Finance; FT listing in Google News RSS)",
+   "source_a": "https://finance.yahoo.com/news/anthropic-plans-ipo-early-2026-004854547.html",
+   "value_b": "2025-12-03 (checklist lead; TechCrunch and Fortune write-ups)",
+   "source_b": "https://techcrunch.com/2025/12/03/anthropic-hires-lawyers-as-it-preps-for-ipo/",
+   "note": "One-day difference (US evening vs next-day coverage); Dec 2 used.",
+   "agent": "scout-2025h2"
+  },
+  {
+   "topic": "Series G: relationship to Nvidia/Microsoft commitment",
+   "value_a": "Separate from the $15B joint Nvidia/Microsoft commitment (round then $10B at $350B)",
+   "source_a": "https://techcrunch.com/2026/01/07/anthropic-reportedly-raising-10b-at-350b-valuation/",
+   "value_b": "Closed $30B round includes a portion of previously announced Microsoft and NVIDIA investments",
+   "source_b": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+   "note": "Scope difference, not a numeric conflict: Jan 7 report predates the upsizing; Feb 9 TechCrunch says the bulk came from Nvidia and Microsoft, which Anthropic's release does not say. Microsoft/NVIDIA amounts inside the round remain undisclosed.",
+   "agent": "scout-2026q1"
+  },
+  {
+   "topic": "Series G valuation labels ($350B vs $380B)",
+   "value_a": "$350B valuation (Jan 7 and Feb 9 TechCrunch reports, $10B then $20B)",
+   "source_a": "https://techcrunch.com/2026/02/09/anthropic-closes-in-on-20b-round/",
+   "value_b": "$380B post-money on $30B (Anthropic Feb 12), implying $350B pre-money",
+   "source_b": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+   "note": "Resolved after ruling out pre/post-money: $380B - $30B = $350B pre-money (derived). Not a true conflict; confidence remains HIGH for $380B post.",
+   "agent": "scout-2026q1"
+  },
+  {
+   "topic": "Supply-chain-risk designation date",
+   "value_a": "Feb 27 2026 (Hegseth X post directing the designation; Trump directive at 3:47 pm ET)",
+   "source_a": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.134.0.pdf",
+   "value_b": "Mar 3 2026 (determination and letters dated Mar 3, received Mar 4); Reuters' timeline and TechCrunch date the formal designation Mar 5",
+   "source_b": "https://www.yahoo.com/news/articles/anthropic-pentagon-dispute-over-ai-203611917.html",
+   "note": "Same event in layers: Feb 27 announcement, Mar 3 letters/determination, Mar 4 receipt, Mar 5 public confirmation. Not a factual conflict; the recorded event date is Mar 3 with Feb 27 logged separately.",
+   "agent": "scout-2026q1"
+  },
+  {
+   "topic": "Q1 2026 revenue ($4.73B canonical) vs run-rate-implied period revenue",
+   "value_a": "$4.73B of Q1 2026 revenue (brief's KNOWN CANONICAL; not found in any source opened this run)",
+   "source_a": "brief (no URL); TechCrunch Sep 28 and Reuters Sep 29 prospectus coverage opened but give no Q1 2026 figure",
+   "value_b": "About $3.6-4.1B of Q1 period revenue implied by the sourced run-rate path ($9B end-2025, $14B Feb 12, about $19B Mar 3, Mar 31 assumed $19-30B) under piecewise-linear integration (derived by this agent, not sourced)",
+   "source_b": "https://finance.yahoo.com/news/anthropic-arr-surges-19-billion-151028403.html",
+   "note": "Gap of roughly 16-30%, above the 10% threshold, after ruling out run-rate versus period basis by integrating the run-rate path. Possible reconcilers: gross versus net revenue recognition through cloud marketplaces, run-rate definition, or the $4.73B figure itself. Left DISPUTED for desk-s1 to resolve from the S-1.",
+   "agent": "scout-2026q1"
+  },
+  {
+   "topic": "Employee count",
+   "value_a": "About 2,500 employees worldwide on Jan 30 2026 (over 1,300 in the Bay Area)",
+   "source_a": "https://sfist.com/2026/01/30/anthropic-signs-lease-for-entire-27-story-downtown-tower/",
+   "value_b": "About 5,000 employees in Apr 2026 (brief's KNOWN CANONICAL; not found in any source opened this run)",
+   "source_b": "brief (no URL)",
+   "note": "Different dates and an unsourced second value; a doubling in about three months looks steep, so either the SFist figure's provenance or the basis of the canonical figure (for example contractors) needs checking against the S-1.",
+   "agent": "scout-2026q1"
+  },
+  {
+   "topic": "Series H lead investors and investor count",
+   "value_a": "T1: led by Altimeter Capital, Dragoneer, Greenoaks, Sequoia Capital; co-led by Capital Group, Coatue, D1 Capital Partners, GIC, ICONIQ, XN; ~20 named significant investors; no Cloverdale or Salesforce Ventures; no count of other investors",
+   "source_a": "https://www.anthropic.com/news/series-h",
+   "value_b": "Brief/PitchBook lead: led by Dragoneer, Sequoia, Cloverdale, Greenoaks, Altimeter, Salesforce Ventures + ~56 others",
+   "source_b": "brief (PitchBook-derived, unopened)",
+   "note": "Not a numeric conflict; roster differs. T1 page does not mention Cloverdale or Salesforce Ventures. They may be participants omitted from the press post - verify against PitchBook deal participants / press coverage. Round size ($65B) and post-money ($965B) agree across T1 and TechCrunch.",
+   "agent": "scout-2026q2"
+  },
+  {
+   "topic": "SpaceX/xAI Colossus contract term and capacity",
+   "value_a": "$1.25B/month through May 2029, 90 days' notice, Colossus 1 (~300 MW) per TechCrunch reading of S-1; SEC CORRESP: Colossus and Colossus II, either party may terminate on 90 days' notice",
+   "source_a": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
+   "value_b": "Musk: SpaceX agreed only a six-month Colossus lease (Reuters headline May 28 - blocked, not opened)",
+   "source_b": "https://news.google.com/rss/search?q=Anthropic+after:2026-05-20+before:2026-05-31",
+   "note": "A six-month commitment may describe the initial firm period versus the S-1's through-May-2029 term with 90-day termination. Needs the S-1 text (11.8MB, exceeds fetch limit) or the Reuters article.",
+   "agent": "scout-2026q2"
+  },
+  {
+   "topic": "Size of TPU chip financing",
+   "value_a": "$6B A1 + $25B A2 + $4.5B B = $35.5B (price talk, Jun 2)",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
+   "value_b": "$34.5B final per brief ($6.0B superpriority / $24.0B 1st lien / $4.5B 2nd lien); Motley Fool Jun 17 says $35B closed, Broadcom backstop on $30B of tranches",
+   "source_b": "https://www.fool.com/investing/2026/06/17/apollo-and-blackstone-just-closed-a-35-billion-pri/",
+   "note": "2.9% gap, below the 10% dispute threshold; likely price-talk vs final sizing (A2 cut by $1B). Also these are SPV lessor notes - not Anthropic-issued bonds - which may explain PitchBook delisting. Final terms unverified.",
+   "agent": "scout-2026q2"
+  },
+  {
+   "topic": "Run-rate revenue path Apr-May 2026",
+   "value_a": "$30B+ (Apr 6 and Apr 20, company); 'closer to $40B' (Apr 29, TechCrunch/Bloomberg)",
+   "source_a": "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
+   "value_b": ">$47B 'earlier this month' (May 28, company T1); brief says $44B early May",
+   "source_b": "https://www.anthropic.com/news/series-h",
+   "note": "Consistent with rapid growth; all run-rate (annualized) basis, gross of cloud-partner resale. $44B early-May figure not yet located in an opened source.",
+   "agent": "scout-2026q2"
+  },
+  {
+   "topic": "WSJ Apr 6 Anthropic investor-document figures",
+   "value_a": "Brief: breakeven 2025 excl. training and 2028 incl. training; FCF trough -$25B in 2027; gross margin -94% -> 40% -> 63% (2027E) -> 77% (2028E)",
+   "source_a": "brief (WSJ 2026-04-06, blocked)",
+   "value_b": "Substack summary of the same WSJ report: gross margin 40% (2025), positive FCF target 2027, profitability 2028-2029 training-inclusive, cash burn $3B (2025)",
+   "source_b": "https://aiafterhours.substack.com/p/openai-vs-anthropic-the-121-billion",
+   "note": "Cannot be resolved: WSJ blocked and the Substack is a low-tier secondary (T4/T5). The two versions disagree on FCF in 2027 (trough -$25B vs positive) - possibly different cases/years. Left DISPUTED/unverified; no event created from these figures.",
+   "agent": "scout-2026q2"
+  },
+  {
+   "topic": "Sonnet 5 price",
+   "value_a": "$2/$10 per M tokens (T1 page, permanent after update)",
+   "source_a": "https://www.anthropic.com/news/claude-sonnet-5",
+   "value_b": "$2/$10 introductory through Aug 31, $3/$15 from Sep 1 (TechCrunch at launch)",
+   "source_b": "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/",
+   "note": "Not a true conflict: pricing was changed after launch (T1 page carries an update). Use $2/$10 launch price with the later permanence note.",
+   "agent": "scout-2026q2"
+  },
+  {
+   "topic": "IPO listing timing (October vs November)",
+   "value_a": "October 2026 Nasdaq listing (Quartz Aug 13; Business Insider Sep 13; PitchBook note Sep 21 per orchestrator)",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html",
+   "value_b": "November debut after Q3 results (WSJ Sep 18); after US midterms in November (Fortune Sep 29)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "note": "Sequence, not a true split: 'as soon as late September' (The Information Aug 18) -> October (Aug 13/Sep 13) -> November (WSJ Sep 18). Latest evidence favors November; no public S-1 existed on Sep 30. Confidence DISPUTED until a public filing/pricing date appears.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Compute commitments over ~11 months",
+   "value_a": "$531B (orchestrator checklist, no URL)",
+   "source_a": "orchestrator checklist",
+   "value_b": "$517B maximum contract value in 11 months (The Information via The Decoder); $518B 10-year commitments (prospectus via Reuters)",
+   "source_b": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
+   "note": "The checklist figure appears mis-stated; $517B and $518B differ by 0.2% and measure different things (max value of contracts signed since Oct 2025 vs a 10-year spend plan, ~80% non-cancelable).",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "SpaceX/xAI compute contract value",
+   "value_a": "~$40B: $1.25B/month through May 2029 for 300 MW Colossus 1 (TechCrunch Jul 9)",
+   "source_a": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/",
+   "value_b": "up to $84.5B through 2029 in the prospectus (prior disclosure 'nearly $45B' over three years)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html",
+   "note": "Likely Colossus II / expansion adds to the original Colossus 1 contract; SpaceX's Q2 call named Anthropic as a user of Colossus and Colossus II. Needs the primary S-1 (90-day termination right noted).",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Nscale contract value",
+   "value_a": "$45B (Bloomberg-sourced press coverage, Aug 26)",
+   "source_a": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
+   "value_b": "$44.6B in Nscale's IPO filing",
+   "source_b": "https://siliconangle.com/2026/09/18/data-center-builder-nscale-files-for-ipo-after-multibillion-dollar-anthropic-deal/",
+   "note": "Rounding only (1%). The '$35B' Yahoo headline of Aug 31 is a separate Lambda deal, not an Nscale variant.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Current annualized revenue run-rate",
+   "value_a": "~$65B at end of July (TechCrunch Aug 17; Axios Sep 29; FT Sep 14)",
+   "source_a": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "value_b": "'tops $100 billion' pace (Axios Sep 18 headline, NYT-sourced) vs 'to top $100B in 2026' (Bloomberg headline; Gulf News text)",
+   "source_b": "https://gulfnews.com/world/americas/anthropic-on-track-to-top-100-billion-revenue-pace-ahead-of-potential-ipo-1.500680887",
+   "note": "Run-rate vs year-end projection: investors/FT/WSJ project $100-120B by year-end ($110B WSJ, $120B FT). No opened source shows an actual run-rate above $65B. Confidence DISPUTED for any figure above $65B.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Q2 2026 'operating profit' figure",
+   "value_a": "Q2 revenue $11.5B with adjusted operating profit (amount undisclosed) - FT via Quartz/Stocktwits, Fortune, TechCrunch",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "value_b": "'Operating profit of $11.5 billion in Q2 2026 (per Financial Times)' - Engadget",
+   "source_b": "https://www.engadget.com/2271659/anthropic-lost-8-billion-says-it-could-destroy-humanity/",
+   "note": "Engadget conflates revenue with operating profit; treat $11.5B as revenue. 'Adjusted' is defined differently across summaries (excludes SBC / non-recurring costs / partner revenue share and training cost). FY2025 GAAP operating loss was ~$8.06B.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Cuéllar board seat",
+   "value_a": "Chief Global Affairs Officer plus board seat (orchestrator checklist)",
+   "source_a": "orchestrator checklist",
+   "value_b": "Joins as CGAO, leaves the LTBT, does not join the board of directors",
+   "source_b": "https://www.anthropic.com/news/tino-cuellar",
+   "note": "T1 post controls; Reuters adds reporting line to Daniela Amodei.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Basecamp Research $140M Series C and Anthropic",
+   "value_a": "Anthropic investment in Basecamp (orchestrator checklist)",
+   "source_a": "orchestrator checklist",
+   "value_b": "Anthropic did not invest capital; Anthology Fund (Anthropic-Menlo) participated; Anthropic co-built the Trillion Gene Atlas",
+   "source_b": "https://siliconangle.com/2026/09/23/ai-drug-discovery-startup-basecamp-research-raises-140m/",
+   "note": "Anthology Fund is a $100M Anthropic-Menlo JV, so 'Anthropic-linked' is defensible but not direct.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Date of The Information's prospectus-timing/insider-selling report",
+   "value_a": "Sep 2-3 (orchestrator checklist)",
+   "source_a": "orchestrator checklist",
+   "value_b": "Aug 27 (Reuters headline; BeInCrypto summary of The Information)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-could-come-september-191409974.html",
+   "note": "A later Sep 2-3 report may exist (10b5-1 plans not found in any opened source).",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "SpaceX first post-IPO earnings date",
+   "value_a": "Aug 4 after hours (Business Insider) / Aug 5 (Blockspace)",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/spacex-maps-path-toward-10-140021626.html",
+   "value_b": "Aug 7 (Motley Fool); Aug 6 (orchestrator checklist)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/spacex-signed-14-1-billion-164600188.html",
+   "note": "Event dated Aug 5; day uncertainty only. Anthropic contract values not disclosed by SpaceX.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Secondary-market marks for Anthropic",
+   "value_a": "$1.05-1.15T (Tech Times Sep 14); $1.2T asked (Quartz Jul 9)",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/anthropic-secondary-market-valuation-hits-114416290.html",
+   "value_b": "up to $1.5T (TechCrunch Sep 25; CCN Aug 17); ~$1.8T implied by crypto perps",
+   "source_b": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/",
+   "note": "Indicative asks, SPV prints and derivatives; different dates and venues. None is a priced round. Series H remains $965B post-money.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Amazon's ownership of Anthropic",
+   "value_a": "15%-20%, carried at $190.4B at June 2026 (TheStreet)",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropics-ipo-300-billion-test-014700775.html",
+   "value_b": "~21% stake (Forkast, T4)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-expected-labor-day-021428972.html",
+   "note": "Amazon has not disclosed a percentage; needs Amazon 10-Q/S-1.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Date of Judge Lin's ruling on the Pentagon label",
+   "value_a": "Aug 27 (CNN/CNBC coverage dates in Google News)",
+   "source_a": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+   "value_b": "Aug 28 (TechCrunch 5:46am PDT; Wikipedia)",
+   "source_b": "https://en.wikipedia.org/wiki/Anthropic%E2%80%93United_States_Department_of_Defense_dispute",
+   "note": "Ruling most likely issued late Aug 27 PT; event dated Aug 27, confirm on the docket (3:26-cv-01996).",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "SpaceX record IPO size used as comparator",
+   "value_a": "$75B (Bloomberg via Proactive)",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html",
+   "value_b": "$86.2B (Bloomberg Sep 3) / $86.3B (Tech Times)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+   "note": "555.6M shares x $135 = $75B base; the higher figure probably includes the greenshoe/extra shares - confirm before using as the size bar.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "OpenAI revenue comparators",
+   "value_a": "~$40B run-rate (TechCrunch Aug 17); Q2 revenue $6.2B (Bloomberg via Proactive)",
+   "source_a": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "value_b": "nearly $70B annualized (Axios Sep 29)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/scoop-openais-annual-recurring-revenue-141540007.html",
+   "note": "Different dates and measures (run-rate vs quarter); no true conflict but do not mix.",
+   "agent": "scout-2026q3"
+  },
+  {
+   "topic": "Anthropic headcount",
+   "value_a": "~5,000 employees (Apr 21, orchestrator canonical)",
+   "source_a": "orchestrator canonical",
+   "value_b": "2,500 employees (Wikipedia infobox, year-end data, T4)",
+   "source_b": "https://en.wikipedia.org/wiki/Anthropic",
+   "note": "Outside the Q3 window; prospectus headcount not found in any opened source.",
+   "agent": "scout-2026q3"
+  }
+ ],
+ "open_items": [
+  {
+   "claim": "Mendral acqui-hire by Anthropic (The New Stack headline, Jul 22 2026)",
+   "why_unverified": "Only the headline was visible; article body did not render; no second source found",
+   "best_lead": "https://thenewstack.io/anthropic-mendral-cicd-acquihire/",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Reported ~1GW lease from Stream Data Centers (Apollo-majority) with Google guarantee (The Information, Sep 23 2026)",
+   "why_unverified": "Seen only via a FourWeekMBA summary (T4); reporters say preliminary, nothing signed",
+   "best_lead": "https://fourweekmba.com/ai-anthropic-google-apollo-gigawatt-lease-infrastructure-depend/",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Coefficient Bio price ($400M in stock)",
+   "why_unverified": "Anthropic has not confirmed; TechCrunch sources declined to comment on amount; originals (The Information, Newcomer) paywalled",
+   "best_lead": "https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Stainless price (>$300M) and Runhouse/Kubetorch terms (share-based)",
+   "why_unverified": "Single-source reports; Anthropic discloses no prices; Kubetorch appears in PitchBook without a date",
+   "best_lead": "https://www.calcalistech.com/ctechnews/article/b1dsxqr6zl",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Why Decart (~$6B) and MatX (~$7B) talks ended; any follow-on Decart/MatX partnership",
+   "why_unverified": "Reuters and Bloomberg originals blocked; Verdict and Yahoo mirrors give no reason",
+   "best_lead": "https://www.bloomberg.com/news/articles/2026-09-08/anthropic-said-to-walk-away-from-6-billion-decart-acquisition",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Does Cursor keep offering Claude after the SpaceX/xAI $60B acquisition (close expected Q3 2026)?",
+   "why_unverified": "The New Stack (Aug 31) and WIRED (Jul 2) bodies not readable; Techzine silent on Claude",
+   "best_lead": "https://www.wired.com/story/can-cursor-remain-an-open-platform-inside-of-spacex/",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "SpaceX-Anthropic compute contract ($1.25B/month) in the S-1/A and 424B4",
+   "why_unverified": "Filings exceed the 10MB fetch limit; the Jun 5 FWP (T1) covers only Google ($920M/month) and the Q2 10-Q fetch surfaced no Anthropic text; Motley Fool (T4) remains the only source for $1.25B",
+   "best_lead": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=spacex&type=424B4",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Commonwealth Bank stake size, entry round (Mar 2025 vs Feb 2026) and paper gains",
+   "why_unverified": "AFR (Aug 23 2026) and News.com.au (Aug 24) blocked; Capital Brief (T3) gives only the round and ~15x; PitchBook shows a 2026-02-12 date",
+   "best_lead": "https://www.afr.com/companies/financial-services/cba-sitting-on-whopping-paper-gains-as-anthropic-plots-2trn-ipo-20260821-p60qdd",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Complete Anthology Fund portfolio (60+ companies, 3 exits per Menlo) and which PitchBook rows are direct vs Anthology",
+   "why_unverified": "Menlo Jul 30 2026 cohort post returned 403; only the Dec 2024 cohort (10 named) was readable",
+   "best_lead": "https://menlovc.com/perspective/q3-2025-anthology-fund-update/",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "PitchBook-only portfolio rows: Qualified Health, Ode with Anthropic, RunSybil, LocalHost HQ, Phylo, Echelon, HiO AI, Issa Compass, Grounded Agents, Composite, Indilingo, Transformative American Resources, DocUnlock, Monte Sereno Health, Heidi",
+   "why_unverified": "No opened source names Anthropic as investor in these; several may be Anthology or employee-angel attributions",
+   "best_lead": "https://my.pitchbook.com/profile/466959-97/investor/profile",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Public/private and ticker flags for ~280 long-tail PitchBook investors",
+   "why_unverified": "Desk classification by entity type (funds, angels = private; listed parents only when recognised); not web-verified per row",
+   "best_lead": "https://my.pitchbook.com/profile/466959-97/company/profile",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Anomalies in PitchBook rows: Axevil Capital shows Active with Investor Exit 2025-09-02; Raison Asset Management Former (exit 2026-05-28); three former investors (FTX, Alameda, Raison)",
+   "why_unverified": "Data-quality items; 308 rows = 305 active + 3 former but raw file has 200 (197 active + 3 former)",
+   "best_lead": "https://my.pitchbook.com/profile/466959-97/company/profile",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Claude Partner Network full roster (tiers are documented; members are not)",
+   "why_unverified": "Jun 3 2026 post gives Select/Preferred/Global Premier thresholds and names only Accenture, Cognizant, Deloitte, KPMG, Infosys, PwC; Cognizant confirmed Global Premier (Jul 27); Wipro, TCS, DXC, UST, NEC and the AI-services company tiers not stated",
+   "best_lead": "https://www.anthropic.com/news/services-track-partner-hub",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Dollar values of partner deals (Accenture, Deloitte, Cognizant, KPMG, PwC, Infosys, TCS, Wipro, IBM, ServiceNow, Intuit)",
+   "why_unverified": "Every Anthropic/partner release says terms undisclosed; only Snowflake ($200M), Databricks ($100M, T3), Accenture evaluation ($1B each) and Gates ($200M) carry figures",
+   "best_lead": "https://www.anthropic.com/news/claude-partner-network",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "OpenRouter token-share series and Ramp AI Index primary tables",
+   "why_unverified": "OpenRouter rankings page rendered model scores only; Ramp page truncated; shares rely on T4 secondaries",
+   "best_lead": "https://openrouter.ai/rankings",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Alibaba/Qwen distillation claims (Cyber Magazine Jun 25 2026; seven-lab report, Hacker News Sep 11 2026)",
+   "why_unverified": "Anthropic's Feb 2026 post names only DeepSeek, Moonshot AI and MiniMax; later claims seen as headlines",
+   "best_lead": "https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Naver ~$7M investment (single KED Global report); Nvidia up to $10B IPO anchor talks (Reuters Sep 11 via Yahoo mirror)",
+   "why_unverified": "Single-source / talks-only; originals blocked",
+   "best_lead": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202608100013",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Palantir IR release (Nov 7 2024) body; Amazon/CNBC Apr 20 2026 coverage; Google $40B in Bloomberg/WSJ",
+   "why_unverified": "Pages returned navigation only or 403; T1/T2 substitutes used (Anthropic post, TechCrunch)",
+   "best_lead": "https://investors.palantir.com/news-details/2024/Anthropic-and-Palantir-Partner-to-Bring-Claude-AI-Models-to-AWS-for-U.S.-Government-Intelligence-and-Defense-Operations/",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Bun post customer list spelling (fetch summary showed \"KPMQ\" for what is presumably KPMG)",
+   "why_unverified": "Summarised fetch, not raw text",
+   "best_lead": "https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Other filers that EDGAR full-text search ties to Anthropic but were not read: Cerebras S-1/A, Fermi 10-K, CoreWeave Sep 17 8-K, Hut 8 10-K, Janus Henderson, Capital One, BNY, Humana, Box, Asana, Atlassian, Wiley, Figma, Reddit, Coursera, Veeva, Roper, Tenable, Blackstone and TPG private-equity funds, Apollo/Athene (Stream lease)",
+   "why_unverified": "WebFetch returned \"no mention\" for Snowflake, Blackstone fund, TPG fund, Apollo and Figma 10-Qs despite FTS hits (truncation); counterparties for desk-compute/desk-legal to read in full",
+   "best_lead": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&dateRange=custom&startdt=2026-07-01&enddt=2026-09-30&forms=10-Q",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Nvidia reported to buy Hugging Face (Forbes Sep 9 2026 headline) and Stream Data Centers (Apollo) ~1GW lease with Google guarantee (The Information Sep 23)",
+   "why_unverified": "Headline / T4 secondary only; not opened",
+   "best_lead": "https://fourweekmba.com/ai-anthropic-google-apollo-gigawatt-lease-infrastructure-depend/",
+   "agent": "desk-ecosystem"
+  },
+  {
+   "claim": "Jay Kreps left Anthropic's board on 2026-05-22",
+   "why_unverified": "Only community/tracker sources (LessWrong citing his LinkedIn; FREED); no Anthropic or T2 confirmation; LinkedIn post not fetchable",
+   "best_lead": "https://www.linkedin.com/in/jaykreps/ ; Axios/The Information board reporting",
+   "agent": "desk-governance"
+  },
+  {
+   "claim": "Anthropic S-1/prospectus primary text (share classes, LTBT amendment thresholds, headcount, stock comp, safety-compute split)",
+   "why_unverified": "Not found on EDGAR full-text search under Anthropic's name as of 2026-09-30; facts taken from Reuters/FT/TechCrunch reviews",
+   "best_lead": "SEC EDGAR Anthropic PBC S-1 (public filing around 2026-09-28)",
+   "agent": "desk-governance"
+  },
+  {
+   "claim": "Headcount: about 1,000 (2024) and 5,000 (Apr 2026) per brief",
+   "why_unverified": "No 2024 data point found; 5,000 only from Tracxn via SaaStr (T4); Jan 2026 T3 figure is 2,500",
+   "best_lead": "S-1 employee count; LinkedIn/Tracxn snapshots; Reuters on the 2025-09-26 'triple international workforce' story",
+   "agent": "desk-governance"
+  },
+  {
+   "claim": "N.D. Cal. docket entries after 2026-03-26 (Aug 27 final judgment) and D.C. Circuit No. 26-1049 opinion PDF, mandate, en banc or cert status",
+   "why_unverified": "CourtListener returned HTTP 403 (only the Dkt. 134 PDF was reachable via storage.courtlistener.com)",
+   "best_lead": "https://www.courtlistener.com/docket/72380208/anthropic-pbc-v-united-states-department-of-war/ ; cadc.uscourts.gov opinions",
+   "agent": "desk-governance"
+  },
+  {
+   "claim": "Who appointed Chris Liddell, and current Trust-elected seat count; whether Kreps's seat is vacant; Trust successor for Cuéllar",
+   "why_unverified": "Anthropic announcement omits appointer; no post-May 2026 board change notice found",
+   "best_lead": "anthropic.com/company updates; 8-K/S-1 board section",
+   "agent": "desk-governance"
+  },
+  {
+   "claim": "Dates for CLO Brian Israel, Chief People Officer Hannah Pritchett, Chief Brand and Communications Officer Sasha de Marigny, and Kate Jensen's Head of Americas appointment",
+   "why_unverified": "Leadership page lists them with no dates; only Jensen's first mention (2025-09-26) found",
+   "best_lead": "https://www.anthropic.com/company/leadership bios; press on Israel and Pritchett hires",
+   "agent": "desk-governance"
+  },
+  {
+   "claim": "Paris and Munich office opening dates; Dublin opening date; Singapore opening (Oct 2026)",
+   "why_unverified": "Only plan/announcement dates found",
+   "best_lead": "anthropic.com/careers office pages; Irish Times/RTE 2026-03-13 (403)",
+   "agent": "desk-governance"
+  },
+  {
+   "claim": "Claude Opus 4 and Fable/Mythos 5 system-card concerning behaviors beyond Mythos Preview; Frontier Safety Roadmap and Aug 2026 Risk Report contents",
+   "why_unverified": "Only the Mythos Preview system card (245 pp) and RSP update log were read in full-text form",
+   "best_lead": "https://www.anthropic.com/system-cards ; https://www.anthropic.com/responsible-scaling-policy/roadmap",
+   "agent": "desk-governance"
+  },
+  {
+   "claim": "FTC proposed policy statement (2026-07-01) text and any direct FTC action against Anthropic",
+   "why_unverified": "Only CyberScoop and Tech Times accounts opened; ftc.gov text not located",
+   "best_lead": "ftc.gov proposed policy statement on AI ideological bias (Section 5)",
+   "agent": "desk-governance"
+  },
+  {
+   "claim": "Identity of the issuing agency and legal authority for the Jun 12 2026 directive (BIS vs White House)",
+   "why_unverified": "Anthropic says 'US government directive'; Ars Technica (blocked) says Commerce; MSN snippet says White House",
+   "best_lead": "https://www.bing.com/news/search?q=BIS+export+directive+Anthropic+Mythos+Commerce&format=rss",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Current state of Reddit v. Anthropic in SF Superior Court",
+   "why_unverified": "Remanded Mar 2026; state docket not indexed",
+   "best_lead": "SF Superior Court case search / press",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Concord I (5:24-cv-03811) and Concord II (5:26-cv-00880) rulings and schedule",
+   "why_unverified": "Docket entries not yet opened",
+   "best_lead": "https://www.courtlistener.com/api/rest/v4/search/?type=rd&q=docket_id%3A68889092&order_by=dateFiled+desc",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Legal-proceedings and risk-factor disclosures in the draft S-1 (Reuters, Sep 28-29 2026)",
+   "why_unverified": "Reuters and FT blocked to WebFetch; opened secondary coverage omits litigation content; S-1 not on EDGAR",
+   "best_lead": "https://www.reuters.com/ (Anthropic prospectus coverage) or EDGAR once public S-1 is filed",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Whether Anthropic funded the third $450M Bartz installment due 2026-09-25 and whether the Effective Date has occurred",
+   "why_unverified": "Payment schedule from Authors Guild (T3); docket shows only a clerk 'Settlement Notification' on 2026-09-29; site says Effective Date passed unless late appeal allowed",
+   "best_lead": "https://www.anthropiccopyrightsettlement.com/ and Bartz Dkt 693",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Next steps after D.C. Circuit loss (en banc petition, cert, government appeal of N.D. Cal. judgment, Ninth Circuit 26-2011)",
+   "why_unverified": "Decision 2026-09-25; Anthropic only said 'considering all options'; 9th Cir. appeal stayed",
+   "best_lead": "https://www.courtlistener.com/docket/72380208/anthropic-pbc-v-united-states-department-of-war/",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Apr 22 2026 'possible breach of Mythos Preview' investigation (MSN headline)",
+   "why_unverified": "MSN pages unreadable to WebFetch; no primary post found",
+   "best_lead": "https://www.msn.com/en-us/technology/cybersecurity/anthropic-investigating-possible-breach-of-its-mythos-ai-model/ar-AA21ud9R",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "State attorney-general, employment, NLRB or whistleblower actions against Anthropic",
+   "why_unverified": "Negative result: none found in CourtListener caption search, Bing RSS or WebSearch",
+   "best_lead": "Re-run CourtListener q=Anthropic type=r after new filings",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Privacy-regulator action on the Aug 2025 consumer-data training change",
+   "why_unverified": "No regulator action found; only the policy post opened",
+   "best_lead": "EU DPAs (Irish DPC, Italian Garante) press pages",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Concord I/II rulings on motions to dismiss and any trial date",
+   "why_unverified": "Docket descriptions only; Concord II coordinated with Concord I on 2026-09-21",
+   "best_lead": "https://www.courtlistener.com/api/rest/v4/search/?type=rd&q=docket_id%3A72199828&order_by=dateFiled+desc",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Content of Reddit v. Anthropic state-court docket post-remand (SF Superior Court)",
+   "why_unverified": "State docket not indexed",
+   "best_lead": "SF Superior Court online case search",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "FTC/DOJ or other antitrust inquiry following the Sep 12 2026 pacing essay and Buist suit",
+   "why_unverified": "None found; suit only 12 days old",
+   "best_lead": "https://www.bing.com/news/search?q=DOJ+FTC+AI+pacing+antitrust+Anthropic+OpenAI&format=rss",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Whether any Jan-Aug 2026 evaluation incident was reported under SB 53's 15-day critical-safety-incident rule, and any Cal OES or legislative follow-up",
+   "why_unverified": "Anthropic posts describe third-party notifications and METR review but not state filings",
+   "best_lead": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+   "agent": "desk-legal"
+  },
+  {
+   "claim": "Exact announcement date and T1 source for the Enterprise $20-seat + usage-at-API-rates restructure (and what the prior seat prices were)",
+   "why_unverified": "Not in any Anthropic launch post; The Register (Apr 16 2026) gives timing (Nov 2025 renewals, Feb 2026 new contracts, legacy closed Mar 8 2026); prior $40-$200 seat range only in T4 blogs",
+   "best_lead": "The Information 'Anthropic Changes Pricing to Bill Firms Based on AI Use as Demand Jumps' (2026-04-14); Wayback of claude.com/pricing (blocked in this environment)",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Team/Enterprise premium-seat price at launch (Aug 20 2025) and any changes to Team Standard ($30 monthly at May 2024 launch; $25 monthly/$20 annual now) and minimum seats (5 -> 2)",
+   "why_unverified": "Aug 2025 post gives no seat price; Wayback and inc.com/TradingView coverage not reachable; only current prices are T1-verified",
+   "best_lead": "Inc.com 'Your Employees Can Now Vibe Code With Anthropic's Claude, for a Price' (2025-08-21); Wayback snapshots of claude.com/pricing",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Claude Haiku 5.5 release (price, date)",
+   "why_unverified": "TechCrunch (Sep 22 and Sep 28 2026) says a new Haiku is coming 'in the coming weeks'; Opus 5 coverage (Jul 24) said Haiku is the only model awaiting a 5-series upgrade; not released as of 2026-09-30",
+   "best_lead": "https://www.anthropic.com/claude/haiku (page last modified 2026-06-09 in sitemap)",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Independent (T2/T3) print of per-token prices for Opus 4.6 ($5/$25 plus $10/$37.50 above 200K), Opus 5 ($5/$25), Opus 4.8-era fast-mode history and Mythos Preview ($25/$125)",
+   "why_unverified": "Anthropic posts/docs verified verbatim; TechCrunch and SiliconANGLE articles for Opus 4.6/Opus 5 print no per-token price; SiliconANGLE URL guesses for Opus 5, Sonnet 5, Sonnet 5.5 and Project Glasswing returned 404; VentureBeat short-title URLs did not resolve",
+   "best_lead": "VentureBeat 'Anthropic's Claude Opus 5 halves AI costs' (2026-07-24); SiliconANGLE 'Anthropic debuts Project Glasswing...' (2026-04-07); CNBC Capoot 2026-07-24 'Anthropic's new AI model rivals Fable 5 and is cheaper'",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Company-level ARR ladder second sources ($14B Feb 12, >$30B Apr 6, $47B May 28 2026; Claude Code >$2.5B)",
+   "why_unverified": "$14B and Claude Code >$2.5B are repeated by SiliconANGLE and TechCrunch (same Anthropic disclosure); the >$30B (Apr 6) and $47B (May 28) figures have only Anthropic posts opened; Reuters, CNBC and Bloomberg items seen as RSS headlines whose Google redirect links cannot be opened",
+   "best_lead": "Bloomberg 'Anthropic Tops $30 Billion Run Rate, Seals Deal With Broadcom' (2026-04-06); CNBC 'Anthropic tops OpenAI as most valuable AI startup' (2026-05-28); VentureBeat 2026-05-08 '$30 billion revenue run rate'",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Official consumer MAU/WAU and developer counts",
+   "why_unverified": "No Anthropic MAU/WAU figure in any opened source; only growth statements (paid subs >2x YTD, free users +60% since Jan 2026, India 5.8% of usage) and third-party estimates of 18-30M consumer users (Indagari via TechCrunch)",
+   "best_lead": "Leaked S-1 coverage (Fortune 2026-09-29) via desk-s1; Sensor Tower app-download data",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Team Premium seat price at launch (Aug 2025) and the dates Team seat prices/minimums changed ($30 -> $25/$20; 5 -> 2 seats)",
+   "why_unverified": "Aug 2025 post states no seat price; Wayback snapshots blocked; only current prices are T1-verified",
+   "best_lead": "Inc.com 'Your Employees Can Now Vibe Code With Anthropic's Claude, for a Price' (2025-08-21); Pasquale Pillitteri 'Claude Team now starts at 2 seats' (2026-07-21)",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Fable 5 promotion extensions (Jul 7 -> Jul 12 -> Jul 19 2026) and any Anthropic announcement of the change",
+   "why_unverified": "Help Center confirms only the end (Jul 19 11:59:59 PM PT); extensions known from RSS headlines (Times of India Jul 8, BleepingComputer Jul 12, Indian Express Jul 14, PCWorld Jul 20) whose links do not resolve",
+   "best_lead": "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Third-party harness (OpenClaw) extra-usage policy for Claude Code subscribers (TechCrunch 2026-04-04) and reported test of removing Claude Code from Pro (Apr 22 2026)",
+   "why_unverified": "TechCrunch URL guess 404; biggo/tech-insider items are T4; Help Center page for Pro/Max Claude Code does not mention it",
+   "best_lead": "TechCrunch 'Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage' (2026-04-04)",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Class actions over Claude Max usage limits (Jun 15 2026 Engadget/Decrypt/IndexBox; Aug 30 2026 Startup Fortune)",
+   "why_unverified": "RSS headlines only; outside product desk fence",
+   "best_lead": "desk-legal: Engadget 'Anthropic Hit With Lawsuit Over Its Claude Max Usage Limits' (2026-06-15)",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Sonnet 5's Terminal-Bench 4.0 score in the Sonnet 5.5 launch-post table (summarised as 10.3% vs Sonnet 5.5 70.6%)",
+   "why_unverified": "Looks anomalous against other benchmarks (+3 to +20 points); probable extraction error by the fetch summariser; not reproduced in events",
+   "best_lead": "https://www.anthropic.com/claude-sonnet-5-5 (re-read table directly)",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Claude Code source leak (2026-03-31) product/revenue impact; CEO 'call for a slowdown' and release cadence (CNBC Sep 28: 'second release since CEO's call for a slowdown')",
+   "why_unverified": "Headline-level only (VentureBeat/CNBC via RSS); governance/pace item for other desks",
+   "best_lead": "TechCrunch 2026-04-01 (per scout-2026q1); CNBC 'Anthropic launches cheaper AI model, its second release since CEO's call for a slowdown' (2026-09-28)",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "FTC consumer-protection probe into Anthropic/OpenAI (The Decoder 2026-09-30) - possible product/pricing-practice implications",
+   "why_unverified": "Seen only on The Decoder homepage text; outside product fence",
+   "best_lead": "https://the-decoder.com (2026-09-30 'FTC launches sweeping probe into OpenAI, Anthropic, and other AI labs')",
+   "agent": "desk-product"
+  },
+  {
+   "claim": "Google invested ~$300M for ~10% of Anthropic in late 2022 (deal disclosed Feb 3, 2023 by the FT)",
+   "why_unverified": "FT/Reuters/CNBC/NYT could not be opened (paywall/403); Fortune, SiliconANGLE, Crunchbase, Futurum and Synthedia confirm amount/stake but not the late-2022 timing",
+   "best_lead": "FT, 'Google invests $300mn in artificial intelligence start-up Anthropic' (Feb 3, 2023); Fortune https://fortune.com/2023/02/04/google-invests-300m-anthropic-openai-rival-making-chatgpt-challenger-claude-ai-chatbot-battle",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "Series B (Apr 2022) post-money valuation (~$4B per aggregators)",
+   "why_unverified": "Not disclosed by Anthropic, TechCrunch or SiliconANGLE; the $4.1B figure in circulation belongs to the March 2023 Spark-led round",
+   "best_lead": "PitchBook deal record; The Information; FTX estate Feb 2024 sale motion (share count 44,539,240 at $11.2261/sh gives $500M cost basis but not fully diluted share count)",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "FTX/Alameda's initial Series B stake was ~13.56% (diluted to 7.84% by Feb 2024; '~8%' widely reported)",
+   "why_unverified": "13.56% appeared only in unopened search snippets; Protos confirms 7.84% at Feb 2024; BeInCrypto (T4) says ~8%",
+   "best_lead": "FTX Trading Ltd. bankruptcy docket (Bankr. D. Del. No. 22-11068), Anthropic share sale motion Feb 2024; CNBC Mar 25, 2024 (403 on fetch)",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "Claude was available inside Quora's Poe at its Dec 21, 2022 invite-only launch",
+   "why_unverified": "Quora blog posts returned 403; Semafor/Wikipedia/Originality.ai do not specify launch models",
+   "best_lead": "TechCrunch, Sarah Perez, Feb 6, 2023 (Poe public launch) or Quora blog 'Poe' (Dec 2022)",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "Whether Poe's Dec 2022 beta or Notion AI's Nov 2022 alpha used Claude (would make them 2022 customers)",
+   "why_unverified": "Anthropic's Mar 14, 2023 post confirms the partnerships but not start dates",
+   "best_lead": "Notion/Quora statements from Mar 2023; Bloomberg Mar 14, 2023 'Chatbot Claude Latest to Challenge ChatGPT After Tests by DuckDuckGo, Quora' (not fetchable)",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "Exact co-founder roster per Anthropic (7 vs 8, Ben Mann) and titles",
+   "why_unverified": "Founder list only from Wikipedia/Contrary (T4); Wikipedia's CNBC (Jun 10, 2025) and Reuters (May 9, 2023) citations not opened",
+   "best_lead": "CNBC Jun 10, 2025 Anthropic profile; Reuters (Stephen Nellis) May 9, 2023",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "Title and subcommittee of the Sept 29, 2022 Senate Commerce hearing at which Jack Clark testified",
+   "why_unverified": "Testimony PDF opened but hearing header not extracted; search budget exhausted before locating the hearing page",
+   "best_lead": "commerce.senate.gov hearings index for September 29, 2022",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "Anthropic submitted comments on NIST's AI Risk Management Framework drafts in 2022",
+   "why_unverified": "Not listed among 2nd-draft commenters; initial-draft commenter page returned 404",
+   "best_lead": "https://www.nist.gov/itl/ai-risk-management-framework (comments pages); regulations.gov",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "Headcount at founding and at the May 2021 Series A",
+   "why_unverified": "Only data point found is ~40 employees at Apr 29, 2022 (Anthropic/SiliconANGLE); Dec 2021 paper author lists (~25) are a proxy only",
+   "best_lead": "Jack Clark Senate testimony (full text); 2021 press interviews",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "Notable 2021–2022 hires from OpenAI/DeepMind/academia (e.g., Ethan Perez 2022, Sam Bowman from NYU)",
+   "why_unverified": "Profiles surfaced in search results (OpenReview, FAR.AI) but were not opened",
+   "best_lead": "https://openreview.net/profile?id=~Ethan_Perez1 ; Anthropic author lists on arXiv 2211.03540 and 2212.09251",
+   "agent": "scout-2021-2022"
+  },
+  {
+   "claim": "Frontier Model Forum named an executive director and launched a $10M+ AI Safety Fund with Anthropic as a contributor (Oct 25, 2023)",
+   "why_unverified": "OpenAI (403), frontiermodelforum.org, blog.google and Microsoft candidate URLs all failed to open",
+   "best_lead": "https://openai.com/index/frontier-model-forum-updates/",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "OpenAI's board approached Dario Amodei about a merger/CEO role during the Nov 2023 Altman ouster",
+   "why_unverified": "Search budget exhausted before a source could be found/opened",
+   "best_lead": "The Information, Nov 21, 2023 ('OpenAI Board Approached Anthropic CEO About Merger'); Reuters coverage",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "FTX estate moved in Q4 2023 to sell its ~8% Anthropic stake (bought for $500M in 2022)",
+   "why_unverified": "Only 2024-dated coverage surfaced (sale of ~2/3 of stake for $884M, Mar 2024); no 2023-dated filing or article opened",
+   "best_lead": "https://www.cnbc.com/2024/03/25/ftx-estate-sells-majority-stake-in-startup-anthropic-for-884-million.html and FTX Chapter 11 docket (D. Del. 22-11068), late 2023 motions",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "Anthropic opened its London office on May 24, 2023",
+   "why_unverified": "Official X post returned 402/403 and Wayback is blocked; date/text from search snippet only",
+   "best_lead": "https://x.com/AnthropicAI/status/1661417473072316418",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "Anthropic 2023 headcount (~160 mid-year; ~300 by Dec 2023)",
+   "why_unverified": "Aggregator figures conflict (240/400/546); only Crunchbase News (~300, Dec 2023) opened; Forbes Jul 2023 (403) likely had a mid-year figure",
+   "best_lead": "https://www.forbes.com/sites/alexkonrad/2023/07/11/anthropic-ai-claude-2-release/",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "Claude / Claude Instant launch pricing (Mar 2023) and Claude 2 launch pricing (Jul 2023, 'same price as Claude 1.3')",
+   "why_unverified": "Launch posts link to pricing pages not archived/opened; only the Nov 2023 price sheet was opened",
+   "best_lead": "search: Anthropic pricing March 2023 Claude-v1 $11.02 per million tokens; Anthropic docs pricing July 2023",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "Zoom Ventures' May 2023 investment in Anthropic was ~$51M",
+   "why_unverified": "Figure appears only in 2026 coverage citing a Zoom SEC filing; not opened",
+   "best_lead": "Zoom Video Communications 10-Q for quarter ended Jul 31, 2023 (strategic investments)",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "Google's Oct 2023 investment was structured as convertible notes and Google held ~10% after Feb 2023",
+   "why_unverified": "WSJ original not opened; Reuters relay gives amounts only",
+   "best_lead": "Alphabet 10-K FY2023 / 10-Q Q4 2023 non-marketable equity securities notes",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "SK Telecom's earlier (Series C, May 2023) investment amount in Anthropic",
+   "why_unverified": "SKT release says 'additional' $100M following an SKTVC investment but gives no earlier amount; 20-F excerpt processed by the tool contained no Anthropic mention",
+   "best_lead": "https://www.sec.gov/Archives/edgar/data/1015650/000119312524119709/d610408d20f.htm (full-text search 'Anthropic')",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "Claude app for Slack (May 2023) and claude.ai expansion to ~95 countries (Oct 2023)",
+   "why_unverified": "Guessed Anthropic slug 404'd; search budget exhausted",
+   "best_lead": "search: anthropic.com/news Claude Slack app May 2023; 'Claude available in 95 countries' October 2023",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "Concord complaint alleges at least 500 songs; damages sought",
+   "why_unverified": "Song count appears in press summaries (CNBC/NBC blocked); FindLaw opinion does not state it",
+   "best_lead": "Complaint, Concord Music Group v. Anthropic, M.D. Tenn. 3:23-cv-01092, Dkt. 1 (Oct 18, 2023)",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "Anthropic participated in the DEF CON 31 generative AI red-team exercise (Aug 2023) and Salesforce Ventures' $250M Generative AI Fund (Mar 2023) backed Anthropic",
+   "why_unverified": "Not searched before budget exhaustion",
+   "best_lead": "search: White House DEF CON 31 AI Village Anthropic; Salesforce Ventures Generative AI Fund March 2023 Anthropic",
+   "agent": "scout-2023"
+  },
+  {
+   "claim": "Series D closing date and exact structure (reported ~$500M via Menlo SPV plus ~$250M from Menlo funds/insiders; Forbes Jan 11, 2024)",
+   "why_unverified": "Forbes returned HTTP 403; The Information paywalled; WebSearch budget exhausted before a contemporaneous T2 copy could be opened",
+   "best_lead": "https://www.forbes.com/sites/alexkonrad/2024/01/11/anthropic-750million-funding-round-menlo-ventures/",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Delaware bankruptcy court authorized FTX to sell its Anthropic stake on/around Feb 22, 2024 (Judge John Dorsey), and later approved the $884M buyer list",
+   "why_unverified": "Reuters (Feb 22, 2024) and WSJ (Feb 23, 2024) items found via Google News RSS but not openable; CoinDesk mentions Feb 2024 approval only in passing",
+   "best_lead": "Google News RSS: 'FTX Gets Bankruptcy Court Approval to Sell Shares in AI Startup Anthropic' (WSJ, 2024-02-23); Kroll FTX docket",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Anthropic announced a Dublin office on Mar 19, 2024 (Silicon Republic, Irish Times, RTE) and a Zurich office in Dec 2024 (WSJ, Dec 4, 2024)",
+   "why_unverified": "Direct URLs not resolvable without search; Google News redirect links did not resolve in WebFetch; WSJ paywalled",
+   "best_lead": "Google News RSS query 'Anthropic opens office London OR Zurich OR Dublin OR Tokyo 2024' (items dated 2024-03-19 and 2024-12-04)",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Company-wide headcount during 2024 (only data point opened: London office ~40 employees in May 2024; a T4 blog claims ~800 employees in early 2024)",
+   "why_unverified": "No T1/T2 source opened; Bing RSS returned no relevant items",
+   "best_lead": "Anthropic Series E/F releases, PitchBook profile employee count history, or 2024 press profiles (e.g., WSJ/FT year-end features)",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Google Cloud / TPU usage or any incremental Google investment during 2024",
+   "why_unverified": "No 2024-dated source found before search budget ran out; Google's $2B (Oct 2023) and $1B (Jan 2025, FT) sit outside the period",
+   "best_lead": "Google Cloud blog posts on Claude 3/3.5 on Vertex AI (Mar/Jun/Oct 2024); Reuters 2025-01-21 'Google to invest fresh $1 bln in Anthropic'",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "The Information: Anthropic burned ~$5.6B in 2024; 2024 revenue/loss figures reported later (PitchBook FY2024 revenue ~$1.0B, net loss ~$5.3B)",
+   "why_unverified": "The Information paywalled; PitchBook figures not opened (PitchBook MCP tool exists but was outside the tool list given to this agent)",
+   "best_lead": "mcp__PitchBook_Premium__pitchbook_get_company_financials (Anthropic) and The Information 2025 coverage of Anthropic's 2024 financials",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Exact filing day of Bartz v. Anthropic (Aug 19, 2024) and 2024 docket events (answer, scheduling)",
+   "why_unverified": "CourtListener docket pages returned 403; complaint PDF parsed only partially; GovInfo metadata showed an opinion date, not the filing date",
+   "best_lead": "https://www.courtlistener.com/docket/69058235/bartz-v-anthropic-pbc/",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Exact transfer date of Concord v. Anthropic to N.D. Cal. (reported June 24, 2024)",
+   "why_unverified": "Opened law-firm summaries give 'June 2024'; the Quinn Emanuel PDF text was not reliably parsed",
+   "best_lead": "https://www.courtlistener.com/docket/68889092/concord-music-group-inc-v-anthropic-pbc/",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Contemporaneous (Dec 2024/Jan 2025) reporting of ~$875M-$1B annualized revenue exiting 2024",
+   "why_unverified": "Reuters/CNBC/WSJ Jan 7, 2025 items found via RSS but blocked or paywalled; TechCrunch/PYMNTS slug guesses 404'd",
+   "best_lead": "CNBC 2025-01-07 'Anthropic in talks to raise funding at $60 billion valuation'; WSJ same day (reported ~$875M annualized revenue)",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Interim 2024 run-rate data points (e.g., mid-2024) and any 2024 gross-margin disclosures",
+   "why_unverified": "No opened source; search budget exhausted",
+   "best_lead": "The Information 2024 coverage; Sacra premium model",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Primary text of Dario Amodei's Aug 21, 2024 SB 1047 letter (list of remaining concerns)",
+   "why_unverified": "Both PDF copies fetched but not machine-readable in this environment; contents verified only via two secondary write-ups",
+   "best_lead": "https://cdn.sanity.io/files/4zrzovbb/website/6a3b14a98a781a6b69b9a3c5b65da26a44ecddc6.pdf",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Business Wire text of the Nov 7, 2024 Anthropic-Palantir-AWS release (Kate Earle Jensen / Dave Levy quotes)",
+   "why_unverified": "Business Wire and Nasdaq copies returned 403/404; Palantir IR page rendered only navigation",
+   "best_lead": "https://www.businesswire.com/news/home/20241107699415/en/",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Reuters Aug 30, 2024 Alexa/Claude exclusive (primary text)",
+   "why_unverified": "Reuters syndication copies (StreetInsider, MarketScreener) returned 403; GeekWire write-up used instead",
+   "best_lead": "https://www.reuters.com/technology/artificial-intelligence/amazon-turns-anthropics-claude-alexa-ai-revamp-2024-08-30/",
+   "agent": "scout-2024"
+  },
+  {
+   "claim": "Dario Amodei warns AI could eliminate half of entry-level white-collar jobs / unemployment 10-20% (May 28 2025)",
+   "why_unverified": "Axios (403), CNN (451), Fortune/Business Insider not fetchable; only RSS headlines seen",
+   "best_lead": "https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Claude Code included in the $20/month Pro plan (Jun 4-5 2025)",
+   "why_unverified": "ZDNET and PCMag not fetchable; no Anthropic page found",
+   "best_lead": "Google News RSS: ZDNET 'Anthropic's popular Claude Code AI tool now included in its $20/month Pro plan' (Jun 5 2025)",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Nvidia publicly accused Anthropic of telling 'tall tales' on chip smuggling (May 1 2025)",
+   "why_unverified": "CNBC 403; TheStreet/American Bazaar/Tom's Hardware not opened (guessed URL 404)",
+   "best_lead": "Google News RSS: CNBC May 1 2025 'Nvidia says Anthropic is telling tall tales in its defense of U.S. AI chip restrictions on China'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Claude available via Palantir FedStart (Apr 17 2025)",
+   "why_unverified": "FedScoop/Yahoo/Palantir IR items seen only as RSS headlines",
+   "best_lead": "FedScoop: 'Palantir, Anthropic, Google deepen ties on government AI use with Claude partnership' (Apr 17 2025)",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Dario Amodei NYT op-ed opposing a 10-year ban on state AI regulation (Jun 5 2025)",
+   "why_unverified": "NYT and Reuters summary not fetchable",
+   "best_lead": "Reuters Jun 5 2025: 'Anthropic CEO says proposed 10-year ban on state AI regulation too blunt in NYT op-ed'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Senators probe Google-Anthropic and Microsoft-OpenAI deals over antitrust concerns (Apr 9 2025)",
+   "why_unverified": "Only a Computerworld RSS headline seen",
+   "best_lead": "Computerworld Apr 9 2025 'Senators probe Google-Anthropic, Microsoft-OpenAI deals over antitrust concerns'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "AWS capacity limits on Anthropic models caused customer backlash (The Information, Apr 21 2025)",
+   "why_unverified": "Headline only in RSS; guessed The Information URL 404",
+   "best_lead": "Google News RSS: The Information 'AWS Faces Backlash Over Limits on Anthropic's AI' (Apr 21 2025)",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Jan 2-3 2025 stipulation between Anthropic and music publishers on lyrics guardrails (Concord v. Anthropic)",
+   "why_unverified": "Reuters, Hollywood Reporter, CNET, Gizmodo, Tech Policy Press not fetchable; stipulation/order not found on GovInfo",
+   "best_lead": "Reuters Jan 3 2025 'Anthropic reaches deal on AI guardrails in lawsuit over music lyrics'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Pre-announcement reports that the Series E was 'finalizing' at $3.5B / $61.5B (WSJ Feb 24, Crunchbase News Feb 25 2025)",
+   "why_unverified": "WSJ paywalled; Crunchbase URL not found",
+   "best_lead": "Google News RSS: WSJ 'Exclusive | AI Startup Anthropic Finalizing $3.5 Billion Funding Round' (Feb 24 2025)",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "DOJ dropped its demand that Google divest AI investments (incl. Anthropic), and the DOJ v. Google filing showing Google's 14% stake",
+   "why_unverified": "Only relayed by TechCrunch/Sherwood citing the NYT; Reuters Mar 7 headline unopened; court filing not located",
+   "best_lead": "Reuters Mar 7 2025 'US drops bid to make Google sell AI investments in antitrust case'; DOJ v. Google, D.D.C. No. 20-cv-3010",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "As-of date of The Information's $1.4B run-rate figure (and its Mar 11 'Claude drives strong revenue growth' article)",
+   "why_unverified": "The Information paywalled; only Maginative rewrite opened",
+   "best_lead": "https://www.theinformation.com/articles/anthropics-claude-drives-strong-revenue-growth-while-powering-manus-sensation",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "The Information/Reuters 2027 revenue scenarios ($34.5B optimistic vs $12B base?) and the 2025 $2.2B projection",
+   "why_unverified": "Paywalled/blocked; scenario basis unconfirmed",
+   "best_lead": "Reuters Feb 13 2025 'Anthropic sees revenue potentially soaring to $34.5 billion in 2027, The Information reports'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Anthropic's Max-plan announcement (Apr 9 2025) on an Anthropic-owned page",
+   "why_unverified": "anthropic.com/news/max-plan redirects to claude.com/blog/max-plan which returns 404",
+   "best_lead": "https://www.anthropic.com/news/max-plan",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Employee buyback terms ($56.09/share, 20%/$2M caps) and $1.4B run-rate",
+   "why_unverified": "Relayed by Maginative from a paywalled The Information report; no primary or second source",
+   "best_lead": "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Apple's Siri talks (Anthropic 'best fit', multibillion-dollar annual fee ask) and the Xcode/Claude Sonnet project",
+   "why_unverified": "Bloomberg originals paywalled; only Reuters/MacRumors/TechCrunch relays opened",
+   "best_lead": "Bloomberg Jun 30 2025 'Apple Weighs Using Anthropic or OpenAI to Power Siri in Major Reversal'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Amazon FY2024 10-K (filed 2025-02-07) Anthropic disclosure; Business Insider Feb 21 '$14 billion' headline",
+   "why_unverified": "WebFetch excerpt of the 10-K lacked the financial-statement notes",
+   "best_lead": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.htm",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Project Rainier Jun 24 2025 activation date and the 'nearly half a million Trainium2 chips' claim",
+   "why_unverified": "About Amazon page undated/retitled; DCD (403), NYT, Sherwood unopened",
+   "best_lead": "Data Center Dynamics Jun 25 2025 'Amazon details Project Rainier compute cluster'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Google TPU usage by Anthropic during H1 2025",
+   "why_unverified": "No dated H1-2025 source found in RSS scans (the large TPU deal is later in 2025)",
+   "best_lead": "Google News RSS scans Jan-Jun 2025 returned no Anthropic-TPU item",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Menlo Ventures enterprise/coding market-share reports naming Anthropic",
+   "why_unverified": "No Menlo share report dated Jan-Jun 2025 found; Menlo posts found in window are investor statements (Series E, Goodfire); the share report is believed to be mid-year/July but that is unverified",
+   "best_lead": "menlovc.com perspective pages",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Hires: Elizabeth Kelly (AI for social good team, Fast Company May 5), Holden Karnofsky (Fortune Feb 13), Niki Parmar, Alex Palcuie",
+   "why_unverified": "Only RSS headlines seen; Fortune/Fast Company not fetchable",
+   "best_lead": "Fast Company May 5 2025 'Anthropic hires a top Biden official to lead its new AI for social good team'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "SignalFire talent-retention claims (Anthropic retention vs OpenAI/DeepMind), Fortune Jun 3 2025",
+   "why_unverified": "Fortune not fetchable; SignalFire report not located",
+   "best_lead": "Fortune Jun 3 2025 'OpenAI and DeepMind are losing engineers to Anthropic in a one-sided talent war'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Seattle office (GeekWire Mar 4 2025) and other office expansions beyond Zurich/EMEA",
+   "why_unverified": "GeekWire returned 403",
+   "best_lead": "GeekWire Mar 4 2025 'Anthropic, which opened a Seattle office last year, now valued at $61.5B'",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "$4B annualized revenue milestone ('by mid-2025')",
+   "why_unverified": "The only source is The Information (paywalled headline 'Anthropic Revenue Hits $4 Billion Annual Pace as Competition With Cursor Intensifies'); Google News RSS dates it Jul 1 2025, one day outside this window, and the as-of date of the figure is not visible",
+   "best_lead": "https://www.theinformation.com/articles/anthropic-revenue-hits-4-billion-annual-pace-competition-cursor-intensifies",
+   "agent": "scout-2025h1"
+  },
+  {
+   "claim": "Dario Amodei leaked memo on seeking Gulf-state investment (Wired, Jul 21) and MGX talks (Bloomberg Oct 15)",
+   "why_unverified": "Wired/Bloomberg blocked",
+   "best_lead": "Data Center Dynamics Jul 22 write-up",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Google early talks to raise its Anthropic investment (BI/Reuters Nov 5); Congress request for Amodei testimony (Nov 26)",
+   "why_unverified": "Only RSS headlines seen",
+   "best_lead": "CyberScoop Nov 26; Reuters Nov 5",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Employee/secondary liquidity and SPV clampdown (BI Aug 18, FT Aug 21)",
+   "why_unverified": "Only RSS headlines seen",
+   "best_lead": "Business Insider Aug 18",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Term sheet for $10B at $350B (Coatue, GIC) 'confirmed Dec 31, 2025'",
+   "why_unverified": "Wikipedia (T4) lead only",
+   "best_lead": "Jan 2026 WSJ/CNBC coverage; handed to scout-2026q1",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Anthropic's role in the Hut 8 / Fluidstack River Bend lease (Dec 17)",
+   "why_unverified": "SEC exhibits name Fluidstack and Google only; Anthropic link is in PR Newswire/WSJ headlines I did not open",
+   "best_lead": "PR Newswire 'Hut 8 Announces AI Infrastructure Partnership with Anthropic and Fluidstack' (Dec 17, 2025)",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Broadcom's additional $11B Anthropic order (Dec 11 call)",
+   "why_unverified": "The SiliconANGLE recap opened does not mention it; CNBC blocked",
+   "best_lead": "Broadcom FQ4 2025 earnings call transcript",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Alphabet's Anthropic holdings / ownership",
+   "why_unverified": "Alphabet Q3 2025 10-Q excerpt does not name Anthropic (non-marketable equity gains $10.2B in Q3)",
+   "best_lead": "Alphabet 10-K FY2025 or Google statements",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Oct 7 Reuters/FT: OpenAI and Anthropic weighing investor funds to settle AI lawsuits; Oct 6 Reuters: music publishers defeat part of Anthropic's motion to dismiss (Concord v. Anthropic)",
+   "why_unverified": "Reuters/FT blocked; only RSS headlines seen",
+   "best_lead": "Reuters Oct 6-7, 2025; CourtListener docket (blocked to fetch)",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Seoul office announcement (Oct 23, 2025) and formal Bengaluru opening",
+   "why_unverified": "Anthropic page slug could not be found (guessed slug 404); Reuters headline only",
+   "best_lead": "Anthropic newsroom 'Seoul becomes Anthropic's third APAC office'",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Congress request for Dario Amodei to testify on the Chinese espionage campaign (Axios/CyberScoop Nov 26)",
+   "why_unverified": "Only RSS headlines seen",
+   "best_lead": "CyberScoop Nov 26; House Homeland Security Committee",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Dec 4 Reuters: Bartz class counsel seek $300M in fees; Dec 18: Anthropic asks judge to slash fees (vs 25% / $375M request cited by Wolters Kluwer)",
+   "why_unverified": "Reuters blocked; docket blocked",
+   "best_lead": "Bartz docket entries Dec 2025; Publishers Weekly",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Actual December 2025 exit run-rate (~$9B per the canonical figure)",
+   "why_unverified": "Every H2-2025 source opened gives forecasts or ranges (Reuters ~$9B via TipRanks in Oct; Amodei $8-10B on Dec 3; Fortune 'nearly $10B' on Dec 4), not a reported actual; later actuals sit in 2026 sources",
+   "best_lead": "Anthropic Series G announcement (Feb 2026) and Jan 2026 press; handed to desk-revenue",
+   "agent": "scout-2025h2"
+  },
+  {
+   "claim": "Bloomberg Mar 26-27: Anthropic weighing an IPO as soon as October (banks approached); The Information says Q4",
+   "why_unverified": "Bloomberg and CNBC return 403, The Information is paywalled, and Yahoo syndication search found no March copy",
+   "best_lead": "https://www.bloomberg.com/news/articles/2026-03-27/claude-ai-maker-anthropic-said-to-weigh-ipo-as-soon-as-october",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Employee tender at $350B pre-money: Bloomberg Feb 23 'kicks off share sale for staffers of up to $6 billion'; completion Apr 8 (outside window)",
+   "why_unverified": "Bloomberg paywalled; only aggregators (Trending Topics, Tech Funding News) opened",
+   "best_lead": "https://www.bloomberg.com/news/articles/2026-02-04/anthropic-plans-employee-tender-offer-at-350-billion-valuation",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Q1 2026 revenue of $4.73B",
+   "why_unverified": "Not in TechCrunch (Sep 28) or Reuters (Sep 29) prospectus coverage; S-1 not opened; conflicts with run-rate-implied $3.6-4.1B",
+   "best_lead": "S-1 via desk-s1",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Employee count of about 5,000 (Apr 2026)",
+   "why_unverified": "Only Q1 datapoint is about 2,500 (SFist, Jan 30)",
+   "best_lead": "S-1 or Anthropic company page",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Microsoft and NVIDIA dollar participation inside the $30B Series G",
+   "why_unverified": "Anthropic states only 'a portion of the previously announced investments'; amounts undisclosed",
+   "best_lead": "S-1 capitalization tables",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "CNBC Jan 27 'Anthropic closes latest funding round above $10 billion'",
+   "why_unverified": "Headline only (CNBC 403); probably an interim close of the Series G",
+   "best_lead": "Google News RSS Anthropic after:2026-01-16 before:2026-02-01",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Mid-January reports that Anthropic would raise $25B or more (TradingView Jan 18 headline)",
+   "why_unverified": "Headline only; original outlet not identified",
+   "best_lead": "Google News RSS Anthropic after:2026-01-16 before:2026-02-01",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Bloomberg Jan 21 'Anthropic's Revenue Run Rate Tops $9 Billion as VCs Pile In'",
+   "why_unverified": "Bloomberg paywalled; the end-2025 $9B level is corroborated by Investing.com and VentureBeat instead",
+   "best_lead": "https://www.bloomberg.com/news/articles/2026-01-21/anthropic-s-revenue-run-rate-tops-9-billion-as-vcs-pile-in",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Goldman Sachs using Claude to automate accounting roles (CNBC Feb 6)",
+   "why_unverified": "CNBC 403; no Yahoo copy found",
+   "best_lead": "Google News RSS Anthropic after:2026-02-01 before:2026-02-16",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Claude used in the Maduro operation via Palantir (WSJ/Axios Feb 13-14) and the Feb 11 classified-network push",
+   "why_unverified": "Only relayed inside Reuters' Feb 15 piece (opened); originals not opened",
+   "best_lead": "https://www.axios.com/2026/02/13/anthropic-claude-maduro-raid-pentagon",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Reuters Mar 11 'Anthropic in talks with private equity firms on AI joint venture' and Breakingviews 'AI revenue hallucination'",
+   "why_unverified": "Not found via Yahoo syndication; Reuters direct is blocked",
+   "best_lead": "Google News RSS Anthropic after:2026-03-01 before:2026-03-16",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Bartz v. Anthropic settlement-fee pushback (Reuters Mar 23) and related payouts",
+   "why_unverified": "No Q1 source opened",
+   "best_lead": "Google News RSS Anthropic after:2026-03-16 before:2026-04-01",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Text and effective date of the separate Section 705 order after the seven-day stay, and later Ninth Circuit or D.C. Circuit action",
+   "why_unverified": "Only the Mar 26 order (Dkt. 134) was opened; later orders are outside or beyond this window",
+   "best_lead": "CourtListener docket 3:26-cv-01996-RFL and D.C. Cir. 26-1049",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Hegseth's Jan 9 AI strategy memorandum itself",
+   "why_unverified": "Described in the court order and Reuters; the memo PDF was not opened",
+   "best_lead": "media.defense.gov/2026/Jan/12/2003855671/-1/-1/0/ARTIFICIAL-INTELLIGENCE-STRATEGY-FOR-THE-DEPARTMENT-OF-WAR.PDF",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Compute: DCD Feb 18 'Anthropic cloud spend expected to reach $80bn through 2029'; FT/Bloomberg original of the Google Texas financing",
+   "why_unverified": "DCD 403; Texas report seen only via a low-quality relay",
+   "best_lead": "https://www.datacenterdynamics.com/en/news/google-to-provide-financial-backing-for-multi-billion-dollar-anthropic-data-center-in-texas-report/",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Anthology Fund (Menlo) investments in Q1 2026",
+   "why_unverified": "No Q1 announcement found; RSS query returned unrelated startup items",
+   "best_lead": "https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "Debt or credit facilities in Q1 2026",
+   "why_unverified": "None found; a $15B revolving credit facility appears only in a Sep 2026 search snippet (outside window)",
+   "best_lead": "S-1 debt note via desk-s1",
+   "agent": "scout-2026q1"
+  },
+  {
+   "claim": "WSJ Apr 6 investor documents: breakeven 2025 excl. training / 2028 incl. training; FCF trough -$25B in 2027; gross margin -94% -> 40% -> 63% (2027E) -> 77% (2028E)",
+   "why_unverified": "WSJ blocked in this environment; no accessible syndication found yet",
+   "best_lead": "WSJ 'An Inside Look at OpenAI and Anthropic's Finances Ahead of Their IPOs' (2026-04-06)",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "$44B run-rate early May",
+   "why_unverified": "Only $30B (Apr), ~$40B (Apr 29) and >$47B (May) found in opened sources",
+   "best_lead": "CNBC/Reuters May 6-8 (Amodei 80x growth remarks)",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "Claude Opus 4.8 1M-token context window",
+   "why_unverified": "Not stated on the Opus 4.7/4.8/Fable 5/Sonnet 5 announcement pages",
+   "best_lead": "platform.claude.com models overview",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "Employees ~5,000 (Apr 21)",
+   "why_unverified": "No opened source states headcount",
+   "best_lead": "S-1 (public prospectus late Sep) headcount as of Jun 30; AI Magazine Apr 22 'Ramps Up Hiring Spree'",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "$2.5B revolving credit facility",
+   "why_unverified": "Not mentioned in Epoch AI, Yahoo, Fool or Digitimes snippets; a $15B credit line was reported Sep 4 (Q3, Tech Times headline)",
+   "best_lead": "Anthropic prospectus (Sep) / Bloomberg Jun 5",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "Micron-Anthropic Jun 22 strategic investment and multi-year memory supply agreement",
+   "why_unverified": "Micron IR page 404; Reuters/BNN headlines not opened; Micron is named as a Series H investor on Anthropic's T1 page",
+   "best_lead": "Micron press release Jun 22 (investors.micron.com)",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "Musk 'six-month Colossus lease' statement (May 28)",
+   "why_unverified": "Only a Reuters headline seen; Reuters blocked",
+   "best_lead": "Reuters 2026-05-28 / Musk post on X",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "Orange AI chief hired (Jun 25), Microsoft chip talks (May 21), Akamai $1.8B (May 8), $200B Google commitment (May 6), BMS 30,000 staff (May 20), music-publisher ruling push (Apr 21), Bartz settlement approval delay (May 14-15), legal-tech firm suing over export order (Jun 24)",
+   "why_unverified": "Headlines seen in Google News RSS; publishers blocked or no accessible mirror found",
+   "best_lead": "Reuters/Bloomberg/WSJ/The Information items listed in the Google News RSS windows",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "Apr 22-24 N.D. Cal. appeal sequencing: DOJ asked a California judge to pause Anthropic's appeal (Politico Apr 22) and a judge rejected the bid (Politico Apr 24); Jun 9 government filing denying unlawful retaliation (Reuters)",
+   "why_unverified": "Politico/Reuters blocked; CourtListener docket details require auth",
+   "best_lead": "Politico 2026-04-22/04-24; Reuters 2026-06-09",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "What D.C. Cir. No. 26-1162 (Jun 17) and Shakespeare v. Anthropic (5:26-cv-05931, Jun 17) challenge",
+   "why_unverified": "Docket detail returns HTTP 401",
+   "best_lead": "CourtListener docket ids 73496372 and 73494355",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "Series H roster: Cloverdale and Salesforce Ventures as participants, ~56 other investors, share price",
+   "why_unverified": "Absent from anthropic.com and Orrick releases; Anthropic PBC has no Form D on EDGAR; Latham release URL 404",
+   "best_lead": "PitchBook deal participants/cap table; investor press releases (QIA, Samsung, SK hynix, Micron)",
+   "agent": "scout-2026q2"
+  },
+  {
+   "claim": "Reuters, CNBC, Axios, Bloomberg, WSJ, FT, NYT and The Information originals behind many Q3 events",
+   "why_unverified": "WebFetch blocks reuters.com/theguardian.com/theverge.com/arstechnica.com/latimes.com and cnbc.com/axios.com/forbes.com/datacenterdynamics.com return 403; Google News links return an empty shell. Content read via Yahoo Finance syndication, TechCrunch, SiliconANGLE, Fortune and aggregators.",
+   "best_lead": "https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Dollar amount of Q2 2026 adjusted operating profit (first profitable quarter) and the definition of 'adjusted'",
+   "why_unverified": "FT report (Sep 13-14) gives no figure; summaries disagree on adjustments",
+   "best_lead": "FT Sep 13-14 'Anthropic expects second straight quarter of adjusted operating profit'",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Any current annualized run-rate above $65B (Axios/NYT '>$100B')",
+   "why_unverified": "Only headlines and an aggregator; Axios 403, Bloomberg/NYT not opened; headline wording is ambiguous between current and year-end",
+   "best_lead": "https://www.axios.com/2026/09/18/anthropic-100-billion-revenue",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "10b5-1 plans, lockup length and size of insider sales (The Information)",
+   "why_unverified": "Only a BeInCrypto summary of the Aug 27 report; no 10b5-1 item found",
+   "best_lead": "The Information Aug 27 and Sep 2-3 prospectus/lockup stories",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "PitchBook Sep 21 note (October Nasdaq listing, up to $100B at ~$2T, ~$10B debt)",
+   "why_unverified": "Not located with allowed tools; its components trace to Business Insider Sep 13, Quartz Aug 13 and the Bloomberg/Reuters revolver reports",
+   "best_lead": "pitchbook.com news Sep 21",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Context windows and knowledge cutoffs for Opus 5, Opus 5.5, Sonnet 5.5, Fable 5.1, Mythos 5.1",
+   "why_unverified": "Not stated on any opened announcement page",
+   "best_lead": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Primary confirmations of Nscale, Lambda, Volta, Riot, RUM and Akamai deal terms",
+   "why_unverified": "Nscale filing, Hut 8/Lambda, Riot 8-K, RUM and Akamai releases/8-Ks not opened; Anthropic has not confirmed most of them",
+   "best_lead": "SEC EDGAR: Nscale S-1 (Sep 18), Akamai 8-K (Sep 24), Riot 8-K (Aug 10), RUM Group 8-K (Sep 14)",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Amazon and Alphabet Q2 carrying values/ownership percentages for Anthropic",
+   "why_unverified": "Only TheStreet/Motley Fool analyses opened; Amazon and Alphabet 10-Qs not opened",
+   "best_lead": "Amazon and Alphabet Q2 2026 10-Q filings (Jul 30-Jul 31)",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Pre-IPO investor meetings from July and any investor-day disclosures",
+   "why_unverified": "No opened source describes meetings; only Quartz Aug 13 'investors expect' and Bloomberg revolver reports",
+   "best_lead": "Bloomberg/The Information pre-IPO marketing stories Jul-Aug",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Sep 4 'Anthropic surpasses OpenAI in ARR and valuation, says OpenAI president'; Sep 10 fourth AI hacking incident; Sep 9 alignment assessment; 26% AI-led R&D figure",
+   "why_unverified": "Headlines in Google News only; T1 pages and TradingView/Reuters not opened",
+   "best_lead": "https://www.anthropic.com/news (Sep 9 'An alignment assessment of recent cybersecurity incidents'; Sep 17 'Measurements for understanding the pace of AI development inside frontier labs')",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Sep 26 Axios scoop on tens of thousands of AI security incidents; Sep 29 service disruption; Sep 29 Reuters exclusives on rogue-agent legal risk and Big Tech dependence",
+   "why_unverified": "Headlines only",
+   "best_lead": "Reuters exclusives Sep 29 (existential risks; rogue agents legal risk; dependence on Big Tech partners)",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "EU AI Act GPAI obligations, US federal preemption, Japan/Korea/UK policy items and Economic Index release in Q3",
+   "why_unverified": "No Anthropic-specific Q3 item found beyond watermarking/EU transparency, the UK AISI hold and India pricing",
+   "best_lead": "Anthropic policy pages; EU AI Office enforcement notices (Forkast: hiring 40 enforcement staff)",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Headcount and LTBT/board composition changes",
+   "why_unverified": "Only The Information (3 active LTBT members after Cuéllar exit) and a stale Wikipedia infobox; prospectus headcount not found",
+   "best_lead": "public S-1 when filed",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Anthropic/Decart: final status and any collaboration",
+   "why_unverified": "Single Bloomberg-sourced report",
+   "best_lead": "Bloomberg Sep 8",
+   "agent": "scout-2026q3"
+  },
+  {
+   "claim": "Other headline-only Q3 items: OpenEvidence medical-AI partnership (Reuters exclusive Sep 24), Salesforce 'Claudeforce' (Aug 26), San Francisco security-team strike work-from-home notice (Business Insider Aug 25), Claude token theft (Sep 8), Cowork mobile/web (Jul 7), Claude Code auto mode default (Aug 9), Project Swap (Sep 24)",
+   "why_unverified": "Seen only as Google News/TechCrunch feed titles or blocked pages; not opened, so not recorded as events",
+   "best_lead": "https://techcrunch.com/tag/anthropic/feed/?paged=2 and https://news.google.com/rss/search?q=Anthropic+September+2026",
+   "agent": "scout-2026q3"
+  }
+ ],
+ "claims": []
+}

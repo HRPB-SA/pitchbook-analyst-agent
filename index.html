@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anthropic Intelligence Desk</title>
+<meta name="description" content="Source-verified record of Anthropic since founding: timeline, topic analysis, financial model, compute economics, bull/bear verdict, and the agents that built it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+</head>
+<body>
+<div class="shell">
+  <aside class="rail" aria-label="Desks">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">A</div>
+      <div>
+        <div class="brand-name">Anthropic<br>Intelligence Desk</div>
+        <div class="brand-sub">Pre-IPO reference · 2021 → today</div>
+      </div>
+    </div>
+    <nav class="nav" role="tablist" aria-label="Sections" id="nav"></nav>
+    <div class="rail-foot">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Theme: system</span>
+      </button>
+      <div id="railStats"></div>
+    </div>
+  </aside>
+
+  <main class="workspace" id="main">
+    <header class="topbar">
+      <div class="title">
+        <h1 id="pageTitle">Overview</h1>
+        <span class="status-pill" id="ipoPill"><span class="dot"></span><span>Loading status…</span></span>
+      </div>
+      <div class="asof" id="asof">as of —</div>
+    </header>
+
+    <div id="loading" class="loading"><div class="spinner" aria-hidden="true"></div><div>Loading the record…</div></div>
+    <div id="loadError" class="error" hidden></div>
+
+    <section class="panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview"></section>
+    <section class="panel" id="panel-timeline" role="tabpanel" aria-labelledby="tab-timeline"></section>
+    <section class="panel" id="panel-topics" role="tabpanel" aria-labelledby="tab-topics"></section>
+    <section class="panel" id="panel-model" role="tabpanel" aria-labelledby="tab-model"></section>
+    <section class="panel" id="panel-compute" role="tabpanel" aria-labelledby="tab-compute"></section>
+    <section class="panel" id="panel-thesis" role="tabpanel" aria-labelledby="tab-thesis"></section>
+    <section class="panel" id="panel-network" role="tabpanel" aria-labelledby="tab-network"></section>
+    <section class="panel" id="panel-agents" role="tabpanel" aria-labelledby="tab-agents"></section>
+    <section class="panel" id="panel-sources" role="tabpanel" aria-labelledby="tab-sources"></section>
+  </main>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Detail" aria-hidden="true">
+  <button class="close" id="drawerClose" type="button" aria-label="Close">×</button>
+  <div id="drawerBody"></div>
+</aside>
+<div class="tooltip" id="tooltip" hidden></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

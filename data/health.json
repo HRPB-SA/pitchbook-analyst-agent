@@ -1,0 +1,136 @@
+{
+ "generated": "2026-09-30T18:28:08Z",
+ "events": 636,
+ "by_year": {
+  "2021": 6,
+  "2022": 16,
+  "2023": 47,
+  "2024": 67,
+  "2025": 173,
+  "2026": 327
+ },
+ "checks": [
+  {
+   "check": "event dated after today",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "event dated before 2021",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "no source URL",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "source URL not opened",
+   "count": 1,
+   "severity": "WARN",
+   "sample": [
+    "evt-20230524-london-office"
+   ]
+  },
+  {
+   "check": "URL is not http(s)",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "summary missing or > 600 chars",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "headline > 140 chars",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "HIGH confidence but only T4/T5 source and no corroboration",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "T1 source hosted on an aggregator domain",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "valuation present without an amount or round wording",
+   "count": 1,
+   "severity": "WARN",
+   "sample": [
+    "evt-20260601-confidential-draft-s1-submitted"
+   ]
+  },
+  {
+   "check": "run-rate above $150B (implausible)",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "PitchBook TTM 4Q2026/4Q2027 used as run-rate",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "DISPUTED events (frozen conflicts)",
+   "count": 6,
+   "severity": "INFO",
+   "sample": [
+    "evt-20230523-series-c-valuation-reports",
+    "evt-20230925-amazon-up-to-4b",
+    "evt-20250212-the-information-34-5b-2027-projection",
+    "evt-20250415-aws-gtm-team-projections",
+    "evt-20260624-alibaba-distillation-allegation-senate-letter",
+    "evt-20260918-nyt-annualized-revenue-100b-report"
+   ]
+  },
+  {
+   "check": "VERIFY events (open checks)",
+   "count": 6,
+   "severity": "INFO",
+   "sample": [
+    "evt-20230524-london-office",
+    "evt-20240501-revenue-projection-850m",
+    "evt-20260327-google-texas-data-center-financing-report",
+    "evt-20260821-cnbc-ai-backlash-ipo-risk-factor",
+    "evt-20260825-wsj-30t-tam-investor-pitch",
+    "evt-20260827-information-prospectus-after-labor-day-insider-sales"
+   ]
+  },
+  {
+   "check": "same URL is primary source of > 6 different events",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "duplicate event ids",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  },
+  {
+   "check": "categories outside the schema",
+   "count": 0,
+   "severity": "OK",
+   "sample": []
+  }
+ ],
+ "fails": 0,
+ "warns": 2
+}
