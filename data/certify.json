@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T20:01:27Z",
+ "generated": "2026-09-30T20:12:10Z",
  "summary": {
   "PASS": 12,
   "WARN": 1,
@@ -65,7 +65,7 @@
    "id": "G10",
    "name": "Independent re-derivation of load-bearing claims reconciled",
    "status": "PASS",
-   "detail": "121 claims: {'MISMATCH': 4, 'UNTRACEABLE': 20, 'PARTIAL': 5, 'NOTED': 30, 'MATCH': 62}. MISMATCH rows are frozen with both values shown."
+   "detail": "121 claims: {'MISMATCH': 7, 'UNTRACEABLE': 3, 'PARTIAL': 6, 'NOTED': 33, 'MATCH': 72}. MISMATCH rows are frozen with both values shown."
   },
   {
    "id": "G11",
@@ -77,7 +77,7 @@
    "id": "G12",
    "name": "Agent log is the real log: agents known, time-ordered, nothing in the future, every active agent has an output file",
    "status": "PASS",
-   "detail": "5324 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
+   "detail": "5589 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
   },
   {
    "id": "G13",
@@ -95,7 +95,7 @@
    "id": "G15",
    "name": "UI smoke: nine tabs x desktop/phone x light/dark, no console errors, no horizontal overflow",
    "status": "FAIL",
-   "detail": "[desk/light] console: Failed to load resource: the server responded with a status of 404 (Not Found) (+19 more)"
+   "detail": "[desk/light] console: Failed to load resource: the server responded with a status of 404 (Not Found) /data/thesis.json (+3 more)"
   }
  ]
 }

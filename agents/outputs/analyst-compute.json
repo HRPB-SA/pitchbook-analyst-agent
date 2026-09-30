@@ -2,7 +2,7 @@
  "agent": "analyst-compute",
  "role": "Compute Economist",
  "started": "2026-09-30T19:19:29Z",
- "finished": "2026-09-30T20:03:54Z",
+ "finished": "2026-09-30T20:11:04Z",
  "one_liner": "Commitments total $592.1B and 15.8 GW, $455.7B contracted and $89.6B up to; the prospectus shows $518.2B with about 80% non-cancelable. Central gross margin 73% of realized revenue after partner share and before training (range 56% to 83%). Cost per GW-year runs from $2B (shell) to $50B (SpaceX).",
  "extras_guide": {
   "one_liner": "headline summary",
@@ -1491,7 +1491,7 @@
    "invested_usd_m": 18000,
    "invested_up_to_usd_m": 33000,
    "compute_usd_m": 100000,
-   "invested_basis": "funded at cost: $8.0B notes + $5.0B Series G + $5.0B Series H preferred (10-Q, T1); up to adds the $15.0B facility that opens on AWS delivery milestones",
+   "invested_basis": "funded at cost as of Jun 30, 2026: $8.0B notes + $5.0B Series G + $5.0B Series H preferred (10-Q, T1); up to adds the $15.0B facility that opens on AWS delivery milestones",
    "compute_basis": "company floor 'more than $100B over ten years' (T1); S-1 coverage $110B (T3)",
    "event_ids": [
     "evt-20260731-amazon-10q-q2-2026",
@@ -1542,14 +1542,14 @@
    "note": "Equity in, compute out, funded by the vendor's own debt if the T3 report is right."
   }
  ],
- "circularity_note": "Both legs are in the record for Amazon, Google, Microsoft with NVIDIA, and AMD: equity or milestone financing in, compute spend out. Amazon's 'up to $20B more' is a facility that opens as AWS hits compute-delivery milestones (10-Q, T1). $5.0B has been drawn as Series H preferred and $15.0B remains, so money in and money out are linked by contract. Funded amounts are filed only for Amazon: $18.0B at cost, carried at $190.4B. Google's funded total after Oct 2025 is unverified, Microsoft's and NVIDIA's are undisclosed, and AMD's $5B is milestone-based. The chart shows funded dollars in; 'up to' amounts are in invested_up_to_usd_m and are not funded. Suppliers also issue equity to Anthropic: Akamai's warrant is about 5% of Akamai and RUM's covers about 50.8M shares at $0.01. Their values are not in the record. No filing traces cash from an investment to a supplier invoice, so circular flow is an inference from two recorded legs. Open: whether AWS spend is netted against the facility, Google's funded tranche, the S-1 related-party note, and 2026 channel share.",
+ "circularity_note": "Both legs are in the record for Amazon, Google, Microsoft with NVIDIA, and AMD: equity or milestone financing in, compute spend out. Amazon's 'up to $20B more' is a facility that opens as AWS hits compute-delivery milestones (10-Q, T1). Amazon used its option to buy $5.0B of Series H preferred, which cut the facility to $15.0B, so money in and money out are linked by contract. Funded amounts are filed only for Amazon: $18.0B at cost, carried at $190.4B. Google's funded total after Oct 2025 is unverified, Microsoft's and NVIDIA's are undisclosed, and AMD's $5B is milestone-based. The chart shows funded dollars in; 'up to' amounts are in invested_up_to_usd_m and are not funded. Suppliers also issue equity to Anthropic: Akamai's warrant is about 5% of Akamai and RUM's covers about 50.8M shares at $0.01. Their values are not in the record. No filing traces cash from an investment to a supplier invoice, so circular flow is an inference from two recorded legs. Open: whether AWS spend is netted against the facility, Google's funded tranche, the S-1 related-party note, and 2026 channel share.",
  "financing_stack": [
   {
    "layer": "Equity raised",
    "usd_m": 124254,
    "counts_as": "equity",
    "status": "funded",
-   "note": "Series A to H at PitchBook sizes, including converted notes (Amazon $8.0B, Google $2.0B, $0.75B in Series F). Press and T1 headlines sum to $123.4B; strict priced equity is $113.5B. Series H is $65B: about $50B new cash plus $15B of previously committed hyperscaler money.",
+   "note": "PitchBook ledger as of Sep 30, 2026: Series A to H at PitchBook sizes, including converted notes (Amazon $8.0B, Google $2.0B, $0.75B in Series F). Press and T1 headlines sum to $123.4B; strict priced equity is $113.5B. Series H is $65B: about $50B new cash plus $15B of previously committed hyperscaler money.",
    "tier": "T2",
    "event_ids": [
     "evt-20260930-pb-total-raised-bonds-removed",
@@ -1560,10 +1560,11 @@
    "layer": "Revolver, 5-year (May 2025)",
    "usd_m": 2500,
    "counts_as": "debt",
-   "status": "committed capacity; drawn amount undisclosed",
-   "note": "Counted as raised by PitchBook.",
+   "status": "closed May 16, 2025 (CNBC via SiliconANGLE, T3); seven lenders; drawn amount and pricing undisclosed",
+   "note": "Committed capacity, not proceeds. PitchBook still adds the $2.5B to its $126.754B total.",
    "tier": "T3",
    "event_ids": [
+    "evt-20250516-run-rate-2b",
     "evt-20260930-pb-total-raised-bonds-removed"
    ]
   },
@@ -1571,8 +1572,8 @@
    "layer": "Pre-IPO revolver (Sep 2026)",
    "usd_m": 15000,
    "counts_as": "debt",
-   "status": "Bloomberg: nears final; Forbes: finalized by Sep 7",
-   "note": "17 banks led by Morgan Stanley; not in PitchBook; the only IPO-adjacent debt found. Target was above $10B on Aug 18.",
+   "status": "Bloomberg Sep 3: nears final; Forbes (T3) Sep 7: finalized; no company confirmation; draws and pricing undisclosed",
+   "note": "17 banks led by Morgan Stanley; not in PitchBook; the only IPO-adjacent debt found. Target was above $10B on Aug 18. Bloomberg and Forbes describe it as an expansion of the 2025 $2.5B revolver; whether it replaces it is undisclosed, so capacity is $15B or $17.5B.",
    "tier": "T2",
    "event_ids": [
     "evt-20260903-credit-facility-15b-nears-final",
@@ -1607,8 +1608,8 @@
    "layer": "Amazon funded investment",
    "usd_m": 18000,
    "counts_as": "equity (notes and preferred)",
-   "status": "funded",
-   "note": "Inside the rounds, not additive. Carried at $190.4B.",
+   "status": "funded, per the 10-Q for Jun 30, 2026",
+   "note": "Inside the rounds, not additive. $8.0B went in as convertible notes, in part converted to preferred; the rest converts at an IPO. PitchBook counts it as equity raised. Carried at $190.4B.",
    "tier": "T1",
    "event_ids": [
     "evt-20260731-amazon-10q-q2-2026"
@@ -1619,7 +1620,7 @@
    "usd_m": 15000,
    "counts_as": "vendor financing",
    "status": "available as AWS delivers compute milestones; expires 30 months after a liquidity event",
-   "note": "Down from $20.0B after the $5.0B Series H purchase.",
+   "note": "As of Jun 30, 2026. Down from $20.0B after the $5.0B Series H purchase.",
    "tier": "T1",
    "event_ids": [
     "evt-20260731-amazon-10q-q2-2026",
@@ -1707,7 +1708,7 @@
    ]
   }
  ],
- "financing_note": "Equity and debt stay apart. Equity raised is $124.3B. Debt is $2.5B of revolver capacity plus a $15B pre-IPO facility. The $34.5B chip notes are lessor debt: the deals desk says Anthropic is the lessee and not the issuer, and PitchBook counted them on Jul 16 and dropped them on Sep 30. Both are stated, neither is picked. Vendor money is mostly 'up to' and milestone-gated; only Amazon's $18.0B is filed. For scale, cash at Dec 31, 2025 ($20.3B), Series H new cash ($50B) and the $15B revolver add to about $85B before any 2026 burn. Base commitment-implied payments are $56B over the next four quarters and $330B over 2026 to 2030. Cash at Jun 30, 2026 is not reported.",
+ "financing_note": "Equity and debt stay apart. Equity raised is $124.3B. Debt is revolver capacity only. The pre-IPO revolver is described as an expansion of the 2025 $2.5B facility and whether it replaces it is undisclosed, so capacity is $15B or $17.5B. Bloomberg calls it near final on Sep 3, Forbes says finalized on Sep 7, and the company has not confirmed. The $34.5B chip notes are lessor debt: the deals desk says Anthropic is the lessee and not the issuer, and PitchBook counted them on Jul 16 and dropped them on Sep 30. Both are stated, neither is picked. Vendor money is mostly 'up to' and milestone-gated; only Amazon's $18.0B is filed. For scale, cash at Dec 31, 2025 ($20.3B), Series H new cash ($50B) and a $15B revolver reported near final add to about $85B before any 2026 burn. Base commitment-implied payments are $56B over the next four quarters and $330B over 2026 to 2030. Cash at Jun 30, 2026 is not reported.",
  "narrative": {
   "what": [
    {
@@ -1768,7 +1769,7 @@
     ]
    },
    {
-    "t": "Funding has five layers. Equity raised is $124.3B (PitchBook ledger). Amazon has funded $18.0B and a $15.0B facility opens on AWS delivery milestones. Lessors closed $34.5B of chip notes on Jun 9. Revolvers are $2.5B plus a $15B pre-IPO facility. PitchBook counted the chip notes on Jul 16 ($161.254B total) and dropped them on Sep 30 ($126.754B).",
+    "t": "Funding has five layers. Equity raised is $124.3B (PitchBook ledger, Sep 30). Amazon has funded $18.0B and a $15.0B facility opens on AWS delivery milestones (10-Q, Jun 30). Lessors closed $34.5B of chip notes on Jun 9. A $15B pre-IPO revolver, an expansion of a $2.5B one, is reported near final. PitchBook counted the chip notes on Jul 16 ($161.254B total) and dropped them on Sep 30 ($126.754B).",
     "e": [
      "evt-20260930-pb-total-raised-bonds-removed",
      "evt-20260731-amazon-10q-q2-2026",
@@ -1825,7 +1826,7 @@
     ]
    },
    {
-    "t": "Training sits outside the company's gross margin and inside the stricter breakeven. Adjusted operating profit before training was first positive in Q2 2026 (FT, T3). Profitability with training as cost of goods sold is put at 2028 to 2029 by secondary WSJ summaries (T4). Training and other compute is at least $0.36 per revenue dollar in Q2 2026E (derived). The WSJ Q2 projection reportedly includes it; the FT measure does not.",
+    "t": "Training sits outside the company's gross margin and inside the stricter breakeven. Adjusted operating profit before training was first positive in Q2 2026 (FT, T3). Profitability with training as cost of goods sold is put at 2028 to 2029 by secondary WSJ summaries (T4). The WSJ Q2 projection reportedly includes training (T5 commentary); the FT measure does not, so the two margins may not share a scope.",
     "e": [
      "evt-20260913-ft-adj-op-profit-gm-above-80pct",
      "evt-20260406-wsj-investor-docs-secondary-summaries",
@@ -1860,7 +1861,7 @@
     ]
    },
    {
-    "t": "Watch these. SpaceX exit or repricing (13% to 21% of live capacity on 90 days' notice). Nscale's Qualifying Financing. Amazon facility draws beyond the $5.0B taken. A second ~$36B chip package. AMD's first GW in 1H 2027. Q3 adjusted operating income, expected positive. Whether the S-1 defines gross margin before or after training.",
+    "t": "Watch these. SpaceX exit or repricing (13% to 21% of live capacity on 90 days' notice). Nscale's Qualifying Financing. Amazon facility use beyond the $5.0B Series H purchase. A second ~$36B chip package. AMD's first GW in 1H 2027. Q3 adjusted operating income, expected positive. Whether the S-1 defines gross margin before or after training.",
     "e": [
      "evt-20260520-spacex-s1-anthropic-colossus-contract",
      "evt-20260918-nscale-files-nyse-ipo",
@@ -1871,7 +1872,7 @@
     ]
    },
    {
-    "t": "Keep debt and equity apart. The $34.5B chip notes are lessor debt; Anthropic's liability is the lease stream inside the $161.2B line. PitchBook's total moves by $34.5B with the treatment, and a second package would take SPV financing to about $70.5B. For scale: $413.7B carries non-cancelable wording and $104.5B does not; against it stand about $50B of new Series H cash, a $15B revolver and an IPO reported at up to $100B.",
+    "t": "Keep debt and equity apart. The $34.5B chip notes are lessor debt; Anthropic's liability is the lease stream inside the $161.2B line. PitchBook's total moves by $34.5B with the treatment. A second package would take SPV financing to about $70.5B. Against $413.7B of non-cancelable wording stand about $50B of new Series H cash, a $15B revolver reported near final and an IPO reported at up to $100B.",
     "e": [
      "evt-20260930-pb-total-raised-bonds-removed",
      "evt-20260609-tpu-financing-34-5b-closed",
@@ -2563,70 +2564,88 @@
   },
   {
    "seq": 25,
-   "type": "note",
+   "type": "verify",
    "text": "Read verify-compute.json (38 answers). It agrees with the table on AWS, Microsoft, SpaceX, Nscale, TeraWulf, Akamai and all 25 list prices. Pending: Lambda about 350 MW (Reuters), RUM with no financing in place, and a T4 partner split of The Information's $517B that includes Fluidstack $50B."
   },
   {
    "seq": 26,
    "type": "verify",
-   "text": "Read data/model.json (finished 2026-09-30T20:01:05Z). Base compute (cost of revenue + training + capex) is $44.0B, $83.9B, $111.4B, $134.7B, $154.4B for 2026 to 2030, $528.5B in total. Commitment-implied payments cover 62% (low 48%, high 77%)."
+   "text": "Read verify-capital.json (finished 20:05Z). Chip notes at close: A1 $6.0B, A2 $24.0B, B $4.5B, $34.5B in all; the May launch version was about $36B with A2 at $25B. Amazon's $5.0B Series H purchase cut its facility to $15.0B. AMD's $5B is up to and unfunded. All match this file.",
+   "event_id": "evt-20260609-tpu-financing-34-5b-closed"
   },
   {
    "seq": 27,
    "type": "flag",
-   "text": "model.json reads the $0.56 compute ratio as inference-only (2026 gross margin 48%) and adds $13.0B of training. This file reads it as all compute. 2026 compute and training is $42.0B in the model against $32.0B to $37.9B on the ratio path. Reading differs; neither picked."
+   "text": "Pre-IPO revolver: the record has Forbes (T3) saying finalized Sep 7. verify-capital found Bloomberg still 'finalizing' on Sep 13 and no closing report to Sep 30. Shown as near final, not closed. Capacity is $15B if it replaces the $2.5B revolver, $17.5B if additive.",
+   "event_id": "evt-20260903-credit-facility-15b-nears-final"
   },
   {
    "seq": 28,
+   "type": "verify",
+   "text": "Read data/model.json (finished 2026-09-30T20:01:05Z). Base compute (cost of revenue + training + capex) is $44.0B, $83.9B, $111.4B, $134.7B, $154.4B for 2026 to 2030, $528.5B in total. Commitment-implied payments cover 62% (low 48%, high 77%)."
+  },
+  {
+   "seq": 29,
+   "type": "flag",
+   "text": "model.json reads the $0.56 compute ratio as inference-only (2026 gross margin 48%) and adds $13.0B of training. This file reads it as all compute. 2026 compute and training is $42.0B in the model against $32.0B to $37.9B on the ratio path. Reading differs; neither picked."
+  },
+  {
+   "seq": 30,
    "type": "message",
    "text": "Two cross-checks from your file. (1) Gross margin scope: a $0.56 ratio that includes training leaves inference at most $0.20, so 2026 would carry about $32.0B to $37.9B of compute, not $42.0B. (2) Revenue per GW is $28B to $46B at the July run-rate, not $21B: $235B needs 5 to 8 GW, not 11.",
    "to": "analyst-model"
   },
   {
-   "seq": 29,
+   "seq": 31,
    "type": "message",
    "text": "Payments implied by the commitments (straight-line): 2026 $28B to $31B, 2027 $43B to $87B (base $62B), 2028 $53B to $106B (base $80B). Central gross margin 73% of realized revenue after partner share and before training (56% to 83%). Training and other compute at least $16.6B annualized in Q2 2026E.",
    "to": "analyst-model"
   },
   {
-   "seq": 30,
+   "seq": 32,
    "type": "message",
    "text": "Open questions for the verdict: S-1 obligations by year and gross-margin definition, SpaceX $45B against $84.5B, live GW, and whether Q2 adjusted profit includes training. The chip notes are shown both ways, not picked.",
    "to": "analyst-judge"
   },
   {
-   "seq": 31,
+   "seq": 33,
    "type": "message",
    "text": "When the S-1 is public please extract: contractual obligations by year, cost of revenue, the AMD line terms, the SpaceX $84.5B composition, and the lease-versus-commitment split for the seven names outside the six partners.",
    "to": "desk-s1"
   },
   {
-   "seq": 32,
+   "seq": 34,
    "type": "message",
    "text": "Table gaps: AMD over $20B has no dollar figure; Lambda about 350 MW (Reuters, per verify-compute); RUM 8-K dated Aug 23 to 24 and GPU count may be RUM's existing fleet; Colossus II capacity.",
    "to": "desk-compute"
   },
   {
-   "seq": 33,
+   "seq": 35,
    "type": "message",
    "text": "Please confirm the SpaceX first-two-months discount and whether Amazon's $100B floor and the S-1's $110B are the same contract.",
    "to": "verify-operating"
   },
   {
-   "seq": 34,
+   "seq": 36,
    "type": "message",
    "text": "Defect in assets/app.js waterfall() at line 217: an opening total never sets run, so delta bars start at 0 and the bridge renders wrong. Fix: run = end when i === 0 or s.total is the first step.",
    "to": "orchestrator"
   },
   {
-   "seq": 35,
+   "seq": 37,
    "type": "message",
    "text": "The Overview tile reads metrics.compute_totals.usd_m_contracted ($217.9B, T1 and T2 only). The Compute tab uses this file's totals ($455.7B, which adds $237.8B of prospectus coverage). Both are explained in totals.note; pick one label.",
+   "to": "orchestrator"
+  },
+  {
+   "seq": 38,
+   "type": "message",
+   "text": "verify-capital reports later Broadcom-linked chip-debt talks (Aug 20 to 21) that are not in the record. I carry only the Aug 5 Blackstone pitch (about $36B) as unsettled lessor debt and count none of it. If the later talks should show, desk-deals needs to add them.",
    "to": "orchestrator"
   }
  ],
  "stats": {
   "events_read": 172,
-  "flags": 11
+  "flags": 12
  }
 }

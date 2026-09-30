@@ -214,7 +214,7 @@ function barChartH(container, { data, xFmt = v => fmt.usd(v), rowH = 26, onBar, 
 function waterfall(container, { steps, yFmt = v => fmt.pct(v), h = 240 }) {
   const w = 720, m = { t: 18, r: 12, b: 40, l: 54 };
   const { g, iw, ih } = chartFrame(container, w, h, m);
-  let run = 0; const bars = steps.map((s, i) => { const start = s.total ? 0 : run; const end = s.total ? s.value : run + s.value; if (!s.total) run = end; return { ...s, start, end, i }; });
+  let run = 0; const bars = steps.map((s, i) => { const start = s.total ? 0 : run; const end = s.total ? s.value : run + s.value; run = end; return { ...s, start, end, i }; });   // a total resets the running level to its own value
   const lo = Math.min(0, d3.min(bars, b => Math.min(b.start, b.end))), hi = d3.max(bars, b => Math.max(b.start, b.end));
   const x = d3.scaleBand().domain(bars.map(b => b.label)).range([0, iw]).paddingInner(0.4).paddingOuter(0.2);
   const y = d3.scaleLinear().domain([lo, hi * 1.08]).nice().range([ih, 0]);
@@ -328,7 +328,7 @@ function renderOverview(root) {
   const rr = latest(M.run_rate_desk?.length ? M.run_rate_desk.map(r => ({ ...r, usd_m: r.run_rate_usd_m })) : M.run_rate, r => r.usd_m);
   const q = (M.period_revenue || []).filter(r => /Q[1-4]\s*20\d\d/.test(r.period || '') && /actual|prelim/i.test(r.kind || '')).sort((a, b) => a.period.replace(/(Q\d)\s*(\d{4})/, '$2$1').localeCompare(b.period.replace(/(Q\d)\s*(\d{4})/, '$2$1'))).pop();
   const cs = M.capital_summary || {};
-  const ct = M.compute_totals || {};
+  const ct = C?.totals || M.compute_totals || {};   // same source and labels as the Compute tab
   const hcAll = (M.headcount_desk?.length ? M.headcount_desk : M.headcount || []).map(r => ({ ...r, date: /^\d{4}-\d{2}-\d{2}/.test(String(r.date)) ? String(r.date).slice(0, 10) : /^\d{4}-\d{2}/.test(String(r.date)) ? String(r.date).slice(0, 7) + '-01' : r.date }));
   const hc = latest(hcAll.filter(r => /^T[123]$/.test(r.tier || 'T3')), r => r.headcount) || latest(hcAll, r => r.headcount);   // a headline KPI rests on T1-T3 only
   const hcLater = hc ? hcAll.filter(r => r.date > hc.date && r.headcount && Math.abs(r.headcount - hc.headcount) / hc.headcount > 0.2) : [];
@@ -343,7 +343,7 @@ function renderOverview(root) {
       let x = null; try { x = JSON.parse(cl.rederived || '{}').equity_only_usd_m; } catch {}
       return el('span', { class: 'chip conf DISPUTED', title: 'Independent re-derivation disagrees with the PitchBook ledger total; see Sources > re-derivation ledger', text: x ? `disputed: independent check ${fmt.usd(x)}` : 'disputed in re-derivation' });
     })()]),
-    tile('Compute commitments (announced)', ct.usd_m_announced ? fmt.usd(ct.usd_m_announced) : '—', [ct.usd_m_contracted ? `${fmt.usd(ct.usd_m_contracted)} contracted` : '', ct.gw_announced ? fmt.gw(ct.gw_announced) : '']),
+    tile('Compute commitments (announced)', ct.usd_m_announced ? fmt.usd(ct.usd_m_announced) : '—', [ct.usd_m_contracted ? `${fmt.usd(ct.usd_m_contracted)} contracted or disclosed` : '', ct.usd_m_contracted_t1_t2_documented ? `${fmt.usd(ct.usd_m_contracted_t1_t2_documented)} on T1/T2 documents` : '', ct.gw_announced ? fmt.gw(ct.gw_announced) : '']),
     tile('Headcount', hc ? fmt.num(hc.headcount) : '—', hc ? [fmt.date(hc.date), hc.tier ? tierChip(hc.tier) : '', hcLater.length ? el('span', { class: 'chip conf DISPUTED', title: 'Later figures differ by more than 20%; all are T4 estimates', text: `disputed: ${hcLater.map(r => fmt.num(r.headcount)).join(' / ')} (T4)` }) : ''] : ['no data']),
     tile('IPO', os.timing ? os.timing.split('·')[0].trim().slice(0, 28) : 'Confidential S-1', [os.exchange || '', os.target_valuation_usd_m ? `target ${fmt.usd(os.target_valuation_usd_m)}` : '', os.target_raise_usd_m ? `raise up to ${fmt.usd(os.target_raise_usd_m)}` : '']),
     tile('Record', `${fmt.num((state.data.events || []).length)} events`, [L ? `${fmt.num(L.raw_events)} raw · ${Object.keys(A?.agents || {}).length} agents` : '', L ? chip(`${Math.round((L.opened_share || 0) * 100)}% opened`) : ''], { onclick: () => showTab('sources') }),
@@ -649,7 +649,7 @@ function renderCompute(root) {
   const tot = C?.totals || M.compute_totals || {};
   const k = el('div', { class: 'grid cols-4' });
   const kt = (l, v, s) => el('div', { class: 'tile' }, el('div', { class: 'label', text: l }), el('div', { class: 'value', text: v }), el('div', { class: 'sub', text: s || '' }));
-  k.append(kt('Announced commitments', fmt.usd(tot.usd_m_announced), 'sum of headline figures, "up to" included'), kt('Contracted / disclosed', fmt.usd(tot.usd_m_contracted), 'contract-level or filing-level figures'), kt('Power announced', fmt.gw(tot.gw_announced), 'gigawatts across partners'), kt('Partners', String(new Set(rows.map(r => r.partner)).size), 'cloud, chip, neocloud, data-center'));
+  k.append(kt('Announced, all bases', fmt.usd(tot.usd_m_announced), tot.usd_m_up_to != null ? `incl. ${fmt.usd(tot.usd_m_up_to)} "up to" and ${fmt.usd(tot.usd_m_reported_unconfirmed || 0)} reported, unconfirmed` : 'sum of headline figures, "up to" included'), kt('Contracted or disclosed', fmt.usd(tot.usd_m_contracted), tot.usd_m_contracted_t1_t2_documented != null ? `${fmt.usd(tot.usd_m_contracted_t1_t2_documented)} on T1/T2 documents + ${fmt.usd(tot.usd_m_contracted_s1_coverage || 0)} from S-1 press coverage (T3)` : 'contract-level or filing-level figures'), kt('Power announced', fmt.gw(tot.gw_announced), tot.gw_up_to_ceiling != null ? `${tot.gw_up_to_ceiling} GW are "up to" ceilings` : 'gigawatts across partners'), tot.s1_non_cancelable_share != null ? kt('S-1 plan, non-cancelable', fmt.pct(tot.s1_non_cancelable_share, 1), `${fmt.usd(tot.usd_m_s1_non_cancelable_lines)} of ${fmt.usd(tot.usd_m_s1_reference)} over ten years (press-reported)`) : kt('Partners', String(new Set(rows.map(r => r.partner)).size), 'cloud, chip, neocloud, data-center'));
   root.append(k);
   const g = el('div', { class: 'grid cols-2 section' });
   const byP = {}; rows.forEach(r => { const p = r.partner || 'Other'; byP[p] = byP[p] || { a: 0, c: 0, gw: 0 }; byP[p].a += r.usd_m || 0; if ((r.usd_basis || '').match(/contract|filing|disclosed/i)) byP[p].c += r.usd_m || 0; byP[p].gw += r.gw || 0; });
