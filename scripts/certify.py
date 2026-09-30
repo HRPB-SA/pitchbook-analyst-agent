@@ -139,6 +139,16 @@ if os.path.exists(ef):
 else:
     gate("G15", "UI smoke: nine tabs x desktop/phone x light/dark", "PENDING", "run: NODE_PATH=$(npm root -g) node scripts/shot.cjs")
 
+# independent certification (the Certifier agent's own file): published beside the mechanical gates, never edited here
+cf = load("agents", "outputs", "certifier.json")
+if cf:
+    trim = lambda xs, keys: [{k: x.get(k) for k in keys if x.get(k) is not None} for x in (xs or [])]
+    json.dump({"generated": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "verdict": cf.get("verdict"), "finished": cf.get("finished"), "stats": cf.get("stats"),
+               "rederived_provenance": cf.get("rederived_provenance"),
+               "rederived": [{"fact": r.get("fact"), "value": r.get("value"), "as_of": r.get("as_of"), "single_source": r.get("single_source"), "sources": [{"url": x.get("url"), "publisher": x.get("publisher"), "tier": x.get("tier")} for x in (r.get("sources") or [])[:3]]} for r in cf.get("rederived") or []],
+               "reconciliation": trim(cf.get("reconciliation"), ["fact", "deliverable_says", "where", "agrees", "note"]),
+               "blocking": trim(cf.get("blocking"), ["id", "where", "issue", "smallest_fix"]), "non_blocking": trim(cf.get("non_blocking"), ["id", "where", "issue", "suggestion"])},
+              open(P("data", "certification.json"), "w"), indent=1, ensure_ascii=False)
 summary = {k: sum(1 for g in gates if g["status"] == k) for k in ("PASS", "WARN", "FAIL", "PENDING")}
 out = {"generated": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "summary": summary, "gates": gates}
 json.dump(out, open(P("data", "certify.json"), "w"), indent=1)
