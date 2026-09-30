@@ -2,7 +2,7 @@
  "agent": "verify-compute",
  "role": "Source Re-deriver",
  "started": "2026-09-30T19:18:59Z",
- "finished": "2026-09-30T19:46:29Z",
+ "finished": "2026-09-30T19:48:41Z",
  "answers": [
   {
    "claim_id": "OPS-COM-e7a4c2",
@@ -11,9 +11,9 @@
     "usd_basis": "About $161.2B of 'Broadcom-related equipment lease obligations', described as largely non-cancelable (non-cancelable by either party except on default). Committed lease obligations, not an 'up to' figure; part of the >=$518B total. Source is a confidential S-1 as seen by Reuters, not a public filing.",
     "gw": "~3.5 GW accessible through Broadcom from 2027 (Broadcom 8-K, 2026-04-06, 'as part of the multiple gigawatts ... committed by Anthropic'). Broadcom CEO remarks of 2026-09-02 as reported by BigGo/Yahoo: 1 GW Ironwood in 2026, 5 GW TPU v8i in 2027, line of sight to 10 GW more in 2028 (management outlook, not contract). XPV platform target >20 GW through 2028 across labs.",
     "chips": "Google-designed TPUs co-developed with Broadcom, bought by special-purpose vehicles and leased to Anthropic (Ironwood in 2026, TPU v8i in 2027 per Broadcom CEO remarks reported by BigGo).",
-    "term": "Lease term not reported in the Reuters text (no term or maturity given for the $161.2B). Start: first XPV tranche deployments from mid-2026 (Apollo); 3.5 GW from 2027 (Broadcom 8-K).",
+    "term": "Reuters gives no term for the $161.2B. Broadcom's 10-Q (quarter ended 2026-08-02, customer unnamed) describes a financial partner taking over AI-rack purchase agreements and the related customer lease agreements, with a backstop over 'the 5-year lease terms'. Start: first XPV tranche deployments from mid-2026 (Apollo); 3.5 GW from 2027 (Broadcom 8-K).",
     "stated_by": "Anthropic's confidential IPO prospectus as seen by Reuters (2026-09-29) for the $161.2B; Broadcom Form 8-K (2026-04-06) for 3.5 GW; Apollo release (2026-06-09) for the first XPV tranche.",
-    "notes": "Media report of a confidential filing (Reuters, single origin), not a filed contract; no public filing carries the $161.2B. The link between the $161.2B and the XPV SPV notes is my inference: Reuters says 'Broadcom-related equipment lease obligations' without naming XPV. The first XPV tranche alone was ~$35B of financing (see OPS-COM-5723ea); a second ~$36B Blackstone-led package was only floated (2026-08-04, early stage). Broadcom's 8-K adds that consumption of the capacity 'is dependent on Anthropic's continued commercial success' and that the parties were 'in discussions with certain operational and financial partners'."
+    "notes": "Media report of a confidential filing (Reuters, single origin), not a filed contract; no public filing carries the $161.2B. The link between the $161.2B and the XPV SPV notes is my inference: Reuters says 'Broadcom-related equipment lease obligations' without naming XPV. The first XPV tranche alone was ~$35B of financing (see OPS-COM-5723ea); a second ~$36B Blackstone-led package was only floated (2026-08-04, early stage). Broadcom's 8-K adds that consumption of the capacity 'is dependent on Anthropic's continued commercial success' and that the parties were 'in discussions with certain operational and financial partners'. Broadcom's 10-Q (filed 2026-09-10) does not name the customer; it states Broadcom's maximum potential liability under its backstop of the lease obligations is about $29B once all racks are deployed (liability = shortfall of rack sale value versus 85% of amounts owed) and that the customer may issue Broadcom convertible notes of up to $42B (none issued at 2026-08-02). That the 10-Q's customer is Anthropic is my inference from timing and the XPV structure."
    },
    "verdict_hint": "PARTIAL",
    "sources": [
@@ -34,6 +34,15 @@
      "tier": "T1",
      "opened": true,
      "supports": "Anthropic, beginning in 2027, will access through Broadcom approximately 3.5 gigawatts; consumption dependent on Anthropic commercial success."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/R17.htm",
+     "publisher": "Broadcom Inc. (SEC Form 10-Q, note on commitments and contingencies)",
+     "title": "Form 10-Q for the quarter ended 2026-08-02 (filed 2026-09-10)",
+     "published": "2026-09-10",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Backstop of a customer's lease obligations over 5-year lease terms; maximum liability about $29 billion; customer may issue up to $42B convertible notes."
     },
     {
      "url": "https://ir.apollo.com/news-events/press-releases/detail/629/apollo-leads-35-billion-capital-solution-for-broadcom-ai",
@@ -477,7 +486,7 @@
     "usd_basis": "Apollo: 'initial $35 billion capital solution' for the Broadcom AI XPV Platform. Bloomberg tranche detail (2026-06-08): A1 $6B + A2 $24B (Broadcom-backed, A2 at 5.75%) + B $4.5B (unbacked, 8.5%) = $34.5B debt, plus $800M equity from Apollo's Atlas SP. This is financing raised by an SPV to buy TPUs that Anthropic leases, drawn over a multi-year schedule; it is not Anthropic's spend commitment. Pre-close talks (2026-05-28) were ~$36B with A2 ~$25B.",
     "gw": "'More than 1GW' of Anthropic compute 'starting in mid-2026' (Apollo); platform designed for over 20 GW through 2028 across frontier labs.",
     "chips": "Google-designed TPUs (Bloomberg: 'Google's custom chips'); Ironwood per Broadcom's Q3 call summary. Sites reported in New York, Texas, Louisiana and Indiana.",
-    "term": "'Multi-year draw schedule' (Apollo); lease term and note maturities not reported. Broadcom residual-value support protects A1/A2 if Anthropic stops paying for a period. Start: mid-2026; Broadcom said on 2026-09-02 the 1 GW deployment was underway.",
+    "term": "'Multi-year draw schedule' (Apollo); note maturities not reported. Broadcom's 10-Q (customer unnamed) says its backstop covers lease obligations over '5-year lease terms', maximum exposure ~$29B. Bloomberg: Broadcom's residual-value support protects A1/A2 if Anthropic stops paying for a period. Start: mid-2026; Broadcom said on 2026-09-02 the 1 GW deployment was underway.",
     "stated_by": "Apollo press release 2026-06-09; Bloomberg 2026-05-28/29 and 2026-06-05/08 (via Yahoo Finance and ET Telecom); Broadcom CEO Hock Tan on earnings calls (June and 2026-09-02).",
     "notes": "Company announcement (Apollo) plus Bloomberg reporting of note terms; no filed contract. Roughly half the debt was syndicated; notes privately rated mid-investment-grade. A second ~$36B package led by Blackstone was floated on 2026-08-04 (early stage, unconfirmed)."
    },
@@ -509,6 +518,15 @@
      "tier": "T2",
      "opened": true,
      "supports": "SPV buys Google TPUs and leases to Anthropic; sites in NY, TX, LA, IN; Broadcom backstops the largest portions."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/R17.htm",
+     "publisher": "Broadcom Inc. (SEC Form 10-Q, note on commitments and contingencies)",
+     "title": "Form 10-Q for the quarter ended 2026-08-02 (filed 2026-09-10)",
+     "published": "2026-09-10",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Backstop of a customer's lease obligations over 5-year lease terms; maximum liability about $29 billion; customer may issue up to $42B convertible notes."
     },
     {
      "url": "https://finance.biggo.com/news/US_AVGO_2026-09-02",
@@ -2536,268 +2554,281 @@
   },
   {
    "seq": 63,
+   "type": "open",
+   "text": "Opened Broadcom 10-Q (qtr ended Aug 2, 2026, filed Sep 10) note on commitments: financial partner took AI-rack purchase and customer lease agreements; Broadcom backstop over 5-year lease terms, max ~$29B; customer may issue up to $42B convertible notes (customer unnamed)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/R17.htm",
+   "event_id": "OPS-COM-e7a4c2"
+  },
+  {
+   "seq": 64,
+   "type": "flag",
+   "text": "Broadcom 10-Q names no customer; linking its 5-year lease backstop ($29B) and $42B convertible-note option to Anthropic/XPV is an inference, recorded as such",
+   "event_id": "OPS-COM-5723ea"
+  },
+  {
+   "seq": 65,
    "type": "found",
    "text": "OPS-COM-e7a4c2: value 161200 USD m (PARTIAL)",
    "event_id": "OPS-COM-e7a4c2"
   },
   {
-   "seq": 64,
+   "seq": 66,
    "type": "found",
    "text": "OPS-COM-21eade: value None USD m (CONFLICT)",
    "event_id": "OPS-COM-21eade"
   },
   {
-   "seq": 65,
+   "seq": 67,
    "type": "flag",
    "text": "OPS-COM-21eade: 2 conflict(s) recorded between sources",
    "event_id": "OPS-COM-21eade"
   },
   {
-   "seq": 66,
+   "seq": 68,
    "type": "found",
    "text": "OPS-COM-191007: value 100000 USD m (FOUND)",
    "event_id": "OPS-COM-191007"
   },
   {
-   "seq": 67,
+   "seq": 69,
    "type": "found",
    "text": "OPS-COM-c23f8d: value 50000 USD m (PARTIAL)",
    "event_id": "OPS-COM-c23f8d"
   },
   {
-   "seq": 68,
+   "seq": 70,
    "type": "found",
    "text": "OPS-COM-37026d: value 45000 USD m (CONFLICT)",
    "event_id": "OPS-COM-37026d"
   },
   {
-   "seq": 69,
+   "seq": 71,
    "type": "flag",
    "text": "OPS-COM-37026d: 2 conflict(s) recorded between sources",
    "event_id": "OPS-COM-37026d"
   },
   {
-   "seq": 70,
+   "seq": 72,
    "type": "found",
    "text": "OPS-COM-bda5ab: value 44600 USD m (FOUND)",
    "event_id": "OPS-COM-bda5ab"
   },
   {
-   "seq": 71,
+   "seq": 73,
    "type": "found",
    "text": "OPS-COM-0a90d6: value 35000 USD m (PARTIAL)",
    "event_id": "OPS-COM-0a90d6"
   },
   {
-   "seq": 72,
+   "seq": 74,
    "type": "found",
    "text": "OPS-COM-5723ea: value 35000 USD m (FOUND)",
    "event_id": "OPS-COM-5723ea"
   },
   {
-   "seq": 73,
+   "seq": 75,
    "type": "flag",
    "text": "OPS-COM-5723ea: 1 conflict(s) recorded between sources",
    "event_id": "OPS-COM-5723ea"
   },
   {
-   "seq": 74,
+   "seq": 76,
    "type": "found",
    "text": "OPS-COM-846861: value 30000 USD m (FOUND)",
    "event_id": "OPS-COM-846861"
   },
   {
-   "seq": 75,
+   "seq": 77,
    "type": "found",
    "text": "OPS-COM-51b596: value 19000 USD m (FOUND)",
    "event_id": "OPS-COM-51b596"
   },
   {
-   "seq": 76,
+   "seq": 78,
    "type": "found",
    "text": "OPS-COM-43a89f: value 13700 USD m (PARTIAL)",
    "event_id": "OPS-COM-43a89f"
   },
   {
-   "seq": 77,
+   "seq": 79,
    "type": "found",
    "text": "OPS-COM-e4c257: value 11600 USD m (FOUND)",
    "event_id": "OPS-COM-e4c257"
   },
   {
-   "seq": 78,
+   "seq": 80,
    "type": "found",
    "text": "OPS-COM-a6eaa7: value 518000 USD m (PARTIAL)",
    "event_id": "OPS-COM-a6eaa7"
   },
   {
-   "seq": 79,
+   "seq": 81,
    "type": "flag",
    "text": "OPS-COM-a6eaa7: 2 conflict(s) recorded between sources",
    "event_id": "OPS-COM-a6eaa7"
   },
   {
-   "seq": 80,
+   "seq": 82,
    "type": "found",
    "text": "OPS-PRI-e1af19: $0.25/$1.25 per MTok, released 2024-03-13 (FOUND)",
    "event_id": "OPS-PRI-e1af19"
   },
   {
-   "seq": 81,
+   "seq": 83,
    "type": "found",
    "text": "OPS-PRI-4f98c5: $3.0/$15.0 per MTok, released 2024-03-04 (FOUND)",
    "event_id": "OPS-PRI-4f98c5"
   },
   {
-   "seq": 82,
+   "seq": 84,
    "type": "found",
    "text": "OPS-PRI-ceacd1: $15.0/$75.0 per MTok, released 2024-03-04 (FOUND)",
    "event_id": "OPS-PRI-ceacd1"
   },
   {
-   "seq": 83,
+   "seq": 85,
    "type": "found",
    "text": "OPS-PRI-4922e9: $3.0/$15.0 per MTok, released 2024-06-20 (FOUND)",
    "event_id": "OPS-PRI-4922e9"
   },
   {
-   "seq": 84,
+   "seq": 86,
    "type": "found",
    "text": "OPS-PRI-d76d7f: $1.0/$5.0 per MTok, released 2024-11-04 (FOUND)",
    "event_id": "OPS-PRI-d76d7f"
   },
   {
-   "seq": 85,
+   "seq": 87,
    "type": "found",
    "text": "OPS-PRI-46a566: $3.0/$15.0 per MTok, released 2025-02-24 (FOUND)",
    "event_id": "OPS-PRI-46a566"
   },
   {
-   "seq": 86,
+   "seq": 88,
    "type": "found",
    "text": "OPS-PRI-11024e: $15.0/$75.0 per MTok, released 2025-05-22 (FOUND)",
    "event_id": "OPS-PRI-11024e"
   },
   {
-   "seq": 87,
+   "seq": 89,
    "type": "found",
    "text": "OPS-PRI-3cacec: $3.0/$15.0 per MTok, released 2025-05-22 (FOUND)",
    "event_id": "OPS-PRI-3cacec"
   },
   {
-   "seq": 88,
+   "seq": 90,
    "type": "found",
    "text": "OPS-PRI-8e796e: $15.0/$75.0 per MTok, released 2025-08-05 (FOUND)",
    "event_id": "OPS-PRI-8e796e"
   },
   {
-   "seq": 89,
+   "seq": 91,
    "type": "found",
    "text": "OPS-PRI-4faae8: $3.0/$15.0 per MTok, released 2025-09-29 (FOUND)",
    "event_id": "OPS-PRI-4faae8"
   },
   {
-   "seq": 90,
+   "seq": 92,
    "type": "found",
    "text": "OPS-PRI-e6612c: $1.0/$5.0 per MTok, released 2025-10-15 (FOUND)",
    "event_id": "OPS-PRI-e6612c"
   },
   {
-   "seq": 91,
+   "seq": 93,
    "type": "found",
    "text": "OPS-PRI-27b2a8: $5.0/$25.0 per MTok, released 2025-11-24 (FOUND)",
    "event_id": "OPS-PRI-27b2a8"
   },
   {
-   "seq": 92,
+   "seq": 94,
    "type": "found",
    "text": "OPS-PRI-1718c6: $5.0/$25.0 per MTok, released 2026-02-05 (FOUND)",
    "event_id": "OPS-PRI-1718c6"
   },
   {
-   "seq": 93,
+   "seq": 95,
    "type": "found",
    "text": "OPS-PRI-f1019d: $3.0/$15.0 per MTok, released 2026-02-17 (FOUND)",
    "event_id": "OPS-PRI-f1019d"
   },
   {
-   "seq": 94,
+   "seq": 96,
    "type": "found",
    "text": "OPS-PRI-2e6641: $25.0/$125.0 per MTok, released 2026-04-07 (FOUND)",
    "event_id": "OPS-PRI-2e6641"
   },
   {
-   "seq": 95,
+   "seq": 97,
    "type": "found",
    "text": "OPS-PRI-3a256f: $5.0/$25.0 per MTok, released 2026-04-16 (FOUND)",
    "event_id": "OPS-PRI-3a256f"
   },
   {
-   "seq": 96,
+   "seq": 98,
    "type": "found",
    "text": "OPS-PRI-9883ec: $5.0/$25.0 per MTok, released 2026-05-28 (FOUND)",
    "event_id": "OPS-PRI-9883ec"
   },
   {
-   "seq": 97,
+   "seq": 99,
    "type": "found",
    "text": "OPS-PRI-42e96b: $10.0/$50.0 per MTok, released 2026-06-09 (FOUND)",
    "event_id": "OPS-PRI-42e96b"
   },
   {
-   "seq": 98,
+   "seq": 100,
    "type": "found",
    "text": "OPS-PRI-c360e0: $10.0/$50.0 per MTok, released 2026-06-09 (FOUND)",
    "event_id": "OPS-PRI-c360e0"
   },
   {
-   "seq": 99,
+   "seq": 101,
    "type": "found",
    "text": "OPS-PRI-0c0a69: $2.0/$10.0 per MTok, released 2026-06-30 (FOUND)",
    "event_id": "OPS-PRI-0c0a69"
   },
   {
-   "seq": 100,
+   "seq": 102,
    "type": "found",
    "text": "OPS-PRI-fe68cd: $5.0/$25.0 per MTok, released 2026-07-24 (FOUND)",
    "event_id": "OPS-PRI-fe68cd"
   },
   {
-   "seq": 101,
+   "seq": 103,
    "type": "found",
    "text": "OPS-PRI-4cb1f2: $10.0/$50.0 per MTok, released 2026-09-01 (FOUND)",
    "event_id": "OPS-PRI-4cb1f2"
   },
   {
-   "seq": 102,
+   "seq": 104,
    "type": "found",
    "text": "OPS-PRI-026aed: $10.0/$50.0 per MTok, released 2026-09-01 (FOUND)",
    "event_id": "OPS-PRI-026aed"
   },
   {
-   "seq": 103,
+   "seq": 105,
    "type": "found",
    "text": "OPS-PRI-38ef44: $4.0/$20.0 per MTok, released 2026-09-22 (FOUND)",
    "event_id": "OPS-PRI-38ef44"
   },
   {
-   "seq": 104,
+   "seq": 106,
    "type": "found",
    "text": "OPS-PRI-f9fd47: $2.0/$10.0 per MTok, released 2026-09-28 (FOUND)",
    "event_id": "OPS-PRI-f9fd47"
   },
   {
-   "seq": 105,
+   "seq": 107,
    "type": "verify",
    "text": "Cross-checked prices three ways: launch post vs docs model page vs archived pricing tables; release dates vs API release notes and deprecations page"
   },
   {
-   "seq": 106,
+   "seq": 108,
    "type": "verify",
    "text": "Cross-checked Anthropic, Amazon, Microsoft, Apollo, TeraWulf, Akamai, RUM, Nscale statements against counterparty SEC filings where a filing exists"
   },
   {
-   "seq": 107,
+   "seq": 109,
    "type": "message",
    "text": "Handoff: 38 answers written; main disagreements are Google $ (200B vs >=111.1B), SpaceX/xAI ($45B vs up to $84.5B), prospectus vs The Information totals; $531B figure untraceable",
    "to": "orchestrator"
@@ -2805,8 +2836,8 @@
  ],
  "stats": {
   "searches": 66,
-  "pages_opened": 143,
+  "pages_opened": 147,
   "claims_answered": 38,
-  "flags": 11
+  "flags": 12
  }
 }
