@@ -37,11 +37,11 @@
    "confidence": "MEDIUM"
   },
   {
-   "date": "2024-05-31",
+   "date": "2024-07-01",
    "usd_m": 21000.0,
    "pre_usd_m": 19800.0,
-   "label": "PitchBook secondary: FTX/Alameda stake sold for $1.32B",
-   "event_id": "evt-20240531-pb-secondary-1-32b",
+   "label": "PitchBook: Series D closes at $1.2B, $21.0B post-money",
+   "event_id": "evt-20240701-pb-series-d-1-2b-21b",
    "tier": "T2",
    "confidence": "HIGH"
   },
@@ -224,7 +224,7 @@
   {
    "date": "2026-04-06",
    "usd_m": 30000.0,
-   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate-2",
    "tier": "T1",
    "confidence": "HIGH",
    "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
@@ -566,14 +566,14 @@
    "notes": "Explicit 'post-money' wording for the $18.4B figure; 'nearly $8B' likely counts Amazon's $4B and Google's $2B commitments, not only funded equity. | Explicit 'post-money' wording only for $18.4B (TechCrunch) - no official Anthropic release for the Series D exists. 'Nearly $8B raised' is a commitments-inclusive total (Amazon $4B + Google $2B + prior rounds), cf. PB $3.55B at that date. The FTX sale at $30.0045/share (T1, Mar 2024) and PB's Series D price are the same, so press and PB describe the same price but different share counts: $18.4B/30.0045 = 613M FD shares vs PB's 700M (21.0B/30.0045) - a fully-diluted-basis difference (my arithmetic), not a price difference."
   },
   {
-   "date": "2024-05-31",
-   "usd_m": 1320.0,
+   "date": "2024-07-01",
+   "usd_m": 1200.0,
    "kind": "equity",
-   "label": "PitchBook secondary: FTX/Alameda stake sold for $1.32B",
-   "event_id": "evt-20240531-pb-secondary-1-32b",
+   "label": "PitchBook: Series D closes at $1.2B, $21.0B post-money",
+   "event_id": "evt-20240701-pb-series-d-1-2b-21b",
    "tier": "T2",
    "confidence": "HIGH",
-   "notes": "Amount reconciles within 1.2% to the two estate sales ($884.1M T1 + ~$452M T3 = ~$1,336M). Conflicts: (1) PB's buyer list (SquareOne, DAMAC, Bessemer, Golden Falcon, AGC, Pachamama) does not match the T1 purchaser list for sale 1 (ATIC, Jane Street, Fidelity, HOF, Ford...; only Jane Street overlaps); (2) PB 'shares acquired' 29.4M equals sale 1 only while the $1.32B spans both sales; (3) date 2024-05-31 sits between Mar-22 (notice) and ~Jun-2 (sale 2 report). Treat PB's record as a blended estimate. Secondary = no cash to Anthropic; excluded from total raised. | DISPUTED (size +60%, post-money +14% vs press). Arithmetic inside PB is consistent (40.44M sh x $30.0045 = $1.213B; 19.8+1.2=21.0; 700M FD shares). The price per share matches T1 (FTX docket), so the valuation gap is a fully-diluted share-count basis difference (PB 700M vs 613M implied by $18.4B) and the $450M size gap is later D closings (D-2/D-3) - both consistent with 'announced vs closed', but unverified by any opened Anthropic document (no Anthropic release for Series D exists). Retail vehicles (Fundrise, MicroVentures) appear among 43 investors."
+   "notes": "DISPUTED (size +60%, post-money +14% vs press). Arithmetic inside PB is consistent (40.44M sh x $30.0045 = $1.213B; 19.8+1.2=21.0; 700M FD shares). The price per share matches T1 (FTX docket), so the valuation gap is a fully-diluted share-count basis difference (PB 700M vs 613M implied by $18.4B) and the $450M size gap is later D closings (D-2/D-3) - both consistent with 'announced vs closed', but unverified by any opened Anthropic document (no Anthropic release for Series D exists). Retail vehicles (Fundrise, MicroVentures) appear among 43 investors."
   },
   {
    "date": "2025-01-07",
@@ -682,7 +682,7 @@
    "label": "PitchBook ledger totals $126.754B; $34.5B chip bonds no longer included",
    "event_id": "evt-20260930-pb-total-raised-bonds-removed",
    "tier": "T2",
-   "confidence": "VERIFY",
+   "confidence": "HIGH",
    "notes": "FLAG. Arithmetic: 161,254 - 126,754 = 34,500 exactly. The Sep-30 extract contains no record for deal 334763-02T, so PB removed or reclassified it; the reason is not stated anywhere I could open (pitchbook.com profile/news pages return 403; search snippet shows PitchBook saying Anthropic 'has raised $127 billion'). Press explains why it should not count: the notes are issued by a lessor SPV and Anthropic only leases (5-year lease; Broadcom backstop), although a 'chip bonds' label makes it look like Anthropic debt. The $161.254B figure is therefore an over-count; use $126.754B (incl. $2.5B revolver) or $124.254B (equity only)."
   }
  ],
@@ -838,9 +838,9 @@
    "status": "contracted",
    "financing": "bonds (lessor SPV notes, Broadcom/Google credit support)",
    "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate",
-   "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html",
    "include_in_totals": true,
-   "note": "includes the $34.5B closed tranche below"
+   "note": "amount from prospectus coverage (Stocktwits/Yahoo); 3.5 GW via Broadcom per Broadcom 8-K; includes the $34.5B closed tranche below"
   },
   {
    "partner": "Broadcom AI XPV Platform SPV - first tranche (Apollo/Blackstone notes)",
@@ -922,8 +922,8 @@
    "chips": "NVIDIA (model not stated)",
    "usd_m": 35000,
    "usd_basis": "reported, unconfirmed (WSJ via Proactive)",
-   "gw": 0.704,
-   "gw_basis": "two 352 MW IT leases (Hut 8), tenant unnamed",
+   "gw": null,
+   "gw_basis": "not stated for this deal (Hut 8 campus: two 352 MW leases to Nvidia = 704 MW)",
    "term": "Anthropic-Lambda term undisclosed; energization Q1 2027",
    "status": "announced",
    "financing": "opex",
@@ -943,9 +943,9 @@
    "status": "contracted",
    "financing": "opex (lease; investment-grade credit support)",
    "event_id": "evt-20260706-terawulf-kentucky-19b-lease",
-   "source_url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_8k.htm",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_ex99-1.htm",
    "include_in_totals": true,
-   "note": "T1 names Anthropic PBC"
+   "note": "T1 names Anthropic PBC (8-K and Ex.99.1)"
   },
   {
    "partner": "Riot Platforms - Rockdale, Texas",
@@ -967,8 +967,8 @@
    "chips": "NVIDIA H100/H200 (~22,000 GPUs)",
    "usd_m": 13700,
    "usd_basis": "contracted GPU services agreement per RUM; Anthropic identity via The Information/MarketBeat",
-   "gw": 0.25,
-   "gw_basis": "250 MW campus (120-180 MW phase 1); not all Anthropic's",
+   "gw": null,
+   "gw_basis": "not stated for this deal (campus 250 MW; 120-180 MW phase 1)",
    "term": "six years; ~$2.28B per year",
    "status": "contracted",
    "financing": "opex (+ warrants to Anthropic)",
@@ -1048,9 +1048,9 @@
    "status": "announced",
    "financing": "opex (lease)",
    "event_id": "evt-20260916-zerra-queensland-first-australian-lease",
-   "source_url": "https://www.abc.net.au/news/2026-09-16/queensland-data-centre-anthropic-dalby/107160640",
+   "source_url": "https://brisbanedevelopment.com.au/anthropic-zerra-dc-western-downs-digital-park-32-billion-data-centre-dalby/",
    "include_in_totals": true,
-   "note": "inference workload"
+   "note": "inference workload (ABC); first of four 360 MW halls (Brisbane Development)"
   },
   {
    "partner": "CoreWeave",
@@ -1108,7 +1108,7 @@
    "status": "live",
    "financing": "AWS capex",
    "event_id": "evt-20251029-project-rainier-operational",
-   "source_url": "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster",
+   "source_url": "https://siliconangle.com/2025/10/29/aws-opens-11b-project-rainier-data-center-campus-built-anthropic/",
    "include_in_totals": false,
    "note": "inside the AWS 5 GW / $100B+ row"
   },
@@ -1132,8 +1132,8 @@
    "chips": "power-generation equipment",
    "usd_m": null,
    "usd_basis": "not disclosed",
-   "gw": 0.47,
-   "gw_basis": "470 MW of generation equipment, not IT load",
+   "gw": null,
+   "gw_basis": "470 MW of generation equipment (not IT load; not counted)",
    "term": "into 2028",
    "status": "contracted",
    "financing": "opex/capex",
@@ -2899,7 +2899,7 @@
  "compute_totals": {
   "usd_m_announced": 592100,
   "usd_m_contracted": 217900,
-  "gw_announced": 16.799,
+  "gw_announced": 15.845,
   "usd_m_buckets": {
    "contracted_T1_or_T2_firm": 217900,
    "contracted_but_cancellable_or_conditional": 89600,
@@ -2909,8 +2909,8 @@
   },
   "gw_by_basis": {
    "up_to_ceiling": 13.0,
-   "contracted_or_reported_site_capacity": 3.799,
-   "note": "up-to: AWS 5.0 + Google next-gen TPU 5.0 + Microsoft/NVIDIA 1.0 + AMD 2.0; remainder = Google 2026 floor 1.0 + SpaceX 0.3 + Nscale 0.46 + Lambda 0.704 + TeraWulf 0.401 + Riot 0.191 + RUM 0.25 + Volta 0.133 + Zerra 0.36"
+   "contracted_or_reported_site_capacity": 2.845,
+   "note": "up-to: AWS 5.0 + Google next-gen TPU 5.0 + Microsoft/NVIDIA 1.0 + AMD 2.0; remainder = Google 2026 floor 1.0 + SpaceX 0.3 + Nscale 0.46 (press) + TeraWulf 0.401 + Riot 0.191 + Volta 0.133 + Zerra 0.36; Lambda/Hut 8 Beacon Point (704 MW campus leases) and RUM (250 MW campus) excluded because capacity is not stated for the Anthropic deal"
   },
   "top_down_reference": {
    "the_information_sep_6_2026": {
@@ -2936,7 +2936,7 @@
    },
    "checklist_531b": "not found in any source; nearest: $517B (+ RUM $13.7B = $530.7B arithmetic coincidence)"
   },
-  "note": "Bottom-up deal-level sum ($592.1B) mixes T1 filings, T2/T3 reports and prospectus-coverage figures (Google $111.1B and Broadcom leases $161.2B are second-hand and may overlap with FT's guarantee web), so it is NOT comparable to The Information's $517B (maximum value, Oct 2025-Aug 2026) or the prospectus' $518B (10-year commitments, probably dated before the Jul-Sep deals). Rows flagged include_in_totals=false are subsets/overlaps, AWS site capex, energy equipment or talks. GW are 'up to' ceilings for most hyperscaler programs; 16.8 GW bottom-up compares with The Information's 14.8 GW signed since Oct 2025 plus 1-2 GW held (15.8-16.8). IT-load vs gross-power basis differs by source (Nscale 1.37 IT / 2.0 gross; Zerra 1.44 IT / 2.16 GVA; TeraWulf 401 IT / 480 gross = ~1.2-1.5x)."
+  "note": "Bottom-up deal-level sum ($592.1B) mixes T1 filings, T2/T3 reports and prospectus-coverage figures (Google $111.1B and Broadcom leases $161.2B are second-hand and may overlap with FT's guarantee web), so it is NOT comparable to The Information's $517B (maximum value, Oct 2025-Aug 2026) or the prospectus' $518B (10-year commitments, probably dated before the Jul-Sep deals). Rows flagged include_in_totals=false are subsets/overlaps, AWS site capex, energy equipment or talks. GW are 'up to' ceilings for most hyperscaler programs; ~15.8 GW bottom-up (excl. Lambda and RUM campus capacity) compares with The Information's 14.8 GW signed since Oct 2025 plus 1-2 GW held (15.8-16.8). IT-load vs gross-power basis differs by source (Nscale 1.37 IT / 2.0 gross; Zerra 1.44 IT / 2.16 GVA; TeraWulf 401 IT / 480 gross = ~1.2-1.5x)."
  },
  "compute_costs": [
   {

@@ -1,13 +1,13 @@
 {
- "generated": "2026-09-30T18:36:39Z",
- "events": 641,
+ "generated": "2026-09-30T19:18:33Z",
+ "events": 691,
  "by_year": {
   "2021": 6,
-  "2022": 16,
+  "2022": 17,
   "2023": 47,
-  "2024": 68,
-  "2025": 173,
-  "2026": 331
+  "2024": 71,
+  "2025": 175,
+  "2026": 375
  },
  "checks": [
   {
@@ -37,10 +37,22 @@
    ]
   },
   {
-   "check": "URL is not http(s)",
+   "check": "URL is not http(s) or a pitchbook:// field reference",
    "count": 0,
    "severity": "OK",
    "sample": []
+  },
+  {
+   "check": "source is a licensed PitchBook field with no public URL (not openable by a reader)",
+   "count": 5,
+   "severity": "INFO",
+   "sample": [
+    "evt-20220429-pb-series-b-980m-reconcile",
+    "evt-20240531-pb-secondary-1-32b",
+    "evt-20240701-pb-series-d-1-2b-21b",
+    "evt-20250115-pb-secondary-homeroom-lakeside",
+    "evt-20260930-pb-total-raised-bonds-removed"
+   ]
   },
   {
    "check": "summary missing or > 600 chars",
@@ -68,10 +80,13 @@
   },
   {
    "check": "valuation present without an amount or round wording",
-   "count": 1,
+   "count": 4,
    "severity": "WARN",
    "sample": [
-    "evt-20260601-confidential-draft-s1-submitted"
+    "evt-20260601-confidential-draft-s1",
+    "evt-20260814-q2-2026-rev-11-5b-first-report",
+    "evt-20260925-founders-voting-control",
+    "evt-20260928-reuters-draft-prospectus-2025-financials"
    ]
   },
   {
@@ -88,15 +103,15 @@
   },
   {
    "check": "DISPUTED events (frozen conflicts)",
-   "count": 6,
+   "count": 11,
    "severity": "INFO",
    "sample": [
     "evt-20230523-series-c-valuation-reports",
     "evt-20230925-amazon-up-to-4b",
+    "evt-20231027-google-up-to-2b",
     "evt-20250212-the-information-34-5b-2027-projection",
-    "evt-20251104-information-2028-revenue-projections",
-    "evt-20260624-alibaba-distillation-allegation-senate-letter",
-    "evt-20260918-nyt-annualized-revenue-100b-report"
+    "evt-20250502-amazon-10q-q1-2025-ladder",
+    "evt-20251104-information-gross-margin-path-to-77pct"
    ]
   },
   {
@@ -106,10 +121,10 @@
    "sample": [
     "evt-20230524-london-office",
     "evt-20240501-revenue-projection-850m",
+    "evt-20250101-marshals-seized-ftx-exec-shares",
     "evt-20260327-google-texas-data-center-financing-report",
-    "evt-20260821-cnbc-ai-backlash-ipo-risk-factor",
-    "evt-20260825-wsj-30t-tam-investor-pitch",
-    "evt-20260827-information-prospectus-after-labor-day-insider-sales"
+    "evt-20260406-wsj-investor-docs-secondary-summaries",
+    "evt-20260825-wsj-30t-tam-investor-pitch"
    ]
   },
   {

@@ -139,6 +139,10 @@ def normalize_event(e, agent):
     src.setdefault("tier", "T4")
     if src.get("tier") not in TIER_RANK: src["tier"] = "T4"
     src["url"] = (src.get("url") or "").strip()
+    if src["url"].startswith("file:"):
+        # a licensed PitchBook extract held locally (git-ignored): keep the provenance, drop the local path
+        m = re.search(r"deal ([0-9]+-[0-9]+T)", src.get("publisher") or "")
+        src["local_extract"] = os.path.basename(src["url"]); src["url"] = f"pitchbook://deal/{m.group(1)}" if m else "pitchbook://licensed-extract"
     ev["source"] = src
     cor = ev.get("corroboration") or []
     ev["corroboration"] = [c for c in cor if isinstance(c, dict) and c.get("url")]

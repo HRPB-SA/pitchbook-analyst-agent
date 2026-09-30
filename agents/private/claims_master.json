@@ -2115,7 +2115,7 @@
     "gw": 0.15
    },
    "draft_sources": [
-    "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm"
+    "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html"
    ],
    "draft_tier": null,
    "label": "Broadcom-related TPU equipment leases (XPV platform and successors): $161.2B",
@@ -2272,7 +2272,7 @@
    "event_id": "evt-20260826-nscale-45b-west-virginia-deal"
   },
   {
-   "claim_id": "OPS-COM-af38e9",
+   "claim_id": "OPS-COM-0a90d6",
    "group": "operating",
    "kind": "compute",
    "question": "Anthropic's compute agreement with Lambda at Hut 8 Beacon Point, Texas (Nvidia holds the shell lease): dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
@@ -2287,7 +2287,7 @@
    ],
    "expect": {
     "usd_m": 35000,
-    "gw": 0.704,
+    "gw": null,
     "chips": "NVIDIA (model not stated)"
    },
    "tol": {
@@ -2298,7 +2298,7 @@
     "https://finance.yahoo.com/technology/ai/articles/anthropic-strikes-35-billion-cloud-155100165.html"
    ],
    "draft_tier": null,
-   "label": "Lambda at Hut 8 Beacon Point, Texas (Nvidia holds the shell lease): $35.0B, 0.704 GW",
+   "label": "Lambda at Hut 8 Beacon Point, Texas (Nvidia holds the shell lease): $35.0B",
    "event_id": "evt-20260831-lambda-35b-cloud-deal-texas"
   },
   {
@@ -2385,14 +2385,14 @@
     "gw": 0.15
    },
    "draft_sources": [
-    "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_8k.htm"
+    "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_ex99-1.htm"
    ],
    "draft_tier": null,
    "label": "TeraWulf - Justified Data campus, Kentucky: $19.0B, 0.401 GW",
    "event_id": "evt-20260706-terawulf-kentucky-19b-lease"
   },
   {
-   "claim_id": "OPS-COM-e08e63",
+   "claim_id": "OPS-COM-43a89f",
    "group": "operating",
    "kind": "compute",
    "question": "Anthropic's compute agreement with RUM Group - Maysville, Georgia: dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
@@ -2407,7 +2407,7 @@
    ],
    "expect": {
     "usd_m": 13700,
-    "gw": 0.25,
+    "gw": null,
     "chips": "NVIDIA H100/H200 (~22,000 GPUs)"
    },
    "tol": {
@@ -2418,7 +2418,7 @@
     "https://www.sec.gov/Archives/edgar/data/1830081/000121390026098854/ea030515801ex99-1.htm"
    ],
    "draft_tier": null,
-   "label": "RUM Group - Maysville, Georgia: $13.7B, 0.25 GW",
+   "label": "RUM Group - Maysville, Georgia: $13.7B",
    "event_id": "evt-20260913-rum-group-13-7b-georgia-deal"
   },
   {

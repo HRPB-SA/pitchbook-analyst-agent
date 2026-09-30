@@ -10,6 +10,7 @@ python3 scripts/q.py --table compute ; --table compute_totals ; --table compute_
 python3 scripts/q.py --cat compute,debt --limit 300 ; python3 scripts/q.py --cat financials,revenue --limit 200 ; python3 scripts/q.py --q "gigawatt" ; python3 scripts/q.py --q "non-cancel"
 python3 scripts/q.py --conflicts --q compute ; python3 scripts/q.py --ids <ids>
 ```
+Start from `--table compute_totals`: the compute desk sorted $592.1B of deal-level figures into buckets ($217.9B firm T1/T2; $89.6B contracted but cancellable or conditional; $46.8B reported but unconfirmed; $237.8B second-hand from prospectus coverage) and about 15.8 GW (13.0 GW of it "up to"). Reconcile that with the top-down references (The Information: $517B maximum value, 14.8 GW; leaked prospectus: $518B over ten years, about 80% non-cancelable) and explain the gap by named items (for example Google $111.1B in the prospectus vs $200B in press, SpaceX about $45B vs $84.5B, the Broadcom lease remainder, campus-level capacity that is not Anthropic's).
 Also read `data/model.json` (if present; the Financial Modeler's three scenarios) and `data/topics.json`. Tables may be partly empty: say so; never guess.
 
 ## 2. Output: ONE valid JSON file at agents/outputs/analyst-compute.json

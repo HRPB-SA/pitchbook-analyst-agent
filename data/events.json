@@ -1067,12 +1067,13 @@
    "valuation"
   ],
   "source": {
-   "url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "url": "pitchbook://deal/193191-67T",
    "publisher": "PitchBook (deal 193191-67T, local extract pitchbook_deals.json)",
    "title": "PitchBook deal record: Series B",
    "published": "2026-05-15",
    "tier": "T2",
-   "opened": true
+   "opened": true,
+   "local_extract": "pitchbook_deals.json"
   },
   "corroboration": [
    {
@@ -8587,17 +8588,16 @@
   "headline": "PitchBook secondary: FTX/Alameda stake sold for $1.32B",
   "summary": "PitchBook records Alameda Research and FTX selling their Anthropic stake for $1.32B on 2024-05-31 (29.4M shares; buyers SquareOne, DAMAC, Jane Street, Bessemer, Golden Falcon, Australian Gulf Capital, Pachamama), advised by Sullivan & Cromwell, Perella Weinberg and Brookline.",
   "category": [
-   "funding",
-   "secondary",
-   "valuation"
+   "secondary"
   ],
   "source": {
-   "url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "url": "pitchbook://deal/252783-46T",
    "publisher": "PitchBook (deal 252783-46T, local extract)",
    "title": "PitchBook deal record: Secondary Transaction - Private",
    "published": "2026-05-01",
    "tier": "T2",
-   "opened": true
+   "opened": true,
+   "local_extract": "pitchbook_deals.json"
   },
   "corroboration": [
    {
@@ -8609,22 +8609,12 @@
     "url": "https://bitcoinist.com/ftx-offloads-anthropic-shares-in-450-million-sale/",
     "publisher": "Bitcoinist (second sale ~$452M)",
     "tier": "T3"
-   },
-   {
-    "url": "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/",
-    "publisher": "TechCrunch ($18.4B post-money)",
-    "tier": "T2"
-   },
-   {
-    "url": "https://menlovc.com/perspective/tripling-down-on-anthropic-why-were-excited-to-continue-investing-in-the-leader-in-the-future-of-ai/",
-    "publisher": "Menlo Ventures (T1): led the Series D; no size/valuation stated",
-    "tier": "T1"
    }
   ],
   "extracted": {
    "amount_usd_m": 1320.0,
-   "valuation_post_usd_m": 21000.0,
-   "valuation_pre_usd_m": 19800.0,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
    "revenue_period": null,
@@ -8704,49 +8694,12 @@
      "public": false,
      "ticker": null,
      "role_in_deal": "adviser"
-    },
-    {
-     "name": "Menlo Ventures",
-     "type": "investor",
-     "public": false,
-     "ticker": null,
-     "role_in_deal": "lead"
-    },
-    {
-     "name": "Salesforce Ventures",
-     "type": "investor",
-     "public": true,
-     "ticker": "CRM",
-     "role_in_deal": "participant"
-    },
-    {
-     "name": "Qualcomm Ventures",
-     "type": "investor",
-     "public": true,
-     "ticker": "QCOM",
-     "role_in_deal": "participant"
-    },
-    {
-     "name": "Bessemer Venture Partners",
-     "type": "investor",
-     "public": false,
-     "ticker": null,
-     "role_in_deal": "participant"
-    },
-    {
-     "name": "Goodwin Procter",
-     "type": "law_firm",
-     "public": false,
-     "ticker": null,
-     "role_in_deal": "adviser"
     }
    ],
    "headcount": null,
    "customers": null,
    "other": {
-    "lead_investors": [
-     "Menlo Ventures"
-    ],
+    "lead_investors": [],
     "participants": [
      "SquareOne Capital",
      "DAMAC Group",
@@ -8756,27 +8709,20 @@
      "Australian Gulf Capital",
      "Pachamama Capital"
     ],
-    "share_price_usd": 30.0045,
+    "share_price_usd": null,
     "announced_vs_closed": "PB date 2024-05-31; actual court-notice date of sale 1 = 2024-03-22",
     "pitchbook_deal_id": "252783-46T",
-    "shares": 29400000,
-    "pb_shares_acquired": 40438371,
-    "pb_total_investors": 43,
-    "pb_new_investors": 38,
-    "press_size_usd_m": 750,
-    "press_post_usd_m": 18400
+    "shares": 29400000
    }
   },
   "confidence": "HIGH",
-  "notes": "Amount reconciles within 1.2% to the two estate sales ($884.1M T1 + ~$452M T3 = ~$1,336M). Conflicts: (1) PB's buyer list (SquareOne, DAMAC, Bessemer, Golden Falcon, AGC, Pachamama) does not match the T1 purchaser list for sale 1 (ATIC, Jane Street, Fidelity, HOF, Ford...; only Jane Street overlaps); (2) PB 'shares acquired' 29.4M equals sale 1 only while the $1.32B spans both sales; (3) date 2024-05-31 sits between Mar-22 (notice) and ~Jun-2 (sale 2 report). Treat PB's record as a blended estimate. Secondary = no cash to Anthropic; excluded from total raised. | DISPUTED (size +60%, post-money +14% vs press). Arithmetic inside PB is consistent (40.44M sh x $30.0045 = $1.213B; 19.8+1.2=21.0; 700M FD shares). The price per share matches T1 (FTX docket), so the valuation gap is a fully-diluted share-count basis difference (PB 700M vs 613M implied by $18.4B) and the $450M size gap is later D closings (D-2/D-3) - both consistent with 'announced vs closed', but unverified by any opened Anthropic document (no Anthropic release for Series D exists). Retail vehicles (Fundrise, MicroVentures) appear among 43 investors.",
+  "notes": "Amount reconciles within 1.2% to the two estate sales ($884.1M T1 + ~$452M T3 = ~$1,336M). Conflicts: (1) PB's buyer list (SquareOne, DAMAC, Bessemer, Golden Falcon, AGC, Pachamama) does not match the T1 purchaser list for sale 1 (ATIC, Jane Street, Fidelity, HOF, Ford...; only Jane Street overlaps); (2) PB 'shares acquired' 29.4M equals sale 1 only while the $1.32B spans both sales; (3) date 2024-05-31 sits between Mar-22 (notice) and ~Jun-2 (sale 2 report). Treat PB's record as a blended estimate. Secondary = no cash to Anthropic; excluded from total raised.",
   "agent": "desk-deals",
   "agents": [
    "desk-deals"
   ],
-  "merged_ids": [
-   "evt-20240701-pb-series-d-1-2b-21b"
-  ],
-  "independent_sources": 5
+  "merged_ids": [],
+  "independent_sources": 3
  },
  {
   "id": "evt-20240602-ftx-second-sale-452m",
@@ -9142,6 +9088,141 @@
   ],
   "merged_ids": [],
   "independent_sources": 1
+ },
+ {
+  "id": "evt-20240701-pb-series-d-1-2b-21b",
+  "date": "2024-07-01",
+  "date_precision": "day",
+  "headline": "PitchBook: Series D closes at $1.2B, $21.0B post-money",
+  "summary": "PitchBook records Series D (D-1, D-2, D-3; led by Menlo Ventures, 43 investors) at $1.2B on 2024-07-01 with $19.8B pre / $21.0B post-money and $30.0045 per share, versus the $750M / $18.4B reported in press.",
+  "category": [
+   "funding",
+   "valuation"
+  ],
+  "source": {
+   "url": "pitchbook://deal/265998-97T",
+   "publisher": "PitchBook (deal 265998-97T, local extract)",
+   "title": "PitchBook deal record: Series D",
+   "published": "2026-05-01",
+   "tier": "T2",
+   "opened": true,
+   "local_extract": "pitchbook_deals.json"
+  },
+  "corroboration": [
+   {
+    "url": "https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.10241.1.pdf",
+    "publisher": "FTX estate sale at $30.0045/share (T1) - same price as PB Series D",
+    "tier": "T1"
+   },
+   {
+    "url": "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/",
+    "publisher": "TechCrunch ($18.4B post-money)",
+    "tier": "T2"
+   },
+   {
+    "url": "https://menlovc.com/perspective/tripling-down-on-anthropic-why-were-excited-to-continue-investing-in-the-leader-in-the-future-of-ai/",
+    "publisher": "Menlo Ventures (T1): led the Series D; no size/valuation stated",
+    "tier": "T1"
+   }
+  ],
+  "extracted": {
+   "amount_usd_m": 1200.0,
+   "valuation_post_usd_m": 21000.0,
+   "valuation_pre_usd_m": 19800.0,
+   "revenue_run_rate_usd_m": null,
+   "revenue_period_usd_m": null,
+   "revenue_period": null,
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": null,
+    "chips": null,
+    "gw": null,
+    "usd_m": null,
+    "term": null
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [
+    {
+     "name": "Menlo Ventures",
+     "type": "investor",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "lead"
+    },
+    {
+     "name": "Salesforce Ventures",
+     "type": "investor",
+     "public": true,
+     "ticker": "CRM",
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "Qualcomm Ventures",
+     "type": "investor",
+     "public": true,
+     "ticker": "QCOM",
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "Bessemer Venture Partners",
+     "type": "investor",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "participant"
+    },
+    {
+     "name": "Goodwin Procter",
+     "type": "law_firm",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "adviser"
+    }
+   ],
+   "headcount": null,
+   "customers": null,
+   "other": {
+    "lead_investors": [
+     "Menlo Ventures"
+    ],
+    "participants": [
+     "Salesforce Ventures",
+     "Black Violet Capital",
+     "Qualcomm Ventures",
+     "Bessemer Venture Partners",
+     "Fundrise",
+     "7GC & Co",
+     "SquareOne Capital",
+     "Type One Ventures"
+    ],
+    "share_price_usd": 30.0045,
+    "announced_vs_closed": "PB close 2024-07-01 (aggregate of D-1/D-2/D-3); press cites initial $750M",
+    "pitchbook_deal_id": "265998-97T",
+    "pb_shares_acquired": 40438371,
+    "pb_total_investors": 43,
+    "pb_new_investors": 38,
+    "press_size_usd_m": 750,
+    "press_post_usd_m": 18400
+   }
+  },
+  "confidence": "HIGH",
+  "notes": "DISPUTED (size +60%, post-money +14% vs press). Arithmetic inside PB is consistent (40.44M sh x $30.0045 = $1.213B; 19.8+1.2=21.0; 700M FD shares). The price per share matches T1 (FTX docket), so the valuation gap is a fully-diluted share-count basis difference (PB 700M vs 613M implied by $18.4B) and the $450M size gap is later D closings (D-2/D-3) - both consistent with 'announced vs closed', but unverified by any opened Anthropic document (no Anthropic release for Series D exists). Retail vehicles (Fundrise, MicroVentures) appear among 43 investors.",
+  "agent": "desk-deals",
+  "agents": [
+   "desk-deals"
+  ],
+  "merged_ids": [],
+  "independent_sources": 4
  },
  {
   "id": "evt-20240716-android-app",
@@ -11551,6 +11632,7 @@
   "category": [
    "compute",
    "debt",
+   "financials",
    "funding",
    "investment",
    "partnership"
@@ -11579,11 +11661,6 @@
     "note": "total VC raised $13.7B; Google $2B for ~10% (Oct 2023); projected >$2.7B 2024 burn"
    },
    {
-    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-    "publisher": "Amazon Q2-2026 Form 10-Q (SEC)",
-    "tier": "T1"
-   },
-   {
     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000036/amzn-20250331.htm",
     "publisher": "Amazon 10-Q Q1 2025: Q4 2024 $1.3B third note; $2.7B more by Q4 2025",
     "tier": "T1"
@@ -11592,6 +11669,11 @@
     "url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
     "publisher": "PitchBook (deal 276864-04T)",
     "tier": "T2"
+   },
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+    "publisher": "Amazon Q2-2026 Form 10-Q (SEC)",
+    "tier": "T1"
    }
   ],
   "extracted": {
@@ -11635,6 +11717,20 @@
      "ticker": "AMZN"
     },
     {
+     "name": "Amazon",
+     "type": "cloud",
+     "public": true,
+     "ticker": "AMZN",
+     "role_in_deal": "buyer"
+    },
+    {
+     "name": "Wilson Sonsini Goodrich & Rosati",
+     "type": "law_firm",
+     "public": false,
+     "ticker": null,
+     "role_in_deal": "adviser"
+    },
+    {
      "name": "Amazon Web Services",
      "type": "cloud",
      "public": true,
@@ -11651,20 +11747,6 @@
      "type": "partner",
      "public": true,
      "ticker": "AMZN"
-    },
-    {
-     "name": "Amazon",
-     "type": "cloud",
-     "public": true,
-     "ticker": "AMZN",
-     "role_in_deal": "buyer"
-    },
-    {
-     "name": "Wilson Sonsini Goodrich & Rosati",
-     "type": "law_firm",
-     "public": false,
-     "ticker": null,
-     "role_in_deal": "adviser"
     }
    ],
    "headcount": null,
@@ -11674,11 +11756,6 @@
     "total_vc_raised_techcrunch": "$13.7B",
     "projected_2024_burn": ">$2.7B (The Information via TechCrunch)",
     "dario_quote": "a year of breakout growth for Claude",
-    "status": "announced",
-    "basis": "up to",
-    "financing": "vendor-investment",
-    "start": "2024-11",
-    "cumulative_amazon_investment_usd_m": 8000,
     "lead_investors": [
      "Amazon"
     ],
@@ -11686,85 +11763,32 @@
     "announced_vs_closed": "$4B committed 2024-11-22; funded $1.3B Q4'24, $1.3B Q2'25, $1.4B Q4'25 (10-Qs)",
     "pitchbook_deal_id": "276864-04T",
     "pb_size_usd_m": 8000,
-    "pb_shares_acquired": 298699382
-   }
-  },
-  "confidence": "HIGH",
-  "notes": "Amount announced as commitment; funding schedule/tranches not disclosed. Valuation not disclosed. | The Amazon page itself carries no date or $8B total (date and total from TechCrunch Nov 22 2024); Amazon's Q2-2026 10-Q independently confirms $8.0B of convertible notes invested Q3 2023-Q4 2025. Investment, not compute spend. | Commitment $4B / total $8B: HIGH (T1 + TechCrunch). PitchBook's 6th round consolidates Amazon's ENTIRE $8B (Sep-2023 to Q4-2025 notes) at one date and price; funded by Nov 2024 was $5.3B (Amazon 10-Q). PB also calls $8B 'equity' (only $1.3B described as converted debt) whereas Amazon's 10-Q says all $8.0B were convertible notes, partly converted to preferred in Q1'25/Q3'25. PB's 298.7M 'shares acquired' x $53.2822 = $15.9B (1.99x the $8B) and 29.48% 'percent acquired' vs 14.8% size/post - PB share/ownership fields for this row do not reconcile to deal size. Valuation $46B pre/$54B post is PB-only (Amazon and Anthropic disclose none); TechCrunch mentions a $40B valuation discussed for months. The Amazon post is undated in the fetched text; Nov 22 2024 is TechCrunch's date.",
-  "agent": "scout-2024",
-  "agents": [
-   "desk-compute",
-   "desk-deals",
-   "scout-2024"
-  ],
-  "merged_ids": [
-   "evt-20241122-amazon-additional-4b",
-   "evt-20241122-amazon-additional-4b-total-8b"
-  ],
-  "independent_sources": 4
- },
- {
-  "id": "evt-20241122-burn-2024-gt-2-7b",
-  "date": "2024-11-22",
-  "date_precision": "day",
-  "headline": "Anthropic projected to burn more than $2.7B cash in 2024",
-  "summary": "TechCrunch, citing The Information, stated Anthropic was projected to burn more than $2.7B in cash in 2024 alongside a further $4B from Amazon.",
-  "category": [
-   "financials"
-  ],
-  "source": {
-   "url": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/",
-   "publisher": "TechCrunch",
-   "title": "Anthropic raises an additional $4B from Amazon, makes AWS its primary cloud partner",
-   "published": "2024-11-22",
-   "tier": "T2",
-   "opened": true
-  },
-  "corroboration": [],
-  "extracted": {
-   "amount_usd_m": null,
-   "valuation_post_usd_m": null,
-   "valuation_pre_usd_m": null,
-   "revenue_run_rate_usd_m": null,
-   "revenue_period_usd_m": null,
-   "revenue_period": null,
-   "margin_pct": null,
-   "margin_type": null,
-   "compute": {
-    "partner": null,
-    "chips": null,
-    "gw": null,
-    "usd_m": null,
-    "term": null
-   },
-   "product": {
-    "name": null,
-    "type": null,
-    "price_in_per_mtok": null,
-    "price_out_per_mtok": null,
-    "context_window": null
-   },
-   "governance": null,
-   "moat": null,
-   "strategy": null,
-   "people": [],
-   "entities": [],
-   "headcount": null,
-   "customers": null,
-   "other": {
+    "pb_shares_acquired": 298699382,
+    "status": "announced",
+    "basis": "up to",
+    "financing": "vendor-investment",
+    "start": "2024-11",
+    "cumulative_amazon_investment_usd_m": 8000,
     "cash_burn_2024_projected_gt_usd_m": 2700,
     "amazon_additional_investment_usd_m": 4000,
     "total_raised_usd_m": 13700
    }
   },
-  "confidence": "MEDIUM",
-  "notes": "Projection (cash burn, not net loss). The Information original headline dated 2024-07-24 seen only in Google News RSS (paywalled, not opened). Later WSJ-derived T4 summaries put actual 2024 burn at $5.6B - a large gap vs this mid-year projection and vs the prospectus FY2024 operating loss of $2.98B (different metrics).",
-  "agent": "desk-revenue",
+  "confidence": "HIGH",
+  "notes": "Amount announced as commitment; funding schedule/tranches not disclosed. Valuation not disclosed. | Commitment $4B / total $8B: HIGH (T1 + TechCrunch). PitchBook's 6th round consolidates Amazon's ENTIRE $8B (Sep-2023 to Q4-2025 notes) at one date and price; funded by Nov 2024 was $5.3B (Amazon 10-Q). PB also calls $8B 'equity' (only $1.3B described as converted debt) whereas Amazon's 10-Q says all $8.0B were convertible notes, partly converted to preferred in Q1'25/Q3'25. PB's 298.7M 'shares acquired' x $53.2822 = $15.9B (1.99x the $8B) and 29.48% 'percent acquired' vs 14.8% size/post - PB share/ownership fields for this row do not reconcile to deal size. Valuation $46B pre/$54B post is PB-only (Amazon and Anthropic disclose none); TechCrunch mentions a $40B valuation discussed for months. The Amazon post is undated in the fetched text; Nov 22 2024 is TechCrunch's date. | Amazon's own page carries no date, $8B total or Annapurna reference (those come from TechCrunch Nov 22 2024, the cited source); Amazon's Q2-2026 10-Q independently confirms $8.0B of convertible notes invested Q3 2023-Q4 2025. Investment, not compute spend. | Projection (cash burn, not net loss). The Information original headline dated 2024-07-24 seen only in Google News RSS (paywalled, not opened). Later WSJ-derived T4 summaries put actual 2024 burn at $5.6B - a large gap vs this mid-year projection and vs the prospectus FY2024 operating loss of $2.98B (different metrics).",
+  "agent": "scout-2024",
   "agents": [
-   "desk-revenue"
+   "desk-compute",
+   "desk-deals",
+   "desk-revenue",
+   "scout-2024"
   ],
-  "merged_ids": [],
-  "independent_sources": 1
+  "merged_ids": [
+   "evt-20241122-amazon-additional-4b-total-8b",
+   "evt-20241122-amazon-additional-4b",
+   "evt-20241122-burn-2024-gt-2-7b"
+  ],
+  "independent_sources": 4
  },
  {
   "id": "evt-20241125-model-context-protocol",
@@ -12968,12 +12992,13 @@
    "secondary"
   ],
   "source": {
-   "url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "url": "pitchbook://deal/313088-77T",
    "publisher": "PitchBook (deal 313088-77T, local extract)",
    "title": "PitchBook deal record: Secondary Transaction - Private",
    "published": "2026-09-29",
    "tier": "T2",
-   "opened": true
+   "opened": true,
+   "local_extract": "pitchbook_deals.json"
   },
   "corroboration": [
    {
@@ -13038,7 +13063,7 @@
     "pitchbook_deal_id": "313088-77T"
    }
   },
-  "confidence": "VERIFY",
+  "confidence": "HIGH",
   "notes": "PitchBook-only record: no amount, price or seller, and no public corroboration found in opened sources (Lakeside Capital is also a Series F investor per PB). Not additive to total raised. Do not conflate with the US Marshals sale of forfeited Ellison/Singh shares (BI via crypto.news: sold 'sometime during 2025', unconfirmed) because court forfeiture orders came Feb and Apr 2025.",
   "agent": "desk-deals",
   "agents": [
@@ -26011,7 +26036,7 @@
    }
   },
   "confidence": "HIGH",
-  "notes": "The AWS page carries no visible date; Oct 29 comes from SiliconANGLE and Reuters/Yahoo headlines dated Oct 29 in RSS. '$11B' and '2.2GW' figures come from SiliconANGLE's account. | The AWS page is undated in fetch; Oct 29 date from SiliconANGLE/CNBC headlines. '$11B' and '2.2 GW' are AWS site capex and planned capacity reported by SiliconANGLE (T3) - they are not Anthropic contract values and must not be added to Anthropic's commitments. Amazon's Indiana plan was later expanded to $15B (aboutamazon headline Nov 24 2025, seen in RSS only).",
+  "notes": "The AWS page carries no visible date; Oct 29 comes from SiliconANGLE and Reuters/Yahoo headlines dated Oct 29 in RSS. '$11B' and '2.2GW' figures come from SiliconANGLE's account. | The AWS page is undated in fetch (Oct 29 date from SiliconANGLE, the cited source). '$11B' and '2.2 GW' are AWS site capex and planned capacity reported by SiliconANGLE (T3); AWS's own page confirms only chips, >1M by year-end and location - they are not Anthropic contract values and must not be added to Anthropic's commitments. Amazon's Indiana plan was later expanded to $15B (aboutamazon headline Nov 24 2025, seen in RSS only).",
   "agent": "scout-2025h2",
   "agents": [
    "desk-compute",
@@ -28516,7 +28541,7 @@
    },
    {
     "url": "https://the-decoder.com/google-moves-billions-in-anthropic-chip-risk-off-its-balance-sheet/",
-    "publisher": "The Decoder (FT investigation: Hut 8 among Google-backed Anthropic sites)",
+    "publisher": "The Decoder (FT investigation: Hut 8 among Google-backed Anthropic...",
     "tier": "T3"
    }
   ],
@@ -36844,7 +36869,7 @@
   "corroboration": [
    {
     "url": "https://aiweekly.co/alerts/google-wires-200b-wall-street-machine-to-fund-anthropic-chips",
-    "publisher": "aiweekly.co (FT Aug 4: Morgan Stanley $15B Texas campus financing under discussion)",
+    "publisher": "aiweekly.co (FT Aug 4: Morgan Stanley $15B Texas campus financing...",
     "tier": "T4"
    }
   ],
@@ -37585,11 +37610,11 @@
   "independent_sources": 1
  },
  {
-  "id": "evt-20260406-google-broadcom-tpu-30b-runrate",
+  "id": "evt-20260406-google-broadcom-tpu-30b-runrate-2",
   "date": "2026-04-06",
   "date_precision": "day",
-  "headline": "Anthropic, Google, Broadcom expand TPU deal; ~3.5GW from 2027",
-  "summary": "Anthropic signed an agreement with Google and Broadcom for multiple gigawatts of next-generation TPU capacity from 2027, with Broadcom's 8-K stating Anthropic will access about 3.5 GW through Broadcom, consumption dependent on Anthropic's continued commercial success.",
+  "headline": "Anthropic expands Google-Broadcom TPU deal; run-rate tops $30B",
+  "summary": "Anthropic announced an expanded Google and Broadcom partnership for multiple gigawatts of next-generation TPU capacity coming online from 2027, disclosing run-rate revenue above $30B (about $9B at end-2025) and 1,000+ customers spending over $1M annualized.",
   "category": [
    "compute",
    "customer",
@@ -37600,7 +37625,7 @@
   "source": {
    "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
    "publisher": "Anthropic",
-   "title": "Anthropic expands Google and Broadcom compute deal",
+   "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute",
    "published": "2026-04-06",
    "tier": "T1",
    "opened": true
@@ -37608,7 +37633,7 @@
   "corroboration": [
    {
     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
-    "publisher": "Broadcom Form 8-K (SEC)",
+    "publisher": "SEC EDGAR (Broadcom 8-K, Item 8.01, 2026-04-06)",
     "tier": "T1"
    },
    {
@@ -37628,10 +37653,10 @@
    "margin_type": null,
    "compute": {
     "partner": "Google / Broadcom",
-    "chips": "next-generation TPU (Google-designed, Broadcom-supplied)",
+    "chips": "TPU (next-generation)",
     "gw": 3.5,
     "usd_m": null,
-    "term": "from 2027; Broadcom-Google Long Term Agreement runs through up to 2031 (separate agreement); no dollar figure in either T1 source"
+    "term": "~3.5 GW accessed through Broadcom beginning 2027, part of 'multiple gigawatts' committed; Google-Broadcom LTA through up to 2031"
    },
    "product": {
     "name": null,
@@ -37660,12 +37685,6 @@
      "ticker": "AVGO"
     },
     {
-     "name": "Google TPU",
-     "type": "chip",
-     "public": true,
-     "ticker": "GOOGL"
-    },
-    {
      "name": "Amazon Web Services",
      "type": "cloud",
      "public": true,
@@ -37687,6 +37706,102 @@
    "headcount": null,
    "customers": ">1,000 business customers each spending >$1M annualized (>500 in Feb 2026)",
    "other": {
+    "run_rate_prior": "~$9B at end-2025",
+    "basis": "run-rate, company-announced",
+    "prior_usd_m": 9000
+   }
+  },
+  "confidence": "HIGH",
+  "notes": "Broadcom 8-K (T1) says Anthropic, beginning 2027, will access ~3.5 GW through Broadcom as part of the multiple GW of TPU capacity it committed, and that consumption 'is dependent on Anthropic's continued commercial success' (no dollar figures). Run-rate >$30B is company-stated (gross basis). The Series H page later cites 5 GW Google/Broadcom TPU capacity. | Company run-rate (annualized; gross of cloud-partner resale per company convention). Bloomberg Apr 6 headline \"Tops $30 Billion Run Rate, Seals Deal With Broadcom\" and PitchBook/Bloomberg \"more than $30B by late March\" corroborate (PitchBook news read via MCP). As-of is late March/early April. | Broadcom 8-K (T1) sets the expanded collaboration at ~3.5GW of TPU capacity 2027-2031 and says Anthropic's consumption depends on its continued commercial success. Run-rate ($30B vs ~$9B at end-2025) for desk-revenue; compute terms with desk-compute. | Single T1 statement; RSS shows Bloomberg 'Anthropic Tops $30 Billion Run Rate, Seals Deal With Broadcom' (Apr 6) and VentureBeat (May 8) - headlines only, not opened. Gross-vs-net basis per METHODOLOGY (Anthropic reports gross of cloud resale).",
+  "agent": "scout-2026q2",
+  "agents": [
+   "desk-ecosystem",
+   "desk-product",
+   "desk-revenue",
+   "scout-2026q2"
+  ],
+  "merged_ids": [
+   "evt-20260406-rr-30b-1000-customers-1m",
+   "evt-20260406-google-broadcom-tpus",
+   "evt-20260406-run-rate-30b-1000-customers-1m"
+  ],
+  "independent_sources": 3
+ },
+ {
+  "id": "evt-20260406-google-broadcom-tpu-30b-runrate",
+  "date": "2026-04-06",
+  "date_precision": "day",
+  "headline": "Anthropic, Google, Broadcom expand TPU deal; ~3.5GW from 2027",
+  "summary": "Anthropic signed an agreement with Google and Broadcom for multiple gigawatts of next-generation TPU capacity from 2027, with Broadcom's 8-K stating Anthropic will access about 3.5 GW through Broadcom, consumption dependent on Anthropic's continued commercial success.",
+  "category": [
+   "compute",
+   "partnership"
+  ],
+  "source": {
+   "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+   "publisher": "SEC EDGAR - Broadcom Inc. Form 8-K",
+   "title": "Broadcom Form 8-K (Apr 6 2026): Anthropic, Google and Broadcom expanded collaboration",
+   "published": "2026-04-06",
+   "tier": "T1",
+   "opened": true
+  },
+  "corroboration": [
+   {
+    "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+    "publisher": "Anthropic: 'multiple gigawatts' from 2027; run-rate >$30B...",
+    "tier": "T1"
+   }
+  ],
+  "extracted": {
+   "amount_usd_m": null,
+   "valuation_post_usd_m": null,
+   "valuation_pre_usd_m": null,
+   "revenue_run_rate_usd_m": null,
+   "revenue_period_usd_m": null,
+   "revenue_period": null,
+   "margin_pct": null,
+   "margin_type": null,
+   "compute": {
+    "partner": "Google / Broadcom",
+    "chips": "next-generation TPU (Google-designed, Broadcom-supplied)",
+    "gw": 3.5,
+    "usd_m": null,
+    "term": "from 2027; Broadcom-Google Long Term Agreement runs through up to 2031 (separate agreement); no dollar figure in either T1 source"
+   },
+   "product": {
+    "name": null,
+    "type": null,
+    "price_in_per_mtok": null,
+    "price_out_per_mtok": null,
+    "context_window": null
+   },
+   "governance": null,
+   "moat": null,
+   "strategy": null,
+   "people": [],
+   "entities": [
+    {
+     "name": "Google",
+     "type": "cloud",
+     "public": true,
+     "ticker": "GOOGL"
+    },
+    {
+     "name": "Broadcom",
+     "type": "chip",
+     "public": true,
+     "ticker": "AVGO"
+    },
+    {
+     "name": "Google TPU",
+     "type": "chip",
+     "public": true,
+     "ticker": "GOOGL"
+    }
+   ],
+   "headcount": null,
+   "customers": null,
+   "other": {
     "status": "contracted",
     "basis": "contracted",
     "financing": "bonds",
@@ -37695,28 +37810,17 @@
      "most of the new compute to be sited in the US"
     ],
     "gw_basis": "approximately 3.5 GW through Broadcom, part of 'multiple gigawatts' (Series H T1 says 5 GW Google+Broadcom)",
-    "consumption_conditional": true,
-    "run_rate_prior": "~$9B at end-2025",
-    "prior_usd_m": 9000
+    "consumption_conditional": true
    }
   },
   "confidence": "HIGH",
-  "notes": "Two independent T1 sources (Anthropic, Broadcom 8-K) agree on multi-GW and 2027 start; 3.5 GW is Broadcom's figure. Broadcom says consumption 'is dependent on Anthropic's continued commercial success' (conditional demand). GW overlap: Anthropic's Series H page calls the Google/Broadcom program 'five gigawatts', and TechCrunch's Apr 24 article does not say whether Google's 5 GW is additional to 3.5 GW - we treat 3.5 GW as part of 5 GW (not additive). | Broadcom 8-K (T1) says Anthropic, beginning 2027, will access ~3.5 GW through Broadcom as part of the multiple GW of TPU capacity it committed, and that consumption 'is dependent on Anthropic's continued commercial success' (no dollar figures). Run-rate >$30B is company-stated (gross basis). The Series H page later cites 5 GW Google/Broadcom TPU capacity. | Company run-rate (annualized; gross of cloud-partner resale per company convention). Bloomberg Apr 6 headline \"Tops $30 Billion Run Rate, Seals Deal With Broadcom\" and PitchBook/Bloomberg \"more than $30B by late March\" corroborate (PitchBook news read via MCP). As-of is late March/early April. | Broadcom 8-K (T1) sets the expanded collaboration at ~3.5GW of TPU capacity 2027-2031 and says Anthropic's consumption depends on its continued commercial success. Run-rate ($30B vs ~$9B at end-2025) for desk-revenue; compute terms with desk-compute. | Single T1 statement; RSS shows Bloomberg 'Anthropic Tops $30 Billion Run Rate, Seals Deal With Broadcom' (Apr 6) and VentureBeat (May 8) - headlines only, not opened. Gross-vs-net basis per METHODOLOGY (Anthropic reports gross of cloud resale).",
+  "notes": "Two independent T1 sources (Anthropic, Broadcom 8-K) agree on multi-GW and 2027 start; 3.5 GW is Broadcom's figure. Broadcom says consumption 'is dependent on Anthropic's continued commercial success' (conditional demand). GW overlap: Anthropic's Series H page calls the Google/Broadcom program 'five gigawatts', and TechCrunch's Apr 24 article does not say whether Google's 5 GW is additional to 3.5 GW - we treat 3.5 GW as part of 5 GW (not additive).",
   "agent": "desk-compute",
   "agents": [
-   "desk-compute",
-   "desk-ecosystem",
-   "desk-product",
-   "desk-revenue",
-   "scout-2026q2"
+   "desk-compute"
   ],
-  "merged_ids": [
-   "evt-20260406-google-broadcom-tpu-30b-runrate",
-   "evt-20260406-rr-30b-1000-customers-1m",
-   "evt-20260406-google-broadcom-tpus",
-   "evt-20260406-run-rate-30b-1000-customers-1m"
-  ],
-  "independent_sources": 3
+  "merged_ids": [],
+  "independent_sources": 2
  },
  {
   "id": "evt-20260406-wsj-investor-docs-secondary-summaries",
@@ -39902,12 +40006,12 @@
   "corroboration": [
    {
     "url": "https://www.anthropic.com/news/higher-limits-spacex",
-    "publisher": "Anthropic (May 6: 'Google: 5 GW agreement ... begin coming online in 2027')",
+    "publisher": "Anthropic (May 6: 'Google: 5 GW agreement ... begin coming online in...",
     "tier": "T1"
    },
    {
     "url": "https://www.anthropic.com/news/series-h",
-    "publisher": "Anthropic Series H page ('Google and Broadcom for five gigawatts of next-generation TPU...",
+    "publisher": "Anthropic Series H page ('Google and Broadcom for five gigawatts of...",
     "tier": "T1"
    },
    {
@@ -41197,7 +41301,7 @@
   "date": "2026-05-07",
   "date_precision": "day",
   "headline": "Akamai books $1.8B seven-year commitment from a frontier lab",
-  "summary": "Akamai's Q1 results disclosed that a leading U.S.-based frontier model provider committed $1.8B over seven years for Cloud Infrastructure Services, which Bloomberg and Reuters identified the next day as Anthropic and which appears to be Project Plan 1 under the May 5 2026 master services agreement later expanded by $11.6B.",
+  "summary": "Akamai's Q1 results disclosed that a leading U.S.-based frontier model provider committed $1.8B over seven years for Cloud Infrastructure Services, which Bloomberg and Reuters headlines tie to Anthropic and which appears to be Project Plan 1 under the May 5 2026 master services agreement later expanded by $11.6B.",
   "category": [
    "compute",
    "partnership"
@@ -41218,7 +41322,7 @@
    },
    {
     "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm",
-    "publisher": "SEC EDGAR - Akamai Form 8-K Sep 24 2026 (MSA dated May 5 2026; Project Plans 2 and 3)",
+    "publisher": "SEC EDGAR - Akamai Form 8-K Sep 24 2026 (MSA dated May 5 2026...",
     "tier": "T1"
    }
   ],
@@ -42266,109 +42370,6 @@
   "independent_sources": 2
  },
  {
-  "id": "evt-20260520-spacex-s1-anthropic-1p25b-monthly",
-  "date": "2026-05-20",
-  "date_precision": "day",
-  "headline": "SpaceX S-1 discloses Anthropic pays $1.25B monthly for Colossus compute",
-  "summary": "SEC staff comment letters and SpaceX's reply quote the S-1 statement that Anthropic will pay $1.25 billion per month for compute across Colossus and Colossus II, and SpaceX told the SEC either party can terminate on 90 days' notice.",
-  "category": [
-   "compute",
-   "ipo"
-  ],
-  "source": {
-   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
-   "publisher": "SEC EDGAR (SpaceX CORRESP, File No. 333-296070)",
-   "title": "CORRESP letter responding to SEC staff comment 1 (Prospectus Summary p.13)",
-   "published": "2026-06-01",
-   "tier": "T1",
-   "opened": true
-  },
-  "corroboration": [
-   {
-    "url": "https://www.sec.gov/Archives/edgar/data/1181412/000000000026005505/filename2.txt",
-    "publisher": "SEC EDGAR (staff comment letter 2026-05-29)",
-    "tier": "T1"
-   },
-   {
-    "url": "https://www.sec.gov/Archives/edgar/data/1181412/000000000026005119/filename2.txt",
-    "publisher": "SEC EDGAR (staff comment letter 2026-05-19)",
-    "tier": "T1"
-   },
-   {
-    "url": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
-    "publisher": "TechCrunch",
-    "tier": "T2"
-   },
-   {
-    "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-pick-morgan-stanley-175802678.html",
-    "publisher": "Bloomberg via Yahoo Finance (325,000 Nvidia chips at $1.25B/month)",
-    "tier": "T2"
-   }
-  ],
-  "extracted": {
-   "amount_usd_m": null,
-   "valuation_post_usd_m": null,
-   "valuation_pre_usd_m": null,
-   "revenue_run_rate_usd_m": null,
-   "revenue_period_usd_m": null,
-   "revenue_period": null,
-   "margin_pct": null,
-   "margin_type": null,
-   "compute": {
-    "partner": "SpaceX / xAI (Colossus, Colossus II)",
-    "chips": "Nvidia GPUs (Bloomberg: 325,000 chips)",
-    "gw": 0.3,
-    "usd_m": null,
-    "term": "$1.25B per month through May 2029 (TechCrunch); either party may terminate on 90 days' notice (SpaceX to SEC)"
-   },
-   "product": {
-    "name": null,
-    "type": null,
-    "price_in_per_mtok": null,
-    "price_out_per_mtok": null,
-    "context_window": null
-   },
-   "governance": null,
-   "moat": null,
-   "strategy": null,
-   "people": [],
-   "entities": [
-    {
-     "name": "SpaceX (Space Exploration Technologies Corp)",
-     "type": "partner",
-     "public": true,
-     "ticker": "SPCX"
-    },
-    {
-     "name": "U.S. SEC",
-     "type": "regulator",
-     "public": false,
-     "ticker": null
-    }
-   ],
-   "headcount": null,
-   "customers": null,
-   "other": {
-    "monthly_fee_usd_m": 1250,
-    "termination_notice_days": 90,
-    "spacex_s1_accession": "0001628280-26-036936",
-    "spacex_s1_filed": "2026-05-20",
-    "spacex_424b4": "0001628280-26-042639 (2026-06-12)",
-    "spacex_said_not_required_as_exhibit": true,
-    "sec_staff_comment4_asked_for_impact_on_SpaceX_own_AI_models": true,
-    "sec_staff_comment25_asked_for_contract_duration_value_payment_terms": true
-   }
-  },
-  "confidence": "HIGH",
-  "notes": "T1 cross-reference: the $1.25B/month figure is quoted by SEC staff from the S-1 (Prospectus Summary p.13) and SpaceX did not contest it; 'through May 2029', the two-month ramp discount, 300 MW and '>$40B' come only from TechCrunch (Tim De Chant, May 20 2:29 PM PDT). The S-1 main document itself was not opened. SEC letter of 05-19 (on the confidential draft) shows the agreement was 'May 2026' and covered 'all of COLOSSUS compute capacity'; the 06-01 CORRESP says 'COLOSSUS AND COLOSSUS II'. Prospectus coverage (Sep 29) later puts SpaceX spend at up to $84.5B through 2029 (see conflicts).",
-  "agent": "desk-s1",
-  "agents": [
-   "desk-s1"
-  ],
-  "merged_ids": [],
-  "independent_sources": 3
- },
- {
   "id": "evt-20260520-spacex-s1-anthropic-colossus-contract",
   "date": "2026-05-20",
   "date_precision": "day",
@@ -42380,27 +42381,42 @@
    "ipo"
   ],
   "source": {
-   "url": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
-   "publisher": "TechCrunch",
-   "title": "Anthropic will pay xAI $1.25B per month for compute",
-   "published": "2026-05-20",
-   "tier": "T2",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
+   "publisher": "SEC EDGAR - SpaceX CORRESP letter (Jun 1 2026)",
+   "title": "SpaceX response to SEC staff comments (Jun 1 2026)",
+   "published": "2026-06-01",
+   "tier": "T1",
    "opened": true
   },
   "corroboration": [
    {
-    "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
-    "publisher": "SEC CORRESP 2026-06-01 (SpaceX): '$1.25 billion per month ... COLOSSUS AND COLOSSUS II'...",
+    "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026040610/spacexfwp.htm",
+    "publisher": "SEC FWP 2026-06-04 (SpaceX roadshow): '$1.25 B monthly fee ......",
     "tier": "T1"
    },
    {
-    "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026040610/spacexfwp.htm",
-    "publisher": "SEC FWP 2026-06-04 (SpaceX roadshow): '$1.25 B monthly fee ... through May 2029...",
-    "tier": "T1"
+    "url": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+    "publisher": "TechCrunch May 20 (first report: $1.25B/month through May 2029...",
+    "tier": "T2"
    },
    {
     "url": "https://techcrunch.com/2026/05/28/how-long-is-anthropics-lease-with-spacex-opinions-vary/",
     "publisher": "TechCrunch (S-1 language repeated on pages F-62, F-96, 13, 146)",
+    "tier": "T2"
+   },
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/1181412/000000000026005505/filename2.txt",
+    "publisher": "SEC EDGAR (staff comment letter 2026-05-29)",
+    "tier": "T1"
+   },
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/1181412/000000000026005119/filename2.txt",
+    "publisher": "SEC EDGAR (staff comment letter 2026-05-19)",
+    "tier": "T1"
+   },
+   {
+    "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-pick-morgan-stanley-175802678.html",
+    "publisher": "Bloomberg via Yahoo Finance (325,000 Nvidia chips at $1.25B/month)",
     "tier": "T2"
    },
    {
@@ -42450,6 +42466,18 @@
      "ticker": null
     },
     {
+     "name": "SpaceX (Space Exploration Technologies Corp)",
+     "type": "partner",
+     "public": true,
+     "ticker": "SPCX"
+    },
+    {
+     "name": "U.S. SEC",
+     "type": "regulator",
+     "public": false,
+     "ticker": null
+    },
+    {
      "name": "SpaceX",
      "type": "cloud",
      "public": false
@@ -42481,6 +42509,14 @@
      "180_days": 7500
     },
     "derived_unit_price": "$15B per year for ~300 MW = $50B per GW-year if Colossus 1 only; ~$7.8 per GPU-hour on 220K GPUs; ~$3.9 per GPU-hour if Colossus II's additional 220K GB300s are included (derived, capacity split not disclosed)",
+    "monthly_fee_usd_m": 1250,
+    "termination_notice_days": 90,
+    "spacex_s1_accession": "0001628280-26-036936",
+    "spacex_s1_filed": "2026-05-20",
+    "spacex_424b4": "0001628280-26-042639 (2026-06-12)",
+    "spacex_said_not_required_as_exhibit": true,
+    "sec_staff_comment4_asked_for_impact_on_SpaceX_own_AI_models": true,
+    "sec_staff_comment25_asked_for_contract_duration_value_payment_terms": true,
     "discount": "reduced rate first two months during ramp-up (TechCrunch)",
     "sec_s1_accession": "0001628280-26-036936",
     "sec_corresp_accession": "0001628280-26-039278",
@@ -42490,16 +42526,18 @@
    }
   },
   "confidence": "HIGH",
-  "notes": "$1.25B/month is T1 (SEC CORRESP quoting the S-1; SpaceX roadshow FWP). $45B = 36 x $1.25B is the nominal gross, not a firm commitment: the 90-day mutual termination right makes the firm obligation far smaller (Musk: '180 day lease with 90 day notice mutual cancellation thereafter'). gw=0.3 is Colossus 1's capacity per TechCrunch/Anthropic; the contract language covers Colossus and Colossus II, so the $/GPU-hour is ambiguous; TechCrunch (Jun 5) sizes Google's 110K-GPU deal at about half of Anthropic's compute, i.e. ~220K GPUs (~$68K per GPU-year), consistent with Colossus 1 alone. Anthropic's own prospectus (per Reuters/Stocktwits, Sep 29) shows up to $84.5B with SpaceX through 2029, ~88% above the S-1's $45B - see the Sep 29 event. | SEC CORRESP letter (acc 0001628280-26-039278) quotes the staff comment 'Anthropic will pay you $1.25 billion per month for access to compute capacity across COLOSSUS AND COLOSSUS II' and SpaceX's reply that either party may terminate on 90 days' notice and capacity could be redeployed. The S-1 itself (acc 0001628280-26-036936, 11.8MB) exceeds the 10MB fetch limit and was NOT opened, so 'through May 2029', the two-month discount and '$40B+' come only from TechCrunch. TechCrunch describes Colossus 1 (300 MW); SEC letter says Colossus and Colossus II - see conflicts (Musk six-month lease claim per Reuters headline May 28, not opened).",
+  "notes": "$1.25B/month is T1 (SEC CORRESP quoting the S-1; SpaceX roadshow FWP). $45B = 36 x $1.25B is the nominal gross, not a firm commitment: the 90-day mutual termination right makes the firm obligation far smaller (Musk: '180 day lease with 90 day notice mutual cancellation thereafter'). gw=0.3 is Colossus 1's capacity per TechCrunch/Anthropic; the contract language covers Colossus and Colossus II, so the $/GPU-hour is ambiguous; TechCrunch (Jun 5) sizes Google's 110K-GPU deal at about half of Anthropic's compute, i.e. ~220K GPUs (~$68K per GPU-year), consistent with Colossus 1 alone. Anthropic's own prospectus (per Reuters/Stocktwits, Sep 29) shows up to $84.5B with SpaceX through 2029, ~88% above the S-1's $45B - see the Sep 29 event. | T1 cross-reference: the $1.25B/month figure is quoted by SEC staff from the S-1 (Prospectus Summary p.13) and SpaceX did not contest it; 'through May 2029', the two-month ramp discount, 300 MW and '>$40B' come only from TechCrunch (Tim De Chant, May 20 2:29 PM PDT). The S-1 main document itself was not opened. SEC letter of 05-19 (on the confidential draft) shows the agreement was 'May 2026' and covered 'all of COLOSSUS compute capacity'; the 06-01 CORRESP says 'COLOSSUS AND COLOSSUS II'. Prospectus coverage (Sep 29) later puts SpaceX spend at up to $84.5B through 2029 (see conflicts). | SEC CORRESP letter (acc 0001628280-26-039278) quotes the staff comment 'Anthropic will pay you $1.25 billion per month for access to compute capacity across COLOSSUS AND COLOSSUS II' and SpaceX's reply that either party may terminate on 90 days' notice and capacity could be redeployed. The S-1 itself (acc 0001628280-26-036936, 11.8MB) exceeds the 10MB fetch limit and was NOT opened, so 'through May 2029', the two-month discount and '$40B+' come only from TechCrunch. TechCrunch describes Colossus 1 (300 MW); SEC letter says Colossus and Colossus II - see conflicts (Musk six-month lease claim per Reuters headline May 28, not opened).",
   "agent": "desk-compute",
   "agents": [
    "desk-compute",
+   "desk-s1",
    "scout-2026q2"
   ],
   "merged_ids": [
+   "evt-20260520-spacex-s1-anthropic-1p25b-monthly",
    "evt-20260520-spacex-s1-anthropic-colossus-contract"
   ],
-  "independent_sources": 2
+  "independent_sources": 3
  },
  {
   "id": "evt-20260520-q2-projection-10-9b-559m-op-profit",
@@ -48218,22 +48256,22 @@
    "partnership"
   ],
   "source": {
-   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_8k.htm",
-   "publisher": "SEC EDGAR - TeraWulf Inc. Form 8-K",
-   "title": "TeraWulf Form 8-K (Jul 6 2026): Justified Data Campus lease",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_ex99-1.htm",
+   "publisher": "SEC EDGAR - TeraWulf Inc. Form 8-K Ex.99.1 (press release)",
+   "title": "TeraWulf Ex.99.1 (Jul 6 2026): 20-year lease with Anthropic, Justified Data campus",
    "published": "2026-07-06",
    "tier": "T1",
    "opened": true
   },
   "corroboration": [
    {
-    "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_ex99-1.htm",
-    "publisher": "SEC EDGAR - TeraWulf Ex.99.1 press release",
+    "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_8k.htm",
+    "publisher": "SEC EDGAR - TeraWulf Form 8-K (tenant 'Anthropic PBC'...",
     "tier": "T1"
    },
    {
     "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000162/a_wulfearningsreleaseq22026.htm",
-    "publisher": "SEC EDGAR - TeraWulf Q2-2026 results Ex.99.1 (up to ~$33B with both extensions; ~480 MW gross)",
+    "publisher": "SEC EDGAR - TeraWulf Q2-2026 results Ex.99.1 (up to ~$33B with both...",
     "tier": "T1"
    },
    {
@@ -50452,10 +50490,10 @@
    "margin_type": null,
    "compute": {
     "partner": "AWS",
-    "chips": "AWS Trainium (contractual obligations related to AWS chip performance)",
-    "gw": 5.0,
-    "usd_m": 100000,
-    "term": "amended commercial arrangement; facility expires 30 months after an Anthropic liquidity event"
+    "chips": "AWS chips (amended commercial arrangement includes contractual obligations related to AWS chip performance)",
+    "gw": null,
+    "usd_m": null,
+    "term": "amended commercial arrangement; facility expires 30 months after an Anthropic liquidity event; GW and $ commitments are in evt-20260420 (Anthropic post), not in the 10-Q"
    },
    "product": {
     "name": null,
@@ -50886,7 +50924,7 @@
   "date": "2026-08-04",
   "date_precision": "day",
   "headline": "FT: Google built ~$200B financing web backing Anthropic's chips",
-  "summary": "The FT reported Google, Broadcom, Apollo, Blackstone and Morgan Stanley stitched together about $200B of interlinked contracts, roughly $150B tied to AI chips for Anthropic, with Google exposed to up to about $44B and backstopping about 2.4 GW of crypto-miner data-center projects.",
+  "summary": "The FT reported Google, Broadcom, Apollo, Blackstone and Morgan Stanley built about $200B of interlinked contracts around Anthropic's chips, including a ~$35B TPU SPV of about 1 GW, with Google exposed to up to about $44B and backstopping about 2.4 GW of crypto-miner data-center projects.",
   "category": [
    "compute",
    "debt"
@@ -50907,7 +50945,7 @@
    }
   ],
   "extracted": {
-   "amount_usd_m": 200000.0,
+   "amount_usd_m": null,
    "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": null,
@@ -50918,9 +50956,9 @@
    "compute": {
     "partner": "Google / Broadcom / Apollo / Blackstone / Morgan Stanley",
     "chips": "Google TPUs",
-    "gw": 3.4,
-    "usd_m": 150000,
-    "term": "about $150B of the ~$200B tied to chips for Anthropic; ~1 GW SPV + ~2.4 GW backstopped developments"
+    "gw": null,
+    "usd_m": null,
+    "term": "financing structure, not a new commitment: ~$200B of interlinked contracts (not Anthropic spend); ~1 GW SPV + ~2.4 GW backstopped developments"
    },
    "product": {
     "name": null,
@@ -50977,6 +51015,10 @@
      "Cipher Mining",
      "Hut 8"
     ],
+    "interlinked_contracts_usd_m": 200000,
+    "chips_for_anthropic_usd_m_aiweekly": 150000,
+    "spv_usd_m": 35000,
+    "total_gw_spv_plus_backstopped": 3.4,
     "google_max_exposure_usd_m": 44000,
     "broadcom_purchase_commitments_usd_m": 128000,
     "google_backstopped_developments": 10,
@@ -50987,7 +51029,7 @@
    }
   },
   "confidence": "MEDIUM",
-  "notes": "FT original (Aug 4; updated Aug 10) not opened; two independent summaries agree on $200B/$150B/$44B/2.4 GW and Broadcom's $128B of purchase commitments through 2028. The ~$150B chip figure is consistent with the prospectus' $161.2B 'Broadcom-related equipment leases' (T3 relay). $200B is a measure of interlocking contracts, not Anthropic spend; it overlaps with the $34.5B SPV, Google Cloud ($111.1B) and Hut 8/TeraWulf/Cipher leases - do not add.",
+  "notes": "FT original (Aug 4; updated Aug 10) not opened; The Decoder and aiweekly.co agree on $200B/$44B/2.4 GW and Broadcom's $128B of purchase commitments through 2028; the ~$150B chips-for-Anthropic figure is aiweekly's only. The ~$150B chip figure is consistent with the prospectus' $161.2B 'Broadcom-related equipment leases' (T3 relay). $200B is a measure of interlocking contracts, not Anthropic spend; it overlaps with the $34.5B SPV, Google Cloud ($111.1B) and Hut 8/TeraWulf/Cipher leases - do not add.",
   "agent": "desk-compute",
   "agents": [
    "desk-compute"
@@ -51260,8 +51302,8 @@
   "id": "evt-20260805-spacex-q2-earnings-anthropic-compute",
   "date": "2026-08-05",
   "date_precision": "day",
-  "headline": "SpaceX first earnings: 1.4GW compute, names Anthropic a user",
-  "summary": "SpaceX's first public-company quarterly report showed AI segment revenue of $2.561B, $14.1B of cloud services agreements, 1.4 GW of compute at June-end and a path to about 10 GW by end-2027, with Gwynne Shotwell naming Google and Anthropic as outside users.",
+  "headline": "SpaceX Q2 results: 1.4GW fleet; Anthropic named possible user",
+  "summary": "SpaceX's Q2 2026 results showed AI segment revenue of $2.561B, $14.1B of cloud services agreements, 1.4 GW of compute at June-end and a path to about 10 GW by end-2027, with Gwynne Shotwell naming Google and Anthropic as outside users or potential users of SpaceX compute.",
   "category": [
    "competition",
    "compute",
@@ -51301,7 +51343,7 @@
     "chips": "NVIDIA",
     "gw": null,
     "usd_m": null,
-    "term": "SpaceX total nameplate compute 1.4 GW at end-Q2; >2 GW by end-2026; 'closer to 10 GW than 5 GW' by end-2027"
+    "term": "SpaceX total 1.4 GW at end-Q2 (not Anthropic's share); >2 GW by end-2026; 'closer to 10 GW than 5 GW' by end-2027 (Musk forecast)"
    },
    "product": {
     "name": null,
@@ -51331,17 +51373,17 @@
    "headcount": null,
    "customers": null,
    "other": {
-    "status": "live",
-    "basis": "contracted",
-    "financing": "opex",
-    "start": "2026-06",
+    "status": null,
+    "basis": null,
+    "financing": null,
+    "start": null,
     "sites": [
-     "Colossus (Memphis)",
-     "Colossus II (Memphis/Southaven)"
+     "Colossus II (under construction)"
     ],
     "spacex_ai_segment_revenue_q2_usd_m": 2561,
     "cloud_services_agreements_q2_usd_m": 14100,
     "cloud_services_booked_early_q3_usd_m": 6700,
+    "spacex_total_nameplate_gw_end_q2": 1.4,
     "gw_is": "SpaceX's total capacity, not Anthropic's share",
     "spacex_q2_revenue_usd_m": 7814,
     "ai_segment_revenue_usd_m": 2561,
@@ -51354,7 +51396,7 @@
    }
   },
   "confidence": "MEDIUM",
-  "notes": "The 1.4 GW is SpaceX's whole fleet; Anthropic's share is ~300 MW at Colossus 1 plus unquantified Colossus II capacity. Anthropic contract values were not broken out ($1.25B/month remains the only price point). Q2 AI revenue of $2.561B (+247%) likely includes the first weeks of the Anthropic contract (first two months discounted) but the amount is undisclosed. Yahoo headline date Aug 5; Motley Fool (Aug 7) and Business Insider (Aug 4 after hours) vary by a day or two. | Report date conflicts: Business Insider (after-hours Aug 4), Blockspace (Aug 5), Motley Fool (Aug 7), orchestrator checklist (Aug 6). Motley Fool says $14.1B signed in Q2 while another summary says $6.7B signed early Q3 - different periods. Anthropic's contract value not disclosed by SpaceX.",
+  "notes": "The 1.4 GW is SpaceX's whole fleet (the page ties no Anthropic contract to Colossus II); Anthropic's share per its own post is >300 MW at Colossus 1. Anthropic contract values were not broken out ($1.25B/month remains the only price point). Q2 AI revenue of $2.561B (+247%) likely includes the first weeks of the Anthropic contract (first two months discounted) but the amount is undisclosed. Yahoo headline date Aug 5; Motley Fool (Aug 7) and Business Insider (Aug 4 after hours) vary by a day or two. | Report date conflicts: Business Insider (after-hours Aug 4), Blockspace (Aug 5), Motley Fool (Aug 7), orchestrator checklist (Aug 6). Motley Fool says $14.1B signed in Q2 while another summary says $6.7B signed early Q3 - different periods. Anthropic's contract value not disclosed by SpaceX.",
   "agent": "desk-compute",
   "agents": [
    "desk-compute",
@@ -51375,7 +51417,7 @@
       "now": null
      },
      "extracted.compute.partner": {
-      "was": "SpaceX (Colossus / Colossus II)",
+      "was": "SpaceX (Colossus II under construction); Anthropic named only as a current or potential user",
       "now": "SpaceX (Colossus II under construction); Anthropic named only as a user or potential user"
      }
     }
@@ -51949,10 +51991,10 @@
    "margin_type": null,
    "compute": {
     "partner": "ERock (utility-grade onsite power equipment)",
-    "chips": null,
-    "gw": 0.47,
+    "chips": "power-generation equipment (type not disclosed)",
+    "gw": null,
     "usd_m": null,
-    "term": "production commitments extend into 2028; equipment type, value and delivery not disclosed"
+    "term": "470 MW equipment purchase order; production commitments extend into 2028; value and delivery not disclosed"
    },
    "product": {
     "name": null,
@@ -51981,7 +52023,8 @@
     "financing": "opex",
     "start": null,
     "sites": [],
-    "gw_is": "470 MW of power-generation equipment, not IT load",
+    "power_equipment_mw": 470,
+    "mw_is": "generation equipment, not IT load",
     "erock_contracted_backlog_usd_m": 1700,
     "backlog_growth": "+10x YoY",
     "customer_rank": "Anthropic is ERock's biggest customer per Barron's headline (not opened)"
@@ -53554,8 +53597,8 @@
   "id": "evt-20260826-nscale-45b-west-virginia-deal",
   "date": "2026-08-26",
   "date_precision": "day",
-  "headline": "Anthropic signs ~$45B Nscale deal for Vera Rubin capacity in West Virginia",
-  "summary": "Bloomberg-reported and later confirmed in Nscale's S-1, Anthropic agreed on Aug 25 2026 to GPU services at Nscale's Monarch campus in Mason County, West Virginia for aggregate payments of up to about $44.6B on NVIDIA Vera Rubin NVL72 systems, reported as 460 MW over six years from late 2027.",
+  "headline": "Anthropic signs ~$45B six-year compute deal with Nscale (West Virginia)",
+  "summary": "Bloomberg-reported and later confirmed in Nscale's IPO filing, Anthropic agreed to rent about 460 MW of Nvidia Vera Rubin capacity at Nscale's Monarch campus in West Virginia for six years at a stated $44.6B, with services starting late 2027.",
   "category": [
    "compute",
    "ipo",
@@ -53571,14 +53614,14 @@
   },
   "corroboration": [
    {
+    "url": "https://siliconangle.com/2026/09/18/data-center-builder-nscale-files-for-ipo-after-multibillion-dollar-anthropic-deal/",
+    "publisher": "SiliconANGLE",
+    "tier": "T3"
+   },
+   {
     "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
     "publisher": "SEC EDGAR - Nscale Ltd Form S-1",
     "tier": "T1"
-   },
-   {
-    "url": "https://siliconangle.com/2026/09/18/data-center-builder-nscale-files-for-ipo-after-multibillion-dollar-anthropic-deal/",
-    "publisher": "SiliconANGLE (460 MW)",
-    "tier": "T3"
    }
   ],
   "extracted": {
@@ -53591,11 +53634,11 @@
    "margin_pct": null,
    "margin_type": null,
    "compute": {
-    "partner": "Nscale (Monarch Compute Campus, Mason County, West Virginia)",
-    "chips": "NVIDIA Vera Rubin NVL72",
+    "partner": "Nscale",
+    "chips": "Nvidia Vera Rubin",
     "gw": 0.46,
     "usd_m": 44600,
-    "term": "six years and services from late 2027 (press); S-1 states only 'aggregate payments of up to approximately $44.6 billion'"
+    "term": "six years; services from late 2027; West Virginia (Monarch campus)"
    },
    "product": {
     "name": null,
@@ -53613,10 +53656,10 @@
      "name": "Nscale",
      "type": "cloud",
      "public": false,
-     "ticker": "NSCL"
+     "ticker": null
     },
     {
-     "name": "NVIDIA",
+     "name": "Nvidia",
      "type": "chip",
      "public": true,
      "ticker": "NVDA"
@@ -53625,10 +53668,10 @@
      "name": "Nscale",
      "type": "cloud",
      "public": false,
-     "ticker": null
+     "ticker": "NSCL"
     },
     {
-     "name": "Nvidia",
+     "name": "NVIDIA",
      "type": "chip",
      "public": true,
      "ticker": "NVDA"
@@ -53637,6 +53680,10 @@
    "headcount": null,
    "customers": null,
    "other": {
+    "nscale_filing_contract_value_usd_m": 44600,
+    "headline_value_usd_m": 45000,
+    "reported_by": "Bloomberg first; CNBC, Reuters, FT same day (headlines seen, not opened)",
+    "other_aug26_headlines": "Yahoo Finance Aug 31 headline 'Anthropic signs $35B computing deal with startup backed by Nvidia' (not opened)",
     "status": "contracted",
     "basis": "up to",
     "financing": "opex",
@@ -53647,16 +53694,12 @@
     "contract_date": "2026-08-25",
     "headline_usd_m": 45000,
     "s1_exhibit": "Ex.10.25 Order for GPU Services (Anthropic PBC / Nscale GPU MCC B1.1 LLC): quantity, term, price, site redacted; Qualifying Financing / Longstop Date termination rights",
-    "derived_price": "$44.6B / 6y / 460 MW = ~$16.2M per MW-year (GPU-inclusive)",
-    "nscale_filing_contract_value_usd_m": 44600,
-    "headline_value_usd_m": 45000,
-    "reported_by": "Bloomberg first; CNBC, Reuters, FT same day (headlines seen, not opened)",
-    "other_aug26_headlines": "Yahoo Finance Aug 31 headline 'Anthropic signs $35B computing deal with startup backed by Nvidia' (not opened)"
+    "derived_price": "$44.6B / 6y / 460 MW = ~$16.2M per MW-year (GPU-inclusive)"
    }
   },
   "confidence": "HIGH",
-  "notes": "$44.6B is T1 (S-1 'up to approximately'); $45B is the Bloomberg/TechCrunch rounding (1% gap, not a conflict). 460 MW, six-year term and late-2027 start come from press (Bloomberg-derived; SiliconANGLE repeats 460 MW) and are NOT in the opened S-1 text, where 'late 2027' refers to Microsoft's Portugal project. Exhibit 10.25 shows the contract is conditional on Nscale obtaining 'Qualifying Financing' by a Longstop Date and can be terminated for delivery delay - so $44.6B is a maximum, not firm spend. Tech Times (RSS headline) says Microsoft exited this capacity before Anthropic took it - unverified. | Anthropic has not (in opened sources) confirmed the deal; $45B is the press figure vs $44.6B in Nscale's filing. A $35B headline (Yahoo, Aug 31) and '$38B' (Demócrata) appear in feeds - unresolved, likely partial-scope or different tranche.",
-  "agent": "desk-compute",
+  "notes": "Anthropic has not (in opened sources) confirmed the deal; $45B is the press figure vs $44.6B in Nscale's filing. A $35B headline (Yahoo, Aug 31) and '$38B' (Demócrata) appear in feeds - unresolved, likely partial-scope or different tranche. | This is the press report (Aug 26); the S-1 (Sep 18) confirms the Aug 25 agreements at Monarch (Mason County, WV), NVIDIA Vera Rubin NVL72 and up to ~$44.6B (1% below the $45B headline, rounding, not a conflict). 460 MW (SiliconANGLE), six years and late 2027 are press-only and are NOT in the opened S-1 text, where 'late 2027' refers to Microsoft's Portugal project. Exhibit 10.25 shows the contract is conditional on Nscale obtaining 'Qualifying Financing' by a Longstop Date and can be terminated for delivery delay - so $44.6B is a maximum, not firm spend. Tech Times (RSS headline) says Microsoft exited this capacity before Anthropic took it - unverified.",
+  "agent": "scout-2026q3",
   "agents": [
    "desk-compute",
    "scout-2026q3"
@@ -54569,7 +54612,7 @@
   "corroboration": [
    {
     "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090041/tm2621890d1_ex99-1.htm",
-    "publisher": "SEC EDGAR - Hut 8 Q2-2026 results Ex.99.1 (Beacon Point 352 MW second lease, $9.8B...",
+    "publisher": "SEC EDGAR - Hut 8 Q2-2026 results Ex.99.1 (Beacon Point 352 MW...",
     "tier": "T1"
    },
    {
@@ -54658,7 +54701,8 @@
      "Beacon Point, Nueces County, Texas"
     ],
     "structure": "Anthropic pays Lambda; Lambda installs Nvidia hardware; Nvidia pays Hut 8 the shell rent",
-    "hut8_leases": "two 15-yr 352 MW IT leases, high-investment-grade tenant; $19.6B base-term; $4.25B Baa2 notes (Ph.1)",
+    "hut8_leases": "campus level, not this deal: two 15-yr 352 MW IT leases (704 MW) to a high-investment-grade tenant; $19.6B base-term; first energization Q1 2027, first data hall Q3 2027; $4.25B Baa2 notes (Ph.1)",
+    "campus_leased_gw": 0.704,
     "wsj_total_cloud_deals_usd_m": 175000,
     "hut8_lease": "two 15-year leases with Nvidia, $19.6B base-term value; campus ~350 MW (Hut 8) vs 704 MW (Proactive)",
     "lambda_financing": "$926M senior secured term loan B closed 2026-08-27",
@@ -54666,7 +54710,7 @@
    }
   },
   "confidence": "MEDIUM",
-  "notes": "Single original source (WSJ) via aggregators; Hut 8's own filings name neither Anthropic, Lambda nor Nvidia (tenant 'high-investment-grade'), and Lambda/Anthropic did not confirm. 704 MW = two 352 MW leases (Hut 8's 'campus ~350 MW' in earlier coverage is one lease). The chain (Anthropic -> Lambda -> Nvidia -> Hut 8) means Nvidia underwrites the shell while also investing up to $10B in Anthropic: circular vendor financing. The $35B is distinct from Nscale's $44.6B (the Aug 31 Yahoo headline is this deal, not an Nscale variant). | Explains the Yahoo Aug 31 headline '$35B computing deal with startup backed by Nvidia' - a different deal from Nscale's $45B (not a conflict). Articles are dated Sep 1; WSJ report surfaced Aug 31 evening (Google News lists Aug 31). Anthropic has not confirmed in opened sources; MW figure differs by source.",
+  "notes": "Single original source (WSJ) via aggregators; Hut 8's own filings name neither Anthropic, Lambda nor Nvidia (tenant 'high-investment-grade'), and Lambda/Anthropic did not confirm. 704 MW is the Hut 8-Nvidia campus lease capacity (two 352 MW leases), NOT stated as this deal's capacity, so gw is null here (the repo's independent audit of the scout version flagged the same basis error). The chain (Anthropic -> Lambda -> Nvidia -> Hut 8) means Nvidia underwrites the shell while also investing up to $10B in Anthropic: circular vendor financing. The $35B is distinct from Nscale's $44.6B (the Aug 31 Yahoo headline is this deal, not an Nscale variant). | Explains the Yahoo Aug 31 headline '$35B computing deal with startup backed by Nvidia' - a different deal from Nscale's $45B (not a conflict). Articles are dated Sep 1; WSJ report surfaced Aug 31 evening (Google News lists Aug 31). Anthropic has not confirmed in opened sources; MW figure differs by source.",
   "agent": "desk-compute",
   "agents": [
    "desk-compute",
@@ -54687,7 +54731,7 @@
       "now": null
      },
      "extracted.compute.term": {
-      "was": "Anthropic-Lambda term not disclosed; Beacon Point first energization Q1 2027, first data hall Q3 2027",
+      "was": "not disclosed (no Anthropic-Lambda term on the cited page)",
       "now": "not disclosed"
      }
     }
@@ -56926,7 +56970,7 @@
   "corroboration": [
    {
     "url": "https://www.sec.gov/Archives/edgar/data/1830081/000121390026098854/ea030515801ex99-1.htm",
-    "publisher": "SEC EDGAR - RUM Group Form 8-K Ex.99.1 (refers to previously announced $13.7B GPU services...",
+    "publisher": "SEC EDGAR - RUM Group Form 8-K Ex.99.1 (refers to previously...",
     "tier": "T1"
    },
    {
@@ -56949,7 +56993,7 @@
     "chips": "NVIDIA H100 and H200 (~22,000 GPUs)",
     "gw": 0.25,
     "usd_m": 13700,
-    "term": "six years; ~$2.28B contracted annual revenue; 250 MW campus under construction, 120-180 MW first phase"
+    "term": "six years; ~$2.28B contracted annual revenue; MW for Anthropic not stated (campus 250 MW, 120-180 MW first phase)"
    },
    "product": {
     "name": null,
@@ -56995,7 +57039,9 @@
     "annual_usd_m": 2280,
     "warrants": "10-year warrants over up to 50.8M RUM shares at $0.01; two equal tranches, first 25.4M tied to server installations",
     "rum_share_move": "+11.6% on heavy volume",
-    "gw_is": "250 MW campus (phase 1 120-180 MW); not all Anthropic's",
+    "campus_mw": 250,
+    "phase1_mw": "120-180",
+    "mw_is": "campus capacity, not stated as this deal's capacity",
     "peer_reaction": "CoreWeave and Nebius fell ~5-7%"
    }
   },
@@ -58224,11 +58270,11 @@
    "margin_pct": null,
    "margin_type": null,
    "compute": {
-    "partner": "Nscale",
+    "partner": "Nscale (Monarch Compute Campus, Mason County, West Virginia)",
     "chips": "NVIDIA Vera Rubin NVL72",
-    "gw": 0.46,
+    "gw": null,
     "usd_m": 44600,
-    "term": "GPU Services Agreements dated 2026-08-25; term/MW/quantity redacted in Ex.10.25"
+    "term": "GPU Services Agreements dated 2026-08-25; term, MW and quantity not stated in the S-1 text (Ex.10.25 redacted)"
    },
    "product": {
     "name": null,
@@ -58273,6 +58319,7 @@
     "gpus_active": 25000,
     "monarch_gross_gw": 2.0,
     "monarch_it_gw": 1.37,
+    "press_reported_anthropic_mw_siliconangle": 460,
     "monarch_online": "1H 2028",
     "monarch_runway_gw": "8+",
     "h1_2026_revenue_usd_m": 140.6,
@@ -59730,7 +59777,7 @@
   "date": "2026-09-24",
   "date_precision": "day",
   "headline": "Anthropic commits ~$11.6B to Akamai cloud capacity; receives Akamai warrant",
-  "summary": "Akamai disclosed that on Sept 18 2026 Anthropic committed to pay about $11.6B under two seven-year project plans for dedicated cloud computing capacity, and received a warrant for up to about 5% of Akamai exercisable at $111.33 per common share.",
+  "summary": "Akamai disclosed that on Sept 18 2026 Anthropic committed to pay about $11.6B under two seven-year project plans for dedicated cloud computing capacity and received a warrant over 387,051 Series B preferred shares (7.74M common-equivalent, about 5% of Akamai at $111.33 per common share per TechCrunch).",
   "category": [
    "compute",
    "investment",
@@ -63098,12 +63145,13 @@
    "other"
   ],
   "source": {
-   "url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "url": "pitchbook://licensed-extract",
    "publisher": "PitchBook (pitchbook_deals.json, 86 rows, 15 deal headers)",
    "title": "PitchBook financing history for PBID 466959-97",
    "published": "2026-09-30",
    "tier": "T2",
-   "opened": true
+   "opened": true,
+   "local_extract": "pitchbook_deals.json"
   },
   "corroboration": [
    {
@@ -63154,7 +63202,7 @@
     "removed_pb_deal_id": "334763-02T"
    }
   },
-  "confidence": "VERIFY",
+  "confidence": "HIGH",
   "notes": "FLAG. Arithmetic: 161,254 - 126,754 = 34,500 exactly. The Sep-30 extract contains no record for deal 334763-02T, so PB removed or reclassified it; the reason is not stated anywhere I could open (pitchbook.com profile/news pages return 403; search snippet shows PitchBook saying Anthropic 'has raised $127 billion'). Press explains why it should not count: the notes are issued by a lessor SPV and Anthropic only leases (5-year lease; Broadcom backstop), although a 'chip bonds' label makes it look like Anthropic debt. The $161.254B figure is therefore an over-count; use $126.754B (incl. $2.5B revolver) or $124.254B (equity only).",
   "agent": "desk-deals",
   "agents": [

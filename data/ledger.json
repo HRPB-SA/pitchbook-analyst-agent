@@ -1,19 +1,19 @@
 {
- "generated": "2026-09-30T19:13:17Z",
+ "generated": "2026-09-30T19:18:33Z",
  "raw_events": 1094,
  "merged_events": 691,
  "tiers": {
-  "T1": 382,
-  "T2": 182,
+  "T1": 383,
+  "T2": 181,
   "T3": 110,
   "T4": 16,
   "T5": 1
  },
  "confidence": {
-  "HIGH": 493,
-  "MEDIUM": 169,
+  "HIGH": 496,
+  "MEDIUM": 168,
   "DISPUTED": 11,
-  "VERIFY": 8,
+  "VERIFY": 6,
   "LOW": 10
  },
  "categories": {
@@ -33,7 +33,7 @@
   "security": 45,
   "legal": 68,
   "customer": 96,
-  "partnership": 133,
+  "partnership": 134,
   "pricing": 58,
   "international": 49,
   "regulatory": 42,
@@ -42,7 +42,7 @@
   "financials": 54,
   "secondary": 17,
   "competition": 47,
-  "ipo": 41,
+  "ipo": 40,
   "acquisition": 15
  },
  "years": {
@@ -2966,7 +2966,7 @@
    "id": "K-06",
    "audit_id": "A-038",
    "event_id": "evt-20260805-spacex-q2-earnings-anthropic-compute",
-   "headline": "SpaceX first earnings: 1.4GW compute, names Anthropic a user",
+   "headline": "SpaceX Q2 results: 1.4GW fleet; Anthropic named possible user",
    "reason": "1.4 GW is SpaceX's own capacity, not an Anthropic commitment. The page says 'users or potential users' and links no Anthropic contract to Colossus II.",
    "changed": [
     "extracted.compute.gw",

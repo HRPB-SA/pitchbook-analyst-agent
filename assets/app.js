@@ -255,7 +255,7 @@ function chip(text, cls) { return el('span', { class: `chip ${cls || ''}`, text 
 function tierChip(t) { return el('span', { class: `chip tier ${t}`, text: t }); }
 function confChip(c) { return el('span', { class: `chip conf ${c}`, text: c }); }
 function evLink(id, text) { const e = state.evIndex.get(id); if (!e) return el('span', { class: 'muted small', text: id }); return el('a', { href: '#timeline', class: 'evl', onclick: ev => { ev.preventDefault(); openEvent(id); } }, el('span', { class: 'd' }, e.date), text || e.headline); }
-function sourceLine(src) { if (!src?.url) return el('span', { class: 'muted', text: 'no URL' }); return el('a', { href: src.url, target: '_blank', rel: 'noopener', text: `${src.publisher || fmt.domain(src.url)}${src.title ? ' · ' + src.title.slice(0, 70) : ''}` }); }
+function sourceLine(src) { if (!src?.url) return el('span', { class: 'muted', text: 'no URL' }); if (src.url.startsWith('pitchbook:')) return el('span', { class: 'muted', title: 'Licensed PitchBook field; no public link', text: `${src.publisher || 'PitchBook'} · licensed field, no public link` }); return el('a', { href: src.url, target: '_blank', rel: 'noopener', text: `${src.publisher || fmt.domain(src.url)}${src.title ? ' · ' + src.title.slice(0, 70) : ''}` }); }
 function extractChips(ex) {
   const out = [];
   if (!ex) return out;
@@ -1000,7 +1000,7 @@ function renderSources(root) {
   }
   const conf = [...(L.cross_agent_conflicts || []), ...(L.agent_conflicts || [])];
   if (conf.length) {
-    const lk = u => u ? el('a', { href: u, target: '_blank', rel: 'noopener', text: fmt.domain(u) }) : '';
+    const lk = u => /^https?:/.test(u || '') ? el('a', { href: u, target: '_blank', rel: 'noopener', text: fmt.domain(u) }) : '';
     root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: `Frozen conflicts (${conf.length})` }), el('span', { class: 'small muted', text: 'both values shown, neither chosen' })),
       moreTable(['Topic', 'Value A', 'Value B', 'Note', 'Raised by'], conf, c => el('tr', {}, el('td', { text: c.topic }), el('td', { class: 'small' }, String(c.value_a ?? ''), ' ', lk(c.source_a)), el('td', { class: 'small' }, String(c.value_b ?? ''), ' ', lk(c.source_b)), el('td', { class: 'small', text: c.note || '' }), el('td', { class: 'mono small', text: c.agent || 'merge' })), 10)));
   }
