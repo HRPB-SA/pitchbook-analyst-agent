@@ -336,6 +336,11 @@ def build_metrics(events, outs):
     rv = outs.get("desk-revenue", {})
     m["run_rate_desk"] = rv.get("run_rate_series", [])
     m["period_revenue"] = rv.get("period_revenue", [])
+    for r in m["period_revenue"]:
+        # PitchBook "TTM 4Qyyyy" fields are exit run-rate proxies, not recognized revenue: never label them actual
+        txt = f"{r.get('basis') or ''} {r.get('note') or ''}"
+        if r.get("kind") in ("actual", "preliminary") and re.search(r"run-rate proxy|TTM 4Q\d{4} field|use only as exit run-rate|not recognized revenue", txt, re.I):
+            r["kind_desk"] = r["kind"]; r["kind"] = "proxy"
     m["margins"] = rv.get("margin_and_loss", [])
     m["customers"] = rv.get("customer_metrics", [])
     m["mix"] = rv.get("mix", [])

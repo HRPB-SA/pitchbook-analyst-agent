@@ -1,0 +1,2812 @@
+{
+ "agent": "verify-compute",
+ "role": "Source Re-deriver",
+ "started": "2026-09-30T19:18:59Z",
+ "finished": "2026-09-30T19:46:29Z",
+ "answers": [
+  {
+   "claim_id": "OPS-COM-e7a4c2",
+   "found": {
+    "usd_m": 161200,
+    "usd_basis": "About $161.2B of 'Broadcom-related equipment lease obligations', described as largely non-cancelable (non-cancelable by either party except on default). Committed lease obligations, not an 'up to' figure; part of the >=$518B total. Source is a confidential S-1 as seen by Reuters, not a public filing.",
+    "gw": "~3.5 GW accessible through Broadcom from 2027 (Broadcom 8-K, 2026-04-06, 'as part of the multiple gigawatts ... committed by Anthropic'). Broadcom CEO remarks of 2026-09-02 as reported by BigGo/Yahoo: 1 GW Ironwood in 2026, 5 GW TPU v8i in 2027, line of sight to 10 GW more in 2028 (management outlook, not contract). XPV platform target >20 GW through 2028 across labs.",
+    "chips": "Google-designed TPUs co-developed with Broadcom, bought by special-purpose vehicles and leased to Anthropic (Ironwood in 2026, TPU v8i in 2027 per Broadcom CEO remarks reported by BigGo).",
+    "term": "Lease term not reported in the Reuters text (no term or maturity given for the $161.2B). Start: first XPV tranche deployments from mid-2026 (Apollo); 3.5 GW from 2027 (Broadcom 8-K).",
+    "stated_by": "Anthropic's confidential IPO prospectus as seen by Reuters (2026-09-29) for the $161.2B; Broadcom Form 8-K (2026-04-06) for 3.5 GW; Apollo release (2026-06-09) for the first XPV tranche.",
+    "notes": "Media report of a confidential filing (Reuters, single origin), not a filed contract; no public filing carries the $161.2B. The link between the $161.2B and the XPV SPV notes is my inference: Reuters says 'Broadcom-related equipment lease obligations' without naming XPV. The first XPV tranche alone was ~$35B of financing (see OPS-COM-5723ea); a second ~$36B Blackstone-led package was only floated (2026-08-04, early stage). Broadcom's 8-K adds that consumption of the capacity 'is dependent on Anthropic's continued commercial success' and that the parties were 'in discussions with certain operational and financial partners'."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "publisher": "Reuters (syndicated copy on Lufkin Daily News)",
+     "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
+     "published": "2026-09-29",
+     "tier": "T2",
+     "opened": true,
+     "supports": "At least $518B over a decade with six partners, about 80% non-cancelable or payable regardless of usage (confidential prospectus)."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+     "publisher": "Broadcom Inc. (SEC Form 8-K, Item 8.01)",
+     "title": "Form 8-K filed 2026-04-06",
+     "published": "2026-04-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Anthropic, beginning in 2027, will access through Broadcom approximately 3.5 gigawatts; consumption dependent on Anthropic commercial success."
+    },
+    {
+     "url": "https://ir.apollo.com/news-events/press-releases/detail/629/apollo-leads-35-billion-capital-solution-for-broadcom-ai",
+     "publisher": "Apollo Global Management (GlobeNewswire)",
+     "title": "Apollo Leads $35 Billion Capital Solution for Broadcom AI XPV Platform in Partnership with Blackstone and Leading Global Banks",
+     "published": "2026-06-09",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Initial $35B capital solution; platform over 20GW through 2028; Anthropic expansion of more than 1GW from mid-2026."
+    },
+    {
+     "url": "https://finance.biggo.com/news/US_AVGO_2026-09-02",
+     "publisher": "BigGo Finance (Broadcom Q3 FY26 call summary)",
+     "title": "Broadcom Q3 2026 Earnings Call summary",
+     "published": "2026-09-02",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Hock Tan: Anthropic 1 GW Ironwood in 2026, 5 GW TPU v8i in 2027; first $35B XPV tranche closed in June."
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-anthropic-ramp-puts-google-113804111.html",
+     "publisher": "Yahoo Finance",
+     "title": "Broadcom's Anthropic Ramp Puts Google's TPU Business in a Different Light",
+     "published": "2026-09-13",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Management outlook (1 GW Ironwood 2026, 5 GW 2027) not equivalent to the 3.5 GW contractual disclosure in the April filing."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-COM-21eade",
+   "found": {
+    "usd_m": null,
+    "usd_basis": "No dollar value in any company statement (Anthropic and Google Cloud releases of 2026-04-06, Broadcom 8-K). Reported figures differ: (a) $200,000M over five years, committed, per The Information (2026-05-05, single unnamed source; Reuters could not verify; Anthropic declined comment); (b) at least $111,100M owed to Google Apr 2026-Jul 2033 'regardless of usage' with shortfall top-up, per the leaked confidential S-1 via Reuters (2026-09-29). Whether (b) covers only the April TPU program or all Google Cloud spend is not stated.",
+    "gw": "'Multiple gigawatts' (Anthropic and Google Cloud, 2026-04-06); approximately 3.5 GW through Broadcom from 2027 (Broadcom 8-K); 5 GW (Anthropic posts of 2026-05-06 and 2026-05-28; TechCrunch 2026-04-24: 'fresh 5 gigawatts ... over the next five years').",
+    "chips": "Next-generation Google TPUs; Google-built TPUs supplied through Broadcom plus Google Cloud services.",
+    "term": "Not stated by the parties. The Information: five years. Leaked S-1: payments Apr 2026 to Jul 2033. Capacity expected online starting 2027.",
+    "stated_by": "Anthropic, Google Cloud (PR Newswire) and Broadcom (SEC Form 8-K), all 2026-04-06; $200B by The Information 2026-05-05; $111.1B by Reuters on the confidential prospectus 2026-09-29.",
+    "notes": "Company announcements plus one SEC filing (Broadcom 8-K, which gives GW only); no filed contract and no official dollar value. On 2026-04-24 Google also said it would invest up to $40B in Anthropic ($10B now, $30B on performance targets), which is separate from the compute purchase. The gigawatt figure moved from 'multiple' to 3.5 to 5 between April and May."
+   },
+   "verdict_hint": "CONFLICT",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+     "publisher": "Anthropic",
+     "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute",
+     "published": "2026-04-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Signed agreement for multiple gigawatts of next-generation TPU capacity expected online starting in 2027; no dollar figure."
+    },
+    {
+     "url": "https://www.prnewswire.com/news-releases/anthropic-expands-use-of-google-cloud-and-tpus-302735047.html",
+     "publisher": "Google Cloud (PR Newswire)",
+     "title": "Anthropic Expands Use of Google Cloud and TPUs",
+     "published": "2026-04-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Multiple gigawatts of TPU capacity, expected online starting in 2027, via Google Cloud and Google-built TPUs supplied through Broadcom."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+     "publisher": "Broadcom Inc. (SEC Form 8-K, Item 8.01)",
+     "title": "Form 8-K filed 2026-04-06",
+     "published": "2026-04-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Anthropic, beginning in 2027, will access through Broadcom approximately 3.5 gigawatts; consumption dependent on Anthropic commercial success."
+    },
+    {
+     "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+     "publisher": "TechCrunch",
+     "title": "Google to invest up to $40B in Anthropic in cash and compute",
+     "published": "2026-04-24",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Google Cloud now providing a fresh 5 gigawatts of capacity over the next five years, with room to scale."
+    },
+    {
+     "url": "https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/anthropic-commits-spending-us200-billion-googles-cloud-and-chips-report",
+     "publisher": "The Business Times (Reuters text)",
+     "title": "Anthropic commits to spending US$200 billion on Google's cloud and chips: report",
+     "published": "2026-05-06",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Committed to spend US$200B with Google Cloud over five years, The Information reported; Reuters could not verify."
+    },
+    {
+     "url": "https://www.anthropic.com/news/series-h",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+     "published": "2026-05-28",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Agreements with Amazon for up to five GW, Google and Broadcom for five GW of TPU capacity, SpaceX for Colossus 1 and 2."
+    },
+    {
+     "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "publisher": "Reuters (syndicated copy on Lufkin Daily News)",
+     "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
+     "published": "2026-09-29",
+     "tier": "T2",
+     "opened": true,
+     "supports": "At least $518B over a decade with six partners, about 80% non-cancelable or payable regardless of usage (confidential prospectus)."
+    },
+    {
+     "url": "https://finance.biggo.com/news/202605090027_Anthropic_200B_Google_Cloud_Deal",
+     "publisher": "BigGo Finance",
+     "title": "Anthropic Bets $200 Billion on Google Cloud and TPU Chips in Landmark Five-Year Deal",
+     "published": "2026-05-08",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Re-report: about $200B over five years for 5 GW of TPU capacity, deal begins in 2027."
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$200,000M over five years (committed)",
+     "source_a": "https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/anthropic-commits-spending-us200-billion-googles-cloud-and-chips-report",
+     "value_b": "at least $111,100M payable to Google Apr 2026-Jul 2033 (leaked S-1)",
+     "source_b": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "note": "Different scopes or horizons are possible (five-year cloud+chips vs seven-year minimum obligation); neither is an official Anthropic/Google figure. Also the GW count differs: multiple / ~3.5 / 5."
+    },
+    {
+     "value_a": "~3.5 GW through Broadcom from 2027",
+     "source_a": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+     "value_b": "5 GW with Google and Broadcom",
+     "source_b": "https://www.anthropic.com/news/series-h",
+     "note": "Broadcom's filing quantifies only the Broadcom-delivered portion; Anthropic's own later posts say five gigawatts."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-COM-191007",
+   "found": {
+    "usd_m": 100000,
+    "usd_basis": "'More than $100 billion over the next ten years' committed by Anthropic to AWS technologies (minimum stated, contracted commitment). Capacity is 'up to 5GW'. Leaked S-1 (Reuters): $110,000M payable May 2026-Apr 2036, payable regardless of usage with a shortfall top-up.",
+    "gw": 5,
+    "chips": "AWS Trainium2, Trainium3 and Trainium4 with the option to buy future generations, plus Graviton CPUs (tens of millions of cores).",
+    "term": "Ten years (announced 2026-04-20); S-1: May 2026 to April 2036. Start: Trainium2 capacity coming online Q2 2026, scaled Trainium3 later in 2026; nearly 1 GW of Trainium2+Trainium3 by end-2026.",
+    "stated_by": "Anthropic and Amazon, same-day releases on 2026-04-20; $110B and dates from the confidential prospectus via Reuters 2026-09-29.",
+    "notes": "Company announcements by both parties (no filed contract). Separate from the compute purchase: Amazon invests $5B now and up to $20B more tied to commercial milestones, on top of $8B invested earlier. Anthropic's 2026-05-06 post calls it 'an up to 5 gigawatt (GW) agreement with Amazon'."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+     "publisher": "Anthropic",
+     "title": "Anthropic and Amazon expand collaboration for up to 5 gigawatts of new compute",
+     "published": "2026-04-20",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Committing more than $100 billion over the next ten years to AWS technologies, securing up to 5GW of new capacity."
+    },
+    {
+     "url": "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai",
+     "publisher": "Amazon (About Amazon)",
+     "title": "Amazon and Anthropic expand strategic collaboration",
+     "published": "2026-04-20",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Anthropic to spend more than $100 billion over ten years on AWS; up to 5 GW; Trainium2-4 and Graviton."
+    },
+    {
+     "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "publisher": "Reuters (syndicated copy on Lufkin Daily News)",
+     "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
+     "published": "2026-09-29",
+     "tier": "T2",
+     "opened": true,
+     "supports": "At least $518B over a decade with six partners, about 80% non-cancelable or payable regardless of usage (confidential prospectus)."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-COM-c23f8d",
+   "found": {
+    "usd_m": 50000,
+    "usd_basis": "Announced '$50 billion investment in American computing infrastructure' (Anthropic's wording): a program total for custom data centers built with Fluidstack, not a disclosed contract value; the split between Anthropic, Fluidstack and third-party financing is not stated.",
+    "gw": "Not stated in Anthropic's post (Fluidstack's CEO is quoted on 'rapid delivery of gigawatts of power').",
+    "chips": "Not stated in the announcement. The Information (via BigGo, 2026-09-06) says Anthropic separately signed purchase agreements for Broadcom/Google TPUs and AMD chips to be used in these data centers; Bloomberg (2026-05-29) says TPU sites are in New York, Texas, Louisiana and Indiana.",
+    "term": "No term stated. Sites in Texas and New York 'coming online throughout 2026'; 'more sites to come'.",
+    "stated_by": "Anthropic company announcement, 2025-11-12 (repeated by TechCrunch the same day).",
+    "notes": "Company announcement only; no filed contract and no partner filing quantifies it. Not established whether Fluidstack-linked leases elsewhere (e.g. Hut 8 River Bend, TeraWulf) count toward the $50B. Anthropic's 2026-05-06 post still lists it as 'Our $50 billion investment in American AI infrastructure with Fluidstack'."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+     "publisher": "Anthropic",
+     "title": "Anthropic invests $50 billion in American AI infrastructure",
+     "published": "2025-11-12",
+     "tier": "T1",
+     "opened": true,
+     "supports": "$50 billion investment; data centers with Fluidstack in Texas and New York; sites coming online throughout 2026."
+    },
+    {
+     "url": "https://techcrunch.com/2025/11/12/anthropic-announces-50-billion-data-center-plan/",
+     "publisher": "TechCrunch",
+     "title": "Anthropic announces $50 billion data center plan",
+     "published": "2025-11-12",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic committing $50B with Fluidstack to build U.S. facilities in Texas and New York, online throughout 2026."
+    },
+    {
+     "url": "https://finance.biggo.com/news/28be15e2-a525-4cce-94e8-f7b6c822bc19",
+     "publisher": "BigGo Finance (re-report of The Information)",
+     "title": "Anthropic Secures $517 Billion in Compute Contracts Over 11 Months Ahead of IPO",
+     "published": "2026-09-06",
+     "tier": "T4",
+     "opened": true,
+     "supports": "The Information: $517B in 11 months, at least 14.8 GW added; $50B Fluidstack build; Broadcom TPU and AMD purchase agreements for those sites."
+    },
+    {
+     "url": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html",
+     "publisher": "Yahoo Finance (Bloomberg)",
+     "title": "Anthropic's $36 Billion AI Chip Deal Draws Apollo, Blackstone",
+     "published": "2026-05-29",
+     "tier": "T2",
+     "opened": true,
+     "supports": "SPV buys Google TPUs and leases to Anthropic; sites in NY, TX, LA, IN; Broadcom backstops the largest portions."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-COM-37026d",
+   "found": {
+    "usd_m": 45000,
+    "usd_basis": "$1.25B per month through May 2029 per SpaceX's public S-1 (about $45B over the full term, first two months discounted; TechCrunch says 'over $40 billion'). Anthropic's own confidential prospectus (Reuters 2026-09-29) says agreements with xAI 'could result in up to $84.5 billion' of spending through 2029. Both are ceilings on a cancellable arrangement.",
+    "gw": "Colossus 1: 'more than 300 megawatts' (about 0.3 GW) and 'over 220,000 NVIDIA GPUs', all of the site (Anthropic and SpaceXAI, 2026-05-06). Colossus II capacity was not quantified in any source I could open (SpaceX says it revised S-1 pages 13 and 147 to quantify it).",
+    "chips": "NVIDIA GPUs: H100, H200 and GB200 at Colossus 1 (SpaceXAI release); Colossus II mostly Blackwell per press.",
+    "term": "Payments 'through May 2029' (S-1); either party may terminate on 90 days' notice (S-1 and SpaceX letter of 2026-06-01). Musk on X (2026-05-28): current arrangement is a 180-day lease with 90-day mutual cancellation rights after that. Start: Colossus 1 capacity 'within the month' of 2026-05-06; more on Colossus 2 in June.",
+    "stated_by": "Anthropic and SpaceXAI releases (2026-05-06, capacity only, no price); SpaceX Form S-1 filed 2026-05-20 ($1.25B/month); Anthropic's confidential prospectus via Reuters (2026-09-29, up to $84.5B).",
+    "notes": "The S-1 is a public SEC filing; the compute agreement itself was not filed as an exhibit (SpaceX told the SEC on 2026-06-01 it is an ordinary-course contract not required under Item 601(b)(10); the SEC staff letter of 2026-05-29 asked what consideration was given to filing it). The $84.5B figure is a media report of a confidential filing. The gap ($45B vs $84.5B) is unexplained in the sources; it may reflect extra Colossus II capacity beyond the $1.25B/month base (my inference)."
+   },
+   "verdict_hint": "CONFLICT",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/higher-limits-spacex",
+     "publisher": "Anthropic",
+     "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+     "published": "2026-05-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Agreement to use all compute at Colossus 1: more than 300 megawatts, over 220,000 NVIDIA GPUs within the month."
+    },
+    {
+     "url": "https://x.ai/news/anthropic-compute-partnership",
+     "publisher": "xAI / SpaceXAI",
+     "title": "New Compute Partnership with Anthropic",
+     "published": "2026-05-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "SpaceXAI signed an agreement with Anthropic for access to Colossus 1; over 220,000 NVIDIA GPUs incl. H100, H200, GB200."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
+     "publisher": "SpaceX (SEC CORRESP letter)",
+     "title": "Response letter to SEC staff on Form S-1",
+     "published": "2026-06-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Quotes S-1: Anthropic will pay $1.25 billion per month for compute across COLOSSUS AND COLOSSUS II; 90 days notice termination."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1181412/000000000026005505/filename2.txt",
+     "publisher": "U.S. SEC staff (comment letter to SpaceX)",
+     "title": "Staff comment letter on Form S-1",
+     "published": "2026-05-29",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Staff asks what consideration was given to filing the Anthropic agreement and to quantify capacity."
+    },
+    {
+     "url": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+     "publisher": "TechCrunch",
+     "title": "Anthropic will pay xAI $1.25B per month for compute",
+     "published": "2026-05-20",
+     "tier": "T3",
+     "opened": true,
+     "supports": "$1.25B per month through May 2029 with discounted first two months; either side may terminate on 90 days notice."
+    },
+    {
+     "url": "https://uk.finance.yahoo.com/news/elon-musk-says-spacex-only-170549212.html",
+     "publisher": "Yahoo Finance UK",
+     "title": "Elon Musk says SpaceX has only committed to a 180-day compute agreement with Anthropic",
+     "published": "2026-05-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Musk on X: current arrangement is a 180-day lease with 90-day mutual cancellation rights after that."
+    },
+    {
+     "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "publisher": "Reuters (syndicated copy on Lufkin Daily News)",
+     "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
+     "published": "2026-09-29",
+     "tier": "T2",
+     "opened": true,
+     "supports": "At least $518B over a decade with six partners, about 80% non-cancelable or payable regardless of usage (confidential prospectus)."
+    },
+    {
+     "url": "https://finance.biggo.com/news/24d90a7f-d26d-413c-8685-bf4da9cb540d",
+     "publisher": "BigGo Finance",
+     "title": "Anthropic's SpaceX Compute Deal Nearly Doubles to $84.5 Billion in IPO Filing",
+     "published": "2026-09-30",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Summarises Reuters: up to $84.5B to SpaceX through 2029; SpaceX S-1 said $1.25B/month (~$45B); 90-day termination."
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$1.25B per month through May 2029 (~$45B)",
+     "source_a": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
+     "value_b": "up to $84.5B through 2029",
+     "source_b": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "note": "SpaceX's S-1 (counterparty, public) vs Anthropic's confidential prospectus (as seen by Reuters). BigGo notes the prospectus figure is 'nearly double' the S-1's."
+    },
+    {
+     "value_a": "90-day termination by either party (S-1)",
+     "source_a": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+     "value_b": "180-day lease, then 90-day mutual cancellation (Musk on X)",
+     "source_b": "https://uk.finance.yahoo.com/news/elon-musk-says-spacex-only-170549212.html",
+     "note": "Musk says it does not contradict the S-1 but narrows SpaceX's commitment."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-COM-bda5ab",
+   "found": {
+    "usd_m": 44600,
+    "usd_basis": "Nscale's S-1 says the GPU Services Agreements 'provide for aggregate payments to us of up to approximately $44.6 billion' (a maximum, stated by the vendor). Bloomberg and most press round it to ~$45B over six years. No Anthropic statement found.",
+    "gw": "About 460 MW (0.46 GW) at the Monarch Compute Campus, Mason County, West Virginia (Bloomberg via WV News and Tech Times); the S-1 excerpt I could read gives no MW.",
+    "chips": "NVIDIA Vera Rubin NVL72 GPUs (Nscale S-1).",
+    "term": "Six years (Bloomberg); S-1 excerpt gives no term. Agreements dated 2026-08-25; capacity expected to start powering Anthropic in late 2027 (TechCrunch, source-based).",
+    "stated_by": "Nscale Ltd Form S-1 filed 2026-09-18 (Recent Developments); first reported by Bloomberg 2026-08-26; Aker ASA regulatory disclosure of a $45B contract (per Tech Times); West Virginia governor reacted 2026-08-27.",
+    "notes": "Vendor-side SEC disclosure (S-1, filed but not yet effective) plus media; the contracts themselves are not shown to be filed exhibits. Microsoft had a 1.35 GW non-binding LOI at the same campus that it did not convert (Tech Times, Bloomberg-sourced). I found no Anthropic press release."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+     "publisher": "Nscale Ltd (SEC Form S-1)",
+     "title": "Form S-1 registration statement, Recent Developments",
+     "published": "2026-09-18",
+     "tier": "T1",
+     "opened": true,
+     "supports": "On August 25, 2026 entered GPU Services Agreements with Anthropic; aggregate payments of up to approximately $44.6 billion."
+    },
+    {
+     "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
+     "publisher": "TechCrunch (Bloomberg first)",
+     "title": "Anthropic continues compute-gobbling streak in $45B deal with Nscale",
+     "published": "2026-08-26",
+     "tier": "T3",
+     "opened": true,
+     "supports": "About $45B of AI compute, Nvidia Vera Rubin, online late 2027; Bloomberg says six years at the West Virginia campus."
+    },
+    {
+     "url": "https://www.wvnews.com/news/wvnews/anthropic-agrees-to-45-billion-west-virginia-data-center-deal-with-nscale-governor-says/article_5ade99b0-4fcb-49e8-bee2-9dace1410485.html",
+     "publisher": "WV News",
+     "title": "Anthropic agrees to $45 billion West Virginia data center deal with Nscale, governor says",
+     "published": "2026-08-27",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Per Bloomberg: approximately $45 billion over six years, about 460 megawatts, NVIDIA Vera Rubin."
+    },
+    {
+     "url": "https://www.techtimes.com/articles/325815/20260827/after-microsoft-exited-anthropic-signed-45b-deal-anchoring-nscales-ipo.htm",
+     "publisher": "Tech Times",
+     "title": "After Microsoft exited, Anthropic signed $45B deal anchoring Nscale's IPO",
+     "published": "2026-08-27",
+     "tier": "T4",
+     "opened": true,
+     "supports": "460 MW at Monarch first building; Aker ASA disclosure of $45B contract; Microsoft 1.35 GW LOI not converted."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-COM-0a90d6",
+   "found": {
+    "usd_m": 35000,
+    "usd_basis": "Reported value of a cloud-computing agreement between Anthropic and Nvidia-backed Lambda; committed-versus-maximum basis not reported. Not confirmed by Anthropic, Lambda, Nvidia or Hut 8 in anything I could open.",
+    "gw": "About 350 MW (0.35 GW) of a Hut 8 data center in Nueces County, Texas (Reuters source, 2026-08-31). Hut 8's Beacon Point campus is 1 GW with two 352 MW leases (704 MW) to an unnamed investment-grade tenant; CoinDesk: Hut 8 has not confirmed how much of that is tied to Lambda/Anthropic.",
+    "chips": "Nvidia GPUs supplied by Lambda (Reuters: 'bring online Nvidia capacity'); Hut 8 designed the first hall to Nvidia's DSX architecture.",
+    "term": "Not reported for the Anthropic-Lambda agreement. Hut 8's two leases are 15 years each; Phase 1 energization Q1 2027, Phase 2 first hall Q2 2028 (Hut 8 release).",
+    "stated_by": "WSJ first reported 2026-08-31 (paywalled, not opened); Reuters (source familiar) 2026-08-31; FT (late July 2026, per Reuters) identified Nvidia as the Beacon Point tenant; WSJ said Nvidia itself holds the lease.",
+    "notes": "Media reports only: no filed contract, no company announcement. Hut 8's own releases (2026-05-06 Phase 1, 2026-07-20 Phase 2: $9.8B each, $19.6B base-term, renewals to $50.2B) name no tenant and do not mention Anthropic, Lambda or Nvidia as tenant. The $35B is Anthropic-Lambda, not Hut 8's rent, so it should not be compared with the $19.6B lease value."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.thestandard.com.hk/innovation/article/341478/Anthropic-signs-US35-billion-cloud-deal-with-Nvidia-backed-Lambda-source-says",
+     "publisher": "The Standard HK (Reuters text)",
+     "title": "Anthropic signs US$35 billion cloud deal with Nvidia-backed Lambda, source says",
+     "published": "2026-09-01",
+     "tier": "T2",
+     "opened": true,
+     "supports": "$35B cloud deal with Lambda for a ~350 MW Texas data center (Hut 8, Nueces County), per a source; WSJ said Nvidia holds the lease."
+    },
+    {
+     "url": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
+     "publisher": "CoinDesk",
+     "title": "Hut 8's Texas power site sits inside Anthropic's $35 billion AI deal",
+     "published": "2026-09-01",
+     "tier": "T3",
+     "opened": true,
+     "supports": "WSJ reported $35B; Nvidia holds the Beacon Point lease, Lambda uses Nvidia chips; Hut 8 not confirming how much capacity is tied."
+    },
+    {
+     "url": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
+     "publisher": "Hut 8 (PR Newswire)",
+     "title": "Hut 8 Fully Commercializes 1 GW Beacon Point AI Data Center Campus with Second 352 MW IT Lease",
+     "published": "2026-07-20",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Second 15-year, $9.8B, 352 MW lease; campus base-term value $19.6B; tenant unnamed; Anthropic, Lambda, Nvidia not named."
+    },
+    {
+     "url": "https://pulse2.com/anthropic-reportedly-signs-35-billion-lambda-cloud-deal-for-350-mw-texas-ai-data-center/",
+     "publisher": "Pulse 2.0 (Reuters summary)",
+     "title": "Anthropic reportedly signs $35 billion Lambda cloud deal for 350 MW Texas AI data center",
+     "published": "2026-09-01",
+     "tier": "T4",
+     "opened": true,
+     "supports": "FT identified Nvidia as tenant at Hut 8 1 GW Beacon Point; WSJ first reported the Anthropic-Lambda transaction."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-COM-5723ea",
+   "found": {
+    "usd_m": 35000,
+    "usd_basis": "Apollo: 'initial $35 billion capital solution' for the Broadcom AI XPV Platform. Bloomberg tranche detail (2026-06-08): A1 $6B + A2 $24B (Broadcom-backed, A2 at 5.75%) + B $4.5B (unbacked, 8.5%) = $34.5B debt, plus $800M equity from Apollo's Atlas SP. This is financing raised by an SPV to buy TPUs that Anthropic leases, drawn over a multi-year schedule; it is not Anthropic's spend commitment. Pre-close talks (2026-05-28) were ~$36B with A2 ~$25B.",
+    "gw": "'More than 1GW' of Anthropic compute 'starting in mid-2026' (Apollo); platform designed for over 20 GW through 2028 across frontier labs.",
+    "chips": "Google-designed TPUs (Bloomberg: 'Google's custom chips'); Ironwood per Broadcom's Q3 call summary. Sites reported in New York, Texas, Louisiana and Indiana.",
+    "term": "'Multi-year draw schedule' (Apollo); lease term and note maturities not reported. Broadcom residual-value support protects A1/A2 if Anthropic stops paying for a period. Start: mid-2026; Broadcom said on 2026-09-02 the 1 GW deployment was underway.",
+    "stated_by": "Apollo press release 2026-06-09; Bloomberg 2026-05-28/29 and 2026-06-05/08 (via Yahoo Finance and ET Telecom); Broadcom CEO Hock Tan on earnings calls (June and 2026-09-02).",
+    "notes": "Company announcement (Apollo) plus Bloomberg reporting of note terms; no filed contract. Roughly half the debt was syndicated; notes privately rated mid-investment-grade. A second ~$36B package led by Blackstone was floated on 2026-08-04 (early stage, unconfirmed)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://ir.apollo.com/news-events/press-releases/detail/629/apollo-leads-35-billion-capital-solution-for-broadcom-ai",
+     "publisher": "Apollo Global Management (GlobeNewswire)",
+     "title": "Apollo Leads $35 Billion Capital Solution for Broadcom AI XPV Platform in Partnership with Blackstone and Leading Global Banks",
+     "published": "2026-06-09",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Initial $35B capital solution; platform over 20GW through 2028; Anthropic expansion of more than 1GW from mid-2026."
+    },
+    {
+     "url": "https://telecom.economictimes.indiatimes.com/news/devices/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic/131576658",
+     "publisher": "ET Telecom (Bloomberg text)",
+     "title": "Apollo wraps up $35 billion debt to buy AI chips for Anthropic",
+     "published": "2026-06-08",
+     "tier": "T2",
+     "opened": true,
+     "supports": "A1 $6B and A2 $24B Broadcom-backed, B $4.5B unbacked at 8.5%; $800M equity from Atlas SP; Hock Tan: >20 GW through 2028."
+    },
+    {
+     "url": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html",
+     "publisher": "Yahoo Finance (Bloomberg)",
+     "title": "Anthropic's $36 Billion AI Chip Deal Draws Apollo, Blackstone",
+     "published": "2026-05-29",
+     "tier": "T2",
+     "opened": true,
+     "supports": "SPV buys Google TPUs and leases to Anthropic; sites in NY, TX, LA, IN; Broadcom backstops the largest portions."
+    },
+    {
+     "url": "https://finance.biggo.com/news/US_AVGO_2026-09-02",
+     "publisher": "BigGo Finance (Broadcom Q3 FY26 call summary)",
+     "title": "Broadcom Q3 2026 Earnings Call summary",
+     "published": "2026-09-02",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Hock Tan: Anthropic 1 GW Ironwood in 2026, 5 GW TPU v8i in 2027; first $35B XPV tranche closed in June."
+    },
+    {
+     "url": "https://www.techtimes.com/articles/323034/20260804/anthropic-stacks-second-record-debt-deal-60-days-compute-bill-defies-equity-raise.htm",
+     "publisher": "Tech Times",
+     "title": "Anthropic Stacks Second Record Debt Deal in 60 Days",
+     "published": "2026-08-04",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Blackstone exploring a second package of at least $36B for Anthropic TPU leases; early stage, size and lead not final."
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "~$36B with A2 ~$25B (Bloomberg pre-close)",
+     "source_a": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html",
+     "value_b": "$35B with A2 $24B (final)",
+     "source_b": "https://telecom.economictimes.indiatimes.com/news/devices/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic/131576658",
+     "note": "Pre-close estimate vs final; Apollo's release says $35 billion."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-COM-846861",
+   "found": {
+    "usd_m": 30000,
+    "usd_basis": "'Anthropic has committed to purchase $30 billion of Azure compute capacity' (contracted commitment) and 'to contract additional compute capacity up to one gigawatt' (an 'up to'). Leaked S-1 (Reuters): $31.4B with Microsoft, Nov 2026-May 2033, non-cancelable except for Microsoft's uncured material breach.",
+    "gw": 1,
+    "chips": "NVIDIA Grace Blackwell and Vera Rubin systems ('initially up to one gigawatt').",
+    "term": "Not stated in the announcement; S-1 period Nov 2026 to May 2033.",
+    "stated_by": "Microsoft, NVIDIA and Anthropic joint announcement 2025-11-18 (Microsoft blog and Anthropic post); $31.4B and dates via Reuters on the confidential prospectus 2026-09-29.",
+    "notes": "Company announcement (no filed contract). NVIDIA and Microsoft also committed to invest up to $10B and up to $5B respectively in Anthropic (separate from the compute purchase). Anthropic's 2026-05-06 post describes it as 'a strategic partnership with Microsoft and NVIDIA that includes $30 billion of Azure capacity'."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+     "publisher": "Microsoft (Official Microsoft Blog)",
+     "title": "Microsoft, NVIDIA and Anthropic announce strategic partnerships",
+     "published": "2025-11-18",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Anthropic committed to purchase $30 billion of Azure compute and to contract additional capacity up to one gigawatt."
+    },
+    {
+     "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+     "publisher": "Anthropic",
+     "title": "Microsoft, NVIDIA, and Anthropic partnerships",
+     "published": "2025-11-18",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Commitment initially up to one gigawatt with NVIDIA Grace Blackwell and Vera Rubin; NVIDIA up to $10B, Microsoft up to $5B invest."
+    },
+    {
+     "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "publisher": "Reuters (syndicated copy on Lufkin Daily News)",
+     "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
+     "published": "2026-09-29",
+     "tier": "T2",
+     "opened": true,
+     "supports": "At least $518B over a decade with six partners, about 80% non-cancelable or payable regardless of usage (confidential prospectus)."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-COM-51b596",
+   "found": {
+    "usd_m": 19000,
+    "usd_basis": "'Expected to generate approximately $19 billion of contracted revenue over the initial lease term' (TeraWulf, contracted lease revenue for the 20-year initial term). Payment obligations 'expected to be supported by an investment-grade credit'.",
+    "gw": 0.401,
+    "chips": "Not specified: a lease of data-center capacity (about 401 MW of critical IT load for HPC); the tenant supplies its own compute hardware.",
+    "term": "20 years from delivery of each phase, plus two five-year renewal options. Delivery in phases beginning late 2027 (press release: second half of 2027) and reaching full 401 MW by early 2028.",
+    "stated_by": "TeraWulf press release and Form 8-K, both 2026-07-06 (landlord Raylan Data LLC; Hawesville, Kentucky).",
+    "notes": "Filed disclosure (8-K reports the executed lease; dollar figure comes from the press release attached to the filing). Anthropic PBC is named as tenant. The 8-K was filed the same day as TeraWulf's sale of its Abernathy JV stake to Fluidstack (~$530M)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://investors.terawulf.com/sec-filings/all-sec-filings/content/0001104659-26-080583/tm2619468d1_8k.htm",
+     "publisher": "TeraWulf Inc. (SEC Form 8-K)",
+     "title": "Form 8-K filed 2026-07-06",
+     "published": "2026-07-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "20-year lease with Anthropic PBC; approximately 401 MW critical IT load at Hawesville, Kentucky; delivery late 2027 to early 2028."
+    },
+    {
+     "url": "https://www.globenewswire.com/news-release/2026/07/06/3322382/0/en/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack.html",
+     "publisher": "TeraWulf (GlobeNewswire)",
+     "title": "TeraWulf Announces Anthropic Lease at Justified Data Campus and Sale of Majority Interest in Abernathy Joint Venture to Fluidstack",
+     "published": "2026-07-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Lease expected to generate approximately $19 billion of contracted revenue over the initial lease term."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-COM-43a89f",
+   "found": {
+    "usd_m": 13700,
+    "usd_basis": "'Approximately $13.7 billion spread evenly across the three tranches' under an executed six-year commercial agreement for GPU services (RUM 8-K); the third tranche requires the customer's approval of RUM's delivery date. RUM has no financing in place. Counterparty is unnamed in the filing.",
+    "gw": "Not stated in the 8-K. The Information (via BigGo) says the Maysville site has a 120 MW grid connection, expandable to 180 MW.",
+    "chips": "'GPU services'; GPU make and model not stated in the 8-K. RUM's existing Northern Data fleet is about 22,000 Nvidia Hopper (H100/H200) GPUs (The Information via BigGo).",
+    "term": "Six years; start not stated (data center under development; no delivery dates in the filing).",
+    "stated_by": "RUM Group Form 8-K filed 2026-08-24 (agreement dated 2026-08-23; Items 1.01, 3.02, 8.01) describing an 'unaffiliated U.S.-based third party cloud customer'; Anthropic identified by The Information on 2026-09-13.",
+    "notes": "The contract value is a filed disclosure; Anthropic as the customer rests on one outlet (The Information, paywalled) and I found no RUM or Anthropic confirmation. A separate binding warrant term sheet gives the customer a warrant for 50,808,408 Class A shares at $0.01, vesting with tranche purchases (first 50% in three tranches of 16.67%, rest through five expansion tranches of 10%). Simply Wall St calls the GPU arrangement a 'term sheet'; per the 8-K an affiliate of RUM entered the Commercial Agreement on 2026-08-23 and the binding 'Warrant Term Sheet' covers only the warrant (definitive warrant agreement still to be negotiated)."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1830081/000121390026092801/ea0303131-8k_rumgroup.htm",
+     "publisher": "RUM Group Inc. (SEC Form 8-K)",
+     "title": "Form 8-K filed 2026-08-24",
+     "published": "2026-08-24",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Commercial agreement ~$13.7 billion spread evenly across three tranches, six-year term, unnamed U.S. cloud customer, Maysville, Georgia."
+    },
+    {
+     "url": "https://finance.biggo.com/news/da9d3141-ac24-42ad-b93f-d2d499806259",
+     "publisher": "BigGo Finance (re-report of The Information)",
+     "title": "Anthropic Signs $13.7 Billion, Six-Year Computing Deal With Trump-Linked RUM Group",
+     "published": "2026-09-14",
+     "tier": "T4",
+     "opened": true,
+     "supports": "The Information: Anthropic signed the six-year deal; Maysville site has 120 MW grid connection; options on 51M shares."
+    },
+    {
+     "url": "https://finance.biggo.com/news/d60fbf38-ac4f-4c24-9ab7-1902b11a5c14",
+     "publisher": "BigGo Finance",
+     "title": "Anthropic Named as Mystery Buyer in RUM's $13.7 Billion GPU Deal",
+     "published": "2026-09-14",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Anthropic identified by The Information as the unnamed customer; 120 MW, expandable to 180 MW; financing not in place."
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-strikes-13-7-billion-compute-deal-trump-linked-rum-group",
+     "publisher": "The Information",
+     "title": "Anthropic Strikes $13.7 Billion Compute Deal With Trump-Linked Rum Group",
+     "published": "2026-09-13",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Headline only (paywalled): Anthropic strikes $13.7B compute deal with RUM Group."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-COM-e4c257",
+   "found": {
+    "usd_m": 11600,
+    "usd_basis": "'Approximately $11.6 billion in aggregate' committed by Anthropic under Project Plans 2 and 3 of a Master Services Agreement dated 2026-05-05 (Akamai 8-K). Subject to Akamai meeting delivery/availability requirements and to termination rights (TechCrunch reading of the 8-K). The possible +$9B expansion (to ~$20B total) is an option tied to warrant vesting, not committed.",
+    "gw": "Not disclosed for the Anthropic contract; Akamai said its $14.4B portfolio of large multi-year cloud contracts signed this year needs 95-105 MW in total (10-30 MW per site).",
+    "chips": "CPU-based distributed cloud infrastructure (dedicated cloud computing capacity and managed services), not GPUs.",
+    "term": "Seven-year initial term for each Project Plan from its service start date; Akamai expects revenue from H2 2027 ($150-300M in 2027) and an annual pace near $1.7B by end-2028 (TechCrunch, investor call).",
+    "stated_by": "Akamai press release and Form 8-K, 2026-09-24 (Anthropic named). An earlier $1.8B seven-year deal with Anthropic was reported by Bloomberg on 2026-05-08.",
+    "notes": "Filed disclosure (8-K under Item 1.01 with warrant exhibits) plus press release. Akamai warrant: 387,051 Series B preferred shares at $2,226.60 (about 7.7M common at $111.33, up to ~5%), ~2% vesting with the first commitment and ~1% per extra $3B. Whether the $1.8B May deal is Project Plan 1 and sits outside the $11.6B is my inference (TechCrunch: $11.6B is 'more than six times' the $1.8B deal)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.globenewswire.com/news-release/2026/09/24/3368729/0/en/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand.html",
+     "publisher": "Akamai Technologies (GlobeNewswire)",
+     "title": "Akamai Announces $11.6 Billion Multi-year Agreement with Anthropic to Support Growing Demand",
+     "published": "2026-09-24",
+     "tier": "T1",
+     "opened": true,
+     "supports": "$11.6 billion of contractual commitment over seven years; potential expansion up to additional $9B (~$20B); capex about $5.5B."
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm",
+     "publisher": "Akamai Technologies (SEC Form 8-K)",
+     "title": "Form 8-K filed 2026-09-24 (Items 1.01, 3.02, 5.03, 7.01, 9.01)",
+     "published": "2026-09-24",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Project Plans 2 and 3 under May 5, 2026 MSA; approximately $11.6B aggregate; initial seven-year term from service start."
+    },
+    {
+     "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
+     "publisher": "TechCrunch",
+     "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
+     "published": "2026-09-25",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Commitment depends on Akamai meeting delivery and availability requirements; more than six times the $1.8B deal Bloomberg reported in May."
+    },
+    {
+     "url": "https://www.techtarget.com/it-infrastructure/news/366651495/Akamais-potential-20B-Anthropic-deal-scales-AI-beyond-GPUs",
+     "publisher": "TechTarget",
+     "title": "Akamai's potential $20B Anthropic deal scales AI beyond GPUs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "CPU infrastructure; Akamai did not disclose power for the Anthropic contract; $14.4B contract portfolio needs 95-105 MW."
+    },
+    {
+     "url": "https://www.reuters.com/business/anthropic-signs-18-billion-ai-cloud-deal-with-akamai-bloomberg-news-reports-2026-05-08/",
+     "publisher": "Reuters",
+     "title": "Anthropic signs $1.8 billion AI cloud deal with Akamai, Bloomberg News reports",
+     "published": "2026-05-08",
+     "tier": "T2",
+     "opened": false,
+     "supports": "Headline only (page blocked to my fetchers): $1.8B Akamai cloud deal reported by Bloomberg in May 2026."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-COM-a6eaa7",
+   "found": {
+    "prospectus_total_usd_m": 518000,
+    "non_cancelable_share": "About 80% 'non-cancelable or requires payment regardless of usage' (roughly $414B by my arithmetic). Breakdown per Reuters: Broadcom-related equipment leases ~$161.2B (largely non-cancelable; neither party can terminate except on default); Google at least $111.1B (Apr 2026-Jul 2033, shortfall top-up); Amazon $110B (May 2026-Apr 2036, similar terms); xAI/SpaceX up to $84.5B through 2029 (largely cancelable on 90 days' notice); Microsoft $31.4B (Nov 2026-May 2033, non-cancelable except uncured Microsoft breach); AMD capacity expected to exceed $20B (AMD also to buy up to $5B of Anthropic stock).",
+    "information_total_usd_m": 517000,
+    "information_gw": "At least 14.8 GW of capacity contracted in 11 months (since Oct 2025), on top of 1-2 GW already held; Amazon+Google 11 GW (>$300B over 10 years); Microsoft $30B/1 GW; SpaceX up to $45B; Lambda+Nscale $80B (as re-reported by Chosunbiz/BigGo, which garble the MW figure); Fluidstack $50B. I could not find any source for a $531B figure (517 + 13.7 RUM = 530.7 is arithmetic only).",
+    "notes": "(1) Prospectus: 'at least $518 billion over a decade ... with six partners' (Google, Amazon, Microsoft, Broadcom, xAI, AMD; components sum to 498.2 + AMD >20 = ~518), a mix of minimum/non-cancelable commitments and 'up to' ceilings, not a single funded amount; it is a confidential S-1 (filed June 1, 2026) seen by Reuters, not on EDGAR. Reuters' separate exclusive (2026-09-29): end-2025 non-cancellable hosting commitments $54.6B; by early 2026 total long-term commitments >$417B covering 3.5 GW. (2) The Information (2026-09-06, paywalled; opened only via re-reports): up to $517B, compiled from company announcements and reports, 'mostly across the next decade'; it is an aggregate of announced/reported deals, well above the ~$180B of server-leasing spend through 2029 shown to investors in Dec 2025. (3) Other: Anthropic's own GW list (May 2026): Amazon up to 5 GW, Google+Broadcom 5 GW, Microsoft/NVIDIA $30B, Fluidstack $50B. Deals after the prospectus cut-off (RUM $13.7B, Akamai $11.6B, TeraWulf ~$19B, Lambda $35B, Nscale ~$44.6B) are not in the six-partner $518B; the Information's $517B and the prospectus's $518B are different constructions that happen to land close."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "publisher": "Reuters (syndicated copy on Lufkin Daily News)",
+     "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
+     "published": "2026-09-29",
+     "tier": "T2",
+     "opened": true,
+     "supports": "At least $518B over a decade with six partners, about 80% non-cancelable or payable regardless of usage (confidential prospectus)."
+    },
+    {
+     "url": "https://wncy.com/2026/09/29/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners/",
+     "publisher": "Reuters (syndicated copy on WNCY)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T2",
+     "opened": true,
+     "supports": "End-2025 non-cancellable commitments $54.6B; by early 2026 total long-term commitments exceeded $417B covering 3.5 GW."
+    },
+    {
+     "url": "https://www.techtarget.com/it-infrastructure/news/366651336/Report-Anthropic-locks-in-518B-AI-infrastructure-commitments",
+     "publisher": "TechTarget",
+     "title": "Report: Anthropic locks in $518B AI infrastructure commitments",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Re-reports Reuters: at least $518B over the next decade, roughly 80% non-cancelable or payable regardless of usage."
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-518-billion-commitment-165731037.html",
+     "publisher": "Yahoo Finance",
+     "title": "Anthropic's S-1 Is Here. The $518 Billion Commitment Is the Real Story.",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Notes the S-1 has not appeared on EDGAR; figures based on prospectus as viewed by Reuters; confidential filing June 1."
+    },
+    {
+     "url": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
+     "publisher": "The Decoder",
+     "title": "Anthropic reportedly signs $517 billion in compute deals after Dario Amodei warned rivals about reckless risk",
+     "published": "2026-09-07",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Compute contracts worth up to $517B in eleven months per The Information; at least 14.8 GW on top of 1-2 GW."
+    },
+    {
+     "url": "https://finance.biggo.com/news/28be15e2-a525-4cce-94e8-f7b6c822bc19",
+     "publisher": "BigGo Finance (re-report of The Information)",
+     "title": "Anthropic Secures $517 Billion in Compute Contracts Over 11 Months Ahead of IPO",
+     "published": "2026-09-06",
+     "tier": "T4",
+     "opened": true,
+     "supports": "The Information: $517B in 11 months, at least 14.8 GW added; $50B Fluidstack build; Broadcom TPU and AMD purchase agreements for those sites."
+    },
+    {
+     "url": "https://biz.chosun.com/en/en-it/2026/09/07/CEDEW5MFC5HYXEQENNAVUMVV5Q/",
+     "publisher": "Chosunbiz (re-report of The Information)",
+     "title": "Anthropic amasses compute deals, adds 14.8GW ahead of IPO",
+     "published": "2026-09-07",
+     "tier": "T4",
+     "opened": true,
+     "supports": "The Information: $517B of contracts in 11 months; 11 GW Amazon/Google >$300B over 10 years; $30B Microsoft; up to $45B SpaceX."
+    },
+    {
+     "url": "https://247wallst.com/investing/2026/09/13/anthropic-locks-down-517-billion-in-compute-ahead-of-ipo-and-its-still-not-enough/",
+     "publisher": "24/7 Wall St.",
+     "title": "Anthropic Locks Down $517 Billion in Compute Ahead of IPO",
+     "published": "2026-09-13",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Figure aggregates contracted and reported deals across the next decade; up from about $180B server-leasing spend told to investors through 2029."
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-clinched-517-billion-compute-deals-11-months",
+     "publisher": "The Information",
+     "title": "How Anthropic Clinched $517 Billion in Compute Deals in 11 Months",
+     "published": "2026-09-06",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Headline visible only (paywalled page opened, article text not accessible)."
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "Prospectus (Reuters): at least $518B over a decade, six partners, ~80% non-cancelable",
+     "source_a": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "value_b": "The Information: up to $517B of contracts signed in 11 months, at least 14.8 GW",
+     "source_b": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
+     "note": "Different constructions (company commitment schedule vs journalist tally of announced deals). The Information's Amazon+Google estimate (>$300B) exceeds the prospectus's Google+Amazon sum ($221.1B)."
+    },
+    {
+     "value_a": "Prospectus figure 'by early 2026': >$417B covering 3.5 GW",
+     "source_a": "https://wncy.com/2026/09/29/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners/",
+     "value_b": "Prospectus figure later: at least $518B over a decade",
+     "source_b": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+     "note": "Reuters reports two prospectus totals with different as-of dates; the $417B/3.5 GW figure is earlier and narrower."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PRI-e1af19",
+   "found": {
+    "price_in_per_mtok": 0.25,
+    "price_out_per_mtok": 1.25,
+    "release_date": "2024-03-13",
+    "later_changes": "No list-price change found: $0.25/$1.25 in Anthropic's docs tables archived 2024-11-10, 2025-03-01, 2025-06-15, 2026-01-15 and 2026-02-25. Batch ($0.125/$0.625) and prompt-caching prices ($0.30 write, $0.03 read) were added later as features. Deprecation announced 2026-02-19; retired on the Claude API 2026-04-20.",
+    "notes": "Claude 3 family announced 2024-03-04 with Haiku 'available soon' at $0.25/$1.25; Haiku reached the API and Claude Pro on 2024-03-13 (model ID claude-3-haiku-20240307). Prices per Anthropic launch post and docs; page dates given in sources."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-3-family",
+     "publisher": "Anthropic",
+     "title": "Introducing the next generation of Claude",
+     "published": "2024-03-04",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Cost per million tokens: Opus $15/$75, Sonnet $3/$15, Haiku $0.25/$1.25; Haiku available soon."
+    },
+    {
+     "url": "https://www.anthropic.com/news/claude-3-haiku",
+     "publisher": "Anthropic",
+     "title": "Claude 3 Haiku: our fastest model yet",
+     "published": "2024-03-13",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Starting today, customers can use Claude 3 Haiku through our API or Claude Pro."
+    },
+    {
+     "url": "https://web.archive.org/web/20241110000000/https://docs.anthropic.com/en/docs/about-claude/models",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Models - Anthropic docs (archived 2024-11-10)",
+     "published": "2024-11-10",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Cost per MTok: 3.5 Sonnet $3/$15, 3.5 Haiku $1.00/$5.00, 3 Opus $15/$75, 3 Sonnet $3/$15, 3 Haiku $0.25/$1.25."
+    },
+    {
+     "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-01-15)",
+     "published": "2026-01-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4.5 $5/$25; Opus 4.1/4 $15/$75; Sonnet 4.5/4 $3/$15 (>200K premium $6/$22.50); Haiku 4.5 $1/$5; 3.5 Haiku $0.80/$4."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-4f98c5",
+   "found": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2024-03-04",
+    "later_changes": "No list-price change found ($3/$15 in the docs models table archived 2024-11-10). Deprecation announced 2025-01-21; retired 2025-07-21. Not in the March 2025 pricing table (already deprecated).",
+    "notes": "Claude 3 Sonnet (claude-3-sonnet-20240229) was available on the API from the 2024-03-04 announcement. Launch price from the family post; later-state confirmation is from an archived docs page."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-3-family",
+     "publisher": "Anthropic",
+     "title": "Introducing the next generation of Claude",
+     "published": "2024-03-04",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Cost per million tokens: Opus $15/$75, Sonnet $3/$15, Haiku $0.25/$1.25; Haiku available soon."
+    },
+    {
+     "url": "https://web.archive.org/web/20241110000000/https://docs.anthropic.com/en/docs/about-claude/models",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Models - Anthropic docs (archived 2024-11-10)",
+     "published": "2024-11-10",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Cost per MTok: 3.5 Sonnet $3/$15, 3.5 Haiku $1.00/$5.00, 3 Opus $15/$75, 3 Sonnet $3/$15, 3 Haiku $0.25/$1.25."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-ceacd1",
+   "found": {
+    "price_in_per_mtok": 15.0,
+    "price_out_per_mtok": 75.0,
+    "release_date": "2024-03-04",
+    "later_changes": "No list-price change found: $15/$75 in docs tables archived 2024-11-10, 2025-03-01, 2025-06-15 and 2026-01-15 (marked deprecated). Deprecation announced 2025-06-30; retired on the API 2026-01-05 (release note of 2026-01-05: Opus 4.5 'at a third of the cost').",
+    "notes": "Claude 3 Opus (claude-3-opus-20240229) available from the 2024-03-04 announcement; 200K context (1M on request)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-3-family",
+     "publisher": "Anthropic",
+     "title": "Introducing the next generation of Claude",
+     "published": "2024-03-04",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Cost per million tokens: Opus $15/$75, Sonnet $3/$15, Haiku $0.25/$1.25; Haiku available soon."
+    },
+    {
+     "url": "https://web.archive.org/web/20241110000000/https://docs.anthropic.com/en/docs/about-claude/models",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Models - Anthropic docs (archived 2024-11-10)",
+     "published": "2024-11-10",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Cost per MTok: 3.5 Sonnet $3/$15, 3.5 Haiku $1.00/$5.00, 3 Opus $15/$75, 3 Sonnet $3/$15, 3 Haiku $0.25/$1.25."
+    },
+    {
+     "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-01-15)",
+     "published": "2026-01-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4.5 $5/$25; Opus 4.1/4 $15/$75; Sonnet 4.5/4 $3/$15 (>200K premium $6/$22.50); Haiku 4.5 $1/$5; 3.5 Haiku $0.80/$4."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-4922e9",
+   "found": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2024-06-20",
+    "later_changes": "No list-price change for either version: the upgraded claude-3-5-sonnet-20241022 (released 2024-10-22) carries the same price ('same price and speed as its predecessor'); $3/$15 in docs tables archived 2024-11-10, 2025-03-01, 2025-06-15. Both snapshots deprecated 2025-08-13 and retired 2025-10-28.",
+    "notes": "Anthropic's docs release notes date the original launch 2024-06-20 (Claude API, Bedrock, Vertex); the news post page itself carries the date label Jun 21, 2024. Upgrade announced 2024-10-22."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude 3.5 Sonnet",
+     "published": "2024-06-21",
+     "tier": "T1",
+     "opened": true,
+     "supports": "The model costs $3 per million input tokens and $15 per million output tokens (page dated Jun 21, 2024)."
+    },
+    {
+     "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+     "publisher": "Anthropic",
+     "title": "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku",
+     "published": "2024-10-22",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Update (12/03/2024): Claude 3.5 Haiku now priced at $0.80 MTok input / $4 MTok output; new 3.5 Sonnet at same price."
+    },
+    {
+     "url": "https://web.archive.org/web/20250301000000/https://docs.anthropic.com/en/docs/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Anthropic docs (archived 2025-03-01)",
+     "published": "2025-03-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: 3.7 Sonnet and 3.5 Sonnet $3/$15; 3.5 Haiku $0.80/$4; 3 Opus $15/$75; 3 Haiku $0.25/$1.25."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-d76d7f",
+   "found": {
+    "price_in_per_mtok": 1.0,
+    "price_out_per_mtok": 5.0,
+    "release_date": "2024-11-04",
+    "later_changes": "Price moved twice after the announcement. (1) At the 2024-10-22 announcement Anthropic said 3.5 Haiku came 'for the same cost ... as Claude 3 Haiku' ($0.25/$1.25). (2) When it reached the API on 2024-11-04 it was priced $1/$5 (post updated that day; docs page archived 2024-11-10 shows $1.00/$5.00). (3) On 2024-12-03 Anthropic cut it to $0.80/$4, unchanged until retirement on the Claude API (2026-02-19; still on Bedrock and Google Cloud).",
+    "notes": "'At launch' is ambiguous: the announced price (same as 3 Haiku, $0.25/$1.25), the first list price when the API opened (2024-11-04: $1/$5, text-only), and the price from 2024-12-03 ($0.80/$4). I report $1/$5 as the launch list price. Batch $0.40/$2; cache write $1, read $0.08 at the $0.80 price."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://web.archive.org/web/20241101000000/https://www.anthropic.com/news/3-5-models-and-computer-use",
+     "publisher": "Internet Archive copy of Anthropic post",
+     "title": "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku (archived 2024-11-01)",
+     "published": "2024-10-22",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Original text: for the same cost and similar speed to Claude 3 Haiku, Claude 3.5 Haiku improves across every skill set."
+    },
+    {
+     "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+     "publisher": "Anthropic",
+     "title": "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku",
+     "published": "2024-10-22",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Update (12/03/2024): Claude 3.5 Haiku now priced at $0.80 MTok input / $4 MTok output; new 3.5 Sonnet at same price."
+    },
+    {
+     "url": "https://web.archive.org/web/20241110000000/https://docs.anthropic.com/en/docs/about-claude/models",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Models - Anthropic docs (archived 2024-11-10)",
+     "published": "2024-11-10",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Cost per MTok: 3.5 Sonnet $3/$15, 3.5 Haiku $1.00/$5.00, 3 Opus $15/$75, 3 Sonnet $3/$15, 3 Haiku $0.25/$1.25."
+    },
+    {
+     "url": "https://tech.co/news/anthropic-claude-haiku-price-increase",
+     "publisher": "tech.co",
+     "title": "Anthropic's New Claude Haiku AI Tool Has Increased in Price Already",
+     "published": "2024-11-05",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Announcement updated 4 Nov: Claude 3.5 Haiku now priced at $1 MTok input / $5 MTok output, a fourfold increase."
+    },
+    {
+     "url": "https://web.archive.org/web/20250301000000/https://docs.anthropic.com/en/docs/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Anthropic docs (archived 2025-03-01)",
+     "published": "2025-03-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: 3.7 Sonnet and 3.5 Sonnet $3/$15; 3.5 Haiku $0.80/$4; 3 Opus $15/$75; 3 Haiku $0.25/$1.25."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-46a566",
+   "found": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2025-02-24",
+    "later_changes": "No list-price change found ($3/$15 in docs tables archived 2025-03-01, 2025-06-15, 2026-01-15). Deprecation announced 2025-10-28; retired 2026-02-19.",
+    "notes": "Price applies in standard and extended-thinking modes and includes thinking tokens ('same price as its predecessors')."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+     "publisher": "Anthropic",
+     "title": "Claude 3.7 Sonnet and Claude Code",
+     "published": "2025-02-24",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Same price as predecessors: $3 per million input tokens and $15 per million output tokens, including thinking tokens."
+    },
+    {
+     "url": "https://web.archive.org/web/20250301000000/https://docs.anthropic.com/en/docs/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Anthropic docs (archived 2025-03-01)",
+     "published": "2025-03-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: 3.7 Sonnet and 3.5 Sonnet $3/$15; 3.5 Haiku $0.80/$4; 3 Opus $15/$75; 3 Haiku $0.25/$1.25."
+    },
+    {
+     "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-01-15)",
+     "published": "2026-01-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4.5 $5/$25; Opus 4.1/4 $15/$75; Sonnet 4.5/4 $3/$15 (>200K premium $6/$22.50); Haiku 4.5 $1/$5; 3.5 Haiku $0.80/$4."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-11024e",
+   "found": {
+    "price_in_per_mtok": 15.0,
+    "price_out_per_mtok": 75.0,
+    "release_date": "2025-05-22",
+    "later_changes": "No list-price change found ($15/$75 in docs tables archived 2025-06-15, 2026-01-15, 2026-02-25). Deprecation announced 2026-04-14; retired on the Claude API 2026-06-15 (still on Google Cloud).",
+    "notes": "Launched together with Sonnet 4; Anthropic: 'Pricing remains consistent with previous Opus and Sonnet models'. Opus 4.5 later cut the Opus tier to $5/$25 (a new model, not a change to Opus 4)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-4",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude 4",
+     "published": "2025-05-22",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Opus 4 at $15/$75 per million tokens (input/output) and Sonnet 4 at $3/$15."
+    },
+    {
+     "url": "https://web.archive.org/web/20250615000000/https://docs.anthropic.com/en/docs/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Anthropic docs (archived 2025-06-15)",
+     "published": "2025-06-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4 $15/$75; Sonnet 4, 3.7, 3.5 $3/$15; 3.5 Haiku $0.80/$4; 3 Opus $15/$75; 3 Haiku $0.25/$1.25."
+    },
+    {
+     "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-01-15)",
+     "published": "2026-01-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4.5 $5/$25; Opus 4.1/4 $15/$75; Sonnet 4.5/4 $3/$15 (>200K premium $6/$22.50); Haiku 4.5 $1/$5; 3.5 Haiku $0.80/$4."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-3cacec",
+   "found": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2025-05-22",
+    "later_changes": "Base price unchanged. A long-context premium applies to the 1M-token context beta (beta opened 2025-08-12): prompts over 200K input tokens billed $6 input / $22.50 output (shown in docs tables archived 2026-01-15 and 2026-02-25; I did not open a 2025 copy, so the premium's start date is unconfirmed). The 1M beta was retired 2026-04-30. Deprecation announced 2026-04-14; retired on the Claude API 2026-06-15.",
+    "notes": "Launch price per Anthropic's Claude 4 post: Sonnet 4 at $3/$15."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-4",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude 4",
+     "published": "2025-05-22",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Opus 4 at $15/$75 per million tokens (input/output) and Sonnet 4 at $3/$15."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-01-15)",
+     "published": "2026-01-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4.5 $5/$25; Opus 4.1/4 $15/$75; Sonnet 4.5/4 $3/$15 (>200K premium $6/$22.50); Haiku 4.5 $1/$5; 3.5 Haiku $0.80/$4."
+    },
+    {
+     "url": "https://web.archive.org/web/20260225000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-02-25)",
+     "published": "2026-02-25",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Opus 4.6 $5/$25 (>200K $10/$37.50; fast mode $30/$150); Sonnet 4.6/4.5/4 $3/$15 (>200K $6/$22.50)."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-8e796e",
+   "found": {
+    "price_in_per_mtok": 15.0,
+    "price_out_per_mtok": 75.0,
+    "release_date": "2025-08-05",
+    "later_changes": "No list-price change found ($15/$75 in docs tables archived 2026-01-15 and 2026-02-25). Deprecation announced 2026-06-05; retired on the Claude API 2026-08-05 (still on Bedrock and Google Cloud per the live pricing page).",
+    "notes": "Launch post: 'Pricing is the same as Opus 4' ($15/$75); model ID claude-opus-4-1-20250805."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-opus-4-1",
+     "publisher": "Anthropic",
+     "title": "Claude Opus 4.1",
+     "published": "2025-08-05",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Pricing is the same as Opus 4."
+    },
+    {
+     "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-01-15)",
+     "published": "2026-01-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4.5 $5/$25; Opus 4.1/4 $15/$75; Sonnet 4.5/4 $3/$15 (>200K premium $6/$22.50); Haiku 4.5 $1/$5; 3.5 Haiku $0.80/$4."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-4faae8",
+   "found": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2025-09-29",
+    "later_changes": "Base price unchanged ($3/$15, live page 2026-09-30). Prompts over 200K input tokens under the 1M-context beta carried a premium of $6/$22.50 (archived docs 2026-01-15 and 2026-02-25; start date of the premium not confirmed); that beta was retired 2026-04-30. Deprecation announced 2026-09-30; retirement scheduled 2026-11-30.",
+    "notes": "Launch post: pricing remains the same as Claude Sonnet 4, at $3/$15 per million tokens."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Sonnet 4.5",
+     "published": "2025-09-29",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Pricing remains the same as Claude Sonnet 4, at $3/$15 per million tokens."
+    },
+    {
+     "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-01-15)",
+     "published": "2026-01-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4.5 $5/$25; Opus 4.1/4 $15/$75; Sonnet 4.5/4 $3/$15 (>200K premium $6/$22.50); Haiku 4.5 $1/$5; 3.5 Haiku $0.80/$4."
+    },
+    {
+     "url": "https://web.archive.org/web/20260225000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-02-25)",
+     "published": "2026-02-25",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Opus 4.6 $5/$25 (>200K $10/$37.50; fast mode $30/$150); Sonnet 4.6/4.5/4 $3/$15 (>200K $6/$22.50)."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-e6612c",
+   "found": {
+    "price_in_per_mtok": 1.0,
+    "price_out_per_mtok": 5.0,
+    "release_date": "2025-10-15",
+    "later_changes": "No list-price change found ($1/$5 in docs tables archived 2026-01-15 and on the live page 2026-09-30). Cache write $1.25 (5m), read $0.10; batch $0.50/$2.50. Retirement not sooner than 2026-10-15.",
+    "notes": "Launch post: 'Pricing is now $1/$5 per million input and output tokens' (up from 3.5 Haiku's $0.80/$4)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Haiku 4.5",
+     "published": "2025-10-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Pricing is now $1/$5 per million input and output tokens."
+    },
+    {
+     "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-01-15)",
+     "published": "2026-01-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4.5 $5/$25; Opus 4.1/4 $15/$75; Sonnet 4.5/4 $3/$15 (>200K premium $6/$22.50); Haiku 4.5 $1/$5; 3.5 Haiku $0.80/$4."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Models overview (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Current lineup prices: Fable 5.1 $10/$50, Opus 5.5 $4/$20, Sonnet 5.5 $2/$10, Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-27b2a8",
+   "found": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2025-11-24",
+    "later_changes": "No list-price change found ($5/$25 on live page 2026-09-30). Retirement not sooner than 2026-11-24.",
+    "notes": "Launch post: 'Pricing is now $5/$25 per million tokens' - a two-thirds cut from Opus 4.1's $15/$75. Model ID claude-opus-4-5-20251101."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-opus-4-5",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Opus 4.5",
+     "published": "2025-11-24",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Pricing is now $5/$25 per million tokens."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    },
+    {
+     "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-01-15)",
+     "published": "2026-01-15",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Table: Opus 4.5 $5/$25; Opus 4.1/4 $15/$75; Sonnet 4.5/4 $3/$15 (>200K premium $6/$22.50); Haiku 4.5 $1/$5; 3.5 Haiku $0.80/$4."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-1718c6",
+   "found": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-02-05",
+    "later_changes": "Base price unchanged. At launch prompts over 200K tokens (1M-context beta) were billed $10/$37.50; the 1M window went out of beta at standard pricing on 2026-03-13. Fast mode (research preview, from 2026-02-07) cost $30/$150 (6x); fast mode was removed for Opus 4.6 on 2026-06-29 (requests now run at standard speed and rates).",
+    "notes": "Launch post: 'Pricing remains the same at $5/$25 per million tokens'. Also US-only inference at 1.1x (inference_geo) for models after 2026-02-01."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-opus-4-6",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Opus 4.6",
+     "published": "2026-02-05",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Pricing remains the same at $5/$25 per million tokens; >200k premium $10/$37.50 in 1M beta."
+    },
+    {
+     "url": "https://web.archive.org/web/20260225000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-02-25)",
+     "published": "2026-02-25",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Opus 4.6 $5/$25 (>200K $10/$37.50; fast mode $30/$150); Sonnet 4.6/4.5/4 $3/$15 (>200K $6/$22.50)."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-f1019d",
+   "found": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2026-02-17",
+    "later_changes": "Base price unchanged. The 1M-token context was in beta at launch with a premium above 200K input tokens ($6/$22.50 per the archived 2026-02-25 table); on 2026-03-13 it went out of beta 'at standard pricing'.",
+    "notes": "Launch post: 'Pricing remains the same as Sonnet 4.5, starting at $3/$15 per million tokens'."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Sonnet 4.6",
+     "published": "2026-02-17",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Pricing remains the same as Sonnet 4.5, starting at $3/$15 per million tokens."
+    },
+    {
+     "url": "https://web.archive.org/web/20260225000000/https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Internet Archive copy of Anthropic docs",
+     "title": "Pricing - Claude Platform Docs (archived 2026-02-25)",
+     "published": "2026-02-25",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Opus 4.6 $5/$25 (>200K $10/$37.50; fast mode $30/$150); Sonnet 4.6/4.5/4 $3/$15 (>200K $6/$22.50)."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-2e6641",
+   "found": {
+    "price_in_per_mtok": 25.0,
+    "price_out_per_mtok": 125.0,
+    "release_date": "2026-04-07",
+    "later_changes": "Never on the public price table. Deprecated 2026-06-09 (successor Claude Mythos 5 at $10/$50, released the same day for Glasswing participants); retirement date 'to be announced'. No change to the $25/$125 figure found.",
+    "notes": "Basis: gated research preview (invitation-only, Project Glasswing), not generally available. Anthropic committed $100M in usage credits to cover usage; 'afterward' participants pay $25/$125 per million input/output tokens. Release date is the announcement and research-preview availability on 2026-04-07. Newer tokenizer (about 30% more tokens per text)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/glasswing",
+     "publisher": "Anthropic",
+     "title": "Project Glasswing: Securing critical software for the AI era",
+     "published": "2026-04-07",
+     "tier": "T1",
+     "opened": true,
+     "supports": "After $100M credits, Mythos Preview available to participants at $25/$125 per million input/output tokens."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Model deprecations (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Retirement and deprecation dates: Haiku 3 retired 2026-04-20; 3.5 Haiku and 3.7 Sonnet 2026-02-19; Opus 4.1 2026-08-05."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-3a256f",
+   "found": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-04-16",
+    "later_changes": "Base price unchanged ($5/$25). New tokenizer produces about 30% more tokens for the same text, so effective cost per text rose (Anthropic docs). Fast mode (research preview) added 2026-05-12, deprecated 2026-06-25, removed 2026-07-24 (requests now error).",
+    "notes": "Launch post: 'Pricing remains the same as Opus 4.6: $5 per million input tokens and $25 per million output tokens.' Retirement not sooner than 2027-04-16."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-opus-4-7",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Opus 4.7",
+     "published": "2026-04-16",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Pricing remains the same as Opus 4.6: $5 per million input tokens and $25 per million output tokens."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/opus-4-7/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Opus 4.7 model page",
+     "published": "2026-04-16",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released April 16, 2026; input $5, output $25 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-9883ec",
+   "found": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-05-28",
+    "later_changes": "No list-price change found ($5/$25 on live page 2026-09-30). Fast mode (research preview, API only) is $10/$50 (2x), priced at launch; still offered.",
+    "notes": "Launch post: pricing for regular usage unchanged from Opus 4.7 at $5/$25; fast mode $10/$50. 1M context at standard pricing. Retirement not sooner than 2027-05-28."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-opus-4-8",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Opus 4.8",
+     "published": "2026-05-28",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Regular usage unchanged from Opus 4.7 at $5/$25; fast mode is $10 input and $50 output per million."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/opus-4-8/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Opus 4.8 model page",
+     "published": "2026-05-28",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released May 28, 2026; input $5, output $25 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-42e96b",
+   "found": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-06-09",
+    "later_changes": "List price unchanged ($10/$50). Cache reads $1/MTok on Fable 5 (0.1x) versus $0.25 on Fable 5.1 (released 2026-09-01). Access was suspended for all users from 2026-06-12 (US export controls) until 2026-07-01 (not a price change). Billing rule change: refusals returned before any output were not billed before 2026-09-24; billed in some categories after.",
+    "notes": "Launched with Claude Mythos 5 (same price; Glasswing-only). Fable 5 carries safety classifiers that can decline requests. Anthropic: 'the same underlying model' as Mythos 5. Batch $5/$25."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://platform.claude.com/docs/en/models/fable-5/introducing-claude-fable-5-and-claude-mythos-5",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Introducing Claude Fable 5 and Claude Mythos 5",
+     "published": "2026-06-09",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Fable 5 and Mythos 5 share specs and pricing: $10 per million input tokens and $50 per million output tokens."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/fable-5/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Fable 5 model page",
+     "published": "2026-06-09",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released June 9, 2026; input $10, output $50, cache read $1 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://www.anthropic.com/news/redeploying-fable-5",
+     "publisher": "Anthropic",
+     "title": "Redeploying Fable 5",
+     "published": "2026-06-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "US export controls on June 12 forced suspension; access to Fable 5 and Mythos 5 restored July 1."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-c360e0",
+   "found": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-06-09",
+    "later_changes": "List price unchanged ($10/$50). Cache reads $1/MTok at launch; Mythos 5.1 (2026-09-01) cut cache reads to $0.25. Access was suspended on 2026-06-12 by US export controls and restored for a set of US organizations after 2026-06-26 approval, with broader Glasswing access still being coordinated on 2026-07-01.",
+    "notes": "Limited availability: offered only to approved Project Glasswing participants (not on the public self-serve list). Successor to Mythos Preview ($25/$125). Same pricing as Fable 5."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://platform.claude.com/docs/en/models/fable-5/introducing-claude-fable-5-and-claude-mythos-5",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Introducing Claude Fable 5 and Claude Mythos 5",
+     "published": "2026-06-09",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Fable 5 and Mythos 5 share specs and pricing: $10 per million input tokens and $50 per million output tokens."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/mythos-5/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Mythos 5 model page",
+     "published": "2026-06-09",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released June 9, 2026; input $10, output $50 per MTok; Project Glasswing only."
+    },
+    {
+     "url": "https://www.anthropic.com/news/redeploying-fable-5",
+     "publisher": "Anthropic",
+     "title": "Redeploying Fable 5",
+     "published": "2026-06-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "US export controls on June 12 forced suspension; access to Fable 5 and Mythos 5 restored July 1."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-0c0a69",
+   "found": {
+    "price_in_per_mtok": 2.0,
+    "price_out_per_mtok": 10.0,
+    "release_date": "2026-06-30",
+    "later_changes": "Launched at 'introductory pricing' of $2/$10 (through 2026-08-31 per the pricing page) with a scheduled rise to $3/$15 on 2026-09-01. On 2026-08-10 Anthropic made $2/$10 the permanent standard price; the increase will not occur. Live page 2026-09-30: $2/$10.",
+    "notes": "Uses a new tokenizer (about 1.0-1.35x more tokens than Sonnet 4.6), so the effective per-text saving versus Sonnet 4.6's $3/$15 is smaller than the headline. Batch $1/$5; cache read $0.20."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-sonnet-5",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Sonnet 5",
+     "published": "2026-06-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Priced at $2/$10 per million; Edit Aug 10, 2026: introductory pricing is permanent, $3/$15 from Sept 1 no longer applies."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/sonnet-5/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Sonnet 5 model page",
+     "published": "2026-06-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released June 30, 2026; input $2, output $10 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-fe68cd",
+   "found": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-07-24",
+    "later_changes": "No list-price change ($5/$25 on live page 2026-09-30). Opus 5.5 (2026-09-22) launched at $4/$20, making Opus 5 the higher-priced Opus. Fast mode at 2x base ($10/$50).",
+    "notes": "Launch post: priced at $5/$25, 'the same as Opus 4.8'. Retirement not sooner than 2027-07-24."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-opus-5",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Opus 5",
+     "published": "2026-07-24",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Priced at $5 per million input tokens and $25 per million output tokens, the same as Opus 4.8."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/opus-5/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Opus 5 model page",
+     "published": "2026-07-24",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released July 24, 2026; input $5, output $25 per MTok."
+    },
+    {
+     "url": "https://www.anthropic.com/news/claude-opus-5-5",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Opus 5.5",
+     "published": "2026-09-22",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Input and output tokens are $4 and $20 per million, 20% less than Opus 5; cache reads $0.20."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-4cb1f2",
+   "found": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-09-01",
+    "later_changes": "None yet: launched 29 days before 2026-09-30. Launch change versus Fable 5: cache reads cut to $0.25/MTok (0.025x base).",
+    "notes": "Same input/output price as Fable 5; released alongside Mythos 5.1; successor to Fable 5. Batch $5/$25; cache write $12.50 (5m)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "What's new in Claude Fable 5.1",
+     "published": "2026-09-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Priced the same as Fable 5 ($10/$50) except cache reads, $0.25 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Fable 5.1 model page",
+     "published": "2026-09-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released September 1, 2026; input $10, output $50, cache read $0.25 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-026aed",
+   "found": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-09-01",
+    "later_changes": "None yet (launched 2026-09-01). Cache reads $0.25/MTok (0.025x base), versus $1 on Mythos 5.",
+    "notes": "Limited availability: Project Glasswing participants only; same specs and pricing as Fable 5.1. Not on the public self-serve list."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "What's new in Claude Fable 5.1",
+     "published": "2026-09-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Priced the same as Fable 5 ($10/$50) except cache reads, $0.25 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/mythos-5-1/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Mythos 5.1 model page",
+     "published": "2026-09-01",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released September 1, 2026; input $10, output $50, cache read $0.25 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-38ef44",
+   "found": {
+    "price_in_per_mtok": 4.0,
+    "price_out_per_mtok": 20.0,
+    "release_date": "2026-09-22",
+    "later_changes": "None yet (launched 2026-09-22). Launch terms: 20% below Opus 5's $5/$25; cache reads $0.20/MTok (0.05x, 60% below Opus 5); fast mode $8/$40.",
+    "notes": "Launch post: input and output tokens are $4 and $20 per million. Anthropic's docs call Opus 5.5 the starting point for most workloads."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/claude-opus-5-5",
+     "publisher": "Anthropic",
+     "title": "Introducing Claude Opus 5.5",
+     "published": "2026-09-22",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Input and output tokens are $4 and $20 per million, 20% less than Opus 5; cache reads $0.20."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Opus 5.5 model page",
+     "published": "2026-09-22",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released September 22, 2026; input $4, output $20, cache read $0.20 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRI-f9fd47",
+   "found": {
+    "price_in_per_mtok": 2.0,
+    "price_out_per_mtok": 10.0,
+    "release_date": "2026-09-28",
+    "later_changes": "None yet (launched 2026-09-28). Cache read $0.20, 5m write $2.50, 1h write $4; batch $1/$5.",
+    "notes": "Model page and live pricing table both show $2/$10; same as Sonnet 5's standard price. The release-note entry points to the model page for prices."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Sonnet 5.5 model page",
+     "published": "2026-09-28",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Released September 28, 2026; input $2, output $10, cache read $0.20 per MTok."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/release-notes/api",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Claude Platform release notes, API (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Dated launch entries for every model; Sonnet 5 introductory $2/$10 made standard on 2026-08-10."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Pricing (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Model table: Fable 5.1/5 $10/$50; Opus 5.5 $4/$20; Opus 5 to 4.5 $5/$25; Sonnet 5.5 and 5 $2/$10; Haiku 4.5 $1/$5."
+    },
+    {
+     "url": "https://platform.claude.com/docs/en/models/overview",
+     "publisher": "Anthropic (Claude Platform Docs)",
+     "title": "Models overview (live page, fetched 2026-09-30)",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Current lineup prices: Fable 5.1 $10/$50, Opus 5.5 $4/$20, Sonnet 5.5 $2/$10, Haiku 4.5 $1/$5."
+    }
+   ],
+   "conflicts": []
+  }
+ ],
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Started verify-compute: read brief and questions file (38 claims: 13 compute, 25 price). Plan: read Anthropic pricing/docs pages once, then launch posts, then partner filings for compute."
+  },
+  {
+   "seq": 2,
+   "type": "open",
+   "text": "Opened Anthropic API pricing docs page (platform.claude.com) - current price table, batch, fast mode, Sonnet 5 intro-pricing footnote",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+  },
+  {
+   "seq": 3,
+   "type": "open",
+   "text": "Opened Anthropic models overview page (current lineup, model IDs, retirement commitments)",
+   "url": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  {
+   "seq": 4,
+   "type": "open",
+   "text": "Opened Anthropic model deprecations page (status + retirement dates for each model, used to date releases)",
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "seq": 5,
+   "type": "open",
+   "text": "Opened claude.com/pricing (consumer/API pricing summary; redirect from anthropic.com/pricing)",
+   "url": "https://claude.com/pricing"
+  },
+  {
+   "seq": 6,
+   "type": "open",
+   "text": "Opened anthropic.com/news index (latest items through Sep 23, 2026; no compute-deal posts in first 10 items)",
+   "url": "https://www.anthropic.com/news"
+  },
+  {
+   "seq": 7,
+   "type": "open",
+   "text": "Opened Anthropic Claude API release notes (dated launch entries for every model incl. Sonnet 5 price-standardisation on Aug 10, 2026)",
+   "url": "https://platform.claude.com/docs/en/release-notes/api"
+  },
+  {
+   "seq": 8,
+   "type": "open",
+   "text": "Opened Claude 3 family launch post (Mar 4, 2024): Opus $15/$75, Sonnet $3/$15, Haiku $0.25/$1.25",
+   "url": "https://www.anthropic.com/news/claude-3-family"
+  },
+  {
+   "seq": 9,
+   "type": "open",
+   "text": "Opened Claude 3 Haiku launch post (Mar 13, 2024): available on API from that day",
+   "url": "https://www.anthropic.com/news/claude-3-haiku"
+  },
+  {
+   "seq": 10,
+   "type": "open",
+   "text": "Opened Claude 3.5 Sonnet launch post: $3/$15 per MTok",
+   "url": "https://www.anthropic.com/news/claude-3-5-sonnet"
+  },
+  {
+   "seq": 11,
+   "type": "open",
+   "text": "Opened Oct 22, 2024 post (3.5 Sonnet upgrade + 3.5 Haiku): carries Dec 3, 2024 update 'revised pricing for Claude 3.5 Haiku ... $0.80 input / $4 output'",
+   "url": "https://www.anthropic.com/news/3-5-models-and-computer-use"
+  },
+  {
+   "seq": 12,
+   "type": "open",
+   "text": "Opened Wayback Nov 1, 2024 copy of the Oct 22 post: original text says Haiku 3.5 'for the same cost ... as Claude 3 Haiku'",
+   "url": "https://web.archive.org/web/20241101000000/https://www.anthropic.com/news/3-5-models-and-computer-use"
+  },
+  {
+   "seq": 13,
+   "type": "open",
+   "text": "Opened Wayback Nov 10, 2024 copy of Anthropic docs models page: 3.5 Haiku cost $1.00 / $5.00 per MTok (3 Haiku $0.25/$1.25; 3.5 Sonnet $3/$15)",
+   "url": "https://web.archive.org/web/20241110000000/https://docs.anthropic.com/en/docs/about-claude/models"
+  },
+  {
+   "seq": 14,
+   "type": "flag",
+   "text": "Claude 3.5 Haiku list price moved three times: announced as same cost as Claude 3 Haiku (Oct 22, 2024), listed $1/$5 at API availability (Nov 4, 2024), cut to $0.80/$4 (Dec 3, 2024)",
+   "event_id": "OPS-PRI-d76d7f"
+  },
+  {
+   "seq": 15,
+   "type": "open",
+   "text": "Opened Claude 3.7 Sonnet post: same price as predecessors $3/$15 incl. thinking tokens",
+   "url": "https://www.anthropic.com/news/claude-3-7-sonnet"
+  },
+  {
+   "seq": 16,
+   "type": "open",
+   "text": "Opened Claude 4 launch post (May 22, 2025): Opus 4 $15/$75, Sonnet 4 $3/$15",
+   "url": "https://www.anthropic.com/news/claude-4"
+  },
+  {
+   "seq": 17,
+   "type": "open",
+   "text": "Opened Opus 4.1, Sonnet 4.5, Haiku 4.5, Opus 4.5, Opus 4.6, Sonnet 4.6, Opus 4.7, Opus 4.8 launch posts for prices",
+   "url": "https://www.anthropic.com/news/claude-opus-4-5"
+  },
+  {
+   "seq": 18,
+   "type": "open",
+   "text": "Opened Project Glasswing post (Apr 7, 2026): Mythos Preview $25/$125 per MTok after $100M credits",
+   "url": "https://www.anthropic.com/glasswing"
+  },
+  {
+   "seq": 19,
+   "type": "open",
+   "text": "Opened Claude Sonnet 5 launch post (Jun 30, 2026): $2/$10; edit of Aug 10, 2026 makes it permanent (planned $3/$15 from Sep 1 cancelled)",
+   "url": "https://www.anthropic.com/news/claude-sonnet-5"
+  },
+  {
+   "seq": 20,
+   "type": "open",
+   "text": "Opened Claude Opus 5 launch post (Jul 24, 2026): $5/$25",
+   "url": "https://www.anthropic.com/news/claude-opus-5"
+  },
+  {
+   "seq": 21,
+   "type": "open",
+   "text": "Opened Claude Opus 5.5 launch post (Sep 22, 2026): $4/$20, cache reads $0.20",
+   "url": "https://www.anthropic.com/news/claude-opus-5-5"
+  },
+  {
+   "seq": 22,
+   "type": "open",
+   "text": "Opened docs page 'Introducing Claude Fable 5 and Claude Mythos 5' (released Jun 9, 2026): $10/$50",
+   "url": "https://platform.claude.com/docs/en/models/fable-5/introducing-claude-fable-5-and-claude-mythos-5"
+  },
+  {
+   "seq": 23,
+   "type": "open",
+   "text": "Opened Anthropic statement 'Redeploying Fable 5' (Jun 30/Jul 1, 2026): access suspended Jun 12 by US export controls, restored Jul 1",
+   "url": "https://www.anthropic.com/news/redeploying-fable-5"
+  },
+  {
+   "seq": 24,
+   "type": "open",
+   "text": "Opened docs model pages for Fable 5.1, Mythos 5.1, Sonnet 5.5, Opus 5.5 etc. (Released dates and per-MTok prices)",
+   "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+  },
+  {
+   "seq": 25,
+   "type": "verify",
+   "text": "Release dates cross-checked: API release-notes dates match per-model docs 'Released' lines and deprecations-page retirement commitments for every 4.5-and-later model"
+  },
+  {
+   "seq": 26,
+   "type": "search",
+   "text": "Discovery batch: Google News RSS on Anthropic/Broadcom/Google TPU (Apr 2026), prospectus commitments, The Information $517B, SpaceX S-1 Colossus",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 27,
+   "type": "open",
+   "text": "Opened Anthropic post 'Anthropic expands Google and Broadcom compute deal' (Apr 6, 2026): multiple GW of next-gen TPU capacity from 2027, no dollar value",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+   "event_id": "OPS-COM-21eade"
+  },
+  {
+   "seq": 28,
+   "type": "open",
+   "text": "Opened Google Cloud PR Newswire release Apr 6, 2026: multiple gigawatts of TPU capacity from 2027 via Google Cloud and Broadcom-supplied TPUs",
+   "url": "https://www.prnewswire.com/news-releases/anthropic-expands-use-of-google-cloud-and-tpus-302735047.html",
+   "event_id": "OPS-COM-21eade"
+  },
+  {
+   "seq": 29,
+   "type": "open",
+   "text": "Opened Broadcom 8-K (Item 8.01, filed Apr 6, 2026) via SEC: Anthropic to access ~3.5 GW through Broadcom from 2027; no dollar amounts",
+   "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+   "event_id": "OPS-COM-e7a4c2"
+  },
+  {
+   "seq": 30,
+   "type": "open",
+   "text": "Opened Anthropic SpaceX post (May 6, 2026): all of Colossus 1, >300 MW, >220,000 NVIDIA GPUs; also lists Amazon up to 5 GW, Google+Broadcom 5 GW, Microsoft/NVIDIA $30B, Fluidstack $50B",
+   "url": "https://www.anthropic.com/news/higher-limits-spacex",
+   "event_id": "OPS-COM-37026d"
+  },
+  {
+   "seq": 31,
+   "type": "open",
+   "text": "Opened xAI/SpaceXAI release (May 6, 2026): agreement to provide Colossus 1 access",
+   "url": "https://x.ai/news/anthropic-compute-partnership",
+   "event_id": "OPS-COM-37026d"
+  },
+  {
+   "seq": 32,
+   "type": "open",
+   "text": "Opened SEC staff letter of May 29, 2026 to SpaceX and company response of Jun 1, 2026 quoting S-1: 'Anthropic will pay you $1.25 billion per month ... COLOSSUS AND COLOSSUS II'; 90-day termination; agreement not filed as exhibit",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
+   "event_id": "OPS-COM-37026d"
+  },
+  {
+   "seq": 33,
+   "type": "open",
+   "text": "Opened TechTarget (Sep 29, 2026) summarising Reuters read of Anthropic confidential IPO prospectus: at least $518B, ~80% non-cancelable or payable regardless of usage",
+   "url": "https://www.techtarget.com/it-infrastructure/news/366651336/Report-Anthropic-locks-in-518B-AI-infrastructure-commitments",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 34,
+   "type": "open",
+   "text": "Opened BigGo Finance (Sep 30, 2026) summary of Reuters prospectus story: Google 111.1B, Amazon 110B, Microsoft 31.4B, Broadcom leases 161.2B, SpaceX up to 84.5B, AMD >20B",
+   "url": "https://finance.biggo.com/news/24d90a7f-d26d-413c-8685-bf4da9cb540d",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 35,
+   "type": "flag",
+   "text": "Reuters and Charlotte Observer pages are blocked to my fetchers; Reuters prospectus figures are taken from TechTarget, BigGo, Yahoo Finance and WNCY (all re-reporting Reuters = one origin)",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 36,
+   "type": "flag",
+   "text": "SpaceX S-1 says Anthropic pays $1.25B/month (~$45B to May 2029) for Colossus 1+2; Reuters on Anthropic prospectus says up to $84.5B through 2029 - two figures for one counterparty",
+   "event_id": "OPS-COM-37026d"
+  },
+  {
+   "seq": 37,
+   "type": "open",
+   "text": "Opened Anthropic and Amazon April 20, 2026 releases: >$100B over ten years to AWS, up to 5 GW, Trainium2-4 + Graviton, nearly 1 GW by end-2026",
+   "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+   "event_id": "OPS-COM-191007"
+  },
+  {
+   "seq": 38,
+   "type": "open",
+   "text": "Opened Amazon's own release (aboutamazon.com, Apr 20, 2026): Anthropic commitment to spend >$100B over 10 years on AWS; up to 5 GW; Amazon invests $5B now + up to $20B",
+   "url": "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai",
+   "event_id": "OPS-COM-191007"
+  },
+  {
+   "seq": 39,
+   "type": "open",
+   "text": "Opened Anthropic Nov 12, 2025 post: $50B US infrastructure with Fluidstack in Texas and New York, sites online through 2026; no GW or chip stated",
+   "url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+   "event_id": "OPS-COM-c23f8d"
+  },
+  {
+   "seq": 40,
+   "type": "open",
+   "text": "Opened TechCrunch Nov 12, 2025 on Fluidstack deal (Fluidstack early Google TPU third-party vendor; company revenue-plan context)",
+   "url": "https://techcrunch.com/2025/11/12/anthropic-announces-50-billion-data-center-plan/",
+   "event_id": "OPS-COM-c23f8d"
+  },
+  {
+   "seq": 41,
+   "type": "open",
+   "text": "Opened Nscale S-1 (filed Sep 18, 2026) via SEC: Aug 25, 2026 GPU Services Agreements with Anthropic, aggregate payments up to ~$44.6B, Vera Rubin NVL72 at Monarch Compute Campus",
+   "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+   "event_id": "OPS-COM-bda5ab"
+  },
+  {
+   "seq": 42,
+   "type": "open",
+   "text": "Opened TechCrunch Aug 26, 2026 (Bloomberg first reported ~$45B, six years, Vera Rubin, online late 2027) and WV News Aug 27 (governor statement: ~460 MW per Bloomberg)",
+   "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
+   "event_id": "OPS-COM-bda5ab"
+  },
+  {
+   "seq": 43,
+   "type": "open",
+   "text": "Opened The Standard HK (Reuters text, Aug 31, 2026): Lambda deal $35B, ~350 MW at Hut 8 Nueces County TX, WSJ said Nvidia holds the lease; FT earlier reported Nvidia is Beacon Point tenant",
+   "url": "https://www.thestandard.com.hk/innovation/article/341478/Anthropic-signs-US35-billion-cloud-deal-with-Nvidia-backed-Lambda-source-says",
+   "event_id": "OPS-COM-0a90d6"
+  },
+  {
+   "seq": 44,
+   "type": "open",
+   "text": "Opened CoinDesk Sep 1, 2026 on WSJ Lambda report; Hut 8 has not confirmed how much of Beacon Point's 704 MW is tied to Lambda/Anthropic",
+   "url": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
+   "event_id": "OPS-COM-0a90d6"
+  },
+  {
+   "seq": 45,
+   "type": "open",
+   "text": "Opened Tech Times Jul 21, 2026 on Hut 8 Beacon Point leases: two 15-year leases, 704 MW, $19.6B base term, unnamed investment-grade tenant",
+   "url": "https://www.techtimes.com/articles/321209/20260721/former-bitcoin-miner-hut-8-fully-contracts-beacon-point-ai-campus-196b.htm",
+   "event_id": "OPS-COM-0a90d6"
+  },
+  {
+   "seq": 46,
+   "type": "flag",
+   "text": "Nscale deal stated three ways: Bloomberg ~$45B over six years/460 MW; Nscale S-1 'up to approximately $44.6 billion' aggregate payments; Aker ASA disclosure '$45B'. Basis is maximum aggregate payments, not a funded amount",
+   "event_id": "OPS-COM-bda5ab"
+  },
+  {
+   "seq": 47,
+   "type": "flag",
+   "text": "Lambda/Hut 8: no party confirmed the $35B figure; WSJ/Reuters single-source reports. Hut 8 Beacon Point leases ($19.6B, 704 MW) name no tenant",
+   "event_id": "OPS-COM-0a90d6"
+  },
+  {
+   "seq": 48,
+   "type": "open",
+   "text": "Opened Wayback copies of Anthropic docs pricing page (2025-03-01, 2025-06-15, 2026-01-15): legacy prices unchanged: Haiku 3 0.25/1.25, 3.5 Haiku 0.80/4, 3 Opus 15/75, 3.5/3.7 Sonnet 3/15, Opus 4/4.1 15/75; Sonnet 4/4.5 long-context >200K premium 6/22.50",
+   "url": "https://web.archive.org/web/20260115000000/https://platform.claude.com/docs/en/about-claude/pricing"
+  },
+  {
+   "seq": 49,
+   "type": "verify",
+   "text": "Release-note date headings mapped to launch and pricing events (Sonnet 4 1M beta 2025-08-12; Opus 4.6/Sonnet 4.6 1M GA at standard price 2026-03-13; 1M beta for Sonnet 4/4.5 retired 2026-04-30; fast mode removed Opus 4.6 2026-06-29, Opus 4.7 2026-07-24)",
+   "url": "https://platform.claude.com/docs/en/release-notes/api"
+  },
+  {
+   "seq": 50,
+   "type": "open",
+   "text": "Opened Anthropic Series H post (May 28, 2026): own count 'up to five gigawatts' Amazon, 'five gigawatts of next-generation TPU capacity' Google+Broadcom, GPU capacity in Colossus 1 and Colossus 2 (SpaceX)",
+   "url": "https://www.anthropic.com/news/series-h",
+   "event_id": "OPS-COM-21eade"
+  },
+  {
+   "seq": 51,
+   "type": "open",
+   "text": "Opened Lufkin Daily News copy of Reuters Sep 29, 2026 story: 'at least $518 billion over a decade ... six partners'; ~80% non-cancelable or payable regardless of usage; Google 111.1B, Amazon 110B, Microsoft 31.4B, Broadcom leases 161.2B, xAI up to 84.5B, AMD >20B",
+   "url": "https://lufkindailynews.com/news_reuters/business/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows/article_8fa855e3-8c65-5e0b-bc25-f857e79ca85d.html",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 52,
+   "type": "open",
+   "text": "Opened Reuters exclusive (Sep 29) via WNCY: end-2025 non-cancellable hosting commitments $54.6B; by early 2026 total long-term commitments >$417B covering 3.5 GW",
+   "url": "https://wncy.com/2026/09/29/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners/",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 53,
+   "type": "open",
+   "text": "Opened The Decoder, BigGo, Chosunbiz re-reports of The Information (Sep 6, 2026): up to $517B over 11 months, >=14.8 GW added on top of 1-2 GW pre-Oct 2025; original is paywalled (not opened)",
+   "url": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 54,
+   "type": "flag",
+   "text": "Could not find any source for a $531B figure; $517B + $13.7B (RUM) = $530.7B arithmetic only. Reports of The Information after the RUM deal still cite $517B",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 55,
+   "type": "open",
+   "text": "Opened Apollo press release (Jun 9, 2026): initial $35B capital solution for Broadcom AI XPV Platform; >20 GW through 2028; Anthropic >1 GW from mid-2026",
+   "url": "https://ir.apollo.com/news-events/press-releases/detail/629/apollo-leads-35-billion-capital-solution-for-broadcom-ai",
+   "event_id": "OPS-COM-5723ea"
+  },
+  {
+   "seq": 56,
+   "type": "open",
+   "text": "Opened ET Telecom (Bloomberg text, Jun 8, 2026): A1 $6B, A2 $24B (Broadcom-backed, 5.75%), B $4.5B (8.5%), plus $800M Atlas SP equity",
+   "url": "https://telecom.economictimes.indiatimes.com/news/devices/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic/131576658",
+   "event_id": "OPS-COM-5723ea"
+  },
+  {
+   "seq": 57,
+   "type": "open",
+   "text": "Opened TeraWulf 8-K (Jul 6, 2026) and press release: 20-year lease, ~401 MW, ~$19B contracted revenue, delivery H2 2027 to early 2028",
+   "url": "https://investors.terawulf.com/sec-filings/all-sec-filings/content/0001104659-26-080583/tm2619468d1_8k.htm",
+   "event_id": "OPS-COM-51b596"
+  },
+  {
+   "seq": 58,
+   "type": "open",
+   "text": "Opened RUM Group 8-K (Aug 24, 2026): ~$13.7B, six-year commercial agreement, three tranches, Maysville GA, customer unnamed; Anthropic named by The Information Sep 13",
+   "url": "https://www.sec.gov/Archives/edgar/data/1830081/000121390026092801/ea0303131-8k_rumgroup.htm",
+   "event_id": "OPS-COM-43a89f"
+  },
+  {
+   "seq": 59,
+   "type": "open",
+   "text": "Opened Akamai 8-K and press release (Sep 24, 2026): Project Plans 2 and 3 under May 5, 2026 MSA, ~$11.6B, seven-year initial term, warrant; expansion up to +$9B (~$20B)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm",
+   "event_id": "OPS-COM-e4c257"
+  },
+  {
+   "seq": 60,
+   "type": "open",
+   "text": "Opened Microsoft blog and Anthropic post (Nov 18, 2025): $30B Azure compute, up to 1 GW with Grace Blackwell and Vera Rubin, NVIDIA up to $10B and Microsoft up to $5B investment",
+   "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+   "event_id": "OPS-COM-846861"
+  },
+  {
+   "seq": 61,
+   "type": "open",
+   "text": "Opened Business Times (Reuters text, May 6, 2026) on The Information report of $200B over five years with Google Cloud; Reuters could not verify, Anthropic declined comment",
+   "url": "https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/anthropic-commits-spending-us200-billion-googles-cloud-and-chips-report",
+   "event_id": "OPS-COM-21eade"
+  },
+  {
+   "seq": 62,
+   "type": "flag",
+   "text": "Google dollar figure conflicts: The Information $200B over 5 years (May 5, 2026) vs leaked prospectus at least $111.1B (Apr 2026 to Jul 2033); Anthropic/Google/Broadcom state no dollar figure; GW stated as multiple / ~3.5 / 5",
+   "event_id": "OPS-COM-21eade"
+  },
+  {
+   "seq": 63,
+   "type": "found",
+   "text": "OPS-COM-e7a4c2: value 161200 USD m (PARTIAL)",
+   "event_id": "OPS-COM-e7a4c2"
+  },
+  {
+   "seq": 64,
+   "type": "found",
+   "text": "OPS-COM-21eade: value None USD m (CONFLICT)",
+   "event_id": "OPS-COM-21eade"
+  },
+  {
+   "seq": 65,
+   "type": "flag",
+   "text": "OPS-COM-21eade: 2 conflict(s) recorded between sources",
+   "event_id": "OPS-COM-21eade"
+  },
+  {
+   "seq": 66,
+   "type": "found",
+   "text": "OPS-COM-191007: value 100000 USD m (FOUND)",
+   "event_id": "OPS-COM-191007"
+  },
+  {
+   "seq": 67,
+   "type": "found",
+   "text": "OPS-COM-c23f8d: value 50000 USD m (PARTIAL)",
+   "event_id": "OPS-COM-c23f8d"
+  },
+  {
+   "seq": 68,
+   "type": "found",
+   "text": "OPS-COM-37026d: value 45000 USD m (CONFLICT)",
+   "event_id": "OPS-COM-37026d"
+  },
+  {
+   "seq": 69,
+   "type": "flag",
+   "text": "OPS-COM-37026d: 2 conflict(s) recorded between sources",
+   "event_id": "OPS-COM-37026d"
+  },
+  {
+   "seq": 70,
+   "type": "found",
+   "text": "OPS-COM-bda5ab: value 44600 USD m (FOUND)",
+   "event_id": "OPS-COM-bda5ab"
+  },
+  {
+   "seq": 71,
+   "type": "found",
+   "text": "OPS-COM-0a90d6: value 35000 USD m (PARTIAL)",
+   "event_id": "OPS-COM-0a90d6"
+  },
+  {
+   "seq": 72,
+   "type": "found",
+   "text": "OPS-COM-5723ea: value 35000 USD m (FOUND)",
+   "event_id": "OPS-COM-5723ea"
+  },
+  {
+   "seq": 73,
+   "type": "flag",
+   "text": "OPS-COM-5723ea: 1 conflict(s) recorded between sources",
+   "event_id": "OPS-COM-5723ea"
+  },
+  {
+   "seq": 74,
+   "type": "found",
+   "text": "OPS-COM-846861: value 30000 USD m (FOUND)",
+   "event_id": "OPS-COM-846861"
+  },
+  {
+   "seq": 75,
+   "type": "found",
+   "text": "OPS-COM-51b596: value 19000 USD m (FOUND)",
+   "event_id": "OPS-COM-51b596"
+  },
+  {
+   "seq": 76,
+   "type": "found",
+   "text": "OPS-COM-43a89f: value 13700 USD m (PARTIAL)",
+   "event_id": "OPS-COM-43a89f"
+  },
+  {
+   "seq": 77,
+   "type": "found",
+   "text": "OPS-COM-e4c257: value 11600 USD m (FOUND)",
+   "event_id": "OPS-COM-e4c257"
+  },
+  {
+   "seq": 78,
+   "type": "found",
+   "text": "OPS-COM-a6eaa7: value 518000 USD m (PARTIAL)",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 79,
+   "type": "flag",
+   "text": "OPS-COM-a6eaa7: 2 conflict(s) recorded between sources",
+   "event_id": "OPS-COM-a6eaa7"
+  },
+  {
+   "seq": 80,
+   "type": "found",
+   "text": "OPS-PRI-e1af19: $0.25/$1.25 per MTok, released 2024-03-13 (FOUND)",
+   "event_id": "OPS-PRI-e1af19"
+  },
+  {
+   "seq": 81,
+   "type": "found",
+   "text": "OPS-PRI-4f98c5: $3.0/$15.0 per MTok, released 2024-03-04 (FOUND)",
+   "event_id": "OPS-PRI-4f98c5"
+  },
+  {
+   "seq": 82,
+   "type": "found",
+   "text": "OPS-PRI-ceacd1: $15.0/$75.0 per MTok, released 2024-03-04 (FOUND)",
+   "event_id": "OPS-PRI-ceacd1"
+  },
+  {
+   "seq": 83,
+   "type": "found",
+   "text": "OPS-PRI-4922e9: $3.0/$15.0 per MTok, released 2024-06-20 (FOUND)",
+   "event_id": "OPS-PRI-4922e9"
+  },
+  {
+   "seq": 84,
+   "type": "found",
+   "text": "OPS-PRI-d76d7f: $1.0/$5.0 per MTok, released 2024-11-04 (FOUND)",
+   "event_id": "OPS-PRI-d76d7f"
+  },
+  {
+   "seq": 85,
+   "type": "found",
+   "text": "OPS-PRI-46a566: $3.0/$15.0 per MTok, released 2025-02-24 (FOUND)",
+   "event_id": "OPS-PRI-46a566"
+  },
+  {
+   "seq": 86,
+   "type": "found",
+   "text": "OPS-PRI-11024e: $15.0/$75.0 per MTok, released 2025-05-22 (FOUND)",
+   "event_id": "OPS-PRI-11024e"
+  },
+  {
+   "seq": 87,
+   "type": "found",
+   "text": "OPS-PRI-3cacec: $3.0/$15.0 per MTok, released 2025-05-22 (FOUND)",
+   "event_id": "OPS-PRI-3cacec"
+  },
+  {
+   "seq": 88,
+   "type": "found",
+   "text": "OPS-PRI-8e796e: $15.0/$75.0 per MTok, released 2025-08-05 (FOUND)",
+   "event_id": "OPS-PRI-8e796e"
+  },
+  {
+   "seq": 89,
+   "type": "found",
+   "text": "OPS-PRI-4faae8: $3.0/$15.0 per MTok, released 2025-09-29 (FOUND)",
+   "event_id": "OPS-PRI-4faae8"
+  },
+  {
+   "seq": 90,
+   "type": "found",
+   "text": "OPS-PRI-e6612c: $1.0/$5.0 per MTok, released 2025-10-15 (FOUND)",
+   "event_id": "OPS-PRI-e6612c"
+  },
+  {
+   "seq": 91,
+   "type": "found",
+   "text": "OPS-PRI-27b2a8: $5.0/$25.0 per MTok, released 2025-11-24 (FOUND)",
+   "event_id": "OPS-PRI-27b2a8"
+  },
+  {
+   "seq": 92,
+   "type": "found",
+   "text": "OPS-PRI-1718c6: $5.0/$25.0 per MTok, released 2026-02-05 (FOUND)",
+   "event_id": "OPS-PRI-1718c6"
+  },
+  {
+   "seq": 93,
+   "type": "found",
+   "text": "OPS-PRI-f1019d: $3.0/$15.0 per MTok, released 2026-02-17 (FOUND)",
+   "event_id": "OPS-PRI-f1019d"
+  },
+  {
+   "seq": 94,
+   "type": "found",
+   "text": "OPS-PRI-2e6641: $25.0/$125.0 per MTok, released 2026-04-07 (FOUND)",
+   "event_id": "OPS-PRI-2e6641"
+  },
+  {
+   "seq": 95,
+   "type": "found",
+   "text": "OPS-PRI-3a256f: $5.0/$25.0 per MTok, released 2026-04-16 (FOUND)",
+   "event_id": "OPS-PRI-3a256f"
+  },
+  {
+   "seq": 96,
+   "type": "found",
+   "text": "OPS-PRI-9883ec: $5.0/$25.0 per MTok, released 2026-05-28 (FOUND)",
+   "event_id": "OPS-PRI-9883ec"
+  },
+  {
+   "seq": 97,
+   "type": "found",
+   "text": "OPS-PRI-42e96b: $10.0/$50.0 per MTok, released 2026-06-09 (FOUND)",
+   "event_id": "OPS-PRI-42e96b"
+  },
+  {
+   "seq": 98,
+   "type": "found",
+   "text": "OPS-PRI-c360e0: $10.0/$50.0 per MTok, released 2026-06-09 (FOUND)",
+   "event_id": "OPS-PRI-c360e0"
+  },
+  {
+   "seq": 99,
+   "type": "found",
+   "text": "OPS-PRI-0c0a69: $2.0/$10.0 per MTok, released 2026-06-30 (FOUND)",
+   "event_id": "OPS-PRI-0c0a69"
+  },
+  {
+   "seq": 100,
+   "type": "found",
+   "text": "OPS-PRI-fe68cd: $5.0/$25.0 per MTok, released 2026-07-24 (FOUND)",
+   "event_id": "OPS-PRI-fe68cd"
+  },
+  {
+   "seq": 101,
+   "type": "found",
+   "text": "OPS-PRI-4cb1f2: $10.0/$50.0 per MTok, released 2026-09-01 (FOUND)",
+   "event_id": "OPS-PRI-4cb1f2"
+  },
+  {
+   "seq": 102,
+   "type": "found",
+   "text": "OPS-PRI-026aed: $10.0/$50.0 per MTok, released 2026-09-01 (FOUND)",
+   "event_id": "OPS-PRI-026aed"
+  },
+  {
+   "seq": 103,
+   "type": "found",
+   "text": "OPS-PRI-38ef44: $4.0/$20.0 per MTok, released 2026-09-22 (FOUND)",
+   "event_id": "OPS-PRI-38ef44"
+  },
+  {
+   "seq": 104,
+   "type": "found",
+   "text": "OPS-PRI-f9fd47: $2.0/$10.0 per MTok, released 2026-09-28 (FOUND)",
+   "event_id": "OPS-PRI-f9fd47"
+  },
+  {
+   "seq": 105,
+   "type": "verify",
+   "text": "Cross-checked prices three ways: launch post vs docs model page vs archived pricing tables; release dates vs API release notes and deprecations page"
+  },
+  {
+   "seq": 106,
+   "type": "verify",
+   "text": "Cross-checked Anthropic, Amazon, Microsoft, Apollo, TeraWulf, Akamai, RUM, Nscale statements against counterparty SEC filings where a filing exists"
+  },
+  {
+   "seq": 107,
+   "type": "message",
+   "text": "Handoff: 38 answers written; main disagreements are Google $ (200B vs >=111.1B), SpaceX/xAI ($45B vs up to $84.5B), prospectus vs The Information totals; $531B figure untraceable",
+   "to": "orchestrator"
+  }
+ ],
+ "stats": {
+  "searches": 66,
+  "pages_opened": 143,
+  "claims_answered": 38,
+  "flags": 11
+ }
+}

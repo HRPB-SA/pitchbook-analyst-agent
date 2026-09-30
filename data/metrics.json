@@ -330,24 +330,26 @@
   {
    "period": "FY2022",
    "usd_m": 10,
-   "kind": "actual",
+   "kind": "proxy",
    "basis": "PitchBook TTM 4Q2022 field; no primary source; contradicts company statement that first revenue came in 2023",
    "source_url": "https://my.pitchbook.com/profile/466959-97/company/profile",
    "tier": "T2",
    "confidence": "LOW",
    "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series",
-   "note": "Company (Series G): \"less than three years since Anthropic earned its first dollar in revenue\""
+   "note": "Company (Series G): \"less than three years since Anthropic earned its first dollar in revenue\"",
+   "kind_desk": "actual"
   },
   {
    "period": "FY2023",
    "usd_m": 100,
-   "kind": "actual",
+   "kind": "proxy",
    "basis": "PitchBook TTM 4Q2023 field = exit run-rate proxy (The Information: ~$100M annualized rate ~Sep 2023; Amodei: \"zero to $100 million\"); recognized FY2023 revenue not found",
    "source_url": "https://my.pitchbook.com/profile/466959-97/company/profile",
    "tier": "T2",
    "confidence": "MEDIUM",
    "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series",
-   "note": "Not recognized revenue"
+   "note": "Not recognized revenue",
+   "kind_desk": "actual"
   },
   {
    "period": "FY2024",
@@ -363,13 +365,14 @@
   {
    "period": "FY2024",
    "usd_m": 1000,
-   "kind": "actual",
+   "kind": "proxy",
    "basis": "PitchBook TTM 4Q2024 field = year-end run-rate proxy (company: ~$1B at start of 2025; Amodei: $1B in 2024); NOT recognized revenue (2.6x the prospectus figure)",
    "source_url": "https://my.pitchbook.com/profile/466959-97/company/profile",
    "tier": "T2",
    "confidence": "MEDIUM",
    "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series",
-   "note": "Use only as exit run-rate"
+   "note": "Use only as exit run-rate",
+   "kind_desk": "actual"
   },
   {
    "period": "FY2025",
@@ -385,13 +388,14 @@
   {
    "period": "FY2025",
    "usd_m": 10000,
-   "kind": "actual",
+   "kind": "proxy",
    "basis": "PitchBook TTM 4Q2025 field = exit run-rate proxy (brief says earlier value was $9.0B; revision history not retrievable); NOT recognized revenue (2.2x the prospectus figure)",
    "source_url": "https://my.pitchbook.com/profile/466959-97/company/profile",
    "tier": "T2",
    "confidence": "MEDIUM",
    "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series",
-   "note": "CEO Dec 3 2025: $8-10B by year-end; Fortune Dec 4: nearly $10B; company Apr 6 2026: ~$9B at end-2025"
+   "note": "CEO Dec 3 2025: $8-10B by year-end; Fortune Dec 4: nearly $10B; company Apr 6 2026: ~$9B at end-2025",
+   "kind_desk": "actual"
   },
   {
    "period": "FY2025",

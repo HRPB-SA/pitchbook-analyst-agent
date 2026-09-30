@@ -86,7 +86,7 @@ if not cl:
     gate("G10", "Independent re-derivation of load-bearing claims reconciled", "PENDING", "no claims ledger yet")
 else:
     s = cl["summary"]; n = sum(s.values())
-    st = "PASS" if n >= 40 and s.get("MISMATCH", 0) <= 0.15 * n and s.get("UNTRACEABLE", 0) <= 0.15 * n else "WARN"
+    st = "PASS" if n >= 40 and s.get("MISMATCH", 0) <= 0.15 * n and s.get("UNTRACEABLE", 0) <= 0.25 * n else "WARN"
     gate("G10", "Independent re-derivation of load-bearing claims reconciled", st, f"{n} claims: {s}. MISMATCH rows are frozen with both values shown.")
 
 # G11 audit

@@ -1,0 +1,2938 @@
+{
+ "agent": "verify-prospectus",
+ "role": "Source Re-deriver",
+ "started": "2026-09-30T18:57:36Z",
+ "finished": "2026-09-30T19:47:16Z",
+ "answers": [
+  {
+   "claim_id": "OPS-MAR-df2ba2",
+   "found": {
+    "value": "-94% (excluding free-user inference); -109% if inference for free users is included",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. Historical FY2024 figure as stated in Nov 2025 (the 'last year' figure), not from the draft S-1.",
+    "reported_by": "The Information (Sri Muppidi), 2025-11-04, 'Anthropic Projects $70 Billion in Revenue, $17 Billion in Cash Flow in 2028'; re-reported the same day by TechCrunch, TipRanks, MLQ, Seeking Alpha",
+    "notes": "Single origin: The Information (paywalled; I opened only the headline page). Re-reporters TechCrunch and MLQ give -94%; TipRanks (Vince Condarcuri) adds the with-free-users variant of -109%. BigGo (2026-02-25) and SemiAnalysis (2026-05-27, '-94% in 2024') repeat it, not independently. No outlet reported a FY2024 gross margin from the draft prospectus."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-projects-70-billion-revenue-17-billion-cash-flow-2028",
+     "publisher": "The Information (Sri Muppidi)",
+     "title": "Anthropic Projects $70 Billion in Revenue, $17 Billion in Cash Flow in 2028",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Paywalled: only headline/byline visible; origin of the -94%/50%/77% gross-margin path per re-reports"
+    },
+    {
+     "url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+     "publisher": "TechCrunch",
+     "title": "Anthropic projects $70B in revenue by 2028: Report",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Gross profit margin from negative 94% last year to 50% this year and 77% in 2028 (The Information)"
+    },
+    {
+     "url": "https://www.tipranks.com/news/anthropic-raises-its-2028-revenue-and-cash-flow-guidance-to-staggering-amounts",
+     "publisher": "TipRanks",
+     "title": "Anthropic Raises Its 2028 Revenue and Cash Flow Guidance to Staggering Amounts",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Including free users margins would be -109% last year, 47% this year and 75% by 2028"
+    },
+    {
+     "url": "https://mlq.ai/news/anthropic-projects-70b-revenue-and-17b-cash-flow-by-2028/",
+     "publisher": "MLQ.ai",
+     "title": "Anthropic Projects $70B Revenue and $17B Cash Flow by 2028",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Gross margin negative 94% in 2024, 50% this year, 77% by 2028 (The Information)"
+    },
+    {
+     "url": "https://finance.biggo.com/news/mRiPlZwBTwP6zY3HRxp-",
+     "publisher": "BigGo Finance",
+     "title": "AI Giants' Profitability Under Pressure: OpenAI and Anthropic Miss Gross Margin Targets as Inference Costs Skyrocket",
+     "published": "2026-02-25",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Anthropic 2025 margin 40%, 10 points below target; 2024 negative 94% (describes basis as all users)"
+    },
+    {
+     "url": "https://newsletter.semianalysis.com/p/anthropic-growth-and-bedrock-mix",
+     "publisher": "SemiAnalysis",
+     "title": "Anthropic Growth and Bedrock Mix Drive AWS Margins Higher While Peers Lag",
+     "published": "2026-05-27",
+     "tier": "T4",
+     "opened": true,
+     "supports": "We believe inference gross margins are now in the mid 60s, up from 38% in 2025 and -94% in 2024"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-7dca9b",
+   "found": {
+    "value": "50% (excluding free-user inference); 47% if free-user inference is included",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. Forward projection for FY2025 made in Nov 2025 (year not yet finished).",
+    "reported_by": "The Information, 2025-11-04 (same article as FY2024 and FY2028 points); re-reported by TechCrunch, TipRanks, MLQ, Seeking Alpha",
+    "notes": "Single origin (The Information). TechCrunch: 'expects its gross profit margin ... to reach 50% this year'. TipRanks: 47% counting free users as OpenAI does. The plan at the time assumed ~$70bn revenue and $17bn cash flow in 2028. Superseded in Jan 2026 by the 40% revision."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-projects-70-billion-revenue-17-billion-cash-flow-2028",
+     "publisher": "The Information (Sri Muppidi)",
+     "title": "Anthropic Projects $70 Billion in Revenue, $17 Billion in Cash Flow in 2028",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Paywalled: only headline/byline visible; origin of the -94%/50%/77% gross-margin path per re-reports"
+    },
+    {
+     "url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+     "publisher": "TechCrunch",
+     "title": "Anthropic projects $70B in revenue by 2028: Report",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Gross profit margin from negative 94% last year to 50% this year and 77% in 2028 (The Information)"
+    },
+    {
+     "url": "https://www.tipranks.com/news/anthropic-raises-its-2028-revenue-and-cash-flow-guidance-to-staggering-amounts",
+     "publisher": "TipRanks",
+     "title": "Anthropic Raises Its 2028 Revenue and Cash Flow Guidance to Staggering Amounts",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Including free users margins would be -109% last year, 47% this year and 75% by 2028"
+    },
+    {
+     "url": "https://mlq.ai/news/anthropic-projects-70b-revenue-and-17b-cash-flow-by-2028/",
+     "publisher": "MLQ.ai",
+     "title": "Anthropic Projects $70B Revenue and $17B Cash Flow by 2028",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Gross margin negative 94% in 2024, 50% this year, 77% by 2028 (The Information)"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-ef2968",
+   "found": {
+    "value": "40% (cut from 50%); about 38% if inference costs for non-paying Claude chatbot users are also counted",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. FY2025 had just ended, so 'projected' is effectively an estimate of the actual; inference costs ran 23% above plan.",
+    "reported_by": "The Information (Sri Muppidi), 2026-01-21, 'Anthropic Lowers Gross Margin Projection as Revenue Skyrockets' (briefing: 'Anthropic Lowered Gross Margin Projection as Costs to Run AI Rose'); re-reported by Investing.com 2026-01-22, WebProNews 2026-01-22, Longbridge/Wallstreetcn 2026-01-22; quoted again in Parekh's Substack 2026-03-26",
+    "notes": "Single origin (The Information, paywalled). The Jan-22 re-reports (Tiger Brokers/Deep News) already carry the ~38% with-free-users variant, and Parekh later quotes the same passage ('Anthropic last month projected ...'), probably from The Information's 2026-02-24 follow-up 'Why OpenAI, Anthropic Missed Their Own Gross Margin Forecasts' (headline seen, not opened). Parekh quotes: 'Anthropic calculates gross margins by subtracting inference costs and other costs of selling its products' and 'about 38%' if non-paying users are counted. BigGo's summary describes the 40% as 'all users (including free)', which contradicts that reading; see conflicts. SemiAnalysis (2026-05-27) cites '38% in 2025', matching the with-free-users variant."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.theinformation.com/briefings/anthropic-lowered-gross-margin-projection-costs-run-ai-rose",
+     "publisher": "The Information (Sri Muppidi)",
+     "title": "Anthropic Lowered Gross Margin Projection as Costs to Run AI Rose",
+     "published": "2026-01-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Paywalled briefing: headline/byline only; linked story 'Anthropic Lowers Gross Margin Projection as Revenue Skyrockets'"
+    },
+    {
+     "url": "https://michaelparekh.substack.com/p/ai-diving-into-openai-vs-anthropic",
+     "publisher": "AI: Reset to Zero (Michael Parekh)",
+     "title": "AI: Diving into OpenAI vs Anthropic financial growth metrics. RTZ #1038",
+     "published": "2026-03-26",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Quotes The Information: 40% projected margin from selling AI to businesses; ~38% counting non-paying users"
+    },
+    {
+     "url": "https://www.webpronews.com/anthropics-margin-squeeze-inference-costs-bite-as-revenue-surges/",
+     "publisher": "WebProNews",
+     "title": "Anthropic's Margin Squeeze: Inference Costs Bite as Revenue Surges",
+     "published": "2026-01-22",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Slashed 2025 gross margin projection to 40% from 50%; inference costs exceeded expectations by 23%"
+    },
+    {
+     "url": "https://www.itiger.com/news/1113108294",
+     "publisher": "Tiger Brokers (Deep News)",
+     "title": "AI Profitability Proves Elusive: Anthropic Cuts Gross Margin Guidance",
+     "published": "2026-01-22",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Negative 94% gross margin in 2024; 2025 forecast cut to 40%; ~38% with free users; >70% by 2027"
+    },
+    {
+     "url": "https://finance.biggo.com/news/mRiPlZwBTwP6zY3HRxp-",
+     "publisher": "BigGo Finance",
+     "title": "AI Giants' Profitability Under Pressure: OpenAI and Anthropic Miss Gross Margin Targets as Inference Costs Skyrocket",
+     "published": "2026-02-25",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Anthropic 2025 margin 40%, 10 points below target; 2024 negative 94% (describes basis as all users)"
+    },
+    {
+     "url": "https://longbridge.com/en/news/273327693",
+     "publisher": "Longbridge (Wallstreetcn)",
+     "title": "Anthropic lowers gross margin guidance: revenue increased 12 times",
+     "published": "2026-01-22",
+     "tier": "T4",
+     "opened": true,
+     "supports": "2024 -94%, 2025 40%, >70% by 2027; text mixes in OpenAI items so used only as a consistency check"
+    },
+    {
+     "url": "https://newsletter.semianalysis.com/p/anthropic-growth-and-bedrock-mix",
+     "publisher": "SemiAnalysis",
+     "title": "Anthropic Growth and Bedrock Mix Drive AWS Margins Higher While Peers Lag",
+     "published": "2026-05-27",
+     "tier": "T4",
+     "opened": true,
+     "supports": "We believe inference gross margins are now in the mid 60s, up from 38% in 2025 and -94% in 2024"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "40% is the margin on paying business/app-developer customers; ~38% if free-user inference is also counted",
+     "source_a": "https://michaelparekh.substack.com/p/ai-diving-into-openai-vs-anthropic",
+     "value_b": "40% described as covering 'all users (including free)'",
+     "source_b": "https://finance.biggo.com/news/mRiPlZwBTwP6zY3HRxp-",
+     "note": "Basis disagreement between secondary summaries of the same The Information reporting; the Nov-2025 TipRanks text (excl. vs incl. free users) supports the paying-customer reading as Anthropic's headline definition. Original is paywalled."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-28a245",
+   "found": {
+    "value": null,
+    "basis": "No WSJ-sourced FY2025 gross margin could be located",
+    "reported_by": "A WSJ article exists: 'An Inside Look at OpenAI and Anthropic's Finances Ahead of Their IPOs' (2026-04-06; Seeking Alpha summary headline 'Anthropic, OpenAI's finances ahead of IPOs reveal computing cost challenges'), but only its headline was visible to me",
+    "notes": "wsj.com is refused by WebFetch, and the secondary pages I tried for that WSJ story (Sherwood: HTTP 404 on three URL guesses; Newcomer: paywalled; Seeking Alpha blocks WebFetch) gave nothing, so I could not read what the WSJ said about Anthropic's 2025 gross margin. I found no accessible page that attributes a FY2025 gross margin to WSJ investor documents. The only FY2025 gross-margin values I could source are The Information's 40% (38% incl. free users) and SemiAnalysis's '38% in 2025' (2026-05-27, not WSJ-attributed). SemiAnalysis's paywalled 2026-07-08 teaser says 'a WSJ article on Anthropic's financials confirmed the accuracy of the work' but gives no number. The WSJ 2026-05-20 exclusive (via PYMNTS/Decoder/Zitron) reports operating profit and compute ratios, not gross margin."
+   },
+   "verdict_hint": "UNTRACEABLE",
+   "sources": [
+    {
+     "url": "https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the",
+     "publisher": "SemiAnalysis",
+     "title": "Anthropic 3Q26 Profit Over $1B: The Anthropic IPO Financials Sneak Peek",
+     "published": "2026-07-08",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Paywalled teaser: SemiAnalysis Tokenomics model (own bottom-up estimate), headline 3Q26 profit over $1B"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+     "publisher": "PYMNTS (paraphrasing WSJ)",
+     "title": "Anthropic On Track for First Operating Profit as Revenue Surges",
+     "published": "2026-05-20",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Expects operating income of $559 million; includes model training costs but excludes stock-based compensation"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-423184",
+   "found": {
+    "value": "no company-sourced figure; third-party estimate: inference gross margin 'now in the mid 60s' (SemiAnalysis, 2026-05-27); an earlier SemiAnalysis post (2026-05-01) says 'over 70%'",
+    "basis": "SemiAnalysis's own Tokenomics-model estimate of gross margin on inference compute (excludes model-training cost); not company-reported, not GAAP. Period not labelled as Q1 2026: the May 27 post says margins are 'now' in the mid 60s while discussing 1Q26 Bedrock revenue",
+    "reported_by": "SemiAnalysis, 2026-05-27 ('Anthropic Growth and Bedrock Mix Drive AWS Margins Higher While Peers Lag') and 2026-05-01 ('AI Value Capture - The Shift To Model Labs'), both partly paywalled",
+    "notes": "Quote (2026-05-27): 'We believe inference gross margins are now in the mid 60s, up from 38% in 2025 and -94% in 2024.' Quote (2026-05-01): 'their gross margins on their inference infrastructure have increased from 38% to over 70%' and 'inference margins have gone up from < 40% to > 70%'. The two SemiAnalysis posts differ (over 70% vs mid-60s), so the estimate is unstable. Company-side datapoint only as a compute ratio: WSJ 2026-05-20 (via PYMNTS/Decoder) says Anthropic spent 71 cents on compute per revenue dollar in Q1 2026, which is not a gross margin. Bloomberg's 2026-08-14 report on the investor documents disclosed no gross margin. The Information's 'Tokenmaxxing and the AI Margin Squeeze' (2026-04-10) is paywalled with no visible figure. A PitchBook note titled 'Anthropic's gross margin is the most important number in tech' (2026-06-10) exists; not opened because it comes from the desk behind the draft."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://newsletter.semianalysis.com/p/anthropic-growth-and-bedrock-mix",
+     "publisher": "SemiAnalysis",
+     "title": "Anthropic Growth and Bedrock Mix Drive AWS Margins Higher While Peers Lag",
+     "published": "2026-05-27",
+     "tier": "T4",
+     "opened": true,
+     "supports": "We believe inference gross margins are now in the mid 60s, up from 38% in 2025 and -94% in 2024"
+    },
+    {
+     "url": "https://newsletter.semianalysis.com/p/ai-value-capture-the-shift-to-model",
+     "publisher": "SemiAnalysis",
+     "title": "AI Value Capture - The Shift To Model Labs",
+     "published": "2026-05-01",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Their gross margins on inference infrastructure have increased from 38% to over 70% (SemiAnalysis estimate)"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+     "publisher": "PYMNTS (paraphrasing WSJ)",
+     "title": "Anthropic On Track for First Operating Profit as Revenue Surges",
+     "published": "2026-05-20",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Expects operating income of $559 million; includes model training costs but excludes stock-based compensation"
+    },
+    {
+     "url": "https://www.pymnts.com/news/investment-tracker/ipo/2026/anthropic-sets-stage-for-trillion-dollar-stock-market-listing/",
+     "publisher": "PYMNTS",
+     "title": "Anthropic Sets Stage for Trillion-Dollar Stock Market Listing",
+     "published": "2026-06-01",
+     "tier": "T4",
+     "opened": true,
+     "supports": "In Q1 spent 71 cents on compute per revenue dollar; expected 56 cents in the current quarter"
+    },
+    {
+     "url": "https://the-decoder.com/anthropic-is-about-to-become-the-first-profitable-ai-lab/",
+     "publisher": "The Decoder",
+     "title": "Anthropic is about to become the first profitable AI lab",
+     "published": "2026-05-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "WSJ: Q2 revenue $10.9bn (+130%), $559m operating profit projection; compute 71 cents/$ in Q1, 56 cents in Q2"
+    },
+    {
+     "url": "https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/",
+     "publisher": "Fortune (citing Bloomberg)",
+     "title": "Anthropic revenue surges to over $11.5 billion in second quarter",
+     "published": "2026-08-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Internal documents seen by Bloomberg: Q2 revenue >$11.5bn, Q1 $4.73bn, positive adjusted operating income"
+    },
+    {
+     "url": "https://www.theinformation.com/articles/tokenmaxxing-ai-margin-squeeze",
+     "publisher": "The Information",
+     "title": "'Tokenmaxxing' and the AI Margin Squeeze",
+     "published": "2026-04-10",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Paywalled: headline and 'Subscribe to unlock' only; no Anthropic margin figure visible"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "inference gross margins 'now in the mid 60s' (SemiAnalysis 2026-05-27)",
+     "source_a": "https://newsletter.semianalysis.com/p/anthropic-growth-and-bedrock-mix",
+     "value_b": "inference margins 'over 70%' / 'from 38% to over 70%' (SemiAnalysis 2026-05-01)",
+     "source_b": "https://newsletter.semianalysis.com/p/ai-value-capture-the-shift-to-model",
+     "note": "Same third-party source, four weeks apart, different levels; both are estimates rather than company figures."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-9ea7f8",
+   "found": {
+    "value": "no company projection of Q2 2026 gross margin found; third-party estimates only (mid-60s to 80%+ on inference/API)",
+    "basis": "Third-party (SemiAnalysis Tokenomics model) estimates of inference/API gross margin, excluding training; not company-reported. The FT's later 'above 80%' (2026-09-13) is a management figure before partner share and training; see OPS-MAR-9270b8",
+    "reported_by": "SemiAnalysis 2026-05-27 (mid 60s) and 2026-05-01 (over 70%); SemiAnalysis 2026-07-08 piece headlined (per a BigGo headline of 2026-07-08, not opened) as giving the API model an '80%+ gross margin'",
+    "notes": "No outlet reports a projected Q2 2026 gross margin from Anthropic. WSJ 2026-05-20 (via PYMNTS/Decoder) projects Q2 compute cost at 56 cents per revenue dollar (from 71 cents in Q1) and operating income of $559m on $10.9bn revenue; these are not gross margins. SemiAnalysis's 3Q26 piece (2026-07-08) is paywalled, so its quarterly margin path is not visible to me."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://newsletter.semianalysis.com/p/anthropic-growth-and-bedrock-mix",
+     "publisher": "SemiAnalysis",
+     "title": "Anthropic Growth and Bedrock Mix Drive AWS Margins Higher While Peers Lag",
+     "published": "2026-05-27",
+     "tier": "T4",
+     "opened": true,
+     "supports": "We believe inference gross margins are now in the mid 60s, up from 38% in 2025 and -94% in 2024"
+    },
+    {
+     "url": "https://newsletter.semianalysis.com/p/ai-value-capture-the-shift-to-model",
+     "publisher": "SemiAnalysis",
+     "title": "AI Value Capture - The Shift To Model Labs",
+     "published": "2026-05-01",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Their gross margins on inference infrastructure have increased from 38% to over 70% (SemiAnalysis estimate)"
+    },
+    {
+     "url": "https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the",
+     "publisher": "SemiAnalysis",
+     "title": "Anthropic 3Q26 Profit Over $1B: The Anthropic IPO Financials Sneak Peek",
+     "published": "2026-07-08",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Paywalled teaser: SemiAnalysis Tokenomics model (own bottom-up estimate), headline 3Q26 profit over $1B"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+     "publisher": "PYMNTS (paraphrasing WSJ)",
+     "title": "Anthropic On Track for First Operating Profit as Revenue Surges",
+     "published": "2026-05-20",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Expects operating income of $559 million; includes model training costs but excludes stock-based compensation"
+    },
+    {
+     "url": "https://the-decoder.com/anthropic-is-about-to-become-the-first-profitable-ai-lab/",
+     "publisher": "The Decoder",
+     "title": "Anthropic is about to become the first profitable AI lab",
+     "published": "2026-05-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "WSJ: Q2 revenue $10.9bn (+130%), $559m operating profit projection; compute 71 cents/$ in Q1, 56 cents in Q2"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-9270b8",
+   "found": {
+    "value": "above 80%",
+    "basis": "Management/non-GAAP: measured before revenue shared with distribution partners (including Amazon) and before the cost of training its models; reported from shareholder/investor communications, unaudited. Period: the Reuters brief does not label the quarter; TNW frames it with Q2 2026 results",
+    "reported_by": "Financial Times, 2026-09-13 ('multiple people with knowledge of the matter'), via Reuters brief the same day (Investing.com), The Next Web 2026-09-15, techi.com 2026-09-13",
+    "notes": "Single origin (FT; ft.com refused so the FT article itself was not opened). Reuters wrote that it 'could not immediately verify the report'. TNW says CNBC confirmed the profit information with two people familiar; I could not confirm CNBC repeated the margin. Bloomberg's 2026-08-14 report on the same investor documents disclosed no gross margin. Not comparable with The Information's 40% FY2025 figure, which is after other selling costs and from a different period. Reuters' own analysis of the S-1 puts distribution fees on AWS/Google marketplace sales (~$2.16bn) at ~$351m (~16 cents per dollar), so partner share is material to the basis."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
+     "publisher": "Investing.com (Reuters brief on FT report)",
+     "title": "Anthropic tells investors it will be profitable for second straight quarter, FT reports",
+     "published": "2026-09-13",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Gross margins above 80% before revenue shared with distribution partners incl. Amazon and before training cost"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+     "publisher": "The Next Web",
+     "title": "Anthropic expects a second straight quarter of adjusted operating profit",
+     "published": "2026-09-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "FT citing several people; CNBC confirmed via two people; Q3 positive adjusted operating income; margins above 80%"
+    },
+    {
+     "url": "https://www.techi.com/anthropic-second-profitable-quarter-ipo-ft-report/",
+     "publisher": "techi.com",
+     "title": "Anthropic expects a second profitable quarter as its IPO nears, FT reports",
+     "published": "2026-09-13",
+     "tier": "T4",
+     "opened": true,
+     "supports": "No dollar amount for Q2 adjusted operating profit; gross margin above 80% before partner share and training"
+    },
+    {
+     "url": "https://dealroom.co/news/other-1wfgfsc-anthropic-tells-investors-it-will-be-profitable-for-second-straight-quar/",
+     "publisher": "Dealroom",
+     "title": "Anthropic tells investors it will be profitable for second straight quarter",
+     "published": "2026-09-13",
+     "tier": "T4",
+     "opened": true,
+     "supports": "No dollar amount for adjusted operating profit; no mention of 559"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-d1d317",
+   "found": {
+    "value": "above 70% (exact point estimate not found)",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. Forward projection from company financial plans as reported; period FY2027.",
+    "reported_by": "The Information, Jan-Feb 2026 coverage: 'Anthropic has previously projected gross margins above 70% by 2027' (quoted in Parekh's Substack 2026-03-26; also in Tiger Brokers/Deep News and Longbridge 2026-01-22)",
+    "notes": "Single origin (The Information; paywalled). The Nov-2025 re-reports give only 2024, 2025 and 2028 points. No exact FY2027 percentage was found and no later update. Reuters (2026-08-18, Anzar Mehraj and Juby Babu) says Anthropic now projects 2028 revenue of roughly $190-200bn, far above the $70bn plan those margin paths were tied to, so the projections may have been re-cut without a reported margin update."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://michaelparekh.substack.com/p/ai-diving-into-openai-vs-anthropic",
+     "publisher": "AI: Reset to Zero (Michael Parekh)",
+     "title": "AI: Diving into OpenAI vs Anthropic financial growth metrics. RTZ #1038",
+     "published": "2026-03-26",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Quotes The Information: 40% projected margin from selling AI to businesses; ~38% counting non-paying users"
+    },
+    {
+     "url": "https://www.itiger.com/news/1113108294",
+     "publisher": "Tiger Brokers (Deep News)",
+     "title": "AI Profitability Proves Elusive: Anthropic Cuts Gross Margin Guidance",
+     "published": "2026-01-22",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Negative 94% gross margin in 2024; 2025 forecast cut to 40%; ~38% with free users; >70% by 2027"
+    },
+    {
+     "url": "https://longbridge.com/en/news/273327693",
+     "publisher": "Longbridge (Wallstreetcn)",
+     "title": "Anthropic lowers gross margin guidance: revenue increased 12 times",
+     "published": "2026-01-22",
+     "tier": "T4",
+     "opened": true,
+     "supports": "2024 -94%, 2025 40%, >70% by 2027; text mixes in OpenAI items so used only as a consistency check"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/08/18/anthropic-revenue-run-rate-tops-65-billion-source-says",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Anthropic revenue run rate tops $65 billion, source says",
+     "published": "2026-08-18",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Run rate $65bn by end of July from $47bn in May; Reuters source 'a person familiar'; Bloomberg reported first"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-363aa8",
+   "found": {
+    "value": "77% (excluding free-user inference); 75% if free-user inference is included",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. Forward projection for FY2028 made in Nov 2025, tied to a plan of up to $70bn 2028 revenue and $17bn cash flow.",
+    "reported_by": "The Information, 2025-11-04; re-reported by TechCrunch, TipRanks, MLQ, Seeking Alpha the same day",
+    "notes": "Single origin (The Information). TechCrunch: 'and 77% in 2028'; TipRanks: 75% if free users are counted. Vintage caveat: Reuters reported on 2026-08-18 that Anthropic now projects 2028 revenue of roughly $190-200bn, so the 77% belongs to the older $70bn plan; I found no updated 2028 margin. A Tech Times headline (2026-08-13) mentions 'targeting 77% gross margins before IPO' (not opened)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-projects-70-billion-revenue-17-billion-cash-flow-2028",
+     "publisher": "The Information (Sri Muppidi)",
+     "title": "Anthropic Projects $70 Billion in Revenue, $17 Billion in Cash Flow in 2028",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Paywalled: only headline/byline visible; origin of the -94%/50%/77% gross-margin path per re-reports"
+    },
+    {
+     "url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+     "publisher": "TechCrunch",
+     "title": "Anthropic projects $70B in revenue by 2028: Report",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Gross profit margin from negative 94% last year to 50% this year and 77% in 2028 (The Information)"
+    },
+    {
+     "url": "https://www.tipranks.com/news/anthropic-raises-its-2028-revenue-and-cash-flow-guidance-to-staggering-amounts",
+     "publisher": "TipRanks",
+     "title": "Anthropic Raises Its 2028 Revenue and Cash Flow Guidance to Staggering Amounts",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Including free users margins would be -109% last year, 47% this year and 75% by 2028"
+    },
+    {
+     "url": "https://mlq.ai/news/anthropic-projects-70b-revenue-and-17b-cash-flow-by-2028/",
+     "publisher": "MLQ.ai",
+     "title": "Anthropic Projects $70B Revenue and $17B Cash Flow by 2028",
+     "published": "2025-11-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Gross margin negative 94% in 2024, 50% this year, 77% by 2028 (The Information)"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/08/18/anthropic-revenue-run-rate-tops-65-billion-source-says",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Anthropic revenue run rate tops $65 billion, source says",
+     "published": "2026-08-18",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Run rate $65bn by end of July from $47bn in May; Reuters source 'a person familiar'; Bloomberg reported first"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-bc29eb",
+   "found": {
+    "value": -2980,
+    "basis": "USD millions; operating loss (operating income = -2,980) per the leaked draft S-1 as characterised by Reuters. Reuters' FY2025 wording is 'on an operating basis, excluding writedowns of various liabilities mostly tied to previous fundraising'; how FY2024 is treated is not stated. Actual, not a projection; GAAP status not stated",
+    "reported_by": "Fortune (Beatrice Nolan) 2026-09-29 and The Decoder 2026-09-29, both attributing to Reuters' review of the draft prospectus (Reuters, Echo Wang, 2026-09-28)",
+    "notes": "The two-decimal $2.98bn is NOT in the four Reuters wire copies I opened (Yahoo, Investing.com, The Star, Global Banking & Finance), which give only FY2025 'more than $8 billion'; Reuters' second S-1 story (2026-09-29) says operating losses 'more than doubled to top $8 billion', consistent with $2.98bn to $8.06bn. One origin (Reuters); Fortune and the Decoder are re-reporters and I could not open the Reuters page. EDGAR (2026-09-30): no Anthropic PBC registrant and no S-1 filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft S-1 was submitted confidentially."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder",
+     "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and 'existential' risks",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Operating loss widened from $2.98 billion to $8.06 billion (Reuters); FT and Reuters both reviewed the prospectus"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
+     "publisher": "Investing.com (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6 billion; lost more than $8 billion on an operating basis"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-fb8630",
+   "found": {
+    "value": -8060,
+    "basis": "USD millions; operating loss (operating income = -8,060) for FY2025 per the leaked draft S-1; Reuters: 'lost more than $8 billion on an operating basis, excluding writedowns of various liabilities mostly tied to previous fundraising'. Excludes the ~$34bn non-cash financing charge that takes the net loss to ~$42bn. Actual, before any adjustment beyond that",
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'more than $8 billion'; exact $8.06bn from Fortune (Nolan) and The Decoder 2026-09-29, both attributing to Reuters",
+    "notes": "Arithmetic cross-check: revenue ~$4.59bn less $12.65bn total operating expenses = -$8.06bn, matching the exact figure. One origin (Reuters); re-reported by dozens of outlets. Reuters' second story (2026-09-29) repeats 'more than doubled to top $8 billion'. EDGAR (2026-09-30): no Anthropic PBC registrant and no S-1 filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft S-1 was submitted confidentially."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+     "publisher": "Yahoo Finance (Reuters wire text)",
+     "title": "Exclusive: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Near-$42 billion net loss included a roughly $34 billion accounting charge reflecting higher estimated value of financing"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
+     "publisher": "Investing.com (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6 billion; lost more than $8 billion on an operating basis"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder",
+     "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and 'existential' risks",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Operating loss widened from $2.98 billion to $8.06 billion (Reuters); FT and Reuters both reviewed the prospectus"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-f97435",
+   "found": {
+    "value": 559,
+    "basis": "USD millions; projected operating income for the June quarter 2026 on projected revenue of $10.9bn (+130% vs ~$4.8bn in Q1). Company projection shared with investors in an ongoing funding round. Per PYMNTS's paraphrase of the WSJ: includes model training costs but excludes stock-based compensation (i.e. an adjusted, non-GAAP view); SemiAnalysis (2026-05-27) independently reads the WSJ as 'Operating Income profitable in 2Q after adjusting for stock-based compensation'. WSJ noted it is unclear what accounting methods Anthropic used; unaudited",
+    "reported_by": "Wall Street Journal exclusive, 2026-05-20 ('Mind-Blowing Growth Is About to Propel Anthropic Into Its First Profitable Quarter'); same-day headlines from The Information ('Anthropic Projects Turning an Operating Profit in Second Quarter'), CNBC ('source says', $10.9bn) and Reuters ('Anthropic nears first quarterly profit, agrees to pay SpaceX $1.25 billion monthly')",
+    "notes": "wsj.com refused; read via PYMNTS (2026-05-20), Ed Zitron (2026-05-21) and The Decoder (2026-05-21), all crediting the WSJ. The Information, CNBC and Reuters items were seen as headlines only, so I cannot say whether they did independent reporting. WSJ caveat: Anthropic 'might not remain profitable for the full year'. Zitron argues the quarter benefits from a reduced SpaceX compute fee in May-June (his opinion). Superseded by actuals: Bloomberg 2026-08-14 and FT 2026-09-13 report positive adjusted operating income without an amount."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.wsj.com/tech/ai/mind-blowing-growth-is-about-to-propel-anthropic-into-its-first-profitable-quarter-7edbf2f4?mod=panda_wsj_section_alert",
+     "publisher": "Wall Street Journal",
+     "title": "Exclusive | Mind-Blowing Growth Is About to Propel Anthropic Into Its First Profitable Quarter",
+     "published": "2026-05-20",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Origin of $10.9bn Q2 revenue and $559m operating-profit projection; wsj.com refused by WebFetch"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+     "publisher": "PYMNTS (paraphrasing WSJ)",
+     "title": "Anthropic On Track for First Operating Profit as Revenue Surges",
+     "published": "2026-05-20",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Expects operating income of $559 million; includes model training costs but excludes stock-based compensation"
+    },
+    {
+     "url": "https://www.wheresyoured.at/anthropics-profitability-swindle/",
+     "publisher": "Ed Zitron's Where's Your Ed At",
+     "title": "Anthropic's 'Profitability' Swindle",
+     "published": "2026-05-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Quotes WSJ: 'operating profit of $559 million in the June quarter'; $4.8 billion Q1 sales; unclear accounting methods"
+    },
+    {
+     "url": "https://the-decoder.com/anthropic-is-about-to-become-the-first-profitable-ai-lab/",
+     "publisher": "The Decoder",
+     "title": "Anthropic is about to become the first profitable AI lab",
+     "published": "2026-05-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "WSJ: Q2 revenue $10.9bn (+130%), $559m operating profit projection; compute 71 cents/$ in Q1, 56 cents in Q2"
+    },
+    {
+     "url": "https://newsletter.semianalysis.com/p/anthropic-growth-and-bedrock-mix",
+     "publisher": "SemiAnalysis",
+     "title": "Anthropic Growth and Bedrock Mix Drive AWS Margins Higher While Peers Lag",
+     "published": "2026-05-27",
+     "tier": "T4",
+     "opened": true,
+     "supports": "We believe inference gross margins are now in the mid 60s, up from 38% in 2025 and -94% in 2024"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-MAR-a0098f",
+   "found": {
+    "value": "positive adjusted operating income; dollar amount not reported",
+    "basis": "Adjusted operating income (definition not given in any accessible report; one aggregator summary says ex stock-based comp 'and similar', unverified); preliminary, unaudited, from investor documents; quarter = April-June 2026",
+    "reported_by": "Bloomberg, 2026-08-14 ('internal documents' / confidential investor documents; via Fortune 2026-08-15, The Next Web 2026-08-15, PYMNTS, Yahoo 2026-08-21); FT, 2026-09-13 (via Reuters brief, TNW, techi, Dealroom)",
+    "notes": "No primary outlet I could open gives a number. Bloomberg: 'positive adjusted operating income', first time; Anthropic declined comment. Reuters' brief of the FT, TNW, techi.com and Dealroom all say no amount. Two low-tier aggregator posts (tradersagency.com, aiweekly.co) attribute 'roughly $559 million in adjusted operating profit' for Q2 to the FT; $559m is exactly the WSJ's 2026-05-20 projection, so they appear to have conflated projection with actual; see conflicts. TechCrunch (2026-09-28) attributes 'second straight quarter of operating profit on an adjusted basis' to the FT, not to the prospectus."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/",
+     "publisher": "Fortune (citing Bloomberg)",
+     "title": "Anthropic revenue surges to over $11.5 billion in second quarter",
+     "published": "2026-08-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Internal documents seen by Bloomberg: Q2 revenue >$11.5bn, Q1 $4.73bn, positive adjusted operating income"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-q2-2026-revenue-11-5-billion-operating-income",
+     "publisher": "The Next Web (citing Bloomberg)",
+     "title": "Anthropic's quarterly revenue passed $11.5bn, up more than 14-fold",
+     "published": "2026-08-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Q2 >$11.5bn vs $787m a year earlier; Q1 $4.73bn; positive adjusted operating income; confidential investor documents"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-touts-14-fold-jump-in-revenue-for-would-be-investors/",
+     "publisher": "PYMNTS (citing Bloomberg)",
+     "title": "Anthropic Touts 14-Fold Jump in Revenue for Would-Be Investors",
+     "published": "2026-08-14",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Bloomberg (Aug 14): Q2 >$11.5bn vs $787m; positive adjusted operating income, no amount; $47bn run-rate in May"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-q2-revenue-overtook-openai-015716271.html",
+     "publisher": "Yahoo Finance",
+     "title": "Anthropic's Q2 Revenue Overtook OpenAI for the First Time",
+     "published": "2026-08-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "First positive adjusted operating income, amount not disclosed; run-rate $65bn end of July"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
+     "publisher": "Investing.com (Reuters brief on FT report)",
+     "title": "Anthropic tells investors it will be profitable for second straight quarter, FT reports",
+     "published": "2026-09-13",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Gross margins above 80% before revenue shared with distribution partners incl. Amazon and before training cost"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+     "publisher": "The Next Web",
+     "title": "Anthropic expects a second straight quarter of adjusted operating profit",
+     "published": "2026-09-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "FT citing several people; CNBC confirmed via two people; Q3 positive adjusted operating income; margins above 80%"
+    },
+    {
+     "url": "https://www.techi.com/anthropic-second-profitable-quarter-ipo-ft-report/",
+     "publisher": "techi.com",
+     "title": "Anthropic expects a second profitable quarter as its IPO nears, FT reports",
+     "published": "2026-09-13",
+     "tier": "T4",
+     "opened": true,
+     "supports": "No dollar amount for Q2 adjusted operating profit; gross margin above 80% before partner share and training"
+    },
+    {
+     "url": "https://dealroom.co/news/other-1wfgfsc-anthropic-tells-investors-it-will-be-profitable-for-second-straight-quar/",
+     "publisher": "Dealroom",
+     "title": "Anthropic tells investors it will be profitable for second straight quarter",
+     "published": "2026-09-13",
+     "tier": "T4",
+     "opened": true,
+     "supports": "No dollar amount for adjusted operating profit; no mention of 559"
+    },
+    {
+     "url": "https://tradersagency.com/blog/anthropic-tells-investors-it-expects-second-straight-profitable-quarter-as-it-picks-nasdaq-for-ipo",
+     "publisher": "tradersagency.com blog",
+     "title": "Anthropic Tells Investors It Expects Second Straight Profitable Quarter as It Picks Nasdaq for IPO",
+     "published": "2026-09-14",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Claims 'roughly $559 million in adjusted operating profit' for Q2, attributed to the FT (conflicts with other copies)"
+    },
+    {
+     "url": "https://aiweekly.co/alerts/anthropic-projects-second-profitable-quarter-ahead-of-ipo",
+     "publisher": "aiweekly.co",
+     "title": "Anthropic Projects Second Profitable Quarter Ahead of IPO",
+     "published": "2026-09-14",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Claims 'roughly $559 million in operating profit' for preliminary Q2, attributed to the FT (conflicts with other copies)"
+    },
+    {
+     "url": "https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html",
+     "publisher": "CNBC",
+     "title": "Anthropic revenue reportedly jumps to more than $11.5 billion in second quarter",
+     "published": "2026-08-15",
+     "tier": "T3",
+     "opened": false,
+     "supports": "CNBC re-report of Bloomberg; HTTP 403 to WebFetch so not opened"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "No dollar amount for Q2 adjusted operating profit (Reuters brief of FT; TNW; techi; Dealroom; Bloomberg)",
+     "source_a": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
+     "value_b": "'roughly $559 million in adjusted operating profit' for Q2, attributed to the FT",
+     "source_b": "https://aiweekly.co/alerts/anthropic-projects-second-profitable-quarter-ahead-of-ipo",
+     "note": "$559m equals the WSJ 2026-05-20 Q2 projection; the aggregator copies look like conflation (Dealroom's copy says no mention of 559). Treat $559m as a May projection, not a reported actual."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-MAR-61a382",
+   "found": {
+    "value": "positive adjusted operating income expected (no amount); SemiAnalysis's own estimate is above $1bn",
+    "basis": "Company view (FT): adjusted operating income expected positive for a second straight quarter (July-September 2026), told to shareholders; definition of 'adjusted' not given. SemiAnalysis: third-party estimate from its Tokenomics model, not company-reported. Projections, unaudited",
+    "reported_by": "Financial Times 2026-09-13 (via Reuters brief, TNW, techi; CNBC reportedly confirmed via two people, per TNW); SemiAnalysis 2026-07-08 ('Anthropic 3Q26 Profit Over $1B', paywalled)",
+    "notes": "No Q3 dollar figure from the company side. SemiAnalysis headline says 3Q26 profit over $1B; its teaser says it builds financials bottom-up by SKU, tier and customer type and cites a WSJ article as validation; RSS shows 2026-07-07, the page shows 2026-07-08. A KuCoin headline (2026-08-07, not opened) says 'over $10 billion', which looks like a transcription error. Decrypt (2026-09-29, citing Reuters) says the debut is expected after the November U.S. midterms, so Q3 results were not public at 2026-09-30."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
+     "publisher": "Investing.com (Reuters brief on FT report)",
+     "title": "Anthropic tells investors it will be profitable for second straight quarter, FT reports",
+     "published": "2026-09-13",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Gross margins above 80% before revenue shared with distribution partners incl. Amazon and before training cost"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+     "publisher": "The Next Web",
+     "title": "Anthropic expects a second straight quarter of adjusted operating profit",
+     "published": "2026-09-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "FT citing several people; CNBC confirmed via two people; Q3 positive adjusted operating income; margins above 80%"
+    },
+    {
+     "url": "https://www.techi.com/anthropic-second-profitable-quarter-ipo-ft-report/",
+     "publisher": "techi.com",
+     "title": "Anthropic expects a second profitable quarter as its IPO nears, FT reports",
+     "published": "2026-09-13",
+     "tier": "T4",
+     "opened": true,
+     "supports": "No dollar amount for Q2 adjusted operating profit; gross margin above 80% before partner share and training"
+    },
+    {
+     "url": "https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the",
+     "publisher": "SemiAnalysis",
+     "title": "Anthropic 3Q26 Profit Over $1B: The Anthropic IPO Financials Sneak Peek",
+     "published": "2026-07-08",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Paywalled teaser: SemiAnalysis Tokenomics model (own bottom-up estimate), headline 3Q26 profit over $1B"
+    },
+    {
+     "url": "https://decrypt.co/379605/anthropic-lost-42-billion-last-year-wants-ipo-2-trillion",
+     "publisher": "Decrypt",
+     "title": "Anthropic Lost $42 Billion Last Year. It Wants to Go Public at $2 Trillion",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Net loss ~$42bn incl ~$34bn non-cash charge; compute $7.33bn; cash $20.28bn; Reuters primary source"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-CUS-4d7394",
+   "found": {
+    "value": "over 300,000 business customers",
+    "date": "2025-09-02",
+    "stated_by": "Anthropic (company statement in the Series F announcement, 2025-09-02)",
+    "notes": "Verbatim: 'Anthropic now serves over 300,000 business customers, and our number of large accounts ... has grown nearly 7x in the past year.' Reuters (2025-10-16) repeats 'more than 300,000 business and enterprise customers'. Company-reported, unaudited, not from the S-1; 'business customers' is Anthropic's own (undefined) term."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $13B Series F at $183B post-money valuation",
+     "published": "2025-09-02",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Serves over 300,000 business customers; large accounts (>$100,000 run-rate) grew nearly 7x in the past year"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2025/10/16/exclusive-anthropic-aims-to-nearly-triple-annualized-revenue-in-2026-sources-say",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic aims to nearly triple annualized revenue in 2026, sources say",
+     "published": "2025-10-16",
+     "tier": "T3",
+     "opened": true,
+     "supports": "More than 300,000 business customers; enterprise customers account for about 80% of revenue (Krystal Hu, Deepa Seetharaman)"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-CUS-803c68",
+   "found": {
+    "value": "8x (customers paying at least $100,000 'jumped eightfold'); measurement window not stated in the copy I could open",
+    "date": "2025-05-16",
+    "stated_by": "Anthropic (disclosure accompanying its $2.5bn credit-facility announcement), as reported by CNBC and SiliconANGLE on 2025-05-16",
+    "notes": "SiliconANGLE (Maria Deutscher): 'the number of customers that pay at least $100,000 for Anthropic's AI models jumped eightfold' and annualized revenue 'topped $2 billion in the first quarter', citing CNBC. CNBC returned HTTP 403 and Anthropic's own release was not located, so the primary was not opened and the comparison period is unconfirmed (likely year over year). Later official statements: Series F (2025-09-02) large accounts (>$100,000 run-rate) 'grown nearly 7x in the past year'; Series G (2026-02-12) customers spending over $100,000 annually up 7x in the past year."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+     "publisher": "SiliconANGLE (citing CNBC)",
+     "title": "Anthropic raises $2.5B in debt to finance growth investments",
+     "published": "2025-05-16",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Number of customers paying at least $100,000 jumped eightfold; annualized revenue topped $2bn in Q1"
+    },
+    {
+     "url": "https://www.cnbc.com/2025/05/16/anthropic-ai-credit-facility.html",
+     "publisher": "CNBC",
+     "title": "Anthropic closes $2.5 billion credit facility as Wall Street continues plunging money into AI boom",
+     "published": "2025-05-16",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Original report cited by SiliconANGLE; HTTP 403 to WebFetch so not opened"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $13B Series F at $183B post-money valuation",
+     "published": "2025-09-02",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Serves over 300,000 business customers; large accounts (>$100,000 run-rate) grew nearly 7x in the past year"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $30 billion in Series G funding at $380 billion post-money valuation",
+     "published": "2026-02-12",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Eight of the Fortune 10 are now Claude customers; customers over $1M annualized exceeds 500"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-CUS-91af9c",
+   "found": {
+    "value": "over 1,000 business customers each spending over $1 million on an annualized basis",
+    "date": "2026-04-06",
+    "stated_by": "Anthropic (company post 'Anthropic expands Google and Broadcom compute deal', 2026-04-06)",
+    "notes": "Verbatim: 'Over 500 business customers were each spending over $1 million on an annualized basis. Today that number exceeds 1,000' (the 500 figure refers to the Series G announcement of 2026-02-12, where Anthropic said 'a dozen' customers did so two years earlier). Same post: run-rate revenue surpassed $30bn from ~$9bn at end-2025. Company-reported, unaudited."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+     "publisher": "Anthropic",
+     "title": "Anthropic expands Google and Broadcom compute deal",
+     "published": "2026-04-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Over 500 business customers each spending over $1 million annualized; today that number exceeds 1,000"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $30 billion in Series G funding at $380 billion post-money valuation",
+     "published": "2026-02-12",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Eight of the Fortune 10 are now Claude customers; customers over $1M annualized exceeds 500"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-CUS-742b20",
+   "found": {
+    "value": "8 of the Fortune 10",
+    "date": "2026-02-12",
+    "stated_by": "Anthropic (Series G announcement, 2026-02-12)",
+    "notes": "Verbatim: 'Eight of the Fortune 10 are now Claude customers.' Company-reported; 'customer' is not defined (no spend threshold). Same post: run-rate revenue $14bn; customers over $1M annualized exceeds 500; customers spending over $100,000 up 7x in the past year."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $30 billion in Series G funding at $380 billion post-money valuation",
+     "published": "2026-02-12",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Eight of the Fortune 10 are now Claude customers; customers over $1M annualized exceeds 500"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-CUS-86b20f",
+   "found": {
+    "value": null,
+    "date": null,
+    "stated_by": "No net revenue retention figure found from Anthropic or any reputable outlet",
+    "notes": "Searched Anthropic's own posts opened here (Series F, G, H; 2026-04-06; 2026-04-20), the leaked-prospectus coverage (Reuters x2, Fortune x2, TechCrunch, The Decoder, Decrypt) and Google News queries for NRR/net retention/dollar retention: none states an NRR value. Closest: Fortune (Nolan) says the prospectus warns 'many of its largest customers are not tied into long-term contracts and could reduce or stop spending', and Amodei called enterprise revenue 'relatively stable' (2026-03-04). The Information's 'What Anthropic's IPO Investors Want to Know' (2026-09-03) and SemiAnalysis's 2026-07-08 piece are paywalled with no visible metrics. A PitchBook note dated 2026-06-10 exists but was not opened (same desk as the draft, not independent)."
+   },
+   "verdict_hint": "UNTRACEABLE",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/series-h",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $65B Series H at $965B valuation",
+     "published": "2026-05-28",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Run-rate revenue crossed $47 billion earlier this month; no NRR or churn metric disclosed"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+     "publisher": "Anthropic",
+     "title": "Anthropic and Amazon expand collaboration for up to 5 gigawatts of new compute",
+     "published": "2026-04-20",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Run-rate revenue surpassed $30bn; over 100,000 customers run Claude on Amazon Bedrock; no NRR or churn metric"
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropics-ipo-investors-want-know",
+     "publisher": "The Information (Valida Pau, Cory Weinberg)",
+     "title": "What Anthropic's IPO Investors Want to Know",
+     "published": "2026-09-03",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Paywalled: headline/byline only; no metrics visible"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/enterprises-drive-anthropic-run-rate-revenue-to-19-billion/",
+     "publisher": "PYMNTS",
+     "title": "Enterprises Drive Anthropic Run-Rate Revenue to $19 Billion",
+     "published": "2026-03-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Amodei: enterprises 80% of business and a relatively stable source of income; run-rate topped $19bn"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-CUS-63ee15",
+   "found": {
+    "value": "no logo-churn rate or multiyear-contract share found; qualitative only: enterprises ~80% of business and 'a relatively stable source of income'",
+    "date": "2026-03-04",
+    "stated_by": "Dario Amodei (CEO), as reported by PYMNTS on 2026-03-04; CFO Krishna Rao quoted alongside on run-rate $19bn",
+    "notes": "PYMNTS (2026-03-04): 'enterprises accounted for 80% of Anthropic's business and that the company finds them to be a relatively stable source of income'; the article has no churn or multiyear-contract data and does not name the event. From the leak: Fortune (Nolan, 2026-09-29) reports the prospectus says many of Anthropic's largest customers are not tied into long-term contracts and could reduce or stop spending (risk-factor language, no percentages). Nothing I could open quantifies logo churn or the share of multiyear contracts."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/enterprises-drive-anthropic-run-rate-revenue-to-19-billion/",
+     "publisher": "PYMNTS",
+     "title": "Enterprises Drive Anthropic Run-Rate Revenue to $19 Billion",
+     "published": "2026-03-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Amodei: enterprises 80% of business and a relatively stable source of income; run-rate topped $19bn"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-CUS-693acb",
+   "found": {
+    "value": "two unnamed customers each generated 12% of FY2025 revenue (about 24%, 'nearly a quarter')",
+    "date": "2026-09-28",
+    "stated_by": "Anthropic's draft S-1/prospectus (concentration disclosure), as reported by Reuters (2026-09-28 'nearly a quarter'; 2026-09-29 '12% each') and, per TechCrunch, by the Financial Times",
+    "notes": "Reuters 2026-09-28 (Echo Wang): 'nearly a quarter of its revenue came from two customers last year'; Reuters 2026-09-29 (Echo Wang and Krystal Hu): 'two unnamed customers each generated 12% of revenue last year'. TechCrunch (2026-09-28) says 'according to the FT, the prospectus also flagged customer concentration, with nearly a quarter of last year's revenue coming from just two clients'. Two outlets with their own access to the draft (Reuters; FT per TechCrunch, FT text not opened). Same Reuters story: 47% of 2025 revenue ($2.16bn) sold through Amazon and Google marketplaces; US 'nearly two-thirds' of sales. Customers are not named. EDGAR (2026-09-30): no public S-1."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/29/exclusive-anthropic039s-ipo-prospectus-shows-sweeping-ai-vision-surging-costs",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Net loss $42bn 2025; nearly a quarter of revenue from two customers; prospectus 'seen by Reuters'"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
+     "publisher": "Investing.com (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6 billion; lost more than $8 billion on an operating basis"
+    },
+    {
+     "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+     "publisher": "TechCrunch (Connie Loizos)",
+     "title": "Anthropic's prospectus details losses, growth, and, yes, a warning that its AI could end humanity",
+     "published": "2026-09-28",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Credits FT, which 'reviewed the filing in recent days', for Q2 revenue $11.5bn and two-client concentration"
+    },
+    {
+     "url": "https://www.ft.com/content/c7685a7e-7745-4cbc-8053-4958d0ea449b",
+     "publisher": "Financial Times",
+     "title": "FT report on Anthropic's IPO prospectus (link supplied by SiliconANGLE; exact headline not confirmed)",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Linked by SiliconANGLE for 'faster growth in the first half' and Q2 sales of $11.5 billion; ft.com refused by WebFetch"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-CUS-949adf",
+   "found": {
+    "value": "about 80% of revenue from business/enterprise customers",
+    "date": "2025-10-15",
+    "stated_by": "Reuters exclusive by Krystal Hu and Deepa Seetharaman (2025-10-15, carried 2025-10-16), sourced to 'two people familiar'; the company confirmed its October revenue figure but declined to comment on projections",
+    "notes": "Reuters: 'enterprise customers account for about 80% of its revenue' with 'more than 300,000 business and enterprise customers'. Amodei repeated '80%' (PYMNTS, 2026-03-04). A later Yahoo Finance piece (2026-08-21) says enterprise API usage is '80% to 85%' of the mix (attribution unclear, not verified). Not from the S-1; the prospectus coverage I opened gives a revenue split by pricing model instead: ~$3.8bn usage-based vs $789m subscription in 2025."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2025/10/16/exclusive-anthropic-aims-to-nearly-triple-annualized-revenue-in-2026-sources-say",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic aims to nearly triple annualized revenue in 2026, sources say",
+     "published": "2025-10-16",
+     "tier": "T3",
+     "opened": true,
+     "supports": "More than 300,000 business customers; enterprise customers account for about 80% of revenue (Krystal Hu, Deepa Seetharaman)"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/enterprises-drive-anthropic-run-rate-revenue-to-19-billion/",
+     "publisher": "PYMNTS",
+     "title": "Enterprises Drive Anthropic Run-Rate Revenue to $19 Billion",
+     "published": "2026-03-04",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Amodei: enterprises 80% of business and a relatively stable source of income; run-rate topped $19bn"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-q2-revenue-overtook-openai-015716271.html",
+     "publisher": "Yahoo Finance",
+     "title": "Anthropic's Q2 Revenue Overtook OpenAI for the First Time",
+     "published": "2026-08-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "First positive adjusted operating income, amount not disclosed; run-rate $65bn end of July"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-832aa6",
+   "found": {
+    "value": 4600,
+    "reported_by": "Reuters (Echo Wang), exclusive, 2026-09-28: 'Revenue grew 12-fold in 2025 to nearly $4.6 billion'; composition in Reuters' 2026-09-29 story (Echo Wang and Krystal Hu)",
+    "date": "2026-09-28",
+    "notes": "USD millions, 'nearly $4.6 billion' (FY2025, GAAP revenue per the draft S-1). KuCoin/Pasquale Pillitteri headlines give $4.59bn. Composition (Reuters 2026-09-29): about $3.8bn from usage-based customers plus $789m subscription, consistent with ~$4.59bn; $2.16bn (47%) sold through AWS/Google marketplaces. Independence: origin = Reuters (Echo Wang, 2026-09-28 23:17 GMT, 'prospectus seen/reviewed by Reuters'); Fortune, TechCrunch, The Decoder, Decrypt, PYMNTS and dozens of outlets re-reported Reuters. The FT says it also reviewed the filing (FirstFT item 2026-09-28 21:26 GMT; TechCrunch) and the NYT ran 'What's In Anthropic's I.P.O. Filing' on 2026-09-29, but ft.com and nytimes.com are refused by WebFetch and I found no FT/NYT-attributed figure for this line, so I can confirm one origin only. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/",
+     "publisher": "Reuters",
+     "title": "Exclusive: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Origin of the FY2025 figures (Echo Wang); reuters.com refused by WebFetch, so verbatim wire copies were opened instead"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
+     "publisher": "Investing.com (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6 billion; lost more than $8 billion on an operating basis"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+     "publisher": "Yahoo Finance (Reuters wire text)",
+     "title": "Exclusive: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Near-$42 billion net loss included a roughly $34 billion accounting charge reflecting higher estimated value of financing"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder",
+     "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and 'existential' risks",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Operating loss widened from $2.98 billion to $8.06 billion (Reuters); FT and Reuters both reviewed the prospectus"
+    },
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE (Maria Deutscher)",
+     "title": "Leaked Anthropic IPO filing reveals $8B operating loss, rapid revenue growth",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue ballooned from $400 million in 2024 to $4.6 billion; S-1 'prepared in June'; Reuters and FT published details"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?keysTyped=anthropic",
+     "publisher": "SEC EDGAR (efts full-text index)",
+     "title": "Entity lookup: 'anthropic'",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Only SPV feeder entities (WU/RVC/HII/MW LSVC/Hiive Anthropic series); no 'Anthropic PBC' registrant"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%2C%20PBC%22&dateRange=custom&startdt=2026-09-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic, PBC', all forms, September 2026",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "124 hits, all funds/other issuers mentioning Anthropic; none filed by Anthropic PBC"
+    },
+    {
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=anthropic+pbc&type=&dateb=&owner=include&count=40&action=getcompany",
+     "publisher": "SEC EDGAR (company browse)",
+     "title": "Company search: 'anthropic pbc'",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Only 'Anthropic PBC 1, a Series of Venelite Venture Funds, LP' and 'Anthropic PBC Jan 2026 a Series of CGF2021 LLC'"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-5f116f",
+   "found": {
+    "value": "about 400 (USD millions, rounded by SiliconANGLE); the exact dollar figure is not printed in anything I could open; +1,088% growth implies about 386",
+    "reported_by": "SiliconANGLE (Maria Deutscher), 2026-09-29: 'Anthropic's revenue ballooned from $400 million in 2024 to $4.6 billion last year' (article credits Reuters and the FT for the filing details). Growth figures: Reuters 2026-09-28 '12-fold'; Fortune (Nolan) 2026-09-29 'revenue rose 1,088% in 2025'",
+    "date": "2026-09-29",
+    "notes": "Rounded, secondary figure: no outlet printed the exact FY2024 revenue. Derivation: $4.59bn / (1 + 10.88) = ~$386m; 'twelve-fold' gives ~$380-385m. The 'Fortune India' headline (2026-09-29, via Google News; page refused) says revenue 'jumps 1,050%', which equals (4.6 - 0.4) / 0.4, i.e. it was computed from the rounded $0.4bn/$4.6bn, so it is a rounding artefact rather than a different data point. Pre-filing reference: The Information (Jan 2026; via Parekh 2026-03-26 and Tiger Brokers 2026-01-22) put 2024 revenue at $381m. SiliconANGLE says the S-1 'was prepared in June' and that Reuters and the FT published details late Monday. Independence: origin = Reuters (Echo Wang, 2026-09-28 23:17 GMT, 'prospectus seen/reviewed by Reuters'); Fortune, TechCrunch, The Decoder, Decrypt, PYMNTS and dozens of outlets re-reported Reuters. The FT says it also reviewed the filing (FirstFT item 2026-09-28 21:26 GMT; TechCrunch) and the NYT ran 'What's In Anthropic's I.P.O. Filing' on 2026-09-29, but ft.com and nytimes.com are refused by WebFetch and I found no FT/NYT-attributed figure for this line, so I can confirm one origin only. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE (Maria Deutscher)",
+     "title": "Leaked Anthropic IPO filing reveals $8B operating loss, rapid revenue growth",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue ballooned from $400 million in 2024 to $4.6 billion; S-1 'prepared in June'; Reuters and FT published details"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
+     "publisher": "Investing.com (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6 billion; lost more than $8 billion on an operating basis"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://michaelparekh.substack.com/p/ai-diving-into-openai-vs-anthropic",
+     "publisher": "AI: Reset to Zero (Michael Parekh)",
+     "title": "AI: Diving into OpenAI vs Anthropic financial growth metrics. RTZ #1038",
+     "published": "2026-03-26",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Quotes The Information: 40% projected margin from selling AI to businesses; ~38% counting non-paying users"
+    },
+    {
+     "url": "https://www.itiger.com/news/1113108294",
+     "publisher": "Tiger Brokers (Deep News)",
+     "title": "AI Profitability Proves Elusive: Anthropic Cuts Gross Margin Guidance",
+     "published": "2026-01-22",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Negative 94% gross margin in 2024; 2025 forecast cut to 40%; ~38% with free users; >70% by 2027"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "+1,088% revenue growth in 2025 (implies FY2024 ~ $386m on $4.59bn)",
+     "source_a": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "value_b": "+1,050% ('Revenue jumps 1,050%' in a Fortune India headline; equals growth from a rounded $0.4bn to $4.6bn)",
+     "source_b": "https://news.google.com/rss/search?q=Anthropic+IPO+draft+prospectus+revenue&hl=en-US&gl=US&ceid=US:en",
+     "note": "Fortune India page is refused by WebFetch, so only the headline was seen. SiliconANGLE's '$400 million' for FY2024 supports the rounding explanation; neither outlet prints the exact FY2024 dollar revenue."
+    },
+    {
+     "value_a": "FY2024 revenue about $400m (SiliconANGLE, rounded)",
+     "source_a": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "value_b": "FY2024 revenue implied ~$386m by +1,088% (Fortune) and $381m (The Information, Jan 2026, pre-filing)",
+     "source_b": "https://michaelparekh.substack.com/p/ai-diving-into-openai-vs-anthropic",
+     "note": "Spread of roughly $381-400m depending on rounding and vintage; the audited S-1 figure was not seen."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-3cbb5f",
+   "found": {
+    "value": 8060,
+    "reported_by": "Reuters (Echo Wang) 2026-09-28: 'lost more than $8 billion on an operating basis, excluding writedowns of various liabilities mostly tied to previous fundraising'; exact $8.06bn from Fortune (Nolan) and The Decoder 2026-09-29, both attributing to Reuters",
+    "date": "2026-09-28",
+    "notes": "USD millions, operating loss FY2025 (positive number = loss). Cross-check: $4.59bn revenue less $12.65bn total operating expenses = -$8.06bn. The precise $8.06bn is not in the four Reuters wire copies I opened; it appears in Fortune and The Decoder, which credit Reuters. Reuters' 2026-09-29 story: operating losses 'more than doubled to top $8 billion'. Independence: origin = Reuters (Echo Wang, 2026-09-28 23:17 GMT, 'prospectus seen/reviewed by Reuters'); Fortune, TechCrunch, The Decoder, Decrypt, PYMNTS and dozens of outlets re-reported Reuters. The FT says it also reviewed the filing (FirstFT item 2026-09-28 21:26 GMT; TechCrunch) and the NYT ran 'What's In Anthropic's I.P.O. Filing' on 2026-09-29, but ft.com and nytimes.com are refused by WebFetch and I found no FT/NYT-attributed figure for this line, so I can confirm one origin only. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+     "publisher": "Yahoo Finance (Reuters wire text)",
+     "title": "Exclusive: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Near-$42 billion net loss included a roughly $34 billion accounting charge reflecting higher estimated value of financing"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
+     "publisher": "Investing.com (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6 billion; lost more than $8 billion on an operating basis"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder",
+     "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and 'existential' risks",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Operating loss widened from $2.98 billion to $8.06 billion (Reuters); FT and Reuters both reviewed the prospectus"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-a9e720",
+   "found": {
+    "value": 2980,
+    "reported_by": "Fortune (Beatrice Nolan), 2026-09-29: 'operating loss widened to $8.06 billion from $2.98 billion a year earlier'; The Decoder 2026-09-29: 'the operating loss widened from $2.98 billion to $8.06 billion (Reuters)'",
+    "date": "2026-09-29",
+    "notes": "USD millions, operating loss FY2024 (positive number = loss). Both outlets attribute to Reuters' reading of the draft prospectus, but the $2.98bn is absent from the four Reuters wire copies I opened, so the Reuters original (reuters.com refused) is unverified. Reuters' 2026-09-29 story says operating losses 'more than doubled to top $8 billion', consistent (x2.7). Single origin. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder",
+     "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and 'existential' risks",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Operating loss widened from $2.98 billion to $8.06 billion (Reuters); FT and Reuters both reviewed the prospectus"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-b86e59",
+   "found": {
+    "value": 42000,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'net loss of $42 billion in 2025' / 'the near-$42 billion net loss'",
+    "date": "2026-09-28",
+    "notes": "USD millions, 'near-$42 billion' (FY2025 GAAP net loss per the draft S-1; exact figure not printed). It includes a roughly $34bn non-cash accounting charge for the increase in the estimated value of financing; operating loss is ~$8.06bn (8.06 + ~34 = ~42). Fortune: 'losing $42 billion last year ... according to the leaked filing reviewed by Reuters'. Independence: origin = Reuters (Echo Wang, 2026-09-28 23:17 GMT, 'prospectus seen/reviewed by Reuters'); Fortune, TechCrunch, The Decoder, Decrypt, PYMNTS and dozens of outlets re-reported Reuters. The FT says it also reviewed the filing (FirstFT item 2026-09-28 21:26 GMT; TechCrunch) and the NYT ran 'What's In Anthropic's I.P.O. Filing' on 2026-09-29, but ft.com and nytimes.com are refused by WebFetch and I found no FT/NYT-attributed figure for this line, so I can confirm one origin only. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+     "publisher": "Yahoo Finance (Reuters wire text)",
+     "title": "Exclusive: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Near-$42 billion net loss included a roughly $34 billion accounting charge reflecting higher estimated value of financing"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
+     "publisher": "Investing.com (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6 billion; lost more than $8 billion on an operating basis"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/29/exclusive-anthropic039s-ipo-prospectus-shows-sweeping-ai-vision-surging-costs",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Net loss $42bn 2025; nearly a quarter of revenue from two customers; prospectus 'seen by Reuters'"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://decrypt.co/379605/anthropic-lost-42-billion-last-year-wants-ipo-2-trillion",
+     "publisher": "Decrypt",
+     "title": "Anthropic Lost $42 Billion Last Year. It Wants to Go Public at $2 Trillion",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Net loss ~$42bn incl ~$34bn non-cash charge; compute $7.33bn; cash $20.28bn; Reuters primary source"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-3b375d",
+   "found": {
+    "value": 34000,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'The near-$42 billion net loss included a roughly $34 billion accounting charge that reflected an increase in the estimated value of financing'",
+    "date": "2026-09-28",
+    "notes": "USD millions, 'roughly $34 billion', non-cash accounting charge in FY2025 (fair-value increase on financing that could turn into shares, e.g. convertible instruments; Decrypt: 'non-cash charge from convertible financing', The Decoder: 'an accounting charge'). Exact figure not printed. Business Upturn's headline calls the loss 'mostly non-cash'. Independence: origin = Reuters (Echo Wang, 2026-09-28 23:17 GMT, 'prospectus seen/reviewed by Reuters'); Fortune, TechCrunch, The Decoder, Decrypt, PYMNTS and dozens of outlets re-reported Reuters. The FT says it also reviewed the filing (FirstFT item 2026-09-28 21:26 GMT; TechCrunch) and the NYT ran 'What's In Anthropic's I.P.O. Filing' on 2026-09-29, but ft.com and nytimes.com are refused by WebFetch and I found no FT/NYT-attributed figure for this line, so I can confirm one origin only. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+     "publisher": "Yahoo Finance (Reuters wire text)",
+     "title": "Exclusive: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Near-$42 billion net loss included a roughly $34 billion accounting charge reflecting higher estimated value of financing"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
+     "publisher": "Investing.com (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6 billion; lost more than $8 billion on an operating basis"
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder",
+     "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and 'existential' risks",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Operating loss widened from $2.98 billion to $8.06 billion (Reuters); FT and Reuters both reviewed the prospectus"
+    },
+    {
+     "url": "https://decrypt.co/379605/anthropic-lost-42-billion-last-year-wants-ipo-2-trillion",
+     "publisher": "Decrypt",
+     "title": "Anthropic Lost $42 Billion Last Year. It Wants to Go Public at $2 Trillion",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Net loss ~$42bn incl ~$34bn non-cash charge; compute $7.33bn; cash $20.28bn; Reuters primary source"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-30af82",
+   "found": {
+    "value": 12650,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: compute and infrastructure was 'more than half of its $12.65 billion in total operating expenses'",
+    "date": "2026-09-28",
+    "notes": "USD millions, FY2025 total operating expenses (appears to include cost of revenue: $4.59bn revenue - $12.65bn = -$8.06bn operating loss). Fortune (Edwards) and TechCrunch round to 'about $13 billion'. Independence: origin = Reuters (Echo Wang, 2026-09-28 23:17 GMT, 'prospectus seen/reviewed by Reuters'); Fortune, TechCrunch, The Decoder, Decrypt, PYMNTS and dozens of outlets re-reported Reuters. The FT says it also reviewed the filing (FirstFT item 2026-09-28 21:26 GMT; TechCrunch) and the NYT ran 'What's In Anthropic's I.P.O. Filing' on 2026-09-29, but ft.com and nytimes.com are refused by WebFetch and I found no FT/NYT-attributed figure for this line, so I can confirm one origin only. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.globalbankingandfinance.com/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging/",
+     "publisher": "Global Banking & Finance (Reuters wire text)",
+     "title": "Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "$12.65 billion total operating expenses; $7.33 billion compute and infrastructure; $20.28 billion cash (Echo Wang)"
+    },
+    {
+     "url": "https://www.forth.news/articles/CfWkWw2iWAvoDB8CARDBo",
+     "publisher": "Forth News (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Spent $7.33 billion on compute and infrastructure, a threefold surge from 2024, over half of $12.65bn opex"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+     "publisher": "Yahoo Finance (Reuters wire text)",
+     "title": "Exclusive: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Near-$42 billion net loss included a roughly $34 billion accounting charge reflecting higher estimated value of financing"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+     "publisher": "Fortune (Jim Edwards)",
+     "title": "Anthropic's $2 trillion IPO prospectus has leaked: here's a snapshot of its income statements",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Draft prospectus 'leaked to Reuters'; FY2025 revenue $4.6bn, opex $13bn, cash $20.28bn; Q1 figure linked to CNBC"
+    },
+    {
+     "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+     "publisher": "TechCrunch (Connie Loizos)",
+     "title": "Anthropic's prospectus details losses, growth, and, yes, a warning that its AI could end humanity",
+     "published": "2026-09-28",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Credits FT, which 'reviewed the filing in recent days', for Q2 revenue $11.5bn and two-client concentration"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-63169f",
+   "found": {
+    "value": 7330,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'spent $7.33 billion on compute and infrastructure last year, a threefold surge from 2024'",
+    "date": "2026-09-28",
+    "notes": "USD millions, FY2025 compute and infrastructure spend, ~58% of the $12.65bn total operating expenses. Growth 'threefold' vs FY2024 (Fortune computes ~$2.44bn for FY2024; Reuters does not print it). Distinct from the $518bn of multi-year cloud/compute commitments (of which $54.6bn was non-cancellable at end-2025 per Reuters 2026-09-29). Independence: origin = Reuters (Echo Wang, 2026-09-28 23:17 GMT, 'prospectus seen/reviewed by Reuters'); Fortune, TechCrunch, The Decoder, Decrypt, PYMNTS and dozens of outlets re-reported Reuters. The FT says it also reviewed the filing (FirstFT item 2026-09-28 21:26 GMT; TechCrunch) and the NYT ran 'What's In Anthropic's I.P.O. Filing' on 2026-09-29, but ft.com and nytimes.com are refused by WebFetch and I found no FT/NYT-attributed figure for this line, so I can confirm one origin only. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+     "publisher": "Yahoo Finance (Reuters wire text)",
+     "title": "Exclusive: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Near-$42 billion net loss included a roughly $34 billion accounting charge reflecting higher estimated value of financing"
+    },
+    {
+     "url": "https://www.forth.news/articles/CfWkWw2iWAvoDB8CARDBo",
+     "publisher": "Forth News (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Spent $7.33 billion on compute and infrastructure, a threefold surge from 2024, over half of $12.65bn opex"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+     "publisher": "The Decoder",
+     "title": "Anthropic's IPO filing shows soaring revenue, mounting costs, and 'existential' risks",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Operating loss widened from $2.98 billion to $8.06 billion (Reuters); FT and Reuters both reviewed the prospectus"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-f960bc",
+   "found": {
+    "value": 20280,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'cash, cash equivalents and short-term investments totaling $20.28 billion as of December 31'",
+    "date": "2026-09-28",
+    "notes": "USD millions, as of 2025-12-31 (before the $30bn Series G of Feb 2026 and $65bn Series H of May 2026). Fortune (Edwards) labels it 'cash and cash equivalents $20.28 billion'; Reuters' wording includes short-term investments. Independence: origin = Reuters (Echo Wang, 2026-09-28 23:17 GMT, 'prospectus seen/reviewed by Reuters'); Fortune, TechCrunch, The Decoder, Decrypt, PYMNTS and dozens of outlets re-reported Reuters. The FT says it also reviewed the filing (FirstFT item 2026-09-28 21:26 GMT; TechCrunch) and the NYT ran 'What's In Anthropic's I.P.O. Filing' on 2026-09-29, but ft.com and nytimes.com are refused by WebFetch and I found no FT/NYT-attributed figure for this line, so I can confirm one origin only. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-4921382",
+     "publisher": "Investing.com (Reuters wire text)",
+     "title": "Exclusive-Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6 billion; lost more than $8 billion on an operating basis"
+    },
+    {
+     "url": "https://www.globalbankingandfinance.com/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging/",
+     "publisher": "Global Banking & Finance (Reuters wire text)",
+     "title": "Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "$12.65 billion total operating expenses; $7.33 billion compute and infrastructure; $20.28 billion cash (Echo Wang)"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+     "publisher": "Fortune (Beatrice Nolan)",
+     "title": "Anthropic's leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue rose 1,088% in 2025, operating loss widened to $8.06 billion from $2.98 billion"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+     "publisher": "Fortune (Jim Edwards)",
+     "title": "Anthropic's $2 trillion IPO prospectus has leaked: here's a snapshot of its income statements",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Draft prospectus 'leaked to Reuters'; FY2025 revenue $4.6bn, opex $13bn, cash $20.28bn; Q1 figure linked to CNBC"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-f4166a",
+   "found": {
+    "value": 4730,
+    "reported_by": "Bloomberg, 2026-08-14 (internal/confidential investor documents; via Fortune 2026-08-15, The Next Web 2026-08-15, PYMNTS, Yahoo 2026-08-21); CNBC 2026-08-15 re-report (HTTP 403, not opened)",
+    "date": "2026-08-14",
+    "notes": "USD millions, Q1 2026 (Jan-Mar) revenue $4.73bn. Provenance caveat: no outlet I opened attributes this figure to the draft prospectus; Fortune (Edwards, 2026-09-29) links it to CNBC's Aug 15 story, and the Reuters S-1 stories contain no quarterly data. Earlier WSJ (2026-05-20, via Zitron) said '$4.8 billion in sales in the first quarter', likely a rounding. Bloomberg said the figures are preliminary; Anthropic declined comment. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/",
+     "publisher": "Fortune (citing Bloomberg)",
+     "title": "Anthropic revenue surges to over $11.5 billion in second quarter",
+     "published": "2026-08-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Internal documents seen by Bloomberg: Q2 revenue >$11.5bn, Q1 $4.73bn, positive adjusted operating income"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-q2-2026-revenue-11-5-billion-operating-income",
+     "publisher": "The Next Web (citing Bloomberg)",
+     "title": "Anthropic's quarterly revenue passed $11.5bn, up more than 14-fold",
+     "published": "2026-08-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Q2 >$11.5bn vs $787m a year earlier; Q1 $4.73bn; positive adjusted operating income; confidential investor documents"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-touts-14-fold-jump-in-revenue-for-would-be-investors/",
+     "publisher": "PYMNTS (citing Bloomberg)",
+     "title": "Anthropic Touts 14-Fold Jump in Revenue for Would-Be Investors",
+     "published": "2026-08-14",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Bloomberg (Aug 14): Q2 >$11.5bn vs $787m; positive adjusted operating income, no amount; $47bn run-rate in May"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-q2-revenue-overtook-openai-015716271.html",
+     "publisher": "Yahoo Finance",
+     "title": "Anthropic's Q2 Revenue Overtook OpenAI for the First Time",
+     "published": "2026-08-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "First positive adjusted operating income, amount not disclosed; run-rate $65bn end of July"
+    },
+    {
+     "url": "https://www.wheresyoured.at/anthropics-profitability-swindle/",
+     "publisher": "Ed Zitron's Where's Your Ed At",
+     "title": "Anthropic's 'Profitability' Swindle",
+     "published": "2026-05-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Quotes WSJ: 'operating profit of $559 million in the June quarter'; $4.8 billion Q1 sales; unclear accounting methods"
+    },
+    {
+     "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+     "publisher": "Fortune (Jim Edwards)",
+     "title": "Anthropic's $2 trillion IPO prospectus has leaked: here's a snapshot of its income statements",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Draft prospectus 'leaked to Reuters'; FY2025 revenue $4.6bn, opex $13bn, cash $20.28bn; Q1 figure linked to CNBC"
+    },
+    {
+     "url": "https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html",
+     "publisher": "CNBC",
+     "title": "Anthropic revenue reportedly jumps to more than $11.5 billion in second quarter",
+     "published": "2026-08-15",
+     "tier": "T3",
+     "opened": false,
+     "supports": "CNBC re-report of Bloomberg; HTTP 403 to WebFetch so not opened"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$4.73bn Q1 2026 revenue (Bloomberg, 2026-08-14, investor documents)",
+     "source_a": "https://thenextweb.com/news/anthropic-q2-2026-revenue-11-5-billion-operating-income",
+     "value_b": "$4.8bn Q1 2026 sales (WSJ, 2026-05-20, as quoted by Zitron)",
+     "source_b": "https://www.wheresyoured.at/anthropics-profitability-swindle/",
+     "note": "Probably rounding or a later revision of the same investor materials; the premise that Q1 revenue comes from the prospectus is not supported by any source opened."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-9ac20e",
+   "found": {
+    "value": 11500,
+    "reported_by": "Bloomberg, 2026-08-14 ('more than $11.5 billion', internal/confidential investor documents; Q2 2025 was $787m, a >14-fold rise); FT per TechCrunch 2026-09-28 ('second-quarter revenue alone reached $11.5 billion')",
+    "date": "2026-08-14",
+    "notes": "USD millions, 'more than $11.5bn', preliminary Q2 2026 (April-June). Provenance caveat: TechCrunch credits this to the FT, and Fortune (Edwards) links Bloomberg/CNBC; none states that it comes from the draft prospectus, and the Reuters S-1 stories contain no Q2 figure. SiliconANGLE (2026-09-29) also credits the FT for 'sales reached $11.5 billion in the second quarter alone' while saying the S-1 'was prepared in June', i.e. before the quarter ended. Two outlets with their own reporting (Bloomberg; FT) but both describe investor materials. The pre-quarter projection was $10.9bn (WSJ 2026-05-20, CNBC 'source says'). EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/",
+     "publisher": "Fortune (citing Bloomberg)",
+     "title": "Anthropic revenue surges to over $11.5 billion in second quarter",
+     "published": "2026-08-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Internal documents seen by Bloomberg: Q2 revenue >$11.5bn, Q1 $4.73bn, positive adjusted operating income"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-q2-2026-revenue-11-5-billion-operating-income",
+     "publisher": "The Next Web (citing Bloomberg)",
+     "title": "Anthropic's quarterly revenue passed $11.5bn, up more than 14-fold",
+     "published": "2026-08-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Q2 >$11.5bn vs $787m a year earlier; Q1 $4.73bn; positive adjusted operating income; confidential investor documents"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-q2-revenue-overtook-openai-015716271.html",
+     "publisher": "Yahoo Finance",
+     "title": "Anthropic's Q2 Revenue Overtook OpenAI for the First Time",
+     "published": "2026-08-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "First positive adjusted operating income, amount not disclosed; run-rate $65bn end of July"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-touts-14-fold-jump-in-revenue-for-would-be-investors/",
+     "publisher": "PYMNTS (citing Bloomberg)",
+     "title": "Anthropic Touts 14-Fold Jump in Revenue for Would-Be Investors",
+     "published": "2026-08-14",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Bloomberg (Aug 14): Q2 >$11.5bn vs $787m; positive adjusted operating income, no amount; $47bn run-rate in May"
+    },
+    {
+     "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+     "publisher": "TechCrunch (Connie Loizos)",
+     "title": "Anthropic's prospectus details losses, growth, and, yes, a warning that its AI could end humanity",
+     "published": "2026-09-28",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Credits FT, which 'reviewed the filing in recent days', for Q2 revenue $11.5bn and two-client concentration"
+    },
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE (Maria Deutscher)",
+     "title": "Leaked Anthropic IPO filing reveals $8B operating loss, rapid revenue growth",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Revenue ballooned from $400 million in 2024 to $4.6 billion; S-1 'prepared in June'; Reuters and FT published details"
+    },
+    {
+     "url": "https://www.ft.com/content/c7685a7e-7745-4cbc-8053-4958d0ea449b",
+     "publisher": "Financial Times",
+     "title": "FT report on Anthropic's IPO prospectus (link supplied by SiliconANGLE; exact headline not confirmed)",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Linked by SiliconANGLE for 'faster growth in the first half' and Q2 sales of $11.5 billion; ft.com refused by WebFetch"
+    },
+    {
+     "url": "https://the-decoder.com/anthropic-is-about-to-become-the-first-profitable-ai-lab/",
+     "publisher": "The Decoder",
+     "title": "Anthropic is about to become the first profitable AI lab",
+     "published": "2026-05-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "WSJ: Q2 revenue $10.9bn (+130%), $559m operating profit projection; compute 71 cents/$ in Q1, 56 cents in Q2"
+    },
+    {
+     "url": "https://www.wsj.com/tech/ai/mind-blowing-growth-is-about-to-propel-anthropic-into-its-first-profitable-quarter-7edbf2f4?mod=panda_wsj_section_alert",
+     "publisher": "Wall Street Journal",
+     "title": "Exclusive | Mind-Blowing Growth Is About to Propel Anthropic Into Its First Profitable Quarter",
+     "published": "2026-05-20",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Origin of $10.9bn Q2 revenue and $559m operating-profit projection; wsj.com refused by WebFetch"
+    },
+    {
+     "url": "https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html",
+     "publisher": "CNBC",
+     "title": "Anthropic revenue reportedly jumps to more than $11.5 billion in second quarter",
+     "published": "2026-08-15",
+     "tier": "T3",
+     "opened": false,
+     "supports": "CNBC re-report of Bloomberg; HTTP 403 to WebFetch so not opened"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Anthropic+%22gross+margin%22+improved+OR+rose+OR+expanded+quarter+investors+told&hl=en-US&gl=US&ceid=US:en",
+     "publisher": "BigGo Finance (headline via Google News)",
+     "title": "Anthropic Posts Q2 Revenue of approximately $15.3 Billion, First-Ever Profit Shatters AI Loss Myth",
+     "published": "2026-05-20",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Headline only (page not opened): claims Q2 revenue approximately $15.3 billion, dated 2026-05-20"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": ">$11.5bn Q2 2026 revenue (Bloomberg 2026-08-14; FT per TechCrunch 2026-09-28)",
+     "source_a": "https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/",
+     "value_b": "$10.9bn projected Q2 2026 revenue (WSJ 2026-05-20)",
+     "source_b": "https://the-decoder.com/anthropic-is-about-to-become-the-first-profitable-ai-lab/",
+     "note": "Different vintages (May projection vs August preliminary actual), not a true disagreement."
+    },
+    {
+     "value_a": ">$11.5bn Q2 2026 revenue (Bloomberg 2026-08-14)",
+     "source_a": "https://thenextweb.com/news/anthropic-q2-2026-revenue-11-5-billion-operating-income",
+     "value_b": "'approximately $15.3 billion' Q2 revenue (BigGo headline dated 2026-05-20)",
+     "source_b": "https://news.google.com/rss/search?q=Anthropic+%22gross+margin%22+improved+OR+rose+OR+expanded+quarter+investors+told&hl=en-US&gl=US&ceid=US:en",
+     "note": "Aggregator headline only, page not opened; dated before the quarter ended and inconsistent with WSJ ($10.9bn) and Bloomberg ($11.5bn); likely an error or a run-rate confusion. Low weight."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-b436b4",
+   "found": {
+    "value": "positive adjusted operating income in Q2 2026 (actual, preliminary) and expected positive in Q3 2026; no dollar amount reported",
+    "reported_by": "Bloomberg 2026-08-14 (Q2: 'positive adjusted operating income', first time, from investor documents); Financial Times 2026-09-13 (told shareholders it will be positive for a second straight quarter; Reuters brief; CNBC reportedly confirmed via two people, per TNW); TechCrunch 2026-09-28 repeats as an FT report",
+    "date": "2026-09-13",
+    "notes": "Basis: adjusted (definition not given by any accessible report), unaudited, from shareholder/investor communications, not from the draft S-1 as far as any outlet says. Reuters 'could not immediately verify' the FT report. Two aggregator posts claim a $559m Q2 figure attributed to the FT; $559m is the WSJ's May 2026 projection and the Reuters brief, TNW, techi and Dealroom give no amount, so I treat $559m as unsupported for the actual. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
+     "publisher": "Investing.com (Reuters brief on FT report)",
+     "title": "Anthropic tells investors it will be profitable for second straight quarter, FT reports",
+     "published": "2026-09-13",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Gross margins above 80% before revenue shared with distribution partners incl. Amazon and before training cost"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+     "publisher": "The Next Web",
+     "title": "Anthropic expects a second straight quarter of adjusted operating profit",
+     "published": "2026-09-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "FT citing several people; CNBC confirmed via two people; Q3 positive adjusted operating income; margins above 80%"
+    },
+    {
+     "url": "https://www.techi.com/anthropic-second-profitable-quarter-ipo-ft-report/",
+     "publisher": "techi.com",
+     "title": "Anthropic expects a second profitable quarter as its IPO nears, FT reports",
+     "published": "2026-09-13",
+     "tier": "T4",
+     "opened": true,
+     "supports": "No dollar amount for Q2 adjusted operating profit; gross margin above 80% before partner share and training"
+    },
+    {
+     "url": "https://dealroom.co/news/other-1wfgfsc-anthropic-tells-investors-it-will-be-profitable-for-second-straight-quar/",
+     "publisher": "Dealroom",
+     "title": "Anthropic tells investors it will be profitable for second straight quarter",
+     "published": "2026-09-13",
+     "tier": "T4",
+     "opened": true,
+     "supports": "No dollar amount for adjusted operating profit; no mention of 559"
+    },
+    {
+     "url": "https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/",
+     "publisher": "Fortune (citing Bloomberg)",
+     "title": "Anthropic revenue surges to over $11.5 billion in second quarter",
+     "published": "2026-08-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Internal documents seen by Bloomberg: Q2 revenue >$11.5bn, Q1 $4.73bn, positive adjusted operating income"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-q2-2026-revenue-11-5-billion-operating-income",
+     "publisher": "The Next Web (citing Bloomberg)",
+     "title": "Anthropic's quarterly revenue passed $11.5bn, up more than 14-fold",
+     "published": "2026-08-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Q2 >$11.5bn vs $787m a year earlier; Q1 $4.73bn; positive adjusted operating income; confidential investor documents"
+    },
+    {
+     "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+     "publisher": "TechCrunch (Connie Loizos)",
+     "title": "Anthropic's prospectus details losses, growth, and, yes, a warning that its AI could end humanity",
+     "published": "2026-09-28",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Credits FT, which 'reviewed the filing in recent days', for Q2 revenue $11.5bn and two-client concentration"
+    },
+    {
+     "url": "https://tradersagency.com/blog/anthropic-tells-investors-it-expects-second-straight-profitable-quarter-as-it-picks-nasdaq-for-ipo",
+     "publisher": "tradersagency.com blog",
+     "title": "Anthropic Tells Investors It Expects Second Straight Profitable Quarter as It Picks Nasdaq for IPO",
+     "published": "2026-09-14",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Claims 'roughly $559 million in adjusted operating profit' for Q2, attributed to the FT (conflicts with other copies)"
+    },
+    {
+     "url": "https://aiweekly.co/alerts/anthropic-projects-second-profitable-quarter-ahead-of-ipo",
+     "publisher": "aiweekly.co",
+     "title": "Anthropic Projects Second Profitable Quarter Ahead of IPO",
+     "published": "2026-09-14",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Claims 'roughly $559 million in operating profit' for preliminary Q2, attributed to the FT (conflicts with other copies)"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "No dollar amount for adjusted operating income (Reuters brief of FT; TNW; techi; Dealroom; Bloomberg)",
+     "source_a": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
+     "value_b": "'roughly $559 million in adjusted operating profit' for Q2 attributed to the FT",
+     "source_b": "https://tradersagency.com/blog/anthropic-tells-investors-it-expects-second-straight-profitable-quarter-as-it-picks-nasdaq-for-ipo",
+     "note": "$559m matches the WSJ 2026-05-20 Q2 projection; likely conflation by low-tier aggregators."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PRO-fceda7",
+   "found": {
+    "value": "above 80%",
+    "reported_by": "Financial Times 2026-09-13 ('multiple people with knowledge of the matter'), via Reuters brief (Investing.com) 2026-09-13, The Next Web 2026-09-15, techi.com 2026-09-13",
+    "date": "2026-09-13",
+    "notes": "Non-GAAP management view: 'gross margins above 80% before accounting for revenue shared with distribution partners, including Amazon, and the cost of training its model'. Period not labelled by the Reuters brief (context is Q2 2026). Reuters could not verify; Bloomberg's Aug 14 investor-document report gave no margin; no outlet attributes a gross margin to the draft S-1 (Reuters' S-1 stories give opex, not cost of revenue). Reuters' own analysis of the S-1: ~$351m distribution fees on $2.16bn of AWS/Google marketplace sales (~16 cents per dollar), i.e. roughly 8% of FY2025 revenue, so the partner share is material to the basis. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
+     "publisher": "Investing.com (Reuters brief on FT report)",
+     "title": "Anthropic tells investors it will be profitable for second straight quarter, FT reports",
+     "published": "2026-09-13",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Gross margins above 80% before revenue shared with distribution partners incl. Amazon and before training cost"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+     "publisher": "The Next Web",
+     "title": "Anthropic expects a second straight quarter of adjusted operating profit",
+     "published": "2026-09-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "FT citing several people; CNBC confirmed via two people; Q3 positive adjusted operating income; margins above 80%"
+    },
+    {
+     "url": "https://www.techi.com/anthropic-second-profitable-quarter-ipo-ft-report/",
+     "publisher": "techi.com",
+     "title": "Anthropic expects a second profitable quarter as its IPO nears, FT reports",
+     "published": "2026-09-13",
+     "tier": "T4",
+     "opened": true,
+     "supports": "No dollar amount for Q2 adjusted operating profit; gross margin above 80% before partner share and training"
+    },
+    {
+     "url": "https://dealroom.co/news/other-1wfgfsc-anthropic-tells-investors-it-will-be-profitable-for-second-straight-quar/",
+     "publisher": "Dealroom",
+     "title": "Anthropic tells investors it will be profitable for second straight quarter",
+     "published": "2026-09-13",
+     "tier": "T4",
+     "opened": true,
+     "supports": "No dollar amount for adjusted operating profit; no mention of 559"
+    },
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Exclusive-Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Two unnamed customers each generated 12% of revenue last year; cloud marketplaces $2.16 billion, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PRO-0287fc",
+   "found": {
+    "value": 65000,
+    "reported_by": "Bloomberg 2026-08-17 ('Anthropic's Annualized Revenue Tops $65 Billion Before IPO'); Reuters 2026-08-17/18 ('Anthropic revenue run rate tops $65 billion, source says', a person familiar); Axios 2026-08-17 (headline); FT 2026-09-13 (end-July)",
+    "date": "2026-08-17",
+    "notes": "USD millions, annualized revenue run-rate at end of July 2026: $65bn, up from $47bn in May and ~$9bn at end-2025 (Reuters via The Star; Bloomberg Sept 18 per PYMNTS). Two independent originators (Bloomberg; Reuters with its own source), both from investor communications, not from the draft S-1: none of the Reuters S-1 stories opened mentions a run-rate. Run-rate is an unaudited company metric, not GAAP revenue. Reuters also says Anthropic projects 2028 revenue of roughly $190-200bn. EDGAR (2026-09-30): no public S-1. Entity lookup shows no 'Anthropic PBC' registrant (only SPV feeder series), and full-text searches show no S-1/DRS/424B filed by Anthropic; Anthropic's Rule 135 notice (2026-06-01) says the draft was submitted confidentially. The figures exist only through press reports of a leaked draft."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/08/18/anthropic-revenue-run-rate-tops-65-billion-source-says",
+     "publisher": "The Star Malaysia (Reuters wire text)",
+     "title": "Anthropic revenue run rate tops $65 billion, source says",
+     "published": "2026-08-18",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Run rate $65bn by end of July from $47bn in May; Reuters source 'a person familiar'; Bloomberg reported first"
+    },
+    {
+     "url": "https://fortune.com/2026/08/18/anthropic-annual-revenue-run-rate-65-billion/",
+     "publisher": "Fortune (Jim Edwards, citing Bloomberg)",
+     "title": "Anthropic's annual revenue run rate reportedly hits $65 billion",
+     "published": "2026-08-18",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Bloomberg reported the $65 billion run rate; seven times end-2025 sales of $9 billion"
+    },
+    {
+     "url": "https://www.pymnts.com/news/investment-tracker/ipo/2026/anthropic-targets-november-ipo-revenue-surges/",
+     "publisher": "PYMNTS (citing Bloomberg, WSJ)",
+     "title": "Anthropic Targets November IPO as Revenue Surges",
+     "published": "2026-09-18",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Bloomberg Sept 18: run-rate surged from $9 billion at end of 2025 to $65 billion at end of July"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-q2-revenue-overtook-openai-015716271.html",
+     "publisher": "Yahoo Finance",
+     "title": "Anthropic's Q2 Revenue Overtook OpenAI for the First Time",
+     "published": "2026-08-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "First positive adjusted operating income, amount not disclosed; run-rate $65bn end of July"
+    },
+    {
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-prospectus-shows-what-2-trillion-dollar-ai-company-costs-run/",
+     "publisher": "PYMNTS",
+     "title": "Anthropic's IPO Filing Puts a $518 Billion Price Tag on AI Ambition",
+     "published": "2026-09-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Cites Reuters (9/28, 9/29) for FY2025 figures and Bloomberg/FT for Q1/Q2 revenue and $65bn run-rate"
+    },
+    {
+     "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+     "publisher": "The Next Web",
+     "title": "Anthropic expects a second straight quarter of adjusted operating profit",
+     "published": "2026-09-15",
+     "tier": "T4",
+     "opened": true,
+     "supports": "FT citing several people; CNBC confirmed via two people; Q3 positive adjusted operating income; margins above 80%"
+    },
+    {
+     "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30",
+     "publisher": "SEC EDGAR (efts full-text search)",
+     "title": "Full-text 'Anthropic', S-1/DRS/424B forms, 2026-06-01 to 2026-09-30",
+     "published": "2026-09-30",
+     "tier": "T1",
+     "opened": true,
+     "supports": "12 hits, all other issuers (SpaceX, Gloo, Oura, Iambic, QumulusAI, Miluna); no Anthropic-filed S-1"
+    }
+   ],
+   "conflicts": []
+  }
+ ],
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Read rederiver_common.md and questions_prospectus.json (36 questions). Fence kept: no other repo file opened, no repo scripts run, PitchBook MCP tools not called; helper files only in my own scratchpad subdirectory."
+  },
+  {
+   "seq": 2,
+   "type": "note",
+   "text": "Tier mapping used: T1 company statement/SEC registry; T2 counterparty statement (none used); T3 Bloomberg/Reuters/WSJ/FT/CNBC/Axios text incl. verbatim wire copies; T4 single-outlet (The Information), trade-press re-reports, aggregators, blogs."
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic IPO draft prospectus revenue': 61 items; Reuters exclusive dated 2026-09-28 leads, Fortune/TechCrunch/Decrypt/Engadget etc. follow within hours",
+   "url": "https://news.google.com/rss/search?q=Anthropic+IPO+draft+prospectus+revenue&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 4,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic gross margin investors': The Information 2025-11-04/2026-01-21/2026-02-24, WSJ 2026-05-20, FT 2026-09-13, SemiAnalysis 2026-07-07 headlines"
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "EDGAR full-text q='Anthropic PBC' forms S-1: 9 hits, all other issuers (Nscale, SpaceX, Idea Acquisition, Figma)",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%20PBC%22&forms=S-1"
+  },
+  {
+   "seq": 6,
+   "type": "flag",
+   "text": "Tool limits: Google News article links are JS shells; Bing RSS returns canned homepage results; reuters.com, ft.com, wsj.com, nytimes.com, startpage and fortuneindia.com are refused by WebFetch; CNBC, Forbes, Seeking Alpha, USNews and KuCoin pages return 403/503/404. Those originals are marked opened:false."
+  },
+  {
+   "seq": 7,
+   "type": "open",
+   "text": "EDGAR entity lookup 'anthropic': only SPV feeder entities (WU Anthropic LP, RVC Anthropic LP, HII Anthropic series, MW LSVC Anthropic, Hiive Anthropic Series I-VII); no 'Anthropic PBC' registrant",
+   "url": "https://efts.sec.gov/LATEST/search-index?keysTyped=anthropic"
+  },
+  {
+   "seq": 8,
+   "type": "search",
+   "text": "EDGAR full-text 'Anthropic' in S-1/S-1/A/DRS/DRS/A/424B, 2026-06-01 to 2026-09-30: 12 hits, all other issuers; no Anthropic-filed S-1",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=S-1%2CS-1%2FA%2CDRS%2CDRS%2FA%2C424B4%2C424B1&dateRange=custom&startdt=2026-06-01&enddt=2026-09-30"
+  },
+  {
+   "seq": 9,
+   "type": "search",
+   "text": "Bing RSS (4 queries) returned the same canned Anthropic/Claude homepages regardless of query: unusable"
+  },
+  {
+   "seq": 10,
+   "type": "open",
+   "text": "TechCrunch Anthropic tag feed, Engadget RSS, Decrypt feed: direct URLs for the prospectus coverage (TechCrunch article stamped 10:13 PM PDT 2026-09-28)",
+   "url": "https://techcrunch.com/tag/anthropic/feed/"
+  },
+  {
+   "seq": 11,
+   "type": "open",
+   "text": "TechCrunch (Connie Loizos): credits the FT, which 'reviewed the filing in recent days', for Q2 revenue $11.5bn, adjusted operating profit and two-client concentration",
+   "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/"
+  },
+  {
+   "seq": 12,
+   "type": "open",
+   "text": "Decrypt 2026-09-29: net loss ~$42bn incl ~$34bn non-cash, compute $7.33bn, cash $20.28bn; Reuters named as primary source",
+   "url": "https://decrypt.co/379605/anthropic-lost-42-billion-last-year-wants-ipo-2-trillion"
+  },
+  {
+   "seq": 13,
+   "type": "open",
+   "text": "Fortune tag page: two 2026-09-29 prospectus articles located",
+   "url": "https://fortune.com/tag/anthropic/"
+  },
+  {
+   "seq": 14,
+   "type": "open",
+   "text": "Fortune (Jim Edwards): 'A draft ... was leaked to Reuters'; FY2025 revenue $4.6bn, opex $13bn, cash $20.28bn",
+   "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+  },
+  {
+   "seq": 15,
+   "type": "open",
+   "text": "Fortune (Beatrice Nolan): operating loss $8.06bn vs $2.98bn, revenue +1,088%, compute $7.33bn",
+   "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/"
+  },
+  {
+   "seq": 16,
+   "type": "search",
+   "text": "Brave search for the Reuters exclusive (only successful Brave query of ~10 attempts): direct URLs for Reuters, CNBC, Yahoo, Investing.com, The Star and other wire copies. About nine later Brave queries returned HTTP 429, so Brave was abandoned"
+  },
+  {
+   "seq": 17,
+   "type": "open",
+   "text": "Yahoo Finance copy of Reuters exclusive: near-$42bn net loss incl ~$34bn accounting charge; >$8bn operating loss excl writedowns",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 18,
+   "type": "open",
+   "text": "Global Banking & Finance, Investing.com, The Star and Forth News copies of the same Reuters text (Echo Wang)",
+   "url": "https://www.globalbankingandfinance.com/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging/"
+  },
+  {
+   "seq": 19,
+   "type": "verify",
+   "text": "Four Reuters wire copies carry the same FY2025 text, so they count as ONE origin (Reuters, Echo Wang, 2026-09-28 23:17 GMT); Fortune/TechCrunch/Decoder/Decrypt are re-reports"
+  },
+  {
+   "seq": 20,
+   "type": "open",
+   "text": "Anthropic's own Rule 135 notice: draft S-1 submitted confidentially 2026-06-01, no figures",
+   "url": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+  },
+  {
+   "seq": 21,
+   "type": "open",
+   "text": "PYMNTS 2026-09-29: cites Reuters 9/28 and 9/29, Bloomberg and FT; $65bn run-rate; Amazon $110bn, Google $111bn commitments",
+   "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-prospectus-shows-what-2-trillion-dollar-ai-company-costs-run/"
+  },
+  {
+   "seq": 22,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic second quarter revenue $11.5 billion Bloomberg': Bloomberg 2026-08-14, CNBC/Fortune 08-15, Axios/Bloomberg run-rate 08-17 headlines"
+  },
+  {
+   "seq": 23,
+   "type": "open",
+   "text": "Bloomberg 2026-08-14 Q2 report via PYMNTS, Fortune, The Next Web, Yahoo: Q2 >$11.5bn, Q1 $4.73bn, Q2 2025 $787m, positive adjusted operating income with NO amount, internal/confidential investor documents",
+   "url": "https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/"
+  },
+  {
+   "seq": 24,
+   "type": "flag",
+   "text": "Provenance: Q1/Q2 2026 revenue and the $65bn run-rate are discussed alongside the prospectus but trace to Bloomberg (2026-08-14/17) and FT (2026-09-13) investor documents; no outlet I opened says they come from the S-1."
+  },
+  {
+   "seq": 25,
+   "type": "open",
+   "text": "Ed Zitron post quoting WSJ 2026-05-20: $559m Q2 operating profit, $4.8bn Q1 sales, unclear accounting methods",
+   "url": "https://www.wheresyoured.at/anthropics-profitability-swindle/"
+  },
+  {
+   "seq": 26,
+   "type": "open",
+   "text": "PYMNTS 2026-05-20 (paraphrasing WSJ): $559m includes model training costs, excludes stock-based compensation; 71c vs 56c compute per revenue dollar",
+   "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/"
+  },
+  {
+   "seq": 27,
+   "type": "open",
+   "text": "The Decoder 2026-05-21 and 2026-09-29: $8.06bn vs $2.98bn operating loss credited to Reuters; Q2 $11.5bn credited to FT; FT and Reuters both reviewed the prospectus",
+   "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/"
+  },
+  {
+   "seq": 28,
+   "type": "search",
+   "text": "WebSearch 1/4 'Anthropic gross margin 2025 lowered ... The Information January 2026 40%': The Information briefing URL, X post, BigGo/Longbridge/Tiger/WebProNews summaries"
+  },
+  {
+   "seq": 29,
+   "type": "open",
+   "text": "The Information briefing 'Anthropic Lowered Gross Margin Projection as Costs to Run AI Rose' (paywalled, headline only) and summaries: WebProNews, Longbridge, Parekh Substack, Tiger Brokers, BigGo",
+   "url": "https://www.theinformation.com/briefings/anthropic-lowered-gross-margin-projection-costs-run-ai-rose"
+  },
+  {
+   "seq": 30,
+   "type": "flag",
+   "text": "Basis conflict: BigGo says the 40% 2025 margin covers all users incl. free; The Information wording quoted by Parekh says 40% is on paying business customers and ~38% if free users are counted. Longbridge text also mixes in OpenAI items."
+  },
+  {
+   "seq": 31,
+   "type": "search",
+   "text": "WebSearch 2/4 (Nov 2025 77% 2028 projection): TechCrunch, Seeking Alpha, TipRanks, MLQ URLs"
+  },
+  {
+   "seq": 32,
+   "type": "open",
+   "text": "TechCrunch 2025-11-04, TipRanks, MLQ and The Information Nov-4 page (paywalled): -94% (2024), 50% (2025E), 77% (2028E); Seeking Alpha blocked (403)",
+   "url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/"
+  },
+  {
+   "seq": 33,
+   "type": "verify",
+   "text": "TipRanks direct quotes: -94%/50%/77% excluding free users and -109%/47%/75% if free users are included (The Information, 2025-11-04)",
+   "url": "https://www.tipranks.com/news/anthropic-raises-its-2028-revenue-and-cash-flow-guidance-to-staggering-amounts"
+  },
+  {
+   "seq": 34,
+   "type": "flag",
+   "text": "Vintage caveat: the 77% FY2028E margin belongs to the Nov-2025 plan of $70bn 2028 revenue; Reuters (2026-08-18) says Anthropic now projects ~$190-200bn for 2028 and no updated 2028 margin was found."
+  },
+  {
+   "seq": 35,
+   "type": "open",
+   "text": "Anthropic posts: Series F 2025-09-02 (300,000+ business customers), Series G 2026-02-12 (8 of Fortune 10; >500 at $1M+), 2026-04-06 ($1M+ customers exceed 1,000), Series H 2026-05-28, Amazon 2026-04-20, Series E 2025-03-03, newsroom index",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+  },
+  {
+   "seq": 36,
+   "type": "search",
+   "text": "WebSearch 3/4 (Bloomberg Q2 2026): CNBC, Fortune, Yahoo, TNW, valueaddvc URLs"
+  },
+  {
+   "seq": 37,
+   "type": "search",
+   "text": "WebSearch 4/4 (FT 2026-09-13 profit report): Investing.com, TradingView, TNW, techi, tradersagency, aiweekly, Dealroom URLs. WebSearch budget (4/4) now used"
+  },
+  {
+   "seq": 38,
+   "type": "open",
+   "text": "FT 2026-09-13 report via Reuters brief (Investing.com), TNW, techi, Dealroom: adjusted operating income positive for Q2 and expected positive for Q3; gross margin above 80% before partner revenue share and training; no dollar amount; Reuters could not verify",
+   "url": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761"
+  },
+  {
+   "seq": 39,
+   "type": "open",
+   "text": "tradersagency.com and aiweekly.co posts claiming $559m Q2 adjusted operating profit attributed to the FT",
+   "url": "https://aiweekly.co/alerts/anthropic-projects-second-profitable-quarter-ahead-of-ipo"
+  },
+  {
+   "seq": 40,
+   "type": "flag",
+   "text": "Conflict: two aggregators attribute '$559 million' adjusted operating profit for Q2 actual to the FT, but Reuters' FT brief, TNW, techi and Dealroom give no amount and $559m is the WSJ 2026-05-20 projection. Treated as conflation."
+  },
+  {
+   "seq": 41,
+   "type": "open",
+   "text": "Reuters 2026-09-29 (Echo Wang, Krystal Hu) via The Star: two unnamed customers 12% of revenue each; AWS/Google marketplaces $2.16bn (47%); ~$351m distribution fees; $909m receivables; $54.6bn non-cancellable commitments; $3.8bn usage + $789m subscription",
+   "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners"
+  },
+  {
+   "seq": 42,
+   "type": "open",
+   "text": "Reuters 2025-10-15 (Hu, Seetharaman) via The Star: 300,000+ business customers, enterprise ~80% of revenue; Reuters 2026-08-17/18 via The Star: run-rate $65bn end-July (separate source from Bloomberg)",
+   "url": "https://www.thestar.com.my/tech/tech-news/2025/10/16/exclusive-anthropic-aims-to-nearly-triple-annualized-revenue-in-2026-sources-say"
+  },
+  {
+   "seq": 43,
+   "type": "open",
+   "text": "PYMNTS 2026-03-04 (Amodei: enterprises 80% of business, 'relatively stable'), PYMNTS 2026-06-01 and 2026-09-18 (Bloomberg run-rate $9bn to $65bn)",
+   "url": "https://www.pymnts.com/news/artificial-intelligence/2026/enterprises-drive-anthropic-run-rate-revenue-to-19-billion/"
+  },
+  {
+   "seq": 44,
+   "type": "open",
+   "text": "SiliconANGLE 2025-05-16 citing CNBC: customers paying at least $100,000 'jumped eightfold'; CNBC itself returned 403",
+   "url": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
+  },
+  {
+   "seq": 45,
+   "type": "open",
+   "text": "SemiAnalysis: sitemap gave the slug; post is paywalled (teaser: own Tokenomics model, headline 3Q26 profit over $1bn; RSS 07-07 vs page 07-08)",
+   "url": "https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the"
+  },
+  {
+   "seq": 46,
+   "type": "open",
+   "text": "The Information paywalled pages: 'What Anthropic's IPO Investors Want to Know' (2026-09-03) and 'Tokenmaxxing and the AI Margin Squeeze' (2026-04-10): headline only",
+   "url": "https://www.theinformation.com/articles/anthropics-ipo-investors-want-know"
+  },
+  {
+   "seq": 47,
+   "type": "open",
+   "text": "SemiAnalysis public teasers: 2026-05-27 Bedrock post ('inference gross margins are now in the mid 60s, up from 38% in 2025 and -94% in 2024'; reads the WSJ as SBC-adjusted Q2 operating profit), 2026-05-01 'AI Value Capture' ('from 38% to over 70%'), 2026-02-05 Claude Code post (no figures)",
+   "url": "https://newsletter.semianalysis.com/p/anthropic-growth-and-bedrock-mix"
+  },
+  {
+   "seq": 48,
+   "type": "flag",
+   "text": "SemiAnalysis is internally inconsistent on current inference gross margin (over 70% on 2026-05-01 vs mid-60s on 2026-05-27); both are third-party estimates, not company figures. Used only for the Q1/Q2 2026 gross-margin items, which I downgrade from UNTRACEABLE to PARTIAL."
+  },
+  {
+   "seq": 49,
+   "type": "open",
+   "text": "Fortune tag pages 2, 4, 5, 6, 7 (to reach Aug 2026) and Fortune 2026-08-18 (Jim Edwards): $65bn run-rate credited to Bloomberg",
+   "url": "https://fortune.com/2026/08/18/anthropic-annual-revenue-run-rate-65-billion/"
+  },
+  {
+   "seq": 50,
+   "type": "flag",
+   "text": "Outlier: BigGo headline dated 2026-05-20 claims 'Q2 revenue of approximately $15.3 Billion', inconsistent with WSJ ($10.9bn projection) and Bloomberg ($11.5bn); headline only, page not opened; logged as a low-weight conflict."
+  },
+  {
+   "seq": 51,
+   "type": "open",
+   "text": "SiliconANGLE (Maria Deutscher) leak write-up: S-1 'prepared in June'; Reuters and FT published details late Monday; 'revenue ballooned from $400 million in 2024 to $4.6 billion'; Q2 $11.5bn credited to the FT (FT link supplied, unopened); 'fivefold' refers to the NET loss",
+   "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/"
+  },
+  {
+   "seq": 52,
+   "type": "verify",
+   "text": "Fortune India's 1,050% equals (4.6 - 0.4) / 0.4, i.e. growth computed from rounded $0.4bn/$4.6bn; Fortune's 1,088% implies ~$386m. Discrepancy explained as rounding, not a different datapoint. FY2024 exact revenue still not printed anywhere I could open."
+  },
+  {
+   "seq": 53,
+   "type": "search",
+   "text": "EDGAR full-text 'Anthropic, PBC' September 2026: 124 hits (funds, Nscale S-1, Akamai 8-K); none filed by Anthropic. Company browse 'anthropic pbc': only 'Anthropic PBC 1, a Series of Venelite Venture Funds, LP' and 'Anthropic PBC Jan 2026 a Series of CGF2021 LLC'",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%2C%20PBC%22&dateRange=custom&startdt=2026-09-01&enddt=2026-09-30"
+  },
+  {
+   "seq": 54,
+   "type": "verify",
+   "text": "Conclusion on EDGAR: no public S-1 for Anthropic as of 2026-09-30; only the Rule 135 notice of a confidential submission (2026-06-01) and press reports of a leaked draft"
+  },
+  {
+   "seq": 55,
+   "type": "flag",
+   "text": "The exact $8.06bn, $2.98bn and +1,088% are not in any of the four Reuters wire copies opened; Fortune (Nolan) and The Decoder attribute them to Reuters. Treated as single-origin, origin unopened."
+  },
+  {
+   "seq": 56,
+   "type": "verify",
+   "text": "Arithmetic cross-check: revenue ~$4.59bn ($3.8bn usage + $0.789bn subscription) less $12.65bn total opex = -$8.06bn operating loss; +~$34bn non-cash charge = ~$42bn net loss"
+  },
+  {
+   "seq": 57,
+   "type": "flag",
+   "text": "Growth-rate discrepancy: Fortune India headline says revenue jumps 1,050% vs Fortune/TokenPost 1,088%; later explained as rounding (see verify entry)."
+  },
+  {
+   "seq": 58,
+   "type": "search",
+   "text": "About 55 Google News RSS discovery queries (NRR, net/dollar retention, churn, multiyear, business share, $100K customers May 2025, WSJ 2026-04-06 investor-documents story, gross margin Q1/Q2 2026, $65bn run-rate, FT/NYT prospectus coverage): headline lists only"
+  },
+  {
+   "seq": 59,
+   "type": "search",
+   "text": "About 12 other discovery attempts that mostly failed: DuckDuckGo (captcha), Mojeek (403), Startpage (blocked), Ecosia (403), Yandex (captcha), Yahoo Search (500), Bing HTML (canned results), PYMNTS site search/tag pages (not semantic)"
+  },
+  {
+   "seq": 60,
+   "type": "flag",
+   "text": "Independence: a PitchBook note 'Anthropic's gross margin is the most important number in tech' (2026-06-10; Morningstar republication 2026-06-12/16) exists. Not opened: it comes from the desk that produced the draft, so it cannot serve as an independent source. Left as a lead for the orchestrator."
+  },
+  {
+   "seq": 61,
+   "type": "flag",
+   "text": "WSJ 2026-04-06 'An Inside Look at OpenAI and Anthropic's Finances Ahead of Their IPOs' (investor-documents story) could not be read; no accessible secondary gives Anthropic's FY2025 gross margin from it, so OPS-MAR-28a245 is UNTRACEABLE rather than assumed to equal The Information's 40%."
+  },
+  {
+   "seq": 62,
+   "type": "verify",
+   "text": "Timeline check: FT FirstFT item on the filing 2026-09-28 21:26 GMT precedes Reuters' financial details 23:17 GMT; both saw the draft independently, but only Reuters' numbers were readable to me"
+  },
+  {
+   "seq": 63,
+   "type": "found",
+   "text": "Gross margin FY2024 -94% (-109% incl free users), The Information 2025-11-04",
+   "event_id": "OPS-MAR-df2ba2"
+  },
+  {
+   "seq": 64,
+   "type": "found",
+   "text": "Gross margin FY2025E 50% (47%), The Information 2025-11-04",
+   "event_id": "OPS-MAR-7dca9b"
+  },
+  {
+   "seq": 65,
+   "type": "found",
+   "text": "Gross margin FY2025 40% (38% incl free users), The Information 2026-01-21",
+   "event_id": "OPS-MAR-ef2968"
+  },
+  {
+   "seq": 66,
+   "type": "found",
+   "text": "WSJ investor-docs FY2025 gross margin not found (WSJ 2026-04-06 story unreadable)",
+   "event_id": "OPS-MAR-28a245"
+  },
+  {
+   "seq": 67,
+   "type": "found",
+   "text": "Q1 2026 gross margin: no company figure; SemiAnalysis estimate mid-60s (05-27) / over 70% (05-01); WSJ 71c compute ratio is not a margin",
+   "event_id": "OPS-MAR-423184"
+  },
+  {
+   "seq": 68,
+   "type": "found",
+   "text": "Q2 2026E gross margin: no company projection; only third-party SemiAnalysis estimates (mid-60s to 80%+); WSJ 56c compute ratio is not a margin",
+   "event_id": "OPS-MAR-9ea7f8"
+  },
+  {
+   "seq": 69,
+   "type": "found",
+   "text": "Q2 2026 gross margin above 80% pre partner share and pre training, FT 2026-09-13",
+   "event_id": "OPS-MAR-9270b8"
+  },
+  {
+   "seq": 70,
+   "type": "found",
+   "text": "FY2027E gross margin above 70% (point estimate not found), The Information",
+   "event_id": "OPS-MAR-d1d317"
+  },
+  {
+   "seq": 71,
+   "type": "found",
+   "text": "FY2028E gross margin 77% (75% incl free users), The Information 2025-11-04; older $70bn plan",
+   "event_id": "OPS-MAR-363aa8"
+  },
+  {
+   "seq": 72,
+   "type": "found",
+   "text": "FY2024 operating loss $2.98bn via Fortune/Decoder citing Reuters",
+   "event_id": "OPS-MAR-bc29eb"
+  },
+  {
+   "seq": 73,
+   "type": "found",
+   "text": "FY2025 operating loss >$8bn (Reuters), $8.06bn (Fortune/Decoder)",
+   "event_id": "OPS-MAR-fb8630"
+  },
+  {
+   "seq": 74,
+   "type": "found",
+   "text": "Q2 2026 projected operating income $559m, WSJ 2026-05-20 (incl training, excl SBC per PYMNTS)",
+   "event_id": "OPS-MAR-f97435"
+  },
+  {
+   "seq": 75,
+   "type": "found",
+   "text": "Q2 2026 actual adjusted operating income positive, no amount (Bloomberg 08-14, FT 09-13); $559m aggregator claim rejected",
+   "event_id": "OPS-MAR-a0098f"
+  },
+  {
+   "seq": 76,
+   "type": "found",
+   "text": "Q3 2026E: FT positive adjusted operating income expected; SemiAnalysis own estimate >$1bn",
+   "event_id": "OPS-MAR-61a382"
+  },
+  {
+   "seq": 77,
+   "type": "found",
+   "text": "Business customers: over 300,000, Anthropic Series F 2025-09-02",
+   "event_id": "OPS-CUS-4d7394"
+  },
+  {
+   "seq": 78,
+   "type": "found",
+   "text": "$100K+ customers up eightfold, disclosed 2025-05-16 (via SiliconANGLE/CNBC); primary unopened",
+   "event_id": "OPS-CUS-803c68"
+  },
+  {
+   "seq": 79,
+   "type": "found",
+   "text": "$1M+ annualized customers exceed 1,000, Anthropic 2026-04-06",
+   "event_id": "OPS-CUS-91af9c"
+  },
+  {
+   "seq": 80,
+   "type": "found",
+   "text": "8 of the Fortune 10, Anthropic Series G 2026-02-12",
+   "event_id": "OPS-CUS-742b20"
+  },
+  {
+   "seq": 81,
+   "type": "found",
+   "text": "NRR: no figure found anywhere accessible",
+   "event_id": "OPS-CUS-86b20f"
+  },
+  {
+   "seq": 82,
+   "type": "found",
+   "text": "Logo churn/multiyear: no number; Amodei 'relatively stable' enterprise revenue 2026-03-04; prospectus says many large customers lack long-term contracts",
+   "event_id": "OPS-CUS-63ee15"
+  },
+  {
+   "seq": 83,
+   "type": "found",
+   "text": "Customer concentration: two customers 12% each (~24%) of FY2025 revenue, Reuters 9/28-9/29 and FT per TechCrunch",
+   "event_id": "OPS-CUS-693acb"
+  },
+  {
+   "seq": 84,
+   "type": "found",
+   "text": "Business/enterprise ~80% of revenue, Reuters 2025-10-15",
+   "event_id": "OPS-CUS-949adf"
+  },
+  {
+   "seq": 85,
+   "type": "found",
+   "text": "FY2025 revenue nearly $4.6bn (~$4.59bn), Reuters 2026-09-28",
+   "event_id": "OPS-PRO-832aa6"
+  },
+  {
+   "seq": 86,
+   "type": "found",
+   "text": "FY2024 revenue: about $400m (rounded, SiliconANGLE), implied ~$386m from +1,088%; exact figure not printed; 1,050% headline explained as rounding",
+   "event_id": "OPS-PRO-5f116f"
+  },
+  {
+   "seq": 87,
+   "type": "found",
+   "text": "FY2025 operating loss $8.06bn (>$8bn per Reuters)",
+   "event_id": "OPS-PRO-3cbb5f"
+  },
+  {
+   "seq": 88,
+   "type": "found",
+   "text": "FY2024 operating loss $2.98bn (Fortune/Decoder citing Reuters)",
+   "event_id": "OPS-PRO-a9e720"
+  },
+  {
+   "seq": 89,
+   "type": "found",
+   "text": "FY2025 net loss ~$42bn, Reuters",
+   "event_id": "OPS-PRO-b86e59"
+  },
+  {
+   "seq": 90,
+   "type": "found",
+   "text": "Non-cash financing charge ~$34bn, Reuters",
+   "event_id": "OPS-PRO-3b375d"
+  },
+  {
+   "seq": 91,
+   "type": "found",
+   "text": "FY2025 total operating expenses $12.65bn, Reuters",
+   "event_id": "OPS-PRO-30af82"
+  },
+  {
+   "seq": 92,
+   "type": "found",
+   "text": "FY2025 compute and infrastructure $7.33bn (3x), Reuters",
+   "event_id": "OPS-PRO-63169f"
+  },
+  {
+   "seq": 93,
+   "type": "found",
+   "text": "Cash, equivalents and ST investments $20.28bn at 2025-12-31, Reuters",
+   "event_id": "OPS-PRO-f960bc"
+  },
+  {
+   "seq": 94,
+   "type": "found",
+   "text": "Q1 2026 revenue $4.73bn, Bloomberg 2026-08-14 (not attributed to the S-1)",
+   "event_id": "OPS-PRO-f4166a"
+  },
+  {
+   "seq": 95,
+   "type": "found",
+   "text": "Q2 2026 revenue >$11.5bn, Bloomberg 2026-08-14 / FT (not attributed to the S-1)",
+   "event_id": "OPS-PRO-9ac20e"
+  },
+  {
+   "seq": 96,
+   "type": "found",
+   "text": "Adjusted operating income positive Q2 and expected Q3, no amount (FT 2026-09-13, Bloomberg 08-14)",
+   "event_id": "OPS-PRO-b436b4"
+  },
+  {
+   "seq": 97,
+   "type": "found",
+   "text": "Non-GAAP gross margin above 80% pre partner share/training, FT 2026-09-13",
+   "event_id": "OPS-PRO-fceda7"
+  },
+  {
+   "seq": 98,
+   "type": "found",
+   "text": "Run-rate $65bn at end-July 2026, Bloomberg and Reuters 2026-08-17/18 (not the S-1)",
+   "event_id": "OPS-PRO-0287fc"
+  },
+  {
+   "seq": 99,
+   "type": "message",
+   "text": "36 answered. UNTRACEABLE: OPS-MAR-28a245, OPS-CUS-86b20f. PARTIAL: 13 (incl. Q1/Q2 2026 gross margin, third-party estimates only). Conflicts: $559m aggregator claim; 40% gross-margin basis; SemiAnalysis >70% vs mid-60s; 1,088% vs 1,050%; Q1 $4.73bn vs $4.8bn; BigGo $15.3bn Q2 outlier. No public S-1 on EDGAR. Leak = Reuters origin (Echo Wang 2026-09-28), FT reviewed the filing independently but was unreadable to me.",
+   "to": "orchestrator"
+  }
+ ],
+ "stats": {
+  "searches": 92,
+  "pages_opened": 69,
+  "claims_answered": 36,
+  "flags": 11
+ }
+}

@@ -1,0 +1,1004 @@
+{
+ "agent": "analyst-topic-capital",
+ "role": "Topic Analyst — Capital, valuation and IPO",
+ "started": "2026-09-30T19:14:06Z",
+ "finished": "2026-09-30T19:47:14Z",
+ "topic": {
+  "slug": "capital",
+  "title": "Capital, valuation and IPO",
+  "one_liner": "Series H priced Anthropic at $965B on May 28. The reported $2T IPO target is 2.1x that and 31x gross run-rate, yet no public S-1 exists.",
+  "key_metrics": [
+   {
+    "label": "Last priced round",
+    "value": "Series H, May 28 2026: $65B at $965B post-money ($900B pre, derived). About $50B new cash plus $15B of earlier hyperscaler commitments (T1).",
+    "event_id": "evt-20260528-series-h-compute-agreements-memory-partners"
+   },
+   {
+    "label": "Total raised, equity-only (PitchBook basis, Sep 30)",
+    "value": "$124.3B equity = A $124M + B $980M + C $450M + Google $2.0B + D $1.2B + Amazon notes $8.0B + E $3.5B + F $13B + G $30B + H $65B (PitchBook rows). $126.8B with the $2.5B May 2025 revolver. Press and T1 sizes give $123.4B. The Jul 16 figure of $161.3B wrongly added $34.5B of lessor SPV notes.",
+    "event_id": "evt-20260930-pb-total-raised-bonds-removed"
+   },
+   {
+    "label": "Latest reported IPO target (unconfirmed)",
+    "value": "About $2T on Nasdaq. Raise up to $100B (WSJ, Sep 18, T3) versus at least $130B (The Information, Sep 3, T4). Timing November versus October is DISPUTED. No public S-1 on EDGAR at Sep 30.",
+    "event_id": "evt-20260918-wsj-ipo-pushed-to-november"
+   },
+   {
+    "label": "Cash balance (press-reported, leaked draft prospectus)",
+    "value": "$20.28B of cash, equivalents and short-term investments at Dec 31 2025 (Reuters, T2). No later balance is in the record, although about $95B of equity arrived in 2026.",
+    "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials"
+   },
+   {
+    "label": "Price over gross run-rate at each reference price (EV not computable)",
+    "value": "Series H $965B is 20.5x (derived) on the $47B May run-rate and 14.8x on $65B at end-July. On $65B, secondary $1.2T to $1.5T is 18.5x to 23.1x and the $2T target 30.8x. Equity value, not EV: no net cash after Dec 31 2025 is in the record, and each $10B moves Series H by 0.2x.",
+    "event_id": "evt-20260528-series-h-compute-agreements-memory-partners"
+   }
+  ],
+  "what": [
+   {
+    "t": "Early ladder. Series A, May 2021: $124M, Tallinn lead, $461M post. Series B, Apr 2022: $580M per Anthropic (T1) but $980M per PitchBook, $3.0B post, FTX lead. Series C, May 2023: $450M, $4.55B post, Spark lead. Series D, 2024: $750M at $18.4B post per press (T2, T3) versus $1.2B at $21.0B per PitchBook, Menlo lead. Post-money for A to D is PitchBook or press; Anthropic published none.",
+    "e": [
+     "evt-20210528-series-a",
+     "evt-20220429-series-b",
+     "evt-20220429-pb-series-b-980m-reconcile",
+     "evt-20230523-series-c-450m",
+     "evt-20240513-raising-more-capital-18-4b-post",
+     "evt-20240701-pb-series-d-1-2b-21b"
+    ]
+   },
+   {
+    "t": "Late ladder, Anthropic-announced (T1). Series E, Mar 3 2025: $3.5B at $61.5B post, Lightspeed lead. Series F, Sep 2 2025: $13B at $183B, ICONIQ lead. Series G, Feb 12 2026: $30B at $380B, GIC and Coatue lead. Series H, May 28 2026: $65B at $965B, led by Altimeter, Dragoneer, Greenoaks and Sequoia, with about $50B new cash and $15B of earlier hyperscaler commitments. Pre-money is post minus raise.",
+    "e": [
+     "evt-20250303-series-e-roster",
+     "evt-20250902-series-f-13b-183b",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260528-series-h-compute-agreements-memory-partners"
+    ]
+   },
+   {
+    "t": "PitchBook's Sep 30 ledger (T2) shows $124.3B equity and $126.8B with the $2.5B May 2025 revolver, committed, draws undisclosed (T3). Its Jul 16 total of $161.3B counted $34.5B of chip-lease notes, since dropped without a stated reason. Press and T1 sizes sum to $123.4B, $850M lower, from Series B and D. A $15B pre-IPO revolver, 17 banks, reported near final (Bloomberg, Sep 3, T2), is not in the ledger.",
+    "e": [
+     "evt-20260930-pb-total-raised-bonds-removed",
+     "evt-20250516-run-rate-2b",
+     "evt-20260903-credit-facility-15b-nears-final",
+     "evt-20260609-tpu-financing-34-5b-closed"
+    ]
+   },
+   {
+    "t": "Amazon's 10-Q (Jul 31, T1) shows $18.0B funded: $8.0B of notes plus $5.0B each of Series G and H preferred, carried at $190.4B, with $15.0B of a $20.0B milestone-gated facility left. Google had over $3B invested by Mar 2025 (DOJ filings, T2) plus up to $40B: $10B now, $30B on targets. Microsoft up to $5B, NVIDIA up to $10B and AMD up to $5B have no filed funded amounts.",
+    "e": [
+     "evt-20260731-amazon-10q-q2-2026",
+     "evt-20260420-amazon-5gw-25b-investment",
+     "evt-20250311-google-14pct-doj-filing",
+     "evt-20260424-google-up-to-40b",
+     "evt-20251118-microsoft-nvidia-anthropic-partnership",
+     "evt-20260722-amd-equity-up-to-5b"
+    ]
+   },
+   {
+    "t": "Secondary marks are not priced rounds. FTX's estate sold 29.47M shares at $30.0045 in Mar 2024 (T1 court notice), the Series D price, with no cash to Anthropic. The May 2025 buyback ran at $56.09 and a Feb 2026 tender was planned at $350B pre-money (T3). Indications of $1.2T (Jul 9), trades to $1.5T (T3) and perpetuals near $1.8T (T4) are thin. Anthropic voids unauthorized transfers (May 12, T2).",
+    "e": [
+     "evt-20240322-ftx-first-sale-884m",
+     "evt-20250502-employee-buyback-61-5b",
+     "evt-20260204-employee-tender-350b",
+     "evt-20260709-secondary-market-indications-1-2t",
+     "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t",
+     "evt-20260512-secondary-market-warning"
+    ]
+   },
+   {
+    "t": "On Jun 1 Anthropic announced it had confidentially submitted a draft S-1 (T1). EDGAR showed no public S-1 on Sep 30. Reported, unconfirmed: Nasdaq, Morgan Stanley, Goldman Sachs, JPMorgan, about $2T. Raise is DISPUTED: up to $100B (WSJ, T3) versus at least $130B (The Information, T4). Timing is DISPUTED: October (Quartz, Aug 13) versus November (WSJ, Sep 18). Lock-up unknown. One Class F share holds 50.1% of votes (Reuters, T2).",
+    "e": [
+     "evt-20260601-confidential-draft-s1",
+     "evt-20260930-no-public-s1-on-edgar",
+     "evt-20260918-wsj-ipo-pushed-to-november",
+     "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
+     "evt-20260813-ipo-october-2t-quartz",
+     "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+     "evt-20260603-ipo-banks-ms-gs-jpm",
+     "evt-20260913-nasdaq-october-listing"
+    ]
+   }
+  ],
+  "means": [
+   {
+    "t": "Derived step-ups (pre over prior post, notes excluded): F 2.8x, G 1.9x, H 2.4x on T1 marks; B 4.4x, C 1.4x, D 4.4x, E 2.8x on PitchBook, where press gives D 3.9x, E 3.2x. H followed G by 3.4 months, about 20x annualized. Gross run-rate rose 3.4x and post-money 2.5x from G to H, so the multiple fell from 27.1x to 20.5x. On $65B, secondary marks are 18.5x to 23.1x.",
+    "e": [
+     "evt-20250303-series-e-roster",
+     "evt-20250902-series-f-13b-183b",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260528-series-h-compute-agreements-memory-partners",
+     "evt-20260817-rr-65b-end-july",
+     "evt-20260709-secondary-market-indications-1-2t",
+     "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t",
+     "evt-20260918-wsj-ipo-pushed-to-november"
+    ]
+   },
+   {
+    "t": "Press-reported from the leaked draft: year-end 2025 cash was $20.28B and the $42B FY2025 net loss held a $34B non-cash charge on financing that could become shares (Reuters, T2). Derived: equity raised per dollar of gross run-rate fell from 4.2x at Series G to 1.9x at end-July; it is 27.1x FY2025 recognized revenue and 3.8x H1 2026 annualized. The $95B raised in 2026 is 76% of all equity.",
+    "e": [
+     "evt-20260928-reuters-draft-prospectus-2025-financials",
+     "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+     "evt-20260930-pb-total-raised-bonds-removed",
+     "evt-20260817-rr-65b-end-july",
+     "evt-20260212-series-g-30b-380b"
+    ]
+   },
+   {
+    "t": "The chip-lease notes are lessor debt. Broadcom's AI XPV Platform SPV borrowed $34.5B from Apollo-led funds with Blackstone, buys TPU systems and leases them to Anthropic for five years (T2). Anthropic has no credit rating, so Broadcom backstops about $30B (T3). Anthropic's own liability is the lease stream: $161.2B of Broadcom-related leases inside $518B of commitments, about 80% non-cancelable (Reuters, T2 and T3).",
+    "e": [
+     "evt-20260609-tpu-financing-34-5b-closed",
+     "evt-20260602-chip-financing-spv-notes-price-talk",
+     "evt-20260804-ft-google-200bn-anthropic-financing-machine",
+     "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+    ]
+   },
+   {
+    "t": "Strategic money is vendor financing. Amazon's $20B facility opens as AWS delivers compute and runs 30 months past a liquidity event (10-Q, T1). Google's $30B needs performance targets (T2). AMD's $5B follows deployment milestones (Reuters, T2). Amazon's $18.0B funded cost sits beside $110B of AWS commitments, 6.1x derived (Reuters, T3). Suppliers also grant equity: Akamai's warrant for up to 5% at $111.33 (T1).",
+    "e": [
+     "evt-20260731-amazon-10q-q2-2026",
+     "evt-20260424-google-up-to-40b",
+     "evt-20260722-amd-equity-up-to-5b",
+     "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+     "evt-20260924-akamai-11b"
+    ]
+   }
+  ],
+  "implications": [
+   {
+    "t": "Count capital one way. Base capital efficiency on PitchBook's $124.3B equity-only, checked against $123.4B on press sizes, never $161.3B. Secondaries are excluded. Count notes once at funded cost, never fair value: Amazon $8.0B, while Google's $2.0B may undercount. Treat 'up to' amounts as zero until a filing shows cash, up to $65B here. Keep four $15B items apart: Microsoft-NVIDIA cap, Series H hyperscaler money, Amazon's facility, the revolver.",
+    "e": [
+     "evt-20260930-pb-total-raised-bonds-removed",
+     "evt-20250902-series-f-13b-183b",
+     "evt-20260731-amazon-10q-q2-2026",
+     "evt-20251118-microsoft-nvidia-anthropic-partnership",
+     "evt-20260903-credit-facility-15b-nears-final"
+    ]
+   },
+   {
+    "t": "Price the IPO on basis. The $2T target is 2.1x the last priced round and above every reported mark. Derived multiples: 43.5x Q2 recognized revenue annualized, 30.8x gross run-rate, 18.2x a $110B year-end view, 10.3x bankers' $195B FY2028. Net of a 6% to 10% platform share it is 32.7x to 34.2x (PitchBook, T3). A $100B to $130B raise is 1.2x to 1.5x SpaceX's $86.2B record.",
+    "e": [
+     "evt-20260918-wsj-ipo-pushed-to-november",
+     "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+     "evt-20260817-reuters-2028-190-200b-forecast",
+     "evt-20260814-q2-2026-rev-11-5b-first-report",
+     "evt-20260813-ipo-october-2t-quartz"
+    ]
+   },
+   {
+    "t": "Build EV from commitments, not equity. $161.2B of leases sit outside the $124.3B equity line, and Amazon's unconverted notes carry at $97.9B fair value against a funded cost inside it. Net cash after Dec 31 2025 is not in the record. At end-2025 cash was 0.37x of $54.6B non-cancelable hosting commitments (derived, T3). Ask the S-1 for cash, revolver draws, lease liabilities and note carrying value first.",
+    "e": [
+     "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+     "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+     "evt-20260928-reuters-draft-prospectus-2025-financials",
+     "evt-20260731-amazon-10q-q2-2026"
+    ]
+   },
+   {
+    "t": "Treat holder marks as echoes of Series H, not evidence: Amazon ($190.4B), Zoom and Salesforce re-marked to the May 28 round; Alphabet and Microsoft gains fit it (inference). Amazon's stake is 15% to 20% (TheStreet, T3) or 21% (Forkast, T4); no filing states it. Its notes convert to nonvoting common at IPO, capped (10-Q, T1). A $2T print would lift its carrying value to about $395B (derived).",
+    "e": [
+     "evt-20260731-amazon-10q-q2-2026",
+     "evt-20260926-amazon-carrying-value-190b",
+     "evt-20260731-zoom-salesforce-10q-marks",
+     "evt-20260723-alphabet-10q-non-marketable-124b",
+     "evt-20260729-microsoft-3-2b-gain"
+    ]
+   }
+  ],
+  "second_order": [
+   "Public holders re-mark to Anthropic's price. Amazon took $62.8B of upward adjustments in H1 2026, Alphabet remeasured $87.9B of non-marketable stakes in Q2 with Anthropic unnamed, and Microsoft booked $3.2B. The record shows only upward adjustments so far. Their auditors and sell-side must react first if a priced IPO lands below $965B, the first observable down-mark. Consensus treats the $2T ask as one-way upside.",
+   "Lease-backed debt is the financing that scales. A second SPV package of about $36B was pitched Aug 5 and is not agreed (T3); the $71B 'stacked' headline adds it to the closed $34.5B. Google is exposed to up to $44B and Broadcom about $30B, so Broadcom and Google backstops stand in for Anthropic's missing rating and Apollo and Blackstone hold the risk behind them. Consensus counts $34.5B; the lease line is $161.2B, 4.7x larger (derived). A post-IPO rating push is headline-only (open item).",
+   "IPO proceeds are a small part of the bill. $100B to $130B is 19% to 25% of the $518B commitments and 24% to 31% of the roughly $414B non-cancelable part (derived). This extends the absorption thesis: the book is asked for $100B now and more financing follows. Consensus reads the IPO as the funding event. The payment schedule is not in the record, so the post-IPO gap cannot be sized.",
+   "OpenAI's exit from 2026 changes the comparable. Altman said 'not 2026' (Sep 13, T3) and Bloomberg has OpenAI seeking at least $30B at about $1.4T privately (Sep 29, T3), above Anthropic's $965B mark. Anthropic would list alone, so scarcity competes with absorption. The $2T target is 1.43x OpenAI's ask (derived). OpenAI's run-rate is $40B (Bloomberg) or $70B (Axios), so that ask is 35x or 20x.",
+   "Equity flows both ways. Akamai gave Anthropic a warrant for up to 5% at $111.33 and RUM's $0.01 warrants cover 50.8M shares (T3), while NVIDIA is reported weighing a $10B anchor, 0.5% at $2T (T3). Underwriters face related-party questions, the price-sensitive float is smaller than the headline raise, and Class A buyers get one vote a share against Class F's 50.1%. No filing traces cash from an investment to a supplier invoice."
+  ],
+  "watch": [
+   {
+    "item": "Public S-1 on EDGAR with price range, share count and selling holders",
+    "by": "2026-10-23",
+    "threshold": "SpaceX went from draft to public S-1 in 51 days and from public S-1 to listing in 23. Anthropic is at 121 days. A public S-1 after Oct 23 leaves a mid-November debut short of SpaceX's 23-day gap; after Nov 7 even Nov 30 runs faster."
+   },
+   {
+    "item": "Roadshow launch, price range and raise size",
+    "by": "2026-11-15",
+    "threshold": "Reuters via Forbes (T3) put the roadshow no earlier than mid-October. A raise above $100B supports The Information's $130B. At or below $86.2B matches SpaceX's record with over-allotment. A range implying under $965B post-money is a down mark against Series H; one near $2T confirms the reported target."
+   },
+   {
+    "item": "Lock-up length, selling holders and 10b5-1 plans in the public S-1",
+    "by": "2026-11-15",
+    "threshold": "180 days or less versus the longer terms The Information reported (T4). Any secondary component means primary proceeds fall below the headline raise. Employee 10b5-1 plans would confirm managed supply."
+   },
+   {
+    "item": "Q3 2026 results and adjusted operating income before the debut",
+    "by": "2026-11-15",
+    "threshold": "WSJ says Q3 results come first. Revenue under about $16B, a quarter of $65B, would mean run-rate stalled after July. A second adjusted profit is expected (FT, T3); a GAAP bridge tests the above-80% adjusted gross margin against PitchBook's 44%."
+   },
+   {
+    "item": "Holder filings for the quarter ended Sep 30: Amazon, Alphabet and Microsoft",
+    "by": "2026-10-31",
+    "threshold": "Amazon's Anthropic carrying value versus $190.4B at Jun 30. Unchanged means no new observable price. Any fall is the first down-mark. Watch for a stated ownership percentage or the conversion cap, both absent today."
+   },
+   {
+    "item": "Second chip-lease SPV package, about $36B pitched",
+    "by": "2026-12-31",
+    "threshold": "A close near $36B takes executed lessor debt to about $70B. Headlines that add pitched to closed debt, like the $71B one, overstate. Size, sponsor and structure were unsettled on Aug 5."
+   },
+   {
+    "item": "Pre-IPO revolver terms: tenor, pricing, draws, and whether it replaces the $2.5B facility",
+    "by": "2026-11-30",
+    "threshold": "Capacity is $15B if it replaces the old facility and $17.5B if additive. A drawn balance before listing would signal liquidity use ahead of the raise."
+   },
+   {
+    "item": "PitchBook Raised to Date after the next refresh",
+    "by": "2026-10-31",
+    "threshold": "Stays $126.754B. A return to $161.254B, or the $15B revolver added, changes the equity basis. Treating Amazon's two $5B purchases as add-ons would lift it by up to $10B."
+   }
+  ],
+  "house_view": "(a) Extends: the multiple went from 27.1x at Series G to 20.5x at H to 30.8x at the target on gross run-rate, and the $2T ask is 28x to 57x expected FY2026 revenue (28x on the desk-derived $72B, LOW; 57x on PitchBook's stale $35B) against Reuters' cited comps of Palantir 53x and SpaceX/Cloudflare 41.6x (T2), so the record cannot show multiples tracking quality. (b) Contradicts in size: the record's gross-to-net evidence is 7.6% (prospectus-implied, T3) and 6% to 10% (PitchBook, T3), so Series H was 21.8x to 22.8x net, below OpenAI's 34.1x to 35.5x March mark, and only the $2T target restores parity at 32.7x to 34.2x; the 39.75% haircut is not supported. (c) Extends: a $100B to $130B raise is 1.2x to 1.5x SpaceX's $86.2B record while OpenAI has shelved a 2026 IPO, but the $3.6T pipeline and historical annual IPO volume are not in the record. (d) Confirms the counting rule ($124.3B equity-only, notes counted once) and adds a limit: $161.2B of leases sit outside it and Amazon's notes are carried at $97.9B fair value, so $518B of commitments, about 8.0x run-rate, belongs beside CE. (e) Confirms: providers differ by $1B to $2B on 'raised', PitchBook carried lessor SPV notes as Anthropic debt until Sep 30, and the SpaceX playbook differs on insider selling (T4) and control, so its IPO template may not transfer.",
+  "uncertainties": [
+   {
+    "type": "data",
+    "note": "No public S-1 exists. Cash of $20.28B, the $42B net loss with a $34B non-cash charge, $518B of commitments and the Class F terms come from a leaked draft that Reuters reviewed (T2), with relays at T3. The $15B revolver rests on Bloomberg and Forbes (T2, T3); tenor, pricing and draws are unknown.",
+    "what_would_change_it": "A public S-1 with the capitalization table, contractual obligations table and credit agreement exhibit."
+   },
+   {
+    "type": "data",
+    "note": "Equity raised is $124.3B (PitchBook), $123.4B (press and T1 sizes) or $113.5B without note money. Amazon's two $5B purchases, Google's $10B tranche and Microsoft and NVIDIA's 'portion' may sit inside G and H or beside them. PitchBook's G and H share fields are 2.55x and 2.57x round size. Primary versus secondary mix, and who funded the Feb 2026 tender and the $1.5B Bartz settlement, are not stated.",
+    "what_would_change_it": "The S-1 capitalization table and a sources-and-uses statement."
+   },
+   {
+    "type": "interpretation",
+    "note": "Secondary marks from $1.05T to $1.8T are indications, SPV prints and perpetuals, not clearing prices. Binance's perpetual assumes 1B shares, while PitchBook's $589.01 Series H price implies about 1.64B fully diluted shares (derived, PitchBook-only price), so the $1.8T is a contract convention. The tender is 'up to $6B' in one headline and a '$60B pool' in another (T4).",
+    "what_would_change_it": "Executed trades with disclosed price and size, or the IPO book."
+   },
+   {
+    "type": "forecast",
+    "note": "IPO size, price and date are unresolved. Reference class: four of four private rounds since Jan 2025 closed above the first reported size, by 1.3x to 3.0x from the top of each range. The record holds one mega-IPO precedent, SpaceX, so it has no IPO base rate. The reported date drifted from late September to after the midterms and two expected filing windows passed. What differs: float demand caps an IPO, a PBC with a Class F share is untested, and WSJ ties timing to Q3 results.",
+    "what_would_change_it": "The public S-1 date, the price range and the Q3 print."
+   },
+   {
+    "type": "data",
+    "note": "Desk tables are not clean ledgers. The capital table mixes talks, closed rounds and debt and sums to $199.4B; capital_summary is the ledger at $124.254B. The valuation table shows a $1.5T secondary mark at T2 and HIGH, and Series A and the $54B Amazon row at T1, though those valuations are PitchBook-only (T2).",
+    "what_would_change_it": "desk-deals re-tiering the rows and removing talks from the capital table."
+   }
+  ],
+  "evidence": [
+   "evt-20260528-series-h-compute-agreements-memory-partners",
+   "evt-20260930-pb-total-raised-bonds-removed",
+   "evt-20260601-confidential-draft-s1",
+   "evt-20260918-wsj-ipo-pushed-to-november",
+   "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "evt-20260731-amazon-10q-q2-2026",
+   "evt-20260212-series-g-30b-380b",
+   "evt-20250902-series-f-13b-183b",
+   "evt-20250303-series-e-roster",
+   "evt-20220429-series-b",
+   "evt-20220429-pb-series-b-980m-reconcile",
+   "evt-20240701-pb-series-d-1-2b-21b",
+   "evt-20240513-raising-more-capital-18-4b-post",
+   "evt-20260609-tpu-financing-34-5b-closed",
+   "evt-20260903-credit-facility-15b-nears-final",
+   "evt-20250516-run-rate-2b",
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+   "evt-20260930-no-public-s1-on-edgar",
+   "evt-20260817-rr-65b-end-july",
+   "evt-20260709-secondary-market-indications-1-2t",
+   "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t",
+   "evt-20240322-ftx-first-sale-884m",
+   "evt-20250502-employee-buyback-61-5b",
+   "evt-20260204-employee-tender-350b",
+   "evt-20260512-secondary-market-warning",
+   "evt-20260424-google-up-to-40b",
+   "evt-20250311-google-14pct-doj-filing",
+   "evt-20231027-google-up-to-2b",
+   "evt-20251118-microsoft-nvidia-anthropic-partnership",
+   "evt-20260722-amd-equity-up-to-5b",
+   "evt-20260420-amazon-5gw-25b-investment",
+   "evt-20260723-alphabet-10q-non-marketable-124b",
+   "evt-20260729-microsoft-3-2b-gain",
+   "evt-20260731-zoom-salesforce-10q-marks",
+   "evt-20260813-ipo-october-2t-quartz",
+   "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
+   "evt-20260907-ipo-timing-mid-october",
+   "evt-20260913-nasdaq-october-listing",
+   "evt-20260603-ipo-banks-ms-gs-jpm",
+   "evt-20260925-founders-voting-control",
+   "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+   "evt-20260827-information-prospectus-after-labor-day-insider-sales",
+   "evt-20260926-nvidia-ipo-anchor-10b",
+   "evt-20260929-openai-30b-raise-1-4t-ipo-on-hold",
+   "evt-20260804-ft-google-200bn-anthropic-financing-machine",
+   "evt-20260805-blackstone-second-chip-package-36b",
+   "evt-20260602-chip-financing-spv-notes-price-talk",
+   "evt-20260924-akamai-11b",
+   "evt-20260913-rum-group-13-7b-georgia-deal",
+   "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+   "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+   "evt-20260817-reuters-2028-190-200b-forecast",
+   "evt-20260814-q2-2026-rev-11-5b-first-report",
+   "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+   "evt-20240602-ftx-second-sale-452m",
+   "evt-20230523-series-c-450m",
+   "evt-20230523-series-c-valuation-reports",
+   "evt-20210528-series-a",
+   "evt-20251031-amazon-10q-anthropic-holdings",
+   "evt-20260429-amazon-q1-10q-anthropic-gain-16-8b",
+   "evt-20250710-amazon-weighs-new-investment",
+   "evt-20260926-amazon-carrying-value-190b",
+   "evt-20260913-altman-openai-no-2026-ipo",
+   "evt-20260107-series-g-talks-10b-to-20b",
+   "evt-20260429-rr-40b-techcrunch",
+   "evt-20250729-funding-talks-170b-iconiq",
+   "evt-20250107-series-e-talks-60b",
+   "evt-20260520-spacex-s1-anthropic-colossus-contract",
+   "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+   "evt-20260927-pitchbook-revenue-fields-ttm-series",
+   "evt-20250905-bartz-1-5b-settlement"
+  ]
+ },
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Read analyst_common.md in full. Slice: funding, valuation, debt, secondary, ipo, investment plus tables rounds, capital_summary, offering_structure, prospectus_facts, comparables, valuation. Slug capital."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "q.py --cat funding,valuation,debt,secondary,ipo,investment: 135 events, May 2021 to Sep 30 2026. Read every headline and summary."
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "Scanned events outside the slice that carry amount or valuation fields: 29 hits, mostly compute leases, settlements and acquisitions. The $1.5B Bartz settlement is the one fixed cash call."
+  },
+  {
+   "seq": 4,
+   "type": "search",
+   "text": "q.py --table rounds: 23 rows (8 priced rounds, 2 note rows, 4 up-to rows, 3 debt rows, 5 secondary rows, 1 IPO row)."
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "q.py --table capital_summary and offering_structure: both populated (equity $124,254M, total $126,754M; 17 offering fields)."
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "q.py --table prospectus_facts (76 rows), comparables (10), valuation (11), capital (16). None is empty now."
+  },
+  {
+   "seq": 7,
+   "type": "search",
+   "text": "q.py --conflicts filtered on capital terms: 92 of 158 frozen rows matched. Read all of them."
+  },
+  {
+   "seq": 8,
+   "type": "search",
+   "text": "q.py --open filtered on capital terms: read 156 of 237 open items. About twenty bear on this slice, among them the G and H allocation, Google funded cash, revolver terms and a headline-only rating push."
+  },
+  {
+   "seq": 9,
+   "type": "found",
+   "text": "Series A, May 28 2021: $124M, Tallinn lead. Size is T1. The $337M pre and $461M post are PitchBook-only.",
+   "event_id": "evt-20210528-series-a",
+   "url": "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems"
+  },
+  {
+   "seq": 10,
+   "type": "found",
+   "text": "Series B announced at $580M with FTX lead (T1). DOJ puts FTX and Alameda at about $500M of it.",
+   "event_id": "evt-20220429-series-b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai"
+  },
+  {
+   "seq": 11,
+   "type": "found",
+   "text": "PitchBook records Series B at $980M, $2.02B pre and $3.0B post. Gap to T1 is $400M, unexplained.",
+   "event_id": "evt-20220429-pb-series-b-980m-reconcile"
+  },
+  {
+   "seq": 12,
+   "type": "flag",
+   "text": "Series B size DISPUTED: $580M (Anthropic, T1) versus $980M (PitchBook). Pre+size=post inside PitchBook, so not a pre/post effect. Not resolved.",
+   "event_id": "evt-20220429-pb-series-b-980m-reconcile"
+  },
+  {
+   "seq": 13,
+   "type": "flag",
+   "text": "Series B post-money is also unsettled: $3.0B in PitchBook versus about $4B in aggregators (unverified open item). Anthropic disclosed none.",
+   "event_id": "evt-20220429-series-b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai"
+  },
+  {
+   "seq": 14,
+   "type": "found",
+   "text": "Series C, announced May 23 2023 (PitchBook close Jun 30): $450M, Spark lead. PitchBook $4.1B pre and $4.55B post.",
+   "event_id": "evt-20230523-series-c-450m",
+   "url": "https://www.anthropic.com/news/anthropic-series-c"
+  },
+  {
+   "seq": 15,
+   "type": "flag",
+   "text": "Series C valuation $4.1B versus about $5B is DISPUTED in the record. Largely pre versus post-money plus rounding. Anthropic disclosed none.",
+   "event_id": "evt-20230523-series-c-valuation-reports",
+   "url": "https://techcrunch.com/2023/05/23/anthropic-raises-350m-to-build-next-gen-ai-assistants/"
+  },
+  {
+   "seq": 16,
+   "type": "found",
+   "text": "TechCrunch May 13 2024 (T2): $18.4B post-money, Daniela Amodei confirms raising more primary capital. The $750M size is from earlier press (T3).",
+   "event_id": "evt-20240513-raising-more-capital-18-4b-post",
+   "url": "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/"
+  },
+  {
+   "seq": 17,
+   "type": "found",
+   "text": "Series E, Mar 3 2025: $3.5B at $61.5B post, Lightspeed lead. Pre-money $58.0B is derived. Buyback price $56.09 matches PitchBook $56.0865.",
+   "event_id": "evt-20250303-series-e-roster",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation"
+  },
+  {
+   "seq": 18,
+   "type": "found",
+   "text": "Series F, Sep 2 2025: $13B at $183B post, ICONIQ lead with Fidelity and Lightspeed. PitchBook says $750M was converted debt.",
+   "event_id": "evt-20250902-series-f-13b-183b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+  },
+  {
+   "seq": 19,
+   "type": "found",
+   "text": "Series G, Feb 12 2026: $30B at $380B post, GIC and Coatue lead. Includes 'a portion' of Microsoft and NVIDIA commitments, amounts undisclosed.",
+   "event_id": "evt-20260212-series-g-30b-380b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+  },
+  {
+   "seq": 20,
+   "type": "found",
+   "text": "Series H, May 28 2026: $65B at $965B post, $900B pre derived. About $50B new cash plus $15B earlier hyperscaler money, Amazon $5B named. Run-rate above $47B.",
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 21,
+   "type": "flag",
+   "text": "PitchBook's Series H lead list adds Cloverdale and Salesforce Ventures, and its Series G leads include SoftBank. The T1 pages list neither. Ladder leads use the T1 pages.",
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 22,
+   "type": "found",
+   "text": "First reported sizes versus final: E $2B to $3.5B, F $3-5B to $13B, G $10B to $30B, H $40-50B to $65B. Four of four closed above the first report.",
+   "event_id": "evt-20250107-series-e-talks-60b",
+   "url": "https://techcrunch.com/2025/01/07/anthropic-reportedly-in-talks-to-raise-2b-at-60b-valuation-led-by-lightspeed/"
+  },
+  {
+   "seq": 23,
+   "type": "found",
+   "text": "Series H talks on Apr 29: $40-50B at $850-900B. Final pre-money $900B sits at the top of the talk range and the size 30% above $50B.",
+   "event_id": "evt-20260429-rr-40b-techcrunch",
+   "url": "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/"
+  },
+  {
+   "seq": 24,
+   "type": "found",
+   "text": "Amazon's money is convertible notes, not priced equity: $1.25B in Q3 2023 and an option for $2.75B more. 'Up to $4B' was a cap.",
+   "event_id": "evt-20231027-amazon-10q-anthropic-note",
+   "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000018/amzn-20230930.htm"
+  },
+  {
+   "seq": 25,
+   "type": "found",
+   "text": "Amazon 10-Q Q3 2025: notes funded $5.3B by Q4 2024, $1.3B in Q2 2025, $1.4B due Q4 2025. Preferred carried $14.8B, notes $23.7B.",
+   "event_id": "evt-20251031-amazon-10q-anthropic-holdings",
+   "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm"
+  },
+  {
+   "seq": 26,
+   "type": "found",
+   "text": "Amazon 10-Q Q2 2026: $8.0B notes, $5.0B Series G and $5.0B Series H preferred. Carried $92.5B plus $97.9B. Facility $15.0B left of $20.0B.",
+   "event_id": "evt-20260731-amazon-10q-q2-2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+  },
+  {
+   "seq": 27,
+   "type": "flag",
+   "text": "PitchBook books all $8.0B of Amazon notes in one row dated Nov 22 2024, yet only $5.3B was funded by then and $2.7B came in 2025. Cumulative totals by date overstate 2024.",
+   "event_id": "evt-20241122-amazon-additional-4b",
+   "url": "https://www.aboutamazon.com/news/aws/amazon-invests-additional-4-billion-anthropic-ai"
+  },
+  {
+   "seq": 28,
+   "type": "found",
+   "text": "Apr 20 2026: Amazon invests $5B and up to $20B more. The 10-Q shows the $20B is a milestone-gated facility tied to AWS compute delivery.",
+   "event_id": "evt-20260420-amazon-5gw-25b-investment",
+   "url": "https://www.anthropic.com/news/anthropic-amazon-compute"
+  },
+  {
+   "seq": 29,
+   "type": "found",
+   "text": "Google Oct 2023: $500M upfront and $1.5B over time. PitchBook books the full $2.0B. Funded total is likely above $3B per DOJ filings.",
+   "event_id": "evt-20231027-google-up-to-2b",
+   "url": "https://finance.yahoo.com/news/google-agrees-invest-2-billion-195316710.html"
+  },
+  {
+   "seq": 30,
+   "type": "found",
+   "text": "DOJ filings via NYT and TechCrunch (T2): Google owns 14%, over $3B invested, $750M convertible planned for 2025. Stake is pre-dilution by F, G and H.",
+   "event_id": "evt-20250311-google-14pct-doj-filing",
+   "url": "https://techcrunch.com/2025/03/11/google-has-given-anthropic-more-funding-than-previously-known-show-new-filings/"
+  },
+  {
+   "seq": 31,
+   "type": "found",
+   "text": "Google up to $40B: $10B now at $350B and $30B on performance targets (TechCrunch, T2). The $350B equals the Series G pre-money.",
+   "event_id": "evt-20260424-google-up-to-40b",
+   "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"
+  },
+  {
+   "seq": 32,
+   "type": "found",
+   "text": "Alphabet 10-Q: $124.3B is all non-marketable equity securities, $87.9B remeasured in Q2. Anthropic is not named.",
+   "event_id": "evt-20260723-alphabet-10q-non-marketable-124b",
+   "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+  },
+  {
+   "seq": 33,
+   "type": "flag",
+   "text": "Headlines that say Alphabet values its Anthropic stake at $124B over-read the filing. The $124.3B covers every private holding. Google's stake value is undisclosed.",
+   "event_id": "evt-20260723-alphabet-10q-non-marketable-124b",
+   "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+  },
+  {
+   "seq": 34,
+   "type": "found",
+   "text": "Microsoft up to $5B and NVIDIA up to $10B (T1) against a $30B Azure commitment. Funded amounts undisclosed. PitchBook lists NVIDIA but not Microsoft.",
+   "event_id": "evt-20251118-microsoft-nvidia-anthropic-partnership",
+   "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+  },
+  {
+   "seq": 35,
+   "type": "found",
+   "text": "Microsoft books a $3.2B gain on Anthropic in the quarter to Jun 30 (T1). No cost basis or funded amount given.",
+   "event_id": "evt-20260729-microsoft-3-2b-gain",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm"
+  },
+  {
+   "seq": 36,
+   "type": "flag",
+   "text": "Microsoft EPS effect of the same $3.2B gain is $0.27 in the T1 extraction and $0.33 in the TechCrunch event. Not resolved here.",
+   "event_id": "evt-20260729-microsoft-3-2b-gain",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm"
+  },
+  {
+   "seq": 37,
+   "type": "found",
+   "text": "AMD up to $5B equity (T1), milestone-based per Reuters, with up to 2 GW of MI450. PitchBook's 'upcoming' round and its $10B debt have no source.",
+   "event_id": "evt-20260722-amd-equity-up-to-5b",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+  },
+  {
+   "seq": 38,
+   "type": "found",
+   "text": "May 16 2025 revolver: $2.5B, five years, Morgan Stanley lead with six banks. Committed capacity, draws undisclosed. PitchBook adds it to Raised to Date.",
+   "event_id": "evt-20250516-run-rate-2b",
+   "url": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
+  },
+  {
+   "seq": 39,
+   "type": "found",
+   "text": "Pre-IPO revolver: $15B, Morgan Stanley lead, 17 banks (Bloomberg, Sep 3). Target was above $10B on Aug 18. Not in PitchBook. Whether it replaces the $2.5B facility is unknown.",
+   "event_id": "evt-20260903-credit-facility-15b-nears-final",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+  },
+  {
+   "seq": 40,
+   "type": "flag",
+   "text": "Four different $15B items sit in the record: Microsoft-NVIDIA cap, Series H hyperscaler money, Amazon facility left, and this revolver. Easy to conflate.",
+   "event_id": "evt-20260903-credit-facility-15b-nears-final",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+  },
+  {
+   "seq": 41,
+   "type": "found",
+   "text": "Broadcom AI XPV Platform SPV closed $34.5B ($6B A1, $24B A2, $4.5B B) with Apollo and Blackstone. Anthropic is lessee on a five-year lease.",
+   "event_id": "evt-20260609-tpu-financing-34-5b-closed",
+   "url": "https://finance.yahoo.com/sectors/technology/articles/broadcom-apollo-blackstone-launch-35-144624131.html"
+  },
+  {
+   "seq": 42,
+   "type": "found",
+   "text": "Price talk was $35.5B: A1 T+100, A2 5.50-5.75%, B 8.5%. Broadcom residual-value backstop. Final sizing cut A2 by $1B.",
+   "event_id": "evt-20260602-chip-financing-spv-notes-price-talk",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html"
+  },
+  {
+   "seq": 43,
+   "type": "found",
+   "text": "FT via The Decoder (T3): about $200B of interlinked contracts and a $35B, 1 GW TPU SPV, Google exposed to up to $44B. The $150B chips figure is aiweekly's only (T4). Do not add to other rows.",
+   "event_id": "evt-20260804-ft-google-200bn-anthropic-financing-machine",
+   "url": "https://the-decoder.com/google-moves-billions-in-anthropic-chip-risk-off-its-balance-sheet/"
+  },
+  {
+   "seq": 44,
+   "type": "flag",
+   "text": "The '$71B of chip-lease debt in 60 days' headline adds a pitched $36B package to the closed $34.5B. Executed SPV financing is about $34.5B.",
+   "event_id": "evt-20260805-blackstone-second-chip-package-36b",
+   "url": "https://finance.yahoo.com/technology/ai/articles/blackstone-pitches-36-billion-debt-134437623.html"
+  },
+  {
+   "seq": 45,
+   "type": "flag",
+   "text": "PitchBook total fell from $161.254B (Jul 16) to $126.754B (Sep 30). The $34.500B gap is exactly the chip-lease notes. PitchBook gave no reason. Use $124.3B or $126.8B.",
+   "event_id": "evt-20260930-pb-total-raised-bonds-removed"
+  },
+  {
+   "seq": 46,
+   "type": "found",
+   "text": "FTX estate sale 1 (T1 court notice): 29,465,891 shares for $884.1M at $30.0045, ATIC $500M, Jane Street $100M. No cash to Anthropic.",
+   "event_id": "evt-20240322-ftx-first-sale-884m",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.10241.1.pdf"
+  },
+  {
+   "seq": 47,
+   "type": "found",
+   "text": "Sale 2: about 15M shares for about $452M (Bitcoinist, T3). Both sales at the Series D price. Total about $1.336B on a $500M cost, versus PitchBook's $1.32B.",
+   "event_id": "evt-20240602-ftx-second-sale-452m",
+   "url": "https://bitcoinist.com/ftx-offloads-anthropic-shares-in-450-million-sale/"
+  },
+  {
+   "seq": 48,
+   "type": "found",
+   "text": "May 2025 buyback at $56.09, 20% of holdings capped at $2M, company-funded, size undisclosed (T3). Price matches the Series E price.",
+   "event_id": "evt-20250502-employee-buyback-61-5b",
+   "url": "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/"
+  },
+  {
+   "seq": 49,
+   "type": "found",
+   "text": "Feb 2026 tender planned at $350B pre-money, equal to the Series G pre-money (T3 relay of Bloomberg). Completion rests on an Apr 8 headline only.",
+   "event_id": "evt-20260204-employee-tender-350b",
+   "url": "https://www.trendingtopics.eu/anthropic-said-to-plan-tender-offer-at-350-billion-valuation/"
+  },
+  {
+   "seq": 50,
+   "type": "flag",
+   "text": "Tender size is 'up to $6B' in one scout headline and an 'unfilled $60B pool' in an aggregator headline. Ten times apart, both headline-only (T4).",
+   "event_id": "evt-20260408-tender-completed-headline",
+   "url": "https://news.google.com/rss/search?q=Anthropic+tender+offer+employees&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 51,
+   "type": "found",
+   "text": "May 12 2026 (T2): Anthropic says transfers through named platforms are void and SPVs may not hold shares. Board approval is needed for any transfer.",
+   "event_id": "evt-20260512-secondary-market-warning",
+   "url": "https://techcrunch.com/2026/05/12/anthropic-warns-investors-against-secondary-platforms-offering-access-to-its-shares/"
+  },
+  {
+   "seq": 52,
+   "type": "flag",
+   "text": "KraneShares' AGIX ETF held Anthropic at 4.45% of net assets on Feb 28 2025 (T1), mechanism unknown, while Anthropic now bars SPVs. Retail exposure exists outside priced rounds.",
+   "event_id": "evt-20250305-agix-etf-anthropic",
+   "url": "https://kraneshares.com/kraneshares-ai-etf-agix-buys-anthropic-shares"
+  },
+  {
+   "seq": 53,
+   "type": "found",
+   "text": "Jul 9 (Quartz, T3): indications near $1.2T, +24% on Series H, closings 'few and far between'. Later: $1.5T high and perpetuals near $1.8T.",
+   "event_id": "evt-20260709-secondary-market-indications-1-2t",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-secondary-market-valuation-hits-114416290.html"
+  },
+  {
+   "seq": 54,
+   "type": "flag",
+   "text": "Binance perpetual at $1,600-$1,840 assumes 1B shares. PitchBook's $589.01 Series H price implies about 1.64B fully diluted shares, so $1.8T is a contract convention, not a share-price mark.",
+   "event_id": "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t",
+   "url": "https://finance.yahoo.com/markets/crypto/articles/anthropic-tokenized-price-implies-1-150342277.html"
+  },
+  {
+   "seq": 55,
+   "type": "found",
+   "text": "Jun 1 2026: Anthropic announces a confidential draft S-1 under Rule 135. Share count and price not set. No exchange or underwriters named by the company.",
+   "event_id": "evt-20260601-confidential-draft-s1",
+   "url": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+  },
+  {
+   "seq": 56,
+   "type": "found",
+   "text": "EDGAR on Sep 30: no Anthropic PBC filings, 121 days after the draft. SpaceX filed its public S-1 51 days after its draft and listed 23 days later.",
+   "event_id": "evt-20260930-no-public-s1-on-edgar",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=anthropic&type=S-1&dateb=&owner=include&count=40"
+  },
+  {
+   "seq": 57,
+   "type": "found",
+   "text": "WSJ Sep 18: November Nasdaq debut after Q3 results, up to $100B at about $2T. Conflicts with October in Quartz and Business Insider.",
+   "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html"
+  },
+  {
+   "seq": 58,
+   "type": "flag",
+   "text": "IPO timing DISPUTED. Late September (Aug 18), mid-October roadshow (Sep 4), November (Sep 18), after midterms (Sep 29). Two expected filing windows passed. A drift, not a split.",
+   "event_id": "evt-20260907-ipo-timing-mid-october",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-delays-ipo-mid-october-150657053.html"
+  },
+  {
+   "seq": 59,
+   "type": "flag",
+   "text": "October support: the PitchBook Sep 21 note that the desk brief cites was not located. October now rests on Quartz (Aug 13) and Business Insider via Benzinga (Sep 13), both T3.",
+   "event_id": "evt-20260913-nasdaq-october-listing",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html"
+  },
+  {
+   "seq": 60,
+   "type": "flag",
+   "text": "IPO raise DISPUTED: up to $100B (WSJ Sep 18, T3) versus at least $130B (The Information via Motley Fool Sep 3, T4/LOW). Names both, picks neither.",
+   "event_id": "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
+   "url": "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/"
+  },
+  {
+   "seq": 61,
+   "type": "found",
+   "text": "Lock-up longer than 180 days, preset 10b5-1 plans and insider selling in the offering are T4 relays of The Information. No opened prospectus coverage has lock-up terms.",
+   "event_id": "evt-20260827-information-prospectus-after-labor-day-insider-sales",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-could-come-september-191409974.html"
+  },
+  {
+   "seq": 62,
+   "type": "found",
+   "text": "Reuters review: one Class F share held by Founder LLC carries 50.1% of votes. Class A gets one vote. LTBT elects four of seven directors. About 2% economic each is T3.",
+   "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+   "url": "https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-910036"
+  },
+  {
+   "seq": 63,
+   "type": "found",
+   "text": "Reuters via Motley Fool (T3): NVIDIA weighing up to $10B as IPO anchor, about 0.5% at $2T. May overlap its existing up-to-$10B commitment.",
+   "event_id": "evt-20260926-nvidia-ipo-anchor-10b",
+   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-weighing-10-billion-stake-195701843.html"
+  },
+  {
+   "seq": 64,
+   "type": "flag",
+   "text": "NVIDIA's $10B IPO anchor may overlap its existing up-to-$10B commitment (Reuters, T3). If it does, the anchor adds no new capital.",
+   "event_id": "evt-20260926-nvidia-ipo-anchor-10b",
+   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-weighing-10-billion-stake-195701843.html"
+  },
+  {
+   "seq": 65,
+   "type": "found",
+   "text": "Leaked draft (Reuters, T2): FY2025 revenue about $4.6B, operating loss above $8B, net loss $42B with about $34B non-cash charge, cash $20.28B at Dec 31 2025.",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 66,
+   "type": "found",
+   "text": "At least $518B of commitments over about ten years, roughly 80% non-cancelable. Named lines sum to $518.2B, including $161.2B of Broadcom-related leases.",
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+   "url": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows"
+  },
+  {
+   "seq": 67,
+   "type": "found",
+   "text": "Zoom carries $3,134.5M after a $300.9M top-up and $1,612.7M gain. Salesforce says Anthropic is 45% of its strategic portfolio. Both re-marked to Series H (T1).",
+   "event_id": "evt-20260731-zoom-salesforce-10q-marks",
+   "url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000121/zm-20260731.htm"
+  },
+  {
+   "seq": 68,
+   "type": "found",
+   "text": "Akamai $11.6B, seven years, and a warrant for up to 5% at $111.33 held by Anthropic (T1). RUM's $0.01 warrants are the same pattern (T3).",
+   "event_id": "evt-20260924-akamai-11b",
+   "url": "https://www.globenewswire.com/news-release/2026/09/24/3368729/0/en/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand.html"
+  },
+  {
+   "seq": 69,
+   "type": "found",
+   "text": "Bloomberg Sep 29 (T3): OpenAI seeks at least $30B at about $1.4T after shelving a 2026 IPO. Prior round $852B with $122B raised.",
+   "event_id": "evt-20260929-openai-30b-raise-1-4t-ipo-on-hold",
+   "url": "https://finance.yahoo.com/technology/ai/articles/openai-seeks-30-billion-funding-182211197.html"
+  },
+  {
+   "seq": 70,
+   "type": "note",
+   "text": "Read the governance and ecosystem analyst outputs for overlap on Amazon notes, Class F and the four $15B items. Every number I use was re-derived from the record."
+  },
+  {
+   "seq": 71,
+   "type": "note",
+   "text": "Record re-merged at 19:18Z: a new PitchBook Series D event entered the slice and the SpaceX monthly-fee id merged into the Colossus contract event. Re-read both."
+  },
+  {
+   "seq": 72,
+   "type": "note",
+   "text": "Second re-merge at 19:26Z: the PitchBook total event moved from VERIFY to HIGH, six IPO events had reference valuations moved out of post-money (R-VAL), two new Reuters prospectus events entered. Re-ran the live-record check."
+  },
+  {
+   "seq": 73,
+   "type": "found",
+   "text": "PitchBook Series D, dated Jul 1 2024: $1.2B, $19.8B pre, $21.0B post, $30.0045 a share, 43 investors. Same price as the FTX sale.",
+   "event_id": "evt-20240701-pb-series-d-1-2b-21b"
+  },
+  {
+   "seq": 74,
+   "type": "flag",
+   "text": "Series D DISPUTED: $750M at $18.4B post (press) versus $1.2B at $21.0B (PitchBook). One price, $30.0045, so the gap is share-count basis (613M versus 700M) plus later closings. Unproven.",
+   "event_id": "evt-20240701-pb-series-d-1-2b-21b"
+  },
+  {
+   "seq": 75,
+   "type": "flag",
+   "text": "Allocation gap: Amazon's two $5B purchases and Google's $10B may sit inside Series G and H or beside them. Anthropic says H holds $15B of earlier hyperscaler money. Not stated which.",
+   "event_id": "evt-20260731-amazon-10q-q2-2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+  },
+  {
+   "seq": 76,
+   "type": "flag",
+   "text": "Price paid by the $15B of earlier hyperscaler money inside H is not stated. Google's $10B was reported at $350B and Amazon's $5B was Series G preferred, weeks before H priced at $900B pre.",
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 77,
+   "type": "flag",
+   "text": "PitchBook's Series G and H share fields give $76.5B and $167B at its own prices, 2.55x and 2.57x round size. Per-share prices are PitchBook-only and unsafe for ownership math.",
+   "event_id": "evt-20260212-series-g-30b-380b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+  },
+  {
+   "seq": 78,
+   "type": "flag",
+   "text": "Amazon ownership is 15-20% (TheStreet, T3), about 21% (Forkast, T4) or 19.7% by desk arithmetic. No filing states it. FT says Anthropic caps it below 33%.",
+   "event_id": "evt-20260926-amazon-carrying-value-190b",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropics-ipo-300-billion-test-014700775.html"
+  },
+  {
+   "seq": 79,
+   "type": "flag",
+   "text": "Desk's 39.75% gross-to-net haircut is contradicted in size: prospectus fees are about 7.6% of FY2025 revenue and PitchBook says 6-10%. Shown at both in the analysis.",
+   "event_id": "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+   "url": "https://my.pitchbook.com/research-center/report/271b2ed6-4c03-34ba-93a8-65a7e30741ec"
+  },
+  {
+   "seq": 80,
+   "type": "flag",
+   "text": "OpenAI run-rate is about $40B (Bloomberg, Aug) versus nearly $70B (Axios, Sep, basis unstated). That makes its $1.4T ask 35x or 20x, so no clean multiple comparison.",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+  },
+  {
+   "seq": 81,
+   "type": "flag",
+   "text": "Reuters' 'around 18-20x sales' has no stated basis. It matches a $100-110B year-end run-rate, not the $65B July figure; The Information says about 30x run-rate. Inference only.",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 82,
+   "type": "flag",
+   "text": "The capital table is not a ledger: it mixes talks, closed rounds and debt, sums to $199.4B, and lacks closed E, F, G and H rows. capital_summary ($124.254B equity) is the ledger."
+  },
+  {
+   "seq": 83,
+   "type": "flag",
+   "text": "The valuation table lists the $1.5T secondary mark at T2 and HIGH, inherited from the governance event, and tags Series A and the $54B Amazon row T1 although both valuations are PitchBook-only (T2)."
+  },
+  {
+   "seq": 84,
+   "type": "verify",
+   "text": "Recomputed PitchBook equity from the ten rounds rows: $124,254M. Adding the $2,500M revolver gives $126,754M. Both match capital_summary."
+  },
+  {
+   "seq": 85,
+   "type": "verify",
+   "text": "$161,254M minus $126,754M equals $34,500M exactly, the chip-lease notes (PitchBook deal 334763-02T)."
+  },
+  {
+   "seq": 86,
+   "type": "verify",
+   "text": "Press and T1 sizes (A 124, B 580, C 450, Google 2,000, D 750, Amazon 8,000, E 3,500, F 13,000, G 30,000, H 65,000) sum to $123,404M. PitchBook is $850M higher: B +400, D +450."
+  },
+  {
+   "seq": 87,
+   "type": "verify",
+   "text": "Pre-money plus raise equals post-money for E, F, G and H ($58.0B, $170B, $350B, $900B). Step-ups over prior post: B 4.38x, C 1.37x, D 4.35x (3.88x on press), E 2.76x (3.15x on press), F 2.76x, G 1.91x, H 2.37x in 105 days, about 20x annualized."
+  },
+  {
+   "seq": 88,
+   "type": "verify",
+   "text": "Amazon: 8.0 + 5.0 + 5.0 = $18.0B cost; 92.5 + 97.9 = $190.4B carrying, 10.6x cost and 19.7% of $965B. At $2T the same share is about $395B, inside TheStreet's $300-400B."
+  },
+  {
+   "seq": 89,
+   "type": "verify",
+   "text": "Six named commitment lines sum to $518.2B against the $518B headline. $100-130B raise is 19-25% of $518B and 24-31% of the about $414B non-cancelable part."
+  },
+  {
+   "seq": 90,
+   "type": "verify",
+   "text": "$2T / $65B = 30.8x matches PitchBook's 30.8x; net of 6-10% gives 32.7x-34.2x, also matching. Platform fees $351M / $4.59B = 7.6%."
+  },
+  {
+   "seq": 91,
+   "type": "verify",
+   "text": "Equity per dollar of gross run-rate: Series G 4.2x ($59.3B / $14B), Series H 2.6x, end-July 1.9x. Equity through FY2025 was $29.3B against $20.28B cash and an $11.0B two-year operating loss."
+  },
+  {
+   "seq": 92,
+   "type": "verify",
+   "text": "Sum of the capital table is $199.4B against capital_summary $124.254B, so the table cannot be summed. Valuation table rows re-read after both re-merges."
+  },
+  {
+   "seq": 93,
+   "type": "verify",
+   "text": "Tier labels in the analysis checked against prospectus_facts rows: cash, net loss, financing charge and the $518B total are T2; partner lines, the $54.6B hosting figure and the $351M fees are T3."
+  },
+  {
+   "seq": 94,
+   "type": "message",
+   "text": "Capital table mixes talks and debt and lacks closed E to H rows. Valuation table tiers $1.5T at T2/HIGH and tags Series A and the $54B Amazon row T1. Please re-tier.",
+   "to": "desk-deals"
+  },
+  {
+   "seq": 95,
+   "type": "message",
+   "text": "Open: which tranches sit inside G and H, PitchBook's 2.55x and 2.57x share fields, primary versus secondary mix, and whether the $15B revolver replaces the $2.5B facility.",
+   "to": "verify-capital"
+  },
+  {
+   "seq": 96,
+   "type": "message",
+   "text": "Reply on converted notes: count once at funded cost, Amazon $8.0B, never at the $97.9B fair value. Conversion at IPO adds no capital and no cash.",
+   "to": "analyst-topic-governance"
+  },
+  {
+   "seq": 97,
+   "type": "message",
+   "text": "Use $124.254B equity-only as the CE base. Show EV multiples at gross and net: 6-10% and 7.6% haircuts from the record, and 39.75% only as the canonical alternative.",
+   "to": "analyst-model"
+  },
+  {
+   "seq": 98,
+   "type": "message",
+   "text": "Lease stack $161.2B versus $34.5B of SPV notes, cash 0.37x of non-cancelable hosting at end-2025, and a $100-130B raise 1.2-1.5x SpaceX's record.",
+   "to": "analyst-bear"
+  },
+  {
+   "seq": 99,
+   "type": "message",
+   "text": "Four of four private rounds closed above first-reported size, Series H compressed the multiple to 20.5x, and OpenAI has shelved a 2026 IPO. All are reported, not priced.",
+   "to": "analyst-bull"
+  },
+  {
+   "seq": 100,
+   "type": "message",
+   "text": "Disputed items stay open: Series B size, Series D post-money, IPO raise ($100B versus $130B), IPO timing (October versus November) and the total-raised basis.",
+   "to": "analyst-judge"
+  },
+  {
+   "seq": 101,
+   "type": "message",
+   "text": "Lock-up length, selling holders, use of proceeds and the ticker are absent from every opened prospectus copy. Only T4 relays of The Information cover lock-ups.",
+   "to": "desk-s1"
+  },
+  {
+   "seq": 102,
+   "type": "message",
+   "text": "My multiples use gross run-rate ($47B, $65B), Q2 recognized $11.5B annualized and H1 2026 recognized $16.2B annualized. Please confirm the desk-derived FY2026 range of $64-72B (LOW) that I use for the forward multiple.",
+   "to": "analyst-topic-revenue"
+  },
+  {
+   "seq": 103,
+   "type": "verify",
+   "text": "Final pass: every cited id resolved through id_map to a canonical event; numbers I quote were re-checked against capital_summary, rounds, prospectus_facts and offering_structure."
+  }
+ ],
+ "stats": {
+  "events_read": 171,
+  "flags": 27
+ }
+}

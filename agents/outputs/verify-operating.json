@@ -1,0 +1,2455 @@
+{
+ "agent": "verify-operating",
+ "role": "Source Re-deriver",
+ "started": "2026-09-30T18:57:28Z",
+ "finished": "2026-09-30T19:45:11Z",
+ "answers": [
+  {
+   "claim_id": "OPS-RUN-7b7aeb",
+   "found": {
+    "date": "2026-02-12",
+    "run_rate_usd_m": 14000,
+    "basis": "Company-stated annualized run-rate revenue (not recognized revenue). Release does not say gross or net of cloud-partner resale; Anthropic's practice is to count partner-channel sales at full end-customer value (gross) per Axios 2026-09-03 and Sacra.",
+    "stated_by": "Anthropic (company post announcing the $30B Series G at $380B post-money, 2026-02-12)",
+    "notes": "Post adds: growth over 10x annually in each of the past three years; Claude Code run-rate over $2.5B (more than doubled since start of 2026); customers spending over $1M annualized now exceed 500. Only one February 2026 figure found; next data point is ~$19B in early March (Bloomberg / The Information)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $30 billion in Series G funding at $380 billion post-money valuation",
+     "published": "2026-02-12",
+     "tier": "T1",
+     "opened": true,
+     "supports": "our run-rate revenue is $14 billion, with this figure growing over 10x annually"
+    },
+    {
+     "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth",
+     "publisher": "VentureBeat",
+     "title": "Anthropic says it hit a $30 billion revenue run rate after 'crazy' 80x growth",
+     "published": "2026-05-08",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Lists run-rate points: $87M (Jan 2024), $1B (Dec 2024), $9B, $14B, $19B, $30B; OpenAI disputes gross counting"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios (via Yahoo Finance)",
+     "title": "Anthropic and OpenAI's revenue chasm, explained",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic records the full value of Claude sales through partners, then records cloud providers' cuts as expenses"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-RUN-f70649",
+   "found": {
+    "date": "2026-04-06",
+    "run_rate_usd_m": 30000,
+    "basis": "Company-stated annualized run-rate revenue ('has now surpassed $30 billion'); not recognized revenue. Counted gross of cloud-partner cuts in Anthropic's practice; OpenAI disputes the figure as overstated by roughly $8B on gross-vs-net grounds (VentureBeat 2026-05-08); Axios source says a net restatement would be only a 6-10% hit.",
+    "stated_by": "Anthropic (company post 'Anthropic expands Google and Broadcom compute deal', 2026-04-06); VentureBeat (2026-05-08) reports the CEO discussing the $30B run rate at the Code with Claude developer event in early May",
+    "notes": "Post: up from approximately $9B at end of 2025; customers spending over $1M annualized exceed 1,000, doubling in under two months. The Information newsletter blurb (2026-04-07): more than $30B, up from $19B about a month earlier. Sanity check from Om Malik (2026-05-29): $9B end-2025 to 'over $30B this spring'."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+     "publisher": "Anthropic",
+     "title": "Anthropic expands Google and Broadcom compute deal",
+     "published": "2026-04-06",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company states run-rate revenue surpassed $30 billion, up from approximately $9 billion at end of 2025"
+    },
+    {
+     "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth",
+     "publisher": "VentureBeat",
+     "title": "Anthropic says it hit a $30 billion revenue run rate after 'crazy' 80x growth",
+     "published": "2026-05-08",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Lists run-rate points: $87M (Jan 2024), $1B (Dec 2024), $9B, $14B, $19B, $30B; OpenAI disputes gross counting"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios (via Yahoo Finance)",
+     "title": "Anthropic and OpenAI's revenue chasm, explained",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic records the full value of Claude sales through partners, then records cloud providers' cuts as expenses"
+    },
+    {
+     "url": "https://om.co/2026/05/29/anthropic-ai-and-the-numbers-problem/",
+     "publisher": "On my Om",
+     "title": "Anthropic, AI and The 'Numbers' Problem",
+     "published": "2026-05-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Run rate went from about $9B end-2025 to over $30B this spring; sources put current closer to $40B"
+    },
+    {
+     "url": "https://www.theinformation.com/newsletters/dealmaker/anthropic-hit-100-billion-annualized-revenue-year",
+     "publisher": "The Information",
+     "title": "How Anthropic Could Hit $100 Billion in Annualized Revenue This Year",
+     "published": "2026-04-07",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Bing snippet only (paywalled): said Monday it is generating more than $30 billion, up from $19 billion about a month ago"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$30B run-rate as stated by Anthropic (gross of cloud-partner cuts)",
+     "source_a": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+     "value_b": "Roughly $22B if OpenAI's claim of ~$8B overstatement is right (net basis)",
+     "source_b": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth",
+     "note": "Basis dispute, not a factual conflict in the stated number. OpenAI claim is relayed by VentureBeat without a primary document; Axios (2026-09-03) cites a source familiar with the financials saying net reporting would cut only ~6-10%."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-RUN-ad2e22",
+   "found": {
+    "date": "2026-05 (company wording 'earlier this month', stated 2026-05-28; no exact day given)",
+    "run_rate_usd_m": 47000,
+    "basis": "Company-stated annualized run-rate revenue ('crossed $47 billion'); not recognized revenue; gross/net not stated in the post (Anthropic counts reseller sales gross per Axios/Sacra).",
+    "stated_by": "Anthropic (Series H post: $65B raise at $965B post-money, 2026-05-28)",
+    "notes": "Other May-2026 figures: ~$44B early May was a SemiAnalysis third-party estimate (per SaaStr / OfficeChai headline, 2026-05-02); Om Malik (2026-05-29) cites 'sources close to the company' at closer to $40B; VentureBeat (2026-05-08) has the CEO discussing the $30B (the April figure) at the Code with Claude event in early May. Reuters (2026-08-17) and Bloomberg later cite $47B 'in May'. No contradiction: the run rate was rising through the month."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/series-h",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+     "published": "2026-05-28",
+     "tier": "T1",
+     "opened": true,
+     "supports": "our run-rate revenue crossed $47 billion earlier this month"
+    },
+    {
+     "url": "https://www.saastr.com/by-year-end-anthropic-will-out-earn-every-public-software-company-except-microsoft/",
+     "publisher": "SaaStr",
+     "title": "By Year-End, Anthropic Will Out-Earn Every Public Software Company Except Microsoft",
+     "published": "2026-07-06",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Timeline: Feb $14B, Mar $19B, Apr $30B, early May $44B, mid-May $47B; Anthropic books much revenue gross"
+    },
+    {
+     "url": "https://om.co/2026/05/29/anthropic-ai-and-the-numbers-problem/",
+     "publisher": "On my Om",
+     "title": "Anthropic, AI and The 'Numbers' Problem",
+     "published": "2026-05-29",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Run rate went from about $9B end-2025 to over $30B this spring; sources put current closer to $40B"
+    },
+    {
+     "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth",
+     "publisher": "VentureBeat",
+     "title": "Anthropic says it hit a $30 billion revenue run rate after 'crazy' 80x growth",
+     "published": "2026-05-08",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Lists run-rate points: $87M (Jan 2024), $1B (Dec 2024), $9B, $14B, $19B, $30B; OpenAI disputes gross counting"
+    },
+    {
+     "url": "https://www.investing.com/news/stock-market-news/anthropic-revenue-run-rate-tops-65-billion-source-says-4864031",
+     "publisher": "Reuters (via Investing.com)",
+     "title": "Anthropic revenue run rate tops $65 billion, source says",
+     "published": "2026-08-17",
+     "tier": "T2",
+     "opened": true,
+     "supports": "annual revenue run rate topped $65 billion by the end of July; company shared it with investors"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$47B (company, crossed 'earlier this month')",
+     "source_a": "https://www.anthropic.com/news/series-h",
+     "value_b": "~$44B (SemiAnalysis estimate reported early May; third-party)",
+     "source_b": "https://www.saastr.com/by-year-end-anthropic-will-out-earn-every-public-software-company-except-microsoft/",
+     "note": "Different dates and a third-party estimate versus the company's own later statement; treat the $47B as authoritative for May."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-RUN-d33b7d",
+   "found": {
+    "date": "2026-07-31 ('by the end of July'; first reported 2026-08-17)",
+    "run_rate_usd_m": 65000,
+    "basis": "Annualized run-rate revenue shared with investors in ongoing financial updates; outlet-reported, not a public company release and not audited. Anthropic counts reseller sales gross (Axios 2026-09-03), so this is gross of cloud-partner cuts.",
+    "stated_by": "Anthropic to investors, reported by Bloomberg first (2026-08-17), then Reuters ('person with knowledge'; company 'shared the latest figure with investors') and CNBC ('confirmed')",
+    "notes": "Up from $47B in May (company) and about $9B at end-2025. Third-party alt-data estimate: Yipit put ARR at $69B on 2026-07-10 (not company-stated, method unknown). NYT (via Bloomberg and Axios, 2026-09-18) says annualized revenue is pacing above $100B, up 50% from two months earlier (implying roughly $65-67B in July, consistent with $65B) - a run-rate pace, not recognized revenue. Bloomberg, Reuters, CNBC trace to one underlying investor update."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.investing.com/news/stock-market-news/anthropic-revenue-run-rate-tops-65-billion-source-says-4864031",
+     "publisher": "Reuters (via Investing.com)",
+     "title": "Anthropic revenue run rate tops $65 billion, source says",
+     "published": "2026-08-17",
+     "tier": "T2",
+     "opened": true,
+     "supports": "annual revenue run rate topped $65 billion by the end of July; company shared it with investors"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-annualized-revenue-top-100-220623178.html",
+     "publisher": "Bloomberg (via Yahoo Finance)",
+     "title": "Anthropic's Annualized Revenue to Top $100 Billion in 2026, NYT Says",
+     "published": "2026-09-18",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Bloomberg: run rate hit $65 billion by end of July, up from $9 billion at end of 2025"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-tops-100-billion-revenue-224001996.html",
+     "publisher": "Axios (via Yahoo Finance; relaying the New York Times)",
+     "title": "Anthropic tops $100 billion revenue pace, report says",
+     "published": "2026-09-18",
+     "tier": "T2",
+     "opened": true,
+     "supports": "NYT: Anthropic pacing to more than $100B in annual revenue, up 50% from just two months ago (implies ~$65-67B in July)"
+    },
+    {
+     "url": "https://www.fool.com/investing/2026/08/24/anthropic-has-a-65-billion-run-rate-buy-these-stoc/",
+     "publisher": "The Motley Fool",
+     "title": "Anthropic Has a $65 Billion Run Rate. Buy These Stocks to Profit From It.",
+     "published": "2026-08-24",
+     "tier": "T3",
+     "opened": true,
+     "supports": "run rate of $65 billion, about seven times the end of last year"
+    },
+    {
+     "url": "https://www.nextbigfuture.com/2026/07/reports-of-69-billion-annualized-revenue-rate-for-anthropic.html",
+     "publisher": "NextBigFuture",
+     "title": "Reports of $69 Billion Annualized Revenue Rate for Anthropic",
+     "published": "2026-07-10",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Attributes $69 billion ARR to Yipit (via an X post), July 10, 2026; not company-stated"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios (via Yahoo Finance)",
+     "title": "Anthropic and OpenAI's revenue chasm, explained",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic records the full value of Claude sales through partners, then records cloud providers' cuts as expenses"
+    },
+    {
+     "url": "https://www.cnbc.com/video/2026/08/18/anthropic-tells-investors-annualized-revenue-run-rate-climbed-to-65-billion-in-july.html",
+     "publisher": "CNBC",
+     "title": "Anthropic tells investors annualized revenue run rate climbed to $65 billion in July",
+     "published": "2026-08-18",
+     "tier": "T2",
+     "opened": false,
+     "supports": "Headline and Bing snippet only (page returned 403): run rate hit $65B at end of July, CNBC confirmed"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$65B (company run rate at end of July, per investor update)",
+     "source_a": "https://www.investing.com/news/stock-market-news/anthropic-revenue-run-rate-tops-65-billion-source-says-4864031",
+     "value_b": "$69B ARR (Yipit alt-data estimate, 2026-07-10)",
+     "source_b": "https://www.nextbigfuture.com/2026/07/reports-of-69-billion-annualized-revenue-rate-for-anthropic.html",
+     "note": "Different measurer and date; Yipit is a third-party estimate with no stated gross/net method. Company-sourced figure is the $65B."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-RUN-91e239",
+   "found": {
+    "date": "2025-10 (Reuters 2025-10-15: 'approaching $7 billion this month'; CEO statement 2025-10-21: '$7B run rate')",
+    "run_rate_usd_m": 7000,
+    "basis": "Company-stated annualized run rate (company told Reuters it was 'approaching' $7B; then stated $7B publicly). Gross/net of cloud-partner resale not stated.",
+    "stated_by": "Anthropic - told Reuters (2025-10-15) and Dario Amodei's public statement (2025-10-21)",
+    "notes": "Reuters also reported, from two sources, an internal goal of $9B run rate by end-2025 and 2026 targets of $20B base / $26B best case - projections, not actuals. Earlier company marker: over $5B in August 2025 (Series F post). The CEO statement frames growth as $1B to $7B over the last nine months."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/news/exclusive-anthropic-aims-nearly-triple-170234463.html",
+     "publisher": "Reuters (via Yahoo Finance)",
+     "title": "Exclusive-Anthropic aims to nearly triple annualized revenue in 2026, sources say",
+     "published": "2025-10-15",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic told Reuters its annual revenue run rate is approaching $7 billion this month"
+    },
+    {
+     "url": "https://www.anthropic.com/news/statement-dario-amodei-american-ai-leadership",
+     "publisher": "Anthropic",
+     "title": "A statement from Dario Amodei on Anthropic's commitment to American AI leadership",
+     "published": "2025-10-21",
+     "tier": "T1",
+     "opened": true,
+     "supports": "revenue growing from a $1B to $7B run rate over the last nine months"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $13B Series F at $183B post-money valuation",
+     "published": "2025-09-02",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company: run-rate revenue approximately $1 billion at beginning of 2025; over $5 billion by August 2025"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-RUN-189efe",
+   "found": {
+    "date": "2024-12 (company wording: 'at the beginning of 2025'; Reuters sources: 'December 2024')",
+    "run_rate_usd_m": 1000,
+    "basis": "Annualized run rate, approximate: 'approximately $1 billion' (company) / 'nearly $1 billion' (Reuters sources). Gross/net of cloud-partner resale not stated.",
+    "stated_by": "Anthropic (Series F post, 2025-09-02); Reuters two-source report (2025-05-30); CEO statement 2025-10-21 uses $1B as the base nine months earlier",
+    "notes": "CNBC 2025-01-22 (not opened; per Epoch index) reported revenue hit an annualized $1B in December 2024, and The Information (2025-03-11 headline-level) says $1B at end of prior year. Start of 2024 was $87M (company, 2025-09-26), so roughly 10x+ growth through 2024."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $13B Series F at $183B post-money valuation",
+     "published": "2025-09-02",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company: run-rate revenue approximately $1 billion at beginning of 2025; over $5 billion by August 2025"
+    },
+    {
+     "url": "https://finance.yahoo.com/news/exclusive-anthropic-hits-3-billion-200202733.html",
+     "publisher": "Reuters (via Yahoo Finance)",
+     "title": "Anthropic hits $3 billion in annualized revenue on business demand for AI",
+     "published": "2025-05-30",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Two sources: run rate nearly $1B in Dec 2024, crossed $2B around end of March, $3B at May's end"
+    },
+    {
+     "url": "https://www.anthropic.com/news/statement-dario-amodei-american-ai-leadership",
+     "publisher": "Anthropic",
+     "title": "A statement from Dario Amodei on Anthropic's commitment to American AI leadership",
+     "published": "2025-10-21",
+     "tier": "T1",
+     "opened": true,
+     "supports": "revenue growing from a $1B to $7B run rate over the last nine months"
+    },
+    {
+     "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth",
+     "publisher": "VentureBeat",
+     "title": "Anthropic says it hit a $30 billion revenue run rate after 'crazy' 80x growth",
+     "published": "2026-05-08",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Lists run-rate points: $87M (Jan 2024), $1B (Dec 2024), $9B, $14B, $19B, $30B; OpenAI disputes gross counting"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-RUN-b1fead",
+   "found": {
+    "date": "2023-09 (approximate: The Information reported on 2023-10-03 that Anthropic 'has been generating' this rate; its 2023-12-26 article dates it 'just three months ago')",
+    "run_rate_usd_m": 100,
+    "basis": "Annualized run-rate revenue that Anthropic told some investors; outlet-reported, single origin (The Information); not recognized revenue; gross/net of cloud-partner resale not stated.",
+    "stated_by": "Anthropic, to investors, as reported by The Information (2023-10-03 and 2023-12-26; Reuters re-reported the December piece)",
+    "notes": "Same reports: expected about $200M annualized by end-2023 (Oct 2023 piece, per Epoch index) and $500M by end-2024, then raised to more than $850M by end-2024 (2023-12-26) - projections, not actuals. The Information pages are paywalled; the quote is via TipRanks/The Fly and the Epoch index. CONFLICT FLAG: Anthropic's own later statement puts run-rate at $87M at the start of 2024, below this $100M (and far below the $200M year-end target)."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.tipranks.com/news/the-fly/anthropic-sees-850m-in-annualized-revenue-by-2024-end-the-information-says",
+     "publisher": "TipRanks / The Fly (summarizing The Information)",
+     "title": "Anthropic sees $850M in annualized revenue by 2024-end, The Information says",
+     "published": "2023-12-26",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Three months earlier Anthropic told some investors it was generating revenue at a $100M annualized rate"
+    },
+    {
+     "url": "https://www.theinformation.com/articles/openai-rival-anthropic-in-talks-to-raise-2-billion-from-google-others-as-ai-arms-race-accelerates",
+     "publisher": "The Information",
+     "title": "Anthropic in Talks to Raise $2 Billion From Google and Others Just Days After Amazon Investment",
+     "published": "2023-10-03",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Paywalled; only headline/byline visible. Epoch index attributes $100M annualized (year-end target $200M) to this article"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+     "publisher": "Anthropic",
+     "title": "Anthropic Expands Global Leadership in Enterprise AI",
+     "published": "2025-09-26",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company: run-rate revenue grew from $87 million at the start of 2024 to over $5 billion in August 2025"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "~$100M annualized around Sep 2023, with ~$200M projected by end-2023 (The Information, investor pitch)",
+     "source_a": "https://www.tipranks.com/news/the-fly/anthropic-sees-850m-in-annualized-revenue-by-2024-end-the-information-says",
+     "value_b": "$87M run-rate at the start of 2024 (Anthropic company statement)",
+     "source_b": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+     "note": "Not necessarily contradictory (different definitions or an investor-deck peak vs a later company restatement), but the company's January 2024 number is lower than the reported September 2023 number and far below the $200M year-end target. Single-origin 2023 report; could not open the original."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-RUN-b2aea0",
+   "found": {
+    "date": "2024-01-01 ('at the start of 2024')",
+    "run_rate_usd_m": 87,
+    "basis": "Company-stated run-rate revenue (annualized); not recognized revenue; gross/net of cloud-partner resale not stated.",
+    "stated_by": "Anthropic (company post naming Chris Ciauri, 2025-09-26: 'from $87 million at the start of 2024 to over $5 billion in August 2025'); restated in VentureBeat's run-rate timeline (2026-05-08)",
+    "notes": "Outlet reports around the turn of the year were projections, not actuals: The Information (2023-12-26) said Anthropic projected more than $850M annualized by end-2024 (earlier $500M). No outlet-reported current run-rate for January 2024 was accessible (The Information 2024-01-22 gross-margin story is paywalled). See conflict with the ~$100M 'Sep 2023' figure."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+     "publisher": "Anthropic",
+     "title": "Anthropic Expands Global Leadership in Enterprise AI",
+     "published": "2025-09-26",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company: run-rate revenue grew from $87 million at the start of 2024 to over $5 billion in August 2025"
+    },
+    {
+     "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth",
+     "publisher": "VentureBeat",
+     "title": "Anthropic says it hit a $30 billion revenue run rate after 'crazy' 80x growth",
+     "published": "2026-05-08",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Lists run-rate points: $87M (Jan 2024), $1B (Dec 2024), $9B, $14B, $19B, $30B; OpenAI disputes gross counting"
+    },
+    {
+     "url": "https://www.tipranks.com/news/the-fly/anthropic-sees-850m-in-annualized-revenue-by-2024-end-the-information-says",
+     "publisher": "TipRanks / The Fly (summarizing The Information)",
+     "title": "Anthropic sees $850M in annualized revenue by 2024-end, The Information says",
+     "published": "2023-12-26",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Three months earlier Anthropic told some investors it was generating revenue at a $100M annualized rate"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$87M at the start of 2024 (company)",
+     "source_a": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+     "value_b": "~$100M annualized around Sep 2023 with ~$200M projected for end-2023 (The Information)",
+     "source_b": "https://www.tipranks.com/news/the-fly/anthropic-sees-850m-in-annualized-revenue-by-2024-end-the-information-says",
+     "note": "Company figure is lower than the earlier press-reported figure; flagged, not reconciled. The company statement is the only first-party data point for early 2024."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-RUN-df68e2",
+   "found": {
+    "date": [
+     "2025-03 (early March, 'as of earlier this month', reported 2025-03-11)",
+     "2025-03 (end of March / Q1 2025; disclosed 2025-05-16)"
+    ],
+    "run_rate_usd_m": [
+     1400,
+     2000
+    ],
+    "basis": "Annualized run rate (not recognized revenue). $1.4B is outlet-reported (The Information). $2B is company-disclosed ('annualized revenue topped $2 billion in the first quarter', reported by SiliconANGLE/CNBC 2025-05-16) and matched by Reuters sources ('crossed $2 billion around the end of March'). Gross/net not stated.",
+    "stated_by": "The Information (2025-03-11; headline-level access only); Anthropic (disclosure with its $2.5B credit facility, 2025-05-16); Reuters two sources (2025-05-30)",
+    "notes": "Both figures are consistent with a rapidly rising run rate: about $1.4B in early March and about $2B by end-March. The company's own 'more than $2B in Q1' is the authoritative end-of-quarter figure; CNBC's 2025-05-16 page was not opened (403)."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+     "publisher": "SiliconANGLE",
+     "title": "Anthropic raises $2.5B in debt to finance growth investments",
+     "published": "2025-05-16",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic disclosed today that its annualized revenue topped $2 billion in the first quarter"
+    },
+    {
+     "url": "https://finance.yahoo.com/news/exclusive-anthropic-hits-3-billion-200202733.html",
+     "publisher": "Reuters (via Yahoo Finance)",
+     "title": "Anthropic hits $3 billion in annualized revenue on business demand for AI",
+     "published": "2025-05-30",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Two sources: run rate nearly $1B in Dec 2024, crossed $2B around end of March, $3B at May's end"
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropics-claude-drives-strong-revenue-growth-while-powering-manus-sensation",
+     "publisher": "The Information",
+     "title": "Anthropic's Claude Drives Strong Revenue Growth While Powering 'Manus' Sensation",
+     "published": "2025-03-11",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Paywalled teaser: annualized revenue $1.4B versus $1B at end of prior year (page text mostly hidden)"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-RUN-a56a47",
+   "found": {
+    "date": "2025-05-30 ('at May's end')",
+    "run_rate_usd_m": 3000,
+    "basis": "Outlet-reported annualized run rate from two unnamed sources (Reuters); not a company statement; not recognized revenue; gross/net not stated.",
+    "stated_by": "Reuters (Anna Tong, Jeffrey Dastin; two sources familiar with the matter), 2025-05-30; carried by CNBC and Yahoo Finance",
+    "notes": "Same report: nearly $1B in December 2024 and crossed $2B around end-March 2025. Earlier in May (2025-05-16) the company itself disclosed annualized revenue had topped $2B in Q1. Single-origin for the $3B (CNBC/Yahoo are the same Reuters story); consistent with the company's later trajectory (over $5B by August 2025)."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/news/exclusive-anthropic-hits-3-billion-200202733.html",
+     "publisher": "Reuters (via Yahoo Finance)",
+     "title": "Anthropic hits $3 billion in annualized revenue on business demand for AI",
+     "published": "2025-05-30",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Two sources: run rate nearly $1B in Dec 2024, crossed $2B around end of March, $3B at May's end"
+    },
+    {
+     "url": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+     "publisher": "SiliconANGLE",
+     "title": "Anthropic raises $2.5B in debt to finance growth investments",
+     "published": "2025-05-16",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic disclosed today that its annualized revenue topped $2 billion in the first quarter"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $13B Series F at $183B post-money valuation",
+     "published": "2025-09-02",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company: run-rate revenue approximately $1 billion at beginning of 2025; over $5 billion by August 2025"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-RUN-e4290a",
+   "found": {
+    "date": [
+     "2025-07-01 (The Information, 'annual pace')",
+     "2025-07-29 (Bloomberg: 'by end of July'); company: 'August 2025'"
+    ],
+    "run_rate_usd_m": [
+     4000,
+     5000
+    ],
+    "basis": "Annualized run rate. $4B: outlet-reported pace (The Information; about $333M a month per Epoch index; body paywalled). $5B: Bloomberg 'recurring revenue about $5 billion by end of July' (not opened) and Anthropic's own statement that run-rate 'reached over $5 billion' by August 2025. Gross/net not stated.",
+    "stated_by": "The Information (2025-07-01); Bloomberg (2025-07-29, via Epoch index); Anthropic (Series F post 2025-09-02 and 2025-09-26 post: over $5B in August 2025)",
+    "notes": "Brad Gerstner (via SaaStr) also cites $4B in mid-2025. Reuters 2025-10-15 repeats that the company 'said its run rate was more than $5 billion in August'. The $4B and $5B are consistent (rising through the month), not contradictory."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $13B Series F at $183B post-money valuation",
+     "published": "2025-09-02",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company: run-rate revenue approximately $1 billion at beginning of 2025; over $5 billion by August 2025"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+     "publisher": "Anthropic",
+     "title": "Anthropic Expands Global Leadership in Enterprise AI",
+     "published": "2025-09-26",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company: run-rate revenue grew from $87 million at the start of 2024 to over $5 billion in August 2025"
+    },
+    {
+     "url": "https://finance.yahoo.com/news/exclusive-anthropic-aims-nearly-triple-170234463.html",
+     "publisher": "Reuters (via Yahoo Finance)",
+     "title": "Exclusive-Anthropic aims to nearly triple annualized revenue in 2026, sources say",
+     "published": "2025-10-15",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic told Reuters its annual revenue run rate is approaching $7 billion this month"
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-revenue-hits-4-billion-annual-pace-competition-cursor-intensifies",
+     "publisher": "The Information",
+     "title": "Anthropic Revenue Hits $4 Billion Annual Pace as Competition With Cursor Intensifies",
+     "published": "2025-07-01",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Headline: Anthropic revenue hits $4 billion annual pace (body paywalled)"
+    },
+    {
+     "url": "https://www.saastr.com/anthropic-only-has-5000-employees-almost-no-one-has-ever-been-this-efficient-thats-by-choice/",
+     "publisher": "SaaStr",
+     "title": "Anthropic Only Has ~5,000 Employees. Almost No One Has Ever Been This Efficient. That's By Choice.",
+     "published": "2026-04-14",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Per Brad Gerstner: $1B annualized end-2024, $4B mid-2025, $9B end-2025, $30B end-March 2026"
+    },
+    {
+     "url": "https://www.bloomberg.com/news/articles/2025-07-29/anthropic-nears-deal-to-raise-funding-at-170-billion-valuation",
+     "publisher": "Bloomberg",
+     "title": "Anthropic nears deal to raise funding at $170 billion valuation",
+     "published": "2025-07-29",
+     "tier": "T2",
+     "opened": false,
+     "supports": "Not opened (403/paywall); Epoch index says recurring revenue climbed to about $5B by end of July 2025"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-RUN-2c99b0",
+   "found": {
+    "date": "2026-03-03",
+    "run_rate_usd_m": 19000,
+    "basis": "Annualized run rate ('topped $19 billion'; Bloomberg headline 'nears $20 billion'); reported figure, not a formal company release; not recognized revenue; gross/net not stated (Anthropic counts reseller sales gross per Axios).",
+    "stated_by": "Bloomberg (2026-03-03; PYMNTS relays it as unnamed sources); The Information chart (2026-03-05) also shows $19B; Ed Zitron attributes the claim to CEO Dario Amodei; VentureBeat's run-rate timeline (2026-05-08) also lists $19B for March 2026",
+    "notes": "Up from $14B on 2026-02-12 (company) and about $9B at end-2025. The Information later described the $30B of 2026-04-06 as up from $19B 'about a month ago'. Bloomberg page returned 403 (not opened). Whether the figure came from sources or from the CEO could not be settled."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.pymnts.com/artificial-intelligence-2/2026/enterprises-drive-anthropic-run-rate-revenue-to-19-billion/",
+     "publisher": "PYMNTS.com",
+     "title": "Enterprises Drive Anthropic Run-Rate Revenue to $19 Billion",
+     "published": "2026-03-04",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Relaying Bloomberg (unnamed sources, 2026-03-03): run-rate topped $19 billion vs $9 billion ~three months earlier"
+    },
+    {
+     "url": "https://officechai.com/ai/openais-annual-revenue-run-rate-at-25-billion-anthropic-not-far-behind-at-19-billion-the-information-report/",
+     "publisher": "OfficeChai",
+     "title": "OpenAI's Annual Revenue Run Rate At $25 Billion, Anthropic Not Far Behind At $19 Billion: The Information Report",
+     "published": "2026-03-05",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Attributes Anthropic $19 billion and OpenAI $25 billion run rates to a chart from The Information"
+    },
+    {
+     "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth",
+     "publisher": "VentureBeat",
+     "title": "Anthropic says it hit a $30 billion revenue run rate after 'crazy' 80x growth",
+     "published": "2026-05-08",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Lists run-rate points: $87M (Jan 2024), $1B (Dec 2024), $9B, $14B, $19B, $30B; OpenAI disputes gross counting"
+    },
+    {
+     "url": "https://www.wheresyoured.at/anthropics-profitability-swindle/",
+     "publisher": "Ed Zitron's Where's Your Ed At",
+     "title": "Anthropic's \"Profitability\" Swindle",
+     "published": "2026-05-21",
+     "tier": "T4",
+     "opened": true,
+     "supports": "States Dario Amodei would claim Anthropic had reached $19bn ARR on March 3, 2026"
+    },
+    {
+     "url": "https://www.bloomberg.com/news/articles/2026-03-03/anthropic-nears-20-billion-revenue-run-rate-amid-pentagon-feud",
+     "publisher": "Bloomberg",
+     "title": "Anthropic Nears $20 Billion Revenue Run Rate Amid Pentagon Feud",
+     "published": "2026-03-03",
+     "tier": "T2",
+     "opened": false,
+     "supports": "Not opened (HTTP 403); headline and PYMNTS relay: run-rate revenue topped $19 billion"
+    },
+    {
+     "url": "https://www.theinformation.com/newsletters/dealmaker/anthropic-hit-100-billion-annualized-revenue-year",
+     "publisher": "The Information",
+     "title": "How Anthropic Could Hit $100 Billion in Annualized Revenue This Year",
+     "published": "2026-04-07",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Bing snippet only (paywalled): said Monday it is generating more than $30 billion, up from $19 billion about a month ago"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "Bloomberg unnamed sources (per PYMNTS)",
+     "source_a": "https://www.pymnts.com/artificial-intelligence-2/2026/enterprises-drive-anthropic-run-rate-revenue-to-19-billion/",
+     "value_b": "CEO Dario Amodei 'would claim' $19B ARR on March 3 (per Ed Zitron)",
+     "source_b": "https://www.wheresyoured.at/anthropics-profitability-swindle/",
+     "note": "Attribution disagreement only; the $19B number itself is consistent across Bloomberg, The Information and VentureBeat's later run-rate timeline."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PER-e92fe0",
+   "found": {
+    "usd_m": null,
+    "kind": "no FY2022 figure reported; a company statement implies zero recognized revenue in 2022 (first revenue earned after Feb 2023) - inference, not a reported number",
+    "basis": "Not applicable - the statement implies no revenue was earned in 2022, so gross/net of cloud-partner resale is moot.",
+    "reported_by": "Anthropic, implicitly: Series G post (2026-02-12) says 'less than three years since Anthropic earned its first dollar in revenue', i.e. first revenue after Feb 2023",
+    "notes": "Inference only (Feb 2026 minus 3 years = Feb 2023). The CFO's sworn declaration (2026-03-09) refers only to revenue 'since entering the commercial market'. No outlet, prospectus coverage or investor document I could open reports a FY2022 number; any third-party estimate would be unsourced. Treat as 'implied zero / not reported', not as a confirmed reported figure."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+     "publisher": "Anthropic",
+     "title": "Anthropic raises $30 billion in Series G funding at $380 billion post-money valuation",
+     "published": "2026-02-12",
+     "tier": "T1",
+     "opened": true,
+     "supports": "It has been less than three years since Anthropic earned its first dollar in revenue"
+    },
+    {
+     "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.6.5.pdf",
+     "publisher": "U.S. District Court N.D. Cal. (CourtListener)",
+     "title": "Declaration of Krishna Rao (CFO), Anthropic PBC v. U.S. Department of War, No. 3:26-cv-01996, Doc. 6-5",
+     "published": "2026-03-09",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Sworn CFO declaration: revenue since entering the commercial market exceeding $5 billion to date"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PER-620695",
+   "found": {
+    "usd_m": null,
+    "kind": "not found - no recognized FY2023 revenue figure from the company, a prospectus or investor documents located",
+    "basis": "Not determinable. Anthropic's practice (per Axios/Sacra) is gross recognition of cloud-partner sales, but no FY2023 number exists in what I could open.",
+    "reported_by": "none located",
+    "notes": "Indirect anchors only (not revenue): run-rate of about $100M annualized around Sep 2023 (The Information, single origin) and $87M at the start of 2024 (company). Consistency check: CFO's sworn declaration (2026-03-09) says revenue 'exceeding $5 billion to date' since entering the commercial market; FY2024 (~$0.38B) + FY2025 (~$4.59B) already gives ~$4.97B, which points to a small FY2023 (order of tens to low hundreds of $M) if that 'to date' ran through end-2025 - an inference, not a figure. The S-1 coverage I could open compares only 2024 with 2025."
+   },
+   "verdict_hint": "UNTRACEABLE",
+   "sources": [
+    {
+     "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.6.5.pdf",
+     "publisher": "U.S. District Court N.D. Cal. (CourtListener)",
+     "title": "Declaration of Krishna Rao (CFO), Anthropic PBC v. U.S. Department of War, No. 3:26-cv-01996, Doc. 6-5",
+     "published": "2026-03-09",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Sworn CFO declaration: revenue since entering the commercial market exceeding $5 billion to date"
+    },
+    {
+     "url": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+     "publisher": "Anthropic",
+     "title": "Anthropic Expands Global Leadership in Enterprise AI",
+     "published": "2025-09-26",
+     "tier": "T1",
+     "opened": true,
+     "supports": "Company: run-rate revenue grew from $87 million at the start of 2024 to over $5 billion in August 2025"
+    },
+    {
+     "url": "https://www.tipranks.com/news/the-fly/anthropic-sees-850m-in-annualized-revenue-by-2024-end-the-information-says",
+     "publisher": "TipRanks / The Fly (summarizing The Information)",
+     "title": "Anthropic sees $850M in annualized revenue by 2024-end, The Information says",
+     "published": "2023-12-26",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Three months earlier Anthropic told some investors it was generating revenue at a $100M annualized rate"
+    },
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE",
+     "title": "Leaked Anthropic IPO filing reveals $8B operating loss, rapid revenue growth",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic's revenue ballooned from $400 million in 2024 to $4.6 billion last year"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PER-f71902",
+   "found": {
+    "usd_m": 386,
+    "kind": "recognized full-year revenue (draft S-1 coverage / investor documents); not run-rate",
+    "basis": "Basis: gross of cloud-partner resale as reported - Anthropic books the full end-customer value of sales through AWS/Google/Microsoft and records the cloud provider's cut as an expense (Axios 2026-09-03; Sacra; SaaStr). OpenAI disputes this treatment, and OfficeChai notes the prospectus coverage does not itself spell out the method (both approaches are permitted under US accounting rules). About 47% (~$2.16B) of 2025 revenue came through Amazon and Google cloud marketplaces. Unaudited in public view.",
+    "reported_by": "Draft S-1 coverage (Reuters/FT, 2026-09-28/29): FY2025 $4.59B, up 1,088% (CryptoSlate) or roughly 12x (Reuters), which implies FY2024 of about $386M - Bitcoin.com News states 'about $386 million in 2024'. Earlier, The Information (2026-01-21/22, investor documents) had $381M (per Epoch index; page paywalled). SiliconANGLE and 24/7 Wall St. round FY2024 to about $400M.",
+    "notes": "All FY2024 figures seen: ~$386M (S-1-era, implied by +1,088% and stated by Bitcoin.com News), $381M (The Information via Epoch), ~$383M (implied by a flat 12x of $4.59B), ~$400M (rounded by SiliconANGLE / 24/7 Wall St.). FY2024 operating loss was about $2.98B (Pulse 2.0 / Bitcoin.com). If the draft carries a run-rate instead: $87M at the start of 2024 and about $1B at the end of 2024 (company). Duplicate question; answered identically for both claim ids. Provenance: figures come from a confidential draft S-1 obtained and reviewed by Reuters on 2026-09-28 (per a Tech Times snippet) and reviewed by the Financial Times (described by most outlets as leaked, by the Motley Fool as previewed by Anthropic); Anthropic's only official statement is the 2026-06-01 Rule 135 notice that a draft S-1 was confidentially submitted. Not audited/public. Reuters, FT, WSJ, Bloomberg and CNBC pages were not openable, so figures are read from outlets relaying them."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://news.bitcoin.com/finance/anthropic-chases-2-trillion-ipo-42-billion-loss/",
+     "publisher": "Bitcoin.com News (Shiraz Jagati)",
+     "title": "Anthropic Chases $2 Trillion IPO Even After a $42 Billion Loss",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue rose from about $386 million in 2024 to $4.59 billion in 2025, roughly a 12x jump"
+    },
+    {
+     "url": "https://cryptoslate.com/anthropic-lost-42-billion-warned-ai-could-resist-shutdowns-but-traders-still-price-it-at-2-trillion/",
+     "publisher": "CryptoSlate (Oluwapelumi Adejumo)",
+     "title": "Anthropic lost $42 billion, warned AI could resist shutdowns, but traders still price it at $2 trillion",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic's revenue jumped 1,088% in 2025 to $4.59 billion"
+    },
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE",
+     "title": "Leaked Anthropic IPO filing reveals $8B operating loss, rapid revenue growth",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic's revenue ballooned from $400 million in 2024 to $4.6 billion last year"
+    },
+    {
+     "url": "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/",
+     "publisher": "24/7 Wall St.",
+     "title": "Anthropic's Prospectus Shows a Giant Loss and an Even Bigger Ask",
+     "published": "2026-09-30",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue $4.6B in 2025, about 12x the roughly $400M booked in 2024; $4.73B in Q1 2026 and $11.5B in Q2"
+    },
+    {
+     "url": "https://www.eenewseurope.com/en/anthropic-ipo-518-billion-infrastructure-commitments/",
+     "publisher": "eeNews Europe",
+     "title": "Anthropic IPO reveals $518bn in infrastructure commitments",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic generated nearly $4.6 billion in revenue in 2025, approximately 12 times its 2024 figure"
+    },
+    {
+     "url": "https://pulse2.com/anthropic-ipo-could-value-ai-company-above-2-trillion-as-costs-surge/",
+     "publisher": "Pulse 2.0",
+     "title": "Anthropic: IPO Could Value AI Company Above $2 Trillion As Costs Surge",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Nearly $4.6B revenue in 2025, about 12-fold growth; operating loss $8.06B in 2025 vs $2.98B in 2024"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios (via Yahoo Finance)",
+     "title": "Anthropic and OpenAI's revenue chasm, explained",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic records the full value of Claude sales through partners, then records cloud providers' cuts as expenses"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-lowers-profit-margin-projection-revenue-skyrockets",
+     "publisher": "The Information",
+     "title": "Anthropic Lowers Gross Margin Projection as Revenue Skyrockets",
+     "published": "2026-01-21",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Paywalled (headline and byline only). Epoch index cites it for 2024 revenue of $381 million and 2025 near 12x that"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$381M (The Information, 2026-01, investor documents)",
+     "source_a": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "value_b": "~$386M (S-1-era: +1,088% growth / Bitcoin.com News); ~$400M rounded",
+     "source_b": "https://news.bitcoin.com/finance/anthropic-chases-2-trillion-ipo-42-billion-loss/",
+     "note": "Differences of about 1% to 5%; the S-1-era figure is newer and tied to the prospectus, the $381M is an earlier investor-document figure. Not a real disagreement, but the exact value differs by source."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PER-2af222",
+   "found": {
+    "usd_m": 386,
+    "kind": "recognized full-year revenue (draft S-1 coverage / investor documents); not run-rate",
+    "basis": "Basis: gross of cloud-partner resale as reported - Anthropic books the full end-customer value of sales through AWS/Google/Microsoft and records the cloud provider's cut as an expense (Axios 2026-09-03; Sacra; SaaStr). OpenAI disputes this treatment, and OfficeChai notes the prospectus coverage does not itself spell out the method (both approaches are permitted under US accounting rules). About 47% (~$2.16B) of 2025 revenue came through Amazon and Google cloud marketplaces. Unaudited in public view.",
+    "reported_by": "Draft S-1 coverage (Reuters/FT, 2026-09-28/29): FY2025 $4.59B, up 1,088% (CryptoSlate) or roughly 12x (Reuters), which implies FY2024 of about $386M - Bitcoin.com News states 'about $386 million in 2024'. Earlier, The Information (2026-01-21/22, investor documents) had $381M (per Epoch index; page paywalled). SiliconANGLE and 24/7 Wall St. round FY2024 to about $400M.",
+    "notes": "All FY2024 figures seen: ~$386M (S-1-era, implied by +1,088% and stated by Bitcoin.com News), $381M (The Information via Epoch), ~$383M (implied by a flat 12x of $4.59B), ~$400M (rounded by SiliconANGLE / 24/7 Wall St.). FY2024 operating loss was about $2.98B (Pulse 2.0 / Bitcoin.com). If the draft carries a run-rate instead: $87M at the start of 2024 and about $1B at the end of 2024 (company). Duplicate question; answered identically for both claim ids. Provenance: figures come from a confidential draft S-1 obtained and reviewed by Reuters on 2026-09-28 (per a Tech Times snippet) and reviewed by the Financial Times (described by most outlets as leaked, by the Motley Fool as previewed by Anthropic); Anthropic's only official statement is the 2026-06-01 Rule 135 notice that a draft S-1 was confidentially submitted. Not audited/public. Reuters, FT, WSJ, Bloomberg and CNBC pages were not openable, so figures are read from outlets relaying them."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://news.bitcoin.com/finance/anthropic-chases-2-trillion-ipo-42-billion-loss/",
+     "publisher": "Bitcoin.com News (Shiraz Jagati)",
+     "title": "Anthropic Chases $2 Trillion IPO Even After a $42 Billion Loss",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue rose from about $386 million in 2024 to $4.59 billion in 2025, roughly a 12x jump"
+    },
+    {
+     "url": "https://cryptoslate.com/anthropic-lost-42-billion-warned-ai-could-resist-shutdowns-but-traders-still-price-it-at-2-trillion/",
+     "publisher": "CryptoSlate (Oluwapelumi Adejumo)",
+     "title": "Anthropic lost $42 billion, warned AI could resist shutdowns, but traders still price it at $2 trillion",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic's revenue jumped 1,088% in 2025 to $4.59 billion"
+    },
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE",
+     "title": "Leaked Anthropic IPO filing reveals $8B operating loss, rapid revenue growth",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic's revenue ballooned from $400 million in 2024 to $4.6 billion last year"
+    },
+    {
+     "url": "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/",
+     "publisher": "24/7 Wall St.",
+     "title": "Anthropic's Prospectus Shows a Giant Loss and an Even Bigger Ask",
+     "published": "2026-09-30",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue $4.6B in 2025, about 12x the roughly $400M booked in 2024; $4.73B in Q1 2026 and $11.5B in Q2"
+    },
+    {
+     "url": "https://www.eenewseurope.com/en/anthropic-ipo-518-billion-infrastructure-commitments/",
+     "publisher": "eeNews Europe",
+     "title": "Anthropic IPO reveals $518bn in infrastructure commitments",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic generated nearly $4.6 billion in revenue in 2025, approximately 12 times its 2024 figure"
+    },
+    {
+     "url": "https://pulse2.com/anthropic-ipo-could-value-ai-company-above-2-trillion-as-costs-surge/",
+     "publisher": "Pulse 2.0",
+     "title": "Anthropic: IPO Could Value AI Company Above $2 Trillion As Costs Surge",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Nearly $4.6B revenue in 2025, about 12-fold growth; operating loss $8.06B in 2025 vs $2.98B in 2024"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios (via Yahoo Finance)",
+     "title": "Anthropic and OpenAI's revenue chasm, explained",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic records the full value of Claude sales through partners, then records cloud providers' cuts as expenses"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-lowers-profit-margin-projection-revenue-skyrockets",
+     "publisher": "The Information",
+     "title": "Anthropic Lowers Gross Margin Projection as Revenue Skyrockets",
+     "published": "2026-01-21",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Paywalled (headline and byline only). Epoch index cites it for 2024 revenue of $381 million and 2025 near 12x that"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$381M (The Information, 2026-01, investor documents)",
+     "source_a": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "value_b": "~$386M (S-1-era: +1,088% growth / Bitcoin.com News); ~$400M rounded",
+     "source_b": "https://news.bitcoin.com/finance/anthropic-chases-2-trillion-ipo-42-billion-loss/",
+     "note": "Differences of about 1% to 5%; the S-1-era figure is newer and tied to the prospectus, the $381M is an earlier investor-document figure. Not a real disagreement, but the exact value differs by source."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PER-b31930",
+   "found": {
+    "usd_m": 4590,
+    "kind": "recognized full-year FY2025 revenue per the draft S-1 ('nearly $4.6 billion'; $3.8B usage-based + $789M subscription); earlier preliminary figure from investor documents was $4.5B",
+    "basis": "Basis: gross of cloud-partner resale as reported - Anthropic books the full end-customer value of sales through AWS/Google/Microsoft and records the cloud provider's cut as an expense (Axios 2026-09-03; Sacra; SaaStr). OpenAI disputes this treatment, and OfficeChai notes the prospectus coverage does not itself spell out the method (both approaches are permitted under US accounting rules). About 47% (~$2.16B) of 2025 revenue came through Amazon and Google cloud marketplaces.",
+    "reported_by": "Draft S-1 reviewed by Reuters and FT (reported 2026-09-28/29; relayed by TechCrunch, SiliconANGLE, Quartz, Benzinga, Motley Fool, Pulse 2.0, eeNews). Earlier: The Information (2026-01-27, investor documents) $4.5B, per Epoch index.",
+    "notes": "Near-exact: $3.8B usage + $0.789B subscription = about $4.59B (Economic Times snippet also says $4.59B; page not opened). About 12x FY2024 (~$381-386M). Two customers were ~25% of 2025 revenue (12% each). Net loss ~$42B (about $34B non-cash charge on financing instruments); operating loss $8.06B. Wikipedia infobox shows $4.5B (stale preliminary). Duplicate question; answered identically for both claim ids. Provenance: figures come from a confidential draft S-1 obtained and reviewed by Reuters on 2026-09-28 (per a Tech Times snippet) and reviewed by the Financial Times (described by most outlets as leaked, by the Motley Fool as previewed by Anthropic); Anthropic's only official statement is the 2026-06-01 Rule 135 notice that a draft S-1 was confidentially submitted. Not audited/public. Reuters, FT, WSJ, Bloomberg and CNBC pages were not openable, so figures are read from outlets relaying them."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html",
+     "publisher": "Quartz (via Yahoo Finance), relaying Reuters and FT",
+     "title": "Anthropic IPO prospectus: 2025 revenue, losses, and $518B spending plan",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Reuters: revenue of nearly $4.6 billion in 2025, a twelvefold increase; FT: Q2 revenue $11.5 billion"
+    },
+    {
+     "url": "https://cryptoslate.com/anthropic-lost-42-billion-warned-ai-could-resist-shutdowns-but-traders-still-price-it-at-2-trillion/",
+     "publisher": "CryptoSlate (Oluwapelumi Adejumo)",
+     "title": "Anthropic lost $42 billion, warned AI could resist shutdowns, but traders still price it at $2 trillion",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic's revenue jumped 1,088% in 2025 to $4.59 billion"
+    },
+    {
+     "url": "https://news.bitcoin.com/finance/anthropic-chases-2-trillion-ipo-42-billion-loss/",
+     "publisher": "Bitcoin.com News (Shiraz Jagati)",
+     "title": "Anthropic Chases $2 Trillion IPO Even After a $42 Billion Loss",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue rose from about $386 million in 2024 to $4.59 billion in 2025, roughly a 12x jump"
+    },
+    {
+     "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+     "publisher": "TechCrunch",
+     "title": "Anthropic's prospectus details losses, growth, and yes, a warning that its AI could end humanity",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue jumped twelvefold to nearly $4.6 billion (Reuters); second-quarter revenue reached $11.5 billion (FT)"
+    },
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE",
+     "title": "Leaked Anthropic IPO filing reveals $8B operating loss, rapid revenue growth",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic's revenue ballooned from $400 million in 2024 to $4.6 billion last year"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-filing-reveals-major-121817226.html",
+     "publisher": "Benzinga (via Yahoo Finance)",
+     "title": "Anthropic IPO Filing Reveals a Major Vulnerability: Nearly 50% of Sales Flow Through Amazon and Google as Revenue Concentration Raises Risks: Report",
+     "published": "2026-09-30",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Usage-based revenue $3.8B plus subscription $789M; cloud marketplace sales about $2.16B, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://www.fool.com/investing/2026/09/29/anthropic-reportedly-generated-usd4-6-billion-in-revenue-and-lost-usd42-billion-in-2025-will-this-impact-its-targeted-usd2-trillion-valuation/",
+     "publisher": "The Motley Fool",
+     "title": "Anthropic Reportedly Generated $4.6 Billion in Revenue and Lost $42 Billion in 2025. Will This Impact Its Targeted $2 Trillion Valuation?",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Gross margins of 80% before accounting for revenue shared with distribution partners; 2025 revenue $4.6B"
+    },
+    {
+     "url": "https://pulse2.com/anthropic-ipo-could-value-ai-company-above-2-trillion-as-costs-surge/",
+     "publisher": "Pulse 2.0",
+     "title": "Anthropic: IPO Could Value AI Company Above $2 Trillion As Costs Surge",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Nearly $4.6B revenue in 2025, about 12-fold growth; operating loss $8.06B in 2025 vs $2.98B in 2024"
+    },
+    {
+     "url": "https://officechai.com/ai/anthropics-revenue-was-4-6-billion-in-2025-with-a-loss-of-42-billion-its-ipo-prospectus-says/",
+     "publisher": "OfficeChai",
+     "title": "Anthropic's Revenue Was $4.6 Billion In 2025 With A Loss Of $42 Billion, Its IPO Prospectus Says",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6B; OpenAI says Anthropic books cloud-partner revenue gross; prospectus coverage does not clarify the method"
+    },
+    {
+     "url": "https://officechai.com/ai/just-2-customers-accounted-for-25-of-anthropics-revenue-its-ipo-prospectus-says/",
+     "publisher": "OfficeChai",
+     "title": "Just 2 Customers Accounted For 25% Of Anthropic's Revenue, Its IPO Prospectus Says",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Nearly a quarter of 2025 revenue (~$4.6B) came from two customers, ~12% each; gross booking of cloud-partner revenue is a rival accusation"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios (via Yahoo Finance)",
+     "title": "Anthropic and OpenAI's revenue chasm, explained",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic records the full value of Claude sales through partners, then records cloud providers' cuts as expenses"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Anthropic",
+     "publisher": "Wikipedia",
+     "title": "Anthropic",
+     "published": "2026-09-30",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Infobox lists revenue US$4.5 billion (2025) and 2,500 employees (2026), the latter citing SF Chronicle 2026-01-30"
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-hikes-2026-revenue-forecast-20-delays-will-go-cash-flow-positive",
+     "publisher": "The Information",
+     "title": "Anthropic Hikes 2026 Revenue Forecast 20% but Delays When It Will Go Cash Flow Positive",
+     "published": "2026-01-27",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Paywalled. Epoch index cites it for $4.5B of 2025 revenue; Bing snippet shows 2026 forecast of up to $18B"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$4.5B FY2025 revenue (The Information, Jan 2026 investor documents; Wikipedia infobox)",
+     "source_a": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "value_b": "~$4.59B / 'nearly $4.6B' (draft S-1 via Reuters)",
+     "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html",
+     "note": "Earlier preliminary vs later S-1 figure (about 2%); prefer the S-1-derived $4.59B."
+    },
+    {
+     "value_a": "'roughly $10 billion in actual revenue during 2025' (IBTimes 2026-08-17)",
+     "source_a": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
+     "value_b": "~$4.59B recognized FY2025 revenue (draft S-1)",
+     "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html",
+     "note": "IBTimes appears to mislabel the ~$9-10B exit run-rate as actual revenue; company run-rate at end-2025 was about $9B. Flagged, not adopted."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PER-87d017",
+   "found": {
+    "usd_m": 4590,
+    "kind": "recognized full-year FY2025 revenue per the draft S-1 ('nearly $4.6 billion'; $3.8B usage-based + $789M subscription); earlier preliminary figure from investor documents was $4.5B",
+    "basis": "Basis: gross of cloud-partner resale as reported - Anthropic books the full end-customer value of sales through AWS/Google/Microsoft and records the cloud provider's cut as an expense (Axios 2026-09-03; Sacra; SaaStr). OpenAI disputes this treatment, and OfficeChai notes the prospectus coverage does not itself spell out the method (both approaches are permitted under US accounting rules). About 47% (~$2.16B) of 2025 revenue came through Amazon and Google cloud marketplaces.",
+    "reported_by": "Draft S-1 reviewed by Reuters and FT (reported 2026-09-28/29; relayed by TechCrunch, SiliconANGLE, Quartz, Benzinga, Motley Fool, Pulse 2.0, eeNews). Earlier: The Information (2026-01-27, investor documents) $4.5B, per Epoch index.",
+    "notes": "Near-exact: $3.8B usage + $0.789B subscription = about $4.59B (Economic Times snippet also says $4.59B; page not opened). About 12x FY2024 (~$381-386M). Two customers were ~25% of 2025 revenue (12% each). Net loss ~$42B (about $34B non-cash charge on financing instruments); operating loss $8.06B. Wikipedia infobox shows $4.5B (stale preliminary). Duplicate question; answered identically for both claim ids. Provenance: figures come from a confidential draft S-1 obtained and reviewed by Reuters on 2026-09-28 (per a Tech Times snippet) and reviewed by the Financial Times (described by most outlets as leaked, by the Motley Fool as previewed by Anthropic); Anthropic's only official statement is the 2026-06-01 Rule 135 notice that a draft S-1 was confidentially submitted. Not audited/public. Reuters, FT, WSJ, Bloomberg and CNBC pages were not openable, so figures are read from outlets relaying them."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html",
+     "publisher": "Quartz (via Yahoo Finance), relaying Reuters and FT",
+     "title": "Anthropic IPO prospectus: 2025 revenue, losses, and $518B spending plan",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Reuters: revenue of nearly $4.6 billion in 2025, a twelvefold increase; FT: Q2 revenue $11.5 billion"
+    },
+    {
+     "url": "https://cryptoslate.com/anthropic-lost-42-billion-warned-ai-could-resist-shutdowns-but-traders-still-price-it-at-2-trillion/",
+     "publisher": "CryptoSlate (Oluwapelumi Adejumo)",
+     "title": "Anthropic lost $42 billion, warned AI could resist shutdowns, but traders still price it at $2 trillion",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic's revenue jumped 1,088% in 2025 to $4.59 billion"
+    },
+    {
+     "url": "https://news.bitcoin.com/finance/anthropic-chases-2-trillion-ipo-42-billion-loss/",
+     "publisher": "Bitcoin.com News (Shiraz Jagati)",
+     "title": "Anthropic Chases $2 Trillion IPO Even After a $42 Billion Loss",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue rose from about $386 million in 2024 to $4.59 billion in 2025, roughly a 12x jump"
+    },
+    {
+     "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+     "publisher": "TechCrunch",
+     "title": "Anthropic's prospectus details losses, growth, and yes, a warning that its AI could end humanity",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue jumped twelvefold to nearly $4.6 billion (Reuters); second-quarter revenue reached $11.5 billion (FT)"
+    },
+    {
+     "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+     "publisher": "SiliconANGLE",
+     "title": "Leaked Anthropic IPO filing reveals $8B operating loss, rapid revenue growth",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic's revenue ballooned from $400 million in 2024 to $4.6 billion last year"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-filing-reveals-major-121817226.html",
+     "publisher": "Benzinga (via Yahoo Finance)",
+     "title": "Anthropic IPO Filing Reveals a Major Vulnerability: Nearly 50% of Sales Flow Through Amazon and Google as Revenue Concentration Raises Risks: Report",
+     "published": "2026-09-30",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Usage-based revenue $3.8B plus subscription $789M; cloud marketplace sales about $2.16B, 47% of 2025 revenue"
+    },
+    {
+     "url": "https://www.fool.com/investing/2026/09/29/anthropic-reportedly-generated-usd4-6-billion-in-revenue-and-lost-usd42-billion-in-2025-will-this-impact-its-targeted-usd2-trillion-valuation/",
+     "publisher": "The Motley Fool",
+     "title": "Anthropic Reportedly Generated $4.6 Billion in Revenue and Lost $42 Billion in 2025. Will This Impact Its Targeted $2 Trillion Valuation?",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Gross margins of 80% before accounting for revenue shared with distribution partners; 2025 revenue $4.6B"
+    },
+    {
+     "url": "https://pulse2.com/anthropic-ipo-could-value-ai-company-above-2-trillion-as-costs-surge/",
+     "publisher": "Pulse 2.0",
+     "title": "Anthropic: IPO Could Value AI Company Above $2 Trillion As Costs Surge",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Nearly $4.6B revenue in 2025, about 12-fold growth; operating loss $8.06B in 2025 vs $2.98B in 2024"
+    },
+    {
+     "url": "https://officechai.com/ai/anthropics-revenue-was-4-6-billion-in-2025-with-a-loss-of-42-billion-its-ipo-prospectus-says/",
+     "publisher": "OfficeChai",
+     "title": "Anthropic's Revenue Was $4.6 Billion In 2025 With A Loss Of $42 Billion, Its IPO Prospectus Says",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue grew 12-fold in 2025 to nearly $4.6B; OpenAI says Anthropic books cloud-partner revenue gross; prospectus coverage does not clarify the method"
+    },
+    {
+     "url": "https://officechai.com/ai/just-2-customers-accounted-for-25-of-anthropics-revenue-its-ipo-prospectus-says/",
+     "publisher": "OfficeChai",
+     "title": "Just 2 Customers Accounted For 25% Of Anthropic's Revenue, Its IPO Prospectus Says",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Nearly a quarter of 2025 revenue (~$4.6B) came from two customers, ~12% each; gross booking of cloud-partner revenue is a rival accusation"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios (via Yahoo Finance)",
+     "title": "Anthropic and OpenAI's revenue chasm, explained",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic records the full value of Claude sales through partners, then records cloud providers' cuts as expenses"
+    },
+    {
+     "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "publisher": "Epoch AI",
+     "title": "AI companies revenue reports (dataset, Anthropic rows)",
+     "published": "2026-08-17",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Dataset rows list each Anthropic run-rate report with date, basis and source URL (lead index only)"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Anthropic",
+     "publisher": "Wikipedia",
+     "title": "Anthropic",
+     "published": "2026-09-30",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Infobox lists revenue US$4.5 billion (2025) and 2,500 employees (2026), the latter citing SF Chronicle 2026-01-30"
+    },
+    {
+     "url": "https://www.theinformation.com/articles/anthropic-hikes-2026-revenue-forecast-20-delays-will-go-cash-flow-positive",
+     "publisher": "The Information",
+     "title": "Anthropic Hikes 2026 Revenue Forecast 20% but Delays When It Will Go Cash Flow Positive",
+     "published": "2026-01-27",
+     "tier": "T3",
+     "opened": false,
+     "supports": "Paywalled. Epoch index cites it for $4.5B of 2025 revenue; Bing snippet shows 2026 forecast of up to $18B"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$4.5B FY2025 revenue (The Information, Jan 2026 investor documents; Wikipedia infobox)",
+     "source_a": "https://epoch.ai/data/ai_companies_revenue_reports.csv",
+     "value_b": "~$4.59B / 'nearly $4.6B' (draft S-1 via Reuters)",
+     "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html",
+     "note": "Earlier preliminary vs later S-1 figure (about 2%); prefer the S-1-derived $4.59B."
+    },
+    {
+     "value_a": "'roughly $10 billion in actual revenue during 2025' (IBTimes 2026-08-17)",
+     "source_a": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
+     "value_b": "~$4.59B recognized FY2025 revenue (draft S-1)",
+     "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html",
+     "note": "IBTimes appears to mislabel the ~$9-10B exit run-rate as actual revenue; company run-rate at end-2025 was about $9B. Flagged, not adopted."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PER-fc62ba",
+   "found": {
+    "usd_m": 4730,
+    "kind": "reported quarterly revenue for Jan-Mar 2026 from investor documents / draft S-1-era coverage (company-prepared, unaudited); earlier WSJ figure was $4.8B",
+    "basis": "Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partner-channel sales with the cloud provider's cut as an expense; OpenAI disputes this treatment and the prospectus coverage I could open does not spell out the method.",
+    "reported_by": "Bloomberg-cited documents as relayed by IBTimes (2026-08-17: $4.73B in Q1 2026) and S-1-era coverage (24/7 Wall St. 2026-09-30: $4.73B Q1, $11.5B Q2); WSJ (2026-05-20, via PYMNTS): $4.8B",
+    "notes": "WSJ's $4.8B (May 2026, from investor documents) is 1.5% above the $4.73B that later outlets use. Q1 2026 alone ($4.73B) already exceeds FY2025 (~$4.59B). OpenAI's Q1 revenue was reported at $5.7B (WSJ/The Information), i.e. above Anthropic's in Q1. Provenance: Q1/Q2 2026 figures come from investor documents reported by Bloomberg and WSJ (May-Aug 2026) and from the FT/Reuters review of the confidential draft S-1 (Sep 2026); Reuters, FT, WSJ, Bloomberg and CNBC pages were not openable, so read via relaying outlets. Not audited/public."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
+     "publisher": "International Business Times",
+     "title": "Anthropic Revenue Explodes Past $11.5 Billion. Its Blockbuster IPO Is Now Coming Into Focus.",
+     "published": "2026-08-17",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Preliminary revenue of more than $11.5 billion vs $787 million a year earlier; $4.73 billion in Q1 2026"
+    },
+    {
+     "url": "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/",
+     "publisher": "24/7 Wall St.",
+     "title": "Anthropic's Prospectus Shows a Giant Loss and an Even Bigger Ask",
+     "published": "2026-09-30",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue $4.6B in 2025, about 12x the roughly $400M booked in 2024; $4.73B in Q1 2026 and $11.5B in Q2"
+    },
+    {
+     "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+     "publisher": "PYMNTS.com (relaying WSJ)",
+     "title": "Anthropic On Track for First Operating Profit as Revenue Surges",
+     "published": "2026-05-20",
+     "tier": "T3",
+     "opened": true,
+     "supports": "WSJ: company projects $10.9 billion for the June quarter, up 130% from $4.8 billion in Q1"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+     "publisher": "Axios (via Yahoo Finance)",
+     "title": "Anthropic and OpenAI's revenue chasm, explained",
+     "published": "2026-09-03",
+     "tier": "T2",
+     "opened": true,
+     "supports": "Anthropic records the full value of Claude sales through partners, then records cloud providers' cuts as expenses"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$4.73B (IBTimes / 24/7 Wall St., Bloomberg-era documents)",
+     "source_a": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
+     "value_b": "$4.8B (WSJ 2026-05-20 via PYMNTS)",
+     "source_b": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+     "note": "Minor (1.5%) difference, likely earlier rounded/preliminary WSJ figure; both reported as Q1 2026 revenue."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PER-88c333",
+   "found": {
+    "usd_m": 11500,
+    "kind": "preliminary (quarter ended 2026-06-30): 'more than $11.5 billion' in investor documents viewed by Bloomberg; $11.5B again in the FT's review of the draft S-1",
+    "basis": "Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partner-channel sales with the cloud provider's cut as an expense; OpenAI disputes this treatment and the prospectus coverage I could open does not spell out the method. Adjusted operating income was positive in the quarter (first profitable quarter, adjusted basis).",
+    "reported_by": "Bloomberg (2026-08-14, documents viewed by Bloomberg; vs $787M in Q2 2025); FT (2026-09-28/29, S-1 review: $11.5B); WSJ (2026-08-18): $11.6B",
+    "notes": "Year-earlier quarter: $787M (14-fold). Earlier WSJ projection (2026-05-20): $10.9B. CNBC (2026-08-15) and Forbes (2026-08-17) pages were not openable. Provenance: Q1/Q2 2026 figures come from investor documents reported by Bloomberg and WSJ (May-Aug 2026) and from the FT/Reuters review of the confidential draft S-1 (Sep 2026); Reuters, FT, WSJ, Bloomberg and CNBC pages were not openable, so read via relaying outlets. Not audited/public."
+   },
+   "verdict_hint": "FOUND",
+   "sources": [
+    {
+     "url": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
+     "publisher": "International Business Times",
+     "title": "Anthropic Revenue Explodes Past $11.5 Billion. Its Blockbuster IPO Is Now Coming Into Focus.",
+     "published": "2026-08-17",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Preliminary revenue of more than $11.5 billion vs $787 million a year earlier; $4.73 billion in Q1 2026"
+    },
+    {
+     "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-touts-14-fold-jump-in-revenue-for-would-be-investors/",
+     "publisher": "PYMNTS.com (relaying Bloomberg)",
+     "title": "Anthropic Touts 14-Fold Jump in Revenue for Would-Be Investors",
+     "published": "2026-08-16",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Documents viewed by Bloomberg show preliminary revenue above $11.5 billion vs $787 million a year earlier"
+    },
+    {
+     "url": "https://thenextweb.com/news/openai-q2-revenue-anthropic-surpasses",
+     "publisher": "The Next Web (relaying WSJ and Bloomberg)",
+     "title": "Anthropic's revenue passed OpenAI's for the first time last quarter",
+     "published": "2026-08-19",
+     "tier": "T3",
+     "opened": true,
+     "supports": "WSJ: Anthropic revenue more than doubled to $11.6bn in Q2; Bloomberg preliminary figure $11.5bn"
+    },
+    {
+     "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+     "publisher": "TechCrunch",
+     "title": "Anthropic's prospectus details losses, growth, and yes, a warning that its AI could end humanity",
+     "published": "2026-09-28",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue jumped twelvefold to nearly $4.6 billion (Reuters); second-quarter revenue reached $11.5 billion (FT)"
+    },
+    {
+     "url": "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/",
+     "publisher": "24/7 Wall St.",
+     "title": "Anthropic's Prospectus Shows a Giant Loss and an Even Bigger Ask",
+     "published": "2026-09-30",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue $4.6B in 2025, about 12x the roughly $400M booked in 2024; $4.73B in Q1 2026 and $11.5B in Q2"
+    },
+    {
+     "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+     "publisher": "PYMNTS.com (relaying WSJ)",
+     "title": "Anthropic On Track for First Operating Profit as Revenue Surges",
+     "published": "2026-05-20",
+     "tier": "T3",
+     "opened": true,
+     "supports": "WSJ: company projects $10.9 billion for the June quarter, up 130% from $4.8 billion in Q1"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "$11.5B preliminary (Bloomberg; FT/S-1)",
+     "source_a": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-touts-14-fold-jump-in-revenue-for-would-be-investors/",
+     "value_b": "$11.6B (WSJ, 2026-08-18, via The Next Web)",
+     "source_b": "https://thenextweb.com/news/openai-q2-revenue-anthropic-surpasses",
+     "note": "Minor (0.9%) difference between outlets' investor-document figures; also $10.9B was the earlier WSJ projection (2026-05-20)."
+    }
+   ]
+  },
+  {
+   "claim_id": "OPS-PER-23f61c",
+   "found": {
+    "usd_m": 16230,
+    "kind": "derived sum, not reported by any source: Q1 2026 $4.73B + Q2 2026 $11.5B preliminary",
+    "basis": "Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partner-channel sales with the cloud provider's cut as an expense; OpenAI disputes this treatment and the prospectus coverage I could open does not spell out the method.",
+    "reported_by": "No outlet or document located states an H1/six-month figure; computed from Bloomberg/FT-sourced quarters",
+    "notes": "On WSJ's numbers ($4.8B + $11.6B) the sum is about $16.4B, so the plausible range is $16.2-16.4B; Bloomberg's 'more than $11.5B' for Q2 implies H1 is at least about $16.2B. Q2 is preliminary, so H1 is preliminary. Provenance: Q1/Q2 2026 figures come from investor documents reported by Bloomberg and WSJ (May-Aug 2026) and from the FT/Reuters review of the confidential draft S-1 (Sep 2026); Reuters, FT, WSJ, Bloomberg and CNBC pages were not openable, so read via relaying outlets. Not audited/public."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/",
+     "publisher": "24/7 Wall St.",
+     "title": "Anthropic's Prospectus Shows a Giant Loss and an Even Bigger Ask",
+     "published": "2026-09-30",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue $4.6B in 2025, about 12x the roughly $400M booked in 2024; $4.73B in Q1 2026 and $11.5B in Q2"
+    },
+    {
+     "url": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
+     "publisher": "International Business Times",
+     "title": "Anthropic Revenue Explodes Past $11.5 Billion. Its Blockbuster IPO Is Now Coming Into Focus.",
+     "published": "2026-08-17",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Preliminary revenue of more than $11.5 billion vs $787 million a year earlier; $4.73 billion in Q1 2026"
+    },
+    {
+     "url": "https://thenextweb.com/news/openai-q2-revenue-anthropic-surpasses",
+     "publisher": "The Next Web (relaying WSJ and Bloomberg)",
+     "title": "Anthropic's revenue passed OpenAI's for the first time last quarter",
+     "published": "2026-08-19",
+     "tier": "T3",
+     "opened": true,
+     "supports": "WSJ: Anthropic revenue more than doubled to $11.6bn in Q2; Bloomberg preliminary figure $11.5bn"
+    },
+    {
+     "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+     "publisher": "PYMNTS.com (relaying WSJ)",
+     "title": "Anthropic On Track for First Operating Profit as Revenue Surges",
+     "published": "2026-05-20",
+     "tier": "T3",
+     "opened": true,
+     "supports": "WSJ: company projects $10.9 billion for the June quarter, up 130% from $4.8 billion in Q1"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-PER-225887",
+   "found": {
+    "usd_m": 19600,
+    "kind": "derived estimate, not reported: Q3 2025 + Q4 2025 + Q1 2026 + Q2 2026 (preliminary)",
+    "basis": "Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partner-channel sales with the cloud provider's cut as an expense; OpenAI disputes this treatment and the prospectus coverage I could open does not spell out the method.",
+    "reported_by": "No source states a trailing-twelve-month figure or Q3/Q4 2025 quarterly revenue; built from FY2025 $4.59B, Q2 2025 $787M (Bloomberg), Q1 2026 $4.73B and Q2 2026 $11.5B",
+    "notes": "TTM = FY2025 - (Q1 2025 + Q2 2025) + H1 2026 = 4.59 - (Q1 2025 + 0.787) + 16.23 = 20.03 - Q1 2025. Q1 2025 was not found; a run-rate-implied estimate is about $0.3-0.5B, giving about $19.5-19.7B; if Q1 2025 were anywhere from $0.2B to $0.6B the TTM would be about $19.4-19.8B. Point estimate about $19.6B. On WSJ quarters (Q1 $4.8B, Q2 $11.6B) it would be about $0.2B higher. Unverified arithmetic; flagged as derived. Provenance: Q1/Q2 2026 figures come from investor documents reported by Bloomberg and WSJ (May-Aug 2026) and from the FT/Reuters review of the confidential draft S-1 (Sep 2026); Reuters, FT, WSJ, Bloomberg and CNBC pages were not openable, so read via relaying outlets. Not audited/public."
+   },
+   "verdict_hint": "PARTIAL",
+   "sources": [
+    {
+     "url": "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/",
+     "publisher": "24/7 Wall St.",
+     "title": "Anthropic's Prospectus Shows a Giant Loss and an Even Bigger Ask",
+     "published": "2026-09-30",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Revenue $4.6B in 2025, about 12x the roughly $400M booked in 2024; $4.73B in Q1 2026 and $11.5B in Q2"
+    },
+    {
+     "url": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
+     "publisher": "International Business Times",
+     "title": "Anthropic Revenue Explodes Past $11.5 Billion. Its Blockbuster IPO Is Now Coming Into Focus.",
+     "published": "2026-08-17",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Preliminary revenue of more than $11.5 billion vs $787 million a year earlier; $4.73 billion in Q1 2026"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html",
+     "publisher": "Quartz (via Yahoo Finance), relaying Reuters and FT",
+     "title": "Anthropic IPO prospectus: 2025 revenue, losses, and $518B spending plan",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Reuters: revenue of nearly $4.6 billion in 2025, a twelvefold increase; FT: Q2 revenue $11.5 billion"
+    },
+    {
+     "url": "https://www.eenewseurope.com/en/anthropic-ipo-518-billion-infrastructure-commitments/",
+     "publisher": "eeNews Europe",
+     "title": "Anthropic IPO reveals $518bn in infrastructure commitments",
+     "published": "2026-09-29",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic generated nearly $4.6 billion in revenue in 2025, approximately 12 times its 2024 figure"
+    }
+   ],
+   "conflicts": []
+  },
+  {
+   "claim_id": "OPS-HEA-116f01",
+   "found": {
+    "headcount": "No company-stated total found. Latest named-outlet figure: 'more than 2,500 employees' (Fortune, 2026-08-25); earlier ~2,500 worldwide and 1,300+ in the Bay Area (SF Chronicle via SFist, 2026-01-30). Data-vendor counts are higher: ~3,950 (Revelio Labs, Mar 2026); ~5,000 (Tracxn, Mar 2026, via SaaStr) and 5,994 (Tracxn, 2026-08-31, search snippet only)",
+    "date": "Latest named-outlet figure 2026-08-25 (Fortune: more than 2,500); previous 2026-01-30 (SF Chronicle/SFist: 2,500). Latest vendor data point 2026-08-31 (Tracxn 5,994, page not opened).",
+    "stated_by": "No statement by Anthropic of a total. Company president Daniela Amodei is quoted (via the SF Chronicle/SFist) only on 'over 1,300 employees in the Bay Area'. Totals come from Fortune, SF Chronicle/SFist, SaaStr (citing Tracxn, TrueUp, PitchBook, Brad Gerstner), Revelio Labs and Tracxn.",
+    "notes": "Trajectory: Revelio Labs (LinkedIn-based workforce data) ~546 in 2023, ~1,324 in 2024, ~3,089 in 2025, ~3,950 in Mar 2026; ~2,300+ by Q4 2025 per Fortune (via JobsByCulture; that Fortune page not opened); ~2,500 worldwide on 2026-01-30 (SF Chronicle/SFist); SaaStr 2026-04-14: 'between 3,000 and 5,000' (Tracxn ~5,000 as of Mar 2026, TrueUp ~3,000, PitchBook and Brad Gerstner ~2,500 earlier in 2026); more than 2,500 on 2026-08-25 (Fortune); Tracxn 5,994 at 2026-08-31. Sep 2025: company said it would triple headcount outside the U.S. (no baseline). The anthropic.com/company page and the draft-S-1 coverage I could open (TechCrunch, SiliconANGLE, Gizmodo, Pulse 2.0, eWeek, Quartz/Yahoo, Benzinga/Yahoo) contain no employee count. The named-outlet figures (2,500 / 'more than 2,500') look like a stale or lower-bound number, while LinkedIn-style vendor counts run 3,950-5,994; none is authoritative."
+   },
+   "verdict_hint": "CONFLICT",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-potential-2-trillion-ipo-150327764.html",
+     "publisher": "Fortune (via Yahoo Finance; Preston Fore)",
+     "title": "Anthropic's potential $2 trillion IPO could turn staff into millionaires - now the AI firm is asking candidates what they'd do if stock fell to zero",
+     "published": "2026-08-25",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Refers to the AI company's more than 2,500 employees"
+    },
+    {
+     "url": "https://sfist.com/2026/01/30/anthropic-signs-lease-for-entire-27-story-downtown-tower/",
+     "publisher": "SFist (citing the San Francisco Chronicle)",
+     "title": "Anthropic Signs Lease For Entire 27-Story Downtown Tower",
+     "published": "2026-01-30",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic, which currently has 2,500 employees worldwide and 1,300 locally"
+    },
+    {
+     "url": "https://www.saastr.com/anthropic-only-has-5000-employees-almost-no-one-has-ever-been-this-efficient-thats-by-choice/",
+     "publisher": "SaaStr",
+     "title": "Anthropic Only Has ~5,000 Employees. Almost No One Has Ever Been This Efficient. That's By Choice.",
+     "published": "2026-04-14",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Between 3,000 and 5,000 employees depending on source: Tracxn ~5,000 (Mar 2026), TrueUp ~3,000, PitchBook ~2,500"
+    },
+    {
+     "url": "https://www.reveliolabs.com/companies/anthropic-pbc/employees",
+     "publisher": "Revelio Labs",
+     "title": "Anthropic Number of Employees 2026",
+     "published": "2026-08-01",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Approximately 3,950 employees as of March 2026; 2023 546, 2024 1,324, 2025 3,089 (page says published August 2026)"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Anthropic",
+     "publisher": "Wikipedia",
+     "title": "Anthropic",
+     "published": "2026-09-30",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Infobox lists revenue US$4.5 billion (2025) and 2,500 employees (2026), the latter citing SF Chronicle 2026-01-30"
+    },
+    {
+     "url": "https://jobsbyculture.com/blog/anthropic-layoffs-2026",
+     "publisher": "JobsByCulture",
+     "title": "Anthropic Layoffs 2026: None. Hypergrowth, $380B+ Valuation, ~$30B ARR",
+     "published": "2026-09-30",
+     "tier": "T4",
+     "opened": true,
+     "supports": "Headcount grew from ~500 (2023) to ~2,300+ by Q4 2025, citing Fortune (undated page; accessed date used)"
+    },
+    {
+     "url": "https://tracxn.com/d/companies/anthropic/__SzoxXDMin-NK5tKB7ks8yHr6S9Mz68pjVCzFEcGFZ08",
+     "publisher": "Tracxn",
+     "title": "Anthropic - 2026 Company Profile, Team, Funding & Competitors - Tracxn",
+     "published": "2026-08-31",
+     "tier": "T4",
+     "opened": false,
+     "supports": "Page returned 403; a WebSearch snippet gave 5,994 employees as of Aug 31, 2026 (not verified on the page)"
+    },
+    {
+     "url": "https://www.trueup.io/co/anthropic",
+     "publisher": "TrueUp",
+     "title": "Anthropic - Company Profile",
+     "published": "2026-09-30",
+     "tier": "T4",
+     "opened": false,
+     "supports": "Page returned 403; SaaStr cites TrueUp at about 3,000 employees"
+    },
+    {
+     "url": "https://www.anthropic.com/company",
+     "publisher": "Anthropic",
+     "title": "Company \\ Anthropic",
+     "published": "2026-09-11",
+     "tier": "T1",
+     "opened": true,
+     "supports": "No employee count or headcount statement on the company page"
+    },
+    {
+     "url": "https://siliconangle.com/2025/09/26/anthropic-triple-international-headcount-add-offices-following-latest-funding-round/",
+     "publisher": "SiliconANGLE (citing CNBC)",
+     "title": "Anthropic to triple international headcount, add offices following latest funding round",
+     "published": "2025-09-26",
+     "tier": "T3",
+     "opened": true,
+     "supports": "Anthropic will triple its headcount outside the U.S. and expand the applied AI team fivefold (no baseline total given)"
+    }
+   ],
+   "conflicts": [
+    {
+     "value_a": "'More than 2,500' employees (Fortune, 2026-08-25); ~2,500 (SF Chronicle via SFist, 2026-01-30)",
+     "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-potential-2-trillion-ipo-150327764.html",
+     "value_b": "~3,950 (Revelio Labs, Mar 2026) and ~5,000-5,994 (Tracxn, Mar-Aug 2026)",
+     "source_b": "https://www.reveliolabs.com/companies/anthropic-pbc/employees",
+     "note": "Named-outlet figures have not moved in seven months while vendor profile counts are 60-140% higher; vendors count profiles (possibly contractors or ex-staff) and the outlet figure may be an old PitchBook-style number. No company total to arbitrate."
+    },
+    {
+     "value_a": "~3,000 (TrueUp, per SaaStr 2026-04-14)",
+     "source_a": "https://www.saastr.com/anthropic-only-has-5000-employees-almost-no-one-has-ever-been-this-efficient-thats-by-choice/",
+     "value_b": "5,994 (Tracxn, 2026-08-31, search snippet) / ~5,000 (Tracxn, Mar 2026, per SaaStr)",
+     "source_b": "https://tracxn.com/d/companies/anthropic/__SzoxXDMin-NK5tKB7ks8yHr6S9Mz68pjVCzFEcGFZ08",
+     "note": "Vendor counts for the same period differ by up to 2x; Tracxn page not opened (403), so the 5,994 is unverified."
+    }
+   ]
+  }
+ ],
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Read re-deriver brief and questions_operating.json: 23 questions (12 run-rate months, 10 period-revenue, 1 headcount). FY2024 (x2) and FY2025 (x2) questions have identical text."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "Google News RSS discovery (3 queries): 'Anthropic annualized revenue run rate', 'Anthropic run-rate revenue billion 2026', 'Anthropic headcount employees' - surfaced Aug-Sep 2026 coverage ($65B end-July, $100B pace, S-1 leak, SaaStr '~5,000 employees')."
+  },
+  {
+   "seq": 3,
+   "type": "open",
+   "text": "SEC EDGAR company browse for 'anthropic' (S-1): 'No matching companies' - the draft S-1 is confidential and not on EDGAR.",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=anthropic&type=S-1&dateb=&owner=include&count=40&action=getcompany"
+  },
+  {
+   "seq": 4,
+   "type": "search",
+   "text": "SEC EDGAR full-text search 'Anthropic PBC' S-1 (1 query): only other issuers (Nscale, SpaceX, Figma, Idea Acquisition) mention Anthropic; no Anthropic registration statement indexed.",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%20PBC%22&forms=S-1"
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "Bing RSS in web mode (2 queries): returned only anthropic.com/claude.com/Wikipedia pages, no news."
+  },
+  {
+   "seq": 6,
+   "type": "flag",
+   "text": "Google News article links do not resolve in WebFetch; Reuters, CNBC, Bloomberg, Forbes, Ars Technica, ZDNET, Economic Times, NY Post, Inc., Morningstar, FourWeekMBA and web.archive.org are not fetchable (blocked, 403 or empty). DuckDuckGo gave a captcha and Brave a 429. Switched to Bing News RSS (direct URLs), syndicated copies (Yahoo Finance, Investing.com) and outlets that do open."
+  },
+  {
+   "seq": 7,
+   "type": "search",
+   "text": "Bing News RSS (3 queries that returned items): 'Anthropic run rate $65 billion', 'Anthropic second quarter revenue $11.5 billion', 'Anthropic confidential prospectus revenue 2025 net loss' - gave direct URLs for CNBC video, Forbes, Yahoo/Quartz, IBTimes, SiliconANGLE, Motley Fool, Benzinga, Inc., 24/7 Wall St., eWeek, eeNews."
+  },
+  {
+   "seq": 8,
+   "type": "open",
+   "text": "Quartz via Yahoo (2026-09-29): Reuters - revenue nearly $4.6B in 2025, twelvefold; FT - Q2 revenue $11.5B; opex ~$13B; net loss ~$42B (about $34B non-cash).",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html"
+  },
+  {
+   "seq": 9,
+   "type": "open",
+   "text": "SiliconANGLE (2026-09-29): 'revenue ballooned from $400 million in 2024 to $4.6 billion last year'; leaked filing reviewed by Reuters/FT; draft S-1 from June 2026.",
+   "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/"
+  },
+  {
+   "seq": 10,
+   "type": "open",
+   "text": "IBTimes (2026-08-17): preliminary Q2 revenue more than $11.5B vs $787M a year earlier; Q1 2026 $4.73B; Anthropic said in May run rate crossed $47B.",
+   "url": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473"
+  },
+  {
+   "seq": 11,
+   "type": "flag",
+   "text": "IBTimes says 'roughly $10 billion in actual revenue during 2025', contradicting the S-1-era ~$4.59B; likely mislabels the ~$9-10B exit run-rate. Reported as a conflict, not adopted.",
+   "url": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
+   "event_id": "OPS-PER-b31930"
+  },
+  {
+   "seq": 12,
+   "type": "open",
+   "text": "Benzinga via Yahoo (2026-09-30): usage revenue $3.8B + subscription $789M; cloud marketplace sales ~$2.16B = 47% of 2025 revenue; two customers 12% each.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-filing-reveals-major-121817226.html"
+  },
+  {
+   "seq": 13,
+   "type": "open",
+   "text": "TechCrunch (2026-09-28, Connie Loizos): revenue twelvefold to nearly $4.6B (Reuters); Q2 $11.5B and second straight adjusted operating profit (FT); no 2023 data or headcount.",
+   "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/"
+  },
+  {
+   "seq": 14,
+   "type": "open",
+   "text": "24/7 Wall St. (2026-09-30): 2025 revenue $4.6B, about 12x the roughly $400M of 2024; Q1 2026 $4.73B and Q2 $11.5B.",
+   "url": "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/"
+  },
+  {
+   "seq": 15,
+   "type": "open",
+   "text": "Motley Fool (2026-09-29), eeNews Europe, eWeek, Pulse 2.0, Gizmodo prospectus write-ups (5 pages): all relay Reuters/FT (2025 revenue nearly $4.6B; op loss $8.06B vs $2.98B in 2024; 80% gross margin before distribution-partner revenue share); none has headcount or FY2023.",
+   "url": "https://www.fool.com/investing/2026/09/29/anthropic-reportedly-generated-usd4-6-billion-in-revenue-and-lost-usd42-billion-in-2025-will-this-impact-its-targeted-usd2-trillion-valuation/"
+  },
+  {
+   "seq": 16,
+   "type": "open",
+   "text": "OfficeChai S-1 write-ups (2 pages, 2026-09-29): 2025 revenue nearly $4.6B; OpenAI accuses Anthropic of booking cloud-partner revenue gross; prospectus coverage does not clarify the method; both approaches permitted under US GAAP; run rate $47B at filing.",
+   "url": "https://officechai.com/ai/anthropics-revenue-was-4-6-billion-in-2025-with-a-loss-of-42-billion-its-ipo-prospectus-says/"
+  },
+  {
+   "seq": 17,
+   "type": "open",
+   "text": "CryptoSlate (2026-09-29): revenue jumped 1,088% in 2025 to $4.59 billion; two largest customers 12% each.",
+   "url": "https://cryptoslate.com/anthropic-lost-42-billion-warned-ai-could-resist-shutdowns-but-traders-still-price-it-at-2-trillion/"
+  },
+  {
+   "seq": 18,
+   "type": "open",
+   "text": "Bitcoin.com News (2026-09-29): revenue rose from about $386 million in 2024 to $4.59 billion in 2025; 2024 operating loss $2.98B.",
+   "url": "https://news.bitcoin.com/finance/anthropic-chases-2-trillion-ipo-42-billion-loss/"
+  },
+  {
+   "seq": 19,
+   "type": "search",
+   "text": "Exact-figure lookups (3 queries: 1 Google News, 2 Bing News) - headlines from tokenpost, TradingKey, KuCoin, Futu print $4.59B; a Bing title lookup gave the Tech Times snippet that Reuters obtained and reviewed the confidential draft on Monday 2026-09-28."
+  },
+  {
+   "seq": 20,
+   "type": "flag",
+   "text": "FY2024 differs slightly by vintage: $381M (The Information, Jan 2026, via Epoch) vs about $386M (S-1-era: +1,088% growth; Bitcoin.com News) vs ~$383M (flat 12x) vs ~$400M (rounded). Reported all four.",
+   "url": "https://news.bitcoin.com/finance/anthropic-chases-2-trillion-ipo-42-billion-loss/",
+   "event_id": "OPS-PER-f71902"
+  },
+  {
+   "seq": 21,
+   "type": "verify",
+   "text": "FY2025 ~ $4.6B appears in TechCrunch, SiliconANGLE, Quartz, Benzinga, Motley Fool, Pulse 2.0, eeNews, Gizmodo, eWeek, OfficeChai, 24/7 Wall St. - all relay the same Reuters/FT review of one draft S-1, so one underlying origin. Split $3.8B + $0.789B = $4.589B matches 'nearly $4.6B'.",
+   "event_id": "OPS-PER-b31930"
+  },
+  {
+   "seq": 22,
+   "type": "flag",
+   "text": "Reuters' original prospectus story (and FT, WSJ, CNBC, Bloomberg, Forbes and Economic Times versions) could not be opened; all S-1 figures are read through outlets that relay them. Economic Times snippet gives $4.59B.",
+   "url": "https://www.reuters.com/world/anthropic-ipo-prospectus-lays-bare-deep-dependence-big-tech-partners-2026-09-29/"
+  },
+  {
+   "seq": 23,
+   "type": "found",
+   "text": "FY2025 revenue ~ $4.59B (draft S-1 via Reuters/FT, 2026-09-28/29); preliminary $4.5B from The Information in Jan 2026.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html",
+   "event_id": "OPS-PER-b31930"
+  },
+  {
+   "seq": 24,
+   "type": "found",
+   "text": "FY2025 revenue (duplicate claim id) - same answer.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-filing-reveals-major-121817226.html",
+   "event_id": "OPS-PER-87d017"
+  },
+  {
+   "seq": 25,
+   "type": "found",
+   "text": "FY2024 revenue ~ $386M (S-1-era: +1,088% growth / Bitcoin.com News); $381M (The Information per Epoch); ~ $400M rounded (SiliconANGLE, 24/7 Wall St.).",
+   "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
+   "event_id": "OPS-PER-f71902"
+  },
+  {
+   "seq": 26,
+   "type": "found",
+   "text": "FY2024 revenue (duplicate claim id) - same answer.",
+   "url": "https://247wallst.com/investing/2026/09/30/anthropics-prospectus-shows-a-giant-loss-and-an-even-bigger-ask/",
+   "event_id": "OPS-PER-2af222"
+  },
+  {
+   "seq": 27,
+   "type": "search",
+   "text": "Bing News RSS (4 queries, mostly empty feeds): 'prospectus Reuters' gave the Reuters URL (blocked); 'revenue gross net cloud resale accounting', 'employees headcount prospectus', 'gross revenue Amazon Google resale' returned nothing."
+  },
+  {
+   "seq": 28,
+   "type": "open",
+   "text": "Wikipedia 'Anthropic' (first pass): infobox revenue $4.5B (2025), 2,500 employees (2026); draft S-1 announced 2026-06-01. T4.",
+   "url": "https://en.wikipedia.org/wiki/Anthropic"
+  },
+  {
+   "seq": 29,
+   "type": "open",
+   "text": "Anthropic newsroom index (Aug-Sep 2026 items only; no funding items on first page).",
+   "url": "https://www.anthropic.com/news"
+  },
+  {
+   "seq": 30,
+   "type": "open",
+   "text": "Anthropic Series G post (2026-02-12): run-rate revenue $14B; first dollar of revenue less than three years ago.",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+  },
+  {
+   "seq": 31,
+   "type": "found",
+   "text": "Feb 2026 run-rate: $14B, company-stated 2026-02-12.",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+   "event_id": "OPS-RUN-7b7aeb"
+  },
+  {
+   "seq": 32,
+   "type": "search",
+   "text": "Google News RSS (3 queries): Series H / site:anthropic.com, '$30 billion run-rate Google Broadcom', and Mar-Sep 2026 run-rate titles - dated the Apr 6-7 and Mar 2-5 reports and listed the 2026-06-01 S-1 notice; Series H and confidential-S-1 slug guesses returned 404 before 'series-h' worked."
+  },
+  {
+   "seq": 33,
+   "type": "open",
+   "text": "Anthropic Series H post (slug 'series-h', 2026-05-28): 'run-rate revenue crossed $47 billion earlier this month'.",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 34,
+   "type": "found",
+   "text": "May 2026 run-rate: $47B, company-stated 2026-05-28 ('earlier this month').",
+   "url": "https://www.anthropic.com/news/series-h",
+   "event_id": "OPS-RUN-ad2e22"
+  },
+  {
+   "seq": 35,
+   "type": "open",
+   "text": "Anthropic post 'Anthropic expands Google and Broadcom compute deal' (2026-04-06): run-rate surpassed $30B, up from ~ $9B at end-2025.",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+  },
+  {
+   "seq": 36,
+   "type": "found",
+   "text": "Apr 2026 run-rate: $30B, company-stated 2026-04-06.",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+   "event_id": "OPS-RUN-f70649"
+  },
+  {
+   "seq": 37,
+   "type": "open",
+   "text": "Anthropic confidential draft S-1 Rule 135 notice (2026-06-01).",
+   "url": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+  },
+  {
+   "seq": 38,
+   "type": "search",
+   "text": "Bing News RSS numeric/title lookups (25 queries, most returning empty feeds): $30B/Broadcom, $19B, $3B, $1.4B, $4B, $2B credit facility, $170B raise, $10.9B and $4.8B quarters, $45B, 'first profitable quarter' (worked), 'count revenue differently' (worked), prospectus-reliance and 47% cloud-share titles - an empty feed means no match in Bing's news index."
+  },
+  {
+   "seq": 39,
+   "type": "search",
+   "text": "Google News RSS (1 query): 'Amodei $19 billion run-rate conference OR interview' (Mar 1-12, 2026) - no item showing the CEO stating it himself."
+  },
+  {
+   "seq": 40,
+   "type": "search",
+   "text": "WebSearch 1/4: 'Anthropic annualized revenue run rate 2023 $100 million / $200 million' - surfaced Epoch AI revenue-report CSV, TipRanks/The Fly (The Information Dec 2023) and Yahoo copies of Reuters items."
+  },
+  {
+   "seq": 41,
+   "type": "open",
+   "text": "Epoch AI revenue-reports CSV (Anthropic rows): aggregator lead index with dates, values and source URLs (Oct 2023 $100M ... Jul 2026 $65B; FY2024 $381M; FY2025 $4.5B). Every row verified against a primary or named-outlet page where possible.",
+   "url": "https://epoch.ai/data/ai_companies_revenue_reports.csv"
+  },
+  {
+   "seq": 42,
+   "type": "open",
+   "text": "Epoch AI data-insight page: lists 9 annualized-revenue points with source types; no gross/net or run-rate-vs-recognized method note.",
+   "url": "https://epoch.ai/data-insights/anthropic-openai-revenue"
+  },
+  {
+   "seq": 43,
+   "type": "open",
+   "text": "Anthropic Series F post (2025-09-02): ~$1B run rate at beginning of 2025; over $5B by August 2025.",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+  },
+  {
+   "seq": 44,
+   "type": "open",
+   "text": "Anthropic post naming Chris Ciauri (2025-09-26): run-rate grew from $87M at start of 2024 to over $5B in August 2025.",
+   "url": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of"
+  },
+  {
+   "seq": 45,
+   "type": "open",
+   "text": "Dario Amodei statement (2025-10-21): revenue growing from $1B to $7B run rate over the last nine months.",
+   "url": "https://www.anthropic.com/news/statement-dario-amodei-american-ai-leadership"
+  },
+  {
+   "seq": 46,
+   "type": "open",
+   "text": "Reuters exclusive via Yahoo (2025-10-15): Anthropic told Reuters run rate approaching $7B this month; $9B internal goal for end-2025; 2026 targets $20B-$26B.",
+   "url": "https://finance.yahoo.com/news/exclusive-anthropic-aims-nearly-triple-170234463.html"
+  },
+  {
+   "seq": 47,
+   "type": "found",
+   "text": "Oct 2025 run-rate: ~$7B (company told Reuters 2025-10-15; CEO statement 2025-10-21).",
+   "url": "https://finance.yahoo.com/news/exclusive-anthropic-aims-nearly-triple-170234463.html",
+   "event_id": "OPS-RUN-91e239"
+  },
+  {
+   "seq": 48,
+   "type": "open",
+   "text": "Reuters exclusive via Yahoo (2025-05-30): run rate nearly $1B Dec 2024, crossed $2B around end of March, $3B at May's end (two sources).",
+   "url": "https://finance.yahoo.com/news/exclusive-anthropic-hits-3-billion-200202733.html"
+  },
+  {
+   "seq": 49,
+   "type": "found",
+   "text": "Dec 2024 run-rate: ~$1B (company: 'beginning of 2025' approx $1B; Reuters sources: nearly $1B in December 2024).",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+   "event_id": "OPS-RUN-189efe"
+  },
+  {
+   "seq": 50,
+   "type": "found",
+   "text": "May 2025 run-rate: $3B at end of May, Reuters two sources (single origin).",
+   "url": "https://finance.yahoo.com/news/exclusive-anthropic-hits-3-billion-200202733.html",
+   "event_id": "OPS-RUN-a56a47"
+  },
+  {
+   "seq": 51,
+   "type": "open",
+   "text": "SiliconANGLE (2025-05-16): Anthropic disclosed annualized revenue topped $2B in Q1 2025 (with its $2.5B credit facility).",
+   "url": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
+  },
+  {
+   "seq": 52,
+   "type": "open",
+   "text": "Yahoo copy of Reuters (2025-02-12): The Information said Anthropic sees 2027 revenue up to $34.5B; 2025 revenue ~$2.2B projected; 2024 burn $5.6B. Context only.",
+   "url": "https://finance.yahoo.com/news/anthropic-projects-soaring-growth-34-002016708.html"
+  },
+  {
+   "seq": 53,
+   "type": "search",
+   "text": "Google News RSS date-bounded history batch (11 queries): Aug-Dec 2023; Oct 2023 (x2); Jan-Apr 2024; Nov 2024-Feb 2025; Jan-Feb 2025; Mar 2025; May 2025 (credit facility); May 28-Jun 12 2025 ($3B); Jun-Aug 2025; Jul 28-Sep 5 2025 - mapped The Information / Reuters / CNBC / Bloomberg run-rate reports by month (titles and dates only; links do not resolve)."
+  },
+  {
+   "seq": 54,
+   "type": "open",
+   "text": "TipRanks/The Fly (2023-12-26) summarising The Information: three months earlier Anthropic told some investors it generated $100M annualized; projected >$850M annualized by end-2024 (earlier $500M).",
+   "url": "https://www.tipranks.com/news/the-fly/anthropic-sees-850m-in-annualized-revenue-by-2024-end-the-information-says"
+  },
+  {
+   "seq": 55,
+   "type": "open",
+   "text": "The Information teasers (6 pages; paywalled, headline/byline only or partial): Oct 2023 raise story, Mar 2025 'Manus' story ($1.4B vs $1B), Jul 2025 '$4 Billion Annual Pace', Jan 2026 gross-margin and forecast-hike stories, May 2026 OpenAI-Q1 story. No body text available.",
+   "url": "https://www.theinformation.com/articles/anthropics-claude-drives-strong-revenue-growth-while-powering-manus-sensation"
+  },
+  {
+   "seq": 56,
+   "type": "flag",
+   "text": "The Information's original reports (Oct 2023 $100M; Mar 2025 $1.4B; Jul 2025 $4B; Jan 2026 FY2024 $381M / FY2025 $4.5B) are paywalled; values rest on headlines, Bing/TipRanks snippets and the Epoch index, not on readable article text."
+  },
+  {
+   "seq": 57,
+   "type": "found",
+   "text": "Sep 2023 run-rate: ~$100M annualized (Anthropic to investors, per The Information; single origin; original paywalled).",
+   "url": "https://www.tipranks.com/news/the-fly/anthropic-sees-850m-in-annualized-revenue-by-2024-end-the-information-says",
+   "event_id": "OPS-RUN-b1fead"
+  },
+  {
+   "seq": 58,
+   "type": "flag",
+   "text": "Company says $87M run-rate at start of 2024, below the ~$100M (Sep 2023) and ~$200M (year-end target) that The Information reported; reported as a conflict.",
+   "url": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+   "event_id": "OPS-RUN-b2aea0"
+  },
+  {
+   "seq": 59,
+   "type": "found",
+   "text": "Jan 2024 run-rate: $87M at start of 2024 (company, 2025-09-26; repeated in VentureBeat's run-rate timeline).",
+   "url": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+   "event_id": "OPS-RUN-b2aea0"
+  },
+  {
+   "seq": 60,
+   "type": "found",
+   "text": "Mar 2025 run-rate: $1.4B early March (The Information) and $2B end-March (company disclosure; Reuters sources).",
+   "url": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+   "event_id": "OPS-RUN-df68e2"
+  },
+  {
+   "seq": 61,
+   "type": "found",
+   "text": "Jul 2025 run-rate: $4B (The Information, headline) and ~$5B end of July (Bloomberg per Epoch; company 'over $5B in August').",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+   "event_id": "OPS-RUN-e4290a"
+  },
+  {
+   "seq": 62,
+   "type": "open",
+   "text": "SaaStr timeline piece (2026-07-06): Feb $14B, Mar $19B, Apr $30B, early May $44B, mid-May $47B; says Anthropic books a meaningful share of revenue gross. T4.",
+   "url": "https://www.saastr.com/by-year-end-anthropic-will-out-earn-every-public-software-company-except-microsoft/"
+  },
+  {
+   "seq": 63,
+   "type": "open",
+   "text": "VentureBeat (2026-05-08): run-rate list $87M (Jan 2024), $1B (Dec 2024), $9B, $14B, $19B, $30B, alongside CEO remarks at Code with Claude; OpenAI says $30B is overstated by ~$8B (gross vs net of AWS/Google).",
+   "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth"
+  },
+  {
+   "seq": 64,
+   "type": "open",
+   "text": "Om Malik (2026-05-29): run rate $9B end-2025 to over $30B this spring; sources put it closer to $40B. T4.",
+   "url": "https://om.co/2026/05/29/anthropic-ai-and-the-numbers-problem/"
+  },
+  {
+   "seq": 65,
+   "type": "open",
+   "text": "Ed Zitron (2026-05-21): Mar 3 $19B attributed to Dario Amodei; CFO sworn declaration link; WSJ Q1 $4.8B and Q2 $10.9B projection. T4, opinion.",
+   "url": "https://www.wheresyoured.at/anthropics-profitability-swindle/"
+  },
+  {
+   "seq": 66,
+   "type": "open",
+   "text": "PYMNTS (2026-03-04) relaying Bloomberg: run-rate topped $19B, more than double $9B about three months earlier (unnamed sources).",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/enterprises-drive-anthropic-run-rate-revenue-to-19-billion/"
+  },
+  {
+   "seq": 67,
+   "type": "open",
+   "text": "OfficeChai (2026-03-05): The Information chart shows Anthropic $19B and OpenAI $25B annualized.",
+   "url": "https://officechai.com/ai/openais-annual-revenue-run-rate-at-25-billion-anthropic-not-far-behind-at-19-billion-the-information-report/"
+  },
+  {
+   "seq": 68,
+   "type": "found",
+   "text": "Mar 2026 run-rate: $19B (Bloomberg 2026-03-03; The Information chart 2026-03-05); attribution (sources vs CEO) unresolved.",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/enterprises-drive-anthropic-run-rate-revenue-to-19-billion/",
+   "event_id": "OPS-RUN-2c99b0"
+  },
+  {
+   "seq": 69,
+   "type": "flag",
+   "text": "March 2026 $19B: PYMNTS says Bloomberg unnamed sources; Ed Zitron says CEO Dario Amodei claimed it on 2026-03-03. Bloomberg page returned 403; a one-query search for a CEO conference statement found none.",
+   "url": "https://www.wheresyoured.at/anthropics-profitability-swindle/",
+   "event_id": "OPS-RUN-2c99b0"
+  },
+  {
+   "seq": 70,
+   "type": "open",
+   "text": "Reuters via Investing.com (2026-08-17): run rate topped $65B by end of July; company shared the figure with investors; Bloomberg first.",
+   "url": "https://www.investing.com/news/stock-market-news/anthropic-revenue-run-rate-tops-65-billion-source-says-4864031"
+  },
+  {
+   "seq": 71,
+   "type": "open",
+   "text": "Yahoo copy of Bloomberg (2026-09-18): run rate $65B by end of July, $9B at end-2025; NYT says annualized revenue expected to top $100B in 2026 (projection).",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-annualized-revenue-top-100-220623178.html"
+  },
+  {
+   "seq": 72,
+   "type": "open",
+   "text": "Axios via Yahoo (2026-09-18, Ben Berkowitz) relaying NYT: pacing to more than $100B, up 50% from two months ago (implies ~$65-67B in July).",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-tops-100-billion-revenue-224001996.html"
+  },
+  {
+   "seq": 73,
+   "type": "open",
+   "text": "Motley Fool (2026-08-24): run rate $65B, about seven times end of last year.",
+   "url": "https://www.fool.com/investing/2026/08/24/anthropic-has-a-65-billion-run-rate-buy-these-stoc/"
+  },
+  {
+   "seq": 74,
+   "type": "open",
+   "text": "NextBigFuture (2026-07-10): Yipit put Anthropic ARR at $69B (via X post); method unknown.",
+   "url": "https://www.nextbigfuture.com/2026/07/reports-of-69-billion-annualized-revenue-rate-for-anthropic.html"
+  },
+  {
+   "seq": 75,
+   "type": "found",
+   "text": "Jul 2026 run-rate: $65B by end of July, investor update reported by Bloomberg/Reuters/CNBC (2026-08-17).",
+   "url": "https://www.investing.com/news/stock-market-news/anthropic-revenue-run-rate-tops-65-billion-source-says-4864031",
+   "event_id": "OPS-RUN-d33b7d"
+  },
+  {
+   "seq": 76,
+   "type": "flag",
+   "text": "Third-party Yipit estimate of $69B ARR (2026-07-10) sits above the company-sourced $65B end-of-July figure; different measurer/date, reported as alternative, not chosen.",
+   "url": "https://www.nextbigfuture.com/2026/07/reports-of-69-billion-annualized-revenue-rate-for-anthropic.html",
+   "event_id": "OPS-RUN-d33b7d"
+  },
+  {
+   "seq": 77,
+   "type": "flag",
+   "text": "CNBC (Aug 15 Q2 story and Aug 18 $65B video), Bloomberg (Mar 3, Aug 14, Aug 17) and WSJ (May 20, Aug 18) originals could not be opened (403/paywall); CNBC snippet via Bing: $65B at end of July, 'CNBC confirmed'.",
+   "url": "https://www.cnbc.com/video/2026/08/18/anthropic-tells-investors-annualized-revenue-run-rate-climbed-to-65-billion-in-july.html",
+   "event_id": "OPS-RUN-d33b7d"
+  },
+  {
+   "seq": 78,
+   "type": "search",
+   "text": "Google News RSS: gross-vs-net queries (4): 'OpenAI Anthropic revenue overstated $8 billion', 'prospectus gross revenue principal agent', 'books revenue gross cloud resellers', 'gross net run-rate OpenAI overstated' - surfaced Forbes 2026-03-25 'OpenAI And Anthropic Count Revenue Differently' (403), Axios/Yahoo explainer, SemiAnalysis, techtimes 2026-06-05."
+  },
+  {
+   "seq": 79,
+   "type": "open",
+   "text": "Axios via Yahoo (2026-09-03) 'Anthropic and OpenAI's revenue chasm, explained': Anthropic records full value of partner sales, cloud providers' cuts as expenses; net restatement would be a 6-10% hit.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html"
+  },
+  {
+   "seq": 80,
+   "type": "open",
+   "text": "Sacra: says Anthropic books reseller (AWS/Google/Microsoft) revenue gross; no FY2022-2024 revenue; no headcount. Aggregator, lead only.",
+   "url": "https://sacra.com/c/anthropic/"
+  },
+  {
+   "seq": 81,
+   "type": "flag",
+   "text": "Gross-vs-net: OpenAI contends Anthropic's $30B run rate is overstated by ~$8B because cloud-partner sales are counted gross (VentureBeat); Axios/SaaStr/Sacra say Anthropic books full partner-channel value with cloud cuts as expenses; OfficeChai says the prospectus coverage does not clarify the method. I did not find the S-1 revenue-recognition wording.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html"
+  },
+  {
+   "seq": 82,
+   "type": "search",
+   "text": "Google News RSS quarter-level batch (11 queries): May-Jul 2026 WSJ/CNBC/PYMNTS/Reuters 'first profitable quarter'; Aug 2026 'Q2 $11.5B' and 'WSJ $11.6B vs OpenAI $6.7B'; $44B/$45B (Apr 20-Jun 5); $50-60B (Jun-Aug); Jun 10-Aug 10 run-rate; first half / six months; TTM; third/fourth-quarter 2025; $787 million - no source reports H1, TTM or Q1/Q3/Q4 2025."
+  },
+  {
+   "seq": 83,
+   "type": "open",
+   "text": "PYMNTS relaying WSJ (2026-05-20): Q2 projected $10.9B, up 130% from $4.8B in Q1; expected operating income $559M.",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/"
+  },
+  {
+   "seq": 84,
+   "type": "open",
+   "text": "PYMNTS relaying Bloomberg (2026-08-16): documents viewed by Bloomberg show preliminary Q2 revenue above $11.5B vs $787M a year earlier.",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-touts-14-fold-jump-in-revenue-for-would-be-investors/"
+  },
+  {
+   "seq": 85,
+   "type": "open",
+   "text": "The Next Web (2026-08-19): WSJ says Anthropic Q2 revenue $11.6B; Bloomberg's preliminary figure was $11.5B.",
+   "url": "https://thenextweb.com/news/openai-q2-revenue-anthropic-surpasses"
+  },
+  {
+   "seq": 86,
+   "type": "flag",
+   "text": "Q2 2026 differs by outlet: $11.5B (Bloomberg prelim; FT S-1 review) vs $11.6B (WSJ); earlier WSJ projection $10.9B. Both reported.",
+   "url": "https://thenextweb.com/news/openai-q2-revenue-anthropic-surpasses",
+   "event_id": "OPS-PER-88c333"
+  },
+  {
+   "seq": 87,
+   "type": "found",
+   "text": "Q1 2026 revenue $4.73B (Bloomberg-era docs via IBTimes; S-1-era 24/7 Wall St.); WSJ had $4.8B.",
+   "url": "https://www.ibtimes.com/anthropic-revenue-explodes-past-115-billion-its-blockbuster-ipo-now-coming-focus-3806473",
+   "event_id": "OPS-PER-fc62ba"
+  },
+  {
+   "seq": 88,
+   "type": "flag",
+   "text": "Q1 2026 differs slightly: $4.73B (IBTimes/24/7) vs $4.8B (WSJ 2026-05-20). Both reported.",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+   "event_id": "OPS-PER-fc62ba"
+  },
+  {
+   "seq": 89,
+   "type": "found",
+   "text": "Q2 2026 revenue $11.5B preliminary (Bloomberg docs 2026-08-14; FT S-1 review); year-earlier $787M.",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-touts-14-fold-jump-in-revenue-for-would-be-investors/",
+   "event_id": "OPS-PER-88c333"
+  },
+  {
+   "seq": 90,
+   "type": "found",
+   "text": "H1 2026 = derived $16.23B (Q1 $4.73B + Q2 $11.5B); no source states an H1 figure.",
+   "event_id": "OPS-PER-23f61c"
+  },
+  {
+   "seq": 91,
+   "type": "found",
+   "text": "TTM 2Q2026 = derived about $19.6B (range ~$19.4-19.8B); Q1 2025 and Q3/Q4 2025 quarterly revenue not reported anywhere I could open.",
+   "event_id": "OPS-PER-225887"
+  },
+  {
+   "seq": 92,
+   "type": "search",
+   "text": "Google News RSS: FY2022/FY2023/FY2024 revenue queries (6): '2023 revenue', 'revenue in 2022', '2024 revenue $381 million/$400 million', 'revenue last year 2023' (2024), 'S-1 2023', 'Jan-Feb 2026 2025 revenue $4.5B' - nothing reports FY2022 or FY2023; FY2024 $381M only via the Epoch index."
+  },
+  {
+   "seq": 93,
+   "type": "open",
+   "text": "CourtListener PDF, CFO Krishna Rao declaration (2026-03-09, N.D. Cal. 3:26-cv-01996, Doc. 6-5): revenue 'exceeding $5 billion to date'; >$60B raised; >$10B spent on training/inference; no headcount.",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.6.5.pdf"
+  },
+  {
+   "seq": 94,
+   "type": "verify",
+   "text": "Cumulative cross-check: CFO sworn '>$5B to date' (2026-03-09) vs FY2024 ~ $0.38B + FY2025 ~ $4.59B = ~ $4.97B, so FY2023 must be small if 'to date' ran through end-2025. Inference only.",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.6.5.pdf",
+   "event_id": "OPS-PER-620695"
+  },
+  {
+   "seq": 95,
+   "type": "found",
+   "text": "FY2022: no figure published; Series G says first dollar of revenue earned less than three years before 2026-02-12, implying $0 in 2022 (inference).",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+   "event_id": "OPS-PER-e92fe0"
+  },
+  {
+   "seq": 96,
+   "type": "found",
+   "text": "FY2023 revenue: nothing found from company, S-1 coverage or investor documents (coverage compares only 2024 vs 2025). UNTRACEABLE.",
+   "event_id": "OPS-PER-620695"
+  },
+  {
+   "seq": 97,
+   "type": "flag",
+   "text": "FY2023 revenue: no company, S-1-coverage or investor-document figure found. Reported as UNTRACEABLE rather than estimated.",
+   "event_id": "OPS-PER-620695"
+  },
+  {
+   "seq": 98,
+   "type": "search",
+   "text": "Google News RSS + Bing News headcount queries (12 in total): 'headcount employees 2026 workforce hiring', 'prospectus employees as of full-time', 'S-1 takeaways employees', 'Anthropic, which employs', 'employees 4,000/5,000/3,000', 'revenue per employee', 'number of employees', 'takes over entire office building', 'leases NY office', 'prospectus employees' - surfaced SaaStr, SFist/SF Chronicle lease stories, NY Post lease story, Fortune Dec 2025 (not openable)."
+  },
+  {
+   "seq": 99,
+   "type": "search",
+   "text": "Bing News RSS headcount follow-ups (5 queries): 'Anthropic employees worldwide', 'workforce employees IPO millionaires', 'How Anthropic grew ... $183 billion', 'candidates blunt money question' - led to the Fortune Aug 2026 piece via Yahoo; Fortune Dec 2025 and Axios pages not openable."
+  },
+  {
+   "seq": 100,
+   "type": "search",
+   "text": "WebSearch 2/4: 'Anthropic IPO prospectus S-1 number of employees headcount' - only aggregators and Wikipedia (2,500) surfaced; no S-1 employee count."
+  },
+  {
+   "seq": 101,
+   "type": "search",
+   "text": "WebSearch 3/4: 'Anthropic hits $3 billion in annualized revenue ... Reuters May 30 2025' - gave the Yahoo copy of the Reuters exclusive and Sacra."
+  },
+  {
+   "seq": 102,
+   "type": "search",
+   "text": "WebSearch 4/4: 'how many employees does Anthropic have 2026' - gave Revelio Labs, Tracxn, TrueUp, GetLatka, jobsbyculture pages (aggregators)."
+  },
+  {
+   "seq": 103,
+   "type": "open",
+   "text": "Revelio Labs employees page: ~3,950 (Mar 2026); 2023 546, 2024 1,324, 2025 3,089 (page says published Aug 2026).",
+   "url": "https://www.reveliolabs.com/companies/anthropic-pbc/employees"
+  },
+  {
+   "seq": 104,
+   "type": "flag",
+   "text": "Tracxn and TrueUp pages returned HTTP 403; Tracxn 5,994 (2026-08-31) is a WebSearch snippet only, unverified on the page.",
+   "url": "https://tracxn.com/d/companies/anthropic/__SzoxXDMin-NK5tKB7ks8yHr6S9Mz68pjVCzFEcGFZ08",
+   "event_id": "OPS-HEA-116f01"
+  },
+  {
+   "seq": 105,
+   "type": "open",
+   "text": "SaaStr headcount piece (2026-04-14): 3,000-5,000 depending on source (Tracxn ~5,000 Mar 2026, TrueUp ~3,000, PitchBook and Gerstner ~2,500); Gerstner run-rate points $1B end-2024, $4B mid-2025, $9B end-2025, $30B end-March 2026.",
+   "url": "https://www.saastr.com/anthropic-only-has-5000-employees-almost-no-one-has-ever-been-this-efficient-thats-by-choice/"
+  },
+  {
+   "seq": 106,
+   "type": "open",
+   "text": "Wikipedia infobox reference trace: 2,500 employees (2026) cites SF Chronicle 2026-01-30 (Laura Waxmann).",
+   "url": "https://en.wikipedia.org/wiki/Anthropic"
+  },
+  {
+   "seq": 107,
+   "type": "open",
+   "text": "SFist (2026-01-30): 'Anthropic, which currently has 2,500 employees worldwide and 1,300 locally'; 1,300+ Bay Area attributed to Daniela Amodei.",
+   "url": "https://sfist.com/2026/01/30/anthropic-signs-lease-for-entire-27-story-downtown-tower/"
+  },
+  {
+   "seq": 108,
+   "type": "open",
+   "text": "Fortune via Yahoo (2026-08-25, Preston Fore): refers to the AI company's 'more than 2,500 employees' - latest named-outlet headcount.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-potential-2-trillion-ipo-150327764.html"
+  },
+  {
+   "seq": 109,
+   "type": "open",
+   "text": "anthropic.com/company: no employee count.",
+   "url": "https://www.anthropic.com/company"
+  },
+  {
+   "seq": 110,
+   "type": "open",
+   "text": "JobsByCulture blog: ~500 (2023) to ~2,300+ (Q4 2025, citing Fortune). T4, Fortune page itself not opened (guessed URLs 404).",
+   "url": "https://jobsbyculture.com/blog/anthropic-layoffs-2026"
+  },
+  {
+   "seq": 111,
+   "type": "open",
+   "text": "SiliconANGLE (2025-09-26): company to triple headcount outside US (no baseline total).",
+   "url": "https://siliconangle.com/2025/09/26/anthropic-triple-international-headcount-add-offices-following-latest-funding-round/"
+  },
+  {
+   "seq": 112,
+   "type": "open",
+   "text": "Reuters factbox on S-1 executives/board (kfgo.com copy), Investing.com explainer, Forge IPO page, Gradually explainer (4 pages): no headcount or FY2023 data.",
+   "url": "https://kfgo.com/2026/09/28/factbox-anthropic-ipo-prospectus-shows-key-executives-and-board/"
+  },
+  {
+   "seq": 113,
+   "type": "found",
+   "text": "Headcount: no company-stated total; named outlets say ~2,500 (SF Chronicle Jan 2026) and more than 2,500 (Fortune Aug 2026); vendors say ~3,950 (Revelio Mar 2026) to ~5,000-5,994 (Tracxn Mar-Aug 2026); Revelio trajectory 546 / 1,324 / 3,089 / 3,950.",
+   "url": "https://sfist.com/2026/01/30/anthropic-signs-lease-for-entire-27-story-downtown-tower/",
+   "event_id": "OPS-HEA-116f01"
+  },
+  {
+   "seq": 114,
+   "type": "flag",
+   "text": "Headcount: no company figure; named outlets (2,500 / more than 2,500) sit well below vendor counts (Revelio 3,950, Tracxn ~5,000-5,994); up to 2.4x spread.",
+   "event_id": "OPS-HEA-116f01"
+  },
+  {
+   "seq": 115,
+   "type": "verify",
+   "text": "Consistency: Q2 2026 recognized revenue $11.5B annualizes to ~$46B, in line with the company run-rate path ($30B Apr, $47B May, $65B end-July); Q2 2025 $787M annualizes to ~$3.1B, in line with the $3B run rate at end-May 2025. Axios/NYT (2026-09-18) 'up 50% from two months ago' to >$100B implies ~$65-67B in July, consistent with $65B.",
+   "event_id": "OPS-PER-88c333"
+  },
+  {
+   "seq": 116,
+   "type": "verify",
+   "text": "Note: Q1 2026 recognized revenue $4.73B annualizes to ~$18.9B, above the average Q1 run rate implied by $14B (Feb) and $19B (Mar) - recognized and run-rate measures are not interchangeable; both are gross of cloud-partner cuts.",
+   "event_id": "OPS-PER-fc62ba"
+  },
+  {
+   "seq": 117,
+   "type": "verify",
+   "text": "Run-rate chain is internally consistent: $1B (Dec 2024) -> $2B (Mar 2025) -> $3B (May) -> $4-5B (Jul) -> >$5B (Aug) -> $7B (Oct) -> ~$9B (Dec) -> $14B (Feb 2026) -> $19B (Mar) -> $30B (Apr) -> $47B (May) -> $65B (end-Jul); recognized revenue (FY2025 $4.59B, Q1 2026 $4.73B, Q2 2026 $11.5B) is far below the run rates, as expected for an annualized exit rate."
+  },
+  {
+   "seq": 118,
+   "type": "verify",
+   "text": "Gross-vs-net: Axios (2026-09-03), SaaStr, Sacra and the Motley Fool (80% gross margin before distribution-partner revenue share) agree Anthropic books full partner-channel value with the cloud cut as an expense; OpenAI's claim of ~$8B overstatement is relayed only by VentureBeat. I did not find the S-1 revenue-recognition wording itself."
+  },
+  {
+   "seq": 119,
+   "type": "message",
+   "text": "Hand-off to orchestrator: 23 questions answered. Key points: run-rate months are mostly company-stated (Anthropic posts for Sep 2025, Oct 2025, Feb/Apr/May 2026); FY2023 untraceable; FY2022 only inferable as $0; headcount has no company figure and third-party counts conflict 2,500 to ~6,000; H1 and TTM are derived, not reported. All revenue is reported gross of cloud-partner cuts (run-rate and recognized); the S-1 method wording itself was not located.",
+   "to": "orchestrator"
+  }
+ ],
+ "stats": {
+  "searches": 90,
+  "pages_opened": 67,
+  "claims_answered": 23,
+  "flags": 15
+ }
+}

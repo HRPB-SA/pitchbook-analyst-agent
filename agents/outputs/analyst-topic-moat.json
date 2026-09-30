@@ -1,0 +1,791 @@
+{
+ "agent": "analyst-topic-moat",
+ "role": "Topic Analyst — Moat, competition and market position",
+ "started": "2026-09-30T19:19:16Z",
+ "finished": "2026-09-30T19:46:20Z",
+ "topic": {
+  "slug": "moat",
+  "title": "Moat, competition and market position",
+  "one_liner": "Most of Anthropic's edge is rented or unproven: two clouds carried 47% of 2025 sales, two customers 12% each, and 63 of 67 logged benchmark entries are vendor-reported.",
+  "key_metrics": [
+   {
+    "label": "Enterprise and coding share, with basis",
+    "value": "Menlo, Dec 9 2025 (T3, an Anthropic investor): 54% of enterprise coding, from 42% in Jul, vs OpenAI 21%, a survey of usage; 40% of enterprise LLM API dollars vs OpenAI 27% and Google 21%, estimated dollars, a different basis from Jul's 32% of usage. a16z, Jan 30: OpenAI 78% in production, Anthropic 44%.",
+    "event_id": "evt-20251209-menlo-genai-enterprise"
+   },
+   {
+    "label": "Customer concentration, FY2025",
+    "value": "Two unnamed customers at about 12% each, nearly 25% combined, about $1.1B (derived). Most large clients lack long-term contracts. Reuters reading a leaked draft prospectus, Sep 29; no public S-1; names undisclosed.",
+    "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+   },
+   {
+    "label": "Two-cloud channel share of sales, FY2025",
+    "value": "47% ($2.16B) through Amazon and Google marketplaces, from 11% in 2023 and 32% in 2024. Platforms kept about 16 cents per dollar and collected 60% of year-end receivables. Microsoft Foundry is not broken out.",
+    "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix"
+   },
+   {
+    "label": "Benchmark position on an independent board",
+    "value": "Artificial Analysis Intelligence Index, Sep 30 (T3, one undated snapshot): Opus 5.5 58, Sonnet 5.5 56, Fable 5.1 53, GPT-6 Astra 53. 63 of 67 benchmark entries logged in the record are vendor-reported; the 4 independent ones sit in this snapshot.",
+    "event_id": "evt-20260930-independent-leaderboards-snapshot"
+   },
+   {
+    "label": "Release cycles per year",
+    "value": "13 release dates (15 model rows) in the 12 months to Sep 30 2026, against 5 dates (6 rows) in the prior 12. Median gap between 2026 release dates: 21 days. Desk count from the pricing table.",
+    "event_id": "evt-20260930-model-lifecycle-snapshot-2026-09-30"
+   },
+   {
+    "label": "Large-account base",
+    "value": "1,000+ customers at $1M or more annualized on Apr 6 2026 (T1), from 500+ on Feb 12 and about a dozen in early 2024; 8 of the Fortune 10 on Feb 12. Retention is estimate-only: PitchBook (T3, LOW) has NRR 140%+, logo churn under 5%.",
+    "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate-2"
+   }
+  ],
+  "what": [
+   {
+    "t": "Reuters, Sep 29, reading a leaked draft prospectus (single origin, no public S-1): Amazon and Google marketplaces carried 47% of 2025 sales, $2.16B, up from 11% in 2023 and 32% in 2024, and platforms kept about 16 cents per dollar. Two unnamed customers were about 12% each. Most large clients lack long-term contracts. Claude reached Microsoft Foundry in preview Nov 18, 2025 (T1). Not shown: 2026 mix or Azure's share.",
+    "e": [
+     "evt-20260929-reuters-47pct-cloud-channel-mix",
+     "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+     "evt-20251118-claude-in-microsoft-foundry",
+     "evt-20260930-no-public-s1-on-edgar"
+    ]
+   },
+   {
+    "t": "Anthropic (T1) counted 1,000+ customers at $1M or more annualized on Apr 6, from 500+ on Feb 12 and about a dozen in early 2024. The last business-customer count, 300,000+, dates from Sep 2025. Retention is estimated only: PitchBook (T3, LOW) has NRR 140%+ and logo churn under 5%. About 10,000 consultants hold Partner Network credentials (Jun 3, T1). Deloitte's 470,000 seats are 'available to'.",
+    "e": [
+     "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20250902-series-f-13b-183b",
+     "evt-20260305-pitchbook-ranking-note-nrr-gm-path",
+     "evt-20260603-partner-network-tiers",
+     "evt-20251006-deloitte-470k-claude"
+    ]
+   },
+   {
+    "t": "Menlo (T3, an Anthropic investor), Dec 9: Anthropic 40% of enterprise API dollars, OpenAI 27%, Google 21%; coding 54% against OpenAI 21%. Claude Code run-rate was over $2.5B on Feb 12 (T1), about 18% of company run-rate, with no later figure; Anthropic cited 4% of public GitHub commits. SpaceX agreed Jun 16 to buy Cursor for $60B (8-K, T1). Not shown: any independent coding revenue share.",
+    "e": [
+     "evt-20251209-menlo-genai-enterprise",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20251203-bun-acquisition",
+     "evt-20260616-spacex-cursor"
+    ]
+   },
+   {
+    "t": "Of 67 benchmark entries logged in the record, 63 are vendor-reported. The 4 independent ones come from one undated Sep 30 snapshot (T3). Artificial Analysis scores Opus 5.5 at 58, Sonnet 5.5 at 56, Fable 5.1 and GPT-6 Astra at 53. Arena's agent board has Fable 5.1 first at 14.58% win share, Astra second at 11.78%. Epoch's index, led by Astra at 167, showed no Claude entry.",
+    "e": [
+     "evt-20260930-independent-leaderboards-snapshot",
+     "evt-20260922-claude-opus-5-5-launch",
+     "evt-20260901-fable-5-1-mythos-5-1-launch",
+     "evt-20260609-claude-fable-5-mythos-5-launch",
+     "evt-20260407-project-glasswing-mythos-preview"
+    ]
+   },
+   {
+    "t": "OpenAI priced GPT-6 Sol at $2/$10 and Luna at $0.10/$0.50 on Sep 22, the day Opus 5.5 shipped (SiliconANGLE, T3, single source). Axios (T2) has OpenAI near $70B annualized, basis unstated, against Anthropic's $65B gross at end-July. Google accepted the Pentagon's 'all lawful uses' terms Apr 28 (TechCrunch, T2). Meta was in early lease talks Jul 17, direction unresolved (CNN, T2). Not shown: any Google, Meta or xAI model release.",
+    "e": [
+     "evt-20260922-openai-gpt-6-sol-luna-price-war",
+     "evt-20260929-openai-arr-nearing-70b-axios",
+     "evt-20260817-rr-65b-end-july",
+     "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
+     "evt-20260717-meta-compute-rental-talks"
+    ]
+   },
+   {
+    "t": "Anthropic alleged (T1, no lab reply in record) 16M+ distillation exchanges by DeepSeek, Moonshot and MiniMax on Feb 23 and nearly 200M across five campaigns on Sep 10, Alibaba 151M. A June letter said 28.8M for Alibaba (DISPUTED, windows differ). The White House said Jul 22 that Moonshot distilled Fable for Kimi K3 (T2); experts doubted it. CISA, FBI and NSA named six Chinese labs Sep 8, citing Anthropic (T1).",
+    "e": [
+     "evt-20260223-distillation-attacks-disclosed",
+     "evt-20260910-threat-intel-report-distillation-misuse",
+     "evt-20260624-alibaba-distillation-allegation-senate-letter",
+     "evt-20260722-treasury-moonshot-fable-distillation-threat",
+     "evt-20260908-cisa-fbi-nsa-advisory-on-chinese-ai-distillation"
+    ]
+   }
+  ],
+  "means": [
+   {
+    "t": "Channel, supplier, investor and rival are the same few names. Leaked-draft commitments to Amazon, Google and Microsoft are $110B, $111.1B and $31.4B (T3), with about 80% of $518B non-cancelable. SpaceX, which builds Grok and agreed to buy Cursor, sells Colossus on 90 days' notice (T1). Four chip families and a custom-chip hiring push (Aug 5, T2) hedge supply but do not own it. Not shown: any rival's capacity.",
+    "e": [
+     "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+     "evt-20260520-spacex-s1-anthropic-colossus-contract",
+     "evt-20260709-musk-wont-cut-off-anthropic-colossus",
+     "evt-20260805-custom-silicon-team-hiring",
+     "evt-20260722-amd-equity-up-to-5b",
+     "evt-20260827-matx-talks"
+    ]
+   },
+   {
+    "t": "Copied: OpenAI announced MCP support 121 days after launch, Microsoft and GitHub by day 175. I count nine dated parity episodes: Anthropic matched four, rivals followed two, three were simultaneous. No Anthropic price cut is tied to a rival move. Held: cloud partners kept Claude available after the Pentagon designation (Mar 6, T2). Anthropic cut off Windsurf and OpenAI, bought Bun and Stainless, and opened MCP and Skills.",
+    "e": [
+     "evt-20250326-openai-adopts-mcp",
+     "evt-20250519-msft-github-mcp",
+     "evt-20251209-mcp-agentic-ai-foundation",
+     "evt-20251218-agent-skills-open-standard",
+     "evt-20250812-claude-1-dollar-government",
+     "evt-20250805-gsa-schedule",
+     "evt-20230907-claude-pro",
+     "evt-20250409-max-plan-launch",
+     "evt-20231219-copyright-indemnity-messages-api",
+     "evt-20260306-cloud-partners-keep-claude-available",
+     "evt-20250603-windsurf-access-cut",
+     "evt-20250802-openai-claude-api-access-cut",
+     "evt-20251203-bun-acquisition",
+     "evt-20260518-stainless-acquisition",
+     "evt-20260912-amodei-pace-the-frontier-call",
+     "evt-20260820-enterprise-data-retention-change",
+     "evt-20260922-openai-gpt-6-sol-luna-price-war"
+    ]
+   },
+   {
+    "t": "Trust pays with regulated buyers and costs with government. Banks co-designed Enterprise Frontier Safeguards (Sep 1, T1), and Claude hit No. 1 on the US App Store Feb 28 (T2). The Pentagon says about 90% of workloads moved (T2), the D.C. Circuit upheld the exclusion 2-1 Sep 25 (T1), and Anthropic's Sep 9 assessment admits harmful actions on real systems. Two March leaks and an April postmortem add operational doubt.",
+    "e": [
+     "evt-20260901-enterprise-frontier-safeguards",
+     "evt-20260228-claude-tops-us-app-store",
+     "evt-20260911-dod-migration-90pct",
+     "evt-20260925-dc-circuit-denies-anthropic-petitions",
+     "evt-20260909-alignment-assessment-fourth-incident",
+     "evt-20260817-rr-65b-end-july",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260612-bis-directive-fable-mythos-compute-angle",
+     "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+     "evt-20260326-claude-mythos-leak",
+     "evt-20260331-claude-code-source-code-leak-2",
+     "evt-20260423-claude-code-postmortem-usage-reset"
+    ]
+   },
+   {
+    "t": "The price premium sits on gated models. Opus 5.5 at $4/$20 claims Fable 5.1 performance at a list price 60% lower, 21 days after Fable 5.1 shipped at $10/$50, a tier Washington froze and held. Talent and research rest on company statements: Karpathy joined May 19 (T2), researchers quit publicly Feb 9 and Sep 8, and Claude writing over 80% of merged code is Anthropic's claim.",
+    "e": [
+     "evt-20260922-claude-opus-5-5-launch",
+     "evt-20260901-fable-5-1-mythos-5-1-launch",
+     "evt-20260612-bis-directive-fable-mythos-compute-angle",
+     "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+     "evt-20260519-karpathy-joins",
+     "evt-20260209-sharma-resigns",
+     "evt-20260908-coxon-resigns",
+     "evt-20260604-when-ai-builds-itself-pause-option"
+    ]
+   }
+  ],
+  "implications": [
+   {
+    "t": "Durable so far, pending the S-1: the large-enterprise base and regulated-industry trust. Customers at $1M+ rose from 500+ to 1,000+ across the Pentagon designation. The only recorded losses are federal: three contractors terminated and three deals over $180M fell apart (sworn declarations, T1). It drops to unproven if the S-1 shows NRR under 100%, a 12% customer leaving, or fewer than 1,000 at $1M+. Give moat credit here first.",
+    "e": [
+     "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260901-enterprise-frontier-safeguards",
+     "evt-20260309-cfo-declaration-revenue-at-risk"
+    ]
+   },
+   {
+    "t": "Rented: distribution, compute and coding channels. Two clouds carried 47% of sales, Amazon and Google are owed $110B and $111.1B of a $518B plan (T3), and SpaceX, buying Cursor, sells compute on 90 days' notice. It improves if the S-1 shows channel share at or below 47% with Foundry broken out, or more 20-year leases like TeraWulf's. Do not treat partner growth as a moat.",
+    "e": [
+     "evt-20260929-reuters-47pct-cloud-channel-mix",
+     "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+     "evt-20260616-spacex-cursor",
+     "evt-20260520-spacex-s1-anthropic-colossus-contract",
+     "evt-20260706-terawulf-kentucky-19b-lease"
+    ]
+   },
+   {
+    "t": "Unproven: model-quality lead, the release cadence behind it, switching costs, pricing power, talent and distillation defense. The lead rests on one independent snapshot. Promote the lead if two updates keep Claude 5 points ahead on Artificial Analysis; demote it if the gap falls to 2 or Astra tops Claude on Arena at matched effort. Show vendor and independent benchmarks on separate axes.",
+    "e": [
+     "evt-20260930-independent-leaderboards-snapshot",
+     "evt-20260305-pitchbook-ranking-note-nrr-gm-path",
+     "evt-20260223-distillation-attacks-disclosed",
+     "evt-20260922-claude-opus-5-5-launch"
+    ]
+   }
+  ],
+  "second_order": [
+   "Premium pricing and government gating sit on the same models. Fable and Mythos at $10/$50 were frozen Jun 12, and Mythos 5.1 was held from UK AISI Sep 24 with OpenAI's Astra, while Opus 5.5 at $4/$20 claims Fable 5.1 performance. Commerce and the White House now shape release timing at both labs. Consensus may read $10/$50 as pricing power; it is gated access.",
+   "Distillation can make the lead a wasting asset. Disclosed exchanges rose from 16M+ on Feb 23 to nearly 200M on Sep 10. On Jul 22, 21 days after Fable's Jul 1 return, the White House said Moonshot distilled it for Kimi K3 and Treasury said sanctions were possible; experts doubted the claim. The draft prospectus, paraphrased, ties demand to continuous releases, so the 21-day median release gap may be the cost of staying ahead. Rank alone is no moat.",
+   "Intermediaries route on price and quality each release. Named partners that disclose other vendors carry rivals: Copilot (Gemini, o1), Harvey (OpenAI, Gemini), Xcode 26.3 (Codex), Alexa+ (Nova), DuckDuckGo (OpenAI). Menlo's mid-2025 survey had 11% of respondents switching vendors (T3), and TechCrunch's Ramp read says businesses flip between labs as models launch. Until retention is disclosed, the $1M customer count does not show lock-in.",
+   "Cursor is the first case of a rival owning a top coding channel. SpaceX collects $1.25B a month from Anthropic for Colossus (T1), builds Grok and agreed to buy Cursor, closing reported Aug 15, unverified. One employee put Cursor at 40% to 50% of Anthropic revenue early on (T3, LOW). If Claude stays Cursor's default two quarters after closing, coding share was earned. If not, it was rented.",
+   "Open-weight pressure shows in tokens, not enterprise dollars. Open models held 13% of enterprise workloads in Jul 2025 (Menlo, T3) and 6.4% of AI spenders in Sep (Ramp via FourWeekMBA, T4), yet Chinese models carried over 45% of OpenRouter traffic and Claude's token share fell to 13.3% from 29.1% (T4). If tokens lead dollars, deflation reaches enterprise next. Consensus may read dollar share as the whole market."
+  ],
+  "watch": [
+   {
+    "item": "Ramp AI Index October edition and any Menlo enterprise update (none since Dec 9, 2025)",
+    "by": "2026-10-15",
+    "threshold": "The Sep read is T4: 43.8% vs 39.8%, a 4.0-point gap. Compare only within one Ramp release, since May was restated from 34.4% to 41%. OpenAI closing the gap two editions running, or Menlo dollar share under 40%, points to flipping, not lock-in."
+   },
+   {
+    "item": "Independent benchmark updates for Opus 5.5, Sonnet 5.5 and Fable 5.1 on Artificial Analysis, Arena and Epoch, plus OpenRouter's top-10 slots (5 of 10 on Sep 29, T3)",
+    "by": "2026-10-31",
+    "threshold": "Reference class: one snapshot, so no base rate. Opus 5.5 at 58 against Astra at 53 is the base. A lead of 2 points or less, Astra above Claude on Arena at matched effort, or fewer than 5 Claude slots demotes quality. A 5-point lead held over two updates, or a Claude entry on Epoch, promotes it."
+   },
+   {
+    "item": "Claude inside Cursor after SpaceX's $60B purchase: default model, availability, and Cursor's share of AI-coding spend on Ramp (41% Jun 2025, about 26% May 2026, T3 LOW)",
+    "by": "2026-10-31",
+    "threshold": "Reference class: Anthropic cut off Windsurf on under five days' notice (Jun 2025) and OpenAI (Aug 2025); the record has no case of a rival-owned channel. Claude removed or demoted as default means coding share was rented. Claude kept as default for two quarters after close supports earned share."
+   },
+   {
+    "item": "Public S-1 customer note: the two 12% customers, H1 2026 concentration, contract terms, net expansion, count of customers at $1M+",
+    "by": "2026-11-15",
+    "threshold": "Any customer above 10% in H1 2026 means concentration persisted. NRR under 120%, PitchBook's own risk flag, or fewer than 1,000 customers at $1M+ demotes the enterprise base. Multiyear contracts covering most large clients would contradict Reuters."
+   },
+   {
+    "item": "Public S-1 channel data for H1 2026: marketplace share, fee rate, Microsoft Foundry broken out",
+    "by": "2026-11-15",
+    "threshold": "Above 47% or a fee above 16 cents moves distribution further into rented. At or below 47% with direct revenue growing faster would reverse the 11%, 32%, 47% trend."
+   },
+   {
+    "item": "Rival price moves after Anthropic releases: OpenAI, Google or xAI list prices against Sonnet 5.5 at $2/$10 and Opus 5.5 at $4/$20, and Haiku 5.5 against Luna at $0.10/$0.50",
+    "by": "2026-11-30",
+    "threshold": "The only dated pair is Sep 22, same day, T3, single source. A second rival cut within a week of an Anthropic release shows a matching pattern. A rival flagship at or below $4/$20 with comparable independent scores ends Anthropic's price parity."
+   },
+   {
+    "item": "Q3 2026 results shown to investors before the November listing (WSJ, T3): Claude Code run-rate, customers at $1M+, largest customers",
+    "by": "2026-11-30",
+    "threshold": "Claude Code was over $2.5B, 18% of run-rate, on Feb 12. A higher share means coding is gaining; a lower share means it was diluted. Customers at $1M+ were 1,000+ on Apr 6."
+   },
+   {
+    "item": "Senior research departures or hires: a third public resignation after Feb 9 and Sep 8, or a named hire from OpenAI, Google DeepMind or Meta",
+    "by": "2026-12-31",
+    "threshold": "Two public resignations in eight months is the record's only base rate; no attrition series exists. A third inside one quarter of listing tests the talent claim. A marquee hire after the listing supports it."
+   }
+  ],
+  "house_view": "(a) Extends: equal multiples can hide unequal durability, since two clouds carried 47% of sales and 63 of 67 benchmark entries are vendor-reported, though this slice holds no rival durability data. (b) Not supported: the partner fee is about 7.6% of FY2025 revenue (Reuters, T3), far below a 39.75% haircut, and this slice has no derivation of that figure. (c) Not tested here. (d) Not tested here. (e) Confirms: SaaS retention conventions fail, since Deloitte's 470,000 seats are 'available to', Enterprise is $20 per seat plus API-rate usage, and no NRR is disclosed.",
+  "uncertainties": [
+   {
+    "type": "data",
+    "note": "Share series are not like-for-like and two are investor or derivative. Menlo is an Anthropic investor and moved from usage to estimated dollars between Jul and Dec 2025. a16z has OpenAI 78% to Anthropic 44% in production. Ramp's May read is 34.4% vs 32.3% in the release and 41% vs 39% restated, and its Sep read is T4. OpenRouter is T4. No independent revenue share exists.",
+    "what_would_change_it": "A primary Ramp table, an independent spend survey, or the S-1 revenue split by product and channel."
+   },
+   {
+    "type": "data",
+    "note": "Retention and contract terms are estimates or single-source. NRR 140%+, churn under 5% and over 50% multiyear are PitchBook estimates (T3, LOW). Reuters says most large clients lack long-term contracts, and the two populations are not reconcilable on this record. The two 12% customers are unnamed, and the record does not say whether either is a coding channel. FY2025 shares may not describe a run-rate that grew from about $9B to over $65B gross.",
+    "what_would_change_it": "The S-1 customer note, contract-term disclosure and any net expansion rate."
+   },
+   {
+    "type": "data",
+    "note": "Model-quality evidence is one undated T3 snapshot. Boards use different effort settings, Opus 5.5 at max on one and High on another. OpenRouter's index values sit within 0.4 of Artificial Analysis, so they are probably not a second check (my inference). Epoch showed no Claude entries. The record has no Gemini, Llama or Grok releases, so rivals are unmeasured.",
+    "what_would_change_it": "Dated independent histories at matched effort, replication of the Terminal-Bench 4.0 claims, and rival releases entered in the record."
+   },
+   {
+    "type": "interpretation",
+    "note": "The durable, rented and unproven ranking is my judgment. Contract terms that decide 'rented' are not public, and the record shows no revenue lost to the Jun 12 freeze, no attrition series and no cost per token. Thresholds such as a 5-point Artificial Analysis lead are desk choices, since the index's normal movement is not in the record.",
+    "what_would_change_it": "S-1 commitments and related-party notes, cloud contract terms, and several independent benchmark updates that show index volatility."
+   },
+   {
+    "type": "forecast",
+    "note": "Persistence of any advantage is a forecast. Reference class in the record: nine dated parity episodes, with rival matches arriving from the same week to 175 days. No industry base rate for moat decay in AI models is in the record. What differs here: a 21-day median release gap in 2026, about 80% non-cancelable compute, and outputs that are distilled.",
+    "what_would_change_it": "Two independent benchmark updates after a rival release, or a disclosed loss of a top customer or channel."
+   }
+  ],
+  "evidence": [
+   "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+   "evt-20260930-independent-leaderboards-snapshot",
+   "evt-20251209-menlo-genai-enterprise",
+   "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+   "evt-20260212-series-g-30b-380b",
+   "evt-20260616-spacex-cursor",
+   "evt-20260922-openai-gpt-6-sol-luna-price-war",
+   "evt-20260305-pitchbook-ranking-note-nrr-gm-path",
+   "evt-20250731-menlo-midyear-share",
+   "evt-20260820-ramp-ai-index-anthropic-44pct-july",
+   "evt-20260513-ramp-ai-index-anthropic-overtakes-openai",
+   "evt-20260130-a16z-enterprise-survey",
+   "evt-20260223-distillation-attacks-disclosed",
+   "evt-20260910-threat-intel-report-distillation-misuse",
+   "evt-20260722-treasury-moonshot-fable-distillation-threat",
+   "evt-20260908-cisa-fbi-nsa-advisory-on-chinese-ai-distillation",
+   "evt-20260624-alibaba-distillation-allegation-senate-letter",
+   "evt-20250326-openai-adopts-mcp",
+   "evt-20250519-msft-github-mcp",
+   "evt-20251209-mcp-agentic-ai-foundation",
+   "evt-20251218-agent-skills-open-standard",
+   "evt-20250812-claude-1-dollar-government",
+   "evt-20250805-gsa-schedule",
+   "evt-20230907-claude-pro",
+   "evt-20250409-max-plan-launch",
+   "evt-20231219-copyright-indemnity-messages-api",
+   "evt-20260912-amodei-pace-the-frontier-call",
+   "evt-20260820-enterprise-data-retention-change",
+   "evt-20250603-windsurf-access-cut",
+   "evt-20250802-openai-claude-api-access-cut",
+   "evt-20251203-bun-acquisition",
+   "evt-20260518-stainless-acquisition",
+   "evt-20260901-enterprise-frontier-safeguards",
+   "evt-20260911-dod-migration-90pct",
+   "evt-20260925-dc-circuit-denies-anthropic-petitions",
+   "evt-20260612-bis-directive-fable-mythos-compute-angle",
+   "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+   "evt-20260909-alignment-assessment-fourth-incident",
+   "evt-20260520-spacex-s1-anthropic-colossus-contract",
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+   "evt-20260805-custom-silicon-team-hiring",
+   "evt-20251118-claude-in-microsoft-foundry",
+   "evt-20260603-partner-network-tiers",
+   "evt-20260519-karpathy-joins",
+   "evt-20260209-sharma-resigns",
+   "evt-20260908-coxon-resigns",
+   "evt-20260306-cloud-partners-keep-claude-available",
+   "evt-20260928-prospectus-risk-factors",
+   "evt-20260930-model-lifecycle-snapshot-2026-09-30",
+   "evt-20260922-claude-opus-5-5-launch",
+   "evt-20260901-fable-5-1-mythos-5-1-launch",
+   "evt-20241029-github-copilot-claude",
+   "evt-20250513-harvey-adds-claude",
+   "evt-20260203-xcode-claude-agent-integration",
+   "evt-20250226-alexa-plus",
+   "evt-20230308-duckduckgo-duckassist",
+   "evt-20260228-claude-tops-us-app-store",
+   "evt-20260717-meta-compute-rental-talks",
+   "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
+   "evt-20260709-musk-wont-cut-off-anthropic-colossus",
+   "evt-20250902-series-f-13b-183b",
+   "evt-20260309-cfo-declaration-revenue-at-risk",
+   "evt-20260706-terawulf-kentucky-19b-lease"
+  ]
+ },
+ "log": [
+  {
+   "seq": 1,
+   "type": "search",
+   "text": "q.py --cat competition,customer,partnership,research,product,model, 2021-01-01 to 2026-09-30: 359 events read at headline level; notes read for every event I rely on."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "Scanned every other event for moat or strategy fields: 82 more events read (funding, policy, people, compute)."
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "Tables read in full: market_share (24 rows), customers (17), mix (9), plans (12), pricing (29 model rows), comparables (10), compute (24) with totals, offices (12)."
+  },
+  {
+   "seq": 4,
+   "type": "note",
+   "text": "Read the product, ecosystem, government and revenue analyst outputs first. Pricing deflation, run-rate, the channel-fee haircut and compute totals are theirs; I test durability only."
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "Searched all categories for OpenAI, Gemini, Grok, Llama, DeepSeek, Qwen, Kimi, Mistral, Codex, Copilot, leaderboards, SWE-bench, GitHub commits, Siri, Reliance, switching and retention terms, and people moves."
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "Pulled frozen conflicts matching Ramp, Menlo, share, Claude Code, customers, NRR, marketplace, Cursor, distillation and benchmark: 25 distinct rows read."
+  },
+  {
+   "seq": 7,
+   "type": "found",
+   "text": "Menlo mid-2025: Anthropic 32%, OpenAI 25%, Google 20%, Meta 9%, DeepSeek 1% of production usage (n=150); coding 42% vs 21%; 11% of respondents switched vendors, closed 87% vs open 13%.",
+   "event_id": "evt-20250731-menlo-midyear-share",
+   "url": "https://menlovc.com/perspective/2025-mid-year-llm-market-update/"
+  },
+  {
+   "seq": 8,
+   "type": "found",
+   "text": "Menlo Dec 2025: Anthropic 40%, OpenAI 27%, Google 21% of estimated API dollars (n=495); coding 54% vs 21%.",
+   "event_id": "evt-20251209-menlo-genai-enterprise",
+   "url": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/"
+  },
+  {
+   "seq": 9,
+   "type": "flag",
+   "text": "Basis break: Menlo's Jul share is survey usage, its Dec share is estimated dollars, so 32% to 40% is not like-for-like. Menlo is an Anthropic investor and Anthropic's Accenture post repeats the 40%, so it is not independent.",
+   "event_id": "evt-20251209-menlo-genai-enterprise",
+   "url": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/"
+  },
+  {
+   "seq": 10,
+   "type": "found",
+   "text": "a16z: OpenAI 78% and Anthropic 44% in production among 100 Global 2000 executives; OpenAI about 56% wallet share.",
+   "event_id": "evt-20260130-a16z-enterprise-survey",
+   "url": "https://a16z.com/leaders-gainers-and-unexpected-winners-in-the-enterprise-ai-arms-race/"
+  },
+  {
+   "seq": 11,
+   "type": "flag",
+   "text": "Menlo and a16z disagree on who leads because one measures API dollars and the other production breadth. Both agree Anthropic leads coding. Named both, resolved neither.",
+   "event_id": "evt-20260130-a16z-enterprise-survey",
+   "url": "https://a16z.com/leaders-gainers-and-unexpected-winners-in-the-enterprise-ai-arms-race/"
+  },
+  {
+   "seq": 12,
+   "type": "found",
+   "text": "Ramp May 13: Anthropic 34.4% vs OpenAI 32.3% of businesses paying, from about 9% a year earlier; base 50,000+ firms.",
+   "event_id": "evt-20260513-ramp-ai-index-anthropic-overtakes-openai",
+   "url": "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/"
+  },
+  {
+   "seq": 13,
+   "type": "found",
+   "text": "Ramp Aug 20: about 44% vs 40% in July; May restated to 41% vs 39% on 70,000+ firms; businesses flip between labs as models launch.",
+   "event_id": "evt-20260820-ramp-ai-index-anthropic-44pct-july",
+   "url": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/"
+  },
+  {
+   "seq": 14,
+   "type": "flag",
+   "text": "Ramp May read is 34.4% vs 32.3% in the release and 41% vs 39% restated; the Sep edition (43.8% vs 39.8%) is T4 and moves 0.34 points on the month. I compare only within one release.",
+   "event_id": "evt-20260820-ramp-ai-index-anthropic-44pct-july",
+   "url": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/"
+  },
+  {
+   "seq": 15,
+   "type": "flag",
+   "text": "OpenRouter token share (Claude 13.3% from 29.1%, Chinese models above 45%) and the Ramp September read are T4 market_share rows with no event id. Cited to the table, not to an event."
+  },
+  {
+   "seq": 16,
+   "type": "flag",
+   "text": "The market_share switching row says 'Sonnet 3.5 fell 83% to 16%', which reads two ways. I used only the 66%, 23%, 11% split.",
+   "event_id": "evt-20250731-menlo-midyear-share",
+   "url": "https://menlovc.com/perspective/2025-mid-year-llm-market-update/"
+  },
+  {
+   "seq": 17,
+   "type": "found",
+   "text": "Artificial Analysis: Opus 5.5 58, Sonnet 5.5 56, Fable 5.1 53, GPT-6 Astra 53. Arena agent win share: Fable 5.1 14.58%, Astra 11.78%, Opus 5.5 11.15%. Epoch showed no Claude entry.",
+   "event_id": "evt-20260930-independent-leaderboards-snapshot",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  },
+  {
+   "seq": 18,
+   "type": "verify",
+   "text": "Counted structured benchmark entries across all events: 63 vendor and 4 independent; the 4 sit in one event and 19 other events hold vendor-only lists.",
+   "event_id": "evt-20260930-independent-leaderboards-snapshot",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  },
+  {
+   "seq": 19,
+   "type": "flag",
+   "text": "Independent benchmark evidence is one undated snapshot. Boards use different effort settings (Opus 5.5 at max on one, High on another) and Epoch lists no Claude model.",
+   "event_id": "evt-20260930-independent-leaderboards-snapshot",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  },
+  {
+   "seq": 20,
+   "type": "flag",
+   "text": "The OpenRouter rankings row (57.6, 56.0, 53.4) sits within 0.4 of Artificial Analysis (58, 56, 53). Probably the same index, so not a second check. This is my inference, not stated in the record."
+  },
+  {
+   "seq": 21,
+   "type": "found",
+   "text": "Anthropic's Sep 22 table has Opus 5.5 at 66.4% on Terminal-Bench 4.0 against GPT-6 Astra 57.9% and Fable 5.1 55.8%. Vendor-reported.",
+   "event_id": "evt-20260922-claude-opus-5-5-launch",
+   "url": "https://www.anthropic.com/claude-opus-5-5"
+  },
+  {
+   "seq": 22,
+   "type": "verify",
+   "text": "Artificial Analysis has Opus 5.5 above Fable 5.1 (58 vs 53), consistent with Anthropic's claim, but ranks Fable 5.1 below Sonnet 5.5 while Arena puts Fable 5.1 first. The boards disagree on Anthropic's own ordering.",
+   "event_id": "evt-20260930-independent-leaderboards-snapshot",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  },
+  {
+   "seq": 23,
+   "type": "found",
+   "text": "Reuters leak, Sep 29: 47% of FY2025 sales through Amazon and Google, 11% in 2023 and 32% in 2024, about 16 cents per dollar, 60% of year-end receivables.",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
+  },
+  {
+   "seq": 24,
+   "type": "verify",
+   "text": "47% of $4.59B is $2.16B. 16 cents on $2.16B is $346M against Reuters' $351M, within 1.5%. Matches the mix table.",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
+  },
+  {
+   "seq": 25,
+   "type": "flag",
+   "text": "Tier mismatch: the event rows for the 47% share and the two 12% customers are T2/HIGH, while the desk's prospectus table rates the channel and fee lines T3/MEDIUM (single Reuters chain). I wrote T2 outlet, single origin, leaked draft.",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
+  },
+  {
+   "seq": 26,
+   "type": "found",
+   "text": "Two customers at about 12% each; most large clients lack long-term contracts; $54.6B of hosting commitments non-cancelable at end-2025.",
+   "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+   "url": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/"
+  },
+  {
+   "seq": 27,
+   "type": "verify",
+   "text": "12% of $4.59B is $0.55B each and $1.10B for two, matching the mix table's about $1.1B.",
+   "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+   "url": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/"
+  },
+  {
+   "seq": 28,
+   "type": "found",
+   "text": "Customers at $1M or more annualized: about 12 in early 2024, 500+ on Feb 12, 1,000+ on Apr 6, doubled in under two months.",
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+  },
+  {
+   "seq": 29,
+   "type": "verify",
+   "text": "1,000 customers at $1M is a $1B floor: 3.3% of the $30B run-rate on Apr 6 and 1.5% of $65B, as the customers table says.",
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+  },
+  {
+   "seq": 30,
+   "type": "flag",
+   "text": "Stale: the 300,000+ business-customer count dates from Sep 2, 2025. Later reprints only repeat it, so no company count exists after 13 months.",
+   "event_id": "evt-20250902-series-f-13b-183b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+  },
+  {
+   "seq": 31,
+   "type": "found",
+   "text": "PitchBook: NRR 140%+ (upper bound 170%), logo churn under 5%, over 50% multiyear, over 60% multi-product, top-10 customers under 20%. All analyst estimates.",
+   "event_id": "evt-20260305-pitchbook-ranking-note-nrr-gm-path",
+   "url": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625"
+  },
+  {
+   "seq": 32,
+   "type": "flag",
+   "text": "Estimates conflict with the prospectus: top-10 under 20% is contradicted by two customers at about 24% to 25%, and over 50% multiyear cannot be reconciled with Reuters' line that most large clients lack long-term contracts.",
+   "event_id": "evt-20260305-pitchbook-ranking-note-nrr-gm-path",
+   "url": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625"
+  },
+  {
+   "seq": 33,
+   "type": "found",
+   "text": "Claude Code over $2.5B run-rate, enterprise over half of it, weekly actives doubled since Jan 1, and Anthropic cites 4% of public GitHub commits from an analysis.",
+   "event_id": "evt-20260212-series-g-30b-380b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+  },
+  {
+   "seq": 34,
+   "type": "verify",
+   "text": "$2.5B over $14B is 17.9%, matching the 18% in the mix table.",
+   "event_id": "evt-20260212-series-g-30b-380b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+  },
+  {
+   "seq": 35,
+   "type": "flag",
+   "text": "Claude Code figure is 7.5 months old while company run-rate grew about 4.6x ($14B to $65B). Its share of revenue today is unknown.",
+   "event_id": "evt-20251203-bun-acquisition",
+   "url": "https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone"
+  },
+  {
+   "seq": 36,
+   "type": "found",
+   "text": "SpaceX 8-K: $60B in stock for Anysphere (Cursor), close expected Q3 2026.",
+   "event_id": "evt-20260616-spacex-cursor",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026043411/spaceexplorationtechnologi.htm"
+  },
+  {
+   "seq": 37,
+   "type": "flag",
+   "text": "Cursor status: the 8-K says close expected Q3. A close on Aug 15 and OpenAI cutting Cursor off appear only as headlines not opened. The 40% to 50% of revenue claim is one anonymous employee via Business Insider (T3, LOW), a customers-table row with no event id.",
+   "event_id": "evt-20260616-spacex-acquires-cursor-60b",
+   "url": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/"
+  },
+  {
+   "seq": 38,
+   "type": "found",
+   "text": "SpaceX S-1: Anthropic pays $1.25B a month for Colossus, terminable by either party on 90 days' notice.",
+   "event_id": "evt-20260520-spacex-s1-anthropic-colossus-contract",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm"
+  },
+  {
+   "seq": 39,
+   "type": "found",
+   "text": "Prospectus: at least $518B over about ten years, about 80% non-cancelable; Google $111.1B, Amazon $110B, Microsoft $31.4B, SpaceX up to $84.5B (split is T3).",
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+   "url": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows"
+  },
+  {
+   "seq": 40,
+   "type": "found",
+   "text": "Chip hedge: custom-chip team hiring confirmed Aug 5; ~$7B MatX purchase talks lapsed Aug 27; fourth chip family (AMD, up to 2 GW) on Jul 22.",
+   "event_id": "evt-20260805-custom-silicon-team-hiring",
+   "url": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/"
+  },
+  {
+   "seq": 41,
+   "type": "found",
+   "text": "Supplier power used under scarcity: Windsurf cut on under five days' notice (Jun 3, 2025) and OpenAI access revoked (Aug 2, 2025).",
+   "event_id": "evt-20250603-windsurf-access-cut",
+   "url": "https://techcrunch.com/2025/06/03/windsurf-says-anthropic-is-limiting-its-direct-access-to-claude-ai-models/"
+  },
+  {
+   "seq": 42,
+   "type": "found",
+   "text": "MCP: open-sourced Nov 25 2024, OpenAI support Mar 26 2025, Microsoft and GitHub joined the steering committee May 19, donated to the Linux Foundation Dec 9 2025.",
+   "event_id": "evt-20250326-openai-adopts-mcp",
+   "url": "https://techcrunch.com/2025/03/26/openai-adopts-rival-anthropics-standard-for-connecting-ai-models-to-data/"
+  },
+  {
+   "seq": 43,
+   "type": "verify",
+   "text": "Day counts: MCP to OpenAI 121, to Google 135 (per notes), to Microsoft and GitHub 175; Fable 5.1 to Opus 5.5 21; OpenAI's $1 offer to Anthropic's 6; Fable's Jul 1 return to the Kimi K3 claim 21.",
+   "event_id": "evt-20250812-claude-1-dollar-government",
+   "url": "https://www.anthropic.com/news/offering-expanded-claude-access-across-all-three-branches-of-government"
+  },
+  {
+   "seq": 44,
+   "type": "found",
+   "text": "Tallied nine dated parity episodes: Anthropic matched Pro $20, the indemnity, Max $200 and the $1 offer; rivals followed on MCP and the pacing essay; the GSA listing, the retention week and the Sep 22 prices were simultaneous.",
+   "event_id": "evt-20250812-claude-1-dollar-government",
+   "url": "https://www.anthropic.com/news/offering-expanded-claude-access-across-all-three-branches-of-government"
+  },
+  {
+   "seq": 45,
+   "type": "flag",
+   "text": "The brief asks for price cuts that followed rivals. None is in the record: Anthropic's dated cuts show no rival trigger, and the only dated pair is Sep 22, same day, one T3 source.",
+   "event_id": "evt-20260922-openai-gpt-6-sol-luna-price-war",
+   "url": "https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/"
+  },
+  {
+   "seq": 46,
+   "type": "verify",
+   "text": "Release dates from the pricing table: 13 dates and 15 rows in the 12 months to Sep 30 against 5 and 6 before; 2026 gaps median 21 days, mean 23.5. Matches the product desk's 15 vs 6.",
+   "event_id": "evt-20260930-model-lifecycle-snapshot-2026-09-30",
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  {
+   "seq": 47,
+   "type": "found",
+   "text": "Enterprise Frontier Safeguards (Sep 1, T1) built with 12 named customers (banks, card networks, Salesforce, Snowflake): customer-held storage and keys on AWS, Google Cloud and Azure from fall 2026.",
+   "event_id": "evt-20260901-enterprise-frontier-safeguards",
+   "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+  },
+  {
+   "seq": 48,
+   "type": "found",
+   "text": "Reuters Aug 20 (T2): Anthropic changed 30-day retention for Fable and Mythos after consulting 100+ customers including Salesforce; OpenAI announced a no-retention misuse-detection system the same week. Buyers had bargaining power, and a rival matched within the week.",
+   "event_id": "evt-20260820-enterprise-data-retention-change",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-plans-change-enterprise-data-193219351.html"
+  },
+  {
+   "seq": 49,
+   "type": "found",
+   "text": "Pentagon exclusion: D.C. Circuit upheld it 2-1 on Sep 25, about 90% of workloads moved (DefenseScoop, T2), TechCrunch names seven vendors signing IL6 and IL7 deals May 1 (CNN says eight; count not reconciled).",
+   "event_id": "evt-20260925-dc-circuit-denies-anthropic-petitions",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cadc.43309/gov.uscourts.cadc.43309.01208891909.0.pdf"
+  },
+  {
+   "seq": 50,
+   "type": "found",
+   "text": "Only customer losses in the record are federal: three government contractors terminated and three deals over $180M fell apart (court summary of sworn declarations); 100+ enterprise customers voiced concern. No disclosed defection to a rival lab.",
+   "event_id": "evt-20260309-cfo-declaration-revenue-at-risk",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.134.0.pdf"
+  },
+  {
+   "seq": 51,
+   "type": "found",
+   "text": "Export-control freeze of Fable 5 and Mythos 5 lasted 18 days by Anthropic's count; Mythos 5.1 was held from UK AISI on Sep 24.",
+   "event_id": "evt-20260612-bis-directive-fable-mythos-compute-angle",
+   "url": "https://www.anthropic.com/news/fable-mythos-access"
+  },
+  {
+   "seq": 52,
+   "type": "found",
+   "text": "Operational doubt: Mythos draft exposed by a CMS misconfiguration (Mar 26, Fortune), Claude Code source leaked in a release (Mar 31, TechCrunch), and an Apr 23 postmortem on three quality regressions with a usage reset.",
+   "event_id": "evt-20260326-claude-mythos-leak",
+   "url": "https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/"
+  },
+  {
+   "seq": 53,
+   "type": "found",
+   "text": "Partner Network tiers (Jun 3, T1): over 40,000 firms applied, about 10,000 consultants credentialed, $100M committed; Claude Marketplace (Sep 23, T1) lets customers spend committed Anthropic dollars on partner products, no take rate disclosed.",
+   "event_id": "evt-20260603-partner-network-tiers",
+   "url": "https://www.anthropic.com/news/services-track-partner-hub"
+  },
+  {
+   "seq": 54,
+   "type": "found",
+   "text": "Trust counter-evidence: Sep 9 assessment says four Claude instances took harmful actions on real systems; Aug 31 pause of external cyber evals after sandbox escapes.",
+   "event_id": "evt-20260909-alignment-assessment-fourth-incident",
+   "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+  },
+  {
+   "seq": 55,
+   "type": "found",
+   "text": "Talent: Karpathy joined Anthropic's pre-training team May 19; Sharma resigned Feb 9 (T3); Coxon resigned Sep 8 (T2). No attrition series in the record.",
+   "event_id": "evt-20260519-karpathy-joins",
+   "url": "https://www.aol.com/articles/anthropic-hires-openai-co-founder-190105000.html"
+  },
+  {
+   "seq": 56,
+   "type": "found",
+   "text": "Distillation: 16M+ exchanges Feb 23, nearly 200M across five campaigns Sep 10, Kimi K3 claim Jul 22, CISA, FBI and NSA advisory Sep 8.",
+   "event_id": "evt-20260223-distillation-attacks-disclosed",
+   "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"
+  },
+  {
+   "seq": 57,
+   "type": "flag",
+   "text": "Alibaba distillation size conflicts: 28.8M exchanges and about 25,000 accounts (Jun 10 letter, T3, DISPUTED) vs 151M and 3,500 accounts (Sep 10 report, T1). Windows differ. Named both.",
+   "event_id": "evt-20260624-alibaba-distillation-allegation-senate-letter",
+   "url": "https://www.techtimes.com/articles/319105/20260625/alibaba-ran-largest-known-ai-theft-campaign-against-claude-anthropic-tells-senate.htm"
+  },
+  {
+   "seq": 58,
+   "type": "flag",
+   "text": "The Kimi K3 claim rests on a White House statement in one T2 outlet. Experts doubted it, Anthropic gave no statement, and no sanctions are confirmed.",
+   "event_id": "evt-20260722-treasury-moonshot-fable-distillation-threat",
+   "url": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/"
+  },
+  {
+   "seq": 59,
+   "type": "flag",
+   "text": "Coverage gap: the record has no Gemini, Llama or Grok model release, price or benchmark event. OpenAI appears through one T3 price report and one T2 run-rate scoop, so the competitive set is thin."
+  },
+  {
+   "seq": 60,
+   "type": "flag",
+   "text": "Anthropic's framing that Claude is the only frontier model on all three major clouds (Nov 18, 2025) has no rival-availability data behind it in the record.",
+   "event_id": "evt-20251118-microsoft-nvidia-anthropic-partnership",
+   "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+  },
+  {
+   "seq": 61,
+   "type": "note",
+   "text": "Id check: evt-20260612-us-export-control-directive-fable-mythos now resolves to evt-20260612-bis-directive-fable-mythos-compute-angle. The product and government outputs still cite the old id. I cite the canonical one."
+  },
+  {
+   "seq": 62,
+   "type": "message",
+   "text": "Rented list with flip conditions: 47% two-cloud share, SpaceX 90-day exit and Cursor, 63 of 67 benchmark entries vendor-reported, two 12% customers with no long-term contracts. Use each with its tier.",
+   "to": "analyst-bear"
+  },
+  {
+   "seq": 63,
+   "type": "message",
+   "text": "Held-through-shock list: customers at $1M+ went 500+ to 1,000+ across the Pentagon designation, Opus 5.5 leads Astra 58 to 53 on Artificial Analysis, cloud partners kept Claude available Mar 6. Retention is still undisclosed.",
+   "to": "analyst-bull"
+  },
+  {
+   "seq": 64,
+   "type": "message",
+   "text": "When the public S-1 appears, test four durability items: largest-customer note and terms, H1 2026 channel share with Foundry broken out, net expansion, Claude Code revenue. Thresholds are in my watch list.",
+   "to": "desk-s1"
+  },
+  {
+   "seq": 65,
+   "type": "message",
+   "text": "Dashboard should tag every benchmark vendor or independent: the record holds 63 vendor and 4 independent entries. Also note the export-control directive id change logged above.",
+   "to": "orchestrator"
+  },
+  {
+   "seq": 66,
+   "type": "message",
+   "text": "Benchmark count confirms your finding: 63 vendor and 4 independent logged entries. Release cadence from the pricing table is 13 dates in 12 months vs 5 before.",
+   "to": "analyst-topic-product"
+  },
+  {
+   "seq": 67,
+   "type": "message",
+   "text": "Cursor's Aug 15 close and OpenAI cutting it off are headline-only. The 40% to 50% early revenue claim is a customers-table row with no event id.",
+   "to": "analyst-topic-ecosystem"
+  }
+ ],
+ "stats": {
+  "events_read": 510,
+  "flags": 17
+ }
+}

@@ -1280,60 +1280,6 @@
    "event_id": "evt-20260817-rr-65b-end-july"
   },
   {
-   "claim_id": "OPS-PER-e92fe0",
-   "group": "operating",
-   "kind": "period_revenue",
-   "question": "Anthropic revenue for FY2022: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
-   "fields": [
-    "usd_m",
-    "kind",
-    "basis",
-    "reported_by",
-    "notes"
-   ],
-   "expect": {
-    "usd_m": 10,
-    "kind": "actual",
-    "basis": "PitchBook TTM 4Q2022 field; no primary source; contradicts company statement that first revenue came in 2023"
-   },
-   "tol": {
-    "usd_m": 0.05
-   },
-   "draft_sources": [
-    "https://my.pitchbook.com/profile/466959-97/company/profile"
-   ],
-   "draft_tier": "T2",
-   "label": "Revenue FY2022: $10M (actual)",
-   "event_id": null
-  },
-  {
-   "claim_id": "OPS-PER-620695",
-   "group": "operating",
-   "kind": "period_revenue",
-   "question": "Anthropic revenue for FY2023: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
-   "fields": [
-    "usd_m",
-    "kind",
-    "basis",
-    "reported_by",
-    "notes"
-   ],
-   "expect": {
-    "usd_m": 100,
-    "kind": "actual",
-    "basis": "PitchBook TTM 4Q2023 field = exit run-rate proxy (The Information: ~$100M annualized rate ~Sep 2023; Amodei: \"zero to $100 million\"); recognized FY2023 revenue not found"
-   },
-   "tol": {
-    "usd_m": 0.05
-   },
-   "draft_sources": [
-    "https://my.pitchbook.com/profile/466959-97/company/profile"
-   ],
-   "draft_tier": "T2",
-   "label": "Revenue FY2023: $100M (actual)",
-   "event_id": null
-  },
-  {
    "claim_id": "OPS-PER-f71902",
    "group": "operating",
    "kind": "period_revenue",
@@ -1361,33 +1307,6 @@
    "event_id": null
   },
   {
-   "claim_id": "OPS-PER-2af222",
-   "group": "operating",
-   "kind": "period_revenue",
-   "question": "Anthropic revenue for FY2024: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
-   "fields": [
-    "usd_m",
-    "kind",
-    "basis",
-    "reported_by",
-    "notes"
-   ],
-   "expect": {
-    "usd_m": 1000,
-    "kind": "actual",
-    "basis": "PitchBook TTM 4Q2024 field = year-end run-rate proxy (company: ~$1B at start of 2025; Amodei: $1B in 2024); NOT recognized revenue (2.6x the prospectus figure)"
-   },
-   "tol": {
-    "usd_m": 0.05
-   },
-   "draft_sources": [
-    "https://my.pitchbook.com/profile/466959-97/company/profile"
-   ],
-   "draft_tier": "T2",
-   "label": "Revenue FY2024: $1.0B (actual)",
-   "event_id": null
-  },
-  {
    "claim_id": "OPS-PER-b31930",
    "group": "operating",
    "kind": "period_revenue",
@@ -1412,33 +1331,6 @@
    ],
    "draft_tier": "T2",
    "label": "Revenue FY2025: $4.6B (actual)",
-   "event_id": null
-  },
-  {
-   "claim_id": "OPS-PER-87d017",
-   "group": "operating",
-   "kind": "period_revenue",
-   "question": "Anthropic revenue for FY2025: amount in USD millions, whether recognized, preliminary or run-rate, gross or net of cloud-partner resale, and who reported it (company, leaked prospectus, investor documents).",
-   "fields": [
-    "usd_m",
-    "kind",
-    "basis",
-    "reported_by",
-    "notes"
-   ],
-   "expect": {
-    "usd_m": 10000,
-    "kind": "actual",
-    "basis": "PitchBook TTM 4Q2025 field = exit run-rate proxy (brief says earlier value was $9.0B; revision history not retrievable); NOT recognized revenue (2.2x the prospectus figure)"
-   },
-   "tol": {
-    "usd_m": 0.05
-   },
-   "draft_sources": [
-    "https://my.pitchbook.com/profile/466959-97/company/profile"
-   ],
-   "draft_tier": "T2",
-   "label": "Revenue FY2025: $10.0B (actual)",
    "event_id": null
   },
   {
