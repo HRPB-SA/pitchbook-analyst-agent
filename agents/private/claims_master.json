@@ -1,6 +1,804 @@
 {
  "claims": [
   {
+   "claim_id": "CAP-ROU-28fa1c",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Series A' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2021-05-28",
+    "size_usd_m": 124,
+    "pre_usd_m": 337,
+    "post_usd_m": 461,
+    "leads": [
+     "Jaan Tallinn"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems"
+   ],
+   "draft_tier": "T1",
+   "label": "Series A: $124M at $461M post (2021-05-28)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-cda9a7",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Series B' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2022-04-29",
+    "size_usd_m": 980,
+    "pre_usd_m": 2020,
+    "post_usd_m": 3000,
+    "leads": [
+     "Sam Bankman-Fried (FTX)"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai"
+   ],
+   "draft_tier": "T1",
+   "label": "Series B: $980M at $3.0B post (2022-04-29)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-d0f4c6",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Series C' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2023-06-30",
+    "size_usd_m": 450,
+    "pre_usd_m": 4100,
+    "post_usd_m": 4550,
+    "leads": [
+     "Spark Capital"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-series-c"
+   ],
+   "draft_tier": "T1",
+   "label": "Series C: $450M at $4.5B post (2023-06-30)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-0ec616",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Google convertible notes (PB 4th round)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2023-10-27",
+    "size_usd_m": 2000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Alphabet"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/news/google-agrees-invest-2-billion-195316710.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Google convertible notes (PB 4th round): $2.0B at n/a post (2023-10-27)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-230a8a",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Series D' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2024-07-01",
+    "size_usd_m": 1200,
+    "pre_usd_m": 19800,
+    "post_usd_m": 21000,
+    "leads": [
+     "Menlo Ventures"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/"
+   ],
+   "draft_tier": "T2",
+   "label": "Series D: $1.2B at $21.0B post (2024-07-01)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-717ba1",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Amazon convertible notes (PB 6th round)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2024-11-22",
+    "size_usd_m": 8000,
+    "pre_usd_m": 46000,
+    "post_usd_m": 54000,
+    "leads": [
+     "Amazon"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.aboutamazon.com/news/aws/amazon-invests-additional-4-billion-anthropic-ai"
+   ],
+   "draft_tier": "T1",
+   "label": "Amazon convertible notes (PB 6th round): $8.0B at $54.0B post (2024-11-22)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-e36c1a",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Series E' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-03-03",
+    "size_usd_m": 3500,
+    "pre_usd_m": 58000,
+    "post_usd_m": 61500,
+    "leads": [
+     "Lightspeed Venture Partners"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation"
+   ],
+   "draft_tier": "T1",
+   "label": "Series E: $3.5B at $61.5B post (2025-03-03)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-65af9e",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Series F' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-09-02",
+    "size_usd_m": 13000,
+    "pre_usd_m": 170000,
+    "post_usd_m": 183000,
+    "leads": [
+     "ICONIQ",
+     "Fidelity Management & Research",
+     "Lightspeed Venture Partners"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+   ],
+   "draft_tier": "T1",
+   "label": "Series F: $13.0B at $183.0B post (2025-09-02)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-e70989",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Series G' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-02-12",
+    "size_usd_m": 30000,
+    "pre_usd_m": 350000,
+    "post_usd_m": 380000,
+    "leads": [
+     "GIC",
+     "Coatue"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+   ],
+   "draft_tier": "T1",
+   "label": "Series G: $30.0B at $380.0B post (2026-02-12)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-20299f",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Series H' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-05-28",
+    "size_usd_m": 65000,
+    "pre_usd_m": 900000,
+    "post_usd_m": 965000,
+    "leads": [
+     "Altimeter Capital",
+     "Dragoneer",
+     "Greenoaks",
+     "Sequoia Capital"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/series-h"
+   ],
+   "draft_tier": "T1",
+   "label": "Series H: $65.0B at $965.0B post (2026-05-28)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-f4bfd5",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's '11th round: AMD strategic equity (up to)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-07-22",
+    "size_usd_m": 5000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "AMD"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+   ],
+   "draft_tier": "T1",
+   "label": "11th round: AMD strategic equity (up to): $5.0B at n/a post (2026-07-22)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-94451d",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Revolving credit facility (5-year)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-05-16",
+    "size_usd_m": 2500,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Morgan Stanley"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
+   ],
+   "draft_tier": "T3",
+   "label": "Revolving credit facility (5-year): $2.5B at n/a post (2025-05-16)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-7d2fef",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Pre-IPO revolving credit facility' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-09-03",
+    "size_usd_m": 15000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Morgan Stanley"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+   ],
+   "draft_tier": "T2",
+   "label": "Pre-IPO revolving credit facility: $15.0B at n/a post (2026-09-03)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-d1e7d9",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'TPU chip-lease SPV notes (lessor debt; not Anthropic-issued)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-06-09",
+    "size_usd_m": 34500,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Apollo Global Management",
+     "Blackstone"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://epochai.substack.com/p/will-financing-bottleneck-ai-compute"
+   ],
+   "draft_tier": "T3",
+   "label": "TPU chip-lease SPV notes (lessor debt; not Anthropic-issued): $34.5B at n/a post (2026-06-09)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-5c3794",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'FTX/Alameda estate sale #1 (secondary)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2024-03-22",
+    "size_usd_m": 884.109327,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": []
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.10241.1.pdf"
+   ],
+   "draft_tier": "T1",
+   "label": "FTX/Alameda estate sale #1 (secondary): $884M at n/a post (2024-03-22)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-1f3e39",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'FTX/Alameda estate sale #2 (secondary)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2024-06-02",
+    "size_usd_m": 452,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": []
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://bitcoinist.com/ftx-offloads-anthropic-shares-in-450-million-sale/"
+   ],
+   "draft_tier": "T3",
+   "label": "FTX/Alameda estate sale #2 (secondary): $452M at n/a post (2024-06-02)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-b6e2c9",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Secondary: undisclosed seller to Homeroom Fund, Lakeside Capital' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-01-15",
+    "size_usd_m": null,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": []
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json"
+   ],
+   "draft_tier": "T2",
+   "label": "Secondary: undisclosed seller to Homeroom Fund, Lakeside Capital: n/a at n/a post (2025-01-15)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-467407",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Employee buyback #1 (secondary)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-05-02",
+    "size_usd_m": null,
+    "pre_usd_m": null,
+    "post_usd_m": 61500,
+    "leads": []
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/"
+   ],
+   "draft_tier": "T3",
+   "label": "Employee buyback #1 (secondary): n/a at $61.5B post (2025-05-02)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-e8fe9a",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Amazon Apr-2026: $5B now + up to $20B facility' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-04-20",
+    "size_usd_m": 25000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Amazon"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-amazon-compute"
+   ],
+   "draft_tier": "T1",
+   "label": "Amazon Apr-2026: $5B now + up to $20B facility: $25.0B at n/a post (2026-04-20)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-9220f5",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Google Apr-2026: up to $40B ($10B now)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-04-24",
+    "size_usd_m": 40000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Alphabet"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"
+   ],
+   "draft_tier": "T2",
+   "label": "Google Apr-2026: up to $40B ($10B now): $40.0B at n/a post (2026-04-24)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-f3735c",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'Microsoft / NVIDIA strategic (up to)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2025-11-18",
+    "size_usd_m": 15000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "NVIDIA",
+     "Microsoft"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+   ],
+   "draft_tier": "T1",
+   "label": "Microsoft / NVIDIA strategic (up to): $15.0B at n/a post (2025-11-18)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-ROU-cbf591",
+   "group": "capital",
+   "kind": "round",
+   "question": "Anthropic's 'IPO (confidential draft S-1)' financing: (1) announcement or close date; (2) amount raised in USD millions, and whether any part was debt, a convertible note or a secondary sale; (3) pre-money and post-money valuation in USD millions; (4) lead and co-lead investors as named by the company or a lead investor. Say whether the amount is announced or funded and whether the valuation is pre- or post-money.",
+   "fields": [
+    "date",
+    "size_usd_m",
+    "pre_usd_m",
+    "post_usd_m",
+    "leads",
+    "notes"
+   ],
+   "expect": {
+    "date": "2026-06-01",
+    "size_usd_m": null,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Morgan Stanley",
+     "Goldman Sachs",
+     "JPMorgan (reported)"
+    ]
+   },
+   "tol": {
+    "date": 3,
+    "size_usd_m": 0.03,
+    "pre_usd_m": 0.03,
+    "post_usd_m": 0.03
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/confidential-draft-s1-sec"
+   ],
+   "draft_tier": "T1",
+   "label": "IPO (confidential draft S-1): n/a at n/a post (2026-06-01)",
+   "event_id": null
+  },
+  {
+   "claim_id": "CAP-TOT-827c44",
+   "group": "capital",
+   "kind": "total",
+   "question": "What is the total capital Anthropic has raised through Sep 30 2026 on an equity-only basis (priced rounds and strategic equity or convertible investments) versus including debt (revolvers, bonds)? List each component with its date and amount in USD millions, and say what PitchBook's 'Total Raised' field includes.",
+   "fields": [
+    "equity_only_usd_m",
+    "debt_usd_m",
+    "total_usd_m",
+    "components"
+   ],
+   "expect": {
+    "equity_only_usd_m": 124254,
+    "debt_usd_m": 2500,
+    "total_usd_m": 126754
+   },
+   "tol": {
+    "equity_only_usd_m": 0.1,
+    "debt_usd_m": 0.1,
+    "total_usd_m": 0.1
+   },
+   "draft_sources": [],
+   "draft_tier": null,
+   "label": "Total raised: $124.3B equity + $2.5B debt",
+   "event_id": null
+  },
+  {
    "claim_id": "CAP-DEB-4ae801",
    "group": "capital",
    "kind": "debt",
@@ -1292,6 +2090,366 @@
    "draft_tier": "T4",
    "label": "share of revenue from business/enterprise: ~80% business/enterprise vs ~20% consumer",
    "event_id": null
+  },
+  {
+   "claim_id": "OPS-COM-e7a4c2",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with Broadcom-related TPU equipment leases (XPV platform and successors): dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 161200,
+    "gw": null,
+    "chips": "Google TPU systems/racks (Broadcom-supplied)"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm"
+   ],
+   "draft_tier": null,
+   "label": "Broadcom-related TPU equipment leases (XPV platform and successors): $161.2B",
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate"
+  },
+  {
+   "claim_id": "OPS-COM-21eade",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with Google Cloud (next-gen TPU program, Apr 2026): dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 111100,
+    "gw": 5.0,
+    "chips": "Google TPU next-generation (incl. ~3.5 GW accessed via Broadcom)"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/series-h"
+   ],
+   "draft_tier": null,
+   "label": "Google Cloud (next-gen TPU program, Apr 2026): $111.1B, 5.0 GW",
+   "event_id": "evt-20260424-google-up-to-40b-investment"
+  },
+  {
+   "claim_id": "OPS-COM-191007",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with Amazon Web Services: dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 100000,
+    "gw": 5.0,
+    "chips": "Trainium2, Trainium3 (through Trainium4); Graviton"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-amazon-compute"
+   ],
+   "draft_tier": null,
+   "label": "Amazon Web Services: $100.0B, 5.0 GW",
+   "event_id": "evt-20260420-amazon-5gw-25b-investment"
+  },
+  {
+   "claim_id": "OPS-COM-c23f8d",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with Fluidstack - $50B US data-center program (TX, NY): dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 50000,
+    "gw": null,
+    "chips": null
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure"
+   ],
+   "draft_tier": null,
+   "label": "Fluidstack - $50B US data-center program (TX, NY): $50.0B",
+   "event_id": "evt-20251112-50b-us-data-centers-fluidstack"
+  },
+  {
+   "claim_id": "OPS-COM-37026d",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with SpaceX / xAI - Colossus and Colossus II: dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 45000,
+    "gw": 0.3,
+    "chips": "NVIDIA GPUs (>220K at Colossus 1; Colossus II GB300 phase)"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm"
+   ],
+   "draft_tier": null,
+   "label": "SpaceX / xAI - Colossus and Colossus II: $45.0B, 0.3 GW",
+   "event_id": "evt-20260520-spacex-s1-anthropic-colossus-contract"
+  },
+  {
+   "claim_id": "OPS-COM-bda5ab",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with Nscale - Monarch Compute Campus, West Virginia: dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 44600,
+    "gw": 0.46,
+    "chips": "NVIDIA Vera Rubin NVL72"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
+   ],
+   "draft_tier": null,
+   "label": "Nscale - Monarch Compute Campus, West Virginia: $44.6B, 0.46 GW",
+   "event_id": "evt-20260826-nscale-45b-west-virginia-deal"
+  },
+  {
+   "claim_id": "OPS-COM-af38e9",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with Lambda at Hut 8 Beacon Point, Texas (Nvidia holds the shell lease): dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 35000,
+    "gw": 0.704,
+    "chips": "NVIDIA (model not stated)"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-strikes-35-billion-cloud-155100165.html"
+   ],
+   "draft_tier": null,
+   "label": "Lambda at Hut 8 Beacon Point, Texas (Nvidia holds the shell lease): $35.0B, 0.704 GW",
+   "event_id": "evt-20260831-lambda-35b-cloud-deal-texas"
+  },
+  {
+   "claim_id": "OPS-COM-5723ea",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with Broadcom AI XPV Platform SPV - first tranche (Apollo/Blackstone notes): dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 34500,
+    "gw": 1.0,
+    "chips": "Google TPU systems (~1M TPUs)"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://finance.yahoo.com/sectors/technology/articles/broadcom-apollo-blackstone-launch-35-144624131.html"
+   ],
+   "draft_tier": null,
+   "label": "Broadcom AI XPV Platform SPV - first tranche (Apollo/Blackstone notes): $34.5B, 1.0 GW",
+   "event_id": "evt-20260609-tpu-financing-34-5b-closed"
+  },
+  {
+   "claim_id": "OPS-COM-846861",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with Microsoft Azure + NVIDIA: dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 30000,
+    "gw": 1.0,
+    "chips": "NVIDIA Grace Blackwell, Vera Rubin"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+   ],
+   "draft_tier": null,
+   "label": "Microsoft Azure + NVIDIA: $30.0B, 1.0 GW",
+   "event_id": "evt-20251118-microsoft-nvidia-anthropic-partnership"
+  },
+  {
+   "claim_id": "OPS-COM-51b596",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with TeraWulf - Justified Data campus, Kentucky: dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 19000,
+    "gw": 0.401,
+    "chips": "none (powered shell; tenant supplies chips)"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_8k.htm"
+   ],
+   "draft_tier": null,
+   "label": "TeraWulf - Justified Data campus, Kentucky: $19.0B, 0.401 GW",
+   "event_id": "evt-20260706-terawulf-kentucky-19b-lease"
+  },
+  {
+   "claim_id": "OPS-COM-e08e63",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with RUM Group - Maysville, Georgia: dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 13700,
+    "gw": 0.25,
+    "chips": "NVIDIA H100/H200 (~22,000 GPUs)"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.sec.gov/Archives/edgar/data/1830081/000121390026098854/ea030515801ex99-1.htm"
+   ],
+   "draft_tier": null,
+   "label": "RUM Group - Maysville, Georgia: $13.7B, 0.25 GW",
+   "event_id": "evt-20260913-rum-group-13-7b-georgia-deal"
+  },
+  {
+   "claim_id": "OPS-COM-e4c257",
+   "group": "operating",
+   "kind": "compute",
+   "question": "Anthropic's compute agreement with Akamai: dollar value (USD millions) and whether 'up to' or contracted, gigawatts or MW, chip type, term, start, and who stated it and when. Is it a filed contract, a company announcement or a media report?",
+   "fields": [
+    "usd_m",
+    "usd_basis",
+    "gw",
+    "chips",
+    "term",
+    "stated_by",
+    "notes"
+   ],
+   "expect": {
+    "usd_m": 11600,
+    "gw": null,
+    "chips": "general-purpose CPUs"
+   },
+   "tol": {
+    "usd_m": 0.12,
+    "gw": 0.15
+   },
+   "draft_sources": [
+    "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm"
+   ],
+   "draft_tier": null,
+   "label": "Akamai: $11.6B",
+   "event_id": "evt-20260924-akamai-11-6b-cloud-deal"
   },
   {
    "claim_id": "OPS-COM-a6eaa7",

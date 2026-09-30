@@ -105,6 +105,7 @@
    "evt-20260306-cloud-partners-keep-claude-available",
    "evt-20260420-amazon-5gw-25b-investment",
    "evt-20260429-amazon-q1-10q-anthropic-gain-16-8b",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
    "evt-20260613-amazon-jailbreak-report-jassy",
    "evt-20260701-fable-5-mythos-5-access-restored",
    "evt-20260731-amazon-10q-q2-2026",
@@ -121,7 +122,62 @@
   ],
   "first_date": "2023-09-25",
   "tier": "T1",
-  "degree": 31
+  "degree": 32
+ },
+ {
+  "name": "Amazon Web Services",
+  "types": [
+   "chip",
+   "cloud",
+   "distribution",
+   "partner"
+  ],
+  "public": true,
+  "ticker": "AMZN",
+  "notes": [
+   "Primary cloud and training partner: Bedrock distribution, Trainium2-4, up to 5GW; amount = Anthropic >$100B decade commitment (Apr 2026)"
+  ],
+  "event_ids": [
+   "evt-20230925-amazon-investment",
+   "evt-20240320-accenture-aws-anthropic",
+   "evt-20241107-palantir-aws-defense",
+   "evt-20241122-amazon-8b-trainium",
+   "evt-20260420-amazon-5gw",
+   "evt-20230413-amazon-bedrock-preview",
+   "evt-20230925-amazon-up-to-4b",
+   "evt-20230928-bedrock-ga",
+   "evt-20231129-claude-2-1-on-bedrock",
+   "evt-20240304-claude-3-family",
+   "evt-20240320-accenture-aws-alliance",
+   "evt-20241029-github-copilot-claude",
+   "evt-20241107-palantir-aws-defense-2",
+   "evt-20241122-amazon-additional-4b",
+   "evt-20241203-project-rainier",
+   "evt-20250415-proj-2025-2-2b-2027-12b",
+   "evt-20250605-claude-gov",
+   "evt-20250624-project-rainier",
+   "evt-20250714-dod-cdao-200m",
+   "evt-20251029-project-rainier-operational",
+   "evt-20260121-information-gross-margin-2025-40pct",
+   "evt-20260217-information-80b-cloud-spend-through-2029",
+   "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "evt-20260407-project-glasswing-mythos-preview",
+   "evt-20260420-amazon-5gw-25b-investment",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
+   "evt-20260731-amazon-10q-q2-2026",
+   "evt-20260827-model-hardware-standard-preview",
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+   "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+  ],
+  "amount_usd_m": 100000.0,
+  "sources": [
+   "https://techcrunch.com/2023/04/13/with-bedrock-amazon-enters-the-generative-ai-race/",
+   "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "https://aws.amazon.com/blogs/aws/amazon-bedrock-is-now-generally-available-build-and-scale-generative-ai-applications-with-foundation-models/"
+  ],
+  "first_date": "2023-04-13",
+  "tier": "T1",
+  "degree": 30
  },
  {
   "name": "US District Court, N.D. Cal.",
@@ -174,60 +230,6 @@
   "degree": 30
  },
  {
-  "name": "Amazon Web Services",
-  "types": [
-   "chip",
-   "cloud",
-   "distribution",
-   "partner"
-  ],
-  "public": true,
-  "ticker": "AMZN",
-  "notes": [
-   "Primary cloud and training partner: Bedrock distribution, Trainium2-4, up to 5GW; amount = Anthropic >$100B decade commitment (Apr 2026)"
-  ],
-  "event_ids": [
-   "evt-20230925-amazon-investment",
-   "evt-20240320-accenture-aws-anthropic",
-   "evt-20241107-palantir-aws-defense",
-   "evt-20241122-amazon-8b-trainium",
-   "evt-20260420-amazon-5gw",
-   "evt-20230413-amazon-bedrock-preview",
-   "evt-20230925-amazon-up-to-4b",
-   "evt-20230928-bedrock-ga",
-   "evt-20231129-claude-2-1-on-bedrock",
-   "evt-20240304-claude-3-family",
-   "evt-20240320-accenture-aws-alliance",
-   "evt-20241029-github-copilot-claude",
-   "evt-20241107-palantir-aws-defense-2",
-   "evt-20241122-amazon-additional-4b",
-   "evt-20241203-project-rainier",
-   "evt-20250415-proj-2025-2-2b-2027-12b",
-   "evt-20250605-claude-gov",
-   "evt-20250624-project-rainier",
-   "evt-20250714-dod-cdao-200m",
-   "evt-20251029-project-rainier-operational",
-   "evt-20260121-information-gross-margin-2025-40pct",
-   "evt-20260217-information-80b-cloud-spend-through-2029",
-   "evt-20260406-google-broadcom-tpu-30b-runrate",
-   "evt-20260407-project-glasswing-mythos-preview",
-   "evt-20260420-amazon-5gw-25b-investment",
-   "evt-20260731-amazon-10q-q2-2026",
-   "evt-20260827-model-hardware-standard-preview",
-   "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
-   "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
-  ],
-  "amount_usd_m": 100000.0,
-  "sources": [
-   "https://techcrunch.com/2023/04/13/with-bedrock-amazon-enters-the-generative-ai-race/",
-   "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
-   "https://aws.amazon.com/blogs/aws/amazon-bedrock-is-now-generally-available-build-and-scale-generative-ai-applications-with-foundation-models/"
-  ],
-  "first_date": "2023-04-13",
-  "tier": "T1",
-  "degree": 29
- },
- {
   "name": "Google",
   "types": [
    "cloud",
@@ -257,6 +259,8 @@
    "evt-20260407-project-glasswing-mythos-preview",
    "evt-20260424-google-up-to-40b",
    "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
+   "evt-20260605-google-pays-spacex-920m-month-benchmark",
    "evt-20260609-tpu-financing-34-5b-closed",
    "evt-20260701-fable-5-mythos-5-access-restored",
    "evt-20260706-terawulf-kentucky-19b-lease",
@@ -275,7 +279,7 @@
   ],
   "first_date": "2023-05-23",
   "tier": "T1",
-  "degree": 27
+  "degree": 29
  },
  {
   "name": "Microsoft",
@@ -364,7 +368,7 @@
    "evt-20260918-nscale-files-nyse-ipo",
    "evt-20260918-nscale-files-nyse-ipo-2",
    "evt-20260923-basecamp-research-140m-series-c",
-   "evt-20260926-nvidia-weighing-10b-ipo-anchor"
+   "evt-20260926-nvidia-ipo-anchor-10b"
   ],
   "amount_usd_m": 10000.0,
   "sources": [
@@ -461,6 +465,46 @@
   "degree": 16
  },
  {
+  "name": "Google Cloud",
+  "types": [
+   "chip",
+   "cloud",
+   "distribution"
+  ],
+  "public": true,
+  "ticker": "GOOGL",
+  "notes": [
+   "Cloud/TPU supplier (up to 1M TPUs, 5GW) and Vertex AI channel (Claude on Vertex since 2024)"
+  ],
+  "event_ids": [
+   "evt-20230203-google-cloud-provider",
+   "evt-20240319-vertex-ai-claude-3",
+   "evt-20251023-google-tpu-1m",
+   "evt-20260406-google-broadcom-tpus",
+   "evt-20260424-google-40b",
+   "evt-20230203-google-cloud-preferred",
+   "evt-20230829-vertex-ai-claude-2-preannounce",
+   "evt-20231108-google-cloud-expansion-tpu-v5e",
+   "evt-20240304-claude-3-family",
+   "evt-20251023-google-tpu-1m-deal",
+   "evt-20260121-information-gross-margin-2025-40pct",
+   "evt-20260217-information-80b-cloud-spend-through-2029",
+   "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "evt-20260424-google-up-to-40b",
+   "evt-20260505-information-200b-google-cloud-commitment",
+   "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.googlecloudpresscorner.com/2023-02-03-Anthropic-Forges-Partnership-With-Google-Cloud-to-Help-Deliver-Reliable-and-Responsible-AI",
+   "https://cloud.google.com/blog/products/ai-machine-learning/vertex-ai-next-2023-announcements",
+   "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html"
+  ],
+  "first_date": "2023-02-03",
+  "tier": "T1",
+  "degree": 16
+ },
+ {
   "name": "US Department of War",
   "types": [
    "government"
@@ -497,80 +541,6 @@
   "degree": 16
  },
  {
-  "name": "Google Cloud",
-  "types": [
-   "chip",
-   "cloud",
-   "distribution"
-  ],
-  "public": true,
-  "ticker": "GOOGL",
-  "notes": [
-   "Cloud/TPU supplier (up to 1M TPUs, 5GW) and Vertex AI channel (Claude on Vertex since 2024)"
-  ],
-  "event_ids": [
-   "evt-20230203-google-cloud-provider",
-   "evt-20240319-vertex-ai-claude-3",
-   "evt-20251023-google-tpu-1m",
-   "evt-20260406-google-broadcom-tpus",
-   "evt-20260424-google-40b",
-   "evt-20230203-google-cloud-preferred",
-   "evt-20230829-vertex-ai-claude-2-preannounce",
-   "evt-20231108-google-cloud-expansion-tpu-v5e",
-   "evt-20240304-claude-3-family",
-   "evt-20251023-google-tpu-1m-deal",
-   "evt-20260121-information-gross-margin-2025-40pct",
-   "evt-20260217-information-80b-cloud-spend-through-2029",
-   "evt-20260406-google-broadcom-tpu-30b-runrate",
-   "evt-20260424-google-up-to-40b",
-   "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.googlecloudpresscorner.com/2023-02-03-Anthropic-Forges-Partnership-With-Google-Cloud-to-Help-Deliver-Reliable-and-Responsible-AI",
-   "https://cloud.google.com/blog/products/ai-machine-learning/vertex-ai-next-2023-announcements",
-   "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html"
-  ],
-  "first_date": "2023-02-03",
-  "tier": "T1",
-  "degree": 15
- },
- {
-  "name": "GIC",
-  "types": [
-   "investor"
-  ],
-  "public": false,
-  "ticker": null,
-  "notes": [
-   "Series F participant, Series G lead, Series H co-lead; co-owner of Theseus Infrastructure; backer of the enterprise AI services company | PitchBook active investor since 2025-09-02 (Series F cohort); named in Anthropic posts: F participant; G lead; H co-lead; Singapore sovereign wealth fund"
-  ],
-  "event_ids": [
-   "evt-20250902-series-f-roster",
-   "evt-20260504-enterprise-ai-services-co",
-   "evt-20260810-theseus-infrastructure",
-   "evt-20250729-funding-talks-170b-iconiq",
-   "evt-20250821-funding-talks-10b",
-   "evt-20250902-series-f-13b-183b",
-   "evt-20260107-series-g-talks-10b-to-20b",
-   "evt-20260209-series-g-upsized-to-20b",
-   "evt-20260212-series-g-30b-380b",
-   "evt-20260504-enterprise-ai-services-jv",
-   "evt-20260528-series-h-roster",
-   "evt-20260529-samsung-skhynix-micron",
-   "evt-20260810-macquarie-gic-theseus-platform"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://techcrunch.com/2025/07/29/anthropic-reportedly-nears-170b-valuation-with-potential-5b-round/",
-   "https://siliconangle.com/2025/08/21/anthropic-reportedly-talks-raise-10b-new-funding-ai-boom-continues-apace/",
-   "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
-  ],
-  "first_date": "2025-07-29",
-  "tier": "T1",
-  "degree": 13
- },
- {
   "name": "Salesforce",
   "types": [
    "competitor",
@@ -598,6 +568,7 @@
    "evt-20251014-salesforce-expanded-partnership",
    "evt-20251203-bun-acquisition",
    "evt-20260203-software-stocks-selloff-cowork-plugins",
+   "evt-20260731-zoom-salesforce-10q-marks",
    "evt-20260820-enterprise-data-retention-change"
   ],
   "amount_usd_m": 50.0,
@@ -607,6 +578,41 @@
    "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json"
   ],
   "first_date": "2023-05-23",
+  "tier": "T1",
+  "degree": 14
+ },
+ {
+  "name": "GIC",
+  "types": [
+   "investor"
+  ],
+  "public": false,
+  "ticker": null,
+  "notes": [
+   "Series F participant, Series G lead, Series H co-lead; co-owner of Theseus Infrastructure; backer of the enterprise AI services company | PitchBook active investor since 2025-09-02 (Series F cohort); named in Anthropic posts: F participant; G lead; H co-lead; Singapore sovereign wealth fund"
+  ],
+  "event_ids": [
+   "evt-20250902-series-f-roster",
+   "evt-20260504-enterprise-ai-services-co",
+   "evt-20260810-theseus-infrastructure",
+   "evt-20250729-funding-talks-170b-iconiq",
+   "evt-20250821-funding-talks-10b",
+   "evt-20250902-series-f-13b-183b",
+   "evt-20260107-series-g-talks-10b-to-20b",
+   "evt-20260209-series-g-upsized-to-20b",
+   "evt-20260212-series-g-30b-380b",
+   "evt-20260504-enterprise-ai-services-jv",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
+   "evt-20260529-samsung-skhynix-micron",
+   "evt-20260810-macquarie-gic-theseus-platform"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://techcrunch.com/2025/07/29/anthropic-reportedly-nears-170b-valuation-with-potential-5b-round/",
+   "https://siliconangle.com/2025/08/21/anthropic-reportedly-talks-raise-10b-new-funding-ai-boom-continues-apace/",
+   "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+  ],
+  "first_date": "2025-07-29",
   "tier": "T1",
   "degree": 13
  },
@@ -633,7 +639,7 @@
    "evt-20260602-chip-financing-spv-notes-price-talk",
    "evt-20260603-ipo-banks-ms-gs-jpm",
    "evt-20260715-ode-with-anthropic-blackstone-jv",
-   "evt-20260813-investors-expect-october-ipo-at-2t",
+   "evt-20260813-ipo-october-2t-quartz",
    "evt-20260903-credit-facility-15b-nears-final"
   ],
   "amount_usd_m": null,
@@ -668,7 +674,8 @@
    "evt-20260602-chip-financing-spv-notes-price-talk",
    "evt-20260603-ipo-banks-ms-gs-jpm",
    "evt-20260804-ft-google-200bn-anthropic-financing-machine",
-   "evt-20260813-investors-expect-october-ipo-at-2t",
+   "evt-20260813-ipo-october-2t-quartz",
+   "evt-20260818-revolver-10b-plus-target",
    "evt-20260903-credit-facility-15b-nears-final"
   ],
   "amount_usd_m": null,
@@ -678,6 +685,39 @@
    "https://finance.yahoo.com/news/anthropic-arr-surges-19-billion-151028403.html"
   ],
   "first_date": "2024-09-23",
+  "tier": "T1",
+  "degree": 12
+ },
+ {
+  "name": "SpaceX",
+  "types": [
+   "cloud",
+   "competitor",
+   "partner"
+  ],
+  "public": false,
+  "ticker": "SPCX",
+  "notes": [],
+  "event_ids": [
+   "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
+   "evt-20260506-spacex-colossus-compute-deal",
+   "evt-20260520-spacex-s1-anthropic-colossus-contract",
+   "evt-20260528-spacex-lease-length-dispute",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
+   "evt-20260605-google-pays-spacex-920m-month-benchmark",
+   "evt-20260616-spacex-acquires-cursor-60b",
+   "evt-20260709-musk-wont-cut-off-anthropic-colossus",
+   "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
+   "evt-20260805-spacex-q2-earnings-anthropic-compute",
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
+   "https://www.anthropic.com/news/higher-limits-spacex",
+   "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/"
+  ],
+  "first_date": "2026-05-01",
   "tier": "T1",
   "degree": 11
  },
@@ -711,6 +751,71 @@
   "first_date": "2026-01-09",
   "tier": "T1",
   "degree": 11
+ },
+ {
+  "name": "Blackstone",
+  "types": [
+   "investor"
+  ],
+  "public": true,
+  "ticker": "BX",
+  "notes": [
+   "Series F/G/H participant and founding partner of the enterprise AI services company | PitchBook active investor since 2025-09-02 (Series F cohort); named in Anthropic posts: F/G/H participant"
+  ],
+  "event_ids": [
+   "evt-20250902-series-f-roster",
+   "evt-20260504-enterprise-ai-services-co",
+   "evt-20250902-series-f-13b-183b",
+   "evt-20260504-enterprise-ai-services-jv",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
+   "evt-20260602-chip-financing-spv-notes-price-talk",
+   "evt-20260609-tpu-financing-34-5b-closed",
+   "evt-20260715-ode-with-anthropic-blackstone-jv",
+   "evt-20260804-ft-google-200bn-anthropic-financing-machine",
+   "evt-20260805-blackstone-second-chip-package-36b"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+   "https://www.anthropic.com/news/enterprise-ai-services-company",
+   "https://www.anthropic.com/news/series-h"
+  ],
+  "first_date": "2025-09-02",
+  "tier": "T1",
+  "degree": 10
+ },
+ {
+  "name": "Broadcom",
+  "types": [
+   "chip",
+   "partner"
+  ],
+  "public": true,
+  "ticker": "AVGO",
+  "notes": [
+   "Custom-silicon partner: Broadcom 8-K (T1) puts the expanded Google/Anthropic collaboration at ~3.5GW of TPU capacity 2027-2031, dependent on Anthropic's commercial success"
+  ],
+  "event_ids": [
+   "evt-20260406-google-broadcom-tpus",
+   "evt-20260407-project-glasswing",
+   "evt-20251211-broadcom-anthropic-10b-tpu-customer",
+   "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "evt-20260407-project-glasswing-mythos-preview",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
+   "evt-20260602-chip-financing-spv-notes-price-talk",
+   "evt-20260609-tpu-financing-34-5b-closed",
+   "evt-20260804-ft-google-200bn-anthropic-financing-machine",
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://siliconangle.com/2025/12/11/broadcoms-stock-falls-despite-another-crushing-earnings-revenue-beat/",
+   "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+   "https://www.anthropic.com/glasswing"
+  ],
+  "first_date": "2025-12-11",
+  "tier": "T1",
+  "degree": 10
  },
  {
   "name": "Cursor (Anysphere)",
@@ -776,100 +881,6 @@
    "https://www.anthropic.com/news/claude-for-financial-services"
   ],
   "first_date": "2024-03-20",
-  "tier": "T1",
-  "degree": 9
- },
- {
-  "name": "Blackstone",
-  "types": [
-   "investor"
-  ],
-  "public": true,
-  "ticker": "BX",
-  "notes": [
-   "Series F/G/H participant and founding partner of the enterprise AI services company | PitchBook active investor since 2025-09-02 (Series F cohort); named in Anthropic posts: F/G/H participant"
-  ],
-  "event_ids": [
-   "evt-20250902-series-f-roster",
-   "evt-20260504-enterprise-ai-services-co",
-   "evt-20250902-series-f-13b-183b",
-   "evt-20260504-enterprise-ai-services-jv",
-   "evt-20260528-series-h-roster",
-   "evt-20260602-chip-financing-spv-notes-price-talk",
-   "evt-20260609-tpu-financing-34-5b-closed",
-   "evt-20260715-ode-with-anthropic-blackstone-jv",
-   "evt-20260804-ft-google-200bn-anthropic-financing-machine"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
-   "https://www.anthropic.com/news/enterprise-ai-services-company",
-   "https://www.anthropic.com/news/series-h"
-  ],
-  "first_date": "2025-09-02",
-  "tier": "T1",
-  "degree": 9
- },
- {
-  "name": "Broadcom",
-  "types": [
-   "chip",
-   "partner"
-  ],
-  "public": true,
-  "ticker": "AVGO",
-  "notes": [
-   "Custom-silicon partner: Broadcom 8-K (T1) puts the expanded Google/Anthropic collaboration at ~3.5GW of TPU capacity 2027-2031, dependent on Anthropic's commercial success"
-  ],
-  "event_ids": [
-   "evt-20260406-google-broadcom-tpus",
-   "evt-20260407-project-glasswing",
-   "evt-20251211-broadcom-anthropic-10b-tpu-customer",
-   "evt-20260406-google-broadcom-tpu-30b-runrate",
-   "evt-20260407-project-glasswing-mythos-preview",
-   "evt-20260602-chip-financing-spv-notes-price-talk",
-   "evt-20260609-tpu-financing-34-5b-closed",
-   "evt-20260804-ft-google-200bn-anthropic-financing-machine",
-   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://siliconangle.com/2025/12/11/broadcoms-stock-falls-despite-another-crushing-earnings-revenue-beat/",
-   "https://www.anthropic.com/news/google-broadcom-partnership-compute",
-   "https://www.anthropic.com/glasswing"
-  ],
-  "first_date": "2025-12-11",
-  "tier": "T1",
-  "degree": 9
- },
- {
-  "name": "SpaceX",
-  "types": [
-   "cloud",
-   "competitor",
-   "partner"
-  ],
-  "public": false,
-  "ticker": "SPCX",
-  "notes": [],
-  "event_ids": [
-   "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
-   "evt-20260506-spacex-colossus-compute-deal",
-   "evt-20260520-spacex-s1-anthropic-colossus-contract",
-   "evt-20260528-spacex-lease-length-dispute",
-   "evt-20260616-spacex-acquires-cursor-60b",
-   "evt-20260709-musk-wont-cut-off-anthropic-colossus",
-   "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
-   "evt-20260805-spacex-q2-earnings-anthropic-compute",
-   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
-   "https://www.anthropic.com/news/higher-limits-spacex",
-   "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/"
-  ],
-  "first_date": "2026-05-01",
   "tier": "T1",
   "degree": 9
  },
@@ -980,7 +991,7 @@
    "evt-20260107-series-g-talks-10b-to-20b",
    "evt-20260209-series-g-upsized-to-20b",
    "evt-20260212-series-g-30b-380b",
-   "evt-20260528-series-h-roster",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
    "evt-20260529-samsung-skhynix-micron"
   ],
   "amount_usd_m": null,
@@ -1098,7 +1109,7 @@
    "evt-20250902-series-f-13b-183b",
    "evt-20260209-series-g-upsized-to-20b",
    "evt-20260212-series-g-30b-380b",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -1127,7 +1138,7 @@
    "evt-20260212-series-g-30b-380b",
    "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
    "evt-20260603-ipo-banks-ms-gs-jpm",
-   "evt-20260813-investors-expect-october-ipo-at-2t",
+   "evt-20260813-ipo-october-2t-quartz",
    "evt-20260903-credit-facility-15b-nears-final"
   ],
   "amount_usd_m": null,
@@ -1166,6 +1177,35 @@
    "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation"
   ],
   "first_date": "2025-01-07",
+  "tier": "T1",
+  "degree": 7
+ },
+ {
+  "name": "Long-Term Benefit Trust",
+  "types": [
+   "investor",
+   "other",
+   "partner"
+  ],
+  "public": false,
+  "ticker": null,
+  "notes": [],
+  "event_ids": [
+   "evt-20230919-long-term-benefit-trust",
+   "evt-20240529-jay-kreps-board",
+   "evt-20260414-narasimhan-board",
+   "evt-20260804-cuellar-chief-global-affairs-officer",
+   "evt-20260818-founder-supervoting-report",
+   "evt-20260925-founders-voting-control",
+   "evt-20260928-founder-llc-class-f"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/the-long-term-benefit-trust",
+   "https://www.anthropic.com/news/jay-kreps-appointed-to-board-of-directors",
+   "https://www.anthropic.com/news/narasimhan-board"
+  ],
+  "first_date": "2023-09-19",
   "tier": "T1",
   "degree": 7
  },
@@ -1216,7 +1256,7 @@
    "evt-20260209-series-g-upsized-to-20b",
    "evt-20260212-series-g-30b-380b",
    "evt-20260504-enterprise-ai-services-jv",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -1572,6 +1612,34 @@
   "degree": 6
  },
  {
+  "name": "Zoom",
+  "types": [
+   "investor"
+  ],
+  "public": true,
+  "ticker": "ZM",
+  "notes": [
+   "PB 503148-88; 2023 cohort (Series C era); roles: C participant; venture arm of Zoom"
+  ],
+  "event_ids": [
+   "evt-20230516-zoom-partnership",
+   "evt-20230523-series-c-syndicate",
+   "evt-20230523-series-c-450m",
+   "evt-20240513-raising-more-capital-18-4b-post",
+   "evt-20260601-salesforce-stake",
+   "evt-20260731-zoom-salesforce-10q-marks"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/zoom-partnership-and-investment",
+   "https://www.anthropic.com/news/anthropic-series-c",
+   "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/"
+  ],
+  "first_date": "2023-05-16",
+  "tier": "T1",
+  "degree": 6
+ },
+ {
   "name": "Alameda Research",
   "types": [
    "investor"
@@ -1708,32 +1776,6 @@
   "degree": 5
  },
  {
-  "name": "Long-Term Benefit Trust",
-  "types": [
-   "investor",
-   "partner"
-  ],
-  "public": false,
-  "ticker": null,
-  "notes": [],
-  "event_ids": [
-   "evt-20230919-long-term-benefit-trust",
-   "evt-20240529-jay-kreps-board",
-   "evt-20260414-narasimhan-board",
-   "evt-20260804-cuellar-chief-global-affairs-officer",
-   "evt-20260928-founder-llc-class-f"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/the-long-term-benefit-trust",
-   "https://www.anthropic.com/news/jay-kreps-appointed-to-board-of-directors",
-   "https://www.anthropic.com/news/narasimhan-board"
-  ],
-  "first_date": "2023-09-19",
-  "tier": "T1",
-  "degree": 5
- },
- {
   "name": "Lovable",
   "types": [
    "customer"
@@ -1775,7 +1817,7 @@
    "evt-20250729-funding-talks-170b-iconiq",
    "evt-20250821-funding-talks-10b",
    "evt-20250902-series-f-13b-183b",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -2004,33 +2046,6 @@
   "degree": 5
  },
  {
-  "name": "Zoom",
-  "types": [
-   "investor"
-  ],
-  "public": true,
-  "ticker": "ZM",
-  "notes": [
-   "PB 503148-88; 2023 cohort (Series C era); roles: C participant; venture arm of Zoom"
-  ],
-  "event_ids": [
-   "evt-20230516-zoom-partnership",
-   "evt-20230523-series-c-syndicate",
-   "evt-20230523-series-c-450m",
-   "evt-20240513-raising-more-capital-18-4b-post",
-   "evt-20260601-salesforce-stake"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/zoom-partnership-and-investment",
-   "https://www.anthropic.com/news/anthropic-series-c",
-   "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/"
-  ],
-  "first_date": "2023-05-16",
-  "tier": "T1",
-  "degree": 5
- },
- {
   "name": "Altimeter",
   "types": [
    "investor"
@@ -2044,7 +2059,7 @@
    "evt-20250902-series-f-roster",
    "evt-20250902-series-f-13b-183b",
    "evt-20260209-series-g-upsized-to-20b",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -2104,6 +2119,33 @@
    "https://menlovc.com/perspective/menlo-turns-50-and-announces-3b-in-fresh-capital-to-go-all-in-on-ai/"
   ],
   "first_date": "2024-07-17",
+  "tier": "T1",
+  "degree": 4
+ },
+ {
+  "name": "Bank of America",
+  "types": [
+   "bank",
+   "customer"
+  ],
+  "public": true,
+  "ticker": "BAC",
+  "notes": [
+   "Named Enterprise Frontier Safeguards customer"
+  ],
+  "event_ids": [
+   "evt-20260901-enterprise-frontier-safeguards",
+   "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
+   "evt-20260602-chip-financing-spv-notes-price-talk",
+   "evt-20260903-credit-facility-15b-nears-final"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://techcrunch.com/2026/04/12/trump-officials-may-be-encouraging-banks-to-test-anthropics-mythos-model/",
+   "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
+   "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+  ],
+  "first_date": "2026-04-10",
   "tier": "T1",
   "degree": 4
  },
@@ -2522,6 +2564,32 @@
   "degree": 4
  },
  {
+  "name": "Samsung Electronics",
+  "types": [
+   "chip",
+   "investor"
+  ],
+  "public": true,
+  "ticker": "005930",
+  "notes": [
+   "Series H strategic investor (memory, possible foundry path per Korea Herald); Samsung SDS deploys Claude to Samsung employees | PB active investor since 2026-05-28 (Series H cohort); named in Anthropic posts: H strategic infrastructure partner"
+  ],
+  "event_ids": [
+   "evt-20260528-series-h-roster",
+   "evt-20260529-samsung-skhynix-micron",
+   "evt-20260617-seoul-office",
+   "evt-20260528-series-h-compute-agreements-memory-partners"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/series-h",
+   "https://www.koreaherald.com/article/10758856"
+  ],
+  "first_date": "2026-05-28",
+  "tier": "T1",
+  "degree": 4
+ },
+ {
   "name": "Sourcegraph",
   "types": [
    "customer",
@@ -2675,6 +2743,32 @@
   "degree": 4
  },
  {
+  "name": "Zoom Video Communications",
+  "types": [
+   "customer",
+   "investor"
+  ],
+  "public": true,
+  "ticker": "ZM",
+  "notes": [
+   "Series C stake (~$51M per TNW) now carried at $3,134.5M after a $300.9M top-up in six months to Jul 2026 and $1,612.7M quarterly unrealised gain (10-Q, T1); Claude in Contact Center"
+  ],
+  "event_ids": [
+   "evt-20230516-zoom-partnership",
+   "evt-20230523-series-c-syndicate",
+   "evt-20260826-zoom-10q-anthropic",
+   "evt-20260731-zoom-salesforce-10q-marks"
+  ],
+  "amount_usd_m": 3134.5,
+  "sources": [
+   "https://www.anthropic.com/news/zoom-partnership-and-investment",
+   "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000121/zm-20260731.htm"
+  ],
+  "first_date": "2023-05-16",
+  "tier": "T1",
+  "degree": 4
+ },
+ {
   "name": "AMD",
   "types": [
    "chip"
@@ -2815,32 +2909,6 @@
   "degree": 3
  },
  {
-  "name": "Bank of America",
-  "types": [
-   "bank",
-   "customer"
-  ],
-  "public": true,
-  "ticker": "BAC",
-  "notes": [
-   "Named Enterprise Frontier Safeguards customer"
-  ],
-  "event_ids": [
-   "evt-20260901-enterprise-frontier-safeguards",
-   "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
-   "evt-20260602-chip-financing-spv-notes-price-talk"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://techcrunch.com/2026/04/12/trump-officials-may-be-encouraging-banks-to-test-anthropics-mythos-model/",
-   "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
-   "https://www.anthropic.com/news/enterprise-frontier-safeguards"
-  ],
-  "first_date": "2026-04-10",
-  "tier": "T1",
-  "degree": 3
- },
- {
   "name": "BlackRock",
   "types": [
    "customer",
@@ -2925,7 +2993,7 @@
   "event_ids": [
    "evt-20250303-series-e-roster",
    "evt-20250902-series-f-13b-183b",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -2977,7 +3045,7 @@
   "event_ids": [
    "evt-20260212-series-g-roster",
    "evt-20260212-series-g-30b-380b",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -3232,6 +3300,31 @@
   "degree": 3
  },
  {
+  "name": "Micron Technology",
+  "types": [
+   "chip",
+   "investor"
+  ],
+  "public": true,
+  "ticker": "MU",
+  "notes": [
+   "Strategic infrastructure investor in Series H (memory supply); missing from the 200-row PitchBook file, present in the full 308 list | PB active investor since 2026-05-28 (Series H cohort); named in Anthropic posts: H strategic infrastructure partner"
+  ],
+  "event_ids": [
+   "evt-20260528-series-h-roster",
+   "evt-20260529-samsung-skhynix-micron",
+   "evt-20260528-series-h-compute-agreements-memory-partners"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/series-h",
+   "https://www.koreaherald.com/article/10758856"
+  ],
+  "first_date": "2026-05-28",
+  "tier": "T1",
+  "degree": 3
+ },
+ {
   "name": "Microsoft Azure",
   "types": [
    "cloud"
@@ -3265,7 +3358,7 @@
   "event_ids": [
    "evt-20210528-series-a",
    "evt-20230221-anthrop-llc-trademark-suit-settled",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -3327,20 +3420,20 @@
   "degree": 3
  },
  {
-  "name": "Samsung Electronics",
+  "name": "SK hynix",
   "types": [
    "chip",
    "investor"
   ],
   "public": true,
-  "ticker": "005930",
+  "ticker": "000660",
   "notes": [
-   "Series H strategic investor (memory, possible foundry path per Korea Herald); Samsung SDS deploys Claude to Samsung employees | PB active investor since 2026-05-28 (Series H cohort); named in Anthropic posts: H strategic infrastructure partner"
+   "Series H strategic investor (HBM/DRAM supplier) | PB active investor since 2026-05-28 (Series H cohort); named in Anthropic posts: H strategic infrastructure partner"
   ],
   "event_ids": [
    "evt-20260528-series-h-roster",
    "evt-20260529-samsung-skhynix-micron",
-   "evt-20260617-seoul-office"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -3459,7 +3552,7 @@
   "notes": [],
   "event_ids": [
    "evt-20260818-supervoting-reported",
-   "evt-20260818-founder-control-supervoting-report",
+   "evt-20260818-founder-supervoting-report",
    "evt-20260925-founders-voting-control"
   ],
   "amount_usd_m": null,
@@ -3583,7 +3676,7 @@
   "event_ids": [
    "evt-20250902-series-f-roster",
    "evt-20250902-series-f-13b-183b",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -3591,31 +3684,6 @@
    "https://www.anthropic.com/news/series-h"
   ],
   "first_date": "2025-09-02",
-  "tier": "T1",
-  "degree": 3
- },
- {
-  "name": "Zoom Video Communications",
-  "types": [
-   "customer",
-   "investor"
-  ],
-  "public": true,
-  "ticker": "ZM",
-  "notes": [
-   "Series C stake (~$51M per TNW) now carried at $3,134.5M after a $300.9M top-up in six months to Jul 2026 and $1,612.7M quarterly unrealised gain (10-Q, T1); Claude in Contact Center"
-  ],
-  "event_ids": [
-   "evt-20230516-zoom-partnership",
-   "evt-20230523-series-c-syndicate",
-   "evt-20260826-zoom-10q-anthropic"
-  ],
-  "amount_usd_m": 3134.5,
-  "sources": [
-   "https://www.anthropic.com/news/zoom-partnership-and-investment",
-   "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000121/zm-20260731.htm"
-  ],
-  "first_date": "2023-05-16",
   "tier": "T1",
   "degree": 3
  },
@@ -3770,6 +3838,27 @@
    "https://anthropic.com/news/bengaluru-office-partnerships-across-india"
   ],
   "first_date": "2026-02-16",
+  "tier": "T1",
+  "degree": 2
+ },
+ {
+  "name": "Akamai Technologies",
+  "types": [
+   "cloud"
+  ],
+  "public": true,
+  "ticker": "AKAM",
+  "notes": [],
+  "event_ids": [
+   "evt-20260507-akamai-1-8b-frontier-model-provider",
+   "evt-20260924-akamai-11-6b-cloud-deal"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.sec.gov/Archives/edgar/data/1086222/000108622226000054/exhibit991-q12026.htm",
+   "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm"
+  ],
+  "first_date": "2026-05-07",
   "tier": "T1",
   "degree": 2
  },
@@ -4179,6 +4268,28 @@
   "degree": 2
  },
  {
+  "name": "Brookfield Corporation",
+  "types": [
+   "investor"
+  ],
+  "public": true,
+  "ticker": "BN",
+  "notes": [
+   "Series H participant (PitchBook file: 2026-05-28 cohort) | PitchBook active investor since 2026-05-28 (Series H cohort); named in Anthropic posts: H participant"
+  ],
+  "event_ids": [
+   "evt-20260528-series-h-roster",
+   "evt-20260528-series-h-compute-agreements-memory-partners"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/series-h"
+  ],
+  "first_date": "2026-05-28",
+  "tier": "T1",
+  "degree": 2
+ },
+ {
   "name": "CRED",
   "types": [
    "customer"
@@ -4410,7 +4521,7 @@
   "notes": [],
   "event_ids": [
    "evt-20250303-series-e-roster",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -4483,6 +4594,28 @@
    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
   ],
   "first_date": "2026-02-12",
+  "tier": "T1",
+  "degree": 2
+ },
+ {
+  "name": "DST Global",
+  "types": [
+   "investor"
+  ],
+  "public": false,
+  "ticker": null,
+  "notes": [
+   "PB 40773-97; Series H cohort; roles: H participant"
+  ],
+  "event_ids": [
+   "evt-20260528-series-h-roster",
+   "evt-20260528-series-h-compute-agreements-memory-partners"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/series-h"
+  ],
+  "first_date": "2026-05-28",
   "tier": "T1",
   "degree": 2
  },
@@ -4563,7 +4696,7 @@
   "notes": [],
   "event_ids": [
    "evt-20260212-series-g-30b-380b",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -4979,7 +5112,7 @@
   ],
   "event_ids": [
    "evt-20260212-series-g-roster",
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -5174,7 +5307,7 @@
   "notes": [],
   "event_ids": [
    "evt-20250516-run-rate-2b",
-   "evt-20260813-investors-expect-october-ipo-at-2t"
+   "evt-20260813-ipo-october-2t-quartz"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -5478,30 +5611,6 @@
   "degree": 2
  },
  {
-  "name": "Micron Technology",
-  "types": [
-   "chip",
-   "investor"
-  ],
-  "public": true,
-  "ticker": "MU",
-  "notes": [
-   "Strategic infrastructure investor in Series H (memory supply); missing from the 200-row PitchBook file, present in the full 308 list | PB active investor since 2026-05-28 (Series H cohort); named in Anthropic posts: H strategic infrastructure partner"
-  ],
-  "event_ids": [
-   "evt-20260528-series-h-roster",
-   "evt-20260529-samsung-skhynix-micron"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/series-h",
-   "https://www.koreaherald.com/article/10758856"
-  ],
-  "first_date": "2026-05-28",
-  "tier": "T1",
-  "degree": 2
- },
- {
   "name": "Microsoft Foundry / Azure",
   "types": [
    "cloud"
@@ -5683,6 +5792,28 @@
   "degree": 2
  },
  {
+  "name": "NTTVC",
+  "types": [
+   "investor"
+  ],
+  "public": true,
+  "ticker": "9432",
+  "notes": [
+   "PB 267065-83; Series H cohort; roles: H participant; venture arm of NTT"
+  ],
+  "event_ids": [
+   "evt-20260528-series-h-roster",
+   "evt-20260528-series-h-compute-agreements-memory-partners"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/series-h"
+  ],
+  "first_date": "2026-05-28",
+  "tier": "T1",
+  "degree": 2
+ },
+ {
   "name": "Nasdaq",
   "types": [
    "partner"
@@ -5691,7 +5822,7 @@
   "ticker": "NDAQ",
   "notes": [],
   "event_ids": [
-   "evt-20260913-business-insider-nasdaq-october-listing",
+   "evt-20260913-nasdaq-october-listing",
    "evt-20260918-wsj-ipo-pushed-to-november"
   ],
   "amount_usd_m": null,
@@ -6122,6 +6253,27 @@
   "degree": 2
  },
  {
+  "name": "Royal Bank of Canada",
+  "types": [
+   "bank"
+  ],
+  "public": true,
+  "ticker": "RY",
+  "notes": [],
+  "event_ids": [
+   "evt-20250516-run-rate-2b",
+   "evt-20260903-credit-facility-15b-nears-final"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+   "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+  ],
+  "first_date": "2025-05-16",
+  "tier": "T2",
+  "degree": 2
+ },
+ {
   "name": "S&P Global",
   "types": [
    "partner"
@@ -6145,30 +6297,6 @@
   "degree": 2
  },
  {
-  "name": "SK hynix",
-  "types": [
-   "chip",
-   "investor"
-  ],
-  "public": true,
-  "ticker": "000660",
-  "notes": [
-   "Series H strategic investor (HBM/DRAM supplier) | PB active investor since 2026-05-28 (Series H cohort); named in Anthropic posts: H strategic infrastructure partner"
-  ],
-  "event_ids": [
-   "evt-20260528-series-h-roster",
-   "evt-20260529-samsung-skhynix-micron"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/series-h",
-   "https://www.koreaherald.com/article/10758856"
-  ],
-  "first_date": "2026-05-28",
-  "tier": "T1",
-  "degree": 2
- },
- {
   "name": "Samsung",
   "types": [
    "chip"
@@ -6177,7 +6305,7 @@
   "ticker": "005930.KS",
   "notes": [],
   "event_ids": [
-   "evt-20260528-series-h-roster",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
    "evt-20260702-samsung-custom-chip-talks"
   ],
   "amount_usd_m": null,
@@ -6689,6 +6817,27 @@
   "degree": 2
  },
  {
+  "name": "UBS",
+  "types": [
+   "bank"
+  ],
+  "public": true,
+  "ticker": "UBS",
+  "notes": [],
+  "event_ids": [
+   "evt-20260602-chip-financing-spv-notes-price-talk",
+   "evt-20260903-credit-facility-15b-nears-final"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
+   "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+  ],
+  "first_date": "2026-06-02",
+  "tier": "T2",
+  "degree": 2
+ },
+ {
   "name": "UK Competition and Markets Authority",
   "types": [
    "regulator"
@@ -7181,25 +7330,6 @@
   "degree": 1
  },
  {
-  "name": "Akamai Technologies",
-  "types": [
-   "cloud"
-  ],
-  "public": true,
-  "ticker": "AKAM",
-  "notes": [],
-  "event_ids": [
-   "evt-20260924-akamai-11-6b-cloud-deal"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm"
-  ],
-  "first_date": "2026-09-24",
-  "tier": "T1",
-  "degree": 1
- },
- {
   "name": "Alameda Research / FTX",
   "types": [
    "investor"
@@ -7534,6 +7664,25 @@
   "degree": 1
  },
  {
+  "name": "Anthropic early investors and employees",
+  "types": [
+   "investor"
+  ],
+  "public": false,
+  "ticker": null,
+  "notes": [],
+  "event_ids": [
+   "evt-20260827-information-prospectus-after-labor-day-insider-sales"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-could-come-september-191409974.html"
+  ],
+  "first_date": "2026-08-27",
+  "tier": "T4",
+  "degree": 1
+ },
+ {
   "name": "Apollo",
   "types": [
    "customer"
@@ -7810,7 +7959,7 @@
   "ticker": null,
   "notes": [],
   "event_ids": [
-   "evt-20260818-pre-ipo-revolver-10b-target-exceeded"
+   "evt-20260818-revolver-10b-plus-target"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -7859,27 +8008,6 @@
    "https://www.anthropic.com/news/advancing-claude-for-financial-services"
   ],
   "first_date": "2025-10-27",
-  "tier": "T1",
-  "degree": 1
- },
- {
-  "name": "Brookfield Corporation",
-  "types": [
-   "investor"
-  ],
-  "public": true,
-  "ticker": "BN",
-  "notes": [
-   "Series H participant (PitchBook file: 2026-05-28 cohort) | PitchBook active investor since 2026-05-28 (Series H cohort); named in Anthropic posts: H participant"
-  ],
-  "event_ids": [
-   "evt-20260528-series-h-roster"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/series-h"
-  ],
-  "first_date": "2026-05-28",
   "tier": "T1",
   "degree": 1
  },
@@ -8466,27 +8594,6 @@
   "degree": 1
  },
  {
-  "name": "DST Global",
-  "types": [
-   "investor"
-  ],
-  "public": false,
-  "ticker": null,
-  "notes": [
-   "PB 40773-97; Series H cohort; roles: H participant"
-  ],
-  "event_ids": [
-   "evt-20260528-series-h-roster"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/series-h"
-  ],
-  "first_date": "2026-05-28",
-  "tier": "T1",
-  "degree": 1
- },
- {
   "name": "DXC Technology",
   "types": [
    "customer",
@@ -8606,6 +8713,25 @@
   "degree": 1
  },
  {
+  "name": "Deutsche Bank",
+  "types": [
+   "bank"
+  ],
+  "public": true,
+  "ticker": "DB",
+  "notes": [],
+  "event_ids": [
+   "evt-20260903-credit-facility-15b-nears-final"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+  ],
+  "first_date": "2026-09-03",
+  "tier": "T2",
+  "degree": 1
+ },
+ {
   "name": "DoD Chief Digital and AI Office (CDAO)",
   "types": [
    "government"
@@ -8659,6 +8785,25 @@
    "https://www.anthropic.com/news/3-5-models-and-computer-use"
   ],
   "first_date": "2024-10-22",
+  "tier": "T1",
+  "degree": 1
+ },
+ {
+  "name": "ERock",
+  "types": [
+   "partner"
+  ],
+  "public": true,
+  "ticker": "EROC",
+  "notes": [],
+  "event_ids": [
+   "evt-20260811-erock-470mw-onsite-power-order"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.sec.gov/Archives/edgar/data/2110029/000119312526344714/eroc-ex99_1.htm"
+  ],
+  "first_date": "2026-08-11",
   "tier": "T1",
   "degree": 1
  },
@@ -8795,6 +8940,25 @@
   ],
   "first_date": "2024-11-22",
   "tier": "T1",
+  "degree": 1
+ },
+ {
+  "name": "Existing Anthropic investors (undisclosed)",
+  "types": [
+   "investor"
+  ],
+  "public": false,
+  "ticker": null,
+  "notes": [],
+  "event_ids": [
+   "evt-20250101-marshals-seized-ftx-exec-shares"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://crypto.news/anthropic-shares-seized-from-ftx-executives-sold/"
+  ],
+  "first_date": "2025-01-01",
+  "tier": "T4",
   "degree": 1
  },
  {
@@ -10319,7 +10483,7 @@
   "ticker": "MU",
   "notes": [],
   "event_ids": [
-   "evt-20260528-series-h-roster"
+   "evt-20260528-series-h-compute-agreements-memory-partners"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -10521,27 +10685,6 @@
    "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a"
   ],
   "first_date": "2026-09-08",
-  "tier": "T1",
-  "degree": 1
- },
- {
-  "name": "NTTVC",
-  "types": [
-   "investor"
-  ],
-  "public": true,
-  "ticker": "9432",
-  "notes": [
-   "PB 267065-83; Series H cohort; roles: H participant; venture arm of NTT"
-  ],
-  "event_ids": [
-   "evt-20260528-series-h-roster"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/series-h"
-  ],
-  "first_date": "2026-05-28",
   "tier": "T1",
   "degree": 1
  },
@@ -11209,25 +11352,6 @@
   ],
   "first_date": "2026-08-17",
   "tier": "T1",
-  "degree": 1
- },
- {
-  "name": "Royal Bank of Canada",
-  "types": [
-   "bank"
-  ],
-  "public": true,
-  "ticker": "RY",
-  "notes": [],
-  "event_ids": [
-   "evt-20250516-run-rate-2b"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
-  ],
-  "first_date": "2025-05-16",
-  "tier": "T3",
   "degree": 1
  },
  {
@@ -12203,6 +12327,25 @@
   "degree": 1
  },
  {
+  "name": "U.S. Marshals Service",
+  "types": [
+   "other"
+  ],
+  "public": false,
+  "ticker": null,
+  "notes": [],
+  "event_ids": [
+   "evt-20250101-marshals-seized-ftx-exec-shares"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://crypto.news/anthropic-shares-seized-from-ftx-executives-sold/"
+  ],
+  "first_date": "2025-01-01",
+  "tier": "T4",
+  "degree": 1
+ },
+ {
   "name": "U.S. Senate Commerce Committee",
   "types": [
    "government"
@@ -12295,25 +12438,6 @@
   ],
   "first_date": "2025-06-05",
   "tier": "T1",
-  "degree": 1
- },
- {
-  "name": "UBS",
-  "types": [
-   "bank"
-  ],
-  "public": true,
-  "ticker": "UBS",
-  "notes": [],
-  "event_ids": [
-   "evt-20260602-chip-financing-spv-notes-price-talk"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html"
-  ],
-  "first_date": "2026-06-02",
-  "tier": "T3",
   "degree": 1
  },
  {

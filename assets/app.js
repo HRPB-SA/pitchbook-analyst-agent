@@ -322,7 +322,7 @@ function renderOverview(root) {
   const { metrics: M = {}, thesis: T, ledger: L, agent_log: A, model: MD, compute: C } = state.data;
   root.replaceChildren();
   const tiles = el('div', { class: 'grid cols-4' });
-  const roundPts = (M.rounds || []).filter(r => r.post_usd_m > 0 && r.status !== 'talks').map(r => ({ date: r.date, usd_m: r.post_usd_m, label: `${r.round}: ${fmt.usd(r.size_usd_m)} raised`, event_id: r.event_id, tier: r.tier || 'T2', confidence: r.confidence || 'HIGH' }));
+  const roundPts = (M.rounds || []).filter(r => r.post_usd_m > 0 && r.status !== 'talks' && r.additive !== false).map(r => ({ date: r.date, usd_m: r.post_usd_m, label: `${r.round}: ${fmt.usd(r.size_usd_m)} raised${r.press_post_usd_m && r.press_post_usd_m !== r.post_usd_m ? ` (press reported ${fmt.usd(r.press_post_usd_m)} post)` : ''}`, event_id: r.event_id, tier: r.tier || 'T2', confidence: r.confidence || 'HIGH' }));
   const valSeries = roundPts.length >= 5 ? roundPts : (M.valuation || []);
   const val = latest(valSeries, r => r.usd_m);
   const rr = latest(M.run_rate_desk?.length ? M.run_rate_desk.map(r => ({ ...r, usd_m: r.run_rate_usd_m })) : M.run_rate, r => r.usd_m);
@@ -366,9 +366,11 @@ function renderOverview(root) {
   const qs = (M.period_revenue || []).filter(r => /Q[1-4]\s*20\d\d/.test(r.period || '')).map(r => ({ key: r.period.replace(/(Q\d)\s*(\d{4})/, '$2$1'), label: r.period.replace(/\s+/, ' '), value: r.usd_m, kind: r.kind })).sort((a, b) => a.key.localeCompare(b.key));
   const seen = new Set(); const qd = qs.filter(r => { if (seen.has(r.key)) return false; seen.add(r.key); return true; });
   columnChart(c3c, { data: qd.map(r => ({ label: r.label, values: [{ name: r.kind || 'revenue', value: r.value, color: 'var(--s1)', est: /proj|est|guid/i.test(r.kind || '') }] })), yFmt: v => fmt.usd(v) });
-  const c4 = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Capital raised by year' }), el('span', { class: 'small muted', text: 'equity vs debt, $ announced' })));
+  const c4 = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Capital raised by year' }), el('span', { class: 'small muted', text: 'closed rounds at PitchBook sizes (incl. converted notes); excludes secondaries and "up to" commitments' })));
   const c4c = el('div', { class: 'chart' }); c4.append(c4c);
-  const byY = {}; for (const r of (M.capital || [])) { const y = r.date.slice(0, 4); byY[y] = byY[y] || { equity: 0, debt: 0 }; byY[y][r.kind] += r.usd_m; }
+  const byY = {};
+  if ((M.rounds || []).length >= 5) for (const r of M.rounds) { if (r.additive === false || r.status !== 'closed' || !r.size_usd_m || !r.date) continue; const y = r.date.slice(0, 4); byY[y] = byY[y] || { equity: 0, debt: 0 }; byY[y][/revolv|credit facility|bond|loan/i.test(r.round) ? 'debt' : 'equity'] += r.size_usd_m; }
+  else for (const r of (M.capital || [])) { const y = r.date.slice(0, 4); byY[y] = byY[y] || { equity: 0, debt: 0 }; byY[y][r.kind] += r.usd_m; }
   columnChart(c4c, { data: Object.keys(byY).sort().map(y => ({ label: y, values: [{ name: 'Equity', value: byY[y].equity, color: 'var(--s1)' }, { name: 'Debt', value: byY[y].debt, color: 'var(--s2)' }] })), yFmt: v => fmt.usd(v) });
   c4.append(legend([{ name: 'Equity', color: 'var(--s1)', rect: true }, { name: 'Debt', color: 'var(--s2)', rect: true }]));
   g.append(c3, c4);

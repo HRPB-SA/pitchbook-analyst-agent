@@ -1,46 +1,46 @@
 {
- "generated": "2026-09-30T19:00:09Z",
- "raw_events": 1073,
- "merged_events": 685,
+ "generated": "2026-09-30T19:13:17Z",
+ "raw_events": 1094,
+ "merged_events": 691,
  "tiers": {
-  "T1": 380,
-  "T2": 181,
-  "T3": 108,
-  "T4": 15,
+  "T1": 382,
+  "T2": 182,
+  "T3": 110,
+  "T4": 16,
   "T5": 1
  },
  "confidence": {
-  "HIGH": 491,
-  "MEDIUM": 167,
-  "DISPUTED": 10,
-  "VERIFY": 7,
+  "HIGH": 493,
+  "MEDIUM": 169,
+  "DISPUTED": 11,
+  "VERIFY": 8,
   "LOW": 10
  },
  "categories": {
   "governance": 56,
-  "other": 46,
+  "other": 49,
   "people": 55,
   "funding": 32,
   "investment": 66,
-  "valuation": 43,
+  "valuation": 45,
   "research": 67,
   "safety": 91,
   "policy": 82,
   "model": 40,
   "product": 142,
   "government": 87,
-  "compute": 71,
+  "compute": 76,
   "security": 45,
   "legal": 68,
   "customer": 96,
-  "partnership": 131,
+  "partnership": 133,
   "pricing": 58,
   "international": 49,
   "regulatory": 42,
   "revenue": 53,
-  "debt": 15,
-  "financials": 52,
-  "secondary": 16,
+  "debt": 16,
+  "financials": 54,
+  "secondary": 17,
   "competition": 47,
   "ipo": 41,
   "acquisition": 15
@@ -50,8 +50,8 @@
   "2022": 17,
   "2023": 47,
   "2024": 71,
-  "2025": 174,
-  "2026": 370
+  "2025": 175,
+  "2026": 375
  },
  "opened_share": 0.999,
  "cross_agent_conflicts": [
@@ -129,6 +129,276 @@
   }
  ],
  "agent_conflicts": [
+  {
+   "topic": "Compute contracts over ~11 months: '$531B' (checklist) vs $517B vs $518B",
+   "value_a": "$531B over 11 months (checklist; no URL)",
+   "source_a": "orchestrator checklist",
+   "value_b": "$517B maximum value, 14.8 GW, Oct 2025-Aug/Sep 2026 (The Information); $518B 10-year commitments (prospectus)",
+   "source_b": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
+   "note": "No opened source or search result carries $531B. $517B + RUM's $13.7B = $530.7B is a numeric coincidence, unproven. $517B (max value of deals signed) and $518B (10-year obligations at ~June 30) measure different things; their 0.2% match is coincidental. DISPUTED - use $517B.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "'$80B+ across 6 partners' (mid-2026)",
+   "value_a": "$80B+ across six partners, mid-2026 (checklist)",
+   "source_a": "orchestrator checklist",
+   "value_b": "at least $80B to THREE hyperscalers (Amazon, Google, Microsoft) through 2029, reported Feb 17-18 2026; ~$180B total server rental told to investors Dec 2025",
+   "source_b": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-set-to-pay-cloud-partners-80-billion-through-2029/",
+   "note": "Figure exists but is 3 partners, a server-cost forecast and Feb 2026 - superseded by $517B. No 'six partners' source found.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "SpaceX/xAI contract value and firmness",
+   "value_a": "$1.25B/month through May 2029 = $45B nominal; 90 days' notice (SEC CORRESP Jun 1; FWP Jun 4)",
+   "source_a": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
+   "value_b": "up to $84.5B through 2029 with 90-day notice (Anthropic prospectus coverage); Musk: 180-day lease with 90-day mutual cancellation",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html",
+   "note": "$84.5B is +88% vs $45B: likely an amended/expanded contract (Colossus II) but unexplained; firm commitment is months not years. DISPUTED pending S-1 text. A CleanTechnica headline says $1.5B/month (unverified).",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Google/Broadcom TPU gigawatts",
+   "value_a": "~3.5 GW through Broadcom from 2027, part of 'multiple gigawatts' (Broadcom 8-K)",
+   "source_a": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+   "value_b": "five gigawatts of next-generation TPU capacity for Google and Broadcom (Anthropic Series H page); Google Cloud 5 GW over 5 years (TechCrunch)",
+   "source_b": "https://www.anthropic.com/news/series-h",
+   "note": "Treated as overlapping (3.5 within 5), not 8.5 GW. Plus >1 GW in 2026 from the Oct 2025 deal, so Google total ~6 GW (The Information: Google+AWS = 11 GW).",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Google commitment size",
+   "value_a": "~$200B over five years for Google Cloud and chips (The Information May 5)",
+   "source_a": "https://the-decoder.com/anthropic-commits-200-billion-to-google-cloud-over-five-years/",
+   "value_b": "Google $111.1B + Broadcom-related leases $161.2B over ~10 years (prospectus coverage); FT ~$200B interlocking contracts",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html",
+   "note": "Scope (cloud vs chips vs guarantees) and window (5 vs 10 years) differ; cannot reconcile without the S-1. DISPUTED (>10%).",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Prospectus $518B vs named partners and later deals",
+   "value_a": "$518B total; five named partners sum to $498.2B",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html",
+   "value_b": "Jul-Sep 2026 deals alone (TeraWulf, Riot, Volta, Nscale, Lambda, RUM, Akamai) ~ $143B plus AMD",
+   "source_b": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
+   "note": "The S-1 total probably pre-dates or treats not-yet-commenced leases differently; needs the contractual-obligations table. Anthropic's S-1 is not on EDGAR.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Amazon 'up to $20B more': investment vs facility",
+   "value_a": "Amazon invests $5B now and up to $20B more (Anthropic/TechCrunch)",
+   "source_a": "https://www.anthropic.com/news/anthropic-amazon-compute",
+   "value_b": "financing arrangement: aggregate facility not to exceed $20.0B, nothing drawable at inception, made available as AWS hits compute-delivery milestones; $15.0B left after Series H $5.0B (Amazon 10-Q)",
+   "source_b": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+   "note": "Not a numeric conflict: 'up to' is conditional vendor financing tied to AWS compute delivery.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Gross margin definitions and 2027E",
+   "value_a": "2025 ~40% (paying-user costs only); 2027E 'above 70%' (The Information); 2028E 77%",
+   "source_a": "https://michaelparekh.substack.com/p/ai-diving-into-openai-vs-anthropic",
+   "value_b": "brief: 63% (2027E, WSJ Apr 6); FT: >80% before partner share and training; WSJ May 20: Q2 operating income INCLUDES training",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "note": "Different cost scopes; 63% not found. All margin figures are company-adjusted, single-outlet, unaudited. DISPUTED.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Nscale term/MW vs S-1 text",
+   "value_a": "$45B, six years, 460 MW, late-2027 start (Bloomberg/TechCrunch/SiliconANGLE)",
+   "source_a": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
+   "value_b": "S-1: up to ~$44.6B; no term, MW or start stated (Exhibit 10.25 redacted); 'late 2027' attached to Microsoft Portugal",
+   "source_b": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+   "note": "$ gap is rounding (1%); MW/term/start are press-only.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "TPU financing size",
+   "value_a": "$35.5B price talk (Jun 2) incl. $25B A2; $36B (Bloomberg May 28); $35.8B (biggo)",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
+   "value_b": "$34.5B closed ($6B + $24B + $4.5B); Apollo headline 'initial $35 billion capital solution'",
+   "source_b": "https://epochai.substack.com/p/will-financing-bottleneck-ai-compute",
+   "note": "Within 3-4%: price-talk vs final sizing; not a dispute. Notes are lessor-SPV debt, not Anthropic-issued.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Broadcom Anthropic orders",
+   "value_a": "$10B ordered in Broadcom FQ3 2025 (SiliconANGLE)",
+   "source_a": "https://siliconangle.com/2025/12/11/broadcoms-stock-falls-despite-another-crushing-earnings-revenue-beat/",
+   "value_b": "$21B (= $10B + $11B) in RSS headlines/blogs (Analytics India, 247wallst, Parekh substack)",
+   "source_b": "https://michaelparekh.substack.com/p/ai-diving-into-openai-vs-anthropic",
+   "note": "$11B add-on unverified; use $10B.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Zerra/Queensland capacity and value",
+   "value_a": "'2.16 GW datacenter for Anthropic' (Tech AU/Converge Digest headline)",
+   "source_a": "https://convergedigest.com/anthropic-zerra-dc-australia-2-16gw-data-center/",
+   "value_b": "campus 1.44 GW IT (four 360 MW halls; 2.16 GVA demand); Anthropic takes the first hall (~0.36 GW IT); A$31.9B campus capex; lease terms undisclosed",
+   "source_b": "https://brisbanedevelopment.com.au/anthropic-zerra-dc-western-downs-digital-park-32-billion-data-centre-dalby/",
+   "note": "Gross vs IT vs Anthropic share: 6x range. A '$10.4B first phase' headline (Mingtiandi) is unverified.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Project Rainier $11B / 2.2 GW basis",
+   "value_a": "$11B and >2.2 GW at the Indiana campus (SiliconANGLE)",
+   "source_a": "https://siliconangle.com/2025/10/29/aws-opens-11b-project-rainier-data-center-campus-built-anthropic/",
+   "value_b": "AWS page: nearly 500,000 Trainium2 chips, >1M by year-end; no $ or GW; Anthropic's Apr 2026 commitment is >$100B / up to 5 GW",
+   "source_b": "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster",
+   "note": "AWS capex and planned site capacity, not an Anthropic obligation; Amazon's Indiana plan was later expanded to $15B (RSS headline).",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "RUM Group date and price",
+   "value_a": "RUM 8-K/press release Sep 10 refers to a 'previously announced' $13.7B GPU services agreement (customer unnamed)",
+   "source_a": "https://www.sec.gov/Archives/edgar/data/1830081/000121390026098854/ea030515801ex99-1.htm",
+   "value_b": "The Information Sep 13 / MarketBeat Sep 15 name Anthropic; ~22,000 H100/H200 GPUs for $2.28B per year = ~$11.8 per GPU-hour",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/ready-rumble-anthropic-rings-ai-154000074.html",
+   "note": "Announcement date earlier than scout-2026q3's Sep 14; ~$11.8/GPU-hour is high for H100/H200 but close to SpaceX-Google (~$11.5); GPU count may be phase-1 only.",
+   "agent": "desk-compute"
+  },
+  {
+   "topic": "Series B size: announced vs PitchBook",
+   "value_a": "$580M (Anthropic T1, Apr 29 2022; FTX/Alameda ~$500M per DOJ)",
+   "source_a": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+   "value_b": "$980M, $2.02B pre / $3.0B post, $11.2261/sh (PitchBook deal 193191-67T)",
+   "source_b": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "note": "Gap $400M (+69%). Not pre/post (PB pre+size=post) and not announced-vs-closed at one date; PB models one 87.3M-share round. Hypothesis (unverified): later Series B-priced closings; size echoes Google's Feb-2023 ~$300-400M but PB has no Google Series B entry. Needs PB cap table / S-1. Confidence DISPUTED. TechCrunch (Apr 29 2022, T2) reports total funding of $704M after the round vs PB's $1,104M.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "Date of FTX/Alameda's ~$500M Series B cheque",
+   "value_a": "Oct 5, 2021 (Protos, quoting the estate filing: 44,539,240 Series B preferred at $11.2261 = $500M)",
+   "source_a": "https://protos.com/anthropic-gamble-could-save-ftx-customers-from-total-ruin/",
+   "value_b": "'in 2022' (DOJ letter, Dkt. 315); Series B announced Apr 29 2022 (Anthropic T1; PB date 2022-04-29)",
+   "source_b": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.590940/gov.uscourts.nysd.590940.315.0.pdf",
+   "note": "If the cheque pre-dates the April 2022 announcement, Series B had an earlier first close and PB's 2022-04-29 date is an announcement date. Price $11.2261 is corroborated across the estate filing (via Protos) and PB. Scout-2021-2022 flagged the same dating conflict.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "Series D size and valuation",
+   "value_a": "$750M at $18.4B post-money (TechCrunch May 13 2024; Reuters talks: $15B pre)",
+   "source_a": "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/",
+   "value_b": "$1.2B (D-1/D-2/D-3) at $19.8B pre / $21.0B post, $30.0045/sh (PitchBook 265998-97T)",
+   "source_b": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "note": "Price per share is identical in T1 (FTX estate sold 29,465,891 sh for $884,109,327 = $30.0045) and PB, so the +14% post-money gap is a fully-diluted share-count basis (613M vs 700M shares), and the +$450M size gap is later D closings. Reconciled in logic; not proven by an Anthropic document.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "Series C valuation ($4.1B vs ~$5B)",
+   "value_a": "$4.1B ('over-$4.1 billion', The Information via TechCrunch, seeking stage, Mar-May 2023)",
+   "source_a": "https://techcrunch.com/2023/05/23/anthropic-raises-350m-to-build-next-gen-ai-assistants/",
+   "value_b": "'about $5 billion in May' (TechCrunch Sep 25 2023); PB $4.1B pre / $4.55B post",
+   "source_b": "https://techcrunch.com/2023/09/25/amazon-to-invest-up-to-4-billion-in-ai-startup-anthropic",
+   "note": "PB pre-money equals the $4.1B press figure; ~$5B is 9% above PB post-money ($4.55B), inside the 10% threshold. Largely a pre- vs post-money plus rounding effect, not a true dispute; Anthropic disclosed none.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "Google Feb-2023 stake: implied valuation",
+   "value_a": "$300M for ~10% (FT) => ~$3.0B post-money",
+   "source_a": "https://venturebeat.com/ai/google-invests-300-million-in-anthropic-as-race-to-compete-with-chatgpt-heats-up",
+   "value_b": "~$5B implied valuation (NYT, per Fortune)",
+   "source_b": "https://fortune.com/2023/02/04/google-invests-300m-anthropic-openai-rival-making-chatgpt-challenger-claude-ai-chatbot-battle",
+   "note": "Internally inconsistent press arithmetic ($300M/10% = $3B). $3.0B equals PB's Series B post-money. Terms never confirmed by companies; FT original unopened.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "FTX/Alameda secondary: PitchBook $1.32B vs court and press",
+   "value_a": "PB: $1,320M on 2024-05-31, buyers SquareOne, DAMAC, Jane Street, Bessemer, Golden Falcon, AGC, Pachamama; 29.4M shares",
+   "source_a": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "value_b": "Sale 1: 29,465,891 sh / $884,109,327 on 2024-03-22 (ATIC, Jane Street, Fidelity, HOF...) + sale 2: ~15M sh / ~$452M (Jun 2024) = ~$1,336M",
+   "source_b": "https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.10241.1.pdf",
+   "note": "Amounts reconcile within 1.2%, but PB's buyer list does not match the estate's purchaser list and its share count equals sale 1 only. Sale 2 rests on a T3 crypto outlet (Bitcoinist); docket entries for it not found.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "Amazon: PB $8B round at 2024-11-22 vs funded tranches and instrument",
+   "value_a": "PB: $8.0B equity round, $53.2822/sh, $54B post, 298.7M shares, 29.48% acquired",
+   "source_a": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "value_b": "Amazon 10-Qs: all $8.0B were convertible notes funded Q3'23 $1.25B, Q1'24 $2.75B, Q4'24 $1.3B, Q2'25 $1.3B, Q4'25 $1.4B ($5.3B by Q4 2024)",
+   "source_b": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm",
+   "note": "PB date/price aggregate 2023-25 funding into one row and label it equity; PB share count x price = $15.9B (1.99x). Same pattern for Series G (2.55x) and H (2.57x). Use T1 for funded amounts; PB for names/dates only.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "PitchBook total raised: $161.254B (Jul 16) vs $126.754B (Sep 30)",
+   "value_a": "$161,254M (brief: Jul 16 note; includes $34,500M chip bonds, deal 334763-02T)",
+   "source_a": "orchestrator brief (no URL)",
+   "value_b": "$126,754M = Series H 'Raised to Date' (incl. $2,500M revolver, excl. secondaries and bonds)",
+   "source_b": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "note": "Difference = $34,500M exactly. Press shows the notes are issued by a lessor SPV (AI XPV Platform) to buy Google TPUs leased to Anthropic (5-yr lease, Broadcom backstop on ~$30B); Anthropic is lessee. PB removed the record (reason not stated). Also size variants $34.5B/$35B/$35.5B/$36B across sources.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "'Total raised' across data providers",
+   "value_a": "PB ledger: $1,554M (Jun 2023), $12,754M (Nov 2024), $16,254M (Mar 2025), $29,254M equity / $31,754M incl. debt (Sep 2025)",
+   "source_a": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "value_b": "TechCrunch $1.45B (May 2023), $13.7B (Nov 2024), $18.2B (Mar 2025); Crunchbase $7.6B (Dec 2023), $33.7B (Sep 2025); Bloomberg $14.3B over 12 rounds (Aug 2025; via scout-2025h2's SiliconANGLE relay, unopened here)",
+   "source_b": "https://techcrunch.com/2025/03/03/anthropic-raises-3-5b-to-fuel-its-ai-ambitions/",
+   "note": "Spread $1-2B vs PB at each date is a counting-basis difference: PB books Google at $2.0B (press: >$3B by Mar 2025 incl. +$1B Jan 2025), dates Amazon at one row, and omits sub-$1B extensions; Crunchbase counts commitments. No dataset is a cap table. Do not mix sources in one series.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "Series H/G hyperscaler money: Amazon $5B x2 and Google $10B",
+   "value_a": "Anthropic: Series H includes '$15 billion of previously committed investments from hyperscalers, including $5 billion from Amazon'",
+   "source_a": "https://www.anthropic.com/news/series-h",
+   "value_b": "Amazon 10-Q: $5.0B Series G preferred AND $5.0B Series H preferred in Q2 2026; Google up to $40B ($10B now at $350B)",
+   "source_b": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+   "note": "Not a numeric conflict but an allocation gap: which tranches sit inside the $30B G or $65B H is undisclosed. If Amazon's Series G $5B were an add-on to the $30B round, PB's ledger would under-count by $5B. S-1 capitalization table needed.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "IPO timing: October vs November",
+   "value_a": "October: PitchBook (Sep 21 note per brief, page 403), Business Insider/FT Sep 13, a Sep 4 'said to push IPO marketing to mid-October' headline (biggo.com, unopened), Quartz Aug 13",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html",
+   "value_b": "November / after the midterms: WSJ Sep 18; Reuters and Fortune Sep 28-29",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "note": "A drift rather than a split: late September (Aug 18) -> October -> mid-October roadshow (Sep 7) -> November (Sep 18). Latest evidence favors mid/late November; no public S-1 existed on Sep 30. DISPUTED until a public filing/pricing date.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "'$71B of chip-lease debt in 60 days'",
+   "value_a": "Yahoo headline (Aug 6): $71B stacked",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-spvs-stack-71-billion-000514097.html",
+   "value_b": "$35B closed (June) + $36B only pitched, terms unsettled (Bloomberg/Quartz Aug 5)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/blackstone-pitches-36-billion-debt-134437623.html",
+   "note": "The headline adds an unagreed package; executed SPV financing is ~$34.5-35B.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "PitchBook 11th round / '$10B debt financing' vs AMD sources",
+   "value_a": "PB 340292-53T: 'reportedly seeking venture funding from AMD as of July 22, 2026... supported by an estimated $10 billion of debt financing'; status Upcoming",
+   "source_a": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "value_b": "AMD IR: 'committed to make a strategic equity investment of up to $5 billion'; Reuters: milestone-based; no $10B debt (Meta reportedly in talks for up to $10B compute lease)",
+   "source_b": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
+   "note": "PB placeholder is stale (deal is announced) and its '$10B debt' has no opened source; the IPO-related ~$10B is better explained by the revolver target ($10B -> $15B).",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "Series G/H investor rosters: PitchBook vs Anthropic",
+   "value_a": "PB: Series H led by Dragoneer, Sequoia, Cloverdale, Greenoaks, Altimeter (+Salesforce Ventures participant); Series G leads include SoftBank",
+   "source_a": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "value_b": "T1 Series H: leads Altimeter, Dragoneer, Greenoaks, Sequoia; co-leads Capital Group, Coatue, D1, GIC, ICONIQ, XN; T1 Series G: GIC and Coatue lead, no SoftBank",
+   "source_b": "https://www.anthropic.com/news/series-h",
+   "note": "Roster noise in PB (its Series G synopsis also contains a garbled 'Microsofblant'); T1 lists only significant investors, so PB's 74/93 investor counts cannot be reconciled.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "Alphabet's Anthropic stake: '$124B' headline vs 10-Q",
+   "value_a": "Motley Fool/Yahoo: 'Alphabet reportedly values its Anthropic stake at $124 billion'",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/alphabet-reportedly-values-anthropic-stake-212401877.html",
+   "value_b": "Alphabet 10-Q: $124.3B is ALL non-marketable equity securities; Anthropic not named; ownership % never disclosed (14% in Mar 2025 DOJ filings)",
+   "source_b": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+   "note": "Bloomberg says the figure 'primarily' reflects Anthropic; the filing does not. Treat Google's stake value as undisclosed.",
+   "agent": "desk-deals"
+  },
+  {
+   "topic": "PitchBook price per share: Series B vs Series C",
+   "value_a": "Series B: $11.2261 (PB; matches FTX cost basis per the estate filing via Protos)",
+   "source_a": "https://protos.com/anthropic-gamble-could-save-ftx-customers-from-total-ruin/",
+   "value_b": "Series C: $11.2261 (PB) although valuations step up from $3.0B post-B to $4.1B pre-C; Series D $30.0045 (T1-corroborated)",
+   "source_b": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "note": "A flat price across a 37% valuation step-up implies either +98M FD shares between the rounds or a PB copy error in Series C price/shares (40.09M sh x $11.2261 = $450M exactly). Do not use PB's Series C price/share count without the S-1.",
+   "agent": "desk-deals"
+  },
   {
    "topic": "Basecamp Research Series C: was Anthropic an investor?",
    "value_a": "Anthropic (and Menlo Anthology Fund) named as backers; PitchBook lists Anthropic active minority investor since 2026-09-23",
@@ -1211,6 +1481,198 @@
   }
  ],
  "open_items": [
+  {
+   "claim": "Broadcom's additional ~$11B Anthropic order (total ~$21B) from the Dec 11 2025 call",
+   "why_unverified": "CNBC 403; Motley Fool/CRN/Analytics India URLs did not open; only RSS headlines and a substack mention '$21 billion of Google's TPUs'",
+   "best_lead": "Broadcom FQ4-2025 earnings-call transcript (Dec 11 2025)",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Anthropic S-1 primary text: contractual-obligations table, cost of revenue, gross margin definition, training vs inference split, SpaceX $84.5B composition, 'adjusted' profit definition",
+   "why_unverified": "Confidential S-1 is not on EDGAR; only Reuters/FT/Fortune/TechCrunch/PYMNTS second-hand coverage",
+   "best_lead": "SEC EDGAR Anthropic PBC S-1 once public flip occurs; Reuters (Echo Wang) Sep 28-29 pieces",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "WSJ Apr 6 2026 investor-document figures incl. 63% gross margin for 2027E",
+   "why_unverified": "WSJ blocked; only a substack summary (40% 2025, FCF positive 2027, burn 9% of revenue) found; 63% not seen anywhere",
+   "best_lead": "WSJ 'An Inside Look at OpenAI and Anthropic's Finances Ahead of Their IPOs' (2026-04-06)",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "FT Aug 4 2026 'Inside Google's $200bn Wall Street finance machine' and The Information May 5 / Jun 11 / Sep 6 originals",
+   "why_unverified": "Paywalled; read only via summaries (aiweekly.co, The Decoder, MLQ, remio)",
+   "best_lead": "https://www.ft.com/content/549f2e23-5aa2-49c7-9ea6-a97 (per search snippet); theinformation.com/articles/anthropic-talks-cement-control-data-centers",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Broadcom and Apollo primary press releases for the $35B XPV platform",
+   "why_unverified": "Broadcom IR returned 503 twice; Apollo URL not found; used Milbank quoting Apollo plus Quartz/Epoch",
+   "best_lead": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-apollo-and-blackstone-establish-landmark-strategic",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Identity and confirmation of Anthropic as tenant/customer at Riot (Rockdale), RUM (Maysville), Hut 8 Beacon Point (via Lambda/Nvidia), Volta (Norway)",
+   "why_unverified": "Filings say 'frontier AI lab' / 'unaffiliated cloud customer' / 'high-investment-grade tenant'; Anthropic named only by Bloomberg/The Information/WSJ",
+   "best_lead": "Anthropic S-1 subsequent-events note; Bloomberg Aug 4/Aug 10, WSJ Aug 31, The Information Sep 13",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Fluidstack 'Texas and New York' sites and which Google-backstopped developments (10 sites, ~2.4 GW) serve Anthropic",
+   "why_unverified": "Anthropic never named the sites; TeraWulf Lake Mariner (NY), Cipher (TX), Hut 8 River Bend filings name Fluidstack, not Anthropic",
+   "best_lead": "FT Aug 4 article; Fluidstack/Cipher/TeraWulf 10-Qs",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Colossus II capacity and pricing split inside the $1.25B/month; SpaceX Q2 10-Q Anthropic disclosure",
+   "why_unverified": "S-1/424B4 exceed the 10MB fetch limit; Q2 coverage names Anthropic without contract values",
+   "best_lead": "SpaceX 424B4 (0001628280-26-042639) and Q2 10-Q",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Akamai Project Plan 1 = the $1.8B/7-year commitment (May 7) and the ~$20B expansion",
+   "why_unverified": "Akamai's releases name no customer for the $1.8B and the Sep 24 8-K describes only Plans 2 and 3 under the May 5 MSA; Anthropic identity for May via Bloomberg/Reuters headlines only; $20B is TechCrunch-only",
+   "best_lead": "Akamai Q1/Q2-2026 10-Q notes on the customer contract; Bloomberg/Reuters May 8",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Google Texas campus financing (Nexus Data Centers ~500 MW to 7.7 GW; $5B+ then $15B Morgan Stanley-led loan; $3.2B construction bond)",
+   "why_unverified": "FT/Reuters/WSJ originals blocked; WinBuzzer (T4) and aiweekly (T4) only",
+   "best_lead": "Reuters Jul 30 'Banks in talks to lend $15 billion for Anthropic data center backed by Google'",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Micron supply/investment deal (Jun 23-26), Canada 'gigawatts' (The Logic Aug 19), India in-country inference (Aug 3), UK/Nordics 20-30 MW (Sep 24), Sherwood Feb 9 '10 GW' staffing, CNBC Jun 25 hiring-spree sites, DCD Jun 24 head of compute finance",
+   "why_unverified": "Headlines in RSS only; publisher URLs not reachable without search budget",
+   "best_lead": "Google News RSS titles: Blocks & Files, The Logic, Hindu BusinessLine, CNBC, Sherwood",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Microsoft exited Nscale's Monarch capacity before Anthropic took it (Tech Times Aug 27)",
+   "why_unverified": "Headline only",
+   "best_lead": "Tech Times 'After Microsoft Exited, Anthropic Signed $45B Deal Anchoring Nscale's IPO'",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Oracle, Crusoe, Microsoft Maia or other counterparties",
+   "why_unverified": "RSS sweeps found no Anthropic deal with Oracle, Crusoe or Microsoft-designed chips; Cerebras and Fermi filings only mention Anthropic as a model/market reference",
+   "best_lead": "none; re-check after the S-1 becomes public",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "Amazon 2026 capacity beyond Indiana (Indiana expanded to $15B; other Rainier sites)",
+   "why_unverified": "aboutamazon URLs for Indiana expansion 404; headline only",
+   "best_lead": "aboutamazon.com Nov 24 2025 'Amazon plans to invest $15 billion in Northern Indiana'",
+   "agent": "desk-compute"
+  },
+  {
+   "claim": "What makes up PitchBook's extra $400M in Series B ($980M vs $580M announced) and extra $450M in Series D ($1.2B vs $750M)",
+   "why_unverified": "No Anthropic document or opened source itemizes Series B/D closings; PB participants/cap-table endpoints are outside this agent's tool list; PB site 403",
+   "best_lead": "PitchBook deal participants/cap table for 193191-67T and 265998-97T; S-1 capitalization table; FTX estate Feb-2024 sale motion (D. Del. 22-11068)",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Whether Amazon's $5.0B Series G and $5.0B Series H purchases, and Google's $10B tranche, sit inside the $30B G / $65B H or are additional",
+   "why_unverified": "Amazon's 10-Q states amounts only; Anthropic says H includes $15B of previously committed hyperscaler money",
+   "best_lead": "S-1 capitalization and principal-stockholder tables; Amazon and Alphabet Q3-2026 10-Qs (late Oct)",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Google's total funded cash, instrument mix and ownership % (PB $2.0B vs press >$3B by Mar 2025; 14% then)",
+   "why_unverified": "Alphabet's 10-K/10-Q do not name Anthropic; NYT/DOJ figures are second-hand; FT original paywalled",
+   "best_lead": "DOJ v. Google (D.D.C. 20-cv-3010) exhibits; S-1 principal stockholders table",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Funded amounts of Microsoft (up to $5B) and NVIDIA (up to $10B) and how much is inside Series G",
+   "why_unverified": "Anthropic says only 'a portion'; Microsoft and NVIDIA filings (as processed) do not name Anthropic",
+   "best_lead": "S-1; Microsoft 10-Q (Sep quarter); NVIDIA 10-Q/10-K footnotes",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Series G ($259.1364) and Series H ($589.0095) per-share prices and Series F price",
+   "why_unverified": "PB-only; Anthropic releases give no prices; no public corroboration found",
+   "best_lead": "S-1 (conversion/issue prices); employee tender documents",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Employee tenders: Feb-Apr 2026 size/price/participation (Bloomberg: up to $6B, launched Feb 23, completed Apr 8) and May-2025 total size",
+   "why_unverified": "Bloomberg/The Information paywalled; PitchBook Apr 17 article 403; only aggregators opened",
+   "best_lead": "Bloomberg 2026-02-04, 2026-04-08; The Information 2026-06-14 ($14B cashed out); PitchBook 2026-04-17",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "10b5-1 plans, lockup length, selling-shareholder list, share classes, exchange/ticker, underwriter roster",
+   "why_unverified": "No public S-1; only The Information/Forbes headlines (unopened) and a leaked draft reviewed by Reuters with no such details in coverage",
+   "best_lead": "Public S-1 when filed; Forbes 2026-09-22 '10b5-1 plans'; The Information 2026-08-27",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "PitchBook's Sep 21 note (October listing, up to $100B, ~$2T, ~$10B debt) and PB 'What to look for in the S-1' (Q3 2026)",
+   "why_unverified": "pitchbook.com pages return 403 to WebFetch",
+   "best_lead": "https://pitchbook.com/news/reports/q3-2026-anthropic-what-to-look-for-in-the-s-1 (via PitchBook MCP news analysis)",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Why PitchBook removed the $34.5B chip-bond record (deal 334763-02T) after Jul 16",
+   "why_unverified": "No PB methodology note opened; only inference from press on SPV structure",
+   "best_lead": "PitchBook research support / deal 334763-02T change log",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Final sizing, closing date and tranche terms of the June 2026 chip financing",
+   "why_unverified": "Apollo release not located; Bloomberg Jun 5/9 blocked; sources give $34.5B-$36B",
+   "best_lead": "Apollo/Blackstone/Broadcom press releases of 2026-06-09; Broadcom 10-Q",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Terms, closing and draws of the ~$15B pre-IPO revolver and whether it replaces the $2.5B facility; drawn amount of the $2.5B revolver",
+   "why_unverified": "Bloomberg blocked; CNBC original 403; no company statement",
+   "best_lead": "S-1 debt note; Bloomberg 2026-09-03",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "PitchBook's 2025-01-15 secondary (Homeroom Fund, Lakeside Capital): seller, size, price",
+   "why_unverified": "PB-only record with no amount; no public report",
+   "best_lead": "PitchBook deal 313088-77T participants",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "FTX second sale (Jun 2024: ~15M sh, ~$452M) docket entries and buyer list",
+   "why_unverified": "Only a T3 crypto outlet opened (CCN 403); CourtListener holds only the March notice",
+   "best_lead": "Kroll FTX docket (restructuring.ra.kroll.com - 403); The Block 2024-06-01; CCN 2024-06-03",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Whether the $750M convertible debt converted inside Series F is Google's planned 2025 convertible",
+   "why_unverified": "PB synopsis does not name the holder; DOJ-filing coverage names Google's $750M plan",
+   "best_lead": "S-1 convertible-note roll-forward",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Zoom's original May-2023 cost (~$51M per 2026 press) and other Series C strategic cheque sizes (SAP, Salesforce, SKT earlier)",
+   "why_unverified": "Not opened; Anthropic releases do not disclose amounts",
+   "best_lead": "Zoom 10-K FY2024 strategic investments note; SAP/Salesforce annual reports",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Did Series B have an earlier first close (estate filing: Oct 5 2021) and how does that map to the $580M / $980M figures and PB's Series C price",
+   "why_unverified": "Estate filing not opened (RECAP holds only the March 2024 notice); Protos is a T3 relay; DOJ letter says 2022",
+   "best_lead": "FTX Bankr. D. Del. 22-11068 Feb-2024 sale motion; S-1 capitalization table",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Third-party data-center and compute financings tied to Anthropic (WSJ Jul 30: banks in talks on a $15B Google-backed data-center loan; Bloomberg Aug 19: $1.3B private-credit loan to an Anthropic-tied data center; Tech Times Aug 4: $10B Norway compute deal with a JPMorgan credit backstop) and Broadcom's $60B+ AI debt deal",
+   "why_unverified": "Headlines seen in Google News RSS only; publishers blocked; unclear whether any is an Anthropic obligation or lessor/developer debt",
+   "best_lead": "WSJ 2026-07-30; Bloomberg 2026-08-19; prospectus lease/debt notes",
+   "agent": "desk-deals"
+  },
+  {
+   "claim": "Post-IPO investment-grade rating push and bond-market plans ('OpenAI, Anthropic seek investment-grade ratings post potential IPOs', Yahoo/Moneycontrol Sep 8-9)",
+   "why_unverified": "Headline only (RSS); article not opened",
+   "best_lead": "Bloomberg/Yahoo 2026-09-08 and Moneycontrol 2026-09-09",
+   "agent": "desk-deals"
+  },
   {
    "claim": "Mendral acqui-hire by Anthropic (The New Stack headline, Jul 22 2026)",
    "why_unverified": "Only the headline was visible; article body did not render; no second source found",

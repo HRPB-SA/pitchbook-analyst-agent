@@ -85,9 +85,18 @@
    "date": "2026-05-28",
    "usd_m": 965000.0,
    "pre_usd_m": 900000.0,
-   "label": "Series H $65B at $965B led by Altimeter, Dragoneer, Greenoaks, Sequoia",
-   "event_id": "evt-20260528-series-h-roster",
+   "label": "Series H page: Amazon 5GW, Google/Broadcom 5GW, SpaceX Colossus signed",
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
    "tier": "T1",
+   "confidence": "HIGH"
+  },
+  {
+   "date": "2026-09-25",
+   "usd_m": 1500000.0,
+   "pre_usd_m": null,
+   "label": "Anthropic asks shareholders to approve 50.1% founder voting control",
+   "event_id": "evt-20260925-founders-voting-control",
+   "tier": "T2",
    "confidence": "HIGH"
   }
  ],
@@ -239,7 +248,7 @@
   {
    "date": "2026-05-28",
    "usd_m": 47000.0,
-   "event_id": "evt-20260528-series-h-roster",
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
    "tier": "T1",
    "confidence": "HIGH",
    "source": "https://www.anthropic.com/news/series-h"
@@ -271,7 +280,7 @@
   {
    "date": "2026-08-13",
    "usd_m": 110000.0,
-   "event_id": "evt-20260813-investors-expect-october-ipo-at-2t",
+   "event_id": "evt-20260813-ipo-october-2t-quartz",
    "tier": "T3",
    "confidence": "MEDIUM",
    "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html"
@@ -287,7 +296,7 @@
   {
    "date": "2026-08-18",
    "usd_m": 65000.0,
-   "event_id": "evt-20260818-pre-ipo-revolver-10b-target-exceeded",
+   "event_id": "evt-20260818-revolver-10b-plus-target",
    "tier": "T2",
    "confidence": "MEDIUM",
    "source": "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html"
@@ -524,7 +533,7 @@
    "event_id": "evt-20220429-pb-series-b-980m-reconcile",
    "tier": "T2",
    "confidence": "HIGH",
-   "notes": "DISPUTED: PB $980M vs T1 $580M (gap $400M, +69%). Pre/post and announced/closed do not explain it: pre+size=post holds inside PB, and shares x price = 87.30M x $11.2261 = $980M, so PB models a single 87.3M-share Series B at one price. Most plausible (unverified) reading: PB aggregates later Series B-priced closings on top of the April 2022 $580M; a $400M delta is the same order as Google's Feb-2023 investment (FT: $300M for ~10%; $300M/$3.0B post = 10%), but PB does not list Google in the Series B investor list and first dates Alphabet at the 2023-06-30 Series C (investors file), so the link is NOT established. Resolution needs PB deal participants/cap table or the S-1 capitalization table. FTX-estate filing: 29,465,891 of its ~44.5M shares were sold in Mar 2024 at $30.0045 (see FTX event); 44.54M shares x $11.2261 = $500M matches the DOJ-stated ~$500M, supporting the $11.2261 Series B price."
+   "notes": "DISPUTED: PB $980M vs T1 $580M (gap $400M, +69%). Pre/post and announced/closed do not explain it: pre+size=post holds inside PB, and shares x price = 87.30M x $11.2261 = $980M, so PB models a single 87.3M-share Series B at one price. Most plausible (unverified) reading: PB aggregates later Series B-priced closings on top of the April 2022 $580M; a $400M delta is the same order as Google's Feb-2023 investment (FT: $300M for ~10%; $300M/$3.0B post = 10%), but PB does not list Google in the Series B investor list and first dates Alphabet at the 2023-06-30 Series C (investors file), so the link is NOT established. Resolution needs PB deal participants/cap table or the S-1 capitalization table. FTX-estate filing: 29,465,891 of its ~44.5M shares were sold in Mar 2024 at $30.0045 (see FTX event); Protos (opened) quotes the estate filing: 44,539,240 Series B preferred at $11.2261 = $500M, which matches the DOJ-stated ~$500M and PB's Series B price; Protos dates the purchase Oct 5 2021 vs DOJ '2022' (timeline conflict, see conflicts). PB also carries the same $11.2261 on Series C although its valuations rise 37% (post-B $3.0B to pre-C $4.1B): either +98M FD shares between rounds or a PB price/share-count error."
   },
   {
    "date": "2023-12-20",
@@ -584,7 +593,7 @@
    "event_id": "evt-20250516-run-rate-2b",
    "tier": "T3",
    "confidence": "HIGH",
-   "notes": "SiliconANGLE paraphrases a company disclosure first reported by CNBC (May 16; CNBC returned 403). Reuters' May 30 exclusive independently says the run-rate 'crossed $2 billion around the end of March' and was 'nearly $1 billion' in December 2024. The '$2B' is a floor ('topped'). The $1.4B figure relayed by Maginative (The Information) most plausibly reflects an earlier as-of date - see conflicts. | CNBC original returned 403 to the prior agent; figure is a floor (topped $2B). Independently matched by Reuters May 30 (crossed $2B around end of March). | Sources: one T3 relay of CNBC (CNBC original returned 403) plus the PitchBook debt record. A revolver is committed capacity, not proceeds: PB nonetheless adds the $2.5B to 'Raised to Date' (126,754 includes it). Replaced/expanded by the ~$15B pre-IPO revolver in Sep 2026 (see evt-20260903). | CNBC's original ('Anthropic closes $2.5 billion credit facility...', May 16) is in Google News RSS and on NBC local sites but returned 403; single opened source."
+   "notes": "SiliconANGLE paraphrases a company disclosure first reported by CNBC (May 16; CNBC returned 403). Reuters' May 30 exclusive independently says the run-rate 'crossed $2 billion around the end of March' and was 'nearly $1 billion' in December 2024. The '$2B' is a floor ('topped'). The $1.4B figure relayed by Maginative (The Information) most plausibly reflects an earlier as-of date - see conflicts. | CNBC original returned 403 to the prior agent; figure is a floor (topped $2B). Independently matched by Reuters May 30 (crossed $2B around end of March). | Sources: one T3 relay of CNBC (CNBC original returned 403) plus the PitchBook debt record. A revolver is committed capacity, not proceeds: PB nonetheless adds the $2.5B to 'Raised to Date' (126,754 includes it). The Sep-2026 ~$15B pre-IPO revolver is described by Bloomberg/Forbes as an expansion from this $2.5B facility; whether it replaces it is undisclosed (see evt-20260903). | CNBC's original ('Anthropic closes $2.5 billion credit facility...', May 16) is in Google News RSS and on NBC local sites but returned 403; single opened source."
   },
   {
    "date": "2025-07-29",
@@ -610,7 +619,7 @@
    "date": "2026-01-07",
    "usd_m": 10000.0,
    "kind": "equity",
-   "label": "Series G first reported at $10B (WSJ), upsized to $20B by Feb 9",
+   "label": "Series G reported at $10B, upsized to $20B by Feb 9",
    "event_id": "evt-20260107-series-g-talks-10b-to-20b",
    "tier": "T2",
    "confidence": "MEDIUM",
@@ -637,14 +646,24 @@
    "notes": "Single anonymous source; run-rate basis; sits between the company $30B (Apr 6) and $47B (May). Bloomberg/CNBC versions seen only as headlines. | Pre-announcement talks, not a closed round; ended as the $65B Series H at $965B post (May 28). Run-rate 'closer to $40B' on Apr 29 sits between the $30B (Apr 6/20) and $47B (May) company statements. Bloomberg/CNBC/Reuters headlines seen (blocked). Earlier $800B offers: Business Insider/Bloomberg Apr 15."
   },
   {
+   "date": "2026-08-05",
+   "usd_m": 36000.0,
+   "kind": "debt",
+   "label": "Blackstone pitches a second ~$36B debt package for Anthropic's Google chips",
+   "event_id": "evt-20260805-blackstone-second-chip-package-36b",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "notes": "FLAG: the Aug 6 Yahoo headline 'SPVs Stack $71 Billion in Chip-Lease Debt in 60 Days' adds the closed $35B to this PITCHED $36B; the same article says the second deal is 'not yet finalized', so $71B overstates executed financing by ~$36B. Like the first, this would be lessor SPV debt, not Anthropic-issued."
+  },
+  {
    "date": "2026-08-18",
    "usd_m": 10000.0,
    "kind": "debt",
-   "label": "Bloomberg: Anthropic's pre-IPO revolver set to top $10B target",
-   "event_id": "evt-20260818-pre-ipo-revolver-10b-target-exceeded",
+   "label": "Bloomberg: Anthropic's pre-IPO revolver set to exceed $10B target",
+   "event_id": "evt-20260818-revolver-10b-plus-target",
    "tier": "T2",
    "confidence": "MEDIUM",
-   "notes": "Closest reported figure to the brief's '~$10B IPO-related debt': this revolver target (Aug 18) grew to $15B by Sep 3. It is a corporate credit facility, not IPO proceeds; no IPO-linked bond issue found. 2028 revenue projection of $190-200B also appears here. | Target then; expanded to $15B by Sep 3."
+   "notes": "Traces the brief's '~$10B IPO debt': it is this revolver (not an IPO bond). Target rose to $15B by Sep 3. Bloomberg original blocked; Reuters relay opened. | Closest reported figure to the brief's '~$10B IPO-related debt': this revolver target (Aug 18) grew to $15B by Sep 3. It is a corporate credit facility, not IPO proceeds; no IPO-linked bond issue found. 2028 revenue projection of $190-200B also appears here. | Target then; expanded to $15B by Sep 3."
   },
   {
    "date": "2026-09-03",
@@ -654,7 +673,7 @@
    "event_id": "evt-20260903-credit-facility-15b-nears-final",
    "tier": "T2",
    "confidence": "HIGH",
-   "notes": "Closest thing to the checklist's '~$10B IPO debt' lead: the pre-IPO revolver rose from a $10B+ target (Aug 18) to $15B (Sep 3); no IPO-linked bond issuance found. Draws and pricing not disclosed. | Two sources agree on $15B; the 'final' close is stated only as 'being finalized' (Forbes) - tenor, pricing and draw terms not disclosed. Revolver is the only reported IPO-adjacent debt."
+   "notes": "Closest thing to the checklist's '~$10B IPO debt' lead: the pre-IPO revolver rose from a $10B+ target (Aug 18) to $15B (Sep 3); no IPO-linked bond issuance found. Draws and pricing not disclosed. | Two sources agree on $15B; the 'final' close is stated only as 'being finalized' (Forbes) - tenor, pricing and draw terms not disclosed. Revolver is the only reported IPO-adjacent debt. | Largest Anthropic-issued debt instrument and the only 'IPO-related debt' found; not yet in PitchBook. Bloomberg: 'Companies typically finalize the revolver before they notify banks of their formal roles in a listing'; SpaceX expanded its revolver to $5B before its $86.2B IPO. If it replaces the $2.5B facility, revolver capacity is $15B; if additive, $17.5B."
   },
   {
    "date": "2026-09-30",
@@ -777,7 +796,368 @@
    "tier": "T1"
   }
  ],
- "compute": [],
+ "compute": [
+  {
+   "partner": "Google Cloud (TPU capacity, Oct 2025 deal)",
+   "chips": "Google TPU (up to 1M; Ironwood)",
+   "usd_m": null,
+   "usd_basis": "tens of billions (undisclosed)",
+   "gw": 1.0,
+   "gw_basis": "floor: 'well over a gigawatt' online in 2026",
+   "term": "capacity online during 2026",
+   "status": "announced",
+   "financing": "opex (SPV-leased hardware for first >1 GW: see Broadcom row)",
+   "event_id": "evt-20251023-google-tpu-1m-deal",
+   "source_url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+   "include_in_totals": true,
+   "note": "GW only; same ~1 GW that the $34.5B SPV funds"
+  },
+  {
+   "partner": "Google Cloud (next-gen TPU program, Apr 2026)",
+   "chips": "Google TPU next-generation (incl. ~3.5 GW accessed via Broadcom)",
+   "usd_m": 111100,
+   "usd_basis": "contracted per prospectus coverage (T3); The Information says ~$200B over 5 yrs incl. chips",
+   "gw": 5.0,
+   "gw_basis": "up to; Series H page: 5 GW Google+Broadcom",
+   "term": "5 years (Google Cloud) / ~10-yr commitment window (prospectus); from 2027",
+   "status": "contracted",
+   "financing": "opex; Google guarantees lessors; Google invests up to $40B",
+   "event_id": "evt-20260424-google-up-to-40b-investment",
+   "source_url": "https://www.anthropic.com/news/series-h",
+   "include_in_totals": true,
+   "note": "Broadcom 3.5 GW is INSIDE this 5 GW (not additive)"
+  },
+  {
+   "partner": "Broadcom-related TPU equipment leases (XPV platform and successors)",
+   "chips": "Google TPU systems/racks (Broadcom-supplied)",
+   "usd_m": 161200,
+   "usd_basis": "contracted per prospectus coverage (T3); FT: ~$150B of chips for Anthropic",
+   "gw": null,
+   "gw_basis": "GW carried in the two Google rows",
+   "term": "5-year leases per tranche; funded in stages to 2027+",
+   "status": "contracted",
+   "financing": "bonds (lessor SPV notes, Broadcom/Google credit support)",
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+   "include_in_totals": true,
+   "note": "includes the $34.5B closed tranche below"
+  },
+  {
+   "partner": "Broadcom AI XPV Platform SPV - first tranche (Apollo/Blackstone notes)",
+   "chips": "Google TPU systems (~1M TPUs)",
+   "usd_m": 34500,
+   "usd_basis": "contracted (closed notes: $6B A1 + $24B A2 + $4.5B B)",
+   "gw": 1.0,
+   "gw_basis": "more than 1 GW (same GW as the Oct 2025 Google expansion)",
+   "term": "5-year lease; ~16 funding stages over ~1 year",
+   "status": "contracted",
+   "financing": "bonds",
+   "event_id": "evt-20260609-tpu-financing-34-5b-closed",
+   "source_url": "https://finance.yahoo.com/sectors/technology/articles/broadcom-apollo-blackstone-launch-35-144624131.html",
+   "include_in_totals": false,
+   "note": "subset of the Broadcom leases row; GW already counted"
+  },
+  {
+   "partner": "Amazon Web Services",
+   "chips": "Trainium2, Trainium3 (through Trainium4); Graviton",
+   "usd_m": 100000,
+   "usd_basis": "committed: 'more than $100B over ten years' (floor; prospectus coverage says $110B)",
+   "gw": 5.0,
+   "gw_basis": "up to",
+   "term": "10 years; ~1 GW online by end-2026",
+   "status": "contracted",
+   "financing": "vendor-investment + $20B compute-milestone facility (now $15B)",
+   "event_id": "evt-20260420-amazon-5gw-25b-investment",
+   "source_url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+   "include_in_totals": true,
+   "note": "Amazon 10-Q confirms amended commercial arrangement"
+  },
+  {
+   "partner": "Microsoft Azure + NVIDIA",
+   "chips": "NVIDIA Grace Blackwell, Vera Rubin",
+   "usd_m": 30000,
+   "usd_basis": "contracted: 'committed to purchase $30 billion of Azure compute'",
+   "gw": 1.0,
+   "gw_basis": "up to ('additional capacity up to one gigawatt')",
+   "term": "non-cancelable through May 2033 (prospectus coverage)",
+   "status": "contracted",
+   "financing": "vendor-investment (NVIDIA up to $10B, Microsoft up to $5B)",
+   "event_id": "evt-20251118-microsoft-nvidia-anthropic-partnership",
+   "source_url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+   "include_in_totals": true,
+   "note": "prospectus coverage: $31.4B"
+  },
+  {
+   "partner": "SpaceX / xAI - Colossus and Colossus II",
+   "chips": "NVIDIA GPUs (>220K at Colossus 1; Colossus II GB300 phase)",
+   "usd_m": 45000,
+   "usd_basis": "nominal gross: 36 x $1.25B; cancellable on 90 days' notice (prospectus coverage: up to $84.5B)",
+   "gw": 0.3,
+   "gw_basis": "Colossus 1 only ('more than 300 MW'); Colossus II capacity unquantified",
+   "term": "through May 2029 subject to conditions",
+   "status": "contracted",
+   "financing": "opex",
+   "event_id": "evt-20260520-spacex-s1-anthropic-colossus-contract",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
+   "include_in_totals": true,
+   "note": "firm commitment only 90-180 days ($3.75B-$7.5B, derived)"
+  },
+  {
+   "partner": "Nscale - Monarch Compute Campus, West Virginia",
+   "chips": "NVIDIA Vera Rubin NVL72",
+   "usd_m": 44600,
+   "usd_basis": "up to (S-1: 'aggregate payments of up to approximately $44.6 billion'); conditional on Qualifying Financing",
+   "gw": 0.46,
+   "gw_basis": "press-reported (SiliconANGLE/Bloomberg); not in S-1 text",
+   "term": "six years from late 2027 (press)",
+   "status": "contracted",
+   "financing": "opex",
+   "event_id": "evt-20260826-nscale-45b-west-virginia-deal",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+   "include_in_totals": true,
+   "note": "Monarch campus 2 GW gross / 1.37 GW IT by 1H28"
+  },
+  {
+   "partner": "Lambda at Hut 8 Beacon Point, Texas (Nvidia holds the shell lease)",
+   "chips": "NVIDIA (model not stated)",
+   "usd_m": 35000,
+   "usd_basis": "reported, unconfirmed (WSJ via Proactive)",
+   "gw": 0.704,
+   "gw_basis": "two 352 MW IT leases (Hut 8), tenant unnamed",
+   "term": "Anthropic-Lambda term undisclosed; energization Q1 2027",
+   "status": "announced",
+   "financing": "opex",
+   "event_id": "evt-20260831-lambda-35b-cloud-deal-texas",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/anthropic-strikes-35-billion-cloud-155100165.html",
+   "include_in_totals": true,
+   "note": "neither Hut 8 nor Lambda names Anthropic"
+  },
+  {
+   "partner": "TeraWulf - Justified Data campus, Kentucky",
+   "chips": "none (powered shell; tenant supplies chips)",
+   "usd_m": 19000,
+   "usd_basis": "contracted lease revenue over 20-yr initial term (up to ~$33B with both 5-yr extensions)",
+   "gw": 0.401,
+   "gw_basis": "critical IT load (campus ~480 MW gross)",
+   "term": "20 years + two 5-yr renewals; delivery late 2027-early 2028",
+   "status": "contracted",
+   "financing": "opex (lease; investment-grade credit support)",
+   "event_id": "evt-20260706-terawulf-kentucky-19b-lease",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_8k.htm",
+   "include_in_totals": true,
+   "note": "T1 names Anthropic PBC"
+  },
+  {
+   "partner": "Riot Platforms - Rockdale, Texas",
+   "chips": "none (powered shell)",
+   "usd_m": 9100,
+   "usd_basis": "contracted lease revenue over 20-yr initial term ($16.1B with options); tenant identity via Bloomberg",
+   "gw": 0.191,
+   "gw_basis": "IT capacity",
+   "term": "20 years to June 2048; 96 MW Dec 2027, 191 MW Jun 2028",
+   "status": "contracted",
+   "financing": "opex (lease)",
+   "event_id": "evt-20260810-riot-9-1b-rockdale-lease",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926093406/riot-20260810xex99d1.htm",
+   "include_in_totals": true,
+   "note": "Riot does not name Anthropic"
+  },
+  {
+   "partner": "RUM Group - Maysville, Georgia",
+   "chips": "NVIDIA H100/H200 (~22,000 GPUs)",
+   "usd_m": 13700,
+   "usd_basis": "contracted GPU services agreement per RUM; Anthropic identity via The Information/MarketBeat",
+   "gw": 0.25,
+   "gw_basis": "250 MW campus (120-180 MW phase 1); not all Anthropic's",
+   "term": "six years; ~$2.28B per year",
+   "status": "contracted",
+   "financing": "opex (+ warrants to Anthropic)",
+   "event_id": "evt-20260913-rum-group-13-7b-georgia-deal",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1830081/000121390026098854/ea030515801ex99-1.htm",
+   "include_in_totals": true,
+   "note": "implied ~$11.8 per GPU-hour if 22K GPUs is the whole scope"
+  },
+  {
+   "partner": "Volta Infra - Norway",
+   "chips": "NVIDIA Vera Rubin",
+   "usd_m": 10000,
+   "usd_basis": "reported, unconfirmed (Bloomberg via TechCrunch)",
+   "gw": 0.133,
+   "gw_basis": "133 MW",
+   "term": "six years",
+   "status": "announced",
+   "financing": "opex",
+   "event_id": "evt-20260804-volta-10b-norway-compute-deal",
+   "source_url": "https://techcrunch.com/2026/08/04/anthropic-signs-10-billion-deal-with-ai-cloud-startup-volta/",
+   "include_in_totals": true,
+   "note": ""
+  },
+  {
+   "partner": "Akamai",
+   "chips": "general-purpose CPUs",
+   "usd_m": 11600,
+   "usd_basis": "contracted (8-K: ~$11.6B aggregate, Project Plans 2 and 3)",
+   "gw": null,
+   "gw_basis": "n/a (CPU cloud)",
+   "term": "7-year initial terms from service start (H2 2027); TechCrunch: up to ~$20B",
+   "status": "contracted",
+   "financing": "opex (+ Akamai warrant to Anthropic)",
+   "event_id": "evt-20260924-akamai-11-6b-cloud-deal",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm",
+   "include_in_totals": true,
+   "note": ""
+  },
+  {
+   "partner": "Akamai - Project Plan 1 (May 2026, reported)",
+   "chips": "Cloud Infrastructure Services",
+   "usd_m": 1800,
+   "usd_basis": "reported: Akamai release names no customer; Bloomberg/Reuters identify Anthropic; plan number inferred",
+   "gw": null,
+   "gw_basis": "n/a",
+   "term": "seven years",
+   "status": "contracted",
+   "financing": "opex",
+   "event_id": "evt-20260507-akamai-1-8b-frontier-model-provider",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1086222/000108622226000054/exhibit991-q12026.htm",
+   "include_in_totals": true,
+   "note": "likely Plan 1 under the May 5 MSA"
+  },
+  {
+   "partner": "AMD",
+   "chips": "Instinct MI450 (MI455X) in Helios racks",
+   "usd_m": null,
+   "usd_basis": "not disclosed (AMD invests up to $5B in Anthropic)",
+   "gw": 2.0,
+   "gw_basis": "up to; first 1 GW from 1H 2027",
+   "term": "multi-year",
+   "status": "announced",
+   "financing": "vendor-investment",
+   "event_id": "evt-20260722-amd-2gw-mi450-partnership",
+   "source_url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
+   "include_in_totals": true,
+   "note": ""
+  },
+  {
+   "partner": "Zerra DC - Western Downs Digital Park, Queensland",
+   "chips": null,
+   "usd_m": null,
+   "usd_basis": "not disclosed",
+   "gw": 0.36,
+   "gw_basis": "first of four 360 MW IT halls (campus 1.44 GW IT / 2.16 GVA)",
+   "term": "from 2027; subject to FIRB approval",
+   "status": "announced",
+   "financing": "opex (lease)",
+   "event_id": "evt-20260916-zerra-queensland-first-australian-lease",
+   "source_url": "https://www.abc.net.au/news/2026-09-16/queensland-data-centre-anthropic-dalby/107160640",
+   "include_in_totals": true,
+   "note": "inference workload"
+  },
+  {
+   "partner": "CoreWeave",
+   "chips": "GPU cloud (models undisclosed)",
+   "usd_m": null,
+   "usd_basis": "not disclosed",
+   "gw": null,
+   "gw_basis": "not disclosed",
+   "term": "multi-year; online later in 2026",
+   "status": "contracted",
+   "financing": "opex",
+   "event_id": "evt-20260410-coreweave-multi-year-agreement",
+   "source_url": "https://www.coreweave.com/news/coreweave-announces-multi-year-agreement-with-anthropic",
+   "include_in_totals": true,
+   "note": ""
+  },
+  {
+   "partner": "Fluidstack - $50B US data-center program (TX, NY)",
+   "chips": null,
+   "usd_m": 50000,
+   "usd_basis": "announced program size",
+   "gw": null,
+   "gw_basis": "not disclosed",
+   "term": "sites online through 2026",
+   "status": "announced",
+   "financing": "developer leases (Google backstop) + SPV-financed TPUs",
+   "event_id": "evt-20251112-50b-us-data-centers-fluidstack",
+   "source_url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+   "include_in_totals": false,
+   "note": "overlaps River Bend, TeraWulf, SPV and Broadcom rows"
+  },
+  {
+   "partner": "Hut 8 River Bend (Fluidstack lease, Google backstop)",
+   "chips": null,
+   "usd_m": 7000,
+   "usd_basis": "lessee (Fluidstack) base-term obligation",
+   "gw": 0.245,
+   "gw_basis": "IT capacity",
+   "term": "15 years + 3x5",
+   "status": "contracted",
+   "financing": "bonds ($3.25B notes)",
+   "event_id": "evt-20251217-hut8-river-bend-fluidstack",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+   "include_in_totals": false,
+   "note": "Anthropic link via Hut 8 Feb 2026 release"
+  },
+  {
+   "partner": "AWS Project Rainier campus, Indiana",
+   "chips": "Trainium2 (~500K live)",
+   "usd_m": 11000,
+   "usd_basis": "AWS site capex (not an Anthropic payment)",
+   "gw": 2.2,
+   "gw_basis": "planned full-site capacity",
+   "term": "live Oct 2025",
+   "status": "live",
+   "financing": "AWS capex",
+   "event_id": "evt-20251029-project-rainier-operational",
+   "source_url": "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster",
+   "include_in_totals": false,
+   "note": "inside the AWS 5 GW / $100B+ row"
+  },
+  {
+   "partner": "Broadcom direct TPU order (Dec 2025)",
+   "chips": "Google TPU incl. Ironwood",
+   "usd_m": 10000,
+   "usd_basis": "order per Broadcom call (T3 relay); additional ~$11B unverified",
+   "gw": null,
+   "gw_basis": "n/a",
+   "term": "ordered Broadcom FQ3 2025",
+   "status": "contracted",
+   "financing": "prepay/SPV",
+   "event_id": "evt-20251211-broadcom-anthropic-10b-tpu-customer",
+   "source_url": "https://siliconangle.com/2025/12/11/broadcoms-stock-falls-despite-another-crushing-earnings-revenue-beat/",
+   "include_in_totals": false,
+   "note": "overlaps Broadcom leases/SPV rows"
+  },
+  {
+   "partner": "ERock onsite power equipment",
+   "chips": "power-generation equipment",
+   "usd_m": null,
+   "usd_basis": "not disclosed",
+   "gw": 0.47,
+   "gw_basis": "470 MW of generation equipment, not IT load",
+   "term": "into 2028",
+   "status": "contracted",
+   "financing": "opex/capex",
+   "event_id": "evt-20260811-erock-470mw-onsite-power-order",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2110029/000119312526344714/eroc-ex99_1.htm",
+   "include_in_totals": false,
+   "note": "energy, not compute capacity"
+  },
+  {
+   "partner": "Talks / non-binding: Stream (1 GW, >=$40B capex), Meta (up to $10B), >12 LOIs (>1 GW), Theseus (Macquarie/GIC), Samsung chip",
+   "chips": null,
+   "usd_m": null,
+   "usd_basis": "talks or non-binding",
+   "gw": null,
+   "gw_basis": "not counted",
+   "term": "n/a",
+   "status": "announced",
+   "financing": "n/a",
+   "event_id": "evt-20260923-stream-data-centers-1gw-talks",
+   "source_url": "https://huggingnews.com/ai/anthropic-negotiates-1gw-direct-lease-for-40b-data-center-project-fa781f56",
+   "include_in_totals": false,
+   "note": "excluded from totals"
+  }
+ ],
  "pricing": [
   {
    "model": "Claude Instant 1.x (Instant 1.1/1.2)",
@@ -2516,8 +2896,162 @@
    "note": "Desk derivation; see conflicts for the OpenAI memo figure"
   }
  ],
- "compute_totals": {},
- "compute_costs": [],
+ "compute_totals": {
+  "usd_m_announced": 592100,
+  "usd_m_contracted": 217900,
+  "gw_announced": 16.799,
+  "usd_m_buckets": {
+   "contracted_T1_or_T2_firm": 217900,
+   "contracted_but_cancellable_or_conditional": 89600,
+   "reported_unconfirmed": 46800,
+   "prospectus_only_second_hand": 237800,
+   "sum": 592100
+  },
+  "gw_by_basis": {
+   "up_to_ceiling": 13.0,
+   "contracted_or_reported_site_capacity": 3.799,
+   "note": "up-to: AWS 5.0 + Google next-gen TPU 5.0 + Microsoft/NVIDIA 1.0 + AMD 2.0; remainder = Google 2026 floor 1.0 + SpaceX 0.3 + Nscale 0.46 + Lambda 0.704 + TeraWulf 0.401 + Riot 0.191 + RUM 0.25 + Volta 0.133 + Zerra 0.36"
+  },
+  "top_down_reference": {
+   "the_information_sep_6_2026": {
+    "usd_m": 517000,
+    "gw": 14.8,
+    "basis": "MAXIMUM value of contracts signed since Oct 2025 (11 months) plus 1-2 GW already held; T3"
+   },
+   "prospectus_sep_29_2026": {
+    "usd_m": 518000,
+    "basis": "at least $518B of cloud/compute/infrastructure commitments over ~10 years; ~80% non-cancelable or payable regardless of usage (~$414B); second-hand from Reuters/FT review of a confidential S-1; T2/T3"
+   },
+   "ft_aug_4_2026": {
+    "usd_m": 200000,
+    "basis": "interlocking Google/Broadcom/Apollo/Blackstone/Morgan Stanley contracts; ~$150B tied to chips for Anthropic; Google exposure up to ~$44B; T3 relay"
+   },
+   "the_information_feb_18_2026": {
+    "usd_m": 80000,
+    "basis": "at least $80B to THREE hyperscalers (Amazon, Google, Microsoft) through 2029; forecast; T3 (this is the '$80B+' figure)"
+   },
+   "the_information_dec_2025_guidance": {
+    "usd_m": 180000,
+    "basis": "~$180B server rental through 2029 told to investors; T4 via remio.ai"
+   },
+   "checklist_531b": "not found in any source; nearest: $517B (+ RUM $13.7B = $530.7B arithmetic coincidence)"
+  },
+  "note": "Bottom-up deal-level sum ($592.1B) mixes T1 filings, T2/T3 reports and prospectus-coverage figures (Google $111.1B and Broadcom leases $161.2B are second-hand and may overlap with FT's guarantee web), so it is NOT comparable to The Information's $517B (maximum value, Oct 2025-Aug 2026) or the prospectus' $518B (10-year commitments, probably dated before the Jul-Sep deals). Rows flagged include_in_totals=false are subsets/overlaps, AWS site capex, energy equipment or talks. GW are 'up to' ceilings for most hyperscaler programs; 16.8 GW bottom-up compares with The Information's 14.8 GW signed since Oct 2025 plus 1-2 GW held (15.8-16.8). IT-load vs gross-power basis differs by source (Nscale 1.37 IT / 2.0 gross; Zerra 1.44 IT / 2.16 GVA; TeraWulf 401 IT / 480 gross = ~1.2-1.5x)."
+ },
+ "compute_costs": [
+  {
+   "metric": "gross margin 2024",
+   "value": "-94%",
+   "basis": "The Information (Nov 2025): calculation includes only costs for paying users; company projection",
+   "source_url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+   "tier": "T3"
+  },
+  {
+   "metric": "gross margin 2025 (projected, Nov 2025)",
+   "value": "~50%",
+   "basis": "projection; later cut",
+   "source_url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+   "tier": "T3"
+  },
+  {
+   "metric": "gross margin 2025 (reported)",
+   "value": "~40% (about 10 points below plan)",
+   "basis": "The Information Jan 2026 via TipRanks; 'selling AI to businesses and app developers'; WSJ investor docs via aiafterhours say 40% vs OpenAI 33% (T4)",
+   "source_url": "https://www.tipranks.com/news/ai-startup-anthropic-warns-of-profit-margin-pressure-as-costs-surge",
+   "tier": "T3"
+  },
+  {
+   "metric": "inference cost overrun 2025 vs plan",
+   "value": "+23% (Google and Amazon cloud inference costs)",
+   "basis": "The Information via TipRanks",
+   "source_url": "https://www.tipranks.com/news/ai-startup-anthropic-warns-of-profit-margin-pressure-as-costs-surge",
+   "tier": "T3"
+  },
+  {
+   "metric": "training cost 2025",
+   "value": "~$4.1B (+~5% vs summer projection)",
+   "basis": "The Information via Parekh substack; projection, not audited",
+   "source_url": "https://michaelparekh.substack.com/p/ai-diving-into-openai-vs-anthropic",
+   "tier": "T4"
+  },
+  {
+   "metric": "compute and infrastructure spend FY2025 / FY2024",
+   "value": "$7.33B / ~$2.44B (implied, 'threefold')",
+   "basis": "Reuters review of confidential S-1; includes training + inference + other infrastructure; 58% of $12.65B opex",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "tier": "T2"
+  },
+  {
+   "metric": "compute spend per revenue dollar",
+   "value": "FY2024 ~$6.3 (derived) -> FY2025 $1.60 -> Q1 2026 $0.71 -> Q2 2026E $0.56",
+   "basis": "S-1 coverage (FY2025 $7.33B / $4.59B; Q1 via PYMNTS) and WSJ May 20 projection (Q2)",
+   "source_url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-prospectus-shows-what-2-trillion-dollar-ai-company-costs-run/",
+   "tier": "T3"
+  },
+  {
+   "metric": "operating income Q2 2026 (projected)",
+   "value": "$559M on $10.9B revenue (5.1%); includes training, excludes SBC",
+   "basis": "WSJ review of investor projections via PYMNTS; actual Q2 revenue $11.5B",
+   "source_url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
+   "tier": "T3"
+  },
+  {
+   "metric": "gross margin Q2-Q3 2026 (company-adjusted)",
+   "value": ">80% BEFORE partner revenue share and model-training costs",
+   "basis": "FT via Yahoo Finance (Sep 14); not comparable to the 40% paying-user basis or GAAP",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "tier": "T3"
+  },
+  {
+   "metric": "gross margin 2027E / 2028E",
+   "value": "2027E: 'above 70%' (The Information) vs 63% (brief, unverified); 2028E: 77%",
+   "basis": "projections; 2028E from The Information Nov 2025; 63% not found in any opened source",
+   "source_url": "https://michaelparekh.substack.com/p/ai-diving-into-openai-vs-anthropic",
+   "tier": "T4"
+  },
+  {
+   "metric": "cloud-partner revenue share payouts",
+   "value": "~$360M (2025), $1.9B (2026E), $6.4B (2027E); ~1/10 of projected revenue; ~half of gross profit on Amazon-resold sales goes to Amazon",
+   "basis": "The Information Feb 2026 via PYMNTS (2024 printed as ~$1.3M)",
+   "source_url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-set-to-pay-cloud-partners-80-billion-through-2029/",
+   "tier": "T3"
+  },
+  {
+   "metric": "server costs to three hyperscalers through 2029",
+   "value": ">= $80B (Feb 2026 forecast); ~$180B total server rental told to investors Dec 2025",
+   "basis": "The Information; forecasts superseded by the Apr-Sep 2026 deal wave",
+   "source_url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-set-to-pay-cloud-partners-80-billion-through-2029/",
+   "tier": "T3"
+  },
+  {
+   "metric": "operating loss / net loss FY2025",
+   "value": "$8.06B / ~$41.97B (incl. ~$34B non-cash charge on financing instruments)",
+   "basis": "S-1 coverage; FY2024 operating loss $2.98B",
+   "source_url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+   "tier": "T2"
+  },
+  {
+   "metric": "cash burn",
+   "value": "$5.6B (2024) -> ~$3B (2025); FCF positive by 2027; burn ~9% of revenue in 2027",
+   "basis": "WSJ investor documents via aiafterhours substack (T4); WSJ Nov 2025 via valueadd (2026 burn 33% of revenue)",
+   "source_url": "https://aiafterhours.substack.com/p/openai-vs-anthropic-the-121-billion",
+   "tier": "T4"
+  },
+  {
+   "metric": "inference margin (stylized, not actual)",
+   "value": ">50%; ~half of compute for training and half for inference",
+   "basis": "Amodei on Dwarkesh Patel podcast Feb 13 2026; illustrative",
+   "source_url": "https://www.dwarkesh.com/p/dario-amodei-2",
+   "tier": "T2"
+  },
+  {
+   "metric": "run-rate revenue per GW (Apr 2026)",
+   "value": "~$21.4B per GW ($30B / 1.4 GW)",
+   "basis": "blog calculation (aiafterhours); capacity figure not company-stated",
+   "source_url": "https://aiafterhours.substack.com/p/openai-vs-anthropic-the-121-billion",
+   "tier": "T4"
+  }
+ ],
  "plans": [
   {
    "plan": "Free",
@@ -3551,7 +4085,13 @@
    "tier": "T2"
   }
  ],
- "capital_summary": {},
+ "capital_summary": {
+  "equity_only_usd_m": 124254,
+  "debt_usd_m": 2500,
+  "total_usd_m": 126754,
+  "arithmetic": "PitchBook ledger, file as of 2026-09-30. Equity: Series A 124 (2021-05-28) + Series B 980 (2022-04-29) + Series C 450 (2023-06-30) + Google convertible 2,000 (2023-10-27) + Series D 1,200 (2024-07-01) + Amazon notes/6th round 8,000 (2024-11-22) + Series E 3,500 (2025-03-03) + Series F 13,000 (2025-09-02) + Series G 30,000 (2026-02-12) + Series H 65,000 (2026-05-28) = 124,254. Debt: revolver 2,500 (2025-05-16). Total 124,254 + 2,500 = 126,754 = PitchBook 'Raised to Date' on the Series H row. Excluded: secondaries (FTX estate ~1,320-1,336; 2025-01-15 undisclosed; tenders), the 34,500 chip SPV notes, the pending 15,000 revolver and all 'up to' commitments.",
+  "basis_note": "(1) Use 126,754 incl. the revolver or 124,254 equity-only (PB basis). NOT 161,254: PB's Jul-16 total added the 34,500 TPU notes (deal 334763-02T), which are lessor-SPV debt with Anthropic as lessee; 161,254 - 126,754 = 34,500 exactly. (2) Press/T1 headline basis: A 124 + B 580 + C 450 + Google 2,000 + D 750 + Amazon 8,000 + E 3,500 + F 13,000 + G 30,000 + H 65,000 = 123,404 equity (125,904 with revolver); PB is 850 higher (B +400, D +450, both unexplained by any Anthropic document). (3) Strict priced-equity sensitivity excluding convertible-note money (Amazon 8,000 + Google 2,000 + 750 in F) = 113,504; note Amazon's notes were still partly unconverted at 2026-06-30 ($97.9B fair value). (4) Series H's 65,000 is ~50,000 new cash + 15,000 previously committed hyperscaler money counted once; Amazon also bought 5,000 Series G + 5,000 Series H preferred in Q2 2026 (cost basis 18,000 total) - whether inside G/H is undisclosed. (5) Possible PB under-count of Google (>3,000 funded per DOJ-filing reports vs 2,000). (6) Other providers differ by 1-2B at each date (TechCrunch 18.2B at Mar 2025 vs PB 16.25B; Crunchbase 33.7B at Sep 2025 vs PB 31.75B incl. debt). (7) Pending: ~15,000 pre-IPO revolver (capacity; not in PB). (8) Cash on hand 20,280 at 2025-12-31 per leaked prospectus (Reuters)."
+ },
  "cases": [
   {
    "matter": "Bartz v. Anthropic PBC (authors' class action; $1.5B settlement)",
@@ -5725,5 +6265,576 @@
    "tier": "T3"
   }
  ],
- "rounds": []
+ "rounds": [
+  {
+   "round": "Series A",
+   "date": "2021-05-28",
+   "size_usd_m": 124,
+   "pre_usd_m": 337,
+   "post_usd_m": 461,
+   "leads": [
+    "Jaan Tallinn"
+   ],
+   "participants": [
+    "Metaplanet Holdings",
+    "Macroscopic Ventures",
+    "Eric Schmidt",
+    "Dustin Moskovitz",
+    "James McClave",
+    "Center for Emerging Risk Research"
+   ],
+   "share_price_usd": 51.3121,
+   "pitchbook_deal_id": "173059-39T",
+   "status": "closed",
+   "source_url": "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "Size T1+PB; pre/post PB-only; price is pre-split (~$2.5656 split-adjusted)."
+  },
+  {
+   "round": "Series B",
+   "date": "2022-04-29",
+   "size_usd_m": 980,
+   "pre_usd_m": 2020,
+   "post_usd_m": 3000,
+   "leads": [
+    "Sam Bankman-Fried (FTX)"
+   ],
+   "participants": [
+    "FTX",
+    "Alameda Research",
+    "Caroline Ellison",
+    "Nishad Singh",
+    "Jaan Tallinn",
+    "James McClave",
+    "Center for Emerging Risk Research",
+    "Pistole Labs",
+    "Unity Growth Ventures",
+    "Macroscopic Ventures",
+    "2468 Ventures"
+   ],
+   "share_price_usd": 11.2261,
+   "pitchbook_deal_id": "193191-67T",
+   "status": "closed",
+   "source_url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+   "tier": "T1",
+   "confidence": "DISPUTED",
+   "notes": "PB $980M vs T1 announced $580M (gap $400M unexplained). FTX/Alameda ~$500M (DOJ T1).",
+   "press_size_usd_m": 580
+  },
+  {
+   "round": "Series C",
+   "date": "2023-06-30",
+   "size_usd_m": 450,
+   "pre_usd_m": 4100,
+   "post_usd_m": 4550,
+   "leads": [
+    "Spark Capital"
+   ],
+   "participants": [
+    "Salesforce Ventures (PB: co-lead)",
+    "Zoom Ventures (PB: co-lead)",
+    "Alphabet (PB: co-lead)",
+    "Microsoft",
+    "Samsung Venture Investment",
+    "SK Telecom",
+    "LG CNS",
+    "SAP",
+    "Sound Ventures",
+    "Menlo Ventures",
+    "XTX Ventures",
+    "SV Angel"
+   ],
+   "share_price_usd": 11.2261,
+   "pitchbook_deal_id": "217918-09T",
+   "status": "closed",
+   "source_url": "https://www.anthropic.com/news/anthropic-series-c",
+   "tier": "T1",
+   "confidence": "MEDIUM",
+   "notes": "Size HIGH; valuation MEDIUM (PB pre = press $4.1B; ~$5B = rounded post). Announced 2023-05-23; PB close 2023-06-30.",
+   "announced": "2023-05-23"
+  },
+  {
+   "round": "Google convertible notes (PB 4th round)",
+   "date": "2023-10-27",
+   "size_usd_m": 2000,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [
+    "Alphabet"
+   ],
+   "participants": [],
+   "share_price_usd": null,
+   "pitchbook_deal_id": "242653-24T",
+   "status": "closed",
+   "source_url": "https://finance.yahoo.com/news/google-agrees-invest-2-billion-195316710.html",
+   "tier": "T2",
+   "confidence": "MEDIUM",
+   "notes": "PB books the full $2.0B 'up to' cap; Reuters: $500M upfront + $1.5B over time; notes converted to equity (PB). Google total funded likely >$3B (DOJ filings)."
+  },
+  {
+   "round": "Series D",
+   "date": "2024-07-01",
+   "size_usd_m": 1200,
+   "pre_usd_m": 19800,
+   "post_usd_m": 21000,
+   "leads": [
+    "Menlo Ventures"
+   ],
+   "participants": [
+    "Salesforce Ventures",
+    "Qualcomm Ventures",
+    "Bessemer Venture Partners",
+    "Fundrise",
+    "SquareOne Capital",
+    "Type One Ventures"
+   ],
+   "share_price_usd": 30.0045,
+   "pitchbook_deal_id": "265998-97T",
+   "status": "closed",
+   "source_url": "https://techcrunch.com/2024/05/13/anthropic-is-expanding-to-europe-and-raising-more-money/",
+   "tier": "T2",
+   "confidence": "DISPUTED",
+   "notes": "PB $1.2B / $21.0B post vs press $750M / $18.4B post; same $30.0045 price (T1 FTX notice) => share-count basis gap.",
+   "press_size_usd_m": 750,
+   "press_post_usd_m": 18400
+  },
+  {
+   "round": "Amazon convertible notes (PB 6th round)",
+   "date": "2024-11-22",
+   "size_usd_m": 8000,
+   "pre_usd_m": 46000,
+   "post_usd_m": 54000,
+   "leads": [
+    "Amazon"
+   ],
+   "participants": [],
+   "share_price_usd": 53.2822,
+   "pitchbook_deal_id": "276864-04T",
+   "status": "closed",
+   "source_url": "https://www.aboutamazon.com/news/aws/amazon-invests-additional-4-billion-anthropic-ai",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "PB books Amazon's entire $8.0B (funded Q3'23-Q4'25 as convertible notes; $5.3B by Q4'24) at one date; valuation PB-only."
+  },
+  {
+   "round": "Series E",
+   "date": "2025-03-03",
+   "size_usd_m": 3500,
+   "pre_usd_m": 58000,
+   "post_usd_m": 61500,
+   "leads": [
+    "Lightspeed Venture Partners"
+   ],
+   "participants": [
+    "Bessemer",
+    "Cisco Investments",
+    "D1 Capital",
+    "Fidelity",
+    "General Catalyst",
+    "Jane Street",
+    "Menlo Ventures",
+    "Salesforce Ventures",
+    "MGX",
+    "Alphabet"
+   ],
+   "share_price_usd": 56.0865,
+   "pitchbook_deal_id": "281518-66T",
+   "status": "closed",
+   "source_url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "T1 + TechCrunch + PB agree; buyback price $56.09 matches."
+  },
+  {
+   "round": "Series F",
+   "date": "2025-09-02",
+   "size_usd_m": 13000,
+   "pre_usd_m": 170000,
+   "post_usd_m": 183000,
+   "leads": [
+    "ICONIQ",
+    "Fidelity Management & Research",
+    "Lightspeed Venture Partners"
+   ],
+   "participants": [
+    "Altimeter",
+    "Baillie Gifford",
+    "BlackRock funds",
+    "Blackstone",
+    "Coatue",
+    "D1 Capital",
+    "General Atlantic",
+    "General Catalyst",
+    "GIC",
+    "Goldman Sachs Alternatives",
+    "Insight Partners",
+    "Jane Street",
+    "Ontario Teachers'",
+    "Qatar Investment Authority",
+    "TPG",
+    "T. Rowe Price",
+    "WCM",
+    "XN"
+   ],
+   "share_price_usd": null,
+   "pitchbook_deal_id": "287700-58T",
+   "status": "closed",
+   "source_url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "Includes $750M of converted debt (PB). No PB share price."
+  },
+  {
+   "round": "Series G",
+   "date": "2026-02-12",
+   "size_usd_m": 30000,
+   "pre_usd_m": 350000,
+   "post_usd_m": 380000,
+   "leads": [
+    "GIC",
+    "Coatue"
+   ],
+   "participants": [
+    "D. E. Shaw Ventures",
+    "Dragoneer",
+    "Founders Fund",
+    "ICONIQ",
+    "MGX",
+    "Accel",
+    "Altimeter",
+    "Blackstone",
+    "Fidelity",
+    "JPMorganChase",
+    "Lightspeed",
+    "Menlo",
+    "Qatar Investment Authority",
+    "Sequoia",
+    "Temasek",
+    "TPG",
+    "XN"
+   ],
+   "share_price_usd": 259.1364,
+   "pitchbook_deal_id": "313890-49T",
+   "status": "closed",
+   "source_url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "Includes 'a portion' of Microsoft/NVIDIA commitments; price PB-only."
+  },
+  {
+   "round": "Series H",
+   "date": "2026-05-28",
+   "size_usd_m": 65000,
+   "pre_usd_m": 900000,
+   "post_usd_m": 965000,
+   "leads": [
+    "Altimeter Capital",
+    "Dragoneer",
+    "Greenoaks",
+    "Sequoia Capital"
+   ],
+   "participants": [
+    "Capital Group",
+    "Coatue",
+    "D1 Capital",
+    "GIC",
+    "ICONIQ",
+    "XN",
+    "Blackstone",
+    "Brookfield",
+    "Fidelity",
+    "T. Rowe Price",
+    "Temasek",
+    "Micron",
+    "Samsung",
+    "SK hynix",
+    "Amazon"
+   ],
+   "share_price_usd": 589.0095,
+   "pitchbook_deal_id": "329489-02T",
+   "status": "closed",
+   "source_url": "https://www.anthropic.com/news/series-h",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "$50B new + $15B previously committed hyperscaler money (incl. Amazon $5B); price PB-only.",
+   "new_cash_usd_m": 50000
+  },
+  {
+   "round": "11th round: AMD strategic equity (up to)",
+   "date": "2026-07-22",
+   "size_usd_m": 5000,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [
+    "AMD"
+   ],
+   "participants": [],
+   "share_price_usd": null,
+   "pitchbook_deal_id": "340292-53T",
+   "status": "announced",
+   "source_url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
+   "tier": "T1",
+   "confidence": "MEDIUM",
+   "notes": "PB 'Upcoming'; AMD T1 says committed up to $5B, milestone-based; not funded; PB's '$10B debt' unsourced.",
+   "additive": false
+  },
+  {
+   "round": "Revolving credit facility (5-year)",
+   "date": "2025-05-16",
+   "size_usd_m": 2500,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [
+    "Morgan Stanley"
+   ],
+   "participants": [
+    "Barclays",
+    "Citibank",
+    "Goldman Sachs",
+    "JPMorgan",
+    "Royal Bank of Canada",
+    "MUFG"
+   ],
+   "share_price_usd": null,
+   "pitchbook_deal_id": "295197-04T",
+   "status": "closed",
+   "source_url": "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "notes": "Committed capacity, drawn amount undisclosed; counted as 'raised' by PB."
+  },
+  {
+   "round": "Pre-IPO revolving credit facility",
+   "date": "2026-09-03",
+   "size_usd_m": 15000,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [
+    "Morgan Stanley"
+   ],
+   "participants": [
+    "Goldman Sachs",
+    "JPMorgan",
+    "Citigroup",
+    "Barclays",
+    "Wells Fargo",
+    "Bank of America",
+    "Deutsche Bank",
+    "RBC",
+    "UBS (+~8 more)"
+   ],
+   "share_price_usd": null,
+   "pitchbook_deal_id": null,
+   "status": "announced",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+   "tier": "T2",
+   "confidence": "MEDIUM",
+   "notes": "Bloomberg: finalizing; Forbes: finalized by Sep 7; not in PB; target $10B on Aug 18.",
+   "additive": false
+  },
+  {
+   "round": "TPU chip-lease SPV notes (lessor debt; not Anthropic-issued)",
+   "date": "2026-06-09",
+   "size_usd_m": 34500,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [
+    "Apollo Global Management",
+    "Blackstone"
+   ],
+   "participants": [
+    "Broadcom (residual-value backstop ~$30B)"
+   ],
+   "share_price_usd": null,
+   "pitchbook_deal_id": "334763-02T (removed from PB)",
+   "status": "closed",
+   "source_url": "https://epochai.substack.com/p/will-financing-bottleneck-ai-compute",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "notes": "A1 $6B T+100, A2 $24B 5.75%, B $4.5B 8.5%; Anthropic is lessee (5-yr lease); excluded from total raised.",
+   "additive": false
+  },
+  {
+   "round": "FTX/Alameda estate sale #1 (secondary)",
+   "date": "2024-03-22",
+   "size_usd_m": 884.109327,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [],
+   "participants": [
+    "ATIC Third International ($500.0M)",
+    "Jane Street ($100.0M)",
+    "Fidelity funds ($45.0M)",
+    "HOF Capital ($30.0M)"
+   ],
+   "share_price_usd": 30.0045,
+   "pitchbook_deal_id": "252783-46T (PB combines #1 and #2 as $1,320M)",
+   "status": "closed",
+   "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.10241.1.pdf",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "29,465,891 shares; court notice Doc 10241-1; no cash to Anthropic.",
+   "additive": false
+  },
+  {
+   "round": "FTX/Alameda estate sale #2 (secondary)",
+   "date": "2024-06-02",
+   "size_usd_m": 452,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [],
+   "participants": [
+    "G Squared (~$135M)",
+    "Fund FG-BLU"
+   ],
+   "share_price_usd": 30,
+   "pitchbook_deal_id": "252783-46T",
+   "status": "closed",
+   "source_url": "https://bitcoinist.com/ftx-offloads-anthropic-shares-in-450-million-sale/",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "notes": "~15M shares at ~$30; T3 crypto outlet; total both sales ~$1.336B vs PB $1.32B.",
+   "additive": false
+  },
+  {
+   "round": "Secondary: undisclosed seller to Homeroom Fund, Lakeside Capital",
+   "date": "2025-01-15",
+   "size_usd_m": null,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [],
+   "participants": [
+    "Homeroom Fund",
+    "Lakeside Capital"
+   ],
+   "share_price_usd": null,
+   "pitchbook_deal_id": "313088-77T",
+   "status": "closed",
+   "source_url": "file:///home/user/pitchbook-analyst-agent/data/raw/pitchbook_deals.json",
+   "tier": "T2",
+   "confidence": "VERIFY",
+   "notes": "PB-only; amount undisclosed.",
+   "additive": false
+  },
+  {
+   "round": "Employee buyback #1 (secondary)",
+   "date": "2025-05-02",
+   "size_usd_m": null,
+   "pre_usd_m": null,
+   "post_usd_m": 61500,
+   "leads": [],
+   "participants": [
+    "Employees with >=2 years tenure (cap $2M / 20%)"
+   ],
+   "share_price_usd": 56.09,
+   "pitchbook_deal_id": null,
+   "status": "closed",
+   "source_url": "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "notes": "Price equals PB Series E price; total size undisclosed.",
+   "additive": false
+  },
+  {
+   "round": "Employee tender (secondary)",
+   "date": "2026-02-04",
+   "size_usd_m": null,
+   "pre_usd_m": 350000,
+   "post_usd_m": null,
+   "leads": [],
+   "participants": [
+    "Current and former employees"
+   ],
+   "share_price_usd": null,
+   "pitchbook_deal_id": null,
+   "status": "talks",
+   "source_url": "https://www.trendingtopics.eu/anthropic-said-to-plan-tender-offer-at-350-billion-valuation/",
+   "tier": "T4",
+   "confidence": "VERIFY",
+   "notes": "Planned at $350B pre-money; completed Apr 8 per Bloomberg headline only; size unknown.",
+   "additive": false
+  },
+  {
+   "round": "Amazon Apr-2026: $5B now + up to $20B facility",
+   "date": "2026-04-20",
+   "size_usd_m": 25000,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [
+    "Amazon"
+   ],
+   "participants": [],
+   "share_price_usd": null,
+   "pitchbook_deal_id": null,
+   "status": "announced",
+   "source_url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "$5B funded (Series G preferred) + $5B drawn as Series H; $15B remains; inside G/H per Anthropic; 'up to' not additive.",
+   "additive": false
+  },
+  {
+   "round": "Google Apr-2026: up to $40B ($10B now)",
+   "date": "2026-04-24",
+   "size_usd_m": 40000,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [
+    "Alphabet"
+   ],
+   "participants": [],
+   "share_price_usd": null,
+   "pitchbook_deal_id": null,
+   "status": "announced",
+   "source_url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+   "tier": "T2",
+   "confidence": "MEDIUM",
+   "notes": "$10B at $350B valuation + $30B on milestones; allocation inside G/H undisclosed.",
+   "additive": false
+  },
+  {
+   "round": "Microsoft / NVIDIA strategic (up to)",
+   "date": "2025-11-18",
+   "size_usd_m": 15000,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [
+    "NVIDIA",
+    "Microsoft"
+   ],
+   "participants": [],
+   "share_price_usd": null,
+   "pitchbook_deal_id": null,
+   "status": "announced",
+   "source_url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "Up to $10B (NVIDIA) + up to $5B (Microsoft); a 'portion' inside Series G; funded amounts undisclosed.",
+   "additive": false
+  },
+  {
+   "round": "IPO (confidential draft S-1)",
+   "date": "2026-06-01",
+   "size_usd_m": null,
+   "pre_usd_m": null,
+   "post_usd_m": null,
+   "leads": [
+    "Morgan Stanley",
+    "Goldman Sachs",
+    "JPMorgan (reported)"
+   ],
+   "participants": [
+    "Citigroup (PB adviser)",
+    "Wilson Sonsini (counsel, reported)"
+   ],
+   "share_price_usd": null,
+   "pitchbook_deal_id": "325962-01T",
+   "status": "announced",
+   "source_url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "notes": "Reported: Nasdaq; Nov 2026 (WSJ) vs Oct (PB/BI); up to $100B at ~$2T; no public S-1 by Sep 30."
+  }
+ ]
 }
