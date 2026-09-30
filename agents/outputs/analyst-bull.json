@@ -2,7 +2,7 @@
  "agent": "analyst-bull",
  "role": "Bull Analyst",
  "started": "2026-09-30T20:01:46Z",
- "finished": "2026-09-30T20:40:08Z",
+ "finished": "2026-09-30T20:42:13Z",
  "case": [
   {
    "claim": "Demand is outrunning compute: gross run-rate rose from $9B to above $65B in seven months, and every revenue plan the record can test was met or beaten.",
@@ -44,7 +44,10 @@
     "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
     "evt-20260913-ft-adj-op-profit-gm-above-80pct",
     "evt-20260630-q2-2026-revenue-11-5b-period",
-    "evt-20260520-q2-projection-10-9b-559m-op-profit"
+    "evt-20260520-q2-projection-10-9b-559m-op-profit",
+    "evt-20260121-information-gross-margin-2025-40pct",
+    "evt-20251104-information-gross-margin-path-to-77pct",
+    "evt-20260610-pitchbook-gm-44pct-compute-cost"
    ],
    "strength": 3,
    "type": "margin",
@@ -123,7 +126,11 @@
     "evt-20260406-google-broadcom-tpu-30b-runrate-2",
     "evt-20260212-series-g-30b-380b",
     "evt-20260925-dc-circuit-denies-anthropic-petitions",
-    "evt-20260929-founder-llc-class-f-share-50-1pct-vote"
+    "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+    "evt-20260925-founders-voting-control",
+    "evt-20260928-factbox-executives-board-ltbt-trustees",
+    "evt-20260429-rsp-v32-ltbt-powers",
+    "evt-20260708-rsp-v34"
    ],
    "strength": 2,
    "type": "governance",
@@ -138,7 +145,9 @@
     "evt-20260612-bis-directive-fable-mythos-compute-angle",
     "evt-20260827-dow-summary-judgment-permanent-injunction",
     "evt-20260925-dc-circuit-denies-anthropic-petitions",
-    "evt-20260930-ftc-probe-anthropic-openai"
+    "evt-20260930-ftc-probe-anthropic-openai",
+    "evt-20260128-concord-ii-complaint-names-amodei-mann",
+    "evt-20260422-concord-i-cross-motions-summary-judgment"
    ],
    "strength": 2,
    "type": "legal",
@@ -315,7 +324,7 @@
    "secondary": 243.3,
    "ipo_target": 333.4
   },
-  "adjustments_not_in_model": "Base equity value about $1,257B: date roll to Sep 30 (+8.9%), $100B net cash (Modeler estimate), SBC treated as a cost (-10.6%; the engine adds SBC back). Each is an engine limit the Modeler listed or I found; together they roughly offset.",
+  "adjustments_not_in_model": "Base equity value about $1,257B: date roll to Sep 30 (+8.9%), $100B net cash (Modeler estimate), SBC treated as a cost (-10.6%; the engine adds SBC back). Each is an engine limit the Modeler listed or I found; together they add about 6%.",
   "return_note": "Annual return over 24 months if the price converges to DCF value and value accretes at the 12% discount rate. The model EV is treated as today's value, which is conservative by about 9% (no date roll). Desk arithmetic on model outputs, not a forecast and not a probability."
  },
  "log": [
@@ -522,13 +531,37 @@
   {
    "seq": 26,
    "type": "open",
+   "text": "Anthropic Series G post, Feb 12 (T1), re-read: run-rate $14B 'growing over 10x annually in each of those past three years'; a dozen $1M customers two years ago, now over 500; eight of the Fortune 10; Claude Code over $2.5B.",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+   "to": "",
+   "event_id": "evt-20260212-series-g-30b-380b"
+  },
+  {
+   "seq": 27,
+   "type": "open",
+   "text": "Anthropic Google and Broadcom post, Apr 6 (T1), re-read: run-rate above $30B from about $9B at end-2025; $1M customers from over 500 to over 1,000, 'doubling in less than two months'; TPU capacity from 2027.",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+   "to": "",
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate-2"
+  },
+  {
+   "seq": 28,
+   "type": "open",
+   "text": "Anthropic Amazon post, Apr 20 (T1), re-read: over 100,000 customers run Claude on Bedrock; nearly 1 GW of Trainium2 and Trainium3 online by end-2026; more than $100B over ten years to AWS. Amounts in that event are DISPUTED.",
+   "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+   "to": "",
+   "event_id": "evt-20260420-amazon-5gw-25b-investment"
+  },
+  {
+   "seq": 29,
+   "type": "open",
    "text": "Credit Suisse, The Base Rate Book (Mauboussin, Callahan, Majd), Sep 26 2016: read the real sales CAGR table for firms above $25B and its observation counts.",
    "url": "https://sorfis.com/wp-content/uploads/2021/09/The-Base-Rate-Book-Integrating-the-Past-to-Better-Anticipate-the-Future-September-2016.pdf",
    "to": "",
    "event_id": ""
   },
   {
-   "seq": 27,
+   "seq": 30,
    "type": "search",
    "text": "Google News RSS 'Anthropic run-rate revenue September 2026': 57 items, headlines only. Nothing above $65B is verified; Axios and NYT Sep 18 'tops $100B pace' is ambiguous and the record treats it as a projection.",
    "url": "https://news.google.com/rss/search?q=Anthropic+run-rate+revenue+September+2026&hl=en-US&gl=US&ceid=US:en",
@@ -536,7 +569,7 @@
    "event_id": ""
   },
   {
-   "seq": 28,
+   "seq": 31,
    "type": "search",
    "text": "WebSearch 1 of 4: SpaceX stock since the June 2026 IPO. Summaries conflicted, so I opened Wikipedia, ipo.club and Al Jazeera; the record has no SpaceX aftermarket data.",
    "url": "",
@@ -544,7 +577,7 @@
    "event_id": ""
   },
   {
-   "seq": 29,
+   "seq": 32,
    "type": "open",
    "text": "Wikipedia, IPO of SpaceX (T4): priced $135, $75B base, $86B with greenshoe, $1.77T, float about 5%; first-day close $161; fell below $135 about a month after listing and toward $123 to $125.",
    "url": "https://en.wikipedia.org/wiki/Initial_public_offering_of_SpaceX",
@@ -552,7 +585,7 @@
    "event_id": ""
   },
   {
-   "seq": 30,
+   "seq": 33,
    "type": "open",
    "text": "ipo.club says SpaceX has traded above its offer price since debut (date unstated); Al Jazeera Jun 23: 10% above the $135 issue, below the $150 debut price. Sources conflict on the aftermarket.",
    "url": "https://www.aljazeera.com/economy/2026/6/23/spacex-shares-drop-below-debut-price-before-jumping-amid-600bn-sell-off",
@@ -560,7 +593,7 @@
    "event_id": ""
   },
   {
-   "seq": 31,
+   "seq": 34,
    "type": "search",
    "text": "WebSearch 2 of 4: Cursor after the SpaceX deal. Bitget/Cryptopolitan (Aug 29, T4): deal closed Aug 14; Anthropic keeps supplying Claude to Cursor and adds compute; OpenAI exits by Nov 12. Not in the record.",
    "url": "https://www.bitget.com/news/detail/12560605753428",
@@ -568,7 +601,7 @@
    "event_id": ""
   },
   {
-   "seq": 32,
+   "seq": 35,
    "type": "open",
    "text": "CNBC Sep 29 headline 'IPO postponements are accelerating in third quarter': page returned 403, headline only. Used only as a flagged headline.",
    "url": "https://www.cnbc.com/2026/09/29/ipo-postponements-are-accelerating-in-third-quarter-even-beyond-oura.html",
@@ -576,7 +609,7 @@
    "event_id": ""
   },
   {
-   "seq": 33,
+   "seq": 36,
    "type": "search",
    "text": "WebSearch 3 of 4: Menlo 2026 mid-year enterprise share update. None found; Menlo's latest share data remain Dec 2025 (T3, an Anthropic investor). Confirms the record's open item; share evidence is stale.",
    "url": "",
@@ -584,7 +617,7 @@
    "event_id": ""
   },
   {
-   "seq": 34,
+   "seq": 37,
    "type": "search",
    "text": "WebSearch 4 of 4: latest Anthropic run-rate. Results repeat the Axios and NYT Sep 18 '$100B pace' report, which some summaries read as current. The record resolves it as a year-end projection and so do I; not used as an actual.",
    "url": "",
@@ -592,7 +625,7 @@
    "event_id": ""
   },
   {
-   "seq": 35,
+   "seq": 38,
    "type": "verify",
    "text": "Replicated scripts/model.py in my own scratch code: DCF EV and reverse-DCF marks match model.json for bear, base and bull (base $1,188.6B; required 2030 revenue $262.0B, $420.2B, $568.0B).",
    "url": "",
@@ -600,7 +633,7 @@
    "event_id": ""
   },
   {
-   "seq": 36,
+   "seq": 39,
    "type": "verify",
    "text": "Base Rate Book re-check, real sales CAGR above $25B: 30% or more = 4.2% (1-yr), 1.3% (3-yr), 0.4% (5-yr, 19 of 4,472); above 45% for five years = 1 of 4,472. Matches the Modeler's outside view.",
    "url": "",
@@ -608,7 +641,7 @@
    "event_id": ""
   },
   {
-   "seq": 37,
+   "seq": 40,
    "type": "verify",
    "text": "Precedent arithmetic: Nvidia data center $47.5B to $193.7B = 4.08x, +$146.2B in two years; plan $55.8B to $195.5B = 3.50x, +$139.7B. Series H needs +$51.5B a year to 2030.",
    "url": "",
@@ -616,7 +649,7 @@
    "event_id": ""
   },
   {
-   "seq": 38,
+   "seq": 41,
    "type": "verify",
    "text": "Re-solved the reverse-DCF by scaling the whole growth path with training and capex: Series H $265B (47.7%), $1.5T $416B (65.2%), $2T $557B (77.7%). Same as the model within 1 point. FY2028 needed: $170B, $229B, $277B.",
    "url": "",
@@ -624,7 +657,7 @@
    "event_id": ""
   },
   {
-   "seq": 39,
+   "seq": 42,
    "type": "verify",
    "text": "Required terminal multiple on base FCF: 15.8x, 25.9x, 35.4x (base uses 20x). Required 2030 FCF margin on base revenue: 22.7%, 36.3%, 49.1% (base 28.4%, bull 36.2%).",
    "url": "",
@@ -632,7 +665,7 @@
    "event_id": ""
   },
   {
-   "seq": 40,
+   "seq": 43,
    "type": "verify",
    "text": "Sensitivities on the replicated engine: fees +5 points of revenue -14.4% EV; gross margin +/-5 points +/-14.4%; FY2027 growth -40 and FY2028 -15 points -38.6%; 39.75% as cash (S&M +28.5 points) gives EV $211B.",
    "url": "",
@@ -640,7 +673,7 @@
    "event_id": ""
   },
   {
-   "seq": 41,
+   "seq": 44,
    "type": "verify",
    "text": "Adjustments to base EV: date roll to Sep 30 +8.9%; $100B net cash (Modeler estimate); SBC as a cost -10.6% (engine adds it back). Combined base equity about $1,257B.",
    "url": "",
@@ -648,7 +681,7 @@
    "event_id": ""
   },
   {
-   "seq": 42,
+   "seq": 45,
    "type": "verify",
    "text": "Haircut arithmetic: 1 - (965/47)/(852/25) = 0.3975; $11.5B x 39.75% = $4.57B in Q2; end-July net run-rate $60.1B at 7.6%, $39.2B at 39.75%; EV multiples in haircut_check.",
    "url": "",
@@ -656,7 +689,7 @@
    "event_id": ""
   },
   {
-   "seq": 43,
+   "seq": 46,
    "type": "verify",
    "text": "Compute ratio check: base FY2026 inference plus training is $39.7B, 71% of revenue; H1 on the WSJ ratios is $9.8B, 60%; implied H2 is 76% (desk arithmetic, scope of the ratios unstated).",
    "url": "",
@@ -664,7 +697,7 @@
    "event_id": ""
   },
   {
-   "seq": 44,
+   "seq": 47,
    "type": "verify",
    "text": "Per-GW check from compute.json: break-even $10B (TPU-class) and $15B (blended) per GW-year against $28B to $46B today; plan $195B over 15.8 GW is $12.3B; Dec 2028 exit run-rate $235B needs 6.9 GW at $34.2B or 11.0 GW at $21.4B.",
    "url": "",
@@ -672,7 +705,7 @@
    "event_id": ""
   },
   {
-   "seq": 45,
+   "seq": 48,
    "type": "verify",
    "text": "Liquidity check from compute.json: commitment-implied payments for 2027 and 2028 are $95.7B (low), $142.0B (base), $192.9B (high). About $100B of net cash plus a reported $100B raise covers them 2.1x, 1.4x and 1.04x (desk arithmetic; raise size DISPUTED).",
    "url": "",
@@ -680,7 +713,7 @@
    "event_id": ""
   },
   {
-   "seq": 46,
+   "seq": 49,
    "type": "verify",
    "text": "Validated every event id in this file against events.json and id_map.json; word limits, banned phrases and dashes checked by script before writing.",
    "url": "",
@@ -688,7 +721,7 @@
    "event_id": ""
   },
   {
-   "seq": 47,
+   "seq": 50,
    "type": "flag",
    "text": "The Modeler's Nvidia series ends at FY2026 (+68%). Later T1 releases show re-acceleration (Q1 FY2027 +92%, Q2 +117% YoY). The outside view's 'growth decays' is one year stale for this analog.",
    "url": "",
@@ -696,15 +729,15 @@
    "event_id": ""
   },
   {
-   "seq": 48,
+   "seq": 51,
    "type": "flag",
-   "text": "The engine adds SBC back in FCF and counts no dilution. Treating SBC as a cost cuts base EV 10.6%. Net cash (+$100B) and the date roll (+8.9%) are not applied; the three roughly offset.",
+   "text": "The engine adds SBC back in FCF and counts no dilution. Treating SBC as a cost cuts base EV 10.6%. Net cash (+$100B) and the date roll (+8.9%) are not applied; together the three add about 6%.",
    "url": "",
    "to": "",
    "event_id": ""
   },
   {
-   "seq": 49,
+   "seq": 52,
    "type": "flag",
    "text": "The canonical 39.75% is fitted: it is the haircut that ties $965B over $47B to $852B over $25B at 34.1x, and at 39.75% Q2 implies $4.6B to partners against $1.9B forecast for 2026. Not evidence of equal multiples.",
    "url": "",
@@ -712,7 +745,7 @@
    "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix"
   },
   {
-   "seq": 50,
+   "seq": 53,
    "type": "flag",
    "text": "Modeler and Compute desk read the $0.56 Q2 compute ratio differently (inference-only versus all-in). The model's reading is the more conservative; I use it and show H1 on the other reading.",
    "url": "",
@@ -720,7 +753,7 @@
    "event_id": ""
   },
   {
-   "seq": 51,
+   "seq": 54,
    "type": "flag",
    "text": "Revenue and run-rate plans were met or beaten (n=5) but margin and cash-flow plans were not: FY2025 gross margin 40% against 50%, breakeven pushed from 2027 to 2028. I say so in claims 1 and 3.",
    "url": "",
@@ -728,7 +761,7 @@
    "event_id": "evt-20260121-information-gross-margin-2025-40pct"
   },
   {
-   "seq": 52,
+   "seq": 55,
    "type": "flag",
    "text": "All FY2024, FY2025, Q1 and Q2 2026 financials come from a leaked draft via Reuters and Fortune (Q2 also from Bloomberg's investor documents). No public S-1 exists.",
    "url": "",
@@ -736,7 +769,7 @@
    "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials"
   },
   {
-   "seq": 53,
+   "seq": 56,
    "type": "flag",
    "text": "The $559M Q2 operating profit was a May 20 projection. Year-end $100B to $120B run-rates and the $360B end-2027 figure are investor projections. Neither is used as an actual.",
    "url": "",
@@ -744,7 +777,7 @@
    "event_id": "evt-20260520-q2-projection-10-9b-559m-op-profit"
   },
   {
-   "seq": 54,
+   "seq": 57,
    "type": "flag",
    "text": "DISPUTED events carried in prose: evt-20251104 (77% margin and $70B plan, mixed fields), evt-20260928 (period tagging only), evt-20260420 (amounts; only GW and Bedrock count used), evt-20260903 (raise size).",
    "url": "",
@@ -752,7 +785,7 @@
    "event_id": "evt-20251104-information-gross-margin-path-to-77pct"
   },
   {
-   "seq": 55,
+   "seq": 58,
    "type": "flag",
    "text": "VERIFY items carried in prose: $15B revolver, $34.5B lessor notes, total raised, NRR 140%+, 63% 2027 margin target, Q2 adjusted operating income definition, compute ratios for Q1 and Q2.",
    "url": "",
@@ -760,7 +793,7 @@
    "event_id": ""
   },
   {
-   "seq": 56,
+   "seq": 59,
    "type": "flag",
    "text": "The $1.5T secondary mark is T4 and LOW (thin trades, perpetuals). The $852B OpenAI round is dated March or May by different sources. SpaceX's greenshoe total is $85.7B or $86.2B by source; I wrote about $86B.",
    "url": "",
@@ -768,7 +801,7 @@
    "event_id": "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t"
   },
   {
-   "seq": 57,
+   "seq": 60,
    "type": "flag",
    "text": "The record has no SpaceX aftermarket data. Wikipedia (T4) says SpaceX fell below its $135 issue price about a month after listing; ipo.club says it traded above. Unresolved, and it bears on IPO absorption.",
    "url": "",
@@ -776,7 +809,7 @@
    "event_id": ""
   },
   {
-   "seq": 58,
+   "seq": 61,
    "type": "flag",
    "text": "Menlo's share data come from an Anthropic investor (T3), and the $65B run-rate traces to one investor update. Both are single-chain; I labelled them so and leaned on T1 customer counts.",
    "url": "",
@@ -784,7 +817,7 @@
    "event_id": "evt-20251209-menlo-genai-enterprise"
   },
   {
-   "seq": 59,
+   "seq": 62,
    "type": "note",
    "text": "Optionality tested, no claim built: the record has no segment revenue beyond Claude Code ($2.5B on Feb 12) and consumer (+75% Jan to mid-May, T2). Managed Agents, Cowork and Mythos-tier pricing are real but unvalued. Too thin to rank.",
    "url": "",
@@ -792,7 +825,7 @@
    "event_id": "evt-20260328-claude-consumer-paid-subs-indagari"
   },
   {
-   "seq": 60,
+   "seq": 63,
    "type": "note",
    "text": "Self red-team result: claims 7, 8 and 9 and the moat part of claim 4 are weak and marked so. Claims 1 to 3 carry the case; at $2T only the bull scenario pays, and I say I would not chase it.",
    "url": "",
@@ -800,7 +833,7 @@
    "event_id": ""
   },
   {
-   "seq": 61,
+   "seq": 64,
    "type": "message",
    "text": "Outside view: your Nvidia series stops at FY2026. Q1 FY2027 data center +92% and Q2 +117% YoY (T1, opened Aug 26 release); AWS +37% in Q2 2026. Also the engine adds back SBC (-10.6% EV if a cost) and ignores net cash and the date roll; my whole-path reverse-DCF matches yours within 1 point.",
    "url": "",
@@ -808,7 +841,7 @@
    "event_id": ""
   },
   {
-   "seq": 62,
+   "seq": 65,
    "type": "message",
    "text": "I use your revenue per GW-year ($28B to $46B), break-even ($10B to $15B) and payback (1.5 to 2.2 years) as T3 with the live-GW estimate flagged. Your $0.56 reading (all-in) differs from the Modeler's; please state which one the S-1 test should use.",
    "url": "",
@@ -816,7 +849,7 @@
    "event_id": ""
   },
   {
-   "seq": 63,
+   "seq": 66,
    "type": "message",
    "text": "My stance by mark: Series H bull; $1.5T holds only if the company beats its plan (FY2028 $229B) or margins reach the bull path; $2T needs the bull scenario and is my weakest mark. If base holds, the 24-month return is +24%, about 0% and -14% a year. Six breakers are in the file.",
    "url": "",
@@ -824,7 +857,7 @@
    "event_id": ""
   },
   {
-   "seq": 64,
+   "seq": 67,
    "type": "message",
    "text": "Flags carried: DISPUTED events 20251104, 20260928, 20260420, 20260903; VERIFY items for the revolver, lessor notes, total raised, NRR, 63% target. Facts outside the record with URLs: Nvidia and Amazon releases, Base Rate Book, Wikipedia SpaceX, Bitget Cursor item (T4).",
    "url": "",
@@ -832,7 +865,7 @@
    "event_id": ""
   },
   {
-   "seq": 65,
+   "seq": 68,
    "type": "message",
    "text": "Haircut: I rely on 7.6% (range 6% to 10%); 39.75% is fitted and is not evidence. My DCF leg holds under both; the relative-value leg against OpenAI holds only at 7.6% and only at Series H. Record gap: no SpaceX aftermarket data for IPO absorption.",
    "url": "",
@@ -844,6 +877,6 @@
   "events_read": 162,
   "flags": 12,
   "searches": 5,
-  "pages_opened": 12
+  "pages_opened": 15
  }
 }

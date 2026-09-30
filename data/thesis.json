@@ -1,0 +1,364 @@
+{
+ "generated": "2026-09-30T20:42:55Z",
+ "bull": [
+  {
+   "claim": "Demand is outrunning compute: gross run-rate rose from $9B to above $65B in seven months, and every revenue plan the record can test was met or beaten.",
+   "evidence": "Run-rate was $9B at end-2025, above $30B on Apr 6 and above $47B in May (Anthropic, T1), then above $65B at Jul 31 (one investor update, relayed by Bloomberg, T2). Q2 recognized revenue was $11.5B, 14x YoY, 5.5% above the May projection (Bloomberg from investor documents, T3; Fortune on the leaked draft prospectus, T2; no public S-1). Q1 growth ran 80x annualized against a 10x plan (Amodei, T3). The draft says demand is 'limited principally by the availability of compute'.",
+   "event_ids": [
+    "evt-20260817-rr-65b-end-july",
+    "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+    "evt-20260814-q2-2026-rev-11-5b-first-report",
+    "evt-20260520-q2-projection-10-9b-559m-op-profit",
+    "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+    "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+    "evt-20260212-series-g-30b-380b",
+    "evt-20260127-info-2026-18b-2027-55b-forecast",
+    "evt-20260506-code-with-claude-80x-growth-run-rate-path",
+    "evt-20260922-openai-gpt-6-sol-luna-price-war"
+   ],
+   "strength": 4,
+   "type": "growth",
+   "defense": "Attack: run-rate is gross and two months old, adds slowed from $13B to $7B a month, margin plans were missed (FY2025 gross margin 40% against 50%), the plan is now a selling document, and OpenAI priced Luna at a tenth of Haiku on Sep 22 (T3). Answer: Q2 recognized revenue fits the run-rate path. The model's base path needs only today's $7B a month. Q3 revenue and Haiku 5.5's price settle it."
+  },
+  {
+   "claim": "At Series H the model needs 47% growth a year to 2030, and the reported 2028 plan leaves only 16% a year for 2029 and 2030.",
+   "evidence": "Model base: FY2026 $55.8B, FY2028 $195.5B (Reuters' $190B to $200B plan, T2), FY2030 $328B, DCF EV $1,189B, so Series H sits 19% below it. Reverse-DCF at base margins: Series H needs $262B of FY2030 revenue, 47% CAGR from FY2026. Series H is 14.8x end-July gross run-rate and 7.6x base FY2027 revenue.",
+   "event_ids": [
+    "evt-20260528-series-h-compute-agreements-memory-partners",
+    "evt-20260817-reuters-2028-190-200b-forecast",
+    "evt-20260817-rr-65b-end-july",
+    "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus"
+   ],
+   "strength": 3,
+   "type": "valuation",
+   "defense": "Attack: 47% a year for four years has almost no base rate above $25B (0.3% over three years, 0.0% over five), terminal value is 89% of EV, and FY2028 is one unverified plan. Answer: Nvidia data center grew 4.1x in two years from $47.5B and was +117% YoY in Q2 FY2027 (T1); the plan needs 3.5x from $55.8B. An analog, not proof. A 13% FY2028 miss still leaves the DCF at Series H. The haircut does not touch the DCF."
+  },
+  {
+   "claim": "Fixed-cost absorption has started: compute per revenue dollar fell from $1.60 to a projected $0.56, and Q2 was the first positive adjusted operating quarter.",
+   "evidence": "Compute and infrastructure cost $7.33B on $4.59B of FY2025 revenue, $1.60 per dollar (draft prospectus via Reuters, T2; event DISPUTED for period tagging only). WSJ investor projections show $0.71 in Q1 and $0.56 in Q2 2026 (T3; scope unstated, VERIFY). Adjusted operating income was positive in Q2 and is expected positive in Q3, no dollar amount (FT, T3). The $559M figure was a May projection.",
+   "event_ids": [
+    "evt-20260928-reuters-draft-prospectus-2025-financials",
+    "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
+    "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+    "evt-20260630-q2-2026-revenue-11-5b-period",
+    "evt-20260520-q2-projection-10-9b-559m-op-profit",
+    "evt-20260121-information-gross-margin-2025-40pct",
+    "evt-20251104-information-gross-margin-path-to-77pct",
+    "evt-20260610-pitchbook-gm-44pct-compute-cost"
+   ],
+   "strength": 3,
+   "type": "margin",
+   "defense": "Attack: this is absorption, not cheaper tokens; the SpaceX discount covered only the first two months; FY2025 margin missed plan by 10 points. Answer: with about 80% of compute non-cancelable, absorption is what margin expansion looks like. Base FY2026 compute plus training is 71% of revenue against about 60% in H1 (desk arithmetic), and 2028 gross margin is 64% against a 77% target (event DISPUTED). Each 5 points moves EV 14%."
+  },
+  {
+   "claim": "Capacity sets the pace, and at today's yield each gigawatt pays back inside its lease.",
+   "evidence": "Gross run-rate is $28B to $46B per GW-year on 1.4 to 2.3 GW live (desk estimate, T3/T4, not company-stated). Break-even over a five-year lease is $10B on TPU-class cost and $15B at blended Q2 cost, so payback is 1.5 to 2.2 years (desk arithmetic). Colossus 1, 0.3 GW, let Anthropic double Claude Code limits within weeks (T1).",
+   "event_ids": [
+    "evt-20260817-rr-65b-end-july",
+    "evt-20260609-tpu-financing-34-5b-closed",
+    "evt-20260506-spacex-colossus-compute-deal",
+    "evt-20260520-spacex-s1-anthropic-colossus-contract",
+    "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+    "evt-20260420-amazon-5gw-25b-investment"
+   ],
+   "strength": 3,
+   "type": "compute",
+   "defense": "Attack: live GW is a guess, 13.0 of 15.8 GW are 'up to', about 80% of $518B is non-cancelable, and 40% annual price deflation takes $34B per GW to $12B in two years at flat volume. Answer: the plan already embeds that fall ($12B per announced GW); the open risk is delivering 7 to 11 GW by Dec 2028. Weak as a moat: no rival capacity is in the record, and most capacity is rented."
+  },
+  {
+   "claim": "The enterprise base is broad and widened through the Pentagon fight.",
+   "evidence": "Customers above $1M annualized rose from about a dozen in early 2024 to 500+ on Feb 12 and 1,000+ on Apr 6 2026 (Anthropic, T1). Eight of the Fortune 10, and over 100,000 Bedrock customers (T1; that event is DISPUTED on amounts only). Claude Code passed $2.5B run-rate by Feb 12 (T1). Menlo, an Anthropic investor, has Anthropic at 54% of enterprise coding and 40% of LLM API dollars (Dec 2025, T3).",
+   "event_ids": [
+    "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+    "evt-20260212-series-g-30b-380b",
+    "evt-20260420-amazon-5gw-25b-investment",
+    "evt-20251209-menlo-genai-enterprise",
+    "evt-20260901-enterprise-frontier-safeguards",
+    "evt-20260306-cloud-partners-keep-claude-available",
+    "evt-20260130-a16z-enterprise-survey",
+    "evt-20260616-spacex-cursor"
+   ],
+   "strength": 3,
+   "type": "moat",
+   "defense": "Attack: Amazon and Google carried 47% of FY2025 sales, two customers were 12% each, most large clients lack long-term contracts, a16z has OpenAI at 78% in production against 44%, and SpaceX bought Cursor. Answer: if each 12% customer grew only 5x in 2026, each is 5% of base FY2026 revenue (derived). Cloud partners kept Claude available under the Pentagon label (T2). Cursor still carries Claude (T4). Retention is unproven until the S-1."
+  },
+  {
+   "claim": "Capital efficiency is improving: equity raised is 1.9x gross run-rate, down from 4.2x at Series G.",
+   "evidence": "PitchBook's equity-only ledger shows $124.3B through Series H ($123.4B on press and T1 sizes; VERIFY). That is 1.9x the $65B end-July run-rate, from 4.2x at Series G. FY2025 cash burn was projected at $2.8B (Fortune, Dec 2025, T2) while run-rate rose about $8B. Lenders underwrote capacity: $34.5B of lessor notes closed Jun 9 and a 17-bank $15B revolver is near final (T2; both VERIFY).",
+   "event_ids": [
+    "evt-20260930-pb-total-raised-bonds-removed",
+    "evt-20260528-series-h-compute-agreements-memory-partners",
+    "evt-20260212-series-g-30b-380b",
+    "evt-20251204-fortune-headcount-burn-breakeven",
+    "evt-20260731-amazon-10q-q2-2026",
+    "evt-20260817-rr-65b-end-july",
+    "evt-20260609-tpu-financing-34-5b-closed",
+    "evt-20260903-credit-facility-15b-nears-final"
+   ],
+   "strength": 3,
+   "type": "capital",
+   "defense": "Attack: equity-only flatters. $161.2B of leases and $518B of commitments sit outside it, the notes and revolver are obligations, and strategic money is vendor financing (Amazon: $18.0B funded, $15.0B open on delivery). Answer: I count equity only, notes once, 'up to' at zero. Commitments are 8.0x run-rate, the real gearing. About $100B of net cash (Modeler estimate) plus a reported $100B raise covers base contract payments for 2027 and 2028, $142B (Compute desk)."
+  },
+  {
+   "claim": "Demand for the paper has exceeded supply at the last two private rounds, and OpenAI is off the 2026 calendar.",
+   "evidence": "Series G was reported at $10B on Jan 7 and closed at $30B on Feb 12 (T2, T1). Series H was 'greatly oversubscribed' (Daniela Amodei, Jun 4, T2). OpenAI shelved a 2026 IPO and is seeking $30B privately at about $1.4T (Bloomberg, Sep 29, T3). SpaceX raised $75B, about $86B with the greenshoe, at $1.77T on Jun 12 (record and press).",
+   "event_ids": [
+    "evt-20260107-series-g-talks-10b-to-20b",
+    "evt-20260212-series-g-30b-380b",
+    "evt-20260604-daniela-amodei-bloomberg-tech-47b",
+    "evt-20260913-altman-openai-no-2026-ipo",
+    "evt-20260929-openai-30b-raise-1-4t-ipo-on-hold",
+    "evt-20260918-wsj-ipo-pushed-to-november"
+   ],
+   "strength": 2,
+   "type": "catalyst",
+   "defense": "Weak as a bull argument. Attack: SpaceX fell below its $135 issue price about a month after listing on a 5% float (Wikipedia, T4, not in the record); a $100B to $130B raise is 5% to 6.5% of $2T and 1.2x to 1.5x the record; the raise is DISPUTED; IPO postponements are rising (CNBC headline, Sep 29). Answer: limited. Reported anchors (Nvidia up to $10B, T3, LOW) and longer lockups (T4) would shrink supply. Nothing is confirmed."
+  },
+  {
+   "claim": "The safety and trust posture has not cost the enterprise franchise, and regulated buyers co-design around it.",
+   "evidence": "Goldman Sachs, Morgan Stanley, Citigroup, Bank of America and Wells Fargo helped build Enterprise Frontier Safeguards (Anthropic, Sep 1, T1). Commerce approved Mythos 5 for 100+ US institutions on Jun 26 (Semafor, T2). Customers above $1M went from 500+ to 1,000+ across the Pentagon dispute (T1), and run-rate rose from $14B to $65B.",
+   "event_ids": [
+    "evt-20260901-enterprise-frontier-safeguards",
+    "evt-20260626-mythos-5-partial-approval",
+    "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+    "evt-20260212-series-g-30b-380b",
+    "evt-20260925-dc-circuit-denies-anthropic-petitions",
+    "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+    "evt-20260925-founders-voting-control",
+    "evt-20260928-factbox-executives-board-ltbt-trustees",
+    "evt-20260429-rsp-v32-ltbt-powers",
+    "evt-20260708-rsp-v34"
+   ],
+   "strength": 2,
+   "type": "governance",
+   "defense": "Weak: I do not credit governance as a moat. Attack: seven founders hold 50.1% of votes on about 2% stakes (Reuters, T2; The Information, T3), the Trust has three trustees and elects 4 of 7 seats, three 2026 RSP revisions touched a capability threshold, and the D.C. Circuit upheld the Pentagon exclusion 2-1. Answer: none of that is revenue yet, and no C-suite exit is recorded in 12 months. Class A holders get economics without control (inference)."
+  },
+  {
+   "claim": "Legal and policy losses so far are small against the run-rate, and the only fixed-dollar item is capped at $1.5B.",
+   "evidence": "Bartz is fixed at $1.5B, final Jul 20 (T1), 0.16% of the $965B mark. Realized Pentagon loss is $150M of DoD ARR (Reuters, T2), 0.2% of the $65B run-rate. Fable 5 and Mythos 5 were off for 18 days in June, revenue effect undisclosed (T1). The California federal court vacated the contractor boycott on Aug 27 (T1).",
+   "event_ids": [
+    "evt-20260720-bartz-final-approval",
+    "evt-20260309-cfo-declaration-public-sector",
+    "evt-20260612-bis-directive-fable-mythos-compute-angle",
+    "evt-20260827-dow-summary-judgment-permanent-injunction",
+    "evt-20260925-dc-circuit-denies-anthropic-petitions",
+    "evt-20260930-ftc-probe-anthropic-openai",
+    "evt-20260128-concord-ii-complaint-names-amodei-mann",
+    "evt-20260422-concord-i-cross-motions-summary-judgment"
+   ],
+   "strength": 2,
+   "type": "legal",
+   "defense": "Weak: federal action has no dollar cap. Attack: music suits carry a $5.4B statutory ceiling, the FTC probe (Sep 30, single source) and model recall are open-ended, and the Oct 21 Concord I hearing can reprice four suits. Answer: at Bartz's $3,109 per work the music suits are about $112M (desk, derived); the June recall did not stop run-rate growth ($47B in May, $65B at Jul 31)."
+  }
+ ],
+ "bear": [
+  {
+   "claim": "Anthropic's compute plan is at least $518B, roughly 80% non-cancelable, while many large customers have no long-term contracts and the Opus price fell 73% in under 14 months.",
+   "evidence": "Reuters, Sep 29, leaked draft (T2 total, T3 split): roughly 80% of at least $518B is non-cancelable or payable regardless of use; four must-pay lines sum to $413.7B (desk arithmetic); many of its biggest customers lack long-term contracts (T3). In the model's bear, cost of revenue plus training runs $63B to $72B a year (2027 to 2030); must-pay and filed-lease payments run $43B to $67B (compute desk, T3, straight-line), 67% to 94% of it.",
+   "event_ids": [
+    "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+    "evt-20260609-tpu-financing-34-5b-closed",
+    "evt-20260520-spacex-s1-anthropic-colossus-contract",
+    "evt-20260918-nscale-files-nyse-ipo",
+    "evt-20260907-information-up-to-517b-compute-contracts-in-11-months",
+    "evt-20260731-amazon-10q-q2-2026",
+    "evt-20260922-claude-opus-5-5-launch",
+    "evt-20250805-claude-opus-4-1",
+    "evt-20260817-reuters-2028-190-200b-forecast",
+    "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+   ],
+   "strength": 4,
+   "type": "compute",
+   "defense": "Attack: only $217.9B is firm on T1/T2 sources, including $34.5B of lessor-SPV debt, not Anthropic's [VERIFY on size], and $22.8B with press-named tenants; $89.6B is 'up to' (SpaceX $45B nominal against $84.5B [DISPUTED], Nscale); $237.8B is second-hand, Google's line [DISPUTED], and Broadcom's $161.2B may bind only as tranches execute. A TPU-class GW repays in 1.5 years. Answer: I size on must-pay wording. The plan implies $12B to $23B per GW against $28B to $46B today: 4.1 years at $12B."
+  },
+  {
+   "claim": "The reported $2T target needs about $568B of 2030 revenue at base margins, 79% a year from FY2026, above the model's bull revenue of $448B.",
+   "evidence": "Model reverse-DCF (analyst-model, Sep 30): $2T needs $568B at base margins and $333B at bull margins; base FY2026 is $55.8B. Only the bull DCF ($2,635B) clears $2T; base is $1,189B. Base Rate Book (T3, re-read): above $25B, 0.3% of three-year and 0.0% of five-year windows grew above 45% a year. The model's bear path grows 26% a year, about a top-2% outcome, so I use it as a stress test, not as a $176B value.",
+   "event_ids": [
+    "evt-20260817-rr-65b-end-july",
+    "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+    "evt-20260814-q2-2026-rev-11-5b-first-report",
+    "evt-20260817-reuters-2028-190-200b-forecast",
+    "evt-20260127-info-2026-18b-2027-55b-forecast",
+    "evt-20260918-wsj-ipo-pushed-to-november",
+    "evt-20260528-series-h-compute-agreements-memory-partners",
+    "evt-20250415-proj-2025-2-2b-2027-12b",
+    "evt-20260520-q2-projection-10-9b-559m-op-profit"
+   ],
+   "strength": 4,
+   "type": "valuation",
+   "defense": "Attack: Anthropic beat every revenue plan (FY2025 by 2.1x, FY2026 base by 3.1x, Q2 by 5.5%), and Nvidia data center compounded about 135% a year for three years. Answer: I apply the prior to 2029 and 2030 only, where the book says weight the median. Nvidia slowed every year from a $15B base, not $56B. Adding net cash and rolling the date (model notes) lifts base value about 17%, my arithmetic; $2T stays 43% above."
+  },
+  {
+   "claim": "Two clouds are Anthropic's channel, supplier and investor at once, and two unnamed customers were about 12% of sales each.",
+   "evidence": "Reuters, Sep 29, on a leaked draft (T2 and T3): Amazon and Google marketplaces carried 47% of FY2025 sales, $2.16B, up from 11% in 2023 and 32% in 2024; they kept about 16 cents a dollar and collected 60% of receivables. Many of the biggest customers lack long-term contracts. Amazon and Google are owed $221.1B of the compute plan (Google's $111.1B [DISPUTED]). Amazon has funded $18.0B (10-Q, T1); its $15.0B facility opens only as AWS delivers.",
+   "event_ids": [
+    "evt-20260929-reuters-47pct-cloud-channel-mix",
+    "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+    "evt-20260731-amazon-10q-q2-2026",
+    "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+    "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+    "evt-20260212-series-g-30b-380b",
+    "evt-20260306-cloud-partners-keep-claude-available",
+    "evt-20260217-information-80b-cloud-spend-through-2029"
+   ],
+   "strength": 3,
+   "type": "structure",
+   "defense": "Attack: this is FY2025. Customers at $1M or more rose from 500+ (Feb 12) to 1,000+ (Apr 6), partners kept Claude available through the Pentagon fight, and the two 12% customers may sit inside the 47%. Answer: channel share rose every year and no 2026 split exists. Weak point: stale data. Milestone gating means a delivery slip delays capital and capacity together."
+  },
+  {
+   "claim": "No GAAP gross margin is public, the three reported figures differ by 40 points, and the first profit is adjusted, with no dollar amount and no bridge.",
+   "evidence": "Three margins, three scopes, each flagged [VERIFY] in the claims ledger: about 40% for FY2025 on paying users (The Information, Jan 21, T3), about 44% for Q2 2026E counting compute only (PitchBook, Jun 10, T3), above 80% adjusted before partner share and training (FT, Sep 13, T3). Q2 adjusted operating income was positive [VERIFY], amount undisclosed; $559M was a May 20 projection. FY2025 GAAP operating loss was $8.06B (Reuters, T2; event flagged DISPUTED for a period tag).",
+   "event_ids": [
+    "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+    "evt-20260610-pitchbook-gm-44pct-compute-cost",
+    "evt-20260121-information-gross-margin-2025-40pct",
+    "evt-20260520-q2-projection-10-9b-559m-op-profit",
+    "evt-20260928-reuters-draft-prospectus-2025-financials",
+    "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+    "evt-20260814-q2-2026-rev-11-5b-first-report",
+    "evt-20260520-spacex-s1-anthropic-colossus-contract"
+   ],
+   "strength": 3,
+   "type": "margin",
+   "defense": "Attack: the profit is real (Q2; Q3 expected), SemiAnalysis puts inference gross margin in the mid-60s (T4), and if $0.56 covers all compute the model's 2026 cost is $4B to $10B too high. Answer: compute per revenue dollar fell from $1.60 to about $0.56 as pre-bought capacity met faster revenue, which reads as absorption, not proven cheaper tokens; Q2 also had a two-month SpaceX compute discount (T1). The company missed its FY2025 margin plan by 10 points (T3)."
+  },
+  {
+   "claim": "Opus list price fell 73% in under 14 months, a rival now undercuts Haiku tenfold, and no volume series shows the offset.",
+   "evidence": "Opus list fell from $15/$75 (Opus 4.1, Aug 5 2025) to $5/$25 (Nov 24 2025) and $4/$20 (Sep 22 2026); Sonnet fell 33% to $2/$10 on Jun 30 (Anthropic pricing, T1). OpenAI priced Sol at $2/$10, level with Sonnet 5.5, and Luna at $0.10/$0.50, a tenth of Haiku 4.5's $1/$5, on Sep 22 (SiliconANGLE, T3, single source). SpaceX, which rents Anthropic compute on 90 days' notice, agreed to buy Cursor, a leading Claude coding channel, for $60B (8-K, T1).",
+   "event_ids": [
+    "evt-20250805-claude-opus-4-1",
+    "evt-20251124-claude-opus-4-5-launch",
+    "evt-20260922-claude-opus-5-5-launch",
+    "evt-20260630-claude-sonnet-5-launch",
+    "evt-20260922-openai-gpt-6-sol-luna-price-war",
+    "evt-20260616-spacex-cursor",
+    "evt-20260520-spacex-s1-anthropic-colossus-contract",
+    "evt-20251209-menlo-genai-enterprise",
+    "evt-20260930-independent-leaderboards-snapshot"
+   ],
+   "strength": 3,
+   "type": "moat",
+   "defense": "Attack: run-rate rose 7.2x to $65B at mostly flat prices, Haiku's price rose 4x, and Menlo has Anthropic at 54% of enterprise coding. Answer: Menlo is an Anthropic investor (T3); independent quality evidence is one snapshot (Opus 5.5 at 58 against 53, T3); the first real cuts landed Jun 30 and Sep 22. Weak point: no volume data either way."
+  },
+  {
+   "claim": "IPO buyers would hold one vote a share against seven founders who control 50.1% of votes through a single Class F share.",
+   "evidence": "Reuters, Sep 28 to 29, on a leaked draft (T2): a Founder LLC of seven co-founders directs one Class F share carrying 50.1% of votes; Class A gets one vote a share. The Trust elects four of seven directors; Class F and Class A together elect the other three, the two Amodeis and one unnamed. Founders hold about 2% each (The Information, T3), about 14% together (derived). The Trust has three trustees, down from five.",
+   "event_ids": [
+    "evt-20260928-founder-llc-class-f",
+    "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+    "evt-20260925-founders-voting-control",
+    "evt-20260928-factbox-executives-board-ltbt-trustees",
+    "evt-20260610-amodei-one-direct-report-org-structure",
+    "evt-20230919-long-term-benefit-trust",
+    "evt-20260804-cuellar-chief-global-affairs-officer",
+    "evt-20260731-amazon-10q-q2-2026",
+    "evt-20260930-no-public-s1-on-edgar"
+   ],
+   "strength": 3,
+   "type": "governance",
+   "defense": "Attack: founder control is common (Meta, Snap, Palantir), all seven pledged 80% of their equity to charity, and the special share phases out once two or fewer founders remain. Answer: Class A cannot outvote Class F (inference); the record has no outcome base rate for super-voting IPOs; the draft warns of conflicts with Class A holders' interests (T2); no governance discount appears in the $2T ask. Key-person: other executives report to Daniela Amodei, who chairs the board (T3)."
+  },
+  {
+   "claim": "The raise would be the largest ever, priced before a public S-1, into a share supply that is still unknown.",
+   "evidence": "WSJ, Sep 18 (T3): up to $100B at about $2T, a November debut [DISPUTED] after Q3 results; The Information relay (T4): at least $130B [DISPUTED]. SpaceX's record was $75B, $86.2B with the greenshoe. $2T is 2.07x Series H. Staff and early investors may sell in the offering and lock-ups may exceed 180 days (The Information, T4, [VERIFY]). No S-1 is public.",
+   "event_ids": [
+    "evt-20260918-wsj-ipo-pushed-to-november",
+    "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
+    "evt-20260612-spacex-ipo",
+    "evt-20260827-information-prospectus-after-labor-day-insider-sales",
+    "evt-20260913-altman-openai-no-2026-ipo",
+    "evt-20260929-openai-30b-raise-1-4t-ipo-on-hold",
+    "evt-20260926-nvidia-ipo-anchor-10b",
+    "evt-20260709-secondary-market-indications-1-2t",
+    "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t",
+    "evt-20260930-no-public-s1-on-edgar"
+   ],
+   "strength": 2,
+   "type": "catalyst",
+   "defense": "Weak: the record has no pipeline figure, so I use none. Attack: OpenAI shelved its 2026 IPO (Altman, T3), so Anthropic lists alone, and Nvidia may anchor with up to $10B (T3). Answer: scarcity helps at pricing, not at the first lock-up. SpaceX, the one precedent, dipped under its $135 issue price to $131.86 on Aug 20 as 319M shares were released, after a larger release on Aug 6 met a 6% gain (247WallSt, outside the record, n=1)."
+  },
+  {
+   "claim": "Legal risk is federal discretion, not damages: one US directive took two models offline for 18 days, and the Pentagon exclusion and an FTC probe are open weeks before listing.",
+   "evidence": "A Jun 12 US directive (Commerce per CSIS, unconfirmed) led Anthropic to take Fable 5 and Mythos 5 offline for 18 days, revenue impact undisclosed (T1). The White House asked Anthropic to hold Mythos 5.1 from UK AISI on Sep 24 (Politico, T2). The D.C. Circuit upheld the FASCSA exclusion 2-1 on Sep 25 (T1); DoD says about 90% of workloads moved (T2, single source; MeriTalk says two-thirds, [DISPUTED]). The FTC opened an agent-risk probe Sep 30 (T2, single source).",
+   "event_ids": [
+    "evt-20260612-bis-directive-fable-mythos-compute-angle",
+    "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+    "evt-20260925-dc-circuit-denies-anthropic-petitions",
+    "evt-20260930-ftc-probe-anthropic-openai",
+    "evt-20260911-dod-migration-90pct",
+    "evt-20260720-bartz-final-approval",
+    "evt-20260128-concord-ii-complaint-names-amodei-mann",
+    "evt-20260309-cfo-declaration-revenue-at-risk",
+    "evt-20260701-fable-5-mythos-5-access-restored"
+   ],
+   "strength": 2,
+   "type": "legal",
+   "defense": "Weak on dollars: Bartz $1.5B final, the music ceiling $5.4B and opt-outs sum to about $7.2B, 0.74% of $965B (derived), and run-rate rose from $14B to $65B through the Pentagon fight. Attack: so it is priced in. Answer: both Mythos-class launches drew federal action and four other launches drew none, so the top tier carries recall risk weeks before listing. I rank it near last."
+  },
+  {
+   "claim": "A net restatement moves the $2T multiple from 30.8x to 33.3x at the record's 7.6% haircut, and to 51.1x only at the desk's 39.75%, which nothing in the record measures.",
+   "evidence": "Reuters, Sep 29 (T3): Anthropic books marketplace sales gross as principal; platforms kept about $351M, 7.6% of FY2025 revenue. PitchBook sees 6% to 10% (Sep 16, T3). The desk's 39.75% is the haircut that ties $965B over $47B to OpenAI's $852B over $25B at 34.1x, a fitted value. On the $65B run-rate, net is $60.1B at 7.6% and $39.2B at 39.75%. An OpenAI memo's 27% rests on aggregators.",
+   "event_ids": [
+    "evt-20260929-reuters-47pct-cloud-channel-mix",
+    "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+    "evt-20260413-openai-memo-gross-vs-net-arr",
+    "evt-20260217-information-80b-cloud-spend-through-2029",
+    "evt-20260817-rr-65b-end-july",
+    "evt-20260814-q2-2026-rev-11-5b-first-report",
+    "evt-20260528-series-h-compute-agreements-memory-partners"
+   ],
+   "strength": 2,
+   "type": "valuation",
+   "defense": "Weak at the record's size. Attack: the fee share is rising (The Information's payouts equal 10.6% of 2026 and 11.6% of 2027 plan revenue). Answer: even at full marketplace share, 16 cents a dollar is 16%; 39.75% needs platforms to keep 85 cents per marketplace dollar at today's 47%. A restatement moves optics, not cash: partner share is already an expense. I rely on 7.6%."
+  }
+ ],
+ "bull_at_price": [
+  {
+   "mark": "series_h",
+   "ev_usd_m": 965000,
+   "argument": "Base margins need $262B of FY2030 revenue, 47% CAGR from FY2026 (model). Base reaches $328B and a $1,189B DCF, so the price sits 19% below it; the reported 2028 plan leaves 2029 and 2030 at +16% a year. Outside view: 0.3% of firm-periods above $25B grew over 45% for three years, 0.0% for five. If base holds, the return is +24% a year over 24 months (price converging to DCF value, desk arithmetic). Bull case holds."
+  },
+  {
+   "mark": "secondary",
+   "ev_usd_m": 1500000,
+   "argument": "Base margins need $420B of FY2030 revenue (66% CAGR, past the 0.3% three-year base rate), 28% above base, or FY2028 revenue of $229B, 17% above the $195B plan; bull margins need $243B (42%). The mark is 26% above the $1,189B base DCF and 19% above about $1.26T after date roll, net cash and SBC as a cost. If base holds, the return is about 0% a year. Works only if the company beats its plan. Marks are thin (T3/T4)."
+  },
+  {
+   "mark": "ipo_target",
+   "ev_usd_m": 2000000,
+   "argument": "Base margins need $568B of FY2030 revenue (79% CAGR, beyond the 0.0% five-year base rate), or a 49% FCF margin on base revenue (Nvidia's FY2026 GAAP operating margin is 60%, AWS 35% in 2025). Bull margins need $333B (54%), inside bull 2030 revenue of $448B, so only the bull scenario pays $2T (DCF $2,635B). If base holds, the return is -14% a year. Weakest mark for this case; I would not chase it."
+  }
+ ],
+ "bear_at_price": [
+  {
+   "mark": "series_h",
+   "ev_usd_m": 965000,
+   "argument": "Weakest price for the bear. Base reverse-DCF needs $262B of 2030 revenue, 47% a year, at the edge of the outside view's 0.0% bin, and the price sits 19% under the $1,189B base DCF. From the $195.5B base 2028 (Reuters plan midpoint) it needs only +16% in 2029 and 2030 (derived). Bull margins need $147B (25%), near the bear path's $127B. The bear case needs 2027 and 2028 growth 40 and 15 points under base (DCF -39%)."
+  },
+  {
+   "mark": "secondary",
+   "ev_usd_m": 1500000,
+   "argument": "The bear case holds. Base reverse-DCF needs $420B of 2030 revenue, 66% a year, inside the 0.0% bin, and the mark sits 26% above the base DCF. From $195.5B in 2028 it needs +47% in 2029 and 2030 (derived). Bull margins need $243B (42%), bear margins $1,047B (114%). $420B is 35% of a $1.2T 2030 market if Menlo's $37B (investor-published, T3) doubles yearly. The mark rests on thin trades, not a priced round. The bear wins if base is delivered."
+  },
+  {
+   "mark": "ipo_target",
+   "ev_usd_m": 2000000,
+   "argument": "Strongest price for the bear. Base margins need $568B of 2030 revenue, 79% a year and inside the 0.0% bin, above the bull path's $448B. From $195.5B in 2028 that is +70% in 2029 and 2030 (derived); Nvidia data center's best year at that scale was +68%. Bull margins need $333B (54%). Only the bull DCF ($2,635B; 36% FCF margin, 26x) clears $2T; base is $1,189B, or $1,717B at 30x. The bear wins if base is delivered."
+  }
+ ],
+ "bull_outside_view": {
+  "reference_class": "Firms with real sales above $25B (top 1,000 by market cap, 1950-2015), plus AWS and Nvidia data center as AI-era analogs.",
+  "base_rate": "Real sales growth of 30% or more a year: 4.2% of firm-years over one year, 1.3% over three, 0.4% over five (19 of 4,472). Above 45% for five years: 1 of 4,472. Five-year median 2.0%. Year-to-year growth correlation 0.30. Nvidia data center grew +217%, +142%, +68% (FY2024 to FY2026), then +92% and +117% YoY in Q1 and Q2 FY2027. AWS grew +13% to +37% a year, +37% in Q2 2026.",
+  "source": "Record: data/model.json outside_view. Credit Suisse, The Base Rate Book (Mauboussin, Callahan, Majd), Sep 26 2016, T3, tables re-checked. Nvidia Q2 FY2027 release (Aug 26) and Amazon Q2 2026 release (Jul 30) opened by the bull analyst, T1, not in the record.",
+  "what_is_different": "Plans: no revenue plan the record can test was missed (n=5); FY2025 beat its plan 2.1x; margin plans were missed. Persistence: +1,088% in FY2025 and +1,116% in base FY2026 (H1 actual $16.2B), against a 0.30 correlation. Capacity: 15.8 GW announced against 1.4 to 2.3 GW live (T3/T4). Precedent: Nvidia grew 4.1x in two years from $47.5B; the plan needs 3.5x from $55.8B. Not different: base 56% CAGR still sits in the top bin."
+ },
+ "bear_outside_view": {
+  "reference_class": "Top-1,000 global firms by market cap, 1950-2015, real sales, size above $25B, plus two demand-shock ramps in the record: AWS (2019 to 2025) and Nvidia data center (FY2023 to FY2026).",
+  "base_rate": "Above $25B, real sales CAGR of 30% or more in 4.2% of one-year, 1.3% of three-year and 0.4% of five-year windows; above 45% for five years, 0.0%; median 2.0% over five years. Growth correlation is 0.30 next year and 0.17 to 0.19 over three to five years. Nvidia data center grew +217%, +142%, +68%; AWS +37%, +29%, +13%, +19%, +20%.",
+  "source": "Record: data/model.json outside_view (analyst-model). Base Rate Book, Credit Suisse, Sep 26 2016, T3: the bear re-read exhibits 4, 8 and 9 in the PDF and confirmed each figure. Nvidia and Amazon results releases, T1, as opened by analyst-model.",
+  "what_is_different": "Growth was +1,088% in FY2025 and is +1,116% in FY2026 on the base, about 5x Nvidia data center's best year; Q2 recognized revenue of $11.5B and a $65B run-rate are in the record. I apply the prior to 2029 and 2030 only. Retired: 'run-rate overstates revenue', 'no path to profit'. Surviving: fixed compute, concentration, margin scope, valuation, governance. FY2025 gross margin was about 40% against 71% to 75% at Nvidia."
+ },
+ "bull_concedes": "At $1.5T and $2T the price needs growth almost no firm above $25B has sustained (79% CAGR at $2T), the support is the company's own plan, and about 80% of $518B of compute is non-cancelable while most large clients have no long-term contracts. A miss turns compute into a fixed charge. That asymmetry, not the growth rate alone, is the bear's best point.",
+ "bear_concedes": "Anthropic has beaten every revenue projection it gave investors: FY2025 was 2.1x the April 2025 plan, FY2026 tracks 3.1x the January plan on the model's base, and Q2 came in 5.5% above the May projection. If that holds through 2027, the $2T target needs only $333B of 2030 revenue at bull margins, inside the bull path's $448B, and sits 24% below the bull DCF."
+}
