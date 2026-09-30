@@ -2,7 +2,7 @@
  "agent": "verify-audit-2",
  "role": "Record Auditor",
  "started": "2026-09-30T18:37:36Z",
- "finished": "2026-09-30T18:46:40Z",
+ "finished": "2026-09-30T18:50:26Z",
  "results": [
   {
    "audit_id": "A-025",
@@ -102,7 +102,7 @@
      "basis_note": "long-prompt tier only; standard tier is $15"
     }
    ],
-   "evidence": "pricing adjusts for prompts over 200K tokens: Prompts > 200K $6 / MTok $22.50 / MTok",
+   "evidence": "Prompts > 200K: $6 / MTok input, $22.50 / MTok output",
    "note": "Published Aug 12, 2025. Public beta on the Claude Developer Platform for customers with Tier 4 and custom rate limits; also on Amazon Bedrock and Vertex AI.",
    "page_is_primary": true
   },
@@ -135,7 +135,7 @@
     }
    ],
    "evidence": "Anthropic devoted nearly a third of its hotly anticipated IPO prospectus to risk factors",
-   "note": "Risk behaviours (resist shutdown, conceal or manipulate information, behavior resembling blackmail) and 'existential risks to humanity' are on the page (attributed to FT/Reuters, latter 'reportedly'). But '261-page' and 'about 80 pages' appear nowhere on the page, which says only 'nearly a third'. TechCrunch re-reports FT and Reuters.",
+   "note": "Page dated Sept 28, 2026 (10:13 PM PDT; UTC Sept 29). Risk behaviours (resist shutdown, conceal or manipulate information, behavior resembling blackmail) and 'existential risks to humanity' are on the page (attributed to FT/Reuters, the latter 'reportedly'). But '261-page' and 'about 80 pages' appear nowhere on the page, which says only 'nearly a third'. TechCrunch re-reports FT and Reuters.",
    "page_is_primary": false
   },
   {
@@ -225,8 +225,8 @@
    "audit_id": "A-036",
    "verdict": "PARTLY",
    "figure_checks": [],
-   "evidence": "Since its founding at the beginning of 2021; co-founder and CEO Dario Amodei; co-founder and President Daniela Amodei",
-   "note": "Page (Series B post dated 2022-04-29) confirms founding 'at the beginning of 2021', Dario as co-founder/CEO and Daniela as co-founder/President. Not on the page: the January 26, 2021 date, former-OpenAI origin, and the names Jack Clark, Jared Kaplan, Tom Brown, Chris Olah, Sam McCandlish, Ben Mann. Item date 2021-01-26 is a founding event date that this page cannot confirm beyond 'beginning of 2021'.",
+   "evidence": "Since its founding at the beginning of 2021",
+   "note": "Page (Series B post dated 2022-04-29) confirms founding 'at the beginning of 2021', Dario Amodei as co-founder and CEO, and Daniela Amodei as co-founder and President. Not on the page: the January 26, 2021 date, former-OpenAI origin, and the names Jack Clark, Jared Kaplan, Tom Brown, Chris Olah, Sam McCandlish, Ben Mann. Item date 2021-01-26 is a founding event date that this page cannot confirm beyond 'beginning of 2021'.",
    "page_is_primary": true
   },
   {
@@ -357,6 +357,114 @@
    ],
    "evidence": "scans with Mythos 5 are billed as standard token usage under your existing plan",
    "note": "Confirmed (Aug 21, 2026): Enterprise Claude Security scans on Mythos 5 at standard token usage; Cyber Verification Program expansion (reduced safeguards for accepted teams); $35 million Defender Advantage Fund in Claude credits. The $10/$50 per-MTok prices appear nowhere on the page.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-043",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 35000,
+     "page_says": "$35 billion deal to buy computing power from Nvidia-backed Lambda",
+     "match": true,
+     "basis_note": "reported by WSJ citing unnamed sources; 'agreed', not confirmed by the companies on this page"
+    },
+    {
+     "field": "compute_partner",
+     "claimed": "Lambda (Nvidia-backed) at Hut 8 Beacon Point, Nueces County, Texas",
+     "page_says": "Lambda; Hut 8's Beacon Point campus in Nueces County, Texas",
+     "match": true,
+     "basis_note": "Nvidia holds the underlying lease and pays Hut 8 rent; Anthropic pays Lambda"
+    },
+    {
+     "field": "compute_usd_m",
+     "claimed": 35000,
+     "page_says": "$35 billion deal",
+     "match": true,
+     "basis_note": "total contract value as reported; no term given"
+    },
+    {
+     "field": "compute_gw",
+     "claimed": 0.704,
+     "page_says": "two 15-year leases covering 704 megawatts at the campus (Hut 8 to Nvidia)",
+     "match": false,
+     "basis_note": "different basis: campus-level leased capacity, not stated as the capacity of the Anthropic-Lambda deal"
+    },
+    {
+     "field": "compute_term",
+     "claimed": "not disclosed; Beacon Point energization Q1 2027, Phase 2 hall Q2 2028",
+     "page_says": "No term for the Anthropic-Lambda deal; no 2027 or 2028 dates on page",
+     "match": false,
+     "basis_note": "'not disclosed' is consistent, but the Q1 2027 energization and Q2 2028 Phase 2 dates are not on this page"
+    }
+   ],
+   "evidence": "$35 billion deal to buy computing power from Nvidia-backed cloud provider Lambda",
+   "note": "Page is a Proactive article on Yahoo Finance dated Sept 1, 2026 (item date Aug 31, within tolerance), crediting the Wall Street Journal and unnamed sources. Confirmed: $35B, Lambda, Beacon Point in Nueces County, '$175 billion in cloud deals in recent months'. Not on page: energization/Phase 2 dates; the 704 MW is Hut 8's campus lease capacity ($19.6B base-term value for Hut 8), not this deal's stated capacity.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-044",
+   "verdict": "SUPPORTED",
+   "figure_checks": [],
+   "evidence": "substantially outperform both the model alone and their own unaided performance",
+   "note": "arXiv abstract page: submitted 4 Nov 2022 (v1, v2 typo fixes 11 Nov); 46 authors listed, Bowman first. Abstract presents an experimental design for tasks where specialists succeed but unaided humans and current AI fail, with an MMLU / time-limited QuALITY proof of concept using an 'unreliable' LLM dialog assistant.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-045",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "Claude / Claude Instant",
+     "page_says": "Claude's context window; Gatsby test run on Claude-Instant (72K tokens)",
+     "match": true,
+     "basis_note": ""
+    }
+   ],
+   "evidence": "expanded Claude's context window from 9K to 100K tokens, corresponding to around 75,000 words",
+   "note": "Published May 11, 2023. Page: '100K context windows are now available in our API'; Great Gatsby loaded into Claude-Instant (72K tokens) with one modified line, correct answer in 22 seconds.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-046",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "revenue_run_rate_usd_m",
+     "claimed": 5000,
+     "page_says": "run-rate revenue ... over $5 billion in August 2025",
+     "match": true,
+     "basis_note": "run-rate (annualized), stated as a lower bound ('over') as of August 2025; the summary text does not cite it"
+    }
+   ],
+   "evidence": "run-rate revenue ... over $5 billion in August 2025",
+   "note": "Published Sep 26, 2025. Ciauri's most recent roles: CEO of Unily, president of EMEA at Google Cloud (before that Salesforce EMEA). He joins Paul Smith's (first Chief Commercial Officer) international leadership group, which drives global go-to-market.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-047",
+   "verdict": "SUPPORTED",
+   "figure_checks": [],
+   "evidence": "The Commission voted 5-0 to allow staff to issue the report.",
+   "note": "FTC release dated Jan 17, 2025. Names the three studied pairings (Microsoft-OpenAI, Amazon-Anthropic, Alphabet-Anthropic); findings on CSP partners' access to sensitive technical and business information and higher switching costs. Commissioner Ferguson, joined by Holyoak, issued a concurring and dissenting statement.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-048",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 100,
+     "page_says": "initial $100 million to this network for 2026",
+     "match": true,
+     "basis_note": "committed, 'initial' and for 2026 ('expect to invest even more over time'); not a disbursed amount"
+    }
+   ],
+   "evidence": "committing an initial $100 million to this network for 2026",
+   "note": "Published Mar 12, 2026. Membership 'free of charge'; Claude Certified Architect, Foundations exam; Partner Portal; partner-facing team scaled fivefold; Accenture, Deloitte, Cognizant and Infosys appear with partner quotes.",
    "page_is_primary": true
   }
  ],
@@ -694,15 +802,133 @@
    "text": "A-042 PARTLY: Claude Security/Mythos 5 scans, CVP expansion and $35M fund confirmed; price figures absent",
    "ts": "2026-09-30T18:46:39Z",
    "event_id": "A-042"
+  },
+  {
+   "seq": 45,
+   "type": "open",
+   "text": "Opened Yahoo Finance Proactive article on Anthropic-Lambda deal (Sept 1, 2026); cross-checked raw text for 704 MW and 2027/2028 dates",
+   "ts": "2026-09-30T18:49:36Z",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-strikes-35-billion-cloud-155100165.html",
+   "event_id": "A-043"
+  },
+  {
+   "seq": 46,
+   "type": "flag",
+   "text": "A-043 0.704 GW on page is campus-level Hut 8/Nvidia lease capacity, not the Anthropic-Lambda allocation; Q1 2027 / Q2 2028 dates absent from page",
+   "ts": "2026-09-30T18:49:36Z",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-strikes-35-billion-cloud-155100165.html",
+   "event_id": "A-043"
+  },
+  {
+   "seq": 47,
+   "type": "found",
+   "text": "A-043 PARTLY: $35B Lambda deal, Beacon Point Texas, $175B total confirmed; gigawatt basis differs and timeline dates missing",
+   "ts": "2026-09-30T18:49:36Z",
+   "event_id": "A-043"
+  },
+  {
+   "seq": 48,
+   "type": "open",
+   "text": "Opened arXiv abstract page 2211.03540 (submitted 4 Nov 2022); counted citation_author tags in raw HTML",
+   "ts": "2026-09-30T18:49:36Z",
+   "url": "https://arxiv.org/abs/2211.03540",
+   "event_id": "A-044"
+  },
+  {
+   "seq": 49,
+   "type": "found",
+   "text": "A-044 SUPPORTED: 46 authors, 4 Nov 2022, unreliable LLM assistant beats model alone and unaided humans",
+   "ts": "2026-09-30T18:49:36Z",
+   "event_id": "A-044"
+  },
+  {
+   "seq": 50,
+   "type": "open",
+   "text": "Opened Anthropic \"Introducing 100K context windows\" (May 11, 2023); cross-checked raw text",
+   "ts": "2026-09-30T18:49:36Z",
+   "url": "https://www.anthropic.com/news/100k-context-windows",
+   "event_id": "A-045"
+  },
+  {
+   "seq": 51,
+   "type": "found",
+   "text": "A-045 SUPPORTED: 9K to 100K tokens (~75,000 words) in API; Gatsby test on Claude-Instant in 22 seconds",
+   "ts": "2026-09-30T18:49:36Z",
+   "event_id": "A-045"
+  },
+  {
+   "seq": 52,
+   "type": "open",
+   "text": "Opened Anthropic Ciauri announcement (Sep 26, 2025); cross-checked raw text for run-rate wording and roles",
+   "ts": "2026-09-30T18:49:36Z",
+   "url": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+   "event_id": "A-046"
+  },
+  {
+   "seq": 53,
+   "type": "found",
+   "text": "A-046 SUPPORTED: Ciauri named MD International, Paul Smith CCO team, run-rate over $5B (Aug 2025)",
+   "ts": "2026-09-30T18:49:36Z",
+   "event_id": "A-046"
+  },
+  {
+   "seq": 54,
+   "type": "open",
+   "text": "Opened FTC press release (Jan 17, 2025); cross-checked raw text for vote and partnerships",
+   "ts": "2026-09-30T18:49:36Z",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-issues-staff-report-ai-partnerships-investments-study",
+   "event_id": "A-047"
+  },
+  {
+   "seq": 55,
+   "type": "found",
+   "text": "A-047 SUPPORTED: FTC staff report on three AI partnerships, 5-0 vote to allow issue, Jan 17 2025",
+   "ts": "2026-09-30T18:49:36Z",
+   "event_id": "A-047"
+  },
+  {
+   "seq": 56,
+   "type": "open",
+   "text": "Opened Anthropic Claude Partner Network announcement (Mar 12, 2026); cross-checked raw text",
+   "ts": "2026-09-30T18:49:36Z",
+   "url": "https://www.anthropic.com/news/claude-partner-network",
+   "event_id": "A-048"
+  },
+  {
+   "seq": 57,
+   "type": "found",
+   "text": "A-048 SUPPORTED: initial $100M for 2026, free membership, certification, portal, fivefold team, four named partners",
+   "ts": "2026-09-30T18:49:36Z",
+   "event_id": "A-048"
+  },
+  {
+   "seq": 58,
+   "type": "verify",
+   "text": "Cross-checked every WebFetch summary against raw page text for all 24 pages; A-028 body is paywalled so only headline, public teaser and datePublished were read",
+   "ts": "2026-09-30T18:50:26Z"
+  },
+  {
+   "seq": 59,
+   "type": "message",
+   "text": "Audit complete for verify-audit-2: 24 of 24 answered; 15 SUPPORTED, 9 PARTLY, 0 NOT_SUPPORTED, 0 UNOPENABLE, 0 DATE_MISMATCH",
+   "ts": "2026-09-30T18:50:26Z",
+   "to": "orchestrator"
+  },
+  {
+   "seq": 60,
+   "type": "message",
+   "text": "Worst findings: A-042 (claimed Mythos 5 $10/$50 per-MTok prices appear nowhere on the page) and A-043 (0.704 GW is campus-level Hut 8/Nvidia lease capacity, energization dates absent); also A-033, A-036, A-041 partly unsupported",
+   "ts": "2026-09-30T18:50:26Z",
+   "to": "orchestrator"
   }
  ],
  "stats": {
-  "pages_opened": 18,
-  "supported": 10,
-  "partly": 8,
+  "pages_opened": 24,
+  "supported": 15,
+  "partly": 9,
   "not_supported": 0,
   "unopenable": 0,
   "date_mismatch": 0,
-  "flags": 7
+  "flags": 8
  }
 }

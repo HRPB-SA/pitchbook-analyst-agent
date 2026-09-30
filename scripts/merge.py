@@ -493,6 +493,20 @@ def main():
         id_map[e["id"]] = e["id"]
         for mid in e.get("merged_ids", []): id_map[mid] = e["id"]
     json.dump(id_map, open(os.path.join(DATA, "id_map.json"), "w"), indent=0)
+    def _load(fn):
+        try: return json.load(open(os.path.join(DATA, fn)))
+        except Exception: return None
+    aud = _load("audit.json")
+    if aud and aud.get("rows"):
+        byid = {}
+        for r in aud["rows"]:
+            fid = id_map.get(r.get("event_id"), r.get("event_id"))
+            byid[fid] = {k: r[k] for k in ("verdict", "note", "evidence", "figure_issues", "auditor", "audit_id", "orig_verdict") if r.get(k) not in (None, [], "")}
+        for e in events:
+            if e["id"] in byid: e["audit"] = byid[e["id"]]
+    cl = _load("claims_ledger.json")
+    if cl and cl.get("claims"):
+        ledger["claims"] = cl["claims"]; ledger["claims_summary"] = cl.get("summary")
     write_timeline_csv(events)
     json.dump(events, open(os.path.join(DATA, "events.json"), "w"), indent=1, ensure_ascii=False)
     json.dump(metrics, open(os.path.join(DATA, "metrics.json"), "w"), indent=1, ensure_ascii=False)

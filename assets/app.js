@@ -308,6 +308,8 @@ function openEvent(id) {
   if (ex.customers) add('Customers', String(ex.customers));
   if (ex.other && Object.keys(ex.other).length) add('Other', el('pre', { class: 'small mono', style: { whiteSpace: 'pre-wrap', margin: 0 }, text: JSON.stringify(ex.other, null, 1).slice(0, 1200) }));
   if (e.notes) add('Notes', e.notes);
+  if (e.audit) add('Independent audit', el('div', {}, el('span', { class: 'chip ' + ({ SUPPORTED: 'ok', PARTLY: 'warn', UNOPENABLE: '' }[e.audit.verdict] || 'bad'), text: e.audit.verdict }), ' ', el('span', { class: 'small', text: e.audit.note || '' }),
+    ...(e.audit.figure_issues || []).map(f => el('div', { class: 'small muted', text: `${f.field}: claimed ${f.claimed}; page says ${f.page_says}${f.basis_note ? ' (' + f.basis_note + ')' : ''}` }))));
   add('Found by', (e.agents || [e.agent]).join(', '));
   add('Event id', el('code', { text: e.id }));
   openDrawer(el('div', {}, el('div', { class: 'eyebrow', text: fmt.date(e.date) }), el('h2', { text: e.headline, style: { margin: '6px 0 8px' } }), el('p', { class: 'ink2', text: e.summary, style: { marginBottom: '14px' } }), kv));
@@ -420,7 +422,7 @@ function renderTimeline(root) {
         el('div', {}, el('div', { class: 'h', text: e.headline }), el('div', { class: 's', text: e.summary }),
           el('div', { class: 'meta' }, ...e.category.slice(0, 4).map(c => chip(c, 'cat')), ...extractChips(e.extracted)),
           el('div', { class: 'src' }, sourceLine(e.source), e.corroboration?.length ? ` · +${e.corroboration.length} corroborating` : '')),
-        el('div', { class: 'right' }, tierChip(e.source.tier), confChip(e.confidence))));
+        el('div', { class: 'right' }, tierChip(e.source.tier), confChip(e.confidence), e.audit ? el('span', { class: 'chip ' + ({ SUPPORTED: 'ok', PARTLY: 'warn', UNOPENABLE: '' }[e.audit.verdict] || 'bad'), title: 'Independent audit: ' + (e.audit.note || ''), text: 'audit ' + e.audit.verdict.toLowerCase().replace('_', ' ') }) : '')));
     }
     if (rows.length > tl.shown) frag.append(el('button', { class: 'btn showmore', type: 'button', text: `Show ${Math.min(200, rows.length - tl.shown)} more (${tl.shown} of ${rows.length} shown)`, onclick: () => { tl.shown += 200; list(true); } }));
     if (!rows.length) frag.append(el('div', { class: 'empty', text: 'Nothing matches these filters.' }));

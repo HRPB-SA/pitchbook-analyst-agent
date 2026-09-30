@@ -2429,10 +2429,1061 @@
    "agent": "desk-s1"
   }
  ],
- "log": [],
- "conflicts": [],
- "open_items": [],
- "stats": {},
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Read scout-2026q3.json and scout-2026q2.json (IPO, financials, governance events plus their conflicts and open items) as leads; every URL cited in this file was re-opened by desk-s1."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "EDGAR full-text search 'Anthropic PBC' in S-1 forms: 9 hits, none filed by Anthropic (SpaceX S-1 and two S-1/A, Nscale S-1 x2, Idea Acquisition x2, Figma x2).",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%20PBC%22&forms=S-1"
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "EDGAR company browse company=anthropic type=S-1: 'No matching companies.'",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=anthropic&type=S-1&action=getcompany"
+  },
+  {
+   "seq": 4,
+   "type": "open",
+   "text": "Opened TechCrunch (Connie Loizos, Sep 28 10:13 PM PDT): op loss >$8B, $518B plan, two clients ~a quarter of revenue, 'nearly a third' on risk factors.",
+   "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/"
+  },
+  {
+   "seq": 5,
+   "type": "note",
+   "text": "CNN Sep 29 URL returned HTTP 451 (unavailable for legal reasons); not usable as a source."
+  },
+  {
+   "seq": 6,
+   "type": "open",
+   "text": "Opened Reuters exclusive via Yahoo Finance (Echo Wang): $42B net loss, ~$34B non-cash charge, $12.65B opex, $7.33B compute, $20.28B cash, $518B plan.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 7,
+   "type": "found",
+   "text": "Reuters review of the draft prospectus: FY2025 financials and $518B plan.",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials"
+  },
+  {
+   "seq": 8,
+   "type": "open",
+   "text": "Opened Fortune (Jim Edwards): FY2025 revenue/opex/loss, Q1 $4.73B (citing CNBC), Q2 $11.5B; no cost-line table despite the 'income statement' headline.",
+   "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+  },
+  {
+   "seq": 9,
+   "type": "open",
+   "text": "Opened Fortune (Beatrice Nolan): operating loss $8.06B vs $2.98B in 2024, +1,088% revenue growth, two customers ~a quarter of revenue.",
+   "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/"
+  },
+  {
+   "seq": 10,
+   "type": "open",
+   "text": "Opened SiliconANGLE (Maria Deutscher): $518B 10-year plan, 80% non-cancelable, $161.2B Broadcom leases, 'no fewer than 80 pages' of risk factors, hoped-for November IPO up to $100B.",
+   "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/"
+  },
+  {
+   "seq": 11,
+   "type": "open",
+   "text": "Opened Motley Fool (Lyle Daly, Sep 3) relaying The Information: $559M Q2 operating profit on $10.9B revenue, raise of at least $130B, lockups beyond 180 days, 10b5-1 plans.",
+   "url": "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/"
+  },
+  {
+   "seq": 12,
+   "type": "found",
+   "text": "The Information via Motley Fool: Q2 profit, $130B raise, lockups, 10b5-1.",
+   "event_id": "evt-20260903-information-q2-operating-profit-130b-raise-lockups"
+  },
+  {
+   "seq": 13,
+   "type": "flag",
+   "text": "Conflict: The Information (via Fool) has Q2 revenue $10.9B and a raise of 'at least $130B'; FT/Bloomberg/prospectus coverage say $11.5B and WSJ says up to $100B. $10.9B equals the May 20 pre-quarter expectation, so it looks like a projection.",
+   "event_id": "evt-20260903-information-q2-operating-profit-130b-raise-lockups"
+  },
+  {
+   "seq": 14,
+   "type": "open",
+   "text": "Opened Yahoo/Moby (Aug 11): IPO window 'as early as September or October', Morgan Stanley, Goldman, JPMorgan 'running the book' (low-tier; not used as an event).",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-sets-fall-ipo-eyeing-185032639.html"
+  },
+  {
+   "seq": 15,
+   "type": "open",
+   "text": "Opened Forge Global IPO page (updated Sep 30): Series H-1 $589.01/share, Forge Price 'not yet available', contradictory lines on whether Anthropic has filed.",
+   "url": "https://forgeglobal.com/anthropic_ipo/"
+  },
+  {
+   "seq": 16,
+   "type": "open",
+   "text": "Opened The Register (Lindsay Clark, Sep 29): says the prospectus was leaked to the FT; $518B, $7.33B compute, existential-risk warning.",
+   "url": "https://www.theregister.com/ai-and-ml/2026/09/29/leaked-ipo-docs-anthropic-tempts-investors-with-existential-risk-warning/5299763"
+  },
+  {
+   "seq": 17,
+   "type": "open",
+   "text": "Opened EDGAR Nscale S-1 exhibit 10.25: 'Order for GPU Services' between Anthropic PBC and Nscale GPU MCC B1.1 LLC (Vera Rubin NVL72), value redacted.",
+   "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_25.htm"
+  },
+  {
+   "seq": 18,
+   "type": "found",
+   "text": "Nscale S-1 exhibit naming Anthropic PBC as counterparty (T1).",
+   "event_id": "evt-20260918-nscale-s1-exhibit-anthropic-order-for-gpu-services"
+  },
+  {
+   "seq": 19,
+   "type": "search",
+   "text": "EDGAR full-text search 'Anthropic' in 10-Q filings Jul 1 - Sep 30, 2026: 21 hits (Amazon 10-Q Jul 31, TeraWulf, Zoom, Salesforce, Apollo, Blackstone PE Strategies and others).",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&forms=10-Q&dateRange=custom&startdt=2026-07-01&enddt=2026-09-30"
+  },
+  {
+   "seq": 20,
+   "type": "open",
+   "text": "Opened EDGAR SpaceX filing list: a single 10-Q filed 2026-08-04 (acc. 0001628280-26-052535).",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1181412&type=10-Q&dateb=&owner=include&count=40"
+  },
+  {
+   "seq": 21,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic prospectus Reuters': 57 items incl. six Reuters exclusives, a Reuters factbox, CNBC, NYT, Bloomberg, Guardian, Gizmodo headlines.",
+   "url": "https://news.google.com/rss/search?q=Anthropic+prospectus+Reuters&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 22,
+   "type": "flag",
+   "text": "Google News shows at least six Reuters exclusives from the leaked prospectus (financials, 'existential risks', $518B non-cancelable, Big Tech dependence, 'Founder LLC', rogue-agent legal risk) plus a factbox - far more detail than the scouts captured."
+  },
+  {
+   "seq": 23,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic IPO super-voting shares': The Information Aug 18, TechCrunch Sep 25, Reuters 'Founder LLC' Sep 29, Tech Times, 36Kr ('each holds ~2%').",
+   "url": "https://news.google.com/rss/search?q=Anthropic+IPO+super-voting+shares&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 24,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic IPO lockup 10b5-1': Reuters/The Information Jul 23 'mandatory employee stock trading plans', The Information Aug 27, Forbes Sep 22, Fool Sep 7.",
+   "url": "https://news.google.com/rss/search?q=Anthropic+IPO+lockup+10b5-1&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 25,
+   "type": "flag",
+   "text": "The mandatory 10b5-1 report dates to Jul 23 (Reuters/The Information headlines), not Sep 2-3 as in the brief; the Sep 3 Fool piece is a later relay. Originals not openable."
+  },
+  {
+   "seq": 26,
+   "type": "search",
+   "text": "Bing RSS 'Anthropic IPO prospectus lays bare deep dependence on Big Tech partners': direct URLs for Reuters syndications (US News, Global Banking & Finance, BusinessWorld, Economic Times, MarketScreener, CNBC).",
+   "url": "https://www.bing.com/search?q=Anthropic+IPO+prospectus+lays+bare+deep+dependence+on+Big+Tech+partners&format=rss"
+  },
+  {
+   "seq": 27,
+   "type": "search",
+   "text": "Bing RSS 'Anthropic \"Founder LLC\"': direct URLs for Reuters, CNBC, Straits Times, JPost, TNW, Crypto Briefing, Binance Square.",
+   "url": "https://www.bing.com/search?q=Anthropic+%22Founder+LLC%22&format=rss"
+  },
+  {
+   "seq": 28,
+   "type": "note",
+   "text": "Bing RSS returned generic or unrelated pages for long, unquoted or exact-title queries (Factbox, $518B, existential, 10b5-1, mid-October, Rao, SOC, ratings); only the two queries above produced usable links."
+  },
+  {
+   "seq": 29,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic IPO November Wall Street Journal': WSJ Sep 18 'Shifts Planned IPO to November', Sep 8 'What to Know About Anthropic's Planned IPO', Forbes Sep 23, Time Sep 22, Forkast Sep 26 (S-1 still not public).",
+   "url": "https://news.google.com/rss/search?q=Anthropic+IPO+November+Wall+Street+Journal&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 30,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic IPO underwriters': Bloomberg Jun 3 (MS, GS; JPM), FT Sep 4 'close to awarding Morgan Stanley and Goldman top roles', Citi set to join (Aug 20), a small firm's first underwriting job (Sep 9).",
+   "url": "https://news.google.com/rss/search?q=Anthropic+IPO+underwriters&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 31,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic Nasdaq listing': Business Insider/Bloomberg/Reuters Sep 13 Nasdaq pick; Nasdaq-100 fast-entry stories; Herald 'Nvidia in talks to invest up to $10b'.",
+   "url": "https://news.google.com/rss/search?q=Anthropic+Nasdaq+listing&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 32,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic IPO debt': revolver $10B -> $15B (Bloomberg Aug 18, Sep 3), FT Sep 8 on investment-grade ratings, Semafor Jun 2 on lender disclosure, Blackstone second $36B chip-debt package.",
+   "url": "https://news.google.com/rss/search?q=Anthropic+IPO+debt&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 33,
+   "type": "open",
+   "text": "Opened Global Banking & Finance copy of the Reuters 'deep dependence on Big Tech partners' exclusive: 47% via cloud marketplaces, two 12% customers, $54.6B non-cancelable, $417B commitments.",
+   "url": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/"
+  },
+  {
+   "seq": 34,
+   "type": "found",
+   "text": "Reuters: cloud-channel and customer concentration detail.",
+   "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+  },
+  {
+   "seq": 35,
+   "type": "note",
+   "text": "Not openable: US News (503), CNBC (403), MarketScreener (503), Economic Times (blocked), BusinessWorld (403), Straits Times (blocked); four guessed Global Banking & Finance slugs returned 404."
+  },
+  {
+   "seq": 36,
+   "type": "open",
+   "text": "Opened Jerusalem Post copy of Reuters 'Founder LLC' exclusive: single Class F share = 50.1% of voting power, Class A one vote, LTBT trustees, 80% charity pledge.",
+   "url": "https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-910036"
+  },
+  {
+   "seq": 37,
+   "type": "open",
+   "text": "Opened The Next Web: Founder LLC, four LTBT seats, phase-out once two or fewer founders remain, 2025 pay of Dario (~$18M) and Daniela ($16.4M).",
+   "url": "https://thenextweb.com/news/anthropic-founder-llc-voting-control-ipo"
+  },
+  {
+   "seq": 38,
+   "type": "open",
+   "text": "Opened Crypto Briefing (Diego Almada Lopez): Founder LLC, Class F, LTBT gaining authority over time.",
+   "url": "https://cryptobriefing.com/anthropic-founder-llc-public-good-governance/"
+  },
+  {
+   "seq": 39,
+   "type": "found",
+   "text": "Reuters: Founder LLC / Class F share with 50.1% of votes.",
+   "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote"
+  },
+  {
+   "seq": 40,
+   "type": "open",
+   "text": "Opened TechCrunch (Connie Loizos, Sep 25 8:40 AM PDT) citing The Information: 50.1%, at least three founders, ~2% each, board seats two to three, $1.5T secondary.",
+   "url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/"
+  },
+  {
+   "seq": 41,
+   "type": "found",
+   "text": "The Information via TechCrunch: founders seek 50.1% voting control.",
+   "event_id": "evt-20260925-founders-seek-50-1pct-voting-control"
+  },
+  {
+   "seq": 42,
+   "type": "search",
+   "text": "EDGAR full-text search 'Anthropic' within SpaceX CIK 1181412: 17 hits (CORRESP x2, SEC UPLOAD letters, FWPs, S-1, 424B4, S-1/A x2, DRS, DRS/A); the 10-Q is not among them.",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&ciks=0001181412"
+  },
+  {
+   "seq": 43,
+   "type": "open",
+   "text": "Opened EDGAR index for SpaceX 10-Q acc. 0001628280-26-052535 (filed 2026-08-04, period 2026-06-30; main document 2.27 MB).",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/0001628280-26-052535-index.htm"
+  },
+  {
+   "seq": 44,
+   "type": "open",
+   "text": "Opened SpaceX 10-Q: Anthropic and Colossus are not named; 'Customer B' is 19.5% of Q2 revenue, AI segment only; AI Solutions & Infrastructure revenue $2,194M.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm"
+  },
+  {
+   "seq": 45,
+   "type": "found",
+   "text": "SpaceX 10-Q does not name Anthropic; unnamed Customer B 19.5% (T1).",
+   "event_id": "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment"
+  },
+  {
+   "seq": 46,
+   "type": "flag",
+   "text": "SpaceX's own 10-Q never names Anthropic or Colossus (read twice: document fetch plus EDGAR full-text index); linking 'Customer B' to Anthropic is inference only.",
+   "event_id": "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment"
+  },
+  {
+   "seq": 47,
+   "type": "open",
+   "text": "Opened SEC staff comment letter of 2026-05-29: comment 1 quotes the S-1 'Anthropic will pay you $1.25 billion per month ... across COLOSSUS AND COLOSSUS II'.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000000000026005505/filename2.txt"
+  },
+  {
+   "seq": 48,
+   "type": "open",
+   "text": "Opened SEC staff comment letter of 2026-05-19: comments 1, 4 and 25 on the agreement to give Anthropic all of Colossus' capacity and on disclosing its value and duration.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000000000026005119/filename2.txt"
+  },
+  {
+   "seq": 49,
+   "type": "open",
+   "text": "Opened SpaceX CORRESP of 2026-06-01: 90-day termination by either party, ordinary-course agreements, not required as exhibits.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm"
+  },
+  {
+   "seq": 50,
+   "type": "found",
+   "text": "SpaceX S-1: Anthropic pays $1.25B monthly (T1 via SEC letters).",
+   "event_id": "evt-20260520-spacex-s1-anthropic-1p25b-monthly"
+  },
+  {
+   "seq": 51,
+   "type": "open",
+   "text": "Opened Anthropic Rule 135 notice: confidential draft S-1 submitted, number of shares and price not set.",
+   "url": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+  },
+  {
+   "seq": 52,
+   "type": "open",
+   "text": "Opened TechCrunch (Kirsten Korosec, Jun 1 9:36 AM PDT) on the confidential filing.",
+   "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/"
+  },
+  {
+   "seq": 53,
+   "type": "found",
+   "text": "Anthropic confidential draft S-1 (T1).",
+   "event_id": "evt-20260601-confidential-draft-s1-submitted"
+  },
+  {
+   "seq": 54,
+   "type": "open",
+   "text": "Opened Bloomberg via Yahoo (Vlad Schepkov, Jun 3): Morgan Stanley and Goldman lead, JPMorgan also working; also '325,000 chips ... $1.25 billion per month' for SpaceX.",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-pick-morgan-stanley-175802678.html"
+  },
+  {
+   "seq": 55,
+   "type": "found",
+   "text": "Bloomberg: lead banks.",
+   "event_id": "evt-20260603-ipo-lead-banks-morgan-stanley-goldman-jpmorgan"
+  },
+  {
+   "seq": 56,
+   "type": "open",
+   "text": "Opened Quartz via Yahoo (Aug 13): investors expect an October IPO at $2T or more.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html"
+  },
+  {
+   "seq": 57,
+   "type": "found",
+   "text": "Quartz: October IPO expectation.",
+   "event_id": "evt-20260813-quartz-investors-expect-october-ipo-at-2t"
+  },
+  {
+   "seq": 58,
+   "type": "open",
+   "text": "Opened Investing.com via Yahoo (Aug 18) citing The Information: supervoting for founders, LTBT elects majority of a seven-member board.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-moves-bolster-founder-control-214023999.html"
+  },
+  {
+   "seq": 59,
+   "type": "found",
+   "text": "The Information: supervoting shares for founders.",
+   "event_id": "evt-20260818-information-founder-supervoting-shares"
+  },
+  {
+   "seq": 60,
+   "type": "open",
+   "text": "Opened Reuters relaying Bloomberg (Aug 18): revolver to exceed ~$10B, $1.25B commitments from lead banks, 2028 revenue projection $190-200B.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html"
+  },
+  {
+   "seq": 61,
+   "type": "found",
+   "text": "Bloomberg via Reuters: revolver above $10B target.",
+   "event_id": "evt-20260818-pre-ipo-revolver-10b-target-exceeded"
+  },
+  {
+   "seq": 62,
+   "type": "open",
+   "text": "Opened Bloomberg via Yahoo (Sep 3): $15B revolver, Morgan Stanley leading, 17 banks, prior $2.5B facility.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+  },
+  {
+   "seq": 63,
+   "type": "found",
+   "text": "Bloomberg: $15B revolver.",
+   "event_id": "evt-20260903-credit-facility-15b-morgan-stanley-17-banks"
+  },
+  {
+   "seq": 64,
+   "type": "open",
+   "text": "Opened Forbes via Yahoo (Jon Markman, Sep 7) citing Reuters: IPO pushed into mid-October, public filing slipped to late September, roadshow not before mid-October.",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-delays-ipo-mid-october-150657053.html"
+  },
+  {
+   "seq": 65,
+   "type": "found",
+   "text": "Reuters via Forbes: launch shifts toward mid-October.",
+   "event_id": "evt-20260904-reuters-ipo-launch-shifts-toward-mid-october"
+  },
+  {
+   "seq": 66,
+   "type": "open",
+   "text": "Opened Benzinga via Yahoo (Sep 13): Business Insider says Nasdaq, October; FT figures on second adjusted profit and >80% gross margin.",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html"
+  },
+  {
+   "seq": 67,
+   "type": "found",
+   "text": "Business Insider: Nasdaq and October listing.",
+   "event_id": "evt-20260913-business-insider-nasdaq-october-listing"
+  },
+  {
+   "seq": 68,
+   "type": "open",
+   "text": "Opened Stocktwits via Yahoo (Sep 14) relaying the FT: Q2 revenue $11.5B, second adjusted operating profit, >80% gross margin ex-SBC and training, projections $120B/$360B.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
+  },
+  {
+   "seq": 69,
+   "type": "found",
+   "text": "FT: second adjusted operating profit and gross margin.",
+   "event_id": "evt-20260913-ft-second-adjusted-operating-profit-gross-margin-above-80"
+  },
+  {
+   "seq": 70,
+   "type": "open",
+   "text": "Opened Investing.com via Yahoo (Sep 18) citing WSJ: November debut, up to $100B at ~$2T, present Q3 results first.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html"
+  },
+  {
+   "seq": 71,
+   "type": "found",
+   "text": "WSJ via Investing.com: IPO pushed to November.",
+   "event_id": "evt-20260918-wsj-ipo-pushed-to-november-up-to-100b-at-2t"
+  },
+  {
+   "seq": 72,
+   "type": "flag",
+   "text": "DISPUTED timing: Quartz/BI/PitchBook (per brief) say October, Reuters Sep 4 says roadshow not before mid-October, WSJ Sep 18 says November, Reuters/Fortune Sep 29 say after the midterms; 'NASDAQ:ANTP' in the WSJ relay is an Investing.com auto-label, not a reported ticker.",
+   "event_id": "evt-20260918-wsj-ipo-pushed-to-november-up-to-100b-at-2t"
+  },
+  {
+   "seq": 73,
+   "type": "open",
+   "text": "Opened BeInCrypto via Yahoo (Aug 27) citing The Information: prospectus after Labor Day, early investors and staff may sell, lockups longer than the norm.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-could-come-september-191409974.html"
+  },
+  {
+   "seq": 74,
+   "type": "found",
+   "text": "The Information via BeInCrypto: prospectus timing, insider sales, lockups.",
+   "event_id": "evt-20260827-information-prospectus-after-labor-day-insider-sales"
+  },
+  {
+   "seq": 75,
+   "type": "open",
+   "text": "Opened Stocktwits via Yahoo (Shashank Nayar, Sep 29): per-partner split of the $518B plan, SpaceX 90-day termination, Microsoft through May 2033.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html"
+  },
+  {
+   "seq": 76,
+   "type": "open",
+   "text": "Opened TechCrunch (Tim De Chant, May 20 2:29 PM PDT): $1.25B/month through May 2029, 90-day termination, 300 MW Colossus 1.",
+   "url": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/"
+  },
+  {
+   "seq": 77,
+   "type": "search",
+   "text": "Google News RSS 'Anthropic prospectus Financial Times': FT headline 'Anthropic warns of existential risks to humanity in IPO prospectus' (Sep 29 02:36 GMT), FT Sep 13, FT Sep 4, NYT 'What's In Anthropic's I.P.O. Filing'.",
+   "url": "https://news.google.com/rss/search?q=Anthropic+prospectus+Financial+Times&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+   "seq": 78,
+   "type": "flag",
+   "text": "The FT ran its own Sep 29 prospectus piece (headline only; paywalled), so Reuters and the FT are two independent reviews of the leaked draft - basis for T2 on headline figures; all other outlets derive from them."
+  },
+  {
+   "seq": 79,
+   "type": "open",
+   "text": "Opened Gizmodo (Webb Wright): risk factors ~80 pages vs 48 business, of a 261-page main body.",
+   "url": "https://gizmodo.com/leaked-anthropic-ipo-prospectus-gives-wall-street-an-early-look-at-how-ai-could-kill-us-all-2000818911"
+  },
+  {
+   "seq": 80,
+   "type": "open",
+   "text": "Opened TradingKey (Yulia Zeng): revenue $4.59B, 2024 ~$386M, +1,088%; also a '$96.5 billion' prior-valuation typo.",
+   "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262190854-anthropic-ipo-prospectus-revealed-tradingkey"
+  },
+  {
+   "seq": 81,
+   "type": "open",
+   "text": "Opened InvestmentNews (Leo Almazora): dated per-partner commitments (Google Apr 2026-Jul 2033, Amazon May 2026-Apr 2036, Microsoft Nov 2026-May 2033, AMD $5B stock).",
+   "url": "https://www.investmentnews.com/equities/anthropics-landmark-ipo-filing-shows-12-fold-revenue-jump-518b-compute-bill/268391"
+  },
+  {
+   "seq": 82,
+   "type": "open",
+   "text": "Opened investingLive (Eamonn Sheridan): operating loss widened to ~$8B from ~$3B in 2024; cash ~$20B.",
+   "url": "https://investinglive.com/stock-market-update/anthropic-ipo-prospectus-shows-42-billion-2025-loss-and-518-billion-spending-plans/"
+  },
+  {
+   "seq": 83,
+   "type": "open",
+   "text": "Opened Crypto Briefing (Sep 28) on the $42B loss.",
+   "url": "https://cryptobriefing.com/anthropic-ipo-42b-loss-spending-plans/"
+  },
+  {
+   "seq": 84,
+   "type": "flag",
+   "text": "Crypto Briefing's figures contradict Reuters/Fortune ('$8.3 billion loss in 2024', '$787 million the prior year', '$15 billion annual' SpaceX); treated as unreliable T4 and not used."
+  },
+  {
+   "seq": 85,
+   "type": "open",
+   "text": "Opened aiunderstanding.org (attributes to New York Post): repeats Reuters' $42B, $12.65B, $20.28B (T5; not used).",
+   "url": "https://aiunderstanding.org/news/anthropic-s-ipo-prospectus-reveals-42-billion-loss-and-2-trillion-valuation-target"
+  },
+  {
+   "seq": 86,
+   "type": "search",
+   "text": "WebSearch #1: Reuters '$518 billion AI buildout hinges largely on deals that cannot be canceled' - returned KSL and Express Tribune syndications."
+  },
+  {
+   "seq": 87,
+   "type": "open",
+   "text": "Opened KSL copy of the Reuters $518B article (Echo Wang and Sabrina Valle): six partners, amounts, date ranges, cancellation terms.",
+   "url": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows"
+  },
+  {
+   "seq": 88,
+   "type": "open",
+   "text": "Opened Express Tribune copy of the same Reuters article; agrees line for line.",
+   "url": "https://tribune.com.pk/story/2632108/anthropics-518b-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows"
+  },
+  {
+   "seq": 89,
+   "type": "found",
+   "text": "Reuters: $518B commitments, ~80% non-cancelable.",
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  },
+  {
+   "seq": 90,
+   "type": "note",
+   "text": "TheStreet copy of the $518B story returned 403."
+  },
+  {
+   "seq": 91,
+   "type": "flag",
+   "text": "Arithmetic check: Google 111.1 + Amazon 110 + Microsoft 31.4 + Broadcom-related 161.2 + SpaceX/xAI 84.5 + AMD >20 = $518.2B, matching the $518B headline.",
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  },
+  {
+   "seq": 92,
+   "type": "search",
+   "text": "WebSearch #2: Reuters 'existential risks to humanity' IPO filing exclusive - returned Yahoo, Investing.com and Devdiscourse copies."
+  },
+  {
+   "seq": 93,
+   "type": "open",
+   "text": "Opened Reuters 'existential risks' exclusive via Yahoo (Echo Wang and Aditya Soni): exact phrases, 80 of 261 pages vs 48, SpaceX 38 of 277.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropic-warns-ai-may-001709847.html"
+  },
+  {
+   "seq": 94,
+   "type": "open",
+   "text": "Opened the Investing.com copy of the same Reuters exclusive; agrees.",
+   "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropic-warns-ai-may-pose-existential-risks-to-humanity-in-ipo-filing-4921447"
+  },
+  {
+   "seq": 95,
+   "type": "open",
+   "text": "Opened Benzinga via Yahoo (Ananya Gairola): '80 of 261 pages', model awareness of evaluation, release cadence.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-spends-80-022205363.html"
+  },
+  {
+   "seq": 96,
+   "type": "open",
+   "text": "Opened Yahoo Finance (Hamza Shaban, Sep 30) on the Reuters review: same quotes and page counts.",
+   "url": "https://finance.yahoo.com/technology/article/anthropic-ipo-documents-show-there-really-is-only-one-risk-with-ai-100000742.html"
+  },
+  {
+   "seq": 97,
+   "type": "found",
+   "text": "Reuters: risk factors 80 of 261 pages, existential-risk language.",
+   "event_id": "evt-20260928-prospectus-risk-factors-80-of-261-pages"
+  },
+  {
+   "seq": 98,
+   "type": "search",
+   "text": "WebSearch #3 (Factbox query) failed: API error that a domain in allowed_domains is not accessible; counted as used."
+  },
+  {
+   "seq": 99,
+   "type": "search",
+   "text": "WebSearch #4: Reuters factbox on key executives and board - returned Investing.com and AOL copies."
+  },
+  {
+   "seq": 100,
+   "type": "open",
+   "text": "Opened Investing.com copy of the Reuters factbox: eight executives, four outside directors, three LTBT trustees.",
+   "url": "https://www.investing.com/news/stock-market-news/factboxanthropic-ipo-prospectus-shows-key-executives-and-board-4921432"
+  },
+  {
+   "seq": 101,
+   "type": "open",
+   "text": "Opened AOL copy of the factbox; agrees.",
+   "url": "https://www.aol.com/articles/factbox-anthropic-ipo-prospectus-shows-234416000.html"
+  },
+  {
+   "seq": 102,
+   "type": "found",
+   "text": "Reuters factbox: executives, board, LTBT trustees.",
+   "event_id": "evt-20260928-factbox-executives-board-ltbt-trustees"
+  },
+  {
+   "seq": 103,
+   "type": "open",
+   "text": "Opened Reuters analysis via Investing.com: sales multiple around 18-20x, analyst quotes (Streeter, Field, Coatsworth, Brooks).",
+   "url": "https://www.investing.com/news/stock-market-news/anthropics-ipo-prospectus-sharpens-focus-on-ai-valuations-4923003"
+  },
+  {
+   "seq": 104,
+   "type": "open",
+   "text": "Opened Reuters timeline via Yahoo: funding history, $1.5B authors' settlement (Jul 2026), 2028 revenue projection $190-200B.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropics-path-ai-startup-industry-235243135.html"
+  },
+  {
+   "seq": 105,
+   "type": "open",
+   "text": "Opened Quartz via Yahoo (Cris Tolomia, Sep 29): Reuters figures repeated; lead banks and Nasdaq named.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-2025-revenue-120505564.html"
+  },
+  {
+   "seq": 106,
+   "type": "search",
+   "text": "Google News RSS on rogue agents, litigation, headcount/key person, investor meetings, Nvidia anchor and secondary marks: found Reuters rogue-agent exclusive, CNBC Jul 15 and Aug 13 investor-meeting headlines, Reuters Nvidia exclusive, Business Insider Aug 14 '$1.5T secondary'; litigation query returned no items."
+  },
+  {
+   "seq": 107,
+   "type": "flag",
+   "text": "Reuters timeline lists a $1.5B settlement of the authors' lawsuit in July 2026, but no opened prospectus coverage quotes the litigation section; litigation summary stays open."
+  },
+  {
+   "seq": 108,
+   "type": "search",
+   "text": "WebSearch #5: Reuters 'rogue AI agents pose uncertain legal risk' - returned Global Banking & Finance, Investing.com, SecurityWeek copies."
+  },
+  {
+   "seq": 109,
+   "type": "open",
+   "text": "Opened Global Banking & Finance copy of the Reuters rogue-agent exclusive (Echo Wang and Jody Godoy).",
+   "url": "https://www.globalbankingandfinance.com/exclusive-anthropic-rogue-ai-agents-pose-uncertain-legal/"
+  },
+  {
+   "seq": 110,
+   "type": "open",
+   "text": "Opened the Investing.com copy of the rogue-agent exclusive; agrees.",
+   "url": "https://www.investing.com/news/stock-market-news/exclusiveanthropic-says-rogue-ai-agents-pose-uncertain-legal-risk-for-the-company-4923159"
+  },
+  {
+   "seq": 111,
+   "type": "open",
+   "text": "Opened SecurityWeek (Eduard Kovacs, Sep 30): adds 'strict liability or negligence' question.",
+   "url": "https://www.securityweek.com/anthropic-flags-ai-agent-liability-risks-as-openai-faces-hacking-lawsuit/"
+  },
+  {
+   "seq": 112,
+   "type": "found",
+   "text": "Reuters: agentic-AI legal risk language.",
+   "event_id": "evt-20260929-prospectus-rogue-ai-agents-legal-risk"
+  },
+  {
+   "seq": 113,
+   "type": "open",
+   "text": "Opened Yahoo Finance explainer (Hal Bundrick): repeats Reuters; cost lines, debt and headcount 'not stated'.",
+   "url": "https://finance.yahoo.com/personal-finance/investing/article/anthropic-ipo-what-investors-should-know-about-costs-risks-after-leaked-prospectus-170741665.html"
+  },
+  {
+   "seq": 114,
+   "type": "open",
+   "text": "Opened Motley Fool via Yahoo (Daniel Sparks, Sep 26) citing Reuters: Nvidia weighing up to $10B anchor stake.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-weighing-10-billion-stake-195701843.html"
+  },
+  {
+   "seq": 115,
+   "type": "found",
+   "text": "Reuters via Motley Fool: Nvidia anchor stake talks.",
+   "event_id": "evt-20260912-reuters-nvidia-weighs-10b-anchor-stake-in-ipo"
+  },
+  {
+   "seq": 116,
+   "type": "open",
+   "text": "Opened Quartz via Yahoo (Jul 9): $1.2T secondary indications, scarce closings.",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-secondary-market-valuation-hits-114416290.html"
+  },
+  {
+   "seq": 117,
+   "type": "found",
+   "text": "Quartz: $1.2T secondary indications.",
+   "event_id": "evt-20260709-secondary-market-indications-1-2t"
+  },
+  {
+   "seq": 118,
+   "type": "open",
+   "text": "Opened CCN via Yahoo (Aug 17): perps imply ~$1.8T; secondary trades up to $1.5T.",
+   "url": "https://finance.yahoo.com/markets/crypto/articles/anthropic-tokenized-price-implies-1-150342277.html"
+  },
+  {
+   "seq": 119,
+   "type": "found",
+   "text": "CCN: secondary up to $1.5T, perps imply $1.8T.",
+   "event_id": "evt-20260817-secondary-up-to-1-5t-perps-imply-1-8t"
+  },
+  {
+   "seq": 120,
+   "type": "open",
+   "text": "Re-opened Fortune income-statement article with a table-specific prompt: only FY2025 headline lines and Q1/Q2 revenue; all cost lines 'not stated'.",
+   "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+  },
+  {
+   "seq": 121,
+   "type": "note",
+   "text": "SpaceX S-1 main document (acc. 0001628280-26-036936) cannot be opened: fetch error 'maxContentLength size of 10485760 exceeded'.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm"
+  },
+  {
+   "seq": 122,
+   "type": "open",
+   "text": "Opened Amazon Q2 10-Q (acc. 0001018724-26-000026), Note 2: Anthropic preferred $92.5B + notes $97.9B; notes convert to nonvoting common at an IPO.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+  },
+  {
+   "seq": 123,
+   "type": "found",
+   "text": "Amazon 10-Q (T1): $190.4B Anthropic stake, conversion at IPO.",
+   "event_id": "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo"
+  },
+  {
+   "seq": 124,
+   "type": "flag",
+   "text": "Amazon's 10-Q says its Anthropic convertible notes convert into nonvoting common stock on an IPO (subject to an ownership cap) - a structural detail absent from all prospectus coverage opened.",
+   "event_id": "evt-20260731-amazon-q2-10q-anthropic-stake-190b-converts-at-ipo"
+  },
+  {
+   "seq": 125,
+   "type": "search",
+   "text": "WebSearch #6: PitchBook note of Sep 21 (October, Nasdaq, $100B, $2T) - not found; only Benzinga, Business Today, Forge and Forbes pieces returned."
+  },
+  {
+   "seq": 126,
+   "type": "open",
+   "text": "Opened Forge Global insights (Sep 25): 'October 2026 listing', Series H price as high as $589.01, Wilson Sonsini counsel.",
+   "url": "https://forgeglobal.com/insights/anthropic-upcoming-ipo-news/"
+  },
+  {
+   "seq": 127,
+   "type": "note",
+   "text": "Not openable: Forbes Sep 23 (403) and CNBC Aug 15 'revenue jumps to over $11.5 billion in Q2' (403)."
+  },
+  {
+   "seq": 128,
+   "type": "open",
+   "text": "Opened Proactive via Yahoo (Aug 21) relaying Bloomberg: public filing 'as soon as the end of this month', IPO could match SpaceX's $75B, Q2 revenue $11.5B.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html"
+  },
+  {
+   "seq": 129,
+   "type": "found",
+   "text": "Bloomberg via Proactive: end-August filing and SpaceX record comparison.",
+   "event_id": "evt-20260820-bloomberg-ipo-could-match-spacex-record-public-filing-end-august"
+  },
+  {
+   "seq": 130,
+   "type": "open",
+   "text": "Opened Forkast via Yahoo (Lena Park, Sep 25): no public Anthropic filing on EDGAR as of Sep 26.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-expected-labor-day-021428972.html"
+  },
+  {
+   "seq": 131,
+   "type": "flag",
+   "text": "Forkast's other numbers are unreliable ('raise over $20 billion', 'H1 2026 revenue ~$9.6 billion' vs Q1 $4.73B + Q2 $11.5B = $16.2B); used only for the no-public-filing statement."
+  },
+  {
+   "seq": 132,
+   "type": "found",
+   "text": "EDGAR: no public Anthropic S-1 at Sep 30.",
+   "event_id": "evt-20260930-no-public-s1-on-edgar-anthropic-drs-confidential"
+  },
+  {
+   "seq": 133,
+   "type": "open",
+   "text": "Opened BeInCrypto via Yahoo (Aug 22) citing CNBC: AI and data-center backlash as a prospectus risk factor; 75% poll opposition.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/americans-turning-against-ai-anthropic-135133328.html"
+  },
+  {
+   "seq": 134,
+   "type": "found",
+   "text": "CNBC via BeInCrypto: backlash risk factor.",
+   "event_id": "evt-20260822-cnbc-ai-and-data-center-backlash-risk-factor"
+  },
+  {
+   "seq": 135,
+   "type": "open",
+   "text": "Opened Binance Square post (citing CNBC): Founder LLC structure and a risk line on reducing everyday investors' influence (T5).",
+   "url": "https://www.binance.com/en/square/post/09-29-2026-anthropic-ipo-filing-reveals-founder-llc-structure-that-preserves-co-founder-control-371735694290480"
+  },
+  {
+   "seq": 136,
+   "type": "open",
+   "text": "Opened BeInCrypto via Yahoo (Kamina Bashir, Sep 29): operating loss $8.06B vs $2.98B, compute $7.33B, safety compute 6%.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropics-own-ipo-filing-warns-074101950.html"
+  },
+  {
+   "seq": 137,
+   "type": "open",
+   "text": "Opened Quartz via Yahoo (Sep 29) summary of Reuters/FT/CNBC/Guardian coverage.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-prospectus-warns-existential-111719817.html"
+  },
+  {
+   "seq": 138,
+   "type": "search",
+   "text": "Bing RSS short queries on Rao investor meetings, SOC Investment Group, investment-grade ratings, first underwriting job and 10b5-1 lockups returned unrelated pages."
+  },
+  {
+   "seq": 139,
+   "type": "open",
+   "text": "Opened TechCrunch Anthropic tag feed: latest items include the Sep 28 prospectus story, Sep 25 voting-control story and the Sep 25 $11.6B Akamai deal.",
+   "url": "https://techcrunch.com/tag/anthropic/feed/"
+  },
+  {
+   "seq": 140,
+   "type": "open",
+   "text": "Opened SiliconANGLE Anthropic tag feed: Sep 29 leak story, Sep 24 Akamai $11.6B, Sep 18 Nscale S-1.",
+   "url": "https://siliconangle.com/tag/anthropic/feed/"
+  },
+  {
+   "seq": 141,
+   "type": "flag",
+   "text": "Nscale ($44.6B, Aug 26), Lambda ($35B, Aug 31) and Akamai ($11.6B, Sep 24-25) are not among the six partners in Reuters' $518B breakdown, so the draft either predates them or folds them into other lines; 'at least $518B' is likely a floor.",
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  },
+  {
+   "seq": 142,
+   "type": "message",
+   "text": "Handoff: $518B per-partner split, Nscale/Lambda/Akamai not in the six named partners, SpaceX $84.5B vs $45B, and SpaceX 10-Q Customer B - please reconcile against compute contracts.",
+   "to": "desk-compute"
+  },
+  {
+   "seq": 143,
+   "type": "message",
+   "text": "Handoff: Founder LLC / Class F share (50.1%), 3+4 board split, LTBT trustees Shah/Fontaine/Bernanke, Amazon notes converting to nonvoting common at IPO - governance detail for your board and LTBT timeline.",
+   "to": "desk-governance"
+  },
+  {
+   "seq": 144,
+   "type": "message",
+   "text": "Handoff: prospectus revenue split (consumption $3.8B, subscription $789M, 47% via cloud marketplaces, two 12% customers, US ~two-thirds) and Q1 $4.73B / Q2 $11.5B - for revenue reconciliation.",
+   "to": "desk-revenue"
+  },
+  {
+   "seq": 145,
+   "type": "message",
+   "text": "Handoff: rogue-agent legal-risk language, $1.5B authors' settlement (Reuters timeline, Jul 2026) and OpenAI/LASST agent suit context - litigation summary from the prospectus is still unopened.",
+   "to": "desk-legal"
+  },
+  {
+   "seq": 146,
+   "type": "message",
+   "text": "Handoff: Amazon Q2 10-Q T1 data ($190.4B carrying value, $20B facility), $15B revolver with 17 banks, Nvidia up-to-$10B anchor talks and AMD up-to-$5B equity purchase.",
+   "to": "desk-deals"
+  }
+ ],
+ "conflicts": [
+  {
+   "topic": "IPO timing: October vs November (DISPUTED)",
+   "value_a": "October 2026 Nasdaq listing: PitchBook note of Sep 21 (per orchestrator brief; not located), Quartz Aug 13, Business Insider Sep 13 via Benzinga; Reuters Sep 4: roadshow not before mid-October, listing days before the midterms",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html",
+   "value_b": "November debut after Q3 results (WSJ Sep 18); likely after the November U.S. midterms (Reuters and Fortune, Sep 29)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "note": "A sequence of slips rather than a true split: late September (The Information Aug 18) -> October -> mid-October roadshow -> November -> after the midterms. Latest evidence favors November or later; a search-engine summary said WSJ/Reuters have an October roadshow for a November listing (unverified). No public S-1 exists, so DISPUTED stands until a filing or pricing date appears."
+  },
+  {
+   "topic": "IPO raise size",
+   "value_a": "Up to $100B at about $2T (WSJ Sep 18; SiliconANGLE 'as much as $100 billion'; Forge 'over $100 billion')",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "value_b": "At least $130B, valuation north of $2T (The Information via Motley Fool, Sep 3)",
+   "source_b": "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/",
+   "note": "30% gap between 'up to' and 'at least'; the Sep 3 relay is T4 and the later WSJ report is newer. Forkast's 'over $20 billion' (T4) is an unreliable outlier. SpaceX's record comparator is $75B base or $86.2B with the over-allotment (Bloomberg Aug 20 vs Sep 3)."
+  },
+  {
+   "topic": "Q2 2026 revenue",
+   "value_a": "$11.5B, ~14x YoY (CNBC Aug 15 per Fortune link; Bloomberg Aug 20 via Proactive; FT Sep 13; prospectus coverage)",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "value_b": "$10.9B with ~$559M operating profit (The Information via Motley Fool, Sep 3)",
+   "source_b": "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/",
+   "note": "$10.9B matches the May 20 pre-quarter expectation (scout-2026q2) and R&D World's Aug 14 headline 'projected Q2 revenue was $10.9B', so it is probably a projection - inference. Q1 also differs: $4.73B (Fortune citing CNBC) vs $4.8B (The Information)."
+  },
+  {
+   "topic": "Q2 profit measure",
+   "value_a": "Positive 'adjusted operating income' in Q2, dollar amount undisclosed, non-GAAP gross margin >80% before partner share and ex-SBC/training (FT Sep 13)",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "value_b": "'First-ever operating profit of about $559 million' (The Information via Motley Fool)",
+   "source_b": "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/",
+   "note": "Adjusted vs unadjusted basis unresolved; FY2025 GAAP operating loss was $8.06B. No GAAP quarterly income statement is reported in any opened source."
+  },
+  {
+   "topic": "SpaceX/xAI contract value",
+   "value_a": "~$45B: $1.25B per month for 36 months (desk arithmetic); '$40B+' through May 2029 (TechCrunch May 20); Crypto Briefing '$15B annual'",
+   "source_a": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+   "value_b": "Up to $84.5B for Nvidia-based capacity through 2029, largely cancelable on 90 days' notice (Reuters, prospectus)",
+   "source_b": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
+   "note": "Prospectus figure is nearly double the original; SEC letters show the S-1 covered Colossus and Colossus II. Likely an expansion or ceiling; needs the S-1 text (over the 10 MB fetch limit) or the prospectus itself."
+  },
+  {
+   "topic": "Total compute commitments",
+   "value_a": "At least $518B over ~10 years, ~80% non-cancelable (prospectus via Reuters)",
+   "source_a": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
+   "value_b": "Above $417B (3.5 GW) in early 2026 and $54.6B non-cancelable at end-2025 (Reuters); up to $517B of contracts signed in 11 months (The Information Sep 7 via The Decoder); '$531B' (brief, unsourced)",
+   "source_b": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/",
+   "note": "Different dates and scopes, not a true conflict; the six named items sum to $518.2B (desk) and exclude Nscale, Lambda and Akamai, so the prospectus total is probably a floor. The brief's $531B appears to be a mis-stated $517B/$518B."
+  },
+  {
+   "topic": "FY2024 revenue and loss",
+   "value_a": "About $386M revenue (TradingKey; implied by +1,088%) and $2.98B operating loss (Fortune)",
+   "source_a": "https://www.tradingkey.com/analysis/stocks/us-stocks/262190854-anthropic-ipo-prospectus-revealed-tradingkey",
+   "value_b": "$400M revenue (SiliconANGLE); $787M revenue and an '$8.3 billion loss in 2024' (Crypto Briefing)",
+   "source_b": "https://cryptobriefing.com/anthropic-ipo-42b-loss-spending-plans/",
+   "note": "$400M is rounding; Crypto Briefing's figures contradict the 12-fold growth and the $2.98B loss and probably misread the $789M subscription revenue - treated as an error."
+  },
+  {
+   "topic": "How the founders' control is structured",
+   "value_a": "Special share classes giving seven co-founders supervoting rights (The Information Aug 18); Bloomberg headline 'Anthropic plans to give CEO extra voting power'",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-moves-bolster-founder-control-214023999.html",
+   "value_b": "One Class F share held by Founder LLC = 50.1% of voting power; Class A one vote per share (Reuters review of the draft, Sep 29)",
+   "source_b": "https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-910036",
+   "note": "Consistent on 50.1%, seven co-founders and a 3+4 board split; descriptions differ (classes vs one LLC-held share). Founder count of unnamed members differs by copy (JPost 'four', TNW 'three'); Reuters pieces together name six of seven."
+  },
+  {
+   "topic": "Prior valuation cited by outlets",
+   "value_a": "$965B post-money Series H of May 2026 (Anthropic/TechCrunch Jun 1; Reuters 'May')",
+   "source_a": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
+   "value_b": "'May 2025' (TechCrunch Sep 28, Fortune Nolan, Quartz) and '$96.5 billion' (TradingKey)",
+   "source_b": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+   "note": "Typographical errors in secondary outlets; Series H was announced May 28, 2026 at $965B."
+  },
+  {
+   "topic": "Risk-factor share of the prospectus",
+   "value_a": "80 of 261 main-body pages = 30.7% (Reuters; TechCrunch 'nearly a third')",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropic-warns-ai-may-001709847.html",
+   "value_b": "'More than one-third of the S-1' (Fortune, Jim Edwards)",
+   "source_b": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+   "note": "Small gap; Fortune's wording is looser. Page counts rest on Reuters alone."
+  },
+  {
+   "topic": "Proposed ticker",
+   "value_a": "None reported in any opened source",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "value_b": "'NASDAQ:ANTP' in the Investing.com relay text of the WSJ story",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "note": "The same piece labels OpenAI 'NASDAQ:OAI'; both look like auto-generated private-company tags, so no ticker is recorded."
+  },
+  {
+   "topic": "SpaceX AI-segment Q2 revenue",
+   "value_a": "$2,194M 'AI Solutions & Infrastructure' (SpaceX 10-Q Note 3)",
+   "source_a": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm",
+   "value_b": "$2.56B AI segment revenue (Blockspace, Aug 5, scout-2026q3)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/spacex-maps-path-toward-10-140021626.html",
+   "note": "Different basis or period; not reconciled. Neither names Anthropic revenue."
+  },
+  {
+   "topic": "Date of the Reuters 'mid-October' scoop",
+   "value_a": "Friday Sep 4 (Forbes Sep 7 cites 'Friday report'; FT/Chosunbiz headlines Sep 4-5)",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html",
+   "value_b": "Sep 8 07:00 GMT (Google News RSS date-only placeholder)",
+   "source_b": "https://news.google.com/rss/search?q=Anthropic+IPO+underwriters&hl=en-US&gl=US&ceid=US:en",
+   "note": "Event dated Sep 4; Reuters original not opened."
+  }
+ ],
+ "open_items": [
+  {
+   "claim": "Public S-1 contents: share count, price range, ticker, use of proceeds, selling stockholders, lockup length, underwriting discount, directed-share and 10b5-1 terms",
+   "why_unverified": "No public filing exists on EDGAR (searches of Sep 30); everything here is a leak of a draft or press speculation",
+   "best_lead": "EDGAR company page for Anthropic PBC once a public S-1 is filed"
+  },
+  {
+   "claim": "PitchBook Sep 21 note (October Nasdaq listing, up to $100B at ~$2T, ~$10B debt)",
+   "why_unverified": "Not located with WebFetch, RSS or the WebSearch budget; components trace to Business Insider Sep 13, Bloomberg Aug 18 and WSJ Sep 18",
+   "best_lead": "pitchbook.com/news (Sep 21) via a PitchBook subscription"
+  },
+  {
+   "claim": "FT's own Sep 29 prospectus article and NYT 'What's In Anthropic's I.P.O. Filing'",
+   "why_unverified": "Paywalled; only headlines seen in Google News RSS, so the FT as an independent second review is inferred from its headline and third-party attributions",
+   "best_lead": "https://www.ft.com (Sep 28-29) and nytimes.com (Sep 29)"
+  },
+  {
+   "claim": "Line items: cost of revenue, GAAP gross margin, R&D, S&M, G&A, stock-based compensation, debt, deferred revenue, remaining performance obligations, capex, headcount",
+   "why_unverified": "None appears in any opened source (Fortune's 'income statement snapshot' and the Yahoo explainer list them as not stated)",
+   "best_lead": "NYT/CNBC/Bloomberg write-ups of the draft; the public S-1"
+  },
+  {
+   "claim": "Dollar amount and definition of Q2 'adjusted operating income' (The Information: ~$559M 'operating profit')",
+   "why_unverified": "FT gives no amount; The Information relay (T4) is tied to the $10.9B figure that appears to be a projection",
+   "best_lead": "FT Sep 13 article; The Information Aug 27/Sep 3 originals"
+  },
+  {
+   "claim": "Revenue by channel: direct API vs cloud partners vs subscriptions vs Claude Code",
+   "why_unverified": "Only partial: consumption $3.8B, subscription $789M, 47% via Amazon/Google marketplaces; no Claude Code line",
+   "best_lead": "Prospectus MD&A via a full Reuters/NYT write-up"
+  },
+  {
+   "claim": "Geography beyond 'United States nearly two-thirds'",
+   "why_unverified": "No country split in any opened source",
+   "best_lead": "Public S-1 segment/geography note"
+  },
+  {
+   "claim": "Identities of the two 12% customers",
+   "why_unverified": "Unnamed in every opened source",
+   "best_lead": "Public S-1 customer-concentration note"
+  },
+  {
+   "claim": "Litigation summary, export-control risk factor, key-person risk and PBC/LTBT governance risk text",
+   "why_unverified": "Not quoted in any opened prospectus coverage; Reuters' timeline notes a $1.5B authors' settlement (Jul 2026) and the June export-control episode is T1 elsewhere",
+   "best_lead": "Reuters/NYT deep dives; public S-1 legal proceedings section"
+  },
+  {
+   "claim": "Lockup length, 10b5-1 plan mechanics and selling-shareholder size",
+   "why_unverified": "Only The Information relays (T4); original Jul 23 Reuters/The Information reports and Forbes Sep 22 not openable",
+   "best_lead": "The Information Jul 23, Aug 27; Reuters Jul 23"
+  },
+  {
+   "claim": "Reuters Sep 4 'IPO launch shifts toward mid-October' original and whether a roadshow is planned for October",
+   "why_unverified": "Reuters blocked; only Forbes' relay opened; a search-engine summary claimed an October roadshow for a November listing",
+   "best_lead": "Reuters Sep 4; WSJ Sep 18"
+  },
+  {
+   "claim": "SpaceX S-1 (acc. 0001628280-26-036936) and 424B4 (2026-06-12) text on Anthropic",
+   "why_unverified": "Main documents exceed the 10 MB fetch limit; T1 evidence is the SEC letters and CORRESP only",
+   "best_lead": "EDGAR Archives, CIK 1181412, via a size-unlimited client"
+  },
+  {
+   "claim": "Pre-IPO investor meetings (CNBC Jul 15 'bankers line up investor meetings'; CNBC Aug 13 CFO Krishna Rao leading early meetings and not discussing valuation)",
+   "why_unverified": "Headlines only; CNBC returns 403",
+   "best_lead": "CNBC Jul 15 and Aug 13; Investing.com Jul 15"
+  },
+  {
+   "claim": "AMD up-to-$5B equity purchase terms and whether Nscale, Lambda and Akamai sit inside the $518B",
+   "why_unverified": "Reuters gives no price or timing; per-line composition not disclosed",
+   "best_lead": "Reuters $518B article text; public S-1 contractual obligations table"
+  },
+  {
+   "claim": "Evan Hubinger '>10% chance AI kills humans within a decade' and the '6% of research compute on safety' line",
+   "why_unverified": "Reuters text as opened does not say whether they are prospectus disclosures or public statements",
+   "best_lead": "Reuters existential-risk article, full text"
+  },
+  {
+   "claim": "SOC Investment Group Sep 16 call to delay the IPO and the FTC probe of AI labs (Sep 30)",
+   "why_unverified": "Headlines only",
+   "best_lead": "Yahoo Finance Sep 16; Reuters Sep 30"
+  }
+ ],
+ "stats": {
+  "searches": 22,
+  "pages_opened": 70,
+  "events": 30,
+  "flags": 12,
+  "websearch_calls": 6,
+  "failed_or_blocked_opens": 19,
+  "note": "searches counts RSS/EDGAR queries plus 6 WebSearch calls (one errored); pages_opened counts pages successfully opened and logged; prospectus_facts=70"
+ },
  "prospectus_facts": [
   {
    "metric": "Revenue",

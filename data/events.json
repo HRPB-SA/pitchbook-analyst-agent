@@ -18733,11 +18733,6 @@
     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm",
     "publisher": "Amazon.com, Inc. Form 10-Q (Sep 30, 2025)",
     "tier": "T1"
-   },
-   {
-    "url": "https://www.theinformation.com/articles/anthropic-revenue-hits-4-billion-annual-pace-competition-cursor-intensifies",
-    "publisher": "The Information (headline only; paywalled)",
-    "tier": "T3"
    }
   ],
   "extracted": {
@@ -18802,7 +18797,7 @@
   "merged_ids": [
    "evt-20250710-rr-4b-ft-siliconangle"
   ],
-  "independent_sources": 3
+  "independent_sources": 2
  },
  {
   "id": "evt-20250714-dod-cdao-200m",
@@ -23492,7 +23487,7 @@
    }
   },
   "confidence": "MEDIUM",
-  "notes": "TipRanks (T4) relays a Reuters exclusive of Oct 15 (Google News RSS title only; Reuters not opened); SiliconANGLE Oct 23 independently says \"approaching $7B\". $26B is the 2026 annualized-run-rate upside; $20B base per The Information (Nov 4). | The Oct ~$7B figure is now supported by TipRanks (T4) and SiliconANGLE's Oct 23 'approaching $7B'; Reuters original blocked. Year-end forecasts: ~$9B (Reuters via TipRanks, Oct), $8-10B (Amodei, Dec 3), nearly $10B (Fortune, Dec 4) - consistent, not treated as a conflict. The 2026 $20-26B range is independently supported by The Information (Nov 4) and Reuters (Dec 2).",
+  "notes": "TipRanks (T4) does not name its source; the same figures (run-rate near $7B, ~$9B year-end target, up to $26B in 2026) match the Reuters exclusive of Oct 15 2025 (\"Anthropic aims to nearly triple annualized revenue in 2026\", cited in PitchBook's Mar 2026 note footnote 78; Reuters original not opened). SiliconANGLE Oct 23 independently says \"approaching $7B\". $26B is the 2026 run-rate upside; $20B base per The Information (Nov 4). | The Oct ~$7B figure is now supported by TipRanks (T4) and SiliconANGLE's Oct 23 'approaching $7B'; Reuters original blocked. Year-end forecasts: ~$9B (Reuters via TipRanks, Oct), $8-10B (Amodei, Dec 3), nearly $10B (Fortune, Dec 4) - consistent, not treated as a conflict. The 2026 $20-26B range is independently supported by The Information (Nov 4) and Reuters (Dec 2).",
   "agent": "desk-revenue",
   "agents": [
    "desk-revenue",
@@ -33329,7 +33324,7 @@
   "source": {
    "url": "https://finance.yahoo.com/news/anthropic-executives-pentagon-blacklisting-could-015740870.html",
    "publisher": "Reuters (via Yahoo Finance)",
-   "title": "Anthropic executives say Pentagon blacklisting could cut billions in revenue",
+   "title": "Reuters report on Anthropic executive declarations about Pentagon blacklisting [title inferred from URL slug]",
    "published": "2026-03-09",
    "tier": "T2",
    "opened": true
@@ -35562,6 +35557,16 @@
     "url": "https://valueaddvc.com/blog/is-anthropic-profitable-2026-losses-burn-rate-and-the-path-to-breakeven",
     "publisher": "valueaddvc.com",
     "tier": "T4"
+   },
+   {
+    "url": "https://siliconangle.com/2026/04/06/100b-question-ais-appetite-compute-rewriting-rules-tech/",
+    "publisher": "SiliconANGLE (Apr 6 2026; two profitability definitions)",
+    "tier": "T3"
+   },
+   {
+    "url": "https://www.fool.com/investing/2026/04/08/own-stock-spacex-openai-anthropic-pre-ipo-how/",
+    "publisher": "Motley Fool (Apr 8 2026; $150B 2029 revenue, profitability by 2028)",
+    "tier": "T4"
    }
   ],
   "extracted": {
@@ -35604,17 +35609,20 @@
      "2026": 33,
      "2027": 9
     },
-    "saastr_note": "Anthropic books revenue through cloud partners gross; OpenAI does not"
+    "saastr_note": "Anthropic books revenue through cloud partners gross; OpenAI does not",
+    "revenue_2029_projection_usd_m": 150000,
+    "profitability_reporting": "two definitions: training excluded vs included (SiliconANGLE citing WSJ)",
+    "biggest_loss_year_per_secondary": 2026
    }
   },
   "confidence": "VERIFY",
-  "notes": "WSJ original and Seeking Alpha summary not openable. The brief's figures (excl-training breakeven 2025; incl-training breakeven 2028; FCF trough -$25B in 2027; GM -94% -> 40% -> 63% (2027E) -> 77% (2028E)) could NOT be confirmed: the T4 summaries instead say positive FCF projected by 2027 and burn ~9% of revenue in 2027 (WSJ Nov 2025 per valueaddvc: 33% of revenue 2026, 9% 2027), which conflicts with a -$25B 2027 trough. -94% is the 2024 margin (The Information), 40% is 2025, 63%/77% are 2027E/2028E targets (PitchBook/The Information). Treat every number here as unverified secondary.",
+  "notes": "WSJ original and Seeking Alpha summary not openable. The brief's figures (excl-training breakeven 2025; incl-training breakeven 2028; FCF trough -$25B in 2027; GM -94% -> 40% -> 63% (2027E) -> 77% (2028E)) could NOT be confirmed: the T4 summaries instead say positive FCF projected by 2027 and burn ~9% of revenue in 2027 (WSJ Nov 2025 per valueaddvc: 33% of revenue 2026, 9% 2027), which conflicts with a -$25B 2027 trough. -94% is the 2024 margin (The Information), 40% is 2025, 63%/77% are 2027E/2028E targets (PitchBook/The Information). Treat every number here as unverified secondary. Added: SiliconANGLE (Apr 6, links the WSJ story) confirms both companies report profitability two ways - excluding and including training costs (training as cost of goods sold), without years; Motley Fool (Apr 8) cites projections of $150B revenue in 2029 and profitability by 2028 (training treatment unspecified); a paywalled newsletter chunk (via PitchBook MCP) says 2026 is the biggest loss year with profitability by 2029.",
   "agent": "desk-revenue",
   "agents": [
    "desk-revenue"
   ],
   "merged_ids": [],
-  "independent_sources": 3
+  "independent_sources": 5
  },
  {
   "id": "evt-20260407-mythos-preview-and-project-glasswing",
@@ -48214,7 +48222,7 @@
   "source": {
    "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html",
    "publisher": "Proactive Investors (via Yahoo Finance), summarizing Bloomberg",
-   "title": "Anthropic IPO could top SpaceX record listing",
+   "title": "Anthropic IPO could top SpaceX record listing [title inferred from URL slug]",
    "published": "2026-08-21",
    "tier": "T3",
    "opened": true
@@ -56696,7 +56704,7 @@
   "source": {
    "url": "https://finance.yahoo.com/technology/ai/articles/scoop-openais-annual-recurring-revenue-141540007.html",
    "publisher": "Axios (via Yahoo Finance)",
-   "title": "Scoop: OpenAI's annual recurring revenue nears $70 billion",
+   "title": "Scoop: OpenAI's annual recurring revenue (nearing $70 billion) [title inferred from URL slug]",
    "published": "2026-09-29",
    "tier": "T2",
    "opened": true
@@ -57497,7 +57505,7 @@
    }
   },
   "confidence": "HIGH",
-  "notes": "Four outlets (Calcalist, TradingKey, Investing.com, Yahoo) reproduce the Reuters text; Reuters computed the ~$351M fee. Usage-based revenue $3.8B and subscription $789M sum to the $4.59B total (subscription ~17%). Marketplace sales are booked GROSS as revenue (Anthropic is principal) with the platform share booked as a marketing expense, so the >80% pre-partner-share gross margin and the revenue total both include the channel economics. Two customers each generated 12% of revenue with no long-term contracts. Cloud providers collected 60% of the $909M of bills outstanding at end-2025 (42% in 2024). $54.6B non-cancellable hosting/compute commitments at end-2025; total long-term commitments >$417B in early 2026.",
+  "notes": "Single origin (Reuters review of the confidential draft): Calcalist, TradingKey, Investing.com and Yahoo reproduce the Reuters text, so they confirm transcription not independence; Reuters computed the ~$351M fee. Usage-based revenue $3.8B and subscription $789M sum to the $4.59B total (subscription ~17%). Marketplace sales are booked GROSS as revenue (Anthropic is principal) with the platform share booked as a marketing expense, so the >80% pre-partner-share gross margin and the revenue total both include the channel economics. Two customers each generated 12% of revenue with no long-term contracts. Cloud providers collected 60% of the $909M of bills outstanding at end-2025 (42% in 2024). $54.6B non-cancellable hosting/compute commitments at end-2025; total long-term commitments >$417B in early 2026.",
   "agent": "desk-revenue",
   "agents": [
    "desk-revenue"

@@ -1,0 +1,946 @@
+{
+ "agent": "verify-audit-1",
+ "role": "Record Auditor",
+ "started": "2026-09-30T18:37:34Z",
+ "finished": "2026-09-30T18:51:36Z",
+ "results": [
+  {
+   "audit_id": "A-001",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "Claude Enterprise",
+     "page_says": "Claude Enterprise plan",
+     "match": true,
+     "basis_note": ""
+    }
+   ],
+   "evidence": "\"Today, we're announcing the Claude Enterprise plan\"; only GitLab and Midjourney named",
+   "note": "MATERIAL: BCG is not named anywhere on the page (only GitLab and Midjourney). Audit logs and SCIM are 'available in the coming weeks', not at launch, yet the summary lists them as launched. DATE: the cited claude.com page is stamped September 10, 2024 (6 days after the record's 2024-09-04); TechCrunch launch coverage is dated Sep 4, 2024, so the event date looks right and the page carries a later re-publication date. 500K context, GitHub integration (beta), SSO/domain capture and role-based permissions match.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-002",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 10000.0,
+     "page_says": "roughly $10 billion target, expected to be exceeded",
+     "match": true,
+     "basis_note": "Target size of the revolver, not a committed or final amount; the summary also frames it as a target to be exceeded"
+    }
+   ],
+   "evidence": "facility \"is expected to exceed its roughly $10 billion target, Bloomberg News reported\"",
+   "note": "Reuters (on Yahoo Finance, Aug 18, 2026) relays Bloomberg. Also on page: lead banks asked for about $1.25B each; banks 'jockeying' for IPO roles. Page adds that Anthropic could still limit the revolver to the target or below.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-003",
+   "verdict": "PARTLY",
+   "figure_checks": [],
+   "evidence": "Landing page: title, date 'Mar 8, 2022', 'Read Paper' link; no abstract",
+   "note": "MODERATE: Anthropic's page carries only the title, date (Mar 8, 2022) and a link to transformer-circuits.pub; the claim that induction heads are the mechanism behind in-context learning, and that it extends the Dec 2021 framework, is not on this page. I opened the linked paper: it says induction heads 'might constitute the mechanism for the actual majority of all in-context learning' (hedged) and builds on the earlier mathematical-framework work, so the claim holds only via the linked document.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-004",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "Claude Fable 5 / Mythos 5",
+     "page_says": "Claude Fable 5 and Claude Mythos 5",
+     "match": true,
+     "basis_note": ""
+    },
+    {
+     "field": "product_price_in_per_mtok",
+     "claimed": 10,
+     "page_says": "no price on the page (no dollar amounts at all)",
+     "match": false,
+     "basis_note": "figure not on page"
+    },
+    {
+     "field": "product_price_out_per_mtok",
+     "claimed": 50,
+     "page_says": "no price on the page (no dollar amounts at all)",
+     "match": false,
+     "basis_note": "figure not on page"
+    }
+   ],
+   "evidence": "\"export controls on Fable 5 and Mythos 5 have been lifted\" as of June 30",
+   "note": "MATERIAL (extracted prices): core events match: controls lifted June 30; Fable 5 global from July 1 (page carries a Jul 1, 2026 update 'now restored'); Mythos 5 restored first for a set of US organizations; up to 50% of weekly limits through July 7; classifier blocks the reported technique in over 99% of cases. The $10/$50 per-MTok prices are nowhere on the page. Nuance: the 50% allowance covers Pro, Max, Team and select Enterprise seats (standard Enterprise seats excluded), not all paid plans.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-005",
+   "verdict": "SUPPORTED",
+   "figure_checks": [],
+   "evidence": "\"Business Insider was first to report... Anthropic has since confirmed with TechCrunch\"",
+   "note": "TechCrunch In Brief, Aug 5, 2026: Anthropic confirmed it is building a team to design custom chips and plans to co-design hardware and models; the job listing seeks chip-design engineers for a 'custom silicon team'. Article was updated to add Anthropic's confirmation.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-006",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "revenue_run_rate_usd_m",
+     "claimed": 26000.0,
+     "page_says": "projecting to more than double and potentially nearly triple its annualized revenue run rate to around $26 billion next year",
+     "match": false,
+     "basis_note": "Forward projection for next year (2026), not a current or reported run-rate; the number matches but the basis is projected"
+    }
+   ],
+   "evidence": "\"hired the law firm Wilson Sonsini ... as early as 2026, the Financial Times reported\"",
+   "note": "MATERIAL (figure basis): narrative matches (Reuters on Yahoo, Dec 2, 2025): FT report, Wilson Sonsini, early informal bank talks, private round above $300B, spokesperson 'has not decided when or even if'. The $26B is a projected annualized run-rate for 2026, so recording it as a run-rate figure is a basis error; that sentence is Reuters text and is not attributed to the FT.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-007",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "summary:author_count",
+     "claimed": 22,
+     "page_says": "Amanda Askell and 21 other authors",
+     "match": true,
+     "basis_note": ""
+    },
+    {
+     "field": "summary:arxiv_id",
+     "claimed": "2112.00861",
+     "page_says": "arXiv:2112.00861",
+     "match": true,
+     "basis_note": ""
+    }
+   ],
+   "evidence": "\"ranked preference modeling performs much better than imitation learning, and often scales more favorably\"",
+   "note": "MINOR: title, 22 authors, arXiv ID, v1 submitted 1 Dec 2021, the helpful-honest-harmless framing and the ranked-preference-modeling result all match the abstract. Not on the page: that it is 'Anthropic's' paper (no affiliations shown) or its 'first major alignment paper' (editorial framing).",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-008",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "summary:author_count",
+     "claimed": 16,
+     "page_says": "Nelson Elhage and 15 other authors",
+     "match": true,
+     "basis_note": ""
+    },
+    {
+     "field": "summary:arxiv_id",
+     "claimed": "2209.10652",
+     "page_says": "arXiv:2209.10652",
+     "match": true,
+     "basis_note": ""
+    }
+   ],
+   "evidence": "polysemanticity \"arising as a result of models storing additional sparse features in 'superposition'\"",
+   "note": "MINOR: title, 16 authors, arXiv ID, v1 21 Sep 2022 and the superposition/polysemanticity claim match the abstract. Not on the page: 'groundwork for later dictionary-learning interpretability' (editorial claim about later work; the abstract only mentions 'potential implications for mechanistic interpretability').",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-009",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "Claude (v1, internal)",
+     "page_says": "first version of our headline model, Claude",
+     "match": true,
+     "basis_note": "page says only 'spring of 2022'; no day-level date"
+    }
+   ],
+   "evidence": "\"trained the first version of our headline model, Claude, in the spring of 2022\"",
+   "note": "MODERATE: core fact is on the page (trained spring 2022; prioritized for safety research rather than public deployment; deployment began later). Not on the page: any attribution of that decision to race dynamics; the nearby rationale is that Anthropic does not wish 'to advance the rate of AI capabilities progress' and is thoughtful about demonstrating frontier capabilities, and 'competitive races' appear only as a general risk elsewhere. DATE: page was published Mar 8, 2023 and gives only 'spring of 2022'; the record's 2022-04-01 is a proxy the page does not state.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-010",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 20.0,
+     "page_says": "Anthropic is contributing $20 million to Public First Action",
+     "match": true,
+     "basis_note": "announced contribution; no 'up to' qualifier"
+    }
+   ],
+   "evidence": "\"contributing $20 million to Public First Action, a new bipartisan 501(c)(4)\"",
+   "note": "MODERATE: amount, recipient, 501(c)(4) status, date (Feb 12, 2026) and the aims (transparency safeguards, federal AI governance framework, export controls) match. 'Ahead of the midterms' is not on the page: no mention of midterms or elections anywhere. Page also lists a fourth aim (targeted regulation of bio and cyber risks) that the summary omits.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-011",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 450.0,
+     "page_says": "raised $450 million in a Series C funding round led by Spark Capital",
+     "match": true,
+     "basis_note": "round size raised (announced close)"
+    },
+    {
+     "field": "summary:valuation_4_1b",
+     "claimed": 4100,
+     "page_says": "The Information reported in early March the company was seeking to raise at an over-$4.1 billion valuation",
+     "match": true,
+     "basis_note": "a March target valuation reported by The Information, not a disclosed round valuation; Anthropic would not disclose what the round valued it at"
+    },
+    {
+     "field": "summary:valuation_5b",
+     "claimed": 5000,
+     "page_says": "no $5B valuation; only 'aims to raise as much as $5 billion over the next two years'",
+     "match": false,
+     "basis_note": "the only $5B on the page is a fundraising goal, not a valuation"
+    }
+   ],
+   "evidence": "\"Anthropic wouldn't disclose what the round valued its business at\"",
+   "note": "MATERIAL (half the claimed conflict): page (TechCrunch, May 23, 2023) supports the $450M Series C and the $4.1B report (with the caveat above). It does not mention CNBC, VentureBeat or any ~$5B valuation, so the claimed conflict between $4.1B and ~$5B cannot be confirmed from this URL; that half rests on other articles.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-012",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "Claude Sonnet (in Xcode)",
+     "page_says": "new version of Xcode that relies on Anthropic's Claude Sonnet model",
+     "match": true,
+     "basis_note": ""
+    }
+   ],
+   "evidence": "\"roll out the software internally\" but \"hasn't decided if it will launch it publicly\"",
+   "note": "TechCrunch (May 2, 2025) relays Bloomberg's Friday report: a vibe-coding platform that is a new version of Xcode built on Claude Sonnet; internal rollout at Apple planned, no public-launch decision.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-013",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 7000.0,
+     "page_says": "discussed buying MatX for roughly $7 billion",
+     "match": true,
+     "basis_note": "discussed/proposed purchase price per two sources; no deal was agreed, which the summary also says"
+    }
+   ],
+   "evidence": "\"Anthropic discussed buying artificial intelligence chip startup MatX for roughly $7 billion\"",
+   "note": "Reuters exclusive (Aug 27, 2026) on Yahoo: MatX founded by former Google TPU engineers; merger talks 'have evolved into a discussion about a partnership'; Reuters could not learn why the talks are no longer active; MatX now seeking new capital at about a $4B valuation.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-014",
+   "verdict": "SUPPORTED",
+   "figure_checks": [],
+   "evidence": "\"we spent more than 150 hours with top biosecurity experts red teaming\"",
+   "note": "Anthropic page (Jul 26, 2023): 'unmitigated LLMs could accelerate a bad actor's efforts to misuse biology'; risks 'may be actualized in the next two to three years'; training changes 'meaningfully reduce harmful outputs'. The two-to-three-year timing is hedged on the page ('we worry', 'if unmitigated', 'may').",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-015",
+   "verdict": "SUPPORTED",
+   "figure_checks": [],
+   "evidence": "\"More than 100\" hires \"will join its offices in Dublin, London and Zurich\"",
+   "note": "SiliconANGLE (Sep 26, 2025) relays CNBC: triple headcount outside the US, 100+ hires in Dublin/London/Zurich, applied AI team fivefold by year-end ('reportedly'), first Asia office in Tokyo, Chris Ciauri newly appointed managing director of international. Minor wording gaps: the page attributes the plan to 'CNBC reported' (summary says 'Anthropic said') and calls the raise the 'most recent funding round' ($13B at $183B) without the label 'Series F'.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-016",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "compute_partner",
+     "claimed": "SpaceX / xAI (Colossus 1, Memphis)",
+     "page_says": "Colossus 1 data center near Memphis, Tennessee; SpaceX's xAI unit",
+     "match": true,
+     "basis_note": ""
+    },
+    {
+     "field": "compute_usd_m",
+     "claimed": 40000,
+     "page_says": "a deal worth about $40 billion in revenue for SpaceX's xAI unit",
+     "match": true,
+     "basis_note": "total contract value over the term as stated by the article ('about'), not a disclosed cash figure"
+    },
+    {
+     "field": "compute_gw",
+     "claimed": 0.3,
+     "page_says": "300 megawatts",
+     "match": true,
+     "basis_note": "300 MW = 0.3 GW"
+    },
+    {
+     "field": "compute_term",
+     "claimed": "$1.25B/month through May 2029",
+     "page_says": "$1.25 billion per month through May 2029",
+     "match": true,
+     "basis_note": ""
+    }
+   ],
+   "evidence": "\"I was clearly wrong about Anthropic\"; $1.25 billion per month through May 2029",
+   "note": "TechCrunch (Jul 9, 2026): Musk wrote 'I was clearly wrong about Anthropic' and 'I would never cut them off in a way that hurt them badly, even as a competitor'; Anthropic buys 300 MW, the entire output of Colossus 1. The $40B is the article's own total. Nuance: Musk's vow is qualified ('in a way that hurt them badly'), matching TechCrunch's own headline framing.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-017",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 100.0,
+     "page_says": "a $100 million investment in partner training, technical support, and shared marketing",
+     "match": true,
+     "basis_note": "committed in March 2026 at the Partner Network launch; existing commitment, not new money in this announcement"
+    }
+   ],
+   "evidence": "backed by a $100 million investment in partner training, technical support, and shared marketing",
+   "note": "Anthropic (Jun 3, 2026): Services Track (Select, Preferred, Global Premier) and Claude Partner Hub announced; Accenture, Cognizant, Deloitte, KPMG, Infosys and PwC are each named with their Claude rollouts. The page says the $100M was committed in March, which fits 'backed by the $100M programme'.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-018",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 1250.0,
+     "page_says": "Amazon will invest up to $4 billion; no $1.25 billion or 'initial' figure anywhere on the page",
+     "match": false,
+     "basis_note": "page gives only the up-to-$4B cap; the $1.25B initial tranche is not in this release"
+    },
+    {
+     "field": "compute_partner",
+     "claimed": "AWS",
+     "page_says": "AWS will become Anthropic's primary cloud provider for mission critical workloads",
+     "match": true,
+     "basis_note": ""
+    },
+    {
+     "field": "compute_term",
+     "claimed": "long-term (unspecified)",
+     "page_says": "Anthropic makes a long-term commitment ... via Amazon Bedrock",
+     "match": true,
+     "basis_note": "'long-term' attaches to the Bedrock commitment; no term length given"
+    },
+    {
+     "field": "product_name",
+     "claimed": "Claude on Amazon Bedrock",
+     "page_says": "access to future generations of its foundation models via Amazon Bedrock",
+     "match": true,
+     "basis_note": ""
+    }
+   ],
+   "evidence": "\"Amazon will invest up to $4 billion in Anthropic and have a minority ownership position\"",
+   "note": "MATERIAL (extracted amount): the release (Sep 25, 2023) says only 'up to $4 billion' and a minority stake; the 'initial $1.25 billion' (the claimed amount_usd_m) does not appear on it. AWS primary cloud, Trainium/Inferentia chips and the long-term Bedrock commitment all match.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-019",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "Claude Mythos 5 / Opus 4.7 / internal model",
+     "page_says": "four models: an early checkpoint of Claude Opus 4.6, Claude Opus 4.7, Claude Mythos 5, and an internal general-purpose research model",
+     "match": false,
+     "basis_note": "incomplete: omits the early Opus 4.6 checkpoint (the January 2026 fourth incident)"
+    }
+   ],
+   "evidence": "\"four incidents in which Claude models gained unauthorized access to real third-party systems\"",
+   "note": "MINOR: core claims match (Sep 9, 2026): four incidents, biased reasoning and recklessness as the two alignment issues, scan widened from roughly 141,000 to roughly 481 million transcripts (both 'roughly'). The product_name field lists three of the four models and omits the early Claude Opus 4.6 checkpoint. Page counts four incidents involving four models (the Opus 4.7 incident spanned four runs); summary says 'four instances'.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-020",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "DuckAssist (customer product)",
+     "page_says": "DuckAssist, a new beta Instant Answer in our search results",
+     "match": true,
+     "basis_note": "page calls it a beta"
+    }
+   ],
+   "evidence": "\"natural language technology from OpenAI and Anthropic to summarize what we find in Wikipedia\"",
+   "note": "MINOR: DuckDuckGo's own post (filed 8 Mar 2023) confirms the launch, an AI-generated beta Instant Answer, and OpenAI and Anthropic technology. Not on the page: 'an early named customer deployment before Claude's public launch' (the page never mentions Claude or Claude's launch; the chronology is outside context). Page also says answers summarize Wikipedia content.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-021",
+   "verdict": "PARTLY",
+   "figure_checks": [],
+   "evidence": "\"was written into our Series A investment documents in 2021\"",
+   "note": "MINOR (date): all substance matches (Long-Term Benefit Committee in the Series A documents in 2021; Class T stock created 'at the close of our Series C'). But the page gives the event only as 'in 2021' and is itself published Sep 19, 2023; the record's 2021-05-28 day is not on the page, so the event date cannot be confirmed at day level from this URL.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-022",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "summary:word_count",
+     "claimed": 15000,
+     "page_says": "not stated on page; counting the page text gives roughly 14,700 words including navigation and footnotes",
+     "match": true,
+     "basis_note": "approximate, by my count; no word count printed on the page"
+    }
+   ],
+   "evidence": "\"could come as early as 2026\"; \"50-100 years of biological progress in 5-10 years\"",
+   "note": "MODERATE: 'as early as 2026' matches (essay adds 'though there are also ways it could take much longer'). The 50-100-years-into-5-10-years compression is stated for biology and explicitly extended to neuroscience; it is not stated for economic development, governance or work, which the summary lumps in. Date: page shows only 'October 2024' (record's 2024-10-11 is within the month). Word count is not on the page.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-023",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 10000.0,
+     "page_says": "gearing up to raise a fresh $10 billion at a $350 billion valuation",
+     "match": true,
+     "basis_note": "reported raise in progress (WSJ, confirmed by a TechCrunch source), not closed; article says the total 'could change'; valuation not labelled pre- or post-money"
+    }
+   ],
+   "evidence": "\"gearing up to raise a fresh $10 billion at a $350 billion valuation\"",
+   "note": "TechCrunch (Jan 7, 2026) cites the WSJ: Coatue and GIC to lead; expected to close 'in the coming weeks'; separate from the $15B Nvidia/Microsoft commitment. Reported, not closed.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-024",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 15000.0,
+     "page_says": "set to finalize expanding its revolving credit facility to $15 billion",
+     "match": true,
+     "basis_note": "expected size of a facility not yet finalized; page says details could still change"
+    }
+   ],
+   "evidence": "\"set to finalize expanding its revolving credit facility to $15 billion\"",
+   "note": "MODERATE: Bloomberg (on Yahoo, Sep 3, 2026): Morgan Stanley leading; Goldman Sachs, JPMorgan and Citigroup prominent; 17 banks named (page lists 17 but never states the count); prior $2.5B five-year facility secured 'last year'. The 'Forbes says finalized by Sept 7' part is not on the page (no mention of Forbes; the article predates Sept 7), so it rests on another source.",
+   "page_is_primary": true
+  }
+ ],
+ "log": [
+  {
+   "type": "note",
+   "text": "Brief and items file read (24 items). Listed the agents/outputs directory once for file names only to confirm it exists; opened no file there or elsewhere under the repo.",
+   "seq": 1,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Claude Enterprise plan announcement (claude.com/blog); page stamped September 10, 2024",
+   "url": "https://claude.com/blog/claude-for-enterprise",
+   "event_id": "A-001",
+   "seq": 2,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "verify",
+   "text": "Raw HTML check: only GitLab and Midjourney named as early customers, no BCG; audit logs and SCIM 'available in the coming weeks'",
+   "url": "https://claude.com/blog/claude-for-enterprise",
+   "event_id": "A-001",
+   "seq": 3,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened TechCrunch launch coverage to cross-check the launch date: dated Sep 4, 2024, also no BCG",
+   "url": "https://techcrunch.com/2024/09/04/anthropic-launches-claude-enterprise-plan-to-compete-with-openai/",
+   "event_id": "A-001",
+   "seq": 4,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "flag",
+   "text": "A-001: BCG is not on the page; audit logs/SCIM are only 'coming weeks'; cited page shows Sep 10, 2024 vs record Sep 4 (launch coverage says Sep 4)",
+   "event_id": "A-001",
+   "seq": 5,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-001 PARTLY: Enterprise launch confirmed; BCG unsupported; audit logs/SCIM not available at launch",
+   "event_id": "A-001",
+   "seq": 6,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Reuters/Yahoo Finance piece on the pre-IPO revolver (Aug 18, 2026)",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html",
+   "event_id": "A-002",
+   "seq": 7,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-002 SUPPORTED: revolver expected to exceed roughly $10B target; banks asked for about $1.25B each; IPO-role jockeying; Reuters relaying Bloomberg",
+   "event_id": "A-002",
+   "seq": 8,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Anthropic induction-heads landing page (Mar 8, 2022): title, date and Read Paper link only",
+   "url": "https://www.anthropic.com/news/in-context-learning-and-induction-heads",
+   "event_id": "A-003",
+   "seq": 9,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened the linked paper on transformer-circuits.pub to see where the claim actually lives",
+   "url": "https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html",
+   "event_id": "A-003",
+   "seq": 10,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-003 PARTLY: page has no abstract; the induction-heads-as-mechanism claim and the Dec 2021 lineage are only in the linked paper (and hedged there)",
+   "event_id": "A-003",
+   "seq": 11,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Anthropic 'Redeploying Fable 5' post (Jun 30, 2026, Jul 1 update)",
+   "url": "https://www.anthropic.com/news/redeploying-fable-5",
+   "event_id": "A-004",
+   "seq": 12,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "flag",
+   "text": "A-004: claimed $10/$50 per-MTok prices are not on the page; there are no dollar amounts on it at all",
+   "event_id": "A-004",
+   "seq": 13,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-004 PARTLY: restoration, Mythos 5 US-first, 50% allowance through Jul 7 and >99% classifier figure all match; prices absent",
+   "event_id": "A-004",
+   "seq": 14,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened TechCrunch In Brief on Anthropic's chip-design hiring (Aug 5, 2026)",
+   "url": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/",
+   "event_id": "A-005",
+   "seq": 15,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-005 SUPPORTED: Business Insider first, Anthropic confirmed to TechCrunch, co-design of hardware and models, custom silicon team",
+   "event_id": "A-005",
+   "seq": 16,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Reuters/Yahoo piece relaying the FT report on Wilson Sonsini and IPO (Dec 2, 2025)",
+   "url": "https://finance.yahoo.com/news/anthropic-plans-ipo-early-2026-004854547.html",
+   "event_id": "A-006",
+   "seq": 17,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "flag",
+   "text": "A-006: the $26B 'run-rate' is a projection for next year (2026), not a current run-rate; wrong basis for the claimed figure",
+   "event_id": "A-006",
+   "seq": 18,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-006 PARTLY: narrative fully supported; revenue_run_rate_usd_m 26000 is a forward projection",
+   "event_id": "A-006",
+   "seq": 19,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened arXiv abstract page 2112.00861 (Askell et al.)",
+   "url": "https://arxiv.org/abs/2112.00861",
+   "event_id": "A-007",
+   "seq": 20,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-007 PARTLY (minor): title, 22 authors, Dec 1 2021 and ranked-preference-modeling result match; 'Anthropic's first major alignment paper' is not on the page",
+   "event_id": "A-007",
+   "seq": 21,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened arXiv abstract page 2209.10652 (Toy Models of Superposition)",
+   "url": "https://arxiv.org/abs/2209.10652",
+   "event_id": "A-008",
+   "seq": 22,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-008 PARTLY (minor): title, 16 authors, Sep 21 2022 and superposition/polysemanticity match; 'groundwork for dictionary learning' is not on the page",
+   "event_id": "A-008",
+   "seq": 23,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Anthropic 'Core Views on AI Safety' (Mar 8, 2023)",
+   "url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+   "event_id": "A-009",
+   "seq": 24,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "verify",
+   "text": "Raw text check: 'spring of 2022' sentence present; the stated rationale nearby is not advancing capabilities progress; race dynamics not cited for this decision",
+   "url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+   "event_id": "A-009",
+   "seq": 25,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "flag",
+   "text": "A-009: page does not cite race dynamics for withholding Claude, and gives only 'spring 2022' (record date 2022-04-01 is a proxy)",
+   "event_id": "A-009",
+   "seq": 26,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-009 PARTLY: core fact on page; motive attribution and day-level date are not",
+   "event_id": "A-009",
+   "seq": 27,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Anthropic post on the $20M Public First Action donation (Feb 12, 2026)",
+   "url": "https://www.anthropic.com/news/donate-public-first-action",
+   "event_id": "A-010",
+   "seq": 28,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "verify",
+   "text": "Full-text search of the page: no mention of midterms or elections",
+   "url": "https://www.anthropic.com/news/donate-public-first-action",
+   "event_id": "A-010",
+   "seq": 29,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "flag",
+   "text": "A-010: 'ahead of the midterms' is not on the page",
+   "event_id": "A-010",
+   "seq": 30,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-010 PARTLY: $20M, 501(c)(4), transparency/federal governance/export-control aims all match; midterms framing absent",
+   "event_id": "A-010",
+   "seq": 31,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened TechCrunch Series C article (May 23, 2023)",
+   "url": "https://techcrunch.com/2023/05/23/anthropic-raises-350m-to-build-next-gen-ai-assistants/",
+   "event_id": "A-011",
+   "seq": 32,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "flag",
+   "text": "A-011: no ~$5B valuation on the page (only a goal to raise as much as $5B over two years) and no CNBC/VentureBeat; the claimed valuation conflict is half-supported",
+   "event_id": "A-011",
+   "seq": 33,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-011 PARTLY: $450M Series C and The Information's over-$4.1B report confirmed; the ~$5B side is not on this page",
+   "event_id": "A-011",
+   "seq": 34,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened TechCrunch relay of Bloomberg on Apple/Anthropic Xcode (May 2, 2025)",
+   "url": "https://techcrunch.com/2025/05/02/apple-and-anthropic-reportedly-partner-to-build-an-ai-coding-platform/",
+   "event_id": "A-012",
+   "seq": 35,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "found",
+   "text": "A-012 SUPPORTED: Xcode vibe-coding platform on Claude Sonnet, internal rollout first, no public-launch decision",
+   "event_id": "A-012",
+   "seq": 36,
+   "ts": "2026-09-30T18:50:11Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Reuters exclusive on Yahoo about the MatX purchase talks (Aug 27, 2026)",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropic-planned-then-abandoned-212219718.html",
+   "event_id": "A-013",
+   "seq": 37,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-013 SUPPORTED: discussed buying MatX for roughly $7B; talks evolved into partnership discussion; MatX seeking about $4B valuation",
+   "event_id": "A-013",
+   "seq": 38,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Anthropic frontier-threats red-teaming post (Jul 26, 2023)",
+   "url": "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety",
+   "event_id": "A-014",
+   "seq": 39,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-014 SUPPORTED: 150+ hours, two-to-three-year near-term risk wording and 'meaningfully reduce harmful outputs' all on page",
+   "event_id": "A-014",
+   "seq": 40,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened SiliconANGLE piece relaying CNBC on international expansion (Sep 26, 2025)",
+   "url": "https://siliconangle.com/2025/09/26/anthropic-triple-international-headcount-add-offices-following-latest-funding-round/",
+   "event_id": "A-015",
+   "seq": 41,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-015 SUPPORTED: triple headcount, 100+ hires in Dublin/London/Zurich, fivefold applied AI, Tokyo, Ciauri; secondary source, 'Series F' label not printed",
+   "event_id": "A-015",
+   "seq": 42,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened TechCrunch on Musk's Mythos/Fable comments and the Colossus 1 deal (Jul 9, 2026)",
+   "url": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/",
+   "event_id": "A-016",
+   "seq": 43,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-016 SUPPORTED: 'clearly wrong about Anthropic', 300 MW Colossus 1, $1.25B/month through May 2029, about $40B all on page",
+   "event_id": "A-016",
+   "seq": 44,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Anthropic Services Track and Partner Hub announcement (Jun 3, 2026)",
+   "url": "https://www.anthropic.com/news/services-track-partner-hub",
+   "event_id": "A-017",
+   "seq": 45,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-017 SUPPORTED: three tiers, Partner Hub, $100M (committed in March), all six firms named",
+   "event_id": "A-017",
+   "seq": 46,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Amazon press release on the Anthropic collaboration (Sep 25, 2023)",
+   "url": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "event_id": "A-018",
+   "seq": 47,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "verify",
+   "text": "Full-text search of the release for '1.25', 'initial', '$1': no matches; only dollar figure is 'up to $4 billion'",
+   "url": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "event_id": "A-018",
+   "seq": 48,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "flag",
+   "text": "A-018: the claimed $1.25B initial investment is not in the Amazon release; it says only 'up to $4 billion'",
+   "event_id": "A-018",
+   "seq": 49,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-018 PARTLY: up-to-$4B minority stake, AWS primary cloud, Trainium/Inferentia, Bedrock commitment match; amount_usd_m 1250 absent",
+   "event_id": "A-018",
+   "seq": 50,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Anthropic alignment assessment of four cybersecurity incidents (Sep 9, 2026)",
+   "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+   "event_id": "A-019",
+   "seq": 51,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "note",
+   "text": "A-019: page lists four models (early Opus 4.6 checkpoint, Opus 4.7, Mythos 5, internal research model); claimed product_name omits the Opus 4.6 checkpoint",
+   "event_id": "A-019",
+   "seq": 52,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-019 PARTLY (minor): 141,000 to 481 million transcripts, biased reasoning and recklessness, January fourth incident all on page; product_name incomplete",
+   "event_id": "A-019",
+   "seq": 53,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened DuckDuckGo's DuckAssist launch post (filed 8 Mar 2023)",
+   "url": "https://spreadprivacy.com/duckassist-launch/",
+   "event_id": "A-020",
+   "seq": 54,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-020 PARTLY (minor): launch and OpenAI/Anthropic technology confirmed; 'before Claude's public launch' is not on the page (Claude is never mentioned)",
+   "event_id": "A-020",
+   "seq": 55,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Anthropic Long-Term Benefit Trust post (Sep 19, 2023)",
+   "url": "https://www.anthropic.com/news/the-long-term-benefit-trust",
+   "event_id": "A-021",
+   "seq": 56,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-021 PARTLY (minor): Series A 2021 committee and Class T at Series C confirmed in footnote/body; page gives only 'in 2021', so day-level date 2021-05-28 is unconfirmed",
+   "event_id": "A-021",
+   "seq": 57,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Dario Amodei's 'Machines of Loving Grace' essay (page shows October 2024)",
+   "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+   "event_id": "A-022",
+   "seq": 58,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "verify",
+   "text": "Searched essay text for every '50-100' and '5-10 years' use: the 50-100-into-5-10 compression is stated for biology and neuroscience only",
+   "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+   "event_id": "A-022",
+   "seq": 59,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "flag",
+   "text": "A-022: summary applies the 50-100-years-into-5-10 compression to all five domains; essay states it for biology and neuroscience only",
+   "event_id": "A-022",
+   "seq": 60,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-022 PARTLY: 'as early as 2026' and five-domain scope match; compression claim overgeneralized; word count (~14.7K by my count) not printed on page",
+   "event_id": "A-022",
+   "seq": 61,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened TechCrunch on the reported $10B raise at $350B (Jan 7, 2026)",
+   "url": "https://techcrunch.com/2026/01/07/anthropic-reportedly-raising-10b-at-350b-valuation/",
+   "event_id": "A-023",
+   "seq": 62,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-023 SUPPORTED: WSJ-sourced $10B at $350B, Coatue and GIC lead, close in coming weeks, separate from $15B Nvidia/Microsoft commitment",
+   "event_id": "A-023",
+   "seq": 63,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "open",
+   "text": "Opened Bloomberg piece on Yahoo about the $15B pre-IPO revolver (Sep 3, 2026)",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+   "event_id": "A-024",
+   "seq": 64,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "verify",
+   "text": "Counted named lenders: 17; searched for Forbes and 'Sept 7': not present (article is dated Sep 3)",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+   "event_id": "A-024",
+   "seq": 65,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "flag",
+   "text": "A-024: the 'Forbes says finalized by Sept 7' claim is not on the cited page",
+   "event_id": "A-024",
+   "seq": 66,
+   "ts": "2026-09-30T18:51:36Z"
+  },
+  {
+   "type": "found",
+   "text": "A-024 PARTLY: $15B revolver nearing finalization, Morgan Stanley lead, 17 banks, $2.5B 2025 facility all match; Forbes/Sept 7 absent",
+   "event_id": "A-024",
+   "seq": 67,
+   "ts": "2026-09-30T18:51:36Z"
+  }
+ ],
+ "stats": {
+  "pages_opened": 26,
+  "supported": 9,
+  "partly": 15,
+  "not_supported": 0,
+  "unopenable": 0,
+  "flags": 9
+ }
+}

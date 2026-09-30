@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T18:48:34Z",
+ "generated": "2026-09-30T18:51:52Z",
  "raw_events": 996,
  "merged_events": 667,
  "tiers": {
@@ -452,6 +452,258 @@
    "source_b": "https://claude.com/blog/claude-for-enterprise",
    "note": "claude.com re-stamped older posts after the Sep 2025 brand migration; prompt-caching copy shows 'August 14, 2025' but includes a Dec 17 2024 update line. T2/brief dates used.",
    "agent": "desk-product"
+  },
+  {
+   "topic": "FY2024 revenue: recognized vs PitchBook field (DISPUTED until basis is fixed)",
+   "value_a": "~$386M recognized (implied by +1,088% to $4.59B; SiliconANGLE rounds to $400M); FY2024 operating loss $2.98B",
+   "source_a": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+   "value_b": "$1,000M (PitchBook TTM 4Q2024; also Amodei '$1B in 2024' and company '~$1B at the start of 2025')",
+   "source_b": "https://my.pitchbook.com/profile/466959-97/company/profile",
+   "note": "Gap 2.6x. Basis difference, not a data error: $1.0B is the exit run-rate (annualized December 2024), $0.386B is GAAP revenue recognized in the year, gross of cloud resale. Recognized/exit-run-rate = 0.39x. A model must not use the PitchBook TTM field as FY revenue. Prospectus figures come from a leaked draft (no public S-1 on EDGAR).",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "FY2025 revenue: recognized vs PitchBook / CEO 'revenue' (DISPUTED until basis is fixed)",
+   "value_a": "$4,590M recognized ($3.8B usage-based + $789M subscription), 12x YoY",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "value_b": "$10,000M (PitchBook TTM 4Q2025; brief says it was $9.0B earlier); CEO $8-10B; Fortune nearly $10B; company ~$9B at end-2025",
+   "source_b": "https://my.pitchbook.com/profile/466959-97/company/profile",
+   "note": "Gap 2.2x. Basis: exit run-rate vs recognized revenue. Desk integration of the sourced monthly run-rate path gives ~$4.3B, within ~7% of $4.59B, so the two are mutually consistent once basis is aligned (recognized/exit = 0.51x). The PitchBook $9.0B -> $10.0B revision cannot be traced through the tool; both round numbers are run-rate style.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "Q1 2026 recognized revenue vs run-rate path (derived cross-check)",
+   "value_a": "$4,730M (Fortune, leaked prospectus); $4.8B (WSJ/FT, May 20)",
+   "source_a": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+   "value_b": "~$4.0-4.2B implied by straight-line integration of run-rate points ($9B Dec 31, $14B Feb 12, $19B Mar 3, >$30B late Mar) - derived by this desk, not sourced",
+   "source_b": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+   "note": "13-20% gap, above the 10% threshold; gross/net is not the cause (both gross). Most likely a steeper intra-quarter ramp than straight lines between sparse points; unresolved until monthly data appear in the S-1. Q2 2026 shows no such gap (Q2 x4 = $46B vs run-rate $30B to $47B to $65B).",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "Current run-rate above $65B (DISPUTED for any figure above $65B)",
+   "value_a": "$65B+ at end of July 2026 (Bloomberg via TechCrunch; FT via TNW; Axios)",
+   "source_a": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "value_b": "'tops $100 billion revenue pace' (Axios Sep 18 headline per RSS, not opened) / 'to top $100B in 2026' (Bloomberg headline)",
+   "source_b": "https://gulfnews.com/world/americas/anthropic-on-track-to-top-100-billion-revenue-pace-ahead-of-potential-ipo-1.500680887",
+   "note": "Resolved by the Gulf News (NYT) text: annualised revenue is 'on track to exceed $100 billion by the end of 2026' - a year-end projection from the $65B July base, in line with investors' $100-120B (Quartz/FT) and $120B (FT). No opened source shows an actual run-rate above $65B.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "Gross-up of cloud-partner sales: OpenAI memo vs prospectus-implied haircut",
+   "value_a": "OpenAI CRO memo (Apr 2026): Anthropic run-rate inflated by ~$8B; comparable ~$22B vs $30B (~27%)",
+   "source_a": "https://quasa.io/media/anthropic-hits-30b-arr-superforecaster-peter-wildeford-now-sees-openai-anthropic-combined-run-rate-at-240b-by-end-of-2026",
+   "value_b": "platform fees ~$351M = ~7.6% of FY2025 revenue (Reuters: ~16c per $1 on $2.16B of marketplace sales); PitchBook estimate of a 6-10% net-presentation haircut",
+   "source_b": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "note": "The $8B/$22B figures are only traceable to aggregators (quasa.io, aicerts; chunks read via PitchBook MCP; The Verge memo not opened) and are 3-4x the S-1-implied haircut. Anthropic says it is the principal and books gross; OpenAI books net of Microsoft. Basis bridge in comparables: $65B x (1 - 6-10%) = ~$58.5-61.1B. Not resolved: the memo may also net credits or other partner items that the prospectus coverage does not show.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "Q2 2026 operating profit",
+   "value_a": "+$559M projected on $10.9B revenue (WSJ/FT, May 20-21)",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/anthropic-track-first-profitable-quarter-124217577.html",
+   "value_b": "actual: positive ADJUSTED operating income, dollar amount undisclosed, revenue >$11.5B; Engadget mislabels $11.5B as 'operating profit'",
+   "source_b": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+   "note": "Do not treat $559M as a reported actual. 'Adjusted' strips stock-based compensation (Stocktwits) and exceptional/one-time items (Bloomberg via TNW); GAAP operating income for Q2 is not reported. Critics say the quarter was not truly profitable.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "Gross margin: >80% vs ~40-44%",
+   "value_a": ">80% gross margin before partner revenue share and model-training costs (company investor materials, FT)",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "value_b": "~40% for 2025 (The Information, Jan 2026) and ~44% for Q2 2026E (PitchBook; compute $0.56 per $1)",
+   "source_b": "https://www.tipranks.com/news/ai-startup-anthropic-warns-of-profit-margin-pressure-as-costs-surge",
+   "note": "Definitions differ: the platform share is booked as a marketing expense (not cost of revenue) and training is below gross profit in the >80% figure. No audited gross margin has been reported; the S-1 must bridge the two. Also FY2025 2025E was ~50% in Nov 2025 and was cut to ~40% in Jan 2026.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "WSJ Apr 6 investor documents: FCF trough and breakeven definitions (DISPUTED / unverified)",
+   "value_a": "brief: FCF trough -$25B in 2027; breakeven excluding training in 2025 and including training in 2028; GM -94% -> 40% -> 63% (2027E) -> 77% (2028E)",
+   "source_a": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625",
+   "value_b": "T4 summaries of WSJ: positive FCF projected by 2027 (burn ~9% of revenue in 2027, 33% in 2026 per WSJ Nov 2025), profitability 2028-2029 including training; The Information Jan 2026: cash-flow positive 2028",
+   "source_b": "https://aiafterhours.substack.com/p/openai-vs-anthropic-the-121-billion",
+   "note": "WSJ and Seeking Alpha cannot be opened. The margin path is partly confirmed (-94% is 2024 paying-customers-only, ~40% is 2025, 63%/77% are 2027E/2028E targets in PitchBook/The Information) but the -$25B trough and the 2025 excluding-training breakeven are not in any opened source. The two T4 versions disagree with the brief on FCF sign in 2027. Secondary WSJ-derived coverage adds: 2026 is the biggest loss year and profitability is expected by 2028-2029 (Motley Fool, genAI Works chunk), which points to a 2026 trough rather than 2027.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "2027 revenue projection (scenario/vintage)",
+   "value_a": "$12B (Reuters via TechCrunch, Apr 2025) and $34.5B (The Information headline Feb 2025, not opened)",
+   "source_a": "https://techcrunch.com/2025/04/15/anthropic-forms-a-new-team-to-grow-its-aws-business/",
+   "value_b": "~$55B (The Information Jan 2026, optimistic); $71B (PitchBook TTM 4Q2027 field); ~$360B year-end 2027 run-rate (FT investor modelling)",
+   "source_b": "https://www.investing.com/news/stock-market-news/anthropic-ups-2026-revenue-forecast-delays-cashpositive-target--the-information-4469111",
+   "note": "Not a true dispute: vintages span 18 months of 10x+ growth and mix recognized revenue, run-rate and scenarios. All predate the $65B July run-rate; treat as historical forecasts.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "Customer concentration: analyst estimate vs prospectus",
+   "value_a": "top-10 customers <20% of revenue (PitchBook estimate, Feb 2026)",
+   "source_a": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625",
+   "value_b": "two unnamed customers ~12% each (~24-25%) of FY2025 revenue",
+   "source_b": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "note": "Different periods (Feb 2026 ARR vs FY2025 revenue) and the PitchBook number is an estimate; the prospectus figure is now the anchor. Business Insider (chunk via PitchBook MCP): Cursor was 40-50% of Anthropic revenue at one point early on (single employee).",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "Ramp AI Index share of businesses paying for Anthropic (May 2026)",
+   "value_a": "34.4% vs OpenAI 32.3% (May 13 2026 release; >50,000 companies); Jan 2026: 19.5% vs 35.9%",
+   "source_a": "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/",
+   "value_b": "May restated to 41% vs OpenAI 39%; July ~44% vs ~40% (Aug 20 release; >70,000 businesses)",
+   "source_b": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/",
+   "note": "Denominator and methodology changed between releases; counts paying businesses, not revenue; skews to tech. Do not chain across releases.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "OpenAI Q2 2026 revenue",
+   "value_a": "$6.2B (+18% QoQ), Bloomberg via Proactive/Yahoo",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html",
+   "value_b": "$6.7B (Pillitteri blog headline 'Anthropic $11.6B vs $6.7B'; seen in Google News RSS only, T5)",
+   "source_b": "https://news.google.com/rss/search?q=Anthropic+investor+documents+WSJ+gross+margin+breakeven&hl=en-US&gl=US&ceid=US:en",
+   "note": "Bloomberg figure used; the T5 blog was not opened and also rounds Anthropic to $11.6B.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "Spring-2025 run-rate: $1.4B vs >$2B",
+   "value_a": "$1.4B 'recently crossed', +40% vs $1B at end-2024 (The Information via Maginative, May 2 2025)",
+   "source_a": "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/",
+   "value_b": ">$2B in Q1 2025 (company via CNBC); $2B around end-March, $3B at end-May (Reuters)",
+   "source_b": "https://finance.yahoo.com/news/exclusive-anthropic-hits-3-billion-200202733.html",
+   "note": "As-of date of the $1.4B figure is unknown (likely Feb-early Mar, republished in May); excluded from the model series.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "2024 cash burn",
+   "value_a": ">$2.7B projected (The Information Jul 24 2024 via TechCrunch Nov 22 2024)",
+   "source_a": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/",
+   "value_b": "$5.6B burned in 2024 (T4/T5 restatements of later investor documents)",
+   "source_b": "https://aiafterhours.substack.com/p/openai-vs-anthropic-the-121-billion",
+   "note": "Projection vs later figure; both differ from the FY2024 operating loss of $2.98B (prospectus). The brief's FY2024 net loss of ~$5.3B is not found in any opened source (the PitchBook news RAG summary asserted it without supporting chunks).",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "PitchBook FY2022 revenue vs company first-revenue statement",
+   "value_a": "$10M (PitchBook TTM 4Q2022)",
+   "source_a": "https://my.pitchbook.com/profile/466959-97/company/profile",
+   "value_b": "'less than three years since Anthropic earned its first dollar in revenue' (Feb 12 2026), i.e. first revenue in 2023",
+   "source_b": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+   "note": "PitchBook's 2022 figure has no support; treat as LOW.",
+   "agent": "desk-revenue"
+  },
+  {
+   "topic": "IPO timing: October vs November (DISPUTED)",
+   "value_a": "October 2026 Nasdaq listing: PitchBook note of Sep 21 (per orchestrator brief; not located), Quartz Aug 13, Business Insider Sep 13 via Benzinga; Reuters Sep 4: roadshow not before mid-October, listing days before the midterms",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html",
+   "value_b": "November debut after Q3 results (WSJ Sep 18); likely after the November U.S. midterms (Reuters and Fortune, Sep 29)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "note": "A sequence of slips rather than a true split: late September (The Information Aug 18) -> October -> mid-October roadshow -> November -> after the midterms. Latest evidence favors November or later; a search-engine summary said WSJ/Reuters have an October roadshow for a November listing (unverified). No public S-1 exists, so DISPUTED stands until a filing or pricing date appears.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "IPO raise size",
+   "value_a": "Up to $100B at about $2T (WSJ Sep 18; SiliconANGLE 'as much as $100 billion'; Forge 'over $100 billion')",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "value_b": "At least $130B, valuation north of $2T (The Information via Motley Fool, Sep 3)",
+   "source_b": "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/",
+   "note": "30% gap between 'up to' and 'at least'; the Sep 3 relay is T4 and the later WSJ report is newer. Forkast's 'over $20 billion' (T4) is an unreliable outlier. SpaceX's record comparator is $75B base or $86.2B with the over-allotment (Bloomberg Aug 20 vs Sep 3).",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "Q2 2026 revenue",
+   "value_a": "$11.5B, ~14x YoY (CNBC Aug 15 per Fortune link; Bloomberg Aug 20 via Proactive; FT Sep 13; prospectus coverage)",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "value_b": "$10.9B with ~$559M operating profit (The Information via Motley Fool, Sep 3)",
+   "source_b": "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/",
+   "note": "$10.9B matches the May 20 pre-quarter expectation (scout-2026q2) and R&D World's Aug 14 headline 'projected Q2 revenue was $10.9B', so it is probably a projection - inference. Q1 also differs: $4.73B (Fortune citing CNBC) vs $4.8B (The Information).",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "Q2 profit measure",
+   "value_a": "Positive 'adjusted operating income' in Q2, dollar amount undisclosed, non-GAAP gross margin >80% before partner share and ex-SBC/training (FT Sep 13)",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "value_b": "'First-ever operating profit of about $559 million' (The Information via Motley Fool)",
+   "source_b": "https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/",
+   "note": "Adjusted vs unadjusted basis unresolved; FY2025 GAAP operating loss was $8.06B. No GAAP quarterly income statement is reported in any opened source.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "SpaceX/xAI contract value",
+   "value_a": "~$45B: $1.25B per month for 36 months (desk arithmetic); '$40B+' through May 2029 (TechCrunch May 20); Crypto Briefing '$15B annual'",
+   "source_a": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+   "value_b": "Up to $84.5B for Nvidia-based capacity through 2029, largely cancelable on 90 days' notice (Reuters, prospectus)",
+   "source_b": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
+   "note": "Prospectus figure is nearly double the original; SEC letters show the S-1 covered Colossus and Colossus II. Likely an expansion or ceiling; needs the S-1 text (over the 10 MB fetch limit) or the prospectus itself.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "Total compute commitments",
+   "value_a": "At least $518B over ~10 years, ~80% non-cancelable (prospectus via Reuters)",
+   "source_a": "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows",
+   "value_b": "Above $417B (3.5 GW) in early 2026 and $54.6B non-cancelable at end-2025 (Reuters); up to $517B of contracts signed in 11 months (The Information Sep 7 via The Decoder); '$531B' (brief, unsourced)",
+   "source_b": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/",
+   "note": "Different dates and scopes, not a true conflict; the six named items sum to $518.2B (desk) and exclude Nscale, Lambda and Akamai, so the prospectus total is probably a floor. The brief's $531B appears to be a mis-stated $517B/$518B.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "FY2024 revenue and loss",
+   "value_a": "About $386M revenue (TradingKey; implied by +1,088%) and $2.98B operating loss (Fortune)",
+   "source_a": "https://www.tradingkey.com/analysis/stocks/us-stocks/262190854-anthropic-ipo-prospectus-revealed-tradingkey",
+   "value_b": "$400M revenue (SiliconANGLE); $787M revenue and an '$8.3 billion loss in 2024' (Crypto Briefing)",
+   "source_b": "https://cryptobriefing.com/anthropic-ipo-42b-loss-spending-plans/",
+   "note": "$400M is rounding; Crypto Briefing's figures contradict the 12-fold growth and the $2.98B loss and probably misread the $789M subscription revenue - treated as an error.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "How the founders' control is structured",
+   "value_a": "Special share classes giving seven co-founders supervoting rights (The Information Aug 18); Bloomberg headline 'Anthropic plans to give CEO extra voting power'",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-moves-bolster-founder-control-214023999.html",
+   "value_b": "One Class F share held by Founder LLC = 50.1% of voting power; Class A one vote per share (Reuters review of the draft, Sep 29)",
+   "source_b": "https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-910036",
+   "note": "Consistent on 50.1%, seven co-founders and a 3+4 board split; descriptions differ (classes vs one LLC-held share). Founder count of unnamed members differs by copy (JPost 'four', TNW 'three'); Reuters pieces together name six of seven.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "Prior valuation cited by outlets",
+   "value_a": "$965B post-money Series H of May 2026 (Anthropic/TechCrunch Jun 1; Reuters 'May')",
+   "source_a": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
+   "value_b": "'May 2025' (TechCrunch Sep 28, Fortune Nolan, Quartz) and '$96.5 billion' (TradingKey)",
+   "source_b": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+   "note": "Typographical errors in secondary outlets; Series H was announced May 28, 2026 at $965B.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "Risk-factor share of the prospectus",
+   "value_a": "80 of 261 main-body pages = 30.7% (Reuters; TechCrunch 'nearly a third')",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropic-warns-ai-may-001709847.html",
+   "value_b": "'More than one-third of the S-1' (Fortune, Jim Edwards)",
+   "source_b": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+   "note": "Small gap; Fortune's wording is looser. Page counts rest on Reuters alone.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "Proposed ticker",
+   "value_a": "None reported in any opened source",
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "value_b": "'NASDAQ:ANTP' in the Investing.com relay text of the WSJ story",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "note": "The same piece labels OpenAI 'NASDAQ:OAI'; both look like auto-generated private-company tags, so no ticker is recorded.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "SpaceX AI-segment Q2 revenue",
+   "value_a": "$2,194M 'AI Solutions & Infrastructure' (SpaceX 10-Q Note 3)",
+   "source_a": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm",
+   "value_b": "$2.56B AI segment revenue (Blockspace, Aug 5, scout-2026q3)",
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/spacex-maps-path-toward-10-140021626.html",
+   "note": "Different basis or period; not reconciled. Neither names Anthropic revenue.",
+   "agent": "desk-s1"
+  },
+  {
+   "topic": "Date of the Reuters 'mid-October' scoop",
+   "value_a": "Friday Sep 4 (Forbes Sep 7 cites 'Friday report'; FT/Chosunbiz headlines Sep 4-5)",
+   "source_a": "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html",
+   "value_b": "Sep 8 07:00 GMT (Google News RSS date-only placeholder)",
+   "source_b": "https://news.google.com/rss/search?q=Anthropic+IPO+underwriters&hl=en-US&gl=US&ceid=US:en",
+   "note": "Event dated Sep 4; Reuters original not opened.",
+   "agent": "desk-s1"
   },
   {
    "topic": "Founding date",
@@ -1258,6 +1510,192 @@
    "why_unverified": "Seen only on The Decoder homepage text; outside product fence",
    "best_lead": "https://the-decoder.com (2026-09-30 'FTC launches sweeping probe into OpenAI, Anthropic, and other AI labs')",
    "agent": "desk-product"
+  },
+  {
+   "claim": "WSJ Apr 6 2026 investor documents: FCF trough of -$25B in 2027; breakeven excluding training (2025) and including training (2028); GM -94% -> 40% -> 63% -> 77%",
+   "why_unverified": "WSJ and Seeking Alpha cannot be opened; only T4 secondary restatements (SaaStr, AI Afterhours, valueaddvc) were readable and they contradict the FCF claim; PitchBook RAG returned no chunk with a -$25B trough",
+   "best_lead": "WSJ 'An Inside Look at OpenAI and Anthropic's Finances Ahead of Their IPOs' (2026-04-06); Seeking Alpha 'Anthropic, OpenAI's finances ahead of IPOs reveal computing cost challenges: report' (2026-04-06); the S-1 cash-flow statement",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "FY2024 net loss ~$5.3B (brief / PitchBook)",
+   "why_unverified": "Not present in any opened source; found FY2024 operating loss $2.98B (prospectus) and cash burn $5.6B (T4/T5)",
+   "best_lead": "Actual S-1 (FY2024 column); The Information 2025 coverage of 2024 financials",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Contemporaneous ~$875M-$1B annualized revenue reports for Dec 2024 / Jan 2025 (WSJ/CNBC Jan 7 2025)",
+   "why_unverified": "Only the company's retrospective (~$1B) and Reuters (nearly $1B) were opened; the Jan 2025 articles were not found",
+   "best_lead": "CNBC/WSJ 2025-01-07 'Anthropic in talks to raise funding at $60 billion valuation'",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Recognized FY2023 revenue (and FY2022 if any)",
+   "why_unverified": "Leaked-prospectus coverage gives FY2024 and FY2025 only; PitchBook $10M/$100M are run-rate-style; company says first revenue came in 2023",
+   "best_lead": "Actual S-1 statement of operations",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "A public S-1: audited gross margin and cost of revenue, definition and amount of Q2 2026 adjusted operating income, Q3 results",
+   "why_unverified": "No Anthropic S-1 on EDGAR as of 2026-09-30 (full-text search); all FY2025/Q1/Q2 figures are from a leaked draft relayed by Reuters",
+   "best_lead": "EDGAR (Anthropic PBC S-1) and desk-s1",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Claude Code run-rate after February 2026 and its share of revenue",
+   "why_unverified": "Latest company figure is >$2.5B (Feb 12 2026); no later figure in opened sources or RSS titles",
+   "best_lead": "S-1 segment/product disclosure; Anthropic Series H/I materials",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Company-disclosed net revenue retention, cohort expansion, consumer subscriber/MAU counts, developer count",
+   "why_unverified": "Only analyst estimates (PitchBook NRR 140%+, upper bound 170%) and card-panel estimates (Indagari 18-30M consumer users) exist",
+   "best_lead": "S-1 key-metrics section",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Revenue by geography and the effect of price cuts (e.g., Opus price reductions, Sonnet 5 at $2/$10) on revenue and gross margin",
+   "why_unverified": "No source in RSS, PitchBook news/reports or opened articles quantifies either (PitchBook RAG explicitly found none)",
+   "best_lead": "S-1 geographic revenue note; The Information pricing coverage",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "SemiAnalysis Q3 2026 profit estimate (~$1B GAAP EBIT at ~6% margin; other headlines say >$10B)",
+   "why_unverified": "SemiAnalysis article returned 404 and only T4/T5 relays (valueaddvc, KuCoin, ChainCatcher) were seen, with inconsistent magnitudes",
+   "best_lead": "SemiAnalysis 'Anthropic 3Q26 Profit Over $1B: The Anthropic IPO Financials Sneak Peak' (2026-07-07)",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "OpenAI CRO memo text (The Verge) and Reuters Jun 11 'bitter battle' article giving the ~$8B / ~$22B figures",
+   "why_unverified": "Only aggregator chunks (quasa.io, aicerts) and Economic Times/Reuters chunk read through PitchBook MCP; originals not fetchable",
+   "best_lead": "The Verge April 2026 memo story; Reuters 2026-06-11",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Bloomberg Aug 14 and CNBC Aug 15 original Q2 2026 revenue reports; CFO Krishna Rao May 2026 interview remarks",
+   "why_unverified": "Bloomberg/CNBC/Axios returned 403 or only headlines; Dealroom and biggo summaries not opened",
+   "best_lead": "Bloomberg 'Anthropic Revenue Surges to Over $11.5 Billion in Second Quarter'; CNBC 'Anthropic revenue reportedly jumps to more than $11.5 billion in second quarter'",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "CFO sworn statement that cumulative GAAP revenue since 2021 was 'over $5 billion' (Mar 2026)",
+   "why_unverified": "Appears only in quasa.io (T5); not in the Mar 26 court order; declaration Dkt. 6-5 not opened (note FY2024 + FY2025 recognized already sum to ~$4.98B, so the statement would be consistent)",
+   "best_lead": "CourtListener docket 3:26-cv-01996-RFL, Dkt. 6-5 (Rao declaration)",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Microsoft Azure / Foundry share of Anthropic sales and cloud-partner revenue-share terms (credits, minimums, warrants)",
+   "why_unverified": "Reuters quantifies only Amazon+Google (47%); Microsoft not broken out",
+   "best_lead": "S-1 related-party and distribution-agreement notes",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Independent (non-investor) measure of enterprise LLM share and any 2026 Menlo update",
+   "why_unverified": "Only Menlo (an Anthropic investor, usage-based, last update Dec 2025) and Ramp (paying-business counts, methodology changes) found",
+   "best_lead": "Gartner/IDC/a16z 2026 enterprise surveys",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Company or The Information revenue projection for 2030 (brief asks for 2030)",
+   "why_unverified": "Only a PitchBook valuation-implied path ($345-450B) and the ~$148-150B 2029 figures were found; no company 2030 projection in any opened source",
+   "best_lead": "The Information 2026 coverage of long-range plan; S-1 MD&A",
+   "agent": "desk-revenue"
+  },
+  {
+   "claim": "Public S-1 contents: share count, price range, ticker, use of proceeds, selling stockholders, lockup length, underwriting discount, directed-share and 10b5-1 terms",
+   "why_unverified": "No public filing exists on EDGAR (searches of Sep 30); everything here is a leak of a draft or press speculation",
+   "best_lead": "EDGAR company page for Anthropic PBC once a public S-1 is filed",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "PitchBook Sep 21 note (October Nasdaq listing, up to $100B at ~$2T, ~$10B debt)",
+   "why_unverified": "Not located with WebFetch, RSS or the WebSearch budget; components trace to Business Insider Sep 13, Bloomberg Aug 18 and WSJ Sep 18",
+   "best_lead": "pitchbook.com/news (Sep 21) via a PitchBook subscription",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "FT's own Sep 29 prospectus article and NYT 'What's In Anthropic's I.P.O. Filing'",
+   "why_unverified": "Paywalled; only headlines seen in Google News RSS, so the FT as an independent second review is inferred from its headline and third-party attributions",
+   "best_lead": "https://www.ft.com (Sep 28-29) and nytimes.com (Sep 29)",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Line items: cost of revenue, GAAP gross margin, R&D, S&M, G&A, stock-based compensation, debt, deferred revenue, remaining performance obligations, capex, headcount",
+   "why_unverified": "None appears in any opened source (Fortune's 'income statement snapshot' and the Yahoo explainer list them as not stated)",
+   "best_lead": "NYT/CNBC/Bloomberg write-ups of the draft; the public S-1",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Dollar amount and definition of Q2 'adjusted operating income' (The Information: ~$559M 'operating profit')",
+   "why_unverified": "FT gives no amount; The Information relay (T4) is tied to the $10.9B figure that appears to be a projection",
+   "best_lead": "FT Sep 13 article; The Information Aug 27/Sep 3 originals",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Revenue by channel: direct API vs cloud partners vs subscriptions vs Claude Code",
+   "why_unverified": "Only partial: consumption $3.8B, subscription $789M, 47% via Amazon/Google marketplaces; no Claude Code line",
+   "best_lead": "Prospectus MD&A via a full Reuters/NYT write-up",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Geography beyond 'United States nearly two-thirds'",
+   "why_unverified": "No country split in any opened source",
+   "best_lead": "Public S-1 segment/geography note",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Identities of the two 12% customers",
+   "why_unverified": "Unnamed in every opened source",
+   "best_lead": "Public S-1 customer-concentration note",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Litigation summary, export-control risk factor, key-person risk and PBC/LTBT governance risk text",
+   "why_unverified": "Not quoted in any opened prospectus coverage; Reuters' timeline notes a $1.5B authors' settlement (Jul 2026) and the June export-control episode is T1 elsewhere",
+   "best_lead": "Reuters/NYT deep dives; public S-1 legal proceedings section",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Lockup length, 10b5-1 plan mechanics and selling-shareholder size",
+   "why_unverified": "Only The Information relays (T4); original Jul 23 Reuters/The Information reports and Forbes Sep 22 not openable",
+   "best_lead": "The Information Jul 23, Aug 27; Reuters Jul 23",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Reuters Sep 4 'IPO launch shifts toward mid-October' original and whether a roadshow is planned for October",
+   "why_unverified": "Reuters blocked; only Forbes' relay opened; a search-engine summary claimed an October roadshow for a November listing",
+   "best_lead": "Reuters Sep 4; WSJ Sep 18",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "SpaceX S-1 (acc. 0001628280-26-036936) and 424B4 (2026-06-12) text on Anthropic",
+   "why_unverified": "Main documents exceed the 10 MB fetch limit; T1 evidence is the SEC letters and CORRESP only",
+   "best_lead": "EDGAR Archives, CIK 1181412, via a size-unlimited client",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Pre-IPO investor meetings (CNBC Jul 15 'bankers line up investor meetings'; CNBC Aug 13 CFO Krishna Rao leading early meetings and not discussing valuation)",
+   "why_unverified": "Headlines only; CNBC returns 403",
+   "best_lead": "CNBC Jul 15 and Aug 13; Investing.com Jul 15",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "AMD up-to-$5B equity purchase terms and whether Nscale, Lambda and Akamai sit inside the $518B",
+   "why_unverified": "Reuters gives no price or timing; per-line composition not disclosed",
+   "best_lead": "Reuters $518B article text; public S-1 contractual obligations table",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "Evan Hubinger '>10% chance AI kills humans within a decade' and the '6% of research compute on safety' line",
+   "why_unverified": "Reuters text as opened does not say whether they are prospectus disclosures or public statements",
+   "best_lead": "Reuters existential-risk article, full text",
+   "agent": "desk-s1"
+  },
+  {
+   "claim": "SOC Investment Group Sep 16 call to delay the IPO and the FTC probe of AI labs (Sep 30)",
+   "why_unverified": "Headlines only",
+   "best_lead": "Yahoo Finance Sep 16; Reuters Sep 30",
+   "agent": "desk-s1"
   },
   {
    "claim": "Google invested ~$300M for ~10% of Anthropic in late 2022 (deal disclosed Feb 3, 2023 by the FT)",

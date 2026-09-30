@@ -1401,7 +1401,7 @@
    "tier": "T2",
    "confidence": "MEDIUM",
    "event_id": "evt-20260928-prospectus-fy2025-rev-4-6b-net-loss-42b",
-   "note": "Comparable: OpenAI FY2025 net loss $38.53B with a $41.55B fair-value loss on convertible interests"
+   "note": "Comparable: OpenAI FY2025 net loss $38.53B also includes large non-cash conversion-related charges (TNW), analogous to Anthropic's ~$34B financing remeasurement"
   },
   {
    "metric": "cash burn",
@@ -1546,6 +1546,17 @@
    "tier": "T2",
    "confidence": "MEDIUM",
    "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix"
+  },
+  {
+   "metric": "breakeven",
+   "period": "definitions",
+   "value": "two reporting bases exist: profitability with training costs EXCLUDED and INCLUDED (training treated as cost of goods sold); Anthropic expects profitability by 2028 (Motley Fool, Apr 8) / 2028-2029 (secondary WSJ summaries); years per definition are not stated in any opened source",
+   "basis": "WSJ investor documents (Apr 6 2026) as described by SiliconANGLE (T3) and Motley Fool (T4); WSJ original not fetchable",
+   "source_url": "https://siliconangle.com/2026/04/06/100b-question-ais-appetite-compute-rewriting-rules-tech/",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "event_id": "evt-20260406-wsj-investor-docs-secondary-summaries",
+   "note": "Brief's 'excl-training breakeven 2025' and 'incl-training 2028' remain unverified; secondary sources also say 2026 is the biggest loss year"
   }
  ],
  "customers": [
@@ -1849,7 +1860,7 @@
    "basis": "unstated",
    "basis_note": "TipRanks relaying Reuters exclusive: \"close to $7 billion\"",
    "source_url": "https://www.tipranks.com/news/anthropic-targets-26-billion-revenue-by-2026-as-ai-demand-accelerates",
-   "publisher": "TipRanks (Reuters exclusive not opened)",
+   "publisher": "TipRanks (figures match Reuters Oct 15 2025 exclusive cited by PitchBook; Reuters not opened)",
    "tier": "T4",
    "confidence": "MEDIUM",
    "event_id": "evt-20251016-rr-7b-ye9b-2026-26b",
@@ -1997,7 +2008,7 @@
    "date": "FY2023-FY2025",
    "source_url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
    "tier": "T2",
-   "confidence": "HIGH",
+   "confidence": "MEDIUM",
    "note": "Booked GROSS as revenue with the platform share in marketing expense; Reuters computed the fee; cloud providers also collected 60% of year-end receivables",
    "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix"
   },
@@ -2062,8 +2073,333 @@
    "event_id": "evt-20260305-pitchbook-ranking-note-nrr-gm-path"
   }
  ],
- "projections": [],
- "comparables": [],
+ "projections": [
+  {
+   "period": "FY2025",
+   "metric": "recognized revenue",
+   "value": "$2.2B (projected in Apr 2025)",
+   "who": "investor docs (Reuters)",
+   "source_url": "https://techcrunch.com/2025/04/15/anthropic-forms-a-new-team-to-grow-its-aws-business/",
+   "tier": "T2",
+   "confidence": "MEDIUM",
+   "note": "Superseded: actual recognized ~$4.59B, exit run-rate ~$9B",
+   "event_id": "evt-20250415-proj-2025-2-2b-2027-12b"
+  },
+  {
+   "period": "FY2025",
+   "metric": "API revenue",
+   "value": "$3.8B",
+   "who": "investor docs (The Information)",
+   "source_url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "API only; not total revenue",
+   "event_id": "evt-20251104-info-2028-70b-gm-77"
+  },
+  {
+   "period": "FY2025",
+   "metric": "year-end run-rate",
+   "value": "~$9B (Reuters Oct 2025); $8-10B (Amodei Dec 3); nearly $10B (Fortune Dec 4); ACTUAL ~$9B (company Apr 6 2026)",
+   "who": "company / CEO",
+   "source_url": "https://techcrunch.com/2025/12/04/anthropic-ceo-weighs-in-on-ai-bubble-talk-and-risk-taking-among-competitors/",
+   "tier": "T2",
+   "confidence": "HIGH",
+   "note": "Outcome matched guidance",
+   "event_id": "evt-20251204-amodei-dealbook-8-10b"
+  },
+  {
+   "period": "FY2026",
+   "metric": "run-rate target",
+   "value": "$20B base to $26B upside (annualized run-rate, set Oct-Dec 2025)",
+   "who": "company / investor docs (Reuters Oct 15, The Information Nov 4, FT Dec 2)",
+   "source_url": "https://finance.yahoo.com/news/anthropic-plans-ipo-early-2026-004854547.html",
+   "tier": "T2",
+   "confidence": "MEDIUM",
+   "note": "Overtaken: run-rate was $30B by Apr 6 2026 and $65B by end-July",
+   "event_id": "evt-20251202-reuters-ft-2026-26b"
+  },
+  {
+   "period": "FY2026",
+   "metric": "recognized revenue",
+   "value": "up to $18B (raised ~20% in Jan 2026)",
+   "who": "investor docs (The Information)",
+   "source_url": "https://www.investing.com/news/stock-market-news/anthropic-ups-2026-revenue-forecast-delays-cashpositive-target--the-information-4469111",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "STALE: H1 2026 actual already $16.2B",
+   "event_id": "evt-20260127-info-2026-18b-2027-55b-forecast"
+  },
+  {
+   "period": "Q2 2026",
+   "metric": "revenue and operating profit",
+   "value": "$10.9B revenue; +$559M operating profit",
+   "who": "investor info (WSJ/FT)",
+   "source_url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-track-first-profitable-quarter-124217577.html",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "Actual: revenue >$11.5B; adjusted operating income positive, amount undisclosed",
+   "event_id": "evt-20260520-q2-projection-10-9b-559m-op-profit"
+  },
+  {
+   "period": "FY2026",
+   "metric": "year-end run-rate",
+   "value": "$100-120B (six backers via FT, Aug 13); ~$120B (FT, Sep 14); \"on track to exceed $100B\" (NYT, Sep 19)",
+   "who": "investor expectations / press",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "These are year-end projections, not current run-rates (Gulf News text resolves the Axios headline)",
+   "event_id": "evt-20260813-ye2026-runrate-100-120b-investor-expectation"
+  },
+  {
+   "period": "FY2026",
+   "metric": "training and running cost",
+   "value": "~$12B training + ~$7B running models",
+   "who": "investor docs (The Information)",
+   "source_url": "https://finance.yahoo.com/news/anthropic-quietly-raises-ceiling-121501064.html",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "PitchBook later: training >$12B (2026), ~$23B (2027), ~$30B (2028)",
+   "event_id": "evt-20260127-info-2026-18b-2027-55b-forecast"
+  },
+  {
+   "period": "Q3 2026",
+   "metric": "adjusted operating income",
+   "value": "positive for a second straight quarter (amount undisclosed); SemiAnalysis est. ~$1B GAAP EBIT at ~6% margin (T4)",
+   "who": "company to investors (FT); SemiAnalysis",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct"
+  },
+  {
+   "period": "FY2026",
+   "metric": "revenue (TTM 4Q2026)",
+   "value": "$65,000M",
+   "who": "PitchBook forward TTM",
+   "source_url": "https://my.pitchbook.com/profile/466959-97/company/profile",
+   "tier": "T2",
+   "confidence": "LOW",
+   "note": "Equals the end-July run-rate; reference only",
+   "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series"
+  },
+  {
+   "period": "FY2027",
+   "metric": "recognized revenue",
+   "value": "~$55B (optimistic scenario, Jan 2026); earlier $12B (Reuters Apr 2025) and $34.5B (The Information Feb 12 2025 headline, not opened)",
+   "who": "investor docs",
+   "source_url": "https://www.investing.com/news/stock-market-news/anthropic-ups-2026-revenue-forecast-delays-cashpositive-target--the-information-4469111",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "Scenario/vintage differences; all predate the $65B run-rate",
+   "event_id": "evt-20260127-info-2026-18b-2027-55b-forecast"
+  },
+  {
+   "period": "FY2027",
+   "metric": "year-end run-rate",
+   "value": "~$360B (nearly triple the $120B YE2026 figure)",
+   "who": "investor forecasts (FT via Stocktwits); SemiAnalysis commentary",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "tier": "T3",
+   "confidence": "LOW",
+   "note": "Investor modeling, not company guidance",
+   "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct"
+  },
+  {
+   "period": "FY2027",
+   "metric": "revenue (TTM 4Q2027)",
+   "value": "$71,000M",
+   "who": "PitchBook forward TTM",
+   "source_url": "https://my.pitchbook.com/profile/466959-97/company/profile",
+   "tier": "T2",
+   "confidence": "LOW",
+   "note": "Reference only; inconsistent with investor run-rate expectations",
+   "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series"
+  },
+  {
+   "period": "FY2027",
+   "metric": "gross margin and cash burn",
+   "value": "gross margin 63% (target, PitchBook compilation); cash burn stops in 2027 / ~9% of revenue (WSJ Nov 2025 via T4)",
+   "who": "company internal projections as compiled by PitchBook",
+   "source_url": "https://my.pitchbook.com/research-center/report/37f05143-d39e-388f-97e1-bc3582b86625",
+   "tier": "T3",
+   "confidence": "VERIFY",
+   "note": "Brief's -$25B FCF trough not verified",
+   "event_id": "evt-20260305-pitchbook-ranking-note-nrr-gm-path"
+  },
+  {
+   "period": "FY2028",
+   "metric": "revenue",
+   "value": "$70B (Nov 2025 plan) then $190-200B (Reuters, Aug 17 2026)",
+   "who": "company plan (The Information); two people familiar (Reuters)",
+   "source_url": "https://www.investing.com/news/stock-market-news/anthropic-ipo-valuation-hinges-on-190200-billion-2028-revenue-forecast-sources-say-4862222",
+   "tier": "T2",
+   "confidence": "MEDIUM",
+   "note": "Basis (recognized vs run-rate) and scenario unstated",
+   "event_id": "evt-20260817-reuters-2028-190-200b-forecast"
+  },
+  {
+   "period": "FY2028",
+   "metric": "cash flow, gross margin, training",
+   "value": "+$17B cash flow; 77% gross margin; training ~$30B",
+   "who": "company plan (The Information)",
+   "source_url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "Cash-flow-positive year delayed from 2027 to 2028 (Jan 2026)",
+   "event_id": "evt-20251104-info-2028-70b-gm-77"
+  },
+  {
+   "period": "FY2029",
+   "metric": "revenue",
+   "value": "up to $148B (optimistic)",
+   "who": "investor docs (The Information, via Yahoo Jan 29)",
+   "source_url": "https://finance.yahoo.com/news/anthropic-quietly-raises-ceiling-121501064.html",
+   "tier": "T3",
+   "confidence": "LOW",
+   "event_id": "evt-20260127-info-2026-18b-2027-55b-forecast"
+  },
+  {
+   "period": "FY2030",
+   "metric": "revenue",
+   "value": "$345-450B implied by the $965B valuation at 40-50% gross margin",
+   "who": "analyst (PitchBook)",
+   "source_url": "https://my.pitchbook.com/news-center/pb8487822101662420642",
+   "tier": "T3",
+   "confidence": "LOW",
+   "note": "Valuation-implied path, not company guidance",
+   "event_id": "evt-20260610-pitchbook-gm-44pct-compute-cost"
+  },
+  {
+   "period": "IPO",
+   "metric": "valuation multiples",
+   "value": "$2T+ target = ~30.8x the $65B run-rate and ~70x annualized gross profit at a 44% margin ($28.6B)",
+   "who": "analyst (PitchBook)",
+   "source_url": "https://my.pitchbook.com/research-center/report/271b2ed6-4c03-34ba-93a8-65a7e30741ec",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "Net presentation would lift the revenue multiple to 32.7x-34.2x",
+   "event_id": "evt-20260916-pitchbook-s1-preview-gross-vs-net"
+  },
+  {
+   "period": "FY2029",
+   "metric": "revenue",
+   "value": "~$150B (Apr 2026 'projections from Anthropic'); consistent with up to $148B optimistic (The Information, Jan 2026)",
+   "who": "company projections (WSJ investor documents per secondary coverage)",
+   "source_url": "https://www.fool.com/investing/2026/04/08/own-stock-spacex-openai-anthropic-pre-ipo-how/",
+   "tier": "T4",
+   "confidence": "LOW",
+   "note": "Motley Fool does not name WSJ; training treatment for the 'profitability by 2028' claim unspecified",
+   "event_id": "evt-20260406-wsj-investor-docs-secondary-summaries"
+  }
+ ],
+ "comparables": [
+  {
+   "company": "OpenAI",
+   "metric": "FY2025 revenue",
+   "value": "$13.07B (audited statements; FT-verified per search results, not opened)",
+   "basis": "recognized, NET of Microsoft revenue share (Reuters Jun 11 via PitchBook MCP chunk) - not like-for-like with Anthropic gross $4.59B",
+   "date": "2026-06-15",
+   "source_url": "https://www.wheresyoured.at/exclusive-openai-financials/",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "TNW Jun 16 corroborates $13bn revenue and $34bn spending"
+  },
+  {
+   "company": "OpenAI",
+   "metric": "FY2025 loss from operations / net loss",
+   "value": "$20.92B / $38.53B",
+   "basis": "audited; net loss includes non-cash conversion-related charges (TNW); TNW quotes an operating loss \"closer to $8bn\" excluding non-cash items",
+   "date": "2026-06-15",
+   "source_url": "https://www.wheresyoured.at/exclusive-openai-financials/",
+   "tier": "T3",
+   "confidence": "MEDIUM"
+  },
+  {
+   "company": "OpenAI",
+   "metric": "gross margin",
+   "value": "FY2025 ~42.6% (computed: $5.57B gross profit / $13.07B); 33% (PitchBook, Q1 2026); 40-45% (PitchBook estimate)",
+   "basis": "definitions differ (cost-of-revenue scope; free-tier inference subsidy ~$2.9B)",
+   "date": "2026-06-03",
+   "source_url": "https://my.pitchbook.com/news-center/pb766985424285710420",
+   "tier": "T3",
+   "confidence": "MEDIUM"
+  },
+  {
+   "company": "OpenAI",
+   "metric": "Q1 2026 revenue",
+   "value": "$5.7B at -122% adjusted operating margin",
+   "basis": "recognized, net of Microsoft share",
+   "date": "2026-06-03",
+   "source_url": "https://my.pitchbook.com/news-center/pb766985424285710420",
+   "tier": "T2",
+   "confidence": "MEDIUM"
+  },
+  {
+   "company": "OpenAI",
+   "metric": "Q2 2026 revenue",
+   "value": "$6.2B (+18% QoQ) vs Anthropic $11.5B",
+   "basis": "recognized; Bloomberg via Proactive/Yahoo",
+   "date": "2026-08-21",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "A T5 blog headline (Pillitteri) quotes $6.7B / Anthropic $11.6B - not opened; Bloomberg figure used"
+  },
+  {
+   "company": "OpenAI",
+   "metric": "annualized run-rate",
+   "value": ">$20B end-2025 (CFO Friar, Jan 2026 blog per PitchBook); ~$24-25B late Mar 2026; ~$40B Aug 2026 (Bloomberg); nearly $70B Sep 2026 (Axios)",
+   "basis": "run-rate, net of Microsoft share; Axios does not state gross/net",
+   "date": "2026-09-29",
+   "source_url": "https://finance.yahoo.com/technology/ai/articles/scoop-openais-annual-recurring-revenue-141540007.html",
+   "tier": "T2",
+   "confidence": "MEDIUM",
+   "note": "Anthropic: $9B (Dec) -> $30B (Apr) -> $47B (May) -> $65B (Jul), gross; do not plot on one axis without the net-basis bridge"
+  },
+  {
+   "company": "Microsoft / OpenAI",
+   "metric": "revenue share",
+   "value": "capped at $38B through 2030 (April 2026 renegotiation; est. savings $70-97B); ~20% share previously per PitchBook; payments to Microsoft $17.2B in 2025 ($10.59B R&D + $6.047B cost of revenue)",
+   "basis": "OpenAI keeps only net revenue after the Microsoft share",
+   "date": "2026-06-03",
+   "source_url": "https://my.pitchbook.com/news-center/pb1677460792818157683",
+   "tier": "T2",
+   "confidence": "MEDIUM",
+   "note": "Microsoft also appears as an Anthropic cloud channel (Azure Foundry) and $31.4B compute counterparty"
+  },
+  {
+   "company": "OpenAI",
+   "metric": "cash burn projections",
+   "value": "$25B (2026), $57B (2027), ~$665B cumulative through 2030 (Feb 2026 projections); positive cash flow not before 2029-2030",
+   "basis": "company projections as reported by PitchBook",
+   "date": "2026-06-03",
+   "source_url": "https://my.pitchbook.com/research-center/report/8cad697e-7faa-3e56-8bb9-50f815844987",
+   "tier": "T3",
+   "confidence": "MEDIUM"
+  },
+  {
+   "company": "xAI (SpaceX)",
+   "metric": "revenue and operating loss",
+   "value": "FY2025 revenue $3.2B, operating loss $6.36B; Q1 2026 revenue $818M (17% of SpaceX $4.69B), operating loss $2.47B",
+   "basis": "recognized, segment disclosure in SpaceX public S-1 (filed May 20 2026) as read by PitchBook; S-1 not opened",
+   "date": "2026-05-21",
+   "source_url": "https://my.pitchbook.com/news-center/pb5258188705281060999",
+   "tier": "T2",
+   "confidence": "MEDIUM"
+  },
+  {
+   "company": "Anthropic (basis bridge)",
+   "metric": "gross vs net presentation of cloud-partner sales",
+   "value": "net presentation would cut reported revenue ~6-10% (PitchBook); prospectus-implied platform fees ~$351M = ~7.6% of FY2025 revenue; OpenAI memo alleges ~$8B of $30B (~27%) - unsubstantiated",
+   "basis": "derived: $65B run-rate x (1 - 6% to 10%) = ~$58.5B-$61.1B on a net-of-platform-share basis",
+   "date": "2026-09-16",
+   "source_url": "https://my.pitchbook.com/research-center/report/271b2ed6-4c03-34ba-93a8-65a7e30741ec",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "note": "Desk derivation; see conflicts for the OpenAI memo figure"
+  }
+ ],
  "compute_totals": {},
  "compute_costs": [],
  "plans": [
