@@ -2,7 +2,7 @@
  "agent": "certifier",
  "role": "Certifier",
  "started": "2026-09-30T20:44:31Z",
- "finished": "2026-09-30T21:23:22Z",
+ "finished": "2026-09-30T21:23:57Z",
  "verdict": "NEEDS WORK",
  "rederived": [
   {
@@ -673,9 +673,9 @@
   },
   {
    "id": "N-10",
-   "where": "Network tab; Agents floor; chart axes; Compute charts",
-   "issue": "Network labels overlap and the ROLE column is cut ('chip, clou'); Agents-floor sign bubbles are overprinted by 'NEW' tags and clipped; time axes read 'Jan 27' for January 2027; Compute bars read '$0K / $45.0B'; two different '73%' numbers sit in the gross-margin bridge (central GM of realized revenue vs the list-price memo bar).",
-   "suggestion": "Polish only; use year ticks, '$0 contracted / $45.0B up to', and label the memo bar basis."
+   "where": "Network tab; Agents floor; chart axes; Compute charts; Sources ledger RE-DERIVED column; Overview 'Equity raised' chip",
+   "issue": "Network labels overlap and the ROLE column is cut ('chip, clou'); Agents-floor sign bubbles are overprinted by 'NEW' tags and clipped; time axes read 'Jan 27' for January 2027; Compute bars read '$0K / $45.0B'; two different '73%' numbers sit in the gross-margin bridge (central GM of realized revenue vs the list-price memo bar). The Sources ledger prints truncated raw JSON in RE-DERIVED cells for long rows (Series D, Amazon notes, total raised) because scripts/reconcile.py cuts json.dumps(...)[:260]; the same truncation makes the Overview equity chip fall back to 'disputed in re-derivation' instead of showing the independent $140.2B.",
+   "suggestion": "Polish only; use year ticks, '$0 contracted / $45.0B up to', label the memo bar basis, and store rederived as an object (no truncation) so the chip can show the independent figure."
   },
   {
    "id": "N-11",

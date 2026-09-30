@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T20:07:57Z",
+ "generated": "2026-09-30T21:24:32Z",
  "summary": {
   "MISMATCH": 7,
   "UNTRACEABLE": 3,
@@ -15,6 +15,16 @@
    "claim": "Series D: $1.2B at $21.0B post (2024-07-01)",
    "draft": "{\"date\": \"2024-07-01\", \"size_usd_m\": 1200, \"pre_usd_m\": 19800, \"post_usd_m\": 21000, \"leads\": [\"Menlo Ventures\"]}",
    "rederived": "{\"date\": \"2023-12-21 (first reported 'in talks'); no company announcement of a close\", \"size_usd_m\": 750, \"pre_usd_m\": 15000, \"post_usd_m\": null, \"reported_headline_valuation_usd_m\": 18400, \"leads\": [\"Menlo Ventures (led, per The Information/Reuters/CNBC/Bloom",
+   "rederived_obj": {
+    "date": "2023-12-21 (first reported 'in talks'); no company announcement of a close",
+    "size_usd_m": 750,
+    "pre_usd_m": 15000,
+    "post_usd_m": null,
+    "reported_headline_valuation_usd_m": 18400,
+    "leads": [
+     "Menlo Ventures (led, per The Information/Reuters/CNBC/Bloomberg reports)"
+    ]
+   },
    "verdict": "MISMATCH",
    "compared": [
     {
@@ -53,6 +63,47 @@
    "claim": "Amazon convertible notes (PB 6th round): $8.0B at $54.0B post (2024-11-22)",
    "draft": "{\"date\": \"2024-11-22\", \"size_usd_m\": 8000, \"pre_usd_m\": 46000, \"post_usd_m\": 54000, \"leads\": [\"Amazon\"]}",
    "rederived": "{\"date\": [\"2023-09-25\", \"2024-03-27\", \"2024-11-22\"], \"size_usd_m\": [1250, 2750, 4000], \"size_usd_m_total\": 8000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Amazon (sole investor in each note)\"], \"tranches\": [{\"announced\": \"2023-09-25\", \"instrument\": \"co",
+   "rederived_obj": {
+    "date": [
+     "2023-09-25",
+     "2024-03-27",
+     "2024-11-22"
+    ],
+    "size_usd_m": [
+     1250,
+     2750,
+     4000
+    ],
+    "size_usd_m_total": 8000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Amazon (sole investor in each note)"
+    ],
+    "tranches": [
+     {
+      "announced": "2023-09-25",
+      "instrument": "convertible note #1",
+      "amount_usd_m": 1250,
+      "funded": "Q3 2023",
+      "note": "Anthropic/Amazon announced 'up to $4 billion'; Amazon 10-Q Q3-23: invested in a $1.25B note convertible to equity; agreement to invest up to $2.75B more, expiring Q1 2024."
+     },
+     {
+      "announced": "2024-03-27",
+      "instrument": "convertible note #2",
+      "amount_usd_m": 2750,
+      "funded": "Q1 2024",
+      "note": "Amazon release: 'Today, we made our additional $2.75 billion investment, bringing our total ... to $4 billion'; 10-Q Q1-24 confirms a second convertible note."
+     },
+     {
+      "announced": "2024-11-22",
+      "instrument": "convertible note #3 (announced $4B)",
+      "amount_usd_m": 4000,
+      "funded": "$1.3B Q4 2024; $1.3B Q2 2025; $1.4B Q4 2025",
+      "note": "Anthropic post: 'a new $4 billion investment from Amazon' bringing total to $8B; Amazon 10-K FY24: invested $1.3B in Q4 2024 'and will invest an additional $2.7 billion by Q4 2025'; 10-Q Q2-25: $1.3B in Q2 2025 and $1.4B more by Q4 2025; 10-K FY25: $2.7B invested in 2025."
+     }
+    ]
+   },
    "verdict": "MISMATCH",
    "compared": [
     {
@@ -88,6 +139,18 @@
    "claim": "Google Apr-2026: up to $40B ($10B now): $40.0B at n/a post (2026-04-24)",
    "draft": "{\"date\": \"2026-04-24\", \"size_usd_m\": 40000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Alphabet\"]}",
    "rederived": "{\"date\": \"2026-04-24 (Bloomberg-first report; I found no Google or Anthropic release stating the dollar terms)\", \"size_usd_m\": 10000, \"up_to_total_usd_m\": 40000, \"contingent_usd_m\": 30000, \"pre_usd_m\": null, \"post_usd_m\": null, \"reported_valuation_usd_m\": 3500",
+   "rederived_obj": {
+    "date": "2026-04-24 (Bloomberg-first report; I found no Google or Anthropic release stating the dollar terms)",
+    "size_usd_m": 10000,
+    "up_to_total_usd_m": 40000,
+    "contingent_usd_m": 30000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "reported_valuation_usd_m": 350000,
+    "leads": [
+     "Google (sole investor)"
+    ]
+   },
    "verdict": "MISMATCH",
    "compared": [
     {
@@ -123,6 +186,15 @@
    "claim": "Series B: $980M at $3.0B post (2022-04-29)",
    "draft": "{\"date\": \"2022-04-29\", \"size_usd_m\": 980, \"pre_usd_m\": 2020, \"post_usd_m\": 3000, \"leads\": [\"Sam Bankman-Fried (FTX)\"]}",
    "rederived": "{\"date\": \"2022-04-29\", \"size_usd_m\": 580, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Sam Bankman-Fried, CEO of FTX (led the round)\"]}",
+   "rederived_obj": {
+    "date": "2022-04-29",
+    "size_usd_m": 580,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Sam Bankman-Fried, CEO of FTX (led the round)"
+    ]
+   },
    "verdict": "MISMATCH",
    "compared": [
     {
@@ -157,6 +229,16 @@
    "claim": "Amazon Apr-2026: $5B now + up to $20B facility: $25.0B at n/a post (2026-04-20)",
    "draft": "{\"date\": \"2026-04-20\", \"size_usd_m\": 25000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Amazon\"]}",
    "rederived": "{\"date\": \"2026-04-20\", \"size_usd_m\": 5000, \"up_to_additional_usd_m\": 20000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Amazon (sole investor)\"]}",
+   "rederived_obj": {
+    "date": "2026-04-20",
+    "size_usd_m": 5000,
+    "up_to_additional_usd_m": 20000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Amazon (sole investor)"
+    ]
+   },
    "verdict": "MISMATCH",
    "compared": [
     {
@@ -191,6 +273,236 @@
    "claim": "Total raised: $124.3B equity + $2.5B debt",
    "draft": "{\"equity_only_usd_m\": 124254, \"debt_usd_m\": 2500, \"total_usd_m\": 126754}",
    "rederived": "{\"equity_only_usd_m\": 140154, \"equity_only_range_usd_m\": {\"low\": 123654, \"base\": 140154, \"alt_if_April_hyperscaler_money_is_inside_Series_H\": 125154}, \"priced_rounds_only_usd_m\": 113404, \"debt_usd_m\": 15000, \"debt_usd_m_confirmed_closed_only\": 2500, \"total_usd",
+   "rederived_obj": {
+    "equity_only_usd_m": 140154,
+    "equity_only_range_usd_m": {
+     "low": 123654,
+     "base": 140154,
+     "alt_if_April_hyperscaler_money_is_inside_Series_H": 125154
+    },
+    "priced_rounds_only_usd_m": 113404,
+    "debt_usd_m": 15000,
+    "debt_usd_m_confirmed_closed_only": 2500,
+    "total_usd_m": 155154,
+    "spv_lessor_notes_excluded_usd_m": 35000,
+    "unfunded_up_to_commitments_excluded_usd_m": {
+     "Amazon_facility_remaining": 15000,
+     "Google_contingent_remaining": 20000,
+     "AMD": 5000,
+     "Microsoft_NVIDIA_unfunded_remainder": "up to 15000 less an undisclosed portion already inside Series G"
+    },
+    "components": [
+     {
+      "component": "Series A",
+      "date": "2021-05-28",
+      "amount_usd_m": 124,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced (Anthropic post)."
+     },
+     {
+      "component": "Series B",
+      "date": "2022-04-29",
+      "amount_usd_m": 580,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced (Anthropic post)."
+     },
+     {
+      "component": "Series C",
+      "date": "2023-05-23",
+      "amount_usd_m": 450,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced; Google took part (amount undisclosed)."
+     },
+     {
+      "component": "Amazon convertible note #1",
+      "date": "2023-09 (announced 2023-09-25)",
+      "amount_usd_m": 1250,
+      "class": "convertible note",
+      "counted_in_equity_only": true,
+      "basis": "Amazon 10-Q Q3-23: funded in Q3 2023."
+     },
+     {
+      "component": "Google cumulative Feb-2023 (~$300M), Oct-2023 package (up to $2B) and Jan-2025 (>$1B) tranches",
+      "date": "2023-02-03 to 2025-01-22",
+      "amount_usd_m": 3000,
+      "class": "equity/convertible (instrument by tranche not disclosed)",
+      "counted_in_equity_only": true,
+      "basis": "Lower bound: NYT court-filing story (2025-03-11) says Google's investment 'now exceeds $3 billion'; sub-tranches are press-reported and not counted separately to avoid double counting."
+     },
+     {
+      "component": "Google $750M convertible debt loan (agreed 2023, to be funded in 2025)",
+      "date": "2025 (per NYT court documents)",
+      "amount_usd_m": 750,
+      "class": "convertible debt",
+      "counted_in_equity_only": true,
+      "basis": "Funded status not independently confirmed; in the low case this is excluded."
+     },
+     {
+      "component": "Series D (reported, no company announcement)",
+      "date": "2023-12-21 reported in talks; close unconfirmed",
+      "amount_usd_m": 750,
+      "class": "priced equity (reported)",
+      "counted_in_equity_only": true,
+      "basis": "The Information/Reuters/CNBC: $750M led by Menlo at $15B pre-money; close not confirmed. Excluded in the low case."
+     },
+     {
+      "component": "Amazon convertible note #2",
+      "date": "2024-03-27",
+      "amount_usd_m": 2750,
+      "class": "convertible note",
+      "counted_in_equity_only": true,
+      "basis": "Amazon release and 10-Q Q1-24."
+     },
+     {
+      "component": "Amazon convertible note #3 (announced $4B: $1.3B Q4-2024, $1.3B Q2-2025, $1.4B Q4-2025)",
+      "date": "2024-11-22 announced; funded 2024-Q4 to 2025-Q4",
+      "amount_usd_m": 4000,
+      "class": "convertible note",
+      "counted_in_equity_only": true,
+      "basis": "Amazon 10-K FY24, 10-Q Q2-25, 10-K FY25."
+     },
+     {
+      "component": "Series E",
+      "date": "2025-03-03",
+      "amount_usd_m": 3500,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced."
+     },
+     {
+      "component": "Series F",
+      "date": "2025-09-02",
+      "amount_usd_m": 13000,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced."
+     },
+     {
+      "component": "Series G (includes a portion of the Nov-2025 Microsoft/NVIDIA commitments)",
+      "date": "2026-02-12",
+      "amount_usd_m": 30000,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced; Microsoft/NVIDIA portion not quantified, so those commitments are NOT added again."
+     },
+     {
+      "component": "Amazon $5.0B Series G nonvoting preferred",
+      "date": "2026-04 (announced 2026-04-20)",
+      "amount_usd_m": 5000,
+      "class": "equity (Series G-priced preferred)",
+      "counted_in_equity_only": true,
+      "basis": "Amazon 10-Q Q2-26. Counted as additional to the $30B and $65B headlines (its own 10-Q labels it Series G, separate from the $5.0B Series H); ALT case treats it as inside Series H."
+     },
+     {
+      "component": "Google $10B at a reported $350B valuation",
+      "date": "2026-04-24 (Bloomberg)",
+      "amount_usd_m": 10000,
+      "class": "equity/notes (instrument not disclosed)",
+      "counted_in_equity_only": true,
+      "basis": "Bloomberg-reported 'now in cash'; Alphabet's Q2-26 non-marketable purchases of $21.1B are consistent; ALT case treats it as inside Series H."
+     },
+     {
+      "component": "Series H (includes $15B previously committed hyperscaler money: Amazon $5B per SEC, rest unattributed)",
+      "date": "2026-05-28",
+      "amount_usd_m": 65000,
+      "class": "priced equity",
+      "counted_in_equity_only": true,
+      "basis": "Company-announced; includes hyperscaler option money, so those option exercises are NOT added again."
+     },
+     {
+      "component": "DEBT: 5-year revolving credit facility (committed, drawn amount undisclosed)",
+      "date": "2025-05-16",
+      "amount_usd_m": 2500,
+      "class": "debt (revolver)",
+      "counted_in_equity_only": false,
+      "basis": "CNBC; superseded by the expansion below if that closes"
+     },
+     {
+      "component": "DEBT: pre-IPO revolver expansion (reported near-final, NOT confirmed closed)",
+      "date": "reported 2026-09-03",
+      "amount_usd_m": 15000,
+      "class": "debt (revolver)",
+      "counted_in_equity_only": false,
+      "basis": "Bloomberg; expands (does not add to) the $2.5B facility; counted as the debt figure here"
+     },
+     {
+      "component": "MEMO: TPU chip-lease SPV notes (lessor debt, NOT Anthropic-issued)",
+      "date": "2026-06-05",
+      "amount_usd_m": 35000,
+      "class": "SPV debt (excluded)",
+      "counted_in_equity_only": false,
+      "basis": "Bloomberg/FT: SPV buys Google TPUs and leases to Anthropic; not Anthropic capital"
+     },
+     {
+      "component": "Microsoft/NVIDIA 'up to' $15B (Nov 2025): unfunded remainder",
+      "date": "2025-11-18",
+      "amount_usd_m": 15000,
+      "class": "up-to commitment; funded portion sits inside Series G (amount undisclosed)",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "Amazon conditional facility remaining",
+      "date": "2026-04-20",
+      "amount_usd_m": 15000,
+      "class": "up-to: $20.0B facility less $5.0B used in Series H; convertible-note draws as compute milestones are met",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "Google contingent commitment remaining (Alphabet 10-Q Q2-26)",
+      "date": "2026-04-24",
+      "amount_usd_m": 20000,
+      "class": "up-to: $30B contingent at announcement, $20.0B left at 2026-06-30",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "AMD strategic equity 'up to' $5B",
+      "date": "2026-07-22",
+      "amount_usd_m": 5000,
+      "class": "up-to, milestone-based, not funded",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "FTX estate sale #1 (secondary)",
+      "date": "2024-03-22",
+      "amount_usd_m": 884,
+      "class": "secondary: proceeds to the estate, not Anthropic",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "FTX estate sale #2 (secondary)",
+      "date": "2024-06-01",
+      "amount_usd_m": 450,
+      "class": "secondary: proceeds to the estate, not Anthropic",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "Employee buyback (May 2025) and tender (Feb-Apr 2026)",
+      "date": "2025-05 / 2026-02..04",
+      "amount_usd_m": null,
+      "class": "secondary/company repurchase: size undisclosed, not capital raised",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     },
+     {
+      "component": "Amazon note-to-preferred conversions (Q1-25, Q3-25, Q1-26)",
+      "date": "2025-2026",
+      "amount_usd_m": null,
+      "class": "non-cash conversions of notes already counted",
+      "counted_in_equity_only": false,
+      "basis": "EXCLUDED from all totals"
+     }
+    ],
+    "pitchbook_total_raised_definition": "UNTRACEABLE from public sources"
+   },
    "verdict": "MISMATCH",
    "compared": [
     {
@@ -229,6 +541,12 @@
    "claim": "Run-rate $1.4B (~2025-05-02)",
    "draft": "{\"date\": \"2025-05-02\", \"run_rate_usd_m\": 1400, \"basis\": \"unstated\"}",
    "rederived": "{\"date\": \"2025-05-30 ('at May's end')\", \"run_rate_usd_m\": 3000, \"basis\": \"Outlet-reported annualized run rate from two unnamed sources (Reuters); not a company statement; not recognized revenue; gross/net not stated.\", \"stated_by\": \"Reuters (Anna Tong, Jeffrey",
+   "rederived_obj": {
+    "date": "2025-05-30 ('at May's end')",
+    "run_rate_usd_m": 3000,
+    "basis": "Outlet-reported annualized run rate from two unnamed sources (Reuters); not a company statement; not recognized revenue; gross/net not stated.",
+    "stated_by": "Reuters (Anna Tong, Jeffrey Dastin; two sources familiar with the matter), 2025-05-30; carried by CNBC and Yahoo Finance"
+   },
    "verdict": "MISMATCH",
    "compared": [
     {
@@ -264,6 +582,15 @@
    "claim": "Secondary: undisclosed seller to Homeroom Fund, Lakeside Capital: n/a at n/a post (2025-01-15)",
    "draft": "{\"date\": \"2025-01-15\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": []}",
    "rederived": "{\"date\": null, \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Homeroom Fund and Lakeside Capital (buyers as named in the question; not verified)\"]}",
+   "rederived_obj": {
+    "date": null,
+    "size_usd_m": null,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Homeroom Fund and Lakeside Capital (buyers as named in the question; not verified)"
+    ]
+   },
    "verdict": "UNTRACEABLE",
    "compared": [],
    "tier": "T1",
@@ -286,6 +613,11 @@
    "claim": "net revenue retention (NRR): 140%+ (PitchBook conservative estimate; upper bound 170%); NOT disclosed by Anthropic",
    "draft": "{\"value\": \"140%+ (PitchBook conservative estimate; upper bound 170%); NOT disclosed by Anthropic\"}",
    "rederived": "{\"value\": null, \"date\": null, \"stated_by\": \"No net revenue retention figure found from Anthropic or any reputable outlet\"}",
+   "rederived_obj": {
+    "value": null,
+    "date": null,
+    "stated_by": "No net revenue retention figure found from Anthropic or any reputable outlet"
+   },
    "verdict": "UNTRACEABLE",
    "compared": [],
    "tier": "T1",
@@ -310,6 +642,11 @@
    "claim": "gross margin FY2025 (WSJ investor docs, secondary): ~40% (OpenAI 33%)",
    "draft": "{\"value\": \"~40% (OpenAI 33%)\", \"basis\": \"WSJ Apr 6 2026 as restated by AI Afterhours (T4); WSJ original not opened\"}",
    "rederived": "{\"value\": null, \"basis\": \"No WSJ-sourced FY2025 gross margin could be located\", \"reported_by\": \"A WSJ article exists: 'An Inside Look at OpenAI and Anthropic's Finances Ahead of Their IPOs' (2026-04-06; Seeking Alpha summary headline 'Anthropic, OpenAI's finan",
+   "rederived_obj": {
+    "value": null,
+    "basis": "No WSJ-sourced FY2025 gross margin could be located",
+    "reported_by": "A WSJ article exists: 'An Inside Look at OpenAI and Anthropic's Finances Ahead of Their IPOs' (2026-04-06; Seeking Alpha summary headline 'Anthropic, OpenAI's finances ahead of IPOs reveal computing cost challenges'), but only its headline was visible to me"
+   },
    "verdict": "UNTRACEABLE",
    "compared": [],
    "tier": "T4",
@@ -332,6 +669,15 @@
    "claim": "Series C: $450M at $4.5B post (2023-06-30)",
    "draft": "{\"date\": \"2023-06-30\", \"size_usd_m\": 450, \"pre_usd_m\": 4100, \"post_usd_m\": 4550, \"leads\": [\"Spark Capital\"]}",
    "rederived": "{\"date\": \"2023-05-23\", \"size_usd_m\": 450, \"pre_usd_m\": 4100, \"post_usd_m\": null, \"leads\": [\"Spark Capital (led the round)\"]}",
+   "rederived_obj": {
+    "date": "2023-05-23",
+    "size_usd_m": 450,
+    "pre_usd_m": 4100,
+    "post_usd_m": null,
+    "leads": [
+     "Spark Capital (led the round)"
+    ]
+   },
    "verdict": "PARTIAL",
    "compared": [
     {
@@ -371,6 +717,43 @@
    "claim": "TPU chip-lease SPV notes (lessor debt; not Anthropic-issued): $34.5B at n/a post (2026-06-09)",
    "draft": "{\"date\": \"2026-06-09\", \"size_usd_m\": 34500, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Apollo Global Management\", \"Blackstone\"]}",
    "rederived": "{\"date\": \"2026-06-05 (financing wrapped up per Bloomberg); first reported 2026-05-28\", \"size_usd_m\": 35000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Apollo Global Management (anchor lender)\", \"Blackstone (anchor lender)\"], \"tranches_usd_m\": {\"A1_super",
+   "rederived_obj": {
+    "date": "2026-06-05 (financing wrapped up per Bloomberg); first reported 2026-05-28",
+    "size_usd_m": 35000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Apollo Global Management (anchor lender)",
+     "Blackstone (anchor lender)"
+    ],
+    "tranches_usd_m": {
+     "A1_super_senior": 6000,
+     "A2_first_lien": 24000,
+     "B_second_lien": 4500
+    },
+    "follow_on_spv_deals_not_confirmed_closed": [
+     {
+      "date": "reported 2026-08-04/06",
+      "size_usd_m": 36000,
+      "status": "preliminary, 'subject to change'; Blackstone leading early investor talks; same SPV-leases-TPUs-to-Anthropic shape; Yahoo Finance headline: SPVs 'stack $71 billion in chip-lease debt in 60 days' ($35B June + about $36B second)"
+     },
+     {
+      "date": "reported 2026-08-20/21",
+      "size_usd_m": "more than 60000 (The Next Web, Bloomberg); a Straits Times headline says more than 76000",
+      "status": "Broadcom-linked SPV package in negotiation (junior tranche about $30B plus senior-secured about $60-70B, Broadcom guaranteeing part of the senior); 'talks are continuing and the terms may change'; no closing found"
+     },
+     {
+      "date": "reported 2026-08-05",
+      "size_usd_m": 15000,
+      "status": "Morgan Stanley-led bond refinancing of debt for a Google-backed Anthropic-leased data-center campus (Nexus Data Centers, Hubbard TX): developer/data-center debt, not chip-lease notes; planning stage"
+     },
+     {
+      "date": "reported 2026-09-16",
+      "size_usd_m": 22000,
+      "status": "Crux AI (Blackstone-Alphabet JV) chip loan from 10 banks to buy Google TPUs for AI labs 'such as OpenAI and Anthropic': a separate newer transaction, not Anthropic-specific"
+     }
+    ]
+   },
    "verdict": "PARTIAL",
    "compared": [
     {
@@ -406,6 +789,14 @@
    "claim": "Google Cloud (next-gen TPU program, Apr 2026): $111.1B, 5.0 GW",
    "draft": "{\"usd_m\": 111100, \"gw\": 5.0, \"chips\": \"Google TPU next-generation (incl. ~3.5 GW accessed via Broadcom)\"}",
    "rederived": "{\"usd_m\": null, \"usd_basis\": \"No dollar value in any company statement (Anthropic and Google Cloud releases of 2026-04-06, Broadcom 8-K). Reported figures differ: (a) $200,000M over five years, committed, per The Information (2026-05-05, single unnamed source;",
+   "rederived_obj": {
+    "usd_m": null,
+    "usd_basis": "No dollar value in any company statement (Anthropic and Google Cloud releases of 2026-04-06, Broadcom 8-K). Reported figures differ: (a) $200,000M over five years, committed, per The Information (2026-05-05, single unnamed source; Reuters could not verify; Anthropic declined comment); (b) at least $111,100M owed to Google Apr 2026-Jul 2033 'regardless of usage' with shortfall top-up, per the leaked confidential S-1 via Reuters (2026-09-29). Whether (b) covers only the April TPU program or all Google Cloud spend is not stated.",
+    "gw": "'Multiple gigawatts' (Anthropic and Google Cloud, 2026-04-06); approximately 3.5 GW through Broadcom from 2027 (Broadcom 8-K); 5 GW (Anthropic posts of 2026-05-06 and 2026-05-28; TechCrunch 2026-04-24: 'fresh 5 gigawatts ... over the next five years').",
+    "chips": "Next-generation Google TPUs; Google-built TPUs supplied through Broadcom plus Google Cloud services.",
+    "term": "Not stated by the parties. The Information: five years. Leaked S-1: payments Apr 2026 to Jul 2033. Capacity expected online starting 2027.",
+    "stated_by": "Anthropic, Google Cloud (PR Newswire) and Broadcom (SEC Form 8-K), all 2026-04-06; $200B by The Information 2026-05-05; $111.1B by Reuters on the confidential prospectus 2026-09-29."
+   },
    "verdict": "PARTIAL",
    "compared": [],
    "tier": "T1",
@@ -430,6 +821,11 @@
    "claim": "Headcount",
    "draft": "{}",
    "rederived": "{\"headcount\": \"No company-stated total found. Latest named-outlet figure: 'more than 2,500 employees' (Fortune, 2026-08-25); earlier ~2,500 worldwide and 1,300+ in the Bay Area (SF Chronicle via SFist, 2026-01-30). Data-vendor counts are higher: ~3,950 (Reveli",
+   "rederived_obj": {
+    "headcount": "No company-stated total found. Latest named-outlet figure: 'more than 2,500 employees' (Fortune, 2026-08-25); earlier ~2,500 worldwide and 1,300+ in the Bay Area (SF Chronicle via SFist, 2026-01-30). Data-vendor counts are higher: ~3,950 (Revelio Labs, Mar 2026); ~5,000 (Tracxn, Mar 2026, via SaaStr) and 5,994 (Tracxn, 2026-08-31, search snippet only)",
+    "date": "Latest named-outlet figure 2026-08-25 (Fortune: more than 2,500); previous 2026-01-30 (SF Chronicle/SFist: 2,500). Latest vendor data point 2026-08-31 (Tracxn 5,994, page not opened).",
+    "stated_by": "No statement by Anthropic of a total. Company president Daniela Amodei is quoted (via the SF Chronicle/SFist) only on 'over 1,300 employees in the Bay Area'. Totals come from Fortune, SF Chronicle/SFist, SaaStr (citing Tracxn, TrueUp, PitchBook, Brad Gerstner), Revelio Labs and Tracxn."
+   },
    "verdict": "PARTIAL",
    "compared": [],
    "tier": "T1",
@@ -452,6 +848,12 @@
    "claim": "Claude 3 Haiku: $0.25/$1.25 per Mtok",
    "draft": "{\"price_in_per_mtok\": 0.25, \"price_out_per_mtok\": 1.25, \"release_date\": \"2024-03-04\"}",
    "rederived": "{\"price_in_per_mtok\": 0.25, \"price_out_per_mtok\": 1.25, \"release_date\": \"2024-03-13\", \"later_changes\": \"No list-price change found: $0.25/$1.25 in Anthropic's docs tables archived 2024-11-10, 2025-03-01, 2025-06-15, 2026-01-15 and 2026-02-25. Batch ($0.125/$0.",
+   "rederived_obj": {
+    "price_in_per_mtok": 0.25,
+    "price_out_per_mtok": 1.25,
+    "release_date": "2024-03-13",
+    "later_changes": "No list-price change found: $0.25/$1.25 in Anthropic's docs tables archived 2024-11-10, 2025-03-01, 2025-06-15, 2026-01-15 and 2026-02-25. Batch ($0.125/$0.625) and prompt-caching prices ($0.30 write, $0.03 read) were added later as features. Deprecation announced 2026-02-19; retired on the Claude API 2026-04-20."
+   },
    "verdict": "PARTIAL",
    "compared": [
     {
@@ -492,6 +894,12 @@
    "claim": "Run-rate $87M (~2024-01-31)",
    "draft": "{\"date\": \"2024-01-31\", \"run_rate_usd_m\": 87, \"basis\": \"unstated\"}",
    "rederived": "{\"date\": \"2024-01-01 ('at the start of 2024')\", \"run_rate_usd_m\": 87, \"basis\": \"Company-stated run-rate revenue (annualized); not recognized revenue; gross/net of cloud-partner resale not stated.\", \"stated_by\": \"Anthropic (company post naming Chris Ciauri, 202",
+   "rederived_obj": {
+    "date": "2024-01-01 ('at the start of 2024')",
+    "run_rate_usd_m": 87,
+    "basis": "Company-stated run-rate revenue (annualized); not recognized revenue; gross/net of cloud-partner resale not stated.",
+    "stated_by": "Anthropic (company post naming Chris Ciauri, 2025-09-26: 'from $87 million at the start of 2024 to over $5 billion in August 2025'); restated in VentureBeat's run-rate timeline (2026-05-08)"
+   },
    "verdict": "PARTIAL",
    "compared": [
     {
@@ -527,6 +935,43 @@
    "claim": "Google: strategic investment",
    "draft": "{}",
    "rederived": "{\"amount_usd_m\": 13750, \"funded_vs_up_to\": \"REPORTED FUNDED (press/court-filing based; Alphabet's filings never name Anthropic): more than $3.0B through early 2025 (NYT court documents via Yahoo Finance, 2025-03-11; FT 2025-01-22) + $0.75B convertible debt loa",
+   "rederived_obj": {
+    "amount_usd_m": 13750,
+    "funded_vs_up_to": "REPORTED FUNDED (press/court-filing based; Alphabet's filings never name Anthropic): more than $3.0B through early 2025 (NYT court documents via Yahoo Finance, 2025-03-11; FT 2025-01-22) + $0.75B convertible debt loan due to be funded in 2025 (court documents; funded status unconfirmed) + $10.0B in April 2026 (Bloomberg: 'now in cash') = about $13.75B. Possibly a further about $10B via an option in the Series H (INFERENCE from Alphabet's 10-Q: $21.1B of Q2-2026 non-marketable purchases and remaining contingent commitments falling to $20.0B from $30B; not stated by any source), which would make the total about $23.75B. UP TO / not funded: $30B contingent on performance targets at announcement (Bloomberg, 2026-04-24), $20.0B still outstanding at 2026-06-30 per Alphabet's 10-Q ('future capital funding commitments with a private company contingent upon ... milestones through 2030', unnamed); headline 'up to $40B'.",
+    "dates": [
+     {
+      "date": "2023-02-03",
+      "amount_usd_m": 300,
+      "note": "About $300M for roughly 10% (FT); NYT cites about $5B valuation. Instrument not stated."
+     },
+     {
+      "date": "2023-05-23",
+      "amount_usd_m": null,
+      "note": "Google named as a participant in the $450M Series C; amount undisclosed."
+     },
+     {
+      "date": "2023-10-27",
+      "amount_usd_m": 2000,
+      "note": "'Up to' $2B: $500M upfront + $1.5B over time (WSJ via Crunchbase); a $750M convertible debt loan 'agreed upon in 2023' was still to be funded in 2025 (court documents)."
+     },
+     {
+      "date": "2025-01-22",
+      "amount_usd_m": 1000,
+      "note": "'More than $1bn' new investment (FT via Silicon Republic); Google total 'more than $3 billion'."
+     },
+     {
+      "date": "2025 (per court documents, reported 2025-03-11)",
+      "amount_usd_m": 750,
+      "note": "Convertible debt loan to be funded in 2025."
+     },
+     {
+      "date": "2026-04-24",
+      "amount_usd_m": 10000,
+      "note": "$10B now at a reported $350B valuation; up to $30B more on performance targets; Google Cloud 5 GW over five years (Bloomberg)."
+     }
+    ],
+    "ownership_or_carrying_value": "OWNERSHIP: about 14% (court filings, reported 2025-03-11 by NYT), contractually capped at 15%, no voting rights, board seat or observer rights (Android Police/NYT; Fortune 2026-06-04 repeats 'roughly 14% ... hard-capped at 15%' and The Next Web 2026-04-24 'approximately 14%'); no post-2026-rounds percentage has been disclosed. CARRYING VALUE: Alphabet's 10-Q Q2-26 shows non-marketable equity securities under the measurement alternative of $124.3B at 2026-06-30 (vs $64.1B at 2025-12-31), footnoted as 'primarily' one unnamed private company (press, e.g. Startup Fortune and Fortune, identify it as Anthropic, but the line covers all such securities, so it is an upper bound, not an Anthropic-only figure); Q2-26 gross unrealized gains on such securities were $77.5B. Alphabet does not name Anthropic in its FY25 10-K or Q1/Q2-26 10-Qs."
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -549,6 +994,48 @@
    "claim": "Amazon: strategic investment",
    "draft": "{}",
    "rederived": "{\"amount_usd_m\": 18000, \"funded_vs_up_to\": \"FUNDED through 2026-06-30: $18.0B = $8.0B convertible notes (Q3 2023 to Q4 2025) + $10.0B nonvoting preferred stock (Q2 2026: $5.0B Series G + $5.0B Series H). UP TO / not funded: a further $15.0B conditional facilit",
+   "rederived_obj": {
+    "amount_usd_m": 18000,
+    "funded_vs_up_to": "FUNDED through 2026-06-30: $18.0B = $8.0B convertible notes (Q3 2023 to Q4 2025) + $10.0B nonvoting preferred stock (Q2 2026: $5.0B Series G + $5.0B Series H). UP TO / not funded: a further $15.0B conditional facility (of a $20.0B facility announced April 2026; draws in new convertible notes, or common stock after an IPO, as compute-delivery milestones are met; expires 30 months after a liquidity event). Maximum if fully drawn: $33.0B. No additional Anthropic funding is disclosed after 2026-06-30 (Amazon's Q3 2026 10-Q is not yet filed).",
+    "dates": [
+     {
+      "tranche": "Convertible note #1",
+      "period": "Q3 2023 (announced 2023-09-25 as 'up to $4B')",
+      "amount_usd_m": 1250
+     },
+     {
+      "tranche": "Convertible note #2",
+      "period": "Q1 2024 (2024-03-27)",
+      "amount_usd_m": 2750
+     },
+     {
+      "tranche": "Convertible note #3, part 1",
+      "period": "Q4 2024 (announced 2024-11-22 as $4B)",
+      "amount_usd_m": 1300
+     },
+     {
+      "tranche": "Convertible note #3, part 2",
+      "period": "Q2 2025",
+      "amount_usd_m": 1300
+     },
+     {
+      "tranche": "Convertible note #3, part 3",
+      "period": "Q4 2025",
+      "amount_usd_m": 1400
+     },
+     {
+      "tranche": "Series G nonvoting preferred",
+      "period": "Q2 2026 (April; announced 2026-04-20 with the up-to-$20B facility)",
+      "amount_usd_m": 5000
+     },
+     {
+      "tranche": "Series H nonvoting preferred (option exercise)",
+      "period": "Q2 2026 (round announced 2026-05-28); cut facility to $15.0B",
+      "amount_usd_m": 5000
+     }
+    ],
+    "ownership_or_carrying_value": "Carrying value at 2026-06-30 (Amazon 10-Q): nonvoting preferred stock about $92.5B plus convertible notes at fair value about $97.9B = about $190.4B (unrealized gain on notes in AOCI $92.0B); at 2025-12-31: $14.8B preferred + $45.8B notes = $60.6B. Q2 2026 'upward adjustments relating to equity investments in private companies' were $50.5B ($62.8B for six months), primarily Anthropic. OWNERSHIP: Amazon does not disclose a percentage; its notes are subject to an 'ownership cap, which may be waived at our election'. Reported estimates: 'somewhere in the mid-to-high teens' (Fortune, 2026-06-04, from Amazon's filings); the Motley Fool (2026-09-15) computes about 19.7% by dividing the $190.4B carrying value by the $965B Series H valuation, which is arithmetic, not a reported ownership figure."
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -571,6 +1058,25 @@
    "claim": "Microsoft and Nvidia: strategic investment",
    "draft": "{}",
    "rederived": "{\"amount_usd_m\": 15000, \"funded_vs_up_to\": \"'UP TO' at announcement: NVIDIA up to $10B and Microsoft up to $5B (total up to $15B), per Anthropic's and Microsoft's own posts of 2025-11-18. Funded since: NOT QUANTIFIED by any primary source. Anthropic's Series G",
+   "rederived_obj": {
+    "amount_usd_m": 15000,
+    "funded_vs_up_to": "'UP TO' at announcement: NVIDIA up to $10B and Microsoft up to $5B (total up to $15B), per Anthropic's and Microsoft's own posts of 2025-11-18. Funded since: NOT QUANTIFIED by any primary source. Anthropic's Series G post (2026-02-12) says the round 'includes a portion of the previously announced investments from Microsoft and NVIDIA' with no amounts. Microsoft's FY26-Q4 release (2026-07-29) records 'a $3.2 billion gain from our investment in Anthropic' (no invested amount); TechCrunch says Microsoft 'invested $5 billion in November 2025' (loose wording, not verified against a filing). Neither company names Anthropic in its 10-K/10-Qs I searched (Microsoft FY26 10-K and 10-Qs; Nvidia FY26 10-K and Q1/Q2 FY27 10-Qs: 0 hits); Nvidia reports only aggregates ($99B equity investments and $25B commitments at 2026-07-26). Separate, unconfirmed: Reuters (2026-09-11) says Nvidia is in talks to invest up to $10B as an Anthropic IPO anchor.",
+    "dates": [
+     {
+      "date": "2025-11-18",
+      "event": "Announcement: NVIDIA up to $10B, Microsoft up to $5B; Anthropic commits to purchase $30B of Azure compute and to contract additional capacity up to 1 GW; initial NVIDIA compute commitment up to 1 GW on Grace Blackwell and Vera Rubin systems."
+     },
+     {
+      "date": "2026-02-12",
+      "event": "Series G includes 'a portion' of these investments (amounts undisclosed)."
+     },
+     {
+      "date": "2026-07-29",
+      "event": "Microsoft discloses a $3.2B gain on its Anthropic investment for the quarter ended 2026-06-30."
+     }
+    ],
+    "ownership_or_carrying_value": "No ownership percentage or carrying value is disclosed for Microsoft or Nvidia. Microsoft's Q4 FY26 release shows only a $3.2B gain; TechCrunch notes Microsoft does not routinely revalue the stake each quarter and gives no ownership figure. VALUATION CITED: neither company post states one; the press figure is about $350B ('Sources told CNBC', via AFP/Tech Xplore 2025-11-18; CNBC headline 'valued in range of $350 billion', not opened), basis pre/post not stated; it equals the Series G pre-money announced in February 2026."
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -593,6 +1099,11 @@
    "claim": "business customers: over 300,000",
    "draft": "{\"value\": \"over 300,000\"}",
    "rederived": "{\"value\": \"over 300,000 business customers\", \"date\": \"2025-09-02\", \"stated_by\": \"Anthropic (company statement in the Series F announcement, 2025-09-02)\"}",
+   "rederived_obj": {
+    "value": "over 300,000 business customers",
+    "date": "2025-09-02",
+    "stated_by": "Anthropic (company statement in the Series F announcement, 2025-09-02)"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -615,6 +1126,11 @@
    "claim": "logo churn / multiyear contracts: logo churn <5%; >50% multiyear contracts; >60% of business customers use more than one Claude product (all analyst estimates)",
    "draft": "{\"value\": \"logo churn <5%; >50% multiyear contracts; >60% of business customers use more than one Claude product (all analyst estimates)\"}",
    "rederived": "{\"value\": \"no logo-churn rate or multiyear-contract share found; qualitative only: enterprises ~80% of business and 'a relatively stable source of income'\", \"date\": \"2026-03-04\", \"stated_by\": \"Dario Amodei (CEO), as reported by PYMNTS on 2026-03-04; CFO Krishn",
+   "rederived_obj": {
+    "value": "no logo-churn rate or multiyear-contract share found; qualitative only: enterprises ~80% of business and 'a relatively stable source of income'",
+    "date": "2026-03-04",
+    "stated_by": "Dario Amodei (CEO), as reported by PYMNTS on 2026-03-04; CFO Krishna Rao quoted alongside on run-rate $19bn"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T4",
@@ -637,6 +1153,11 @@
    "claim": "customer concentration: two unnamed customers each ~12% of FY2025 revenue (nearly 25% combined); many large customers lack long-term contracts",
    "draft": "{\"value\": \"two unnamed customers each ~12% of FY2025 revenue (nearly 25% combined); many large customers lack long-term contracts\"}",
    "rederived": "{\"value\": \"two unnamed customers each generated 12% of FY2025 revenue (about 24%, 'nearly a quarter')\", \"date\": \"2026-09-28\", \"stated_by\": \"Anthropic's draft S-1/prospectus (concentration disclosure), as reported by Reuters (2026-09-28 'nearly a quarter'; 2026",
+   "rederived_obj": {
+    "value": "two unnamed customers each generated 12% of FY2025 revenue (about 24%, 'nearly a quarter')",
+    "date": "2026-09-28",
+    "stated_by": "Anthropic's draft S-1/prospectus (concentration disclosure), as reported by Reuters (2026-09-28 'nearly a quarter'; 2026-09-29 '12% each') and, per TechCrunch, by the Financial Times"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -661,6 +1182,11 @@
    "claim": "Fortune 10 customers: 8 of the Fortune 10",
    "draft": "{\"value\": \"8 of the Fortune 10\"}",
    "rederived": "{\"value\": \"8 of the Fortune 10\", \"date\": \"2026-02-12\", \"stated_by\": \"Anthropic (Series G announcement, 2026-02-12)\"}",
+   "rederived_obj": {
+    "value": "8 of the Fortune 10",
+    "date": "2026-02-12",
+    "stated_by": "Anthropic (Series G announcement, 2026-02-12)"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -682,6 +1208,11 @@
    "claim": "customers >$100K run-rate: growth: 8x YoY (Q1 2025); nearly 7x (Aug 2025); 7x (Feb 2026)",
    "draft": "{\"value\": \"8x YoY (Q1 2025); nearly 7x (Aug 2025); 7x (Feb 2026)\"}",
    "rederived": "{\"value\": \"8x (customers paying at least $100,000 'jumped eightfold'); measurement window not stated in the copy I could open\", \"date\": \"2025-05-16\", \"stated_by\": \"Anthropic (disclosure accompanying its $2.5bn credit-facility announcement), as reported by CNBC",
+   "rederived_obj": {
+    "value": "8x (customers paying at least $100,000 'jumped eightfold'); measurement window not stated in the copy I could open",
+    "date": "2025-05-16",
+    "stated_by": "Anthropic (disclosure accompanying its $2.5bn credit-facility announcement), as reported by CNBC and SiliconANGLE on 2025-05-16"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -705,6 +1236,11 @@
    "claim": "customers >=$1M annualized: ~12 (early 2024) -> over 500 (Feb 2026) -> over 1,000 (Apr 2026)",
    "draft": "{\"value\": \"~12 (early 2024) -> over 500 (Feb 2026) -> over 1,000 (Apr 2026)\"}",
    "rederived": "{\"value\": \"over 1,000 business customers each spending over $1 million on an annualized basis\", \"date\": \"2026-04-06\", \"stated_by\": \"Anthropic (company post 'Anthropic expands Google and Broadcom compute deal', 2026-04-06)\"}",
+   "rederived_obj": {
+    "value": "over 1,000 business customers each spending over $1 million on an annualized basis",
+    "date": "2026-04-06",
+    "stated_by": "Anthropic (company post 'Anthropic expands Google and Broadcom compute deal', 2026-04-06)"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -727,6 +1263,11 @@
    "claim": "share of revenue from business/enterprise: ~80% business/enterprise vs ~20% consumer",
    "draft": "{\"value\": \"~80% business/enterprise vs ~20% consumer\"}",
    "rederived": "{\"value\": \"about 80% of revenue from business/enterprise customers\", \"date\": \"2025-10-15\", \"stated_by\": \"Reuters exclusive by Krystal Hu and Deepa Seetharaman (2025-10-15, carried 2025-10-16), sourced to 'two people familiar'; the company confirmed its October",
+   "rederived_obj": {
+    "value": "about 80% of revenue from business/enterprise customers",
+    "date": "2025-10-15",
+    "stated_by": "Reuters exclusive by Krystal Hu and Deepa Seetharaman (2025-10-15, carried 2025-10-16), sourced to 'two people familiar'; the company confirmed its October revenue figure but declined to comment on projections"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T3",
@@ -751,6 +1292,11 @@
    "claim": "gross margin FY2028E: 77% (target)",
    "draft": "{\"value\": \"77% (target)\", \"basis\": \"company plan reported by The Information (Nov 2025) via TechCrunch\"}",
    "rederived": "{\"value\": \"77% (excluding free-user inference); 75% if free-user inference is included\", \"basis\": \"Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-dev",
+   "rederived_obj": {
+    "value": "77% (excluding free-user inference); 75% if free-user inference is included",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. Forward projection for FY2028 made in Nov 2025, tied to a plan of up to $70bn 2028 revenue and $17bn cash flow.",
+    "reported_by": "The Information, 2025-11-04; re-reported by TechCrunch, TipRanks, MLQ, Seeking Alpha the same day"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T3",
@@ -775,6 +1321,11 @@
    "claim": "gross margin Q1 2026: compute cost $0.71 per $1 of revenue (implied ~29% on a compute-only basis)",
    "draft": "{\"value\": \"compute cost $0.71 per $1 of revenue (implied ~29% on a compute-only basis)\", \"basis\": \"PitchBook analyst estimate (Harrison Rolfes); not a company d",
    "rederived": "{\"value\": \"no company-sourced figure; third-party estimate: inference gross margin 'now in the mid 60s' (SemiAnalysis, 2026-05-27); an earlier SemiAnalysis post (2026-05-01) says 'over 70%'\", \"basis\": \"SemiAnalysis's own Tokenomics-model estimate of gross marg",
+   "rederived_obj": {
+    "value": "no company-sourced figure; third-party estimate: inference gross margin 'now in the mid 60s' (SemiAnalysis, 2026-05-27); an earlier SemiAnalysis post (2026-05-01) says 'over 70%'",
+    "basis": "SemiAnalysis's own Tokenomics-model estimate of gross margin on inference compute (excludes model-training cost); not company-reported, not GAAP. Period not labelled as Q1 2026: the May 27 post says margins are 'now' in the mid 60s while discussing 1Q26 Bedrock revenue",
+    "reported_by": "SemiAnalysis, 2026-05-27 ('Anthropic Growth and Bedrock Mix Drive AWS Margins Higher While Peers Lag') and 2026-05-01 ('AI Value Capture - The Shift To Model Labs'), both partly paywalled"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T4",
@@ -799,6 +1350,11 @@
    "claim": "operating income Q3 2026E: second straight positive adjusted operating income expected; SemiAnalysis est. ~$1B GAAP EBIT (~6% margin)",
    "draft": "{\"value\": \"second straight positive adjusted operating income expected; SemiAnalysis est. ~$1B GAAP EBIT (~6% margin)\", \"basis\": \"company guidance to investors ",
    "rederived": "{\"value\": \"positive adjusted operating income expected (no amount); SemiAnalysis's own estimate is above $1bn\", \"basis\": \"Company view (FT): adjusted operating income expected positive for a second straight quarter (July-September 2026), told to shareholders; ",
+   "rederived_obj": {
+    "value": "positive adjusted operating income expected (no amount); SemiAnalysis's own estimate is above $1bn",
+    "basis": "Company view (FT): adjusted operating income expected positive for a second straight quarter (July-September 2026), told to shareholders; definition of 'adjusted' not given. SemiAnalysis: third-party estimate from its Tokenomics model, not company-reported. Projections, unaudited",
+    "reported_by": "Financial Times 2026-09-13 (via Reuters brief, TNW, techi; CNBC reportedly confirmed via two people, per TNW); SemiAnalysis 2026-07-08 ('Anthropic 3Q26 Profit Over $1B', paywalled)"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T3",
@@ -823,6 +1379,11 @@
    "claim": "gross margin FY2025E (Nov 2025 projection): ~50%",
    "draft": "{\"value\": \"~50%\", \"basis\": \"company projection per The Information via TechCrunch\"}",
    "rederived": "{\"value\": \"50% (excluding free-user inference); 47% if free-user inference is included\", \"basis\": \"Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-dev",
+   "rederived_obj": {
+    "value": "50% (excluding free-user inference); 47% if free-user inference is included",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. Forward projection for FY2025 made in Nov 2025 (year not yet finished).",
+    "reported_by": "The Information, 2025-11-04 (same article as FY2024 and FY2028 points); re-reported by TechCrunch, TipRanks, MLQ, Seeking Alpha"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T4",
@@ -847,6 +1408,11 @@
    "claim": "gross margin Q2 2026 (investor materials): >80% before revenue shared with distribution partners and before model-training costs",
    "draft": "{\"value\": \">80% before revenue shared with distribution partners and before model-training costs\", \"basis\": \"adjusted, company-provided (FT Sep 13 via Stocktwit",
    "rederived": "{\"value\": \"above 80%\", \"basis\": \"Management/non-GAAP: measured before revenue shared with distribution partners (including Amazon) and before the cost of training its models; reported from shareholder/investor communications, unaudited. Period: the Reuters bri",
+   "rederived_obj": {
+    "value": "above 80%",
+    "basis": "Management/non-GAAP: measured before revenue shared with distribution partners (including Amazon) and before the cost of training its models; reported from shareholder/investor communications, unaudited. Period: the Reuters brief does not label the quarter; TNW frames it with Q2 2026 results",
+    "reported_by": "Financial Times, 2026-09-13 ('multiple people with knowledge of the matter'), via Reuters brief the same day (Investing.com), The Next Web 2026-09-15, techi.com 2026-09-13"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T3",
@@ -871,6 +1437,11 @@
    "claim": "gross margin Q2 2026E: compute cost $0.56 per $1 (implied ~44%; PitchBook \"roughly 44%\")",
    "draft": "{\"value\": \"compute cost $0.56 per $1 (implied ~44%; PitchBook \\\"roughly 44%\\\")\", \"basis\": \"PitchBook analyst estimate on a conservative cost allocation\"}",
    "rederived": "{\"value\": \"no company projection of Q2 2026 gross margin found; third-party estimates only (mid-60s to 80%+ on inference/API)\", \"basis\": \"Third-party (SemiAnalysis Tokenomics model) estimates of inference/API gross margin, excluding training; not company-repor",
+   "rederived_obj": {
+    "value": "no company projection of Q2 2026 gross margin found; third-party estimates only (mid-60s to 80%+ on inference/API)",
+    "basis": "Third-party (SemiAnalysis Tokenomics model) estimates of inference/API gross margin, excluding training; not company-reported. The FT's later 'above 80%' (2026-09-13) is a management figure before partner share and training; see OPS-MAR-9270b8",
+    "reported_by": "SemiAnalysis 2026-05-27 (mid 60s) and 2026-05-01 (over 70%); SemiAnalysis 2026-07-08 piece headlined (per a BigGo headline of 2026-07-08, not opened) as giving the API model an '80%+ gross margin'"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T4",
@@ -895,6 +1466,11 @@
    "claim": "operating income Q2 2026 (actual, adjusted): positive adjusted operating income; dollar amount undisclosed",
    "draft": "{\"value\": \"positive adjusted operating income; dollar amount undisclosed\", \"basis\": \"adjusted: strips stock-based compensation and exceptional/one-time items (F",
    "rederived": "{\"value\": \"positive adjusted operating income; dollar amount not reported\", \"basis\": \"Adjusted operating income (definition not given in any accessible report; one aggregator summary says ex stock-based comp 'and similar', unverified); preliminary, unaudited, ",
+   "rederived_obj": {
+    "value": "positive adjusted operating income; dollar amount not reported",
+    "basis": "Adjusted operating income (definition not given in any accessible report; one aggregator summary says ex stock-based comp 'and similar', unverified); preliminary, unaudited, from investor documents; quarter = April-June 2026",
+    "reported_by": "Bloomberg, 2026-08-14 ('internal documents' / confidential investor documents; via Fortune 2026-08-15, The Next Web 2026-08-15, PYMNTS, Yahoo 2026-08-21); FT, 2026-09-13 (via Reuters brief, TNW, techi, Dealroom)"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T3",
@@ -919,6 +1495,11 @@
    "claim": "gross margin FY2027E: 63% (target)",
    "draft": "{\"value\": \"63% (target)\", \"basis\": \"analyst-compiled target in PitchBook Ranking the AI Giants; not located in an opened press/primary source\"}",
    "rederived": "{\"value\": \"above 70% (exact point estimate not found)\", \"basis\": \"Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-tra",
+   "rederived_obj": {
+    "value": "above 70% (exact point estimate not found)",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. Forward projection from company financial plans as reported; period FY2027.",
+    "reported_by": "The Information, Jan-Feb 2026 coverage: 'Anthropic has previously projected gross margins above 70% by 2027' (quoted in Parekh's Substack 2026-03-26; also in Tiger Brokers/Deep News and Longbridge 2026-01-22)"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T3",
@@ -943,6 +1524,11 @@
    "claim": "gross margin FY2024: -94%",
    "draft": "{\"value\": \"-94%\", \"basis\": \"paying customers only (excludes free-user inference); estimate first reported by The Information Nov 4 2025 (\\\"negative 94% last yea",
    "rederived": "{\"value\": \"-94% (excluding free-user inference); -109% if inference for free users is included\", \"basis\": \"Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API",
+   "rederived_obj": {
+    "value": "-94% (excluding free-user inference); -109% if inference for free users is included",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. Historical FY2024 figure as stated in Nov 2025 (the 'last year' figure), not from the draft S-1.",
+    "reported_by": "The Information (Sri Muppidi), 2025-11-04, 'Anthropic Projects $70 Billion in Revenue, $17 Billion in Cash Flow in 2028'; re-reported the same day by TechCrunch, TipRanks, MLQ, Seeking Alpha"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T4",
@@ -967,6 +1553,11 @@
    "claim": "gross margin FY2025 (revised Jan 2026): ~40% (~38% including free-user inference)",
    "draft": "{\"value\": \"~40% (~38% including free-user inference)\", \"basis\": \"The Information Jan 22 2026 via TipRanks: cut ~10pts because inference costs on Google/Amazon c",
    "rederived": "{\"value\": \"40% (cut from 50%); about 38% if inference costs for non-paying Claude chatbot users are also counted\", \"basis\": \"Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (p",
+   "rederived_obj": {
+    "value": "40% (cut from 50%); about 38% if inference costs for non-paying Claude chatbot users are also counted",
+    "basis": "Management (non-GAAP) gross margin as defined by Anthropic in the reporting: revenue less inference costs and other costs of selling (paying business/API/app-developer usage); excludes model-training compute; how AWS/Google distribution fees are treated is not stated; unaudited internal figures, not GAAP. FY2025 had just ended, so 'projected' is effectively an estimate of the actual; inference costs ran 23% above plan.",
+    "reported_by": "The Information (Sri Muppidi), 2026-01-21, 'Anthropic Lowers Gross Margin Projection as Revenue Skyrockets' (briefing: 'Anthropic Lowered Gross Margin Projection as Costs to Run AI Rose'); re-reported by Investing.com 2026-01-22, WebProNews 2026-01-22, Longbridge/Wallstreetcn 2026-01-22; quoted again in Parekh's Substack 2026-03-26"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T4",
@@ -991,6 +1582,11 @@
    "claim": "operating income Q2 2026 (projection, May 20): +$559M on $10.9B projected revenue",
    "draft": "{\"value\": \"+$559M on $10.9B projected revenue\", \"basis\": \"WSJ/FT reporting of investor slide decks (not financial statements); non-GAAP: per T5 commentary inclu",
    "rederived": "{\"value\": 559, \"basis\": \"USD millions; projected operating income for the June quarter 2026 on projected revenue of $10.9bn (+130% vs ~$4.8bn in Q1). Company projection shared with investors in an ongoing funding round. Per PYMNTS's paraphrase of the WSJ: incl",
+   "rederived_obj": {
+    "value": 559,
+    "basis": "USD millions; projected operating income for the June quarter 2026 on projected revenue of $10.9bn (+130% vs ~$4.8bn in Q1). Company projection shared with investors in an ongoing funding round. Per PYMNTS's paraphrase of the WSJ: includes model training costs but excludes stock-based compensation (i.e. an adjusted, non-GAAP view); SemiAnalysis (2026-05-27) independently reads the WSJ as 'Operating Income profitable in 2Q after adjusting for stock-based compensation'. WSJ noted it is unclear what accounting methods Anthropic used; unaudited",
+    "reported_by": "Wall Street Journal exclusive, 2026-05-20 ('Mind-Blowing Growth Is About to Propel Anthropic Into Its First Profitable Quarter'); same-day headlines from The Information ('Anthropic Projects Turning an Operating Profit in Second Quarter'), CNBC ('source says', $10.9bn) and Reuters ('Anthropic nears first quarterly profit, agrees to pay SpaceX $1.25 billion monthly')"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T4",
@@ -1015,6 +1611,11 @@
    "claim": "operating income FY2025: -$8,060M (opex $12,650M vs revenue $4,590M; about -176% operating margin)",
    "draft": "{\"value\": \"-$8,060M (opex $12,650M vs revenue $4,590M; about -176% operating margin)\", \"basis\": \"GAAP; leaked draft prospectus; compute and infrastructure $7.33",
    "rederived": "{\"value\": -8060, \"basis\": \"USD millions; operating loss (operating income = -8,060) for FY2025 per the leaked draft S-1; Reuters: 'lost more than $8 billion on an operating basis, excluding writedowns of various liabilities mostly tied to previous fundraising'",
+   "rederived_obj": {
+    "value": -8060,
+    "basis": "USD millions; operating loss (operating income = -8,060) for FY2025 per the leaked draft S-1; Reuters: 'lost more than $8 billion on an operating basis, excluding writedowns of various liabilities mostly tied to previous fundraising'. Excludes the ~$34bn non-cash financing charge that takes the net loss to ~$42bn. Actual, before any adjustment beyond that",
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'more than $8 billion'; exact $8.06bn from Fortune (Nolan) and The Decoder 2026-09-29, both attributing to Reuters"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1039,6 +1640,11 @@
    "claim": "Prospectus: Annualized revenue run-rate = above $65B at end-July 2026 (about $9B at end-2025; above $47B in May)",
    "draft": "{\"value\": \"above $65B at end-July 2026 (about $9B at end-2025; above $47B in May)\"}",
    "rederived": "{\"value\": 65000, \"reported_by\": \"Bloomberg 2026-08-17 ('Anthropic's Annualized Revenue Tops $65 Billion Before IPO'); Reuters 2026-08-17/18 ('Anthropic revenue run rate tops $65 billion, source says', a person familiar); Axios 2026-08-17 (headline); FT 2026-09",
+   "rederived_obj": {
+    "value": 65000,
+    "reported_by": "Bloomberg 2026-08-17 ('Anthropic's Annualized Revenue Tops $65 Billion Before IPO'); Reuters 2026-08-17/18 ('Anthropic revenue run rate tops $65 billion, source says', a person familiar); Axios 2026-08-17 (headline); FT 2026-09-13 (end-July)",
+    "date": "2026-08-17"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1063,6 +1669,11 @@
    "claim": "Prospectus: Total operating expenses = $12.65B ('almost $13B' per TechCrunch/Fortune)",
    "draft": "{\"value\": \"$12.65B ('almost $13B' per TechCrunch/Fortune)\"}",
    "rederived": "{\"value\": 12650, \"reported_by\": \"Reuters (Echo Wang), 2026-09-28: compute and infrastructure was 'more than half of its $12.65 billion in total operating expenses'\", \"date\": \"2026-09-28\"}",
+   "rederived_obj": {
+    "value": 12650,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: compute and infrastructure was 'more than half of its $12.65 billion in total operating expenses'",
+    "date": "2026-09-28"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1087,6 +1698,11 @@
    "claim": "Prospectus: Non-cash financing charge = ~$34B, 'reflected an increase in the estimated value of financing that could eventually turn into Anthropic shares, rather than money the company spent'",
    "draft": "{\"value\": \"~$34B, 'reflected an increase in the estimated value of financing that could eventually turn into Anthropic shares, rather than money the company spe",
    "rederived": "{\"value\": 34000, \"reported_by\": \"Reuters (Echo Wang), 2026-09-28: 'The near-$42 billion net loss included a roughly $34 billion accounting charge that reflected an increase in the estimated value of financing'\", \"date\": \"2026-09-28\"}",
+   "rederived_obj": {
+    "value": 34000,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'The near-$42 billion net loss included a roughly $34 billion accounting charge that reflected an increase in the estimated value of financing'",
+    "date": "2026-09-28"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1111,6 +1727,11 @@
    "claim": "Prospectus: Operating loss = $8.06B ('more than $8B', excluding writedowns)",
    "draft": "{\"value\": \"$8.06B ('more than $8B', excluding writedowns)\"}",
    "rederived": "{\"value\": 8060, \"reported_by\": \"Reuters (Echo Wang) 2026-09-28: 'lost more than $8 billion on an operating basis, excluding writedowns of various liabilities mostly tied to previous fundraising'; exact $8.06bn from Fortune (Nolan) and The Decoder 2026-09-29, b",
+   "rederived_obj": {
+    "value": 8060,
+    "reported_by": "Reuters (Echo Wang) 2026-09-28: 'lost more than $8 billion on an operating basis, excluding writedowns of various liabilities mostly tied to previous fundraising'; exact $8.06bn from Fortune (Nolan) and The Decoder 2026-09-29, both attributing to Reuters",
+    "date": "2026-09-28"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1135,6 +1756,11 @@
    "claim": "Prospectus: Revenue = about $386M (TradingKey, consistent with +1,088% growth); SiliconANGLE rounds to $400M",
    "draft": "{\"value\": \"about $386M (TradingKey, consistent with +1,088% growth); SiliconANGLE rounds to $400M\"}",
    "rederived": "{\"value\": \"about 400 (USD millions, rounded by SiliconANGLE); the exact dollar figure is not printed in anything I could open; +1,088% growth implies about 386\", \"reported_by\": \"SiliconANGLE (Maria Deutscher), 2026-09-29: 'Anthropic's revenue ballooned from $4",
+   "rederived_obj": {
+    "value": "about 400 (USD millions, rounded by SiliconANGLE); the exact dollar figure is not printed in anything I could open; +1,088% growth implies about 386",
+    "reported_by": "SiliconANGLE (Maria Deutscher), 2026-09-29: 'Anthropic's revenue ballooned from $400 million in 2024 to $4.6 billion last year' (article credits Reuters and the FT for the filing details). Growth figures: Reuters 2026-09-28 '12-fold'; Fortune (Nolan) 2026-09-29 'revenue rose 1,088% in 2025'",
+    "date": "2026-09-29"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1159,6 +1785,11 @@
    "claim": "Prospectus: Compute and infrastructure spend = $7.33B, about 3x FY2024; more than half of total operating expenses",
    "draft": "{\"value\": \"$7.33B, about 3x FY2024; more than half of total operating expenses\"}",
    "rederived": "{\"value\": 7330, \"reported_by\": \"Reuters (Echo Wang), 2026-09-28: 'spent $7.33 billion on compute and infrastructure last year, a threefold surge from 2024'\", \"date\": \"2026-09-28\"}",
+   "rederived_obj": {
+    "value": 7330,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'spent $7.33 billion on compute and infrastructure last year, a threefold surge from 2024'",
+    "date": "2026-09-28"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1183,6 +1814,11 @@
    "claim": "Prospectus: Revenue = nearly $4.6B ($4.59B per TradingKey); about 12x FY2024 (+1,088% per Fortune/TradingKey)",
    "draft": "{\"value\": \"nearly $4.6B ($4.59B per TradingKey); about 12x FY2024 (+1,088% per Fortune/TradingKey)\"}",
    "rederived": "{\"value\": 4600, \"reported_by\": \"Reuters (Echo Wang), exclusive, 2026-09-28: 'Revenue grew 12-fold in 2025 to nearly $4.6 billion'; composition in Reuters' 2026-09-29 story (Echo Wang and Krystal Hu)\", \"date\": \"2026-09-28\"}",
+   "rederived_obj": {
+    "value": 4600,
+    "reported_by": "Reuters (Echo Wang), exclusive, 2026-09-28: 'Revenue grew 12-fold in 2025 to nearly $4.6 billion'; composition in Reuters' 2026-09-29 story (Echo Wang and Krystal Hu)",
+    "date": "2026-09-28"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1207,6 +1843,11 @@
    "claim": "Prospectus: Revenue = $11.5B, about 14x year over year",
    "draft": "{\"value\": \"$11.5B, about 14x year over year\"}",
    "rederived": "{\"value\": 11500, \"reported_by\": \"Bloomberg, 2026-08-14 ('more than $11.5 billion', internal/confidential investor documents; Q2 2025 was $787m, a >14-fold rise); FT per TechCrunch 2026-09-28 ('second-quarter revenue alone reached $11.5 billion')\", \"date\": \"202",
+   "rederived_obj": {
+    "value": 11500,
+    "reported_by": "Bloomberg, 2026-08-14 ('more than $11.5 billion', internal/confidential investor documents; Q2 2025 was $787m, a >14-fold rise); FT per TechCrunch 2026-09-28 ('second-quarter revenue alone reached $11.5 billion')",
+    "date": "2026-08-14"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1231,6 +1872,11 @@
    "claim": "Prospectus: Operating loss = $2.98B (about $3B)",
    "draft": "{\"value\": \"$2.98B (about $3B)\"}",
    "rederived": "{\"value\": 2980, \"reported_by\": \"Fortune (Beatrice Nolan), 2026-09-29: 'operating loss widened to $8.06 billion from $2.98 billion a year earlier'; The Decoder 2026-09-29: 'the operating loss widened from $2.98 billion to $8.06 billion (Reuters)'\", \"date\": \"202",
+   "rederived_obj": {
+    "value": 2980,
+    "reported_by": "Fortune (Beatrice Nolan), 2026-09-29: 'operating loss widened to $8.06 billion from $2.98 billion a year earlier'; The Decoder 2026-09-29: 'the operating loss widened from $2.98 billion to $8.06 billion (Reuters)'",
+    "date": "2026-09-29"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1255,6 +1901,11 @@
    "claim": "Prospectus: Adjusted operating income = positive in Q2 2026 (first) and expected positive again in Q3 (second straight quarter); dollar amount not disclosed",
    "draft": "{\"value\": \"positive in Q2 2026 (first) and expected positive again in Q3 (second straight quarter); dollar amount not disclosed\"}",
    "rederived": "{\"value\": \"positive adjusted operating income in Q2 2026 (actual, preliminary) and expected positive in Q3 2026; no dollar amount reported\", \"reported_by\": \"Bloomberg 2026-08-14 (Q2: 'positive adjusted operating income', first time, from investor documents); F",
+   "rederived_obj": {
+    "value": "positive adjusted operating income in Q2 2026 (actual, preliminary) and expected positive in Q3 2026; no dollar amount reported",
+    "reported_by": "Bloomberg 2026-08-14 (Q2: 'positive adjusted operating income', first time, from investor documents); Financial Times 2026-09-13 (told shareholders it will be positive for a second straight quarter; Reuters brief; CNBC reportedly confirmed via two people, per TNW); TechCrunch 2026-09-28 repeats as an FT report",
+    "date": "2026-09-13"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1279,6 +1930,11 @@
    "claim": "Prospectus: Gross margin (non-GAAP) = above 80% before revenue shared with distribution partners; excludes stock-based compensation and model-training costs",
    "draft": "{\"value\": \"above 80% before revenue shared with distribution partners; excludes stock-based compensation and model-training costs\"}",
    "rederived": "{\"value\": \"above 80%\", \"reported_by\": \"Financial Times 2026-09-13 ('multiple people with knowledge of the matter'), via Reuters brief (Investing.com) 2026-09-13, The Next Web 2026-09-15, techi.com 2026-09-13\", \"date\": \"2026-09-13\"}",
+   "rederived_obj": {
+    "value": "above 80%",
+    "reported_by": "Financial Times 2026-09-13 ('multiple people with knowledge of the matter'), via Reuters brief (Investing.com) 2026-09-13, The Next Web 2026-09-15, techi.com 2026-09-13",
+    "date": "2026-09-13"
+   },
    "verdict": "NOTED",
    "compared": [],
    "tier": "T1",
@@ -1303,6 +1959,13 @@
    "claim": "Revolvers ($2.5B May 2025; ~$15B pre-IPO) and the $34.5B chip-bond claim",
    "draft": "{\"revolver_2025_usd_m\": 2500, \"revolver_2026_usd_m\": 15000}",
    "rederived": "{\"revolver_2025_usd_m\": 2500, \"revolver_2026_usd_m\": 15000, \"chip_bonds_usd_m\": 35000, \"anthropic_issued_chip_bonds_usd_m\": 0, \"chip_bonds_description\": \"The description 'Anthropic issued chip-purchase bonds in June 2026' is WRONG. The June 2026 instrument was",
+   "rederived_obj": {
+    "revolver_2025_usd_m": 2500,
+    "revolver_2026_usd_m": 15000,
+    "chip_bonds_usd_m": 35000,
+    "anthropic_issued_chip_bonds_usd_m": 0,
+    "chip_bonds_description": "The description 'Anthropic issued chip-purchase bonds in June 2026' is WRONG. The June 2026 instrument was about $35B of notes issued by a special-purpose vehicle (the lessor), not by Anthropic: the SPV raised debt (plus equity), bought Google TPUs (co-designed with Broadcom) and leases them to Anthropic. Tranches per Bloomberg: A1 $6B super-senior (~T+100bp), A2 $24B first-lien (5.75% coupon), B $4.5B second-lien (8.5%); senior tranches rated investment grade; Broadcom gives residual-value support covering any shortfall for A1/A2 holders; Apollo and Blackstone anchored, about half syndicated; closed 2026-06-05 (first reported 2026-05-28 at about $36B, A2 $25B). Correct label: 'TPU chip-lease SPV notes (lessor debt; not Anthropic-issued)'."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1336,6 +1999,64 @@
    "claim": "IPO structure and timing",
    "draft": "{\"target_raise_usd_m\": 100000, \"target_valuation_usd_m\": 2000000, \"exchange\": \"Nasdaq\", \"founder_vote_pct\": 50.1}",
    "rederived": "{\"public_s1\": false, \"public_s1_evidence\": \"No public S-1 as of 2026-09-30 (checked 15:26 EDT and re-checked 16:03 EDT): EDGAR company search 'anthropic' lists only 35 SPV/fund vehicles (no issuer 'Anthropic PBC'); full-text search for 'Anthropic' in S-1, S-1/",
+   "rederived_obj": {
+    "public_s1": false,
+    "public_s1_evidence": "No public S-1 as of 2026-09-30 (checked 15:26 EDT and re-checked 16:03 EDT): EDGAR company search 'anthropic' lists only 35 SPV/fund vehicles (no issuer 'Anthropic PBC'); full-text search for 'Anthropic' in S-1, S-1/A, DRS, DRS/A, 424B1, 424B4 and F-1 filed 2026-09-25 to 09-30 returns 0 hits (the only earlier S-1 hits mentioning 'Anthropic, PBC' are other issuers: SpaceX, NSCALE, Figma, Idea Acquisition); the live 'latest S-1 filings' feed shows no Anthropic entry; the only 'Anthropic, PBC' full-text hit since 2026-09-27 is an unrelated ETF-trust 485BPOS (Corgi ETF Trust I, 2026-09-29). Press agrees: Forkast (2026-09-26) 'As of September 26, the SEC EDGAR database contains no public Anthropic filing'; Yahoo Finance (2026-09-29) 'the document has not yet been made public on SEC EDGAR'.",
+    "confidential_submission_date": "2026-06-01 (Anthropic's Rule 135 notice: 'confidentially submitted a draft registration statement on Form S-1'; the notice states no separate submission date; CNBC headline 2026-06-01 'Anthropic confidentially files IPO prospectus')",
+    "target_raise_usd_m": 100000,
+    "target_raise_alternatives_usd_m": {
+     "The Information (March 2026): bankers expect": 60000,
+     "Bloomberg (2026-09-13): match or exceed SpaceX's June IPO of": 86300
+    },
+    "target_valuation_usd_m": 2000000,
+    "exchange": "Nasdaq, reported 2026-09-13 by Business Insider ('citing a person familiar with the company's plans', relayed by Reuters, which did not confirm it) and by Bloomberg ('picked Nasdaq as its listing venue', per 'someone with knowledge'); Anthropic has not confirmed it. FT (2026-09-08) only says trading 'in New York'. Not stated in any coverage of the leaked prospectus I opened.",
+    "timing_reports": [
+     {
+      "outlet": "Bloomberg",
+      "date": "2026-06-03",
+      "report": "Weighing going public 'as soon as October' (via AdvisorHub)."
+     },
+     {
+      "outlet": "Reuters (exclusive)",
+      "date": "2026-09-04",
+      "report": "IPO marketing now mid-October at earliest; prospectus expected toward end of September (previously as early as September); schedule 'could shift again' (opened via The Daily Star copy dated 2026-09-07)."
+     },
+     {
+      "outlet": "Financial Times",
+      "date": "2026-09-08",
+      "report": "Registration filing 'as early as next week', roadshow near end of September, trading 'late September or early October' (via citybiz); assignments not finalized."
+     },
+     {
+      "outlet": "Reuters (exclusive)",
+      "date": "2026-09-11",
+      "report": "Seeking up to $100B at about $2T; IPO expected to be completed before the November US midterm elections; Nvidia in talks to anchor with up to $10B (via Investing.com)."
+     },
+     {
+      "outlet": "Bloomberg",
+      "date": "2026-09-13",
+      "report": "Picks Nasdaq; IPO 'could take place as soon as October' (via Yahoo Finance and Briefs Finance)."
+     },
+     {
+      "outlet": "WSJ",
+      "date": "2026-09-18",
+      "report": "Targeting a November debut, pushed past an expected October target; extra time lets Anthropic present Q3 results; ~$2T valuation, up to $100B raise (via Investing.com and Yahoo Finance)."
+     },
+     {
+      "outlet": "Reuters and FT (draft-prospectus reporting)",
+      "date": "2026-09-28/29",
+      "report": "Coverage of the leaked draft says the IPO may come after the US midterm elections in November / 'hopes to go public in November' (via The Decoder, TradingKey, SiliconANGLE)."
+     }
+    ],
+    "underwriters": [
+     "Morgan Stanley (lead left per FT 2026-09-08)",
+     "Goldman Sachs (stabilization agent per FT; co-lead per Bloomberg 2026-06-03)",
+     "JPMorgan Chase",
+     "Citigroup (Bloomberg 2026-08-21: to be invited; FT: senior role)",
+     "Barclays (FT: senior role)"
+    ],
+    "founder_vote_pct": 50.1,
+    "founder_voting_structure": "Per Reuters' review of the draft prospectus (via The Next Web and TradingKey, 2026-09-29/30): 'Founder LLC', made up of seven co-founders, holds a single special Class F share carrying 50.1% of the vote on director elections and other matters put to shareholders; control persists until two or fewer founders remain; public shares are Class A; co-founders have pledged 80% of their stakes to charity. The Information (2026-09-24/25, via TechCrunch) reported the proposal earlier ('a combined 50.1% of the vote'; each founder about 2% economic stake)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1377,6 +2098,32 @@
    "claim": "Google convertible notes (PB 4th round): $2.0B at n/a post (2023-10-27)",
    "draft": "{\"date\": \"2023-10-27\", \"size_usd_m\": 2000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Alphabet\"]}",
    "rederived": "{\"date\": \"2023-10-27\", \"size_usd_m\": 2000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Google (sole investor in this tranche)\"], \"candidate_tranches\": [{\"date\": \"2023-02-03\", \"amount_usd_m\": 300, \"note\": \"Google ~$300M for roughly 10% (FT, reported 2023-",
+   "rederived_obj": {
+    "date": "2023-10-27",
+    "size_usd_m": 2000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Google (sole investor in this tranche)"
+    ],
+    "candidate_tranches": [
+     {
+      "date": "2023-02-03",
+      "amount_usd_m": 300,
+      "note": "Google ~$300M for roughly 10% (FT, reported 2023-02-03; NYT via Fortune: valuation about $5B). Instrument not stated in sources opened."
+     },
+     {
+      "date": "2023-10-27",
+      "amount_usd_m": 2000,
+      "note": "'Up to' $2B: $500M upfront + $1.5B over time (WSJ, via Crunchbase News). 2025 court filings (via Android Police) call a $750M piece 'a convertible debt loan ... agreed upon in 2023'."
+     },
+     {
+      "date": "2025-01-22",
+      "amount_usd_m": 1000,
+      "note": "More than $1B new Google investment (FT, via Silicon Republic); structure not stated."
+     }
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1412,6 +2159,16 @@
    "claim": "FTX/Alameda estate sale #2 (secondary): $452M at n/a post (2024-06-02)",
    "draft": "{\"date\": \"2024-06-02\", \"size_usd_m\": 452, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": []}",
    "rederived": "{\"date\": \"2024-06-01 (reported by The Block; exact filing or closing date not stated in the article)\", \"size_usd_m\": 450, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"G Squared (about $135M for about 4.5M shares, largest buyer)\", \"about 20 other buyers, m",
+   "rederived_obj": {
+    "date": "2024-06-01 (reported by The Block; exact filing or closing date not stated in the article)",
+    "size_usd_m": 450,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "G Squared (about $135M for about 4.5M shares, largest buyer)",
+     "about 20 other buyers, mostly venture funds"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1446,6 +2203,24 @@
    "claim": "Series H: $65.0B at $965.0B post (2026-05-28)",
    "draft": "{\"date\": \"2026-05-28\", \"size_usd_m\": 65000, \"pre_usd_m\": 900000, \"post_usd_m\": 965000, \"leads\": [\"Altimeter Capital\", \"Dragoneer\", \"Greenoaks\", \"Sequoia Capital",
    "rederived": "{\"date\": \"2026-05-28\", \"size_usd_m\": 65000, \"pre_usd_m\": 900000, \"post_usd_m\": 965000, \"leads\": [\"Altimeter Capital (led)\", \"Dragoneer (led)\", \"Greenoaks (led)\", \"Sequoia Capital (led)\", \"Capital Group (co-lead)\", \"Coatue (co-lead)\", \"D1 Capital Partners (co-l",
+   "rederived_obj": {
+    "date": "2026-05-28",
+    "size_usd_m": 65000,
+    "pre_usd_m": 900000,
+    "post_usd_m": 965000,
+    "leads": [
+     "Altimeter Capital (led)",
+     "Dragoneer (led)",
+     "Greenoaks (led)",
+     "Sequoia Capital (led)",
+     "Capital Group (co-lead)",
+     "Coatue (co-lead)",
+     "D1 Capital Partners (co-lead)",
+     "GIC (co-lead)",
+     "ICONIQ (co-lead)",
+     "XN (co-lead)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1491,6 +2266,15 @@
    "claim": "Series A: $124M at $461M post (2021-05-28)",
    "draft": "{\"date\": \"2021-05-28\", \"size_usd_m\": 124, \"pre_usd_m\": 337, \"post_usd_m\": 461, \"leads\": [\"Jaan Tallinn\"]}",
    "rederived": "{\"date\": \"2021-05-28\", \"size_usd_m\": 124, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Jaan Tallinn (led the round)\"]}",
+   "rederived_obj": {
+    "date": "2021-05-28",
+    "size_usd_m": 124,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Jaan Tallinn (led the round)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1524,6 +2308,17 @@
    "claim": "Employee buyback #1 (secondary): n/a at $61.5B post (2025-05-02)",
    "draft": "{\"date\": \"2025-05-02\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": 61500, \"leads\": []}",
    "rederived": "{\"date\": \"2025-05-02 (reported by The Information; expected to close by end of May 2025)\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"reported_valuation_usd_m\": 61500, \"price_per_share_usd\": 56.09, \"leads\": [\"Anthropic (company repurchase from",
+   "rederived_obj": {
+    "date": "2025-05-02 (reported by The Information; expected to close by end of May 2025)",
+    "size_usd_m": null,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "reported_valuation_usd_m": 61500,
+    "price_per_share_usd": 56.09,
+    "leads": [
+     "Anthropic (company repurchase from employees; no lead investor)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1552,6 +2347,18 @@
    "claim": "FTX/Alameda estate sale #1 (secondary): $884M at n/a post (2024-03-22)",
    "draft": "{\"date\": \"2024-03-22\", \"size_usd_m\": 884.109327, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": []}",
    "rederived": "{\"date\": \"2024-03-22 (court filings, reported 2024-03-25); a New York bankruptcy judge had authorised the sales in Feb 2024\", \"size_usd_m\": 884, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"ATIC Third International Investment Company (Abu Dhabi; $500M for",
+   "rederived_obj": {
+    "date": "2024-03-22 (court filings, reported 2024-03-25); a New York bankruptcy judge had authorised the sales in Feb 2024",
+    "size_usd_m": 884,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "ATIC Third International Investment Company (Abu Dhabi; $500M for 16,664,167 shares)",
+     "Jane Street (about $100M, 3.3M shares)",
+     "Fidelity-managed funds (about $50M, 1.5M shares)",
+     "about 20 other buyers incl. the Ford Foundation"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1585,6 +2392,17 @@
    "claim": "Series F: $13.0B at $183.0B post (2025-09-02)",
    "draft": "{\"date\": \"2025-09-02\", \"size_usd_m\": 13000, \"pre_usd_m\": 170000, \"post_usd_m\": 183000, \"leads\": [\"ICONIQ\", \"Fidelity Management & Research\", \"Lightspeed Venture",
    "rederived": "{\"date\": \"2025-09-02\", \"size_usd_m\": 13000, \"pre_usd_m\": 170000, \"post_usd_m\": 183000, \"leads\": [\"ICONIQ (led)\", \"Fidelity Management & Research Company (co-lead)\", \"Lightspeed Venture Partners (co-lead)\"]}",
+   "rederived_obj": {
+    "date": "2025-09-02",
+    "size_usd_m": 13000,
+    "pre_usd_m": 170000,
+    "post_usd_m": 183000,
+    "leads": [
+     "ICONIQ (led)",
+     "Fidelity Management & Research Company (co-lead)",
+     "Lightspeed Venture Partners (co-lead)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1628,6 +2446,20 @@
    "claim": "Pre-IPO revolving credit facility: $15.0B at n/a post (2026-09-03)",
    "draft": "{\"date\": \"2026-09-03\", \"size_usd_m\": 15000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\"]}",
    "rederived": "{\"date\": \"NOT CONFIRMED: Bloomberg 2026-09-03 said Anthropic was 'set to finalize' the facility; still 'finalizing' per Bloomberg 2026-09-13; no closing report found through 2026-09-30\", \"size_usd_m\": 15000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Mo",
+   "rederived_obj": {
+    "date": "NOT CONFIRMED: Bloomberg 2026-09-03 said Anthropic was 'set to finalize' the facility; still 'finalizing' per Bloomberg 2026-09-13; no closing report found through 2026-09-30",
+    "size_usd_m": 15000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Morgan Stanley (leading)",
+     "Goldman Sachs",
+     "JPMorgan Chase",
+     "Citigroup",
+     "Barclays",
+     "Wells Fargo"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1658,6 +2490,21 @@
    "claim": "Revolving credit facility (5-year): $2.5B at n/a post (2025-05-16)",
    "draft": "{\"date\": \"2025-05-16\", \"size_usd_m\": 2500, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\"]}",
    "rederived": "{\"date\": \"2025-05-16\", \"size_usd_m\": 2500, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\", \"Barclays\", \"Citibank\", \"Goldman Sachs\", \"JPMorgan\", \"Royal Bank of Canada\", \"Mitsubishi UFJ Financial Group (MUFG)\"]}",
+   "rederived_obj": {
+    "date": "2025-05-16",
+    "size_usd_m": 2500,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "Morgan Stanley",
+     "Barclays",
+     "Citibank",
+     "Goldman Sachs",
+     "JPMorgan",
+     "Royal Bank of Canada",
+     "Mitsubishi UFJ Financial Group (MUFG)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1693,6 +2540,20 @@
    "claim": "IPO (confidential draft S-1): n/a at n/a post (2026-06-01)",
    "draft": "{\"date\": \"2026-06-01\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"Morgan Stanley\", \"Goldman Sachs\", \"JPMorgan (reported)\"]}",
    "rederived": "{\"date\": \"2026-06-01\", \"size_usd_m\": null, \"pre_usd_m\": null, \"post_usd_m\": null, \"reported_target_raise_usd_m\": 100000, \"reported_target_valuation_usd_m\": 2000000, \"leads\": [\"Morgan Stanley (reported lead-left)\", \"Goldman Sachs\", \"JPMorgan Chase\", \"Citigroup ",
+   "rederived_obj": {
+    "date": "2026-06-01",
+    "size_usd_m": null,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "reported_target_raise_usd_m": 100000,
+    "reported_target_valuation_usd_m": 2000000,
+    "leads": [
+     "Morgan Stanley (reported lead-left)",
+     "Goldman Sachs",
+     "JPMorgan Chase",
+     "Citigroup and Barclays (reported senior roles, not finalized)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1723,6 +2584,15 @@
    "claim": "Series E: $3.5B at $61.5B post (2025-03-03)",
    "draft": "{\"date\": \"2025-03-03\", \"size_usd_m\": 3500, \"pre_usd_m\": 58000, \"post_usd_m\": 61500, \"leads\": [\"Lightspeed Venture Partners\"]}",
    "rederived": "{\"date\": \"2025-03-03\", \"size_usd_m\": 3500, \"pre_usd_m\": 58000, \"post_usd_m\": 61500, \"leads\": [\"Lightspeed Venture Partners (led)\"]}",
+   "rederived_obj": {
+    "date": "2025-03-03",
+    "size_usd_m": 3500,
+    "pre_usd_m": 58000,
+    "post_usd_m": 61500,
+    "leads": [
+     "Lightspeed Venture Partners (led)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1765,6 +2635,21 @@
    "claim": "Series G: $30.0B at $380.0B post (2026-02-12)",
    "draft": "{\"date\": \"2026-02-12\", \"size_usd_m\": 30000, \"pre_usd_m\": 350000, \"post_usd_m\": 380000, \"leads\": [\"GIC\", \"Coatue\"]}",
    "rederived": "{\"date\": \"2026-02-12\", \"size_usd_m\": 30000, \"pre_usd_m\": 350000, \"post_usd_m\": 380000, \"leads\": [\"GIC (led)\", \"Coatue (led)\", \"D. E. Shaw Ventures (co-lead)\", \"Dragoneer (co-lead)\", \"Founders Fund (co-lead)\", \"ICONIQ (co-lead)\", \"MGX (co-lead)\"]}",
+   "rederived_obj": {
+    "date": "2026-02-12",
+    "size_usd_m": 30000,
+    "pre_usd_m": 350000,
+    "post_usd_m": 380000,
+    "leads": [
+     "GIC (led)",
+     "Coatue (led)",
+     "D. E. Shaw Ventures (co-lead)",
+     "Dragoneer (co-lead)",
+     "Founders Fund (co-lead)",
+     "ICONIQ (co-lead)",
+     "MGX (co-lead)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1810,6 +2695,21 @@
    "claim": "Microsoft / NVIDIA strategic (up to): $15.0B at n/a post (2025-11-18)",
    "draft": "{\"date\": \"2025-11-18\", \"size_usd_m\": 15000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"NVIDIA\", \"Microsoft\"]}",
    "rederived": "{\"date\": \"2025-11-18\", \"size_usd_m\": 15000, \"up_to_components_usd_m\": {\"NVIDIA\": 10000, \"Microsoft\": 5000}, \"pre_usd_m\": null, \"post_usd_m\": null, \"reported_valuation_usd_m\": 350000, \"leads\": [\"NVIDIA (up to $10B)\", \"Microsoft (up to $5B)\"]}",
+   "rederived_obj": {
+    "date": "2025-11-18",
+    "size_usd_m": 15000,
+    "up_to_components_usd_m": {
+     "NVIDIA": 10000,
+     "Microsoft": 5000
+    },
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "reported_valuation_usd_m": 350000,
+    "leads": [
+     "NVIDIA (up to $10B)",
+     "Microsoft (up to $5B)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1845,6 +2745,15 @@
    "claim": "11th round: AMD strategic equity (up to): $5.0B at n/a post (2026-07-22)",
    "draft": "{\"date\": \"2026-07-22\", \"size_usd_m\": 5000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"AMD\"]}",
    "rederived": "{\"date\": \"2026-07-22\", \"size_usd_m\": 5000, \"pre_usd_m\": null, \"post_usd_m\": null, \"leads\": [\"AMD (sole strategic investor)\"]}",
+   "rederived_obj": {
+    "date": "2026-07-22",
+    "size_usd_m": 5000,
+    "pre_usd_m": null,
+    "post_usd_m": null,
+    "leads": [
+     "AMD (sole strategic investor)"
+    ]
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1880,6 +2789,14 @@
    "claim": "Lambda at Hut 8 Beacon Point, Texas (Nvidia holds the shell lease): $35.0B",
    "draft": "{\"usd_m\": 35000, \"gw\": null, \"chips\": \"NVIDIA (model not stated)\"}",
    "rederived": "{\"usd_m\": 35000, \"usd_basis\": \"Reported value of a cloud-computing agreement between Anthropic and Nvidia-backed Lambda; committed-versus-maximum basis not reported. Not confirmed by Anthropic, Lambda, Nvidia or Hut 8 in anything I could open.\", \"gw\": \"About 3",
+   "rederived_obj": {
+    "usd_m": 35000,
+    "usd_basis": "Reported value of a cloud-computing agreement between Anthropic and Nvidia-backed Lambda; committed-versus-maximum basis not reported. Not confirmed by Anthropic, Lambda, Nvidia or Hut 8 in anything I could open.",
+    "gw": "About 350 MW (0.35 GW) of a Hut 8 data center in Nueces County, Texas (Reuters source, 2026-08-31). Hut 8's Beacon Point campus is 1 GW with two 352 MW leases (704 MW) to an unnamed investment-grade tenant; CoinDesk: Hut 8 has not confirmed how much of that is tied to Lambda/Anthropic.",
+    "chips": "Nvidia GPUs supplied by Lambda (Reuters: 'bring online Nvidia capacity'); Hut 8 designed the first hall to Nvidia's DSX architecture.",
+    "term": "Not reported for the Anthropic-Lambda agreement. Hut 8's two leases are 15 years each; Phase 1 energization Q1 2027, Phase 2 first hall Q2 2028 (Hut 8 release).",
+    "stated_by": "WSJ first reported 2026-08-31 (paywalled, not opened); Reuters (source familiar) 2026-08-31; FT (late July 2026, per Reuters) identified Nvidia as the Beacon Point tenant; WSJ said Nvidia itself holds the lease."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1910,6 +2827,14 @@
    "claim": "Amazon Web Services: $100.0B, 5.0 GW",
    "draft": "{\"usd_m\": 100000, \"gw\": 5.0, \"chips\": \"Trainium2, Trainium3 (through Trainium4); Graviton\"}",
    "rederived": "{\"usd_m\": 100000, \"usd_basis\": \"'More than $100 billion over the next ten years' committed by Anthropic to AWS technologies (minimum stated, contracted commitment). Capacity is 'up to 5GW'. Leaked S-1 (Reuters): $110,000M payable May 2026-Apr 2036, payable reg",
+   "rederived_obj": {
+    "usd_m": 100000,
+    "usd_basis": "'More than $100 billion over the next ten years' committed by Anthropic to AWS technologies (minimum stated, contracted commitment). Capacity is 'up to 5GW'. Leaked S-1 (Reuters): $110,000M payable May 2026-Apr 2036, payable regardless of usage with a shortfall top-up.",
+    "gw": 5,
+    "chips": "AWS Trainium2, Trainium3 and Trainium4 with the option to buy future generations, plus Graviton CPUs (tens of millions of cores).",
+    "term": "Ten years (announced 2026-04-20); S-1: May 2026 to April 2036. Start: Trainium2 capacity coming online Q2 2026, scaled Trainium3 later in 2026; nearly 1 GW of Trainium2+Trainium3 by end-2026.",
+    "stated_by": "Anthropic and Amazon, same-day releases on 2026-04-20; $110B and dates from the confidential prospectus via Reuters 2026-09-29."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1945,6 +2870,14 @@
    "claim": "SpaceX / xAI - Colossus and Colossus II: $45.0B, 0.3 GW",
    "draft": "{\"usd_m\": 45000, \"gw\": 0.3, \"chips\": \"NVIDIA GPUs (>220K at Colossus 1; Colossus II GB300 phase)\"}",
    "rederived": "{\"usd_m\": 45000, \"usd_basis\": \"$1.25B per month through May 2029 per SpaceX's public S-1 (about $45B over the full term, first two months discounted; TechCrunch says 'over $40 billion'). Anthropic's own confidential prospectus (Reuters 2026-09-29) says agreeme",
+   "rederived_obj": {
+    "usd_m": 45000,
+    "usd_basis": "$1.25B per month through May 2029 per SpaceX's public S-1 (about $45B over the full term, first two months discounted; TechCrunch says 'over $40 billion'). Anthropic's own confidential prospectus (Reuters 2026-09-29) says agreements with xAI 'could result in up to $84.5 billion' of spending through 2029. Both are ceilings on a cancellable arrangement.",
+    "gw": "Colossus 1: 'more than 300 megawatts' (about 0.3 GW) and 'over 220,000 NVIDIA GPUs', all of the site (Anthropic and SpaceXAI, 2026-05-06). Colossus II capacity was not quantified in any source I could open (SpaceX says it revised S-1 pages 13 and 147 to quantify it).",
+    "chips": "NVIDIA GPUs: H100, H200 and GB200 at Colossus 1 (SpaceXAI release); Colossus II mostly Blackwell per press.",
+    "term": "Payments 'through May 2029' (S-1); either party may terminate on 90 days' notice (S-1 and SpaceX letter of 2026-06-01). Musk on X (2026-05-28): current arrangement is a 180-day lease with 90-day mutual cancellation rights after that. Start: Colossus 1 capacity 'within the month' of 2026-05-06; more on Colossus 2 in June.",
+    "stated_by": "Anthropic and SpaceXAI releases (2026-05-06, capacity only, no price); SpaceX Form S-1 filed 2026-05-20 ($1.25B/month); Anthropic's confidential prospectus via Reuters (2026-09-29, up to $84.5B)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -1975,6 +2908,14 @@
    "claim": "RUM Group - Maysville, Georgia: $13.7B",
    "draft": "{\"usd_m\": 13700, \"gw\": null, \"chips\": \"NVIDIA H100/H200 (~22,000 GPUs)\"}",
    "rederived": "{\"usd_m\": 13700, \"usd_basis\": \"'Approximately $13.7 billion spread evenly across the three tranches' under an executed six-year commercial agreement for GPU services (RUM 8-K); the third tranche requires the customer's approval of RUM's delivery date. RUM has ",
+   "rederived_obj": {
+    "usd_m": 13700,
+    "usd_basis": "'Approximately $13.7 billion spread evenly across the three tranches' under an executed six-year commercial agreement for GPU services (RUM 8-K); the third tranche requires the customer's approval of RUM's delivery date. RUM has no financing in place. Counterparty is unnamed in the filing.",
+    "gw": "Not stated in the 8-K. The Information (via BigGo) says the Maysville site has a 120 MW grid connection, expandable to 180 MW.",
+    "chips": "'GPU services'; GPU make and model not stated in the 8-K. RUM's existing Northern Data fleet is about 22,000 Nvidia Hopper (H100/H200) GPUs (The Information via BigGo).",
+    "term": "Six years; start not stated (data center under development; no delivery dates in the filing).",
+    "stated_by": "RUM Group Form 8-K filed 2026-08-24 (agreement dated 2026-08-23; Items 1.01, 3.02, 8.01) describing an 'unaffiliated U.S.-based third party cloud customer'; Anthropic identified by The Information on 2026-09-13."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2005,6 +2946,14 @@
    "claim": "TeraWulf - Justified Data campus, Kentucky: $19.0B, 0.401 GW",
    "draft": "{\"usd_m\": 19000, \"gw\": 0.401, \"chips\": \"none (powered shell; tenant supplies chips)\"}",
    "rederived": "{\"usd_m\": 19000, \"usd_basis\": \"'Expected to generate approximately $19 billion of contracted revenue over the initial lease term' (TeraWulf, contracted lease revenue for the 20-year initial term). Payment obligations 'expected to be supported by an investment-",
+   "rederived_obj": {
+    "usd_m": 19000,
+    "usd_basis": "'Expected to generate approximately $19 billion of contracted revenue over the initial lease term' (TeraWulf, contracted lease revenue for the 20-year initial term). Payment obligations 'expected to be supported by an investment-grade credit'.",
+    "gw": 0.401,
+    "chips": "Not specified: the filing describes a lease of about 401 MW of critical IT load for high-performance computing; no chip or hardware is named.",
+    "term": "20 years from delivery of each phase, plus two five-year renewal options. Delivery in phases beginning late 2027 (press release: second half of 2027) and reaching full 401 MW by early 2028.",
+    "stated_by": "TeraWulf press release and Form 8-K, both 2026-07-06 (landlord Raylan Data LLC; Hawesville, Kentucky)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2038,6 +2987,14 @@
    "claim": "Broadcom AI XPV Platform SPV - first tranche (Apollo/Blackstone notes): $34.5B, 1.0 GW",
    "draft": "{\"usd_m\": 34500, \"gw\": 1.0, \"chips\": \"Google TPU systems (~1M TPUs)\"}",
    "rederived": "{\"usd_m\": 35000, \"usd_basis\": \"Apollo: 'initial $35 billion capital solution' for the Broadcom AI XPV Platform. Bloomberg tranche detail (2026-06-08): A1 $6B + A2 $24B (Broadcom-backed, A2 at 5.75%) + B $4.5B (unbacked, 8.5%) = $34.5B debt, plus $800M equity f",
+   "rederived_obj": {
+    "usd_m": 35000,
+    "usd_basis": "Apollo: 'initial $35 billion capital solution' for the Broadcom AI XPV Platform. Bloomberg tranche detail (2026-06-08): A1 $6B + A2 $24B (Broadcom-backed, A2 at 5.75%) + B $4.5B (unbacked, 8.5%) = $34.5B debt, plus $800M equity from Apollo's Atlas SP. This is financing raised by an SPV to buy TPUs that Anthropic leases, drawn over a multi-year schedule; it is not Anthropic's spend commitment. Pre-close talks (2026-05-28) were ~$36B with A2 ~$25B.",
+    "gw": "'More than 1GW' of Anthropic compute 'starting in mid-2026' (Apollo); platform designed for over 20 GW through 2028 across frontier labs.",
+    "chips": "Google-designed TPUs (Bloomberg: 'Google's custom chips'); Ironwood per Broadcom's Q3 call summary. Sites reported in New York, Texas, Louisiana and Indiana.",
+    "term": "'Multi-year draw schedule' (Apollo); note maturities not reported. Broadcom's 10-Q (customer unnamed) says its backstop covers lease obligations over '5-year lease terms', maximum exposure ~$29B. Bloomberg: Broadcom's residual-value support protects A1/A2 if Anthropic stops paying for a period. Start: mid-2026; Broadcom said on 2026-09-02 the 1 GW deployment was underway.",
+    "stated_by": "Apollo press release 2026-06-09; Bloomberg 2026-05-28/29 and 2026-06-05/08 (via Yahoo Finance and ET Telecom); Broadcom CEO Hock Tan on earnings calls (June and 2026-09-02)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2068,6 +3025,14 @@
    "claim": "Microsoft Azure + NVIDIA: $30.0B, 1.0 GW",
    "draft": "{\"usd_m\": 30000, \"gw\": 1.0, \"chips\": \"NVIDIA Grace Blackwell, Vera Rubin\"}",
    "rederived": "{\"usd_m\": 30000, \"usd_basis\": \"'Anthropic has committed to purchase $30 billion of Azure compute capacity' (contracted commitment) and 'to contract additional compute capacity up to one gigawatt' (an 'up to'). Leaked S-1 (Reuters): $31.4B with Microsoft, Nov 2",
+   "rederived_obj": {
+    "usd_m": 30000,
+    "usd_basis": "'Anthropic has committed to purchase $30 billion of Azure compute capacity' (contracted commitment) and 'to contract additional compute capacity up to one gigawatt' (an 'up to'). Leaked S-1 (Reuters): $31.4B with Microsoft, Nov 2026-May 2033, non-cancelable except for Microsoft's uncured material breach.",
+    "gw": 1,
+    "chips": "NVIDIA Grace Blackwell and Vera Rubin systems ('initially up to one gigawatt').",
+    "term": "Not stated in the announcement; S-1 period Nov 2026 to May 2033.",
+    "stated_by": "Microsoft, NVIDIA and Anthropic joint announcement 2025-11-18 (Microsoft blog and Anthropic post); $31.4B and dates via Reuters on the confidential prospectus 2026-09-29."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2103,6 +3068,12 @@
    "claim": "Compute commitment totals ($518B prospectus; $517B The Information)",
    "draft": "{\"prospectus_total_usd_m\": 518000, \"information_total_usd_m\": 517000}",
    "rederived": "{\"prospectus_total_usd_m\": 518000, \"non_cancelable_share\": \"About 80% 'non-cancelable or requires payment regardless of usage' (roughly $414B by my arithmetic). Breakdown per Reuters: Broadcom-related equipment leases ~$161.2B (largely non-cancelable; neither ",
+   "rederived_obj": {
+    "prospectus_total_usd_m": 518000,
+    "non_cancelable_share": "About 80% 'non-cancelable or requires payment regardless of usage' (roughly $414B by my arithmetic). Breakdown per Reuters: Broadcom-related equipment leases ~$161.2B (largely non-cancelable; neither party can terminate except on default); Google at least $111.1B (Apr 2026-Jul 2033, shortfall top-up); Amazon $110B (May 2026-Apr 2036, similar terms); xAI/SpaceX up to $84.5B through 2029 (largely cancelable on 90 days' notice); Microsoft $31.4B (Nov 2026-May 2033, non-cancelable except uncured Microsoft breach); AMD capacity expected to exceed $20B (AMD also to buy up to $5B of Anthropic stock).",
+    "information_total_usd_m": 517000,
+    "information_gw": "At least 14.8 GW of capacity contracted in 11 months (since Oct 2025), on top of 1-2 GW already held; Amazon+Google 11 GW (>$300B over 10 years); Microsoft $30B/1 GW; SpaceX up to $45B; Lambda+Nscale $80B (as re-reported by Chosunbiz/BigGo, which garble the MW figure); Fluidstack $50B. I could not find any source for a $531B figure (517 + 13.7 RUM = 530.7 is arithmetic only)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2136,6 +3107,14 @@
    "claim": "Nscale - Monarch Compute Campus, West Virginia: $44.6B, 0.46 GW",
    "draft": "{\"usd_m\": 44600, \"gw\": 0.46, \"chips\": \"NVIDIA Vera Rubin NVL72\"}",
    "rederived": "{\"usd_m\": 44600, \"usd_basis\": \"Nscale's S-1 says the GPU Services Agreements 'provide for aggregate payments to us of up to approximately $44.6 billion' (a maximum, stated by the vendor; the S-1 was read through a summarising fetcher, which returned the 'up to",
+   "rederived_obj": {
+    "usd_m": 44600,
+    "usd_basis": "Nscale's S-1 says the GPU Services Agreements 'provide for aggregate payments to us of up to approximately $44.6 billion' (a maximum, stated by the vendor; the S-1 was read through a summarising fetcher, which returned the 'up to' wording in two of three extractions and confirmed it when asked directly). Bloomberg and most press round it to ~$45B over six years. No Anthropic statement found.",
+    "gw": "About 460 MW (0.46 GW) at the Monarch Compute Campus, Mason County, West Virginia (Bloomberg via WV News and Tech Times); the S-1 excerpt I could read gives no MW.",
+    "chips": "NVIDIA Vera Rubin NVL72 GPUs (Nscale S-1).",
+    "term": "Six years (Bloomberg); S-1 excerpt gives no term. Agreements dated 2026-08-25; capacity expected to start powering Anthropic in late 2027 (TechCrunch, source-based).",
+    "stated_by": "Nscale Ltd Form S-1 filed 2026-09-18 (Recent Developments); first reported by Bloomberg 2026-08-26; Aker ASA regulatory disclosure of a $45B contract (per Tech Times); West Virginia governor reacted 2026-08-27."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2166,6 +3145,14 @@
    "claim": "Fluidstack - $50B US data-center program (TX, NY): $50.0B",
    "draft": "{\"usd_m\": 50000, \"gw\": null, \"chips\": null}",
    "rederived": "{\"usd_m\": 50000, \"usd_basis\": \"Announced '$50 billion investment in American computing infrastructure' (Anthropic's wording): a program total for custom data centers built with Fluidstack, not a disclosed contract value; the split between Anthropic, Fluidstack",
+   "rederived_obj": {
+    "usd_m": 50000,
+    "usd_basis": "Announced '$50 billion investment in American computing infrastructure' (Anthropic's wording): a program total for custom data centers built with Fluidstack, not a disclosed contract value; the split between Anthropic, Fluidstack and third-party financing is not stated.",
+    "gw": "Not stated in Anthropic's post (Fluidstack's CEO is quoted on 'rapid delivery of gigawatts of power').",
+    "chips": "Not stated in the announcement. The Information (via BigGo, 2026-09-06) says Anthropic separately signed purchase agreements for Broadcom/Google TPUs and AMD chips to be used in these data centers; Bloomberg (2026-05-29) says TPU sites are in New York, Texas, Louisiana and Indiana.",
+    "term": "No term stated. Sites in Texas and New York 'coming online throughout 2026'; 'more sites to come'.",
+    "stated_by": "Anthropic company announcement, 2025-11-12 (repeated by TechCrunch the same day)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2196,6 +3183,14 @@
    "claim": "Akamai: $11.6B",
    "draft": "{\"usd_m\": 11600, \"gw\": null, \"chips\": \"general-purpose CPUs\"}",
    "rederived": "{\"usd_m\": 11600, \"usd_basis\": \"'Approximately $11.6 billion in aggregate' committed by Anthropic under Project Plans 2 and 3, entered 2026-09-18 under a Master Services Agreement dated 2026-05-05 (Akamai 8-K: 'Anthropic has committed to pay the Company approxi",
+   "rederived_obj": {
+    "usd_m": 11600,
+    "usd_basis": "'Approximately $11.6 billion in aggregate' committed by Anthropic under Project Plans 2 and 3, entered 2026-09-18 under a Master Services Agreement dated 2026-05-05 (Akamai 8-K: 'Anthropic has committed to pay the Company approximately $11.6 billion in the aggregate under the Project Plans'). Subject to Akamai meeting delivery/availability requirements and to termination rights (TechCrunch reading of the 8-K). The possible +$9B expansion (to ~$20B total) is an option tied to warrant vesting, not committed.",
+    "gw": "Not disclosed for the Anthropic contract; Akamai said its $14.4B portfolio of large multi-year cloud contracts signed this year needs 95-105 MW in total (10-30 MW per site).",
+    "chips": "CPU-based distributed cloud infrastructure (dedicated cloud computing capacity and managed services), not GPUs.",
+    "term": "Seven-year initial term for each Project Plan from its service start date; Akamai expects revenue from H2 2027 ($150-300M in 2027) and an annual pace near $1.7B by end-2028 (TechCrunch, investor call).",
+    "stated_by": "Akamai press release and Form 8-K, 2026-09-24 (Anthropic named). An earlier $1.8B seven-year deal with Anthropic was reported by Bloomberg on 2026-05-08."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2226,6 +3221,14 @@
    "claim": "Broadcom-related TPU equipment leases (XPV platform and successors): $161.2B",
    "draft": "{\"usd_m\": 161200, \"gw\": null, \"chips\": \"Google TPU systems/racks (Broadcom-supplied)\"}",
    "rederived": "{\"usd_m\": 161200, \"usd_basis\": \"About $161.2B of 'Broadcom-related equipment lease obligations', described as largely non-cancelable (non-cancelable by either party except on default). Committed lease obligations, not an 'up to' figure; part of the >=$518B tot",
+   "rederived_obj": {
+    "usd_m": 161200,
+    "usd_basis": "About $161.2B of 'Broadcom-related equipment lease obligations', described as largely non-cancelable (non-cancelable by either party except on default). Committed lease obligations, not an 'up to' figure; part of the >=$518B total. Source is a confidential S-1 as seen by Reuters, not a public filing.",
+    "gw": "~3.5 GW accessible through Broadcom from 2027 (Broadcom 8-K, 2026-04-06, 'as part of the multiple gigawatts ... committed by Anthropic'). Broadcom CEO remarks of 2026-09-02 as reported by BigGo/Yahoo: 1 GW Ironwood in 2026, 5 GW TPU v8i in 2027, line of sight to 10 GW more in 2028 (management outlook, not contract). XPV platform target >20 GW through 2028 across labs.",
+    "chips": "Google-designed TPUs co-developed with Broadcom, bought by special-purpose vehicles and leased to Anthropic (Ironwood in 2026, TPU v8i in 2027 per Broadcom CEO remarks reported by BigGo).",
+    "term": "Reuters gives no term for the $161.2B. Broadcom's 10-Q (quarter ended 2026-08-02, customer unnamed) describes a financial partner taking over AI-rack purchase agreements and the related customer lease agreements, with a backstop over 'the 5-year lease terms'. Start: first XPV tranche deployments from mid-2026 (Apollo); 3.5 GW from 2027 (Broadcom 8-K).",
+    "stated_by": "Anthropic's confidential IPO prospectus as seen by Reuters (2026-09-29) for the $161.2B; Broadcom Form 8-K (2026-04-06) for 3.5 GW; Apollo release (2026-06-09) for the first XPV tranche."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2256,6 +3259,11 @@
    "claim": "operating income FY2024: -$2,980M",
    "draft": "{\"value\": \"-$2,980M\", \"basis\": \"GAAP operating loss; leaked draft prospectus (Fortune/Reuters)\"}",
    "rederived": "{\"value\": -2980, \"basis\": \"USD millions; operating loss (operating income = -2,980) per the leaked draft S-1 as characterised by Reuters. Reuters' FY2025 wording is 'on an operating basis, excluding writedowns of various liabilities mostly tied to previous fun",
+   "rederived_obj": {
+    "value": -2980,
+    "basis": "USD millions; operating loss (operating income = -2,980) per the leaked draft S-1 as characterised by Reuters. Reuters' FY2025 wording is 'on an operating basis, excluding writedowns of various liabilities mostly tied to previous fundraising'; how FY2024 is treated is not stated. Actual, not a projection; GAAP status not stated",
+    "reported_by": "Fortune (Beatrice Nolan) 2026-09-29 and The Decoder 2026-09-29, both attributing to Reuters' review of the draft prospectus (Reuters, Echo Wang, 2026-09-28)"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2286,6 +3294,12 @@
    "claim": "Revenue TTM 2Q2026 (Jul 2025-Jun 2026): $19.6B (preliminary)",
    "draft": "{\"usd_m\": 19600, \"kind\": \"preliminary\", \"basis\": \"DERIVED by desk: FY2025 $4.59B less Q1 2025 (~$0.38B, estimated from run-rate path) less Q2 2025 (~$0.82B = $1",
    "rederived": "{\"usd_m\": 19600, \"kind\": \"derived estimate, not reported: Q3 2025 + Q4 2025 + Q1 2026 + Q2 2026 (preliminary)\", \"basis\": \"Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partne",
+   "rederived_obj": {
+    "usd_m": 19600,
+    "kind": "derived estimate, not reported: Q3 2025 + Q4 2025 + Q1 2026 + Q2 2026 (preliminary)",
+    "basis": "Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partner-channel sales with the cloud provider's cut as an expense; OpenAI disputes this treatment and the prospectus coverage I could open does not spell out the method.",
+    "reported_by": "No source states a trailing-twelve-month figure or Q3/Q4 2025 quarterly revenue; built from FY2025 $4.59B, Q2 2025 $787M (Bloomberg), Q1 2026 $4.73B and Q2 2026 $11.5B"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2316,6 +3330,12 @@
    "claim": "Revenue H1 2026: $16.2B (preliminary)",
    "draft": "{\"usd_m\": 16230, \"kind\": \"preliminary\", \"basis\": \"derived sum of Q1 $4.73B and Q2 $11.5B (recognized, gross)\"}",
    "rederived": "{\"usd_m\": 16230, \"kind\": \"derived sum, not reported by any source: Q1 2026 $4.73B + Q2 2026 $11.5B preliminary\", \"basis\": \"Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partn",
+   "rederived_obj": {
+    "usd_m": 16230,
+    "kind": "derived sum, not reported by any source: Q1 2026 $4.73B + Q2 2026 $11.5B preliminary",
+    "basis": "Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partner-channel sales with the cloud provider's cut as an expense; OpenAI disputes this treatment and the prospectus coverage I could open does not spell out the method.",
+    "reported_by": "No outlet or document located states an H1/six-month figure; computed from Bloomberg/FT-sourced quarters"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2346,6 +3366,12 @@
    "claim": "Revenue Q2 2026: $11.5B (preliminary)",
    "draft": "{\"usd_m\": 11500, \"kind\": \"preliminary\", \"basis\": \"recognized, gross; \\\"more than $11.5 billion\\\", 14x YoY (Bloomberg Aug 14, CNBC Aug 15; FT; Fortune/Reuters pr",
    "rederived": "{\"usd_m\": 11500, \"kind\": \"preliminary (quarter ended 2026-06-30): 'more than $11.5 billion' in investor documents viewed by Bloomberg; $11.5B again in the FT's review of the draft S-1\", \"basis\": \"Basis: gross of cloud-partner resale as reported (Axios 2026-09-",
+   "rederived_obj": {
+    "usd_m": 11500,
+    "kind": "preliminary (quarter ended 2026-06-30): 'more than $11.5 billion' in investor documents viewed by Bloomberg; $11.5B again in the FT's review of the draft S-1",
+    "basis": "Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partner-channel sales with the cloud provider's cut as an expense; OpenAI disputes this treatment and the prospectus coverage I could open does not spell out the method. Adjusted operating income was positive in the quarter (first profitable quarter, adjusted basis).",
+    "reported_by": "Bloomberg (2026-08-14, documents viewed by Bloomberg; vs $787M in Q2 2025); FT (2026-09-28/29, S-1 review: $11.5B); WSJ (2026-08-18): $11.6B"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2376,6 +3402,12 @@
    "claim": "Revenue FY2025: $4.6B (actual)",
    "draft": "{\"usd_m\": 4590, \"kind\": \"actual\", \"basis\": \"GAAP recognized, gross of cloud-partner resale ($3.8B usage-based + $789M subscription); 12x YoY (+1,088%); leaked D",
    "rederived": "{\"usd_m\": 4590, \"kind\": \"recognized full-year FY2025 revenue per the draft S-1 ('nearly $4.6 billion'; $3.8B usage-based + $789M subscription); earlier preliminary figure from investor documents was $4.5B\", \"basis\": \"Basis: gross of cloud-partner resale as rep",
+   "rederived_obj": {
+    "usd_m": 4590,
+    "kind": "recognized full-year FY2025 revenue per the draft S-1 ('nearly $4.6 billion'; $3.8B usage-based + $789M subscription); earlier preliminary figure from investor documents was $4.5B",
+    "basis": "Basis: gross of cloud-partner resale as reported - Anthropic books the full end-customer value of sales through AWS/Google/Microsoft and records the cloud provider's cut as an expense (Axios 2026-09-03; Sacra; SaaStr). OpenAI disputes this treatment, and OfficeChai notes the prospectus coverage does not itself spell out the method (both approaches are permitted under US accounting rules). About 47% (~$2.16B) of 2025 revenue came through Amazon and Google cloud marketplaces.",
+    "reported_by": "Draft S-1 reviewed by Reuters and FT (reported 2026-09-28/29; relayed by TechCrunch, SiliconANGLE, Quartz, Benzinga, Motley Fool, Pulse 2.0, eeNews). Earlier: The Information (2026-01-27, investor documents) $4.5B, per Epoch index."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2406,6 +3438,12 @@
    "claim": "Revenue FY2024: $386M (actual)",
    "draft": "{\"usd_m\": 386, \"kind\": \"actual\", \"basis\": \"GAAP recognized, gross of cloud-partner resale; $386M stated by KuCoin (T4, Reuters-derived) and implied by +1,088% g",
    "rederived": "{\"usd_m\": 386, \"kind\": \"recognized full-year revenue (draft S-1 coverage / investor documents); not run-rate\", \"basis\": \"Basis: gross of cloud-partner resale as reported - Anthropic books the full end-customer value of sales through AWS/Google/Microsoft and re",
+   "rederived_obj": {
+    "usd_m": 386,
+    "kind": "recognized full-year revenue (draft S-1 coverage / investor documents); not run-rate",
+    "basis": "Basis: gross of cloud-partner resale as reported - Anthropic books the full end-customer value of sales through AWS/Google/Microsoft and records the cloud provider's cut as an expense (Axios 2026-09-03; Sacra; SaaStr). OpenAI disputes this treatment, and OfficeChai notes the prospectus coverage does not itself spell out the method (both approaches are permitted under US accounting rules). About 47% (~$2.16B) of 2025 revenue came through Amazon and Google cloud marketplaces. Unaudited in public view.",
+    "reported_by": "Draft S-1 coverage (Reuters/FT, 2026-09-28/29): FY2025 $4.59B, up 1,088% (CryptoSlate) or roughly 12x (Reuters), which implies FY2024 of about $386M - Bitcoin.com News states 'about $386 million in 2024'. Earlier, The Information (2026-01-21/22, investor documents) had $381M (per Epoch index; page paywalled). SiliconANGLE and 24/7 Wall St. round FY2024 to about $400M."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2436,6 +3474,12 @@
    "claim": "Revenue Q1 2026: $4.7B (preliminary)",
    "draft": "{\"usd_m\": 4730, \"kind\": \"preliminary\", \"basis\": \"recognized, gross; Fortune snapshot of leaked draft prospectus; WSJ/FT May 20 figure $4.8B (rounding)\"}",
    "rederived": "{\"usd_m\": 4730, \"kind\": \"reported quarterly revenue for Jan-Mar 2026 from investor documents / draft S-1-era coverage (company-prepared, unaudited); earlier WSJ figure was $4.8B\", \"basis\": \"Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sa",
+   "rederived_obj": {
+    "usd_m": 4730,
+    "kind": "reported quarterly revenue for Jan-Mar 2026 from investor documents / draft S-1-era coverage (company-prepared, unaudited); earlier WSJ figure was $4.8B",
+    "basis": "Basis: gross of cloud-partner resale as reported (Axios 2026-09-03; Sacra; SaaStr) - Anthropic books the full end-customer value of partner-channel sales with the cloud provider's cut as an expense; OpenAI disputes this treatment and the prospectus coverage I could open does not spell out the method.",
+    "reported_by": "Bloomberg-cited documents as relayed by IBTimes (2026-08-17: $4.73B in Q1 2026) and S-1-era coverage (24/7 Wall St. 2026-09-30: $4.73B Q1, $11.5B Q2); WSJ (2026-05-20, via PYMNTS): $4.8B"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2466,6 +3510,12 @@
    "claim": "Claude Mythos 5.1: $10.0/$50.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 10.0, \"price_out_per_mtok\": 50.0, \"release_date\": \"2026-09-01\"}",
    "rederived": "{\"price_in_per_mtok\": 10.0, \"price_out_per_mtok\": 50.0, \"release_date\": \"2026-09-01\", \"later_changes\": \"None yet (launched 2026-09-01). Cache reads $0.25/MTok (0.025x base), versus $1 on Mythos 5.\"}",
+   "rederived_obj": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-09-01",
+    "later_changes": "None yet (launched 2026-09-01). Cache reads $0.25/MTok (0.025x base), versus $1 on Mythos 5."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2506,6 +3556,12 @@
    "claim": "Claude Sonnet 5: $2.0/$10.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 2.0, \"price_out_per_mtok\": 10.0, \"release_date\": \"2026-06-30\"}",
    "rederived": "{\"price_in_per_mtok\": 2.0, \"price_out_per_mtok\": 10.0, \"release_date\": \"2026-06-30\", \"later_changes\": \"Launched at 'introductory pricing' of $2/$10 (through 2026-08-31 per the pricing page) with a scheduled rise to $3/$15 on 2026-09-01. On 2026-08-10 Anthropic",
+   "rederived_obj": {
+    "price_in_per_mtok": 2.0,
+    "price_out_per_mtok": 10.0,
+    "release_date": "2026-06-30",
+    "later_changes": "Launched at 'introductory pricing' of $2/$10 (through 2026-08-31 per the pricing page) with a scheduled rise to $3/$15 on 2026-09-01. On 2026-08-10 Anthropic made $2/$10 the permanent standard price; the increase will not occur. Live page 2026-09-30: $2/$10."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2546,6 +3602,12 @@
    "claim": "Claude Opus 4: $15.0/$75.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 15.0, \"price_out_per_mtok\": 75.0, \"release_date\": \"2025-05-22\"}",
    "rederived": "{\"price_in_per_mtok\": 15.0, \"price_out_per_mtok\": 75.0, \"release_date\": \"2025-05-22\", \"later_changes\": \"No list-price change found ($15/$75 in docs tables archived 2025-06-15, 2026-01-15, 2026-02-25). Deprecation announced 2026-04-14; retired on the Claude API",
+   "rederived_obj": {
+    "price_in_per_mtok": 15.0,
+    "price_out_per_mtok": 75.0,
+    "release_date": "2025-05-22",
+    "later_changes": "No list-price change found ($15/$75 in docs tables archived 2025-06-15, 2026-01-15, 2026-02-25). Deprecation announced 2026-04-14; retired on the Claude API 2026-06-15 (still on Google Cloud)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2586,6 +3648,12 @@
    "claim": "Claude Opus 4.6: $5.0/$25.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2026-02-05\"}",
    "rederived": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2026-02-05\", \"later_changes\": \"Base price unchanged. At launch prompts over 200K tokens (1M-context beta) were billed $10/$37.50; the 1M window went out of beta at standard pricing on 2026",
+   "rederived_obj": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-02-05",
+    "later_changes": "Base price unchanged. At launch prompts over 200K tokens (1M-context beta) were billed $10/$37.50; the 1M window went out of beta at standard pricing on 2026-03-13. Fast mode (research preview, from 2026-02-07) cost $30/$150 (6x); fast mode was removed for Opus 4.6 on 2026-06-29 (requests now run at standard speed and rates)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2626,6 +3694,12 @@
    "claim": "Claude Opus 4.5: $5.0/$25.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2025-11-24\"}",
    "rederived": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2025-11-24\", \"later_changes\": \"No list-price change found ($5/$25 on live page 2026-09-30). Retirement not sooner than 2026-11-24.\"}",
+   "rederived_obj": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2025-11-24",
+    "later_changes": "No list-price change found ($5/$25 on live page 2026-09-30). Retirement not sooner than 2026-11-24."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2665,6 +3739,12 @@
    "claim": "Claude Mythos Preview: $25.0/$125.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 25.0, \"price_out_per_mtok\": 125.0, \"release_date\": \"2026-04-07\"}",
    "rederived": "{\"price_in_per_mtok\": 25.0, \"price_out_per_mtok\": 125.0, \"release_date\": \"2026-04-07\", \"later_changes\": \"Never on the public price table. Deprecated 2026-06-09 (successor Claude Mythos 5 at $10/$50, released the same day for Glasswing participants); retirement",
+   "rederived_obj": {
+    "price_in_per_mtok": 25.0,
+    "price_out_per_mtok": 125.0,
+    "release_date": "2026-04-07",
+    "later_changes": "Never on the public price table. Deprecated 2026-06-09 (successor Claude Mythos 5 at $10/$50, released the same day for Glasswing participants); retirement date 'to be announced'. No change to the $25/$125 figure found."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2705,6 +3785,12 @@
    "claim": "Claude Opus 5.5: $4.0/$20.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 4.0, \"price_out_per_mtok\": 20.0, \"release_date\": \"2026-09-22\"}",
    "rederived": "{\"price_in_per_mtok\": 4.0, \"price_out_per_mtok\": 20.0, \"release_date\": \"2026-09-22\", \"later_changes\": \"None yet (launched 2026-09-22). Launch terms: 20% below Opus 5's $5/$25; cache reads $0.20/MTok (0.05x, 60% below Opus 5); fast mode $8/$40.\"}",
+   "rederived_obj": {
+    "price_in_per_mtok": 4.0,
+    "price_out_per_mtok": 20.0,
+    "release_date": "2026-09-22",
+    "later_changes": "None yet (launched 2026-09-22). Launch terms: 20% below Opus 5's $5/$25; cache reads $0.20/MTok (0.05x, 60% below Opus 5); fast mode $8/$40."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2745,6 +3831,12 @@
    "claim": "Claude Opus 4.7: $5.0/$25.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2026-04-16\"}",
    "rederived": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2026-04-16\", \"later_changes\": \"Base price unchanged ($5/$25). New tokenizer produces about 30% more tokens for the same text, so effective cost per text rose (Anthropic docs). Fast mode (r",
+   "rederived_obj": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-04-16",
+    "later_changes": "Base price unchanged ($5/$25). New tokenizer produces about 30% more tokens for the same text, so effective cost per text rose (Anthropic docs). Fast mode (research preview) added 2026-05-12, deprecated 2026-06-25, removed 2026-07-24 (requests now error)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2785,6 +3877,12 @@
    "claim": "Claude Sonnet 4: $3.0/$15.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2025-05-22\"}",
    "rederived": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2025-05-22\", \"later_changes\": \"Base price unchanged. A long-context premium applies to the 1M-token context beta (beta opened 2025-08-12): prompts over 200K input tokens billed $6 input / ",
+   "rederived_obj": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2025-05-22",
+    "later_changes": "Base price unchanged. A long-context premium applies to the 1M-token context beta (beta opened 2025-08-12): prompts over 200K input tokens billed $6 input / $22.50 output (shown in docs tables archived 2026-01-15 and 2026-02-25; I did not open a 2025 copy, so the premium's start date is unconfirmed). The 1M beta was retired 2026-04-30. Deprecation announced 2026-04-14; retired on the Claude API 2026-06-15."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2825,6 +3923,12 @@
    "claim": "Claude Fable 5: $10.0/$50.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 10.0, \"price_out_per_mtok\": 50.0, \"release_date\": \"2026-06-09\"}",
    "rederived": "{\"price_in_per_mtok\": 10.0, \"price_out_per_mtok\": 50.0, \"release_date\": \"2026-06-09\", \"later_changes\": \"List price unchanged ($10/$50). Cache reads $1/MTok on Fable 5 (0.1x) versus $0.25 on Fable 5.1 (released 2026-09-01). Access was suspended for all users fr",
+   "rederived_obj": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-06-09",
+    "later_changes": "List price unchanged ($10/$50). Cache reads $1/MTok on Fable 5 (0.1x) versus $0.25 on Fable 5.1 (released 2026-09-01). Access was suspended for all users from 2026-06-12 (US export controls) until 2026-07-01 (not a price change). Billing rule change: refusals returned before any output were not billed before 2026-09-24; billed in some categories after."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2865,6 +3969,12 @@
    "claim": "Claude 3.7 Sonnet: $3.0/$15.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2025-02-24\"}",
    "rederived": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2025-02-24\", \"later_changes\": \"No list-price change found ($3/$15 in docs tables archived 2025-03-01, 2025-06-15, 2026-01-15). Deprecation announced 2025-10-28; retired 2026-02-19.\"}",
+   "rederived_obj": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2025-02-24",
+    "later_changes": "No list-price change found ($3/$15 in docs tables archived 2025-03-01, 2025-06-15, 2026-01-15). Deprecation announced 2025-10-28; retired 2026-02-19."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2905,6 +4015,12 @@
    "claim": "Claude 3.5 Sonnet (Jun 2024; upgraded Oct 2024): $3.0/$15.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2024-06-20\"}",
    "rederived": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2024-06-20\", \"later_changes\": \"No list-price change for either version: the upgraded claude-3-5-sonnet-20241022 (released 2024-10-22) carries the same price ('same price and speed as its p",
+   "rederived_obj": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2024-06-20",
+    "later_changes": "No list-price change for either version: the upgraded claude-3-5-sonnet-20241022 (released 2024-10-22) carries the same price ('same price and speed as its predecessor'); $3/$15 in docs tables archived 2024-11-10, 2025-03-01, 2025-06-15. Both snapshots deprecated 2025-08-13 and retired 2025-10-28."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2945,6 +4061,12 @@
    "claim": "Claude Fable 5.1: $10.0/$50.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 10.0, \"price_out_per_mtok\": 50.0, \"release_date\": \"2026-09-01\"}",
    "rederived": "{\"price_in_per_mtok\": 10.0, \"price_out_per_mtok\": 50.0, \"release_date\": \"2026-09-01\", \"later_changes\": \"None yet: launched 29 days before 2026-09-30. Launch change versus Fable 5: cache reads cut to $0.25/MTok (0.025x base).\"}",
+   "rederived_obj": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-09-01",
+    "later_changes": "None yet: launched 29 days before 2026-09-30. Launch change versus Fable 5: cache reads cut to $0.25/MTok (0.025x base)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -2985,6 +4107,12 @@
    "claim": "Claude 3 Sonnet: $3.0/$15.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2024-03-04\"}",
    "rederived": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2024-03-04\", \"later_changes\": \"No list-price change found ($3/$15 in the docs models table archived 2024-11-10). Deprecation announced 2025-01-21; retired 2025-07-21. Not in the March 2025",
+   "rederived_obj": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2024-03-04",
+    "later_changes": "No list-price change found ($3/$15 in the docs models table archived 2024-11-10). Deprecation announced 2025-01-21; retired 2025-07-21. Not in the March 2025 pricing table (already deprecated)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3024,6 +4152,12 @@
    "claim": "Claude Sonnet 4.5: $3.0/$15.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2025-09-29\"}",
    "rederived": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2025-09-29\", \"later_changes\": \"Base price unchanged ($3/$15, live page 2026-09-30). Prompts over 200K input tokens under the 1M-context beta carried a premium of $6/$22.50 (archived docs 2",
+   "rederived_obj": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2025-09-29",
+    "later_changes": "Base price unchanged ($3/$15, live page 2026-09-30). Prompts over 200K input tokens under the 1M-context beta carried a premium of $6/$22.50 (archived docs 2026-01-15 and 2026-02-25; start date of the premium not confirmed); that beta was retired 2026-04-30. Deprecation announced 2026-09-30; retirement scheduled 2026-11-30."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3064,6 +4198,12 @@
    "claim": "Claude Opus 4.1: $15.0/$75.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 15.0, \"price_out_per_mtok\": 75.0, \"release_date\": \"2025-08-05\"}",
    "rederived": "{\"price_in_per_mtok\": 15.0, \"price_out_per_mtok\": 75.0, \"release_date\": \"2025-08-05\", \"later_changes\": \"No list-price change found ($15/$75 in docs tables archived 2026-01-15 and 2026-02-25). Deprecation announced 2026-06-05; retired on the Claude API 2026-08-",
+   "rederived_obj": {
+    "price_in_per_mtok": 15.0,
+    "price_out_per_mtok": 75.0,
+    "release_date": "2025-08-05",
+    "later_changes": "No list-price change found ($15/$75 in docs tables archived 2026-01-15 and 2026-02-25). Deprecation announced 2026-06-05; retired on the Claude API 2026-08-05 (still on Bedrock and Google Cloud per the live pricing page)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3104,6 +4244,12 @@
    "claim": "Claude Opus 4.8: $5.0/$25.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2026-05-28\"}",
    "rederived": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2026-05-28\", \"later_changes\": \"No list-price change found ($5/$25 on live page 2026-09-30). Fast mode (research preview, API only) is $10/$50 (2x), priced at launch; still offered.\"}",
+   "rederived_obj": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-05-28",
+    "later_changes": "No list-price change found ($5/$25 on live page 2026-09-30). Fast mode (research preview, API only) is $10/$50 (2x), priced at launch; still offered."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3143,6 +4289,12 @@
    "claim": "Claude Mythos 5: $10.0/$50.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 10.0, \"price_out_per_mtok\": 50.0, \"release_date\": \"2026-06-09\"}",
    "rederived": "{\"price_in_per_mtok\": 10.0, \"price_out_per_mtok\": 50.0, \"release_date\": \"2026-06-09\", \"later_changes\": \"List price unchanged ($10/$50). Cache reads $1/MTok at launch; Mythos 5.1 (2026-09-01) cut cache reads to $0.25. Access was suspended on 2026-06-12 by US ex",
+   "rederived_obj": {
+    "price_in_per_mtok": 10.0,
+    "price_out_per_mtok": 50.0,
+    "release_date": "2026-06-09",
+    "later_changes": "List price unchanged ($10/$50). Cache reads $1/MTok at launch; Mythos 5.1 (2026-09-01) cut cache reads to $0.25. Access was suspended on 2026-06-12 by US export controls and restored for a set of US organizations after 2026-06-26 approval, with broader Glasswing access still being coordinated on 2026-07-01."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3183,6 +4335,12 @@
    "claim": "Claude 3 Opus: $15.0/$75.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 15.0, \"price_out_per_mtok\": 75.0, \"release_date\": \"2024-03-04\"}",
    "rederived": "{\"price_in_per_mtok\": 15.0, \"price_out_per_mtok\": 75.0, \"release_date\": \"2024-03-04\", \"later_changes\": \"No list-price change found: $15/$75 in docs tables archived 2024-11-10, 2025-03-01, 2025-06-15 and 2026-01-15 (marked deprecated). Deprecation announced 202",
+   "rederived_obj": {
+    "price_in_per_mtok": 15.0,
+    "price_out_per_mtok": 75.0,
+    "release_date": "2024-03-04",
+    "later_changes": "No list-price change found: $15/$75 in docs tables archived 2024-11-10, 2025-03-01, 2025-06-15 and 2026-01-15 (marked deprecated). Deprecation announced 2025-06-30; retired on the API 2026-01-05 (release note of 2026-01-05: Opus 4.5 'at a third of the cost')."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3223,6 +4381,12 @@
    "claim": "Claude 3.5 Haiku: $1.0/$5.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 1.0, \"price_out_per_mtok\": 5.0, \"release_date\": \"2024-11-04\"}",
    "rederived": "{\"price_in_per_mtok\": 1.0, \"price_out_per_mtok\": 5.0, \"release_date\": \"2024-11-04\", \"later_changes\": \"Price moved twice after the announcement. (1) At the 2024-10-22 announcement Anthropic said 3.5 Haiku came 'for the same cost ... as Claude 3 Haiku' ($0.25/$1",
+   "rederived_obj": {
+    "price_in_per_mtok": 1.0,
+    "price_out_per_mtok": 5.0,
+    "release_date": "2024-11-04",
+    "later_changes": "Price moved twice after the announcement. (1) At the 2024-10-22 announcement Anthropic said 3.5 Haiku came 'for the same cost ... as Claude 3 Haiku' ($0.25/$1.25). (2) When it reached the API on 2024-11-04 it was priced $1/$5 (post updated that day; docs page archived 2024-11-10 shows $1.00/$5.00). (3) On 2024-12-03 Anthropic cut it to $0.80/$4, unchanged until retirement on the Claude API (2026-02-19; still on Bedrock and Google Cloud)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3263,6 +4427,12 @@
    "claim": "Claude Haiku 4.5: $1.0/$5.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 1.0, \"price_out_per_mtok\": 5.0, \"release_date\": \"2025-10-15\"}",
    "rederived": "{\"price_in_per_mtok\": 1.0, \"price_out_per_mtok\": 5.0, \"release_date\": \"2025-10-15\", \"later_changes\": \"No list-price change found ($1/$5 in docs tables archived 2026-01-15 and on the live page 2026-09-30). Cache write $1.25 (5m), read $0.10; batch $0.50/$2.50. ",
+   "rederived_obj": {
+    "price_in_per_mtok": 1.0,
+    "price_out_per_mtok": 5.0,
+    "release_date": "2025-10-15",
+    "later_changes": "No list-price change found ($1/$5 in docs tables archived 2026-01-15 and on the live page 2026-09-30). Cache write $1.25 (5m), read $0.10; batch $0.50/$2.50. Retirement not sooner than 2026-10-15."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3303,6 +4473,12 @@
    "claim": "Claude Sonnet 4.6: $3.0/$15.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2026-02-17\"}",
    "rederived": "{\"price_in_per_mtok\": 3.0, \"price_out_per_mtok\": 15.0, \"release_date\": \"2026-02-17\", \"later_changes\": \"Base price unchanged. The 1M-token context was in beta at launch with a premium above 200K input tokens ($6/$22.50 per the archived 2026-02-25 table); on 202",
+   "rederived_obj": {
+    "price_in_per_mtok": 3.0,
+    "price_out_per_mtok": 15.0,
+    "release_date": "2026-02-17",
+    "later_changes": "Base price unchanged. The 1M-token context was in beta at launch with a premium above 200K input tokens ($6/$22.50 per the archived 2026-02-25 table); on 2026-03-13 it went out of beta 'at standard pricing'."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3343,6 +4519,12 @@
    "claim": "Claude Sonnet 5.5: $2.0/$10.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 2.0, \"price_out_per_mtok\": 10.0, \"release_date\": \"2026-09-28\"}",
    "rederived": "{\"price_in_per_mtok\": 2.0, \"price_out_per_mtok\": 10.0, \"release_date\": \"2026-09-28\", \"later_changes\": \"None yet (launched 2026-09-28). Cache read $0.20, 5m write $2.50, 1h write $4; batch $1/$5.\"}",
+   "rederived_obj": {
+    "price_in_per_mtok": 2.0,
+    "price_out_per_mtok": 10.0,
+    "release_date": "2026-09-28",
+    "later_changes": "None yet (launched 2026-09-28). Cache read $0.20, 5m write $2.50, 1h write $4; batch $1/$5."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3383,6 +4565,12 @@
    "claim": "Claude Opus 5: $5.0/$25.0 per Mtok",
    "draft": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2026-07-24\"}",
    "rederived": "{\"price_in_per_mtok\": 5.0, \"price_out_per_mtok\": 25.0, \"release_date\": \"2026-07-24\", \"later_changes\": \"No list-price change ($5/$25 on live page 2026-09-30). Opus 5.5 (2026-09-22) launched at $4/$20, making Opus 5 the higher-priced Opus. Fast mode at 2x base (",
+   "rederived_obj": {
+    "price_in_per_mtok": 5.0,
+    "price_out_per_mtok": 25.0,
+    "release_date": "2026-07-24",
+    "later_changes": "No list-price change ($5/$25 on live page 2026-09-30). Opus 5.5 (2026-09-22) launched at $4/$20, making Opus 5 the higher-priced Opus. Fast mode at 2x base ($10/$50)."
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3423,6 +4611,11 @@
    "claim": "Prospectus: Net loss = $42B",
    "draft": "{\"value\": \"$42B\"}",
    "rederived": "{\"value\": 42000, \"reported_by\": \"Reuters (Echo Wang), 2026-09-28: 'net loss of $42 billion in 2025' / 'the near-$42 billion net loss'\", \"date\": \"2026-09-28\"}",
+   "rederived_obj": {
+    "value": 42000,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'net loss of $42 billion in 2025' / 'the near-$42 billion net loss'",
+    "date": "2026-09-28"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3453,6 +4646,11 @@
    "claim": "Prospectus: Revenue = $4.73B",
    "draft": "{\"value\": \"$4.73B\"}",
    "rederived": "{\"value\": 4730, \"reported_by\": \"Bloomberg, 2026-08-14 (internal/confidential investor documents; via Fortune 2026-08-15, The Next Web 2026-08-15, PYMNTS, Yahoo 2026-08-21); CNBC 2026-08-15 re-report (HTTP 403, not opened)\", \"date\": \"2026-08-14\"}",
+   "rederived_obj": {
+    "value": 4730,
+    "reported_by": "Bloomberg, 2026-08-14 (internal/confidential investor documents; via Fortune 2026-08-15, The Next Web 2026-08-15, PYMNTS, Yahoo 2026-08-21); CNBC 2026-08-15 re-report (HTTP 403, not opened)",
+    "date": "2026-08-14"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3483,6 +4681,11 @@
    "claim": "Prospectus: Cash, cash equivalents and short-term investments = $20.28B",
    "draft": "{\"value\": \"$20.28B\"}",
    "rederived": "{\"value\": 20280, \"reported_by\": \"Reuters (Echo Wang), 2026-09-28: 'cash, cash equivalents and short-term investments totaling $20.28 billion as of December 31'\", \"date\": \"2026-09-28\"}",
+   "rederived_obj": {
+    "value": 20280,
+    "reported_by": "Reuters (Echo Wang), 2026-09-28: 'cash, cash equivalents and short-term investments totaling $20.28 billion as of December 31'",
+    "date": "2026-09-28"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3513,6 +4716,12 @@
    "claim": "Run-rate $1.0B (~2024-12-31)",
    "draft": "{\"date\": \"2024-12-31\", \"run_rate_usd_m\": 1000, \"basis\": \"gross\"}",
    "rederived": "{\"date\": \"2024-12 (company wording: 'at the beginning of 2025'; Reuters sources: 'December 2024')\", \"run_rate_usd_m\": 1000, \"basis\": \"Annualized run rate, approximate: 'approximately $1 billion' (company) / 'nearly $1 billion' (Reuters sources). Gross/net of c",
+   "rederived_obj": {
+    "date": "2024-12 (company wording: 'at the beginning of 2025'; Reuters sources: 'December 2024')",
+    "run_rate_usd_m": 1000,
+    "basis": "Annualized run rate, approximate: 'approximately $1 billion' (company) / 'nearly $1 billion' (Reuters sources). Gross/net of cloud-partner resale not stated.",
+    "stated_by": "Anthropic (Series F post, 2025-09-02); Reuters two-source report (2025-05-30); CEO statement 2025-10-21 uses $1B as the base nine months earlier"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3543,6 +4752,12 @@
    "claim": "Run-rate $19.0B (~2026-03-03)",
    "draft": "{\"date\": \"2026-03-03\", \"run_rate_usd_m\": 19000, \"basis\": \"gross\"}",
    "rederived": "{\"date\": \"2026-03-03\", \"run_rate_usd_m\": 19000, \"basis\": \"Annualized run rate ('topped $19 billion'; Bloomberg headline 'nears $20 billion'); reported figure, not a formal company release; not recognized revenue; gross/net not stated (Anthropic counts reseller",
+   "rederived_obj": {
+    "date": "2026-03-03",
+    "run_rate_usd_m": 19000,
+    "basis": "Annualized run rate ('topped $19 billion'; Bloomberg headline 'nears $20 billion'); reported figure, not a formal company release; not recognized revenue; gross/net not stated (Anthropic counts reseller sales gross per Axios).",
+    "stated_by": "Bloomberg (2026-03-03; PYMNTS relays it as unnamed sources); The Information chart (2026-03-05) also shows $19B; Ed Zitron attributes the claim to CEO Dario Amodei; VentureBeat's run-rate timeline (2026-05-08) also lists $19B for March 2026"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3578,6 +4793,12 @@
    "claim": "Run-rate $14.0B (~2026-02-12)",
    "draft": "{\"date\": \"2026-02-12\", \"run_rate_usd_m\": 14000, \"basis\": \"gross\"}",
    "rederived": "{\"date\": \"2026-02-12\", \"run_rate_usd_m\": 14000, \"basis\": \"Company-stated annualized run-rate revenue (not recognized revenue). Release does not say gross or net of cloud-partner resale; Anthropic's practice is to count partner-channel sales at full end-custome",
+   "rederived_obj": {
+    "date": "2026-02-12",
+    "run_rate_usd_m": 14000,
+    "basis": "Company-stated annualized run-rate revenue (not recognized revenue). Release does not say gross or net of cloud-partner resale; Anthropic's practice is to count partner-channel sales at full end-customer value (gross) per Axios 2026-09-03 and Sacra.",
+    "stated_by": "Anthropic (company post announcing the $30B Series G at $380B post-money, 2026-02-12)"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3613,6 +4834,12 @@
    "claim": "Run-rate $7.0B (~2025-10-15)",
    "draft": "{\"date\": \"2025-10-15\", \"run_rate_usd_m\": 7000, \"basis\": \"unstated\"}",
    "rederived": "{\"date\": \"2025-10 (Reuters 2025-10-15: 'approaching $7 billion this month'; CEO statement 2025-10-21: '$7B run rate')\", \"run_rate_usd_m\": 7000, \"basis\": \"Company-stated annualized run rate (company told Reuters it was 'approaching' $7B; then stated $7B publicl",
+   "rederived_obj": {
+    "date": "2025-10 (Reuters 2025-10-15: 'approaching $7 billion this month'; CEO statement 2025-10-21: '$7B run rate')",
+    "run_rate_usd_m": 7000,
+    "basis": "Company-stated annualized run rate (company told Reuters it was 'approaching' $7B; then stated $7B publicly). Gross/net of cloud-partner resale not stated.",
+    "stated_by": "Anthropic - told Reuters (2025-10-15) and Dario Amodei's public statement (2025-10-21)"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3643,6 +4870,12 @@
    "claim": "Run-rate $44.0B (~2026-05-02)",
    "draft": "{\"date\": \"2026-05-02\", \"run_rate_usd_m\": 44000, \"basis\": \"unstated\"}",
    "rederived": "{\"date\": \"2026-05 (company wording 'earlier this month', stated 2026-05-28; no exact day given)\", \"run_rate_usd_m\": 47000, \"basis\": \"Company-stated annualized run-rate revenue ('crossed $47 billion'); not recognized revenue; gross/net not stated in the post (A",
+   "rederived_obj": {
+    "date": "2026-05 (company wording 'earlier this month', stated 2026-05-28; no exact day given)",
+    "run_rate_usd_m": 47000,
+    "basis": "Company-stated annualized run-rate revenue ('crossed $47 billion'); not recognized revenue; gross/net not stated in the post (Anthropic counts reseller sales gross per Axios/Sacra).",
+    "stated_by": "Anthropic (Series H post: $65B raise at $965B post-money, 2026-05-28)"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3673,6 +4906,12 @@
    "claim": "Run-rate $100M (~2023-09-30)",
    "draft": "{\"date\": \"2023-09-30\", \"run_rate_usd_m\": 100, \"basis\": \"unstated\"}",
    "rederived": "{\"date\": \"2023-09 (approximate: The Information reported on 2023-10-03 that Anthropic 'has been generating' this rate; its 2023-12-26 article dates it 'just three months ago')\", \"run_rate_usd_m\": 100, \"basis\": \"Annualized run-rate revenue that Anthropic told s",
+   "rederived_obj": {
+    "date": "2023-09 (approximate: The Information reported on 2023-10-03 that Anthropic 'has been generating' this rate; its 2023-12-26 article dates it 'just three months ago')",
+    "run_rate_usd_m": 100,
+    "basis": "Annualized run-rate revenue that Anthropic told some investors; outlet-reported, single origin (The Information); not recognized revenue; gross/net of cloud-partner resale not stated.",
+    "stated_by": "Anthropic, to investors, as reported by The Information (2023-10-03 and 2023-12-26; Reuters re-reported the December piece)"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3702,6 +4941,12 @@
    "claim": "Run-rate $65.0B (~2026-07-31)",
    "draft": "{\"date\": \"2026-07-31\", \"run_rate_usd_m\": 65000, \"basis\": \"gross\"}",
    "rederived": "{\"date\": \"2026-07-31 ('by the end of July'; first reported 2026-08-17)\", \"run_rate_usd_m\": 65000, \"basis\": \"Annualized run-rate revenue shared with investors in ongoing financial updates; outlet-reported, not a public company release and not audited. Anthropic",
+   "rederived_obj": {
+    "date": "2026-07-31 ('by the end of July'; first reported 2026-08-17)",
+    "run_rate_usd_m": 65000,
+    "basis": "Annualized run-rate revenue shared with investors in ongoing financial updates; outlet-reported, not a public company release and not audited. Anthropic counts reseller sales gross (Axios 2026-09-03), so this is gross of cloud-partner cuts.",
+    "stated_by": "Anthropic to investors, reported by Bloomberg first (2026-08-17), then Reuters ('person with knowledge'; company 'shared the latest figure with investors') and CNBC ('confirmed')"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3737,6 +4982,18 @@
    "claim": "Run-rate $2.0B (~2025-03-31)",
    "draft": "{\"date\": \"2025-03-31\", \"run_rate_usd_m\": 2000, \"basis\": \"unstated\"}",
    "rederived": "{\"date\": [\"2025-03 (early March, 'as of earlier this month', reported 2025-03-11)\", \"2025-03 (end of March / Q1 2025; disclosed 2025-05-16)\"], \"run_rate_usd_m\": [1400, 2000], \"basis\": \"Annualized run rate (not recognized revenue). $1.4B is outlet-reported (The",
+   "rederived_obj": {
+    "date": [
+     "2025-03 (early March, 'as of earlier this month', reported 2025-03-11)",
+     "2025-03 (end of March / Q1 2025; disclosed 2025-05-16)"
+    ],
+    "run_rate_usd_m": [
+     1400,
+     2000
+    ],
+    "basis": "Annualized run rate (not recognized revenue). $1.4B is outlet-reported (The Information). $2B is company-disclosed ('annualized revenue topped $2 billion in the first quarter', reported by SiliconANGLE/CNBC 2025-05-16) and matched by Reuters sources ('crossed $2 billion around the end of March'). Gross/net not stated.",
+    "stated_by": "The Information (2025-03-11; headline-level access only); Anthropic (disclosure with its $2.5B credit facility, 2025-05-16); Reuters two sources (2025-05-30)"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3767,6 +5024,18 @@
    "claim": "Run-rate $4.0B (~2025-07-10)",
    "draft": "{\"date\": \"2025-07-10\", \"run_rate_usd_m\": 4000, \"basis\": \"unstated\"}",
    "rederived": "{\"date\": [\"2025-07-01 (The Information, 'annual pace')\", \"2025-07-29 (Bloomberg: 'by end of July'); company: 'August 2025'\"], \"run_rate_usd_m\": [4000, 5000], \"basis\": \"Annualized run rate. $4B: outlet-reported pace (The Information; about $333M a month per Epo",
+   "rederived_obj": {
+    "date": [
+     "2025-07-01 (The Information, 'annual pace')",
+     "2025-07-29 (Bloomberg: 'by end of July'); company: 'August 2025'"
+    ],
+    "run_rate_usd_m": [
+     4000,
+     5000
+    ],
+    "basis": "Annualized run rate. $4B: outlet-reported pace (The Information; about $333M a month per Epoch index; body paywalled). $5B: Bloomberg 'recurring revenue about $5 billion by end of July' (not opened) and Anthropic's own statement that run-rate 'reached over $5 billion' by August 2025. Gross/net not stated.",
+    "stated_by": "The Information (2025-07-01); Bloomberg (2025-07-29, via Epoch index); Anthropic (Series F post 2025-09-02 and 2025-09-26 post: over $5B in August 2025)"
+   },
    "verdict": "MATCH",
    "compared": [
     {
@@ -3802,6 +5071,12 @@
    "claim": "Run-rate $30.0B (~2026-04-06)",
    "draft": "{\"date\": \"2026-04-06\", \"run_rate_usd_m\": 30000, \"basis\": \"gross\"}",
    "rederived": "{\"date\": \"2026-04-06\", \"run_rate_usd_m\": 30000, \"basis\": \"Company-stated annualized run-rate revenue ('has now surpassed $30 billion'); not recognized revenue. Counted gross of cloud-partner cuts in Anthropic's practice; OpenAI disputes the figure as overstate",
+   "rederived_obj": {
+    "date": "2026-04-06",
+    "run_rate_usd_m": 30000,
+    "basis": "Company-stated annualized run-rate revenue ('has now surpassed $30 billion'); not recognized revenue. Counted gross of cloud-partner cuts in Anthropic's practice; OpenAI disputes the figure as overstated by roughly $8B on gross-vs-net grounds (VentureBeat 2026-05-08); Axios source says a net restatement would be only a 6-10% hit.",
+    "stated_by": "Anthropic (company post 'Anthropic expands Google and Broadcom compute deal', 2026-04-06); VentureBeat (2026-05-08) reports the CEO discussing the $30B run rate at the Code with Claude developer event in early May"
+   },
    "verdict": "MATCH",
    "compared": [
     {

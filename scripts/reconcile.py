@@ -114,7 +114,7 @@ for c in master:
     if verdict == "UNTRACEABLE": red.append("No independent answer; the draft figure stays flagged until one is found.")
     if found.get("notes"): red.append(str(found["notes"])[:240])
     rows.append({"claim_id": c["claim_id"], "group": c["group"], "kind": c["kind"], "claim": c.get("label") or c["question"][:90], "draft": json.dumps(c.get("expect"), ensure_ascii=False)[:160],
-                 "rederived": json.dumps({k: v for k, v in found.items() if k != "notes"}, ensure_ascii=False)[:260] if found else "", "verdict": verdict,
+                 "rederived": json.dumps({k: v for k, v in found.items() if k != "notes"}, ensure_ascii=False)[:260] if found else "", "rederived_obj": {k: v for k, v in found.items() if k != "notes"} if found else None, "verdict": verdict,
                  "compared": [{"field": f, "ok": ok, "detail": d} for f, ok, d in cmp_rows], "tier": f"T{best_tier}" if best_tier < 9 else (c.get("draft_tier") or "T3"), "cross_check": indep,
                  "confidence": conf, "sources": [s["url"] for s in srcs][:4], "draft_sources": c.get("draft_sources", [])[:2], "red_team": " ".join(red), "event_id": c.get("event_id")})
 
