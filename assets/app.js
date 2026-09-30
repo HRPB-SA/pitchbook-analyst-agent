@@ -263,7 +263,13 @@ function extractChips(ex, e) {
   const out = [];
   if (!ex) return out;
   const o = ex.other || {}, text = e ? `${e.headline || ''} ${e.summary || ''}` : '';
-  const basis = e ? (state.computeBasis?.get(e.id) || '') : '';
+  // the desk's basis for this deal: by event id, else by partner name and dollar amount (another desk may have filed the same deal as its own event)
+  const basis = !e ? '' : (state.computeBasis?.get(e.id) || (() => {
+    const cu = ex.compute?.usd_m; if (!cu) return '';
+    const pn = String(ex.compute?.partner || '').toLowerCase(); if (!pn) return '';
+    const row = (state.data.metrics?.compute || []).find(r => r.usd_m && Math.abs(r.usd_m - cu) / r.usd_m < 0.02 && String(r.partner || '').toLowerCase().split(/[\s\/\-,()]+/).some(t => t.length >= 4 && pn.includes(t)));
+    return row?.usd_basis || '';
+  })());
   const preC = /up to/i.test(basis) ? 'up to ' : '', pre = preC || (e && /\bup to\b/i.test(e.headline || '')) ? 'up to ' : '';   // the headline's 'up to' qualifies the amount chip, not the compute chip
   const post = /unconfirmed|reported/i.test(basis) && !/contract/i.test(basis) ? ' (unconfirmed)' : '';
   if (ex.amount_usd_m) out.push(chip(`${pre}${fmt.usd(ex.amount_usd_m)}${post}`, 'num'));

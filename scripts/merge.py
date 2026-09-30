@@ -327,7 +327,9 @@ def apply_corrections(events):
         if re.search(r"target|expectation|talks|unconfirmed|indication", avc, re.I): return False
         # talks, floated targets, implied or undisclosed valuations are never a priced round, whatever else the headline says
         if re.search(r"\b(in (early )?talks|talks to|seeking|weighs|considering|floated)\b", e["headline"], re.I): return False
-        if re.search(r"\b(implying|implies|implied)\b|valuation (was |is )?(not (disclosed|stated)|unstated)|no valuation|pre/post[- ]money unstated|valuation is a floated", txt, re.I): return False
+        # a T1/T2 announcement of a named round is priced even if its notes mention an implied pre-money
+        if re.search(r"\bseries [a-h]\b", e["headline"], re.I) and e["source"].get("tier") in ("T1", "T2") and not re.search(r"\b(in talks|talks to)\b", e["headline"], re.I): return True
+        if re.search(r"\b(implying|implies)\s+(a\s+|an\s+)?(post-money\s+)?valuation|\bimplied (post-money )?valuation|valuation (was |is )?(not (disclosed|stated)|unstated)|no valuation|pre/post[- ]money unstated|valuation is a floated", txt, re.I): return False
         if re.search(r"\b(secondary|perpetual|indications?)\b", e["headline"], re.I) and not re.search(r"series [a-h]|closes?|raised", e["headline"], re.I): return False
         return True
     for e in events:

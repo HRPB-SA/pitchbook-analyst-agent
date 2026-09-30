@@ -538,13 +538,13 @@ function rerenderCharts() { state.rendered = {}; showTab(state.tab, true); }
 
 /* ---------------- data ---------------- */
 async function loadAll() {
-  const files = ['events','metrics','entities','topics','model','compute','thesis','agent_log','ledger','audit','health','certify'];
+  const files = ['events','metrics','entities','topics','model','compute','thesis','agent_log','ledger','audit','health','certify','certification'];
   const res = await Promise.all(files.map(async f => {
     try { const r = await fetch(`data/${f}.json`, { cache: 'no-store' }); if (!r.ok) throw new Error(`${r.status}`); return [f, await r.json()]; }
     catch (e) { return [f, null, e]; }
   }));
   const missing = [];
-  for (const [f, d, e] of res) { state.data[f] = d; if (!d && !['audit', 'health', 'certify'].includes(f)) missing.push(f); }
+  for (const [f, d, e] of res) { state.data[f] = d; if (!d && !['audit', 'health', 'certify', 'certification'].includes(f)) missing.push(f); }
   if (!state.data.events) throw new Error(`Could not load data/events.json (${missing.join(', ')} missing). Run scripts/merge.py first.`);
   state.computeBasis = new Map((state.data.metrics?.compute || []).filter(r => r.event_id).map(r => [r.event_id, r.usd_basis || '']));
   for (const e of state.data.events) { state.evIndex.set(e.id, e); for (const m of e.merged_ids || []) if (!state.evIndex.has(m)) state.evIndex.set(m, e); }
@@ -722,7 +722,13 @@ function extractChips(ex, e) {
   const out = [];
   if (!ex) return out;
   const o = ex.other || {}, text = e ? `${e.headline || ''} ${e.summary || ''}` : '';
-  const basis = e ? (state.computeBasis?.get(e.id) || '') : '';
+  // the desk's basis for this deal: by event id, else by partner name and dollar amount (another desk may have filed the same deal as its own event)
+  const basis = !e ? '' : (state.computeBasis?.get(e.id) || (() => {
+    const cu = ex.compute?.usd_m; if (!cu) return '';
+    const pn = String(ex.compute?.partner || '').toLowerCase(); if (!pn) return '';
+    const row = (state.data.metrics?.compute || []).find(r => r.usd_m && Math.abs(r.usd_m - cu) / r.usd_m < 0.02 && String(r.partner || '').toLowerCase().split(/[\s\/\-,()]+/).some(t => t.length >= 4 && pn.includes(t)));
+    return row?.usd_basis || '';
+  })());
   const preC = /up to/i.test(basis) ? 'up to ' : '', pre = preC || (e && /\bup to\b/i.test(e.headline || '')) ? 'up to ' : '';   // the headline's 'up to' qualifies the amount chip, not the compute chip
   const post = /unconfirmed|reported/i.test(basis) && !/contract/i.test(basis) ? ' (unconfirmed)' : '';
   if (ex.amount_usd_m) out.push(chip(`${pre}${fmt.usd(ex.amount_usd_m)}${post}`, 'num'));
@@ -1498,6 +1504,12 @@ function renderSources(root) {
       el('div', { class: 'flags-list' }, ...((AU.problems || []).slice(0, 12).map(p => el('div', { class: 'f' }, el('div', { class: 'who', text: `${p.verdict} · ${p.tier} · ${p.category}` }), el('div', {}, `${p.headline} — ${p.note || ''}`, p.event_id && state.evIndex.has(p.event_id) ? el('span', {}, ' ', evLink(p.event_id, '↗')) : '')))), ...((AU.problems || []).length ? [] : [el('div', { class: 'empty', text: 'No problems recorded.' })])))));
   if (L.corrections?.length) root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: `Corrections applied after the audit (${L.corrections.length})` }), el('span', { class: 'small muted', text: 'unsupported figures removed or relabelled; no facts added; agent outputs untouched' })),
     moreTable(['Event', 'Audit item', 'Fields changed', 'Why'], L.corrections, c => el('tr', {}, el('td', {}, state.evIndex.has(c.event_id) ? evLink(c.event_id, c.headline) : c.headline), el('td', { class: 'mono small', text: c.audit_id || '' }), el('td', { class: 'mono small', text: (c.changed || []).map(x => x.replace('extracted.', '')).join(', ') }), el('td', { class: 'small', text: c.reason || '' })), 8)));
+  const CF = state.data.certification;
+  if (CF?.verdict) root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Independent certification' }), el('span', { class: 'small muted', text: `Certifier agent · ${CF.stats?.passes || 1} pass${(CF.stats?.passes || 1) > 1 ? 'es' : ''} · ${fmt.date((CF.finished || '').slice(0, 10))} ${fmt.time(CF.finished)} UTC` })),
+    el('div', { style: { display: 'flex', gap: '10px', alignItems: 'baseline', flexWrap: 'wrap', marginBottom: '8px' } }, el('span', { class: 'chip ' + (CF.verdict === 'READY' ? 'ok' : 'warn'), text: CF.verdict }), el('span', { class: 'small', text: `${(CF.blocking || []).length} blocking · ${(CF.non_blocking || []).length} non-blocking · ${(CF.rederived || []).length} load-bearing facts re-derived from source before it read any deliverable` })),
+    (CF.blocking || []).length ? el('div', { class: 'small', style: { marginBottom: '8px' } }, el('b', { text: 'Open blocking items' }), el('ul', { style: { margin: '4px 0 0 18px', padding: 0 } }, ...CF.blocking.map(b => el('li', { text: `${b.id} · ${b.where}: ${(b.issue || '').slice(0, 280)}` })))) : el('div', { class: 'small muted', text: 'No blocking item open at the last pass.' }),
+    moreTable(['Fact', 'Independently re-derived', 'Agrees with the dashboard'], CF.reconciliation || [], r => el('tr', {}, el('td', { class: 'mono small', text: r.fact }), el('td', { class: 'small', text: ((CF.rederived || []).find(x => x.fact === r.fact) || {}).value || '' }), el('td', { class: 'small' }, el('span', { class: 'chip ' + (r.agrees ? 'ok' : 'bad'), text: r.agrees ? 'yes' : 'no' }), ' ', r.note || '')), 8),
+    (CF.non_blocking || []).length ? el('details', { class: 'small', style: { marginTop: '8px' } }, el('summary', { text: `${CF.non_blocking.length} non-blocking notes`, style: { cursor: 'pointer' } }), el('ul', { style: { margin: '6px 0 0 18px', padding: 0 } }, ...CF.non_blocking.map(n => el('li', { text: `${n.id} · ${n.where}: ${(n.issue || '').slice(0, 240)}`, style: { marginBottom: '4px' } })))) : ''));
   const CT = state.data.certify;
   if (CT?.gates?.length) root.append(el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Ship gates' }), el('span', { class: 'small muted', text: `${CT.summary.PASS} pass · ${CT.summary.WARN} warn · ${CT.summary.FAIL} fail · ${CT.summary.PENDING} pending · ${fmt.date(CT.generated.slice(0, 10))} ${fmt.time(CT.generated)} UTC` })),
     el('div', { class: 'tablewrap' }, el('table', { class: 'data' }, el('thead', {}, el('tr', {}, el('th', { text: 'Gate' }), el('th', { text: 'Status' }), el('th', { text: 'Detail' }))),

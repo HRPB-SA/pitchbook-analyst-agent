@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T22:39:40Z",
+ "generated": "2026-09-30T23:05:44Z",
  "agents": {
   "analyst-bear": {
    "id": "analyst-bear",
@@ -232,14 +232,14 @@
    "name": "Certifier",
    "wave": "certify",
    "started": "2026-09-30T20:44:31Z",
-   "finished": "2026-09-30T22:09:50Z",
+   "finished": "2026-09-30T23:03:48Z",
    "stats": {
     "pages_opened": 43,
     "facts_rederived": 8,
     "blocking": 2,
-    "non_blocking": 18,
+    "non_blocking": 13,
     "web_searches": 2,
-    "passes": 2
+    "passes": 3
    },
    "events": 0,
    "conflicts": 0,
@@ -60404,7 +60404,7 @@
    "i": 5779
   },
   {
-   "t": "2026-09-30T20:45:31Z",
+   "t": "2026-09-30T20:45:55Z",
    "agent": "certifier",
    "type": "note",
    "text": "Started. Read the certifier brief; step 1 (re-derive F1-F8 from outside sources) before opening any deliverable.",
@@ -60424,7 +60424,7 @@
    "i": 5781
   },
   {
-   "t": "2026-09-30T20:46:31Z",
+   "t": "2026-09-30T20:47:19Z",
    "agent": "certifier",
    "type": "search",
    "text": "Google News RSS: Anthropic funding round valuation; IPO S-1; run-rate; Bartz; $518B compute (discovery only)",
@@ -60434,16 +60434,6 @@
    "i": 5782
   },
   {
-   "t": "2026-09-30T20:47:31Z",
-   "agent": "certifier",
-   "type": "open",
-   "text": "Anthropic newsroom (no funding/IPO items in the newest 5-20 posts)",
-   "url": "https://www.anthropic.com/news",
-   "to": null,
-   "event_id": null,
-   "i": 5783
-  },
-  {
    "t": "2026-09-30T20:47:55Z",
    "agent": "analyst-judge",
    "type": "search",
@@ -60451,27 +60441,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5784
+   "i": 5783
   },
   {
-   "t": "2026-09-30T20:48:31Z",
+   "t": "2026-09-30T20:48:44Z",
    "agent": "certifier",
    "type": "open",
-   "text": "Anthropic Series H post: $65B, $965B post-money, run-rate >$47B, $15B prior hyperscaler commitments",
-   "url": "https://www.anthropic.com/news/series-h",
+   "text": "Anthropic newsroom (no funding/IPO items in the newest 5-20 posts)",
+   "url": "https://www.anthropic.com/news",
    "to": null,
    "event_id": null,
-   "i": 5785
-  },
-  {
-   "t": "2026-09-30T20:49:32Z",
-   "agent": "certifier",
-   "type": "found",
-   "text": "F1 Series H $65B at $965B post / $900B pre (2026-05-28); leads Altimeter, Dragoneer, Greenoaks, Sequoia",
-   "url": null,
-   "to": null,
-   "event_id": "F1",
-   "i": 5786
+   "i": 5784
   },
   {
    "t": "2026-09-30T20:49:35Z",
@@ -60481,17 +60461,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5787
+   "i": 5785
   },
   {
-   "t": "2026-09-30T20:50:32Z",
+   "t": "2026-09-30T20:50:08Z",
    "agent": "certifier",
-   "type": "search",
-   "text": "Bing News RSS: Series H pre-money -> The Information: $900B before the financing",
-   "url": "https://www.theinformation.com/briefings/anthropic-raises-65-billion-900-billion-valuation-micron-samsung-invest",
+   "type": "open",
+   "text": "Anthropic Series H post: $65B, $965B post-money, run-rate >$47B, $15B prior hyperscaler commitments",
+   "url": "https://www.anthropic.com/news/series-h",
    "to": null,
    "event_id": null,
-   "i": 5788
+   "i": 5786
   },
   {
    "t": "2026-09-30T20:51:16Z",
@@ -60501,27 +60481,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5789
+   "i": 5787
   },
   {
-   "t": "2026-09-30T20:51:32Z",
+   "t": "2026-09-30T20:51:33Z",
    "agent": "certifier",
-   "type": "open",
-   "text": "SEC EDGAR company search for Anthropic: 'No matching companies' (no public S-1 or DRS visible)",
-   "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=anthropic&type=S-1&dateb=&owner=include&count=40&action=getcompany",
+   "type": "found",
+   "text": "F1 Series H $65B at $965B post / $900B pre (2026-05-28); leads Altimeter, Dragoneer, Greenoaks, Sequoia",
+   "url": null,
    "to": null,
-   "event_id": null,
-   "i": 5790
-  },
-  {
-   "t": "2026-09-30T20:52:32Z",
-   "agent": "certifier",
-   "type": "open",
-   "text": "TechCrunch (Loizos) on the prospectus: FY2025 rev ~$4.6B, op loss >$8B, $518B commitments, Q2 2026 $11.5B",
-   "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
-   "to": null,
-   "event_id": null,
-   "i": 5791
+   "event_id": "F1",
+   "i": 5788
   },
   {
    "t": "2026-09-30T20:52:57Z",
@@ -60531,27 +60501,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5792
+   "i": 5789
   },
   {
-   "t": "2026-09-30T20:53:33Z",
+   "t": "2026-09-30T20:52:57Z",
    "agent": "certifier",
-   "type": "open",
-   "text": "The Decoder: FY2025 $4.6B, FY2024 ~$383M implied, op loss $8.06B, net loss ~$42B (~$34B non-cash)",
-   "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
+   "type": "search",
+   "text": "Bing News RSS: Series H pre-money -> The Information: $900B before the financing",
+   "url": "https://www.theinformation.com/briefings/anthropic-raises-65-billion-900-billion-valuation-micron-samsung-invest",
    "to": null,
    "event_id": null,
-   "i": 5793
+   "i": 5790
   },
   {
-   "t": "2026-09-30T20:54:33Z",
+   "t": "2026-09-30T20:54:21Z",
    "agent": "certifier",
-   "type": "found",
-   "text": "F3 FY2025 revenue ~$4.6B from a confidential/leaked draft prospectus (Reuters+FT); one underlying document; not public",
-   "url": null,
+   "type": "open",
+   "text": "SEC EDGAR company search for Anthropic: 'No matching companies' (no public S-1 or DRS visible)",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=anthropic&type=S-1&dateb=&owner=include&count=40&action=getcompany",
    "to": null,
-   "event_id": "F3",
-   "i": 5794
+   "event_id": null,
+   "i": 5791
   },
   {
    "t": "2026-09-30T20:54:37Z",
@@ -60561,19 +60531,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260817-rr-65b-end-july",
-   "i": 5795,
+   "i": 5792,
    "new": false,
    "confirms": "scout-2026q3"
   },
   {
-   "t": "2026-09-30T20:55:33Z",
+   "t": "2026-09-30T20:55:46Z",
    "agent": "certifier",
    "type": "open",
-   "text": "Bloomberg via Yahoo 2026-09-18: $100B annualized is 'expected ... this year' (projection)",
-   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-annualized-revenue-top-100-220623178.html",
+   "text": "TechCrunch (Loizos) on the prospectus: FY2025 rev ~$4.6B, op loss >$8B, $518B commitments, Q2 2026 $11.5B",
+   "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
    "to": null,
    "event_id": null,
-   "i": 5796
+   "i": 5793
   },
   {
    "t": "2026-09-30T20:56:18Z",
@@ -60583,29 +60553,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
-   "i": 5797,
+   "i": 5794,
    "new": false,
    "confirms": "desk-revenue"
   },
   {
-   "t": "2026-09-30T20:56:33Z",
+   "t": "2026-09-30T20:57:10Z",
    "agent": "certifier",
    "type": "open",
-   "text": "TechCrunch 2026-08-17: run rate surpassed $65B at end of July (Bloomberg), $47B in May",
-   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "text": "The Decoder: FY2025 $4.6B, FY2024 ~$383M implied, op loss $8.06B, net loss ~$42B (~$34B non-cash)",
+   "url": "https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/",
    "to": null,
    "event_id": null,
-   "i": 5798
-  },
-  {
-   "t": "2026-09-30T20:57:33Z",
-   "agent": "certifier",
-   "type": "found",
-   "text": "F2 latest measured run-rate $65B (end-July 2026); $100B+ is a projection; basis gross",
-   "url": null,
-   "to": null,
-   "event_id": "F2",
-   "i": 5799
+   "i": 5795
   },
   {
    "t": "2026-09-30T20:57:59Z",
@@ -60615,29 +60575,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
-   "i": 5800,
+   "i": 5796,
    "new": false,
    "confirms": "scout-2026q3"
   },
   {
-   "t": "2026-09-30T20:58:34Z",
+   "t": "2026-09-30T20:58:35Z",
    "agent": "certifier",
-   "type": "open",
-   "text": "WSJ via Yahoo AU 2026-09-18: IPO pushed from October to November; ~$2T valuation, up to $100B raise",
-   "url": "https://au.finance.yahoo.com/news/anthropic-delays-ipo-staging-november-221211879.html",
+   "type": "found",
+   "text": "F3 FY2025 revenue ~$4.6B from a confidential/leaked draft prospectus (Reuters+FT); one underlying document; not public",
+   "url": null,
    "to": null,
-   "event_id": null,
-   "i": 5801
-  },
-  {
-   "t": "2026-09-30T20:59:34Z",
-   "agent": "certifier",
-   "type": "open",
-   "text": "Bloomberg via Yahoo 2026-09-13: Nasdaq chosen as listing venue",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-choose-nasdaq-much-180359465.html",
-   "to": null,
-   "event_id": null,
-   "i": 5802
+   "event_id": "F3",
+   "i": 5797
   },
   {
    "t": "2026-09-30T20:59:39Z",
@@ -60647,19 +60597,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
-   "i": 5803,
+   "i": 5798,
    "new": false,
    "confirms": "analyst-topic-ecosystem"
   },
   {
-   "t": "2026-09-30T21:00:34Z",
+   "t": "2026-09-30T20:59:59Z",
    "agent": "certifier",
    "type": "open",
-   "text": "TechCrunch 2026-06-01: Anthropic submitted a draft registration statement (confidential)",
-   "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
+   "text": "Bloomberg via Yahoo 2026-09-18: $100B annualized is 'expected ... this year' (projection)",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-annualized-revenue-top-100-220623178.html",
    "to": null,
    "event_id": null,
-   "i": 5804
+   "i": 5799
   },
   {
    "t": "2026-09-30T21:01:20Z",
@@ -60669,29 +60619,29 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
-   "i": 5805,
+   "i": 5800,
    "new": false,
    "confirms": "scout-2026q3"
   },
   {
-   "t": "2026-09-30T21:01:34Z",
-   "agent": "certifier",
-   "type": "found",
-   "text": "F4 confidential DRS (2026-06-01), no public S-1, target ~$2T/up to $100B, November, Nasdaq",
-   "url": null,
-   "to": null,
-   "event_id": "F4",
-   "i": 5806
-  },
-  {
-   "t": "2026-09-30T21:02:35Z",
+   "t": "2026-09-30T21:01:23Z",
    "agent": "certifier",
    "type": "open",
-   "text": "Forkast/Yahoo 2026-09-29: $518B = Google $111.1B, Amazon $110B, Microsoft $31.4B, Broadcom $161.2B; ~80% non-cancelable",
-   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-518-billion-commitment-165731037.html",
+   "text": "TechCrunch 2026-08-17: run rate surpassed $65B at end of July (Bloomberg), $47B in May",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
    "to": null,
    "event_id": null,
-   "i": 5807
+   "i": 5801
+  },
+  {
+   "t": "2026-09-30T21:02:48Z",
+   "agent": "certifier",
+   "type": "found",
+   "text": "F2 latest measured run-rate $65B (end-July 2026); $100B+ is a projection; basis gross",
+   "url": null,
+   "to": null,
+   "event_id": "F2",
+   "i": 5802
   },
   {
    "t": "2026-09-30T21:03:01Z",
@@ -60701,29 +60651,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct",
-   "i": 5808,
+   "i": 5803,
    "new": false,
    "confirms": "scout-2026q3"
   },
   {
-   "t": "2026-09-30T21:03:35Z",
+   "t": "2026-09-30T21:04:12Z",
    "agent": "certifier",
    "type": "open",
-   "text": "24/7 Wall St citing The Information 2026-09-06: $517B aggregate; Amazon+Google ~11 GW; Microsoft ~1 GW; AMD 2 GW",
-   "url": "https://247wallst.com/investing/2026/09/13/anthropic-locks-down-517-billion-in-compute-ahead-of-ipo-and-its-still-not-enough/",
+   "text": "WSJ via Yahoo AU 2026-09-18: IPO pushed from October to November; ~$2T valuation, up to $100B raise",
+   "url": "https://au.finance.yahoo.com/news/anthropic-delays-ipo-staging-november-221211879.html",
    "to": null,
    "event_id": null,
-   "i": 5809
-  },
-  {
-   "t": "2026-09-30T21:04:35Z",
-   "agent": "certifier",
-   "type": "found",
-   "text": "F5 $518B at least, ~80% non-cancelable; GW has no single disclosed total (~14-15 GW aggregate of announcements)",
-   "url": null,
-   "to": null,
-   "event_id": "F5",
-   "i": 5810
+   "i": 5804
   },
   {
    "t": "2026-09-30T21:04:41Z",
@@ -60733,19 +60673,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
-   "i": 5811,
+   "i": 5805,
    "new": false,
    "confirms": "desk-s1"
   },
   {
-   "t": "2026-09-30T21:05:35Z",
+   "t": "2026-09-30T21:05:37Z",
    "agent": "certifier",
    "type": "open",
-   "text": "The Next Web 2026-09-15 (FT/CNBC): gross margin 'above 80%' before partner revenue share and model training",
-   "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+   "text": "Bloomberg via Yahoo 2026-09-13: Nasdaq chosen as listing venue",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-choose-nasdaq-much-180359465.html",
    "to": null,
    "event_id": null,
-   "i": 5812
+   "i": 5806
   },
   {
    "t": "2026-09-30T21:06:22Z",
@@ -60755,29 +60695,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260616-spacex-cursor",
-   "i": 5813,
+   "i": 5807,
    "new": false,
    "confirms": "desk-ecosystem"
   },
   {
-   "t": "2026-09-30T21:06:35Z",
-   "agent": "certifier",
-   "type": "flag",
-   "text": "F6 gross margin figures are not comparable: FY2025 ~40% (Breakingviews snippet, could not open) vs 2026 adjusted >80% before partner share and training",
-   "url": null,
-   "to": null,
-   "event_id": "F6",
-   "i": 5814
-  },
-  {
-   "t": "2026-09-30T21:07:36Z",
+   "t": "2026-09-30T21:07:01Z",
    "agent": "certifier",
    "type": "open",
-   "text": "Axios via Yahoo 2026-09-03: Anthropic books gross, OpenAI net; net basis would be a 6-10% hit",
-   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
+   "text": "TechCrunch 2026-06-01: Anthropic submitted a draft registration statement (confidential)",
+   "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
    "to": null,
    "event_id": null,
-   "i": 5815
+   "i": 5808
   },
   {
    "t": "2026-09-30T21:08:03Z",
@@ -60787,29 +60717,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
-   "i": 5816,
+   "i": 5809,
    "new": false,
    "confirms": "scout-2026q3"
   },
   {
-   "t": "2026-09-30T21:08:36Z",
+   "t": "2026-09-30T21:08:26Z",
    "agent": "certifier",
-   "type": "open",
-   "text": "Reuters via Yahoo Canada 2026-09-29: 47% of sales via Amazon/Google; $351M distribution fees (~16c per $)",
-   "url": "https://ca.finance.yahoo.com/news/anthropic-routes-47-sales-amazon-213011817.html",
-   "to": null,
-   "event_id": null,
-   "i": 5817
-  },
-  {
-   "t": "2026-09-30T21:09:36Z",
-   "agent": "certifier",
-   "type": "search",
-   "text": "WebSearch (1 of 4): equalization / gross-net haircut ruling OpenAI vs Anthropic -> nothing found",
+   "type": "found",
+   "text": "F4 confidential DRS (2026-06-01), no public S-1, target ~$2T/up to $100B, November, Nasdaq",
    "url": null,
    "to": null,
-   "event_id": null,
-   "i": 5818
+   "event_id": "F4",
+   "i": 5810
   },
   {
    "t": "2026-09-30T21:09:43Z",
@@ -60819,19 +60739,29 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
-   "i": 5819,
+   "i": 5811,
    "new": false,
    "confirms": "desk-product"
   },
   {
-   "t": "2026-09-30T21:10:36Z",
+   "t": "2026-09-30T21:09:50Z",
    "agent": "certifier",
-   "type": "flag",
-   "text": "F7 I can find no public equalization ruling; sourced haircut is 6-10% (Axios) and 7.6% ($351M/$4.6B); 39.75% unsourced by me",
-   "url": null,
+   "type": "open",
+   "text": "Forkast/Yahoo 2026-09-29: $518B = Google $111.1B, Amazon $110B, Microsoft $31.4B, Broadcom $161.2B; ~80% non-cancelable",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-1-518-billion-commitment-165731037.html",
    "to": null,
-   "event_id": "F7",
-   "i": 5820
+   "event_id": null,
+   "i": 5812
+  },
+  {
+   "t": "2026-09-30T21:11:14Z",
+   "agent": "certifier",
+   "type": "open",
+   "text": "24/7 Wall St citing The Information 2026-09-06: $517B aggregate; Amazon+Google ~11 GW; Microsoft ~1 GW; AMD 2 GW",
+   "url": "https://247wallst.com/investing/2026/09/13/anthropic-locks-down-517-billion-in-compute-ahead-of-ipo-and-its-still-not-enough/",
+   "to": null,
+   "event_id": null,
+   "i": 5813
   },
   {
    "t": "2026-09-30T21:11:24Z",
@@ -60841,27 +60771,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260127-info-2026-18b-2027-55b-forecast",
-   "i": 5821
+   "i": 5814
   },
   {
-   "t": "2026-09-30T21:11:37Z",
+   "t": "2026-09-30T21:12:39Z",
    "agent": "certifier",
-   "type": "open",
-   "text": "Bartz settlement administrator site: 'On July 20, 2026, the Court granted final approval'",
-   "url": "https://www.anthropiccopyrightsettlement.com/",
+   "type": "found",
+   "text": "F5 $518B at least, ~80% non-cancelable; GW has no single disclosed total (~14-15 GW aggregate of announcements)",
+   "url": null,
    "to": null,
-   "event_id": null,
-   "i": 5822
-  },
-  {
-   "t": "2026-09-30T21:12:37Z",
-   "agent": "certifier",
-   "type": "open",
-   "text": "TechTimes 2026-07-21: $1.5B, ~$3,000 per work, Judge Martinez-Olguin, 3:24-cv-05417",
-   "url": "https://www.techtimes.com/articles/321156/20260721/anthropic-copyright-settlement-gets-final-approval-3000-per-book-no-binding-precedent.htm",
-   "to": null,
-   "event_id": null,
-   "i": 5823
+   "event_id": "F5",
+   "i": 5815
   },
   {
    "t": "2026-09-30T21:13:05Z",
@@ -60871,27 +60791,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
-   "i": 5824
+   "i": 5816
   },
   {
-   "t": "2026-09-30T21:13:37Z",
+   "t": "2026-09-30T21:14:03Z",
    "agent": "certifier",
-   "type": "found",
-   "text": "F8 Bartz $1.5B, final approval 2026-07-20 (press says Monday; some outlets print Jul 21)",
-   "url": null,
-   "to": null,
-   "event_id": "F8",
-   "i": 5825
-  },
-  {
-   "t": "2026-09-30T21:14:37Z",
-   "agent": "certifier",
-   "type": "note",
-   "text": "Blocked pages (403 or fetch refused): reuters.com, nytimes.com, axios.com, cnbc.com, forbes.com, marketplace.org, seekingalpha.com, msn.com; relied on RSS snippets where flagged opened=false",
-   "url": null,
+   "type": "open",
+   "text": "The Next Web 2026-09-15 (FT/CNBC): gross margin 'above 80%' before partner revenue share and model training",
+   "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
    "to": null,
    "event_id": null,
-   "i": 5826
+   "i": 5817
   },
   {
    "t": "2026-09-30T21:14:45Z",
@@ -60901,17 +60811,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260610-pitchbook-gm-44pct-compute-cost",
-   "i": 5827
+   "i": 5818
   },
   {
-   "t": "2026-09-30T21:15:37Z",
+   "t": "2026-09-30T21:15:28Z",
    "agent": "certifier",
-   "type": "note",
-   "text": "Step 1 was saved at 20:57Z, before any deliverable was opened (rederived: 8 facts, all my own, none taken from the ledger). Before that I had only listed filenames in agents/outputs to find my output path; no draft contents were read.",
+   "type": "flag",
+   "text": "F6 gross margin figures are not comparable: FY2025 ~40% (Breakingviews snippet, could not open) vs 2026 adjusted >80% before partner share and training",
    "url": null,
    "to": null,
-   "event_id": null,
-   "i": 5828
+   "event_id": "F6",
+   "i": 5819
   },
   {
    "t": "2026-09-30T21:16:26Z",
@@ -60921,27 +60831,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5829
+   "i": 5820
   },
   {
-   "t": "2026-09-30T21:16:38Z",
+   "t": "2026-09-30T21:16:52Z",
    "agent": "certifier",
    "type": "open",
-   "text": "Read data/model.json, scripts/model.py and computeModel() in assets/app.js (engine logic, assumptions, sources, notes)",
-   "url": null,
+   "text": "Axios via Yahoo 2026-09-03: Anthropic books gross, OpenAI net; net basis would be a 6-10% hit",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-openais-revenue-chasm-explained-090007594.html",
    "to": null,
    "event_id": null,
-   "i": 5830
-  },
-  {
-   "t": "2026-09-30T21:17:38Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Recomputed bear/base/bull from the assumptions with my own code: 282 values (revenue, GP, opex, training, OI, tax, capex, FCF, cum FCF, DCF EV, PV split, reverse-DCF per mark) vs data/model.json: 0 mismatches",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5831
+   "i": 5821
   },
   {
    "t": "2026-09-30T21:18:07Z",
@@ -60951,27 +60851,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5832
+   "i": 5822
   },
   {
-   "t": "2026-09-30T21:18:38Z",
+   "t": "2026-09-30T21:18:16Z",
    "agent": "certifier",
-   "type": "verify",
-   "text": "Ran the dashboard's own JS computeModel() on model.json in node: 672 values compared, max relative difference 0 (parity with the Python twin holds)",
+   "type": "open",
+   "text": "Reuters via Yahoo Canada 2026-09-29: 47% of sales via Amazon/Google; $351M distribution fees (~16c per $)",
+   "url": "https://ca.finance.yahoo.com/news/anthropic-routes-47-sales-amazon-213011817.html",
+   "to": null,
+   "event_id": null,
+   "i": 5823
+  },
+  {
+   "t": "2026-09-30T21:19:41Z",
+   "agent": "certifier",
+   "type": "search",
+   "text": "WebSearch (1 of 4): equalization / gross-net haircut ruling OpenAI vs Anthropic -> nothing found",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5833
-  },
-  {
-   "t": "2026-09-30T21:19:38Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Base FY2026: Q1 4.73 + Q2 11.50 + Q3 17.23 + Q4 22.38 = $55.84B on a run-rate path of $60.6B (end-Jun), $65B (Jul 31), +$7B a month to $100B; model says $55.8B. If Axios's 'pacing $100B' were already current on Sep 18, FY2026 would be $61-64B (bull is $60B)",
-   "url": null,
-   "to": null,
-   "event_id": "F2",
-   "i": 5834
+   "i": 5824
   },
   {
    "t": "2026-09-30T21:19:47Z",
@@ -60981,17 +60881,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260930-pb-total-raised-bonds-removed",
-   "i": 5835
+   "i": 5825
   },
   {
-   "t": "2026-09-30T21:20:39Z",
+   "t": "2026-09-30T21:21:05Z",
    "agent": "certifier",
-   "type": "verify",
-   "text": "Reverse DCF recomputed by hand. Base: Series H needs $262B of 2030 revenue (47.2% CAGR), secondary $420B (65.7%), IPO target $568B (78.6%); bear $675B/$1,047B/$1,394B; bull $147B/$243B/$333B. All match model.json and the Thesis tab text",
+   "type": "flag",
+   "text": "F7 I can find no public equalization ruling; sourced haircut is 6-10% (Axios) and 7.6% ($351M/$4.6B); 39.75% unsourced by me",
    "url": null,
    "to": null,
-   "event_id": null,
-   "i": 5836
+   "event_id": "F7",
+   "i": 5826
   },
   {
    "t": "2026-09-30T21:21:28Z",
@@ -61001,27 +60901,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
-   "i": 5837
+   "i": 5827
   },
   {
-   "t": "2026-09-30T21:21:39Z",
+   "t": "2026-09-30T21:22:30Z",
    "agent": "certifier",
-   "type": "verify",
-   "text": "Thesis at-price numbers reproduce: Series H 19% under base DCF, +16% a year after the plan, +24% a year if base holds, $2T -14% a year, 30.8x/33.3x/51.1x net multiples, 14.8x and 7.6x; the $229B FY2028 figure reproduces at $229.2-229.8B",
-   "url": null,
+   "type": "open",
+   "text": "Bartz settlement administrator site: 'On July 20, 2026, the Court granted final approval'",
+   "url": "https://www.anthropiccopyrightsettlement.com/",
    "to": null,
    "event_id": null,
-   "i": 5838
-  },
-  {
-   "t": "2026-09-30T21:22:39Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Base DCF sensitivities reproduce: 15x/20x/30x = $924B/$1,189B/$1,717B; terminal value 88.9% of EV; sensitivity grid (e.g. $328B and 25x = $1.45T) matches the Model tab",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5839
+   "i": 5828
   },
   {
    "t": "2026-09-30T21:23:09Z",
@@ -61031,27 +60921,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
-   "i": 5840
+   "i": 5829
   },
   {
-   "t": "2026-09-30T21:23:39Z",
+   "t": "2026-09-30T21:23:54Z",
    "agent": "certifier",
-   "type": "verify",
-   "text": "Compute table arithmetic reproduces: 17 rows sum to $592.1B; contracted $455.7B; up to $89.6B; unconfirmed $46.8B; T1/T2 $217.9B; S-1 coverage $237.8B; non-cancelable 413.7/518.2 = 79.8%; 15.845 GW = 13.0 up-to + 2.845",
-   "url": null,
+   "type": "open",
+   "text": "TechTimes 2026-07-21: $1.5B, ~$3,000 per work, Judge Martinez-Olguin, 3:24-cv-05417",
+   "url": "https://www.techtimes.com/articles/321156/20260721/anthropic-copyright-settlement-gets-final-approval-3000-per-book-no-binding-precedent.htm",
    "to": null,
    "event_id": null,
-   "i": 5841
-  },
-  {
-   "t": "2026-09-30T21:24:39Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Haircut arithmetic: $351M / $4.59B = 7.6%; 39.75% of Q2 $11.5B = $4.57B paid to partners in one quarter vs $351M for all FY2025; net multiple at $2T: 33.3x at 7.6%, 51.1x at 39.75%",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5842
+   "i": 5830
   },
   {
    "t": "2026-09-30T21:24:50Z",
@@ -61061,17 +60941,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260217-information-80b-cloud-spend-through-2029",
-   "i": 5843
+   "i": 5831
   },
   {
-   "t": "2026-09-30T21:25:40Z",
+   "t": "2026-09-30T21:25:19Z",
    "agent": "certifier",
    "type": "found",
-   "text": "Desk record agrees with my F1-F8 within tolerance (see reconciliation); the disagreements are in labelling and counting, not in the numbers",
+   "text": "F8 Bartz $1.5B, final approval 2026-07-20 (press says Monday; some outlets print Jul 21)",
    "url": null,
    "to": null,
-   "event_id": null,
-   "i": 5844
+   "event_id": "F8",
+   "i": 5832
   },
   {
    "t": "2026-09-30T21:26:30Z",
@@ -61081,27 +60961,27 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
-   "i": 5845
+   "i": 5833
   },
   {
-   "t": "2026-09-30T21:26:40Z",
+   "t": "2026-09-30T21:26:43Z",
    "agent": "certifier",
-   "type": "flag",
-   "text": "Model tab: the 2024A and 2025A columns (and the segment and FCF charts) are labelled 'A = actual' from one test (revenue present). Only revenue, compute, opex and operating loss are press-reported; R&D, S&M, G&A, SBC, segment splits and FCF are the model's own splits. Model notes 3, 18 and 19 say so",
+   "type": "note",
+   "text": "Blocked pages (403 or fetch refused): reuters.com, nytimes.com, axios.com, cnbc.com, forbes.com, marketplace.org, seekingalpha.com, msn.com; relied on RSS snippets where flagged opened=false",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5846
+   "i": 5834
   },
   {
-   "t": "2026-09-30T21:27:40Z",
+   "t": "2026-09-30T21:28:07Z",
    "agent": "certifier",
-   "type": "flag",
-   "text": "Overview IPO tile prints 'DISPUTED sequence, not a cle' (first 28 characters of the timing string) and sub-lines run together ('Nasdaqtarget $2.00Traise up to $100B'; same on the compute tile) [Pass 2: fixed at cd50680; the IPO tile reads 'Confidential S-1' with a timing chip]",
+   "type": "note",
+   "text": "Step 1 was saved at 20:57Z, before any deliverable was opened (rederived: 8 facts, all my own, none taken from the ledger). Before that I had only listed filenames in agents/outputs to find my output path; no draft contents were read.",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5847
+   "i": 5835
   },
   {
    "t": "2026-09-30T21:28:11Z",
@@ -61111,27 +60991,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct",
-   "i": 5848
+   "i": 5836
   },
   {
-   "t": "2026-09-30T21:28:40Z",
+   "t": "2026-09-30T21:29:32Z",
    "agent": "certifier",
-   "type": "flag",
-   "text": "Timeline and event drawer: 5 events print projected or guided run-rates as 'run-rate $X' (e.g. $110B on Sep 18) and 7 events print reported targets or secondary marks as 'post $X' (e.g. post $2.00T); the event data itself says 'reported target' and 'projected' [Pass 2: mostly fixed at a3475a0 (16 re",
+   "type": "open",
+   "text": "Read data/model.json, scripts/model.py and computeModel() in assets/app.js (engine logic, assumptions, sources, notes)",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5849
-  },
-  {
-   "t": "2026-09-30T21:29:41Z",
-   "agent": "certifier",
-   "type": "flag",
-   "text": "Counting and tiers: events.independent_sources counts distinct domains (merge.py line 248) and the Sources tab calls it 'independent origins'; ledger rows show T1 / 6 origins / HIGH for 'Net loss = $42B' while their own note says Reuters is the only readable origin [Pass 2: fixed at a3475a0; outlets",
-   "url": null,
-   "to": null,
-   "event_id": "F3",
-   "i": 5850
+   "i": 5837
   },
   {
    "t": "2026-09-30T21:29:52Z",
@@ -61141,17 +61011,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260817-reuters-2028-190-200b-forecast",
-   "i": 5851
+   "i": 5838
   },
   {
-   "t": "2026-09-30T21:30:41Z",
+   "t": "2026-09-30T21:30:56Z",
    "agent": "certifier",
-   "type": "flag",
-   "text": "evt-20260913-altman-openai-no-2026-ipo is T3 with HIGH and no corroboration (The Next Web and Business Insider carried it the same day, but the record does not show them) [Pass 2: fixed; the event is MEDIUM with 'Capped from HIGH: no T1/T2 origin']",
+   "type": "verify",
+   "text": "Recomputed bear/base/bull from the assumptions with my own code: 282 values (revenue, GP, opex, training, OI, tax, capex, FCF, cum FCF, DCF EV, PV split, reverse-DCF per mark) vs data/model.json: 0 mismatches",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5852
+   "i": 5839
   },
   {
    "t": "2026-09-30T21:31:32Z",
@@ -61161,27 +61031,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5853
+   "i": 5840
   },
   {
-   "t": "2026-09-30T21:31:41Z",
-   "agent": "certifier",
-   "type": "open",
-   "text": "Fresh screenshots (desktop and phone, light and dark, 9 tabs) via scripts/shot.cjs into my own qa dir at 21:00Z: no console errors, no horizontal page overflow; extra full-page phone and dark captures checked for overflow and truncation",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5854
-  },
-  {
-   "t": "2026-09-30T21:32:41Z",
+   "t": "2026-09-30T21:32:21Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "Read Overview, Model, Compute, Topics, Thesis, Agents, Network and Timeline captures: Agents floor shows desks, signs (with overlapping 'NEW' tags) and messages; Network labels overlap; Thesis tab says 'Verdict pending'",
+   "text": "Ran the dashboard's own JS computeModel() on model.json in node: 672 values compared, max relative difference 0 (parity with the Python twin holds)",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5855
+   "i": 5841
   },
   {
    "t": "2026-09-30T21:33:13Z",
@@ -61191,27 +61051,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5856
+   "i": 5842
   },
   {
-   "t": "2026-09-30T21:33:41Z",
-   "agent": "certifier",
-   "type": "open",
-   "text": "Sources tab text with every 'Show all' expanded: tiers, audit (49% fully supported, 100% core fact), 14 corrections, ship gates (G15 FAIL is stale), PitchBook licence, MNPI screen, conflict of interest and not-investment-advice all present",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5857
-  },
-  {
-   "t": "2026-09-30T21:34:42Z",
+   "t": "2026-09-30T21:33:45Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "Spot-checked T1 facts against source: Anthropic Apr 6 (run-rate >$30B from ~$9B; >1,000 customers over $1M), Anthropic Apr 20 (>$100B to AWS over ten years, up to 5GW, $5B plus up to $20B), Amazon 10-Q (notes $97.9B, preferred $92.5B, facility up to $20.0B), Opus 5.5 at $4/$20 on Sep 22: all match t",
-   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+   "text": "Base FY2026: Q1 4.73 + Q2 11.50 + Q3 17.23 + Q4 22.38 = $55.84B on a run-rate path of $60.6B (end-Jun), $65B (Jul 31), +$7B a month to $100B; model says $55.8B. If Axios's 'pacing $100B' were already current on Sep 18, FY2026 would be $61-64B (bull is $60B)",
+   "url": null,
    "to": null,
-   "event_id": null,
-   "i": 5858
+   "event_id": "F2",
+   "i": 5843
   },
   {
    "t": "2026-09-30T21:34:54Z",
@@ -61221,17 +61071,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
-   "i": 5859
+   "i": 5844
   },
   {
-   "t": "2026-09-30T21:35:42Z",
+   "t": "2026-09-30T21:35:09Z",
    "agent": "certifier",
-   "type": "open",
-   "text": "Judge draft agents/outputs/analyst-judge.json read at 21:13Z (complete, valid, being rewritten: log and stats removed at 21:13:43Z): BEARISH overall; Series H LEAN BULLISH, $1.5T NEUTRAL, $2T BEARISH; data/thesis.json still has no verdict key",
+   "type": "verify",
+   "text": "Reverse DCF recomputed by hand. Base: Series H needs $262B of 2030 revenue (47.2% CAGR), secondary $420B (65.7%), IPO target $568B (78.6%); bear $675B/$1,047B/$1,394B; bull $147B/$243B/$333B. All match model.json and the Thesis tab text",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5860
+   "i": 5845
   },
   {
    "t": "2026-09-30T21:36:34Z",
@@ -61241,27 +61091,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5861
+   "i": 5846
   },
   {
-   "t": "2026-09-30T21:36:42Z",
+   "t": "2026-09-30T21:36:34Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "Judge numbers: adjusted base (1,189 - 126 SBC-as-cost) x 1.0887 + 100 = $1,257B and adjusted bull $2,769B reproduce; -23%/+19%/+59% vs adjusted base reproduce; returns +28%/+3%/-11% a year reproduce; 'plan less 9% to 13%' does not (I get -13% model basis, -16% adjusted)",
+   "text": "Thesis at-price numbers reproduce: Series H 19% under base DCF, +16% a year after the plan, +24% a year if base holds, $2T -14% a year, 30.8x/33.3x/51.1x net multiples, 14.8x and 7.6x; the $229B FY2028 figure reproduces at $229.2-229.8B",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5862
+   "i": 5847
   },
   {
-   "t": "2026-09-30T21:37:42Z",
+   "t": "2026-09-30T21:37:58Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "Judge's 8 thesis-breakers each carry metric, threshold and observable_by date; every cited event id exists; COI appears only as a 'consistency with the standing position' check, not as evidence",
+   "text": "Base DCF sensitivities reproduce: 15x/20x/30x = $924B/$1,189B/$1,717B; terminal value 88.9% of EV; sensitivity grid (e.g. $328B and 25x = $1.45T) matches the Model tab",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5863
+   "i": 5848
   },
   {
    "t": "2026-09-30T21:38:15Z",
@@ -61271,27 +61121,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5864
+   "i": 5849
   },
   {
-   "t": "2026-09-30T21:38:43Z",
+   "t": "2026-09-30T21:39:23Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "Judge's outside-record facts checked against T1 pages: NVIDIA Q2 FY2027 data center $89.0B, +117% YoY, GAAP gross margin 75.0% (Aug 26); Amazon Q2 2026 AWS $42.2B, +37% YoY, operating margin 39.4% (Jul 30). Both match the verdict text",
-   "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+   "text": "Compute table arithmetic reproduces: 17 rows sum to $592.1B; contracted $455.7B; up to $89.6B; unconfirmed $46.8B; T1/T2 $217.9B; S-1 coverage $237.8B; non-cancelable 413.7/518.2 = 79.8%; 15.845 GW = 13.0 up-to + 2.845",
+   "url": null,
    "to": null,
    "event_id": null,
-   "i": 5865
-  },
-  {
-   "t": "2026-09-30T21:39:43Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Amazon Q2 2026 release (AWS +37%, 39.4% margin)",
-   "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx",
-   "to": null,
-   "event_id": null,
-   "i": 5866
+   "i": 5850
   },
   {
    "t": "2026-09-30T21:39:56Z",
@@ -61301,17 +61141,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5867
+   "i": 5851
   },
   {
-   "t": "2026-09-30T21:40:43Z",
+   "t": "2026-09-30T21:40:47Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "Anthropic Opus 5.5 page: $4 and $20 per million tokens, Sep 22 (matches pricing table and bear claim 5)",
-   "url": "https://www.anthropic.com/claude-opus-5-5",
+   "text": "Haircut arithmetic: $351M / $4.59B = 7.6%; 39.75% of Q2 $11.5B = $4.57B paid to partners in one quarter vs $351M for all FY2025; net multiple at $2T: 33.3x at 7.6%, 51.1x at 39.75%",
+   "url": null,
    "to": null,
    "event_id": null,
-   "i": 5868
+   "i": 5852
   },
   {
    "t": "2026-09-30T21:41:36Z",
@@ -61321,27 +61161,17 @@
    "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
    "to": null,
    "event_id": null,
-   "i": 5869
+   "i": 5853
   },
   {
-   "t": "2026-09-30T21:41:43Z",
+   "t": "2026-09-30T21:42:11Z",
    "agent": "certifier",
-   "type": "search",
-   "text": "Bing News RSS: FTC probe of Anthropic, OpenAI, METR on Sep 29-30 -> CNBC, Reuters, USA Today, NDTV and others; the Thesis and Judge call it 'single source'",
-   "url": "https://www.bing.com/news/search?q=FTC+probe+Anthropic+OpenAI+METR+autonomous+AI+agents&format=rss",
-   "to": null,
-   "event_id": null,
-   "i": 5870
-  },
-  {
-   "t": "2026-09-30T21:42:43Z",
-   "agent": "certifier",
-   "type": "flag",
-   "text": "Timeline events evt-20240701-pb-series-d-1-2b-21b (HIGH) and evt-20220429-pb-series-b-980m-reconcile (HIGH) stay HIGH while the ledger marks Series D and Series B MISMATCH/DISPUTED; evt-20250502 shows 'run-rate $1.4B' (ledger: $3B at May's end, MISMATCH) at MEDIUM; ledger verdicts do not flow back t",
+   "type": "found",
+   "text": "Desk record agrees with my F1-F8 within tolerance (see reconciliation); the disagreements are in labelling and counting, not in the numbers",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5871
+   "i": 5854
   },
   {
    "t": "2026-09-30T21:43:17Z",
@@ -61351,27 +61181,17 @@
    "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx",
    "to": null,
    "event_id": null,
-   "i": 5872
+   "i": 5855
   },
   {
-   "t": "2026-09-30T21:43:44Z",
+   "t": "2026-09-30T21:43:36Z",
    "agent": "certifier",
-   "type": "open",
-   "text": "Judge file final at 21:20:33Z (62 log rows, stats present): same calls as the draft (BEARISH at $2T, NEUTRAL at $1.5T, LEAN BULLISH at Series H); Series H why now says how this case differs from the base rate; 8 thesis-breakers complete; 19 cited event ids exist; its message to me gives 'plan test -",
+   "type": "flag",
+   "text": "Model tab: the 2024A and 2025A columns (and the segment and FCF charts) are labelled 'A = actual' from one test (revenue present). Only revenue, compute, opex and operating loss are press-reported; R&D, S&M, G&A, SBC, segment splits and FCF are the model's own splits. Model notes 3, 18 and 19 say so",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5873
-  },
-  {
-   "t": "2026-09-30T21:44:44Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Judge R5: firm 2028 payments $53B = 27% of plan revenue ($195.5B) and 56% of the bear's $95.4B: reproduces. R3 bands (1.257T x 0.85 = 1.07T; single-variable 30x $1,775B; 26x $1,568B): reproduce",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5874
+   "i": 5856
   },
   {
    "t": "2026-09-30T21:44:58Z",
@@ -61381,17 +61201,27 @@
    "url": "https://en.wikipedia.org/wiki/Initial_public_offering_of_SpaceX",
    "to": null,
    "event_id": null,
-   "i": 5875
+   "i": 5857
   },
   {
-   "t": "2026-09-30T21:45:44Z",
+   "t": "2026-09-30T21:45:00Z",
    "agent": "certifier",
-   "type": "note",
-   "text": "Not done: I could not open reuters.com, nytimes.com, axios.com, cnbc.com or forbes.com (blocked), so the Reuters Breakingviews 40% gross margin and the NYT '$100B this year' wording rest on RSS snippets and on Bloomberg and Axios relays; marked opened=false or single origin",
+   "type": "flag",
+   "text": "Overview IPO tile prints 'DISPUTED sequence, not a cle' (first 28 characters of the timing string) and sub-lines run together ('Nasdaqtarget $2.00Traise up to $100B'; same on the compute tile) [Pass 2: fixed at cd50680; the IPO tile reads 'Confidential S-1' with a timing chip]",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5876
+   "i": 5858
+  },
+  {
+   "t": "2026-09-30T21:46:25Z",
+   "agent": "certifier",
+   "type": "flag",
+   "text": "Timeline and event drawer: 5 events print projected or guided run-rates as 'run-rate $X' (e.g. $110B on Sep 18) and 7 events print reported targets or secondary marks as 'post $X' (e.g. post $2.00T); the event data itself says 'reported target' and 'projected' [Pass 2: mostly fixed at a3475a0 (16 re",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5859
   },
   {
    "t": "2026-09-30T21:46:38Z",
@@ -61401,27 +61231,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5877
+   "i": 5860
   },
   {
-   "t": "2026-09-30T21:46:44Z",
+   "t": "2026-09-30T21:47:49Z",
    "agent": "certifier",
-   "type": "note",
-   "text": "The repo moved while I worked: commits b6c2d3a (21:23Z, verdict merged, gates re-run) and cd50680 (21:24Z, Overview tiles). I re-ran the UI dump and screenshots at HEAD cd50680 (data built 21:21:51Z) and re-checked every finding against it",
+   "type": "flag",
+   "text": "Counting and tiers: events.independent_sources counts distinct domains (merge.py line 248) and the Sources tab calls it 'independent origins'; ledger rows show T1 / 6 origins / HIGH for 'Net loss = $42B' while their own note says Reuters is the only readable origin [Pass 2: fixed at a3475a0; outlets",
    "url": null,
    "to": null,
-   "event_id": null,
-   "i": 5878
-  },
-  {
-   "t": "2026-09-30T21:47:45Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Resolved and verified at HEAD: verdict in data/thesis.json; gates 14 PASS, 1 WARN (G11), 0 FAIL, 0 PENDING; IPO tile and compute tile text fixed; equity chip shows the independent range; Thesis tab renders the verdict, call chips, position check, scorecard and 8 breakers",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5879
+   "event_id": "F3",
+   "i": 5861
   },
   {
    "t": "2026-09-30T21:48:19Z",
@@ -61431,27 +61251,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5880
+   "i": 5862
   },
   {
-   "t": "2026-09-30T21:48:45Z",
+   "t": "2026-09-30T21:49:14Z",
    "agent": "certifier",
    "type": "flag",
-   "text": "Pass 1, still open at HEAD cd50680: Model tab 2024A/2025A labelling (B-4), domain-counted origins and T1/HIGH on leaked-draft ledger rows (B-2), target and projection chips on Timeline cards (B-3); Timeline, Topics, Model and Compute text is byte-identical to my first pass [Pass 2 at HEAD 6fd1ca6: B",
+   "text": "evt-20260913-altman-openai-no-2026-ipo is T3 with HIGH and no corroboration (The Next Web and Business Insider carried it the same day, but the record does not show them) [Pass 2: fixed; the event is MEDIUM with 'Capped from HIGH: no T1/T2 origin']",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5881
-  },
-  {
-   "t": "2026-09-30T21:49:45Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Base Rate Book (Credit Suisse, 2016, PDF p.32) read with pypdf: above $25B 4,472 five-year periods, 19 at 30% or more, 1 above 45%; above $50B 1,810 periods, 1 at 30% or more. The Judge's reference-class numbers match",
-   "url": "https://sorfis.com/wp-content/uploads/2021/09/The-Base-Rate-Book-Integrating-the-Past-to-Better-Anticipate-the-Future-September-2016.pdf",
-   "to": null,
-   "event_id": null,
-   "i": 5882
+   "i": 5863
   },
   {
    "t": "2026-09-30T21:50:00Z",
@@ -61461,17 +61271,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5883
+   "i": 5864
   },
   {
-   "t": "2026-09-30T21:50:45Z",
+   "t": "2026-09-30T21:50:38Z",
    "agent": "certifier",
-   "type": "verify",
-   "text": "Judgment review of the filed verdict: reference class and base rate come first; Series H is LEAN BULLISH despite needing 47% a year and the text says why (H1 actuals in hand, 11-16% a year after the plan); both cases are held to the same standard in the scorecard; 8 of 8 thesis-breakers have metric,",
+   "type": "open",
+   "text": "Fresh screenshots (desktop and phone, light and dark, 9 tabs) via scripts/shot.cjs into my own qa dir at 21:00Z: no console errors, no horizontal page overflow; extra full-page phone and dark captures checked for overflow and truncation",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5884
+   "i": 5865
   },
   {
    "t": "2026-09-30T21:51:40Z",
@@ -61481,27 +61291,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5885
+   "i": 5866
   },
   {
-   "t": "2026-09-30T21:51:45Z",
+   "t": "2026-09-30T21:52:02Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "Crypto Briefing (opened): the FTC probe of Sep 30 rests on Reuters citing a senior agency official, with no formal FTC statement; 'single source' is an official-source chain, not a filing",
-   "url": "https://cryptobriefing.com/ftc-probes-anthropic-openai-metr-ai-harms/",
-   "to": null,
-   "event_id": null,
-   "i": 5886
-  },
-  {
-   "t": "2026-09-30T21:52:46Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Final re-check at 21:38Z against HEAD cd50680 (no new commits since 21:24Z): B-2, B-3 and B-4 still hold; B-1 and B-5 stay resolved. Verdict stays NEEDS WORK with 3 blocking items",
+   "text": "Read Overview, Model, Compute, Topics, Thesis, Agents, Network and Timeline captures: Agents floor shows desks, signs (with overlapping 'NEW' tags) and messages; Network labels overlap; Thesis tab says 'Verdict pending'",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5887
+   "i": 5867
   },
   {
    "t": "2026-09-30T21:53:21Z",
@@ -61511,27 +61311,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5888
+   "i": 5868
   },
   {
-   "t": "2026-09-30T21:53:46Z",
+   "t": "2026-09-30T21:53:27Z",
    "agent": "certifier",
-   "type": "message",
-   "text": "Orchestrator: at HEAD cd50680 verdict is NEEDS WORK with 3 blocking items (B-2, B-3, B-4); B-1 and B-5 are resolved and verified. Worst: B-4 (Model tab prints 2024A/2025A as 'actual' with modelled splits and no press-reported label), then B-2 (domain-counted origins and T1/HIGH on leaked-draft rows)",
-   "url": null,
-   "to": "orchestrator",
-   "event_id": null,
-   "i": 5889
-  },
-  {
-   "t": "2026-09-30T21:54:46Z",
-   "agent": "certifier",
-   "type": "note",
-   "text": "Pass 2 started 21:47Z at the orchestrator's request. HEAD had moved from cd50680 through a3475a0, a9cb82f and bea88e3 to 6fd1ca6 (21:47:51Z); re-verifying against HEAD with fresh page dumps, screenshots and measurements.",
+   "type": "open",
+   "text": "Sources tab text with every 'Show all' expanded: tiers, audit (49% fully supported, 100% core fact), 14 corrections, ship gates (G15 FAIL is stale), PitchBook licence, MNPI screen, conflict of interest and not-investment-advice all present",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5890
+   "i": 5869
+  },
+  {
+   "t": "2026-09-30T21:54:51Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Spot-checked T1 facts against source: Anthropic Apr 6 (run-rate >$30B from ~$9B; >1,000 customers over $1M), Anthropic Apr 20 (>$100B to AWS over ten years, up to 5GW, $5B plus up to $20B), Amazon 10-Q (notes $97.9B, preferred $92.5B, facility up to $20.0B), Opus 5.5 at $4/$20 on Sep 22: all match t",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+   "to": null,
+   "event_id": null,
+   "i": 5870
   },
   {
    "t": "2026-09-30T21:55:02Z",
@@ -61541,17 +61341,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5891
+   "i": 5871
   },
   {
-   "t": "2026-09-30T21:55:46Z",
+   "t": "2026-09-30T21:56:16Z",
    "agent": "certifier",
-   "type": "verify",
-   "text": "Diff a3475a0 to 6fd1ca6: assets/app.js (Model scope paragraph, Network labels and table, Agents-floor autoplay), assets/styles.css (4 lines), regenerated data and dist/artifact.html. data/model.json, compute.json, thesis.json and topics.json changed only in timestamps, so my pass-1 recomputes stand",
+   "type": "open",
+   "text": "Judge draft agents/outputs/analyst-judge.json read at 21:13Z (complete, valid, being rewritten: log and stats removed at 21:13:43Z): BEARISH overall; Series H LEAN BULLISH, $1.5T NEUTRAL, $2T BEARISH; data/thesis.json still has no verdict key",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5892
+   "i": 5872
   },
   {
    "t": "2026-09-30T21:56:42Z",
@@ -61561,27 +61361,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5893
+   "i": 5873
   },
   {
-   "t": "2026-09-30T21:56:47Z",
+   "t": "2026-09-30T21:57:40Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "Engine parity at HEAD: my harness compares 672 values of computeModel() against model.json, max relative difference 0; my Python re-implementation compares 282 values, 0 mismatches. Tile numbers reproduce (7.55x / 12.53x / 8.17x; FCF trough -1,050 and -10,602)",
+   "text": "Judge numbers: adjusted base (1,189 - 126 SBC-as-cost) x 1.0887 + 100 = $1,257B and adjusted bull $2,769B reproduce; -23%/+19%/+59% vs adjusted base reproduce; returns +28%/+3%/-11% a year reproduce; 'plan less 9% to 13%' does not (I get -13% model basis, -16% adjusted)",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5894
-  },
-  {
-   "t": "2026-09-30T21:57:47Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "B-2 fixed: ledger rows OPS-PRO-b86e59, OPS-PRO-f960bc and OPS-PER-f71902 are now T2 / MEDIUM with the 'one reporting chain' note; the Altman event is MEDIUM ('Capped from HIGH'); Sources tile reads 'Multi-outlet events 349 ... 74 likely one reporting chain' (recomputed 349 and 74)",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5895
+   "i": 5874
   },
   {
    "t": "2026-09-30T21:58:23Z",
@@ -61591,27 +61381,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5896
+   "i": 5875
   },
   {
-   "t": "2026-09-30T21:58:47Z",
+   "t": "2026-09-30T21:59:04Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "B-4 fixed: Model columns read 2024*/2025*, model-split cells are italic grey, segment cells are dashes, FCF bars read '(model)', the trough tile says '-$1.1B from 2026, -$10.6B incl. modelled FY2024-25', the EV/revenue tile shows both haircuts",
+   "text": "Judge's 8 thesis-breakers each carry metric, threshold and observable_by date; every cited event id exists; COI appears only as a 'consistency with the standing position' check, not as evidence",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5897
-  },
-  {
-   "t": "2026-09-30T21:59:47Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Rendered all 691 Timeline cards and read six drawers. The WSJ Sep 18 card now reads 'target or cap $100B | reference mark $2.00T | projected run-rate $110B'; 16 reference marks, 10 targets, 8 projections are relabelled; no run-rate chip above $70B remains (the $70B one is OpenAI's)",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5898
+   "i": 5876
   },
   {
    "t": "2026-09-30T22:00:04Z",
@@ -61621,17 +61401,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5899
+   "i": 5877
   },
   {
-   "t": "2026-09-30T22:00:47Z",
+   "t": "2026-09-30T22:00:29Z",
    "agent": "certifier",
-   "type": "flag",
-   "text": "B-3 residual: three cards still print unpriced valuations as 'post' (Sep 23 2024 'up to $40B' talks, Amazon Nov 22 2024 $54B, Google Feb 2023 $5B) and five compute chips print ceilings or unconfirmed reports as plain amounts (SpaceX $45B, Nscale $44.6B, Lambda, Volta, Akamai). Cause: merge.py priced",
-   "url": null,
+   "type": "verify",
+   "text": "Judge's outside-record facts checked against T1 pages: NVIDIA Q2 FY2027 data center $89.0B, +117% YoY, GAAP gross margin 75.0% (Aug 26); Amazon Q2 2026 AWS $42.2B, +37% YoY, operating margin 39.4% (Jul 30). Both match the verdict text",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
    "to": null,
    "event_id": null,
-   "i": 5900
+   "i": 5878
   },
   {
    "t": "2026-09-30T22:01:45Z",
@@ -61641,27 +61421,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5901
+   "i": 5879
   },
   {
-   "t": "2026-09-30T22:01:48Z",
+   "t": "2026-09-30T22:01:53Z",
    "agent": "certifier",
    "type": "verify",
-   "text": "N-1, N-4, N-7, N-9, N-11, N-13 and N-14 verified fixed: tile wording, eight clickable tiles, the relabelled cost row, the disclosure line under the Thesis banner, call chips on the Overview banner, the gross-margin scope paragraph on the Model tab",
-   "url": null,
+   "text": "Amazon Q2 2026 release (AWS +37%, 39.4% margin)",
+   "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx",
    "to": null,
    "event_id": null,
-   "i": 5902
+   "i": 5880
   },
   {
-   "t": "2026-09-30T22:02:48Z",
+   "t": "2026-09-30T22:03:18Z",
    "agent": "certifier",
-   "type": "flag",
-   "text": "B-6 NEW: the CSS added in a9cb82f for the Network table (td overflow-wrap anywhere, td.mono nowrap) breaks every wide table. The re-derivation ledger is 15,457 px wide in a 1,114 px frame (RE-DERIVED column 14,216 px; VERDICT, TIER, ORIGINS and CONFIDENCE off screen), thesis-breakers and Compute tab",
-   "url": null,
+   "type": "verify",
+   "text": "Anthropic Opus 5.5 page: $4 and $20 per million tokens, Sep 22 (matches pricing table and bear claim 5)",
+   "url": "https://www.anthropic.com/claude-opus-5-5",
    "to": null,
    "event_id": null,
-   "i": 5903
+   "i": 5881
   },
   {
    "t": "2026-09-30T22:03:25Z",
@@ -61671,27 +61451,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5904
+   "i": 5882
   },
   {
-   "t": "2026-09-30T22:03:48Z",
+   "t": "2026-09-30T22:04:42Z",
    "agent": "certifier",
-   "type": "verify",
-   "text": "Root-cause test in a scratch copy of HEAD: deleting those two CSS rules restores Sources to 16,897 px, Compute to 11,229 px, Thesis to 9,328 px and every table to a 1,114 px frame, identical to a3475a0. Gate G15 stays 'clean' because it checks document-level overflow only",
-   "url": null,
+   "type": "search",
+   "text": "Bing News RSS: FTC probe of Anthropic, OpenAI, METR on Sep 29-30 -> CNBC, Reuters, USA Today, NDTV and others; the Thesis and Judge call it 'single source'",
+   "url": "https://www.bing.com/news/search?q=FTC+probe+Anthropic+OpenAI+METR+autonomous+AI+agents&format=rss",
    "to": null,
    "event_id": null,
-   "i": 5905
-  },
-  {
-   "t": "2026-09-30T22:04:48Z",
-   "agent": "certifier",
-   "type": "flag",
-   "text": "Ledger RE-DERIVED cells print '[object Object]' in 9 places (1 at cd50680): compactJson joins arrays of objects with join('/'). Non-blocking (N-22)",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5906
+   "i": 5883
   },
   {
    "t": "2026-09-30T22:05:06Z",
@@ -61701,17 +61471,17 @@
    "url": "https://sorfis.com/wp-content/uploads/2021/09/The-Base-Rate-Book-Integrating-the-Past-to-Better-Anticipate-the-Future-September-2016.pdf",
    "to": null,
    "event_id": null,
-   "i": 5907
+   "i": 5884
   },
   {
-   "t": "2026-09-30T22:05:49Z",
+   "t": "2026-09-30T22:06:07Z",
    "agent": "certifier",
-   "type": "search",
-   "text": "WebSearch 2 of 4: FTC probe of Anthropic and OpenAI on Sep 30 is carried by The Globe and Mail, Detroit News, BNN Bloomberg, Yahoo, MSN and Android Headlines (snippets only, not opened); the event is HIGH with 1 outlet and the chain chip while the thesis says 'single source' (N-16)",
-   "url": "https://www.theglobeandmail.com/business/article-ftc-opens-probe-into-openai-anthropic-and-other-ai-giants/",
+   "type": "flag",
+   "text": "Timeline events evt-20240701-pb-series-d-1-2b-21b (HIGH) and evt-20220429-pb-series-b-980m-reconcile (HIGH) stay HIGH while the ledger marks Series D and Series B MISMATCH/DISPUTED; evt-20250502 shows 'run-rate $1.4B' (ledger: $3B at May's end, MISMATCH) at MEDIUM; ledger verdicts do not flow back t",
+   "url": null,
    "to": null,
    "event_id": null,
-   "i": 5908
+   "i": 5885
   },
   {
    "t": "2026-09-30T22:06:47Z",
@@ -61721,27 +61491,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5909
+   "i": 5886
   },
   {
-   "t": "2026-09-30T22:06:49Z",
+   "t": "2026-09-30T22:07:31Z",
    "agent": "certifier",
-   "type": "verify",
-   "text": "Ship gates in data/certify.json (generated 21:46:16Z): 14 PASS, 1 WARN (G11, audit 49% fully supported, 100% core fact), 0 FAIL, 0 PENDING. Disclosures present on the Sources tab and under the Thesis banner",
+   "type": "open",
+   "text": "Judge file final at 21:20:33Z (62 log rows, stats present): same calls as the draft (BEARISH at $2T, NEUTRAL at $1.5T, LEAN BULLISH at Series H); Series H why now says how this case differs from the base rate; 8 thesis-breakers complete; 19 cited event ids exist; its message to me gives 'plan test -",
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5910
-  },
-  {
-   "t": "2026-09-30T22:07:49Z",
-   "agent": "certifier",
-   "type": "verify",
-   "text": "Re-checked at 22:03Z and again at 22:09Z before writing: HEAD is still 6fd1ca6 with a clean working tree, so the verdict applies to it",
-   "url": null,
-   "to": null,
-   "event_id": null,
-   "i": 5911
+   "i": 5887
   },
   {
    "t": "2026-09-30T22:08:27Z",
@@ -61751,25 +61511,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5912
+   "i": 5888
   },
   {
-   "t": "2026-09-30T22:08:49Z",
+   "t": "2026-09-30T22:08:55Z",
    "agent": "certifier",
-   "type": "message",
-   "text": "Orchestrator: at HEAD 6fd1ca6 verdict is NEEDS WORK with 2 blocking items. B-6 (new): delete the two CSS rules added in a9cb82f ('.data td.small, .data td { overflow-wrap: anywhere }' and '.data td.mono { white-space: nowrap }'); they make the re-derivation ledger 15,457 px wide and crush the thesis",
+   "type": "verify",
+   "text": "Judge R5: firm 2028 payments $53B = 27% of plan revenue ($195.5B) and 56% of the bear's $95.4B: reproduces. R3 bands (1.257T x 0.85 = 1.07T; single-variable 30x $1,775B; 26x $1,568B): reproduce",
    "url": null,
-   "to": "orchestrator",
+   "to": null,
    "event_id": null,
-   "i": 5913
-  },
-  {
-   "t": "2026-09-30T22:09:50Z",
-   "agent": "certifier",
-   "type": "done",
-   "to": "orchestrator",
-   "text": "Done: 43 pages.",
-   "i": 5914
+   "i": 5889
   },
   {
    "t": "2026-09-30T22:10:08Z",
@@ -61779,7 +61531,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5915
+   "i": 5890
+  },
+  {
+   "t": "2026-09-30T22:10:20Z",
+   "agent": "certifier",
+   "type": "note",
+   "text": "Not done: I could not open reuters.com, nytimes.com, axios.com, cnbc.com or forbes.com (blocked), so the Reuters Breakingviews 40% gross margin and the NYT '$100B this year' wording rest on RSS snippets and on Bloomberg and Axios relays; marked opened=false or single origin",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5891
+  },
+  {
+   "t": "2026-09-30T22:11:44Z",
+   "agent": "certifier",
+   "type": "note",
+   "text": "The repo moved while I worked: commits b6c2d3a (21:23Z, verdict merged, gates re-run) and cd50680 (21:24Z, Overview tiles). I re-ran the UI dump and screenshots at HEAD cd50680 (data built 21:21:51Z) and re-checked every finding against it",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5892
   },
   {
    "t": "2026-09-30T22:11:49Z",
@@ -61789,7 +61561,17 @@
    "url": null,
    "to": "analyst-model",
    "event_id": null,
-   "i": 5916
+   "i": 5893
+  },
+  {
+   "t": "2026-09-30T22:13:09Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Resolved and verified at HEAD: verdict in data/thesis.json; gates 14 PASS, 1 WARN (G11), 0 FAIL, 0 PENDING; IPO tile and compute tile text fixed; equity chip shows the independent range; Thesis tab renders the verdict, call chips, position check, scorecard and 8 breakers",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5894
   },
   {
    "t": "2026-09-30T22:13:29Z",
@@ -61799,7 +61581,17 @@
    "url": null,
    "to": "analyst-compute",
    "event_id": null,
-   "i": 5917
+   "i": 5895
+  },
+  {
+   "t": "2026-09-30T22:14:33Z",
+   "agent": "certifier",
+   "type": "flag",
+   "text": "Pass 1, still open at HEAD cd50680: Model tab 2024A/2025A labelling (B-4), domain-counted origins and T1/HIGH on leaked-draft ledger rows (B-2), target and projection chips on Timeline cards (B-3); Timeline, Topics, Model and Compute text is byte-identical to my first pass [Pass 2 at HEAD 6fd1ca6: B",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5896
   },
   {
    "t": "2026-09-30T22:15:10Z",
@@ -61809,7 +61601,17 @@
    "url": null,
    "to": "analyst-bull",
    "event_id": null,
-   "i": 5918
+   "i": 5897
+  },
+  {
+   "t": "2026-09-30T22:15:57Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Base Rate Book (Credit Suisse, 2016, PDF p.32) read with pypdf: above $25B 4,472 five-year periods, 19 at 30% or more, 1 above 45%; above $50B 1,810 periods, 1 at 30% or more. The Judge's reference-class numbers match",
+   "url": "https://sorfis.com/wp-content/uploads/2021/09/The-Base-Rate-Book-Integrating-the-Past-to-Better-Anticipate-the-Future-September-2016.pdf",
+   "to": null,
+   "event_id": null,
+   "i": 5898
   },
   {
    "t": "2026-09-30T22:16:51Z",
@@ -61819,7 +61621,17 @@
    "url": null,
    "to": "analyst-bear",
    "event_id": null,
-   "i": 5919
+   "i": 5899
+  },
+  {
+   "t": "2026-09-30T22:17:22Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Judgment review of the filed verdict: reference class and base rate come first; Series H is LEAN BULLISH despite needing 47% a year and the text says why (H1 actuals in hand, 11-16% a year after the plan); both cases are held to the same standard in the scorecard; 8 of 8 thesis-breakers have metric,",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5900
   },
   {
    "t": "2026-09-30T22:18:31Z",
@@ -61829,7 +61641,27 @@
    "url": null,
    "to": "certifier",
    "event_id": null,
-   "i": 5920
+   "i": 5901
+  },
+  {
+   "t": "2026-09-30T22:18:46Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Crypto Briefing (opened): the FTC probe of Sep 30 rests on Reuters citing a senior agency official, with no formal FTC statement; 'single source' is an official-source chain, not a filing",
+   "url": "https://cryptobriefing.com/ftc-probes-anthropic-openai-metr-ai-harms/",
+   "to": null,
+   "event_id": null,
+   "i": 5902
+  },
+  {
+   "t": "2026-09-30T22:20:11Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Final re-check at 21:38Z against HEAD cd50680 (no new commits since 21:24Z): B-2, B-3 and B-4 still hold; B-1 and B-5 stay resolved. Verdict stays NEEDS WORK with 3 blocking items",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5903
   },
   {
    "t": "2026-09-30T22:20:12Z",
@@ -61839,7 +61671,17 @@
    "url": null,
    "to": "orchestrator",
    "event_id": null,
-   "i": 5921
+   "i": 5904
+  },
+  {
+   "t": "2026-09-30T22:21:35Z",
+   "agent": "certifier",
+   "type": "message",
+   "text": "Orchestrator: at HEAD cd50680 verdict is NEEDS WORK with 3 blocking items (B-2, B-3, B-4); B-1 and B-5 are resolved and verified. Worst: B-4 (Model tab prints 2024A/2025A as 'actual' with modelled splits and no press-reported label), then B-2 (domain-counted origins and T1/HIGH on leaked-draft rows)",
+   "url": null,
+   "to": "orchestrator",
+   "event_id": null,
+   "i": 5905
   },
   {
    "t": "2026-09-30T22:21:53Z",
@@ -61849,7 +61691,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5922
+   "i": 5906
+  },
+  {
+   "t": "2026-09-30T22:22:59Z",
+   "agent": "certifier",
+   "type": "note",
+   "text": "Pass 2 started 21:47Z at the orchestrator's request. HEAD had moved from cd50680 through a3475a0, a9cb82f and bea88e3 to 6fd1ca6 (21:47:51Z); re-verifying against HEAD with fresh page dumps, screenshots and measurements.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5907
   },
   {
    "t": "2026-09-30T22:23:33Z",
@@ -61859,7 +61711,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5923
+   "i": 5908
+  },
+  {
+   "t": "2026-09-30T22:24:24Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Diff a3475a0 to 6fd1ca6: assets/app.js (Model scope paragraph, Network labels and table, Agents-floor autoplay), assets/styles.css (4 lines), regenerated data and dist/artifact.html. data/model.json, compute.json, thesis.json and topics.json changed only in timestamps, so my pass-1 recomputes stand",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5909
   },
   {
    "t": "2026-09-30T22:25:14Z",
@@ -61869,7 +61731,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5924
+   "i": 5910
+  },
+  {
+   "t": "2026-09-30T22:25:48Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Engine parity at HEAD: my harness compares 672 values of computeModel() against model.json, max relative difference 0; my Python re-implementation compares 282 values, 0 mismatches. Tile numbers reproduce (7.55x / 12.53x / 8.17x; FCF trough -1,050 and -10,602)",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5911
   },
   {
    "t": "2026-09-30T22:26:55Z",
@@ -61879,7 +61751,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5925
+   "i": 5912
+  },
+  {
+   "t": "2026-09-30T22:27:13Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "B-2 fixed: ledger rows OPS-PRO-b86e59, OPS-PRO-f960bc and OPS-PER-f71902 are now T2 / MEDIUM with the 'one reporting chain' note; the Altman event is MEDIUM ('Capped from HIGH'); Sources tile reads 'Multi-outlet events 349 ... 74 likely one reporting chain' (recomputed 349 and 74)",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5913
   },
   {
    "t": "2026-09-30T22:28:35Z",
@@ -61889,7 +61771,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5926
+   "i": 5914
+  },
+  {
+   "t": "2026-09-30T22:28:37Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "B-4 fixed: Model columns read 2024*/2025*, model-split cells are italic grey, segment cells are dashes, FCF bars read '(model)', the trough tile says '-$1.1B from 2026, -$10.6B incl. modelled FY2024-25', the EV/revenue tile shows both haircuts",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5915
+  },
+  {
+   "t": "2026-09-30T22:30:02Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Rendered all 691 Timeline cards and read six drawers. The WSJ Sep 18 card now reads 'target or cap $100B | reference mark $2.00T | projected run-rate $110B'; 16 reference marks, 10 targets, 8 projections are relabelled; no run-rate chip above $70B remains (the $70B one is OpenAI's)",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5916
   },
   {
    "t": "2026-09-30T22:30:16Z",
@@ -61899,7 +61801,17 @@
    "url": "https://www.yahoo.com/news/politics/articles/ftc-opens-probe-ai-giants-135328719.html",
    "to": null,
    "event_id": null,
-   "i": 5927
+   "i": 5917
+  },
+  {
+   "t": "2026-09-30T22:31:26Z",
+   "agent": "certifier",
+   "type": "flag",
+   "text": "B-3 residual: three cards still print unpriced valuations as 'post' (Sep 23 2024 'up to $40B' talks, Amazon Nov 22 2024 $54B, Google Feb 2023 $5B) and five compute chips print ceilings or unconfirmed reports as plain amounts (SpaceX $45B, Nscale $44.6B, Lambda, Volta, Akamai). Cause: merge.py priced",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5918
   },
   {
    "t": "2026-09-30T22:31:57Z",
@@ -61909,7 +61821,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5928
+   "i": 5919
+  },
+  {
+   "t": "2026-09-30T22:32:50Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "N-1, N-4, N-7, N-9, N-11, N-13 and N-14 verified fixed: tile wording, eight clickable tiles, the relabelled cost row, the disclosure line under the Thesis banner, call chips on the Overview banner, the gross-margin scope paragraph on the Model tab",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5920
   },
   {
    "t": "2026-09-30T22:33:37Z",
@@ -61919,7 +61841,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5929
+   "i": 5921
+  },
+  {
+   "t": "2026-09-30T22:34:15Z",
+   "agent": "certifier",
+   "type": "flag",
+   "text": "B-6 NEW: the CSS added in a9cb82f for the Network table (td overflow-wrap anywhere, td.mono nowrap) breaks every wide table. The re-derivation ledger is 15,457 px wide in a 1,114 px frame (RE-DERIVED column 14,216 px; VERDICT, TIER, ORIGINS and CONFIDENCE off screen), thesis-breakers and Compute tab",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5922
   },
   {
    "t": "2026-09-30T22:35:18Z",
@@ -61929,7 +61861,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 5930
+   "i": 5923
+  },
+  {
+   "t": "2026-09-30T22:35:39Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Root-cause test in a scratch copy of HEAD: deleting those two CSS rules restores Sources to 16,897 px, Compute to 11,229 px, Thesis to 9,328 px and every table to a 1,114 px frame, identical to a3475a0. Gate G15 stays 'clean' because it checks document-level overflow only",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5924
   },
   {
    "t": "2026-09-30T22:36:59Z",
@@ -61939,7 +61881,27 @@
    "url": null,
    "to": "certifier",
    "event_id": null,
-   "i": 5931
+   "i": 5925
+  },
+  {
+   "t": "2026-09-30T22:37:04Z",
+   "agent": "certifier",
+   "type": "flag",
+   "text": "Ledger RE-DERIVED cells print '[object Object]' in 9 places (1 at cd50680): compactJson joins arrays of objects with join('/'). Non-blocking (N-22)",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5926
+  },
+  {
+   "t": "2026-09-30T22:38:28Z",
+   "agent": "certifier",
+   "type": "search",
+   "text": "WebSearch 2 of 4: FTC probe of Anthropic and OpenAI on Sep 30 is carried by The Globe and Mail, Detroit News, BNN Bloomberg, Yahoo, MSN and Android Headlines (snippets only, not opened); the event is HIGH with 1 outlet and the chain chip while the thesis says 'single source' (N-16)",
+   "url": "https://www.theglobeandmail.com/business/article-ftc-opens-probe-into-openai-anthropic-and-other-ai-giants/",
+   "to": null,
+   "event_id": null,
+   "i": 5927
   },
   {
    "t": "2026-09-30T22:38:40Z",
@@ -61947,7 +61909,185 @@
    "type": "done",
    "to": "orchestrator",
    "text": "Done: 5 searches, 5 pages, 17 flags.",
+   "i": 5928
+  },
+  {
+   "t": "2026-09-30T22:39:52Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Ship gates in data/certify.json (generated 21:46:16Z): 14 PASS, 1 WARN (G11, audit 49% fully supported, 100% core fact), 0 FAIL, 0 PENDING. Disclosures present on the Sources tab and under the Thesis banner",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5929
+  },
+  {
+   "t": "2026-09-30T22:41:17Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Re-checked at 22:03Z and again at 22:09Z before writing: HEAD is still 6fd1ca6 with a clean working tree, so the verdict applies to it",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5930
+  },
+  {
+   "t": "2026-09-30T22:42:41Z",
+   "agent": "certifier",
+   "type": "message",
+   "text": "Orchestrator: at HEAD 6fd1ca6 verdict is NEEDS WORK with 2 blocking items. B-6 (new): delete the two CSS rules added in a9cb82f ('.data td.small, .data td { overflow-wrap: anywhere }' and '.data td.mono { white-space: nowrap }'); they make the re-derivation ledger 15,457 px wide and crush the thesis",
+   "url": null,
+   "to": "orchestrator",
+   "event_id": null,
+   "i": 5931
+  },
+  {
+   "t": "2026-09-30T22:44:06Z",
+   "agent": "certifier",
+   "type": "note",
+   "text": "Pass 3 started 22:41Z at the orchestrator's request. HEAD had moved from 6fd1ca6 through 4544389, 82f7060, 52b87b8, 8740aa6 and a4de47c to 0462e30 (22:42:57Z), which also puts my verdict on the Sources tab; re-verifying against it with fresh dumps, measurements and screenshots.",
+   "url": null,
+   "to": null,
+   "event_id": null,
    "i": 5932
+  },
+  {
+   "t": "2026-09-30T22:45:30Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "B-6 fixed: re-measured every table at 1440 and 400 px against an archive of a3475a0. Desktop ledger scrollWidth 1,114 = frame (was 15,457), thesis-breakers 1,114 (was 2,342), Compute ledger and cost datapoints 1,114; Compute panel 11,229 px (was 20,849), Thesis 9,544, Sources 21,408. Phone Model inc",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5933
+  },
+  {
+   "t": "2026-09-30T22:46:55Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Guard test: the repo's new shot.cjs logic, run from a scratch copy, reports no console errors, no overflow and no table over 4x at HEAD; on a scratch copy with the two old CSS rules restored it reports 15 errors (tables up to 145.7x wider than their frame, Sources height 19,709 to 41,221 px). The ga",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5934
+  },
+  {
+   "t": "2026-09-30T22:48:19Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Ship gates in data/certify.json (generated 22:42:51Z): 14 PASS, 1 WARN (G11, audit 49% fully supported, 100% core fact), 0 FAIL, 0 PENDING. G15 is clean and is now backed by the table guard",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5935
+  },
+  {
+   "t": "2026-09-30T22:49:43Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "B-3 labels: the $40B talks card reads 'reference mark $40.0B'; the Amazon $54B and Google $5B drawers read 'Reference mark (not a priced round)'; SpaceX reads 'up to $45.0B', the Aug 26 Nscale card 'up to', Lambda, Volta and Akamai Plan 1 '(unconfirmed)'. Chips by prefix against pass 2: 'post' 13 to",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5936
+  },
+  {
+   "t": "2026-09-30T22:51:08Z",
+   "agent": "certifier",
+   "type": "flag",
+   "text": "B-7 NEW: the B-3 fix demoted the Series H event. The new 'implied' trigger in priced_round() matches 'pre-money implied $900B' in its notes, so the T1 announcement of $65B at $965B now reads 'Reference mark (not a priced round) $965B' and its card lost 'post $965B', against the Overview tile, the mo",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5937
+  },
+  {
+   "t": "2026-09-30T22:52:32Z",
+   "agent": "certifier",
+   "type": "flag",
+   "text": "B-3 residual: the Nscale S-1 card (Sep 18, T1 HIGH) still prints 'compute $44.6B' with no 'up to'; the desk row with the 'up to' basis is keyed to the Aug 26 event. TeraWulf now prints 'up to $19.0B' although the Compute tab says contracted (over-hedge, N-27)",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5938
+  },
+  {
+   "t": "2026-09-30T22:53:57Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Judge revision checked: the call is unchanged, all 53 event ids (7 rationale items, 3 marks, 6 what_flips) resolve. Plan test recomputed with growth 2027-2030 scaled until value equals the mark: costs scaled model -13.3 / +17.0 / +41.5, adjusted -18.0 / +13.7 / +39.1; costs held model -8.7 / +11.4 /",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5939
+  },
+  {
+   "t": "2026-09-30T22:55:21Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Series H growth still needed after the $195B plan: 16.2% (model) and 11.4% (adjusted) with costs scaled, as written; 20.8% and 18.2% with training and capex held, which the text does not say (N-28). Bands 85% / 127% / 143% of $1,257B reproduce (1,068 / 1,596 / 1,798)",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5940
+  },
+  {
+   "t": "2026-09-30T22:56:45Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "N-21 cap works: events HIGH 459 to 448 and MEDIUM 201 to 212; 0 events HIGH and flagged single-chain and non-T1 (was 11); flagged cards read 'N outlets, likely one chain'; ledger column is 'Outlets'; the Q2 tile reads T3 MEDIUM; ledger rows T2/MEDIUM; no T3+ HIGH row in the ledger or metrics",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5941
+  },
+  {
+   "t": "2026-09-30T22:58:10Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "N-19, N-20, N-22, N-23 (mostly), N-24 and N-25 verified fixed; the Sources text no longer has '[object Object]' in the ledger; the Overview signs card shows the Judge's signs. README numbers checked: scenario table, 262/420/568, ledger counts and audit figures reproduce",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5942
+  },
+  {
+   "t": "2026-09-30T22:59:34Z",
+   "agent": "certifier",
+   "type": "flag",
+   "text": "Methodology text says an event inherits the tier of its weakest load-bearing source (Sources tab, docs/ARCHITECTURE.md, docs/METHODOLOGY.md) but merge_cluster() keeps the best tier among the clustered findings (N-26). Also found: clicking the first Overview tile opens nothing because metrics.rounds ",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5943
+  },
+  {
+   "t": "2026-09-30T23:00:59Z",
+   "agent": "certifier",
+   "type": "verify",
+   "text": "Re-checked at 23:01Z: HEAD is still 0462e30 with a clean working tree. dist/artifact.html (22:39Z) predates that commit (N-30)",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 5944
+  },
+  {
+   "t": "2026-09-30T23:02:23Z",
+   "agent": "certifier",
+   "type": "message",
+   "text": "Orchestrator: at HEAD 0462e30 verdict is NEEDS WORK with 2 blocking items, both one-line fixes. B-7 (new, from the B-3 fix): in merge.py priced_round() narrow the 'implied' trigger to r'\\b(implying|implies|implied) (a |an |the )?(post-money |pre-money )?valuation\\b' so Series H and PitchBook Series ",
+   "url": null,
+   "to": "orchestrator",
+   "event_id": null,
+   "i": 5945
+  },
+  {
+   "t": "2026-09-30T23:03:48Z",
+   "agent": "certifier",
+   "type": "done",
+   "to": "orchestrator",
+   "text": "Done: 43 pages.",
+   "i": 5946
   }
  ],
  "note": "Each entry is what the agent itself logged. Within one agent's run, timestamps are spread evenly between its recorded start and finish; start and finish are the agent's own clock readings."

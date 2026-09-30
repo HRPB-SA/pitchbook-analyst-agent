@@ -1,14 +1,14 @@
 {
- "generated": "2026-09-30T22:42:51Z",
+ "generated": "2026-09-30T23:07:54Z",
  "verdict": "NEEDS WORK",
- "finished": "2026-09-30T22:09:50Z",
+ "finished": "2026-09-30T23:03:48Z",
  "stats": {
   "pages_opened": 43,
   "facts_rederived": 8,
   "blocking": 2,
-  "non_blocking": 18,
+  "non_blocking": 13,
   "web_searches": 2,
-  "passes": 2
+  "passes": 3
  },
  "rederived_provenance": {
   "own": 8,
@@ -208,49 +208,49 @@
    "deliverable_says": "Series H $65B at $965B post-money ($900B pre, derived), 2026-05-28; leads Altimeter, Dragoneer, Greenoaks, Sequoia; co-leads Capital Group, Coatue, D1, GIC, ICONIQ, XN",
    "where": "data/metrics.json rounds; Overview tile 'Last post-money valuation'; ledger CAP-ROU-20299f",
    "agrees": true,
-   "note": "Matches Anthropic's post and The Information's $900B pre-money. The $15B of previously committed hyperscaler money is noted in capital_summary."
+   "note": "Every number agrees (amount, post-money, pre-money, date, leads). Open: the Series H event drawer now labels the $965B 'Reference mark (not a priced round)' and its card lost 'post $965B' (B-7); the Overview tile, model and verdict still use $965B as post-money."
   },
   {
    "fact": "F2",
    "deliverable_says": "$65.0B run-rate at Jul 31 2026, T2 HIGH, gross; $100B-$120B year-end figures are investor projections, not used",
    "where": "Overview tile 'Annualized run-rate revenue'; metrics.run_rate_desk; model notes",
    "agrees": true,
-   "note": "Agrees. The Sep 18 '$100B pace' traces to one origin (NYT). Timeline chips still print projected run-rates as 'run-rate $X' (B-3)."
+   "note": "Agrees. The Sep 18 '$100B pace' traces to one origin (NYT); Timeline cards now label year-end figures 'projected run-rate'. The tile reads $65.0B, T2 HIGH, gross, dated Jul 31."
   },
   {
    "fact": "F3",
    "deliverable_says": "FY2025 revenue $4.59B (+1,088%), FY2024 $386M implied; recognized, gross of cloud resale; leaked draft prospectus via Reuters, no public S-1",
    "where": "metrics.period_revenue; Topics tab revenue card; Model notes",
    "agrees": true,
-   "note": "Numbers agree within 1%. Labelling gap on the Model tab (B-4); ledger shows HIGH with 9-10 'origins' for one leaked document (B-2)."
+   "note": "Numbers agree within 1%. The Model table flags 2024*/2025* as press-reported from the leaked draft and greys the model splits; the ledger rows for net loss, cash and FY2024 revenue are T2/MEDIUM with the 'one reporting chain' note (B-2 and B-4 fixed)."
   },
   {
    "fact": "F4",
    "deliverable_says": "Private; confidential draft S-1 submitted Jun 1 2026; no public S-1 on EDGAR; target about $2T, raise up to $100B (WSJ, T3); Nasdaq; timing 'disputed (Oct vs Nov)'",
    "where": "Overview status pill and IPO tile; metrics.offering_structure; ledger CAP-IPO-9d6ced",
    "agrees": true,
-   "note": "Facts agree. The newest reporting (WSJ and NYT Sep 18, Reuters Sep 29) says November or later; 'Oct vs Nov' understates that. The IPO tile text is truncated (B-5)."
+   "note": "Facts agree; no public S-1 on EDGAR as of Sep 30. The status pill now reads 'Oct, then Nov or after the midterms'; the IPO tile still says 'timing disputed: Oct vs Nov' (N-8)."
   },
   {
    "fact": "F5",
    "deliverable_says": "Announced $592.1B ($455.7B contracted, $89.6B up to, $46.8B unconfirmed); S-1 $518.2B, 79.8% non-cancelable ($413.7B); 15.845 GW of which 13.0 'up to'; The Information $517B and 14.8 GW carried as a second origin",
    "where": "data/compute.json totals; Compute tab tiles and ledger; Overview compute tile",
    "agrees": true,
-   "note": "Agrees with my $518B, about 80% and 14-15 GW; 'up to' and contracted are kept apart on the Compute tab. The Overview tile drops the 'incl. up to' wording (N-4)."
+   "note": "Agrees with my $518B, about 80% and 14-15 GW. The Overview and Compute tiles keep 'up to' ($89.6B) and unconfirmed ($46.8B) apart from contracted; one Timeline card still prints a ceiling as a plain compute chip (B-3)."
   },
   {
    "fact": "F6",
    "deliverable_says": "No GAAP margin: FY2025 about 40% (The Information, T3); Q2 2026 about 44% compute-only (PitchBook); above 80% adjusted before partner share and training (FT, T3)",
    "where": "metrics.margins; model sources.gross_margin; Thesis bear claim 3",
    "agrees": true,
-   "note": "Agrees with my two scopes. Reuters Breakingviews (Sep 29) also says '40% gross margin last year'; I could not open it to see whether the prospectus states it (question, not a finding)."
+   "note": "Agrees with my two scopes. Reuters Breakingviews (Sep 29) also says '40% gross margin last year'; I could not open it to see whether the prospectus states it (question, not a finding). The Model table legend now names The Information (T3, paying-user scope) as the source."
   },
   {
    "fact": "F7",
    "deliverable_says": "Desk canonical 39.75% is a fitted value (1 - (965/47)/(852/25)); record evidence 7.6% ($351M / $4.59B) and PitchBook 6-10%; both shown, neither used as evidence",
    "where": "Model tab haircut slider and notes; Compute tab row 'Revenue per GW-year, net'; Thesis bear claim 8",
    "agrees": true,
-   "note": "Agrees: I found no public 'ruling'; the only sourced adjustments are 6-10% (Axios, unnamed source) and 7.6% (prospectus fees). The Model tab still defaults to 39.75% and its tile states no haircut (N-1)."
+   "note": "Agrees: I found no public 'ruling'; the sourced adjustments are 6-10% (Axios, unnamed source) and 7.6% (prospectus fees). The Model tile now states both haircuts (12.5x net at 39.75%, 8.2x at 7.6%)."
   },
   {
    "fact": "F8",
@@ -258,137 +258,100 @@
    "where": "Topics legal card; Thesis bull claim 9; event evt-20260720-bartz-final-approval",
    "agrees": true,
    "note": "Matches the settlement administrator's site ('On July 20, 2026, the Court granted final approval'); some outlets print Jul 21."
-  },
-  {
-   "fact": "K1-K8 (Overview tiles)",
-   "deliverable_says": "valuation $965B T1 HIGH (May 28, 2026); run-rate $65.0B T2 HIGH gross (Jul 31); Q2 revenue $11.5B T3 HIGH 'recognized, gross'; equity raised $124B + $2.5B debt, 'incl. $10.0B convertible notes', 'disputed: independent check $124B to $140B'; compute $592B 'incl. $89.6B up to and $46.8B unconfirmed', $456B contracted or disclosed, $218B on T1/T2 documents, 15.85 GW; headcount 2,500 (Jan 30, T3) 'disputed: 5,000 (T4)'; IPO 'Confidential S-1', 'timing disputed: Oct vs Nov', 'target $2.00T (reported)', 'raise up to $100B (WSJ)'; record 691 events, 1,094 raw, 38 agents, 99.9% opened",
-   "where": "Overview tiles at HEAD 6fd1ca6 (assets/app.js renderOverview; my qa6/desk-light-overview.png and text4/overview.txt)",
-   "agrees": true,
-   "note": "Each tile traces to an event or row with its flag shown, and all eight are clickable. K1 matches my F1; K2 matches my F2 (a projected $100B+ is not used); K7 matches my F4 (confidential draft filed Jun 1, no public S-1); K5 is consistent with my F5 (the draft names at least $518B; the tile sums announced deals by partner and labels the up-to and unconfirmed parts). K3, K4, K6 and K8 sit outside F1-F8 and were checked against their events and ledger rows. K3 shows T3 HIGH: HIGH rests on a Fortune (T2) snapshot of the draft plus FT (Sep 14) and Bloomberg (Aug 14), see N-21. Tier, confidence and year tallies on the Sources tab reproduce from data/events.json (T1 383, T2 181, T3 110, T4 16, T5 1; HIGH 459, MEDIUM 201, LOW 10, VERIFY 8, DISPUTED 13; 691 each)."
   }
  ],
  "blocking": [
   {
-   "id": "B-6",
-   "where": "assets/styles.css lines 398-399, added in commit a9cb82f: '.data td.small, .data td { overflow-wrap: anywhere; }' and '.data td.mono { white-space: nowrap; overflow-wrap: normal; }' (same rules inside dist/artifact.html). Tables hit: Sources & ledger > Re-derivation ledger; Bull / Bear > Thesis-breakers; Compute > Commitment ledger and 'Reported cost and margin datapoints'; Model income statement and every .data table at phone width.",
-   "issue": "NEW, introduced by the Network-table fix. The two global rules stop every monospaced cell from wrapping and let every other cell break anywhere, so the browser gives all the width to the long cells and squeezes the rest to one or two characters. The re-derivation ledger (the exhibit that shows VERDICT, TIER, ORIGINS and CONFIDENCE for the 121 load-bearing claims, i.e. the evidence for the B-2 fix) is now 15,457 px wide inside a 1,114 px frame: CLAIM is 61 px with words split mid-word, RE-DERIVED is 14,216 px, and VERDICT, TIER, ORIGINS, CONFIDENCE and NOTE sit off screen. The thesis-breakers table (metric, threshold, observable by, current reading, status, evidence) shows METRIC at about 70 px and THRESHOLD as one 1,841 px line; the other four columns are off screen. The Compute commitment ledger shows CHIPS at 60 px ('Googl e TPU syste ms') with FINANCING and SOURCE pushed out of view, and 'Reported cost and margin datapoints' shows BASIS at 59 px, one or two characters per line; that is where the gross-margin provenance (The Information, paying-user scope) is written. Page heights grew: Sources 16,897 to 38,422 px, Compute 11,229 to 20,849, Thesis 9,328 to 10,760 (1440 px wide); at 400 px Sources 26,488 to 55,492 and the Model income statement 1,582 to 7,432 px. Ship gate G15 still says 'clean' because scripts/shot.cjs only tests document-level overflow, not the scrolling frame around each table.",
-   "smallest_fix": "Delete the two rules (keep the '.node text' halo) or scope them to the Network table only; rebuild dist/artifact.html; add to scripts/shot.cjs a check that each '.tablewrap' has scrollWidth <= clientWidth + 2 for the ledger, thesis-breakers and compute tables, and re-run gate G15."
+   "id": "B-7",
+   "where": "scripts/merge.py priced_round() (new 'implied' trigger); event evt-20260528-series-h-compute-agreements-memory-partners (card and drawer); also evt-20240701-pb-series-d-1-2b-21b",
+   "issue": "NEW, caused by the B-3 fix. The Series H event (Anthropic's own T1 announcement, 'Anthropic raises $65B in Series H funding at $965B valuation') now reads 'Reference mark (not a priced round) $965B' in its drawer and its card lost the 'post $965B' chip, while the Overview tile calls the same $965B 'Last post-money valuation' (T1 HIGH), the model and the verdict price Series H as a post-money, and my F1 re-derivation confirms it (post-money $965B, pre-money $900B, May 28 2026). Cause: the new text trigger \\b(implying|implies|implied)\\b in priced_round() matches 'pre-money implied $900B' in the event's notes, so R-VAL treats the round as not priced and moves valuation_post_usd_m 965000 to other.valuation_reference_usd_m. The same trigger also demoted the PitchBook Series D event ('613M implied by $18.4B' in a share-count note). Of the six events newly demoted since pass 2, four are right (Series A, Google $300M, the $40B talks, the Amazon notes); Series H is wrong and PitchBook Series D is debatable.",
+   "smallest_fix": "In merge.py priced_round() replace the text trigger r'\\b(implying|implies|implied)\\b' with r'\\b(implying|implies|implied) (a |an |the )?(post-money |pre-money )?valuation\\b' (or drop it and rely on the explicit 'valuation not disclosed / unstated / floated' phrases), re-run merge.py and rebuild dist/artifact.html. Add one check to scripts/certify.py that the Series H event keeps valuation_post_usd_m 965000 (and Series E to G their post values), so a rule change cannot demote the anchor round again."
   },
   {
    "id": "B-3",
-   "where": "Timeline cards and drawer (assets/app.js extractChips and openEvent; scripts/merge.py priced_round() and R-AMT): evt-20240923-40b-valuation-talks, evt-20241122-amazon-additional-4b, evt-20230203-google-300m-10pct ('post' chips); evt-20260520-spacex-s1-anthropic-colossus-contract, evt-20260918-nscale-files-nyse-ipo, evt-20260831-lambda-35b-cloud-deal-texas, evt-20260804-volta-10b-norway-compute-deal, evt-20260507-akamai-1-8b-frontier-model-provider (amount and compute chips); Overview chart 'Post-money valuation by round' and its table view (Nov 22 2024 point)",
-   "issue": "Narrowed, not closed. Fixed at a3475a0 and verified at HEAD 6fd1ca6: the WSJ Sep 18 card now reads 'target or cap $100B | reference mark $2.00T | projected run-rate $110B' and its drawer says 'not a closed amount', 'not a priced round', 'not reported'; 16 reference marks, 10 targets or caps and 8 projections are relabelled; no run-rate chip above $70B remains (the $70B one is OpenAI's own); 'up to' shows where the headline says so. Still open, same trap class (a qualifier dropped from a figure): (1) Three cards print 'post' for valuations the record itself says are unpriced or unstated. 'Reported early talks to raise at up to $40B valuation' (Sep 23 2024, T3 MEDIUM) shows 'Post-money $40.0B' beside its own note 'Talks only; valuation is a floated target (up to $40B), pre/post unstated'. The Amazon $4B card (Nov 22 2024, T1 HIGH) shows 'post $54.0B' where its note says 'Valuation not disclosed' and the ledger row says 'no valuation or pre/post-money was ever stated for them'. The Google $300M card (Feb 3 2023) shows 'post $5.0B' where its note says $300M for ~10% implies ~$3.0B. (2) The Overview chart and its table plot 'Amazon convertible notes (PB 6th round): $8.0B raised' at $54B post as T1 HIGH with no DISPUTED chip, while the ledger marks that row MISMATCH/DISPUTED (Series B and D now carry the chip). (3) Compute chips print ceilings and unconfirmed reports as plain amounts: SpaceX '$45.0B | compute $45.0B' (compute.json basis 'up to'), Nscale 'compute $44.6B' (basis 'up to'), Lambda '$35.0B', Volta '$10.0B', Akamai 'compute $1.8B' (basis 'reported (unconfirmed)'). The Compute tab and the Overview tile label these correctly. Nothing here feeds a KPI tile, the model or the verdict; it is the 'up to shown as contracted / target shown as post-money' error that the brief makes blocking wherever it appears.",
-   "smallest_fix": "(1) In merge.py priced_round() anchor the guard so 'to raise' does not count as a closed raise (for example r'series [a-h]|closes?|(?<!to )\\braises?\\b|raised'), or add three R-VAL corrections to agents/corrections.json; (2) in extractChips and openEvent prefix 'up to' or 'reported' on the amount and compute chips when the compute.json basis (joined on event_id) is 'up to' or 'reported (unconfirmed)'; (3) give the PitchBook 6th-round point in metrics.rounds a DISPUTED or 'PitchBook consolidation, no stated valuation' tag."
+   "where": "Timeline card and drawer for evt-20260918-nscale-files-nyse-ipo (assets/app.js extractChips; event keys in metrics.compute)",
+   "issue": "The Nscale S-1 card (Sep 18, T1 HIGH) prints 'compute $44.6B' with no 'up to' although its own summary says 'GPU services agreements of up to about $44.6B' and the Compute tab and the Overview tile count the figure in the $89.6B 'up to' bucket. The desk row that carries the 'up to' basis is keyed to the Aug 26 Nscale event, so the S-1 event id gets no qualifier; the drawer row reads '$44.6B' plain as well. Everything else in B-3 from pass 2 is fixed and verified at HEAD 0462e30: the $40B talks card reads 'reference mark $40.0B'; the Amazon $54B and Google $5B drawers read 'Reference mark (not a priced round)' with 'R-VAL (automatic rule)'; compute chips carry the desk basis (SpaceX 'up to $45.0B', the Aug 26 Nscale card 'up to', Lambda, Volta and Akamai Plan 1 '(unconfirmed)'); the headline's 'up to' qualifies only the amount chip.",
+   "smallest_fix": "Key the desk basis on both Nscale event ids (add the S-1 event id to the metrics.compute row, or let extractChips add 'up to' when the event summary says 'up to about $' before the compute figure), rebuild."
   }
  ],
  "non_blocking": [
   {
    "id": "N-2",
-   "where": "Judge by_mark and rationale vs Model tab 'What each mark requires' and Thesis at-price table",
-   "issue": "The verdict now defines its 'adjusted base' of $1.26T in rationale 3 (engine $1.19T, -10.6% SBC as a cost, +8.9% date roll, +$100B net cash) and quotes -23% / +19% / +59%; I reproduce all of it. The Model tab and the Thesis at-price text still show the unadjusted $1.19T and -19% / +26% / +68%, so a reader sees two distances on one page with no bridge row.",
-   "suggestion": "Add an 'adjusted base value' row with the three adjustments to the Model tab and name the basis in each by_mark 'why'."
-  },
-  {
-   "id": "N-3",
-   "where": "Judge by_mark: Series H 'plan revenue less 9% to 13%'; secondary '9% to 17% beat'; IPO '26% to 42% beat'",
-   "issue": "I reproduce -13% (model basis) and -16% (adjusted basis) for Series H, +17% and +13% for the secondary mark, +41% and +22% for the IPO mark depending on method; the 9% and 26% ends are not reproducible from the file.",
-   "suggestion": "State the method (whole-path rescale vs growth shift, adjusted or not) next to each range."
+   "where": "Judge by_mark and rationale 3 against the Model tab 'What each mark requires' and the Thesis at-price text",
+   "issue": "The verdict now names its basis in every by_mark 'why' (adjusted base $1.26T = engine $1.19T, -10.6% for SBC as a cost, +8.9% date roll, +$100B net cash; I reproduce all of it and the -23% / +19% / +59%), but the Model tab and the Thesis at-price text still show the unadjusted $1.19T and -19% / +26% / +68%, so a reader sees two distances on one page with no bridge row.",
+   "suggestion": "Add an 'adjusted base value' row with the three adjustments to the Model tab."
   },
   {
    "id": "N-5",
-   "where": "Overview chart 'Capital raised by year' (caption 'incl. converted notes') and tile 'Equity raised (ex-debt) $124B'",
-   "issue": "Residual. The tile chip now reads 'incl. $10.0B convertible notes' (fixed). The chart caption still says 'incl. converted notes', which Amazon's 10-Q contradicts (notes still outstanding at Jun 30 2026, $97.9B fair value, convert on an IPO), and the strict priced-equity figure ($113.5B in capital_summary) is still not shown.",
+   "where": "Overview chart 'Capital raised by year' caption",
+   "issue": "The caption still says 'incl. converted notes' (the tile chip now says 'incl. $10.0B convertible notes'). Amazon's 10-Q says the notes are still outstanding at Jun 30 2026 ($97.9B fair value) and convert on an IPO, so 'converted' is wrong; the strict priced-equity figure ($113.5B in capital_summary) is still not shown.",
    "suggestion": "Caption 'incl. convertible notes, still notes until an IPO'; show $113.5B as the strict figure."
   },
   {
    "id": "N-6",
-   "where": "Timeline events evt-20240701-pb-series-d-1-2b-21b, evt-20220429-pb-series-b-980m-reconcile, evt-20250502-employee-buyback-61-5b; metrics.rounds",
-   "issue": "Residual. Series B and Series D now carry DISPUTED in the Overview chart and table (verified in the UI logic and metrics.rounds). Still open: the two PitchBook events stay HIGH (T2) while the ledger marks Series B and D MISMATCH/DISPUTED, and evt-20250502 'run-rate $1.4B' stays MEDIUM against a ledger MISMATCH ($3B at May's end); ledger verdicts do not flow back into event confidence. The Amazon $54B point is now part of B-3.",
-   "suggestion": "Write the ledger verdict into the linked events (DISPUTED chip)."
+   "where": "Overview chart and table 'Post-money valuation by round' (metrics.rounds); Timeline events evt-20240701-pb-series-d-1-2b-21b, evt-20220429-pb-series-b-980m-reconcile, evt-20250502-employee-buyback-61-5b",
+   "issue": "The chart plots PitchBook rounds that the record itself disputes or demotes, and the DISPUTED state is computed in code but never drawn: the tooltip and the table view show only label and value. The Amazon notes point ($54.0B, label 'PB 6th round') and Series A ($461M) are plotted as post-money while their events now read 'Reference mark (not a priced round)' and the ledger says no valuation was stated for the notes. Series B and D are MISMATCH in the ledger, yet the two PitchBook events stay HIGH and evt-20250502 'run-rate $1.4B' stays MEDIUM against a ledger MISMATCH. Downgraded from B-3: nothing relies on the point and the label names PitchBook, but it contradicts the drawer.",
+   "suggestion": "Draw the flag (hollow marker plus 'DISPUTED: no stated valuation' in the label) or leave non-priced rounds out of the post-money series; write the ledger verdict into the linked events."
   },
   {
    "id": "N-8",
-   "where": "Overview IPO tile chip and sub-line ('timing disputed: Oct vs Nov', 'Nasdaq')",
-   "issue": "Residual. The status pill on every tab now reads 'listing timing disputed: Oct, then Nov or after the midterms' (fixed). The IPO tile still says 'timing disputed: Oct vs Nov' and prints 'Nasdaq' without '(reported)' although it rests on Bloomberg citing a person familiar (Sep 13).",
+   "where": "Overview IPO tile chip and sub-line",
+   "issue": "The status pill now reads 'listing timing disputed: Oct, then Nov or after the midterms' (fixed), but the IPO tile still says 'timing disputed: Oct vs Nov' and prints 'Nasdaq' without '(reported)' although it rests on Bloomberg citing a person familiar (Sep 13).",
    "suggestion": "Reuse the pill wording on the tile; 'Nasdaq (reported)'."
   },
   {
    "id": "N-10",
-   "where": "Network tab; Agents floor; Compute charts; Sources ledger RE-DERIVED column",
-   "issue": "Residual polish after a3475a0 and a9cb82f. Fixed: time axes now read 'Jan 2024' and so on, the Network ROLE column is complete, labels are limited to 24. Still visible at HEAD: Network labels still touch at a few nodes (Amazon / Morgan Stanley / Notion near the top; Microsoft / US partner / Blackstone near the bottom), 'Alphabet (Google)' is clipped at the left edge, the public-companies table header reads 'EVEN' (frame 282 px, content 295 px) and 'Salesforce' breaks mid-word; Agents-floor sign bubbles at the top row are still overprinted by 'NEW' tags; the Compute bar chart still prints '$0K up to or unconfirmed' for AMD, Zerra DC and CoreWeave and clips '$161B contracted / $161' at the card edge.",
-   "suggestion": "Polish only; widen the Network table frame or shorten the header to 'Ev.'; print '$0 contracted' or hide zero rows; clip-safe label placement."
+   "where": "Network tab; Agents floor; Compute bar chart",
+   "issue": "Polish left after the fixes: Network labels still touch at a few nodes (Amazon / Morgan Stanley / Notion near the top), 'Alphabet (Google)' is clipped at the left edge, the public-companies table is 295 px wide in a 282 px frame so its last header reads 'EVEN', and 'Salesforce' breaks mid-word; Agents-floor sign bubbles on the scout row are still overprinted by 'NEW' tags; the Compute bar chart still prints '$0K up to or unconfirmed' for AMD, Zerra DC and CoreWeave and clips '$161B contracted / $161B' at the card edge. Fixed: time axes, the ROLE column, label count, '[object Object]'.",
+   "suggestion": "Widen the Network frame or shorten the header; hide zero rows or print 'no amount disclosed'; clip-safe label placement."
   },
   {
    "id": "N-12",
-   "where": "Sources tab audit (G11 WARN)",
-   "issue": "Only 49% of the 47 audited events are fully supported (100% on the core fact). The same label errors I found in B-3 exist in unsampled events, so the 8 corrections do not generalize.",
-   "suggestion": "Run a second audit pass over events with amount, post-money or run-rate fields and apply the fix by rule."
+   "where": "Sources tab audit (gate G11 WARN) and the automatic R-rules",
+   "issue": "Only 49% of the 47 audited events are fully supported (100% on the core fact); G11 stays WARN. The fix is now applied by rule (R-VAL 22, R-AMT 10, R-PROJ 8 corrections), but the new rule's false positive on Series H (B-7) shows a rule change needs a check against the anchor rounds before it ships.",
+   "suggestion": "Keep G11 visible; add the anchor-round check from B-7; run a second audit pass on events with amount, post-money or run-rate fields."
   },
   {
    "id": "N-15",
-   "where": "Open questions I could not source",
-   "issue": "(a) Reuters Breakingviews Sep 29 says '40% gross margin last year': I could not open it to see whether the prospectus states a margin, which would contradict 'No GAAP margin is public'. (b) I found no 'equalization ruling' in any public source; if one exists it is not in the record the desk cites.",
+   "where": "Open questions I could not source (disclosed on the Sources tab in my F6 and F7 rows)",
+   "issue": "(a) Reuters Breakingviews Sep 29 says '40% gross margin last year': I could not open it to see whether the prospectus states a margin, which would contradict 'No GAAP margin is public'. (b) I found no public 'equalization ruling' for the 39.75% haircut; if one exists it is not in the record the desk cites. Both are questions, not findings.",
    "suggestion": "Ask the desk for the origin and date of the 39.75% ruling; open the Breakingviews piece."
   },
   {
-   "id": "N-16",
-   "where": "Thesis bear claim 7, Judge unresolved list: 'FTC probe (Sep 30, single source)'",
-   "issue": "By the evening of Sep 30 the Bing News feed lists the FTC probe from CNBC, Reuters, USA Today and others (headlines only), and Crypto Briefing (opened) says Reuters cites 'a senior agency official' with no formal FTC statement. 'Single source' in the Thesis and Judge text may be stale, but it is still one official-source chain, not a filing. Pass 2 (WebSearch, my second of four; snippets only, none opened): the same story is carried on Sep 30 by The Globe and Mail (https://www.theglobeandmail.com/business/article-ftc-opens-probe-into-openai-anthropic-and-other-ai-giants/), Detroit News (https://www.detroitnews.com/story/tech/2026/09/30/ftc-probe-ai-anthropic-openai/92021127007/), BNN Bloomberg (https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai/), Yahoo, MSN and Android Headlines, reporting Civil Investigative Demands to OpenAI, Anthropic and METR. evt-20260930-ftc-probe-anthropic-openai is HIGH with 1 distinct outlet and the 'likely one reporting chain' chip, while Thesis bear claim 7 and the Judge's unresolved list still say 'single source'. The record, the chip and the thesis text disagree with each other.",
-   "suggestion": "Open the CNBC and Reuters pieces, update the event's corroboration, and say 'Reuters citing a senior FTC official, not an FTC release'. Add the syndicating outlets to the event as corroboration and say 'official-source chain, widely syndicated' in the thesis text; or keep the event at MEDIUM."
+   "id": "N-26",
+   "where": "Sources tab 'Tier ladder' paragraph; docs/ARCHITECTURE.md line 45; docs/METHODOLOGY.md line 16; scripts/merge.py merge_cluster()",
+   "issue": "The text says 'An event inherits the tier of its weakest load-bearing source', but merge_cluster() sorts the clustered findings by tier and takes the best one as primary (members[0]), so an event shows the best tier among the agents' findings and the corroboration list carries the rest. A reader who trusts the sentence will over-read a T1 tag on an event whose other figures rest on T2 or T3 sources.",
+   "suggestion": "Reword to 'the tier of the best source among the findings; corroboration and weaker sources are listed beside it', or implement weakest-of-load-bearing."
   },
   {
-   "id": "N-17",
-   "where": "Judge verdict text on the Thesis tab (rationale, what_flips, by_mark)",
-   "issue": "The verdict sentences carry no event ids; traceability runs through the bull and bear claims above and the ids on the 8 thesis-breakers. Rationale 1 reads 'and 1 of 1,810 above $50B, Anthropic's FY2026 base' (it means: in the above-$50B size class, Anthropic's FY2026 base, 1 of 1,810 five-year periods reached 30%). I checked the counts against the Base Rate Book p.32 (4,472 and 19 above $25B; 1,810 and 1 above $50B) and they match.",
-   "suggestion": "Add event_ids to each rationale and by_mark item and reword the sentence."
+   "id": "N-27",
+   "where": "Timeline chips and Sources tile: TeraWulf card, Reuters draft card, 'Multi-outlet events' sub-label",
+   "issue": "Small leftovers from the label fixes. The TeraWulf lease card (Jul 6, T1 HIGH) now prints 'up to $19.0B' because the desk's free-text basis contains 'up to ~$33B with both renewals', while the Compute tab and the row say contracted initial-term revenue of $19.0B (an over-hedge, the opposite error). The Reuters draft-prospectus card still shows 'reference mark $2.00T' because the gate regex matches 'IPO' although its summary names no valuation. The Sources sub-label '74 likely one reporting chain' counts all flagged events, 39 of which have one outlet, not 74 of the 349; the ledger Outlets column still prints 4 to 12 on single-chain rows (the row note caveats it).",
+   "suggestion": "Match 'up to' only at the start of the desk basis or use an explicit flag; tighten the reference-mark gate to a number in the summary; say 'of which 35' in the sub-label."
   },
   {
-   "id": "N-18",
-   "where": "Judge rationale 3 and by_mark secondary: call bands",
-   "issue": "The bands are LEAN BULLISH up to $1.07T (85% of the $1.257T adjusted base), NEUTRAL to $1.6T (127%), LEAN BEARISH to $1.8T, BEARISH above. They are set from single-variable cases, not symmetrically around the base, so a mark 19% above the adjusted base ($1.5T) is NEUTRAL while one 15% below is only LEAN BULLISH. The verdict says the bands come from 'single-variable values', not odds; an IC will ask why the neutral zone leans upward.",
-   "suggestion": "Say in one sentence why the neutral zone sits above the base value (e.g. bull-tail asymmetry or plan beats), or make the bands symmetric."
+   "id": "N-28",
+   "where": "Judge rationale 2 and by_mark Series H (growth needed after the plan); Thesis 'What would flip it'",
+   "issue": "'16% a year (model basis) or 11% (adjusted basis) for 2029-2030' holds only with training and capex scaled with revenue (I get 16.2% and 11.4%); with training and capex held at plan dollars it is 20.8% and 18.2%, at the top of the AWS 13% to 20% range the sentence compares it with. The FY2028 plan-test ends in rationale 4 do say 'held' or 'scaled'; this one does not. The what_flips items carry event ids in thesis.json, but the tab draws none.",
+   "suggestion": "Add '(costs scaled)' to the 16% and 11%, or quote both treatments; render what_flips_ids like the rationale ids."
   },
   {
-   "id": "N-19",
-   "where": "Model tab table 'Income statement and cash flow build': 2024*/2025* rows 'Cost of revenue' ($749M, $2.8B), 'Gross profit' (-$363M, $1.8B), 'Gross margin' (-94%, 40%)",
-   "issue": "These three rows render upright like reported figures, but the legend names only revenue and operating loss as press-reported from the leaked draft. The margins come from The Information (T3, single outlet, 'paying users only' scope; the FY2024 -94% event evt-20251104-information-gross-margin-path-to-77pct is DISPUTED); FY2025 40% is The Information Jan 21 with a Breakingviews snippet (unopened by me) attributing 40% to the prospectus. Cost of revenue and gross profit are arithmetic from them (revenue x (1 - margin)). The source-and-basis note under the 2026 gross-margin slider says so; the table legend does not.",
-   "suggestion": "Extend the legend ('gross margin: The Information, T3, paying-user scope; cost of revenue and gross profit derived from it') or give the three rows a third style."
+   "id": "N-29",
+   "where": "Overview tile 'Last post-money valuation' and the post-money chart points",
+   "issue": "Clicking the first tile opens nothing, and so does clicking a chart point, because none of the 23 rows in metrics.rounds carries an event_id (checked at cd50680, 6fd1ca6 and HEAD). My pass-2 'all eight tiles are clickable' was read from the code, not clicked; the other seven tiles open an event or a tab. The dead link is also where a reader would have found the B-7 contradiction.",
+   "suggestion": "Set event_id on the rounds (Series H to evt-20260528-series-h-compute-agreements-memory-partners, and so on)."
   },
   {
-   "id": "N-20",
-   "where": "Model tab card 'Margin path, 2026E-2030E' subtitle (assets/app.js line 622)",
-   "issue": "Stale label: the subtitle still reads '... 2024A-2025A in the table' while the table columns are now '2024*/2025*'. 'A' is the actual-label B-4 removed.",
-   "suggestion": "'2024*-2025* in the table'."
+   "id": "N-30",
+   "where": "dist/artifact.html",
+   "issue": "The single-file artifact was built at 22:39Z and predates commit 0462e30 (the Independent certification card and the certification.json loader in assets/app.js); publishing it would ship a page without the certification card.",
+   "suggestion": "Rebuild with scripts/build_artifact.py after the last app.js and data change, including after the B-7 fix."
   },
   {
-   "id": "N-21",
-   "where": "Timeline chip 'likely one reporting chain' vs confidence; Sources tile 'Multi-outlet events'; ledger ORIGINS column",
-   "issue": "Mixed messages after the B-2 fix. 11 events whose primary source is not T1 are HIGH while flagged single-chain (evt-20250530-run-rate-3b, evt-20260326-claude-mythos-leak, evt-20260331-claude-code-source-code-leak-2, evt-20260512-secondary-market-warning, evt-20260623-menlo-3b-fund, evt-20260814-q2-2026-rev-11-5b-first-report, evt-20260928-prospectus-risk-factors-80-of-261-pages, evt-20260928-factbox-executives-board-ltbt-trustees, evt-20260929-prospectus-rogue-ai-agents-legal-risk, evt-20260929-founder-llc-class-f-share-50-1pct-vote, evt-20260930-ftc-probe-anthropic-openai), and the drawer says 'count as one confirmation'. The Overview Q2 tile reads 'T3 HIGH' because HIGH rests on a Fortune (T2) snapshot of the draft while the primary citation is a T3 summary of Bloomberg; it is defensible (two chains: investor documents on Aug 14, draft prospectus on Sep 29) but reads oddly. merge.py caps HIGH only when no T1/T2 origin exists. The Sources sub-label '74 likely one reporting chain' counts all flagged events (39 of them have one outlet), not 74 of the 349 (35). Cards still print '+10 corroborating' beside the chain chip, and the ledger ORIGINS column still prints 4 to 12 on single-chain rows (the row note caveats it).",
-   "suggestion": "Require two T1/T2 origins, or a T1 primary, for HIGH when the chain chip is set; change the sub-label to 'of which 35'; show 'distinct outlets' instead of '+N corroborating' on flagged cards; rename the column 'outlets'."
-  },
-  {
-   "id": "N-22",
-   "where": "Sources tab re-derivation ledger, RE-DERIVED column (assets/app.js compactJson)",
-   "issue": "'[object Object]' is printed in 9 cells at HEAD (1 at cd50680). compactJson() joins arrays with x.join('/'), so arrays of objects and nested objects print as '[object Object]': the Amazon notes row ('tranches [object Object]/[object Object]/...') and the equity-total MISMATCH row ('equity only range [object Object] ... components [object Object]/...'), the row behind the Overview 'disputed: independent check $124B to $140B' chip. Introduced when a3475a0 switched the cells to rederived_obj.",
-   "suggestion": "Recurse into objects and arrays of objects, or print scalar fields only."
-  },
-  {
-   "id": "N-23",
-   "where": "Event drawer 'Corrected after audit'; Timeline chips 'reference mark' and 'projected run-rate'",
-   "issue": "Label nits. The drawer prints 'R-VAL (audit null)'. The Aug 14 Q2-revenue card shows 'reference mark $965B' and the Sep 28 Reuters-draft card shows 'reference mark $2.00T' although neither summary mentions a valuation (they come from another agent's other.* fields). SemiAnalysis's May 2 'ARR above $44B' (T4 LOW) is labelled 'projected run-rate $44.0B' although it estimates the current run-rate.",
-   "suggestion": "Drop 'audit null'; show a reference mark only when the summary names it; say 'estimated run-rate' for analyst estimates."
-  },
-  {
-   "id": "N-24",
-   "where": "data/certify.json gate G15 and scripts/shot.cjs",
-   "issue": "The UI smoke gate passes ('clean', generated 21:46:16Z) although B-6 was live: it checks console errors and document-level overflow only, so a 15,457 px table inside a scrolling frame passes.",
-   "suggestion": "Add per-table checks (scrollWidth <= clientWidth + 2 on .tablewrap) and a panel-height delta against the previous run."
-  },
-  {
-   "id": "N-25",
-   "where": "Overview card 'Signs raised by the desk'",
-   "issue": "The card shows the newest eight flags in the log with no resolved state, and at HEAD all eight were my first-pass Certifier flags, several already fixed (for example 'Still open at HEAD: Model tab 2024A/2025A labelling (B-4) ...'), so stale flags read as current. In this output I appended the resolution to each fixed flag and added the current ones last.",
-   "suggestion": "Give flags a resolved state, or show only flags newer than the last 'verify' row of the same agent."
+   "id": "N-31",
+   "where": "README.md 'What the desk concluded', second bullet",
+   "issue": "'Every FY2024/FY2025 financial is press-reported from a leaked draft prospectus' is slightly broad: the 2024-25 gross margin, cost of revenue and gross profit on the Model tab come from The Information (T3, paying-user scope), as the Model legend now says. All README numbers I checked reproduce (scenario table, 262/420/568, 72 match and 33 noted and 6 partial and 7 mismatch and 3 untraceable, 48 audited events).",
+   "suggestion": "Say 'revenue, operating loss and compute spend are press-reported from a leaked draft; gross margin is The Information (T3)'."
   }
  ]
 }

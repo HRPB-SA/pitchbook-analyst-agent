@@ -344,7 +344,7 @@
   ],
   "extracted": {
    "amount_usd_m": 124.0,
-   "valuation_post_usd_m": null,
+   "valuation_post_usd_m": 461.0,
    "valuation_pre_usd_m": 337.0,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -510,8 +510,7 @@
     "pitchbook_deal_id": "173059-39T",
     "pb_shares_acquired": 2416584,
     "pb_total_investors": 7,
-    "pb_percent_acquired": 26.9,
-    "valuation_reference_usd_m": 461.0
+    "pb_percent_acquired": 26.9
    }
   },
   "confidence": "HIGH",
@@ -528,24 +527,7 @@
   ],
   "distinct_outlets": 5,
   "independent_sources": 5,
-  "single_chain_suspected": false,
-  "corrections": [
-   {
-    "id": "R-VAL",
-    "audit_id": null,
-    "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
-    "changed": {
-     "extracted.valuation_post_usd_m": {
-      "was": 461.0,
-      "now": null
-     },
-     "extracted.other.valuation_reference_usd_m": {
-      "was": null,
-      "now": 461.0
-     }
-    }
-   }
-  ]
+  "single_chain_suspected": false
  },
  {
   "id": "evt-20211201-hhh-assistant-paper",
@@ -9431,7 +9413,7 @@
   ],
   "extracted": {
    "amount_usd_m": 1200.0,
-   "valuation_post_usd_m": null,
+   "valuation_post_usd_m": 21000.0,
    "valuation_pre_usd_m": 19800.0,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -9516,8 +9498,7 @@
     "pb_total_investors": 43,
     "pb_new_investors": 38,
     "press_size_usd_m": 750,
-    "press_post_usd_m": 18400,
-    "valuation_reference_usd_m": 21000.0
+    "press_post_usd_m": 18400
    }
   },
   "confidence": "HIGH",
@@ -9529,24 +9510,7 @@
   "merged_ids": [],
   "distinct_outlets": 4,
   "independent_sources": 4,
-  "single_chain_suspected": false,
-  "corrections": [
-   {
-    "id": "R-VAL",
-    "audit_id": null,
-    "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
-    "changed": {
-     "extracted.valuation_post_usd_m": {
-      "was": 21000.0,
-      "now": null
-     },
-     "extracted.other.valuation_reference_usd_m": {
-      "was": null,
-      "now": 21000.0
-     }
-    }
-   }
-  ]
+  "single_chain_suspected": false
  },
  {
   "id": "evt-20240716-android-app",
@@ -44642,7 +44606,7 @@
   ],
   "extracted": {
    "amount_usd_m": 65000.0,
-   "valuation_post_usd_m": null,
+   "valuation_post_usd_m": 965000.0,
    "valuation_pre_usd_m": 900000.0,
    "revenue_run_rate_usd_m": 47000.0,
    "revenue_period_usd_m": null,
@@ -44986,8 +44950,7 @@
      "GIC",
      "ICONIQ",
      "XN"
-    ],
-    "valuation_reference_usd_m": 965000.0
+    ]
    }
   },
   "confidence": "HIGH",
@@ -45010,24 +44973,7 @@
   ],
   "distinct_outlets": 5,
   "independent_sources": 5,
-  "single_chain_suspected": false,
-  "corrections": [
-   {
-    "id": "R-VAL",
-    "audit_id": null,
-    "reason": "A valuation on an event that is not a priced round is a reference mark (last round price, reported IPO target or secondary indication), not this event's post-money. Moved to other.valuation_reference_usd_m.",
-    "changed": {
-     "extracted.valuation_post_usd_m": {
-      "was": 965000.0,
-      "now": null
-     },
-     "extracted.other.valuation_reference_usd_m": {
-      "was": null,
-      "now": 965000.0
-     }
-    }
-   }
-  ]
+  "single_chain_suspected": false
  },
  {
   "id": "evt-20260529-samsung-skhynix-micron",
