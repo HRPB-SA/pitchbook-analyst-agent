@@ -17,6 +17,7 @@ cat data/compute.json | head -c 6000
 Event ids you cite must exist (`q.py --ids` prints `# unknown id` otherwise). Tiers T1 primary … T5 social; anything DISPUTED/VERIFY stays flagged in your prose. Anthropic revenue is GROSS of cloud-partner resale, OpenAI's is NET;
 run-rate is not recognized revenue; "up to" is not contracted; debt is not equity; PitchBook TTM 4Q2026/4Q2027 fields are forward projections.
 Open methodology conflict (do not resolve silently): the desk's canonical gross-to-net equalization haircut is 39.75%, but the record's own evidence (leaked prospectus platform fees about 7.6% of FY2025 revenue, PitchBook 6-10%) is far lower. Show how each side of your case and the verdict change under both, and say which you rely on and why.
+The revenue analyst (data/topics.json, slug revenue) found that 39.75% reproduces exactly the haircut that ties Anthropic's $965B over $47B to OpenAI's $852B over $25B at 34.1x: it looks solved from those marks, not measured, so it cannot count as evidence that the two multiples are "equal". At 39.75% Q2 2026 would imply about $4.6B paid to partners against The Information's $1.9B forecast for all of 2026.
 
 ## analyst-bull and analyst-bear (run independently, in parallel; never read each other's output)
 Write the strongest case FOR (bull) or AGAINST (bear) owning Anthropic at the reference prices, with the same evidentiary standard. A manufactured case is worthless: if your side is weak on a point, say so in one line.
