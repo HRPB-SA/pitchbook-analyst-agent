@@ -296,11 +296,13 @@ Gate checklist (asserted before "done"):
 
 ## 10. Refresh path
 
-- `scripts/refresh.py` (Wave 4) re-runs the roster briefs against the Claude API with web search,
-  appends to `agent_log.json`, and re-merges. Intended cadence: weekly until the public S-1, then
-  on every filing/event. Can be wired to a Claude Code Remote routine on request.
-- On the public S-1: `desk-s1` re-runs against the primary document and every T3 prospectus-leak
-  figure is re-tiered to T1 or cut.
+There is no automated refresh job (an earlier plan for `scripts/refresh.py` was not built). The refresh is manual and repeatable:
+
+1. Re-dispatch the research desks you want refreshed with their briefs (`agents/briefs/`), one Claude Code subagent per desk, writing to `agents/outputs/<agent>.json`.
+2. `python3 scripts/merge.py` (dedupe, metrics, entities, agent log, corrections), then `make_claims.py` and the re-derivers, `reconcile.py`, `sample_audit.py` (new sample), `model.py` after the Modeler, `build_analysis.py`, `certify.py`, `shot.cjs`.
+3. On the public S-1: re-run `desk-s1` against the primary document; every T3 leaked-prospectus figure is re-tiered to T1 or cut, and the model's FY2024/FY2025 columns lose their press-reported label only when the filing confirms them.
+
+Suggested cadence: on the public S-1, on the price range, and after Q3 results.
 
 ---
 
@@ -309,7 +311,7 @@ Gate checklist (asserted before "done"):
 - **Single-file static dashboard over a framework app.** Zero build step, deployable anywhere,
   Artifact-publishable. Tradeoff: no server-side auth; the data is public anyway.
 - **Real agent log over a simulated one.** The Agents tab replays what actually happened this
-  session; a Live mode covers future refresh runs. Tradeoff: the first replay is a fixed recording.
+  session; the Live toggle polls `data/agent_log.json`, so a later re-run that rewrites that file shows up. Tradeoff: the first replay is a fixed recording.
 - **Model in the browser (JS) with a Python twin.** Sliders need client-side recompute; the Python
   script is the auditable reference and produces the shipped `model.json`. An `.xlsx` export is a
   follow-on, not in this pass.
