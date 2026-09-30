@@ -1,0 +1,766 @@
+{
+ "agent": "analyst-topic-people",
+ "role": "Topic Analyst — People & organization",
+ "started": "2026-09-30T18:19:05Z",
+ "finished": "2026-09-30T18:41:07Z",
+ "topic": {
+  "slug": "people",
+  "title": "People, board and headcount",
+  "one_liner": "No recorded C-suite exits in 12 months, yet control is redrawn: seven co-founders would get 50.1% of votes on ~2% stakes; the Trust elects 4 of 7 seats.",
+  "key_metrics": [
+   {
+    "label": "Latest headcount (DISPUTED after Jan 2026)",
+    "value": "About 2,500 worldwide on Jan 30, 2026 (SFist, T3, single outlet). Mar 2026 T4 estimates: about 3,000 or about 5,000. No T1 or T2 count after Dec 2025.",
+    "event_id": "evt-20260130-sf-300-howard-lease"
+   },
+   {
+    "label": "Headcount growth multiple",
+    "value": "4.6x (base about 500), 7.7x (about 300), 11.5x or more (under 200): 2,300 in Dec 2025 (Fortune, T2) over a DISPUTED late-2023 base, about 24 months apart.",
+    "event_id": "evt-20251204-fortune-headcount-burn-breakeven"
+   },
+   {
+    "label": "Revenue per employee (two bases, not mixed)",
+    "value": "Gross run-rate: $3.9M at end-2025 ($9B, company, over 2,300) and $5.6M on Feb 12, 2026 ($14B over 2,500 from Jan 30). Recognized FY2025: $2.0M ($4.6B per leaked prospectus over 2,300).",
+    "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate"
+   },
+   {
+    "label": "C-suite changes, last 12 months",
+    "value": "3 seats changed, all T1 (CTO Oct 2025, CPO Jan 2026, new Chief Global Affairs Officer Aug 2026). 1 more is T4 only (legal). 0 exits on record.",
+    "event_id": "evt-20260804-cuellar-chief-global-affairs-officer"
+   },
+   {
+    "label": "Board size",
+    "value": "6 directors plus 3 trustees (Reuters factbox, Sep 28, T2). Post-IPO design: 7 seats, Trust elects 4, Class F and Class A holders elect 3.",
+    "event_id": "evt-20260928-prospectus-board-execs"
+   },
+   {
+    "label": "Founder vote at IPO",
+    "value": "50.1% of votes via one Class F share. About 2% equity each, about 14% combined (derived). Holds while 3 of 7 keep a minimum stake.",
+    "event_id": "evt-20260928-founder-llc-class-f"
+   }
+  ],
+  "what": [
+   {
+    "t": "Headcount points are few and partly disputed. About 40 staff at the Apr 29, 2022 Series B (T1). Late 2023 reads under 200 or about 500 in two Fortune pieces two days apart, and about 300 per Crunchbase (T3). About 2,300 in Dec 2025 (Fortune, T2), about 2,500 on Jan 30, 2026 (SFist, T3). March 2026 aggregator estimates split at about 3,000 and about 5,000 (T4).",
+    "e": [
+     "evt-20220429-series-b",
+     "evt-20231220-menlo-750m-talks",
+     "evt-20251202-fortune-headcount",
+     "evt-20251204-fortune-headcount-burn-breakeven",
+     "evt-20260130-sf-300-howard-lease"
+    ]
+   },
+   {
+    "t": "Rahul Patil joined as CTO (Oct 7, 2025, T1; TechCrunch Oct 2) and Sam McCandlish became Chief Architect. On Jan 13, 2026 Mike Krieger moved from CPO to co-lead Labs and Ami Vora took Product (T1). Tino Cuéllar became first Chief Global Affairs Officer on Aug 4 (T1). Reuters' Sep 28 factbox lists eight executives: four founders, four hired since May 2024. The record shows no C-suite exits.",
+    "e": [
+     "evt-20251007-patil-cto",
+     "evt-20251002-rahul-patil-cto",
+     "evt-20260113-anthropic-labs-krieger",
+     "evt-20260804-cuellar-chief-global-affairs-officer",
+     "evt-20260928-prospectus-board-execs",
+     "evt-20260826-legal-leadership"
+    ]
+   },
+   {
+    "t": "Six directors by appointer: founders Dario and Daniela Amodei, investors' seat Yasmin Razavi, Trust Reed Hastings (May 28, 2025) and Vas Narasimhan (Apr 14, 2026), unstated Chris Liddell (Feb 13, 2026). The board grew from four in May 2024 to seven on Apr 14, 2026, a Trust majority (T1). Trust-appointed Jay Kreps reportedly left May 22 (T5, T4 only). Trustees fell to three when Cuéllar left Aug 4.",
+    "e": [
+     "evt-20240529-jay-kreps-board",
+     "evt-20250528-reed-hastings-board",
+     "evt-20260213-chris-liddell-board",
+     "evt-20260414-narasimhan-board",
+     "evt-20260522-kreps-leaves-board",
+     "evt-20260121-ltbt-cuellar-appointed",
+     "evt-20260709-bernanke-ltbt",
+     "evt-20260804-cuellar-chief-global-affairs-officer",
+     "evt-20260928-prospectus-board-execs"
+    ]
+   },
+   {
+    "t": "Reuters (Sep 28, T2) reviewed a leaked draft prospectus. A Founder LLC of seven co-founders directs one Class F share with 50.1% of votes on key matters. The Trust elects four directors; Dario Amodei, Daniela Amodei and one other are elected by Class F and Class A holders. The Information, via TechCrunch (Sep 25), adds about 2% each and a three-of-seven minimum-stake test. EDGAR shows no public S-1.",
+    "e": [
+     "evt-20260928-founder-llc-class-f",
+     "evt-20260925-founders-voting-control",
+     "evt-20260818-supervoting-reported",
+     "evt-20260930-no-public-s1-on-edgar"
+    ]
+   },
+   {
+    "t": "Inbound: Jan Leike (May 2024), John Schulman (Aug 2024), Durk Kingma (Oct 2024), Neil Houlsby from DeepMind (Feb 2025), Andrej Karpathy (May 19, 2026), Dale Finlay from OpenAI (Sep 16, 2026). Schulman left after five months for Mira Murati's startup (T2 relay). Mrinank Sharma (Feb 9, T3) and Jacob Coxon (Sep 8, T2) resigned publicly. Jenny Wen to Cursor rests on a T4 tracker.",
+    "e": [
+     "evt-20240528-jan-leike-joins",
+     "evt-20240805-schulman-joins",
+     "evt-20241001-kingma-joins",
+     "evt-20250213-zurich-office-houlsby",
+     "evt-20260519-karpathy-joins",
+     "evt-20260916-singapore-office-plan",
+     "evt-20250206-schulman-leaves",
+     "evt-20260209-sharma-resigns",
+     "evt-20260908-coxon-resigns"
+    ]
+   },
+   {
+    "t": "Buyback on May 2, 2025: up to 20% of employee shares, $2M per person, two-year tenure, $56.09 a share at $61.5B (T3, single outlet). Tender planned Feb 4, 2026 at $350B pre-money (Bloomberg via aggregator, T3). May 12: Anthropic voided transfers on named secondary platforms (T2). Aug 27: staff may sell inside the IPO and lock-ups may run long (The Information, T4, VERIFY).",
+    "e": [
+     "evt-20250502-first-employee-buyback",
+     "evt-20260204-employee-tender-350b",
+     "evt-20260512-secondary-market-warning",
+     "evt-20260827-information-prospectus-after-labor-day-insider-sales"
+    ]
+   }
+  ],
+  "means": [
+   {
+    "t": "Revenue per head rose because run-rate outran hiring. Run-rate went from about $100M in Sep 2023 (T3, basis unstated) to about $9B at end-2025 (company, gross, T1), roughly 90x, while staff grew 4.6x to at least 11.5x on the disputed base. That is $0.2M-$0.5M per head in late 2023 and $3.9M at end-2025. Recognized FY2025 is $2.0M per head, as recognized revenue trails run-rate in a fast-growing year.",
+    "e": [
+     "evt-20231226-revenue-run-rate-projection",
+     "evt-20260406-google-broadcom-tpu-30b-runrate",
+     "evt-20251203-amodei-dealbook-revenue-guidance",
+     "evt-20251202-fortune-headcount",
+     "evt-20251204-fortune-headcount-burn-breakeven",
+     "evt-20260928-prospectus-leaked-reuters",
+     "evt-20231220-menlo-750m-talks"
+    ]
+   },
+   {
+    "t": "Control sits in two hands. After the IPO the Trust elects 4 of 7 seats. Founders hold 50.1% of votes through Class F, so on this reading they decide the other 3 seats and Class A holders cannot outvote them. Sitting trustees pick new ones with Anthropic, hold no equity, and four of five founding trustees left within 28 months. Post-IPO Class T amendment thresholds are not public.",
+    "e": [
+     "evt-20230919-long-term-benefit-trust",
+     "evt-20260928-founder-llc-class-f",
+     "evt-20250606-ltbt-fontaine",
+     "evt-20260121-ltbt-cuellar-appointed",
+     "evt-20260709-bernanke-ltbt",
+     "evt-20260804-cuellar-chief-global-affairs-officer"
+    ]
+   },
+   {
+    "t": "IPO-readiness hires came in a dated run: CFO Krishna Rao (May 21, 2024), Wilson Sonsini (FT, Dec 2, 2025), ex-Microsoft CFO Chris Liddell to the board (Feb 13, 2026), Novartis CEO Vas Narasimhan (Apr 14), confidential S-1 (Jun 1), Cuéllar (Aug 4), legal reshuffle (Aug 26, T4), Matt Clifford (Sep 7, T3). The record ties the policy hires to the Pentagon dispute, so the IPO signal is mixed.",
+    "e": [
+     "evt-20240521-krishna-rao-cfo",
+     "evt-20251202-ipo-prep-wilson-sonsini",
+     "evt-20260213-chris-liddell-board",
+     "evt-20260414-narasimhan-board",
+     "evt-20260601-confidential-draft-s1-submitted",
+     "evt-20260804-cuellar-chief-global-affairs-officer",
+     "evt-20260826-legal-leadership",
+     "evt-20260907-clifford-intl-affairs",
+     "evt-20260311-anthropic-institute-launch"
+    ]
+   },
+   {
+    "t": "Equity is both the retention lever and the exit risk. Series H ($965B post-money) is 15.7x the May 2025 buyback valuation and 2.6x the tender's pre-money ($900B against $350B). Stock also buys teams: Coefficient Bio, about 10 staff for a reported $400M all-stock, and Runhouse, share-based. The two recorded public resignations cite values, not pay.",
+    "e": [
+     "evt-20250502-first-employee-buyback",
+     "evt-20260204-employee-tender-350b",
+     "evt-20260528-series-h-roster",
+     "evt-20260403-coefficient-bio-acquisition",
+     "evt-20260428-runhouse-acquihire",
+     "evt-20260209-sharma-resigns",
+     "evt-20260908-coxon-resigns"
+    ]
+   }
+  ],
+  "implications": [
+   {
+    "t": "Hold revenue per head as provisional until the S-1 states headcount. Use $3.9M at end-2025 and $5.6M at Feb 2026, both gross run-rate. The 2,500 versus 5,000 split halves any 2026 figure: annualized Q2 recognized revenue of $46B is $18.4M per head at 2,500 and $9.2M at 5,000. The record has no Q2 headcount.",
+    "e": [
+     "evt-20260406-google-broadcom-tpu-30b-runrate",
+     "evt-20251204-fortune-headcount-burn-breakeven",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260130-sf-300-howard-lease",
+     "evt-20260928-prospectus-leaked-reuters"
+    ]
+   },
+   {
+    "t": "Treat control as two keys and flag it in both cases. The Trust holds a seat majority by design but has three trustees and, on the best reading, three seated directors today. Founders hold the votes, and the draft warns this could conflict with Class A holders' interests. Price no governance discount until the S-1 shows Class T amendment thresholds, the Class F minimum stake and any sunset.",
+    "e": [
+     "evt-20260928-founder-llc-class-f",
+     "evt-20260925-founders-voting-control",
+     "evt-20260414-narasimhan-board",
+     "evt-20260522-kreps-leaves-board",
+     "evt-20260213-chris-liddell-board"
+    ]
+   },
+   {
+    "t": "Rank key-person risk with Daniela Amodei first: Dario Amodei says his only direct report is his chief of staff and all other executives report to her (T3), and she chairs the board. Then Dario Amodei as policy voice, Jared Kaplan (CSO and Responsible Scaling Officer since Oct 2024), Jack Clark (Institute, Mar 11, 2026), Krishna Rao (runs the IPO) and Rahul Patil. Co-founder retention is seven of seven.",
+    "e": [
+     "evt-20260610-amodei-one-direct-report-org-structure",
+     "evt-20260928-prospectus-board-execs",
+     "evt-20241015-rsp-v2",
+     "evt-20260311-anthropic-institute-launch",
+     "evt-20260601-confidential-s1",
+     "evt-20251002-rahul-patil-cto",
+     "evt-20251202-fortune-headcount",
+     "evt-20260925-founders-voting-control"
+    ]
+   },
+   {
+    "t": "Carry employee supply as an unknown, not zero. The record has no lock-up length, no insider-sale size and no stock-compensation figure. Staff may sell inside the offering and lock-ups may exceed the norm (T4, VERIFY). Keep float and overhang as open inputs to the IPO-absorption case until the S-1 states them.",
+    "e": [
+     "evt-20260827-information-prospectus-after-labor-day-insider-sales",
+     "evt-20260930-no-public-s1-on-edgar",
+     "evt-20260204-employee-tender-350b"
+    ]
+   }
+  ],
+  "second_order": [
+   "If the Trust's fourth seat is vacant and Liddell counts as Trust-appointed, the Trust elects three of six today, not a majority. The S-1 board section must show the count. What is easy to miss: the record shows three self-selected trustees, one of whom became an executive, and no Anthropic statement of the split after Apr 14.",
+   "Two public resignations on safety grounds (Feb 9, Sep 8), the second 20 days before the leaked prospectus, bracket RSP v3.4 (Jul 8), which cut mandatory sharing of unredacted Risk Reports to at least 200 employees. The record shows no link. S-1 drafters must word key-personnel and dissent risk with care. Liquidity alone will not hold staff whose stated reason is values.",
+   "Staff who sold in the tender at $350B pre-money sold at about 39% of the May Series H pre-money, and the IPO is reported at $2T or more. Lock-up expiry, not the IPO, becomes the retention test. Anthropic must carry staff past that date; the record holds no vesting or refresh-grant data and names no outbound move to OpenAI.",
+   "Fortune's seven co-founders omit Ben Mann, whom Anthropic's Labs post calls a co-founder, and prospectus coverage does not list the seven. If Mann sits outside the Founder LLC, a Labs co-lead is outside the control bloc. The S-1's named Founder LLC members settle it.",
+   "Two UK appointments, Rishi Sunak (Oct 9, 2025) and Matt Clifford (Sep 7, 2026), drew conflict-of-interest questions, and Clifford stays ARIA chair until Nov 6. The D.C. Circuit upheld the FASCSA exclusion on Sep 25. A policy arm staffed between Aug 4 and Sep 7 may face related-party and adviser disclosure in the S-1."
+  ],
+  "watch": [
+   {
+    "item": "Public S-1 filed on EDGAR (none as of Sep 30)",
+    "by": "2026-10-31",
+    "threshold": "No filing by Oct 31 pushes the listing past the WSJ November target (Sep 18). Every item below is first read here."
+   },
+   {
+    "item": "S-1 employee count with an as-of date",
+    "by": "2026-10-31",
+    "threshold": "4,000 or more supports the T4 estimate of about 5,000; 3,000 or less supports the lean reading. Either sets revenue per head."
+   },
+   {
+    "item": "S-1 executive officers and executive compensation",
+    "by": "2026-10-31",
+    "threshold": "Whether Tom Brown (Chief Compute Officer), Jack Clark and the Labs co-leads are executive officers; the factbox as summarized lists eight and omits them. Any large equity award to Rao, Patil, Smith or Ciauri."
+   },
+   {
+    "item": "S-1 board section: seated Trust directors, Kreps exit, Liddell's appointer, successor for Cuéllar's trustee seat",
+    "by": "2026-10-31",
+    "threshold": "Four Trust-elected directors seated before pricing is a majority of 7; three of 6 is not. A fourth trustee named ends the three-person Trust. Any independent chair, lead director or audit committee chair, since Daniela Amodei is President and Board Chair."
+   },
+   {
+    "item": "Founder LLC and Class T terms, plus shareholder approval of the Class F structure",
+    "by": "2026-10-31",
+    "threshold": "Minimum stake per founder, any sunset, who can amend Class T, and whether the Series C investors' seat held by Yasmin Razavi survives. The approval date is not in the record."
+   },
+   {
+    "item": "Lock-up length and selling holders in the prospectus",
+    "by": "2026-11-30",
+    "threshold": "A lock-up longer than the market norm (The Information, T4, VERIFY), any employee shares sold inside the offering, and the size of insider sales."
+   },
+   {
+    "item": "Senior departures before pricing",
+    "by": "2026-11-30",
+    "threshold": "Any exit among the eight listed executives, the seven co-founders or the three trustees (none on record for 12 months), or a third public resignation on safety grounds."
+   },
+   {
+    "item": "Matt Clifford leaves the ARIA chair",
+    "by": "2026-11-06",
+    "threshold": "Date slips past Nov 6 or UK conflict-of-interest scrutiny escalates beyond the Labour MP's question (The Register, T3)."
+   }
+  ],
+  "house_view": "(a) Valuation-quality paradox: extends, cannot test; the slice adds a quality datapoint, $3.9M gross run-rate per head at end-2025, but the record has no peer headcount and the comparables table is empty. (b) Equalization ruling: extends; revenue per head inherits Anthropic's gross basis, which OpenAI contests (Apr 13, T2), so any peer comparison needs the same equalization first. (c) IPO absorption: extends; staff selling inside the offering and lock-up length are supply inputs with no figures in the record (T4, VERIFY). (d) Capital efficiency: extends; the record does not say whether tender purchases used company cash or new-round money, so equity raised may partly fund liquidity rather than operations. (e) Sector conventions: extends; founder super-voting precedents (Meta, Snap) do not map one-to-one here, where control is collective, stakes are about 2% each and a purpose Trust elects the seat majority.",
+  "uncertainties": [
+   {
+    "type": "data",
+    "note": "Headcount after Dec 2025 has no T1 or T2 source: 2,500 (T3, Jan), about 3,000 and about 5,000 (T4, Mar). The desk's canonical 5,000 for Apr 21 carries no URL. The late-2023 base is under 200, about 300 or about 500. Prospectus coverage opened reports no headcount.",
+    "what_would_change_it": "An S-1 employee count with an as-of date, or an Anthropic statement."
+   },
+   {
+    "type": "data",
+    "note": "Board and roster are not settled. Kreps's May 22 exit rests on T5 and T4 sources, and Liddell's appointing body is unstated; both decide whether the Trust kept a seat majority after Apr 14. Start dates for CLO Brian Israel, Chief People Officer Hannah Pritchett and Chief Brand and Communications Officer Sasha de Marigny are not in the record, so the count of 3 C-suite changes may be understated. The record also names no audit-committee chair, investor-relations head or chief accounting officer.",
+    "what_would_change_it": "Anthropic's board and leadership pages with dates, the S-1 board section, or a T2 report on Kreps."
+   },
+   {
+    "type": "interpretation",
+    "note": "The post-IPO balance of control is read from two accounts. Reuters gives seats and votes but not amendment thresholds, the Class F minimum stake, a sunset or the fate of the investor-elected seat. The third Class F and Class A seat is a founder seat per The Information and one unnamed director per Reuters. The 2% stakes come from one outlet relayed by TechCrunch. Which seven co-founders sit in the Founder LLC is not stated: Fortune's seven omit Ben Mann, and the factbox as summarized omits Tom Brown.",
+    "what_would_change_it": "The S-1 charter summary and the Founder LLC agreement."
+   },
+   {
+    "type": "forecast",
+    "note": "Employee supply at and after the IPO cannot be sized. Lock-up base rates are not in the record. The nearest comparable, SpaceX's June 2026 IPO, had no secondary component (The Information, T4). Here staff may sell inside the offering and lock-ups may run long (T4, VERIFY). Buyback and tender terms are single-source T3, and the tender's final size and take-up are headline-only.",
+    "what_would_change_it": "The S-1 sections on shares eligible for future sale and on equity plans."
+   },
+   {
+    "type": "interpretation",
+    "note": "Talent flow is selectively recorded. The record is built around Anthropic events, so named inbound hires with OpenAI ties (five) are over-covered and outbound moves under-covered. FREED, a T4 tracker, is sole source for Jenny Wen's move and a co-source for Kreps and Schulman's destination. Two public resignations are not an attrition rate.",
+    "what_would_change_it": "A turnover figure in the S-1 or alumni data from a second source."
+   }
+  ],
+  "evidence": [
+   "evt-20260928-founder-llc-class-f",
+   "evt-20260928-prospectus-board-execs",
+   "evt-20260925-founders-voting-control",
+   "evt-20251204-fortune-headcount-burn-breakeven",
+   "evt-20251202-fortune-headcount",
+   "evt-20260130-sf-300-howard-lease",
+   "evt-20260414-narasimhan-board",
+   "evt-20260522-kreps-leaves-board",
+   "evt-20260804-cuellar-chief-global-affairs-officer",
+   "evt-20251007-patil-cto",
+   "evt-20260113-anthropic-labs-krieger",
+   "evt-20260610-amodei-one-direct-report-org-structure",
+   "evt-20230919-long-term-benefit-trust",
+   "evt-20260709-bernanke-ltbt",
+   "evt-20260121-ltbt-cuellar-appointed",
+   "evt-20260213-chris-liddell-board",
+   "evt-20250502-first-employee-buyback",
+   "evt-20260204-employee-tender-350b",
+   "evt-20260827-information-prospectus-after-labor-day-insider-sales",
+   "evt-20260512-secondary-market-warning",
+   "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "evt-20251203-amodei-dealbook-revenue-guidance",
+   "evt-20231226-revenue-run-rate-projection",
+   "evt-20260928-prospectus-leaked-reuters",
+   "evt-20260413-openai-memo-gross-vs-net-arr",
+   "evt-20260212-series-g-30b-380b",
+   "evt-20260930-no-public-s1-on-edgar",
+   "evt-20260908-coxon-resigns",
+   "evt-20260209-sharma-resigns",
+   "evt-20250206-schulman-leaves",
+   "evt-20260519-karpathy-joins",
+   "evt-20240521-krishna-rao-cfo",
+   "evt-20251202-ipo-prep-wilson-sonsini",
+   "evt-20260826-legal-leadership",
+   "evt-20260907-clifford-intl-affairs",
+   "evt-20260403-coefficient-bio-acquisition",
+   "evt-20260428-runhouse-acquihire",
+   "evt-20260528-series-h-roster",
+   "evt-20260708-rsp-v34",
+   "evt-20241015-rsp-v2",
+   "evt-20260311-anthropic-institute-launch",
+   "evt-20251002-rahul-patil-cto",
+   "evt-20260601-confidential-draft-s1-submitted",
+   "evt-20260601-confidential-s1",
+   "evt-20250606-ltbt-fontaine",
+   "evt-20260818-supervoting-reported",
+   "evt-20260925-dc-circuit-denies-anthropic-petitions",
+   "evt-20251009-sunak-senior-adviser",
+   "evt-20260916-singapore-office-plan",
+   "evt-20220429-series-b",
+   "evt-20231220-menlo-750m-talks",
+   "evt-20260416-krieger-leaves-figma-board"
+  ]
+ },
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Read analyst_common.md in full. Slice: category people plus people, board and headcount fields on any event. Slug people."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "q.py --cat people 2021-01-01 to 2026-09-30: 55 events, read at headline level; notes read for every event relied on."
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "q.py --table people_moves: 46 rows (20 joined, 10 left, 9 board, 6 promoted, 1 advisor; 29 at T1, 1 at T5)."
+  },
+  {
+   "seq": 4,
+   "type": "search",
+   "text": "q.py --table board_history: no such table. The desk table is named board (8 rows); also read ltbt (8 trustees)."
+  },
+  {
+   "seq": 5,
+   "type": "flag",
+   "text": "Task names table board_history but the helper has no such table; used board and ltbt instead."
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "q.py --table headcount_desk (7 rows) and headcount (18 rows)."
+  },
+  {
+   "seq": 7,
+   "type": "flag",
+   "text": "headcount table mixes units: 6 of 18 rows are Anthropic staff counts; 12 are customer seat counts (Deloitte 470,000) or acqui-hire team sizes (Humanloop 13)."
+  },
+  {
+   "seq": 8,
+   "type": "found",
+   "text": "Baseline: about 40 employees at the Apr 29, 2022 Series B, T1.",
+   "event_id": "evt-20220429-series-b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai"
+  },
+  {
+   "seq": 9,
+   "type": "found",
+   "text": "About 300 in late 2023 sits inside a T2 event but is Crunchbase's estimate (T3).",
+   "event_id": "evt-20231220-menlo-750m-talks",
+   "url": "https://finance.yahoo.com/news/anthropic-raise-750-mln-menlo-235104282.html"
+  },
+  {
+   "seq": 10,
+   "type": "flag",
+   "text": "Late-2023 headcount DISPUTED: Fortune Dec 2 says under 200, Fortune Dec 4 says about 500, Crunchbase says about 300.",
+   "event_id": "evt-20251202-fortune-headcount",
+   "url": "https://fortune.com/article/anthropic-ceo-dario-amodei-openai-chatgpt-artificial-intelligence-safety-donald-trump/"
+  },
+  {
+   "seq": 11,
+   "type": "found",
+   "text": "2,300 staff in Dec 2025, T2 MEDIUM; the only absolute H2 2025 count in the record.",
+   "event_id": "evt-20251204-fortune-headcount-burn-breakeven",
+   "url": "https://fortune.com/2025/12/04/how-anthropic-grew-what-the-183-billion-giant-faces-next/"
+  },
+  {
+   "seq": 12,
+   "type": "found",
+   "text": "2,500 worldwide and over 1,300 in the Bay Area on Jan 30, 2026, T3 single outlet, source inside the article not stated.",
+   "event_id": "evt-20260130-sf-300-howard-lease",
+   "url": "https://sfist.com/2026/01/30/anthropic-signs-lease-for-entire-27-story-downtown-tower/"
+  },
+  {
+   "seq": 13,
+   "type": "flag",
+   "text": "2026 headcount: 2,500 (T3, Jan) vs about 3,000 (TrueUp) and about 5,000 (Tracxn) in Mar (T4). Desk canonical 5,000 for Apr 21 has no URL.",
+   "event_id": "evt-20260130-sf-300-howard-lease",
+   "url": "https://sfist.com/2026/01/30/anthropic-signs-lease-for-entire-27-story-downtown-tower/"
+  },
+  {
+   "seq": 14,
+   "type": "verify",
+   "text": "headcount_desk (7 rows) vs events: 2,300 (Dec 2025) and 2,500 (Jan 30) agree; the 200 and 500 rows are the late-2023 dispute; the 3,000 and 5,000 rows are T4 LOW estimates for Mar 2026."
+  },
+  {
+   "seq": 15,
+   "type": "search",
+   "text": "q.py --conflicts and --open filtered on headcount, board, Kreps, Liddell, Cuéllar, trustee, tender, buyback: read every hit that touches this slice."
+  },
+  {
+   "seq": 16,
+   "type": "found",
+   "text": "Executive build-out 2024-2025: Krieger CPO May 15, Rao CFO May 21, Smith CCO Jul 15, Ciauri Sep 26, Patil CTO Oct 2 and 7.",
+   "event_id": "evt-20240521-krishna-rao-cfo",
+   "url": "https://www.anthropic.com/news/krishna-rao-joins-anthropic"
+  },
+  {
+   "seq": 17,
+   "type": "found",
+   "text": "Patil start: TechCrunch Oct 2, Anthropic post Oct 7. McCandlish to Chief Architect. Both report to Daniela Amodei.",
+   "event_id": "evt-20251007-patil-cto",
+   "url": "https://www.anthropic.com/news/rahul-patil-joins-anthropic"
+  },
+  {
+   "seq": 18,
+   "type": "found",
+   "text": "CPO seat changed Jan 13, 2026: Krieger to Labs, Vora to Product, T1.",
+   "event_id": "evt-20260113-anthropic-labs-krieger",
+   "url": "https://www.anthropic.com/news/introducing-anthropic-labs"
+  },
+  {
+   "seq": 19,
+   "type": "flag",
+   "text": "TechCrunch Apr 16 still calls Krieger chief product officer three months after the T1 role change; title is stale.",
+   "event_id": "evt-20260416-krieger-leaves-figma-board",
+   "url": "https://techcrunch.com/2026/04/16/anthropic-cpo-leaves-figmas-board-after-reports-he-will-offer-a-competing-product/"
+  },
+  {
+   "seq": 20,
+   "type": "found",
+   "text": "First Chief Global Affairs Officer Aug 4; left the LTBT; T1 says no board seat (desk brief said board seat); reports to Daniela Amodei per Reuters.",
+   "event_id": "evt-20260804-cuellar-chief-global-affairs-officer",
+   "url": "https://www.anthropic.com/news/tino-cuellar"
+  },
+  {
+   "seq": 21,
+   "type": "found",
+   "text": "Legal reshuffle Aug 26 is a T4/LOW aggregator item with no effective dates; counted as unconfirmed.",
+   "event_id": "evt-20260826-legal-leadership",
+   "url": "https://finance.biggo.com/news/5343a9e2-f610-4ba7-bd53-a9f94f82bf51"
+  },
+  {
+   "seq": 22,
+   "type": "found",
+   "text": "Matt Clifford named MD international affairs Sep 7, T3; stays ARIA chair to Nov 6.",
+   "event_id": "evt-20260907-clifford-intl-affairs",
+   "url": "https://www.theregister.com/public-sector/2026/09/07/matt-clifford-to-leave-aria-before-anthropic-role-becomes-a-distraction/5294861"
+  },
+  {
+   "seq": 23,
+   "type": "verify",
+   "text": "people_moves rows after 2025-09-30: 25. C-suite seat changes at T1: CTO, CPO, Chief Global Affairs Officer. C-suite exits: 0. Ciauri (Sep 26, 2025) sits 4 days outside the window."
+  },
+  {
+   "seq": 24,
+   "type": "flag",
+   "text": "Start dates for CLO Israel, Chief People Officer Pritchett and brand chief de Marigny are undated in the open items, so the C-suite count may be understated."
+  },
+  {
+   "seq": 25,
+   "type": "flag",
+   "text": "people_moves omits McCandlish's Oct 2025 move, Jack Clark's Mar 2026 Institute role and Cuéllar's Aug 4 LTBT exit as rows; Fontaine is Jun 7 in the table and Jun 6 in the event."
+  },
+  {
+   "seq": 26,
+   "type": "found",
+   "text": "Reuters factbox Sep 28: eight executives, six directors, three trustees. Kreps absent.",
+   "event_id": "evt-20260928-prospectus-board-execs",
+   "url": "https://www.marketscreener.com/news/anthropic-ipo-prospectus-shows-key-executives-and-board-ce785addd98df42c"
+  },
+  {
+   "seq": 27,
+   "type": "flag",
+   "text": "Reuters factbox, as summarized in the record, omits Tom Brown, titled Chief Compute Officer in T2 sources of Jun 26 and Sep 25; no reason given.",
+   "event_id": "evt-20260928-prospectus-board-execs",
+   "url": "https://www.marketscreener.com/news/anthropic-ipo-prospectus-shows-key-executives-and-board-ce785addd98df42c"
+  },
+  {
+   "seq": 28,
+   "type": "flag",
+   "text": "Kreps exit May 22 is T5/LOW (LessWrong comment citing LinkedIn, FREED T4); no Anthropic or T2 confirmation.",
+   "event_id": "evt-20260522-kreps-leaves-board",
+   "url": "https://www.lesswrong.com/posts/sdCcsTt9hRpbX6obP/maybe-anthropic-s-long-term-benefit-trust-is-powerless"
+  },
+  {
+   "seq": 29,
+   "type": "flag",
+   "text": "Liddell's appointing body is unstated; the 4-of-7 Trust majority on Apr 14 holds only if he is Trust-appointed (inference).",
+   "event_id": "evt-20260213-chris-liddell-board",
+   "url": "https://www.anthropic.com/news/chris-liddell-appointed-anthropic-board"
+  },
+  {
+   "seq": 30,
+   "type": "verify",
+   "text": "board table (8 rows) vs Reuters factbox: six current directors agree (Dario, Daniela, Razavi, Hastings, Liddell, Narasimhan)."
+  },
+  {
+   "seq": 31,
+   "type": "found",
+   "text": "LTBT 2023 terms: Class T, board majority within four years, amendments need trustee consent with supermajority failsafes; five founding trustees.",
+   "event_id": "evt-20230919-long-term-benefit-trust",
+   "url": "https://www.anthropic.com/news/the-long-term-benefit-trust"
+  },
+  {
+   "seq": 32,
+   "type": "found",
+   "text": "Trust turnover: Matheny Dec 2023, Christiano Apr 2024, Bahl and Robinson Jan 2026; Cuéllar in Jan 21, out Aug 4; Bernanke in Jul 9.",
+   "event_id": "evt-20260121-ltbt-cuellar-appointed",
+   "url": "https://www.anthropic.com/news/mariano-florentino-long-term-benefit-trust"
+  },
+  {
+   "seq": 33,
+   "type": "found",
+   "text": "Apr 14, 2026: Trust-appointed directors a majority of seven, T1, about 17 months before the four-year limit.",
+   "event_id": "evt-20260414-narasimhan-board",
+   "url": "https://www.anthropic.com/news/narasimhan-board"
+  },
+  {
+   "seq": 34,
+   "type": "verify",
+   "text": "ltbt table vs events: trustee count 5, 4, 3, 4, 3, 4, 3 across Sep 2023 to Aug 2026; three today (Shah, Fontaine, Bernanke)."
+  },
+  {
+   "seq": 35,
+   "type": "found",
+   "text": "Founder LLC of seven co-founders directs one Class F share with 50.1% of votes; Trust elects four directors (Reuters, T2).",
+   "event_id": "evt-20260928-founder-llc-class-f",
+   "url": "https://wtaq.com/2026/09/28/exclusive-anthropic-leaders-to-control-ai-lab-via-founder-llc-to-promote-public-good-over-market-forces/"
+  },
+  {
+   "seq": 36,
+   "type": "found",
+   "text": "TechCrunch relay of The Information: about 2% each, three-of-seven minimum stake, founder seats two to three.",
+   "event_id": "evt-20260925-founders-voting-control",
+   "url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/"
+  },
+  {
+   "seq": 37,
+   "type": "flag",
+   "text": "Third Class F and Class A seat is reported two ways: founder seat (The Information) vs one unnamed director (Reuters). Fate of the investor-elected seat is not stated.",
+   "event_id": "evt-20260925-founders-voting-control",
+   "url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/"
+  },
+  {
+   "seq": 38,
+   "type": "flag",
+   "text": "Co-founder count: seven in Fortune and prospectus coverage, eight names in the founding event incl. Ben Mann (T4 list); Labs post (T1) calls Mann a co-founder.",
+   "event_id": "evt-20260113-anthropic-labs-krieger",
+   "url": "https://www.anthropic.com/news/introducing-anthropic-labs"
+  },
+  {
+   "seq": 39,
+   "type": "flag",
+   "text": "No public S-1 on EDGAR. Every prospectus fact is from a leaked draft reviewed by Reuters (T2) or The Information (T3/T4).",
+   "event_id": "evt-20260930-no-public-s1-on-edgar",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=anthropic&type=S-1&dateb=&owner=include&count=40"
+  },
+  {
+   "seq": 40,
+   "type": "search",
+   "text": "q.py --cat governance (33 events not tagged people), --cat ipo (29) and --cat secondary (8): Trust, board, founder-control, lock-up and insider-sale items."
+  },
+  {
+   "seq": 41,
+   "type": "search",
+   "text": "q.py --q tender, buyback, lockup, insider, Class F, Founder LLC, Class T: liquidity and control events."
+  },
+  {
+   "seq": 42,
+   "type": "search",
+   "text": "q.py --q talent, resign, departure, poach, FREED, compensation, retention, stock comp, equity grant: no compensation or stock-comp event exists in the record."
+  },
+  {
+   "seq": 43,
+   "type": "search",
+   "text": "q.py --q audit committee, investor relations, chief accounting: no hits, so no named audit chair, IR head or chief accounting officer in the record."
+  },
+  {
+   "seq": 44,
+   "type": "found",
+   "text": "First buyback: 20% cap, $2M per person, two-year tenure, $56.09 a share at $61.5B; T3 single outlet.",
+   "event_id": "evt-20250502-first-employee-buyback",
+   "url": "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/"
+  },
+  {
+   "seq": 45,
+   "type": "found",
+   "text": "Tender planned at $350B pre-money; Feb 23 'up to $6B' and Apr 8 'employees hold onto shares' are headline-only notes, not opened.",
+   "event_id": "evt-20260204-employee-tender-350b",
+   "url": "https://www.trendingtopics.eu/anthropic-said-to-plan-tender-offer-at-350-billion-valuation/"
+  },
+  {
+   "seq": 46,
+   "type": "found",
+   "text": "Staff and early backers may sell in the IPO and lock-ups may run long; T4 VERIFY; no 10b5-1 or lock-up length anywhere.",
+   "event_id": "evt-20260827-information-prospectus-after-labor-day-insider-sales",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-could-come-september-191409974.html"
+  },
+  {
+   "seq": 47,
+   "type": "found",
+   "text": "Company voids transfers on named secondary platforms; board approval needed for common and preferred transfers.",
+   "event_id": "evt-20260512-secondary-market-warning",
+   "url": "https://techcrunch.com/2026/05/12/anthropic-warns-investors-against-secondary-platforms-offering-access-to-its-shares/"
+  },
+  {
+   "seq": 48,
+   "type": "found",
+   "text": "Equity as currency: Coefficient Bio (about 10 staff, reported $400M all-stock) and Runhouse (share-based).",
+   "event_id": "evt-20260403-coefficient-bio-acquisition",
+   "url": "https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/"
+  },
+  {
+   "seq": 49,
+   "type": "found",
+   "text": "Inbound talent: Leike, Schulman, Kingma, Houlsby, Karpathy, Finlay; no named move from Anthropic to OpenAI in the record.",
+   "event_id": "evt-20260519-karpathy-joins",
+   "url": "https://www.aol.com/articles/anthropic-hires-openai-co-founder-190105000.html"
+  },
+  {
+   "seq": 50,
+   "type": "found",
+   "text": "Public exits: Sharma Feb 9 (T3) and Coxon Sep 8 (T2); Wen to Cursor appears only in the T4 tracker row.",
+   "event_id": "evt-20260908-coxon-resigns",
+   "url": "https://www.cbsnews.com/news/anthropic-researcher-jacob-coxon-ai-warning/"
+  },
+  {
+   "seq": 51,
+   "type": "flag",
+   "text": "Coxon resignation date: X post Sep 8 (FREED) vs CBS 'Tuesday, September 10'; Sep 8 used.",
+   "event_id": "evt-20260908-coxon-resigns",
+   "url": "https://www.cbsnews.com/news/anthropic-researcher-jacob-coxon-ai-warning/"
+  },
+  {
+   "seq": 52,
+   "type": "flag",
+   "text": "The Coxon event says he quit days before the prospectus became public; the leak is Sep 28, 20 days later, and no public S-1 exists.",
+   "event_id": "evt-20260908-coxon-resigns",
+   "url": "https://www.cbsnews.com/news/anthropic-researcher-jacob-coxon-ai-warning/"
+  },
+  {
+   "seq": 53,
+   "type": "found",
+   "text": "Policy build: Advisory Council Aug 27, 2025; Sunak Oct 9, 2025; Institute and DC office Mar 11, 2026; Cuéllar Aug 4; Clifford Sep 7.",
+   "event_id": "evt-20260311-anthropic-institute-launch",
+   "url": "https://www.anthropic.com/news/the-anthropic-institute"
+  },
+  {
+   "seq": 54,
+   "type": "found",
+   "text": "End-2025 run-rate of about $9B is company-stated and gross (Apr 6, 2026 post, T1); the CEO's Dec 3 range of $8B-$10B is run-rate style, not recognized.",
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+  },
+  {
+   "seq": 55,
+   "type": "verify",
+   "text": "Revenue per head on two bases, never mixed. Run-rate: late 2023 $0.2M-$0.5M, end-2025 $3.9M, Feb 2026 $5.6M. Recognized: FY2025 $2.0M. No matched headcount for Q2 2026."
+  },
+  {
+   "seq": 56,
+   "type": "flag",
+   "text": "Run-rate pair dates differ: $100M is about Sep 30, 2023 vs 'late 2023' headcount; $9B is Dec 31 vs 2,300 on Dec 2-4; $14B is Feb 12 vs 2,500 on Jan 30. The May 2025 $1.4B and 800 pair is excluded; the desk marks that run-rate use_in_model false.",
+   "event_id": "evt-20250502-first-employee-buyback",
+   "url": "https://www.maginative.com/article/anthropic-launches-first-employee-share-buyback-at-61-5-billion-valuation/"
+  },
+  {
+   "seq": 57,
+   "type": "note",
+   "text": "RSP v3.4 (Jul 8) cut mandatory sharing of unredacted Risk Reports to at least 200 employees. Two public resignations on safety grounds bracket it; the record shows no link.",
+   "event_id": "evt-20260708-rsp-v34"
+  },
+  {
+   "seq": 58,
+   "type": "verify",
+   "text": "offices table: London lease for 800 staff (Apr 17, 2026) and a 420,000 sq ft SF tower vs about 1,300 Bay Area staff point to planned growth but do not settle 2,500 vs 5,000."
+  },
+  {
+   "seq": 59,
+   "type": "flag",
+   "text": "Desk tables offering_structure, prospectus_facts, risk_factor_themes, period_revenue, comparables, customers and projections are empty; nothing inferred for them."
+  },
+  {
+   "seq": 60,
+   "type": "search",
+   "text": "Record re-merged at 18:36Z mid-run: events 636 to 641, run_rate_desk now 17 rows, people slice unchanged except notes on two events. Re-read run_rate_desk and the gross-versus-net ARR event; revised the end-2025 basis."
+  },
+  {
+   "seq": 61,
+   "type": "message",
+   "text": "Revenue per head on two bases and the open headcount dispute; use run-rate per head only with the gross label.",
+   "to": "analyst-model"
+  },
+  {
+   "seq": 62,
+   "type": "message",
+   "text": "Bull inputs: no C-suite exits on record, co-founders seven of seven in role, five named hires with OpenAI ties, Trust seat majority by design.",
+   "to": "analyst-bull"
+  },
+  {
+   "seq": 63,
+   "type": "message",
+   "text": "Bear inputs: three-person Trust, unconfirmed Kreps exit, 50.1% vote on about 2% stakes, two public resignations on safety grounds, headcount and lock-up unknown.",
+   "to": "analyst-bear"
+  },
+  {
+   "seq": 64,
+   "type": "message",
+   "text": "Headcount after Jan 2026 needs an S-1 count; 2,500 vs 3,000 vs 5,000 cannot be settled from the record.",
+   "to": "verify-operating"
+  },
+  {
+   "seq": 65,
+   "type": "message",
+   "text": "Unknown whether tender purchases used company cash or new-round money; it matters for capital efficiency on equity raised only.",
+   "to": "verify-capital"
+  },
+  {
+   "seq": 66,
+   "type": "message",
+   "text": "Decisive unknowns: S-1 headcount, Class T amendment thresholds, seated Trust directors at pricing, lock-up terms.",
+   "to": "analyst-judge"
+  },
+  {
+   "seq": 67,
+   "type": "message",
+   "text": "Control structure and Trust overlap with governance and IPO topics; shared ids are in my evidence list.",
+   "to": "analyst-topics"
+  },
+  {
+   "seq": 68,
+   "type": "message",
+   "text": "Table board_history does not exist (named board); seven desk tables I checked are empty; 17 flags raised. Output written.",
+   "to": "orchestrator"
+  }
+ ],
+ "stats": {
+  "events_read": 221,
+  "flags": 17
+ }
+}

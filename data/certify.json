@@ -1,0 +1,101 @@
+{
+ "generated": "2026-09-30T18:40:29Z",
+ "summary": {
+  "PASS": 7,
+  "WARN": 0,
+  "FAIL": 0,
+  "PENDING": 8
+ },
+ "gates": [
+  {
+   "id": "G1",
+   "name": "Record: >= 300 deduped events, each with a source URL, every year 2021 to 2026 present",
+   "status": "PASS",
+   "detail": "641 events; 0 without a URL; years 2021\u20132026"
+  },
+  {
+   "id": "G2",
+   "name": "Mechanical health checks (dates, schema, duplicate ids, tier/confidence consistency)",
+   "status": "PASS",
+   "detail": "0 fails, 2 warns"
+  },
+  {
+   "id": "G3",
+   "name": "No HIGH/CANONICAL confidence resting on a T4/T5 source alone",
+   "status": "PASS",
+   "detail": "0 violations"
+  },
+  {
+   "id": "G4",
+   "name": "Conflicts are frozen, not resolved: every conflict row shows both values and a source or note",
+   "status": "PASS",
+   "detail": "94 conflicts in the ledger (0 incomplete); 19 events carry a DISPUTED/VERIFY/LOW tag"
+  },
+  {
+   "id": "G5",
+   "name": "Model: bear/base/bull present, every driver traced to an event id or table row",
+   "status": "PENDING",
+   "detail": "data/model.json not built yet"
+  },
+  {
+   "id": "G6",
+   "name": "Model engine parity: scripts/model.py == computeModel() in assets/app.js",
+   "status": "PENDING",
+   "detail": "no model"
+  },
+  {
+   "id": "G7",
+   "name": "Compute: commitments table reconciles to the totals shown",
+   "status": "PENDING",
+   "detail": "data/compute.json not built yet"
+  },
+  {
+   "id": "G8",
+   "name": "Thesis: verdict at each reference price; every thesis-breaker carries metric, threshold, date",
+   "status": "PENDING",
+   "detail": "data/thesis.json not built yet"
+  },
+  {
+   "id": "G9",
+   "name": "Topics: ten topic analyses, each with >= 12 evidence ids",
+   "status": "PENDING",
+   "detail": "2 topics built; thin evidence: none"
+  },
+  {
+   "id": "G10",
+   "name": "Independent re-derivation of load-bearing claims reconciled",
+   "status": "PENDING",
+   "detail": "no claims ledger yet"
+  },
+  {
+   "id": "G11",
+   "name": "Independent audit of a random sample of the record",
+   "status": "PENDING",
+   "detail": "no audit scored yet"
+  },
+  {
+   "id": "G12",
+   "name": "Agent log is the real log: agents known, time-ordered, nothing in the future, every active agent has an output file",
+   "status": "PASS",
+   "detail": "3434 rows; unknown agents none; ordered True; future rows 0; active agents without an output file none"
+  },
+  {
+   "id": "G13",
+   "name": "Hygiene: PitchBook raw pulls git-ignored, no credentials in tracked files",
+   "status": "PASS",
+   "detail": "0 raw files tracked; secret-pattern hits none; .gitignore covers data/raw: True"
+  },
+  {
+   "id": "G14",
+   "name": "Disclosures present in the UI (PitchBook licence, MNPI screen, conflict of interest, not investment advice)",
+   "status": "PASS",
+   "detail": "{'licence': True, 'MNPI': True, 'conflict of interest': True, 'not investment advice': True}"
+  },
+  {
+   "id": "G15",
+   "name": "UI smoke: nine tabs x desktop/phone x light/dark",
+   "status": "PENDING",
+   "detail": "run: NODE_PATH=$(npm root -g) node scripts/shot.cjs"
+  }
+ ]
+}

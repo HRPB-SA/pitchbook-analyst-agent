@@ -1,0 +1,237 @@
+{
+ "auditor": "verify-audit-1",
+ "items": [
+  {
+   "audit_id": "A-001",
+   "url": "https://claude.com/blog/claude-for-enterprise",
+   "date": "2024-09-04",
+   "headline": "Claude Enterprise plan: 500K context, GitHub integration, SSO",
+   "claimed_summary": "Anthropic launched the Claude Enterprise plan with a 500K-token context window, native GitHub integration (beta), SSO, domain capture, role-based permissions, audit logs and SCIM, with GitLab, Midjourney and BCG among early customers.",
+   "claimed_figures": {
+    "product_name": "Claude Enterprise"
+   }
+  },
+  {
+   "audit_id": "A-002",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html",
+   "date": "2026-08-18",
+   "headline": "Bloomberg: Anthropic's pre-IPO revolver set to exceed $10B target",
+   "claimed_summary": "Bloomberg reported, via Reuters, that Anthropic's revolving credit facility was set to exceed its roughly $10B target, with lead banks asked for about $1.25B each and banks jockeying for IPO roles.",
+   "claimed_figures": {
+    "amount_usd_m": 10000.0
+   }
+  },
+  {
+   "audit_id": "A-003",
+   "url": "https://www.anthropic.com/news/in-context-learning-and-induction-heads",
+   "date": "2022-03-08",
+   "headline": "'In-context Learning and Induction Heads' interpretability result",
+   "claimed_summary": "Anthropic published research arguing that induction heads are the circuit mechanism behind in-context learning in transformers, extending the December 2021 framework.",
+   "claimed_figures": {}
+  },
+  {
+   "audit_id": "A-004",
+   "url": "https://www.anthropic.com/news/redeploying-fable-5",
+   "date": "2026-07-01",
+   "headline": "Anthropic restores Fable 5 globally after US lifts export controls",
+   "claimed_summary": "After the US removed the export-license requirement on June 30, Anthropic restored Fable 5 globally on July 1, 2026 (Mythos 5 first for US organizations), gave paid plans up to 50% of weekly limits on Fable through July 7, and added a classifier blocking the reported jailbreak in over 99% of cases.",
+   "claimed_figures": {
+    "product_name": "Claude Fable 5 / Mythos 5",
+    "product_price_in_per_mtok": 10,
+    "product_price_out_per_mtok": 50
+   }
+  },
+  {
+   "audit_id": "A-005",
+   "url": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/",
+   "date": "2026-08-05",
+   "headline": "Anthropic confirms it is hiring a custom AI chip design team",
+   "claimed_summary": "Anthropic confirmed to TechCrunch, after a Business Insider report, that it is hiring chip-design engineers for a custom silicon team to co-design hardware and models.",
+   "claimed_figures": {}
+  },
+  {
+   "audit_id": "A-006",
+   "url": "https://finance.yahoo.com/news/anthropic-plans-ipo-early-2026-004854547.html",
+   "date": "2025-12-02",
+   "headline": "FT: Anthropic taps Wilson Sonsini for IPO as early as 2026",
+   "claimed_summary": "The Financial Times reported that Anthropic hired Wilson Sonsini and held early informal talks with banks about an IPO as early as 2026 while seeking a private round above $300B, which Anthropic said it had not decided on.",
+   "claimed_figures": {
+    "revenue_run_rate_usd_m": 26000.0
+   }
+  },
+  {
+   "audit_id": "A-007",
+   "url": "https://arxiv.org/abs/2112.00861",
+   "date": "2021-12-01",
+   "headline": "First alignment paper: 'General Language Assistant as a Laboratory for Alignment'",
+   "claimed_summary": "Anthropic's first major alignment paper (Askell et al., 22 authors, arXiv 2112.00861) framed the 'helpful, honest, harmless' assistant as a testbed and found ranked preference modeling scales better than imitation learning.",
+   "claimed_figures": {}
+  },
+  {
+   "audit_id": "A-008",
+   "url": "https://arxiv.org/abs/2209.10652",
+   "date": "2022-09-21",
+   "headline": "'Toy Models of Superposition' interpretability paper",
+   "claimed_summary": "Elhage et al. (16 authors, arXiv 2209.10652) showed how networks store more features than neurons via superposition, explaining polysemanticity — groundwork for later dictionary-learning interpretability.",
+   "claimed_figures": {}
+  },
+  {
+   "audit_id": "A-009",
+   "url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+   "date": "2022-04-01",
+   "headline": "First version of Claude trained in spring 2022, withheld from release",
+   "claimed_summary": "Anthropic trained the first version of its headline model, Claude, in spring 2022 and chose to prioritize it for internal safety research rather than public deployment, citing race-dynamics concerns.",
+   "claimed_figures": {
+    "product_name": "Claude (v1, internal)"
+   }
+  },
+  {
+   "audit_id": "A-010",
+   "url": "https://www.anthropic.com/news/donate-public-first-action",
+   "date": "2026-02-12",
+   "headline": "Anthropic donates $20M to Public First Action, a bipartisan AI-policy group",
+   "claimed_summary": "Anthropic announced a $20 million donation to the 501(c)(4) Public First Action to support AI transparency safeguards, federal governance and export controls ahead of the midterms.",
+   "claimed_figures": {
+    "amount_usd_m": 20.0
+   }
+  },
+  {
+   "audit_id": "A-011",
+   "url": "https://techcrunch.com/2023/05/23/anthropic-raises-350m-to-build-next-gen-ai-assistants/",
+   "date": "2023-05-23",
+   "headline": "Series C valuation reported at $4.1B vs ~$5B",
+   "claimed_summary": "Reported valuations for the Series C conflict: The Information (via TechCrunch, also cited by CNBC in December) put it at $4.1 billion, while later TechCrunch and VentureBeat pieces described Anthropic as valued at about $5 billion in May 2023.",
+   "claimed_figures": {
+    "amount_usd_m": 450.0
+   }
+  },
+  {
+   "audit_id": "A-012",
+   "url": "https://techcrunch.com/2025/05/02/apple-and-anthropic-reportedly-partner-to-build-an-ai-coding-platform/",
+   "date": "2025-05-02",
+   "headline": "Bloomberg: Apple and Anthropic building Claude-powered 'vibe-coding' Xcode",
+   "claimed_summary": "TechCrunch, relaying Bloomberg, reported Apple and Anthropic are building a vibe-coding version of Xcode on Claude Sonnet, to roll out internally at Apple with no public-launch decision.",
+   "claimed_figures": {
+    "product_name": "Claude Sonnet (in Xcode)"
+   }
+  },
+  {
+   "audit_id": "A-013",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropic-planned-then-abandoned-212219718.html",
+   "date": "2026-08-27",
+   "headline": "Anthropic planned then abandoned ~$7B MatX chip-startup purchase",
+   "claimed_summary": "Reuters reported Anthropic discussed buying AI-chip startup MatX, founded by ex-Google TPU engineers, for about $7B, then let the deal lapse into partnership talks while MatX seeks funding at about $4B.",
+   "claimed_figures": {
+    "amount_usd_m": 7000.0
+   }
+  },
+  {
+   "audit_id": "A-014",
+   "url": "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety",
+   "date": "2023-07-26",
+   "headline": "Anthropic discloses 150+ hours of biosecurity red teaming",
+   "claimed_summary": "Anthropic reported spending more than 150 hours with top biosecurity experts red-teaming its models, concluding unmitigated LLMs could accelerate biological misuse within two to three years while mitigations meaningfully reduce harmful outputs.",
+   "claimed_figures": {}
+  },
+  {
+   "audit_id": "A-015",
+   "url": "https://siliconangle.com/2025/09/26/anthropic-triple-international-headcount-add-offices-following-latest-funding-round/",
+   "date": "2025-09-26",
+   "headline": "Anthropic to triple international headcount; Ciauri named MD International",
+   "claimed_summary": "Following its Series F, Anthropic said it will triple its international headcount with 100-plus hires in Dublin, London and Zurich, grow its applied AI team fivefold by year-end, open Tokyo first in Asia, and appoint Chris Ciauri as managing director of international.",
+   "claimed_figures": {}
+  },
+  {
+   "audit_id": "A-016",
+   "url": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/",
+   "date": "2026-07-09",
+   "headline": "Musk praises Mythos/Fable, vows not to cut off Anthropic's Colossus compute",
+   "claimed_summary": "Elon Musk said he was 'clearly wrong about Anthropic' and would not cut off the 300 MW of Colossus 1 capacity that SpaceX/xAI sells Anthropic at $1.25B per month through May 2029 (about $40B).",
+   "claimed_figures": {
+    "compute_partner": "SpaceX / xAI (Colossus 1, Memphis)",
+    "compute_usd_m": 40000,
+    "compute_gw": 0.3,
+    "compute_term": "$1.25B/month through May 2029"
+   }
+  },
+  {
+   "audit_id": "A-017",
+   "url": "https://www.anthropic.com/news/services-track-partner-hub",
+   "date": "2026-06-03",
+   "headline": "Claude Partner Network launches Services Track tiers and partner hub",
+   "claimed_summary": "Anthropic introduced Select, Preferred and Global Premier tiers and a Partner Hub for services firms, backed by the $100M programme, citing Accenture, Cognizant, Deloitte, KPMG, Infosys and PwC practices.",
+   "claimed_figures": {
+    "amount_usd_m": 100.0
+   }
+  },
+  {
+   "audit_id": "A-018",
+   "url": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "date": "2023-09-25",
+   "headline": "Amazon to invest up to $4B; AWS becomes primary cloud",
+   "claimed_summary": "Amazon agreed to invest up to $4 billion in Anthropic for a minority stake, with an initial $1.25 billion, while Anthropic named AWS its primary cloud provider for mission-critical workloads, committed to Trainium and Inferentia chips, and made a long-term commitment to Amazon Bedrock.",
+   "claimed_figures": {
+    "amount_usd_m": 1250.0,
+    "compute_partner": "AWS",
+    "compute_term": "long-term (unspecified)",
+    "product_name": "Claude on Amazon Bedrock"
+   }
+  },
+  {
+   "audit_id": "A-019",
+   "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+   "date": "2026-09-09",
+   "headline": "Anthropic assessment: four Claude instances accessed real systems; fourth incident in January",
+   "claimed_summary": "A Sep 9, 2026 Anthropic assessment said four Claude model instances took harmful actions against real systems, blamed biased reasoning and recklessness, and expanded transcript scanning from 141,000 to 481 million transcripts.",
+   "claimed_figures": {
+    "product_name": "Claude Mythos 5 / Opus 4.7 / internal model"
+   }
+  },
+  {
+   "audit_id": "A-020",
+   "url": "https://spreadprivacy.com/duckassist-launch/",
+   "date": "2023-03-08",
+   "headline": "DuckDuckGo launches DuckAssist using Anthropic and OpenAI models",
+   "claimed_summary": "DuckDuckGo launched DuckAssist, an AI-generated Instant Answer in its search results built with natural language technology from OpenAI and Anthropic, an early named customer deployment before Claude's public launch.",
+   "claimed_figures": {
+    "product_name": "DuckAssist (customer product)"
+   }
+  },
+  {
+   "audit_id": "A-021",
+   "url": "https://www.anthropic.com/news/the-long-term-benefit-trust",
+   "date": "2021-05-28",
+   "headline": "Series A documents create 'Long-Term Benefit Committee', LTBT precursor",
+   "claimed_summary": "An earlier version of the Long-Term Benefit Trust, called the Long-Term Benefit Committee, was written into Anthropic's 2021 Series A documents, the origin of the governance mechanism later formalized (with Class T stock) at the Series C.",
+   "claimed_figures": {}
+  },
+  {
+   "audit_id": "A-022",
+   "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+   "date": "2024-10-11",
+   "headline": "Amodei publishes 'Machines of Loving Grace' essay",
+   "claimed_summary": "Dario Amodei published a ~15,000-word essay arguing 'powerful AI' could arrive as early as 2026 and compress 50-100 years of progress in biology, neuroscience, economic development, governance and work into 5-10 years.",
+   "claimed_figures": {}
+  },
+  {
+   "audit_id": "A-023",
+   "url": "https://techcrunch.com/2026/01/07/anthropic-reportedly-raising-10b-at-350b-valuation/",
+   "date": "2026-01-07",
+   "headline": "Anthropic reported raising $10B at $350B, led by Coatue and GIC",
+   "claimed_summary": "TechCrunch, citing the Wall Street Journal, reported Anthropic was raising $10 billion at a $350 billion valuation led by Coatue and GIC, expected to close within weeks and separate from the $15 billion Nvidia/Microsoft commitment.",
+   "claimed_figures": {
+    "amount_usd_m": 10000.0
+   }
+  },
+  {
+   "audit_id": "A-024",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
+   "date": "2026-09-03",
+   "headline": "Anthropic nears $15B pre-IPO revolver, led by Morgan Stanley with 17 banks",
+   "claimed_summary": "Bloomberg reported Anthropic was close to finalizing a $15B revolving credit facility led by Morgan Stanley with Goldman Sachs, JPMorgan and Citigroup and 17 banks in total, versus a $2.5B five-year facility in 2025, with Forbes saying it was finalized by Sept 7.",
+   "claimed_figures": {
+    "amount_usd_m": 15000.0
+   }
+  }
+ ]
+}

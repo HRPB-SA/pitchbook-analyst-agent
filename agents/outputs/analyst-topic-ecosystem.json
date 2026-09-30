@@ -1,0 +1,769 @@
+{
+ "agent": "analyst-topic-ecosystem",
+ "role": "Topic Analyst — Ecosystem: investors, partners, customers, acquisitions",
+ "started": "2026-09-30T18:19:11Z",
+ "finished": "2026-09-30T18:42:19Z",
+ "topic": {
+  "slug": "ecosystem",
+  "title": "Ecosystem: investors, partners, customers, acquisitions",
+  "one_liner": "Amazon, Google and Microsoft are owed $252.5B of Anthropic's compute commitments (leaked prospectus, T3) against $18.0B of filing-verified equity funded and about $81B of announced ceilings.",
+  "key_metrics": [
+   {
+    "label": "Hyperscaler equity, funded vs announced ceilings",
+    "value": "$18.0B funded (Amazon 10-Q, T1) inside about $81B of ceilings: Amazon $33.0B, Google $43B, Microsoft $5B. Only Amazon's funding is filed.",
+    "event_id": "evt-20260731-amazon-10q-anthropic"
+   },
+   {
+    "label": "Public companies tied to Anthropic",
+    "value": "117 listed parents by ticker: 28 hold equity, 16 supply compute, chips or memory, 61 are named customers. Desk flags, not web-verified per row.",
+    "event_id": "evt-20260528-series-h-roster"
+   },
+   {
+    "label": "Compute owed to the three investor-hyperscalers",
+    "value": "$252.5B of $518B (48.7%): Amazon $110B, Google $111.1B, Microsoft $31.4B. About 80% of the total is non-cancelable (leaked prospectus, T3).",
+    "event_id": "evt-20260929-prospectus-518b-compute-commitments"
+   },
+   {
+    "label": "Latest enterprise-share datapoint",
+    "value": "Anthropic 40% vs OpenAI 27% of enterprise LLM API dollars (Menlo, Dec 9 2025, T3, an Anthropic investor). Newer Ramp read: 43.8% vs 39.8% of businesses paying (Sep 9, T4).",
+    "event_id": "evt-20251209-menlo-genai-enterprise"
+   },
+   {
+    "label": "Two customers, share of FY2025 revenue",
+    "value": "Nearly 25%, names undisclosed (FT via TechCrunch, Sep 28, T2). No revenue split by cloud channel is in the record.",
+    "event_id": "evt-20260928-prospectus-risk-factors"
+   },
+   {
+    "label": "Direct Anthropic equity tickets verified",
+    "value": "2 of PitchBook's 35 investments (Goodfire, Sapiom), no check sizes. Largest outbound commitment is $300M to the Ode JV (T2).",
+    "event_id": "evt-20250417-goodfire-series-a-anthropic"
+   }
+  ],
+  "what": [
+   {
+    "t": "Amazon's 10-Q, Jul 31 (T1): $18.0B funded ($8.0B notes, $5.0B each in Series G and H), $15.0B facility left. Google: over $3B funded by Mar 2025, plus up to $40B, $10B now and $30B on targets (TechCrunch, Apr 24, T2). Microsoft up to $5B, Nvidia up to $10B (Nov 18, T1), AMD up to $5B (Jul 22, T1). Funded amounts for Google's new tranche, Microsoft, Nvidia and AMD are absent.",
+    "e": [
+     "evt-20260731-amazon-10q-anthropic",
+     "evt-20260420-amazon-5gw-25b-investment",
+     "evt-20260424-google-up-to-40b-investment",
+     "evt-20250311-google-14pct-stake",
+     "evt-20251118-microsoft-nvidia-anthropic-partnership",
+     "evt-20260722-amd-2gw-5b"
+    ]
+   },
+   {
+    "t": "Leaked prospectus, Sep 29 (total via Reuters, split via Stocktwits, T3): $518B of commitments, about 80% non-cancelable. Amazon $110B, Google $111.1B, Microsoft $31.4B, Broadcom-related leases $161.2B, SpaceX up to $84.5B. Amazon's $110B is 6.1x its $18.0B funded. Suppliers also grant Anthropic equity: Akamai's warrant for up to 5% at $111.33 (Sep 24, T1) and RUM's 50.8M shares at $0.01 (Sep 14, T3).",
+    "e": [
+     "evt-20260929-prospectus-518b-compute-commitments",
+     "evt-20260907-compute-contracts-517b-in-11-months",
+     "evt-20260924-akamai-11b",
+     "evt-20260914-rum-group-13-7b-georgia-deal",
+     "evt-20260731-amazon-10q-anthropic"
+    ]
+   },
+   {
+    "t": "Two customers were nearly 25% of 2025 revenue, unnamed (FT via TechCrunch, Sep 28, T2). Claude is on all three clouds: Bedrock reports over 100,000 customers (Apr 20, T1) and AWS Marketplace bills Claude Platform (May 11). Snowflake committed $200M (Dec 3, T1); Salesforce reportedly $300M of 2026 tokens (T3). Deloitte's 470,000 seats are 'available to'. No revenue split by channel is in the record.",
+    "e": [
+     "evt-20260928-prospectus-risk-factors",
+     "evt-20260420-amazon-5gw-25b-investment",
+     "evt-20260511-claude-platform-on-aws-launch",
+     "evt-20251118-claude-in-microsoft-foundry",
+     "evt-20251203-snowflake-200m-partnership",
+     "evt-20260601-salesforce-stake",
+     "evt-20251006-deloitte-470k-claude"
+    ]
+   },
+   {
+    "t": "Closed deals are small. Coefficient Bio ~$400M in stock (Apr 3, T2) and Stainless above $300M (May 18) are single-source; Bun, Vercept and Humanloop are unpriced. Decart (~$6B) and MatX (~$7B) talks lapsed (Sep 8, Aug 27). PitchBook's 35 investments include Anthology deals; direct tickets are verified only for Goodfire and Sapiom. The $100M Anthology Fund (Jul 17 2024) is Menlo's money.",
+    "e": [
+     "evt-20260403-coefficient-bio-acquisition",
+     "evt-20260518-stainless-acquisition",
+     "evt-20251203-bun-acquisition",
+     "evt-20260225-vercept-acquisition",
+     "evt-20250813-humanloop-acquihire",
+     "evt-20260908-decart-talks-ended",
+     "evt-20260827-matx-talks",
+     "evt-20240717-anthology-fund",
+     "evt-20250417-goodfire-series-a-anthropic",
+     "evt-20260809-sapiom-series-a"
+    ]
+   },
+   {
+    "t": "Menlo (Dec 9 2025, T3) has Anthropic at 40% of API dollars to OpenAI's 27%. a16z (Jan 30, T3) has OpenAI at 78% in production to Anthropic's 44%. Ramp card data (Aug 20, T3) has 44% to 40% in July, from 41% to 39% in May. Axios (Sep 29, T2, single source) puts OpenAI near $70B run-rate and Anthropic about $65B in July, on different revenue bases.",
+    "e": [
+     "evt-20251209-menlo-genai-enterprise",
+     "evt-20260130-a16z-enterprise-survey",
+     "evt-20260820-ramp-data-openai-gaining-on-anthropic",
+     "evt-20260929-openai-arr-nears-70b",
+     "evt-20250731-menlo-midyear-share",
+     "evt-20260513-ramp-ai-index-anthropic-overtakes-openai"
+    ]
+   },
+   {
+    "t": "By ticker, role and dollars. AMZN funder, cloud, channel: $18.0B funded, $110B owed. GOOGL: up to $40B, $111.1B owed. MSFT: up to $5B, $31.4B owed, $3.2B gain (Jul 29, T1). NVDA up to $10B. AMD up to $5B. AVGO $10B TPU order. Hosts: WULF $19B, RUM $13.7B, AKAM $11.6B, RIOT $9.1B, HUT $7.0B. Holders: CRM $3.0B (six months) and ZM $1.6B (quarter) gains. SPCX $1.25B a month.",
+    "e": [
+     "evt-20260731-amazon-10q-anthropic",
+     "evt-20260729-microsoft-anthropic-gain",
+     "evt-20251211-broadcom-anthropic-10b-tpu-customer",
+     "evt-20260706-terawulf-lease",
+     "evt-20260914-rum-group-13-7b-georgia-deal",
+     "evt-20260924-akamai-11b",
+     "evt-20260810-riot-9-1b-rockdale-lease",
+     "evt-20251217-hut8-river-bend",
+     "evt-20260827-salesforce-10q-anthropic",
+     "evt-20260826-zoom-10q-anthropic",
+     "evt-20260520-spacex-s1-anthropic-colossus-contract"
+    ]
+   }
+  ],
+  "means": [
+   {
+    "t": "Each hyperscaler is funder, compute seller and channel; Google and Microsoft are also rivals. The equity buys economics without control: Amazon holds non-voting preferred, Google reportedly had no board seat or vote, and an FT report says ownership is capped below 33%. Holders book the mark. Amazon's Q1 gain was $16.8B pre-tax against $30.3B net income, priced by rounds where hyperscalers supplied $15B of Series H's $65B.",
+    "e": [
+     "evt-20260429-amazon-q1-10q-anthropic-gain-16-8b",
+     "evt-20250710-amazon-weighs-new-investment",
+     "evt-20250311-google-14pct-stake",
+     "evt-20260528-series-h-roster",
+     "evt-20260309-microsoft-copilot-cowork"
+    ]
+   },
+   {
+    "t": "Circularity has two legs in the record: equity in from Amazon, Google, Microsoft, Nvidia and AMD, and compute out to the same names. Nvidia sits on both sides at Beacon Point: Lambda installs Nvidia GPUs for Anthropic while Nvidia pays Hut 8 rent (T3). No filing traces cash from an investment to a supplier invoice, so 'circular' is an inference, not a finding.",
+    "e": [
+     "evt-20260831-lambda-35b-cloud-deal-texas",
+     "evt-20260929-prospectus-518b-compute-commitments",
+     "evt-20260911-nvidia-ipo-anchor-talks",
+     "evt-20251118-microsoft-nvidia-anthropic-partnership",
+     "evt-20260722-amd-2gw-5b",
+     "evt-20260731-amazon-10q-anthropic"
+    ]
+   },
+   {
+    "t": "The share series measure four different things. Menlo surveyed usage, then estimated dollars. a16z surveyed production breadth. Ramp counts businesses with card spend. OpenRouter counts tokens. Anthropic leads on dollars and card adoption and trails on breadth. Its OpenRouter token share fell to 13.3% from 29.1% (T4). Menlo is an Anthropic investor and Anthropic repeats its 40%, so that figure is not independent.",
+    "e": [
+     "evt-20250731-menlo-midyear-share",
+     "evt-20251209-menlo-genai-enterprise",
+     "evt-20260130-a16z-enterprise-survey",
+     "evt-20260513-ramp-ai-index-anthropic-overtakes-openai",
+     "evt-20260623-menlo-3b-fund"
+    ]
+   },
+   {
+    "t": "PitchBook misstates the web both ways. Amazon shows from Nov 2024 not Sep 2023, Microsoft is missing, and Commonwealth Bank is dated Feb 2026 against Mar 2025 per Capital Brief. Its 35 Anthropic investments include Menlo-funded Anthology deals, employee angels (Sazabi), a credit pledge (Frontier) and a tenancy (Theseus). BioSpace says Basecamp wrongly named Anthropic.",
+    "e": [
+     "evt-20230925-amazon-up-to-4b",
+     "evt-20260729-microsoft-anthropic-gain",
+     "evt-20250314-commbank-investment",
+     "evt-20250318-graphite-series-b",
+     "evt-20260625-sazabi-seed-angels-incl-openai-anthropic-staff",
+     "evt-20260617-frontier-coalition",
+     "evt-20260810-theseus-infrastructure",
+     "evt-20260923-basecamp-research-140m-series-c"
+    ]
+   }
+  ],
+  "implications": [
+   {
+    "t": "Reprice 'up to' as options. Count only filed dollars as raised: Amazon's $18.0B. Treat Google's $30B as target-gated and Microsoft's $5B, Nvidia's $10B and AMD's $5B as unfunded until a filing says otherwise. Keep four $15B items apart: the Microsoft and Nvidia cap, Series H's hyperscaler share, Amazon's facility and the pre-IPO revolver. Capital efficiency counts equity only, never debt.",
+    "e": [
+     "evt-20260731-amazon-10q-anthropic",
+     "evt-20260424-google-up-to-40b-investment",
+     "evt-20251118-microsoft-nvidia-anthropic-partnership",
+     "evt-20260722-amd-2gw-5b",
+     "evt-20260528-series-h-roster",
+     "evt-20260903-credit-facility-15b-nears-final"
+    ]
+   },
+   {
+    "t": "Underwrite the supplier web as fixed obligations. The three investor-hyperscalers are owed $252.5B, 48.7% of $518B and 3.1x their equity ceilings. About 80% is non-cancelable, while SpaceX's contract is terminable on 90 days' notice. Test the public S-1 on two points: whether the supplier split holds, and whether $150.0B of named neocloud contracts fits in the roughly $19.8B left over.",
+    "e": [
+     "evt-20260929-prospectus-518b-compute-commitments",
+     "evt-20260520-spacex-s1-anthropic-colossus-contract",
+     "evt-20260826-nscale-45b-west-virginia-deal",
+     "evt-20260831-lambda-35b-cloud-deal-texas",
+     "evt-20260706-terawulf-lease"
+    ]
+   },
+   {
+    "t": "Chart shares by basis, never as one line. Tag each point survey, card spend or tokens, and mark Menlo as investor-published. Bulls can cite dollars and card adoption. Bears can cite breadth, 78% vs 44%, and token share. TechCrunch says OpenAI is gaining, but Ramp's May to July figures show Anthropic's lead widening from 2 to 4 points. June is missing.",
+    "e": [
+     "evt-20251209-menlo-genai-enterprise",
+     "evt-20260130-a16z-enterprise-survey",
+     "evt-20260820-ramp-data-openai-gaining-on-anthropic",
+     "evt-20260513-ramp-ai-index-anthropic-overtakes-openai"
+    ]
+   },
+   {
+    "t": "Rank public exposure by the share of own size the record gives, then by dollars. RUM: contract over 3x market cap (T3). Riot: $9.1B of $9.8B contracted revenue. Amazon: $16.8B Q1 pre-tax gain vs $30.3B net income. Salesforce: 45% of strategic portfolio. Broadcom: $10B order is 13.7% of AI backlog. Then Akamai, TeraWulf, Zoom, Microsoft, Alphabet, Nvidia. No market caps are computed.",
+    "e": [
+     "evt-20260914-rum-group-13-7b-georgia-deal",
+     "evt-20260810-riot-9-1b-rockdale-lease",
+     "evt-20260429-amazon-q1-10q-anthropic-gain-16-8b",
+     "evt-20260827-salesforce-10q-anthropic",
+     "evt-20251211-broadcom-anthropic-10b-tpu-customer",
+     "evt-20260924-akamai-11b",
+     "evt-20260706-terawulf-lease",
+     "evt-20260826-zoom-10q-anthropic",
+     "evt-20260729-microsoft-anthropic-gain"
+    ]
+   }
+  ],
+  "second_order": [
+   "An IPO near the reported $2T, 2.07x Series H, re-marks every holder again: TheStreet puts Amazon's stake at $300B to $400B against $190.4B carried. Sell-side and auditors must then separate Anthropic marks from AMZN, MSFT, CRM and ZM earnings. The gains recur each priced round, $9.5B in Q3 2025 and $16.8B in Q1 2026, so treating them as one-offs would be wrong.",
+   "Nvidia as IPO anchor, up to $10B or about 0.5% at $2T (Reuters, T3), would put a chip supplier in the book while Akamai and RUM already issue Anthropic warrants. Equity then flows both ways between Anthropic and its suppliers. That extends the IPO absorption worry: the price-sensitive float is smaller than the $100B raise, but price discovery is less clean. Underwriters will face related-party questions.",
+   "Cursor, Claude's largest coding channel at ARR above $2B, moves under SpaceX in a $60.0B deal. SpaceX rents Anthropic compute on 90-day terms and competes through Grok. Anthropic cut off Windsurf (Jun 2025) and OpenAI (Aug 2025) to avoid supplying rivals. A cut-off would confirm the channel-risk thesis. Continued access on both sides, as Musk's Jul 9 vow not to cut off Colossus hints, would show rivals trading as suppliers.",
+   "Each host contract re-rates a small cap in a day: Akamai +17% after hours, Riot +25% after hours, TeraWulf above 10%, RUM +11.6%, while CoreWeave and Nebius fell 5% to 7% on RUM. The missing piece is concentration: Riot's Anthropic lease is 93% of its contracted revenue. If the IPO slips, these names carry the sharpest single-counterparty risk.",
+   "Anthropic's six closed deals carry no reported price above about $400M, and two lapsed talks at $6B and $7B sat 50% above Decart's $4B May valuation and 75% above the $4B MatX sought. A $2T stock currency changes the math. A priced deal above $1B would break the pattern and a Decart or MatX revival would reverse the walk-aways. Consensus may be assuming tuck-ins continue."
+  ],
+  "watch": [
+   {
+    "item": "Amazon Q3 2026 results and 10-Q: Anthropic carrying value, gain and facility draws",
+    "by": "2026-10-31",
+    "threshold": "Carrying value above $190.4B or a pre-tax gain above Q1's $16.8B shows another up-mark. A draw on the $15.0B facility shows funding pace. Any ownership percentage would settle the 15% to 21% spread."
+   },
+   {
+    "item": "Microsoft fiscal Q1 and Alphabet Q3 results: Anthropic gains and funded dollars",
+    "by": "2026-10-31",
+    "threshold": "Microsoft funded dollars against the $5B cap, and a gain beyond the $3.2B booked in fiscal Q4. Alphabet funded dollars against the $10B first tranche and any word on the $30B target-gated tranche."
+   },
+   {
+    "item": "Anthropic public S-1: commitments by supplier, related-party note, beneficial ownership, Nvidia anchor",
+    "by": "2026-11-15",
+    "threshold": "Amazon near $110B, Google near $111.1B, Microsoft near $31.4B, SpaceX up to $84.5B, total near $518B. Room for $150.0B of neocloud deals. Nvidia named with a $5B or larger anchor would confirm the Sep 11 report."
+   },
+   {
+    "item": "Nvidia fiscal Q3 results: Anthropic stake carrying value and funded share of the $10B",
+    "by": "2026-11-30",
+    "threshold": "A funded amount well below $10B keeps the cap an option. A disclosed anchor allocation confirms supplier-as-anchor."
+   },
+   {
+    "item": "Claude availability inside Cursor after SpaceX's $60B deal (closing reported Aug 15, not opened)",
+    "by": "2026-10-31",
+    "threshold": "Any removal of Claude models, a default switch to an xAI model, or an Anthropic access restriction on Cursor."
+   },
+   {
+    "item": "Ramp AI Index October edition, plus any new Menlo enterprise update (none since Dec 9 2025)",
+    "by": "2026-10-15",
+    "threshold": "Anthropic's lead below the 4.0-point September gap (43.8% vs 39.8%), or OpenAI ahead. Menlo dollar share below 40% or OpenAI above 27%."
+   },
+   {
+    "item": "Holder and host quarterly filings: Zoom and Salesforce fiscal Q3 10-Qs, Akamai, Riot and TeraWulf results",
+    "by": "2026-12-15",
+    "threshold": "Salesforce's Anthropic share of strategic portfolio above 45%. Zoom carrying value above $3,134.5M. Akamai reaffirming $150M to $300M of 2027 revenue from the deal."
+   },
+   {
+    "item": "New distribution deals and acquisitions: Apple, Reliance or Schwab rollouts, Ode add-ons, Decart or MatX revival",
+    "by": "2026-12-31",
+    "threshold": "Any priced acquisition above $400M, the largest reported to date. A named Apple or Reliance agreement. A revived Decart or MatX deal."
+   }
+  ],
+  "house_view": "(a) Extends: the market prices unlike quality alike, and Nscale's reported $30B to $35B IPO target rests on $140.6M of H1 revenue and a $1.02B H1 loss, priced off one $44.6B Anthropic contract. (b) Extends without testing: Claude bills through AWS Marketplace and Azure commit drawdown and the FT cites revenue shared with distribution partners, so part of the gross run-rate is partner-billed, but with no channel mix in the record the desk's 39.75% haircut cannot be checked here and Axios's $70B OpenAI against $65B Anthropic mixes net and gross. (c) Extends: strategic buyers such as Nvidia, reported at up to $10B, and Amazon's $15.0B facility, open for 30 months after a liquidity event, make part of the book less price-sensitive than the $100B headline raise, yet the $2T ask is 2.07x the last mark. (d) Confirms with a wrinkle: $8.0B of Amazon's $18.0B entered as convertible notes, every 'up to' is unfunded, and the $15B revolver and $34.5B TPU SPV notes are debt, so only filed equity counts. (e) Confirms: seats, run-rate and contract value mean different things across software, cloud and hosting, since Deloitte's 470,000 is 'available to' and RUM's $13.7B is six-year contract value.",
+  "uncertainties": [
+   {
+    "type": "data",
+    "note": "Funded versus up-to. Only Amazon's $18.0B is filed. Google's $10B first tranche is reported as made but unconfirmed, and Microsoft, Nvidia and AMD funded amounts are absent. Amazon's ownership is 15% to 20% (TheStreet, T3), about 21% (Forkast, T4) or 19.7% by desk arithmetic; no filing states it.",
+    "what_would_change_it": "Alphabet, Microsoft and Nvidia filings, or the capitalization table in the public S-1."
+   },
+   {
+    "type": "data",
+    "note": "The $518B supplier split is a T3 relay of a leaked draft. It sums to $498.2B and leaves $19.8B, while named neocloud contracts total $150.0B. SpaceX is $40B, $45B or up to $84.5B by source. TeraWulf and Riot do not name Anthropic in their own releases, and Hut 8's River Bend lease names Fluidstack.",
+    "what_would_change_it": "The commitments table and related-party note in the public S-1."
+   },
+   {
+    "type": "interpretation",
+    "note": "Circularity is an inference. The record shows equity in and compute out for the same names, and warrants flowing back from Akamai and RUM, but no filing traces cash from an investment to an invoice. Amazon's 10-Q says its AWS commercial arrangement was amended, terms not given. A ~$34B non-cash investor-funding charge sits inside the leaked FY2025 net loss of $42B (T3); the record does not say which instruments.",
+    "what_would_change_it": "S-1 use-of-proceeds, related-party and financial-instrument notes."
+   },
+   {
+    "type": "data",
+    "note": "Share series are not like-for-like. Menlo is an Anthropic investor, and 40% of its $12.5B API pool is about $5.0B for 2025 against about $4.6B of total FY2025 revenue in the leaked prospectus (T2), on different bases. Ramp's May reading is 34.4% in one article and 41% in another, and the Sep read is T4. Channel concentration is unmeasured: two unnamed customers are nearly 25% of 2025 revenue and the record has no channel split.",
+    "what_would_change_it": "Ramp's primary tables, an independent spend survey, or the S-1 revenue split by product and channel."
+   },
+   {
+    "type": "forecast",
+    "note": "IPO re-mark. Reference class: the three priced rounds since Sep 2025 each lifted holders' marks, Amazon's preferred from $14.8B at Dec 2025 to $92.5B at Jun 2026. A base rate for mega-IPO pricing against the last private mark is not in the record. What differs: $2T is 2.07x Series H and timing slipped from October to November (WSJ, T3; Business Insider said October).",
+    "what_would_change_it": "The price range in the public S-1 and Q3 results shown before the roadshow."
+   }
+  ],
+  "evidence": [
+   "evt-20260731-amazon-10q-anthropic",
+   "evt-20260929-prospectus-518b-compute-commitments",
+   "evt-20260424-google-up-to-40b-investment",
+   "evt-20251118-microsoft-nvidia-anthropic-partnership",
+   "evt-20260420-amazon-5gw-25b-investment",
+   "evt-20260928-prospectus-risk-factors",
+   "evt-20260924-akamai-11b",
+   "evt-20260914-rum-group-13-7b-georgia-deal",
+   "evt-20260729-microsoft-anthropic-gain",
+   "evt-20260722-amd-2gw-5b",
+   "evt-20260911-nvidia-ipo-anchor-talks",
+   "evt-20251209-menlo-genai-enterprise",
+   "evt-20260130-a16z-enterprise-survey",
+   "evt-20260820-ramp-data-openai-gaining-on-anthropic",
+   "evt-20260513-ramp-ai-index-anthropic-overtakes-openai",
+   "evt-20260616-spacex-cursor",
+   "evt-20260826-zoom-10q-anthropic",
+   "evt-20260827-salesforce-10q-anthropic",
+   "evt-20260429-amazon-q1-10q-anthropic-gain-16-8b",
+   "evt-20260528-series-h-roster",
+   "evt-20260810-riot-9-1b-rockdale-lease",
+   "evt-20260918-nscale-files-nyse-ipo",
+   "evt-20260520-spacex-s1-anthropic-colossus-contract",
+   "evt-20260831-lambda-35b-cloud-deal-texas",
+   "evt-20251203-snowflake-200m-partnership",
+   "evt-20260504-enterprise-ai-services-jv",
+   "evt-20260504-astrix-cisco",
+   "evt-20240717-anthology-fund",
+   "evt-20260923-basecamp-research-140m-series-c",
+   "evt-20250417-goodfire-series-a-anthropic",
+   "evt-20260403-coefficient-bio-acquisition",
+   "evt-20260518-stainless-acquisition",
+   "evt-20260908-decart-talks-ended",
+   "evt-20260827-matx-talks",
+   "evt-20251211-broadcom-anthropic-10b-tpu-customer",
+   "evt-20260609-tpu-financing-34-5b-closed",
+   "evt-20260306-cloud-partners-keep-claude-available",
+   "evt-20260511-claude-platform-on-aws-launch",
+   "evt-20251118-claude-in-microsoft-foundry",
+   "evt-20260929-openai-arr-nears-70b",
+   "evt-20260223-ibm-cobol-selloff",
+   "evt-20260203-software-stocks-selloff-cowork-plugins"
+  ]
+ },
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Read analyst_common.md in full. Slice: partnership, customer, acquisition, investment, competition, entities, market_share. Slug ecosystem."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "q.py --cat investment, 2021-01-01 to 2026-09-30: 63 events read at headline level"
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "q.py --cat partnership: 127 events read"
+  },
+  {
+   "seq": 4,
+   "type": "search",
+   "text": "q.py --cat customer: 83 events read"
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "q.py --cat acquisition: 15 events read"
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "q.py --cat competition: 43 events read"
+  },
+  {
+   "seq": 7,
+   "type": "note",
+   "text": "The five categories overlap. Union is 228 distinct events, all read at headline level."
+  },
+  {
+   "seq": 8,
+   "type": "search",
+   "text": "q.py --table market_share: 24 rows (Menlo, a16z, Ramp, OpenRouter, seat counts, partner network)"
+  },
+  {
+   "seq": 9,
+   "type": "search",
+   "text": "q.py --table capital (11 rows) and valuation (7 rows). Tables customers, mix, compute, compute_totals, rounds, comparables, run_rate_desk and capital_summary are empty in this snapshot, so I used event notes instead."
+  },
+  {
+   "seq": 10,
+   "type": "search",
+   "text": "q.py --conflicts and --open, desk-ecosystem rows: 15 conflicts (14 desk, 1 cross-agent) and 21 open items"
+  },
+  {
+   "seq": 11,
+   "type": "search",
+   "text": "q.py --entities: 793 rows. 172 public rows collapse to 117 parent tickers once SK Telecom's SKM and 017670 are merged."
+  },
+  {
+   "seq": 12,
+   "type": "search",
+   "text": "q.py --q free-text, about 55 queries: Bedrock, resale, gross, MACC, Marketplace, prospectus, S-1, nvidia, Broadcom, Apollo, Fluidstack, SPV, Ramp, OpenRouter, Cursor, top two customers"
+  },
+  {
+   "seq": 13,
+   "type": "found",
+   "text": "Amazon: $8.0B notes plus $5.0B Series G plus $5.0B Series H is $18.0B funded. $15.0B facility left. Preferred $92.5B and notes $97.9B carried at Jun 30 2026.",
+   "event_id": "evt-20260731-amazon-10q-anthropic"
+  },
+  {
+   "seq": 14,
+   "type": "verify",
+   "text": "Amazon tranche arithmetic ties across three 10-Q events: $1.25B + $2.75B + $1.3B + $2.7B = $8.0B; $5.3B + $1.3B + $1.4B = $8.0B; $8.0B + $10.0B = $18.0B; $20.0B less $5.0B = $15.0B.",
+   "event_id": "evt-20251031-amazon-10q-anthropic-holdings"
+  },
+  {
+   "seq": 15,
+   "type": "found",
+   "text": "Amazon gains: $3.3B Q1 2025, $9.5B Q3 2025, $16.8B Q1 2026. The Jul 31 10-Q notes show upward adjustments near $50.5B in Q2 and $62.8B for six months; the income versus OCI split is not stated.",
+   "event_id": "evt-20260429-amazon-q1-10q-anthropic-gain-16-8b"
+  },
+  {
+   "seq": 16,
+   "type": "found",
+   "text": "Google: over $3B funded by Mar 2025 and a 14% stake per court filings via NYT (T2). Up to $40B from Apr 24 2026: $10B now, $30B on targets (T2). No Alphabet filing in the record.",
+   "event_id": "evt-20260424-google-up-to-40b-investment"
+  },
+  {
+   "seq": 17,
+   "type": "flag",
+   "text": "Google's 14% stake dates from Mar 2025 and pre-dates Series E to H. Series H's $15B hyperscaler portion fits Amazon $5B plus Google's $10B, but Anthropic does not say so.",
+   "event_id": "evt-20260528-series-h-roster"
+  },
+  {
+   "seq": 18,
+   "type": "found",
+   "text": "Microsoft up to $5B, Nvidia up to $10B, Azure purchase $30B (Nov 18 2025, T1). Series G counts 'a portion' of these. Nvidia calls it an investment and deep technology partnership.",
+   "event_id": "evt-20251118-microsoft-nvidia-anthropic-partnership"
+  },
+  {
+   "seq": 19,
+   "type": "flag",
+   "text": "Microsoft's $3.2B gain has two EPS effects: about $0.27 in the 8-K (T1) and 33 cents in TechCrunch (T2). Not reconciled. Funded dollars are not disclosed.",
+   "event_id": "evt-20260729-microsoft-anthropic-gain"
+  },
+  {
+   "seq": 20,
+   "type": "found",
+   "text": "AMD: up to 2 GW, first GW from 1H 2027, equity up to $5B. TechCrunch's recap blurs the equity with compute spend.",
+   "event_id": "evt-20260722-amd-2gw-5b"
+  },
+  {
+   "seq": 21,
+   "type": "found",
+   "text": "Nvidia anchor talks: up to $10B, about 0.5% at $2T, may overlap the existing cap, unconfirmed (Reuters via mirror, T3/LOW).",
+   "event_id": "evt-20260911-nvidia-ipo-anchor-talks"
+  },
+  {
+   "seq": 22,
+   "type": "found",
+   "text": "Leaked prospectus split: Broadcom-related $161.2B, Google $111.1B, Amazon $110B, SpaceX up to $84.5B, Microsoft $31.4B of $518B, about 80% non-cancelable.",
+   "event_id": "evt-20260929-prospectus-518b-compute-commitments"
+  },
+  {
+   "seq": 23,
+   "type": "flag",
+   "text": "The five named suppliers sum to $498.2B and leave $19.8B, yet named neocloud contracts in the record total $150.0B (Nscale 44.6, Lambda 35.0, TeraWulf 19.0, RUM 13.7, Akamai 11.6, Volta 10.0, Riot 9.1, Hut 8 7.0). Bases do not fit.",
+   "event_id": "evt-20260929-prospectus-518b-compute-commitments"
+  },
+  {
+   "seq": 24,
+   "type": "verify",
+   "text": "Commitments cross-check: Amazon over $100B (T1, Apr 20) vs $110B leaked; Microsoft $30B (T1) vs $31.4B; $518B leaked vs The Information's $517B, within 0.2%. Totals agree, the split is unverified.",
+   "event_id": "evt-20260907-compute-contracts-517b-in-11-months"
+  },
+  {
+   "seq": 25,
+   "type": "flag",
+   "text": "SpaceX contract value ranges from about $40B (Musk remarks) to $45B (36 months at $1.25B) to up to $84.5B (leaked prospectus). Either side can exit on 90 days' notice.",
+   "event_id": "evt-20260520-spacex-s1-anthropic-colossus-contract"
+  },
+  {
+   "seq": 26,
+   "type": "found",
+   "text": "Akamai: $11.6B over seven years, up to $9B more. Warrant issued to Anthropic for up to about 5% at $111.33, 7.7M shares. Akamai guides $150M to $300M of 2027 revenue. Shares up 17% after hours.",
+   "event_id": "evt-20260924-akamai-11b"
+  },
+  {
+   "seq": 27,
+   "type": "found",
+   "text": "RUM Group: $13.7B over six years. Warrants to Anthropic over about 50.8M shares at $0.01. Shares +11.6%. Contract described as over 3x RUM's market cap (MarketBeat, T3).",
+   "event_id": "evt-20260914-rum-group-13-7b-georgia-deal"
+  },
+  {
+   "seq": 28,
+   "type": "found",
+   "text": "Riot: $9.1B, 20 years, 191 MW. Riot total signed is 241 MW and $9.8B, so Anthropic is about 93% of contracted revenue (derived). Shares +25% after hours.",
+   "event_id": "evt-20260810-riot-9-1b-rockdale-lease"
+  },
+  {
+   "seq": 29,
+   "type": "flag",
+   "text": "TeraWulf and Riot do not name Anthropic in their own releases; Bloomberg and Reuters identify the tenant. Hut 8's River Bend lease names Fluidstack, with Anthropic tied only in Hut 8's Feb 2026 results.",
+   "event_id": "evt-20251217-hut8-river-bend"
+  },
+  {
+   "seq": 30,
+   "type": "found",
+   "text": "Nscale: $44.6B, 460 MW, six years. NYSE IPO filing shows $140.6M H1 revenue, $1.02B H1 loss. Reported target $30B to $35B vs $14.6B in Mar 2026. Not yet listed.",
+   "event_id": "evt-20260918-nscale-files-nyse-ipo"
+  },
+  {
+   "seq": 31,
+   "type": "found",
+   "text": "Lambda $35B at Hut 8's Beacon Point: Anthropic pays Lambda, Lambda installs Nvidia hardware, Nvidia pays Hut 8 rent on two 15-year leases worth $19.6B base term (WSJ, T3).",
+   "event_id": "evt-20260831-lambda-35b-cloud-deal-texas"
+  },
+  {
+   "seq": 32,
+   "type": "found",
+   "text": "TPU financing: Apollo and Blackstone led $34.5B of SPV notes for more than 1 GW of Google TPUs leased to Anthropic, Broadcom support up to about $29B. Debt at the SPV, not Anthropic equity.",
+   "event_id": "evt-20260609-tpu-financing-34-5b-closed"
+  },
+  {
+   "seq": 33,
+   "type": "found",
+   "text": "Broadcom: $10B Google-TPU order named on the earnings call (T2/MEDIUM), against a $73B AI backlog, which is 13.7% (derived).",
+   "event_id": "evt-20251211-broadcom-anthropic-10b-tpu-customer"
+  },
+  {
+   "seq": 34,
+   "type": "found",
+   "text": "Salesforce 10-Q: Anthropic about 45% of strategic investments, 22% at Jan 31, $3.0B gains over six months. No commercial commitment disclosed.",
+   "event_id": "evt-20260827-salesforce-10q-anthropic"
+  },
+  {
+   "seq": 35,
+   "type": "found",
+   "text": "Zoom 10-Q: Anthropic preferred carried at $3,134.5M after a $300.9M top-up and $1,612.7M quarterly gain.",
+   "event_id": "evt-20260826-zoom-10q-anthropic"
+  },
+  {
+   "seq": 36,
+   "type": "verify",
+   "text": "Zoom cross-check: $3,134.5M less $300.9M less $1,612.7M is $1,220.9M, close to The Next Web's ~$1.3B pre-top-up mark (T3).",
+   "event_id": "evt-20260601-salesforce-stake"
+  },
+  {
+   "seq": 37,
+   "type": "flag",
+   "text": "Salesforce: The Next Web (T3, Jun 1) says the stake is two-thirds of a $7.8B portfolio; the 10-Q (T1) says 45% at Jul 31 and 22% at Jan 31. Unreconciled. I prefer the 10-Q.",
+   "event_id": "evt-20260601-salesforce-stake"
+  },
+  {
+   "seq": 38,
+   "type": "found",
+   "text": "Channels: Snowflake $200M across Bedrock, Vertex and Azure (Snowflake commits, per TechCrunch); Databricks $100M (T3, direction unstated); Foundry MACC-eligible; AWS Marketplace billing; Claude Marketplace drawdown of committed spend.",
+   "event_id": "evt-20251203-snowflake-200m-partnership"
+  },
+  {
+   "seq": 39,
+   "type": "found",
+   "text": "Customer concentration: two customers were nearly 25% of 2025 revenue (FT via TechCrunch, T2). Names are not in the record.",
+   "event_id": "evt-20260928-prospectus-risk-factors"
+  },
+  {
+   "seq": 40,
+   "type": "note",
+   "text": "No revenue split by channel exists in the record. The FT (T3) says gross margin is above 80% before revenue shared with distribution partners such as Amazon; the share is not sized.",
+   "event_id": "evt-20260913-ft-second-straight-adjusted-operating-profit"
+  },
+  {
+   "seq": 41,
+   "type": "found",
+   "text": "Seat deployments are 'available to' counts, not paid seats: Deloitte 470,000, Cognizant up to 350,000, KPMG 276,000+, PwC hundreds of thousands.",
+   "event_id": "evt-20251006-deloitte-470k-claude"
+  },
+  {
+   "seq": 42,
+   "type": "found",
+   "text": "Microsoft, Google and Amazon said Claude stays available outside Department of War work (Mar 6, T2). Cloud channels held through the designation.",
+   "event_id": "evt-20260306-cloud-partners-keep-claude-available"
+  },
+  {
+   "seq": 43,
+   "type": "found",
+   "text": "Cursor: SpaceX buys Anysphere for $60.0B in stock (8-K, T1). Cursor ARR above $2B per Techzine (T3). Anthropic cut off Windsurf (Jun 2025) and OpenAI (Aug 2025).",
+   "event_id": "evt-20260616-spacex-cursor"
+  },
+  {
+   "seq": 44,
+   "type": "flag",
+   "text": "Cursor status is inconsistent: the entity row says close expected Q3, while the T2 event notes say later reports show it closed Aug 15 and that Anthropic did not cut Cursor off (not opened).",
+   "event_id": "evt-20260616-spacex-acquires-cursor-60b"
+  },
+  {
+   "seq": 45,
+   "type": "found",
+   "text": "Acquisitions: Bun (Dec 3 2025), Vercept (Feb 25 2026), Coefficient Bio (~$400M stock, Apr 3), Runhouse (Apr 28), Stainless (>$300M, May 18), Humanloop acqui-hire (Aug 2025). Only two carry a reported price.",
+   "event_id": "evt-20260403-coefficient-bio-acquisition"
+  },
+  {
+   "seq": 46,
+   "type": "flag",
+   "text": "Astrix: Cisco announced intent to acquire (May 4); PitchBook records a completed $400M exit and the price comes from that field. Cisco's blog gives no price and close is not confirmed.",
+   "event_id": "evt-20260504-astrix-cisco"
+  },
+  {
+   "seq": 47,
+   "type": "found",
+   "text": "Lapsed talks: Decart about $6B (Aug 13 to Sep 8, T3) and MatX about $7B (Reuters Aug 27, T2). A $7B Decart headline also exists (Calcalist, unopened).",
+   "event_id": "evt-20260908-decart-talks-ended"
+  },
+  {
+   "seq": 48,
+   "type": "found",
+   "text": "Ode JV: $1.5B valuation with $300M each from Anthropic, Blackstone and H&F (TechCrunch, T2; Anthropic page gives no amounts). Fractional AI acquired in May, Casper Studios in Aug (TNW, T3).",
+   "event_id": "evt-20260504-enterprise-ai-services-jv"
+  },
+  {
+   "seq": 49,
+   "type": "flag",
+   "text": "Anthology first cohort is 26 startups (TechCrunch: 18 named plus 8 stealth) or 18 (Menlo: 10 named plus seven stealth). Menlo cites three exits by Jun 2026; the record names two, Graphite and Astrix.",
+   "event_id": "evt-20241218-anthology-first-cohort"
+  },
+  {
+   "seq": 50,
+   "type": "flag",
+   "text": "Ledger conflicts on which investments are real: Basecamp DISPUTED (BioSpace correction), Sazabi (employee angels), Frontier (credit pledge), Theseus (tenancy), Graphite and Astrix (Anthology co-investments). Kept out of equity counts.",
+   "event_id": "evt-20260923-basecamp-research-140m-series-c"
+  },
+  {
+   "seq": 51,
+   "type": "flag",
+   "text": "Sapiom is called verified by the desk, yet the Anthropic role rests on one secondary source (Memeburn, T3) and no check size. Goodfire's 'first direct investment' is Menlo's wording.",
+   "event_id": "evt-20260809-sapiom-series-a"
+  },
+  {
+   "seq": 52,
+   "type": "found",
+   "text": "Menlo: Jul 31 2025, 32% of production usage (n=150); Dec 9 2025, 40% of estimated API dollars (n=495). Basis changed between them. Menlo invests in Anthropic.",
+   "event_id": "evt-20251209-menlo-genai-enterprise"
+  },
+  {
+   "seq": 53,
+   "type": "verify",
+   "text": "market_share table agrees with the event extractions for Menlo (32/25/20, 40/27/21), a16z (44/78) and Ramp (34.4/32.3).",
+   "event_id": "evt-20260130-a16z-enterprise-survey"
+  },
+  {
+   "seq": 54,
+   "type": "flag",
+   "text": "Menlo's 40% of a $12.5B API pool is about $5.0B for 2025, above the ~$4.6B total FY2025 revenue in the leaked prospectus (T2). Bases differ, so it cannot be audited until the S-1 is public.",
+   "event_id": "evt-20260928-prospectus-leaked-reuters"
+  },
+  {
+   "seq": 55,
+   "type": "found",
+   "text": "Ramp: May 13 34.4% vs 32.3% (n 50,000+); Aug 20 about 44% vs 40% in July from 41% vs 39% in May (n about 70,000); Sep 9 43.8% vs 39.8% (T4 relay).",
+   "event_id": "evt-20260820-ramp-data-openai-gaining-on-anthropic"
+  },
+  {
+   "seq": 56,
+   "type": "flag",
+   "text": "Ramp's May reading is 34.4% in one article and 41% in another, a 6.6-point gap. The Aug 20 headline says OpenAI is gaining, yet May to July the lead widened from 2 to 4 points; June is missing.",
+   "event_id": "evt-20260513-ramp-ai-index-anthropic-overtakes-openai"
+  },
+  {
+   "seq": 57,
+   "type": "found",
+   "text": "OpenAI: ~$70B annualized revenue (Axios, T2) vs Anthropic ~$65B in July; seeking $30B at ~$1.4T after shelving a 2026 IPO (Bloomberg, T3); Sol $2/$10 and Luna $0.10/$0.50 on Sep 22.",
+   "event_id": "evt-20260929-openai-arr-nears-70b"
+  },
+  {
+   "seq": 58,
+   "type": "flag",
+   "text": "run_rate table row dated 2026-09-29 ($70,000M) cites the OpenAI ARR event, so OpenAI's figure sits in Anthropic's run-rate table.",
+   "event_id": "evt-20260929-openai-arr-nears-70b"
+  },
+  {
+   "seq": 59,
+   "type": "found",
+   "text": "Incumbent moves tied to Anthropic releases: IBM -13.2% on Feb 23; Thomson Reuters and LegalZoom down over 15% and RELX and FactSet double digits on Feb 3 (both T2).",
+   "event_id": "evt-20260223-ibm-cobol-selloff"
+  },
+  {
+   "seq": 60,
+   "type": "verify",
+   "text": "Re-derived the public count from entity rows: 117 parent tickers; 28 with an investor role, 16 cloud or chip, 61 customer, 19 competitor, 11 bank (roles overlap)."
+  },
+  {
+   "seq": 61,
+   "type": "flag",
+   "text": "Entity public flags are inconsistent: SpaceX appears as public=False and True, Forge Global differs between entity and event, Nscale carries NSCL while unlisted. Desk says long-tail flags are not web-verified, so 117 is approximate."
+  },
+  {
+   "seq": 62,
+   "type": "flag",
+   "text": "Four different $15B items: Microsoft plus Nvidia cap (Nov 2025), Series H hyperscaler portion (May 2026), Amazon's remaining facility (Jul 2026), pre-IPO revolver (Sep 2026). Not the same money.",
+   "event_id": "evt-20260903-credit-facility-15b-nears-final"
+  },
+  {
+   "seq": 63,
+   "type": "flag",
+   "text": "IPO timing conflicts: Business Insider (Sep 13) says October, WSJ (Sep 18) says November. My watch dates assume the later case.",
+   "event_id": "evt-20260918-wsj-ipo-pushed-to-november"
+  },
+  {
+   "seq": 64,
+   "type": "flag",
+   "text": "Accenture and Faculty 'at least $1B over five years' is combined per the extracted term field, yet the same record carries a per-party minimum of $1B and the entity note says each side.",
+   "event_id": "evt-20260918-accenture-embedded-evaluation"
+  },
+  {
+   "seq": 65,
+   "type": "flag",
+   "text": "Leaked FY2025 net loss of $42B includes a ~$34B non-cash investor-funding charge (SiliconANGLE, T3) while Amazon books gains on its notes. The record does not say the two are linked.",
+   "event_id": "evt-20260928-prospectus-leaked-reuters"
+  },
+  {
+   "seq": 66,
+   "type": "flag",
+   "text": "Meta compute talks: CNN says Meta leases up to $10B over two years to Anthropic; Engadget says Meta could spend up to $10B a year with Anthropic. Direction and period unresolved.",
+   "event_id": "evt-20260717-meta-compute-rental-talks"
+  },
+  {
+   "seq": 67,
+   "type": "message",
+   "text": "Leaked-prospectus split sums to $498.2B of $518B, but named neocloud deals total $150.0B. Please reconcile bases, maximum versus committed, and SpaceX at $40B, $45B or $84.5B.",
+   "to": "analyst-compute"
+  },
+  {
+   "seq": 68,
+   "type": "message",
+   "text": "Amazon funded $18.0B ties across 10-Qs; facility $15.0B; ceiling $33.0B. Open: Google's $10B funding, Microsoft and Nvidia funded dollars, Microsoft EPS $0.27 vs $0.33.",
+   "to": "verify-capital"
+  },
+  {
+   "seq": 69,
+   "type": "message",
+   "text": "run_rate row 2026-09-29 is OpenAI's ARR. Tables customers, mix, compute and rounds are empty. Ramp May readings differ, 34.4% vs 41%. Two customers are nearly 25% of 2025 revenue with no names.",
+   "to": "verify-operating"
+  },
+  {
+   "seq": 70,
+   "type": "message",
+   "text": "Bear-side findings: $252.5B owed to three investor-hyperscalers, unfunded 'up to' caps, Cursor under SpaceX, survey and usage gaps, top two customers near 25%.",
+   "to": "analyst-bear"
+  },
+  {
+   "seq": 71,
+   "type": "message",
+   "text": "Bull-side findings: Claude on all three clouds, cloud partners held through the Pentagon designation, $18.0B filed from Amazon, holder gains recur each priced round, Anthropic leads API dollars and card adoption.",
+   "to": "analyst-bull"
+  },
+  {
+   "seq": 72,
+   "type": "message",
+   "text": "For capital efficiency: only Amazon's $18.0B is filed equity, and $8.0B of it went in as convertible notes. The $15B revolver and $34.5B TPU SPV notes are debt. Do not add 'up to' amounts.",
+   "to": "analyst-model"
+  },
+  {
+   "seq": 73,
+   "type": "message",
+   "text": "Supplier contracts belong to analyst-compute; I used them only to size circularity against equity. Shared ids: prospectus commitments, SpaceX, Nscale, Lambda.",
+   "to": "analyst-topics"
+  },
+  {
+   "seq": 74,
+   "type": "message",
+   "text": "Slice done. Main flags: $518B split does not reconcile, run_rate table holds OpenAI's figure, four $15B items, PitchBook overstates direct investments, Menlo share cannot yet be audited.",
+   "to": "orchestrator"
+  }
+ ],
+ "stats": {
+  "events_read": 329,
+  "flags": 20
+ }
+}

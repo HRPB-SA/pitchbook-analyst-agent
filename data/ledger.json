@@ -1,24 +1,24 @@
 {
- "generated": "2026-09-30T18:36:39Z",
- "raw_events": 914,
- "merged_events": 641,
+ "generated": "2026-09-30T18:41:27Z",
+ "raw_events": 973,
+ "merged_events": 662,
  "tiers": {
-  "T1": 372,
-  "T2": 161,
-  "T3": 96,
-  "T4": 11,
+  "T1": 375,
+  "T2": 171,
+  "T3": 102,
+  "T4": 13,
   "T5": 1
  },
  "confidence": {
-  "HIGH": 471,
-  "MEDIUM": 151,
-  "DISPUTED": 6,
+  "HIGH": 481,
+  "MEDIUM": 161,
+  "DISPUTED": 7,
   "VERIFY": 6,
   "LOW": 7
  },
  "categories": {
-  "governance": 53,
-  "other": 40,
+  "governance": 55,
+  "other": 41,
   "people": 55,
   "funding": 28,
   "investment": 63,
@@ -28,33 +28,42 @@
   "model": 40,
   "product": 142,
   "government": 87,
-  "compute": 48,
+  "compute": 52,
   "security": 45,
-  "legal": 65,
-  "customer": 89,
-  "partnership": 127,
+  "legal": 66,
+  "customer": 95,
+  "partnership": 126,
   "valuation": 33,
   "pricing": 58,
   "international": 47,
   "regulatory": 40,
-  "revenue": 41,
-  "financials": 32,
-  "secondary": 8,
-  "competition": 44,
-  "ipo": 29,
+  "revenue": 50,
+  "financials": 46,
+  "secondary": 10,
+  "competition": 47,
+  "ipo": 38,
   "debt": 7,
   "acquisition": 15
  },
  "years": {
   "2021": 6,
   "2022": 16,
-  "2023": 47,
+  "2023": 46,
   "2024": 68,
   "2025": 173,
-  "2026": 331
+  "2026": 353
  },
  "opened_share": 0.998,
  "cross_agent_conflicts": [
+  {
+   "topic": "Amazon to invest up to $4B; AWS becomes primary cloud · amount_usd_m",
+   "value_a": 1250.0,
+   "source_a": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "value_b": 4000.0,
+   "source_b": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "note": "cross-agent numeric mismatch (scout-2023 vs desk-compute)",
+   "event_id": "evt-20230925-amazon-up-to-4b"
+  },
   {
    "topic": "Amazon to invest up to $4B; AWS becomes primary cloud · amount_usd_m",
    "value_a": 1250.0,
@@ -81,6 +90,15 @@
    "source_b": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
    "note": "cross-agent numeric mismatch (scout-2025h2 vs desk-revenue)",
    "event_id": "evt-20251104-information-2028-revenue-projections"
+  },
+  {
+   "topic": "Reuters: draft prospectus shows $42B 2025 net loss, $518B spending plans · revenue_period_usd_m",
+   "value_a": 4590.0,
+   "source_a": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "value_b": 11500.0,
+   "source_b": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "note": "cross-agent numeric mismatch (desk-s1 vs scout-2026q3)",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials"
   }
  ],
  "agent_conflicts": [

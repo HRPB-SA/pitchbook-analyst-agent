@@ -275,8 +275,11 @@ skill (one categorical palette, sequential for time, direct labels, no chartjunk
 - Adversarial defensibility: for each attackable claim the defense is in the artifact (notes field,
   ledger line), not in my head.
 - Ship decision: [VERIFY]/[DISPUTED] figures ship only with the flag visible in the UI.
-- MNPI/COI: all inputs public; portfolio disclosure (Anthropic 6% overweight in the model
-  portfolio per project-context) shown on the Ledger tab.
+- MNPI/COI: inputs are public web sources plus licensed PitchBook Premium content (not public; licence
+  check before sharing). The S-1 is confidential: any figure from a leaked or reported prospectus is
+  press-reported (T2/T3), labelled, and subject to the reader's compliance review. Portfolio disclosure
+  (Anthropic 6% overweight, OpenAI 2% underweight in the model portfolio per project context dated
+  Feb 27, to be re-verified) is shown on the Sources tab and is never used as evidence.
 
 Gate checklist (asserted before "done"):
 - [ ] `events.json` ≥ 300 deduped events, every one with an opened URL

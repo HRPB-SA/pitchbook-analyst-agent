@@ -1,0 +1,1291 @@
+{
+ "agent": "desk-compute",
+ "role": "Compute Desk",
+ "started": "2026-09-30T18:14:37Z",
+ "finished": null,
+ "events": [
+  {
+   "id": "evt-20230203-google-cloud-preferred",
+   "date": "2023-02-03",
+   "date_precision": "day",
+   "headline": "Anthropic picks Google Cloud as preferred provider; TPU/GPU clusters",
+   "summary": "Google Cloud announced that Anthropic selected it as preferred cloud provider, with Google intending to build large-scale next-generation TPU and GPU clusters for Anthropic to train and deploy its AI systems, with no dollar or capacity terms disclosed.",
+   "category": [
+    "compute",
+    "partnership"
+   ],
+   "source": {
+    "url": "https://www.googlecloudpresscorner.com/2023-02-03-Anthropic-Forges-Partnership-With-Google-Cloud-to-Help-Deliver-Reliable-and-Responsible-AI",
+    "publisher": "Google Cloud Press Corner",
+    "title": "Anthropic Forges Partnership With Google Cloud to Help Deliver Reliable and Responsible AI",
+    "published": "2023-02-03",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [],
+   "extracted": {
+    "amount_usd_m": null,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "Google Cloud",
+     "chips": "next-generation TPU and GPU clusters (Google to build)",
+     "gw": null,
+     "usd_m": null,
+     "term": null
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Google Cloud",
+      "type": "cloud",
+      "public": true,
+      "ticker": "GOOGL"
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "announced",
+     "basis": null,
+     "financing": null,
+     "start": "2023-02",
+     "sites": [],
+     "dollar_terms_disclosed": false
+    }
+   },
+   "confidence": "HIGH",
+   "notes": "Earliest dated Google Cloud compute commitment; release states 'Claude runs on Google Cloud'. No dollar, chip-count or GW figure. The ~$300M Google equity stake reported by the FT at the time is a separate investment event (desk-deals), not in this release.",
+   "agent": "desk-compute"
+  },
+  {
+   "id": "evt-20230925-amazon-up-to-4b",
+   "date": "2023-09-25",
+   "date_precision": "day",
+   "headline": "Amazon to invest up to $4B; AWS becomes primary cloud",
+   "summary": "Amazon announced it would invest up to $4B in Anthropic for a minority stake while Anthropic named AWS its primary cloud provider for mission-critical workloads and agreed to use AWS Trainium and Inferentia chips to build, train and deploy future foundation models.",
+   "category": [
+    "compute",
+    "partnership",
+    "investment"
+   ],
+   "source": {
+    "url": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+    "publisher": "Amazon (press release)",
+    "title": "Amazon and Anthropic announce strategic collaboration to advance generative AI",
+    "published": "2023-09-25",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+     "publisher": "Amazon Q2-2026 Form 10-Q (SEC)",
+     "tier": "T1"
+    }
+   ],
+   "extracted": {
+    "amount_usd_m": 4000,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "AWS",
+     "chips": "AWS Trainium and Inferentia",
+     "gw": null,
+     "usd_m": null,
+     "term": "long-term; AWS primary cloud for mission-critical workloads; no compute-spend commitment disclosed"
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Amazon Web Services",
+      "type": "cloud",
+      "public": true,
+      "ticker": "AMZN"
+     },
+     {
+      "name": "AWS Trainium",
+      "type": "chip",
+      "public": true,
+      "ticker": "AMZN"
+     },
+     {
+      "name": "AWS Inferentia",
+      "type": "chip",
+      "public": true,
+      "ticker": "AMZN"
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "announced",
+     "basis": "up to",
+     "financing": "vendor-investment",
+     "start": "2023-09",
+     "sites": [],
+     "investment_basis": "up to $4B (investment, not compute spend)"
+    }
+   },
+   "confidence": "HIGH",
+   "notes": "'Up to $4B' is an investment cap, not funded capital and not compute spend. Amazon's Q2-2026 10-Q confirms the money was invested as convertible notes: $8.0B cumulative from Q3 2023 to Q4 2025 (covers this tranche plus Mar 2024 and Nov 2024). This release is the origin of the AWS-primary-cloud and Trainium/Inferentia commitments that Amazon's 10-Q says were later amended (Q2 2026).",
+   "agent": "desk-compute"
+  },
+  {
+   "id": "evt-20231108-google-cloud-expansion-tpu-v5e",
+   "date": "2023-11-08",
+   "date_precision": "day",
+   "headline": "Google Cloud expands Anthropic partnership; TPU v5e for Claude inference",
+   "summary": "Google announced Anthropic would be among the first to deploy Cloud TPU v5e at scale to serve Claude, alongside one of the industry's largest GKE clusters, AlloyDB, BigQuery and Google security services, with no dollar figure.",
+   "category": [
+    "compute",
+    "partnership"
+   ],
+   "source": {
+    "url": "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html",
+    "publisher": "Google Cloud (PR Newswire)",
+    "title": "Google announces expansion of AI partnership with Anthropic",
+    "published": "2023-11-08",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [],
+   "extracted": {
+    "amount_usd_m": null,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "Google Cloud",
+     "chips": "Cloud TPU v5e (inference); Multislice training across tens of thousands of interconnected TPU chips",
+     "gw": null,
+     "usd_m": null,
+     "term": null
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Google Cloud",
+      "type": "cloud",
+      "public": true,
+      "ticker": "GOOGL"
+     },
+     {
+      "name": "Google TPU v5e",
+      "type": "chip",
+      "public": true,
+      "ticker": "GOOGL"
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "live",
+     "basis": null,
+     "financing": null,
+     "start": "2023-11",
+     "sites": [],
+     "tpu_v5e_serving_perf_per_dollar_vs_v4": "2.7x (Google-stated)"
+    }
+   },
+   "confidence": "HIGH",
+   "notes": "Shows Claude serving on TPUs by Nov 2023 (release says 'serve its Claude LLM'), i.e. TPU inference precedes the 2025 1M-TPU deal. Google-stated performance claims (2.3x training, 2.7x serving per dollar vs prior gen) are vendor marketing, not Anthropic cost data.",
+   "agent": "desk-compute"
+  },
+  {
+   "id": "evt-20241122-amazon-additional-4b",
+   "date": "2024-11-22",
+   "date_precision": "day",
+   "headline": "Amazon invests another $4B; AWS named primary training partner",
+   "summary": "Amazon committed an additional $4B (total $8B) and Anthropic named AWS its primary training partner as well as primary cloud provider, agreeing to train and deploy future foundation models on Trainium and Inferentia and to work with Annapurna Labs on future Trainium generations.",
+   "category": [
+    "compute",
+    "partnership",
+    "investment"
+   ],
+   "source": {
+    "url": "https://www.aboutamazon.com/news/aws/amazon-invests-additional-4-billion-anthropic-ai",
+    "publisher": "Amazon (aboutamazon.com)",
+    "title": "Amazon to invest additional $4 billion in Anthropic",
+    "published": "2024-11-22",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [
+    {
+     "url": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/",
+     "publisher": "TechCrunch",
+     "tier": "T2"
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+     "publisher": "Amazon Q2-2026 Form 10-Q (SEC)",
+     "tier": "T1"
+    }
+   ],
+   "extracted": {
+    "amount_usd_m": 4000,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "AWS",
+     "chips": "Trainium (training) and Inferentia (deployment); future Trainium generations co-developed with Annapurna Labs",
+     "gw": null,
+     "usd_m": null,
+     "term": "AWS primary cloud and training partner; no compute-spend figure disclosed"
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Amazon Web Services",
+      "type": "cloud",
+      "public": true,
+      "ticker": "AMZN"
+     },
+     {
+      "name": "AWS Trainium",
+      "type": "chip",
+      "public": true,
+      "ticker": "AMZN"
+     },
+     {
+      "name": "Annapurna Labs",
+      "type": "partner",
+      "public": true,
+      "ticker": "AMZN"
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "announced",
+     "basis": "up to",
+     "financing": "vendor-investment",
+     "start": "2024-11",
+     "sites": [],
+     "cumulative_amazon_investment_usd_m": 8000
+    }
+   },
+   "confidence": "HIGH",
+   "notes": "The Amazon page itself carries no date or $8B total (date and total from TechCrunch Nov 22 2024); Amazon's Q2-2026 10-Q independently confirms $8.0B of convertible notes invested Q3 2023-Q4 2025. Investment, not compute spend.",
+   "agent": "desk-compute"
+  },
+  {
+   "id": "evt-20241203-project-rainier",
+   "date": "2024-12-03",
+   "date_precision": "day",
+   "headline": "AWS unveils Project Rainier Trainium2 cluster for Anthropic",
+   "summary": "At re:Invent AWS announced Trainium2 general availability and Project Rainier, an EC2 UltraCluster of Trn2 UltraServers with hundreds of thousands of Trainium2 chips and more than 5x the exaflops Anthropic used to train its then-current models.",
+   "category": [
+    "compute",
+    "partnership"
+   ],
+   "source": {
+    "url": "https://press.aboutamazon.com/2024/12/aws-trainium2-instances-now-generally-available",
+    "publisher": "Amazon (press release)",
+    "title": "AWS Trainium2 instances now generally available",
+    "published": "2024-12-03",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [],
+   "extracted": {
+    "amount_usd_m": null,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "AWS",
+     "chips": "Trainium2 (hundreds of thousands) in Project Rainier; Trainium3 (3nm) previewed for late 2025",
+     "gw": null,
+     "usd_m": null,
+     "term": ">5x exaflops vs Anthropic's then-current training cluster; no dollar figure"
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Amazon Web Services",
+      "type": "cloud",
+      "public": true,
+      "ticker": "AMZN"
+     },
+     {
+      "name": "AWS Trainium2",
+      "type": "chip",
+      "public": true,
+      "ticker": "AMZN"
+     },
+     {
+      "name": "AWS Trainium3",
+      "type": "chip",
+      "public": true,
+      "ticker": "AMZN"
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "announced",
+     "basis": null,
+     "financing": "vendor-investment",
+     "start": "2025-01",
+     "sites": [
+      "multiple US data centers (Indiana named Oct 2025)"
+     ],
+     "trn2_ultraserver": "64 chips, 83.2 peak petaflops",
+     "price_performance_claim": "30-40% better than GPU-based P5e/P5en (AWS-stated)"
+    }
+   },
+   "confidence": "HIGH",
+   "notes": "Chip count in 2024 is only 'hundreds of thousands'; the ~500,000 live figure is from the Oct 2025 activation. Vendor price-performance claim (30-40% vs GPU instances) is AWS-stated and relevant to Anthropic's Trainium cost advantage thesis but not an Anthropic disclosure.",
+   "agent": "desk-compute"
+  },
+  {
+   "id": "evt-20251023-google-tpu-1m-deal",
+   "date": "2025-10-23",
+   "date_precision": "day",
+   "headline": "Anthropic to use up to 1M Google TPUs; over 1GW in 2026",
+   "summary": "Anthropic announced it will expand its Google Cloud use to up to one million TPUs, a deal it describes as worth tens of billions of dollars, bringing well over a gigawatt of capacity online in 2026.",
+   "category": [
+    "compute",
+    "partnership"
+   ],
+   "source": {
+    "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+    "publisher": "Anthropic",
+    "title": "Expanding our use of Google Cloud TPUs and Services",
+    "published": "2025-10-23",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [
+    {
+     "url": "https://siliconangle.com/2025/10/23/anthropic-strikes-multibillion-dollar-deal-google-access-million-tpus/",
+     "publisher": "SiliconANGLE",
+     "tier": "T3"
+    }
+   ],
+   "extracted": {
+    "amount_usd_m": null,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "Google Cloud",
+     "chips": "Google TPUs (up to 1,000,000; seventh-generation Ironwood cited by Google)",
+     "gw": 1.0,
+     "usd_m": null,
+     "term": "capacity online during 2026; dollar value stated only as 'tens of billions'"
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Google Cloud",
+      "type": "cloud",
+      "public": true,
+      "ticker": "GOOGL"
+     },
+     {
+      "name": "Google TPU Ironwood",
+      "type": "chip",
+      "public": true,
+      "ticker": "GOOGL"
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "announced",
+     "basis": "up to",
+     "financing": "opex",
+     "start": "2026-01",
+     "sites": [],
+     "gw_is_floor": true,
+     "usd_disclosed": "'tens of billions of dollars' (no number)",
+     "three_chip_strategy": "TPUs + Trainium + NVIDIA GPUs"
+    }
+   },
+   "confidence": "MEDIUM",
+   "notes": "Dollar figure is undisclosed ('tens of billions'); gw=1.0 is a floor ('well over a gigawatt'); 'up to' 1M TPUs is a ceiling. SiliconANGLE notes 'the companies didn't talk about numbers'. The $10B Broadcom TPU order (Dec 2025) and $35B TPU SPV (Jun 2026) are the first hard dollar figures tied to this TPU supply chain.",
+   "agent": "desk-compute"
+  },
+  {
+   "id": "evt-20251029-project-rainier-operational",
+   "date": "2025-10-29",
+   "date_precision": "day",
+   "headline": "AWS opens Project Rainier Indiana campus, ~500K Trainium2 chips",
+   "summary": "AWS said Project Rainier is operational with nearly 500,000 Trainium2 chips for Anthropic, expected to exceed one million chips by end-2025, at an Indiana campus SiliconANGLE reports as an $11B build planned to reach more than 2.2 GW across 30 buildings.",
+   "category": [
+    "compute",
+    "partnership"
+   ],
+   "source": {
+    "url": "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster",
+    "publisher": "Amazon (aboutamazon.com)",
+    "title": "Project Rainier: AWS's Trainium2 compute cluster for Anthropic",
+    "published": "2025-10-29",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [
+    {
+     "url": "https://siliconangle.com/2025/10/29/aws-opens-11b-project-rainier-data-center-campus-built-anthropic/",
+     "publisher": "SiliconANGLE",
+     "tier": "T3"
+    }
+   ],
+   "extracted": {
+    "amount_usd_m": null,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "AWS",
+     "chips": "Trainium2 (~500,000 live; >1,000,000 expected by end-2025)",
+     "gw": 2.2,
+     "usd_m": 11000,
+     "term": "operational Oct 2025; site planned to reach 30 buildings"
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Amazon Web Services",
+      "type": "cloud",
+      "public": true,
+      "ticker": "AMZN"
+     },
+     {
+      "name": "AWS Trainium2",
+      "type": "chip",
+      "public": true,
+      "ticker": "AMZN"
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "live",
+     "basis": "estimated",
+     "financing": "vendor-investment",
+     "start": "2025-10",
+     "sites": [
+      "St. Joseph County (New Carlisle area), Indiana"
+     ],
+     "buildings_now": 7,
+     "buildings_planned_additional": 23,
+     "usd_m_is": "AWS site capex, not an Anthropic payment obligation",
+     "gw_is": "planned full-site capacity, not current",
+     "compute_vs_prior_training": "more than 5x"
+    }
+   },
+   "confidence": "MEDIUM",
+   "notes": "The AWS page is undated in fetch; Oct 29 date from SiliconANGLE/CNBC headlines. '$11B' and '2.2 GW' are AWS site capex and planned capacity reported by SiliconANGLE (T3) - they are not Anthropic contract values and must not be added to Anthropic's commitments. Amazon's Indiana plan was later expanded to $15B (aboutamazon headline Nov 24 2025, seen in RSS only). 'More than 1M Trainium2 chips in use' is confirmed by Anthropic's Apr 20 2026 post.",
+   "agent": "desk-compute"
+  },
+  {
+   "id": "evt-20251112-50b-us-data-centers-fluidstack",
+   "date": "2025-11-12",
+   "date_precision": "day",
+   "headline": "Anthropic commits $50B to US data centers with Fluidstack",
+   "summary": "Anthropic announced a $50B investment in American computing infrastructure, building custom data centers with Fluidstack in Texas and New York with sites coming online throughout 2026 and about 800 permanent and 2,400 construction jobs.",
+   "category": [
+    "compute",
+    "partnership",
+    "investment"
+   ],
+   "source": {
+    "url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+    "publisher": "Anthropic",
+    "title": "Anthropic invests $50 billion in American AI infrastructure",
+    "published": "2025-11-12",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [
+    {
+     "url": "https://techcrunch.com/2025/11/12/anthropic-announces-50-billion-data-center-plan/",
+     "publisher": "TechCrunch",
+     "tier": "T2"
+    }
+   ],
+   "extracted": {
+    "amount_usd_m": null,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "Fluidstack",
+     "chips": null,
+     "gw": null,
+     "usd_m": 50000,
+     "term": "sites online throughout 2026; Texas and New York, 'more sites to come'"
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Fluidstack",
+      "type": "cloud",
+      "public": false,
+      "ticker": null
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "announced",
+     "basis": "estimated",
+     "financing": null,
+     "start": "2026-01",
+     "sites": [
+      "Texas",
+      "New York"
+     ],
+     "jobs_permanent": 800,
+     "jobs_construction": 2400,
+     "capacity_disclosed": false
+    }
+   },
+   "confidence": "HIGH",
+   "notes": "$50B is an announced program size ('investment'); the release gives no GW, chip type, financing or lease terms and TechCrunch confirms no capacity figure. Later evidence (Hut 8 River Bend Fluidstack lease with Google backstop; Broadcom/Apollo SPV for 'Fluidstack-based sites') shows the build is financed by developer leases plus TPU SPV notes rather than Anthropic cash capex. Do not add to other Fluidstack-linked rows.",
+   "agent": "desk-compute"
+  },
+  {
+   "id": "evt-20251118-microsoft-nvidia-anthropic-partnership",
+   "date": "2025-11-18",
+   "date_precision": "day",
+   "headline": "Anthropic commits $30B to Azure; up to 1GW Nvidia capacity",
+   "summary": "Anthropic committed to purchase $30B of Azure compute and to contract up to one additional gigawatt on NVIDIA Grace Blackwell and Vera Rubin systems, while NVIDIA committed to invest up to $10B and Microsoft up to $5B in Anthropic.",
+   "category": [
+    "compute",
+    "partnership",
+    "investment"
+   ],
+   "source": {
+    "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+    "publisher": "Anthropic",
+    "title": "Microsoft, NVIDIA and Anthropic announce strategic partnerships",
+    "published": "2025-11-18",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [
+    {
+     "url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+     "publisher": "Microsoft Corporate Blogs",
+     "tier": "T1"
+    }
+   ],
+   "extracted": {
+    "amount_usd_m": 15000,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "Microsoft Azure + NVIDIA",
+     "chips": "NVIDIA Grace Blackwell and Vera Rubin systems",
+     "gw": 1.0,
+     "usd_m": 30000,
+     "term": "term not disclosed in release; non-cancelable through May 2033 per prospectus coverage (Stocktwits relay, not primary)"
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Microsoft Azure",
+      "type": "cloud",
+      "public": true,
+      "ticker": "MSFT"
+     },
+     {
+      "name": "NVIDIA",
+      "type": "chip",
+      "public": true,
+      "ticker": "NVDA"
+     },
+     {
+      "name": "Microsoft",
+      "type": "investor",
+      "public": true,
+      "ticker": "MSFT"
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "contracted",
+     "basis": "contracted",
+     "financing": "vendor-investment",
+     "start": "2025-11",
+     "sites": [],
+     "gw_basis": "up to",
+     "investment_up_to_usd_m": {
+      "nvidia": 10000,
+      "microsoft": 5000
+     },
+     "azure_commit_usd_m": 30000
+    }
+   },
+   "confidence": "HIGH",
+   "notes": "$30B is 'committed to purchase' (contracted; term unstated); 1 GW is 'up to' ('additional compute capacity up to one gigawatt', 'initially up to one gigawatt'). The $15B of investment is 'up to' and partly inside the Series G (funded amount undisclosed). Circularity: the investors are also the compute vendors. amount_usd_m holds the investment cap only; compute dollars are in compute.usd_m.",
+   "agent": "desk-compute"
+  },
+  {
+   "id": "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "date": "2026-04-06",
+   "date_precision": "day",
+   "headline": "Anthropic, Google, Broadcom expand TPU deal; ~3.5GW from 2027",
+   "summary": "Anthropic signed an agreement with Google and Broadcom for multiple gigawatts of next-generation TPU capacity from 2027, with Broadcom's 8-K stating Anthropic will access about 3.5 GW through Broadcom, consumption dependent on Anthropic's continued commercial success.",
+   "category": [
+    "compute",
+    "partnership"
+   ],
+   "source": {
+    "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+    "publisher": "Anthropic",
+    "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute",
+    "published": "2026-04-06",
+    "tier": "T1",
+    "opened": true
+   },
+   "corroboration": [
+    {
+     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+     "publisher": "Broadcom Form 8-K (SEC)",
+     "tier": "T1"
+    }
+   ],
+   "extracted": {
+    "amount_usd_m": null,
+    "valuation_post_usd_m": null,
+    "valuation_pre_usd_m": null,
+    "revenue_run_rate_usd_m": null,
+    "revenue_period_usd_m": null,
+    "revenue_period": null,
+    "margin_pct": null,
+    "margin_type": null,
+    "compute": {
+     "partner": "Google / Broadcom",
+     "chips": "next-generation TPU (Google-designed, Broadcom-supplied)",
+     "gw": 3.5,
+     "usd_m": null,
+     "term": "from 2027; Broadcom-Google Long Term Agreement runs through up to 2031 (separate agreement); no dollar figure in either T1 source"
+    },
+    "product": {
+     "name": null,
+     "type": null,
+     "price_in_per_mtok": null,
+     "price_out_per_mtok": null,
+     "context_window": null
+    },
+    "governance": null,
+    "moat": null,
+    "strategy": null,
+    "people": [],
+    "entities": [
+     {
+      "name": "Google",
+      "type": "cloud",
+      "public": true,
+      "ticker": "GOOGL"
+     },
+     {
+      "name": "Broadcom",
+      "type": "chip",
+      "public": true,
+      "ticker": "AVGO"
+     },
+     {
+      "name": "Google TPU",
+      "type": "chip",
+      "public": true,
+      "ticker": "GOOGL"
+     }
+    ],
+    "headcount": null,
+    "customers": null,
+    "other": {
+     "status": "contracted",
+     "basis": "contracted",
+     "financing": "bonds",
+     "start": "2027-01",
+     "sites": [
+      "most of the new compute to be sited in the US"
+     ],
+     "gw_basis": "approximately 3.5 GW through Broadcom, part of 'multiple gigawatts' (Series H T1 says 5 GW Google+Broadcom)",
+     "consumption_conditional": true
+    }
+   },
+   "confidence": "HIGH",
+   "notes": "Two independent T1 sources (Anthropic, Broadcom 8-K) agree on multi-GW and 2027 start; 3.5 GW is Broadcom's figure. Broadcom says consumption 'is dependent on Anthropic's continued commercial success' (conditional demand). GW overlap: Anthropic's Series H page calls the Google/Broadcom program 'five gigawatts', and TechCrunch's Apr 24 article does not say whether Google's 5 GW is additional to 3.5 GW - we treat 3.5 GW as part of 5 GW (not additive). Dollar value is not disclosed here; the prospectus coverage gives Broadcom-related equipment leases of $161.2B (T3 relay) and Google $111.1B.",
+   "agent": "desk-compute"
+  }
+ ],
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Read 12 prior outputs; 47 compute-category events from scouts reused as leads (not re-derived). Open items inherited: $80B/6-partner total, $531B/11-month total, WSJ Apr-6 margin path, SpaceX S-1 text, Nscale/Akamai/Riot/RUM primaries, Amazon/Alphabet Q2 10-Qs."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "RSS: Anthropic compute deals $531 billion (no item carries 531; nearest are The Information $13.7B RUM deal, Apollo 1GW lease talks, AMD 2GW)"
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "RSS: Anthropic gross margin (Information Jan-21 'lowers gross margin projection', SemiAnalysis Jul-7 '3Q26 profit over $1B', Morningstar/Yahoo Jun-10, FT Sep-13)"
+  },
+  {
+   "seq": 4,
+   "type": "open",
+   "text": "Anthropic newsroom page 1: latest 10 posts (Aug 7-Sep 23 2026) contain no compute/infrastructure posts",
+   "url": "https://www.anthropic.com/news"
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "EDGAR full-text: 'Anthropic' + 'Colossus' (May-Sep 2026): SpaceX S-1, S-1/A x2, 424B4, FWPs, CORRESP letters, SEC staff UPLOAD letters"
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "RSS: Anthropic SpaceX Colossus (75 items May-Sep 2026; Axios/Wired/Verge '$15B a year'; Reuters/FT/Yahoo 'six-month lease' May 28; Sep 29 '$84.5B' items)"
+  },
+  {
+   "seq": 7,
+   "type": "search",
+   "text": "RSS: Anthropic $80 billion six partners compute (returns the Sep 29 prospectus $518B/$84.5B cluster; TrendForce 'Amazon, Google, Broadcom and more')"
+  },
+  {
+   "seq": 8,
+   "type": "open",
+   "text": "SEC CORRESP 2026-05-20 (SpaceX): staff comment quotes 'agreement is with Anthropic ... all of COLOSSUS' compute capacity'; cloud services agreement dated May 3, 2026 (S-1 p.F-62)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026036964/filename1.htm"
+  },
+  {
+   "seq": 9,
+   "type": "open",
+   "text": "SEC staff letter 2026-05-19 (text extract) to SpaceX: same Anthropic/COLOSSUS language; asks SpaceX to discuss reduced compute for its own models",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000000000026005119/filename2.txt"
+  },
+  {
+   "seq": 10,
+   "type": "open",
+   "text": "SpaceX FWP 2026-06-09 (CFO interview transcript): Johnsen on Anthropic deal and GB300s; no contract terms",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026041761/fwp_cfointerview.htm"
+  },
+  {
+   "seq": 11,
+   "type": "open",
+   "text": "SpaceX FWP 2026-06-04 (roadshow slides): '$1.25B monthly fee for access to compute capacity through May 2029, subject to certain conditions'; 'across COLOSSUS and COLOSSUS II'; Colossus II next phase 400MW+ / 220K+ GB300",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026040610/spacexfwp.htm"
+  },
+  {
+   "seq": 12,
+   "type": "open",
+   "text": "SpaceX UK retail FWP: Colossus/Colossus II descriptions, ~1.0 GW; no Anthropic mention",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026040874/spacexukfwp.htm"
+  },
+  {
+   "seq": 13,
+   "type": "open",
+   "text": "SEC CORRESP 2026-06-01 (SpaceX): 'Anthropic will pay you $1.25 billion per month ... COLOSSUS AND COLOSSUS II'; either party may terminate on 90 days' notice",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm"
+  },
+  {
+   "seq": 14,
+   "type": "open",
+   "text": "SpaceX Japan retail FWP: no Anthropic/Google contract text",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026041013/japanfwp_06042026.htm"
+  },
+  {
+   "seq": 15,
+   "type": "flag",
+   "text": "SpaceX/Anthropic terms now T1-confirmed: agreement executed 2026-05-03; $1.25B monthly fee through May 2029 'subject to certain conditions' (FWP); either party may terminate on 90 days' notice (SEC CORRESP). $45B is therefore a gross, cancellable maximum, and Musk's 'six-month' remark (Reuters/FT May 28) is about that exit right.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm"
+  },
+  {
+   "seq": 16,
+   "type": "search",
+   "text": "EDGAR full-text: 'Anthropic PBC' in S-1 filings Sep 2026 -> only Nscale S-1 appears; Anthropic's own S-1 is NOT on EDGAR"
+  },
+  {
+   "seq": 17,
+   "type": "flag",
+   "text": "Anthropic's own prospectus is not publicly filed on EDGAR as of 2026-09-30; every prospectus figure ($518B, $7.33B, $84.5B) is second-hand from Reuters/FT reviews of a confidential S-1."
+  },
+  {
+   "seq": 18,
+   "type": "open",
+   "text": "Nscale S-1 Exhibit 10.25: 'Order for GPU Services' Anthropic PBC / Nscale GPU MCC B1.1 LLC; Vera Rubin NVL72; site, quantity, term, price all redacted; Qualifying Financing / Longstop Date termination rights",
+   "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_25.htm"
+  },
+  {
+   "seq": 19,
+   "type": "open",
+   "text": "Nscale S-1 main doc: 'On August 25, 2026 ... GPU Services Agreements ... Anthropic PBC ... Monarch Compute Campus ... aggregate payments of up to approximately $44.6 billion'; $103.4B active+contracted TCV; 461,000 GPUs; Monarch 2 GW gross / 1.37 GW IT by 1H28",
+   "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
+  },
+  {
+   "seq": 20,
+   "type": "flag",
+   "text": "Nscale S-1 (T1) confirms up to ~$44.6B and Vera Rubin NVL72 at Monarch (Mason County, WV) but discloses NO Anthropic term, MW or start date; Bloomberg's '460 MW / six years / late 2027' is not in the opened S-1 text.",
+   "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
+  },
+  {
+   "seq": 21,
+   "type": "open",
+   "text": "TechCrunch Anthropic tag feed (Sep 17-29 2026): prospectus story, Akamai deal, Emerald AI grid-space item",
+   "url": "https://techcrunch.com/tag/anthropic/feed/"
+  },
+  {
+   "seq": 22,
+   "type": "open",
+   "text": "SiliconANGLE Anthropic tag feed (Sep 15-29 2026)",
+   "url": "https://siliconangle.com/tag/anthropic/feed/"
+  },
+  {
+   "seq": 23,
+   "type": "open",
+   "text": "TechCrunch Sep 28: prospectus details losses/growth; Q2 revenue $11.5B; $518B plans; 2025 opex ~$13B, operating loss >$8B",
+   "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/"
+  },
+  {
+   "seq": 24,
+   "type": "open",
+   "text": "Fortune Sep 29 (Reuters review): $7.33B compute and infrastructure spend in 2025, 3x 2024; $518B commitments; op loss $8.06B vs $2.98B; cash $20.28B",
+   "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/"
+  },
+  {
+   "seq": 25,
+   "type": "open",
+   "text": "Reuters (Echo Wang) via Yahoo Finance Sep 29: $7.33B compute/infrastructure 2025, $518B obligations, revenue ~$4.6B, op loss >$8B, net loss $42B incl. $34B accounting charge",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 26,
+   "type": "open",
+   "text": "SiliconANGLE Sep 29 (leaked S-1): 'computing infrastructure costs accounted for more than 91% of that sum' ($8B op loss), $518B/80% non-cancelable, Broadcom leases $161.2B, ~half of cloud budget to AWS+Microsoft+Google",
+   "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/"
+  },
+  {
+   "seq": 27,
+   "type": "flag",
+   "text": "SiliconANGLE's '91%' equals $7.33B compute spend / $8.06B operating loss (90.9%): a ratio of two disclosed totals, not evidence that compute is 91% of costs. Compute spend ($7.33B) = 159% of 2025 revenue ($4.6B).",
+   "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/"
+  },
+  {
+   "seq": 28,
+   "type": "open",
+   "text": "Reuters direct article: blocked by WebFetch (known limitation); Yahoo/Fortune/SiliconANGLE mirrors used instead",
+   "url": "https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/"
+  },
+  {
+   "seq": 29,
+   "type": "open",
+   "text": "Anthropic T1 post Apr 20 2026: up to 5 GW, >$100B over ten years to AWS, Amazon $5B now + up to $20B later, ~1 GW Trainium2/3 by end-2026, >1M Trainium2 in use",
+   "url": "https://www.anthropic.com/news/anthropic-amazon-compute"
+  },
+  {
+   "seq": 30,
+   "type": "open",
+   "text": "AWS Project Rainier page: 'nearly half a million Trainium2 chips', >1M by year-end, St. Joseph County Indiana, >5x prior training compute",
+   "url": "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster"
+  },
+  {
+   "seq": 31,
+   "type": "open",
+   "text": "Amazon press release Sep 25 2023: up to $4B, AWS primary cloud for mission-critical workloads, Trainium and Inferentia",
+   "url": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai"
+  },
+  {
+   "seq": 32,
+   "type": "search",
+   "text": "EDGAR full-text: 'Anthropic' in 8-K filings Jan-Sep 2026 (103 hits): Akamai, TeraWulf, Broadcom, Amazon x4, AMD, CoreWeave x2, Microsoft, NVIDIA, Hut 8 identified as compute-relevant filers"
+  },
+  {
+   "seq": 33,
+   "type": "search",
+   "text": "EDGAR full-text: 'Anthropic' in 10-Q filings Apr-Sep 2026 (33 hits): Amazon Q1 and Q2, TeraWulf, Apollo/Athene identified"
+  },
+  {
+   "seq": 34,
+   "type": "open",
+   "text": "Akamai 8-K 2026-09-24: Project Plans 2 and 3 signed 2026-09-18, ~$11.6B aggregate, 7-year initial terms, warrant for 387,051 Series B preferred shares (7,741,020 common as-converted at $2,226.60/share preferred)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm"
+  },
+  {
+   "seq": 35,
+   "type": "flag",
+   "text": "Akamai 8-K shows a Master Services Agreement dated 2026-05-05 and 'Project Plan 2 and 3' (implying a Project Plan 1); the 8-K does not quantify Plan 1 or the ~$20B expansion TechCrunch cites.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm"
+  },
+  {
+   "seq": 36,
+   "type": "open",
+   "text": "TeraWulf 8-K Ex.99.1 2026-07-06: 20-year lease with Anthropic, Hawesville KY 'Justified Data' campus, ~401 MW critical IT, ~$19B contracted lease revenue, in service 2H27, full early 2028",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_ex99-1.htm"
+  },
+  {
+   "seq": 37,
+   "type": "open",
+   "text": "TeraWulf 8-K 2026-07-06: tenant 'Anthropic PBC', landlord Raylan Data LLC, lease dated 2026-07-06, two 5-year renewals, rent 'supported by an investment-grade credit'",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_8k.htm"
+  },
+  {
+   "seq": 38,
+   "type": "open",
+   "text": "Amazon Q2-2026 10-Q: $8.0B convertible notes invested Q3'23-Q4'25; fair value $97.9B notes + $92.5B preferred at 6/30/26; AWS commercial arrangement amended; financing facility up to $20.0B tied to compute-delivery milestones",
+   "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+  },
+  {
+   "seq": 39,
+   "type": "flag",
+   "text": "Amazon 10-Q: the 'up to $20B more' is a facility that expires 30 months after an Anthropic liquidity event; nothing is drawable at inception, amounts become available as AWS hits compute-delivery milestones; draws are new convertible notes (or common stock post-IPO, subject to an ownership cap); $5.0B Series H participation reduced capacity to $15.0B. Vendor-financing structure, not committed equity.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+  },
+  {
+   "seq": 40,
+   "type": "open",
+   "text": "Hut 8 FY2025 10-K: River Bend LA 15-yr triple-net lease, 245 MW, Fluidstack tenant, Google backstop; Anthropic not named in the opened text",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019392/hut-20251231x10k.htm"
+  },
+  {
+   "seq": 41,
+   "type": "open",
+   "text": "Hut 8 Q4-2025 results Ex.99.1 (2026-02-25): 'Launched a partnership with Anthropic and Fluidstack'; $7.0B/15-yr/245 MW River Bend lease; ROFO up to 1,000 MW; delivery Q2 2027; 8,500 MW pipeline",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019393/hut-20260225xex99d1.htm"
+  },
+  {
+   "seq": 42,
+   "type": "open",
+   "text": "Broadcom 8-K 2026-04-06: Anthropic to access ~3.5 GW through Broadcom from 2027 'as part of the multiple gigawatts' committed; consumption 'dependent on Anthropic's continued commercial success'; Google-Broadcom LTA through up to 2031",
+   "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm"
+  },
+  {
+   "seq": 43,
+   "type": "open",
+   "text": "Cerebras S-1/A (May 2026): Anthropic mentioned only as a model reference ('Claude Opus 4.7'); no compute relationship",
+   "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026033143/cerebras-sx1a2.htm"
+  },
+  {
+   "seq": 44,
+   "type": "open",
+   "text": "Fermi Inc. FY2025 10-K: zero Anthropic mentions (ruled out as a compute counterparty)",
+   "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000010/frmi-20251231.htm"
+  },
+  {
+   "seq": 45,
+   "type": "open",
+   "text": "Google Cloud press corner Feb 3 2023: Anthropic 'selected Google Cloud as its preferred cloud provider'; Google 'intends to build large-scale, next-generation TPU and GPU clusters'; no dollar figures",
+   "url": "https://www.googlecloudpresscorner.com/2023-02-03-Anthropic-Forges-Partnership-With-Google-Cloud-to-Help-Deliver-Reliable-and-Responsible-AI"
+  },
+  {
+   "seq": 46,
+   "type": "open",
+   "text": "PR Newswire Nov 8 2023: Anthropic 'one of the first companies to deploy at scale TPU v5e' to serve Claude (inference); GKE, AlloyDB, BigQuery; Multislice to tens of thousands of chips",
+   "url": "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html"
+  },
+  {
+   "seq": 47,
+   "type": "open",
+   "text": "AWS Sep 25 2023 release re-read; Amazon Nov 22 2024 page (no date/total on page) cross-checked with TechCrunch Nov 22 2024: additional $4B, total $8B, AWS primary training partner, Annapurna Labs co-development",
+   "url": "https://techcrunch.com/2024/11/22/anthropic-raises-an-additional-4b-from-amazon-makes-aws-its-primary-cloud-partner/"
+  },
+  {
+   "seq": 48,
+   "type": "open",
+   "text": "Amazon Nov 2024 announcement page: AWS named primary training partner in addition to primary cloud provider; Trainium and Inferentia for future foundation models",
+   "url": "https://www.aboutamazon.com/news/aws/amazon-invests-additional-4-billion-anthropic-ai"
+  },
+  {
+   "seq": 49,
+   "type": "open",
+   "text": "AWS press release Dec 3 2024 (Trainium2 GA): Project Rainier = EC2 UltraCluster of Trn2 UltraServers, hundreds of thousands of Trainium2 chips, >5x exaflops of Anthropic's prior training; Trainium3 3nm for late 2025",
+   "url": "https://press.aboutamazon.com/2024/12/aws-trainium2-instances-now-generally-available"
+  },
+  {
+   "seq": 50,
+   "type": "open",
+   "text": "Anthropic T1 Oct 23 2025: up to one million TPUs, 'tens of billions of dollars', 'well over a gigawatt' online in 2026; three chip platforms (TPU, Trainium, NVIDIA GPU); Amazon remains primary training partner",
+   "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services"
+  },
+  {
+   "seq": 51,
+   "type": "open",
+   "text": "SiliconANGLE Oct 23 2025 (Wheatley): same 'up to one million TPUs / tens of billions / well over a gigawatt'; 'companies didn't talk about numbers'; Google has invested $3B to date; run-rate approaching $7B",
+   "url": "https://siliconangle.com/2025/10/23/anthropic-strikes-multibillion-dollar-deal-google-access-million-tpus/"
+  },
+  {
+   "seq": 52,
+   "type": "open",
+   "text": "SiliconANGLE Oct 29 2025 (Deutscher): AWS opened $11B Indiana campus; 7 buildings, ~500K Trainium2; 23 more buildings -> >2.2 GW; Trainium3 by year-end",
+   "url": "https://siliconangle.com/2025/10/29/aws-opens-11b-project-rainier-data-center-campus-built-anthropic/"
+  },
+  {
+   "seq": 53,
+   "type": "search",
+   "text": "RSS: Amazon $11 billion Indiana data center New Carlisle Project Rainier (CNBC 'Amazon opens $11 billion AI data center' Oct 29 2025; aboutamazon Apr 25 2024 '$11 billion in Indiana'; aboutamazon Nov 24 2025 expands to $15B)"
+  },
+  {
+   "seq": 54,
+   "type": "flag",
+   "text": "Rainier's '$11B' and '2.2 GW' are AWS site capex/planned capacity reported by SiliconANGLE (T3) and CNBC headline, NOT an Anthropic payment obligation; Amazon's Indiana plan was later expanded to $15B (Nov 24 2025 RSS headline).",
+   "url": "https://siliconangle.com/2025/10/29/aws-opens-11b-project-rainier-data-center-campus-built-anthropic/"
+  },
+  {
+   "seq": 55,
+   "type": "open",
+   "text": "Anthropic T1 Nov 12 2025: '$50 billion investment in American computing infrastructure, building data centers with Fluidstack in Texas and New York'; ~800 permanent / 2,400 construction jobs; sites online throughout 2026",
+   "url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure"
+  },
+  {
+   "seq": 56,
+   "type": "open",
+   "text": "TechCrunch Nov 12 2025: Fluidstack 'U.K.-based neocloud'; custom-built for Anthropic; no capacity in GW/MW; no financing detail",
+   "url": "https://techcrunch.com/2025/11/12/anthropic-announces-50-billion-data-center-plan/"
+  },
+  {
+   "seq": 57,
+   "type": "open",
+   "text": "Anthropic T1 Nov 18 2025: committed to purchase $30B of Azure compute and contract up to 1 GW more; NVIDIA Grace Blackwell and Vera Rubin; NVIDIA up to $10B, Microsoft up to $5B",
+   "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+  },
+  {
+   "seq": 58,
+   "type": "open",
+   "text": "Microsoft blog Nov 18 2025: identical $30B Azure / up to 1 GW / Grace Blackwell and Vera Rubin / up to $10B and $5B language",
+   "url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/"
+  },
+  {
+   "seq": 59,
+   "type": "open",
+   "text": "Anthropic T1 Apr 6 2026: 'multiple gigawatts of next-generation TPU capacity' from 2027; run-rate >$30B; most of the new compute sited in the US",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+  },
+  {
+   "seq": 60,
+   "type": "open",
+   "text": "Anthropic T1 Series H May 28 2026: 'Amazon up to five gigawatts ... Google and Broadcom five gigawatts of next-generation TPU capacity ... SpaceX Colossus 1 and Colossus 2'; $15B previously committed hyperscaler money incl. $5B Amazon",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 61,
+   "type": "flag",
+   "text": "GW reconciliation: Broadcom 8-K says ~3.5 GW through Broadcom is 'part of the multiple gigawatts' committed; Anthropic's Series H page calls the Google+Broadcom program 'five gigawatts'. The 3.5 GW and 5 GW figures therefore appear to overlap (3.5 GW via Broadcom inside 5 GW total); summing them (8.5 GW) is not supported.",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 62,
+   "type": "found",
+   "text": "Anthropic picks Google Cloud as preferred provider; TPU/GPU clusters (2023-02-03)",
+   "url": "https://www.googlecloudpresscorner.com/2023-02-03-Anthropic-Forges-Partnership-With-Google-Cloud-to-Help-Deliver-Reliable-and-Responsible-AI",
+   "event_id": "evt-20230203-google-cloud-preferred"
+  },
+  {
+   "seq": 63,
+   "type": "found",
+   "text": "Amazon to invest up to $4B; AWS becomes primary cloud (2023-09-25)",
+   "url": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "event_id": "evt-20230925-amazon-up-to-4b"
+  },
+  {
+   "seq": 64,
+   "type": "found",
+   "text": "Google Cloud expands Anthropic partnership; TPU v5e for Claude inference (2023-11-08)",
+   "url": "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html",
+   "event_id": "evt-20231108-google-cloud-expansion-tpu-v5e"
+  },
+  {
+   "seq": 65,
+   "type": "found",
+   "text": "Amazon invests another $4B; AWS named primary training partner (2024-11-22)",
+   "url": "https://www.aboutamazon.com/news/aws/amazon-invests-additional-4-billion-anthropic-ai",
+   "event_id": "evt-20241122-amazon-additional-4b"
+  },
+  {
+   "seq": 66,
+   "type": "found",
+   "text": "AWS unveils Project Rainier Trainium2 cluster for Anthropic (2024-12-03)",
+   "url": "https://press.aboutamazon.com/2024/12/aws-trainium2-instances-now-generally-available",
+   "event_id": "evt-20241203-project-rainier"
+  },
+  {
+   "seq": 67,
+   "type": "found",
+   "text": "Anthropic to use up to 1M Google TPUs; over 1GW in 2026 (2025-10-23)",
+   "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+   "event_id": "evt-20251023-google-tpu-1m-deal"
+  },
+  {
+   "seq": 68,
+   "type": "found",
+   "text": "AWS opens Project Rainier Indiana campus, ~500K Trainium2 chips (2025-10-29)",
+   "url": "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster",
+   "event_id": "evt-20251029-project-rainier-operational"
+  },
+  {
+   "seq": 69,
+   "type": "found",
+   "text": "Anthropic commits $50B to US data centers with Fluidstack (2025-11-12)",
+   "url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+   "event_id": "evt-20251112-50b-us-data-centers-fluidstack"
+  },
+  {
+   "seq": 70,
+   "type": "found",
+   "text": "Anthropic commits $30B to Azure; up to 1GW Nvidia capacity (2025-11-18)",
+   "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+   "event_id": "evt-20251118-microsoft-nvidia-anthropic-partnership"
+  },
+  {
+   "seq": 71,
+   "type": "found",
+   "text": "Anthropic, Google, Broadcom expand TPU deal; ~3.5GW from 2027 (2026-04-06)",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate"
+  }
+ ],
+ "conflicts": [],
+ "open_items": [],
+ "stats": {
+  "searches": 9,
+  "pages_opened": 43,
+  "events": 10,
+  "flags": 8
+ },
+ "compute_summary": {
+  "rows": [],
+  "totals": {},
+  "cost_datapoints": []
+ }
+}

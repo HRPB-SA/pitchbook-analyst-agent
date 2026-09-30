@@ -14,7 +14,7 @@ const srv = http.createServer((req, res) => { let p = decodeURIComponent(req.url
     for (const theme of ['light', 'dark']) {
       const ctx = await browser.newContext({ viewport: { width: w, height: h }, colorScheme: theme, deviceScaleFactor: 1, ignoreHTTPSErrors: true });
       const page = await ctx.newPage();
-      page.on('console', m => { if (m.type() === 'error') errors.push(`[${name}/${theme}] console: ${m.text()}`); });
+      page.on('console', m => { if (m.type() !== 'error') return; const u = (m.location() && m.location().url) || ''; if (/fonts\.(googleapis|gstatic)\.com/.test(u)) return; /* sandbox has no route to Google Fonts; the page falls back to system fonts */ errors.push(`[${name}/${theme}] console: ${m.text()} ${u.replace(/^https?:\/\/[^/]+/, '')}`.trim()); });
       page.on('pageerror', e => errors.push(`[${name}/${theme}] pageerror: ${e.message}`));
       await page.goto(`http://127.0.0.1:${port}/index.html#overview`, { waitUntil: 'networkidle' });
       await page.waitForTimeout(800);

@@ -1,0 +1,456 @@
+{
+ "agent": "verify-audit-2",
+ "role": "Record Auditor",
+ "started": "2026-09-30T18:37:36Z",
+ "finished": "2026-09-30T18:43:42Z",
+ "results": [
+  {
+   "audit_id": "A-025",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "headcount",
+     "claimed": 2300,
+     "page_says": "approximately 2,300 (fewer than 200 in late 2023)",
+     "match": true,
+     "basis_note": "'approximately'; current headcount as of Dec 2025 article"
+    }
+   ],
+   "evidence": "Anthropic had fewer than 200 employees in late 2023. Today it has approximately 2,300.",
+   "note": "Published 2025-12-02. 'Dario Vision Quests' (DVQs) described as regular company-wide addresses where Dario explains strategy, policy and mission.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-026",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 1500,
+     "page_says": "$1.5 billion, plus interest",
+     "match": true,
+     "basis_note": "settlement principal; interest is on top, which the summary also says"
+    }
+   ],
+   "evidence": "took the final approval motion under submission; 350 class members opted out, 53 objected",
+   "note": "Published 2026-05-14. Judge Martinez-Olguin also asked for a brief submission from the parties. ~482,000 works and ~$3,100 per work are plaintiffs' figures (counsel Justin Nelson); '350 additional opt-outs' as stated.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-027",
+   "verdict": "SUPPORTED",
+   "figure_checks": [],
+   "evidence": "44% of enterprises are now using Anthropic in production, rising to over 63% including testing.",
+   "note": "Every summary number matches: 100 verified VPs/C-level execs in Global 2000; OpenAI 78% in production; OAI wallet share ~56%; Anthropic 'growing 25% in enterprise penetration' since May 2025 (page does not say points vs relative). a16z discloses it is an OpenAI investor.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-028",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "revenue_run_rate_usd_m",
+     "claimed": 4000,
+     "page_says": "pace of $4 billion annually, or $333 million per month",
+     "match": true,
+     "basis_note": "annualized run-rate / pace (not period revenue), matches the field name"
+    }
+   ],
+   "evidence": "Headline: Anthropic Revenue Hits $4 Billion Annual Pace as Competition With Cursor Intensifies",
+   "note": "Body paywalled; verified from headline, public teaser ('reached a pace of $4 billion annually... according to people familiar with the finances') and datePublished 2025-07-01T18:10Z. Rest of article not read.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-029",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 884,
+     "page_says": "$884 million",
+     "match": true,
+     "basis_note": "agreed sale price per Delaware filing, not yet approved or closed; summary says subject to approval"
+    }
+   ],
+   "evidence": "agreement to sell the majority of its stake in ... Anthropic for $884 million",
+   "note": "CNBC (MacKenzie Sigalos) article syndicated on NBC NY Money Report; published 2024-03-25. Page: ATIC 'nearly $500 million', Jane Street 'almost $100 million', 'nearly two dozen buyers', 'nearly two-thirds' of FTX's shares, needs Judge Dorsey's (Delaware) clearance. Page calls ATIC 'aligned with Mubadala' (UAE), not 'Abu Dhabi's'.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-030",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "Claude Sonnet 4 (1M context)",
+     "page_says": "Claude Sonnet 4 now supports up to 1 million tokens of context",
+     "match": true,
+     "basis_note": ""
+    },
+    {
+     "field": "product_price_in_per_mtok",
+     "claimed": 6,
+     "page_says": "$6 / MTok for prompts > 200K (vs $3 at <= 200K)",
+     "match": true,
+     "basis_note": "long-prompt tier only; standard tier is $3"
+    },
+    {
+     "field": "product_price_out_per_mtok",
+     "claimed": 22.5,
+     "page_says": "$22.50 / MTok for prompts > 200K (vs $15 at <= 200K)",
+     "match": true,
+     "basis_note": "long-prompt tier only; standard tier is $15"
+    }
+   ],
+   "evidence": "pricing adjusts for prompts over 200K tokens: Prompts > 200K $6 / MTok $22.50 / MTok",
+   "note": "Published Aug 12, 2025. Public beta on the Claude Developer Platform for customers with Tier 4 and custom rate limits; also on Amazon Bedrock and Vertex AI.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-031",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "revenue_period_usd_m",
+     "claimed": 11500,
+     "page_says": "$11.5 billion in its most recent quarter, 14 times higher than a year earlier",
+     "match": true,
+     "basis_note": "quarterly (period) revenue, not annualized; page does not label the quarter 'Q2'"
+    }
+   ],
+   "evidence": "revenue of $11.5 billion in its most recent quarter, 14 times higher",
+   "note": "Core facts are on the page (IPO could match/surpass SpaceX's record $75B June flotation; filing as soon as end of this month; $11.5B quarterly revenue, 14x). Differences: page is a Proactive article, and only the SpaceX comparison is attributed to Bloomberg; the $11.5B revenue and filing-timing sentences carry no Bloomberg attribution; quarter is 'most recent', not stated as Q2. Page date Aug 20, 2026 (metadata 2026-08-21 UTC).",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-032",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "revenue_period_usd_m",
+     "claimed": 4600,
+     "page_says": "revenue jumped twelvefold to nearly $4.6 billion (2025)",
+     "match": true,
+     "basis_note": "FY2025 annual revenue, approximate ('nearly'); summary text itself does not cite it"
+    }
+   ],
+   "evidence": "Anthropic devoted nearly a third of its hotly anticipated IPO prospectus to risk factors",
+   "note": "Risk behaviours (resist shutdown, conceal or manipulate information, behavior resembling blackmail) and 'existential risks to humanity' are on the page (attributed to FT/Reuters, latter 'reportedly'). But '261-page' and 'about 80 pages' appear nowhere on the page, which says only 'nearly a third'. TechCrunch re-reports FT and Reuters.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-033",
+   "verdict": "PARTLY",
+   "figure_checks": [
+    {
+     "field": "revenue_period_usd_m",
+     "claimed": 400,
+     "page_says": "No FY2024 revenue stated; 2025 revenue $4.6 billion, 'Revenue rose 1,088% in 2025'",
+     "match": false,
+     "basis_note": "derived, not stated: 4,600/11.88 = ~$387M implied; claimed ~$400M is a rounded-up derivation"
+    },
+    {
+     "field": "compute_usd_m",
+     "claimed": 2440,
+     "page_says": "$7.33 billion on computing and infrastructure in 2025, 'up threefold from 2024'",
+     "match": false,
+     "basis_note": "derived, not stated: 7,330/3 = ~$2,443M; 'threefold' wording is loose, so implied 2024 figure is approximate"
+    },
+    {
+     "field": "compute_term",
+     "claimed": "FY2024 computing and infrastructure spend (implied from 'threefold' increase to $7.33B in 2025)",
+     "page_says": "FY2025 spend $7.33B, up threefold from 2024",
+     "match": true,
+     "basis_note": "descriptor correctly labels the figure as implied"
+    }
+   ],
+   "evidence": "operating loss widened to $8.06 billion from $2.98 billion a year earlier",
+   "note": "Stated on page: 2024 operating loss $2.98B, 2025 revenue $4.6B (per leaked filing reviewed by Reuters), +1,088% growth, $7.33B 2025 compute. FY2024 revenue (~$400M) and FY2024 compute (~$2.4B) are not stated, only derivable. Item date 2024-12-31 is the FY2024 period end; page published 2026-09-29, not treated as a date mismatch.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-034",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "amount_usd_m",
+     "claimed": 400,
+     "page_says": "$400 million stock deal, per The Information and Eric Newcomer",
+     "match": true,
+     "basis_note": "reported figure, unconfirmed: TechCrunch's sources confirmed closing but declined to comment on the amount; stock consideration"
+    },
+    {
+     "field": "headcount",
+     "claimed": 10,
+     "page_says": "team of around 10 people",
+     "match": true,
+     "basis_note": "approximate team size joining Anthropic"
+    }
+   ],
+   "evidence": "Coefficient Bio in a $400 million stock deal, according to The Information and Eric Newcomer",
+   "note": "Published 2026-04-03. Page says 'stock deal' (not 'all-stock') and credits The Information and Eric Newcomer, without saying who was first. Founders Stanton and Frey ex-Genentech Prescient Design, launched eight months ago; team joins health and life sciences.",
+   "page_is_primary": false
+  },
+  {
+   "audit_id": "A-035",
+   "verdict": "SUPPORTED",
+   "figure_checks": [
+    {
+     "field": "product_name",
+     "claimed": "Claude Opus 5",
+     "page_says": "Introducing Claude Opus 5",
+     "match": true,
+     "basis_note": ""
+    },
+    {
+     "field": "product_price_in_per_mtok",
+     "claimed": 5,
+     "page_says": "$5 per million input tokens",
+     "match": true,
+     "basis_note": "standard API price, same as Opus 4.8"
+    },
+    {
+     "field": "product_price_out_per_mtok",
+     "claimed": 25,
+     "page_says": "$25 per million output tokens",
+     "match": true,
+     "basis_note": "standard API price, same as Opus 4.8"
+    }
+   ],
+   "evidence": "$5 per million input tokens and $25 per million output tokens (same as Opus 4.8)",
+   "note": "Published 2026-07-24. 'Most aligned model to date' is on the page. Fable 5 claim: page headline is 'comes close to the frontier intelligence of Claude Fable 5 at half the price'; named head-to-head wins over Fable 5 only on OSWorld 2.0 (just over a third of the cost), near-parity on CursorBench (within 0.5% at half cost); also 'new state-of-the-art' on Frontier-Bench and GDPval-AA.",
+   "page_is_primary": true
+  },
+  {
+   "audit_id": "A-036",
+   "verdict": "PARTLY",
+   "figure_checks": [],
+   "evidence": "Since its founding at the beginning of 2021; co-founder and CEO Dario Amodei; co-founder and President Daniela Amodei",
+   "note": "Page (Series B post dated 2022-04-29) confirms founding 'at the beginning of 2021', Dario as co-founder/CEO and Daniela as co-founder/President. Not on the page: the January 26, 2021 date, former-OpenAI origin, and the names Jack Clark, Jared Kaplan, Tom Brown, Chris Olah, Sam McCandlish, Ben Mann. Item date 2021-01-26 is a founding event date that this page cannot confirm beyond 'beginning of 2021'.",
+   "page_is_primary": true
+  }
+ ],
+ "log": [
+  {
+   "seq": 1,
+   "type": "open",
+   "text": "Opened Fortune feature (pub 2025-12-02); cross-checked raw page text for headcount and DVQ passage",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://fortune.com/article/anthropic-ceo-dario-amodei-openai-chatgpt-artificial-intelligence-safety-donald-trump/",
+   "event_id": "A-025"
+  },
+  {
+   "seq": 2,
+   "type": "found",
+   "text": "A-025 SUPPORTED: Fortune says ~2,300 employees (from <200 in late 2023); DVQ culture practice described",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-025"
+  },
+  {
+   "seq": 3,
+   "type": "open",
+   "text": "Opened Courthouse News hearing report (pub 2026-05-14); cross-checked raw text",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://www.courthousenews.com/authors-publishers-near-final-approval-of-1-5-billion-anthropic-copyright-settlement/",
+   "event_id": "A-026"
+  },
+  {
+   "seq": 4,
+   "type": "found",
+   "text": "A-026 SUPPORTED: hearing report matches $1.5B plus interest, 482k works, $3,100/work, 350 opt-outs, 53 objections, under submission",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-026"
+  },
+  {
+   "seq": 5,
+   "type": "open",
+   "text": "Opened a16z enterprise AI survey post (pub 2026-01-30); cross-checked raw text for each percentage",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://a16z.com/leaders-gainers-and-unexpected-winners-in-the-enterprise-ai-arms-race/",
+   "event_id": "A-027"
+  },
+  {
+   "seq": 6,
+   "type": "found",
+   "text": "A-027 SUPPORTED: 78% OpenAI / 44% Anthropic (63%+ incl. testing), ~56% OAI wallet share, +25% all on page",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-027"
+  },
+  {
+   "seq": 7,
+   "type": "open",
+   "text": "Opened The Information page; article body is paywalled, headline, byline, public teaser text and datePublished (2025-07-01) are readable in page source",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://www.theinformation.com/articles/anthropic-revenue-hits-4-billion-annual-pace-competition-cursor-intensifies",
+   "event_id": "A-028"
+  },
+  {
+   "seq": 8,
+   "type": "found",
+   "text": "A-028 SUPPORTED on headline plus public teaser; $4B annual pace, published 2025-07-01 (body paywalled, not read)",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-028"
+  },
+  {
+   "seq": 9,
+   "type": "open",
+   "text": "Opened NBC New York copy of CNBC report (pub 2024-03-25, updated 2024-03-28); cross-checked raw text",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://www.nbcnewyork.com/news/business/money-report/ftx-estate-selling-majority-stake-in-ai-startup-anthropic-for-884-million-with-bulk-going-to-uae/5258201/",
+   "event_id": "A-029"
+  },
+  {
+   "seq": 10,
+   "type": "found",
+   "text": "A-029 SUPPORTED: $884M FTX stake sale, ATIC ~$500M, Jane Street ~$100M, court approval pending; page is CNBC syndication of a court filing",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-029"
+  },
+  {
+   "seq": 11,
+   "type": "open",
+   "text": "Opened claude.com blog post (pub Aug 12, 2025); cross-checked raw text and pricing table",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://claude.com/blog/1m-context",
+   "event_id": "A-030"
+  },
+  {
+   "seq": 12,
+   "type": "found",
+   "text": "A-030 SUPPORTED: Sonnet 4 1M context public beta (Tier 4), $6/$22.50 above 200K vs $3/$15",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-030"
+  },
+  {
+   "seq": 13,
+   "type": "open",
+   "text": "Opened Yahoo Finance page (Proactive article dated Aug 20, 2026, not a Bloomberg page); cross-checked raw text",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html",
+   "event_id": "A-031"
+  },
+  {
+   "seq": 14,
+   "type": "flag",
+   "text": "A-031 attribution: page is Proactive on Yahoo; only the $75B SpaceX comparison is credited to Bloomberg, revenue line unattributed and not labelled Q2",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html",
+   "event_id": "A-031"
+  },
+  {
+   "seq": 15,
+   "type": "found",
+   "text": "A-031 PARTLY: all facts present but Bloomberg attribution covers only the SpaceX comparison; quarter unlabelled",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-031"
+  },
+  {
+   "seq": 16,
+   "type": "open",
+   "text": "Opened TechCrunch prospectus story (Sept 28, 2026 PDT); cross-checked raw text for page counts",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+   "event_id": "A-032"
+  },
+  {
+   "seq": 17,
+   "type": "flag",
+   "text": "A-032 page counts not on page: no \"261\" or \"80 pages\", only \"nearly a third\" of the prospectus on risk factors",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+   "event_id": "A-032"
+  },
+  {
+   "seq": 18,
+   "type": "found",
+   "text": "A-032 PARTLY: risk-factor themes and existential-risk wording confirmed; 261-page and ~80-page figures missing from page",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-032"
+  },
+  {
+   "seq": 19,
+   "type": "open",
+   "text": "Opened Fortune leaked-prospectus story (pub 2026-09-29); cross-checked raw text for FY2024 figures",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+   "event_id": "A-033"
+  },
+  {
+   "seq": 20,
+   "type": "flag",
+   "text": "A-033 FY2024 revenue (~$400M) and FY2024 compute (~$2.4B) are not on the page; derived from +1,088% and \"threefold\"; $387M implied vs $400M claimed",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
+   "event_id": "A-033"
+  },
+  {
+   "seq": 21,
+   "type": "found",
+   "text": "A-033 PARTLY: $2.98B 2024 operating loss stated; two other figures only implied",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-033"
+  },
+  {
+   "seq": 22,
+   "type": "open",
+   "text": "Opened TechCrunch Coefficient Bio brief (pub 2026-04-03); cross-checked raw text",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/",
+   "event_id": "A-034"
+  },
+  {
+   "seq": 23,
+   "type": "found",
+   "text": "A-034 SUPPORTED: Coefficient Bio purchase, $400M stock per The Information, ~10 people, founded 8 months ago; amount unconfirmed by parties",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-034"
+  },
+  {
+   "seq": 24,
+   "type": "open",
+   "text": "Opened Anthropic Opus 5 announcement (pub 2026-07-24); cross-checked raw text for pricing, Fable 5 comparisons, alignment claim",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "event_id": "A-035"
+  },
+  {
+   "seq": 25,
+   "type": "found",
+   "text": "A-035 SUPPORTED: Opus 5 $5/$25 same as Opus 4.8, beats Fable 5 on OSWorld 2.0 at lower cost, most aligned model to date",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-035"
+  },
+  {
+   "seq": 26,
+   "type": "open",
+   "text": "Opened Anthropic Series B post (pub 2022-04-29); cross-checked raw text for founders and OpenAI origin",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+   "event_id": "A-036"
+  },
+  {
+   "seq": 27,
+   "type": "flag",
+   "text": "A-036 page supports only \"beginning of 2021\" and Dario/Daniela roles; Jan 26 date, ex-OpenAI and five other co-founders are not on the page",
+   "ts": "2026-09-30T18:43:42Z",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+   "event_id": "A-036"
+  },
+  {
+   "seq": 28,
+   "type": "found",
+   "text": "A-036 PARTLY: founding year and two roles confirmed; date, OpenAI origin and co-founder list absent",
+   "ts": "2026-09-30T18:43:42Z",
+   "event_id": "A-036"
+  }
+ ],
+ "stats": {
+  "pages_opened": 12,
+  "supported": 8,
+  "partly": 4,
+  "not_supported": 0,
+  "unopenable": 0,
+  "date_mismatch": 0,
+  "flags": 4
+ }
+}

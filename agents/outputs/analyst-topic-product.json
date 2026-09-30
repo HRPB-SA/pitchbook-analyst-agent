@@ -1,0 +1,655 @@
+{
+ "agent": "analyst-topic-product",
+ "role": "Topic Analyst — Product, models & pricing",
+ "started": "2026-09-30T18:18:50Z",
+ "finished": "2026-09-30T18:41:46Z",
+ "topic": {
+  "slug": "product",
+  "title": "Product, models and pricing",
+  "one_liner": "Opus list price fell 73% in under 14 months to $4/$20 as releases reached one per three weeks, yet nearly all benchmark evidence is Anthropic's own.",
+  "key_metrics": [
+   {
+    "label": "Flagship list price, Opus 5.5 (Sep 22 2026)",
+    "value": "$4 in / $20 out per MTok; -20% vs Opus 5 and -73% vs Opus 4.1 at $15/$75; Opus list about -40% a year since Mar 2024 after 21 flat months",
+    "event_id": "evt-20260922-claude-opus-5-5-launch"
+   },
+   {
+    "label": "Mid-tier list price, Sonnet 5 and 5.5",
+    "value": "$2 / $10 per MTok since Jun 30 2026, the first cut after 27 months at $3/$15; the $3/$15 step-up was cancelled Aug 10",
+    "event_id": "evt-20260810-sonnet-5-intro-price-made-permanent"
+   },
+   {
+    "label": "Sonnet 5.5 launch (Sep 28 2026)",
+    "value": "$2/$10 unchanged, six days after Opus 5.5; Anthropic claims 30%+ faster and up to 30% lower cost per task",
+    "event_id": "evt-20260928-claude-sonnet-5-5-launch"
+   },
+   {
+    "label": "Release cadence",
+    "value": "15 model rows in the 12 months to Sep 30 2026 vs 6 in the prior 12; median gap between 2026 release dates 21 days",
+    "event_id": "evt-20260930-model-lifecycle-snapshot-2026-09-30"
+   },
+   {
+    "label": "Claude Code run-rate, latest in record",
+    "value": "Over $2.5B on Feb 12 2026, at least 18% of the $14B company run-rate; no later figure",
+    "event_id": "evt-20260212-series-g-30b-380b"
+   },
+   {
+    "label": "Fable 5 and Mythos 5 export-control freeze",
+    "value": "19 calendar days, Jun 12 to Jul 1 2026; Fable 5.1 and Mythos 5.1 now list at $10/$50",
+    "event_id": "evt-20260612-us-export-control-directive-fable-mythos"
+   }
+  ],
+  "what": [
+   {
+    "t": "Anthropic (T1), Sep 22 and 28: Opus 5.5 at $4/$20 per MTok, -20% vs Opus 5, cache reads $0.20, fast mode $8/$40. Sonnet 5.5 at unchanged $2/$10, half Opus 5.5's price. Anthropic claims 40% lower typical cost than Opus 5 and up to 30% lower cost per task for Sonnet 5.5. SiliconANGLE (T3, single source): OpenAI launched GPT-6 Sol at $2/$10 and Luna at $0.10/$0.50 on Sep 22.",
+    "e": [
+     "evt-20260922-claude-opus-5-5-launch",
+     "evt-20260928-claude-sonnet-5-5-launch",
+     "evt-20260922-openai-gpt-6-sol-luna-price-war"
+    ]
+   },
+   {
+    "t": "Price sheets and docs (T1). Flagship: Claude 2.x $11.02/$32.68 (launch price unverified) to $8/$24 (Nov 21 2023, -27%); Opus $15/$75 (Mar 2024) to $5/$25 (Nov 24 2025, -67%) to $4/$20 (Sep 22 2026, -20%). Mid: $3/$15 from Mar 2024 to $2/$10 (Jun 30 2026, -33%). Small: Haiku 3 $0.25/$1.25 to Haiku 4.5 $1/$5, a 4x rise. Restricted: Mythos Preview $25/$125 post-credit to Mythos 5 $10/$50 (Jun 9, -60%).",
+    "e": [
+     "evt-20231121-claude-2-1-200k-context",
+     "evt-20240304-claude-3-family",
+     "evt-20251124-claude-opus-4-5-launch",
+     "evt-20260922-claude-opus-5-5-launch",
+     "evt-20260630-claude-sonnet-5-launch",
+     "evt-20251015-claude-haiku-4-5-launch",
+     "evt-20241104-claude-3-5-haiku-price-hike",
+     "evt-20260407-project-glasswing-mythos-preview",
+     "evt-20260609-claude-fable-5-mythos-5-launch"
+    ]
+   },
+   {
+    "t": "Pricing table (mostly T1 sources): 29 model rows on 23 release dates since Mar 14 2023, at 4, 5, 7 and 13 rows in 2023, 2024, 2025 and 2026 to date. Opus gaps since Nov 2025 ran 42 to 73 days. Haiku 4.5 (Oct 15 2025) has no successor, and TechCrunch (T2) said Sep 22 and Sep 28 that a new Haiku comes within weeks.",
+    "e": [
+     "evt-20260930-model-lifecycle-snapshot-2026-09-30",
+     "evt-20260922-claude-opus-5-5-launch-2",
+     "evt-20260928-sonnet-5-5-launch",
+     "evt-20251015-claude-haiku-4-5-launch",
+     "evt-20260528-claude-opus-4-8-launch"
+    ]
+   },
+   {
+    "t": "Anthropic (T1) disclosed Claude Code run-rate of over $500M (Sep 2 2025), $1B (Nov 2025) and over $2.5B (Feb 12 2026), with enterprise over half of it. Company run-rate was $14B on Feb 12. Cowork launched Jan 12 for Max (TechCrunch, T2), went GA Apr 9 and merged into Claude chat Sep 16. The Register (T2, Apr 16) reported Enterprise moved to $20 per seat plus API-rate usage.",
+    "e": [
+     "evt-20250902-series-f-13b-183b",
+     "evt-20251203-bun-acquisition",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260112-claude-cowork-preview",
+     "evt-20260409-cowork-general-availability",
+     "evt-20260916-cowork-chat-unified",
+     "evt-20260416-enterprise-seat-plus-usage-repricing"
+    ]
+   },
+   {
+    "t": "Anthropic (T1): a US directive on Jun 12 2026 barred foreign nationals from Fable 5 and Mythos 5, and Anthropic disabled both for everyone. Commerce approved Mythos 5 for 100+ US institutions Jun 26 (Semafor, T2; MeriTalk: Jun 27). Controls lifted Jun 30; Fable 5 returned Jul 1. Mythos 5.1 is US-only, and on Sep 24 the White House asked Anthropic to hold it from UK AISI (Politico, T2).",
+    "e": [
+     "evt-20260612-us-export-control-directive-fable-mythos",
+     "evt-20260626-mythos-5-partial-approval",
+     "evt-20260701-fable-5-mythos-5-access-restored",
+     "evt-20260901-fable-5-1-mythos-5-1-launch",
+     "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi"
+    ]
+   },
+   {
+    "t": "Every benchmark score in the record from Claude 2 (Jul 2023) through Sonnet 5.5 (Sep 28 2026) comes from Anthropic's own posts or coverage of them. The only independent data is one undated T3 snapshot fetched Sep 30. Artificial Analysis index: Opus 5.5 58, Sonnet 5.5 56, Fable 5.1 53, GPT-6 Astra 53. Arena agent win share: Fable 5.1 14.58%, Astra 11.78%, Opus 5.5 11.15%.",
+    "e": [
+     "evt-20260930-independent-leaderboards-snapshot",
+     "evt-20260922-claude-opus-5-5-launch",
+     "evt-20260928-claude-sonnet-5-5-launch",
+     "evt-20260407-project-glasswing-mythos-preview",
+     "evt-20230711-claude-2-launch"
+    ]
+   }
+  ],
+  "means": [
+   {
+    "t": "List price falls in steps at launches. Opus 5 claimed to beat Fable 5 at lower cost, and Opus 5.5 claims Fable 5.1 performance at 40% of its price. Effective price falls faster: cache reads are 10% of input, now 5% for Opus 5.5 and 2.5% for Fable 5.1; batch is 50% off; the fast-mode premium fell from 6x (VentureBeat, T2) to 2x.",
+    "e": [
+     "evt-20260724-claude-opus-5-launch",
+     "evt-20260922-claude-opus-5-5-launch",
+     "evt-20260901-fable-5-1-mythos-5-1-launch",
+     "evt-20260207-fast-mode-opus-4-6-launch",
+     "evt-20260528-claude-opus-4-8-launch",
+     "evt-20241008-message-batches-api",
+     "evt-20240814-prompt-caching-beta"
+    ]
+   },
+   {
+    "t": "Two forces run against deflation: Opus 4.7's tokenizer adds up to 35% more tokens per text at flat list price, and Haiku's price rose 4x. Revenue per token is a weak guide. Reported margin rose from about 50% for 2025E (The Information, T3) to above 80% adjusted for Q2 2026 (FT, T3, before partner share and training). Unit cost, mix or scope could explain it; no cost-per-token series exists.",
+    "e": [
+     "evt-20260416-claude-opus-4-7-launch",
+     "evt-20241104-claude-3-5-haiku-price-hike",
+     "evt-20251104-information-2028-revenue-projections",
+     "evt-20260913-ft-second-straight-adjusted-operating-profit"
+    ]
+   },
+   {
+    "t": "Coding agents are heavy automated users: 79% of Claude Code conversations were automation versus 49% on Claude.ai (Anthropic, Apr 2025). Flat plans strain, so Anthropic added weekly limits (Aug 28 2025), API-rate usage credits for Fable and Enterprise seats at $20 plus metered usage. Chat still grows: paid consumer subscriptions more than doubled in early 2026 (T2). Revenue moves toward tokens times price, which exposes it to deflation.",
+    "e": [
+     "evt-20250428-economic-index-software-development",
+     "evt-20250728-claude-weekly-rate-limits",
+     "evt-20260719-fable-5-plan-promotion-ends",
+     "evt-20260416-enterprise-seat-plus-usage-repricing",
+     "evt-20260930-pricing-page-snapshot",
+     "evt-20260328-paid-consumer-subscriptions-doubled"
+    ]
+   },
+   {
+    "t": "Interpretation: a release every three weeks means overlapping training, post-training and safety work, so R&D runs continuously. The leaked prospectus (Reuters, T2) shows FY2025 opex of $12.65B on revenue of $4.6B, and compute infrastructure spend of $7.33B with no definition in the record. Earliest retirement dates for five current models sit 12 months after release. The $518B compute plan is about 80% non-cancelable (T3).",
+    "e": [
+     "evt-20260928-prospectus-leaked-reuters",
+     "evt-20260929-prospectus-518b-compute-commitments",
+     "evt-20260930-model-lifecycle-snapshot-2026-09-30",
+     "evt-20260506-code-with-claude-80x-growth-run-rate-path"
+    ]
+   }
+  ],
+  "implications": [
+   {
+    "t": "Reprice revenue as tasks times price per task, not tokens times list price. Run-rate rose 7.2x from about $9B (end 2025) to over $65B (end July, T2) at mostly flat Opus and Sonnet list prices, so growth was volume and mix. The Sonnet 5 and Opus 5.5 cuts are the first test. No token or task series exists here. Ask the S-1 for tokens, price, mix and net revenue retention.",
+    "e": [
+     "evt-20260817-run-rate-tops-65b",
+     "evt-20251203-amodei-dealbook-revenue-guidance",
+     "evt-20251124-claude-opus-4-5-launch",
+     "evt-20260922-claude-opus-5-5-launch"
+    ]
+   },
+   {
+    "t": "Treat the $10/$50 tier as next to reprice. Anthropic's Sep 22 table has Opus 5.5 ahead of Fable 5.1 on all six benchmarks that list both, at 40% of the price. Artificial Analysis (T3) scores Fable 5.1 lowest of three Claude models, and only Arena's agent ranking puts it first. Interpretation: a freeze costs general users the premium, since other models stayed up, but restricted users lack a substitute.",
+    "e": [
+     "evt-20260922-claude-opus-5-5-launch",
+     "evt-20260930-independent-leaderboards-snapshot",
+     "evt-20260612-us-export-control-directive-fable-mythos",
+     "evt-20260724-claude-opus-5-launch"
+    ]
+   },
+   {
+    "t": "Price position: parity at the consumer and mid tiers, premium at the low end. Pro at $20 matched ChatGPT Plus (Sep 2023), Sonnet 5.5 at $2/$10 matches GPT-6 Sol, but Haiku 4.5 at $1/$5 is 10x Luna (SiliconANGLE, T3, single source). Astra and Google prices are not in the record. Haiku 5.5 is the first small-tier price test since Oct 2025.",
+    "e": [
+     "evt-20230907-claude-pro",
+     "evt-20260922-openai-gpt-6-sol-luna-price-war",
+     "evt-20251015-claude-haiku-4-5-launch",
+     "evt-20260928-claude-sonnet-5-5-launch",
+     "evt-20260930-pricing-page-snapshot"
+    ]
+   },
+   {
+    "t": "Discount vendor-only claims until independent data confirm them: SWE-bench Verified from 49.0% (Oct 2024) to 93.9% (Apr 2026), Terminal-Bench, GDPval-AA, per-task cost cuts and Glasswing's 10,000+ flaws (75 of 530 reported open-source bugs patched). Series are re-versioned at launches, and Fable 5's GDPval-AA reads 1932 on Jun 9 and 1723 on Sep 1. Tag each dashboard claim vendor or independent.",
+    "e": [
+     "evt-20241022-computer-use-35-sonnet-haiku",
+     "evt-20260407-project-glasswing-mythos-preview",
+     "evt-20260609-claude-fable-5-mythos-5-launch",
+     "evt-20260901-fable-5-1-mythos-5-1-launch",
+     "evt-20260522-glasswing-initial-update",
+     "evt-20260930-independent-leaderboards-snapshot"
+    ]
+   }
+  ],
+  "second_order": [
+   "Basis: Anthropic books revenue gross of cloud resale, so each list cut lowers reported revenue one for one while the partner share sits in cost. The FT's above 80% gross margin excludes that share and training. OpenAI reports net. Interpretation: reading the cuts only as a margin issue misses the basis question, which decides how much of each cut shows in reported revenue.",
+   "Distribution: Cursor is named at several Claude launches and is being bought by SpaceX for $60B (8-K, Jun 16; no closing in the record). SpaceX/xAI also supplies Anthropic 300 MW at Colossus. A cheaper Opus helps Cursor's margin, but a channel owned by a rival and supplier can steer volume. Two unnamed customers were nearly 25% of 2025 revenue in the leaked prospectus.",
+   "Availability is now a policy variable. One letter cut the two frontier models for 19 days, Mythos 5.1 is US only, and the White House asked for a UK AISI hold. Anthropic pledged to work with Commerce on protocols for future models. The next Fable or Mythos release may carry review risk, and non-US buyers may get a lagging tier.",
+   "Limits are a second price lever that a list-price view misses. Anthropic doubled Claude Code five-hour limits on May 6 after renting Colossus and raised limits again with Opus 5.5. Each raise is a price cut to subscribers, and each tightening drew suits (Kahn, Patel). Deflation shows up in limits as well as list prices.",
+   "Pacing: releases did not slow after the CEO's Sep 12 essay urging a pace cap. Opus 5.5 and Sonnet 5.5 followed within 16 days, and the Buist antitrust suit cites the essay. The S-1 risk factors should reconcile a stated pacing stance with a three-week cadence."
+  ],
+  "watch": [
+   {
+    "item": "Haiku 5.5 launch and list price",
+    "by": "2026-10-31",
+    "threshold": "TechCrunch (T2) said 'coming weeks' on Sep 22 and Sep 28, and Haiku 4.5 is 350 days old. A price above $1/$5 extends the 4x small-tier rise. At or below $1/$5 defends volume against Luna at $0.10/$0.50."
+   },
+   {
+    "item": "Independent benchmark updates for Opus 5.5, Sonnet 5.5 and Fable 5.1 (Artificial Analysis, Arena, Epoch), and first embedded-evaluator output",
+    "by": "2026-10-31",
+    "threshold": "Opus 5.5 holding 58 with Fable 5.1 at 53 supports the vendor ladder and the premium-tier risk. Arena already has Astra above Opus 5.5 at High effort; Astra still ahead at matched effort would contradict Anthropic's Terminal-Bench 4.0 gap of 66.4 vs 57.9. Faculty (named Sep 18, jointly funded) and METR output is only partly independent."
+   },
+   {
+    "item": "Fable or Mythos 5.5 release, or a Fable list price cut",
+    "by": "2026-11-24",
+    "threshold": "Reference class: Fable 5.1 came 84 days after Fable 5 and Mythos 5 came 63 days after Mythos Preview. A list price under $10/$50 confirms compression from Opus 5.5. Mythos 5.1 access for UK AISI or non-US organizations would reverse the Sep 24 hold."
+   },
+   {
+    "item": "Next Opus release, its list price and tokenizer",
+    "by": "2026-12-04",
+    "threshold": "Reference class: Opus gaps since Nov 2025 ran 42 to 73 days, mean 60, so the window is Nov 3 to Dec 4. List below $4/$20 continues deflation. Flat list with a new tokenizer is an effective rise of up to 35%. No release by Dec 4 breaks the 2026 pattern."
+   },
+   {
+    "item": "Public S-1: Claude Code revenue, price and mix, gross margin definition",
+    "by": "2026-11-30",
+    "threshold": "Claude Code above 18% of run-rate or reported as a segment. Adjusted gross margin above 80% reconciled to a GAAP figure. Token or task volumes disclosed. No public S-1 was on EDGAR on Sep 30."
+   },
+   {
+    "item": "US action on Fable 5.1 or Mythos 5.1 access: Commerce letter, UK AISI hold, pre-release review rule",
+    "by": "2026-12-31",
+    "threshold": "Reference class: one freeze (Jun 12) and one hold (Sep 24) in 2026. Any disable or hold longer than 24 hours, or a binding pre-release review, turns a one-off into a recurring risk."
+   },
+   {
+    "item": "Retirement notices for Sonnet 4.5, Haiku 4.5 and Opus 4.5",
+    "by": "2026-11-30",
+    "threshold": "Earliest retirement dates are Sep 29, Oct 15 and Nov 24 2026, each 12 months after release, with 60 days' notice. Retirement on those dates repeats Opus 4.1's 12-month life. A later date would break the pattern."
+   },
+   {
+    "item": "Ruling on the motion to dismiss in the consolidated Max-plan class action",
+    "by": "2026-12-31",
+    "threshold": "Motion filed Sep 22. Denial keeps plan-limit disclosure risk open. Dismissal removes one pressure on flat-plan pricing. No base rate for such rulings is in the record."
+   }
+  ],
+  "house_view": "(a) Extends: the quality claims that would separate fundamentals are vendor-sourced here, with one independent snapshot, so this slice cannot show whether multiples track quality. (b) Confirms the basis rule but cannot test the 39.75% haircut: Anthropic books revenue gross of cloud resale, so list cuts hit reported revenue directly. (e) Confirms: seat and ARR conventions fail when unit price is per token, falling, and moving from seat fees to metered usage. (c) and (d) are not testable from this slice.",
+  "uncertainties": [
+   {
+    "type": "data",
+    "note": "The margin, mix, customers, comparables and compute-cost tables are empty. There is no token volume, cost-per-token or revenue-by-product series. The Claude Code figure stops at Feb 2026 and covers the product only, not coding demand arriving through API channels. 2025 gross margin is about 50% (The Information, T3) or 40% (WSJ via a Substack summary, DISPUTED).",
+    "what_would_change_it": "A public S-1 with segment, price-mix and cost-of-revenue disclosure."
+   },
+   {
+    "type": "data",
+    "note": "Benchmark evidence is vendor-only apart from one undated T3 snapshot. OpenRouter's index values (57.6, 56.0, 53.4) appear to track Artificial Analysis, so they are probably not a second check. Epoch's page was led by GPT-6 Astra at 167 and showed no Claude entries. Arena lists Opus 5.5 at High effort and Fable 5.1 at Max, so its ranking is not like for like.",
+    "what_would_change_it": "Dated independent histories per model at matched effort, third-party replication of the Terminal-Bench 4.0 and GDPval-AA claims, or published output from the embedded evaluators."
+   },
+   {
+    "type": "interpretation",
+    "note": "Per-task cost claims are Anthropic's. The Opus 5.5 '40% less' compares per-task cost with Opus 5, while list price is -20% vs Opus 5 and -60% vs Fable 5.1, and some headlines mix the baselines. Artificial Analysis' blended cost estimate, which depends on token use, has Sonnet 5.5 at $7.60 above Opus 5.5 at $5.98 at max effort, inverting the list ladder.",
+    "what_would_change_it": "An independent cost-per-task study at matched effort settings."
+   },
+   {
+    "type": "forecast",
+    "note": "Cadence forecast. Reference class: Anthropic's own 2026 gaps of 6 to 49 days between release dates with median 21, and Opus gaps of 42 to 73 days. No industry base rate is in the record. What differs now: the CEO's pacing essay, a voluntary federal pre-release review (single T3 report), RSP revisions and compute limits.",
+    "what_would_change_it": "A next Opus later than Dec 4 2026, or a release that skips a tier."
+   },
+   {
+    "type": "interpretation",
+    "note": "Freeze cause and recurrence are unresolved. Reports split between a Fable 5 jailbreak found by Amazon researchers (WSJ via TechCrunch) and 'personality differences' (Axios sources via TechCrunch). Anthropic names no agency while CSIS names BIS. Restoration is Jul 1 per Anthropic and TechCrunch, and a 'Jun 12 to Jul 7' window elsewhere matches the end of initial plan access. Revenue impact is undisclosed.",
+    "what_would_change_it": "Commerce documents, S-1 risk factors or a disclosed revenue impact of the 19 days."
+   }
+  ],
+  "evidence": [
+   "evt-20260922-claude-opus-5-5-launch",
+   "evt-20260928-claude-sonnet-5-5-launch",
+   "evt-20260930-independent-leaderboards-snapshot",
+   "evt-20260930-pricing-page-snapshot",
+   "evt-20260612-us-export-control-directive-fable-mythos",
+   "evt-20260701-fable-5-mythos-5-access-restored",
+   "evt-20260901-fable-5-1-mythos-5-1-launch",
+   "evt-20251124-claude-opus-4-5-launch",
+   "evt-20260810-sonnet-5-intro-price-made-permanent",
+   "evt-20260630-claude-sonnet-5-launch",
+   "evt-20260212-series-g-30b-380b",
+   "evt-20251203-bun-acquisition",
+   "evt-20260416-enterprise-seat-plus-usage-repricing",
+   "evt-20260922-openai-gpt-6-sol-luna-price-war",
+   "evt-20260930-model-lifecycle-snapshot-2026-09-30",
+   "evt-20260416-claude-opus-4-7-launch",
+   "evt-20260528-claude-opus-4-8-launch",
+   "evt-20260609-claude-fable-5-mythos-5-launch",
+   "evt-20260407-project-glasswing-mythos-preview",
+   "evt-20241104-claude-3-5-haiku-price-hike",
+   "evt-20251015-claude-haiku-4-5-launch",
+   "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+   "evt-20260626-mythos-5-partial-approval",
+   "evt-20260207-fast-mode-opus-4-6-launch",
+   "evt-20260313-one-million-context-standard-pricing",
+   "evt-20260614-kahn-v-anthropic-max-plan-class-action-2",
+   "evt-20250728-claude-weekly-rate-limits",
+   "evt-20260506-spacex-colossus-compute-deal",
+   "evt-20260916-cowork-chat-unified",
+   "evt-20260817-run-rate-tops-65b",
+   "evt-20260913-ft-second-straight-adjusted-operating-profit",
+   "evt-20251104-information-2028-revenue-projections",
+   "evt-20260724-claude-opus-5-launch",
+   "evt-20240304-claude-3-family",
+   "evt-20231121-claude-2-1-200k-context",
+   "evt-20260912-pace-the-frontier",
+   "evt-20260616-spacex-cursor",
+   "evt-20260929-prospectus-518b-compute-commitments",
+   "evt-20260928-prospectus-leaked-reuters",
+   "evt-20260630-q2-2026-revenue-11-5b-period",
+   "evt-20260728-patel-v-anthropic-usage-limit-class-action",
+   "evt-20260918-buist-v-anthropic-sherman-act-class-action",
+   "evt-20260205-claude-opus-4-6",
+   "evt-20250428-economic-index-software-development",
+   "evt-20260820-developer-platform-ga-wave",
+   "evt-20260918-accenture-embedded-evaluation",
+   "evt-20260522-glasswing-initial-update"
+  ]
+ },
+ "log": [
+  {
+   "seq": 1,
+   "type": "search",
+   "text": "Queried categories product, model, pricing, research, 2021-01-01 to 2026-09-30: 208 events (T1 166, T2 32, T3 10), none VERIFY or DISPUTED at event level."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "Read tables pricing (29 model rows) and plans (12 rows) in full."
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "Checked desk tables: margins, mix, customers, comparables, compute_costs, period_revenue, run_rate_desk are empty; market_share (24 rows) and run_rate (28 rows) are populated."
+  },
+  {
+   "seq": 4,
+   "type": "note",
+   "text": "Empty margin, mix and compute_costs tables mean no cost-per-token, token-volume or revenue-by-product series; gross-margin and coding-weight views rest on events only."
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "Searched the full record for gross margin, cost per task, price war, SWE-bench, Terminal-Bench, OSWorld, leaderboard, METR, AISI, prospectus and Claude Code across all categories."
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "Pulled frozen conflicts and open items matching price, Sonnet, Opus, Fable, Mythos, Claude Code, benchmark and margin."
+  },
+  {
+   "seq": 7,
+   "type": "found",
+   "text": "Opus 5.5 at $4/$20, -20% vs Opus 5, cache reads $0.20, fast mode $8/$40; Anthropic claims 40% lower typical cost vs Opus 5.",
+   "event_id": "evt-20260922-claude-opus-5-5-launch",
+   "url": "https://www.anthropic.com/claude-opus-5-5"
+  },
+  {
+   "seq": 8,
+   "type": "found",
+   "text": "Sonnet 5.5 at unchanged $2/$10, cache reads $0.20; vendor claims 30%+ faster and up to 30% lower cost per task.",
+   "event_id": "evt-20260928-claude-sonnet-5-5-launch",
+   "url": "https://www.anthropic.com/claude-sonnet-5-5"
+  },
+  {
+   "seq": 9,
+   "type": "found",
+   "text": "Pivotal flagship cut: Opus 4.5 at $5/$25, -66.7% vs Opus 4.1 at $15/$75, leaving Opus at 1.67x Sonnet 4.5.",
+   "event_id": "evt-20251124-claude-opus-4-5-launch",
+   "url": "https://www.anthropic.com/news/claude-opus-4-5"
+  },
+  {
+   "seq": 10,
+   "type": "found",
+   "text": "Fable 5.1 and Mythos 5.1 hold $10/$50 with cache reads cut 75% to $0.25; Mythos 5.1 limited to US verified organizations.",
+   "event_id": "evt-20260901-fable-5-1-mythos-5-1-launch",
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  },
+  {
+   "seq": 11,
+   "type": "found",
+   "text": "Small tier moved against deflation: Haiku 3 $0.25/$1.25, Haiku 3.5 $1/$5 then $0.80/$4, Haiku 4.5 $1/$5.",
+   "event_id": "evt-20241104-claude-3-5-haiku-price-hike",
+   "url": "https://techcrunch.com/2024/11/04/anthropic-hikes-the-price-of-its-haiku-model/"
+  },
+  {
+   "seq": 12,
+   "type": "verify",
+   "text": "Computed cadence from the pricing table: 29 rows on 23 release dates; 15 rows in the trailing 12 months vs 6 in the prior 12; 2026 gaps 6 to 49 days, median 21; Opus gaps 42 to 73 days."
+  },
+  {
+   "seq": 13,
+   "type": "verify",
+   "text": "Computed model lifetimes from pricing-table retirement dates: Claude 1 to 3.5 era 15.5 to 25.5 months; Claude 3.7, Opus 4, Sonnet 4, Opus 4.1 11.8 to 12.8 months; matches the lifecycle note of about 13 months."
+  },
+  {
+   "seq": 14,
+   "type": "verify",
+   "text": "Computed list-price deltas from the pricing table: Opus $15/$75 to $4/$20 is -73% over 30.6 months (about -40% a year) after 20.7 flat months; Sonnet $3/$15 to $2/$10 is -33% after 26.9 months; Haiku $0.25 to $1 is +300%."
+  },
+  {
+   "seq": 15,
+   "type": "verify",
+   "text": "Cross-checked pricing-table rows for Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 4.5 against the Sep 30 pricing-page snapshot: list prices match.",
+   "event_id": "evt-20260930-pricing-page-snapshot",
+   "url": "https://claude.com/pricing"
+  },
+  {
+   "seq": 16,
+   "type": "flag",
+   "text": "Sonnet 5 price conflict: TechCrunch launch-day step-up to $3/$15 on Sep 1 vs Anthropic docs of Aug 10 making $2/$10 permanent; used $2/$10 and cite both.",
+   "event_id": "evt-20260810-sonnet-5-intro-price-made-permanent",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview"
+  },
+  {
+   "seq": 17,
+   "type": "flag",
+   "text": "Opus 5.5 '40% less' has two baselines: per-task cost vs Opus 5 (Anthropic) and headlines vs Fable 5.1; list deltas are -20% vs Opus 5 and -60% vs Fable 5.1.",
+   "event_id": "evt-20260922-claude-opus-5-5-launch",
+   "url": "https://www.anthropic.com/claude-opus-5-5"
+  },
+  {
+   "seq": 18,
+   "type": "flag",
+   "text": "Fable 5 GDPval-AA reads 1932 at launch and 1723 in the Sep 1 post: benchmark versions differ, so the two must not be spliced.",
+   "event_id": "evt-20260609-claude-fable-5-mythos-5-launch",
+   "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+  },
+  {
+   "seq": 19,
+   "type": "flag",
+   "text": "Launch-post table lists Sonnet 5 at 10.3% on Terminal-Bench 4.0, an open VERIFY item that looks anomalous; excluded from the analysis.",
+   "event_id": "evt-20260928-claude-sonnet-5-5-launch",
+   "url": "https://www.anthropic.com/claude-sonnet-5-5"
+  },
+  {
+   "seq": 20,
+   "type": "flag",
+   "text": "Duplicate records for the Opus 5.5 and Sonnet 5.5 launches: two T1 Opus 5.5 events carry different post URLs, and the T2 Sonnet 5.5 event says the T1 post 404'd while the T1 event opened it. Relied on the T1 events."
+  },
+  {
+   "seq": 21,
+   "type": "found",
+   "text": "Only independent benchmark data in the record: Artificial Analysis index (Opus 5.5 58, Sonnet 5.5 56, Fable 5.1 53, Astra 53) and Arena agent win share; T3, undated, fetched Sep 30.",
+   "event_id": "evt-20260930-independent-leaderboards-snapshot",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  },
+  {
+   "seq": 22,
+   "type": "found",
+   "text": "Sep 18: Accenture's Faculty named first embedded evaluator ($1B combined over five years, Anthropic share unspecified, METR to pilot on its own funding); a partial fix for the independent-evidence gap, not fully independent.",
+   "event_id": "evt-20260918-accenture-embedded-evaluation",
+   "url": "https://www.anthropic.com/news/accenture-embedded-evaluation"
+  },
+  {
+   "seq": 23,
+   "type": "found",
+   "text": "Glasswing update: over 10,000 high or critical flaws found, 530 open-source bugs reported, 75 patched (14%); all company-reported, with patch counts the only outside confirmation.",
+   "event_id": "evt-20260522-glasswing-initial-update",
+   "url": "https://www.anthropic.com/research/glasswing-initial-update"
+  },
+  {
+   "seq": 24,
+   "type": "flag",
+   "text": "Artificial Analysis blended cost estimate has Sonnet 5.5 at $7.60 above Opus 5.5 at $5.98 at max effort despite half the list price; the metric depends on token use. Arena compares Opus 5.5 at High with Fable 5.1 at Max.",
+   "event_id": "evt-20260930-independent-leaderboards-snapshot",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  },
+  {
+   "seq": 25,
+   "type": "flag",
+   "text": "Anthropic's own Opus 5.5 table beats Fable 5.1 on all six benchmarks that list both, at 40% of Fable's list price; Opus 5 made the same claim against Fable 5 on Jul 24.",
+   "event_id": "evt-20260922-claude-opus-5-5-launch",
+   "url": "https://www.anthropic.com/claude-opus-5-5"
+  },
+  {
+   "seq": 26,
+   "type": "flag",
+   "text": "Benchmark series are re-versioned at launches (Terminal-Bench 2.0, 2.1, 4.0; GDPval-AA v1, v2, v2.1; OSWorld 2.0, 2.1; SWE-bench Verified then SWE-bench Pro), so vendor scores cannot be chained over time."
+  },
+  {
+   "seq": 27,
+   "type": "flag",
+   "text": "Rival comparators differ by post: GPT-5.5 (Jun 9), GPT-5.6 Sol (Sep 1), GPT-6 Astra (Sep 22); the independent list shows GPT-6.1 Sol. Vendor head-to-heads are point-in-time choices."
+  },
+  {
+   "seq": 28,
+   "type": "found",
+   "text": "Only competitor price datapoints in the record: GPT-6 Sol $2/$10 and Luna $0.10/$0.50 (SiliconANGLE, T3, single source). Astra and Google prices are absent.",
+   "event_id": "evt-20260922-openai-gpt-6-sol-luna-price-war",
+   "url": "https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/"
+  },
+  {
+   "seq": 29,
+   "type": "found",
+   "text": "Jun 12 5:21pm ET directive; Anthropic disabled Fable 5 and Mythos 5 for all customers; other models unaffected; restored Jul 1 (Mythos to US organizations first); 19 calendar days.",
+   "event_id": "evt-20260612-us-export-control-directive-fable-mythos",
+   "url": "https://www.anthropic.com/news/fable-mythos-access"
+  },
+  {
+   "seq": 30,
+   "type": "flag",
+   "text": "Freeze dates: restoration Jul 1 (Anthropic, TechCrunch) vs a 'Jun 12 to Jul 7' window that matches the end of initial 50% plan access; Mythos partial approval Jun 26 (Anthropic) vs Jun 27 (MeriTalk).",
+   "event_id": "evt-20260701-fable-5-mythos-5-access-restored",
+   "url": "https://www.anthropic.com/news/redeploying-fable-5"
+  },
+  {
+   "seq": 31,
+   "type": "flag",
+   "text": "Freeze trigger reported two ways: a Fable 5 jailbreak found by Amazon researchers (WSJ via TechCrunch) vs 'personality differences' (Axios sources); BIS named by CSIS, not by Anthropic. Revenue impact undisclosed.",
+   "event_id": "evt-20260612-us-export-control-directive-fable-mythos",
+   "url": "https://www.anthropic.com/news/fable-mythos-access"
+  },
+  {
+   "seq": 32,
+   "type": "flag",
+   "text": "Anthropic's Jun 9 'no universal jailbreaks after 1,000+ hours of red-teaming' claim met a reported Fable 5 bypass three days later; Anthropic called it a narrow potential jailbreak.",
+   "event_id": "evt-20260609-claude-fable-5-mythos-5-launch",
+   "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+  },
+  {
+   "seq": 33,
+   "type": "found",
+   "text": "Sep 24: White House asked Anthropic and OpenAI to hold Mythos 5.1 and GPT-6 Astra from UK AISI pending US review; Anthropic complied (Politico, T2).",
+   "event_id": "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+   "url": "https://www.yahoo.com/news/politics/articles/white-house-asks-openai-anthropic-164324696.html"
+  },
+  {
+   "seq": 34,
+   "type": "found",
+   "text": "Claude Code run-rate ladder: over $500M (Sep 2 2025), $1B (Nov 2025), over $2.5B (Feb 12 2026); all Anthropic disclosures, repeated by TechCrunch and SiliconANGLE with no independent source.",
+   "event_id": "evt-20251203-bun-acquisition",
+   "url": "https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone"
+  },
+  {
+   "seq": 35,
+   "type": "verify",
+   "text": "Claude Code share of company run-rate: 0.5/5 about 10% (Sep 2025), 1/9 about 11% (Nov to Dec 2025), 2.5/14 at least 18% (Feb 2026); inputs are Anthropic T1 figures plus the CEO's $8B to $10B range.",
+   "event_id": "evt-20250902-series-f-13b-183b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+  },
+  {
+   "seq": 36,
+   "type": "flag",
+   "text": "Stale: no Claude Code revenue after the Feb 12 figure (repeated Mar 9) while company run-rate went from $14B to $65B; today's coding weight is unmeasured.",
+   "event_id": "evt-20260212-series-g-30b-380b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+  },
+  {
+   "seq": 37,
+   "type": "found",
+   "text": "Chat is not shrinking: paid consumer subscriptions more than doubled in early 2026, mostly at $20 Pro (Anthropic spokesperson via TechCrunch, T2, MEDIUM); no MAU or revenue figure is in the record.",
+   "event_id": "evt-20260328-claude-consumer-paid-subs-indagari",
+   "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/"
+  },
+  {
+   "seq": 38,
+   "type": "flag",
+   "text": "SpaceX's $60B Cursor purchase was expected to close in Q3 (8-K); no closing or termination appears in the record, and Cursor is still a Claude Marketplace partner on Sep 23.",
+   "event_id": "evt-20260616-spacex-cursor",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026043411/spaceexplorationtechnologi.htm"
+  },
+  {
+   "seq": 39,
+   "type": "found",
+   "text": "Enterprise moved to a $20 seat plus usage at API rates with bundled tokens removed; The Register (T2), pricing page (T1); announcement date and prior seat prices unverified.",
+   "event_id": "evt-20260416-enterprise-seat-plus-usage-repricing",
+   "url": "https://www.theregister.com/2026/04/16/anthropic_ejects_bundled_tokens_enterprise/"
+  },
+  {
+   "seq": 40,
+   "type": "found",
+   "text": "Limits as a price lever: weekly limits from Aug 28 2025; Claude Code five-hour limits doubled May 6 2026 after SpaceX compute; Kahn and Patel class actions over Max limits, motion to dismiss filed Sep 22.",
+   "event_id": "evt-20250728-claude-weekly-rate-limits",
+   "url": "https://techcrunch.com/2025/07/28/anthropic-unveils-new-rate-limits-to-curb-claude-code-power-users/"
+  },
+  {
+   "seq": 41,
+   "type": "flag",
+   "text": "Gross margin reports do not reconcile: about 50% for 2025E (The Information, T3) vs 40% (WSJ via Substack, DISPUTED); the FT's above 80% adjusted exceeds the 77% 2028E projection, so scopes likely differ."
+  },
+  {
+   "seq": 42,
+   "type": "flag",
+   "text": "Mythos Preview $25/$125 is a post-credit participant price; $100M of credits then a $35M fund mean the realised restricted-tier price is below list and unmeasured.",
+   "event_id": "evt-20260407-project-glasswing-mythos-preview",
+   "url": "https://www.anthropic.com/glasswing"
+  },
+  {
+   "seq": 43,
+   "type": "flag",
+   "text": "Cadence did not slow after the Sep 12 pacing essay: Opus 5.5 came Sep 22 and Sonnet 5.5 Sep 28; the Buist antitrust suit cites the essay.",
+   "event_id": "evt-20260912-pace-the-frontier",
+   "url": "https://www.darioamodei.com/post/we-must-pace-the-frontier"
+  },
+  {
+   "seq": 44,
+   "type": "flag",
+   "text": "Fable 5 plan-inclusion end dates appear as Jun 22 (launch post), Jul 7 (restoration post) and Jul 19 (Help Center); the intermediate extensions rest on unopened RSS headlines.",
+   "event_id": "evt-20260719-fable-5-plan-promotion-ends",
+   "url": "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
+  },
+  {
+   "seq": 45,
+   "type": "verify",
+   "text": "Cross-checked cost scale: FY2025 opex $12.65B on revenue $4.6B (2.75x) and compute infrastructure spend $7.33B; definition of the compute figure is not in the record.",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 46,
+   "type": "message",
+   "text": "Use list price and per-task price: Opus list -73% since Aug 2025; Anthropic's per-task claims are Opus 5.5 -40% vs Opus 5, Sonnet 5.5 up to -30%, Fable 5.1 -25% typical and -45% agentic; Claude Code was at least 18% of run-rate in Feb 2026; margin scopes differ (FT above 80% adjusted vs 50% and 40% for 2025).",
+   "to": "analyst-model"
+  },
+  {
+   "seq": 47,
+   "type": "message",
+   "text": "Cadence median 21 days in 2026, model lifetimes 12 to 13 months lately, rate limits used as a capacity valve; $518B commitments about 80% non-cancelable against roughly one-year model payback.",
+   "to": "analyst-compute"
+  },
+  {
+   "seq": 48,
+   "type": "message",
+   "text": "Fable tier premium is undercut by Opus 5.5 on vendor data; Haiku 4.5 is 10x Luna; one freeze and one UK AISI hold in 2026; benchmark evidence is vendor-only.",
+   "to": "analyst-bear"
+  },
+  {
+   "seq": 49,
+   "type": "message",
+   "text": "Opus 5.5 claims Fable-class performance at 40% of the price; Sonnet 5.5 scores 56 vs Opus 5.5 at 58 on the independent index at half the list price; OpenRouter's ranking page (T3) shows Anthropic with 5 of the top 10 models.",
+   "to": "analyst-bull"
+  },
+  {
+   "seq": 50,
+   "type": "message",
+   "text": "Cross-slice pointers: the Kahn and Patel Max-plan suits, the Buist antitrust suit, the UTRF Claude Code patent suit and the export-control authority question (BIS vs White House) belong to the legal slice.",
+   "to": "analyst-topics"
+  },
+  {
+   "seq": 51,
+   "type": "message",
+   "text": "Please confirm Haiku 5.5 status, any Claude Code revenue after Mar 2026, and the Team seat price-cut date ($30 to $25) and 5 to 2 seat minimum change; all remain open items.",
+   "to": "verify-operating"
+  },
+  {
+   "seq": 52,
+   "type": "note",
+   "text": "Wrote the output file, validated the JSON and confirmed every evidence and event id resolves to an event in the record."
+  }
+ ],
+ "stats": {
+  "events_read": 328,
+  "flags": 18
+ }
+}

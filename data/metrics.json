@@ -62,6 +62,15 @@
    "event_id": "evt-20260528-series-h-roster",
    "tier": "T1",
    "confidence": "HIGH"
+  },
+  {
+   "date": "2026-09-25",
+   "usd_m": 1500000.0,
+   "pre_usd_m": null,
+   "label": "Anthropic asks shareholders to approve 50.1% founder voting control",
+   "event_id": "evt-20260925-founders-voting-control",
+   "tier": "T2",
+   "confidence": "HIGH"
   }
  ],
  "run_rate": [
@@ -188,7 +197,7 @@
   {
    "date": "2026-04-06",
    "usd_m": 30000.0,
-   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "event_id": "evt-20260406-google-broadcom-tpu-3-5gw",
    "tier": "T1",
    "confidence": "HIGH",
    "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
@@ -250,25 +259,49 @@
    "source": "https://storage.courtlistener.com/recap/gov.uscourts.cand.473631/gov.uscourts.cand.473631.1.0_1.pdf"
   },
   {
+   "date": "2026-08-13",
+   "usd_m": 110000.0,
+   "event_id": "evt-20260813-investors-expect-october-ipo-at-2t",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html"
+  },
+  {
    "date": "2026-08-17",
    "usd_m": 65000.0,
-   "event_id": "evt-20260817-run-rate-tops-65b",
+   "event_id": "evt-20260817-rr-65b-end-july",
    "tier": "T2",
    "confidence": "HIGH",
    "source": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
   },
   {
+   "date": "2026-08-18",
+   "usd_m": 65000.0,
+   "event_id": "evt-20260818-pre-ipo-revolver-10b-target-exceeded",
+   "tier": "T2",
+   "confidence": "MEDIUM",
+   "source": "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html"
+  },
+  {
    "date": "2026-09-13",
    "usd_m": 65000.0,
-   "event_id": "evt-20260913-ft-second-straight-adjusted-operating-profit",
+   "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct",
    "tier": "T3",
    "confidence": "MEDIUM",
    "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
   },
   {
+   "date": "2026-09-18",
+   "usd_m": 110000.0,
+   "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
+   "tier": "T3",
+   "confidence": "MEDIUM",
+   "source": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html"
+  },
+  {
    "date": "2026-09-29",
    "usd_m": 70000.0,
-   "event_id": "evt-20260929-openai-arr-nears-70b",
+   "event_id": "evt-20260929-openai-arr-nearing-70b-axios",
    "tier": "T2",
    "confidence": "MEDIUM",
    "source": "https://finance.yahoo.com/technology/ai/articles/scoop-openais-annual-recurring-revenue-141540007.html"
@@ -370,11 +403,11 @@
    "date": "2026-08-18",
    "usd_m": 10000.0,
    "kind": "debt",
-   "label": "Bloomberg: Anthropic's pre-IPO revolver set to exceed $10B target",
-   "event_id": "evt-20260818-pre-ipo-credit-facility-over-10b",
+   "label": "Bloomberg: Anthropic's pre-IPO revolver set to top $10B target",
+   "event_id": "evt-20260818-pre-ipo-revolver-10b-target-exceeded",
    "tier": "T2",
    "confidence": "MEDIUM",
-   "notes": "Target then; expanded to $15B by Sep 3."
+   "notes": "Closest reported figure to the brief's '~$10B IPO-related debt': this revolver target (Aug 18) grew to $15B by Sep 3. It is a corporate credit facility, not IPO proceeds; no IPO-linked bond issue found. 2028 revenue projection of $190-200B also appears here. | Target then; expanded to $15B by Sep 3."
   },
   {
    "date": "2026-09-03",
@@ -384,7 +417,7 @@
    "event_id": "evt-20260903-credit-facility-15b-nears-final",
    "tier": "T2",
    "confidence": "HIGH",
-   "notes": "Closest thing to the checklist's '~$10B IPO debt' lead: the pre-IPO revolver rose from a $10B+ target (Aug 18) to $15B (Sep 3); no IPO-linked bond issuance found. Draws and pricing not disclosed."
+   "notes": "Closest thing to the checklist's '~$10B IPO debt' lead: the pre-IPO revolver rose from a $10B+ target (Aug 18) to $15B (Sep 3); no IPO-linked bond issuance found. Draws and pricing not disclosed. | Two sources agree on $15B; the 'final' close is stated only as 'being finalized' (Forbes) - tenor, pricing and draw terms not disclosed. Revolver is the only reported IPO-adjacent debt."
   }
  ],
  "headcount": [
@@ -1253,6 +1286,32 @@
    "use_in_model": false,
    "reported": "2026-05-08",
    "note": "Single-source Jan-2024 point inside a retrospective path table; no contemporaneous source found"
+  },
+  {
+   "date": "2026-05-15",
+   "run_rate_usd_m": 47000,
+   "basis": "gross (company run-rate; \"crossed $47B earlier this month\")",
+   "source_url": "https://www.anthropic.com/news/series-h",
+   "publisher": "Anthropic",
+   "tier": "T1",
+   "confidence": "HIGH",
+   "event_id": "evt-20260528-rr-47b-series-h",
+   "use_in_model": true,
+   "reported": "2026-05-28",
+   "note": "As-of \"earlier this month\" (May 2026); mid-May used as point estimate; TechCrunch Jun 4 repeats $47B (same disclosure)"
+  },
+  {
+   "date": "2026-07-31",
+   "run_rate_usd_m": 65000,
+   "basis": "gross (Bloomberg; run-rate \"surpassed $65 billion\")",
+   "source_url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "publisher": "TechCrunch (Bloomberg)",
+   "tier": "T2",
+   "confidence": "HIGH",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "use_in_model": true,
+   "reported": "2026-08-17",
+   "note": "FT (via TNW) confirms $65bn in July; latest point in the series"
   }
  ],
  "mix": [],

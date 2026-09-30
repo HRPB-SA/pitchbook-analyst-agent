@@ -16,11 +16,11 @@ November (WSJ): treated as disputed. Last priced round: Series H, $65B at $965B 
 | `data/timeline.csv`, `data/anthropic_record.xlsx` | The same record as a spreadsheet, plus one sheet per desk table, conflicts and open items |
 | `data/metrics.json`, `entities.json` | Time series and tables from the desks; the entity graph (public and private companies attached to Anthropic) |
 | `data/topics.json`, `model.json`, `compute.json`, `thesis.json` | Topic analyses, three-scenario model, compute decomposition, bull/bear verdict |
-| `data/ledger.json`, `audit.json`, `health.json` | Validation ledger, independent audit of a sample of the record, mechanical checks |
+| `data/ledger.json`, `claims_ledger.json`, `audit.json`, `health.json`, `certify.json` | Validation ledger, independent re-derivation of load-bearing claims, independent audit of a sample of the record, mechanical checks, ship gates |
 | `data/agent_log.json` | The agents' own activity log (what the Agents floor replays) |
 | `agents/outputs/` | Raw output of every agent, as received |
 | `agents/briefs/` | The briefs each agent was given |
-| `scripts/` | `merge.py`, `q.py`, `health.py`, `sample_audit.py`, `model.py`, `build_analysis.py`, `export_xlsx.py`, `build_artifact.py`, `shot.cjs` |
+| `scripts/` | `merge.py`, `q.py`, `health.py`, `make_claims.py`, `reconcile.py`, `sample_audit.py`, `model.py`, `parity.cjs`, `build_analysis.py`, `certify.py`, `export_xlsx.py`, `build_artifact.py`, `shot.cjs` |
 | `docs/` | `ARCHITECTURE.md` (design), `METHODOLOGY.md` (tiers, conflict rules, basis discipline, model conventions) |
 
 ## Run it locally
@@ -39,6 +39,18 @@ python3 scripts/health.py            # mechanical checks
 python3 scripts/model.py             # recompute data/model.json from agents/outputs/analyst-model.json
 python3 scripts/build_analysis.py    # topics.json, compute.json, thesis.json from analyst outputs
 python3 scripts/export_xlsx.py       # spreadsheet export (pip install openpyxl)
+```
+
+Verification and gates (run in this order after the desks finish):
+
+```bash
+python3 scripts/make_claims.py       # claims_master (private) + question-only briefs for the independent re-derivers
+#   ... re-derivers write agents/outputs/verify-capital.json and verify-operating.json ...
+python3 scripts/reconcile.py         # MATCH / MISMATCH / PARTIAL / UNTRACEABLE ledger -> data/claims_ledger.json
+python3 scripts/sample_audit.py      # draws the audit sample; after the auditors finish: python3 scripts/sample_audit.py --score
+node scripts/parity.cjs              # model.py and computeModel() in app.js agree on every row
+NODE_PATH=$(npm root -g) node scripts/shot.cjs   # headless QA of nine tabs x desktop/phone x light/dark
+python3 scripts/certify.py           # mechanical ship gates -> data/certify.json (exit 1 on any FAIL)
 ```
 
 ## Deploy

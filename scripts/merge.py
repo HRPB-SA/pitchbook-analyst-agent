@@ -409,8 +409,16 @@ def build_agent_log(outs, events):
             if typ == "found" and final: rec["_final"] = final
             log.append(rec)
         s = d.get("stats") or {}
-        log.append({"t": iso(fi), "agent": aid, "type": "done", "to": "orchestrator",
-                    "text": f"Done: {len(d.get('events') or [])} events, {s.get('searches','?')} searches, {s.get('pages_opened','?')} pages, {s.get('flags','?')} flags, {len(d.get('conflicts') or [])} conflicts."})
+        parts = []
+        if d.get("events"): parts.append(f"{len(d['events'])} events")
+        if s.get("searches") is not None: parts.append(f"{s['searches']} searches")
+        if s.get("pages_opened") is not None: parts.append(f"{s['pages_opened']} pages")
+        if isinstance(d.get("topic"), dict) and d["topic"].get("evidence"): parts.append(f"{len(d['topic']['evidence'])} evidence ids cited")
+        if s.get("claims_answered") is not None: parts.append(f"{s['claims_answered']} claims answered")
+        if d.get("results"): parts.append(f"{len(d['results'])} items audited")
+        if s.get("flags") is not None: parts.append(f"{s['flags']} flags")
+        if d.get("conflicts"): parts.append(f"{len(d['conflicts'])} conflicts")
+        log.append({"t": iso(fi), "agent": aid, "type": "done", "to": "orchestrator", "text": "Done: " + (", ".join(parts) or "output filed") + "."})
     for aid, (nm, wv) in AGENT_META.items():
         if aid not in agents and aid != "orchestrator":
             agents[aid] = {"id": aid, "name": nm, "wave": wv, "planned": True, "started": None, "finished": None, "stats": {}, "events": 0, "conflicts": 0, "open_items": 0}

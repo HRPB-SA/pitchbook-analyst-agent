@@ -110,7 +110,7 @@
    "evt-20260911-nvidia-ipo-anchor-talks",
    "evt-20260922-claude-opus-5-5-launch-2",
    "evt-20260926-amazon-carrying-value-190b",
-   "evt-20260929-prospectus-518b-compute-commitments"
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
   ],
   "amount_usd_m": 18000.0,
   "sources": [
@@ -173,6 +173,56 @@
   "degree": 30
  },
  {
+  "name": "Amazon Web Services",
+  "types": [
+   "chip",
+   "cloud",
+   "distribution",
+   "partner"
+  ],
+  "public": true,
+  "ticker": "AMZN",
+  "notes": [
+   "Primary cloud and training partner: Bedrock distribution, Trainium2-4, up to 5GW; amount = Anthropic >$100B decade commitment (Apr 2026)"
+  ],
+  "event_ids": [
+   "evt-20230925-amazon-investment",
+   "evt-20240320-accenture-aws-anthropic",
+   "evt-20241107-palantir-aws-defense",
+   "evt-20241122-amazon-8b-trainium",
+   "evt-20260420-amazon-5gw",
+   "evt-20230413-amazon-bedrock-preview",
+   "evt-20230925-amazon-up-to-4b",
+   "evt-20230928-bedrock-ga",
+   "evt-20231129-claude-2-1-on-bedrock",
+   "evt-20240304-claude-3-family",
+   "evt-20240320-accenture-aws-alliance",
+   "evt-20241029-github-copilot-claude",
+   "evt-20241107-palantir-aws-defense-2",
+   "evt-20241122-amazon-additional-4b",
+   "evt-20241203-project-rainier",
+   "evt-20250415-proj-2025-2-2b-2027-12b",
+   "evt-20250605-claude-gov",
+   "evt-20250624-project-rainier",
+   "evt-20250714-dod-cdao-200m",
+   "evt-20251029-project-rainier-operational",
+   "evt-20260406-google-broadcom-tpu-3-5gw",
+   "evt-20260407-project-glasswing-mythos-preview",
+   "evt-20260420-amazon-5gw-25b-investment",
+   "evt-20260827-model-hardware-standard-preview",
+   "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+  ],
+  "amount_usd_m": 100000.0,
+  "sources": [
+   "https://techcrunch.com/2023/04/13/with-bedrock-amazon-enters-the-generative-ai-race/",
+   "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "https://aws.amazon.com/blogs/aws/amazon-bedrock-is-now-generally-available-build-and-scale-generative-ai-applications-with-foundation-models/"
+  ],
+  "first_date": "2023-04-13",
+  "tier": "T1",
+  "degree": 25
+ },
+ {
   "name": "Microsoft",
   "types": [
    "cloud",
@@ -210,7 +260,7 @@
    "evt-20260729-microsoft-3-2b-gain-on-anthropic",
    "evt-20260918-nscale-files-nyse-ipo",
    "evt-20260922-claude-opus-5-5-launch-2",
-   "evt-20260929-prospectus-518b-compute-commitments"
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
   ],
   "amount_usd_m": 5000.0,
   "sources": [
@@ -221,54 +271,6 @@
   "first_date": "2023-07-26",
   "tier": "T1",
   "degree": 24
- },
- {
-  "name": "Amazon Web Services",
-  "types": [
-   "chip",
-   "cloud",
-   "distribution",
-   "partner"
-  ],
-  "public": true,
-  "ticker": "AMZN",
-  "notes": [
-   "Primary cloud and training partner: Bedrock distribution, Trainium2-4, up to 5GW; amount = Anthropic >$100B decade commitment (Apr 2026)"
-  ],
-  "event_ids": [
-   "evt-20230925-amazon-investment",
-   "evt-20240320-accenture-aws-anthropic",
-   "evt-20241107-palantir-aws-defense",
-   "evt-20241122-amazon-8b-trainium",
-   "evt-20260420-amazon-5gw",
-   "evt-20230413-amazon-bedrock-preview",
-   "evt-20230925-amazon-up-to-4b",
-   "evt-20230928-bedrock-ga",
-   "evt-20231129-claude-2-1-on-bedrock",
-   "evt-20240304-claude-3-family",
-   "evt-20240320-accenture-aws-alliance",
-   "evt-20241029-github-copilot-claude",
-   "evt-20241107-palantir-aws-defense-2",
-   "evt-20241203-project-rainier",
-   "evt-20250415-proj-2025-2-2b-2027-12b",
-   "evt-20250605-claude-gov",
-   "evt-20250624-project-rainier",
-   "evt-20250714-dod-cdao-200m",
-   "evt-20251029-project-rainier-operational",
-   "evt-20260406-google-broadcom-tpu-30b-runrate",
-   "evt-20260407-project-glasswing-mythos-preview",
-   "evt-20260420-amazon-5gw-25b-investment",
-   "evt-20260827-model-hardware-standard-preview"
-  ],
-  "amount_usd_m": 100000.0,
-  "sources": [
-   "https://techcrunch.com/2023/04/13/with-bedrock-amazon-enters-the-generative-ai-race/",
-   "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
-   "https://aws.amazon.com/blogs/aws/amazon-bedrock-is-now-generally-available-build-and-scale-generative-ai-applications-with-foundation-models/"
-  ],
-  "first_date": "2023-04-13",
-  "tier": "T1",
-  "degree": 23
  },
  {
   "name": "Google",
@@ -294,7 +296,7 @@
    "evt-20260116-pentagon-friction-first-reported",
    "evt-20260129-reuters-pentagon-impasse",
    "evt-20260214-pentagon-threatens-to-cut-off-anthropic",
-   "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "evt-20260406-google-broadcom-tpu-3-5gw",
    "evt-20260407-project-glasswing-mythos-preview",
    "evt-20260424-google-up-to-40b-investment",
    "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
@@ -304,7 +306,7 @@
    "evt-20260911-dod-migration-90pct",
    "evt-20260918-buist-v-anthropic-sherman-act-class-action",
    "evt-20260922-claude-opus-5-5-launch-2",
-   "evt-20260929-prospectus-518b-compute-commitments"
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -341,7 +343,7 @@
    "evt-20260120-davos-chip-export-remarks",
    "evt-20260209-series-g-upsized-to-20b",
    "evt-20260212-series-g-30b-380b",
-   "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "evt-20260406-google-broadcom-tpu-3-5gw",
    "evt-20260407-project-glasswing-mythos-preview",
    "evt-20260506-spacex-colossus-compute-deal",
    "evt-20260804-volta-10b-norway-compute-deal",
@@ -439,6 +441,43 @@
   "degree": 16
  },
  {
+  "name": "Google Cloud",
+  "types": [
+   "chip",
+   "cloud",
+   "distribution"
+  ],
+  "public": true,
+  "ticker": "GOOGL",
+  "notes": [
+   "Cloud/TPU supplier (up to 1M TPUs, 5GW) and Vertex AI channel (Claude on Vertex since 2024)"
+  ],
+  "event_ids": [
+   "evt-20230203-google-cloud-provider",
+   "evt-20240319-vertex-ai-claude-3",
+   "evt-20251023-google-tpu-1m",
+   "evt-20260406-google-broadcom-tpus",
+   "evt-20260424-google-40b",
+   "evt-20230203-google-cloud-preferred",
+   "evt-20230829-vertex-ai-claude-2-preannounce",
+   "evt-20231108-google-cloud-expansion-tpu-v5e",
+   "evt-20240304-claude-3-family",
+   "evt-20251023-google-tpu-1m-deal",
+   "evt-20260406-google-broadcom-tpu-3-5gw",
+   "evt-20260424-google-up-to-40b-investment",
+   "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.googlecloudpresscorner.com/2023-02-03-Anthropic-Forges-Partnership-With-Google-Cloud-to-Help-Deliver-Reliable-and-Responsible-AI",
+   "https://cloud.google.com/blog/products/ai-machine-learning/vertex-ai-next-2023-announcements",
+   "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html"
+  ],
+  "first_date": "2023-02-03",
+  "tier": "T1",
+  "degree": 13
+ },
+ {
   "name": "GIC",
   "types": [
    "investor"
@@ -469,42 +508,6 @@
    "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
   ],
   "first_date": "2025-07-29",
-  "tier": "T1",
-  "degree": 12
- },
- {
-  "name": "Google Cloud",
-  "types": [
-   "chip",
-   "cloud",
-   "distribution"
-  ],
-  "public": true,
-  "ticker": "GOOGL",
-  "notes": [
-   "Cloud/TPU supplier (up to 1M TPUs, 5GW) and Vertex AI channel (Claude on Vertex since 2024)"
-  ],
-  "event_ids": [
-   "evt-20230203-google-cloud-provider",
-   "evt-20240319-vertex-ai-claude-3",
-   "evt-20251023-google-tpu-1m",
-   "evt-20260406-google-broadcom-tpus",
-   "evt-20260424-google-40b",
-   "evt-20230203-google-cloud-preferred",
-   "evt-20230829-vertex-ai-claude-2-preannounce",
-   "evt-20231108-google-cloud-expansion-tpu-v5e",
-   "evt-20240304-claude-3-family",
-   "evt-20251023-google-tpu-1m-deal",
-   "evt-20260406-google-broadcom-tpu-30b-runrate",
-   "evt-20260424-google-up-to-40b-investment"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
-   "https://www.googlecloudpresscorner.com/2023-02-03-Anthropic-Forges-Partnership-With-Google-Cloud-to-Help-Deliver-Reliable-and-Responsible-AI",
-   "https://cloud.google.com/blog/products/ai-machine-learning/vertex-ai-next-2023-announcements"
-  ],
-  "first_date": "2023-02-03",
   "tier": "T1",
   "degree": 12
  },
@@ -548,6 +551,78 @@
   "degree": 12
  },
  {
+  "name": "Alphabet (Google)",
+  "types": [
+   "chip",
+   "cloud",
+   "competitor",
+   "investor",
+   "partner"
+  ],
+  "public": true,
+  "ticker": "GOOGL",
+  "notes": [
+   "Investor (Series C participant; up to $40B: $10B cash at $350B + $30B on milestones) + Google Cloud/TPU supplier (~3.5GW via Broadcom 2027-31) + financial backstop on Fluidstack's Hut 8 lease + Gemini competitor"
+  ],
+  "event_ids": [
+   "evt-20230203-google-cloud-provider",
+   "evt-20230523-series-c-syndicate",
+   "evt-20251023-google-tpu-1m",
+   "evt-20251217-hut8-river-bend",
+   "evt-20260406-google-broadcom-tpus",
+   "evt-20260424-google-40b",
+   "evt-20230203-google-cloud-preferred",
+   "evt-20230523-series-c-450m",
+   "evt-20241119-cma-clears-google-anthropic-partnership",
+   "evt-20250117-ftc-ai-partnerships-report",
+   "evt-20260424-google-up-to-40b-investment"
+  ],
+  "amount_usd_m": 40000.0,
+  "sources": [
+   "https://www.googlecloudpresscorner.com/2023-02-03-Anthropic-Forges-Partnership-With-Google-Cloud-to-Help-Deliver-Reliable-and-Responsible-AI",
+   "https://www.anthropic.com/news/anthropic-series-c",
+   "https://www.gov.uk/cma-cases/alphabet-inc-google-llc-slash-anthropic-merger-inquiry"
+  ],
+  "first_date": "2023-02-03",
+  "tier": "T1",
+  "degree": 11
+ },
+ {
+  "name": "Goldman Sachs",
+  "types": [
+   "bank",
+   "customer",
+   "investor"
+  ],
+  "public": true,
+  "ticker": "GS",
+  "notes": [
+   "Founding partner of the enterprise AI services company, Claude customer (Enterprise Frontier Safeguards) and, via Goldman Sachs Growth Equity, Series F/G investor"
+  ],
+  "event_ids": [
+   "evt-20260504-enterprise-ai-services-co",
+   "evt-20260901-enterprise-frontier-safeguards",
+   "evt-20250516-run-rate-2b",
+   "evt-20251217-hut8-river-bend",
+   "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
+   "evt-20260504-enterprise-ai-services-jv",
+   "evt-20260602-chip-financing-spv-notes-price-talk",
+   "evt-20260603-ipo-lead-banks-morgan-stanley-goldman-jpmorgan",
+   "evt-20260715-ode-with-anthropic-blackstone-jv",
+   "evt-20260813-investors-expect-october-ipo-at-2t",
+   "evt-20260903-credit-facility-15b-nears-final"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+   "https://www.prnewswire.com/news-releases/hut-8-signs-15-year-245-mw-ai-data-center-lease-at-river-bend-campus-with-total-contract-value-of-7-0-billion-302644600.html",
+   "https://techcrunch.com/2026/04/12/trump-officials-may-be-encouraging-banks-to-test-anthropics-mythos-model/"
+  ],
+  "first_date": "2025-05-16",
+  "tier": "T1",
+  "degree": 11
+ },
+ {
   "name": "U.S. Department of War (Defense)",
   "types": [
    "government"
@@ -577,42 +652,6 @@
   "first_date": "2026-01-09",
   "tier": "T1",
   "degree": 11
- },
- {
-  "name": "Alphabet (Google)",
-  "types": [
-   "chip",
-   "cloud",
-   "competitor",
-   "investor",
-   "partner"
-  ],
-  "public": true,
-  "ticker": "GOOGL",
-  "notes": [
-   "Investor (Series C participant; up to $40B: $10B cash at $350B + $30B on milestones) + Google Cloud/TPU supplier (~3.5GW via Broadcom 2027-31) + financial backstop on Fluidstack's Hut 8 lease + Gemini competitor"
-  ],
-  "event_ids": [
-   "evt-20230203-google-cloud-provider",
-   "evt-20230523-series-c-syndicate",
-   "evt-20251023-google-tpu-1m",
-   "evt-20251217-hut8-river-bend",
-   "evt-20260406-google-broadcom-tpus",
-   "evt-20260424-google-40b",
-   "evt-20230523-series-c-450m",
-   "evt-20241119-cma-clears-google-anthropic-partnership",
-   "evt-20250117-ftc-ai-partnerships-report",
-   "evt-20260424-google-up-to-40b-investment"
-  ],
-  "amount_usd_m": 40000.0,
-  "sources": [
-   "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
-   "https://www.anthropic.com/news/anthropic-series-c",
-   "https://www.gov.uk/cma-cases/alphabet-inc-google-llc-slash-anthropic-merger-inquiry"
-  ],
-  "first_date": "2023-02-03",
-  "tier": "T1",
-  "degree": 10
  },
  {
   "name": "Cursor (Anysphere)",
@@ -645,40 +684,6 @@
    "https://www.anthropic.com/news/claude-4"
   ],
   "first_date": "2025-02-24",
-  "tier": "T1",
-  "degree": 10
- },
- {
-  "name": "Goldman Sachs",
-  "types": [
-   "bank",
-   "customer",
-   "investor"
-  ],
-  "public": true,
-  "ticker": "GS",
-  "notes": [
-   "Founding partner of the enterprise AI services company, Claude customer (Enterprise Frontier Safeguards) and, via Goldman Sachs Growth Equity, Series F/G investor"
-  ],
-  "event_ids": [
-   "evt-20260504-enterprise-ai-services-co",
-   "evt-20260901-enterprise-frontier-safeguards",
-   "evt-20250516-run-rate-2b",
-   "evt-20251217-hut8-river-bend",
-   "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
-   "evt-20260504-enterprise-ai-services-jv",
-   "evt-20260602-chip-financing-spv-notes-price-talk",
-   "evt-20260603-ipo-banks-morgan-stanley-goldman-jpmorgan",
-   "evt-20260715-ode-with-anthropic-blackstone-jv",
-   "evt-20260813-investors-expect-october-ipo-at-2t"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
-   "https://www.prnewswire.com/news-releases/hut-8-signs-15-year-245-mw-ai-data-center-lease-at-river-bend-campus-with-total-contract-value-of-7-0-billion-302644600.html",
-   "https://techcrunch.com/2026/04/12/trump-officials-may-be-encouraging-banks-to-test-anthropics-mythos-model/"
-  ],
-  "first_date": "2025-05-16",
   "tier": "T1",
   "degree": 10
  },
@@ -733,7 +738,7 @@
    "evt-20260303-run-rate-19-billion",
    "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
    "evt-20260602-chip-financing-spv-notes-price-talk",
-   "evt-20260603-ipo-banks-morgan-stanley-goldman-jpmorgan",
+   "evt-20260603-ipo-lead-banks-morgan-stanley-goldman-jpmorgan",
    "evt-20260813-investors-expect-october-ipo-at-2t",
    "evt-20260903-credit-facility-15b-nears-final"
   ],
@@ -822,11 +827,11 @@
    "evt-20260406-google-broadcom-tpus",
    "evt-20260407-project-glasswing",
    "evt-20251211-broadcom-anthropic-10b-tpu-customer",
-   "evt-20260406-google-broadcom-tpu-30b-runrate",
+   "evt-20260406-google-broadcom-tpu-3-5gw",
    "evt-20260407-project-glasswing-mythos-preview",
    "evt-20260602-chip-financing-spv-notes-price-talk",
    "evt-20260609-tpu-financing-34-5b-closed",
-   "evt-20260929-prospectus-518b-compute-commitments"
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -866,6 +871,36 @@
    "https://claude.com/blog/skills"
   ],
   "first_date": "2022-12-01",
+  "tier": "T1",
+  "degree": 8
+ },
+ {
+  "name": "SpaceX",
+  "types": [
+   "cloud",
+   "competitor",
+   "partner"
+  ],
+  "public": false,
+  "ticker": "SPCX",
+  "notes": [],
+  "event_ids": [
+   "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
+   "evt-20260506-spacex-colossus-compute-deal",
+   "evt-20260520-spacex-s1-anthropic-colossus-contract",
+   "evt-20260616-spacex-acquires-cursor-60b",
+   "evt-20260709-musk-wont-cut-off-anthropic-colossus",
+   "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
+   "evt-20260805-spacex-q2-earnings-anthropic-compute",
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
+   "https://www.anthropic.com/news/higher-limits-spacex",
+   "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/"
+  ],
+  "first_date": "2026-05-01",
   "tier": "T1",
   "degree": 8
  },
@@ -1046,6 +1081,36 @@
   "degree": 7
  },
  {
+  "name": "JPMorgan Chase",
+  "types": [
+   "bank",
+   "investor"
+  ],
+  "public": true,
+  "ticker": "JPM",
+  "notes": [
+   "Series G participant (Security and Resiliency Initiative and Growth Equity Partners) | PitchBook active investor since 2026-02-12 (Series G cohort); named in Anthropic posts: G participant"
+  ],
+  "event_ids": [
+   "evt-20260212-series-g-roster",
+   "evt-20250516-run-rate-2b",
+   "evt-20260212-series-g-30b-380b",
+   "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
+   "evt-20260603-ipo-lead-banks-morgan-stanley-goldman-jpmorgan",
+   "evt-20260813-investors-expect-october-ipo-at-2t",
+   "evt-20260903-credit-facility-15b-nears-final"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://my.pitchbook.com/profile/55545-67/investor/profile",
+   "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+   "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+  ],
+  "first_date": "2025-05-16",
+  "tier": "T1",
+  "degree": 7
+ },
+ {
   "name": "Lightspeed Venture Partners",
   "types": [
    "investor"
@@ -1130,34 +1195,6 @@
    "https://www.anthropic.com/news/enterprise-ai-services-company"
   ],
   "first_date": "2026-02-09",
-  "tier": "T1",
-  "degree": 7
- },
- {
-  "name": "SpaceX",
-  "types": [
-   "cloud",
-   "competitor"
-  ],
-  "public": false,
-  "ticker": "SPCX",
-  "notes": [],
-  "event_ids": [
-   "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
-   "evt-20260506-spacex-colossus-compute-deal",
-   "evt-20260520-spacex-s1-anthropic-colossus-contract",
-   "evt-20260616-spacex-acquires-cursor-60b",
-   "evt-20260709-musk-wont-cut-off-anthropic-colossus",
-   "evt-20260805-spacex-q2-earnings-anthropic-compute",
-   "evt-20260929-prospectus-518b-compute-commitments"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
-   "https://www.anthropic.com/news/higher-limits-spacex",
-   "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/"
-  ],
-  "first_date": "2026-05-01",
   "tier": "T1",
   "degree": 7
  },
@@ -1337,6 +1374,34 @@
   "degree": 6
  },
  {
+  "name": "Google (Alphabet)",
+  "types": [
+   "cloud",
+   "investor",
+   "partner"
+  ],
+  "public": true,
+  "ticker": "GOOGL",
+  "notes": [],
+  "event_ids": [
+   "evt-20230203-google-300m-stake",
+   "evt-20231027-google-up-to-2b",
+   "evt-20250122-google-additional-1b",
+   "evt-20250311-google-14pct-stake",
+   "evt-20251217-hut8-river-bend",
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://venturebeat.com/ai/google-invests-300-million-in-anthropic-as-race-to-compete-with-chatgpt-heats-up",
+   "https://finance.yahoo.com/news/google-agrees-invest-2-billion-195316710.html",
+   "https://techcrunch.com/2025/01/22/anthropic-reportedly-secures-an-additional-1b-from-google/"
+  ],
+  "first_date": "2023-02-03",
+  "tier": "T1",
+  "degree": 6
+ },
+ {
   "name": "METR",
   "types": [
    "partner"
@@ -1463,7 +1528,7 @@
    "evt-20251112-fluidstack-50b",
    "evt-20251217-hut8-river-bend",
    "evt-20260706-terawulf-lease",
-   "evt-20251112-50b-us-data-centers-fluidstack",
+   "evt-20251112-fluidstack-50b-us-data-centers",
    "evt-20260327-google-texas-data-center-financing-report"
   ],
   "amount_usd_m": 50000.0,
@@ -1473,32 +1538,6 @@
    "https://winbuzzer.com/2026/03/31/google-5-billion-anthropic-data-center-texas-xcxwbn/"
   ],
   "first_date": "2025-11-12",
-  "tier": "T1",
-  "degree": 5
- },
- {
-  "name": "Google (Alphabet)",
-  "types": [
-   "investor",
-   "partner"
-  ],
-  "public": true,
-  "ticker": "GOOGL",
-  "notes": [],
-  "event_ids": [
-   "evt-20230203-google-300m-stake",
-   "evt-20231027-google-up-to-2b",
-   "evt-20250122-google-additional-1b",
-   "evt-20250311-google-14pct-stake",
-   "evt-20251217-hut8-river-bend"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://venturebeat.com/ai/google-invests-300-million-in-anthropic-as-race-to-compete-with-chatgpt-heats-up",
-   "https://finance.yahoo.com/news/google-agrees-invest-2-billion-195316710.html",
-   "https://techcrunch.com/2025/01/22/anthropic-reportedly-secures-an-additional-1b-from-google/"
-  ],
-  "first_date": "2023-02-03",
   "tier": "T1",
   "degree": 5
  },
@@ -1524,34 +1563,6 @@
    "https://www.anthropic.com/news/claude-4"
   ],
   "first_date": "2025-01-23",
-  "tier": "T1",
-  "degree": 5
- },
- {
-  "name": "JPMorgan Chase",
-  "types": [
-   "bank",
-   "investor"
-  ],
-  "public": true,
-  "ticker": "JPM",
-  "notes": [
-   "Series G participant (Security and Resiliency Initiative and Growth Equity Partners) | PitchBook active investor since 2026-02-12 (Series G cohort); named in Anthropic posts: G participant"
-  ],
-  "event_ids": [
-   "evt-20260212-series-g-roster",
-   "evt-20250516-run-rate-2b",
-   "evt-20260212-series-g-30b-380b",
-   "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
-   "evt-20260603-ipo-banks-morgan-stanley-goldman-jpmorgan"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://my.pitchbook.com/profile/55545-67/investor/profile",
-   "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
-   "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
-  ],
-  "first_date": "2025-05-16",
   "tier": "T1",
   "degree": 5
  },
@@ -1743,6 +1754,35 @@
    "https://www.anthropic.com/news/snowflake-anthropic-expanded-partnership"
   ],
   "first_date": "2025-02-12",
+  "tier": "T1",
+  "degree": 5
+ },
+ {
+  "name": "SpaceX (xAI)",
+  "types": [
+   "cloud",
+   "competitor",
+   "partner"
+  ],
+  "public": true,
+  "ticker": "SPCX",
+  "notes": [
+   "xAI merged into SpaceX Feb 2 2026; Colossus 1 lessor to Anthropic (amount = annualised $1.25B/month per S-1 via Motley Fool, T4) and Google ($920M/month, FWP T1); agreed to buy Cursor at $60.0B implied equity value (8-K, T1); also a Grok competitor"
+  ],
+  "event_ids": [
+   "evt-20260506-spacex-colossus",
+   "evt-20260612-spacex-ipo",
+   "evt-20260616-spacex-cursor",
+   "evt-20260506-spacex-colossus-compute-deal",
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  ],
+  "amount_usd_m": 15000.0,
+  "sources": [
+   "https://www.anthropic.com/news/higher-limits-spacex",
+   "https://www.fool.com/investing/2026/06/11/buy-spacex-ipo-stock-make-big-move-first-year/",
+   "https://www.sec.gov/Archives/edgar/data/1181412/000162828026043411/spaceexplorationtechnologi.htm"
+  ],
+  "first_date": "2026-05-06",
   "tier": "T1",
   "degree": 5
  },
@@ -2318,29 +2358,28 @@
   "degree": 4
  },
  {
-  "name": "SpaceX (xAI)",
+  "name": "Spark Capital",
   "types": [
-   "cloud",
-   "competitor"
+   "investor"
   ],
-  "public": true,
-  "ticker": "SPCX",
+  "public": false,
+  "ticker": null,
   "notes": [
-   "xAI merged into SpaceX Feb 2 2026; Colossus 1 lessor to Anthropic (amount = annualised $1.25B/month per S-1 via Motley Fool, T4) and Google ($920M/month, FWP T1); agreed to buy Cursor at $60.0B implied equity value (8-K, T1); also a Grok competitor"
+   "Led the $450M Series C (May 2023) | PitchBook active investor since 2023-06-30 (2023 cohort (Series C era)); named in Anthropic posts: C lead"
   ],
   "event_ids": [
-   "evt-20260506-spacex-colossus",
-   "evt-20260612-spacex-ipo",
-   "evt-20260616-spacex-cursor",
-   "evt-20260506-spacex-colossus-compute-deal"
+   "evt-20230523-series-c-syndicate",
+   "evt-20230523-series-c-450m",
+   "evt-20250821-funding-talks-10b",
+   "evt-20260928-factbox-executives-board-ltbt-trustees"
   ],
-  "amount_usd_m": 15000.0,
+  "amount_usd_m": null,
   "sources": [
-   "https://www.anthropic.com/news/higher-limits-spacex",
-   "https://www.fool.com/investing/2026/06/11/buy-spacex-ipo-stock-make-big-move-first-year/",
-   "https://www.sec.gov/Archives/edgar/data/1181412/000162828026043411/spaceexplorationtechnologi.htm"
+   "https://www.anthropic.com/news/anthropic-series-c",
+   "https://siliconangle.com/2025/08/21/anthropic-reportedly-talks-raise-10b-new-funding-ai-boom-continues-apace/",
+   "https://www.investing.com/news/stock-market-news/factboxanthropic-ipo-prospectus-shows-key-executives-and-board-4921432"
   ],
-  "first_date": "2026-05-06",
+  "first_date": "2023-05-23",
   "tier": "T1",
   "degree": 4
  },
@@ -2418,6 +2457,29 @@
   "first_date": "2025-06-01",
   "tier": "T2",
   "degree": 4
+ },
+ {
+  "name": "AMD",
+  "types": [
+   "chip"
+  ],
+  "public": true,
+  "ticker": "AMD",
+  "notes": [],
+  "event_ids": [
+   "evt-20260120-davos-chip-export-remarks",
+   "evt-20260722-amd-2gw-mi450-partnership",
+   "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://techcrunch.com/2026/01/20/anthropics-ceo-stuns-davos-with-nvidia-criticism/",
+   "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
+   "https://www.ksl.com/article/51629885/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows"
+  ],
+  "first_date": "2026-01-20",
+  "tier": "T1",
+  "degree": 3
  },
  {
   "name": "Accel",
@@ -2933,6 +2995,30 @@
   "degree": 3
  },
  {
+  "name": "Nscale",
+  "types": [
+   "cloud",
+   "partner"
+  ],
+  "public": false,
+  "ticker": "NSCL (proposed NYSE)",
+  "notes": [],
+  "event_ids": [
+   "evt-20260826-nscale-45b-west-virginia-deal",
+   "evt-20260918-nscale-s1-exhibit-anthropic-order-for-gpu-services",
+   "evt-20260918-nscale-files-nyse-ipo"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
+   "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_25.htm",
+   "https://siliconangle.com/2026/09/18/data-center-builder-nscale-files-for-ipo-after-multibillion-dollar-anthropic-deal/"
+  ],
+  "first_date": "2026-08-26",
+  "tier": "T1",
+  "degree": 3
+ },
+ {
   "name": "Palo Alto Networks",
   "types": [
    "competitor",
@@ -3056,30 +3142,6 @@
   "degree": 3
  },
  {
-  "name": "Spark Capital",
-  "types": [
-   "investor"
-  ],
-  "public": false,
-  "ticker": null,
-  "notes": [
-   "Led the $450M Series C (May 2023) | PitchBook active investor since 2023-06-30 (2023 cohort (Series C era)); named in Anthropic posts: C lead"
-  ],
-  "event_ids": [
-   "evt-20230523-series-c-syndicate",
-   "evt-20230523-series-c-450m",
-   "evt-20250821-funding-talks-10b"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://www.anthropic.com/news/anthropic-series-c",
-   "https://siliconangle.com/2025/08/21/anthropic-reportedly-talks-raise-10b-new-funding-ai-boom-continues-apace/"
-  ],
-  "first_date": "2023-05-23",
-  "tier": "T1",
-  "degree": 3
- },
- {
   "name": "State of California",
   "types": [
    "government"
@@ -3176,6 +3238,29 @@
   "degree": 3
  },
  {
+  "name": "U.S. SEC",
+  "types": [
+   "regulator"
+  ],
+  "public": false,
+  "ticker": null,
+  "notes": [],
+  "event_ids": [
+   "evt-20260520-spacex-s1-anthropic-1p25b-monthly",
+   "evt-20260601-confidential-draft-s1-submitted",
+   "evt-20260930-no-public-s1-on-edgar-anthropic-drs-confidential"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm",
+   "https://www.anthropic.com/news/confidential-draft-s1-sec",
+   "https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%20PBC%22&forms=S-1"
+  ],
+  "first_date": "2026-05-20",
+  "tier": "T1",
+  "degree": 3
+ },
+ {
   "name": "UK AI Safety Institute",
   "types": [
    "government",
@@ -3221,6 +3306,32 @@
   ],
   "first_date": "2024-06-24",
   "tier": "T2",
+  "degree": 3
+ },
+ {
+  "name": "Wells Fargo",
+  "types": [
+   "bank",
+   "customer"
+  ],
+  "public": true,
+  "ticker": "WFC",
+  "notes": [
+   "Named customer; CISO quote: logs stay in a Wells-managed environment under Wells-managed keys"
+  ],
+  "event_ids": [
+   "evt-20260901-enterprise-frontier-safeguards",
+   "evt-20260602-chip-financing-spv-notes-price-talk",
+   "evt-20260903-credit-facility-15b-nears-final"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
+   "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+   "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+  ],
+  "first_date": "2026-06-02",
+  "tier": "T1",
   "degree": 3
  },
  {
@@ -3363,23 +3474,44 @@
   "degree": 2
  },
  {
-  "name": "AMD",
+  "name": "AWS Trainium",
   "types": [
    "chip"
   ],
   "public": true,
-  "ticker": "AMD",
+  "ticker": "AMZN",
   "notes": [],
   "event_ids": [
-   "evt-20260120-davos-chip-export-remarks",
-   "evt-20260722-amd-2gw-mi450-partnership"
+   "evt-20230925-amazon-up-to-4b",
+   "evt-20241122-amazon-additional-4b"
   ],
   "amount_usd_m": null,
   "sources": [
-   "https://techcrunch.com/2026/01/20/anthropics-ceo-stuns-davos-with-nvidia-criticism/",
-   "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+   "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+   "https://www.aboutamazon.com/news/aws/amazon-invests-additional-4-billion-anthropic-ai"
   ],
-  "first_date": "2026-01-20",
+  "first_date": "2023-09-25",
+  "tier": "T1",
+  "degree": 2
+ },
+ {
+  "name": "AWS Trainium2",
+  "types": [
+   "chip"
+  ],
+  "public": true,
+  "ticker": "AMZN",
+  "notes": [],
+  "event_ids": [
+   "evt-20241203-project-rainier",
+   "evt-20251029-project-rainier-operational"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://press.aboutamazon.com/2024/12/aws-trainium2-instances-now-generally-available",
+   "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster"
+  ],
+  "first_date": "2024-12-03",
   "tier": "T1",
   "degree": 2
  },
@@ -3625,6 +3757,27 @@
   ],
   "first_date": "2025-09-02",
   "tier": "T1",
+  "degree": 2
+ },
+ {
+  "name": "Barclays",
+  "types": [
+   "bank"
+  ],
+  "public": true,
+  "ticker": "BCS",
+  "notes": [],
+  "event_ids": [
+   "evt-20250516-run-rate-2b",
+   "evt-20260903-credit-facility-15b-nears-final"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/",
+   "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html"
+  ],
+  "first_date": "2025-05-16",
+  "tier": "T2",
   "degree": 2
  },
  {
@@ -5209,27 +5362,6 @@
   "degree": 2
  },
  {
-  "name": "Nscale",
-  "types": [
-   "cloud"
-  ],
-  "public": false,
-  "ticker": "NSCL",
-  "notes": [],
-  "event_ids": [
-   "evt-20260826-nscale-45b-west-virginia-deal",
-   "evt-20260918-nscale-files-nyse-ipo"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
-   "https://siliconangle.com/2026/09/18/data-center-builder-nscale-files-for-ipo-after-multibillion-dollar-anthropic-deal/"
-  ],
-  "first_date": "2026-08-26",
-  "tier": "T2",
-  "degree": 2
- },
- {
   "name": "Ontario Teachers' Pension Plan",
   "types": [
    "investor"
@@ -6234,30 +6366,6 @@
   "degree": 2
  },
  {
-  "name": "Wells Fargo",
-  "types": [
-   "bank",
-   "customer"
-  ],
-  "public": true,
-  "ticker": "WFC",
-  "notes": [
-   "Named customer; CISO quote: logs stay in a Wells-managed environment under Wells-managed keys"
-  ],
-  "event_ids": [
-   "evt-20260901-enterprise-frontier-safeguards",
-   "evt-20260602-chip-financing-spv-notes-price-talk"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
-   "https://www.anthropic.com/news/enterprise-frontier-safeguards"
-  ],
-  "first_date": "2026-06-02",
-  "tier": "T1",
-  "degree": 2
- },
- {
   "name": "Zapier",
   "types": [
    "customer",
@@ -6378,6 +6486,44 @@
   ],
   "first_date": "2024-03-25",
   "tier": "T2",
+  "degree": 1
+ },
+ {
+  "name": "AWS Inferentia",
+  "types": [
+   "chip"
+  ],
+  "public": true,
+  "ticker": "AMZN",
+  "notes": [],
+  "event_ids": [
+   "evt-20230925-amazon-up-to-4b"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai"
+  ],
+  "first_date": "2023-09-25",
+  "tier": "T1",
+  "degree": 1
+ },
+ {
+  "name": "AWS Trainium3",
+  "types": [
+   "chip"
+  ],
+  "public": true,
+  "ticker": "AMZN",
+  "notes": [],
+  "event_ids": [
+   "evt-20241203-project-rainier"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://press.aboutamazon.com/2024/12/aws-trainium2-instances-now-generally-available"
+  ],
+  "first_date": "2024-12-03",
+  "tier": "T1",
   "degree": 1
  },
  {
@@ -6800,6 +6946,25 @@
   "degree": 1
  },
  {
+  "name": "Annapurna Labs",
+  "types": [
+   "partner"
+  ],
+  "public": true,
+  "ticker": "AMZN",
+  "notes": [],
+  "event_ids": [
+   "evt-20241122-amazon-additional-4b"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.aboutamazon.com/news/aws/amazon-invests-additional-4-billion-anthropic-ai"
+  ],
+  "first_date": "2024-11-22",
+  "tier": "T1",
+  "degree": 1
+ },
+ {
   "name": "Anthrop LLC",
   "types": [
    "competitor"
@@ -7009,25 +7174,6 @@
   "degree": 1
  },
  {
-  "name": "Barclays",
-  "types": [
-   "bank"
-  ],
-  "public": true,
-  "ticker": "BCS",
-  "notes": [],
-  "event_ids": [
-   "evt-20250516-run-rate-2b"
-  ],
-  "amount_usd_m": null,
-  "sources": [
-   "https://siliconangle.com/2025/05/16/anthropic-raises-2-5b-debt-finance-growth-investments/"
-  ],
-  "first_date": "2025-05-16",
-  "tier": "T3",
-  "degree": 1
- },
- {
   "name": "BeHeard Labs",
   "types": [
    "portfolio"
@@ -7124,6 +7270,25 @@
   ],
   "first_date": "2025-09-02",
   "tier": "T1",
+  "degree": 1
+ },
+ {
+  "name": "Bloomberg News (source)",
+  "types": [
+   "investor"
+  ],
+  "public": false,
+  "ticker": null,
+  "notes": [],
+  "event_ids": [
+   "evt-20260818-pre-ipo-revolver-10b-target-exceeded"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html"
+  ],
+  "first_date": "2026-08-18",
+  "tier": "T2",
   "degree": 1
  },
  {
@@ -8478,6 +8643,63 @@
   "degree": 1
  },
  {
+  "name": "Google TPU",
+  "types": [
+   "chip"
+  ],
+  "public": true,
+  "ticker": "GOOGL",
+  "notes": [],
+  "event_ids": [
+   "evt-20260406-google-broadcom-tpu-3-5gw"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+  ],
+  "first_date": "2026-04-06",
+  "tier": "T1",
+  "degree": 1
+ },
+ {
+  "name": "Google TPU Ironwood",
+  "types": [
+   "chip"
+  ],
+  "public": true,
+  "ticker": "GOOGL",
+  "notes": [],
+  "event_ids": [
+   "evt-20251023-google-tpu-1m-deal"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services"
+  ],
+  "first_date": "2025-10-23",
+  "tier": "T1",
+  "degree": 1
+ },
+ {
+  "name": "Google TPU v5e",
+  "types": [
+   "chip"
+  ],
+  "public": true,
+  "ticker": "GOOGL",
+  "notes": [],
+  "event_ids": [
+   "evt-20231108-google-cloud-expansion-tpu-v5e"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.prnewswire.com/news-releases/google-announces-expansion-of-ai-partnership-with-anthropic-301981815.html"
+  ],
+  "first_date": "2023-11-08",
+  "tier": "T1",
+  "degree": 1
+ },
+ {
   "name": "Google Vertex AI",
   "types": [
    "cloud"
@@ -9459,6 +9681,25 @@
   "degree": 1
  },
  {
+  "name": "Microsoft Azure",
+  "types": [
+   "cloud"
+  ],
+  "public": true,
+  "ticker": "MSFT",
+  "notes": [],
+  "event_ids": [
+   "evt-20251118-microsoft-nvidia-anthropic-partnership"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+  ],
+  "first_date": "2025-11-18",
+  "tier": "T1",
+  "degree": 1
+ },
+ {
   "name": "Microsoft Foundry",
   "types": [
    "cloud"
@@ -10162,13 +10403,14 @@
  {
   "name": "Reuters",
   "types": [
+   "investor",
    "partner"
   ],
-  "public": null,
+  "public": true,
   "ticker": null,
   "notes": [],
   "event_ids": [
-   "evt-20260928-prospectus-leaked-reuters"
+   "evt-20260928-reuters-draft-prospectus-2025-financials"
   ],
   "amount_usd_m": null,
   "sources": [
@@ -10548,6 +10790,25 @@
    "https://www.anthropic.com/news/claude-for-financial-services"
   ],
   "first_date": "2025-07-15",
+  "tier": "T1",
+  "degree": 1
+ },
+ {
+  "name": "SpaceX (Space Exploration Technologies Corp)",
+  "types": [
+   "partner"
+  ],
+  "public": true,
+  "ticker": "SPCX",
+  "notes": [],
+  "event_ids": [
+   "evt-20260520-spacex-s1-anthropic-1p25b-monthly"
+  ],
+  "amount_usd_m": null,
+  "sources": [
+   "https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm"
+  ],
+  "first_date": "2026-05-20",
   "tier": "T1",
   "degree": 1
  },

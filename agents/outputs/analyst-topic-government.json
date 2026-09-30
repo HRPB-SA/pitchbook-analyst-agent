@@ -1,0 +1,768 @@
+{
+ "agent": "analyst-topic-government",
+ "role": "Topic Analyst — Government, policy & international",
+ "started": "2026-09-30T18:18:59Z",
+ "finished": "2026-09-30T18:46:09Z",
+ "topic": {
+  "slug": "government",
+  "title": "Government, policy & international",
+  "one_liner": "Anthropic's federal risk is discretion, not revenue: a $200M-ceiling DoD deal was lost and two models were suspended 18 days, yet run-rate rose from $14B to $65B.",
+  "key_metrics": [
+   {
+    "label": "Countries with Anthropic offices (open at Sep 30 2026)",
+    "value": "11 per the offices table: US, UK, Ireland, Switzerland, Japan, India, France, Germany, Australia, Italy, South Korea. Singapore, due Oct 2026, would be the 12th.",
+    "event_id": "evt-20260916-singapore-office-plan"
+   },
+   {
+    "label": "DoD CDAO agreement value",
+    "value": "$200M ceiling over two years (Jul 14, 2025). A ceiling, not committed spend. xAI, OpenAI and Google got the same ceiling (DefenseScoop, T2).",
+    "event_id": "evt-20250714-dod-cdao-200m"
+   },
+   {
+    "label": "Latest policy milestone",
+    "value": "2026-09-30: FTC opens agent-risk probe of Anthropic, OpenAI and METR. Last signed accord: White House voluntary pact, 2026-09-29.",
+    "event_id": "evt-20260930-ftc-probe-anthropic-openai"
+   },
+   {
+    "label": "Pentagon exclusion status",
+    "value": "Split. 10 U.S.C. 3252 designation vacated Aug 27 (N.D. Cal.). FASCSA exclusion upheld 2-1 Sep 25 (D.C. Cir.). DoD says about 90% of workloads moved (Sep 11, T2).",
+    "event_id": "evt-20260925-dc-circuit-denies-anthropic-petitions"
+   },
+   {
+    "label": "Fable 5 and Mythos 5 suspension",
+    "value": "18 days from the Jun 12 directive to the Jun 30 lift; access restored Jul 1 (19 days by calendar). Revenue impact not disclosed.",
+    "event_id": "evt-20260612-us-export-control-directive-fable-mythos"
+   },
+   {
+    "label": "Federal revenue claims (sworn declarations)",
+    "value": "Before the ban, 2026 public-sector ARR was expected at several hundred million dollars (court summary, T1), above $500M per Reuters (T2). $150M of DoD ARR was lost immediately. 2026 revenue at risk: hundreds of millions (DoD) to multiple billions. Not audited.",
+    "event_id": "evt-20260309-cfo-declaration-public-sector"
+   }
+  ],
+  "what": [
+   {
+    "t": "Federal build-out. Claude reached IL6 classified networks through Palantir and AWS on Nov 7, 2024 (T2). Claude Gov launched Jun 5, 2025 and Bedrock won FedRAMP High and DoD IL4/5 on Jun 11. On Jul 14 Anthropic announced a two-year CDAO agreement with a $200M ceiling (T1). GSA listing came Aug 5 and a $1 offer to all three branches Aug 12.",
+    "e": [
+     "evt-20241107-palantir-aws-defense",
+     "evt-20250605-claude-gov",
+     "evt-20250611-bedrock-fedramp-il4-5",
+     "evt-20250714-dod-cdao-200m",
+     "evt-20250805-gsa-schedule",
+     "evt-20250812-claude-1-dollar-government"
+    ]
+   },
+   {
+    "t": "Warning signs, then rupture. Sacks called Anthropic's approach regulatory capture on Oct 14, 2025 (T3). Hegseth's Jan 9 memo demanded 'any lawful use' terms (T1). Amodei refused Feb 26, keeping two exceptions. On Feb 27 the President ordered agencies off Claude and Hegseth announced a supply-chain-risk label (T1). OpenAI announced a classified deal hours later (T2). Anthropic sued Mar 9.",
+    "e": [
+     "evt-20251014-sacks-accuses-anthropic-of-regulatory-capture",
+     "evt-20260109-hegseth-any-lawful-use-memo",
+     "evt-20260226-amodei-statement-department-of-war",
+     "evt-20260227-trump-hegseth-ban-and-supply-chain-designation-announced",
+     "evt-20260227-openai-pentagon-classified-deal",
+     "evt-20260309-anthropic-sues-department-of-war-ndcal-and-dc-circuit"
+    ]
+   },
+   {
+    "t": "Two courts, two answers. N.D. Cal. granted summary judgment Aug 27 and vacated the 10 U.S.C. 3252 designation (T1). The D.C. Circuit denied Anthropic's petitions 2-1 on Sep 25 and upheld the FASCSA exclusion (T1). Under Secretary Michael said Sep 11 that about 90% of workloads had moved (DefenseScoop, T2, single source). Seven named vendors signed IL6 and IL7 deals May 1 (TechCrunch, T2).",
+    "e": [
+     "evt-20260827-dow-summary-judgment-permanent-injunction",
+     "evt-20260925-dc-circuit-denies-anthropic-petitions",
+     "evt-20260911-dod-migration-90pct",
+     "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic"
+    ]
+   },
+   {
+    "t": "Levers pulled in 2026. A Commerce directive on Jun 12 barred foreign nationals from Fable 5 and Mythos 5, and Anthropic disabled both worldwide for 18 days (T1). On Sep 24 the White House asked Anthropic to hold Mythos 5.1 from UK AISI, and it complied (Politico, T2). The FTC is opening an agent-risk probe, first reported by the New York Post and relayed by Reuters Sep 30 (T2).",
+    "e": [
+     "evt-20260612-us-export-control-directive-fable-mythos",
+     "evt-20260701-fable-5-mythos-5-access-restored",
+     "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+     "evt-20260930-ftc-probe-anthropic-openai"
+    ]
+   },
+   {
+    "t": "Policy line. Qualified support for SB 1047 on Aug 21, 2024 (T3) ended in a veto Sep 29. Anthropic endorsed SB 53 Sep 8, 2025 (T1), in force Jan 1, 2026. It gave $20M to Public First Action Feb 12. A June 2026 framework seeks federal power to block dangerous deployments. The Sep 12 'pace the frontier' essay sought an antitrust waiver; Sacks called it capture Sep 13 (T3).",
+    "e": [
+     "evt-20240821-sb1047-letter",
+     "evt-20240929-sb1047-vetoed",
+     "evt-20250908-anthropic-endorses-california-sb-53",
+     "evt-20251219-sb53-compliance-framework",
+     "evt-20260212-public-first-action-20m",
+     "evt-20260601-policy-on-ai-exponential",
+     "evt-20260912-pace-the-frontier",
+     "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture"
+    ]
+   },
+   {
+    "t": "International. Offices opened: London May 2023 (VERIFY), Zurich Feb 2025, Tokyo Oct 29, 2025, Bengaluru Feb 16, Sydney Apr 27, Milan May 27 and Seoul Jun 17, 2026. Dublin, Paris and Munich lack opening dates. Sovereign MoUs: UK Feb 2025, Japan Oct 2025, Rwanda Feb 2026, Australia Mar 2026 and Korea Jun 2026 (all T1).",
+    "e": [
+     "evt-20230524-london-office",
+     "evt-20250213-zurich-office-houlsby",
+     "evt-20251029-tokyo-office-japan-aisi",
+     "evt-20260216-bengaluru-office-opens",
+     "evt-20260427-sydney-office",
+     "evt-20260527-milan-office",
+     "evt-20260617-seoul-office",
+     "evt-20251107-paris-munich-offices",
+     "evt-20240514-dublin-office-plan",
+     "evt-20250214-uk-mou",
+     "evt-20260217-rwanda-government-mou",
+     "evt-20260331-australia-government-mou"
+    ]
+   }
+  ],
+  "means": [
+   {
+    "t": "Exposure is federal discretion, not contract revenue. On my arithmetic the CDAO ceiling is at most 0.7% of the $14B run-rate on Feb 12, and pre-ban public-sector ARR above $500M (Reuters, T2) is over 3.6%. In seven months the government pulled five levers: agency ban, contractor boycott, model suspension, foreign-access hold and an FTC probe. The Jun 12 letter gave no specifics.",
+    "e": [
+     "evt-20250714-dod-cdao-200m",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260309-cfo-declaration-public-sector",
+     "evt-20260827-dow-summary-judgment-permanent-injunction",
+     "evt-20260612-us-export-control-directive-fable-mythos",
+     "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+     "evt-20260930-ftc-probe-anthropic-openai"
+    ]
+   },
+   {
+    "t": "Strategy: back binding rules that bind every large lab, preferably federal, with state laws as an interim step. SB 53 covers 10^26 FLOPs and firms above $500M revenue. The June framework covers 10^25 FLOPs and $500M AI revenue or $1B R&D, with penalties tied to global revenue. Abroad the record shows codes and MoUs: EU code signatory, watermarking after Aug 2, institute MoUs, no UK or Asian statute.",
+    "e": [
+     "evt-20250908-anthropic-endorses-california-sb-53",
+     "evt-20260601-policy-on-ai-exponential",
+     "evt-20251021-dario-statement-american-ai-leadership",
+     "evt-20250721-eu-code-of-practice-intent-to-sign",
+     "evt-20260811-claude-text-watermarking-eu-ai-act",
+     "evt-20250214-uk-mou",
+     "evt-20251029-tokyo-office-japan-aisi"
+    ]
+   },
+   {
+    "t": "Evidence policy helps. Anthropic published an SB 53 compliance framework before the law took effect. Its Feb 23 distillation post was cited by the Sep 8 CISA, FBI and NSA advisory on six Chinese labs. Treasury urged banks to test Mythos (T3), Commerce approved it for 100+ US institutions (T2), and NSA reportedly uses it (T3). Claude hit No. 1 on the App Store Feb 28 (T2).",
+    "e": [
+     "evt-20251219-sb53-compliance-framework",
+     "evt-20260223-distillation-attacks-disclosed",
+     "evt-20260908-cisa-fbi-nsa-advisory-on-chinese-ai-distillation",
+     "evt-20260626-mythos-5-partial-approval",
+     "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
+     "evt-20260420-nsa-uses-mythos-despite-blacklist",
+     "evt-20260228-claude-tops-us-app-store"
+    ]
+   },
+   {
+    "t": "Evidence policy hurts. DoD moved workloads to OpenAI, Google and xAI, and Google agreed to 'all lawful uses' Apr 28 (T2). Two models went dark 18 days on a directive that gave no specifics. FTC footnotes cite Anthropic over six times and xAI once (Tech Times, T3). Pacing advocacy drew a Sherman Act suit Sep 18. The PRC ban forwent several hundred million dollars, per Amodei.",
+    "e": [
+     "evt-20260911-dod-migration-90pct",
+     "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
+     "evt-20260612-us-export-control-directive-fable-mythos",
+     "evt-20260701-ftc-ideological-bias-statement",
+     "evt-20260918-buist-v-anthropic-sherman-act-class-action",
+     "evt-20260226-amodei-statement-department-of-war"
+    ]
+   }
+  ],
+  "implications": [
+   {
+    "t": "My read (interpretation): policy is neither a moat nor a revenue liability yet. It is event risk. Realized loss is $150M of DoD ARR (Reuters, T2) plus delayed contractor deals, while run-rate still rose $14B to $65B (gross, not recognized revenue, no counterfactual). Reprice tails: another suspension, FTC findings, FASCSA spillover. Rules exempt small labs and, on their thresholds, bind rivals equally, so the edge is enforcement discretion.",
+    "e": [
+     "evt-20260817-rr-65b-end-july",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260309-cfo-declaration-public-sector",
+     "evt-20260612-us-export-control-directive-fable-mythos",
+     "evt-20260930-ftc-probe-anthropic-openai",
+     "evt-20250908-anthropic-endorses-california-sb-53",
+     "evt-20251021-dario-statement-american-ai-leadership"
+    ]
+   },
+   {
+    "t": "Legal map. The 3252 and FASCSA tracks point opposite ways, so the S-1 should describe two instruments. The D.C. Circuit result controls DoW and contractor use. Track the mandate, en banc or cert, the stayed Ninth Circuit appeal and any government appeal of the Aug 27 judgment. Treat the Sep 2 to Sep 29 thaw as White House and Commerce, not DoW.",
+    "e": [
+     "evt-20260827-dow-summary-judgment-permanent-injunction",
+     "evt-20260925-dc-circuit-denies-anthropic-petitions",
+     "evt-20260903-pentagon-says-anthropic-still-a-supply-chain-risk",
+     "evt-20260902-lutnick-says-anthropic-back-on-administrations-side",
+     "evt-20260927-trump-amodei-dinner",
+     "evt-20260929-trump-ai-ceos-voluntary-safety-pact"
+    ]
+   },
+   {
+    "t": "International: treat MoUs as options, not revenue; only Australia names dollars (A$3M in credits). Anthropic says APAC run-rate rose over 10x and EMEA over 9x, with no dollars. India is second by volume at 5.8% of Claude.ai use but 101st per working-age capita. Volta, Norway, is the only named non-US compute site (T2). Singapore is due in October (Fortune, T2); announce-to-open lags run 33 to 237 days.",
+    "e": [
+     "evt-20260331-australia-government-mou",
+     "evt-20251029-tokyo-office-japan-aisi",
+     "evt-20251107-paris-munich-offices",
+     "evt-20260216-economic-index-india-brief",
+     "evt-20260804-volta-10b-norway-compute-deal",
+     "evt-20260916-singapore-office-plan",
+     "evt-20260713-india-localized-claude-pricing"
+    ]
+   },
+   {
+    "t": "Regulation: score the 'regulatory capture' charge as political risk, not proof of a moat. Watch the House preemption draft and the November midterms, where Anthropic's $20M and AnthroPAC meet an OpenAI-linked network above $100M. Anthropic's position on the draft is not in the record. Ask for it before pricing the durability of SB 53 and similar state laws.",
+    "e": [
+     "evt-20260604-house-preemption-draft",
+     "evt-20260212-public-first-action-20m",
+     "evt-20260403-anthropac-political-action-committee",
+     "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture"
+    ]
+   }
+  ],
+  "second_order": [
+   "The Pentagon exit moves classified reference workloads, including Palantir Maven, to OpenAI, Google and xAI. OpenAI's Feb 27 terms named prohibitions close to Anthropic's two exceptions, so the fight reads as control over who enforces limits, not the limits. Contractors must certify non-use. Coverage frames the Sep 27 dinner as a thaw. DoW says the designation stands.",
+   "The Jun 12 and Sep 24 actions make foreign access to frontier models a US executive decision. UK AISI, Anthropic's deepest government partner abroad, is the first ally held back by name. Japan, Australia and Korea MoUs cover safety evaluation and model information that the same gate can block. This tests whether sovereign MoUs are a durable channel: the record shows no MoU dollars and two US gates.",
+   "Pacing advocacy opened a legal channel. The Buist complaint cites Amodei's Sep 12 essay as evidence of agreement, and the desk's case note expects discovery into any industry working group. Altman endorsed the essay and Musk said Dario is right, and their companies are co-defendants. The public debate is about motive. The docket is about conduct.",
+   "The moat case weakens as rivals converge. OpenAI's Chris Lehane opposed SB 53 and an OpenAI-linked PAC network has over $100M, yet by Sep 2026 OpenAI shared the pacing endorsement, the UN briefing, the White House hold and the FTC probe. When rules bind every large lab, the differentiator is how much discretion the executive applies to each.",
+   "Washington access did not insulate. A NAIAC seat (2022), a bipartisan advisory council (Aug 2025), a DC office (Mar 2026) and a PAC (Apr 2026) sit on either side of the Feb 27 ban. The thaw ran through Wiles, Bessent, Lutnick and Trump. New government-affairs hires on Aug 4 and Sep 7 add access; the record shows discretion outweighing it."
+  ],
+  "watch": [
+   {
+    "item": "October international calendar: Australian Senate inquiry hearing in Canberra on Oct 1 (Anthropic named as a safety-practice witness) and the Singapore office opening (12th country)",
+    "by": "2026-10-31",
+    "threshold": "Base rate not in the record for foreign-legislature summons; a Quartz headline (not opened) says both CEOs skip. A no-show without a written submission signals avoidance of non-US legislatures. Announce-to-open lags in the record: Tokyo 33 days, Sydney 48, Bengaluru 132, Seoul 237; an opening by Oct 31 means 45 days or fewer. A Singapore government MoU would be the sixth."
+   },
+   {
+    "item": "DoD completes removal of Anthropic workloads (Sep 29 or 30 per MeriTalk and FedScoop; end of October per DefenseScoop notes)",
+    "by": "2026-10-31",
+    "threshold": "Reference class: this program's own 180-day order from Mar 5 to 6 implied early September; the targets since are Sep 29 or 30 and end of October. A DoD statement of 100% removal confirms the exclusion in practice; residual Claude use (NSA Mythos reports, T3) would show its limits."
+   },
+   {
+    "item": "Appellate path: D.C. Circuit mandate, en banc petition or cert; Ninth Circuit 26-2011 (stayed Apr 27); any government appeal of the Aug 27 judgment",
+    "by": "2026-Q4",
+    "threshold": "Base rate for en banc or cert grants is not in the record. Different here: a 2-1 panel with a dissent and a split with N.D. Cal. on causation. A filed petition keeps the legal question open through the IPO; a decision not to seek review closes the track."
+   },
+   {
+    "item": "FTC: formal information demands and compelled testimony from the Sep 30 probe, and the final 'ideological bias' policy statement (proposed Jul 1, 300+ comments)",
+    "by": "2026-Q4",
+    "threshold": "One reference class in the record: the FTC AI-partnerships study, orders Jan 2024, report Jan 17, 2025, no enforcement. Different here: executive testimony is planned and Chairman Ferguson's stated view is that developers who instruct agents in cyber tests that cause hacks should be liable. Watch for issued demands that name Anthropic."
+   },
+   {
+    "item": "House 'Great American AI Act' draft (Jun 4): introduction or markup, Anthropic's stated position, and the November midterms",
+    "by": "2026-11-30",
+    "threshold": "No base rate for preemption bills in the record. A three-year freeze on state laws on how AI is built could freeze SB 53-type duties; codifying CAISI at $100M a year for 2027 to 2029 is a federal anchor. IPO reports run from a listing days before the midterms (Reuters via Forbes, Sep 4) to after them (Fortune, Sep 29)."
+   },
+   {
+    "item": "Sanctions or Entity List action on the six Chinese labs named in advisory AA26-251A (Bessent: 'on the table' Jul 22)",
+    "by": "2026-Q4",
+    "threshold": "Ten weeks of threats since Jul 22 with advisory only. A designation of any named firm confirms the export-control and IP thesis; none by year-end means advocacy earned attention, not enforcement."
+   },
+   {
+    "item": "First disclosed paid civil-agency contract after the one-year $1 term that began Aug 12, 2025, or any new DoD-adjacent award",
+    "by": "2026-Q4",
+    "threshold": "Base rate not in the record: no paid federal contract is disclosed. A paid renewal shows civil demand survived the ban; none would leave federal revenue unproven beyond the pre-ban projection."
+   },
+   {
+    "item": "Mythos 5.1 release to UK AISI after US review, and any White House AI safety board or policy-lead appointment (Trump weighing a 10-person board, Sep 29)",
+    "by": "2026-Q4",
+    "threshold": "Release to UK AISI would show the Sep 24 hold was temporary; continued exclusion makes access gating the norm for MoU partners. A board charter would show whether the Sep 29 voluntary pact becomes an institution."
+   }
+  ],
+  "house_view": "(a) Extends narrowly: valuation went from $380B at Series G (Feb 12) to $965B at Series H (May 28) through the Pentagon fight, so federal-policy risk carried no visible price, though this slice cannot test multiples. (b) Not tested: federal access runs partly through Bedrock, Vertex and Palantir channels, so any public-sector ARR inherits the gross-versus-net question. (c) Extends: Buist (Sep 18), the D.C. Circuit (Sep 25) and the FTC probe (Sep 30) cluster before pricing, and relayed WSJ reporting names Amodei's risk stance among reasons for a November slip (T3), a timing input that absorption math omits. (d) Not touched by this slice. (e) Confirms: a $200M prototype ceiling that four labs received is not backlog or ARR, and defense-contract conventions do not transfer to SaaS metrics.",
+  "uncertainties": [
+   {
+    "type": "data",
+    "note": "Federal revenue is not audited or contracted in the record. The CDAO agreement has no obligated amount. Sworn declarations give $150M of DoD ARR lost immediately, 2026 public-sector ARR of several hundred million (court summary, T1) or above $500M (Reuters, T2), and revenue at risk from hundreds of millions to multiple billions. A PitchBook note (T3) puts the federal ban near $200M, about 1.4% of ARR. The revenue-mix, customer and prospectus tables are empty.",
+    "what_would_change_it": "Public S-1 disclosure of federal and defense-contractor revenue, or a company statement that quantifies it."
+   },
+   {
+    "type": "data",
+    "note": "Regional revenue is not in the record. Only growth multiples exist: APAC over 10x, EMEA over 9x, India doubled in four months. The offices table also undercounts: Anthropic said 12 cities on Nov 7, 2025 while the table shows 7, Paris, Munich and Dublin opening dates are missing, and London is VERIFY. Korean and Australian partners (Samsung, SK hynix, Naver, CBA) are also shareholders, so regional growth may include related-party revenue.",
+    "what_would_change_it": "An S-1 geographic revenue note and properties section, or Anthropic office pages."
+   },
+   {
+    "type": "data",
+    "note": "Open conflicts, both sides named. DoD migration: about two-thirds (MeriTalk, T3) versus about 90% (DefenseScoop, T2), with completion Sep 29 or 30 versus end of October. Jun 12 directive: a BIS 'is informed' letter (CSIS, Harvard Law Review Blog) versus an unspecified government directive (Anthropic), and four accounts of the trigger. Sacks: former czar (TechCrunch) versus White House adviser (Sep 13 headline). IL6 and IL7 vendors: seven (TechCrunch) versus eight (CNN).",
+    "what_would_change_it": "A DoD completion statement, a Commerce or BIS document, or a White House staff listing."
+   },
+   {
+    "type": "interpretation",
+    "note": "Moat versus liability is a judgment, not a measurement. The record has no revenue counterfactual and few regulatory outcomes for OpenAI, Google or xAI. The FTC footnote asymmetry rests on one T3 outlet. The courts split on cause: N.D. Cal. found retaliation, the D.C. Circuit found refusal of 'all lawful uses'.",
+    "what_would_change_it": "Segment revenue disclosure, peer regulatory outcomes, or the FTC statement text."
+   },
+   {
+    "type": "forecast",
+    "note": "Appeals, FTC and preemption paths are forecasts with no base rate in the record, except one FTC study that took about 12 months and produced no enforcement. What differs here: a 2-1 panel with a dissent, a split with N.D. Cal., and a White House that hosted Amodei on Sep 27 and Sep 29.",
+    "what_would_change_it": "Mandate issuance, a cert or en banc petition, issued FTC demands, or introduced House bill text."
+   }
+  ],
+  "evidence": [
+   "evt-20260925-dc-circuit-denies-anthropic-petitions",
+   "evt-20260827-dow-summary-judgment-permanent-injunction",
+   "evt-20250714-dod-cdao-200m",
+   "evt-20260227-trump-hegseth-ban-and-supply-chain-designation-announced",
+   "evt-20260309-cfo-declaration-revenue-at-risk",
+   "evt-20260309-cfo-declaration-public-sector",
+   "evt-20260612-us-export-control-directive-fable-mythos",
+   "evt-20260701-fable-5-mythos-5-access-restored",
+   "evt-20260911-dod-migration-90pct",
+   "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+   "evt-20260930-ftc-probe-anthropic-openai",
+   "evt-20260109-hegseth-any-lawful-use-memo",
+   "evt-20260226-amodei-statement-department-of-war",
+   "evt-20260227-openai-pentagon-classified-deal",
+   "evt-20260501-pentagon-classified-ai-deals-exclude-anthropic",
+   "evt-20250908-anthropic-endorses-california-sb-53",
+   "evt-20260601-policy-on-ai-exponential",
+   "evt-20260912-pace-the-frontier",
+   "evt-20260918-buist-v-anthropic-sherman-act-class-action",
+   "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture",
+   "evt-20251014-sacks-accuses-anthropic-of-regulatory-capture",
+   "evt-20251021-dario-statement-american-ai-leadership",
+   "evt-20260604-house-preemption-draft",
+   "evt-20260701-ftc-ideological-bias-statement",
+   "evt-20260212-public-first-action-20m",
+   "evt-20260929-trump-ai-ceos-voluntary-safety-pact",
+   "evt-20260927-trump-amodei-dinner",
+   "evt-20260902-lutnick-says-anthropic-back-on-administrations-side",
+   "evt-20260903-pentagon-says-anthropic-still-a-supply-chain-risk",
+   "evt-20260305-anthropic-will-challenge-designation",
+   "evt-20260326-dow-preliminary-injunction",
+   "evt-20260303-hegseth-fascsa-determination",
+   "evt-20250605-claude-gov",
+   "evt-20250805-gsa-schedule",
+   "evt-20250812-claude-1-dollar-government",
+   "evt-20250611-bedrock-fedramp-il4-5",
+   "evt-20241107-palantir-aws-defense",
+   "evt-20260626-mythos-5-partial-approval",
+   "evt-20260420-nsa-uses-mythos-despite-blacklist",
+   "evt-20260410-bessent-powell-bank-ceos-mythos-testing",
+   "evt-20260908-cisa-fbi-nsa-advisory-on-chinese-ai-distillation",
+   "evt-20260223-distillation-attacks-disclosed",
+   "evt-20260722-treasury-moonshot-fable-distillation-threat",
+   "evt-20260916-singapore-office-plan",
+   "evt-20260617-seoul-office",
+   "evt-20251029-tokyo-office-japan-aisi",
+   "evt-20260216-bengaluru-office-opens",
+   "evt-20260427-sydney-office",
+   "evt-20260527-milan-office",
+   "evt-20251107-paris-munich-offices",
+   "evt-20250214-uk-mou",
+   "evt-20260127-uk-dsit-gov-uk-assistant",
+   "evt-20260217-rwanda-government-mou",
+   "evt-20260331-australia-government-mou",
+   "evt-20260804-volta-10b-norway-compute-deal",
+   "evt-20250721-eu-code-of-practice-intent-to-sign",
+   "evt-20260811-claude-text-watermarking-eu-ai-act",
+   "evt-20260216-economic-index-india-brief",
+   "evt-20260713-india-localized-claude-pricing",
+   "evt-20240821-sb1047-letter",
+   "evt-20240929-sb1047-vetoed",
+   "evt-20251219-sb53-compliance-framework",
+   "evt-20260403-anthropac-political-action-committee",
+   "evt-20260228-claude-tops-us-app-store",
+   "evt-20260817-rr-65b-end-july",
+   "evt-20260212-series-g-30b-380b",
+   "evt-20260528-series-h-roster",
+   "evt-20260918-wsj-ipo-pushed-to-november",
+   "evt-20260310-sydney-office-announced",
+   "evt-20260904-reuters-ipo-launch-shifts-toward-mid-october",
+   "evt-20260311-anthropic-institute-launch",
+   "evt-20250827-national-security-advisory-council",
+   "evt-20220414-clark-naiac",
+   "evt-20260804-cuellar-chief-global-affairs-officer",
+   "evt-20260907-clifford-intl-affairs",
+   "evt-20260912-amodei-pace-the-frontier-call",
+   "evt-20260923-un-security-council",
+   "evt-20260927-australia-senate-calls-ceos-rogue-agent-inquiry",
+   "evt-20250117-ftc-ai-partnerships-report",
+   "evt-20260730-lin-summary-judgment-hearing",
+   "evt-20260613-amazon-jailbreak-report-jassy",
+   "evt-20260309-anthropic-sues-department-of-war-ndcal-and-dc-circuit",
+   "evt-20230524-london-office",
+   "evt-20250213-zurich-office-houlsby",
+   "evt-20240514-dublin-office-plan"
+  ]
+ },
+ "log": [
+  {
+   "seq": 1,
+   "type": "search",
+   "text": "q.py --cat government: 87 events, Apr 2022 to Sep 30 2026. Federal arc, DoD, export control, sovereign MoUs."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "q.py --cat policy: 82 events, Feb 2022 to Sep 29 2026. SB 1047, SB 53, essays, PAC, preemption, pacing."
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "q.py --cat international: 47 events. Offices, regional growth claims, EU and Asia items."
+  },
+  {
+   "seq": 4,
+   "type": "search",
+   "text": "q.py --cat regulatory: 40 events. FTC, CMA, Commerce directive, FASCSA, EU watermarking."
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "q.py --table offices: 12 rows, 11 opened, Singapore not yet open at Sep 30."
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "Keyword sweep of non-slice categories for MoU, sovereign, federal and country terms: 31 hits, mostly context."
+  },
+  {
+   "seq": 7,
+   "type": "search",
+   "text": "Entity sweep for government, regulator and court entities outside the slice: 40 events, mostly litigation for other desks."
+  },
+  {
+   "seq": 8,
+   "type": "search",
+   "text": "q.py --cat compute 2025-2026: about 40 events; named sites are US except Volta (Norway)."
+  },
+  {
+   "seq": 9,
+   "type": "search",
+   "text": "q.py --cat ipo Jun to Sep 2026 and run_rate table, to size federal exposure against company run-rate."
+  },
+  {
+   "seq": 10,
+   "type": "found",
+   "text": "DoD CDAO agreement: $200M ceiling, two years, xAI, OpenAI and Google got the same ceiling (DefenseScoop).",
+   "event_id": "evt-20250714-dod-cdao-200m",
+   "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations"
+  },
+  {
+   "seq": 11,
+   "type": "found",
+   "text": "Federal build-out: Claude Gov, FedRAMP High and IL4/5, GSA schedule, $1 offer to three branches.",
+   "event_id": "evt-20250812-claude-1-dollar-government",
+   "url": "https://www.anthropic.com/news/offering-expanded-claude-access-across-all-three-branches-of-government"
+  },
+  {
+   "seq": 12,
+   "type": "found",
+   "text": "Hegseth Jan 9 memo: 'any lawful use' in all DoW AI contracts. Anthropic agreed except two exceptions.",
+   "event_id": "evt-20260109-hegseth-any-lawful-use-memo",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.134.0.pdf"
+  },
+  {
+   "seq": 13,
+   "type": "found",
+   "text": "Feb 26 refusal, Feb 27 Presidential and Hegseth directives, OpenAI classified deal the same night.",
+   "event_id": "evt-20260227-trump-hegseth-ban-and-supply-chain-designation-announced",
+   "url": "https://www.anthropic.com/news/statement-comments-secretary-war"
+  },
+  {
+   "seq": 14,
+   "type": "found",
+   "text": "CFO declaration: public-sector ARR several hundred million for 2026, 2026 revenue at risk hundreds of millions to multiple billions.",
+   "event_id": "evt-20260309-cfo-declaration-revenue-at-risk",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.134.0.pdf"
+  },
+  {
+   "seq": 15,
+   "type": "found",
+   "text": "N.D. Cal. summary judgment Aug 27: 3252 designation and secondary boycott vacated; government conceded no backdoor access.",
+   "event_id": "evt-20260827-dow-summary-judgment-permanent-injunction",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.250.0_1.pdf"
+  },
+  {
+   "seq": 16,
+   "type": "found",
+   "text": "D.C. Circuit 2-1 Sep 25 upholds FASCSA exclusion; First Amendment claim fails on causation; mandate withheld.",
+   "event_id": "evt-20260925-dc-circuit-denies-anthropic-petitions",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cadc.43309/gov.uscourts.cadc.43309.01208891909.0.pdf"
+  },
+  {
+   "seq": 17,
+   "type": "found",
+   "text": "Michael: about 90% of DoD workloads moved off Anthropic, including Palantir Maven (DefenseScoop, T2 single source).",
+   "event_id": "evt-20260911-dod-migration-90pct",
+   "url": "https://defensescoop.com/2026/09/11/dod-poised-to-move-all-classified-ai-workloads-off-anthropic-by-october/"
+  },
+  {
+   "seq": 18,
+   "type": "found",
+   "text": "Commerce directive Jun 12 5:21pm ET; Fable 5 and Mythos 5 disabled worldwide; lifted Jun 30; restored Jul 1.",
+   "event_id": "evt-20260612-us-export-control-directive-fable-mythos",
+   "url": "https://www.anthropic.com/news/fable-mythos-access"
+  },
+  {
+   "seq": 19,
+   "type": "found",
+   "text": "White House (ONCD) asks Anthropic and OpenAI to hold Mythos 5.1 and GPT-6 Astra from UK AISI; Anthropic complied.",
+   "event_id": "evt-20260924-white-house-holds-mythos-5-1-from-uk-aisi",
+   "url": "https://www.yahoo.com/news/politics/articles/white-house-asks-openai-anthropic-164324696.html"
+  },
+  {
+   "seq": 20,
+   "type": "found",
+   "text": "FTC probe Sep 30 names Anthropic, OpenAI, METR; formal demands and executive testimony planned.",
+   "event_id": "evt-20260930-ftc-probe-anthropic-openai",
+   "url": "https://www.yahoo.com/news/politics/articles/ftc-opens-probe-ai-giants-135328719.html"
+  },
+  {
+   "seq": 21,
+   "type": "found",
+   "text": "SB 53: 10^26 FLOPs, $500M revenue, 15-day incident reports, in force Jan 1 2026; OpenAI's Lehane and a16z opposed.",
+   "event_id": "evt-20250908-anthropic-endorses-california-sb-53",
+   "url": "https://www.anthropic.com/news/anthropic-is-endorsing-sb-53"
+  },
+  {
+   "seq": 22,
+   "type": "found",
+   "text": "June 2026 framework: government power to block deployments, 10^25 FLOPs, $500M AI revenue or $1B R&D, global-revenue penalties.",
+   "event_id": "evt-20260601-policy-on-ai-exponential",
+   "url": "https://www.anthropic.com/policy-on-the-ai-exponential"
+  },
+  {
+   "seq": 23,
+   "type": "found",
+   "text": "House draft (Obernolte, Trahan) would freeze state AI development laws three years and codify CAISI at $100M a year.",
+   "event_id": "evt-20260604-house-preemption-draft",
+   "url": "https://www.nextgov.com/artificial-intelligence/2026/06/lawmakers-propose-ai-framework-would-preempt-state-laws-3-years/413975/"
+  },
+  {
+   "seq": 24,
+   "type": "found",
+   "text": "Pace the Frontier Sep 12 with antitrust waiver; Sacks Sep 13; Buist Sherman Act suit Sep 18 cites the essay.",
+   "event_id": "evt-20260912-pace-the-frontier",
+   "url": "https://www.darioamodei.com/post/we-must-pace-the-frontier"
+  },
+  {
+   "seq": 25,
+   "type": "found",
+   "text": "EU code of practice intent to sign Jul 21 2025 and Aug 11 2026 watermarking; Google signed, Meta refused per TechCrunch notes.",
+   "event_id": "evt-20250721-eu-code-of-practice-intent-to-sign",
+   "url": "https://www.anthropic.com/news/eu-code-practice"
+  },
+  {
+   "seq": 26,
+   "type": "found",
+   "text": "Sovereign MoUs: UK Feb 2025, Japan Oct 2025, Rwanda Feb 2026, Australia Mar 2026 (A$3M credits), Korea MSIT Jun 2026.",
+   "event_id": "evt-20260331-australia-government-mou",
+   "url": "https://www.anthropic.com/news/australia-MOU"
+  },
+  {
+   "seq": 27,
+   "type": "found",
+   "text": "Only compute deal with a named non-US site: Volta, Norway, $10B, six years, 133 MW; Bloomberg via TechCrunch, T2 MEDIUM.",
+   "event_id": "evt-20260804-volta-10b-norway-compute-deal",
+   "url": "https://techcrunch.com/2026/08/04/anthropic-signs-10-billion-deal-with-ai-cloud-startup-volta/"
+  },
+  {
+   "seq": 28,
+   "type": "found",
+   "text": "Regional claims: EMEA run-rate over 9x, APAC over 10x, India doubled in four months; no dollar figures anywhere.",
+   "event_id": "evt-20251107-paris-munich-offices",
+   "url": "https://www.anthropic.com/news/new-offices-in-paris-and-munich-expand-european-presence"
+  },
+  {
+   "seq": 29,
+   "type": "found",
+   "text": "India: 5.8% of Claude.ai use, second to US, 101st of 116 per working-age capita; rupee pricing Jul 13 2026.",
+   "event_id": "evt-20260216-economic-index-india-brief",
+   "url": "https://www.anthropic.com/research/india-brief-economic-index"
+  },
+  {
+   "seq": 30,
+   "type": "verify",
+   "text": "cases table vs events: N.D. Cal. and D.C. Circuit statuses and dates match; 9th Cir. 26-2011 still stayed.",
+   "event_id": "evt-20260925-dc-circuit-denies-anthropic-petitions",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cadc.43309/gov.uscourts.cadc.43309.01208891909.0.pdf"
+  },
+  {
+   "seq": 31,
+   "type": "verify",
+   "text": "offices table vs events: Tokyo Oct 29, Bengaluru Feb 16, Sydney Apr 27, Milan May 27, Seoul Jun 17 match; 11 countries open.",
+   "event_id": "evt-20260617-seoul-office",
+   "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem"
+  },
+  {
+   "seq": 32,
+   "type": "verify",
+   "text": "run_rate table vs events: $14B Feb 12 (T1), $19B Mar 3 (T3), $47B May (T1), above $65B end-July (T2). Gross basis, not revenue.",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+  },
+  {
+   "seq": 33,
+   "type": "verify",
+   "text": "New desk-revenue event after the 18:41 record rebuild: Reuters gives $150M DoD ARR lost and above $500M public-sector ARR for 2026; consistent with the court summary's several hundred million. PitchBook note ~$200M, ~1.4% of ARR, same order.",
+   "event_id": "evt-20260309-cfo-declaration-public-sector",
+   "url": "https://finance.yahoo.com/news/anthropic-executives-pentagon-blacklisting-could-015740870.html"
+  },
+  {
+   "seq": 34,
+   "type": "verify",
+   "text": "Record rebuilt mid-task (events 636 to 662): slice still 169 events; re-checked tier, confidence and summary of all cited events; only change was the run-rate id, now evt-20260817-rr-65b-end-july."
+  },
+  {
+   "seq": 35,
+   "type": "verify",
+   "text": "Empty desk tables: period_revenue, mix, customers, prospectus_facts, risk_factor_themes. No federal mix or regional split available."
+  },
+  {
+   "seq": 36,
+   "type": "flag",
+   "text": "Offices table shows 7 cities at Nov 7 2025 but Anthropic's own post says 12 cities; Seattle office is only an open item. Table likely undercounts.",
+   "event_id": "evt-20251107-paris-munich-offices",
+   "url": "https://www.anthropic.com/news/new-offices-in-paris-and-munich-expand-european-presence"
+  },
+  {
+   "seq": 37,
+   "type": "flag",
+   "text": "DoD migration conflict: about two-thirds (MeriTalk, Sep 3) vs about 90% (DefenseScoop, Sep 11). Completion Sep 29 or 30 vs end of October; the event's own summary and notes disagree.",
+   "event_id": "evt-20260911-dod-migration-90pct",
+   "url": "https://defensescoop.com/2026/09/11/dod-poised-to-move-all-classified-ai-workloads-off-anthropic-by-october/"
+  },
+  {
+   "seq": 38,
+   "type": "flag",
+   "text": "Canonical Concord I event carries Pentagon FASCSA governance text and six merged ids, several unrelated (D.C. Cir. stay denial, 26-1162, Legion LegalTech export suit, Reddit remand). Not used as evidence.",
+   "event_id": "evt-20260422-concord-i-cross-motions-summary-judgment",
+   "url": "https://www.courtlistener.com/api/rest/v4/search/?type=rd&q=docket_id%3A68889092+AND+description%3A%28%22hearing%22+AND+%22summary+judgment%22%29&order_by=dateFiled+desc"
+  },
+  {
+   "seq": 39,
+   "type": "flag",
+   "text": "Sacks's status differs: White House AI czar (Oct 2025), former czar (TechCrunch Jun 13), White House AI adviser (Sep 13 headline).",
+   "event_id": "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture",
+   "url": "https://cryptobriefing.com/sacks-criticizes-pace-frontier-regulatory-capture/"
+  },
+  {
+   "seq": 40,
+   "type": "flag",
+   "text": "T2 headline says Aug 27 ruling restored federal-contract eligibility; FASCSA exclusion stands (Michael Sep 3, D.C. Cir. Sep 25). Used the T1 record.",
+   "event_id": "evt-20260827-pentagon-label-ruled-unlawful",
+   "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/"
+  },
+  {
+   "seq": 41,
+   "type": "flag",
+   "text": "Three event records (T1, T3, T3) cover the same Sep 25 D.C. Circuit ruling. Counted once, T1 used.",
+   "event_id": "evt-20260925-dc-circuit-upholds",
+   "url": "https://www.lawcommentary.com/articles/anthropic-loses-pentagon-supply-chain-risk-appeal"
+  },
+  {
+   "seq": 42,
+   "type": "flag",
+   "text": "Jun 12 directive: issuing agency and authority unconfirmed (BIS 'is informed' per CSIS and Harvard Law Review Blog vs 'US government directive' per Anthropic); four competing trigger accounts: Amazon jailbreak report, 'personality differences', Korean telecom access, Sacks's refusal claim.",
+   "event_id": "evt-20260612-us-export-control-directive-fable-mythos",
+   "url": "https://www.anthropic.com/news/fable-mythos-access"
+  },
+  {
+   "seq": 43,
+   "type": "flag",
+   "text": "The $180M in the CFO declaration is rendered two ways: court summary says three deals over $180M collapsed; Reuters says $180M of financial-institution talks disrupted plus a partner switch over $100M.",
+   "event_id": "evt-20260309-cfo-declaration-revenue-at-risk",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465515/gov.uscourts.cand.465515.134.0.pdf"
+  },
+  {
+   "seq": 44,
+   "type": "flag",
+   "text": "Suspension length is 18 days (Anthropic timeline, lift Jun 30) vs 19 days (calendar to Jul 1); both fields sit in one event.",
+   "event_id": "evt-20260701-fable-5-mythos-5-access-restored",
+   "url": "https://www.anthropic.com/news/redeploying-fable-5"
+  },
+  {
+   "seq": 45,
+   "type": "flag",
+   "text": "Alibaba distillation counts DISPUTED: 28.8M exchanges and about 25,000 accounts (Jun letter) vs 151M and 3,500 accounts (Sep report). Not used in prose.",
+   "event_id": "evt-20260624-alibaba-distillation-allegation-senate-letter",
+   "url": "https://www.techtimes.com/articles/319105/20260625/alibaba-ran-largest-known-ai-theft-campaign-against-claude-anthropic-tells-senate.htm"
+  },
+  {
+   "seq": 46,
+   "type": "flag",
+   "text": "IPO timing differs by source: mid-October roadshow and listing days before the midterms (Reuters via Forbes Sep 4), October (PitchBook Sep 21), November after Q3 results (WSJ Sep 18, relayed), after the midterms (Fortune Sep 29). Ledger keeps it DISPUTED; WSJ item names Amodei's risk stance as a reason.",
+   "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html"
+  },
+  {
+   "seq": 47,
+   "type": "flag",
+   "text": "Korea MSIT MoU appears only in the pre-merge record and offices table; the canonical Seoul summary omits it. Cited through the Seoul event.",
+   "event_id": "evt-20260617-seoul-office",
+   "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem"
+  },
+  {
+   "seq": 48,
+   "type": "flag",
+   "text": "PBS figure of a $14B 2026 revenue projection is inconsistent with Q2 2026 revenue of $11.5B. Not used.",
+   "event_id": "evt-20260309-anthropic-sues",
+   "url": "https://www.pbs.org/newshour/nation/anthropic-sues-in-federal-court-to-reverse-trump-administrations-supply-chain-risk-designation"
+  },
+  {
+   "seq": 49,
+   "type": "flag",
+   "text": "APAC ordinals follow announcement order: Sydney (Apr 27) opened before Seoul (Jun 17) though Seoul is called third. Open-date order is Tokyo, Bengaluru, Sydney, Seoul.",
+   "event_id": "evt-20260310-sydney-office-announced",
+   "url": "https://www.anthropic.com/news/sydney-fourth-office-asia-pacific"
+  },
+  {
+   "seq": 50,
+   "type": "flag",
+   "text": "NSA use of Mythos rests on single-outlet reports (Axios Apr 20, FT Jun 5, both T3); a later NYT and Nextgov headline says parts of NSA lost access (not opened).",
+   "event_id": "evt-20260605-nsa-readying-mythos-for-cyber-operations",
+   "url": "https://techcrunch.com/2026/06/05/nsa-said-to-be-readying-anthropics-mythos-for-use-in-cyber-operations/"
+  },
+  {
+   "seq": 51,
+   "type": "flag",
+   "text": "SB 1047 letter: primary PDF unreadable; quote and date verified through two secondary write-ups only (T3). Cited as T3.",
+   "event_id": "evt-20240821-sb1047-letter",
+   "url": "https://campustechnology.com/articles/2024/08/26/anthropic-announces-cautious-support-for-new-california-ai-regulation-legislation.aspx"
+  },
+  {
+   "seq": 52,
+   "type": "message",
+   "text": "Federal exposure is event risk, not revenue risk. Tail items: model suspension (Jun 12), FTC probe (Sep 30), FASCSA spillover, Buist antitrust suit.",
+   "to": "analyst-bear"
+  },
+  {
+   "seq": 53,
+   "type": "message",
+   "text": "Bargaining power is real: Treasury, Commerce and NSA engaged with Mythos, run-rate rose $14B to $65B through the ban, and the Sep 27 to 29 thaw ran through the White House.",
+   "to": "analyst-bull"
+  },
+  {
+   "seq": 54,
+   "type": "message",
+   "text": "Moat vs liability read: neither yet. Rules bind all large labs equally; executive discretion is the differentiator and cuts both ways. Sides laid out in means.",
+   "to": "analyst-judge"
+  },
+  {
+   "seq": 55,
+   "type": "message",
+   "text": "Named compute sites are US except Volta, Norway (T2 MEDIUM). The Jun 12 foreign-national gate and Sep 24 UK AISI hold show model access sits inside a US policy gate.",
+   "to": "analyst-compute"
+  },
+  {
+   "seq": 56,
+   "type": "message",
+   "text": "Fable 5 and Mythos 5 were dark 18 days (Jun 12 to Jun 30); revenue impact undisclosed. Model-availability risk from government directive is non-zero.",
+   "to": "analyst-model"
+  },
+  {
+   "seq": 57,
+   "type": "message",
+   "text": "Offices table likely undercounts (12 cities vs 7); Paris, Munich, Dublin opening dates missing; London VERIFY. Please check against the S-1 properties section.",
+   "to": "verify-operating"
+  },
+  {
+   "seq": 58,
+   "type": "message",
+   "text": "Public-sector ARR of several hundred million is a pre-ban litigation projection with no stated basis; federal access runs partly through cloud-partner channels (gross vs net).",
+   "to": "verify-capital"
+  },
+  {
+   "seq": 59,
+   "type": "message",
+   "text": "Canonical Concord I event has mis-merged government content; consider re-splitting the merged ids.",
+   "to": "orchestrator"
+  },
+  {
+   "seq": 60,
+   "type": "note",
+   "text": "Wrote analysis to output path; ids validated against events.json and id_map.json."
+  }
+ ],
+ "stats": {
+  "events_read": 300,
+  "flags": 16
+ }
+}
