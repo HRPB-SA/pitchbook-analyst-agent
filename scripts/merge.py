@@ -288,6 +288,15 @@ def apply_corrections(events):
         alias[e["id"]] = e
         for mid in e.get("merged_ids", []): alias[mid] = e
     done = []
+    # automatic rule: a valuation attached to an event that is not a financing is a reference mark (last round price, reported target), not that event's post-money
+    fin = {"funding", "valuation", "debt"}
+    for e in events:
+        v = (e.get("extracted") or {}).get("valuation_post_usd_m")
+        if v and not (fin & set(e["category"])):
+            ex = e["extracted"]; ex.setdefault("other", {})["valuation_reference_usd_m"] = v; ex["valuation_post_usd_m"] = None
+            chg = {"extracted.valuation_post_usd_m": {"was": v, "now": None}, "extracted.other.valuation_reference_usd_m": {"was": None, "now": v}}
+            e.setdefault("corrections", []).append({"id": "R-VAL", "audit_id": None, "reason": "A valuation on an event that is not a financing is a reference mark (last round price or reported target), not this event's post-money. Moved to other.valuation_reference_usd_m.", "changed": chg})
+            done.append({"id": "R-VAL", "audit_id": None, "event_id": e["id"], "headline": e["headline"], "reason": "Reference valuation moved out of the post-money field (event is not a financing).", "changed": list(chg)})
     for c in cs:
         e = alias.get(c.get("event_id"))
         if not e: print("!! correction", c.get("id"), "targets missing event", c.get("event_id"), file=sys.stderr); continue

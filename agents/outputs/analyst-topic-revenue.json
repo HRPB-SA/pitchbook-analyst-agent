@@ -1,0 +1,866 @@
+{
+ "agent": "analyst-topic-revenue",
+ "role": "Topic Analyst — Revenue, margins and customers",
+ "started": "2026-09-30T18:57:41Z",
+ "finished": "2026-09-30T19:25:58Z",
+ "topic": {
+  "slug": "revenue",
+  "title": "Revenue, margins and customers",
+  "one_liner": "Q2 2026 recognized revenue was $11.5B, 14x a year earlier, but the $65B run-rate is gross and the record's haircut evidence is 6% to 10%, not 39.75%.",
+  "key_metrics": [
+   {
+    "label": "Latest run-rate (outlet-reported)",
+    "value": "$65B+ at end-July 2026, gross basis, 7.2x end-2025's $9B. Bloomberg via TechCrunch (T2), FT and Axios agree. Last company-stated figure: $47B in May (T1). Nothing above $65B is verified.",
+    "event_id": "evt-20260817-rr-65b-end-july"
+   },
+   {
+    "label": "FY2025 recognized revenue",
+    "value": "$4.59B, +1,088% YoY, gross of cloud resale. FY2024 about $0.39B, implied. Exit run-rates were $9B and $1B. Leaked draft prospectus via Reuters (T2), no public S-1.",
+    "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials"
+   },
+   {
+    "label": "Q2 2026 revenue",
+    "value": "$11.5B recognized, 14x YoY and 2.4x Q1's $4.73B. H1 2026 is $16.2B. Leaked draft (T2). Beat the May 20 projection of $10.9B by 5.5%.",
+    "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus"
+   },
+   {
+    "label": "Gross margin, by definition",
+    "value": "Above 80% adjusted, before partner share and training (FT, T3). About 40% for FY2025 (The Information, T3). About 44% for Q2 2026E (PitchBook, T3). No GAAP gross margin reported.",
+    "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct"
+   },
+   {
+    "label": "Channel share",
+    "value": "47% of FY2025 sales, $2.16B, through Amazon and Google marketplaces, up from 11% in 2023. Platforms kept about $351M, 7.6% of revenue (Reuters-computed, T3 in the prospectus table).",
+    "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix"
+   },
+   {
+    "label": "Customer concentration",
+    "value": "Two unnamed customers at 12% each, about 24% of FY2025 revenue (T2). Most large customers lack long-term contracts (T3). The 1,000 customers above $1M floor only $1B, 1.5% of run-rate.",
+    "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+   }
+  ],
+  "what": [
+   {
+    "t": "Run-rate path. Anthropic stated $9B at end-2025, $14B on Feb 12, above $30B on Apr 6 and above $47B in May (T1, gross basis inferred). Bloomberg via TechCrunch, Aug 17 (T2) reported above $65B at end-July, with FT and Axios agreeing. Nothing higher is verified. The $100B to $120B year-end figures from Quartz, FT, WSJ and the NYT via Gulf News (T4) are projections.",
+    "e": [
+     "evt-20260817-rr-65b-end-july",
+     "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260528-series-h-compute-agreements-memory-partners",
+     "evt-20260813-ipo-october-2t-quartz",
+     "evt-20260919-nyt-100b-year-end-projection",
+     "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+     "evt-20260918-wsj-ipo-pushed-to-november",
+     "evt-20250902-series-f-13b-183b",
+     "evt-20250530-run-rate-3b"
+    ]
+   },
+   {
+    "t": "Recognized revenue. Reuters and Fortune read a leaked draft prospectus, Sep 28 to 29 (T2, single origin, no public S-1). The event is DISPUTED in the record because two periods share one field. FY2024 was near $0.39B, implied, and FY2025 $4.59B. Q1 2026 was $4.73B and Q2 $11.5B, 14x a year earlier. H1 2026 is $16.2B, 3.5x FY2025. The FY2025 operating loss was $8.06B, up from $2.98B.",
+    "e": [
+     "evt-20260928-reuters-draft-prospectus-2025-financials",
+     "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+     "evt-20260814-q2-2026-rev-11-5b-first-report",
+     "evt-20260630-q2-2026-revenue-11-5b-period",
+     "evt-20241231-fy2024-financials-leaked-s1"
+    ]
+   },
+   {
+    "t": "Channel and customers. Reuters, Sep 29 (T3 in the prospectus table): Amazon and Google marketplaces carried 47% of FY2025 sales, $2.16B, up from 11% in 2023 and 32% in 2024. Anthropic books them gross as principal. Platforms kept about 16 cents per dollar, $351M, 7.6% of revenue. Two unnamed customers were 12% each. Most large customers lack long-term contracts.",
+    "e": [
+     "evt-20260929-reuters-47pct-cloud-channel-mix",
+     "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+     "evt-20260413-openai-memo-gross-vs-net-arr"
+    ]
+   },
+   {
+    "t": "Margins. Every figure has a different scope. The Information, Jan 21 (T3): FY2025 about 40%, below a 50% plan. FT, Sep 13 (T3): above 80% in Q2 2026 before partner share and training. PitchBook, Sep 16 (T3): about 44%. Adjusted operating income was positive in Q2 with no dollar amount. The $559M was a May 20 projection.",
+    "e": [
+     "evt-20260121-information-gross-margin-2025-40pct",
+     "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+     "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+     "evt-20260610-pitchbook-gm-44pct-compute-cost",
+     "evt-20260520-q2-projection-10-9b-559m-op-profit",
+     "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue"
+    ]
+   },
+   {
+    "t": "Mix. FY2025 revenue was $3.8B usage-based and $789M subscription, 17.2% (T2). Business was about 80% of sales (T4, Oct 2025). Claude Code run-rate rose from $1B in Nov 2025 to above $2.5B in Feb 2026, 18% of run-rate, no later figure (T1). Enterprise moved to a $20 seat plus API-rate usage (The Register, T2). Menlo, an Anthropic investor, gave Anthropic 54% of enterprise coding (T3).",
+    "e": [
+     "evt-20260929-reuters-47pct-cloud-channel-mix",
+     "evt-20251016-rr-7b-ye9b-2026-26b",
+     "evt-20251203-bun-acquisition",
+     "evt-20260212-series-g-30b-380b",
+     "evt-20260416-enterprise-seat-plus-usage-repricing",
+     "evt-20251209-menlo-genai-enterprise"
+    ]
+   },
+   {
+    "t": "Comparables. OpenAI's FY2025 revenue was $13.07B net of Microsoft share (T3) and its Q2 2026 $6.2B (WSJ via Proactive, basis unstated), against Anthropic's gross $11.5B. xAI booked $3.2B in FY2025 (T2). The 2028 plan went from $70B with $17B of cash flow (Nov 2025, T3, DISPUTED in the record for mixed fields) to $190B to $200B (Reuters, Aug 17, T2), with no cash-flow figure for the new plan.",
+    "e": [
+     "evt-20260615-openai-2025-audited-revenue-13b",
+     "evt-20260603-openai-q1-2026-rev-5-7b-msft-cap",
+     "evt-20260814-q2-2026-rev-11-5b-first-report",
+     "evt-20260521-xai-spacex-s1-financials",
+     "evt-20251104-information-gross-margin-path-to-77pct",
+     "evt-20260817-reuters-2028-190-200b-forecast"
+    ]
+   }
+  ],
+  "means": [
+   {
+    "t": "A run-rate annualizes a recent period, so recognized revenue lags it in a fast ramp. FY2025 revenue was 0.51x the $9B exit run-rate and FY2024 was 0.39x. Desk-derived trailing revenue is about $19.6B, 0.30x of $65B (LOW). Growth is slowing: the pace fell from about $13B added a month from April to mid-May to about $7B a month since, 13.5% a month.",
+    "e": [
+     "evt-20260817-rr-65b-end-july",
+     "evt-20260610-pitchbook-fy2026-recognized-35-44b",
+     "evt-20260928-reuters-draft-prospectus-2025-financials",
+     "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+     "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+     "evt-20260528-series-h-compute-agreements-memory-partners",
+     "evt-20260506-code-with-claude-80x-growth-run-rate-path"
+    ]
+   },
+   {
+    "t": "Anthropic books marketplace sales gross as principal, with the platform share in marketing expense. The haircut is take rate times channel share: 16 cents times 47% is 7.6%, and 16% at full share. A 39.75% haircut needs platforms to keep 85 cents per marketplace dollar and implies $4.6B paid away in Q2, against $1.9B forecast for all of 2026 (The Information, Feb). The record has no derivation.",
+    "e": [
+     "evt-20260929-reuters-47pct-cloud-channel-mix",
+     "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+     "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+     "evt-20260217-information-80b-cloud-spend-through-2029",
+     "evt-20260413-openai-memo-gross-vs-net-arr",
+     "evt-20260511-claude-platform-on-aws-launch"
+    ]
+   },
+   {
+    "t": "Margins differ in scope. PitchBook's 44% equals one minus its projected $0.56 Q2 compute ratio ($0.71 in Q1), so it deducts only compute. The above-80% figure drops partner share and training. If $0.56 is all-in compute and inference is 37% of it, as The Information's 2026 plan implies, inference costs about $0.21 per dollar, near 80% (desk arithmetic). The ratio was $1.60 in FY2025.",
+    "e": [
+     "evt-20260928-reuters-draft-prospectus-2025-financials",
+     "evt-20260610-pitchbook-gm-44pct-compute-cost",
+     "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+     "evt-20260121-information-gross-margin-2025-40pct",
+     "evt-20260127-info-2026-18b-2027-55b-forecast",
+     "evt-20260213-amodei-dwarkesh-compute-economics",
+     "evt-20251104-information-gross-margin-path-to-77pct"
+    ]
+   },
+   {
+    "t": "Volume carries growth as prices fall. Sep 30 list prices per million tokens: Haiku $1/$5, Sonnet $2/$10, Opus $4/$20, Fable $10/$50. Opus fell 67% in Nov 2025 and 20% on Sep 22. A 20% cut needs 25% more tokens to hold revenue, a 67% cut needs 3x. Tokenizers add up to 35% more tokens, offsetting part of each cut. No volume series is in the record.",
+    "e": [
+     "evt-20260930-pricing-page-snapshot",
+     "evt-20251124-claude-opus-4-5-launch",
+     "evt-20260922-claude-opus-5-5-launch",
+     "evt-20260630-claude-sonnet-5-launch",
+     "evt-20260416-claude-opus-4-7-launch",
+     "evt-20260901-fable-5-1-mythos-5-1-launch",
+     "evt-20260416-enterprise-seat-plus-usage-repricing"
+    ]
+   }
+  ],
+  "implications": [
+   {
+    "t": "Carry both haircuts until the S-1 fixes the basis. End-July net run-rate is $58.5B to $61.1B at 6% to 10%, and $39.2B at 39.75%. Applying the FY2025 fee ratio, Q2's $11.5B is 1.7x OpenAI's $6.2B (WSJ, basis unstated) at 7.6% and 1.1x at 39.75%. Do not plot the two labs' run-rates on one axis.",
+    "e": [
+     "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+     "evt-20260929-reuters-47pct-cloud-channel-mix",
+     "evt-20260413-openai-memo-gross-vs-net-arr",
+     "evt-20260814-q2-2026-rev-11-5b-first-report",
+     "evt-20260929-openai-arr-nearing-70b-axios",
+     "evt-20260817-rr-65b-end-july"
+    ]
+   },
+   {
+    "t": "Label the denominator on every multiple. A reported $2T IPO target is 30.8x the gross end-July run-rate, 32.7x to 34.2x net of 6% to 10%, 43.5x Q2 annualized recognized revenue and about 10x the 2028 projection midpoint. Reuters' 18x to 20x states no revenue basis. Never apply a recognized-revenue multiple to run-rate.",
+    "e": [
+     "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+     "evt-20260817-rr-65b-end-july",
+     "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+     "evt-20260817-reuters-2028-190-200b-forecast",
+     "evt-20260918-wsj-ipo-pushed-to-november"
+    ]
+   },
+   {
+    "t": "Discount quality for concentration until names and terms appear. Two customers are about 24% of FY2025 revenue, and most large ones lack long-term contracts. Amazon and Google are investors, suppliers and the channel for 47% of sales. The 1,000 customers above $1M floor 1.5% of run-rate. Consumer grew an estimated 75% from January to mid-May, run-rate about 4x, so the 80% business split is stale.",
+    "e": [
+     "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+     "evt-20260929-reuters-47pct-cloud-channel-mix",
+     "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+     "evt-20260328-claude-consumer-paid-subs-indagari",
+     "evt-20251016-rr-7b-ye9b-2026-26b",
+     "evt-20260212-series-g-30b-380b"
+    ]
+   },
+   {
+    "t": "Quote one margin only with its definition. Treat above 80% as a management view, 40% and 44% as estimates and GAAP gross margin as unreported. Score Q3 on a dollar amount for adjusted operating income and a GAAP bridge. Q2 had SpaceX's two-month discount, which a T5 relay of the WSJ says ended in July, with compute costs expected to rise in H2.",
+    "e": [
+     "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+     "evt-20260610-pitchbook-gm-44pct-compute-cost",
+     "evt-20260121-information-gross-margin-2025-40pct",
+     "evt-20260520-q2-projection-10-9b-559m-op-profit",
+     "evt-20260520-spacex-s1-anthropic-colossus-contract"
+    ]
+   }
+  ],
+  "second_order": [
+   "Bases will be forced into the open. If the S-1 keeps gross presentation, OpenAI and sell-side comps must bridge to net. If it moves to net, every run-rate print restates by the fee share. Either way Anthropic's $65B and OpenAI's nearly $70B (Axios, basis unstated, two months later) stop being comparable headlines. PitchBook already said neither company's basis would survive a Big Four audit.",
+   "The channel grows faster than the company. The Information projected partner payouts of $360M in 2025, $1.9B in 2026 and $6.4B in 2027, up 5.3x then 3.4x. Claude Platform on AWS and Foundry bill through marketplaces, so share likely rises above 47%, and cloud providers already collect 60% of receivables. The S-1 must explain a fee line that scales.",
+   "Price cuts make revenue depend on volume from coding agents. OpenAI answered Opus 5.5 the same day with Luna at $0.10 and $0.50, one-tenth of Haiku 4.5's $1 and $5. SpaceX, which sells Anthropic $1.25B a month of compute, agreed to buy Cursor, a named Claude coding customer. Distribution, rivalry and supply meet in one counterparty, and the record does not give Cursor's current share.",
+   "The valuation-quality gap is wider than the headlines. Recognized revenue is about 0.30x of run-rate, the run-rate is gross, and two margin figures differ by 36 points. Consensus is missing that the S-1 resets all three at once, and that the last verified run-rate is two months old in a business adding about $7B a month.",
+   "Comparable data need care. OpenAI's Q2 $6.2B with +18% QoQ (WSJ) implies Q1 of $5.25B, not the $5.7B in the record. xAI's Q2 AI-segment revenue includes compute rented to a customer the desk infers is Anthropic, so part of it is Anthropic's own cost. Neither series is a clean revenue comp."
+  ],
+  "watch": [
+   {
+    "item": "Next run-rate print after the $65B end-July figure, company-stated or from Bloomberg, FT or Axios",
+    "by": "2026-10-31",
+    "threshold": "Below $79B at end-September is under the straight-line path to $100B at year-end. Above $87B is on the $120B path. Any figure above $100B before December would be the first actual, not a projection."
+   },
+   {
+    "item": "Public S-1 income statement: audited FY2025, H1 2026, cost of revenue, gross profit and the revenue-recognition note",
+    "by": "2026-11-15",
+    "threshold": "GAAP gross margin against above 80% adjusted and 40% to 44% estimates. GAAP operating result against the adjusted figure. Any move to net presentation or a stated principal-versus-agent policy change."
+   },
+   {
+    "item": "Q3 2026 results, which WSJ says Anthropic will show investors before a November listing",
+    "by": "2026-11-30",
+    "threshold": "Revenue near $17B to $18B is on the path to $100B to $120B. $20B or more runs ahead. Under $16B means the run-rate stalled after July. Adjusted operating income positive a second quarter, with a dollar amount."
+   },
+   {
+    "item": "S-1 channel data: marketplace share and platform fees for H1 2026, with Microsoft Foundry broken out",
+    "by": "2026-11-15",
+    "threshold": "Share above 47% or fees above 7.6% of revenue raises the record-based haircut. A fee ratio near 39.75% would be the first evidence for the canonical figure."
+   },
+   {
+    "item": "S-1 customer note: names, shares and contract terms of the largest customers, and Cursor's weight after SpaceX's $60B purchase",
+    "by": "2026-11-15",
+    "threshold": "Any customer above 10% in H1 2026. The two 12% customers unchanged or named. Share of revenue under multiyear contracts."
+   },
+   {
+    "item": "Haiku 5.5 list price, promised within weeks on Sep 28",
+    "by": "2026-10-31",
+    "threshold": "Below Haiku 4.5's $1/$5 extends deflation to the small tier, where OpenAI's Luna is $0.10/$0.50. An unchanged $1/$5 holds the floor."
+   },
+   {
+    "item": "OpenAI Q3 2026 revenue and a stated basis, net of Microsoft share or not",
+    "by": "2026-11-30",
+    "threshold": "Q3 against $6.2B in Q2 and a run-rate nearing $70B. A stated net basis allows a like-for-like gap. Reconcile Q1 $5.7B with the +18% QoQ claim."
+   },
+   {
+    "item": "SpaceX Q3 10-Q: Customer B share of revenue and AI-segment revenue",
+    "by": "2026-11-15",
+    "threshold": "Customer B above 19.5% of revenue would show a full quarter of the Anthropic compute ramp. A named customer would settle the desk's inference."
+   }
+  ],
+  "house_view": "(a) Extends: the same $2T asks 30.8x gross run-rate or 43.5x Q2 annualized recognized revenue for margins that run from 40% to above 80% by definition, so quality cannot be ranked until the S-1 sets one basis. (b) Contradicts in size, not disproved: the record puts platform fees at 7.6% of FY2025 revenue (Reuters leak, T3) and 6% to 10% (PitchBook, T3) against 39.75%. That figure reproduces exactly as the haircut that ties $965B over $47B to $852B over $25B at 34.1x. If it was set that way, the Jul 16 tie is not independent evidence, and the $65B print has overtaken its $47B input. (c) Not tested here; the $100B to $120B year-end run-rate is an investor projection. (d) Not in this slice. (e) Confirms: run-rate, ARR and seat conventions fail when revenue is metered, booked gross and growing about 13% a month.",
+  "uncertainties": [
+   {
+    "type": "data",
+    "note": "Every prospectus figure comes from a leaked draft that Reuters and the FT reviewed, not a filed S-1. FY2024 revenue is implied from +1,088%, not printed. The channel, fee and Q1 lines are single-chain, T3 in the prospectus table. Cost of revenue, gross profit and GAAP quarterly operating income are not reported, and the Q2 adjusted profit has no dollar amount.",
+    "what_would_change_it": "The public S-1 income statement and revenue-recognition note."
+   },
+   {
+    "type": "interpretation",
+    "note": "The haircut is 7.6% (Reuters leak), about 7.8% on The Information's $360M, 6% to 10% (PitchBook), about 27% in an OpenAI memo that only aggregators carry (T5), and 39.75% in the desk ruling. That figure reproduces exactly as the haircut tying $965B over $47B to $852B over $25B at 34.1x, which fits a solved value, not a measured one. The record has no derivation. It may net more than fees.",
+    "what_would_change_it": "A written derivation of 39.75%, the S-1 recognition note, or H1 2026 marketplace share and fees."
+   },
+   {
+    "type": "interpretation",
+    "note": "Margin figures share no definition: above 80% adjusted, about 40% for FY2025, 44% for Q2 2026E, a stylized inference margin above 50% from Amodei on Feb 13, and -94% in 2024 on paying users only. The compute desk reads $1.60, $0.71 and $0.56 per revenue dollar as one all-in series, while the margins table says the 2026 scope is unstated.",
+    "what_would_change_it": "An S-1 cost-of-revenue line with a training split."
+   },
+   {
+    "type": "forecast",
+    "note": "Reference class in the record: Anthropic's own projections. FY2025 and Q2 2026 were beaten, year-end 2025 run-rate was met, and FY2026 is 90% reached at mid-year. No cross-company base rate is in the record. The year-end figures need $35B to $55B more run-rate in five months, against about $7B a month since May. FY2026 revenue is $35B to $44B (PitchBook, stale), $64B to $72B (desk) or $56B to $60B straight-line.",
+    "what_would_change_it": "The next run-rate print and Q3 results."
+   },
+   {
+    "type": "data",
+    "note": "Concentration is unbounded. The two 12% customers are unnamed and may overlap the 47% marketplace channel. The 1,000 customers above $1M floor only $1B. Cursor was 40% to 50% of revenue early on per one employee (T3, LOW), and SpaceX agreed to buy it (8-K, T1).",
+    "what_would_change_it": "The S-1 customer note and contract-term disclosure."
+   }
+  ],
+  "evidence": [
+   "evt-20260817-rr-65b-end-july",
+   "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+   "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+   "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+   "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+   "evt-20260413-openai-memo-gross-vs-net-arr",
+   "evt-20260610-pitchbook-gm-44pct-compute-cost",
+   "evt-20260121-information-gross-margin-2025-40pct",
+   "evt-20260217-information-80b-cloud-spend-through-2029",
+   "evt-20260610-pitchbook-fy2026-recognized-35-44b",
+   "evt-20260814-q2-2026-rev-11-5b-first-report",
+   "evt-20260630-q2-2026-revenue-11-5b-period",
+   "evt-20260520-q2-projection-10-9b-559m-op-profit",
+   "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
+   "evt-20260817-reuters-2028-190-200b-forecast",
+   "evt-20260813-ipo-october-2t-quartz",
+   "evt-20260919-nyt-100b-year-end-projection",
+   "evt-20260927-pitchbook-revenue-fields-ttm-series",
+   "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+   "evt-20260212-series-g-30b-380b",
+   "evt-20260528-series-h-compute-agreements-memory-partners",
+   "evt-20251104-information-gross-margin-path-to-77pct",
+   "evt-20260127-info-2026-18b-2027-55b-forecast",
+   "evt-20250415-proj-2025-2-2b-2027-12b",
+   "evt-20251203-amodei-dealbook-revenue-guidance",
+   "evt-20260305-pitchbook-ranking-note-nrr-gm-path",
+   "evt-20260615-openai-2025-audited-revenue-13b",
+   "evt-20260603-openai-q1-2026-rev-5-7b-msft-cap",
+   "evt-20260929-openai-arr-nearing-70b-axios",
+   "evt-20260521-xai-spacex-s1-financials",
+   "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
+   "evt-20260616-spacex-cursor",
+   "evt-20260922-claude-opus-5-5-launch",
+   "evt-20260922-openai-gpt-6-sol-luna-price-war",
+   "evt-20251124-claude-opus-4-5-launch",
+   "evt-20260630-claude-sonnet-5-launch",
+   "evt-20260416-enterprise-seat-plus-usage-repricing",
+   "evt-20260416-claude-opus-4-7-launch",
+   "evt-20260930-pricing-page-snapshot",
+   "evt-20251203-bun-acquisition",
+   "evt-20251209-menlo-genai-enterprise",
+   "evt-20260328-claude-consumer-paid-subs-indagari",
+   "evt-20260918-wsj-ipo-pushed-to-november",
+   "evt-20260511-claude-platform-on-aws-launch",
+   "evt-20260213-amodei-dwarkesh-compute-economics",
+   "evt-20260506-code-with-claude-80x-growth-run-rate-path",
+   "evt-20241231-fy2024-financials-leaked-s1",
+   "evt-20260520-spacex-s1-anthropic-colossus-contract"
+  ]
+ },
+ "log": [
+  {
+   "seq": 1,
+   "type": "note",
+   "text": "Read analyst_common.md in full. Slice: revenue and financials categories, plus tables run_rate_desk, period_revenue, margins, customers, mix, projections, comparables, prospectus_facts, market_share, pricing. Slug revenue."
+  },
+  {
+   "seq": 2,
+   "type": "search",
+   "text": "q.py --cat revenue, 2021-01-01 to 2026-09-30: 53 events read at headline level."
+  },
+  {
+   "seq": 3,
+   "type": "search",
+   "text": "q.py --cat financials, same window: 54 events read, overlapping revenue; 79 unique across both."
+  },
+  {
+   "seq": 4,
+   "type": "search",
+   "text": "q.py --cat pricing for the price-deflation angle: 58 events read, plus pricing table (29 models)."
+  },
+  {
+   "seq": 5,
+   "type": "search",
+   "text": "Scanned every event outside revenue and financials for revenue, margin and customer fields: 67 events read."
+  },
+  {
+   "seq": 6,
+   "type": "search",
+   "text": "q.py --table run_rate_desk (18 rows), period_revenue (18), margins (30), customers (17), mix (9): all read in full."
+  },
+  {
+   "seq": 7,
+   "type": "search",
+   "text": "q.py --table projections (22), comparables (10), market_share (24), prospectus_facts (76 rows after the 19:00Z re-merge): all read in full."
+  },
+  {
+   "seq": 8,
+   "type": "search",
+   "text": "q.py --table compute_costs (16 rows) and compute_totals, empty when I started and filled at 19:13Z: read for margin scope and partner payouts. run_rate and valuation tables also read after the re-merge."
+  },
+  {
+   "seq": 9,
+   "type": "search",
+   "text": "q.py --conflicts over 125 frozen conflicts and --open: pulled the revenue, margin, customer and run-rate items."
+  },
+  {
+   "seq": 10,
+   "type": "search",
+   "text": "q.py --q 39.75, haircut, equaliz, 34.1: no event or table carries the 39.75% figure. It appears only in the desk briefs, topic analyses and the agent log."
+  },
+  {
+   "seq": 11,
+   "type": "search",
+   "text": "q.py --q cursor, anysphere, claude code, ramp, sales multiple, gross-of, principal, net revenue, revenue share: read every hit for channel, concentration and basis evidence."
+  },
+  {
+   "seq": 12,
+   "type": "note",
+   "text": "Record re-merged at 19:00:09Z and again at 19:13:17Z while I worked (669 events at start, 691 now). In my slice: three new financials events, several ids renamed, compute tables filled, no revenue figure changed. I re-resolved every id through id_map and cite canonical ids only."
+  },
+  {
+   "seq": 13,
+   "type": "found",
+   "text": "Dated path, run-rate in $B with tier: Dec 2024 1 (T1), Mar 2025 over 2 (T3), May 2025 3 (T2), Jul 2025 over 4 (T2), Aug 2025 over 5 (T1), Oct 2025 near 7 (T4), Dec 2025 9 (T1), Feb 12 14 (T1), Mar 3 19 (T3), Apr 6 over 30 (T1), Apr 29 near 40 (T3, one source), May over 47 (T1), end-Jul over 65 (T2). SemiAnalysis 44 (T4, LOW) not used.",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+  },
+  {
+   "seq": 14,
+   "type": "found",
+   "text": "Run-rate path Dec 2024 to Jul 2026: T1 company anchors $1B, $5B, $9B, $14B, $30B, $47B. Outlet points $19B (Bloomberg), $40B (one source) and $65B (Bloomberg, FT, Axios). Only the $65B end-July point is newer than May and it is outlet-reported.",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+  },
+  {
+   "seq": 15,
+   "type": "found",
+   "text": "Series G, Feb 12 (T1): $14B run-rate, 500+ customers above $1M, Claude Code above $2.5B.",
+   "event_id": "evt-20260212-series-g-30b-380b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+  },
+  {
+   "seq": 16,
+   "type": "found",
+   "text": "Apr 6 Anthropic post (T1): run-rate above $30B, 1,000+ customers above $1M, end-2025 about $9B.",
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+  },
+  {
+   "seq": 17,
+   "type": "found",
+   "text": "Series H, May 28 (T1): above $47B earlier in May. This is the last company-stated run-rate in the record.",
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 18,
+   "type": "found",
+   "text": "Leaked draft prospectus via Reuters: FY2025 revenue $4.59B, operating loss $8.06B, net loss $42B with about $34B non-cash charge, compute and infrastructure $7.33B, cash $20.28B.",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 19,
+   "type": "found",
+   "text": "Fortune snapshot: Q1 2026 $4.73B and Q2 $11.5B recognized, so H1 is $16.2B.",
+   "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+   "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+  },
+  {
+   "seq": 20,
+   "type": "found",
+   "text": "May 20 WSJ projection of $10.9B and $559M was beaten on revenue by 5.5%. The $559M has no reported actual.",
+   "event_id": "evt-20260520-q2-projection-10-9b-559m-op-profit",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-track-first-profitable-quarter-124217577.html"
+  },
+  {
+   "seq": 21,
+   "type": "found",
+   "text": "Channel mix 11%, 32%, 47% for 2023 to 2025. Platform fees $351M, 7.6% of revenue. Usage $3.8B and subscription $789M. Cloud providers collected 60% of $909M receivables.",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
+  },
+  {
+   "seq": 22,
+   "type": "found",
+   "text": "Two unnamed customers at 12% each, most large customers without long-term contracts.",
+   "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+   "url": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/"
+  },
+  {
+   "seq": 23,
+   "type": "found",
+   "text": "The Information, Feb 18 via PYMNTS (T3): partner revenue-share payouts $360M in 2025, $1.9B in 2026, $6.4B in 2027, about one-tenth of projected revenue.",
+   "event_id": "evt-20260217-information-80b-cloud-spend-through-2029",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-set-to-pay-cloud-partners-80-billion-through-2029/"
+  },
+  {
+   "seq": 24,
+   "type": "open",
+   "text": "Opened PYMNTS to confirm the payout text: $1.3M (2024), about $360M (2025), $1.9B (2026), $6.4B (2027), roughly one-tenth of projected revenue, paid to Amazon, Google and Microsoft. It also says roughly half of gross profit on sales via Amazon has gone to Amazon. Confirms the record.",
+   "event_id": "evt-20260217-information-80b-cloud-spend-through-2029",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-set-to-pay-cloud-partners-80-billion-through-2029/"
+  },
+  {
+   "seq": 25,
+   "type": "found",
+   "text": "OpenAI memo alleges gross booking inflates ARR. The $8B and 27% figures appear only in T5 aggregators. PitchBook (T2) reported the memo without them.",
+   "event_id": "evt-20260413-openai-memo-gross-vs-net-arr",
+   "url": "https://my.pitchbook.com/news-center/pb7236696778701751508"
+  },
+  {
+   "seq": 26,
+   "type": "found",
+   "text": "PitchBook, Sep 16 (T3): net presentation cuts revenue 6% to 10%. Gap between above 80% and 44% gross margin left for the S-1 to bridge.",
+   "event_id": "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+   "url": "https://my.pitchbook.com/research-center/report/271b2ed6-4c03-34ba-93a8-65a7e30741ec"
+  },
+  {
+   "seq": 27,
+   "type": "found",
+   "text": "FT, Sep 13 (T3): above 80% gross margin before partner share and training. Second straight adjusted operating profit expected.",
+   "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html"
+  },
+  {
+   "seq": 28,
+   "type": "found",
+   "text": "The Information, Jan 21 (T3): FY2025 gross margin about 40% against a 50% plan because cloud inference cost ran 23% over.",
+   "event_id": "evt-20260121-information-gross-margin-2025-40pct",
+   "url": "https://www.tipranks.com/news/ai-startup-anthropic-warns-of-profit-margin-pressure-as-costs-surge"
+  },
+  {
+   "seq": 29,
+   "type": "found",
+   "text": "PitchBook, Jun 10 (T3): compute $0.71 per revenue dollar in Q1 and $0.56 in Q2E. Gross margin about 44%.",
+   "event_id": "evt-20260610-pitchbook-gm-44pct-compute-cost",
+   "url": "https://my.pitchbook.com/news-center/pb8487822101662420642"
+  },
+  {
+   "seq": 30,
+   "type": "found",
+   "text": "Amodei on Dwarkesh, Feb 13 (T2): stylized inference margin above 50%, compute about half training and half inference. Executive commentary, not company data.",
+   "event_id": "evt-20260213-amodei-dwarkesh-compute-economics",
+   "url": "https://www.dwarkesh.com/p/dario-amodei-2"
+  },
+  {
+   "seq": 31,
+   "type": "found",
+   "text": "Reuters, Aug 17 (T2): 2028 revenue projected at $190B to $200B, two anonymous sources, basis not stated. Nov 2025 plan was $70B with $17B cash flow and 77% gross margin.",
+   "event_id": "evt-20260817-reuters-2028-190-200b-forecast",
+   "url": "https://www.investing.com/news/stock-market-news/anthropic-ipo-valuation-hinges-on-190200-billion-2028-revenue-forecast-sources-say-4862222"
+  },
+  {
+   "seq": 32,
+   "type": "found",
+   "text": "NYT via Gulf News (T4): on track to exceed $100B annualized by end-2026, a projection from $65B. Not a current run-rate.",
+   "event_id": "evt-20260919-nyt-100b-year-end-projection",
+   "url": "https://gulfnews.com/world/americas/anthropic-on-track-to-top-100-billion-revenue-pace-ahead-of-potential-ipo-1.500680887"
+  },
+  {
+   "seq": 33,
+   "type": "found",
+   "text": "OpenAI comparables: FY2025 revenue $13.07B net of Microsoft share, Q1 2026 $5.7B, Q2 $6.2B, run-rate about $40B in August and nearing $70B in September.",
+   "event_id": "evt-20260615-openai-2025-audited-revenue-13b",
+   "url": "https://www.wheresyoured.at/exclusive-openai-financials/"
+  },
+  {
+   "seq": 34,
+   "type": "found",
+   "text": "SpaceX 10-Q: unnamed AI-segment Customer B is 19.5% of Q2 revenue, about $1.52B. The link to Anthropic is the desk's inference.",
+   "event_id": "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm"
+  },
+  {
+   "seq": 35,
+   "type": "found",
+   "text": "SpaceX agreed to buy Cursor for $60B in stock, close expected Q3 2026. Cursor is a named Claude coding customer.",
+   "event_id": "evt-20260616-spacex-cursor",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026043411/spaceexplorationtechnologi.htm"
+  },
+  {
+   "seq": 36,
+   "type": "found",
+   "text": "Pricing ladder: Opus 4.5 cut 67% in Nov 2025, Sonnet 5 at $2/$10 from Jun 30, Opus 5.5 at $4/$20 on Sep 22, Fable 5.1 cache reads cut 75%. OpenAI answered with Sol and Luna the same day.",
+   "event_id": "evt-20260922-claude-opus-5-5-launch",
+   "url": "https://www.anthropic.com/claude-opus-5-5"
+  },
+  {
+   "seq": 37,
+   "type": "found",
+   "text": "Enterprise moved to a $20 seat plus usage at API rates, pulling revenue toward metered billing.",
+   "event_id": "evt-20260416-enterprise-seat-plus-usage-repricing",
+   "url": "https://www.theregister.com/2026/04/16/anthropic_ejects_bundled_tokens_enterprise/"
+  },
+  {
+   "seq": 38,
+   "type": "found",
+   "text": "Claude Platform on AWS and Claude in Foundry bill in Consumption Units on marketplace line items, which affects gross-versus-net treatment.",
+   "event_id": "evt-20260511-claude-platform-on-aws-launch",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview"
+  },
+  {
+   "seq": 39,
+   "type": "found",
+   "text": "PitchBook TTM fields $1.0B (2024), $10.0B (2025), $65B (2026E), $71B (2027E) are run-rate style or forward, not recognized revenue.",
+   "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series",
+   "url": "https://my.pitchbook.com/profile/466959-97/company/profile"
+  },
+  {
+   "seq": 40,
+   "type": "found",
+   "text": "Two financials events added at 19:13Z are compute items: The Information on a roughly $200B Google Cloud commitment (DISPUTED) and Google paying SpaceX $920M a month. Neither carries a revenue figure. Read at headline level.",
+   "event_id": "evt-20260605-google-pays-spacex-920m-month-benchmark",
+   "url": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/"
+  },
+  {
+   "seq": 41,
+   "type": "found",
+   "text": "WSJ, Sep 18 (T3): listing moves to November so Q3 results can be shown first. Sets the Q3 and S-1 watch dates.",
+   "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html"
+  },
+  {
+   "seq": 42,
+   "type": "open",
+   "text": "Opened the Proactive article on Yahoo for the OpenAI comparison: 'OpenAI reported second-quarter revenue of $6.2 billion, up 18% on the previous three months, the Wall Street Journal said.' Anthropic '$11.5 billion in its most recent quarter, 14 times higher than a year earlier.' No basis or Q1 figure stated.",
+   "event_id": "evt-20260814-q2-2026-rev-11-5b-first-report",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html"
+  },
+  {
+   "seq": 43,
+   "type": "open",
+   "text": "Opened TechCrunch, Aug 17: run rate defined as a projection of a full year from a recent, shorter period. Surpassed $65B at end-July, up from $47B in May and $9B at end of last year. OpenAI 'doubled its revenue to $40 billion'. The two companies may calculate metrics differently.",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+  },
+  {
+   "seq": 44,
+   "type": "open",
+   "text": "Opened TNW, Sep 15: FT put gross margins above 80% before partner revenue sharing and training costs. Q2 revenue passed $11.5B with positive adjusted operating income and no dollar amount. Adjusted strips out items Bloomberg called exceptional or one-time.",
+   "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+   "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo"
+  },
+  {
+   "seq": 45,
+   "type": "flag",
+   "text": "The desk's canonical 39.75% haircut is contradicted in size by the record: 7.6% of FY2025 revenue (Reuters leak), about 7.8% on The Information's $360M, 6% to 10% (PitchBook). Only a T5 aggregator figure near 27% is larger. At 39.75%, Q2 alone implies $4.6B paid to partners against $1.9B forecast for all of 2026. Not disproved, since it may net more than fees.",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
+  },
+  {
+   "seq": 46,
+   "type": "flag",
+   "text": "39.75% reproduces exactly as the haircut that ties Series H $965B over the $47B run-rate to OpenAI $852B over $25B at 34.1x. OpenAI at $24B or $26B would give 42.2% or 37.3%. That fits a solved value, not a measured one, so the Jul 16 tie cannot be evidence of no multiple discount. I cannot confirm how the desk set it.",
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 47,
+   "type": "flag",
+   "text": "period_revenue types four PitchBook proxy rows as kind=actual (FY2022 $10M, FY2023 $100M, FY2024 $1,000M, FY2025 $10,000M) although their own basis text says run-rate proxy, not recognized revenue. A model filtering on kind=actual would pick them up.",
+   "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series",
+   "url": "https://my.pitchbook.com/profile/466959-97/company/profile"
+  },
+  {
+   "seq": 48,
+   "type": "flag",
+   "text": "OpenAI Q1 2026 $5.7B (PitchBook) and Q2 $6.2B with +18% QoQ do not reconcile. 6.2 over 5.7 is +8.8%, and +18% implies a Q1 of about $5.25B. I opened the Proactive article: it attributes $6.2B and +18% to the WSJ, where the record says Bloomberg, and gives no Q1 figure or net-versus-gross basis.",
+   "event_id": "evt-20260814-q2-2026-rev-11-5b-first-report",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html"
+  },
+  {
+   "seq": 49,
+   "type": "flag",
+   "text": "CNBC via TNW says $65B is 'about seven times the level of a year earlier'. TechCrunch, from Bloomberg, says up from $9B at the end of last year. 7.2x fits end-2025, not July 2025 at more than $4B, which would be 16x. I use 7.2x since end-2025 and avoid the year-on-year wording.",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+  },
+  {
+   "seq": 50,
+   "type": "flag",
+   "text": "The projections table's desk-derived FY2026 of $64B to $72B needs Q3 $20B to $23B and Q4 $27B to $33B. That implies a late-September run-rate of $114B to $150B and a Q4 average of $108B to $132B, above the $100B to $120B year-end projection. A straight line to $100B to $120B gives Q3 $17B to $18B and FY2026 $56B to $60B (desk arithmetic).",
+   "event_id": "evt-20260610-pitchbook-fy2026-recognized-35-44b",
+   "url": "https://my.pitchbook.com/research-center/report/f3db74ec-cfbb-311d-b38f-91ab1c845962"
+  },
+  {
+   "seq": 51,
+   "type": "flag",
+   "text": "Run-rate growth slowed: about $13B a month from Apr 6 to mid-May, about $7B a month from mid-May to end-July (13.5% a month). The latest verified print is two months old. As-of dates for May and July are approximate floors.",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+  },
+  {
+   "seq": 52,
+   "type": "flag",
+   "text": "evt-20260928 (FY2025 financials) is marked DISPUTED because two desks logged $4.59B and $11.5B in one field. The ledger lists the mismatch without a resolution. The two values are FY2025 and Q2 2026, and I cite each against its own period.",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 53,
+   "type": "flag",
+   "text": "evt-20251104 (2028 plan) is marked DISPUTED because one field holds $3.8B (CY2025E API revenue) and $70B (2028), and margins of 50% (2025E) and 77% (2028E). I cite each against its own period. The $17B 2028 cash flow and 77% margin belong to the $70B plan, and none is restated for the $190B to $200B plan.",
+   "event_id": "evt-20251104-information-gross-margin-path-to-77pct",
+   "url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/"
+  },
+  {
+   "seq": 54,
+   "type": "flag",
+   "text": "SpaceX is closing on Cursor while it sells Anthropic $1.25B a month of compute, and an unnamed 19.5% SpaceX customer is inferred to be Anthropic. The record does not say Cursor's current share of Anthropic revenue. The 40% to 50% early share is one anonymous employee (T3, LOW).",
+   "event_id": "evt-20260616-spacex-cursor",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026043411/spaceexplorationtechnologi.htm"
+  },
+  {
+   "seq": 55,
+   "type": "flag",
+   "text": "xAI's Q2 AI-segment revenue is $2,194M on the 10-Q line and $2.561B on the call, and it includes compute rental to a customer the desk infers is Anthropic. It is not a like-for-like model-revenue comp for Anthropic.",
+   "event_id": "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm"
+  },
+  {
+   "seq": 56,
+   "type": "flag",
+   "text": "Two desks read the same series differently: compute_costs treats $6.3, $1.60, $0.71, $0.56 per revenue dollar as one all-in series, while the margins table says the 2026 scope is unstated and may be a serving subset. The S-1 cost of revenue line settles it.",
+   "event_id": "evt-20260610-pitchbook-gm-44pct-compute-cost",
+   "url": "https://my.pitchbook.com/news-center/pb8487822101662420642"
+  },
+  {
+   "seq": 57,
+   "type": "flag",
+   "text": "Tier mismatch inside the record: the 47% channel share and fee lines are T2/HIGH in events but T3 in the prospectus table, and Reuters computed the $351M itself. I carry T3 for channel, fee and Q1, and T2 for FY2025, Q2 and the two 12% customers.",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
+  },
+  {
+   "seq": 58,
+   "type": "flag",
+   "text": "The 80% business and 20% consumer split dates from Oct 2025 (T4) and Jan 2026. Consumer revenue grew about 75% from January to mid-May while run-rate grew about 4x, so the split is stale. No later mix is in the record.",
+   "event_id": "evt-20260328-claude-consumer-paid-subs-indagari",
+   "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/"
+  },
+  {
+   "seq": 59,
+   "type": "flag",
+   "text": "The company has not updated 'over 300,000 business customers' since Sep 2025, and a Jul 2026 complaint still cites it, while run-rate rose 13x. The disclosed metric switched to customers above $1M. Customer-count growth and the middle of the distribution are unobservable.",
+   "event_id": "evt-20250902-series-f-13b-183b",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+  },
+  {
+   "seq": 60,
+   "type": "flag",
+   "text": "Claude Code has no revenue figure after Feb 2026 in the record, yet the NYT names Claude Code and Cowork as the growth drivers. The coding and agents share of 2026 revenue is a data gap.",
+   "event_id": "evt-20260919-nyt-100b-year-end-projection",
+   "url": "https://gulfnews.com/world/americas/anthropic-on-track-to-top-100-billion-revenue-pace-ahead-of-potential-ipo-1.500680887"
+  },
+  {
+   "seq": 61,
+   "type": "verify",
+   "text": "period_revenue FY2025 $4.59B equals mix usage $3.8B plus subscription $789M, $4.589B. Agrees.",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
+  },
+  {
+   "seq": 62,
+   "type": "verify",
+   "text": "$2.16B over $4.59B is 47.1% and $351M over $4.59B is 7.6%. Agrees across the mix, customers and prospectus_facts tables.",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html"
+  },
+  {
+   "seq": 63,
+   "type": "verify",
+   "text": "run_rate_desk integrates to about $4.3B for FY2025 against $4.59B recognized, within 7%. Q2 x4 is $46B and sits on the $30B to $65B path. The 13% to 20% Q1 2026 gap stays unresolved until monthly data appear.",
+   "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+   "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+  },
+  {
+   "seq": 64,
+   "type": "verify",
+   "text": "Two 12% customers are about $1.1B of FY2025 revenue. Agrees with the customers table (nearly 25%) and the mix table (about $1.1B).",
+   "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+   "url": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/"
+  },
+  {
+   "seq": 65,
+   "type": "verify",
+   "text": "margins table: opex $12.65B equals revenue $4.59B plus operating loss $8.06B. Compute $7.33B over revenue is $1.60 per dollar, 58% of opex.",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 66,
+   "type": "verify",
+   "text": "Recomputed run-rate legs from run_rate_desk: end-2025 to end-July is 7.2x or 32% a month. Mid-May to end-July is 13.5% a month. $100B to $120B by Dec 31 needs 8.8% to 12.8% a month, or $6.9B to $10.8B added a month.",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+  },
+  {
+   "seq": 67,
+   "type": "verify",
+   "text": "H1 2026 is $4.73B plus $11.5B, $16.23B, which is 3.5x FY2025 $4.59B. Matches the period_revenue row.",
+   "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+   "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/"
+  },
+  {
+   "seq": 68,
+   "type": "verify",
+   "text": "Haircut arithmetic: $65B x (1 - 6% to 10%) is $61.1B to $58.5B, matching comparables. $2T over those is 32.7x to 34.2x, matching PitchBook. At 39.75% net run-rate is $39.2B.",
+   "event_id": "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+   "url": "https://my.pitchbook.com/research-center/report/271b2ed6-4c03-34ba-93a8-65a7e30741ec"
+  },
+  {
+   "seq": 69,
+   "type": "verify",
+   "text": "Standing belief reproduced: $965B over $47B x 0.6025 is 34.1x, and $852B over $25B is 34.1x. The tie rests on May's $47B, which the $65B print has overtaken.",
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "url": "https://www.anthropic.com/news/series-h"
+  },
+  {
+   "seq": 70,
+   "type": "verify",
+   "text": "compute_costs table agrees with my arithmetic: FY2024 about $6.3 and FY2025 $1.60 of compute per revenue dollar, payouts $360M, $1.9B, $6.4B. It also shows $4.1B of 2025 training (T4) inside the $7.33B.",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html"
+  },
+  {
+   "seq": 71,
+   "type": "verify",
+   "text": "Cross-check of margin layers against projections: if $0.56 is all-in compute and inference is 37% of it (The Information: $7B of $19B in 2026), inference costs about $0.21 per dollar, a 79% margin, near the above-80% figure. Weak, since vintages differ.",
+   "event_id": "evt-20260610-pitchbook-gm-44pct-compute-cost",
+   "url": "https://my.pitchbook.com/news-center/pb8487822101662420642"
+  },
+  {
+   "seq": 72,
+   "type": "verify",
+   "text": "Projection track record from projections and period_revenue: FY2025 $2.2B against $4.59B, Q2 2026 $10.9B against $11.5B, year-end 2025 $8B to $10B against about $9B, FY2026 'up to $18B' against H1 $16.2B.",
+   "event_id": "evt-20250415-proj-2025-2-2b-2027-12b",
+   "url": "https://techcrunch.com/2025/04/15/anthropic-forms-a-new-team-to-grow-its-aws-business/"
+  },
+  {
+   "seq": 73,
+   "type": "verify",
+   "text": "Price deltas from the pricing table: Opus 4.1 to 4.5 -66.7%, Opus 5 to 5.5 -20%, Sonnet $3/$15 to $2/$10 -33.3%, Mythos Preview $25/$125 to Mythos 5 $10/$50 -60%.",
+   "event_id": "evt-20251124-claude-opus-4-5-launch",
+   "url": "https://www.anthropic.com/news/claude-opus-4-5"
+  },
+  {
+   "seq": 74,
+   "type": "message",
+   "text": "Haircut conflict: record evidence is 7.6% and 6% to 10%, desk canonical 39.75%. End-July net run-rate $58.5B to $61.1B against $39.2B. At 39.75%, Q2 implies $4.6B paid to partners against $1.9B forecast for 2026. 39.75% reproduces as the haircut tying the Jul 16 multiples at 34.1x. Report both.",
+   "event_id": "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+   "url": "https://my.pitchbook.com/research-center/report/271b2ed6-4c03-34ba-93a8-65a7e30741ec",
+   "to": "analyst-model"
+  },
+  {
+   "seq": 75,
+   "type": "message",
+   "text": "For the compute analyst: FY2025 compute and infrastructure $7.33B is $1.60 per revenue dollar including training. PitchBook's $0.71 and $0.56 use an unstated scope. SpaceX Customer B at 19.5% of Q2 revenue is the desk's inferred Anthropic link.",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "to": "analyst-compute"
+  },
+  {
+   "seq": 76,
+   "type": "message",
+   "text": "For ecosystem: channel share 11%, 32%, 47%. Partner payouts $360M, $1.9B, $6.4B for 2025 to 2027. SpaceX is buying Cursor while supplying Anthropic compute. Two 12% customers are unnamed.",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "to": "analyst-topic-ecosystem"
+  },
+  {
+   "seq": 77,
+   "type": "message",
+   "text": "Table hygiene for the revenue desk: period_revenue kind=actual on four PitchBook proxy rows, the projections FY2026 $64B to $72B derivation that exceeds the year-end path, the OpenAI +18% QoQ against $5.7B to $6.2B, and the OpenAI Q2 source, which the article gives as the WSJ, not Bloomberg.",
+   "event_id": "evt-20260610-pitchbook-fy2026-recognized-35-44b",
+   "url": "https://my.pitchbook.com/research-center/report/f3db74ec-cfbb-311d-b38f-91ab1c845962",
+   "to": "desk-revenue"
+  },
+  {
+   "seq": 78,
+   "type": "message",
+   "text": "Handoff: revenue slice done. Headline: Q2 recognized $11.5B, run-rate $65B gross, haircut 7.6% or 6% to 10% in the record against 39.75% canonical. Watch: S-1 income statement, Q3 results, next run-rate print.",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "to": "orchestrator"
+  }
+ ],
+ "stats": {
+  "events_read": 197,
+  "flags": 16
+ }
+}

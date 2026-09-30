@@ -2,7 +2,7 @@
  "agent": "analyst-topic-governance",
  "role": "Topic Analyst — Governance, control structure and safety policy",
  "started": "2026-09-30T18:59:49Z",
- "finished": "2026-09-30T19:18:32Z",
+ "finished": "2026-09-30T19:25:51Z",
  "topic": {
   "slug": "governance",
   "title": "Governance, control structure and safety policy",
@@ -10,7 +10,7 @@
   "key_metrics": [
    {
     "label": "Founder vote share (Class F)",
-    "value": "50.1% of total voting power on key matters, one Class F share directed by a majority of seven co-founders (Reuters, T2). Holds while at least three keep a minimum stake, amount not reported. About 2% economic stake each (The Information, T3).",
+    "value": "50.1% of total voting power on key matters, held by one Class F share that seven co-founders direct by majority (Reuters, T2). Holds while three keep a minimum stake, amount unreported (The Information, T3). About 2% economic stake each (T3).",
     "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote"
    },
    {
@@ -20,7 +20,7 @@
    },
    {
     "label": "Board size",
-    "value": "6 directors named in the draft prospectus: Dario Amodei, Daniela Amodei (chair), Razavi, Hastings, Liddell, Narasimhan. 7 seats after IPO: 4 Trust, 3 Class F and Class A. Anthropic itself stated 6 members on Feb 13 and 7 on Apr 14.",
+    "value": "6 directors named in the draft prospectus: Dario Amodei, Daniela Amodei (chair), Razavi, Hastings, Liddell, Narasimhan. 7 seats after IPO: 4 Trust, 3 Class F and Class A. Anthropic stated 6 members on Feb 13; its Apr 14 post implies 7.",
     "event_id": "evt-20260928-factbox-executives-board-ltbt-trustees"
    },
    {
@@ -53,7 +53,7 @@
     ]
    },
    {
-    "t": "Trust-appointed directors arrived one at a time: Kreps May 29, 2024, Hastings May 28, 2025, Narasimhan Apr 14, 2026. Anthropic then said they were a majority of seven (T1). Kreps reportedly left about May 22 (T5, community sources). The draft prospectus names six directors: both Amodeis, Razavi, Hastings, Liddell, Narasimhan. Daniela Amodei chairs. Liddell's appointer is unstated.",
+    "t": "Trust-appointed directors arrived one at a time: Kreps May 29, 2024, Hastings May 28, 2025, Narasimhan Apr 14, 2026. Anthropic then said they were a board majority (T1). Kreps reportedly left about May 22 (T5, community sources). The draft prospectus names six directors: two executive Amodeis, with Daniela as chair, plus Razavi (Spark Capital), Hastings, Liddell, Narasimhan. Liddell's appointer and director independence are unstated.",
     "e": [
      "evt-20240529-jay-kreps-board",
      "evt-20250528-reed-hastings-board",
@@ -64,7 +64,7 @@
     ]
    },
    {
-    "t": "Reuters' review of the draft prospectus (Sep 28 to 29, T2): a Founder LLC of seven co-founders directs one Class F share carrying 50.1% of votes on key matters. Class A gets one vote per share. The Trust elects four of seven directors. Four other classes exist, with minimal votes for strategic partners. Amazon's notes convert to nonvoting common at IPO, subject to an ownership cap (10-Q, T1).",
+    "t": "Reuters' review of the draft prospectus (Sep 28, T2): a Founder LLC of seven co-founders directs one Class F share carrying 50.1% of votes on key matters. Class A gets one vote per share. The Trust elects four of seven directors. Other classes give strategic partners minimal votes and, per The Information (T3), employees tie-break stock. Amazon's notes convert to nonvoting common at IPO, subject to a cap (10-Q, T1).",
     "e": [
      "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
      "evt-20260928-founder-llc-class-f",
@@ -73,7 +73,7 @@
     ]
    },
    {
-    "t": "RSP v1.0 (Sep 19, 2023) set ASL levels; changes needed board approval after Trust consultation. v2.0 (Oct 15, 2024) added capability thresholds. ASL-3 first applied to Opus 4 on May 22, 2025. v3.0 (Feb 24, 2026) turned hard commitments into non-binding targets. Four more followed by Jul 8; v3.2 gave the Trust review powers. v3.4 cut unredacted Risk Report sharing from all cleared staff to at least 200 employees.",
+    "t": "RSP v1.0 (Sep 19, 2023) set ASL levels; changes needed board approval after Trust consultation. v2.0 (Oct 15, 2024) added capability thresholds. ASL-3 first applied to Opus 4 on May 22, 2025. v3.0 (Feb 24, 2026) added non-binding roadmap targets and Risk Reports. v3.2 gave the Trust review powers. v3.4 (Jul 8) cut unredacted Risk Report sharing from all cleared staff to at least 200 employees.",
     "e": [
      "evt-20230919-responsible-scaling-policy-v1",
      "evt-20241015-rsp-v2",
@@ -84,7 +84,7 @@
     ]
    },
    {
-    "t": "No public S-1 exists on EDGAR (Sep 30). Reuters' review of the leaked draft (T2) confirms these themes: existential risk, shutdown resistance, concealment, blackmail-like behavior, evaluation awareness limiting safety tests, unsettled agent liability, and governance that may conflict with financial interests. About 6% of research compute went to safety in a July week (T3). Risk factors fill about 80 of 261 pages.",
+    "t": "No public S-1 exists on EDGAR (Sep 30). Reuters' review of the leaked draft (T2) confirms existential risk, shutdown resistance, concealment, blackmail-like behavior, evaluation awareness, unsettled agent liability and governance that may conflict with financial interests. About 6% of research compute went to safety in a July week (T3). No coverage, inference only: Pentagon, export controls, RSP changes, key-person risk. About 80 of 261 pages are risk factors.",
     "e": [
      "evt-20260930-no-public-s1-on-edgar",
      "evt-20260928-prospectus-risk-factors-80-of-261-pages",
@@ -94,7 +94,7 @@
     ]
    },
    {
-    "t": "No lock-up term appears in any opened prospectus coverage. The Information (Aug 27, Sep 3; T4 relays of a T3 scoop) says lock-ups beyond 180 days are weighed, early investors and staff may sell in the offering, and rank-and-file staff may have to sell through preset 10b5-1 plans. Earlier liquidity: a May 2025 buyback at $61.5B (T3) and a Feb 2026 tender planned at $350B pre-money (T3).",
+    "t": "No opened prospectus coverage states a lock-up. The Information (Aug 27, Sep 3; T4 relays of a T3 scoop) says lock-ups beyond 180 days are weighed, insiders may sell in the offering and staff may face preset 10b5-1 plans. The Sep 3 relay is tagged DISPUTED on raise size. Earlier: a May 2025 buyback at $61.5B (T3) and a Feb 2026 tender planned at $350B pre-money (T3, completion unconfirmed).",
     "e": [
      "evt-20260827-information-prospectus-after-labor-day-insider-sales",
      "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
@@ -118,7 +118,7 @@
     ]
    },
    {
-    "t": "The Trust's edge is seat math. Pre-IPO text (T1): trustees pick successors with Anthropic's input, serve one-year terms and hold no equity. Post-IPO amendment thresholds are not public. If measured on total votes, Class F can block any supermajority change (inference). Since Apr 2024 no trustee is described as an AI researcher, yet RSP v3.2 gave it review rights over Risk Reports. The board chair is also the President.",
+    "t": "The Trust's edge is seat math. Pre-IPO text (T1): trustees pick successors with Anthropic's input and hold no equity, and a stockholder supermajority can amend the Trust without trustee consent. Post-IPO thresholds are not public. If measured on total votes, Class F can block any supermajority change (inference). Since Apr 2024 no trustee is described as an AI researcher, yet RSP v3.2 gave the Trust Risk Report review rights.",
     "e": [
      "evt-20230919-long-term-benefit-trust",
      "evt-20250606-ltbt-fontaine",
@@ -129,7 +129,7 @@
     ]
    },
    {
-    "t": "The RSP binds only by Anthropic's choice, and Anthropic rewrites it often. Three of the five 2026 revisions edited a capability threshold (v3.1, v3.3, v3.4). Roadmap goals are non-binding, higher-ASL safeguards may be 'outright impossible' to meet unilaterally, and v3.1 says Anthropic stays free to pause. No opened S-1 coverage mentions the RSP. California SB 53, in force Jan 1, 2026, adds a legal duty with its own framework.",
+    "t": "The RSP binds only by Anthropic's choice, and Anthropic rewrites it often. Three of five 2026 revisions edited a threshold: v3.1 (Apr 2), v3.3 (May 26), v3.4 (Jul 8). Roadmap goals are non-binding, higher-ASL safeguards may be 'outright impossible' unilaterally, and v3.1 says Anthropic stays free to pause. No opened S-1 coverage mentions the RSP. California SB 53, in force Jan 1, 2026, adds a legal duty.",
     "e": [
      "evt-20260224-rsp-v3-published",
      "evt-20260429-rsp-v32-ltbt-powers",
@@ -163,7 +163,7 @@
     ]
    },
    {
-    "t": "Score the RSP as disclosure plus outside review, not a covenant. Track Risk Reports, Trust-requested external reviews and the METR investigation, not ASL labels. A pause is a board choice under the PBC form, and about 80% of the $518B compute plan is non-cancelable or payable regardless of use (T2), so the pause option has a price.",
+    "t": "Score the RSP as disclosure plus outside review, not a covenant. Track Risk Reports, Trust-requested external reviews and the METR investigation, not ASL labels. Per v3.1 a pause is Anthropic's choice, not an RSP trigger (inference). About 80% of the $518B compute plan is non-cancelable or payable regardless of use (T2), so the pause option has a price.",
     "e": [
      "evt-20260224-rsp-v3-published",
      "evt-20260429-rsp-v32-ltbt-powers",
@@ -173,7 +173,7 @@
     ]
    },
    {
-    "t": "Keep federal and export exposure as event risk in the model. Realized loss is small against run-rate: PitchBook put the ban near $200M, about 1.4% of ARR (T3), while sworn filings claim far more at risk, unrealized. Reprice on a second suspension, a FASCSA escalation or issued FTC demands.",
+    "t": "Treat governance as event risk, neither a proven moat nor a booked liability. Realized federal loss is small against run-rate: PitchBook puts the ban near $200M, about 1.4% of ARR (T3), while sworn filings claim far more at risk, unrealized. Reprice on a second suspension, a FASCSA escalation or issued FTC demands.",
     "e": [
      "evt-20260309-cfo-declaration-public-sector",
      "evt-20260925-dc-circuit-denies-anthropic-petitions",
@@ -193,22 +193,22 @@
    }
   ],
   "second_order": [
-   "A single Class F share at 50.1% makes Class A votes irrelevant to any outcome the founders oppose, and Amazon and Google hold no or minimal votes. The live contest is founders versus Trust, not founders versus investors. Index committees and proxy advisers must rule on a powerless float. If Nasdaq-100 fast entry applies after 15 trading days (Business Insider, T3), passive funds would be buying within weeks.",
-   "The Trust gained RSP review powers on Apr 29, two weeks after its board majority, then lost the majority (reportedly May 22) and a trustee (Aug 4). Mandate rose as the bench thinned. The Trust must refill seats before a roadshow or the S-1 will describe three trustees and six sitting directors. This falsifies a reading of the four-year plan as a steady ramp in outside control.",
-   "Take-or-pay commitments make a pause expensive. About 80% of the $518B compute plan is non-cancelable or payable regardless of use (T2). Yet the draft reportedly says slowing the technology 'would likely be a good thing' (T3), and Anthropic backs a pause option (Jun 4) and slowing (Sep 12). A board that pauses still pays. Consensus reads the stance as free positioning. Class A holders would bear the cost without a deciding vote (inference).",
+   "A single Class F share at 50.1% makes Class A votes irrelevant to any outcome the founders oppose (inference), and Amazon and Google hold no or minimal votes. The live contest is founders versus Trust, not founders versus investors. Index committees and proxy advisers must rule on a powerless float. If the Nasdaq-100 fast-entry rule applies, 15 trading days after listing (Motley Fool, T4), passive funds would be buying within weeks.",
+   "The Trust gained RSP review powers on Apr 29, two weeks after its board majority, then lost the majority (reportedly May 22) and a trustee (Aug 4). Mandate rose as the bench thinned. If the Trust does not refill seats before a roadshow, the S-1 will describe three trustees and six sitting directors. This falsifies a reading of the four-year plan as a steady ramp in outside control.",
+   "Take-or-pay commitments make a pause expensive. About 80% of the $518B compute plan is non-cancelable or payable regardless of use (T2). Yet the draft reportedly says slowing the technology 'would likely be a good thing' (T3), and Anthropic backs a pause option (Jun 4) and slowing (Sep 12). Critics call that positioning or capture (Sacks, T3). The commitments show a cost, and Class A holders would bear it without a deciding vote (inference).",
    "Anthropic's June framework asked for legal authority to block dangerous deployments (dated Jun 1 in one record event, Jun 10 in another). A US export-control directive then cut two models on Jun 12, and Anthropic's reply asked for a statutory, transparent process (T1). On Anthropic's own account the dispute is process, not power. The White House hold on Mythos 5.1 (Sep 24) and the FTC probe (Sep 30) extend executive discretion that no Anthropic governance body can veto.",
-   "Liquidity design is supply management. Early insider sales, a lock-up beyond 180 days with a second window and preset 10b5-1 plans (T4 relays) would thin first-trade supply, next to a reported $10B Nvidia anchor, about 0.5% at $2T (T3). Underwriters must set the book. Amazon's nonvoting block, capped at an undisclosed level, sets the overhang. This bears on the absorption thesis."
+   "Liquidity design looks like supply management (inference). Insider sales in the offering would meet demand at launch, while a lock-up beyond 180 days with a second window and preset 10b5-1 plans (T4 relays) would hold the rest back. A reported Nvidia anchor of up to $10B is about 0.5% at $2T (T3). Amazon's nonvoting block, capped at an undisclosed level, sets the overhang. This bears on the absorption thesis."
   ],
   "watch": [
    {
     "item": "Public S-1 on EDGAR with Class F and Class T charter text, board section, lock-up and selling holders",
     "by": "2026-10-31",
-    "threshold": "Reference class is this IPO's own filing history: three expected public-filing dates passed (end-Aug per Bloomberg, after Labor Day per The Information, late Sep per Reuters), none met by Sep 30. A filing by Oct 31 moves structure facts from T2 or T3 to T1. A later one supports the November-or-later reports (WSJ Sep 18; Reuters and Fortune Sep 29)."
+    "threshold": "Reference class is this IPO's own filing history. Three expected public-filing dates passed: end-Aug per Bloomberg, after Labor Day per The Information and late Sep per Reuters. None was met by Sep 30. A filing by Oct 31 moves structure facts from T2 or T3 to T1. Listing timing is DISPUTED: October (Quartz Aug 13, Business Insider Sep 13) versus November or later (WSJ Sep 18; Reuters and Fortune Sep 29). A later filing favors the second."
    },
    {
-    "item": "Shareholder vote on the Class F special share and Founder LLC (Anthropic is asking shareholders, The Information via TechCrunch, Sep 25; no vote date reported)",
+    "item": "Shareholder vote on the Class F special share and Founder LLC, which Anthropic is asking holders to approve (The Information via TechCrunch, Sep 25), with no date reported",
     "by": "2026-Q4",
-    "threshold": "Approval on the reported terms (50.1%, three-founder test) confirms the structure. A change to 50.1%, the minimum stake or the sunset, or a named holder dissenting, signals bargaining. The approval threshold and which holders vote are not in the record."
+    "threshold": "No base rate for pre-IPO special-share votes is in the record. Approval on the reported terms (50.1%, three-founder test) confirms the structure. A change to 50.1%, the minimum stake or the sunset, or a named holder dissenting, signals bargaining. The approval threshold and which holders vote are not in the record."
    },
    {
     "item": "LTBT appointments: a successor for Cuéllar's trustee seat and the fourth Trust-elected director seat",
@@ -233,29 +233,29 @@
    {
     "item": "Government levers: FASCSA en banc or cert petition, a DoD removal-complete statement, Commerce reimposition, issued FTC demands",
     "by": "2026-Q4",
-    "threshold": "A petition keeps the exclusion contested through the listing. DoD says about 90% of workloads moved (T2, completion Sep 30 to end-October). A second Commerce suspension would make 18 days a repeat, not a one-off. No en banc or cert base rate is in the record."
+    "threshold": "A petition keeps the exclusion contested through the listing. DoD says about 90% of workloads moved (T2 MEDIUM, single source; completion Sep 30 or end-October by outlet). A second Commerce suspension would make 18 days a repeat, not a one-off. No en banc or cert base rate is in the record."
    },
    {
     "item": "METR independent investigation of the four incidents (eight-week agreement, extendable)",
     "by": "2026-11-04",
-    "threshold": "Eight weeks from Sep 9 ends Nov 4 (desk arithmetic; signing date not stated). A published finding with employee-level access supports the embedded-evaluator claim. An extension or silence before the roadshow leaves four incidents open as a risk factor."
+    "threshold": "No reference class for outside-investigator timelines is in the record. Eight weeks from Sep 9 ends Nov 4 (desk arithmetic; signing date not stated). A published finding with employee-level access supports the embedded-evaluator claim. An extension or silence before the roadshow leaves four incidents open as a risk factor."
    }
   ],
-  "house_view": "(a) Extends loosely: the reported $2T target is about 2.1x the $965B Series H and Reuters' analysis implies 18 to 20x sales, with no governance discount reported although Class A gets no control (targets, not a priced deal). (b) Touches: prospectus coverage records OpenAI's challenge to gross recognition and Anthropic's 'principal' position (Reuters, T3), so the dispute will sit in the S-1 text. (c) Extends: insider sales in the offering, lock-ups beyond 180 days and a reported $10B Nvidia anchor show supply is being managed (T3 and T4, unconfirmed). (d) Touches: $8.0B of Amazon notes convert to nonvoting common at IPO, so the rule must say how a converted note counts. (e) Confirms: governance conventions do not transfer, since the record names only Meta, Snap, Palantir and Veeva and none pairs a Trust with a PBC charter.",
+  "house_view": "(a) Extends loosely: the reported $2T target is about 2.1x the $965B Series H and Reuters' analysis implies 18 to 20x sales on an unstated basis, with no governance discount reported although Class A gets no control (targets, not a priced deal). (b) Touches: prospectus coverage records OpenAI's challenge to gross recognition and Anthropic's 'principal' position (Reuters, T3), so the dispute will sit in the S-1 text. (c) Extends: insider sales in the offering, lock-ups beyond 180 days and a reported $10B Nvidia anchor show supply is being managed (T3 and T4, unconfirmed). (d) Touches: Amazon's outstanding notes, carried at $97.9B, convert to nonvoting common at IPO, so the rule must say how a converted note counts. (e) Confirms: governance conventions do not transfer, since the record names Meta, Snap and Palantir as control precedents and Veeva as the prior largest PBC, and names none that pairs a Trust with a PBC charter.",
   "uncertainties": [
    {
     "type": "data",
-    "note": "No public S-1 exists. Every structure fact is leak-based: Reuters' review (T2), Next Web and Jerusalem Post copies (T3), The Information scoops (T3). Not in the record: Class F and Class T charter text, minimum-stake amount, vote date, Class T amendment thresholds, Amazon's ownership cap, lock-up length, independence determinations, controlled-company status. Single-source: about 2% per founder and employee tie-break stock.",
+    "note": "No public S-1 exists. Every structure fact is leak-based: Reuters' review (T2), Next Web and Jerusalem Post copies (T3), The Information scoops (T3). Not in the record: Class F and Class T charter text, minimum-stake amount, vote date, Class T amendment thresholds, Amazon's ownership cap and stake percentage (TheStreet says 15% to 20%, undisclosed by Amazon), lock-up length, independence determinations, controlled-company status. Single-source: about 2% per founder and employee tie-break stock.",
     "what_would_change_it": "A public S-1 on EDGAR."
    },
    {
     "type": "data",
-    "note": "Board math is unresolved. Anthropic's Apr 14 post (T1) says Trust-appointed directors are a majority of seven. The May 22 Kreps exit rests on T5 community sources. Liddell's appointer is unstated. The prospectus says the Trust elects 4 of 7 while six directors are named. The seventh Founder LLC member is unnamed, and Anthropic calls Ben Mann a co-founder though the seven in The Information's account exclude him.",
+    "note": "Board math is unresolved. Anthropic's Apr 14 post (T1) says Trust-appointed directors are a board majority, which the named list makes seven. The May 22 Kreps exit rests on T5 community sources. Liddell's appointer is unstated. The prospectus says the Trust elects 4 of 7 while six directors are named. The seventh Founder LLC member is unnamed, and Anthropic calls Ben Mann a co-founder though the seven Fortune listed on Jan 27 exclude him.",
     "what_would_change_it": "An Anthropic board notice, the S-1 board section, or Kreps confirming the exit."
    },
    {
     "type": "interpretation",
-    "note": "Moat versus liability is a judgment. There is no revenue counterfactual, run-rate is gross, the federal share is small (PitchBook about 1.4% of ARR, T3) and sworn claims of larger losses are unrealized. The courts split on cause. No win-loss data links safety posture to enterprise purchases, and the revenue effect of the 18-day suspension is undisclosed.",
+    "note": "Moat versus liability is a judgment. Liability side: $150M of DoD ARR lost (T2), a 2-1 appellate loss, an 18-day suspension with undisclosed revenue effect, and a November IPO slip that one record note ties to the pacing stance while The Decoder cites Q3 results (both T3). Moat side, asserted not measured: banks co-designed Enterprise Frontier Safeguards (Sep 1, T1) and cloud partners kept Claude available outside DoW work (Mar 6, T2). No counterfactual or win-loss data exists, run-rate is gross, and the courts split on cause.",
     "what_would_change_it": "S-1 customer and segment notes, federal revenue disclosure, or churn data."
    },
    {
@@ -265,7 +265,7 @@
    },
    {
     "type": "forecast",
-    "note": "Durability of founder control has no reference class in the record: only Meta, Snap and Palantir are named, without outcomes. Sunset is by attrition, at two or fewer founders, and none by date is reported. All seven pledged 80% of their equity to charity while three must keep a minimum stake; the interplay is not reported. Recalled, unverified: some US dual-class issuers adopt time-based sunsets.",
+    "note": "Founder-control durability. Reference class: US IPOs with founder super-voting shares. Base rate: not in the record, which names only Meta, Snap and Palantir, without outcomes. Different here: one fixed 50.1% share, about 2% economics per founder (T3), a no-equity Trust electing 4 of 7, a PBC charter and sunset by attrition only. All seven pledged 80% of equity to charity; its effect on the stake test is unreported. Recalled, unverified: some dual-class issuers add time-based sunsets.",
     "what_would_change_it": "Charter text, sunset and stake-test terms, pledge mechanics."
    }
   ],
@@ -316,6 +316,7 @@
    "evt-20260909-alignment-assessment-fourth-incident",
    "evt-20260831-alignment-security-overhaul",
    "evt-20260912-pace-the-frontier",
+   "evt-20260912-amodei-pace-the-frontier-call",
    "evt-20260918-accenture-embedded-evaluation",
    "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
    "evt-20251219-sb53-compliance-framework",
@@ -344,7 +345,9 @@
    "evt-20260601-confidential-draft-s1",
    "evt-20260209-sharma-resigns",
    "evt-20260908-coxon-resigns",
-   "evt-20250305-biden-commitments-removed"
+   "evt-20250305-biden-commitments-removed",
+   "evt-20210528-ltb-committee",
+   "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture"
   ]
  },
  "log": [
@@ -391,8 +394,8 @@
   {
    "seq": 9,
    "type": "found",
-   "text": "LTBT lineage: Series A 'committee' in 2021, Class T trust announced Sep 19 2023 with five trustees and a four-year plan to a board majority.",
-   "event_id": "evt-20230919-long-term-benefit-trust"
+   "text": "LTBT lineage: a 'Long-Term Benefit Committee' in the 2021 Series A documents, then the Class T trust announced Sep 19 2023 with five trustees and a four-year plan to a board majority.",
+   "event_id": "evt-20210528-ltb-committee"
   },
   {
    "seq": 10,
@@ -403,7 +406,7 @@
   {
    "seq": 11,
    "type": "found",
-   "text": "Board appointments by the Trust: Kreps May 2024, Hastings May 2025, Narasimhan Apr 14 2026 with a T1 statement of a Trust majority of seven.",
+   "text": "Board appointments by the Trust: Kreps May 2024, Hastings May 2025, Narasimhan Apr 14 2026 with a T1 statement that Trust-appointed directors are a board majority.",
    "event_id": "evt-20260414-narasimhan-board"
   },
   {
@@ -551,159 +554,195 @@
   {
    "seq": 36,
    "type": "verify",
+   "text": "prospectus_facts row on planned spend (at least $518B over about 10 years, roughly 80% non-cancelable or payable regardless of use, T2 HIGH) matches the compute-commitments event I cite for the pause-cost point.",
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable"
+  },
+  {
+   "seq": 37,
+   "type": "verify",
    "text": "Amazon holdings: record's desk arithmetic ($97.9B + $92.5B) over $965B gives about 19.7%. TheStreet says 15% to 20% and Forkast about 21% (T4); Amazon discloses no percentage.",
    "event_id": "evt-20260731-amazon-10q-q2-2026"
   },
   {
-   "seq": 37,
+   "seq": 38,
    "type": "verify",
    "text": "Checked the board table: Kreps row is T1 for joining but its exit date rests on T5 sources; Liddell appointer 'unknown' in the table. Both match the open items.",
    "event_id": "evt-20260522-kreps-leaves-board"
   },
   {
-   "seq": 38,
+   "seq": 39,
+   "type": "verify",
+   "text": "rsp table text against the 'three of five 2026 revisions edited a threshold' claim: v3.1 clarified the AI R&D threshold, v3.3 revised the novel chem-bio threshold, v3.4 revised the automated R&D threshold; v3.0 rewrote structure and v3.2 added Trust powers.",
+   "event_id": "evt-20260708-rsp-v34"
+  },
+  {
+   "seq": 40,
+   "type": "verify",
+   "text": "people_moves against the ltbt table: Matheny Dec 2023, Christiano Apr 2024, Bahl and Robinson Jan 21 2026 leaving; Cuéllar joining Jan 21 and leaving Aug 4 2026 (6.5 months). Kreps exit is the only T5 row.",
+   "event_id": "evt-20260121-ltbt-cuellar-appointed"
+  },
+  {
+   "seq": 41,
+   "type": "found",
+   "text": "PBC operating form: co-founder Jack Clark is Head of Public Benefit and leads The Anthropic Institute (Mar 11 2026), so the public-benefit function sits inside management; no decision or suit citing the PBC duty appears in the record.",
+   "event_id": "evt-20260311-anthropic-institute-launch"
+  },
+  {
+   "seq": 42,
+   "type": "found",
+   "text": "Critics of the pacing stance: Sacks calls the pacing push regulatory capture (Sep 13, T3); the Jun 4 pause-option post drew hype criticism in the SciAm relay (T2).",
+   "event_id": "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture"
+  },
+  {
+   "seq": 43,
    "type": "flag",
-   "text": "Board majority conflict: Anthropic's Apr 14 post (T1) says Trust-appointed directors are a majority of seven; a May 22 Kreps exit (T5) would leave 3 of 6. Liddell's appointer is unstated, so both readings stand.",
+   "text": "Board majority conflict: Anthropic's Apr 14 post (T1) says Trust-appointed directors are a board majority, seven on the named list; a May 22 Kreps exit (T5) would leave 3 of 6. Liddell's appointer is unstated, so both readings stand.",
    "event_id": "evt-20260414-narasimhan-board"
   },
   {
-   "seq": 39,
+   "seq": 44,
    "type": "flag",
    "text": "Seat count gap: the draft prospectus names six directors but describes seven seats (4 Trust, 3 Class F and A). A vacancy or an unnamed director is implied; the record does not say which.",
    "event_id": "evt-20260928-factbox-executives-board-ltbt-trustees"
   },
   {
-   "seq": 40,
+   "seq": 45,
    "type": "flag",
-   "text": "Founder roster mismatch: The Information's seven (Fortune list) exclude Ben Mann, whom Anthropic's Jan 13 2026 post calls a co-founder; the Jan 2021 founding event lists eight names. The seventh Founder LLC member is unnamed in every opened Reuters copy.",
+   "text": "Founder roster mismatch: the seven co-founders Fortune listed on Jan 27 (cited on the Sep 25 event) exclude Ben Mann, whom Anthropic's Jan 13 2026 post calls a co-founder; the Jan 2021 founding event lists eight names. The seventh Founder LLC member is unnamed in every opened Reuters copy.",
    "event_id": "evt-20260925-founders-voting-control"
   },
   {
-   "seq": 41,
+   "seq": 46,
    "type": "flag",
-   "text": "Stale open item: desk-s1 lists the PBC and LTBT governance risk text as not quoted in any opened coverage, but the Reuters quote on governance conflicting with financial interests is recorded on the Sep 29 Class F event.",
+   "text": "Possibly stale open item: desk-s1 lists the PBC and LTBT governance risk text as not quoted in any opened coverage, yet the Reuters quote on governance conflicting with financial interests is recorded on the Sep 29 Class F event. Open item should be narrowed.",
    "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote"
   },
   {
-   "seq": 42,
+   "seq": 47,
    "type": "flag",
    "text": "Structured-field error risk: the Sep 25 founder-control event carries valuation_post_usd_m 1,500,000, a secondary-market mark that its own note says is not a priced round. Series H remains $965B post-money.",
    "event_id": "evt-20260925-founders-voting-control"
   },
   {
-   "seq": 43,
+   "seq": 48,
    "type": "flag",
    "text": "Duplicate scoop with split tiers: the Aug 18 super-voting report is one event at T2 HIGH (Reuters relay) and another at T3 MEDIUM (The Information via Investing.com). I treat it as a T3 single-source scoop and anchor on the Sep 28 to 29 Reuters review.",
    "event_id": "evt-20260818-supervoting-reported"
   },
   {
-   "seq": 44,
+   "seq": 49,
    "type": "flag",
    "text": "RSP v2.2 (May 14 2025) excluded sophisticated and state-compromised insiders from the ASL-3 security standard eight days before ASL-3 was first activated (May 22 2025).",
    "event_id": "evt-20250522-asl-3-activated-opus-4"
   },
   {
-   "seq": 45,
+   "seq": 50,
    "type": "flag",
    "text": "Safety compute share has two descriptions: about 6% of research compute in a July sample week (Reuters on the prospectus) and about 6% of capacity plus 12% safety-focused AI R&D (SiliconANGLE on Anthropic's Sep 17 post, unopened). Bases differ.",
    "event_id": "evt-20260917-pace-of-ai-development-metrics"
   },
   {
-   "seq": 46,
+   "seq": 51,
    "type": "flag",
    "text": "Essay date split: the June 'Policy on the AI Exponential' framework sits in two events dated Jun 1 (T1 HIGH) and Jun 10 (T1 MEDIUM, date inferred from coverage).",
    "event_id": "evt-20260601-policy-on-ai-exponential"
   },
   {
-   "seq": 47,
+   "seq": 52,
    "type": "flag",
    "text": "The Sep 3 lock-up event carries DISPUTED confidence. The dispute is raise size ($130B versus $100B) and Q2 figures, not the lock-up wording, which stays T4.",
    "event_id": "evt-20260903-information-q2-operating-profit-130b-raise-lockups"
   },
   {
-   "seq": 48,
+   "seq": 53,
    "type": "flag",
    "text": "Unaddressed interplay: all seven founders pledged 80% of personal equity to charity (Reuters, T2) while the Class F test needs three founders to keep a minimum stake and a founder drops out for selling too many shares.",
    "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote"
   },
   {
-   "seq": 49,
+   "seq": 54,
    "type": "flag",
    "text": "q.py and the brief list table 'board_history', but the data key is 'board'; `--table board_history` prints '# no table'. Anyone following the brief gets an empty board read."
   },
   {
-   "seq": 50,
+   "seq": 55,
    "type": "flag",
-   "text": "Possible duplicate events in this slice, same source and day: factbox (evt-20260928-prospectus-board-execs and evt-20260928-factbox-executives-board-ltbt-trustees), risk factors (two T2 ids plus T3 evt-20260929-draft-s1-leaked-to-reuters), no-public-S-1 (two T1 ids), confidential S-1 (T2 evt-20260601-confidential-s1 and T1 evt-20260601-confidential-draft-s1). I cite the fuller or higher-tier id.",
+   "text": "Possible duplicate events in this slice, same source and day: Class F (evt-20260928-founder-llc-class-f and evt-20260929-founder-llc-class-f-share-50-1pct-vote), factbox (evt-20260928-prospectus-board-execs and evt-20260928-factbox-executives-board-ltbt-trustees), risk factors (two T2 ids plus T3 evt-20260929-draft-s1-leaked-to-reuters), no-public-S-1 (two T1 ids), confidential S-1 (T2 evt-20260601-confidential-s1 and T1 evt-20260601-confidential-draft-s1). I cite the fuller or higher-tier id.",
    "event_id": "evt-20260928-prospectus-risk-factors"
   },
   {
-   "seq": 51,
+   "seq": 56,
    "type": "note",
-   "text": "Record re-merged while I worked: the Amazon 10-Q id changed to evt-20260731-amazon-10q-q2-2026, and 4 other ids I had read were remapped to canonical ids. Every id here is re-checked against q.py --ids before finishing."
+   "text": "Record re-merged while I worked: the Amazon 10-Q id changed to evt-20260731-amazon-10q-q2-2026, and 5 other ids I had read were remapped to canonical ids. Every id here is re-checked against q.py --ids before finishing."
   },
   {
-   "seq": 52,
+   "seq": 57,
+   "type": "note",
+   "text": "A Time headline (RSS only, unopened) frames RSP v3.0 as dropping a flagship safety pledge. I do not use it; the T1 record describes roadmap goals as non-binding and ASL-4 and ASL-5 as restructured.",
+   "event_id": "evt-20260224-rsp-v3-published"
+  },
+  {
+   "seq": 58,
    "type": "note",
    "text": "No source URL was opened with WebFetch. No load-bearing figure was ambiguous in the record, and the pre-IPO Trust text is already held as T1 in prospectus_facts."
   },
   {
-   "seq": 53,
+   "seq": 59,
    "type": "message",
    "text": "Pentagon and export-control facts are cited from your events (CFO declaration $150M, DoD 90% migration, Sep 25 ruling). I read governance as event risk, consistent with your read, and add that the June framework asked for a deployment veto.",
    "to": "analyst-topic-government"
   },
   {
-   "seq": 54,
+   "seq": 60,
    "type": "message",
    "text": "Trust and board churn for your people view: four of five founding trustees gone, Cuéllar trustee to executive in about 6.5 months, Kreps exit only T5, and the Founder LLC roster mismatch around Ben Mann.",
    "to": "analyst-topic-people"
   },
   {
-   "seq": 55,
+   "seq": 61,
    "type": "message",
-   "text": "Amazon's $8.0B of notes convert to nonvoting common at IPO subject to an undisclosed cap. The capital-efficiency rule needs a stated treatment of converted notes. Lock-up and any secondary component are T4 only.",
+   "text": "Amazon's convertible notes, carried at $97.9B, convert to nonvoting common at IPO subject to an undisclosed cap. The capital-efficiency rule needs a stated treatment of converted notes. Lock-up and any secondary component are T4 only.",
    "to": "analyst-topic-capital"
   },
   {
-   "seq": 56,
+   "seq": 62,
    "type": "message",
-   "text": "Governance and safety as moat evidence: regulated-industry safeguards (Sep 1) and Fortune 10 customers exist, but no win-loss data ties safety posture to purchases. Government outcomes are discretionary.",
+   "text": "Governance and safety as moat evidence: regulated-industry safeguards (Sep 1) and 8 of the Fortune 10 as customers (T1) exist, but no win-loss data ties safety posture to purchases. Government outcomes are discretionary.",
    "to": "analyst-topic-moat"
   },
   {
-   "seq": 57,
+   "seq": 63,
    "type": "message",
    "text": "Legal hooks: the governance risk-factor quote, agent-liability language, the Sep 18 Sherman Act suit citing the pacing essay, and the Sep 30 FTC probe. Class F charter text is not public.",
    "to": "analyst-topic-legal"
   },
   {
-   "seq": 58,
+   "seq": 64,
    "type": "message",
    "text": "Stale open item on PBC and LTBT governance risk text should be narrowed; lock-up length, selling holders and Class T amendment thresholds stay open until a public S-1.",
    "to": "desk-s1"
   },
   {
-   "seq": 59,
+   "seq": 65,
    "type": "message",
    "text": "Bear-usable control facts with tiers: Class A cannot outvote Class F (inference), Trust at three trustees, RSP changed five times in 19 weeks, no S-1 mention of the RSP.",
    "to": "analyst-bear"
   },
   {
-   "seq": 60,
+   "seq": 66,
    "type": "message",
-   "text": "Bull-usable facts with tiers: Trust-elected majority reached 17 months early (T1), outside evaluators funded at $1B over five years (shared), SB 53 compliance framework, revenue kept growing through the Pentagon dispute.",
+   "text": "Bull-usable facts with tiers: Trust majority came about 17 months inside the four-year plan (T1 post, desk arithmetic), outside evaluators backed by at least $1B over five years (shared with Accenture), SB 53 compliance framework, run-rate kept rising through the Pentagon dispute.",
    "to": "analyst-bull"
   },
   {
-   "seq": 61,
+   "seq": 67,
    "type": "message",
    "text": "Three record defects for repair: board_history table alias, valuation_post_usd_m on a secondary mark (Sep 25 event), and duplicate events with split tiers in the S-1 cluster.",
    "to": "orchestrator"
   }
  ],
  "stats": {
-  "events_read": 185,
+  "events_read": 186,
   "flags": 13
  }
 }

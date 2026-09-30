@@ -27091,7 +27091,7 @@
   ],
   "extracted": {
    "amount_usd_m": 15000.0,
-   "valuation_post_usd_m": 350000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -27186,7 +27186,8 @@
      "nvidia": 10000,
      "microsoft": 5000
     },
-    "announced_vs_closed": "'up to' caps; funded amounts undisclosed; 'a portion' inside Series G (T1 Feb 12 2026)"
+    "announced_vs_closed": "'up to' caps; funded amounts undisclosed; 'a portion' inside Series G (T1 Feb 12 2026)",
+    "valuation_reference_usd_m": 350000.0
    }
   },
   "confidence": "HIGH",
@@ -27203,7 +27204,24 @@
    "evt-20251118-microsoft-nvidia-anthropic-partnership",
    "evt-20251118-microsoft-nvidia-up-to-15b"
   ],
-  "independent_sources": 6
+  "independent_sources": 6,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a financing is a reference mark (last round price or reported target), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 350000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 350000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20251124-claude-opus-4-5-launch",
@@ -43907,7 +43925,7 @@
   ],
   "extracted": {
    "amount_usd_m": null,
-   "valuation_post_usd_m": 965000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 47000.0,
    "revenue_period_usd_m": null,
@@ -43996,7 +44014,8 @@
     "underwriters_stated": false,
     "run_rate_cited_by_TechCrunch_usd_b": ">47 (from ~9 at end-2025)",
     "shares_and_price": "not set",
-    "status": "SEC review pending as of 2026-09-30 (no public S-1 opened)"
+    "status": "SEC review pending as of 2026-09-30 (no public S-1 opened)",
+    "valuation_reference_usd_m": 965000.0
    }
   },
   "confidence": "HIGH",
@@ -44013,7 +44032,24 @@
    "evt-20260601-confidential-draft-s1-submitted",
    "evt-20260601-anthropic-confidential-draft-s1"
   ],
-  "independent_sources": 2
+  "independent_sources": 2,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a financing is a reference mark (last round price or reported target), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 965000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 965000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20260601-confidential-s1",
@@ -52360,7 +52396,7 @@
   ],
   "extracted": {
    "amount_usd_m": null,
-   "valuation_post_usd_m": 965000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": 11500.0,
@@ -52397,7 +52433,8 @@
     "spacex_record_comparator_usd_b": "75 (Proactive/Bloomberg) vs 86.2 incl. over-allotment (Bloomberg Sep 3)",
     "openai_q2_revenue_usd_b": 6.2,
     "spacex_ipo_usd_m": 75000,
-    "series_h_valuation_usd_m": 965000
+    "series_h_valuation_usd_m": 965000,
+    "valuation_reference_usd_m": 965000.0
    }
   },
   "confidence": "HIGH",
@@ -52413,6 +52450,23 @@
    "evt-20260820-ipo-could-match-spacex-record-q2-revenue"
   ],
   "independent_sources": 3,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a financing is a reference mark (last round price or reported target), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 965000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 965000.0
+     }
+    }
+   }
+  ],
   "audit": {
    "verdict": "PARTLY",
    "note": "Core facts are on the page (IPO could match/surpass SpaceX's record $75B June flotation; filing as soon as end of this month; $11.5B quarterly revenue, 14x). Differences: page is a Proactive article, and only the SpaceX comparison is attributed to Bloomberg; the $11.5B revenue and filing-timing sentences carry no Bloomberg attribution; quarter is 'most recent', not stated as Q2. Page date Aug 20, 2026 (metadata 2026-08-21 UTC).",
@@ -55431,7 +55485,7 @@
   ],
   "extracted": {
    "amount_usd_m": 130000.0,
-   "valuation_post_usd_m": 2000000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": 65000.0,
    "revenue_period_usd_m": 10900.0,
@@ -55470,7 +55524,8 @@
     "secondary_component": "might let existing shareholders sell in the IPO",
     "cumulative_losses_since_2021_usd_b": "10-15",
     "valuation_multiple": "~30x annual run rate",
-    "timing": "public listing in late September or early October"
+    "timing": "public listing in late September or early October",
+    "valuation_reference_usd_m": 2000000.0
    }
   },
   "confidence": "DISPUTED",
@@ -55480,7 +55535,24 @@
    "desk-s1"
   ],
   "merged_ids": [],
-  "independent_sources": 3
+  "independent_sources": 3,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a financing is a reference mark (last round price or reported target), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 2000000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 2000000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20260907-ipo-timing-mid-october",
@@ -55508,7 +55580,7 @@
   ],
   "extracted": {
    "amount_usd_m": null,
-   "valuation_post_usd_m": 2000000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -55547,7 +55619,8 @@
     "listing_window": "'days ahead of the November midterms'",
     "bankers_price_against_2028_revenue_usd_b": "190-200",
     "compute_deals_cited": "$45B Nscale (Aug 26), $35B Lambda (Aug 31)",
-    "reuters_headline": "EXCLUSIVE: Anthropic IPO launch shifts toward mid-October, sources say"
+    "reuters_headline": "EXCLUSIVE: Anthropic IPO launch shifts toward mid-October, sources say",
+    "valuation_reference_usd_m": 2000000.0
    }
   },
   "confidence": "MEDIUM",
@@ -55560,7 +55633,24 @@
   "merged_ids": [
    "evt-20260904-reuters-ipo-launch-shifts-toward-mid-october"
   ],
-  "independent_sources": 1
+  "independent_sources": 1,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a financing is a reference mark (last round price or reported target), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 2000000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 2000000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20260907-clifford-intl-affairs",
@@ -57093,7 +57183,7 @@
   ],
   "extracted": {
    "amount_usd_m": null,
-   "valuation_post_usd_m": 2000000.0,
+   "valuation_post_usd_m": null,
    "valuation_pre_usd_m": null,
    "revenue_run_rate_usd_m": null,
    "revenue_period_usd_m": null,
@@ -57140,7 +57230,8 @@
     "index": "Nasdaq-100 fast-entry eligibility",
     "valuation": "$2T or more",
     "nasdaq_100_rule": "effective May 1: large newcomers join after 15 trading days (SpaceX listed Jun 12, joined Jul 7)",
-    "superseded_by": "WSJ Sep 18: November"
+    "superseded_by": "WSJ Sep 18: November",
+    "valuation_reference_usd_m": 2000000.0
    }
   },
   "confidence": "MEDIUM",
@@ -57155,7 +57246,24 @@
    "evt-20260913-business-insider-nasdaq-october-listing",
    "evt-20260913-business-insider-nasdaq-october-listing"
   ],
-  "independent_sources": 1
+  "independent_sources": 1,
+  "corrections": [
+   {
+    "id": "R-VAL",
+    "audit_id": null,
+    "reason": "A valuation on an event that is not a financing is a reference mark (last round price or reported target), not this event's post-money. Moved to other.valuation_reference_usd_m.",
+    "changed": {
+     "extracted.valuation_post_usd_m": {
+      "was": 2000000.0,
+      "now": null
+     },
+     "extracted.other.valuation_reference_usd_m": {
+      "was": null,
+      "now": 2000000.0
+     }
+    }
+   }
+  ]
  },
  {
   "id": "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture",

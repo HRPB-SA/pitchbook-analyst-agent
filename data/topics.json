@@ -1,6 +1,335 @@
 {
- "generated": "2026-09-30T19:19:32Z",
+ "generated": "2026-09-30T19:26:48Z",
  "topics": [
+  {
+   "slug": "revenue",
+   "title": "Revenue, margins and customers",
+   "one_liner": "Q2 2026 recognized revenue was $11.5B, 14x a year earlier, but the $65B run-rate is gross and the record's haircut evidence is 6% to 10%, not 39.75%.",
+   "key_metrics": [
+    {
+     "label": "Latest run-rate (outlet-reported)",
+     "value": "$65B+ at end-July 2026, gross basis, 7.2x end-2025's $9B. Bloomberg via TechCrunch (T2), FT and Axios agree. Last company-stated figure: $47B in May (T1). Nothing above $65B is verified.",
+     "event_id": "evt-20260817-rr-65b-end-july"
+    },
+    {
+     "label": "FY2025 recognized revenue",
+     "value": "$4.59B, +1,088% YoY, gross of cloud resale. FY2024 about $0.39B, implied. Exit run-rates were $9B and $1B. Leaked draft prospectus via Reuters (T2), no public S-1.",
+     "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials"
+    },
+    {
+     "label": "Q2 2026 revenue",
+     "value": "$11.5B recognized, 14x YoY and 2.4x Q1's $4.73B. H1 2026 is $16.2B. Leaked draft (T2). Beat the May 20 projection of $10.9B by 5.5%.",
+     "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus"
+    },
+    {
+     "label": "Gross margin, by definition",
+     "value": "Above 80% adjusted, before partner share and training (FT, T3). About 40% for FY2025 (The Information, T3). About 44% for Q2 2026E (PitchBook, T3). No GAAP gross margin reported.",
+     "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct"
+    },
+    {
+     "label": "Channel share",
+     "value": "47% of FY2025 sales, $2.16B, through Amazon and Google marketplaces, up from 11% in 2023. Platforms kept about $351M, 7.6% of revenue (Reuters-computed, T3 in the prospectus table).",
+     "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix"
+    },
+    {
+     "label": "Customer concentration",
+     "value": "Two unnamed customers at 12% each, about 24% of FY2025 revenue (T2). Most large customers lack long-term contracts (T3). The 1,000 customers above $1M floor only $1B, 1.5% of run-rate.",
+     "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers"
+    }
+   ],
+   "what": [
+    {
+     "t": "Run-rate path. Anthropic stated $9B at end-2025, $14B on Feb 12, above $30B on Apr 6 and above $47B in May (T1, gross basis inferred). Bloomberg via TechCrunch, Aug 17 (T2) reported above $65B at end-July, with FT and Axios agreeing. Nothing higher is verified. The $100B to $120B year-end figures from Quartz, FT, WSJ and the NYT via Gulf News (T4) are projections.",
+     "e": [
+      "evt-20260817-rr-65b-end-july",
+      "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+      "evt-20260212-series-g-30b-380b",
+      "evt-20260528-series-h-compute-agreements-memory-partners",
+      "evt-20260813-ipo-october-2t-quartz",
+      "evt-20260919-nyt-100b-year-end-projection",
+      "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+      "evt-20260918-wsj-ipo-pushed-to-november",
+      "evt-20250902-series-f-13b-183b",
+      "evt-20250530-run-rate-3b"
+     ]
+    },
+    {
+     "t": "Recognized revenue. Reuters and Fortune read a leaked draft prospectus, Sep 28 to 29 (T2, single origin, no public S-1). The event is DISPUTED in the record because two periods share one field. FY2024 was near $0.39B, implied, and FY2025 $4.59B. Q1 2026 was $4.73B and Q2 $11.5B, 14x a year earlier. H1 2026 is $16.2B, 3.5x FY2025. The FY2025 operating loss was $8.06B, up from $2.98B.",
+     "e": [
+      "evt-20260928-reuters-draft-prospectus-2025-financials",
+      "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+      "evt-20260814-q2-2026-rev-11-5b-first-report",
+      "evt-20260630-q2-2026-revenue-11-5b-period",
+      "evt-20241231-fy2024-financials-leaked-s1"
+     ]
+    },
+    {
+     "t": "Channel and customers. Reuters, Sep 29 (T3 in the prospectus table): Amazon and Google marketplaces carried 47% of FY2025 sales, $2.16B, up from 11% in 2023 and 32% in 2024. Anthropic books them gross as principal. Platforms kept about 16 cents per dollar, $351M, 7.6% of revenue. Two unnamed customers were 12% each. Most large customers lack long-term contracts.",
+     "e": [
+      "evt-20260929-reuters-47pct-cloud-channel-mix",
+      "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+      "evt-20260413-openai-memo-gross-vs-net-arr"
+     ]
+    },
+    {
+     "t": "Margins. Every figure has a different scope. The Information, Jan 21 (T3): FY2025 about 40%, below a 50% plan. FT, Sep 13 (T3): above 80% in Q2 2026 before partner share and training. PitchBook, Sep 16 (T3): about 44%. Adjusted operating income was positive in Q2 with no dollar amount. The $559M was a May 20 projection.",
+     "e": [
+      "evt-20260121-information-gross-margin-2025-40pct",
+      "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+      "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+      "evt-20260610-pitchbook-gm-44pct-compute-cost",
+      "evt-20260520-q2-projection-10-9b-559m-op-profit",
+      "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue"
+     ]
+    },
+    {
+     "t": "Mix. FY2025 revenue was $3.8B usage-based and $789M subscription, 17.2% (T2). Business was about 80% of sales (T4, Oct 2025). Claude Code run-rate rose from $1B in Nov 2025 to above $2.5B in Feb 2026, 18% of run-rate, no later figure (T1). Enterprise moved to a $20 seat plus API-rate usage (The Register, T2). Menlo, an Anthropic investor, gave Anthropic 54% of enterprise coding (T3).",
+     "e": [
+      "evt-20260929-reuters-47pct-cloud-channel-mix",
+      "evt-20251016-rr-7b-ye9b-2026-26b",
+      "evt-20251203-bun-acquisition",
+      "evt-20260212-series-g-30b-380b",
+      "evt-20260416-enterprise-seat-plus-usage-repricing",
+      "evt-20251209-menlo-genai-enterprise"
+     ]
+    },
+    {
+     "t": "Comparables. OpenAI's FY2025 revenue was $13.07B net of Microsoft share (T3) and its Q2 2026 $6.2B (WSJ via Proactive, basis unstated), against Anthropic's gross $11.5B. xAI booked $3.2B in FY2025 (T2). The 2028 plan went from $70B with $17B of cash flow (Nov 2025, T3, DISPUTED in the record for mixed fields) to $190B to $200B (Reuters, Aug 17, T2), with no cash-flow figure for the new plan.",
+     "e": [
+      "evt-20260615-openai-2025-audited-revenue-13b",
+      "evt-20260603-openai-q1-2026-rev-5-7b-msft-cap",
+      "evt-20260814-q2-2026-rev-11-5b-first-report",
+      "evt-20260521-xai-spacex-s1-financials",
+      "evt-20251104-information-gross-margin-path-to-77pct",
+      "evt-20260817-reuters-2028-190-200b-forecast"
+     ]
+    }
+   ],
+   "means": [
+    {
+     "t": "A run-rate annualizes a recent period, so recognized revenue lags it in a fast ramp. FY2025 revenue was 0.51x the $9B exit run-rate and FY2024 was 0.39x. Desk-derived trailing revenue is about $19.6B, 0.30x of $65B (LOW). Growth is slowing: the pace fell from about $13B added a month from April to mid-May to about $7B a month since, 13.5% a month.",
+     "e": [
+      "evt-20260817-rr-65b-end-july",
+      "evt-20260610-pitchbook-fy2026-recognized-35-44b",
+      "evt-20260928-reuters-draft-prospectus-2025-financials",
+      "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+      "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+      "evt-20260528-series-h-compute-agreements-memory-partners",
+      "evt-20260506-code-with-claude-80x-growth-run-rate-path"
+     ]
+    },
+    {
+     "t": "Anthropic books marketplace sales gross as principal, with the platform share in marketing expense. The haircut is take rate times channel share: 16 cents times 47% is 7.6%, and 16% at full share. A 39.75% haircut needs platforms to keep 85 cents per marketplace dollar and implies $4.6B paid away in Q2, against $1.9B forecast for all of 2026 (The Information, Feb). The record has no derivation.",
+     "e": [
+      "evt-20260929-reuters-47pct-cloud-channel-mix",
+      "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+      "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+      "evt-20260217-information-80b-cloud-spend-through-2029",
+      "evt-20260413-openai-memo-gross-vs-net-arr",
+      "evt-20260511-claude-platform-on-aws-launch"
+     ]
+    },
+    {
+     "t": "Margins differ in scope. PitchBook's 44% equals one minus its projected $0.56 Q2 compute ratio ($0.71 in Q1), so it deducts only compute. The above-80% figure drops partner share and training. If $0.56 is all-in compute and inference is 37% of it, as The Information's 2026 plan implies, inference costs about $0.21 per dollar, near 80% (desk arithmetic). The ratio was $1.60 in FY2025.",
+     "e": [
+      "evt-20260928-reuters-draft-prospectus-2025-financials",
+      "evt-20260610-pitchbook-gm-44pct-compute-cost",
+      "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+      "evt-20260121-information-gross-margin-2025-40pct",
+      "evt-20260127-info-2026-18b-2027-55b-forecast",
+      "evt-20260213-amodei-dwarkesh-compute-economics",
+      "evt-20251104-information-gross-margin-path-to-77pct"
+     ]
+    },
+    {
+     "t": "Volume carries growth as prices fall. Sep 30 list prices per million tokens: Haiku $1/$5, Sonnet $2/$10, Opus $4/$20, Fable $10/$50. Opus fell 67% in Nov 2025 and 20% on Sep 22. A 20% cut needs 25% more tokens to hold revenue, a 67% cut needs 3x. Tokenizers add up to 35% more tokens, offsetting part of each cut. No volume series is in the record.",
+     "e": [
+      "evt-20260930-pricing-page-snapshot",
+      "evt-20251124-claude-opus-4-5-launch",
+      "evt-20260922-claude-opus-5-5-launch",
+      "evt-20260630-claude-sonnet-5-launch",
+      "evt-20260416-claude-opus-4-7-launch",
+      "evt-20260901-fable-5-1-mythos-5-1-launch",
+      "evt-20260416-enterprise-seat-plus-usage-repricing"
+     ]
+    }
+   ],
+   "implications": [
+    {
+     "t": "Carry both haircuts until the S-1 fixes the basis. End-July net run-rate is $58.5B to $61.1B at 6% to 10%, and $39.2B at 39.75%. Applying the FY2025 fee ratio, Q2's $11.5B is 1.7x OpenAI's $6.2B (WSJ, basis unstated) at 7.6% and 1.1x at 39.75%. Do not plot the two labs' run-rates on one axis.",
+     "e": [
+      "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+      "evt-20260929-reuters-47pct-cloud-channel-mix",
+      "evt-20260413-openai-memo-gross-vs-net-arr",
+      "evt-20260814-q2-2026-rev-11-5b-first-report",
+      "evt-20260929-openai-arr-nearing-70b-axios",
+      "evt-20260817-rr-65b-end-july"
+     ]
+    },
+    {
+     "t": "Label the denominator on every multiple. A reported $2T IPO target is 30.8x the gross end-July run-rate, 32.7x to 34.2x net of 6% to 10%, 43.5x Q2 annualized recognized revenue and about 10x the 2028 projection midpoint. Reuters' 18x to 20x states no revenue basis. Never apply a recognized-revenue multiple to run-rate.",
+     "e": [
+      "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+      "evt-20260817-rr-65b-end-july",
+      "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+      "evt-20260817-reuters-2028-190-200b-forecast",
+      "evt-20260918-wsj-ipo-pushed-to-november"
+     ]
+    },
+    {
+     "t": "Discount quality for concentration until names and terms appear. Two customers are about 24% of FY2025 revenue, and most large ones lack long-term contracts. Amazon and Google are investors, suppliers and the channel for 47% of sales. The 1,000 customers above $1M floor 1.5% of run-rate. Consumer grew an estimated 75% from January to mid-May, run-rate about 4x, so the 80% business split is stale.",
+     "e": [
+      "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+      "evt-20260929-reuters-47pct-cloud-channel-mix",
+      "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+      "evt-20260328-claude-consumer-paid-subs-indagari",
+      "evt-20251016-rr-7b-ye9b-2026-26b",
+      "evt-20260212-series-g-30b-380b"
+     ]
+    },
+    {
+     "t": "Quote one margin only with its definition. Treat above 80% as a management view, 40% and 44% as estimates and GAAP gross margin as unreported. Score Q3 on a dollar amount for adjusted operating income and a GAAP bridge. Q2 had SpaceX's two-month discount, which a T5 relay of the WSJ says ended in July, with compute costs expected to rise in H2.",
+     "e": [
+      "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+      "evt-20260610-pitchbook-gm-44pct-compute-cost",
+      "evt-20260121-information-gross-margin-2025-40pct",
+      "evt-20260520-q2-projection-10-9b-559m-op-profit",
+      "evt-20260520-spacex-s1-anthropic-colossus-contract"
+     ]
+    }
+   ],
+   "second_order": [
+    "Bases will be forced into the open. If the S-1 keeps gross presentation, OpenAI and sell-side comps must bridge to net. If it moves to net, every run-rate print restates by the fee share. Either way Anthropic's $65B and OpenAI's nearly $70B (Axios, basis unstated, two months later) stop being comparable headlines. PitchBook already said neither company's basis would survive a Big Four audit.",
+    "The channel grows faster than the company. The Information projected partner payouts of $360M in 2025, $1.9B in 2026 and $6.4B in 2027, up 5.3x then 3.4x. Claude Platform on AWS and Foundry bill through marketplaces, so share likely rises above 47%, and cloud providers already collect 60% of receivables. The S-1 must explain a fee line that scales.",
+    "Price cuts make revenue depend on volume from coding agents. OpenAI answered Opus 5.5 the same day with Luna at $0.10 and $0.50, one-tenth of Haiku 4.5's $1 and $5. SpaceX, which sells Anthropic $1.25B a month of compute, agreed to buy Cursor, a named Claude coding customer. Distribution, rivalry and supply meet in one counterparty, and the record does not give Cursor's current share.",
+    "The valuation-quality gap is wider than the headlines. Recognized revenue is about 0.30x of run-rate, the run-rate is gross, and two margin figures differ by 36 points. Consensus is missing that the S-1 resets all three at once, and that the last verified run-rate is two months old in a business adding about $7B a month.",
+    "Comparable data need care. OpenAI's Q2 $6.2B with +18% QoQ (WSJ) implies Q1 of $5.25B, not the $5.7B in the record. xAI's Q2 AI-segment revenue includes compute rented to a customer the desk infers is Anthropic, so part of it is Anthropic's own cost. Neither series is a clean revenue comp."
+   ],
+   "watch": [
+    {
+     "item": "Next run-rate print after the $65B end-July figure, company-stated or from Bloomberg, FT or Axios",
+     "by": "2026-10-31",
+     "threshold": "Below $79B at end-September is under the straight-line path to $100B at year-end. Above $87B is on the $120B path. Any figure above $100B before December would be the first actual, not a projection."
+    },
+    {
+     "item": "Public S-1 income statement: audited FY2025, H1 2026, cost of revenue, gross profit and the revenue-recognition note",
+     "by": "2026-11-15",
+     "threshold": "GAAP gross margin against above 80% adjusted and 40% to 44% estimates. GAAP operating result against the adjusted figure. Any move to net presentation or a stated principal-versus-agent policy change."
+    },
+    {
+     "item": "Q3 2026 results, which WSJ says Anthropic will show investors before a November listing",
+     "by": "2026-11-30",
+     "threshold": "Revenue near $17B to $18B is on the path to $100B to $120B. $20B or more runs ahead. Under $16B means the run-rate stalled after July. Adjusted operating income positive a second quarter, with a dollar amount."
+    },
+    {
+     "item": "S-1 channel data: marketplace share and platform fees for H1 2026, with Microsoft Foundry broken out",
+     "by": "2026-11-15",
+     "threshold": "Share above 47% or fees above 7.6% of revenue raises the record-based haircut. A fee ratio near 39.75% would be the first evidence for the canonical figure."
+    },
+    {
+     "item": "S-1 customer note: names, shares and contract terms of the largest customers, and Cursor's weight after SpaceX's $60B purchase",
+     "by": "2026-11-15",
+     "threshold": "Any customer above 10% in H1 2026. The two 12% customers unchanged or named. Share of revenue under multiyear contracts."
+    },
+    {
+     "item": "Haiku 5.5 list price, promised within weeks on Sep 28",
+     "by": "2026-10-31",
+     "threshold": "Below Haiku 4.5's $1/$5 extends deflation to the small tier, where OpenAI's Luna is $0.10/$0.50. An unchanged $1/$5 holds the floor."
+    },
+    {
+     "item": "OpenAI Q3 2026 revenue and a stated basis, net of Microsoft share or not",
+     "by": "2026-11-30",
+     "threshold": "Q3 against $6.2B in Q2 and a run-rate nearing $70B. A stated net basis allows a like-for-like gap. Reconcile Q1 $5.7B with the +18% QoQ claim."
+    },
+    {
+     "item": "SpaceX Q3 10-Q: Customer B share of revenue and AI-segment revenue",
+     "by": "2026-11-15",
+     "threshold": "Customer B above 19.5% of revenue would show a full quarter of the Anthropic compute ramp. A named customer would settle the desk's inference."
+    }
+   ],
+   "house_view": "(a) Extends: the same $2T asks 30.8x gross run-rate or 43.5x Q2 annualized recognized revenue for margins that run from 40% to above 80% by definition, so quality cannot be ranked until the S-1 sets one basis. (b) Contradicts in size, not disproved: the record puts platform fees at 7.6% of FY2025 revenue (Reuters leak, T3) and 6% to 10% (PitchBook, T3) against 39.75%. That figure reproduces exactly as the haircut that ties $965B over $47B to $852B over $25B at 34.1x. If it was set that way, the Jul 16 tie is not independent evidence, and the $65B print has overtaken its $47B input. (c) Not tested here; the $100B to $120B year-end run-rate is an investor projection. (d) Not in this slice. (e) Confirms: run-rate, ARR and seat conventions fail when revenue is metered, booked gross and growing about 13% a month.",
+   "uncertainties": [
+    {
+     "type": "data",
+     "note": "Every prospectus figure comes from a leaked draft that Reuters and the FT reviewed, not a filed S-1. FY2024 revenue is implied from +1,088%, not printed. The channel, fee and Q1 lines are single-chain, T3 in the prospectus table. Cost of revenue, gross profit and GAAP quarterly operating income are not reported, and the Q2 adjusted profit has no dollar amount.",
+     "what_would_change_it": "The public S-1 income statement and revenue-recognition note."
+    },
+    {
+     "type": "interpretation",
+     "note": "The haircut is 7.6% (Reuters leak), about 7.8% on The Information's $360M, 6% to 10% (PitchBook), about 27% in an OpenAI memo that only aggregators carry (T5), and 39.75% in the desk ruling. That figure reproduces exactly as the haircut tying $965B over $47B to $852B over $25B at 34.1x, which fits a solved value, not a measured one. The record has no derivation. It may net more than fees.",
+     "what_would_change_it": "A written derivation of 39.75%, the S-1 recognition note, or H1 2026 marketplace share and fees."
+    },
+    {
+     "type": "interpretation",
+     "note": "Margin figures share no definition: above 80% adjusted, about 40% for FY2025, 44% for Q2 2026E, a stylized inference margin above 50% from Amodei on Feb 13, and -94% in 2024 on paying users only. The compute desk reads $1.60, $0.71 and $0.56 per revenue dollar as one all-in series, while the margins table says the 2026 scope is unstated.",
+     "what_would_change_it": "An S-1 cost-of-revenue line with a training split."
+    },
+    {
+     "type": "forecast",
+     "note": "Reference class in the record: Anthropic's own projections. FY2025 and Q2 2026 were beaten, year-end 2025 run-rate was met, and FY2026 is 90% reached at mid-year. No cross-company base rate is in the record. The year-end figures need $35B to $55B more run-rate in five months, against about $7B a month since May. FY2026 revenue is $35B to $44B (PitchBook, stale), $64B to $72B (desk) or $56B to $60B straight-line.",
+     "what_would_change_it": "The next run-rate print and Q3 results."
+    },
+    {
+     "type": "data",
+     "note": "Concentration is unbounded. The two 12% customers are unnamed and may overlap the 47% marketplace channel. The 1,000 customers above $1M floor only $1B. Cursor was 40% to 50% of revenue early on per one employee (T3, LOW), and SpaceX agreed to buy it (8-K, T1).",
+     "what_would_change_it": "The S-1 customer note and contract-term disclosure."
+    }
+   ],
+   "evidence": [
+    "evt-20260817-rr-65b-end-july",
+    "evt-20260928-reuters-draft-prospectus-2025-financials",
+    "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+    "evt-20260929-reuters-47pct-cloud-channel-mix",
+    "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+    "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+    "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+    "evt-20260413-openai-memo-gross-vs-net-arr",
+    "evt-20260610-pitchbook-gm-44pct-compute-cost",
+    "evt-20260121-information-gross-margin-2025-40pct",
+    "evt-20260217-information-80b-cloud-spend-through-2029",
+    "evt-20260610-pitchbook-fy2026-recognized-35-44b",
+    "evt-20260814-q2-2026-rev-11-5b-first-report",
+    "evt-20260630-q2-2026-revenue-11-5b-period",
+    "evt-20260520-q2-projection-10-9b-559m-op-profit",
+    "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
+    "evt-20260817-reuters-2028-190-200b-forecast",
+    "evt-20260813-ipo-october-2t-quartz",
+    "evt-20260919-nyt-100b-year-end-projection",
+    "evt-20260927-pitchbook-revenue-fields-ttm-series",
+    "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+    "evt-20260212-series-g-30b-380b",
+    "evt-20260528-series-h-compute-agreements-memory-partners",
+    "evt-20251104-information-gross-margin-path-to-77pct",
+    "evt-20260127-info-2026-18b-2027-55b-forecast",
+    "evt-20250415-proj-2025-2-2b-2027-12b",
+    "evt-20251203-amodei-dealbook-revenue-guidance",
+    "evt-20260305-pitchbook-ranking-note-nrr-gm-path",
+    "evt-20260615-openai-2025-audited-revenue-13b",
+    "evt-20260603-openai-q1-2026-rev-5-7b-msft-cap",
+    "evt-20260929-openai-arr-nearing-70b-axios",
+    "evt-20260521-xai-spacex-s1-financials",
+    "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
+    "evt-20260616-spacex-cursor",
+    "evt-20260922-claude-opus-5-5-launch",
+    "evt-20260922-openai-gpt-6-sol-luna-price-war",
+    "evt-20251124-claude-opus-4-5-launch",
+    "evt-20260630-claude-sonnet-5-launch",
+    "evt-20260416-enterprise-seat-plus-usage-repricing",
+    "evt-20260416-claude-opus-4-7-launch",
+    "evt-20260930-pricing-page-snapshot",
+    "evt-20251203-bun-acquisition",
+    "evt-20251209-menlo-genai-enterprise",
+    "evt-20260328-claude-consumer-paid-subs-indagari",
+    "evt-20260918-wsj-ipo-pushed-to-november",
+    "evt-20260511-claude-platform-on-aws-launch",
+    "evt-20260213-amodei-dwarkesh-compute-economics",
+    "evt-20260506-code-with-claude-80x-growth-run-rate-path",
+    "evt-20241231-fy2024-financials-leaked-s1",
+    "evt-20260520-spacex-s1-anthropic-colossus-contract"
+   ],
+   "analyst": "analyst-topic-revenue",
+   "finished": "2026-09-30T19:25:58Z"
+  },
   {
    "slug": "product",
    "title": "Product, models and pricing",
@@ -323,7 +652,7 @@
    "key_metrics": [
     {
      "label": "Founder vote share (Class F)",
-     "value": "50.1% of total voting power on key matters, one Class F share directed by a majority of seven co-founders (Reuters, T2). Holds while at least three keep a minimum stake, amount not reported. About 2% economic stake each (The Information, T3).",
+     "value": "50.1% of total voting power on key matters, held by one Class F share that seven co-founders direct by majority (Reuters, T2). Holds while three keep a minimum stake, amount unreported (The Information, T3). About 2% economic stake each (T3).",
      "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote"
     },
     {
@@ -333,7 +662,7 @@
     },
     {
      "label": "Board size",
-     "value": "6 directors named in the draft prospectus: Dario Amodei, Daniela Amodei (chair), Razavi, Hastings, Liddell, Narasimhan. 7 seats after IPO: 4 Trust, 3 Class F and Class A. Anthropic itself stated 6 members on Feb 13 and 7 on Apr 14.",
+     "value": "6 directors named in the draft prospectus: Dario Amodei, Daniela Amodei (chair), Razavi, Hastings, Liddell, Narasimhan. 7 seats after IPO: 4 Trust, 3 Class F and Class A. Anthropic stated 6 members on Feb 13; its Apr 14 post implies 7.",
      "event_id": "evt-20260928-factbox-executives-board-ltbt-trustees"
     },
     {
@@ -366,7 +695,7 @@
      ]
     },
     {
-     "t": "Trust-appointed directors arrived one at a time: Kreps May 29, 2024, Hastings May 28, 2025, Narasimhan Apr 14, 2026. Anthropic then said they were a majority of seven (T1). Kreps reportedly left about May 22 (T5, community sources). The draft prospectus names six directors: both Amodeis, Razavi, Hastings, Liddell, Narasimhan. Daniela Amodei chairs. Liddell's appointer is unstated.",
+     "t": "Trust-appointed directors arrived one at a time: Kreps May 29, 2024, Hastings May 28, 2025, Narasimhan Apr 14, 2026. Anthropic then said they were a board majority (T1). Kreps reportedly left about May 22 (T5, community sources). The draft prospectus names six directors: two executive Amodeis, with Daniela as chair, plus Razavi (Spark Capital), Hastings, Liddell, Narasimhan. Liddell's appointer and director independence are unstated.",
      "e": [
       "evt-20240529-jay-kreps-board",
       "evt-20250528-reed-hastings-board",
@@ -377,7 +706,7 @@
      ]
     },
     {
-     "t": "Reuters' review of the draft prospectus (Sep 28 to 29, T2): a Founder LLC of seven co-founders directs one Class F share carrying 50.1% of votes on key matters. Class A gets one vote per share. The Trust elects four of seven directors. Four other classes exist, with minimal votes for strategic partners. Amazon's notes convert to nonvoting common at IPO, subject to an ownership cap (10-Q, T1).",
+     "t": "Reuters' review of the draft prospectus (Sep 28, T2): a Founder LLC of seven co-founders directs one Class F share carrying 50.1% of votes on key matters. Class A gets one vote per share. The Trust elects four of seven directors. Other classes give strategic partners minimal votes and, per The Information (T3), employees tie-break stock. Amazon's notes convert to nonvoting common at IPO, subject to a cap (10-Q, T1).",
      "e": [
       "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
       "evt-20260928-founder-llc-class-f",
@@ -386,7 +715,7 @@
      ]
     },
     {
-     "t": "RSP v1.0 (Sep 19, 2023) set ASL levels; changes needed board approval after Trust consultation. v2.0 (Oct 15, 2024) added capability thresholds. ASL-3 first applied to Opus 4 on May 22, 2025. v3.0 (Feb 24, 2026) turned hard commitments into non-binding targets. Four more followed by Jul 8; v3.2 gave the Trust review powers. v3.4 cut unredacted Risk Report sharing from all cleared staff to at least 200 employees.",
+     "t": "RSP v1.0 (Sep 19, 2023) set ASL levels; changes needed board approval after Trust consultation. v2.0 (Oct 15, 2024) added capability thresholds. ASL-3 first applied to Opus 4 on May 22, 2025. v3.0 (Feb 24, 2026) added non-binding roadmap targets and Risk Reports. v3.2 gave the Trust review powers. v3.4 (Jul 8) cut unredacted Risk Report sharing from all cleared staff to at least 200 employees.",
      "e": [
       "evt-20230919-responsible-scaling-policy-v1",
       "evt-20241015-rsp-v2",
@@ -397,7 +726,7 @@
      ]
     },
     {
-     "t": "No public S-1 exists on EDGAR (Sep 30). Reuters' review of the leaked draft (T2) confirms these themes: existential risk, shutdown resistance, concealment, blackmail-like behavior, evaluation awareness limiting safety tests, unsettled agent liability, and governance that may conflict with financial interests. About 6% of research compute went to safety in a July week (T3). Risk factors fill about 80 of 261 pages.",
+     "t": "No public S-1 exists on EDGAR (Sep 30). Reuters' review of the leaked draft (T2) confirms existential risk, shutdown resistance, concealment, blackmail-like behavior, evaluation awareness, unsettled agent liability and governance that may conflict with financial interests. About 6% of research compute went to safety in a July week (T3). No coverage, inference only: Pentagon, export controls, RSP changes, key-person risk. About 80 of 261 pages are risk factors.",
      "e": [
       "evt-20260930-no-public-s1-on-edgar",
       "evt-20260928-prospectus-risk-factors-80-of-261-pages",
@@ -407,7 +736,7 @@
      ]
     },
     {
-     "t": "No lock-up term appears in any opened prospectus coverage. The Information (Aug 27, Sep 3; T4 relays of a T3 scoop) says lock-ups beyond 180 days are weighed, early investors and staff may sell in the offering, and rank-and-file staff may have to sell through preset 10b5-1 plans. Earlier liquidity: a May 2025 buyback at $61.5B (T3) and a Feb 2026 tender planned at $350B pre-money (T3).",
+     "t": "No opened prospectus coverage states a lock-up. The Information (Aug 27, Sep 3; T4 relays of a T3 scoop) says lock-ups beyond 180 days are weighed, insiders may sell in the offering and staff may face preset 10b5-1 plans. The Sep 3 relay is tagged DISPUTED on raise size. Earlier: a May 2025 buyback at $61.5B (T3) and a Feb 2026 tender planned at $350B pre-money (T3, completion unconfirmed).",
      "e": [
       "evt-20260827-information-prospectus-after-labor-day-insider-sales",
       "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
@@ -431,7 +760,7 @@
      ]
     },
     {
-     "t": "The Trust's edge is seat math. Pre-IPO text (T1): trustees pick successors with Anthropic's input, serve one-year terms and hold no equity. Post-IPO amendment thresholds are not public. If measured on total votes, Class F can block any supermajority change (inference). Since Apr 2024 no trustee is described as an AI researcher, yet RSP v3.2 gave it review rights over Risk Reports. The board chair is also the President.",
+     "t": "The Trust's edge is seat math. Pre-IPO text (T1): trustees pick successors with Anthropic's input and hold no equity, and a stockholder supermajority can amend the Trust without trustee consent. Post-IPO thresholds are not public. If measured on total votes, Class F can block any supermajority change (inference). Since Apr 2024 no trustee is described as an AI researcher, yet RSP v3.2 gave the Trust Risk Report review rights.",
      "e": [
       "evt-20230919-long-term-benefit-trust",
       "evt-20250606-ltbt-fontaine",
@@ -442,7 +771,7 @@
      ]
     },
     {
-     "t": "The RSP binds only by Anthropic's choice, and Anthropic rewrites it often. Three of the five 2026 revisions edited a capability threshold (v3.1, v3.3, v3.4). Roadmap goals are non-binding, higher-ASL safeguards may be 'outright impossible' to meet unilaterally, and v3.1 says Anthropic stays free to pause. No opened S-1 coverage mentions the RSP. California SB 53, in force Jan 1, 2026, adds a legal duty with its own framework.",
+     "t": "The RSP binds only by Anthropic's choice, and Anthropic rewrites it often. Three of five 2026 revisions edited a threshold: v3.1 (Apr 2), v3.3 (May 26), v3.4 (Jul 8). Roadmap goals are non-binding, higher-ASL safeguards may be 'outright impossible' unilaterally, and v3.1 says Anthropic stays free to pause. No opened S-1 coverage mentions the RSP. California SB 53, in force Jan 1, 2026, adds a legal duty.",
      "e": [
       "evt-20260224-rsp-v3-published",
       "evt-20260429-rsp-v32-ltbt-powers",
@@ -476,7 +805,7 @@
      ]
     },
     {
-     "t": "Score the RSP as disclosure plus outside review, not a covenant. Track Risk Reports, Trust-requested external reviews and the METR investigation, not ASL labels. A pause is a board choice under the PBC form, and about 80% of the $518B compute plan is non-cancelable or payable regardless of use (T2), so the pause option has a price.",
+     "t": "Score the RSP as disclosure plus outside review, not a covenant. Track Risk Reports, Trust-requested external reviews and the METR investigation, not ASL labels. Per v3.1 a pause is Anthropic's choice, not an RSP trigger (inference). About 80% of the $518B compute plan is non-cancelable or payable regardless of use (T2), so the pause option has a price.",
      "e": [
       "evt-20260224-rsp-v3-published",
       "evt-20260429-rsp-v32-ltbt-powers",
@@ -486,7 +815,7 @@
      ]
     },
     {
-     "t": "Keep federal and export exposure as event risk in the model. Realized loss is small against run-rate: PitchBook put the ban near $200M, about 1.4% of ARR (T3), while sworn filings claim far more at risk, unrealized. Reprice on a second suspension, a FASCSA escalation or issued FTC demands.",
+     "t": "Treat governance as event risk, neither a proven moat nor a booked liability. Realized federal loss is small against run-rate: PitchBook puts the ban near $200M, about 1.4% of ARR (T3), while sworn filings claim far more at risk, unrealized. Reprice on a second suspension, a FASCSA escalation or issued FTC demands.",
      "e": [
       "evt-20260309-cfo-declaration-public-sector",
       "evt-20260925-dc-circuit-denies-anthropic-petitions",
@@ -506,22 +835,22 @@
     }
    ],
    "second_order": [
-    "A single Class F share at 50.1% makes Class A votes irrelevant to any outcome the founders oppose, and Amazon and Google hold no or minimal votes. The live contest is founders versus Trust, not founders versus investors. Index committees and proxy advisers must rule on a powerless float. If Nasdaq-100 fast entry applies after 15 trading days (Business Insider, T3), passive funds would be buying within weeks.",
-    "The Trust gained RSP review powers on Apr 29, two weeks after its board majority, then lost the majority (reportedly May 22) and a trustee (Aug 4). Mandate rose as the bench thinned. The Trust must refill seats before a roadshow or the S-1 will describe three trustees and six sitting directors. This falsifies a reading of the four-year plan as a steady ramp in outside control.",
-    "Take-or-pay commitments make a pause expensive. About 80% of the $518B compute plan is non-cancelable or payable regardless of use (T2). Yet the draft reportedly says slowing the technology 'would likely be a good thing' (T3), and Anthropic backs a pause option (Jun 4) and slowing (Sep 12). A board that pauses still pays. Consensus reads the stance as free positioning. Class A holders would bear the cost without a deciding vote (inference).",
+    "A single Class F share at 50.1% makes Class A votes irrelevant to any outcome the founders oppose (inference), and Amazon and Google hold no or minimal votes. The live contest is founders versus Trust, not founders versus investors. Index committees and proxy advisers must rule on a powerless float. If the Nasdaq-100 fast-entry rule applies, 15 trading days after listing (Motley Fool, T4), passive funds would be buying within weeks.",
+    "The Trust gained RSP review powers on Apr 29, two weeks after its board majority, then lost the majority (reportedly May 22) and a trustee (Aug 4). Mandate rose as the bench thinned. If the Trust does not refill seats before a roadshow, the S-1 will describe three trustees and six sitting directors. This falsifies a reading of the four-year plan as a steady ramp in outside control.",
+    "Take-or-pay commitments make a pause expensive. About 80% of the $518B compute plan is non-cancelable or payable regardless of use (T2). Yet the draft reportedly says slowing the technology 'would likely be a good thing' (T3), and Anthropic backs a pause option (Jun 4) and slowing (Sep 12). Critics call that positioning or capture (Sacks, T3). The commitments show a cost, and Class A holders would bear it without a deciding vote (inference).",
     "Anthropic's June framework asked for legal authority to block dangerous deployments (dated Jun 1 in one record event, Jun 10 in another). A US export-control directive then cut two models on Jun 12, and Anthropic's reply asked for a statutory, transparent process (T1). On Anthropic's own account the dispute is process, not power. The White House hold on Mythos 5.1 (Sep 24) and the FTC probe (Sep 30) extend executive discretion that no Anthropic governance body can veto.",
-    "Liquidity design is supply management. Early insider sales, a lock-up beyond 180 days with a second window and preset 10b5-1 plans (T4 relays) would thin first-trade supply, next to a reported $10B Nvidia anchor, about 0.5% at $2T (T3). Underwriters must set the book. Amazon's nonvoting block, capped at an undisclosed level, sets the overhang. This bears on the absorption thesis."
+    "Liquidity design looks like supply management (inference). Insider sales in the offering would meet demand at launch, while a lock-up beyond 180 days with a second window and preset 10b5-1 plans (T4 relays) would hold the rest back. A reported Nvidia anchor of up to $10B is about 0.5% at $2T (T3). Amazon's nonvoting block, capped at an undisclosed level, sets the overhang. This bears on the absorption thesis."
    ],
    "watch": [
     {
      "item": "Public S-1 on EDGAR with Class F and Class T charter text, board section, lock-up and selling holders",
      "by": "2026-10-31",
-     "threshold": "Reference class is this IPO's own filing history: three expected public-filing dates passed (end-Aug per Bloomberg, after Labor Day per The Information, late Sep per Reuters), none met by Sep 30. A filing by Oct 31 moves structure facts from T2 or T3 to T1. A later one supports the November-or-later reports (WSJ Sep 18; Reuters and Fortune Sep 29)."
+     "threshold": "Reference class is this IPO's own filing history. Three expected public-filing dates passed: end-Aug per Bloomberg, after Labor Day per The Information and late Sep per Reuters. None was met by Sep 30. A filing by Oct 31 moves structure facts from T2 or T3 to T1. Listing timing is DISPUTED: October (Quartz Aug 13, Business Insider Sep 13) versus November or later (WSJ Sep 18; Reuters and Fortune Sep 29). A later filing favors the second."
     },
     {
-     "item": "Shareholder vote on the Class F special share and Founder LLC (Anthropic is asking shareholders, The Information via TechCrunch, Sep 25; no vote date reported)",
+     "item": "Shareholder vote on the Class F special share and Founder LLC, which Anthropic is asking holders to approve (The Information via TechCrunch, Sep 25), with no date reported",
      "by": "2026-Q4",
-     "threshold": "Approval on the reported terms (50.1%, three-founder test) confirms the structure. A change to 50.1%, the minimum stake or the sunset, or a named holder dissenting, signals bargaining. The approval threshold and which holders vote are not in the record."
+     "threshold": "No base rate for pre-IPO special-share votes is in the record. Approval on the reported terms (50.1%, three-founder test) confirms the structure. A change to 50.1%, the minimum stake or the sunset, or a named holder dissenting, signals bargaining. The approval threshold and which holders vote are not in the record."
     },
     {
      "item": "LTBT appointments: a successor for Cuéllar's trustee seat and the fourth Trust-elected director seat",
@@ -546,29 +875,29 @@
     {
      "item": "Government levers: FASCSA en banc or cert petition, a DoD removal-complete statement, Commerce reimposition, issued FTC demands",
      "by": "2026-Q4",
-     "threshold": "A petition keeps the exclusion contested through the listing. DoD says about 90% of workloads moved (T2, completion Sep 30 to end-October). A second Commerce suspension would make 18 days a repeat, not a one-off. No en banc or cert base rate is in the record."
+     "threshold": "A petition keeps the exclusion contested through the listing. DoD says about 90% of workloads moved (T2 MEDIUM, single source; completion Sep 30 or end-October by outlet). A second Commerce suspension would make 18 days a repeat, not a one-off. No en banc or cert base rate is in the record."
     },
     {
      "item": "METR independent investigation of the four incidents (eight-week agreement, extendable)",
      "by": "2026-11-04",
-     "threshold": "Eight weeks from Sep 9 ends Nov 4 (desk arithmetic; signing date not stated). A published finding with employee-level access supports the embedded-evaluator claim. An extension or silence before the roadshow leaves four incidents open as a risk factor."
+     "threshold": "No reference class for outside-investigator timelines is in the record. Eight weeks from Sep 9 ends Nov 4 (desk arithmetic; signing date not stated). A published finding with employee-level access supports the embedded-evaluator claim. An extension or silence before the roadshow leaves four incidents open as a risk factor."
     }
    ],
-   "house_view": "(a) Extends loosely: the reported $2T target is about 2.1x the $965B Series H and Reuters' analysis implies 18 to 20x sales, with no governance discount reported although Class A gets no control (targets, not a priced deal). (b) Touches: prospectus coverage records OpenAI's challenge to gross recognition and Anthropic's 'principal' position (Reuters, T3), so the dispute will sit in the S-1 text. (c) Extends: insider sales in the offering, lock-ups beyond 180 days and a reported $10B Nvidia anchor show supply is being managed (T3 and T4, unconfirmed). (d) Touches: $8.0B of Amazon notes convert to nonvoting common at IPO, so the rule must say how a converted note counts. (e) Confirms: governance conventions do not transfer, since the record names only Meta, Snap, Palantir and Veeva and none pairs a Trust with a PBC charter.",
+   "house_view": "(a) Extends loosely: the reported $2T target is about 2.1x the $965B Series H and Reuters' analysis implies 18 to 20x sales on an unstated basis, with no governance discount reported although Class A gets no control (targets, not a priced deal). (b) Touches: prospectus coverage records OpenAI's challenge to gross recognition and Anthropic's 'principal' position (Reuters, T3), so the dispute will sit in the S-1 text. (c) Extends: insider sales in the offering, lock-ups beyond 180 days and a reported $10B Nvidia anchor show supply is being managed (T3 and T4, unconfirmed). (d) Touches: Amazon's outstanding notes, carried at $97.9B, convert to nonvoting common at IPO, so the rule must say how a converted note counts. (e) Confirms: governance conventions do not transfer, since the record names Meta, Snap and Palantir as control precedents and Veeva as the prior largest PBC, and names none that pairs a Trust with a PBC charter.",
    "uncertainties": [
     {
      "type": "data",
-     "note": "No public S-1 exists. Every structure fact is leak-based: Reuters' review (T2), Next Web and Jerusalem Post copies (T3), The Information scoops (T3). Not in the record: Class F and Class T charter text, minimum-stake amount, vote date, Class T amendment thresholds, Amazon's ownership cap, lock-up length, independence determinations, controlled-company status. Single-source: about 2% per founder and employee tie-break stock.",
+     "note": "No public S-1 exists. Every structure fact is leak-based: Reuters' review (T2), Next Web and Jerusalem Post copies (T3), The Information scoops (T3). Not in the record: Class F and Class T charter text, minimum-stake amount, vote date, Class T amendment thresholds, Amazon's ownership cap and stake percentage (TheStreet says 15% to 20%, undisclosed by Amazon), lock-up length, independence determinations, controlled-company status. Single-source: about 2% per founder and employee tie-break stock.",
      "what_would_change_it": "A public S-1 on EDGAR."
     },
     {
      "type": "data",
-     "note": "Board math is unresolved. Anthropic's Apr 14 post (T1) says Trust-appointed directors are a majority of seven. The May 22 Kreps exit rests on T5 community sources. Liddell's appointer is unstated. The prospectus says the Trust elects 4 of 7 while six directors are named. The seventh Founder LLC member is unnamed, and Anthropic calls Ben Mann a co-founder though the seven in The Information's account exclude him.",
+     "note": "Board math is unresolved. Anthropic's Apr 14 post (T1) says Trust-appointed directors are a board majority, which the named list makes seven. The May 22 Kreps exit rests on T5 community sources. Liddell's appointer is unstated. The prospectus says the Trust elects 4 of 7 while six directors are named. The seventh Founder LLC member is unnamed, and Anthropic calls Ben Mann a co-founder though the seven Fortune listed on Jan 27 exclude him.",
      "what_would_change_it": "An Anthropic board notice, the S-1 board section, or Kreps confirming the exit."
     },
     {
      "type": "interpretation",
-     "note": "Moat versus liability is a judgment. There is no revenue counterfactual, run-rate is gross, the federal share is small (PitchBook about 1.4% of ARR, T3) and sworn claims of larger losses are unrealized. The courts split on cause. No win-loss data links safety posture to enterprise purchases, and the revenue effect of the 18-day suspension is undisclosed.",
+     "note": "Moat versus liability is a judgment. Liability side: $150M of DoD ARR lost (T2), a 2-1 appellate loss, an 18-day suspension with undisclosed revenue effect, and a November IPO slip that one record note ties to the pacing stance while The Decoder cites Q3 results (both T3). Moat side, asserted not measured: banks co-designed Enterprise Frontier Safeguards (Sep 1, T1) and cloud partners kept Claude available outside DoW work (Mar 6, T2). No counterfactual or win-loss data exists, run-rate is gross, and the courts split on cause.",
      "what_would_change_it": "S-1 customer and segment notes, federal revenue disclosure, or churn data."
     },
     {
@@ -578,7 +907,7 @@
     },
     {
      "type": "forecast",
-     "note": "Durability of founder control has no reference class in the record: only Meta, Snap and Palantir are named, without outcomes. Sunset is by attrition, at two or fewer founders, and none by date is reported. All seven pledged 80% of their equity to charity while three must keep a minimum stake; the interplay is not reported. Recalled, unverified: some US dual-class issuers adopt time-based sunsets.",
+     "note": "Founder-control durability. Reference class: US IPOs with founder super-voting shares. Base rate: not in the record, which names only Meta, Snap and Palantir, without outcomes. Different here: one fixed 50.1% share, about 2% economics per founder (T3), a no-equity Trust electing 4 of 7, a PBC charter and sunset by attrition only. All seven pledged 80% of equity to charity; its effect on the stake test is unreported. Recalled, unverified: some dual-class issuers add time-based sunsets.",
      "what_would_change_it": "Charter text, sunset and stake-test terms, pledge mechanics."
     }
    ],
@@ -629,6 +958,7 @@
     "evt-20260909-alignment-assessment-fourth-incident",
     "evt-20260831-alignment-security-overhaul",
     "evt-20260912-pace-the-frontier",
+    "evt-20260912-amodei-pace-the-frontier-call",
     "evt-20260918-accenture-embedded-evaluation",
     "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
     "evt-20251219-sb53-compliance-framework",
@@ -657,10 +987,12 @@
     "evt-20260601-confidential-draft-s1",
     "evt-20260209-sharma-resigns",
     "evt-20260908-coxon-resigns",
-    "evt-20250305-biden-commitments-removed"
+    "evt-20250305-biden-commitments-removed",
+    "evt-20210528-ltb-committee",
+    "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture"
    ],
    "analyst": "analyst-topic-governance",
-   "finished": "2026-09-30T19:18:32Z"
+   "finished": "2026-09-30T19:25:51Z"
   },
   {
    "slug": "legal",
@@ -2032,7 +2364,7 @@
    "dropped_ids": 0
   },
   "governance": {
-   "evidence": 75,
+   "evidence": 78,
    "dropped_ids": 0
   },
   "government": {
@@ -2049,6 +2381,10 @@
   },
   "product": {
    "evidence": 47,
+   "dropped_ids": 0
+  },
+  "revenue": {
+   "evidence": 50,
    "dropped_ids": 0
   }
  }

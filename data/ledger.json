@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T19:18:33Z",
+ "generated": "2026-09-30T19:26:45Z",
  "raw_events": 1094,
  "merged_events": 691,
  "tiers": {
@@ -2906,6 +2906,72 @@
  ],
  "claims": [],
  "corrections": [
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20251118-microsoft-nvidia-anthropic-partnership",
+   "headline": "Microsoft, NVIDIA to invest up to $15B; Anthropic commits $30B to Azure",
+   "reason": "Reference valuation moved out of the post-money field (event is not a financing).",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20260601-confidential-draft-s1",
+   "headline": "Anthropic confidentially submits draft Form S-1 to the SEC",
+   "reason": "Reference valuation moved out of the post-money field (event is not a financing).",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20260814-q2-2026-rev-11-5b-first-report",
+   "headline": "Anthropic Q2 2026 revenue reported above $11.5B, 14x year earlier (Bloomberg/CNBC)",
+   "reason": "Reference valuation moved out of the post-money field (event is not a financing).",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
+   "headline": "The Information via Fool: $130B+ raise, longer lockups, 10b5-1 plans",
+   "reason": "Reference valuation moved out of the post-money field (event is not a financing).",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20260907-ipo-timing-mid-october",
+   "headline": "Forbes: prospectus slips to late September; roadshow not before mid-October",
+   "reason": "Reference valuation moved out of the post-money field (event is not a financing).",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
+  {
+   "id": "R-VAL",
+   "audit_id": null,
+   "event_id": "evt-20260913-nasdaq-october-listing",
+   "headline": "Reported: Anthropic picks Nasdaq, targets October listing",
+   "reason": "Reference valuation moved out of the post-money field (event is not a financing).",
+   "changed": [
+    "extracted.valuation_post_usd_m",
+    "extracted.other.valuation_reference_usd_m"
+   ]
+  },
   {
    "id": "K-01",
    "audit_id": "A-006",

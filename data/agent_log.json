@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T19:18:33Z",
+ "generated": "2026-09-30T19:26:45Z",
  "agents": {
   "analyst-topic-ecosystem": {
    "id": "analyst-topic-ecosystem",
@@ -10,6 +10,20 @@
    "stats": {
     "events_read": 365,
     "flags": 22
+   },
+   "events": 0,
+   "conflicts": 0,
+   "open_items": 0
+  },
+  "analyst-topic-governance": {
+   "id": "analyst-topic-governance",
+   "name": "Analyst · Governance",
+   "wave": "analysis",
+   "started": "2026-09-30T18:59:49Z",
+   "finished": "2026-09-30T19:25:51Z",
+   "stats": {
+    "events_read": 186,
+    "flags": 13
    },
    "events": 0,
    "conflicts": 0,
@@ -66,6 +80,20 @@
    "stats": {
     "events_read": 328,
     "flags": 18
+   },
+   "events": 0,
+   "conflicts": 0,
+   "open_items": 0
+  },
+  "analyst-topic-revenue": {
+   "id": "analyst-topic-revenue",
+   "name": "Analyst · Revenue",
+   "wave": "analysis",
+   "started": "2026-09-30T18:57:41Z",
+   "finished": "2026-09-30T19:25:58Z",
+   "stats": {
+    "events_read": 197,
+    "flags": 16
    },
    "events": 0,
    "conflicts": 0,
@@ -448,18 +476,6 @@
    "conflicts": 0,
    "open_items": 0
   },
-  "analyst-topic-revenue": {
-   "id": "analyst-topic-revenue",
-   "name": "Analyst · Revenue",
-   "wave": "analysis",
-   "planned": true,
-   "started": null,
-   "finished": null,
-   "stats": {},
-   "events": 0,
-   "conflicts": 0,
-   "open_items": 0
-  },
   "analyst-topic-compute": {
    "id": "analyst-topic-compute",
    "name": "Analyst · Compute",
@@ -475,18 +491,6 @@
   "analyst-topic-moat": {
    "id": "analyst-topic-moat",
    "name": "Analyst · Moat",
-   "wave": "analysis",
-   "planned": true,
-   "started": null,
-   "finished": null,
-   "stats": {},
-   "events": 0,
-   "conflicts": 0,
-   "open_items": 0
-  },
-  "analyst-topic-governance": {
-   "id": "analyst-topic-governance",
-   "name": "Analyst · Governance",
    "wave": "analysis",
    "planned": true,
    "started": null,
@@ -46679,6 +46683,14 @@
    "i": 4454
   },
   {
+   "t": "2026-09-30T18:57:38Z",
+   "agent": "orchestrator",
+   "type": "dispatch",
+   "to": "analyst-topic-revenue",
+   "text": "Dispatch Analyst · Revenue: brief issued, scope fenced, output contract attached.",
+   "i": 4455
+  },
+  {
    "t": "2026-09-30T18:57:41Z",
    "agent": "desk-compute",
    "type": "open",
@@ -46686,7 +46698,7 @@
    "url": "https://convergedigest.com/anthropic-zerra-dc-australia-2-16gw-data-center/",
    "to": null,
    "event_id": null,
-   "i": 4455
+   "i": 4456
   },
   {
    "t": "2026-09-30T18:57:47Z",
@@ -46696,7 +46708,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
    "to": null,
    "event_id": null,
-   "i": 4456
+   "i": 4457
   },
   {
    "t": "2026-09-30T18:57:51Z",
@@ -46706,7 +46718,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
-   "i": 4457
+   "i": 4458
   },
   {
    "t": "2026-09-30T18:57:56Z",
@@ -46716,7 +46728,17 @@
    "url": "https://zerradc.com/",
    "to": null,
    "event_id": null,
-   "i": 4458
+   "i": 4459
+  },
+  {
+   "t": "2026-09-30T18:58:02Z",
+   "agent": "analyst-topic-revenue",
+   "type": "note",
+   "text": "Read analyst_common.md in full. Slice: revenue and financials categories, plus tables run_rate_desk, period_revenue, margins, customers, mix, projections, comparables, prospectus_facts, market_share, pricing. Slug revenue.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4460
   },
   {
    "t": "2026-09-30T18:58:02Z",
@@ -46726,7 +46748,7 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4459
+   "i": 4461
   },
   {
    "t": "2026-09-30T18:58:04Z",
@@ -46736,7 +46758,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260731-amazon-10q-q2-2026",
-   "i": 4460
+   "i": 4462
   },
   {
    "t": "2026-09-30T18:58:11Z",
@@ -46746,7 +46768,7 @@
    "url": "https://brisbanedevelopment.com.au/anthropic-zerra-dc-western-downs-digital-park-32-billion-data-centre-dalby/",
    "to": null,
    "event_id": null,
-   "i": 4461
+   "i": 4463
   },
   {
    "t": "2026-09-30T18:58:18Z",
@@ -46756,7 +46778,7 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/alphabet-reportedly-values-anthropic-stake-212401877.html",
    "to": null,
    "event_id": null,
-   "i": 4462
+   "i": 4464
   },
   {
    "t": "2026-09-30T18:58:18Z",
@@ -46766,7 +46788,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
-   "i": 4463
+   "i": 4465
+  },
+  {
+   "t": "2026-09-30T18:58:23Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "q.py --cat revenue, 2021-01-01 to 2026-09-30: 53 events read at headline level.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4466
   },
   {
    "t": "2026-09-30T18:58:26Z",
@@ -46776,7 +46808,7 @@
    "url": "https://techcrunch.com/2026/09/17/google-nvidia-and-anthropic-want-emerald-ai-to-find-space-on-the-grid-for-more-data-centers/",
    "to": null,
    "event_id": null,
-   "i": 4464
+   "i": 4467
   },
   {
    "t": "2026-09-30T18:58:32Z",
@@ -46786,7 +46818,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260928-prospectus-risk-factors-80-of-261-pages",
-   "i": 4465
+   "i": 4468
   },
   {
    "t": "2026-09-30T18:58:34Z",
@@ -46796,7 +46828,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260723-alphabet-10q-non-marketable-124b",
-   "i": 4466
+   "i": 4469
   },
   {
    "t": "2026-09-30T18:58:41Z",
@@ -46806,7 +46838,17 @@
    "url": "https://huggingnews.com/ai/anthropic-negotiates-1gw-direct-lease-for-40b-data-center-project-fa781f56",
    "to": null,
    "event_id": null,
-   "i": 4467
+   "i": 4470
+  },
+  {
+   "t": "2026-09-30T18:58:45Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "q.py --cat financials, same window: 54 events read, overlapping revenue; 79 unique across both.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4471
   },
   {
    "t": "2026-09-30T18:58:46Z",
@@ -46816,7 +46858,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
-   "i": 4468
+   "i": 4472
   },
   {
    "t": "2026-09-30T18:58:49Z",
@@ -46826,7 +46868,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260723-alphabet-10q-non-marketable-124b",
-   "i": 4469,
+   "i": 4473,
    "new": true
   },
   {
@@ -46837,7 +46879,7 @@
    "url": "https://fourweekmba.com/ai-anthropic-google-apollo-gigawatt-lease-infrastructure-depend/",
    "to": null,
    "event_id": null,
-   "i": 4470
+   "i": 4474
   },
   {
    "t": "2026-09-30T18:59:00Z",
@@ -46845,7 +46887,7 @@
    "type": "done",
    "to": "orchestrator",
    "text": "Done: 33 events, 28 searches, 88 pages, 15 flags, 13 conflicts.",
-   "i": 4471
+   "i": 4475
   },
   {
    "t": "2026-09-30T18:59:05Z",
@@ -46855,7 +46897,17 @@
    "url": "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
    "to": null,
    "event_id": null,
-   "i": 4472
+   "i": 4476
+  },
+  {
+   "t": "2026-09-30T18:59:06Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "q.py --cat pricing for the price-deflation angle: 58 events read, plus pricing table (29 models).",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4477
   },
   {
    "t": "2026-09-30T18:59:11Z",
@@ -46865,7 +46917,7 @@
    "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
    "to": null,
    "event_id": null,
-   "i": 4473
+   "i": 4478
   },
   {
    "t": "2026-09-30T18:59:20Z",
@@ -46875,7 +46927,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
    "to": null,
    "event_id": null,
-   "i": 4474
+   "i": 4479
   },
   {
    "t": "2026-09-30T18:59:26Z",
@@ -46885,7 +46937,17 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html",
    "to": null,
    "event_id": null,
-   "i": 4475
+   "i": 4480
+  },
+  {
+   "t": "2026-09-30T18:59:28Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "Scanned every event outside revenue and financials for revenue, margin and customer fields: 67 events read.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4481
   },
   {
    "t": "2026-09-30T18:59:36Z",
@@ -46895,7 +46957,7 @@
    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=10-&dateb=&owner=include&count=8&output=atom",
    "to": null,
    "event_id": null,
-   "i": 4476
+   "i": 4482
   },
   {
    "t": "2026-09-30T18:59:41Z",
@@ -46905,7 +46967,25 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html",
    "to": null,
    "event_id": null,
-   "i": 4477
+   "i": 4483
+  },
+  {
+   "t": "2026-09-30T18:59:46Z",
+   "agent": "orchestrator",
+   "type": "dispatch",
+   "to": "analyst-topic-governance",
+   "text": "Dispatch Analyst · Governance: brief issued, scope fenced, output contract attached.",
+   "i": 4484
+  },
+  {
+   "t": "2026-09-30T18:59:49Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "q.py --table run_rate_desk (18 rows), period_revenue (18), margins (30), customers (17), mix (9): all read in full.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4485
   },
   {
    "t": "2026-09-30T18:59:52Z",
@@ -46915,7 +46995,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
    "to": null,
    "event_id": null,
-   "i": 4478
+   "i": 4486
   },
   {
    "t": "2026-09-30T18:59:56Z",
@@ -46925,7 +47005,7 @@
    "url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
    "to": null,
    "event_id": "evt-20251104-information-gross-margin-path-to-77pct",
-   "i": 4479,
+   "i": 4487,
    "new": false,
    "confirms": "scout-2025h2"
   },
@@ -46937,7 +47017,27 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
    "to": null,
    "event_id": null,
-   "i": 4480
+   "i": 4488
+  },
+  {
+   "t": "2026-09-30T19:00:11Z",
+   "agent": "analyst-topic-governance",
+   "type": "search",
+   "text": "q.py --cat governance: 56 events, Jan 2021 to Sep 29 2026. Founding, PBC charter, LTBT, board moves, RSP, Class F and S-1 control.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4489
+  },
+  {
+   "t": "2026-09-30T19:00:11Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "q.py --table projections (22), comparables (10), market_share (24), prospectus_facts (76 rows after the 19:00Z re-merge): all read in full.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4490
   },
   {
    "t": "2026-09-30T19:00:11Z",
@@ -46947,7 +47047,7 @@
    "url": "https://techcrunch.com/2026/01/20/anthropics-ceo-stuns-davos-with-nvidia-criticism/",
    "to": null,
    "event_id": "evt-20260120-davos-chip-export-remarks",
-   "i": 4481,
+   "i": 4491,
    "new": false,
    "confirms": "scout-2026q1"
   },
@@ -46959,7 +47059,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260729-microsoft-3-2b-gain",
-   "i": 4482,
+   "i": 4492,
    "new": false,
    "confirms": "desk-ecosystem"
   },
@@ -46971,8 +47071,28 @@
    "url": "https://www.dwarkesh.com/p/dario-amodei-2",
    "to": null,
    "event_id": "evt-20260213-amodei-dwarkesh-compute-economics",
-   "i": 4483,
+   "i": 4493,
    "new": true
+  },
+  {
+   "t": "2026-09-30T19:00:32Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "q.py --table compute_costs (16 rows) and compute_totals, empty when I started and filled at 19:13Z: read for margin scope and partner payouts. run_rate and valuation tables also read after the re-merge.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4494
+  },
+  {
+   "t": "2026-09-30T19:00:34Z",
+   "agent": "analyst-topic-governance",
+   "type": "search",
+   "text": "q.py --cat ipo: 40 events. Banks, timing slips, lock-up reports, leaked prospectus items, EDGAR status.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4495
   },
   {
    "t": "2026-09-30T19:00:38Z",
@@ -46982,7 +47102,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000121/zm-20260731.htm",
    "to": null,
    "event_id": null,
-   "i": 4484
+   "i": 4496
   },
   {
    "t": "2026-09-30T19:00:41Z",
@@ -46992,9 +47112,19 @@
    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-on-track-for-first-operating-profit-as-revenue-surges/",
    "to": null,
    "event_id": "evt-20260520-wsj-projects-first-operating-profit-559m-on-10-9b-q2-revenue",
-   "i": 4485,
+   "i": 4497,
    "new": false,
    "confirms": "desk-s1"
+  },
+  {
+   "t": "2026-09-30T19:00:54Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "q.py --conflicts over 125 frozen conflicts and --open: pulled the revenue, margin, customer and run-rate items.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4498
   },
   {
    "t": "2026-09-30T19:00:54Z",
@@ -47004,7 +47134,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm",
    "to": null,
    "event_id": null,
-   "i": 4486
+   "i": 4499
   },
   {
    "t": "2026-09-30T19:00:56Z",
@@ -47014,9 +47144,19 @@
    "url": "https://www.anthropic.com/news/fable-mythos-access",
    "to": null,
    "event_id": "evt-20260612-bis-directive-fable-mythos-compute-angle",
-   "i": 4487,
+   "i": 4500,
    "new": false,
    "confirms": "desk-legal"
+  },
+  {
+   "t": "2026-09-30T19:00:57Z",
+   "agent": "analyst-topic-governance",
+   "type": "search",
+   "text": "q.py --cat safety: 91 events. Alignment papers, RSP versions, ASL-3, Mythos, sandbox incidents, pacing essay, resignations.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4501
   },
   {
    "t": "2026-09-30T19:01:10Z",
@@ -47026,7 +47166,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260731-zoom-salesforce-10q-marks",
-   "i": 4488,
+   "i": 4502,
    "new": false,
    "confirms": "desk-ecosystem"
   },
@@ -47038,9 +47178,29 @@
    "url": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/",
    "to": null,
    "event_id": "evt-20260702-samsung-custom-chip-talks",
-   "i": 4489,
+   "i": 4503,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:01:15Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "q.py --q 39.75, haircut, equaliz, 34.1: no event or table carries the 39.75% figure. It appears only in the desk briefs, topic analyses and the agent log.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4504
+  },
+  {
+   "t": "2026-09-30T19:01:20Z",
+   "agent": "analyst-topic-governance",
+   "type": "search",
+   "text": "Tables read: board 8 rows, ltbt 8 trustee rows, rsp 9 versions, offering_structure, risk_factor_themes 23, prospectus_facts 76, people_moves 46.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4505
   },
   {
    "t": "2026-09-30T19:01:25Z",
@@ -47050,7 +47210,7 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html",
    "to": null,
    "event_id": null,
-   "i": 4490
+   "i": 4506
   },
   {
    "t": "2026-09-30T19:01:26Z",
@@ -47060,9 +47220,19 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_ex99-1.htm",
    "to": null,
    "event_id": "evt-20260706-terawulf-kentucky-19b-lease",
-   "i": 4491,
+   "i": 4507,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:01:37Z",
+   "agent": "analyst-topic-revenue",
+   "type": "search",
+   "text": "q.py --q cursor, anysphere, claude code, ramp, sales multiple, gross-of, principal, net revenue, revenue share: read every hit for channel, concentration and basis evidence.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4508
   },
   {
    "t": "2026-09-30T19:01:41Z",
@@ -47072,7 +47242,7 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/meta-talks-rent-billions-ai-210752025.html",
    "to": null,
    "event_id": "evt-20260717-meta-compute-rental-talks",
-   "i": 4492,
+   "i": 4509,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47084,9 +47254,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260813-ipo-october-2t-quartz",
-   "i": 4493,
+   "i": 4510,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:01:43Z",
+   "agent": "analyst-topic-governance",
+   "type": "search",
+   "text": "offices table (12 rows) read; only the Washington DC policy office (Anthropic Institute, Mar 11 2026) bears on governance, no other office row used.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4511
   },
   {
    "t": "2026-09-30T19:01:56Z",
@@ -47096,7 +47276,7 @@
    "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
    "to": null,
    "event_id": "evt-20260722-amd-equity-up-to-5b",
-   "i": 4494,
+   "i": 4512,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47108,7 +47288,27 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-moves-bolster-founder-control-214023999.html",
    "to": null,
    "event_id": null,
-   "i": 4495
+   "i": 4513
+  },
+  {
+   "t": "2026-09-30T19:01:58Z",
+   "agent": "analyst-topic-revenue",
+   "type": "note",
+   "text": "Record re-merged at 19:00:09Z and again at 19:13:17Z while I worked (669 events at start, 691 now). In my slice: three new financials events, several ids renamed, compute tables filled, no revenue figure changed. I re-resolved every id through id_map and cite canonical ids only.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4514
+  },
+  {
+   "t": "2026-09-30T19:02:06Z",
+   "agent": "analyst-topic-governance",
+   "type": "search",
+   "text": "Keyword sweeps over headline, summary and notes: Class T, Class F, Class A, nonvoting, lockup, tender, buyback, PBC, Long-Term Benefit, LTBT, supermajority, ownership cap, Veeva, Palantir-style, pledge, Risk Report.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4515
   },
   {
    "t": "2026-09-30T19:02:11Z",
@@ -47118,7 +47318,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
    "to": null,
    "event_id": "evt-20260731-amazon-10q-q2-2026",
-   "i": 4496,
+   "i": 4516,
    "new": false,
    "confirms": "desk-ecosystem"
   },
@@ -47130,7 +47330,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260818-founder-supervoting-report",
-   "i": 4497,
+   "i": 4517,
+   "new": false,
+   "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:02:20Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Dated path, run-rate in $B with tier: Dec 2024 1 (T1), Mar 2025 over 2 (T3), May 2025 3 (T2), Jul 2025 over 4 (T2), Aug 2025 over 5 (T1), Oct 2025 near 7 (T4), Dec 2025 9 (T1), Feb 12 14 (T1), Mar 3 19 (T3), Apr 6 over 30 (T1), Apr 29 near 40 (T3, one source), May over 47 (T1), end-Jul over 65 (T2).",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "to": null,
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "i": 4518,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47142,7 +47354,7 @@
    "url": "https://techcrunch.com/2026/08/04/anthropic-signs-10-billion-deal-with-ai-cloud-startup-volta/",
    "to": null,
    "event_id": "evt-20260804-volta-10b-norway-compute-deal",
-   "i": 4498,
+   "i": 4519,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47154,7 +47366,29 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/anthropics-pre-ipo-credit-facility-175100094.html",
    "to": null,
    "event_id": null,
-   "i": 4499
+   "i": 4520
+  },
+  {
+   "t": "2026-09-30T19:02:29Z",
+   "agent": "analyst-topic-governance",
+   "type": "search",
+   "text": "Government sweep for Pentagon and export-control events: supply-chain, Department of War, export, BIS, Lutnick. Used only as evidence for the moat-versus-liability question.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4521
+  },
+  {
+   "t": "2026-09-30T19:02:41Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Run-rate path Dec 2024 to Jul 2026: T1 company anchors $1B, $5B, $9B, $14B, $30B, $47B. Outlet points $19B (Bloomberg), $40B (one source) and $65B (Bloomberg, FT, Axios). Only the $65B end-July point is newer than May and it is outlet-reported.",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "to": null,
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "i": 4522,
+   "new": false,
+   "confirms": "scout-2026q3"
   },
   {
    "t": "2026-09-30T19:02:41Z",
@@ -47164,7 +47398,7 @@
    "url": "https://the-decoder.com/google-moves-billions-in-anthropic-chip-risk-off-its-balance-sheet/",
    "to": null,
    "event_id": "evt-20260804-ft-google-200bn-anthropic-financing-machine",
-   "i": 4500,
+   "i": 4523,
    "new": true
   },
   {
@@ -47175,9 +47409,19 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260818-revolver-10b-plus-target",
-   "i": 4501,
+   "i": 4524,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:02:52Z",
+   "agent": "analyst-topic-governance",
+   "type": "search",
+   "text": "Open items and frozen conflicts read for board, trust, lock, Kreps, Liddell, S-1, LTBT, RSP, IPO, Pentagon, directive agency. Several open items bear on this slice.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4525
   },
   {
    "t": "2026-09-30T19:02:56Z",
@@ -47187,7 +47431,7 @@
    "url": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/",
    "to": null,
    "event_id": "evt-20260805-custom-silicon-team-hiring",
-   "i": 4502,
+   "i": 4526,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47199,7 +47443,19 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-could-come-september-191409974.html",
    "to": null,
    "event_id": null,
-   "i": 4503
+   "i": 4527
+  },
+  {
+   "t": "2026-09-30T19:03:03Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Series G, Feb 12 (T1): $14B run-rate, 500+ customers above $1M, Claude Code above $2.5B.",
+   "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+   "to": null,
+   "event_id": "evt-20260212-series-g-30b-380b",
+   "i": 4528,
+   "new": false,
+   "confirms": "desk-product"
   },
   {
    "t": "2026-09-30T19:03:11Z",
@@ -47209,9 +47465,21 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/spacex-maps-path-toward-10-140021626.html",
    "to": null,
    "event_id": "evt-20260805-spacex-q2-earnings-anthropic-compute",
-   "i": 4504,
+   "i": 4529,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:03:15Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "LTBT lineage: a 'Long-Term Benefit Committee' in the 2021 Series A documents, then the Class T trust announced Sep 19 2023 with five trustees and a four-year plan to a board majority.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20210528-ltb-committee",
+   "i": 4530,
+   "new": false,
+   "confirms": "scout-2021-2022"
   },
   {
    "t": "2026-09-30T19:03:15Z",
@@ -47221,9 +47489,21 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260827-information-prospectus-after-labor-day-insider-sales",
-   "i": 4505,
+   "i": 4531,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:03:24Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Apr 6 Anthropic post (T1): run-rate above $30B, 1,000+ customers above $1M, end-2025 about $9B.",
+   "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+   "to": null,
+   "event_id": "evt-20260406-google-broadcom-tpu-30b-runrate-2",
+   "i": 4532,
+   "new": false,
+   "confirms": "desk-ecosystem"
   },
   {
    "t": "2026-09-30T19:03:26Z",
@@ -47233,7 +47513,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926093406/riot-20260810xex99d1.htm",
    "to": null,
    "event_id": "evt-20260810-riot-9-1b-rockdale-lease",
-   "i": 4506,
+   "i": 4533,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47245,7 +47525,19 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-nears-finalizing-15-billion-224354345.html",
    "to": null,
    "event_id": null,
-   "i": 4507
+   "i": 4534
+  },
+  {
+   "t": "2026-09-30T19:03:38Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Trustee churn: Matheny Dec 2023, Christiano Apr 2024, Bahl and Robinson Jan 2026 out; Fontaine 2025, Cuéllar Jan 2026, Bernanke Jul 2026 in; Cuéllar out Aug 4. Trust is at three.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260804-cuellar-chief-global-affairs-officer",
+   "i": 4535,
+   "new": false,
+   "confirms": "scout-2026q3"
   },
   {
    "t": "2026-09-30T19:03:41Z",
@@ -47255,8 +47547,20 @@
    "url": "https://www.alternativeswatch.com/2026/08/10/macquarie-gic-to-fund-data-center-platform-for-anthropic/",
    "to": null,
    "event_id": "evt-20260810-macquarie-gic-theseus-platform",
-   "i": 4508,
+   "i": 4536,
    "new": true
+  },
+  {
+   "t": "2026-09-30T19:03:46Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Series H, May 28 (T1): above $47B earlier in May. This is the last company-stated run-rate in the record.",
+   "url": "https://www.anthropic.com/news/series-h",
+   "to": null,
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "i": 4537,
+   "new": false,
+   "confirms": "desk-product"
   },
   {
    "t": "2026-09-30T19:03:46Z",
@@ -47266,7 +47570,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260903-credit-facility-15b-nears-final",
-   "i": 4509,
+   "i": 4538,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47278,9 +47582,21 @@
    "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
    "to": null,
    "event_id": "evt-20260826-nscale-45b-west-virginia-deal",
-   "i": 4510,
+   "i": 4539,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:04:01Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Board appointments by the Trust: Kreps May 2024, Hastings May 2025, Narasimhan Apr 14 2026 with a T1 statement that Trust-appointed directors are a board majority.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260414-narasimhan-board",
+   "i": 4540,
+   "new": false,
+   "confirms": "scout-2026q2"
   },
   {
    "t": "2026-09-30T19:04:01Z",
@@ -47290,7 +47606,19 @@
    "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-delays-ipo-mid-october-150657053.html",
    "to": null,
    "event_id": null,
-   "i": 4511
+   "i": 4541
+  },
+  {
+   "t": "2026-09-30T19:04:07Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Leaked draft prospectus via Reuters: FY2025 revenue $4.59B, operating loss $8.06B, net loss $42B with about $34B non-cash charge, compute and infrastructure $7.33B, cash $20.28B.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "to": null,
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "i": 4542,
+   "new": false,
+   "confirms": "scout-2026q3"
   },
   {
    "t": "2026-09-30T19:04:11Z",
@@ -47300,7 +47628,7 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-strikes-35-billion-cloud-155100165.html",
    "to": null,
    "event_id": "evt-20260831-lambda-35b-cloud-deal-texas",
-   "i": 4512,
+   "i": 4543,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47312,9 +47640,21 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260907-ipo-timing-mid-october",
-   "i": 4513,
+   "i": 4544,
    "new": false,
    "confirms": "desk-s1"
+  },
+  {
+   "t": "2026-09-30T19:04:24Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Kreps exit about May 22 2026 rests on community sources only (T5); Anthropic pages corroborate only by omission.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260522-kreps-leaves-board",
+   "i": 4545,
+   "new": false,
+   "confirms": "desk-governance"
   },
   {
    "t": "2026-09-30T19:04:26Z",
@@ -47324,9 +47664,21 @@
    "url": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
    "to": null,
    "event_id": "evt-20260907-information-up-to-517b-compute-contracts-in-11-months",
-   "i": 4514,
+   "i": 4546,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:04:29Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Fortune snapshot: Q1 2026 $4.73B and Q2 $11.5B recognized, so H1 is $16.2B.",
+   "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+   "to": null,
+   "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+   "i": 4547,
+   "new": false,
+   "confirms": "desk-revenue"
   },
   {
    "t": "2026-09-30T19:04:33Z",
@@ -47336,7 +47688,7 @@
    "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-picks-nasdaq-2-trillion-044345041.html",
    "to": null,
    "event_id": null,
-   "i": 4515
+   "i": 4548
   },
   {
    "t": "2026-09-30T19:04:41Z",
@@ -47346,9 +47698,21 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
    "to": null,
    "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct",
-   "i": 4516,
+   "i": 4549,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:04:47Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Class F structure: one share, 50.1% of votes on key matters, Founder LLC of seven by majority vote, Trust elects four of seven, phase-out at two or fewer founders.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+   "i": 4550,
+   "new": false,
+   "confirms": "desk-s1"
   },
   {
    "t": "2026-09-30T19:04:48Z",
@@ -47358,7 +47722,19 @@
    "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-could-join-nasdaq-100-031301175.html",
    "to": null,
    "event_id": null,
-   "i": 4517
+   "i": 4551
+  },
+  {
+   "t": "2026-09-30T19:04:50Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "May 20 WSJ projection of $10.9B and $559M was beaten on revenue by 5.5%. The $559M has no reported actual.",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-track-first-profitable-quarter-124217577.html",
+   "to": null,
+   "event_id": "evt-20260520-q2-projection-10-9b-559m-op-profit",
+   "i": 4552,
+   "new": false,
+   "confirms": "desk-revenue"
   },
   {
    "t": "2026-09-30T19:04:56Z",
@@ -47368,7 +47744,7 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/ready-rumble-anthropic-rings-ai-154000074.html",
    "to": null,
    "event_id": "evt-20260913-rum-group-13-7b-georgia-deal",
-   "i": 4518,
+   "i": 4553,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47380,9 +47756,21 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260913-nasdaq-october-listing",
-   "i": 4519,
+   "i": 4554,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:05:10Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Reuters prospectus story of Sep 28: four other share classes, minimal votes for strategic partners, Class F and A elect the Amodeis plus one unnamed director.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260928-founder-llc-class-f",
+   "i": 4555,
+   "new": false,
+   "confirms": "desk-governance"
   },
   {
    "t": "2026-09-30T19:05:11Z",
@@ -47392,8 +47780,20 @@
    "url": "https://www.abc.net.au/news/2026-09-16/queensland-data-centre-anthropic-dalby/107160640",
    "to": null,
    "event_id": "evt-20260916-zerra-queensland-first-australian-lease",
-   "i": 4520,
+   "i": 4556,
    "new": true
+  },
+  {
+   "t": "2026-09-30T19:05:12Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Channel mix 11%, 32%, 47% for 2023 to 2025. Platform fees $351M, 7.6% of revenue. Usage $3.8B and subscription $789M. Cloud providers collected 60% of $909M receivables.",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "to": null,
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "i": 4557,
+   "new": false,
+   "confirms": "analyst-topic-ecosystem"
   },
   {
    "t": "2026-09-30T19:05:20Z",
@@ -47403,7 +47803,7 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
    "to": null,
    "event_id": null,
-   "i": 4521
+   "i": 4558
   },
   {
    "t": "2026-09-30T19:05:26Z",
@@ -47413,8 +47813,32 @@
    "url": "https://techcrunch.com/2026/09/17/google-nvidia-and-anthropic-want-emerald-ai-to-find-space-on-the-grid-for-more-data-centers/",
    "to": null,
    "event_id": "evt-20260917-emerald-ai-grid-alliance-founding-member",
-   "i": 4522,
+   "i": 4559,
    "new": true
+  },
+  {
+   "t": "2026-09-30T19:05:33Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "The Information's Sep 24 scoop relayed Sep 25: 'asking shareholders to approve', about 2% each, employee tie-break stock, founder board seats two to three.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260925-founders-voting-control",
+   "i": 4560,
+   "new": false,
+   "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:05:33Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Two unnamed customers at 12% each, most large customers without long-term contracts.",
+   "url": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/",
+   "to": null,
+   "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+   "i": 4561,
+   "new": false,
+   "confirms": "desk-s1"
   },
   {
    "t": "2026-09-30T19:05:35Z",
@@ -47424,7 +47848,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
-   "i": 4523
+   "i": 4562
   },
   {
    "t": "2026-09-30T19:05:41Z",
@@ -47434,7 +47858,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
    "to": null,
    "event_id": "evt-20260918-nscale-files-nyse-ipo",
-   "i": 4524,
+   "i": 4563,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47446,9 +47870,33 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
-   "i": 4525,
+   "i": 4564,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:05:55Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "The Information, Feb 18 via PYMNTS (T3): partner revenue-share payouts $360M in 2025, $1.9B in 2026, $6.4B in 2027, about one-tenth of projected revenue.",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-set-to-pay-cloud-partners-80-billion-through-2029/",
+   "to": null,
+   "event_id": "evt-20260217-information-80b-cloud-spend-through-2029",
+   "i": 4565,
+   "new": false,
+   "confirms": "desk-compute"
+  },
+  {
+   "t": "2026-09-30T19:05:56Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Amazon 10-Q: nonvoting preferred $92.5B and notes $97.9B carried; notes convert to nonvoting common at IPO subject to an ownership cap; facility expires 30 months after a liquidity event.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260731-amazon-10q-q2-2026",
+   "i": 4566,
+   "new": false,
+   "confirms": "desk-ecosystem"
   },
   {
    "t": "2026-09-30T19:05:56Z",
@@ -47458,7 +47906,7 @@
    "url": "https://huggingnews.com/ai/anthropic-negotiates-1gw-direct-lease-for-40b-data-center-project-fa781f56",
    "to": null,
    "event_id": "evt-20260923-stream-data-centers-1gw-talks",
-   "i": 4526,
+   "i": 4567,
    "new": true
   },
   {
@@ -47469,7 +47917,7 @@
    "url": "https://news.google.com/rss/search?q=Anthropic+IPO+Nasdaq+when:7d&hl=en-US&gl=US&ceid=US:en",
    "to": null,
    "event_id": null,
-   "i": 4527
+   "i": 4568
   },
   {
    "t": "2026-09-30T19:06:11Z",
@@ -47479,9 +47927,31 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm",
    "to": null,
    "event_id": "evt-20260924-akamai-11-6b-cloud-deal",
-   "i": 4528,
+   "i": 4569,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:06:16Z",
+   "agent": "analyst-topic-revenue",
+   "type": "open",
+   "text": "Opened PYMNTS to confirm the payout text: $1.3M (2024), about $360M (2025), $1.9B (2026), $6.4B (2027), roughly one-tenth of projected revenue, paid to Amazon, Google and Microsoft. It also says roughly half of gross profit on sales via Amazon has gone to Amazon. Confirms the record.",
+   "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-set-to-pay-cloud-partners-80-billion-through-2029/",
+   "to": null,
+   "event_id": "evt-20260217-information-80b-cloud-spend-through-2029",
+   "i": 4570
+  },
+  {
+   "t": "2026-09-30T19:06:19Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Google: 14% with no voting rights, board seats or control per DOJ filings (Mar 2025, pre-dilution, second-hand via NYT).",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20250311-google-14pct-doj-filing",
+   "i": 4571,
+   "new": false,
+   "confirms": "scout-2025h1"
   },
   {
    "t": "2026-09-30T19:06:22Z",
@@ -47491,7 +47961,7 @@
    "url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/",
    "to": null,
    "event_id": null,
-   "i": 4529
+   "i": 4572
   },
   {
    "t": "2026-09-30T19:06:26Z",
@@ -47501,9 +47971,21 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/spcx-stock-adds-3-anthropics-181215266.html",
    "to": null,
    "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
-   "i": 4530,
+   "i": 4573,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:06:38Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "OpenAI memo alleges gross booking inflates ARR. The $8B and 27% figures appear only in T5 aggregators. PitchBook (T2) reported the memo without them.",
+   "url": "https://my.pitchbook.com/news-center/pb7236696778701751508",
+   "to": null,
+   "event_id": "evt-20260413-openai-memo-gross-vs-net-arr",
+   "i": 4574,
+   "new": false,
+   "confirms": "desk-revenue"
   },
   {
    "t": "2026-09-30T19:06:38Z",
@@ -47513,7 +47995,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260925-founders-voting-control",
-   "i": 4531,
+   "i": 4575,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47525,9 +48007,21 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
    "to": null,
    "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
-   "i": 4532,
+   "i": 4576,
    "new": false,
    "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:06:42Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "RSP path: v1.0 Sep 2023, v2.0 Oct 2024, v2.1 Mar 2025, v2.2 May 14 2025, ASL-3 May 22 2025, v3.0 Feb 24 2026, v3.1 to v3.4 by Jul 8 2026.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260224-rsp-v3-published",
+   "i": 4577,
+   "new": false,
+   "confirms": "desk-governance"
   },
   {
    "t": "2026-09-30T19:06:53Z",
@@ -47537,7 +48031,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260925-founders-voting-control",
-   "i": 4533,
+   "i": 4578,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47549,7 +48043,31 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4534
+   "i": 4579
+  },
+  {
+   "t": "2026-09-30T19:06:59Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "PitchBook, Sep 16 (T3): net presentation cuts revenue 6% to 10%. Gap between above 80% and 44% gross margin left for the S-1 to bridge.",
+   "url": "https://my.pitchbook.com/research-center/report/271b2ed6-4c03-34ba-93a8-65a7e30741ec",
+   "to": null,
+   "event_id": "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+   "i": 4580,
+   "new": false,
+   "confirms": "analyst-topic-ecosystem"
+  },
+  {
+   "t": "2026-09-30T19:07:05Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "RSP v3.2 gave the Trust external-review requests, reviewer approval and briefings; v3.4 cut unredacted Risk Report sharing to at least 200 employees.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260429-rsp-v32-ltbt-powers",
+   "i": 4581,
+   "new": false,
+   "confirms": "desk-governance"
   },
   {
    "t": "2026-09-30T19:07:09Z",
@@ -47559,7 +48077,7 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-weighing-10-billion-stake-195701843.html",
    "to": null,
    "event_id": null,
-   "i": 4535
+   "i": 4582
   },
   {
    "t": "2026-09-30T19:07:11Z",
@@ -47569,7 +48087,19 @@
    "url": "https://the-decoder.com/anthropic-commits-200-billion-to-google-cloud-over-five-years/",
    "to": null,
    "event_id": null,
-   "i": 4536
+   "i": 4583
+  },
+  {
+   "t": "2026-09-30T19:07:20Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "FT, Sep 13 (T3): above 80% gross margin before partner share and training. Second straight adjusted operating profit expected.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-claude-maker-reportedly-070605263.html",
+   "to": null,
+   "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+   "i": 4584,
+   "new": false,
+   "confirms": "scout-2026q3"
   },
   {
    "t": "2026-09-30T19:07:25Z",
@@ -47579,7 +48109,7 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260926-nvidia-ipo-anchor-10b",
-   "i": 4537,
+   "i": 4585,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47591,7 +48121,19 @@
    "url": "https://the-decoder.com/anthropic-commits-200-billion-to-google-cloud-over-five-years/",
    "to": null,
    "event_id": null,
-   "i": 4538
+   "i": 4586
+  },
+  {
+   "t": "2026-09-30T19:07:28Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Prospectus risk themes confirmed by Reuters: existential risk, shutdown resistance, concealment, blackmail-like behavior, evaluation awareness, about 6% safety compute, agent liability, governance conflict quote.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260928-prospectus-risk-factors-80-of-261-pages",
+   "i": 4587,
+   "new": false,
+   "confirms": "desk-s1"
   },
   {
    "t": "2026-09-30T19:07:40Z",
@@ -47601,7 +48143,19 @@
    "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
    "to": null,
    "event_id": null,
-   "i": 4539
+   "i": 4588
+  },
+  {
+   "t": "2026-09-30T19:07:42Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "The Information, Jan 21 (T3): FY2025 gross margin about 40% against a 50% plan because cloud inference cost ran 23% over.",
+   "url": "https://www.tipranks.com/news/ai-startup-anthropic-warns-of-profit-margin-pressure-as-costs-surge",
+   "to": null,
+   "event_id": "evt-20260121-information-gross-margin-2025-40pct",
+   "i": 4589,
+   "new": false,
+   "confirms": "desk-revenue"
   },
   {
    "t": "2026-09-30T19:07:42Z",
@@ -47611,7 +48165,19 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4540
+   "i": 4590
+  },
+  {
+   "t": "2026-09-30T19:07:51Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Lock-up ideas come only from The Information via T4 relays: beyond 180 days, second window, insider sales in the offering, preset 10b5-1 plans.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260827-information-prospectus-after-labor-day-insider-sales",
+   "i": 4591,
+   "new": false,
+   "confirms": "scout-2026q3"
   },
   {
    "t": "2026-09-30T19:07:56Z",
@@ -47621,7 +48187,7 @@
    "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
    "to": null,
    "event_id": null,
-   "i": 4541
+   "i": 4592
   },
   {
    "t": "2026-09-30T19:07:57Z",
@@ -47631,7 +48197,19 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4542
+   "i": 4593
+  },
+  {
+   "t": "2026-09-30T19:08:03Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "PitchBook, Jun 10 (T3): compute $0.71 per revenue dollar in Q1 and $0.56 in Q2E. Gross margin about 44%.",
+   "url": "https://my.pitchbook.com/news-center/pb8487822101662420642",
+   "to": null,
+   "event_id": "evt-20260610-pitchbook-gm-44pct-compute-cost",
+   "i": 4594,
+   "new": false,
+   "confirms": "desk-revenue"
   },
   {
    "t": "2026-09-30T19:08:11Z",
@@ -47641,7 +48219,7 @@
    "url": "https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/",
    "to": null,
    "event_id": null,
-   "i": 4543
+   "i": 4595
   },
   {
    "t": "2026-09-30T19:08:12Z",
@@ -47651,7 +48229,31 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4544
+   "i": 4596
+  },
+  {
+   "t": "2026-09-30T19:08:14Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Liquidity history: May 2025 buyback $61.5B (T3), Feb 2026 tender at $350B pre-money (T3), completion only by an Apr 8 headline (T4 LOW), May 12 notice voiding unapproved transfers (T2).",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260512-secondary-market-warning",
+   "i": 4597,
+   "new": false,
+   "confirms": "scout-2026q2"
+  },
+  {
+   "t": "2026-09-30T19:08:25Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Amodei on Dwarkesh, Feb 13 (T2): stylized inference margin above 50%, compute about half training and half inference. Executive commentary, not company data.",
+   "url": "https://www.dwarkesh.com/p/dario-amodei-2",
+   "to": null,
+   "event_id": "evt-20260213-amodei-dwarkesh-compute-economics",
+   "i": 4598,
+   "new": false,
+   "confirms": "desk-compute"
   },
   {
    "t": "2026-09-30T19:08:27Z",
@@ -47661,7 +48263,7 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4545
+   "i": 4599
   },
   {
    "t": "2026-09-30T19:08:27Z",
@@ -47671,7 +48273,19 @@
    "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
    "to": null,
    "event_id": null,
-   "i": 4546
+   "i": 4600
+  },
+  {
+   "t": "2026-09-30T19:08:37Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Pentagon arc: Feb 26 refusal, Feb 27 ban and label, Aug 27 N.D. Cal. vacatur of the 3252 track, Sep 25 D.C. Circuit 2-1 upholding FASCSA.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260925-dc-circuit-denies-anthropic-petitions",
+   "i": 4601,
+   "new": false,
+   "confirms": "desk-legal"
   },
   {
    "t": "2026-09-30T19:08:42Z",
@@ -47681,7 +48295,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/2110029/000119312526344714/eroc-ex99_1.htm",
    "to": null,
    "event_id": null,
-   "i": 4547
+   "i": 4602
   },
   {
    "t": "2026-09-30T19:08:43Z",
@@ -47691,7 +48305,19 @@
    "url": "https://siliconangle.com/2026/09/29/leaked-anthropic-ipo-filing-reveals-8b-operating-loss-rapid-revenue-growth/",
    "to": null,
    "event_id": null,
-   "i": 4548
+   "i": 4603
+  },
+  {
+   "t": "2026-09-30T19:08:46Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Reuters, Aug 17 (T2): 2028 revenue projected at $190B to $200B, two anonymous sources, basis not stated. Nov 2025 plan was $70B with $17B cash flow and 77% gross margin.",
+   "url": "https://www.investing.com/news/stock-market-news/anthropic-ipo-valuation-hinges-on-190200-billion-2028-revenue-forecast-sources-say-4862222",
+   "to": null,
+   "event_id": "evt-20260817-reuters-2028-190-200b-forecast",
+   "i": 4604,
+   "new": false,
+   "confirms": "desk-revenue"
   },
   {
    "t": "2026-09-30T19:08:57Z",
@@ -47701,7 +48327,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000162/a_wulfearningsreleaseq22026.htm",
    "to": null,
    "event_id": null,
-   "i": 4549
+   "i": 4605
   },
   {
    "t": "2026-09-30T19:08:58Z",
@@ -47711,7 +48337,31 @@
    "url": null,
    "to": null,
    "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
-   "i": 4550,
+   "i": 4606,
+   "new": false,
+   "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:09:00Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Export hold: Jun 12 directive suspended Fable 5 and Mythos 5 for 18 days; Jul 1 restoration with conditions; revenue effect not disclosed in any opened source.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260612-bis-directive-fable-mythos-compute-angle",
+   "i": 4607,
+   "new": false,
+   "confirms": "desk-legal"
+  },
+  {
+   "t": "2026-09-30T19:09:08Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "NYT via Gulf News (T4): on track to exceed $100B annualized by end-2026, a projection from $65B. Not a current run-rate.",
+   "url": "https://gulfnews.com/world/americas/anthropic-on-track-to-top-100-billion-revenue-pace-ahead-of-potential-ipo-1.500680887",
+   "to": null,
+   "event_id": "evt-20260919-nyt-100b-year-end-projection",
+   "i": 4608,
    "new": false,
    "confirms": "scout-2026q3"
   },
@@ -47723,7 +48373,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000162/a_wulfearningsreleaseq22026.htm",
    "to": null,
    "event_id": null,
-   "i": 4551
+   "i": 4609
   },
   {
    "t": "2026-09-30T19:09:14Z",
@@ -47733,7 +48383,19 @@
    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=anthropic&type=&dateb=&owner=include&count=40&output=atom",
    "to": null,
    "event_id": null,
-   "i": 4552
+   "i": 4610
+  },
+  {
+   "t": "2026-09-30T19:09:23Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Incident cluster: Jul 30 disclosure, Aug 31 overhaul with paused external cyber evals, Sep 9 assessment of four incidents and an eight-week METR investigation.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260909-alignment-assessment-fourth-incident",
+   "i": 4611,
+   "new": false,
+   "confirms": "desk-governance"
   },
   {
    "t": "2026-09-30T19:09:27Z",
@@ -47743,8 +48405,20 @@
    "url": "https://the-decoder.com/anthropic-commits-200-billion-to-google-cloud-over-five-years/",
    "to": null,
    "event_id": "evt-20260505-information-200b-google-cloud-commitment",
-   "i": 4553,
+   "i": 4612,
    "new": true
+  },
+  {
+   "t": "2026-09-30T19:09:29Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "OpenAI comparables: FY2025 revenue $13.07B net of Microsoft share, Q1 2026 $5.7B, Q2 $6.2B, run-rate about $40B in August and nearing $70B in September.",
+   "url": "https://www.wheresyoured.at/exclusive-openai-financials/",
+   "to": null,
+   "event_id": "evt-20260615-openai-2025-audited-revenue-13b",
+   "i": 4613,
+   "new": false,
+   "confirms": "desk-revenue"
   },
   {
    "t": "2026-09-30T19:09:29Z",
@@ -47754,7 +48428,7 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4554
+   "i": 4614
   },
   {
    "t": "2026-09-30T19:09:42Z",
@@ -47764,7 +48438,7 @@
    "url": "https://www.anthropic.com/news/series-h",
    "to": null,
    "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
-   "i": 4555,
+   "i": 4615,
    "new": false,
    "confirms": "desk-product"
   },
@@ -47776,7 +48450,31 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4556
+   "i": 4616
+  },
+  {
+   "t": "2026-09-30T19:09:46Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Pacing and outside evaluators: Sep 12 essay, Sep 18 Faculty named first embedded evaluator with at least $1B over five years, shared with Accenture.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260918-accenture-embedded-evaluation",
+   "i": 4617,
+   "new": false,
+   "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:09:51Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "SpaceX 10-Q: unnamed AI-segment Customer B is 19.5% of Q2 revenue, about $1.52B. The link to Anthropic is the desk's inference.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm",
+   "to": null,
+   "event_id": "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
+   "i": 4618,
+   "new": false,
+   "confirms": "desk-s1"
   },
   {
    "t": "2026-09-30T19:09:57Z",
@@ -47786,7 +48484,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/2110029/000119312526344714/eroc-ex99_1.htm",
    "to": null,
    "event_id": "evt-20260811-erock-470mw-onsite-power-order",
-   "i": 4557,
+   "i": 4619,
    "new": true
   },
   {
@@ -47797,7 +48495,31 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4558
+   "i": 4620
+  },
+  {
+   "t": "2026-09-30T19:10:09Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Executive levers after the Pentagon ban: Sep 24 White House hold of Mythos 5.1 from UK AISI (T2) and Sep 30 FTC probe of Anthropic, OpenAI and METR (T2).",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260930-ftc-probe-anthropic-openai",
+   "i": 4621,
+   "new": false,
+   "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:10:12Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "SpaceX agreed to buy Cursor for $60B in stock, close expected Q3 2026. Cursor is a named Claude coding customer.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026043411/spaceexplorationtechnologi.htm",
+   "to": null,
+   "event_id": "evt-20260616-spacex-cursor",
+   "i": 4622,
+   "new": false,
+   "confirms": "desk-ecosystem"
   },
   {
    "t": "2026-09-30T19:10:12Z",
@@ -47807,7 +48529,7 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4559
+   "i": 4623
   },
   {
    "t": "2026-09-30T19:10:16Z",
@@ -47817,7 +48539,7 @@
    "url": null,
    "to": "orchestrator",
    "event_id": null,
-   "i": 4560
+   "i": 4624
   },
   {
    "t": "2026-09-30T19:10:27Z",
@@ -47827,7 +48549,19 @@
    "url": "https://finance.yahoo.com/markets/stocks/articles/pricing-details-emerge-36b-private-212901754.html",
    "to": null,
    "event_id": null,
-   "i": 4561
+   "i": 4625
+  },
+  {
+   "t": "2026-09-30T19:10:32Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "New T3 event: the draft S-1 leak item carries a reported prospectus quote that slowing the technology would likely be a good thing; Reuters original blocked, Crunchbase News relay.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260929-draft-s1-leaked-to-reuters",
+   "i": 4626,
+   "new": false,
+   "confirms": "desk-legal"
   },
   {
    "t": "2026-09-30T19:10:32Z",
@@ -47837,7 +48571,19 @@
    "url": null,
    "to": "desk-s1",
    "event_id": null,
-   "i": 4562
+   "i": 4627
+  },
+  {
+   "t": "2026-09-30T19:10:34Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Pricing ladder: Opus 4.5 cut 67% in Nov 2025, Sonnet 5 at $2/$10 from Jun 30, Opus 5.5 at $4/$20 on Sep 22, Fable 5.1 cache reads cut 75%. OpenAI answered with Sol and Luna the same day.",
+   "url": "https://www.anthropic.com/claude-opus-5-5",
+   "to": null,
+   "event_id": "evt-20260922-claude-opus-5-5-launch",
+   "i": 4628,
+   "new": false,
+   "confirms": "desk-product"
   },
   {
    "t": "2026-09-30T19:10:42Z",
@@ -47847,7 +48593,7 @@
    "url": "https://thetechcapital.com/macquarie-and-gic-to-finance-expanded-anthropic-data-centre-buildout/",
    "to": null,
    "event_id": null,
-   "i": 4563
+   "i": 4629
   },
   {
    "t": "2026-09-30T19:10:48Z",
@@ -47857,7 +48603,31 @@
    "url": null,
    "to": "desk-governance",
    "event_id": null,
-   "i": 4564
+   "i": 4630
+  },
+  {
+   "t": "2026-09-30T19:10:55Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Compute commitments of at least $518B with about 80% non-cancelable or payable regardless of use (Reuters, T2); used to price the pause option.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+   "i": 4631,
+   "new": false,
+   "confirms": "scout-2026q3"
+  },
+  {
+   "t": "2026-09-30T19:10:55Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Enterprise moved to a $20 seat plus usage at API rates, pulling revenue toward metered billing.",
+   "url": "https://www.theregister.com/2026/04/16/anthropic_ejects_bundled_tokens_enterprise/",
+   "to": null,
+   "event_id": "evt-20260416-enterprise-seat-plus-usage-repricing",
+   "i": 4632,
+   "new": false,
+   "confirms": "desk-product"
   },
   {
    "t": "2026-09-30T19:10:57Z",
@@ -47867,7 +48637,7 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4565
+   "i": 4633
   },
   {
    "t": "2026-09-30T19:11:03Z",
@@ -47877,7 +48647,7 @@
    "url": null,
    "to": "desk-compute",
    "event_id": null,
-   "i": 4566
+   "i": 4634
   },
   {
    "t": "2026-09-30T19:11:12Z",
@@ -47887,7 +48657,31 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4567
+   "i": 4635
+  },
+  {
+   "t": "2026-09-30T19:11:17Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Claude Platform on AWS and Claude in Foundry bill in Consumption Units on marketplace line items, which affects gross-versus-net treatment.",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "to": null,
+   "event_id": "evt-20260511-claude-platform-on-aws-launch",
+   "i": 4636,
+   "new": false,
+   "confirms": "desk-product"
+  },
+  {
+   "t": "2026-09-30T19:11:18Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "EDGAR check of Sep 30: no public Anthropic S-1; only a Jun 1 confidential draft (Rule 135 notice). All prospectus facts are leak-based.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260930-no-public-s1-on-edgar",
+   "i": 4637,
+   "new": false,
+   "confirms": "scout-2026q3"
   },
   {
    "t": "2026-09-30T19:11:19Z",
@@ -47897,7 +48691,7 @@
    "url": null,
    "to": "desk-ecosystem",
    "event_id": null,
-   "i": 4568
+   "i": 4638
   },
   {
    "t": "2026-09-30T19:11:27Z",
@@ -47907,7 +48701,7 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4569
+   "i": 4639
   },
   {
    "t": "2026-09-30T19:11:34Z",
@@ -47917,7 +48711,29 @@
    "url": null,
    "to": "desk-legal",
    "event_id": null,
-   "i": 4570
+   "i": 4640
+  },
+  {
+   "t": "2026-09-30T19:11:38Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "PitchBook TTM fields $1.0B (2024), $10.0B (2025), $65B (2026E), $71B (2027E) are run-rate style or forward, not recognized revenue.",
+   "url": "https://my.pitchbook.com/profile/466959-97/company/profile",
+   "to": null,
+   "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series",
+   "i": 4641,
+   "new": false,
+   "confirms": "desk-revenue"
+  },
+  {
+   "t": "2026-09-30T19:11:41Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "Trustee count from ltbt table by date: 5 (Sep 2023), 4, 3 (Apr 2024), 4 (2025), 3 (Jan 2026), 4 (Jul 9 2026), 3 (Aug 4); matches the T1 'four members at the time' on the Bernanke post.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260709-bernanke-ltbt",
+   "i": 4642
   },
   {
    "t": "2026-09-30T19:11:42Z",
@@ -47927,7 +48743,7 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4571
+   "i": 4643
   },
   {
    "t": "2026-09-30T19:11:50Z",
@@ -47937,7 +48753,7 @@
    "url": null,
    "to": "scout-2026q3",
    "event_id": null,
-   "i": 4572
+   "i": 4644
   },
   {
    "t": "2026-09-30T19:11:57Z",
@@ -47947,7 +48763,28 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4573
+   "i": 4645
+  },
+  {
+   "t": "2026-09-30T19:12:00Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "Two financials events added at 19:13Z are compute items: The Information on a roughly $200B Google Cloud commitment (DISPUTED) and Google paying SpaceX $920M a month. Neither carries a revenue figure. Read at headline level.",
+   "url": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
+   "to": null,
+   "event_id": "evt-20260605-google-pays-spacex-920m-month-benchmark",
+   "i": 4646,
+   "new": true
+  },
+  {
+   "t": "2026-09-30T19:12:04Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "rsp table against events: nine versions; v3.0 Feb 24 to v3.4 Jul 8 is 134 days, 19.1 weeks, matching the desk note of five revisions in 19 weeks. Gap from Jul 8 to Sep 30 is 84 days.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260708-rsp-v34",
+   "i": 4647
   },
   {
    "t": "2026-09-30T19:12:06Z",
@@ -47957,7 +48794,7 @@
    "url": "https://protos.com/anthropic-gamble-could-save-ftx-customers-from-total-ruin/",
    "to": null,
    "event_id": null,
-   "i": 4574
+   "i": 4648
   },
   {
    "t": "2026-09-30T19:12:12Z",
@@ -47967,7 +48804,19 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4575
+   "i": 4649
+  },
+  {
+   "t": "2026-09-30T19:12:21Z",
+   "agent": "analyst-topic-revenue",
+   "type": "found",
+   "text": "WSJ, Sep 18 (T3): listing moves to November so Q3 results can be shown first. Sets the Q3 and S-1 watch dates.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-delays-ipo-staging-november-221039905.html",
+   "to": null,
+   "event_id": "evt-20260918-wsj-ipo-pushed-to-november",
+   "i": 4650,
+   "new": false,
+   "confirms": "scout-2026q3"
   },
   {
    "t": "2026-09-30T19:12:21Z",
@@ -47977,7 +48826,17 @@
    "url": null,
    "to": null,
    "event_id": "evt-20220429-pb-series-b-980m-reconcile",
-   "i": 4576
+   "i": 4651
+  },
+  {
+   "t": "2026-09-30T19:12:27Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "offering_structure against prospectus_facts: 50.1%, seven founders, Trust four of seven and Class A one vote agree across Reuters (T2) and The Information (T3).",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+   "i": 4652
   },
   {
    "t": "2026-09-30T19:12:27Z",
@@ -47987,7 +48846,7 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4577
+   "i": 4653
   },
   {
    "t": "2026-09-30T19:12:37Z",
@@ -47997,7 +48856,7 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4578
+   "i": 4654
   },
   {
    "t": "2026-09-30T19:12:42Z",
@@ -48007,7 +48866,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4579
+   "i": 4655
+  },
+  {
+   "t": "2026-09-30T19:12:43Z",
+   "agent": "analyst-topic-revenue",
+   "type": "open",
+   "text": "Opened the Proactive article on Yahoo for the OpenAI comparison: 'OpenAI reported second-quarter revenue of $6.2 billion, up 18% on the previous three months, the Wall Street Journal said.' Anthropic '$11.5 billion in its most recent quarter, 14 times higher than a year earlier.' No basis or Q1 figu",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html",
+   "to": null,
+   "event_id": "evt-20260814-q2-2026-rev-11-5b-first-report",
+   "i": 4656
+  },
+  {
+   "t": "2026-09-30T19:12:50Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "Searched every prospectus_facts and risk_factor_themes row for RSP, ASL and Responsible Scaling: zero hits. The RSP is absent from prospectus coverage in the record.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4657
   },
   {
    "t": "2026-09-30T19:12:53Z",
@@ -48015,7 +48894,7 @@
    "type": "done",
    "to": "orchestrator",
    "text": "Done: 61 events, 24 searches, 104 pages, 17 flags, 16 conflicts.",
-   "i": 4580
+   "i": 4658
   },
   {
    "t": "2026-09-30T19:12:57Z",
@@ -48025,7 +48904,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4581
+   "i": 4659
+  },
+  {
+   "t": "2026-09-30T19:13:04Z",
+   "agent": "analyst-topic-revenue",
+   "type": "open",
+   "text": "Opened TechCrunch, Aug 17: run rate defined as a projection of a full year from a recent, shorter period. Surpassed $65B at end-July, up from $47B in May and $9B at end of last year. OpenAI 'doubled its revenue to $40 billion'. The two companies may calculate metrics differently.",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "to": null,
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "i": 4660
+  },
+  {
+   "t": "2026-09-30T19:13:12Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "Arithmetic: 7 founders x about 2% is about 14% economics against 50.1% votes, about 3.6x (single-source T3 input). Seats: 4 of 7 is 57%; 3 of 6 is 50%. 80 of 261 pages is 30.7%.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4661
   },
   {
    "t": "2026-09-30T19:13:12Z",
@@ -48035,7 +48934,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4582
+   "i": 4662
+  },
+  {
+   "t": "2026-09-30T19:13:26Z",
+   "agent": "analyst-topic-revenue",
+   "type": "open",
+   "text": "Opened TNW, Sep 15: FT put gross margins above 80% before partner revenue sharing and training costs. Q2 revenue passed $11.5B with positive adjusted operating income and no dollar amount. Adjusted strips out items Bloomberg called exceptional or one-time.",
+   "url": "https://thenextweb.com/news/anthropic-second-quarter-adjusted-operating-profit-ipo",
+   "to": null,
+   "event_id": "evt-20260913-ft-adj-op-profit-gm-above-80pct",
+   "i": 4663
   },
   {
    "t": "2026-09-30T19:13:27Z",
@@ -48045,7 +48954,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4583
+   "i": 4664
+  },
+  {
+   "t": "2026-09-30T19:13:35Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "prospectus_facts row on planned spend (at least $518B over about 10 years, roughly 80% non-cancelable or payable regardless of use, T2 HIGH) matches the compute-commitments event I cite for the pause-cost point.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260929-compute-commitments-518b-80pct-non-cancelable",
+   "i": 4665
   },
   {
    "t": "2026-09-30T19:13:42Z",
@@ -48055,7 +48974,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4584
+   "i": 4666
+  },
+  {
+   "t": "2026-09-30T19:13:47Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "The desk's canonical 39.75% haircut is contradicted in size by the record: 7.6% of FY2025 revenue (Reuters leak), about 7.8% on The Information's $360M, 6% to 10% (PitchBook). Only a T5 aggregator figure near 27% is larger. At 39.75%, Q2 alone implies $4.6B paid to partners against $1.9B forecast fo",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "to": null,
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "i": 4667
   },
   {
    "t": "2026-09-30T19:13:57Z",
@@ -48065,7 +48994,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4585
+   "i": 4668
+  },
+  {
+   "t": "2026-09-30T19:13:58Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "Amazon holdings: record's desk arithmetic ($97.9B + $92.5B) over $965B gives about 19.7%. TheStreet says 15% to 20% and Forkast about 21% (T4); Amazon discloses no percentage.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260731-amazon-10q-q2-2026",
+   "i": 4669
+  },
+  {
+   "t": "2026-09-30T19:14:09Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "39.75% reproduces exactly as the haircut that ties Series H $965B over the $47B run-rate to OpenAI $852B over $25B at 34.1x. OpenAI at $24B or $26B would give 42.2% or 37.3%. That fits a solved value, not a measured one, so the Jul 16 tie cannot be evidence of no multiple discount. I cannot confirm ",
+   "url": "https://www.anthropic.com/news/series-h",
+   "to": null,
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "i": 4670
   },
   {
    "t": "2026-09-30T19:14:12Z",
@@ -48075,7 +49024,17 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4586
+   "i": 4671
+  },
+  {
+   "t": "2026-09-30T19:14:21Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "Checked the board table: Kreps row is T1 for joining but its exit date rests on T5 sources; Liddell appointer 'unknown' in the table. Both match the open items.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260522-kreps-leaves-board",
+   "i": 4672
   },
   {
    "t": "2026-09-30T19:14:27Z",
@@ -48085,7 +49044,17 @@
    "url": "desk-deals",
    "to": "desk-deals",
    "event_id": null,
-   "i": 4587
+   "i": 4673
+  },
+  {
+   "t": "2026-09-30T19:14:30Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "period_revenue types four PitchBook proxy rows as kind=actual (FY2022 $10M, FY2023 $100M, FY2024 $1,000M, FY2025 $10,000M) although their own basis text says run-rate proxy, not recognized revenue. A model filtering on kind=actual would pick them up.",
+   "url": "https://my.pitchbook.com/profile/466959-97/company/profile",
+   "to": null,
+   "event_id": "evt-20260927-pitchbook-revenue-fields-ttm-series",
+   "i": 4674
   },
   {
    "t": "2026-09-30T19:14:42Z",
@@ -48095,7 +49064,27 @@
    "url": "desk-revenue",
    "to": "desk-revenue",
    "event_id": null,
-   "i": 4588
+   "i": 4675
+  },
+  {
+   "t": "2026-09-30T19:14:44Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "rsp table text against the 'three of five 2026 revisions edited a threshold' claim: v3.1 clarified the AI R&D threshold, v3.3 revised the novel chem-bio threshold, v3.4 revised the automated R&D threshold; v3.0 rewrote structure and v3.2 added Trust powers.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260708-rsp-v34",
+   "i": 4676
+  },
+  {
+   "t": "2026-09-30T19:14:52Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "OpenAI Q1 2026 $5.7B (PitchBook) and Q2 $6.2B with +18% QoQ do not reconcile. 6.2 over 5.7 is +8.8%, and +18% implies a Q1 of about $5.25B. I opened the Proactive article: it attributes $6.2B and +18% to the WSJ, where the record says Bloomberg, and gives no Q1 figure or net-versus-gross basis.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-file-ipo-could-top-063500275.html",
+   "to": null,
+   "event_id": "evt-20260814-q2-2026-rev-11-5b-first-report",
+   "i": 4677
   },
   {
    "t": "2026-09-30T19:14:57Z",
@@ -48105,7 +49094,17 @@
    "url": "desk-s1",
    "to": "desk-s1",
    "event_id": null,
-   "i": 4589
+   "i": 4678
+  },
+  {
+   "t": "2026-09-30T19:15:07Z",
+   "agent": "analyst-topic-governance",
+   "type": "verify",
+   "text": "people_moves against the ltbt table: Matheny Dec 2023, Christiano Apr 2024, Bahl and Robinson Jan 21 2026 leaving; Cuéllar joining Jan 21 and leaving Aug 4 2026 (6.5 months). Kreps exit is the only T5 row.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260121-ltbt-cuellar-appointed",
+   "i": 4679
   },
   {
    "t": "2026-09-30T19:15:12Z",
@@ -48115,7 +49114,17 @@
    "url": "orchestrator",
    "to": "orchestrator",
    "event_id": null,
-   "i": 4590
+   "i": 4680
+  },
+  {
+   "t": "2026-09-30T19:15:13Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "CNBC via TNW says $65B is 'about seven times the level of a year earlier'. TechCrunch, from Bloomberg, says up from $9B at the end of last year. 7.2x fits end-2025, not July 2025 at more than $4B, which would be 16x. I use 7.2x since end-2025 and avoid the year-on-year wording.",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "to": null,
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "i": 4681
   },
   {
    "t": "2026-09-30T19:15:27Z",
@@ -48125,7 +49134,29 @@
    "url": "desk-legal",
    "to": "desk-legal",
    "event_id": null,
-   "i": 4591
+   "i": 4682
+  },
+  {
+   "t": "2026-09-30T19:15:30Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "PBC operating form: co-founder Jack Clark is Head of Public Benefit and leads The Anthropic Institute (Mar 11 2026), so the public-benefit function sits inside management; no decision or suit citing the PBC duty appears in the record.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260311-anthropic-institute-launch",
+   "i": 4683,
+   "new": false,
+   "confirms": "desk-governance"
+  },
+  {
+   "t": "2026-09-30T19:15:35Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "The projections table's desk-derived FY2026 of $64B to $72B needs Q3 $20B to $23B and Q4 $27B to $33B. That implies a late-September run-rate of $114B to $150B and a Q4 average of $108B to $132B, above the $100B to $120B year-end projection. A straight line to $100B to $120B gives Q3 $17B to $18B an",
+   "url": "https://my.pitchbook.com/research-center/report/f3db74ec-cfbb-311d-b38f-91ab1c845962",
+   "to": null,
+   "event_id": "evt-20260610-pitchbook-fy2026-recognized-35-44b",
+   "i": 4684
   },
   {
    "t": "2026-09-30T19:15:42Z",
@@ -48135,7 +49166,29 @@
    "url": "desk-ecosystem",
    "to": "desk-ecosystem",
    "event_id": null,
-   "i": 4592
+   "i": 4685
+  },
+  {
+   "t": "2026-09-30T19:15:53Z",
+   "agent": "analyst-topic-governance",
+   "type": "found",
+   "text": "Critics of the pacing stance: Sacks calls the pacing push regulatory capture (Sep 13, T3); the Jun 4 pause-option post drew hype criticism in the SciAm relay (T2).",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260913-sacks-calls-pace-the-frontier-regulatory-capture",
+   "i": 4686,
+   "new": false,
+   "confirms": "desk-legal"
+  },
+  {
+   "t": "2026-09-30T19:15:56Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "Run-rate growth slowed: about $13B a month from Apr 6 to mid-May, about $7B a month from mid-May to end-July (13.5% a month). The latest verified print is two months old. As-of dates for May and July are approximate floors.",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "to": null,
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "i": 4687
   },
   {
    "t": "2026-09-30T19:15:57Z",
@@ -48145,7 +49198,7 @@
    "url": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
    "to": null,
    "event_id": null,
-   "i": 4593
+   "i": 4688
   },
   {
    "t": "2026-09-30T19:16:12Z",
@@ -48155,7 +49208,27 @@
    "url": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
    "to": null,
    "event_id": null,
-   "i": 4594
+   "i": 4689
+  },
+  {
+   "t": "2026-09-30T19:16:16Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Board majority conflict: Anthropic's Apr 14 post (T1) says Trust-appointed directors are a board majority, seven on the named list; a May 22 Kreps exit (T5) would leave 3 of 6. Liddell's appointer is unstated, so both readings stand.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260414-narasimhan-board",
+   "i": 4690
+  },
+  {
+   "t": "2026-09-30T19:16:18Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "evt-20260928 (FY2025 financials) is marked DISPUTED because two desks logged $4.59B and $11.5B in one field. The ledger lists the mismatch without a resolution. The two values are FY2025 and Q2 2026, and I cite each against its own period.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "to": null,
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "i": 4691
   },
   {
    "t": "2026-09-30T19:16:27Z",
@@ -48165,7 +49238,27 @@
    "url": null,
    "to": null,
    "event_id": null,
-   "i": 4595
+   "i": 4692
+  },
+  {
+   "t": "2026-09-30T19:16:39Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Seat count gap: the draft prospectus names six directors but describes seven seats (4 Trust, 3 Class F and A). A vacancy or an unnamed director is implied; the record does not say which.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260928-factbox-executives-board-ltbt-trustees",
+   "i": 4693
+  },
+  {
+   "t": "2026-09-30T19:16:39Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "evt-20251104 (2028 plan) is marked DISPUTED because one field holds $3.8B (CY2025E API revenue) and $70B (2028), and margins of 50% (2025E) and 77% (2028E). I cite each against its own period. The $17B 2028 cash flow and 77% margin belong to the $70B plan, and none is restated for the $190B to $200B",
+   "url": "https://techcrunch.com/2025/11/04/anthropic-expects-b2b-demand-to-boost-revenue-to-70b-in-2028-report/",
+   "to": null,
+   "event_id": "evt-20251104-information-gross-margin-path-to-77pct",
+   "i": 4694
   },
   {
    "t": "2026-09-30T19:16:42Z",
@@ -48175,7 +49268,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1086222/000108622226000054/exhibit991-q12026.htm",
    "to": null,
    "event_id": null,
-   "i": 4596
+   "i": 4695
   },
   {
    "t": "2026-09-30T19:16:57Z",
@@ -48185,7 +49278,27 @@
    "url": "https://siliconangle.com/2026/05/07/akamai-shares-surge-26-1-8b-ai-infrastructure-deal/",
    "to": null,
    "event_id": null,
-   "i": 4597
+   "i": 4696
+  },
+  {
+   "t": "2026-09-30T19:17:00Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "SpaceX is closing on Cursor while it sells Anthropic $1.25B a month of compute, and an unnamed 19.5% SpaceX customer is inferred to be Anthropic. The record does not say Cursor's current share of Anthropic revenue. The 40% to 50% early share is one anonymous employee (T3, LOW).",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026043411/spaceexplorationtechnologi.htm",
+   "to": null,
+   "event_id": "evt-20260616-spacex-cursor",
+   "i": 4697
+  },
+  {
+   "t": "2026-09-30T19:17:02Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Founder roster mismatch: the seven co-founders Fortune listed on Jan 27 (cited on the Sep 25 event) exclude Ben Mann, whom Anthropic's Jan 13 2026 post calls a co-founder; the Jan 2021 founding event lists eight names. The seventh Founder LLC member is unnamed in every opened Reuters copy.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260925-founders-voting-control",
+   "i": 4698
   },
   {
    "t": "2026-09-30T19:17:12Z",
@@ -48195,7 +49308,27 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm",
    "to": null,
    "event_id": null,
-   "i": 4598
+   "i": 4699
+  },
+  {
+   "t": "2026-09-30T19:17:22Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "xAI's Q2 AI-segment revenue is $2,194M on the 10-Q line and $2.561B on the call, and it includes compute rental to a customer the desk infers is Anthropic. It is not a like-for-like model-revenue comp for Anthropic.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm",
+   "to": null,
+   "event_id": "evt-20260804-spacex-10q-customer-b-19-5pct-ai-segment",
+   "i": 4700
+  },
+  {
+   "t": "2026-09-30T19:17:25Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Possibly stale open item: desk-s1 lists the PBC and LTBT governance risk text as not quoted in any opened coverage, yet the Reuters quote on governance conflicting with financial interests is recorded on the Sep 29 Class F event. Open item should be narrowed.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+   "i": 4701
   },
   {
    "t": "2026-09-30T19:17:27Z",
@@ -48205,7 +49338,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/1086222/000108622226000054/exhibit991-q12026.htm",
    "to": null,
    "event_id": "evt-20260507-akamai-1-8b-frontier-model-provider",
-   "i": 4599,
+   "i": 4702,
    "new": true
   },
   {
@@ -48216,8 +49349,29 @@
    "url": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
    "to": null,
    "event_id": "evt-20260605-google-pays-spacex-920m-month-benchmark",
-   "i": 4600,
-   "new": true
+   "i": 4703,
+   "new": false,
+   "confirms": "analyst-topic-revenue"
+  },
+  {
+   "t": "2026-09-30T19:17:43Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "Two desks read the same series differently: compute_costs treats $6.3, $1.60, $0.71, $0.56 per revenue dollar as one all-in series, while the margins table says the 2026 scope is unstated and may be a serving subset. The S-1 cost of revenue line settles it.",
+   "url": "https://my.pitchbook.com/news-center/pb8487822101662420642",
+   "to": null,
+   "event_id": "evt-20260610-pitchbook-gm-44pct-compute-cost",
+   "i": 4704
+  },
+  {
+   "t": "2026-09-30T19:17:48Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Structured-field error risk: the Sep 25 founder-control event carries valuation_post_usd_m 1,500,000, a secondary-market mark that its own note says is not a priced round. Series H remains $965B post-money.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260925-founders-voting-control",
+   "i": 4705
   },
   {
    "t": "2026-09-30T19:17:58Z",
@@ -48225,7 +49379,443 @@
    "type": "done",
    "to": "orchestrator",
    "text": "Done: 57 events, 90 searches, 118 pages, 24 flags, 14 conflicts.",
-   "i": 4601
+   "i": 4706
+  },
+  {
+   "t": "2026-09-30T19:18:05Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "Tier mismatch inside the record: the 47% channel share and fee lines are T2/HIGH in events but T3 in the prospectus table, and Reuters computed the $351M itself. I carry T3 for channel, fee and Q1, and T2 for FY2025, Q2 and the two 12% customers.",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "to": null,
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "i": 4707
+  },
+  {
+   "t": "2026-09-30T19:18:11Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Duplicate scoop with split tiers: the Aug 18 super-voting report is one event at T2 HIGH (Reuters relay) and another at T3 MEDIUM (The Information via Investing.com). I treat it as a T3 single-source scoop and anchor on the Sep 28 to 29 Reuters review.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260818-supervoting-reported",
+   "i": 4708
+  },
+  {
+   "t": "2026-09-30T19:18:26Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "The 80% business and 20% consumer split dates from Oct 2025 (T4) and Jan 2026. Consumer revenue grew about 75% from January to mid-May while run-rate grew about 4x, so the split is stale. No later mix is in the record.",
+   "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/",
+   "to": null,
+   "event_id": "evt-20260328-claude-consumer-paid-subs-indagari",
+   "i": 4709
+  },
+  {
+   "t": "2026-09-30T19:18:34Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "RSP v2.2 (May 14 2025) excluded sophisticated and state-compromised insiders from the ASL-3 security standard eight days before ASL-3 was first activated (May 22 2025).",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20250522-asl-3-activated-opus-4",
+   "i": 4710
+  },
+  {
+   "t": "2026-09-30T19:18:48Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "The company has not updated 'over 300,000 business customers' since Sep 2025, and a Jul 2026 complaint still cites it, while run-rate rose 13x. The disclosed metric switched to customers above $1M. Customer-count growth and the middle of the distribution are unobservable.",
+   "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+   "to": null,
+   "event_id": "evt-20250902-series-f-13b-183b",
+   "i": 4711
+  },
+  {
+   "t": "2026-09-30T19:18:57Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Safety compute share has two descriptions: about 6% of research compute in a July sample week (Reuters on the prospectus) and about 6% of capacity plus 12% safety-focused AI R&D (SiliconANGLE on Anthropic's Sep 17 post, unopened). Bases differ.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260917-pace-of-ai-development-metrics",
+   "i": 4712
+  },
+  {
+   "t": "2026-09-30T19:19:09Z",
+   "agent": "analyst-topic-revenue",
+   "type": "flag",
+   "text": "Claude Code has no revenue figure after Feb 2026 in the record, yet the NYT names Claude Code and Cowork as the growth drivers. The coding and agents share of 2026 revenue is a data gap.",
+   "url": "https://gulfnews.com/world/americas/anthropic-on-track-to-top-100-billion-revenue-pace-ahead-of-potential-ipo-1.500680887",
+   "to": null,
+   "event_id": "evt-20260919-nyt-100b-year-end-projection",
+   "i": 4713
+  },
+  {
+   "t": "2026-09-30T19:19:20Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Essay date split: the June 'Policy on the AI Exponential' framework sits in two events dated Jun 1 (T1 HIGH) and Jun 10 (T1 MEDIUM, date inferred from coverage).",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260601-policy-on-ai-exponential",
+   "i": 4714
+  },
+  {
+   "t": "2026-09-30T19:19:31Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "period_revenue FY2025 $4.59B equals mix usage $3.8B plus subscription $789M, $4.589B. Agrees.",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "to": null,
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "i": 4715
+  },
+  {
+   "t": "2026-09-30T19:19:43Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "The Sep 3 lock-up event carries DISPUTED confidence. The dispute is raise size ($130B versus $100B) and Q2 figures, not the lock-up wording, which stays T4.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260903-information-q2-operating-profit-130b-raise-lockups",
+   "i": 4716
+  },
+  {
+   "t": "2026-09-30T19:19:52Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "$2.16B over $4.59B is 47.1% and $351M over $4.59B is 7.6%. Agrees across the mix, customers and prospectus_facts tables.",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "to": null,
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "i": 4717
+  },
+  {
+   "t": "2026-09-30T19:20:06Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Unaddressed interplay: all seven founders pledged 80% of personal equity to charity (Reuters, T2) while the Class F test needs three founders to keep a minimum stake and a founder drops out for selling too many shares.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260929-founder-llc-class-f-share-50-1pct-vote",
+   "i": 4718
+  },
+  {
+   "t": "2026-09-30T19:20:14Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "run_rate_desk integrates to about $4.3B for FY2025 against $4.59B recognized, within 7%. Q2 x4 is $46B and sits on the $30B to $65B path. The 13% to 20% Q1 2026 gap stays unresolved until monthly data appear.",
+   "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+   "to": null,
+   "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+   "i": 4719
+  },
+  {
+   "t": "2026-09-30T19:20:29Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "q.py and the brief list table 'board_history', but the data key is 'board'; `--table board_history` prints '# no table'. Anyone following the brief gets an empty board read.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4720
+  },
+  {
+   "t": "2026-09-30T19:20:35Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "Two 12% customers are about $1.1B of FY2025 revenue. Agrees with the customers table (nearly 25%) and the mix table (about $1.1B).",
+   "url": "https://www.globalbankingandfinance.com/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence/",
+   "to": null,
+   "event_id": "evt-20260929-prospectus-cloud-channel-47pct-two-12pct-customers",
+   "i": 4721
+  },
+  {
+   "t": "2026-09-30T19:20:52Z",
+   "agent": "analyst-topic-governance",
+   "type": "flag",
+   "text": "Possible duplicate events in this slice, same source and day: Class F (evt-20260928-founder-llc-class-f and evt-20260929-founder-llc-class-f-share-50-1pct-vote), factbox (evt-20260928-prospectus-board-execs and evt-20260928-factbox-executives-board-ltbt-trustees), risk factors (two T2 ids plus T3 ev",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260928-prospectus-risk-factors",
+   "i": 4722
+  },
+  {
+   "t": "2026-09-30T19:20:57Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "margins table: opex $12.65B equals revenue $4.59B plus operating loss $8.06B. Compute $7.33B over revenue is $1.60 per dollar, 58% of opex.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "to": null,
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "i": 4723
+  },
+  {
+   "t": "2026-09-30T19:21:15Z",
+   "agent": "analyst-topic-governance",
+   "type": "note",
+   "text": "Record re-merged while I worked: the Amazon 10-Q id changed to evt-20260731-amazon-10q-q2-2026, and 5 other ids I had read were remapped to canonical ids. Every id here is re-checked against q.py --ids before finishing.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4724
+  },
+  {
+   "t": "2026-09-30T19:21:18Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "Recomputed run-rate legs from run_rate_desk: end-2025 to end-July is 7.2x or 32% a month. Mid-May to end-July is 13.5% a month. $100B to $120B by Dec 31 needs 8.8% to 12.8% a month, or $6.9B to $10.8B added a month.",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "to": null,
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "i": 4725
+  },
+  {
+   "t": "2026-09-30T19:21:38Z",
+   "agent": "analyst-topic-governance",
+   "type": "note",
+   "text": "A Time headline (RSS only, unopened) frames RSP v3.0 as dropping a flagship safety pledge. I do not use it; the T1 record describes roadmap goals as non-binding and ASL-4 and ASL-5 as restructured.",
+   "url": null,
+   "to": null,
+   "event_id": "evt-20260224-rsp-v3-published",
+   "i": 4726
+  },
+  {
+   "t": "2026-09-30T19:21:40Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "H1 2026 is $4.73B plus $11.5B, $16.23B, which is 3.5x FY2025 $4.59B. Matches the period_revenue row.",
+   "url": "https://fortune.com/2026/09/29/anthropic-ipo-s-1-prospectus-income-statement/",
+   "to": null,
+   "event_id": "evt-20260929-q1-2026-rev-4-73b-q2-11-5b-prospectus",
+   "i": 4727
+  },
+  {
+   "t": "2026-09-30T19:22:01Z",
+   "agent": "analyst-topic-governance",
+   "type": "note",
+   "text": "No source URL was opened with WebFetch. No load-bearing figure was ambiguous in the record, and the pre-IPO Trust text is already held as T1 in prospectus_facts.",
+   "url": null,
+   "to": null,
+   "event_id": null,
+   "i": 4728
+  },
+  {
+   "t": "2026-09-30T19:22:01Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "Haircut arithmetic: $65B x (1 - 6% to 10%) is $61.1B to $58.5B, matching comparables. $2T over those is 32.7x to 34.2x, matching PitchBook. At 39.75% net run-rate is $39.2B.",
+   "url": "https://my.pitchbook.com/research-center/report/271b2ed6-4c03-34ba-93a8-65a7e30741ec",
+   "to": null,
+   "event_id": "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+   "i": 4729
+  },
+  {
+   "t": "2026-09-30T19:22:23Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "Standing belief reproduced: $965B over $47B x 0.6025 is 34.1x, and $852B over $25B is 34.1x. The tie rests on May's $47B, which the $65B print has overtaken.",
+   "url": "https://www.anthropic.com/news/series-h",
+   "to": null,
+   "event_id": "evt-20260528-series-h-compute-agreements-memory-partners",
+   "i": 4730
+  },
+  {
+   "t": "2026-09-30T19:22:24Z",
+   "agent": "analyst-topic-governance",
+   "type": "message",
+   "text": "Pentagon and export-control facts are cited from your events (CFO declaration $150M, DoD 90% migration, Sep 25 ruling). I read governance as event risk, consistent with your read, and add that the June framework asked for a deployment veto.",
+   "url": null,
+   "to": "analyst-topic-government",
+   "event_id": null,
+   "i": 4731
+  },
+  {
+   "t": "2026-09-30T19:22:44Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "compute_costs table agrees with my arithmetic: FY2024 about $6.3 and FY2025 $1.60 of compute per revenue dollar, payouts $360M, $1.9B, $6.4B. It also shows $4.1B of 2025 training (T4) inside the $7.33B.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "to": null,
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "i": 4732
+  },
+  {
+   "t": "2026-09-30T19:22:47Z",
+   "agent": "analyst-topic-governance",
+   "type": "message",
+   "text": "Trust and board churn for your people view: four of five founding trustees gone, Cuéllar trustee to executive in about 6.5 months, Kreps exit only T5, and the Founder LLC roster mismatch around Ben Mann.",
+   "url": null,
+   "to": "analyst-topic-people",
+   "event_id": null,
+   "i": 4733
+  },
+  {
+   "t": "2026-09-30T19:23:06Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "Cross-check of margin layers against projections: if $0.56 is all-in compute and inference is 37% of it (The Information: $7B of $19B in 2026), inference costs about $0.21 per dollar, a 79% margin, near the above-80% figure. Weak, since vintages differ.",
+   "url": "https://my.pitchbook.com/news-center/pb8487822101662420642",
+   "to": null,
+   "event_id": "evt-20260610-pitchbook-gm-44pct-compute-cost",
+   "i": 4734
+  },
+  {
+   "t": "2026-09-30T19:23:10Z",
+   "agent": "analyst-topic-governance",
+   "type": "message",
+   "text": "Amazon's convertible notes, carried at $97.9B, convert to nonvoting common at IPO subject to an undisclosed cap. The capital-efficiency rule needs a stated treatment of converted notes. Lock-up and any secondary component are T4 only.",
+   "url": null,
+   "to": "analyst-topic-capital",
+   "event_id": null,
+   "i": 4735
+  },
+  {
+   "t": "2026-09-30T19:23:27Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "Projection track record from projections and period_revenue: FY2025 $2.2B against $4.59B, Q2 2026 $10.9B against $11.5B, year-end 2025 $8B to $10B against about $9B, FY2026 'up to $18B' against H1 $16.2B.",
+   "url": "https://techcrunch.com/2025/04/15/anthropic-forms-a-new-team-to-grow-its-aws-business/",
+   "to": null,
+   "event_id": "evt-20250415-proj-2025-2-2b-2027-12b",
+   "i": 4736
+  },
+  {
+   "t": "2026-09-30T19:23:33Z",
+   "agent": "analyst-topic-governance",
+   "type": "message",
+   "text": "Governance and safety as moat evidence: regulated-industry safeguards (Sep 1) and 8 of the Fortune 10 as customers (T1) exist, but no win-loss data ties safety posture to purchases. Government outcomes are discretionary.",
+   "url": null,
+   "to": "analyst-topic-moat",
+   "event_id": null,
+   "i": 4737
+  },
+  {
+   "t": "2026-09-30T19:23:49Z",
+   "agent": "analyst-topic-revenue",
+   "type": "verify",
+   "text": "Price deltas from the pricing table: Opus 4.1 to 4.5 -66.7%, Opus 5 to 5.5 -20%, Sonnet $3/$15 to $2/$10 -33.3%, Mythos Preview $25/$125 to Mythos 5 $10/$50 -60%.",
+   "url": "https://www.anthropic.com/news/claude-opus-4-5",
+   "to": null,
+   "event_id": "evt-20251124-claude-opus-4-5-launch",
+   "i": 4738
+  },
+  {
+   "t": "2026-09-30T19:23:56Z",
+   "agent": "analyst-topic-governance",
+   "type": "message",
+   "text": "Legal hooks: the governance risk-factor quote, agent-liability language, the Sep 18 Sherman Act suit citing the pacing essay, and the Sep 30 FTC probe. Class F charter text is not public.",
+   "url": null,
+   "to": "analyst-topic-legal",
+   "event_id": null,
+   "i": 4739
+  },
+  {
+   "t": "2026-09-30T19:24:10Z",
+   "agent": "analyst-topic-revenue",
+   "type": "message",
+   "text": "Haircut conflict: record evidence is 7.6% and 6% to 10%, desk canonical 39.75%. End-July net run-rate $58.5B to $61.1B against $39.2B. At 39.75%, Q2 implies $4.6B paid to partners against $1.9B forecast for 2026. 39.75% reproduces as the haircut tying the Jul 16 multiples at 34.1x. Report both.",
+   "url": "https://my.pitchbook.com/research-center/report/271b2ed6-4c03-34ba-93a8-65a7e30741ec",
+   "to": "analyst-model",
+   "event_id": "evt-20260916-pitchbook-s1-preview-gross-vs-net",
+   "i": 4740
+  },
+  {
+   "t": "2026-09-30T19:24:19Z",
+   "agent": "analyst-topic-governance",
+   "type": "message",
+   "text": "Stale open item on PBC and LTBT governance risk text should be narrowed; lock-up length, selling holders and Class T amendment thresholds stay open until a public S-1.",
+   "url": null,
+   "to": "desk-s1",
+   "event_id": null,
+   "i": 4741
+  },
+  {
+   "t": "2026-09-30T19:24:32Z",
+   "agent": "analyst-topic-revenue",
+   "type": "message",
+   "text": "For the compute analyst: FY2025 compute and infrastructure $7.33B is $1.60 per revenue dollar including training. PitchBook's $0.71 and $0.56 use an unstated scope. SpaceX Customer B at 19.5% of Q2 revenue is the desk's inferred Anthropic link.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-anthropics-ipo-prospectus-shows-231722972.html",
+   "to": "analyst-compute",
+   "event_id": "evt-20260928-reuters-draft-prospectus-2025-financials",
+   "i": 4742
+  },
+  {
+   "t": "2026-09-30T19:24:42Z",
+   "agent": "analyst-topic-governance",
+   "type": "message",
+   "text": "Bear-usable control facts with tiers: Class A cannot outvote Class F (inference), Trust at three trustees, RSP changed five times in 19 weeks, no S-1 mention of the RSP.",
+   "url": null,
+   "to": "analyst-bear",
+   "event_id": null,
+   "i": 4743
+  },
+  {
+   "t": "2026-09-30T19:24:53Z",
+   "agent": "analyst-topic-revenue",
+   "type": "message",
+   "text": "For ecosystem: channel share 11%, 32%, 47%. Partner payouts $360M, $1.9B, $6.4B for 2025 to 2027. SpaceX is buying Cursor while supplying Anthropic compute. Two 12% customers are unnamed.",
+   "url": "https://www.yahoo.com/news/articles/exclusive-anthropic-ipo-prospectus-lays-205226515.html",
+   "to": "analyst-topic-ecosystem",
+   "event_id": "evt-20260929-reuters-47pct-cloud-channel-mix",
+   "i": 4744
+  },
+  {
+   "t": "2026-09-30T19:25:05Z",
+   "agent": "analyst-topic-governance",
+   "type": "message",
+   "text": "Bull-usable facts with tiers: Trust majority came about 17 months inside the four-year plan (T1 post, desk arithmetic), outside evaluators backed by at least $1B over five years (shared with Accenture), SB 53 compliance framework, run-rate kept rising through the Pentagon dispute.",
+   "url": null,
+   "to": "analyst-bull",
+   "event_id": null,
+   "i": 4745
+  },
+  {
+   "t": "2026-09-30T19:25:15Z",
+   "agent": "analyst-topic-revenue",
+   "type": "message",
+   "text": "Table hygiene for the revenue desk: period_revenue kind=actual on four PitchBook proxy rows, the projections FY2026 $64B to $72B derivation that exceeds the year-end path, the OpenAI +18% QoQ against $5.7B to $6.2B, and the OpenAI Q2 source, which the article gives as the WSJ, not Bloomberg.",
+   "url": "https://my.pitchbook.com/research-center/report/f3db74ec-cfbb-311d-b38f-91ab1c845962",
+   "to": "desk-revenue",
+   "event_id": "evt-20260610-pitchbook-fy2026-recognized-35-44b",
+   "i": 4746
+  },
+  {
+   "t": "2026-09-30T19:25:28Z",
+   "agent": "analyst-topic-governance",
+   "type": "message",
+   "text": "Three record defects for repair: board_history table alias, valuation_post_usd_m on a secondary mark (Sep 25 event), and duplicate events with split tiers in the S-1 cluster.",
+   "url": null,
+   "to": "orchestrator",
+   "event_id": null,
+   "i": 4747
+  },
+  {
+   "t": "2026-09-30T19:25:36Z",
+   "agent": "analyst-topic-revenue",
+   "type": "message",
+   "text": "Handoff: revenue slice done. Headline: Q2 recognized $11.5B, run-rate $65B gross, haircut 7.6% or 6% to 10% in the record against 39.75% canonical. Watch: S-1 income statement, Q3 results, next run-rate print.",
+   "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+   "to": "orchestrator",
+   "event_id": "evt-20260817-rr-65b-end-july",
+   "i": 4748
+  },
+  {
+   "t": "2026-09-30T19:25:51Z",
+   "agent": "analyst-topic-governance",
+   "type": "done",
+   "to": "orchestrator",
+   "text": "Done: 78 evidence ids cited, 13 flags.",
+   "i": 4749
+  },
+  {
+   "t": "2026-09-30T19:25:58Z",
+   "agent": "analyst-topic-revenue",
+   "type": "done",
+   "to": "orchestrator",
+   "text": "Done: 50 evidence ids cited, 16 flags.",
+   "i": 4750
   }
  ],
  "note": "Each entry is what the agent itself logged. Within one agent's run, timestamps are spread evenly between its recorded start and finish; start and finish are the agent's own clock readings."
