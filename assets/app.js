@@ -211,24 +211,26 @@ function barChartH(container, { data, xFmt = v => fmt.usd(v), rowH = 26, onBar, 
     g.append('text').attr('class', 'dl').attr('x', x(Math.max(d.value || 0, d.value2 || 0)) + 6).attr('y', y + 13).text(xFmt(d.value) + (d.value2 != null ? ` / ${xFmt(d.value2)}` : ''));
   });
 }
-function waterfall(container, { steps, yFmt = v => fmt.pct(v), h = 240 }) {
-  const w = 720, m = { t: 18, r: 12, b: 40, l: 54 };
+function waterfall(container, { steps, yFmt = v => fmt.pct(v), rowH = 38 }) {
+  // horizontal waterfall: nine long labels do not fit under vertical bars, so each step is a row
+  const w = 720, m = { t: 6, r: 64, b: 26, l: 250 }, h = steps.length * rowH + m.t + m.b;
   const { g, iw, ih } = chartFrame(container, w, h, m);
-  let run = 0; const bars = steps.map((s, i) => { const start = s.total ? 0 : run; const end = s.total ? s.value : run + s.value; run = end; return { ...s, start, end, i }; });   // a total resets the running level to its own value
+  let run = 0; const bars = steps.map((st, i) => { const start = st.total ? 0 : run; const end = st.total ? st.value : run + st.value; run = end; return { ...st, start, end, i }; });
   const lo = Math.min(0, d3.min(bars, b => Math.min(b.start, b.end))), hi = d3.max(bars, b => Math.max(b.start, b.end));
-  const x = d3.scaleBand().domain(bars.map(b => b.label)).range([0, iw]).paddingInner(0.4).paddingOuter(0.2);
-  const y = d3.scaleLinear().domain([lo, hi * 1.08]).nice().range([ih, 0]);
-  yGrid(g, y, iw, 5); axisY(g, y, yFmt, 5);
-  g.append('line').attr('class', 'baseline').attr('x1', 0).attr('x2', iw).attr('y1', y(0)).attr('y2', y(0));
-  const bw = Math.min(x.bandwidth(), 30);
-  bars.forEach(b => {
-    const gx = x(b.label) + (x.bandwidth() - bw) / 2;
-    g.append('rect').attr('x', gx).attr('y', y(Math.max(b.start, b.end))).attr('width', bw).attr('height', Math.abs(y(b.start) - y(b.end))).attr('rx', 3)
-      .attr('fill', b.total ? 'var(--ink-2)' : (b.value < 0 ? 'var(--s8)' : 'var(--s3)'))
-      .on('pointermove', ev => showTip(ev.clientX, ev.clientY, tipRows(b.label, [{ label: b.total ? 'Level' : 'Change', value: yFmt(b.total ? b.value : b.value) }, ...(b.note ? [{ label: b.note, value: '' }] : [])]))).on('pointerleave', hideTip);
-    g.append('text').attr('class', 'dl').attr('x', gx + bw / 2).attr('y', y(Math.max(b.start, b.end)) - 5).attr('text-anchor', 'middle').text(yFmt(b.total ? b.value : b.value));
+  const x = d3.scaleLinear().domain([lo, hi * 1.06]).nice().range([0, iw]);
+  const y = d3.scaleBand().domain(bars.map(b => b.i)).range([0, ih]).paddingInner(0.3);
+  g.append('g').attr('class', 'grid').selectAll('line').data(x.ticks(5)).join('line').attr('x1', d => x(d)).attr('x2', d => x(d)).attr('y1', 0).attr('y2', ih);
+  g.append('g').attr('class', 'axis').attr('transform', `translate(0,${ih})`).call(d3.axisBottom(x).ticks(5).tickSize(0).tickPadding(8).tickFormat(yFmt)).call(a => a.select('.domain').remove());
+  const wrap = t => { const words = String(t).split(/\s+/), lines = []; let cur = ''; for (const wd of words) { if ((cur + ' ' + wd).trim().length > 36 && cur) { lines.push(cur); cur = wd; } else cur = (cur + ' ' + wd).trim(); } if (cur) lines.push(cur); return lines.slice(0, 2).map((l, i, arr) => i === 1 && lines.length > 2 ? l + '…' : l); };
+  bars.forEach(bd => {
+    const yy = y(bd.i), bh = y.bandwidth(), x0 = Math.min(x(bd.start), x(bd.end)), bw = Math.max(1.5, Math.abs(x(bd.end) - x(bd.start)));
+    const tx = g.append('text').attr('class', 'dl sub').attr('x', -10).attr('text-anchor', 'end').attr('y', yy + bh / 2);
+    const ls = wrap(bd.label); ls.forEach((l, i) => tx.append('tspan').attr('x', -10).attr('dy', i === 0 ? (ls.length === 1 ? '0.35em' : '-0.2em') : '1.15em').text(l));
+    g.append('rect').attr('x', x0).attr('y', yy).attr('width', bw).attr('height', bh).attr('rx', 3)
+      .attr('fill', bd.total ? 'var(--ink-2)' : (bd.value < 0 ? 'var(--s8)' : 'var(--s3)'))
+      .on('pointermove', ev => showTip(ev.clientX, ev.clientY, tipRows(bd.label, [{ label: bd.total ? 'Level' : 'Change', value: yFmt(bd.value) }, ...(bd.range ? [{ label: 'Range', value: `${yFmt(bd.range[0])} to ${yFmt(bd.range[1])}` }] : []), ...(bd.note ? [{ label: bd.note.slice(0, 220), value: '' }] : [])]))).on('pointerleave', hideTip);
+    g.append('text').attr('class', 'dl').attr('x', Math.max(x(bd.start), x(bd.end)) + 6).attr('y', yy + bh / 2).attr('dy', '0.35em').text(yFmt(bd.value));
   });
-  g.append('g').attr('class', 'axis').attr('transform', `translate(0,${ih})`).call(d3.axisBottom(x).tickSize(0).tickPadding(8)).call(a => { a.select('.domain').remove(); a.selectAll('text').call(wrapText, x.bandwidth() + 10); });
 }
 function wrapText(sel, width) {
   sel.each(function () { const t = d3.select(this), words = t.text().split(/\s+/); let line = [], lineNo = 0; const y = t.attr('y'), dy = 0.9; let tspan = t.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', dy + 'em'); for (const w of words) { line.push(w); tspan.text(line.join(' ')); if (tspan.node().getComputedTextLength() > width && line.length > 1) { line.pop(); tspan.text(line.join(' ')); line = [w]; tspan = t.append('tspan').attr('x', 0).attr('y', y).attr('dy', ++lineNo * 1.1 + dy + 'em').text(w); } } });
