@@ -348,6 +348,7 @@ table.model .neg { color: var(--critical); }
 .counters .c .l { font-size: 11px; color: var(--muted); }
 .flags-list .f { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; }
 .flags-list .f .who { font-size: 11px; color: var(--muted); font-family: var(--font-mono); }
+.flags-list.capped { max-height: 420px; overflow: auto; }
 
 /* ---------- ledger ---------- */
 .bar-row { display: grid; grid-template-columns: 90px 1fr 50px; gap: 10px; align-items: center; font-size: 12px; margin: 4px 0; }

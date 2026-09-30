@@ -2,8 +2,8 @@
  "agent": "certifier",
  "role": "Certifier",
  "started": "2026-09-30T20:44:31Z",
- "finished": "2026-09-30T23:03:48Z",
- "verdict": "NEEDS WORK",
+ "finished": "2026-09-30T23:21:11Z",
+ "verdict": "READY",
  "rederived": [
   {
    "fact": "F1",
@@ -327,7 +327,7 @@
    "deliverable_says": "Series H $65B at $965B post-money ($900B pre, derived), 2026-05-28; leads Altimeter, Dragoneer, Greenoaks, Sequoia; co-leads Capital Group, Coatue, D1, GIC, ICONIQ, XN",
    "where": "data/metrics.json rounds; Overview tile 'Last post-money valuation'; ledger CAP-ROU-20299f",
    "agrees": true,
-   "note": "Every number agrees (amount, post-money, pre-money, date, leads). Open: the Series H event drawer now labels the $965B 'Reference mark (not a priced round)' and its card lost 'post $965B' (B-7); the Overview tile, model and verdict still use $965B as post-money."
+   "note": "Every number agrees (amount, post-money, pre-money, date, leads). At HEAD the Series H event also reads 'Post-money $965B' in its drawer and 'post $965B' on its card, consistent with the Overview tile, the model and the verdict (B-7 fixed)."
   },
   {
    "fact": "F2",
@@ -355,7 +355,7 @@
    "deliverable_says": "Announced $592.1B ($455.7B contracted, $89.6B up to, $46.8B unconfirmed); S-1 $518.2B, 79.8% non-cancelable ($413.7B); 15.845 GW of which 13.0 'up to'; The Information $517B and 14.8 GW carried as a second origin",
    "where": "data/compute.json totals; Compute tab tiles and ledger; Overview compute tile",
    "agrees": true,
-   "note": "Agrees with my $518B, about 80% and 14-15 GW. The Overview and Compute tiles keep 'up to' ($89.6B) and unconfirmed ($46.8B) apart from contracted; one Timeline card still prints a ceiling as a plain compute chip (B-3)."
+   "note": "Agrees with my $518B, about 80% and 14-15 GW. The Overview and Compute tiles keep 'up to' ($89.6B) and unconfirmed ($46.8B) apart from contracted, and the Timeline compute chips now carry the basis (both Nscale S-1 cards read 'compute up to $44.6B')."
   },
   {
    "fact": "F6",
@@ -697,24 +697,45 @@
    "deliverable": "$965B T1 HIGH; $65.0B T2 HIGH gross; $11.5B T3 MEDIUM; $124B + $2.5B debt with the convertible and disputed chips; $592B incl. $89.6B up to and $46.8B unconfirmed, $456B, $218B, 15.85 GW; 2,500 T3 disputed 5,000; Confidential S-1; 691 events",
    "recomputed": "all trace; 592.1 - 89.6 - 46.8 = 455.7; tier and confidence tallies reproduce from data/events.json; the first tile opens nothing (N-29)",
    "within_tolerance": true
-  }
- ],
- "blocking": [
-  {
-   "id": "B-7",
-   "where": "scripts/merge.py priced_round() (new 'implied' trigger); event evt-20260528-series-h-compute-agreements-memory-partners (card and drawer); also evt-20240701-pb-series-d-1-2b-21b",
-   "issue": "NEW, caused by the B-3 fix. The Series H event (Anthropic's own T1 announcement, 'Anthropic raises $65B in Series H funding at $965B valuation') now reads 'Reference mark (not a priced round) $965B' in its drawer and its card lost the 'post $965B' chip, while the Overview tile calls the same $965B 'Last post-money valuation' (T1 HIGH), the model and the verdict price Series H as a post-money, and my F1 re-derivation confirms it (post-money $965B, pre-money $900B, May 28 2026). Cause: the new text trigger \\b(implying|implies|implied)\\b in priced_round() matches 'pre-money implied $900B' in the event's notes, so R-VAL treats the round as not priced and moves valuation_post_usd_m 965000 to other.valuation_reference_usd_m. The same trigger also demoted the PitchBook Series D event ('613M implied by $18.4B' in a share-count note). Of the six events newly demoted since pass 2, four are right (Series A, Google $300M, the $40B talks, the Amazon notes); Series H is wrong and PitchBook Series D is debatable.",
-   "evidence": "Drawer of the Series H event at HEAD 0462e30: 'Amount $65.0B | Reference mark (not a priced round) $965B | Pre-money $900B', source title 'Anthropic raises $65B in Series H funding at $965B valuation' (T1) (scratch certifier/drawers3/evt-20260528-series-h-compute-agreements-memory-partners.png and .txt). data/events.json: valuation_post_usd_m null, other.valuation_reference_usd_m 965000, corrections R-VAL 'automatic rule' (965000 to null). Chip inventory of all 691 cards: 'post $965B' present at 6fd1ca6 (drawers/inventory.json), absent now (drawers3/inventory.json). R-VAL demotions 16 at 6fd1ca6, 22 now. Test of a narrower pattern over all 22 demoted events: r'\\b(implying|implies|implied) (a |an |the )?(post-money |pre-money )?valuation\\b' restores Series H and PitchBook Series D and keeps Series A, Google, Amazon and the $40B talks demoted.",
-   "smallest_fix": "In merge.py priced_round() replace the text trigger r'\\b(implying|implies|implied)\\b' with r'\\b(implying|implies|implied) (a |an |the )?(post-money |pre-money )?valuation\\b' (or drop it and rely on the explicit 'valuation not disclosed / unstated / floated' phrases), re-run merge.py and rebuild dist/artifact.html. Add one check to scripts/certify.py that the Series H event keeps valuation_post_usd_m 965000 (and Series E to G their post values), so a rule change cannot demote the anchor round again."
   },
   {
-   "id": "B-3",
-   "where": "Timeline card and drawer for evt-20260918-nscale-files-nyse-ipo (assets/app.js extractChips; event keys in metrics.compute)",
-   "issue": "The Nscale S-1 card (Sep 18, T1 HIGH) prints 'compute $44.6B' with no 'up to' although its own summary says 'GPU services agreements of up to about $44.6B' and the Compute tab and the Overview tile count the figure in the $89.6B 'up to' bucket. The desk row that carries the 'up to' basis is keyed to the Aug 26 Nscale event, so the S-1 event id gets no qualifier; the drawer row reads '$44.6B' plain as well. Everything else in B-3 from pass 2 is fixed and verified at HEAD 0462e30: the $40B talks card reads 'reference mark $40.0B'; the Amazon $54B and Google $5B drawers read 'Reference mark (not a priced round)' with 'R-VAL (automatic rule)'; compute chips carry the desk basis (SpaceX 'up to $45.0B', the Aug 26 Nscale card 'up to', Lambda, Volta and Akamai Plan 1 '(unconfirmed)'); the headline's 'up to' qualifies only the amount chip.",
-   "evidence": "Chip inventory of all 691 cards at HEAD (scratch certifier/drawers3/inventory.json): Sep 18 'Nscale S-1 discloses $44.6B Anthropic contract and $103.4B backlog' chips ['compute', 'partnership', 'compute $44.6B']; Aug 26 'Anthropic signs ~$45B six-year compute deal with Nscale' chips 'up to $45.0B' and 'compute up to $44.6B'. data/metrics.json compute row for Nscale: usd_basis 'up to (S-1: aggregate payments of up to approximately $44.6 billion)', event_id evt-20260826-nscale-45b-west-virginia-deal; data/compute.json commitments row for Nscale is keyed to evt-20260918-nscale-files-nyse-ipo.",
-   "smallest_fix": "Key the desk basis on both Nscale event ids (add the S-1 event id to the metrics.compute row, or let extractChips add 'up to' when the event summary says 'up to about $' before the compute figure), rebuild."
+   "item": "R-VAL correction set, 0462e30 vs HEAD 1fd56d1 (events carrying an R-VAL correction)",
+   "deliverable": "22 before; exactly three left and none joined",
+   "recomputed": "22 to 19; left Series A, PitchBook Series D, Series H; joined none; was-values of the 19 identical; R-AMT 10 and R-PROJ 8 unchanged",
+   "within_tolerance": true
+  },
+  {
+   "item": "Events whose record changed between 0462e30 and HEAD (of 691)",
+   "deliverable": "3 (the B-7 events)",
+   "recomputed": "3, in the extracted field only; tier tallies and confidence tallies identical (HIGH 448, MEDIUM 212, DISPUTED 13, LOW 10, VERIFY 8)",
+   "within_tolerance": true
+  },
+  {
+   "item": "Timeline chip prefixes across all 691 rendered cards, 0462e30 to HEAD: post / reference mark / up to / target or cap / projected run-rate / compute",
+   "deliverable": "post 7 to 10; the rest unchanged; both Nscale S-1 cards gain 'up to'",
+   "recomputed": "post 7 to 10; reference mark 15; up to 7; target or cap 10; projected run-rate 7; compute 108; exactly five cards differ (two Nscale, three 'post' restored)",
+   "within_tolerance": true
+  },
+  {
+   "item": "Coordinator's sweep on all 691 cards: 'post' on non-financing events / 'post' on talks headlines / run-rate chips at or above $70B / HIGH events with a chain flag and a non-T1 primary",
+   "deliverable": "0 / 0 / 0 / 0",
+   "recomputed": "0 / 0 / 1, OpenAI's own $70B from Axios, no Anthropic figure / 0",
+   "within_tolerance": true
+  },
+  {
+   "item": "Table geometry, 0462e30 vs HEAD at 1440 and 400 px: existing tables whose height or scrollWidth changed",
+   "deliverable": "none expected",
+   "recomputed": "none; Sources panel 21,408 to 21,139 px (desktop) and 37,099 to 36,204 (phone) because the corrections table shrank from 48 to 45 rows; widest table 3.09x its frame (phone, Compute unit economics), under the 4x guard",
+   "within_tolerance": true
+  },
+  {
+   "item": "Ledger corrections shown on the Sources tab",
+   "deliverable": "45",
+   "recomputed": "R-VAL 19 + R-AMT 10 + R-PROJ 8 + K-01 to K-08 = 45",
+   "within_tolerance": true
   }
  ],
+ "blocking": [],
  "non_blocking": [
   {
    "id": "N-2",
@@ -731,7 +752,7 @@
   {
    "id": "N-6",
    "where": "Overview chart and table 'Post-money valuation by round' (metrics.rounds); Timeline events evt-20240701-pb-series-d-1-2b-21b, evt-20220429-pb-series-b-980m-reconcile, evt-20250502-employee-buyback-61-5b",
-   "issue": "The chart plots PitchBook rounds that the record itself disputes or demotes, and the DISPUTED state is computed in code but never drawn: the tooltip and the table view show only label and value. The Amazon notes point ($54.0B, label 'PB 6th round') and Series A ($461M) are plotted as post-money while their events now read 'Reference mark (not a priced round)' and the ledger says no valuation was stated for the notes. Series B and D are MISMATCH in the ledger, yet the two PitchBook events stay HIGH and evt-20250502 'run-rate $1.4B' stays MEDIUM against a ledger MISMATCH. Downgraded from B-3: nothing relies on the point and the label names PitchBook, but it contradicts the drawer.",
+   "issue": "The chart plots PitchBook rounds that the record itself disputes or demotes, and the DISPUTED state is computed in code but never drawn: the tooltip and the table view show only label and value. The Amazon notes point ($54.0B, label 'PB 6th round') is plotted as post-money while its event reads 'Reference mark (not a priced round)' and the ledger says no valuation was stated for the notes. Series B and D are MISMATCH in the ledger, yet the two PitchBook events stay HIGH and evt-20250502 'run-rate $1.4B' stays MEDIUM against a ledger MISMATCH. Nothing relies on the point and the label names PitchBook, but it contradicts the drawer.",
    "suggestion": "Draw the flag (hollow marker plus 'DISPUTED: no stated valuation' in the label) or leave non-priced rounds out of the post-money series; write the ledger verdict into the linked events."
   },
   {
@@ -749,8 +770,8 @@
   {
    "id": "N-12",
    "where": "Sources tab audit (gate G11 WARN) and the automatic R-rules",
-   "issue": "Only 49% of the 47 audited events are fully supported (100% on the core fact); G11 stays WARN. The fix is now applied by rule (R-VAL 22, R-AMT 10, R-PROJ 8 corrections), but the new rule's false positive on Series H (B-7) shows a rule change needs a check against the anchor rounds before it ships.",
-   "suggestion": "Keep G11 visible; add the anchor-round check from B-7; run a second audit pass on events with amount, post-money or run-rate fields."
+   "issue": "Only 49% of the 47 audited events are fully supported (100% on the core fact); G11 stays WARN and is disclosed on the Sources tab and in the README. The fix is now applied by rule (R-VAL 19, R-AMT 10, R-PROJ 8 corrections). The rule change that demoted the Series H event (B-7, fixed in 1fd56d1) shows a rule change needs a check against the anchor rounds before it ships.",
+   "suggestion": "Keep G11 visible; add a check to scripts/certify.py that the Series H event keeps valuation_post_usd_m 965000 (and Series E to G their post values); run a second audit pass on events with amount, post-money or run-rate fields."
   },
   {
    "id": "N-15",
@@ -767,7 +788,7 @@
   {
    "id": "N-27",
    "where": "Timeline chips and Sources tile: TeraWulf card, Reuters draft card, 'Multi-outlet events' sub-label",
-   "issue": "Small leftovers from the label fixes. The TeraWulf lease card (Jul 6, T1 HIGH) now prints 'up to $19.0B' because the desk's free-text basis contains 'up to ~$33B with both renewals', while the Compute tab and the row say contracted initial-term revenue of $19.0B (an over-hedge, the opposite error). The Reuters draft-prospectus card still shows 'reference mark $2.00T' because the gate regex matches 'IPO' although its summary names no valuation. The Sources sub-label '74 likely one reporting chain' counts all flagged events, 39 of which have one outlet, not 74 of the 349; the ledger Outlets column still prints 4 to 12 on single-chain rows (the row note caveats it).",
+   "issue": "Small leftovers from the label fixes. The TeraWulf lease card (Jul 6, T1 HIGH) now prints 'up to $19.0B' because the desk's free-text basis contains 'up to ~$33B with both renewals', while the Compute tab and the row say contracted initial-term revenue of $19.0B (an over-hedge, the opposite error). The Reuters draft-prospectus card still shows 'reference mark $2.00T' because the gate regex matches 'IPO' although its summary names no valuation. The Sources sub-label '74 likely one reporting chain' counts all flagged events, 39 of which have one outlet, not 74 of the 349; the ledger Outlets column still prints 4 to 12 on single-chain rows (the row note caveats it). The event drawer's 'Compute' row prints the dollar figure without the basis the card chip now carries (for example the Nscale S-1 drawer reads '$44.6B GPU Services Agreements'; the qualifier sits in the summary and in the raw 'Other' block).",
    "suggestion": "Match 'up to' only at the start of the desk basis or use an explicit flag; tighten the reference-mark gate to a number in the summary; say 'of which 35' in the sub-label."
   },
   {
@@ -783,16 +804,22 @@
    "suggestion": "Set event_id on the rounds (Series H to evt-20260528-series-h-compute-agreements-memory-partners, and so on)."
   },
   {
-   "id": "N-30",
-   "where": "dist/artifact.html",
-   "issue": "The single-file artifact was built at 22:39Z and predates commit 0462e30 (the Independent certification card and the certification.json loader in assets/app.js); publishing it would ship a page without the certification card.",
-   "suggestion": "Rebuild with scripts/build_artifact.py after the last app.js and data change, including after the B-7 fix."
-  },
-  {
    "id": "N-31",
    "where": "README.md 'What the desk concluded', second bullet",
    "issue": "'Every FY2024/FY2025 financial is press-reported from a leaked draft prospectus' is slightly broad: the 2024-25 gross margin, cost of revenue and gross profit on the Model tab come from The Information (T3, paying-user scope), as the Model legend now says. All README numbers I checked reproduce (scenario table, 262/420/568, 72 match and 33 noted and 6 partial and 7 mismatch and 3 untraceable, 48 audited events).",
    "suggestion": "Say 'revenue, operating loss and compute spend are press-reported from a leaked draft; gross margin is The Information (T3)'."
+  },
+  {
+   "id": "N-32",
+   "where": "scripts/shot.cjs height guard (dist/qa-heights.json) on the Agents tab",
+   "issue": "The new page-height guard flakes on the Agents floor. Two runs of the same code from my scratch copy, against the baseline the repo's own run wrote (phone/dark/agents 4,941), both reported 'page height grew 4941 -> 7099' and '-> 7192'; the baseline file itself has phone/light at 7,099, so the taller theme swaps from run to run. The floor now autoplays on first visit and its height follows how much desk chatter the replay has drawn when the page is measured. Every other check (errors, overflow, table width, other tabs' heights) is clean. A gate that fails on a healthy page will be muted.",
+   "suggestion": "Exclude the agents tab from the growth check, or pause the replay (or measure before it starts) and compare against the floor's unstarted height."
+  },
+  {
+   "id": "N-33",
+   "where": "Timeline card and drawer for evt-20210528-series-a",
+   "issue": "With the B-7 fix the Series A card reads 'post $461M' again. The figure is PitchBook's (ledger row MATCH against the PitchBook field); the event's own notes say the company did not disclose a valuation and that Dealroom's $623M is an unconfirmed secondary-market figure. It is a priced round, so the label is defensible, but the card gives no hint that the number is PitchBook's.",
+   "suggestion": "Say 'post $461M (PitchBook)' or add the note to the drawer row."
   }
  ],
  "log": [
@@ -1325,15 +1352,61 @@
    "type": "message",
    "text": "Orchestrator: at HEAD 0462e30 verdict is NEEDS WORK with 2 blocking items, both one-line fixes. B-7 (new, from the B-3 fix): in merge.py priced_round() narrow the 'implied' trigger to r'\\b(implying|implies|implied) (a |an |the )?(post-money |pre-money )?valuation\\b' so Series H and PitchBook Series D stop reading 'Reference mark (not a priced round)'. B-3 (narrowed): the Nscale S-1 card needs 'up to' on its compute chip (key the desk basis on evt-20260918-nscale-files-nyse-ipo too). B-6 is verified fixed and the new guard catches it. Everything else is non-blocking (13 notes). Rebuild data and dist/artifact.html after the fixes",
    "to": "orchestrator"
+  },
+  {
+   "seq": 99,
+   "type": "note",
+   "text": "Pass 4 started 23:08Z, a narrow confirmation of B-7 and B-3 at HEAD 1fd56d1 (23:07:54Z) plus a regression check of the rules they touch; anything else goes to non-blocking."
+  },
+  {
+   "seq": 100,
+   "type": "verify",
+   "text": "B-7 fixed: the Series H drawer reads 'Amount $65.0B | Post-money $965B | Pre-money $900B' and its card shows 'post $965B'; PitchBook Series D reads 'Post-money $21.0B' and Series A 'Post-money $461M'. The $40B talks, Amazon $54B and Google $5B events stay 'reference mark' and 'Reference mark (not a priced round)'"
+  },
+  {
+   "seq": 101,
+   "type": "verify",
+   "text": "B-3 fixed: both Nscale S-1 cards read 'compute up to $44.6B' (T1 HIGH evt-20260918-nscale-files-nyse-ipo and T3 MEDIUM evt-20260918-nscale-files-nyse-ipo-2); the partner-and-amount lookup in extractChips changed no other compute chip"
+  },
+  {
+   "seq": 102,
+   "type": "verify",
+   "text": "Regression check by record diff: between 0462e30 and HEAD exactly three events changed (Series A, PitchBook Series D, Series H, extracted field only); R-VAL 22 to 19 with the other 19 identical; R-AMT 10 and R-PROJ 8 unchanged; tier and confidence tallies identical. The '16 other R-VAL events' in the brief is 19 in the data (16 older plus Google, the $40B talks and Amazon)"
+  },
+  {
+   "seq": 103,
+   "type": "verify",
+   "text": "Sweep of all 691 rendered cards: 'post' chips 7 to 10, all priced rounds; 0 'post' on non-financing events; 0 'post' on talks headlines; run-rate chips at or above $70B: only OpenAI's own $70B; HIGH with a chain flag and a non-T1 primary: 0. Exactly five cards differ from my pass-3 inventory"
+  },
+  {
+   "seq": 104,
+   "type": "verify",
+   "text": "Table geometry at 1440 and 400 px against pass 3: no existing table changed; Sources panel 21,408 to 21,139 px as the corrections table shrank; widest table 3.09x its frame. Ship gates in data/certify.json (23:07:54Z): 14 PASS, 1 WARN (G11), 0 FAIL, 0 PENDING. dist/artifact.html rebuilt 23:06Z and current"
+  },
+  {
+   "seq": 105,
+   "type": "flag",
+   "text": "The repo's shot.cjs height guard flakes on the Agents tab: two runs of the same code both report 'phone/dark/agents page height grew 4941 -> 7099 / 7192' against the baseline the repo wrote, where phone/light is 7,099 and phone/dark 4,941; the floor replay sets the height. Everything else in both runs is clean. Non-blocking (N-32); also noted the Series A card now reads 'post $461M' from PitchBook (N-33)"
+  },
+  {
+   "seq": 106,
+   "type": "verify",
+   "text": "Re-checked at 23:21Z: HEAD is still 1fd56d1 with a clean working tree. Verdict READY: no blocking item remains, F1-F8 agree, and the numbers I recomputed in passes 1 to 3 are unchanged"
+  },
+  {
+   "seq": 107,
+   "type": "message",
+   "text": "Orchestrator: at HEAD 1fd56d1 verdict is READY with 0 blocking items. B-7 (Series H, PitchBook Series D and Series A read 'post' again) and B-3 (both Nscale S-1 cards read 'compute up to $44.6B') are verified fixed, and the rules they touch did not regress: exactly three events changed, R-VAL 22 to 19 with the rest identical, five cards differ in chips, tallies and gates unchanged. 14 non-blocking notes remain; start with N-32 (the smoke height guard flakes on the Agents tab and will fail a healthy page), N-27 and N-29",
+   "to": "orchestrator"
   }
  ],
  "stats": {
   "pages_opened": 43,
   "facts_rederived": 8,
-  "blocking": 2,
-  "non_blocking": 13,
+  "blocking": 0,
+  "non_blocking": 14,
   "web_searches": 2,
-  "passes": 3
+  "passes": 4
  },
  "resolved_since_first_pass": [
   {
@@ -1450,16 +1523,32 @@
    "id": "N-25",
    "resolved_at": "2026-09-30T22:15:44Z (commit 4544389)",
    "verified": "The Overview 'Signs raised by the desk' card now excludes the Certifier's flags; it shows the Judge's signs."
+  },
+  {
+   "id": "B-7",
+   "resolved_at": "2026-09-30T23:07:54Z (commit 1fd56d1)",
+   "verified": "Verified at HEAD 1fd56d1. Drawer of evt-20260528-series-h-compute-agreements-memory-partners: 'Amount $65.0B | Post-money $965B | Pre-money $900B'; its card chips are '$65.0B', 'post $965B', 'run-rate $47.0B' (scratch certifier/drawers4, screenshot evt-20260528-...png). PitchBook Series D drawer reads 'Post-money $21.0B' and the Series A drawer 'Post-money $461M'. Record-level diff of data/events.json between 0462e30 and HEAD: exactly three events changed (those three, in the extracted field only); the R-VAL set went from 22 to 19 (left: Series A, PitchBook Series D, Series H; joined: none; the was-values of the other 19 are identical); R-AMT 10 and R-PROJ 8 unchanged; tier and confidence tallies identical (HIGH 448, MEDIUM 212, DISPUTED 13, LOW 10, VERIFY 8). The $40B talks card still reads 'reference mark $40.0B' and the Amazon $54B and Google $5B drawers still read 'Reference mark (not a priced round)'. Sweep of all 691 rendered cards: 'post' chips went from 7 to 10 and all ten are priced rounds (Series A, B, C, D twice, E, F, G, H); 0 'post' chips on non-financing events, 0 on talks headlines. The narrowed pattern keeps the Google card demoted ('implied valuation'). The coordinator's '16 other R-VAL events' is 19 in the data: the 16 from before pass 3 plus Google, the $40B talks and Amazon."
+  },
+  {
+   "id": "B-3",
+   "resolved_at": "2026-09-30T23:07:54Z (commit 1fd56d1)",
+   "verified": "Both Nscale S-1 cards now read 'compute up to $44.6B': evt-20260918-nscale-files-nyse-ipo (T1 HIGH) and evt-20260918-nscale-files-nyse-ipo-2 (SiliconANGLE, T3 MEDIUM, 'compute up to $44.6B · 0.46 GW'); the Aug 26 Nscale card keeps 'up to $45.0B' and 'compute up to $44.6B'. Chip inventory diff of all 691 cards between 0462e30 and HEAD: exactly five cards differ (the two Nscale cards and the three restored 'post' chips), so the partner-and-amount lookup added to extractChips changed no other chip; the 108 compute chips and the other qualified chips (SpaceX 'up to $45.0B', Lambda, Volta and Akamai Plan 1 '(unconfirmed)', Google 'up to $40.0B', Microsoft/NVIDIA 'up to $15.0B') are as in pass 3. The drawer 'Compute' row still prints a dollar figure without the qualifier for every event, as it did for the ones fixed earlier (N-27)."
+  },
+  {
+   "id": "N-30",
+   "resolved_at": "2026-09-30T23:07:54Z (commit 1fd56d1)",
+   "verified": "dist/artifact.html was rebuilt at 23:06Z and contains the Independent certification card, the certification loader, the partner-and-amount compute lookup, the .net-table rule and the 'outlets, likely one chain' text."
   }
  ],
  "certified_against": {
-  "git_head": "0462e30 Sources tab shows the Certifier's verdict, open blocking items and the facts it re-derived (working tree clean)",
+  "git_head": "1fd56d1 Series A, D and H announcements stay priced rounds; Nscale S-1 cards carry the up-to basis by partner and amount (working tree clean)",
+  "third_pass_head": "0462e30 (verdict NEEDS WORK, blocking B-7 and B-3)",
   "second_pass_head": "6fd1ca6 (verdict NEEDS WORK, blocking B-6 and B-3)",
   "first_pass_head": "cd50680 (verdict NEEDS WORK, blocking B-2, B-3, B-4)",
-  "commits_checked_in_pass_3": "4544389 (22:15:44Z), 82f7060 (22:16:10Z), 52b87b8 (22:41:28Z), 8740aa6 (22:42:03Z), a4de47c (22:42:35Z), 0462e30 (22:42:57Z)",
-  "data_built": "2026-09-30T22:39:40Z (events, ledger); data/certify.json generated 22:42:51Z; dist/artifact.html was built 22:39Z and predates commit 0462e30",
-  "ui_run": "2026-09-30T22:46Z the repo's scripts/shot.cjs logic run from a scratch copy into my own qa8 folder (so no repo file was written): no console or page errors, no document overflow, no table over 4x its frame, no page-height growth over 40%; table geometry at 1440 and 400 px, all 691 Timeline cards and 17 event-drawer opens measured with my own Playwright scripts; HEAD unchanged at my 23:01Z re-check",
-  "pass_3_window": "2026-09-30T22:41:55Z to 2026-09-30T23:03:48Z"
+  "commits_checked_in_pass_4": "1fd56d1 (23:07:54Z)",
+  "data_built": "2026-09-30T23:07:54Z (data/certify.json generated); dist/artifact.html built 23:06Z and contains the latest app.js",
+  "ui_run": "2026-09-30T23:11Z and 23:16Z the repo's scripts/shot.cjs logic run twice from a scratch copy into my own qa9 and qa10 folders (no repo file written): no console or page errors, no document overflow, no table over 4x its frame; both runs report one height-growth error on phone/dark/agents (4,941 to 7,099 and to 7,192), which is the Agents-floor replay state and not a layout change (N-32). Table geometry at 1440 and 400 px, all 691 Timeline cards and 12 event-drawer opens measured with my own Playwright scripts; HEAD unchanged at my 23:21Z re-check",
+  "pass_4_window": "2026-09-30T23:08:15Z to 2026-09-30T23:21:11Z"
  },
- "verdict_note": "Pass 3 at HEAD 0462e30. B-6 (table layout) is fixed and verified at desktop and phone, and the new smoke guard demonstrably catches it. B-2 and B-4 stay fixed. B-3 is narrowed to one card (the Nscale S-1 compute chip has no 'up to'). One NEW blocking regression came from the B-3 fix: the new 'implied' trigger in merge.py priced_round() matches 'pre-money implied $900B' and demotes the Series H event to 'Reference mark (not a priced round) $965B', which contradicts the Overview tile, the model, the verdict and my F1 re-derivation. The Judge's revision is verified: 53 event ids resolve, no call changed, and all twelve restated plan-test numbers reproduce within 0.5 point under the Judge's stated method. F1-F8 still agree; model, compute and thesis numbers are unchanged and reproduce (672 parity values, 282 independent values, 0 mismatches). Both blockers have a one-line fix."
+ "verdict_note": "Pass 4 (narrow confirmation) at HEAD 1fd56d1: READY. B-7 is fixed: the Series H event reads 'Post-money $965B' in its drawer and 'post $965B' on its card again, as do PitchBook Series D ($21.0B) and Series A ($461M). B-3 is fixed: both Nscale S-1 cards read 'compute up to $44.6B'. Nothing I verified regressed: between 0462e30 and HEAD exactly three events changed (the B-7 events), the R-VAL set went from 22 to 19 (those three left, none joined, the other 19 keep their values), R-AMT and R-PROJ are unchanged, tier and confidence tallies are identical, exactly five Timeline cards differ in chips across all 691 (the two Nscale cards and the three restored 'post' chips), no table changed geometry, and gates are 14 pass, 1 warn (G11, disclosed), 0 fail. F1-F8 still agree, and the model, compute and thesis numbers reproduce (672 parity values, 282 independent values, 0 mismatches). The Judge's restated plan-test ranges reproduce within 0.5 point. 14 non-blocking notes remain. None touches a headline tile, a model input or a verdict number. The closest to a basis trap is N-6 (the Overview chart still plots the PitchBook $54.0B 'post-money' for the Amazon notes while the event drawer calls it not a priced round); I kept it non-blocking because nothing relies on the point and its label names PitchBook. Worth a look first: N-6, N-27 (TeraWulf chip says 'up to' although contracted), N-29 (the first Overview tile opens nothing), N-32 (the smoke height guard flakes on the Agents tab) and N-12 (audit sample still 49% fully supported)."
 }

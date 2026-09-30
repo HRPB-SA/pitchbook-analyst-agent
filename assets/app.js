@@ -852,7 +852,7 @@ class Floor {
     const side = el('div', { class: 'card' }, el('div', { class: 'card-h' }, el('h3', { text: 'Desk chatter' }), el('span', { class: 'small muted', text: 'the real log' }))); this.feed = el('div', { class: 'feed' }); side.append(this.feed);
     lay.append(floor, side);
     this.root.append(ctl, this.counters, lay);
-    this.flagsCard = el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Signs raised' }), el('span', { class: 'small muted', text: 'new or conflicting information' }))); this.flagsList = el('div', { class: 'flags-list' }); this.flagsCard.append(this.flagsList); this.root.append(this.flagsCard);
+    this.flagsCard = el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Signs raised' }), el('span', { class: 'small muted', text: 'new or conflicting information' }))); this.flagsList = el('div', { class: 'flags-list capped' }); this.flagsCard.append(this.flagsList); this.root.append(this.flagsCard);
     this.rosterCard = el('div', { class: 'card section' }, el('div', { class: 'card-h' }, el('h3', { text: 'Roster' }))); this.root.append(this.rosterCard); this.renderRoster();
     // draw rows and desks
     const g = this.svg.append('g');
@@ -1081,6 +1081,7 @@ function renderSources(root) {
       'Inputs: public web sources (company posts, filings, dockets, press) and licensed PitchBook Premium content (round sizes, valuations, investors, team data, analyst notes). The PitchBook content is not public: check your licence before sharing this page or its data files.',
       'MNPI screen: the S-1 is confidential. Any figure attributed to a leaked or reported prospectus is press-reported (T2/T3), not confirmed by the company, and is labelled as such where it appears. Nothing here was obtained from an insider. Run your compliance review before acting on reported-prospectus figures.',
       'Conflict of interest: the desk\'s model portfolio (project context dated Feb 27 2026; re-verify before relying on it) is overweight Anthropic (6%) and underweight OpenAI (2%). The analysis does not treat that position as evidence. This page is decision support, not investment advice.',
+      'Independence: an independent analysis by the desk. It is not affiliated with, reviewed by or endorsed by Anthropic PBC or any other company it names.',
       'Tools: PitchBook Premium, web page fetches and news-feed queries were the live sources. Bigdata.com was not used (subscription paused in the desk\'s tool registry).',
     ]).map(p => el('p', { text: p, style: { marginBottom: '6px' } })))));
 }
