@@ -94,7 +94,7 @@ To publish as a single-file page (for an artifact host): `python3 scripts/build_
 
 The one-page decision board (the call, the model behind it, the evidence checks, in one scrollable page) is a second single file that fetches nothing: `python3 scripts/build_summary.py`
 reads `data/*.json` and `agents/outputs/certifier.json`, fills `assets/summary.template.html` and writes `dist/summary.html`. Every figure on it is computed from those files;
-only labels, captions and the disclosure wording are written by hand. Rebuild it after any change to the data, then publish `dist/summary.html` on its own (no data files needed).
+only labels, captions and the disclosure wording are written by hand. Rebuild it after any change to the data, then publish `dist/summary.html` on its own (no data files needed). `python3 scripts/build_summary.py --standalone` also writes `dist/summary.standalone.html` (git-ignored), the same page with a document wrapper, for opening straight from disk.
 
 ## Conventions you should know before quoting a number
 

@@ -5,13 +5,14 @@ Reads data/*.json and agents/outputs/certifier.json, computes every figure the b
 and writes dist/summary.html: a single file that fetches nothing at view time (fonts and nothing else load from the network).
 Every number on the board comes from the files read here; the only text written by hand is labels, captions and the disclosure wording, which repeats
 the Sources tab of the main dashboard. Anything that cannot be parsed from the data is left out rather than guessed.
-Run: python3 scripts/build_summary.py        (then publish dist/summary.html as a private artifact page)
+Run: python3 scripts/build_summary.py [--standalone]   (publish dist/summary.html as a private artifact page; --standalone also writes dist/summary.standalone.html for opening locally)
 """
 import datetime
 import json
 import os
 import re
 import subprocess
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 P = lambda *a: os.path.join(ROOT, *a)
@@ -199,5 +200,13 @@ assert "__DATA__" in tpl, "template has no __DATA__ placeholder"
 os.makedirs(P("dist"), exist_ok=True)
 with open(P("dist", "summary.html"), "w", encoding="utf-8") as f:
     f.write(tpl.replace("__DATA__", payload))
+if "--standalone" in sys.argv:
+    # the artifact host wraps the page in a document skeleton; opening the file on its own needs the same wrapper (doctype, viewport, zero body margin)
+    page = tpl.replace("__DATA__", payload)
+    wrapped = ('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
+               '<style>:root{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}[hidden]{display:none!important}</style></head><body>' + page + '</body></html>')
+    with open(P("dist", "summary.standalone.html"), "w", encoding="utf-8") as f:
+        f.write(wrapped)
+    print("wrote dist/summary.standalone.html (open this one directly in a browser; dist/summary.html is the artifact page)")
 print(f"wrote dist/summary.html {os.path.getsize(P('dist', 'summary.html'))} bytes · {len(E)} events · {len(facts)} facts · {len(mismatches)} frozen conflicts · "
       f"bands {'parsed' if bands else 'NOT parsed'} · adjusted base {'parsed' if m_adj else 'NOT parsed'} · rates {len(rates)} · HEAD {head or '?'}")
