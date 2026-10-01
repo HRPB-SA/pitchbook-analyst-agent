@@ -81,7 +81,11 @@ def main():
                      JOIN firms ON firms.id = funds.firm_id"""),
         ("fund_partners", """SELECT firms.name AS firm, funds.fund_name, funds.vintage_year, funds.sector_focus,
                               funds.sector_focus_specificity, partners.name AS partner, fund_partners.title,
-                              funds.lead_partners_source, funds.sector_focus_source
+                              funds.lead_partners_source, funds.sector_focus_source,
+                              CASE WHEN funds.lead_partners_source LIKE 'web:firm-team-page%'
+                                   AND funds.vintage_year != '' AND CAST(funds.vintage_year AS INTEGER) < 2015
+                                   THEN 'CAUTION: current-era roster applied to a pre-2015 fund - these partners may not have been at the firm when this fund was raised'
+                                   ELSE '' END AS partner_attribution_caution
                               FROM fund_partners
                               JOIN funds ON funds.id = fund_partners.fund_id
                               JOIN firms ON firms.id = funds.firm_id
