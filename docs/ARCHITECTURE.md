@@ -42,7 +42,7 @@ pre-IPO reference, built to be refreshed when the public S-1 lands.
 
 ## 2. Sources and the tier ladder
 
-Every event carries the tier of its weakest load-bearing source (harrison-validation).
+Each agent tags a finding with the tier of its weakest load-bearing source (harrison-validation). A merged event shows the best tier among its findings and lists the others as corroboration; fields the best finding lacks are filled in from the weaker ones, and the drawer does not show which field came from which source.
 
 | Tier | What | Examples used here |
 |---|---|---|

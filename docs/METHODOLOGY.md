@@ -13,7 +13,7 @@ How the record is built, tiered, verified and turned into a model. Rigor 4 throu
 | T4 | Aggregator/secondary | Sacra, Crunchbase, Wikipedia, IPO-tracker blogs (lead-finders only) |
 | T5 | Anonymous/social | never load-bearing |
 
-An event inherits the tier of its weakest load-bearing source. When two agents found the same
+A finding carries the tier of its weakest load-bearing source. When findings are merged into one event, the event shows the best tier among them and lists the others as corroboration; fields the best finding lacks are filled in from the weaker ones, and the drawer does not show which field came from which source. When two agents found the same
 event from different origins, the second origin is recorded as corroboration and the event's
 `independent_sources` count rises; the same wire re-reported by several outlets counts once.
 
