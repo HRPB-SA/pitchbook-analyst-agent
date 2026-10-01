@@ -1,0 +1,661 @@
+<title>Anthropic Decision Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* CONTEXT: ANTHROPIC DECISION BOARD — one scrollable page for the person who has to decide: the call first, then the evidence under it.
+   Layout: 12-column card grid, summary before detail; charts are hand-drawn SVG sized to their container.
+   Tokens match the Intelligence Desk dashboard (stone paper, near-black ink, claret accent) so the two pages read as one product.
+   Colour jobs: bull/bear = diverging blue/red with a grey midpoint (validated); status = fixed good/warning/critical; compute firmness = one-hue ordinal ramp (validated). */
+:root {
+  --bg: #F1F0EB; --surface: #FBFAF7; --surface-2: #F5F4EF; --surface-3: #ECEAE3;
+  --ink: #15181E; --ink-2: #444B58; --muted: #5F6672; --line: #DEDBD2; --line-2: #CFCBC0;
+  --accent: #8B2635; --on-accent: #FFFFFF;
+  --grid: #E3E1DA; --axis: #BDBBB0;
+  --bull: #2a78d6; --bear: #e34948; --mid: #8a8f99; --series-1: #2a78d6;
+  --bull-rgb: 42, 120, 214; --bear-rgb: 227, 73, 72; --mid-rgb: 120, 118, 110;
+  --za1: .13; --za2: .14; --za3: .10; --za4: .20;
+  --good: #0ca30c; --good-text: #006300; --warn: #fab219; --serious: #ec835a; --critical: #d03b3b;
+  --ord-1: #184f95; --ord-2: #2a78d6; --ord-3: #5598e7; --ord-4: #86b6ef;
+  --font-display: "Bricolage Grotesque", "IBM Plex Sans", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --radius: 10px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111317; --surface: #191C21; --surface-2: #1F2329; --surface-3: #262B32;
+    --ink: #ECEAE4; --ink-2: #B9BDC6; --muted: #9299A5; --line: #2B3038; --line-2: #3A404A;
+    --accent: #E07A88; --on-accent: #1A0B0E;
+    --grid: #262A31; --axis: #3A404A;
+    --bull: #3987e5; --bear: #e66767; --mid: #7d8490; --series-1: #3987e5;
+    --bull-rgb: 57, 135, 229; --bear-rgb: 230, 103, 103; --mid-rgb: 146, 153, 165;
+    --za1: .26; --za2: .22; --za3: .20; --za4: .36;
+    --good-text: #4cc94c;
+    --ord-1: #86b6ef; --ord-2: #5598e7; --ord-3: #2a78d6; --ord-4: #184f95;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111317; --surface: #191C21; --surface-2: #1F2329; --surface-3: #262B32;
+  --ink: #ECEAE4; --ink-2: #B9BDC6; --muted: #9299A5; --line: #2B3038; --line-2: #3A404A;
+  --accent: #E07A88; --on-accent: #1A0B0E;
+  --grid: #262A31; --axis: #3A404A;
+  --bull: #3987e5; --bear: #e66767; --mid: #7d8490; --series-1: #3987e5;
+  --bull-rgb: 57, 135, 229; --bear-rgb: 230, 103, 103; --mid-rgb: 146, 153, 165;
+  --za1: .26; --za2: .22; --za3: .20; --za4: .36;
+  --good-text: #4cc94c;
+  --ord-1: #86b6ef; --ord-2: #5598e7; --ord-3: #2a78d6; --ord-4: #184f95;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration-color: var(--line-2); text-underline-offset: 2px; }
+a:hover { text-decoration-color: var(--accent); }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3, p { margin: 0; }
+h2, h3 { text-wrap: balance; }
+.mono { font-family: var(--font-mono); }
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+
+.page { max-width: 1200px; margin: 0 auto; padding-inline: clamp(16px, 3vw, 32px); padding-block: 18px 40px; }
+.masthead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.brand h1 { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: -.01em; }
+.brand p { font-size: 12px; color: var(--muted); margin-top: 1px; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.pill { display: inline-flex; align-items: center; gap: 7px; padding: 4px 10px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 12px; background: var(--surface); }
+.pill i, .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--mid); flex: none; }
+.pill.good i { background: var(--good); } .pill.warn i { background: var(--warn); }
+.lead { font-family: var(--font-display); font-weight: 500; font-size: clamp(22px, 3.4vw, 32px); line-height: 1.22; letter-spacing: -.015em; max-width: 30em; text-wrap: balance; padding-block: 22px 18px; }
+.lead .ct { font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 5px; text-decoration-color: var(--mid); }
+.lead .ct.bull { text-decoration-color: var(--bull); } .lead .ct.bear { text-decoration-color: var(--bear); }
+.lead-sub { font-size: 13px; color: var(--muted); max-width: 62em; margin-bottom: 16px; }
+
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 14px; }
+.grid > * { min-width: 0; }
+.c12 { grid-column: span 12; } .c8 { grid-column: span 8; } .c7 { grid-column: span 7; } .c6 { grid-column: span 6; } .c5 { grid-column: span 5; } .c4 { grid-column: span 4; }
+@media (max-width: 920px) { .c8, .c7, .c6, .c5, .c4 { grid-column: span 12; } }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px 18px; }
+.card-h { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.card h2 { font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: -.005em; }
+.card .sub { font-size: 12px; color: var(--muted); margin-top: 2px; max-width: 60em; }
+.tbtn { flex: none; font-size: 12px; padding: 3px 10px; border: 1px solid var(--line-2); border-radius: 6px; background: var(--surface-2); }
+.tbtn:hover { border-color: var(--accent); }
+.note { font-size: 12px; color: var(--muted); margin-top: 10px; max-width: 62em; }
+
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 9px; border-radius: 999px; font-size: 11.5px; font-weight: 600; letter-spacing: .03em; border: 1px solid var(--line-2); background: var(--surface-2); white-space: nowrap; }
+.chip.call.bull i { background: var(--bull); } .chip.call.bear i { background: var(--bear); }
+.tier { display: inline-block; padding: 0 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 10.5px; line-height: 17px; background: var(--surface-3); color: var(--ink); }
+.tier.T1 { background: rgba(12,163,12,.16); } .tier.T2 { background: rgba(var(--bull-rgb), .16); } .tier.T3 { background: rgba(250,178,25,.22); } .tier.T4, .tier.T5 { background: rgba(var(--bear-rgb), .16); }
+
+/* ---- the call at three prices ---- */
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 920px) { .tiles { grid-template-columns: minmax(0, 1fr); } }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.tile-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.tile-price { font-size: 38px; font-weight: 600; line-height: 1.05; letter-spacing: -.02em; }
+.tile-line { font-size: 13px; color: var(--ink-2); }
+.tile-line b { color: var(--ink); font-weight: 600; }
+details.more { margin-top: 4px; font-size: 12.5px; }
+details.more > summary { cursor: pointer; color: var(--muted); list-style: none; display: inline-flex; align-items: center; gap: 6px; padding: 2px 0; }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::before { content: "+"; display: inline-block; width: 14px; text-align: center; font-family: var(--font-mono); }
+details.more[open] > summary::before { content: "−"; }
+details.more > :not(summary) { margin-top: 6px; color: var(--ink-2); }
+ul.ev { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+ul.ev li { font-size: 12px; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 2px 6px; align-items: baseline; }
+ul.ev li a { color: var(--ink); }
+
+/* ---- charts ---- */
+.chartbox { width: 100%; min-width: 0; }
+.chartbox svg { display: block; max-width: 100%; overflow: visible; }
+.chartbox svg text { font-family: var(--font-body); }
+.svg-t { font-size: 12px; font-weight: 600; fill: var(--ink); }
+.svg-m { font-size: 11px; fill: var(--muted); }
+.svg-cap { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; fill: var(--muted); }
+.halo { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.hit { fill: transparent; pointer-events: all; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 12px; color: var(--ink-2); }
+.legend .k { display: inline-flex; align-items: center; gap: 6px; }
+.legend .sw { width: 11px; height: 11px; border-radius: 3px; flex: none; border: 1px solid rgba(128,128,128,.25); }
+.legend .lk { width: 16px; height: 2px; border-radius: 1px; flex: none; }
+.legend b { font-weight: 600; color: var(--ink); font-family: var(--font-mono); font-size: 11.5px; }
+
+.tip { position: fixed; z-index: 50; max-width: 280px; padding: 8px 10px; border-radius: 8px; background: var(--ink); color: var(--bg); font-size: 12px; line-height: 1.4; pointer-events: none; box-shadow: 0 6px 22px rgba(0,0,0,.22); }
+.tip-t { font-weight: 600; margin-bottom: 3px; }
+.tip-r { display: flex; align-items: center; gap: 7px; }
+.tip-r i { width: 12px; height: 2px; border-radius: 1px; flex: none; }
+.tip-r b { font-family: var(--font-mono); font-weight: 500; }
+.tip-r span { opacity: .78; }
+.tip-n { margin-top: 4px; opacity: .78; }
+
+/* ---- tables ---- */
+.tablewrap { overflow-x: auto; max-width: 100%; }
+table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+th, td { text-align: left; padding: 6px 10px 6px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--font-mono); white-space: nowrap; }
+.scen td:first-child, .mx td:first-child { white-space: nowrap; }
+
+@media (max-width: 520px) { .scen .hs { display: none; } .scen th { white-space: normal; } }
+table.mx { table-layout: fixed; }
+table.mx th, table.mx td { padding: 6px 8px; }
+table.mx td.cell { border: 2px solid var(--surface); border-radius: 6px; }
+table.mx td.cell .r { font-size: 18px; font-weight: 600; line-height: 1.15; white-space: nowrap; }
+@media (max-width: 520px) { table.mx td.cell .r { font-size: 15px; } table.mx th, table.mx td { padding: 6px 5px; } table.mx th:first-child { width: 23%; } }
+table.mx td.cell .u { font-size: 11px; color: var(--ink-2); margin-top: 2px; }
+table.mx td.rowh { font-weight: 600; vertical-align: middle; }
+table.mx td.rowh span { display: block; font-weight: 400; font-size: 11.5px; color: var(--muted); }
+table.mx th:first-child { width: 26%; }
+
+/* ---- stacked bars (2px surface gaps, 4px data-end) ---- */
+.stack { display: flex; gap: 2px; height: 14px; }
+.stack .seg { min-width: 3px; }
+.stack .seg:last-child { border-radius: 0 4px 4px 0; }
+.meter-row + .meter-row { margin-top: 16px; }
+.meter-h { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; margin-bottom: 6px; font-size: 13px; }
+.meter-h b { font-weight: 600; }
+.meter-h span { color: var(--muted); font-size: 12px; }
+
+/* ---- scorecard ---- */
+.srow { border-bottom: 1px solid var(--line); }
+.srow > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(90px, 1.1fr) minmax(100px, 1.3fr) 96px; gap: 10px; align-items: center; padding: 8px 0; }
+.srow > summary::-webkit-details-marker { display: none; }
+.srow .dim { font-size: 13px; }
+.srow .dim::before { content: "+"; display: inline-block; width: 14px; font-family: var(--font-mono); color: var(--muted); }
+.srow[open] .dim::before { content: "−"; }
+.bars { display: grid; gap: 3px; }
+.bars .b { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); font-family: var(--font-mono); }
+.bars .b i { display: block; height: 6px; border-radius: 0 3px 3px 0; }
+.srow p { padding: 0 0 10px 14px; font-size: 12.5px; color: var(--ink-2); max-width: 60em; }
+.edge { justify-self: end; }
+
+/* ---- reasoning, flips ---- */
+ol.why { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; counter-reset: w; }
+ol.why > li { counter-increment: w; display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; font-size: 13.5px; color: var(--ink-2); max-width: 70ch; }
+ol.why > li::before { content: counter(w); font-family: var(--font-mono); font-size: 12px; color: var(--muted); padding-top: 2px; }
+ol.why > li > div > p { color: var(--ink); }
+.evline { font-size: 12px; color: var(--muted); margin-top: 6px; display: flex; flex-wrap: wrap; gap: 2px 8px; align-items: center; }
+.evline a { color: var(--ink); }
+.col { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 36px; }
+@media (max-width: 920px) { .two { grid-template-columns: minmax(0, 1fr); } }
+ul.flips { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+ul.flips li { font-size: 13px; color: var(--ink); padding-left: 16px; position: relative; }
+ul.flips li::before { content: "↳"; position: absolute; left: 0; color: var(--muted); }
+.callout { margin-top: 14px; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--surface-2); font-size: 12.5px; color: var(--ink-2); display: grid; gap: 6px; }
+.callout .t { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.callout b { color: var(--ink); font-weight: 600; }
+.sub-h { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 16px 0 6px; }
+
+/* ---- facts ---- */
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+@media (max-width: 920px) { .facts { grid-template-columns: minmax(0, 1fr); } }
+.fact { padding: 12px 0 12px; border-bottom: 1px solid var(--line); min-width: 0; }
+.fact-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+.fact-h .fid { font-size: 11px; color: var(--muted); }
+.fact-h h3 { font-size: 14px; font-weight: 600; }
+.fact-h .basis { margin-left: auto; font-size: 11.5px; color: var(--muted); }
+.fact-v { font-size: 13px; color: var(--ink-2); margin-top: 4px; }
+.fact-s { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin-top: 6px; font-size: 12px; color: var(--muted); }
+.fact-s a { display: inline-flex; align-items: center; gap: 5px; color: var(--ink); }
+
+/* ---- misc ---- */
+.cols { display: flex; align-items: flex-end; gap: 10px; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 3px 14px; font-size: 12.5px; margin-top: 12px; }
+.kv dt { color: var(--muted); } .kv dd { margin: 0; font-family: var(--font-mono); font-size: 12px; }
+ul.lim { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 13px; color: var(--ink-2); }
+ul.lim li { padding-left: 16px; position: relative; }
+ul.lim li::before { content: "•"; position: absolute; left: 3px; color: var(--muted); }
+.disc { display: grid; gap: 8px; font-size: 12.5px; color: var(--ink-2); max-width: 70ch; }
+.disc b { color: var(--ink); font-weight: 600; }
+.pass-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.foot { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; }
+.foot a { color: var(--ink-2); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+<div class="page" id="app"></div>
+<script>
+(() => {
+'use strict';
+const D = __DATA__;
+
+/* ------------------------------------------------------------------ helpers */
+const NS = 'http://www.w3.org/2000/svg';
+const el = (tag, attrs, ...kids) => {
+  const n = document.createElement(tag);
+  if (attrs) for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === 'class') n.className = v;
+    else if (k === 'text') n.textContent = v;
+    else if (k.startsWith('on') && typeof v === 'function') n.addEventListener(k.slice(2), v);
+    else n.setAttribute(k, v === true ? '' : String(v));
+  }
+  for (const c of kids.flat(Infinity)) { if (c == null || c === false) continue; n.append(c instanceof Node ? c : document.createTextNode(String(c))); }
+  return n;
+};
+const sv = (tag, attrs, ...kids) => {
+  const n = document.createElementNS(NS, tag);
+  if (attrs) for (const [k, v] of Object.entries(attrs)) { if (v == null || v === false) continue; if (k === 'text') n.textContent = v; else n.setAttribute(k, String(v)); }
+  for (const c of kids.flat(Infinity)) { if (c == null || c === false) continue; n.append(c instanceof Node ? c : document.createTextNode(String(c))); }
+  return n;
+};
+const fmt = {
+  usdM(m, d) { const a = Math.abs(m); if (a >= 1e6) return '$' + (+(m / 1e6).toFixed(2)) + 'T'; return '$' + (+(m / 1e3).toFixed(d == null ? (a >= 1e5 ? 0 : 1) : d)) + 'B'; },
+  usdB(b, d = 0) { return '$' + (+b.toFixed(d)) + 'B'; },
+  pct(x, d = 0) { return (x * 100).toFixed(d) + '%'; },
+};
+const S = D.model.scenarios, YEARS = D.model.years;
+const SCEN = { bear: ['Bear', 'var(--bear)'], base: ['Base', 'var(--ink-2)'], bull: ['Bull', 'var(--bull)'] };
+const tone = c => /BULL/i.test(c) ? 'bull' : /BEAR/i.test(c) ? 'bear' : 'mid';
+const SHORT = { series_h: ['Series H', 'H'], secondary: ['Secondary', 'Sec.'], ipo_target: ['IPO target', 'IPO'] };
+const mctx = document.createElement('canvas').getContext('2d');
+const tw = (text, px = 12, weight = 600) => { mctx.font = `${weight} ${px}px "IBM Plex Sans", system-ui, sans-serif`; return mctx.measureText(text).width; };
+const redraws = [];
+function observe(box, draw) {
+  let w = 0;
+  const run = () => { const nw = Math.round(box.getBoundingClientRect().width); if (nw >= 160 && nw !== w) { w = nw; draw(nw); } };   /* a hidden or transiently collapsed box (under 160px) keeps its last drawing */
+  redraws.push(() => { w = 0; run(); });
+  new ResizeObserver(run).observe(box); run();
+}
+/* label tiers: nearest-to-axis row first, so labels that collide stack instead of overlapping */
+function tiers(items, W, pad = 10) {
+  const rows = [];
+  for (const it of items.slice().sort((a, b) => a.x - b.x)) {
+    it.cx = Math.min(Math.max(it.x, it.w / 2 + 2), W - it.w / 2 - 2);
+    for (let r = 0; ; r++) { const row = rows[r] || (rows[r] = []); if (row.every(o => Math.abs(o.cx - it.cx) >= (o.w + it.w) / 2 + pad)) { row.push(it); it.row = r; break; } }
+  }
+  return rows.length;
+}
+
+/* ------------------------------------------------------------------ tooltip (values also live in each table view) */
+const tip = el('div', { class: 'tip', role: 'status', hidden: true });
+document.body.append(tip);
+function showTip(x, y, s) {
+  tip.replaceChildren();
+  if (s.title) tip.append(el('div', { class: 'tip-t', text: s.title }));
+  for (const r of s.rows || []) tip.append(el('div', { class: 'tip-r' }, r.color ? el('i', { style: `background:${r.color}` }) : null, el('b', { text: r.val }), el('span', { text: r.key })));
+  if (s.note) tip.append(el('div', { class: 'tip-n', text: s.note }));
+  tip.hidden = false;
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  let px = x + 14, py = y + 14;
+  if (px + w > innerWidth - 8) px = Math.max(8, x - w - 14);
+  if (py + h > innerHeight - 8) py = Math.max(8, y - h - 14);
+  tip.style.left = px + 'px'; tip.style.top = py + 'px';
+}
+const hideTip = () => { tip.hidden = true; };
+function bindTip(node, spec) {
+  node.addEventListener('pointermove', e => showTip(e.clientX, e.clientY, spec()));
+  node.addEventListener('pointerleave', hideTip);
+  node.addEventListener('focus', () => { const r = node.getBoundingClientRect(); showTip(r.left + r.width / 2, r.top + r.height / 2, spec()); });
+  node.addEventListener('blur', hideTip);
+}
+
+/* ------------------------------------------------------------------ shared pieces */
+const tierChip = t => t ? el('span', { class: `tier ${t}`, text: t }) : null;
+const ext = (href, text, cls) => el('a', { href, target: '_blank', rel: 'noopener noreferrer', class: cls, text });
+function evList(events) {
+  if (!events || !events.length) return null;
+  return el('ul', { class: 'ev' }, events.map(e => el('li', {}, e.url ? ext(e.url, `${e.date} · ${e.publisher || 'source'}`) : el('span', { text: `${e.date} · ${e.publisher || 'source'}` }), tierChip(e.tier), el('span', { text: e.headline.length > 96 ? e.headline.slice(0, 94) + '…' : e.headline }))));
+}
+function evInline(events) {
+  if (!events || !events.length) return null;
+  return el('p', { class: 'evline' }, el('span', { text: 'Evidence' }), events.map(e => el('span', { style: 'display:inline-flex;gap:5px;align-items:center', title: e.headline }, e.url ? ext(e.url, `${e.date} · ${(e.publisher || 'source').replace(/\s*\(.*$/, '')}`) : `${e.date}`, tierChip(e.tier))));
+}
+function card(span, title, sub, body, tableFn) {
+  const head = el('div', { class: 'card-h' }, el('div', {}, el('h2', { text: title }), sub ? el('p', { class: 'sub', text: sub }) : null));
+  const c = el('section', { class: `card ${span}` }, head);
+  if (tableFn) {
+    const view = el('div', {}, body), tbl = el('div', { class: 'tablewrap', hidden: true }, tableFn());
+    const btn = el('button', { type: 'button', class: 'tbtn', 'aria-pressed': 'false', text: 'Table' });
+    btn.addEventListener('click', () => { const on = tbl.hidden; tbl.hidden = !on; view.hidden = on; btn.setAttribute('aria-pressed', String(on)); btn.textContent = on ? 'Chart' : 'Table'; });
+    head.append(btn); c.append(view, tbl);
+  } else c.append(body);
+  return c;
+}
+function simpleTable(head, rows, numCols = []) {
+  return el('table', {}, el('thead', {}, el('tr', {}, head.map((h, i) => el('th', { class: numCols.includes(i) ? 'num' : null, text: h })))),
+    el('tbody', {}, rows.map(r => el('tr', {}, r.map((c, i) => el('td', { class: numCols.includes(i) ? 'num' : null }, c))))));
+}
+function stackBar(parts, total, label) {
+  const bar = el('div', { class: 'stack', role: 'img', 'aria-label': label });
+  for (const p of parts) {
+    if (!p.n) continue;
+    const seg = el('div', { class: 'seg', style: `flex:${p.n} 1 0; background:${p.color}`, tabindex: '0' });
+    bindTip(seg, () => ({ title: p.label, rows: [{ key: `of ${total}`, val: p.valText || String(p.n), color: p.color }], note: p.note }));
+    bar.append(seg);
+  }
+  return bar;
+}
+const legend = items => el('div', { class: 'legend' }, items.map(i => el('span', { class: 'k' }, el('i', { class: i.line ? 'lk' : 'sw', style: `background:${i.color}` }), i.label, i.n != null ? el('b', { text: String(i.n) }) : null)));
+
+/* ------------------------------------------------------------------ masthead and lead */
+function masthead() {
+  const ev = D.evidence, c = ev.certifier;
+  const pill = (cls, text, title) => el('span', { class: `pill ${cls}`, title }, el('i'), text);
+  return el('header', { class: 'masthead' },
+    el('div', { class: 'brand' }, el('h1', { text: 'Anthropic Decision Board' }), el('p', { text: `Record through ${D.asof} · page built ${D.built.slice(0, 10)} from commit ${D.commit || 'n/a'}` })),
+    el('div', { class: 'pills' },
+      pill(c.verdict === 'READY' ? 'good' : 'warn', `Certifier ${c.verdict}`, `${c.passes.length} passes; the first ${c.passes.length - 1} returned NEEDS WORK`),
+      pill('', `Ship gates ${ev.gates.summary.PASS} pass · ${ev.gates.summary.WARN} warn · ${ev.gates.summary.FAIL} fail`),
+      pill('warn', 'Private · licensed PitchBook fields', 'Check your PitchBook licence before sharing this page')));
+}
+function lead() {
+  const parts = D.verdict.one_liner.split(/(LEAN BULLISH|LEAN BEARISH|BULLISH|BEARISH|NEUTRAL)/);
+  const p = el('p', { class: 'lead' }, parts.map((t, i) => i % 2 ? el('span', { class: `ct ${tone(t)}`, text: t }) : t));
+  return el('div', { class: 'c12' }, p, el('p', { class: 'lead-sub', text: `Judge’s call, horizon ${D.verdict.horizon}. The call depends on price because no IPO price range exists until a public S-1 is filed. Decision support, not investment advice.` }));
+}
+
+/* ------------------------------------------------------------------ the call at three prices */
+function tiles() {
+  const wrap = el('div', { class: 'tiles c12' });
+  for (const m of D.marks) {
+    const b = m.by_scenario.base;
+    wrap.append(el('article', { class: 'tile' },
+      el('div', {}, el('span', { class: `chip call ${tone(m.call)}` }, el('i'), m.call)),
+      el('div', { class: 'tile-label', text: m.label }),
+      el('div', { class: 'tile-price', text: fmt.usdM(m.ev_usd_m) }),
+      el('p', { class: 'tile-line' }, 'Needs ', el('b', { text: fmt.usdM(b.req2030rev_usd_m) }), ' of 2030 revenue (', el('b', { text: fmt.pct(b.req_cagr) }), ' a year from FY2026) at base-case margins.'),
+      m.return_pct_a_year != null ? el('p', { class: 'tile-line' }, 'Base-case return about ', el('b', { text: `${m.return_pct_a_year > 0 ? '+' : ''}${m.return_pct_a_year}%` }), ' a year (Judge).') : null,
+      el('details', { class: 'more' }, el('summary', { text: 'Why this call, and the evidence' }), el('p', { text: m.why }), evList(m.events))));
+  }
+  return wrap;
+}
+
+/* ------------------------------------------------------------------ price against value */
+function ladderCard() {
+  const marks = D.marks, bands = D.bands, adj = D.adjusted_base_usd_m, eng = S.base.dcf_ev_usd_m;
+  const max = Math.ceil(Math.max(S.bull.dcf_ev_usd_m, ...marks.map(m => m.ev_usd_m)) / 5e5) * 5e5;
+  const box = el('div', { class: 'chartbox' });
+  const zones = bands ? [
+    { k: 'lean_bull', name: 'Lean bullish', from: 0, to: bands.lean_bullish_max_usd_m, style: 'rgba(var(--bull-rgb), var(--za1))' },
+    { k: 'neutral', name: 'Neutral', from: bands.lean_bullish_max_usd_m, to: bands.neutral_max_usd_m, style: 'rgba(var(--mid-rgb), var(--za2))' },
+    { k: 'lean_bear', name: 'Lean bearish', from: bands.neutral_max_usd_m, to: bands.lean_bearish_max_usd_m, style: 'rgba(var(--bear-rgb), var(--za3))' },
+    { k: 'bear', name: 'Bearish', from: bands.lean_bearish_max_usd_m, to: max, style: 'rgba(var(--bear-rgb), var(--za4))' },
+  ] : [];
+  const zoneRange = z => z.from === 0 ? `up to ${fmt.usdM(z.to)}` : z.to === max ? `above ${fmt.usdM(z.from)}` : `${fmt.usdM(z.from)} to ${fmt.usdM(z.to)}`;
+  const aria = `Price against value. ${marks.map(m => `${m.label} ${fmt.usdM(m.ev_usd_m)}: ${m.call}`).join('. ')}. Model value: bear ${fmt.usdM(S.bear.dcf_ev_usd_m)}, base ${fmt.usdM(eng)}${adj ? ` (${fmt.usdM(adj)} adjusted)` : ''}, bull ${fmt.usdM(S.bull.dcf_ev_usd_m)}.`;
+  const draw = W => {
+    box.replaceChildren();
+    const narrow = W < 470, padX = 10, pw = W - padX * 2, X = v => padX + pw * v / max, rowH = 18;
+    const pl = marks.map(m => { const t = `${SHORT[m.key] ? SHORT[m.key][narrow ? 1 : 0] : m.label} ${fmt.usdM(m.ev_usd_m)}`; return { m, t, x: X(m.ev_usd_m), w: tw(t) + 6 }; });
+    const nA = tiers(pl, W);
+    const vl = [
+      { k: 'bear', t: `Bear ${fmt.usdM(S.bear.dcf_ev_usd_m)}`, x: X(S.bear.dcf_ev_usd_m) },
+      { k: 'base', t: adj ? `Base ${fmt.usdM(eng)}–${fmt.usdM(adj)}` : `Base ${fmt.usdM(eng)}`, x: X(adj ? (eng + adj) / 2 : eng) },
+      { k: 'bull', t: `Bull ${fmt.usdM(S.bull.dcf_ev_usd_m)}`, x: X(S.bull.dcf_ev_usd_m) },
+    ].map(o => ({ ...o, w: tw(o.t) + 6 }));
+    const nB = tiers(vl, W);
+    const rowsTop = 22, labelsBottom = rowsTop + nA * rowH, bandY = labelsBottom + 8, bandH = 40, axisY = bandY + bandH, cap2Y = axisY + 48, cy = cap2Y + 18, vTop = cy + 12, H = vTop + nB * rowH + 6;
+    const svg = sv('svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': aria });
+    svg.append(sv('text', { class: 'svg-cap', x: padX, y: 11, text: 'Reported prices' }));
+    for (const z of zones) { // zones first, so everything else draws over them
+      const r = sv('rect', { x: X(z.from), y: bandY, width: Math.max(0, X(z.to) - X(z.from)), height: bandH, style: `fill:${z.style}` });
+      bindTip(r, () => ({ title: `${z.name}: ${zoneRange(z)}`, note: 'The Judge’s bands, a judgment from the model cases, not odds.' }));
+      svg.append(r);
+    }
+    for (let v = 0; v <= max; v += 5e5) {
+      svg.append(sv('line', { x1: X(v), x2: X(v), y1: bandY, y2: axisY + 4, stroke: 'var(--grid)', 'stroke-width': 1 }));
+      svg.append(sv('text', { class: 'svg-m', x: X(v), y: axisY + 17, 'text-anchor': v === 0 ? 'start' : v === max ? 'end' : 'middle', text: v === 0 ? '$0' : fmt.usdM(v) }));
+    }
+    svg.append(sv('line', { x1: padX, x2: W - padX, y1: axisY, y2: axisY, stroke: 'var(--axis)', 'stroke-width': 1 }));
+    for (const o of pl) {
+      const tn = tone(o.m.call), col = tn === 'bull' ? 'var(--bull)' : tn === 'bear' ? 'var(--bear)' : 'var(--mid)';
+      const top = rowsTop + (nA - 1 - o.row) * rowH, g = sv('g', { tabindex: '0', 'aria-label': `${o.m.label} ${fmt.usdM(o.m.ev_usd_m)}: ${o.m.call}` });
+      g.append(sv('line', { x1: o.x, x2: o.x, y1: top + rowH - 3, y2: axisY, stroke: 'var(--ink-2)', 'stroke-width': 1.5, opacity: .55 }));
+      g.append(sv('circle', { cx: o.x, cy: bandY + bandH / 2, r: 5.5, fill: col, stroke: 'var(--surface)', 'stroke-width': 2 }));
+      g.append(sv('text', { class: 'svg-t halo', x: o.cx, y: top + 13, 'text-anchor': 'middle', text: o.t }));
+      g.append(sv('rect', { class: 'hit', x: o.x - 13, y: top, width: 26, height: axisY - top }));
+      bindTip(g, () => ({ title: `${o.m.label}: ${fmt.usdM(o.m.ev_usd_m)}`, rows: [{ key: 'Judge’s call', val: o.m.call, color: col }], note: o.m.events[0] ? `${o.m.events[0].date} · ${o.m.events[0].publisher}` : null }));
+      svg.append(g);
+    }
+    svg.append(sv('text', { class: 'svg-cap', x: padX, y: cap2Y - 6, text: 'Model value (DCF)' }));
+    const guide = x => svg.append(sv('line', { x1: x, x2: x, y1: axisY, y2: cy, stroke: 'var(--grid)', 'stroke-width': 1 }));
+    for (const o of vl) {
+      const g = sv('g', { tabindex: '0', 'aria-label': o.t });
+      if (o.k === 'base') {
+        const xe = X(eng), xa = adj ? X(adj) : xe;
+        guide(xe); if (adj) guide(xa);
+        g.append(sv('line', { x1: xe, x2: xa, y1: cy, y2: cy, stroke: 'var(--ink-2)', 'stroke-width': 3, 'stroke-linecap': 'round' }));
+        g.append(sv('circle', { cx: xe, cy, r: 5, fill: 'var(--ink-2)', stroke: 'var(--surface)', 'stroke-width': 2 }));
+        if (adj) g.append(sv('circle', { cx: xa, cy, r: 5, fill: 'var(--ink-2)', stroke: 'var(--surface)', 'stroke-width': 2 }));
+        g.append(sv('rect', { class: 'hit', x: Math.min(xe, xa) - 14, y: cy - 14, width: Math.abs(xa - xe) + 28, height: 28 }));
+        bindTip(g, () => ({ title: 'Base-case value', rows: [{ key: 'Engine DCF', val: fmt.usdM(eng), color: 'var(--ink-2)' }].concat(adj ? [{ key: 'Judge’s adjusted base', val: fmt.usdM(adj), color: 'var(--ink-2)' }] : []), note: D.adjusted_base_note ? `Adjustment: ${D.adjusted_base_note}` : null }));
+      } else {
+        guide(o.x);
+        g.append(sv('circle', { cx: o.x, cy, r: 5.5, fill: o.k === 'bull' ? 'var(--bull)' : 'var(--bear)', stroke: 'var(--surface)', 'stroke-width': 2 }));
+        g.append(sv('rect', { class: 'hit', x: o.x - 14, y: cy - 14, width: 28, height: 28 }));
+        const v = S[o.k].dcf_ev_usd_m;
+        bindTip(g, () => ({ title: `${SCEN[o.k][0]}-case DCF value`, rows: [{ key: 'Enterprise value', val: fmt.usdM(v), color: SCEN[o.k][1] }] }));
+      }
+      g.append(sv('text', { class: 'svg-t halo', x: o.cx, y: vTop + o.row * rowH + 12, 'text-anchor': 'middle', text: o.t }));
+      svg.append(g);
+    }
+    box.append(svg);
+  };
+  const lg = zones.length ? legend(zones.map(z => ({ color: z.style, label: `${z.name} · ${zoneRange(z)}` }))) : null;
+  const wrap = el('div', {}, box, lg, el('p', { class: 'note', text: 'Dots on the band are what the market is asking; dots below are what each model scenario says the business is worth. The shaded bands are the Judge’s thresholds for the call, a judgment drawn from the model cases rather than odds.' }));
+  const table = () => simpleTable(['Reference', 'Value', 'Call or case'], marks.map(m => [m.label, fmt.usdM(m.ev_usd_m), m.call]).concat([
+    ['Bear-case DCF', fmt.usdM(S.bear.dcf_ev_usd_m), 'model'], ['Base-case DCF (engine)', fmt.usdM(eng), 'model'], adj ? ['Base, Judge’s adjusted', fmt.usdM(adj), 'Judge'] : null, ['Bull-case DCF', fmt.usdM(S.bull.dcf_ev_usd_m), 'model']].filter(Boolean)), [1]);
+  const c = card('c12', 'Price against value', 'Three reported prices set against the three model scenarios and the Judge’s call bands.', wrap, table);
+  observe(box, draw);
+  return c;
+}
+
+/* ------------------------------------------------------------------ revenue scenarios, and what each price needs */
+function revenueCard() {
+  const box = el('div', { class: 'chartbox' }), keys = ['bull', 'base', 'bear'], n = YEARS.length;
+  const ylab = v => v === 0 ? '$0' : `$${v}B`, xlab = y => y >= 2026 ? `${y}E` : String(y);
+  const draw = W => {
+    box.replaceChildren();
+    const narrow = W < 470, H = narrow ? 240 : 330, m = { t: 12, r: narrow ? 74 : 96, b: 28, l: narrow ? 46 : 54 };
+    const iw = Math.max(40, W - m.l - m.r), ih = H - m.t - m.b, val = k => S[k].revenue_usd_m.map(v => v / 1e3);
+    const ymax = Math.ceil(Math.max(...val('bull')) / 100) * 100, X = i => m.l + iw * i / (n - 1), Y = v => m.t + ih * (1 - v / ymax);
+    const svg = sv('svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}`, tabindex: '0', role: 'img', 'aria-label': `Revenue by scenario, ${YEARS[0]} to ${YEARS[n - 1]}. ` + keys.map(k => `${SCEN[k][0]} reaches ${fmt.usdB(val(k)[n - 1])} in ${YEARS[n - 1]}`).join('; ') + '. Arrow keys step through the years.' });
+    for (let v = 0; v <= ymax; v += 100) {
+      svg.append(sv('line', { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: v === 0 ? 'var(--axis)' : 'var(--grid)', 'stroke-width': 1 }));
+      svg.append(sv('text', { class: 'svg-m', x: m.l - 8, y: Y(v) + 4, 'text-anchor': 'end', text: ylab(v) }));
+    }
+    YEARS.forEach((y, i) => { if (!narrow || i % 2 === 0) svg.append(sv('text', { class: 'svg-m', x: X(i), y: H - 8, 'text-anchor': 'middle', text: xlab(y) })); });
+    for (const k of keys) {
+      const v = val(k);
+      svg.append(sv('path', { d: v.map((x, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)},${Y(x).toFixed(1)}`).join(''), fill: 'none', stroke: SCEN[k][1], 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+      svg.append(sv('circle', { cx: X(n - 1), cy: Y(v[n - 1]), r: 4.5, fill: SCEN[k][1], stroke: 'var(--surface)', 'stroke-width': 2 }));
+      svg.append(sv('text', { class: 'svg-t', x: X(n - 1) + 10, y: Y(v[n - 1]) + 4, text: `${SCEN[k][0]} ${fmt.usdB(v[n - 1])}` }));
+    }
+    const cross = sv('g'); svg.append(cross);
+    const setCross = (i, cx, cy) => {
+      cross.replaceChildren();
+      cross.append(sv('line', { x1: X(i), x2: X(i), y1: m.t, y2: m.t + ih, stroke: 'var(--axis)', 'stroke-width': 1 }));
+      for (const k of keys) cross.append(sv('circle', { cx: X(i), cy: Y(val(k)[i]), r: 4.5, fill: SCEN[k][1], stroke: 'var(--surface)', 'stroke-width': 2 }));
+      showTip(cx, cy, { title: xlab(YEARS[i]), rows: keys.map(k => ({ key: SCEN[k][0], val: fmt.usdB(val(k)[i], val(k)[i] < 10 ? 1 : 0), color: SCEN[k][1] })) });
+    };
+    const clear = () => { cross.replaceChildren(); hideTip(); };
+    const hit = sv('rect', { class: 'hit', x: m.l, y: m.t, width: iw, height: ih });
+    hit.addEventListener('pointermove', e => { const r = svg.getBoundingClientRect(); const i = Math.max(0, Math.min(n - 1, Math.round(((e.clientX - r.left) - m.l) / iw * (n - 1)))); setCross(i, e.clientX, e.clientY); });
+    hit.addEventListener('pointerleave', clear);
+    svg.append(hit);
+    let idx = n - 1;
+    svg.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault(); idx = Math.max(0, Math.min(n - 1, idx + (e.key === 'ArrowRight' ? 1 : -1)));
+      const r = svg.getBoundingClientRect(); setCross(idx, r.left + X(idx), r.top + m.t + 30);
+    });
+    svg.addEventListener('blur', clear);
+    box.append(svg);
+  };
+  const scenTable = el('div', { class: 'tablewrap' }, el('table', { class: 'scen' }, el('thead', {}, el('tr', {}, ['Scenario', '2026E', '2028E', '2030E', 'FCF margin 2030', 'DCF value'].map((h, i) => el('th', { class: [i ? 'num' : '', i === 1 ? 'hs' : ''].join(' ').trim() || null, text: h })))),
+    el('tbody', {}, ['bull', 'base', 'bear'].map(k => el('tr', {}, el('td', { text: SCEN[k][0] }), ...[2026, 2028, 2030].map(y => el('td', { class: y === 2026 ? 'num hs' : 'num', text: fmt.usdB(S[k].revenue_usd_m[YEARS.indexOf(y)] / 1e3, 1) })), el('td', { class: 'num', text: fmt.pct(S[k].fcf_margin_2030, 1) }), el('td', { class: 'num', text: fmt.usdM(S[k].dcf_ev_usd_m) }))))));
+  const wrap = el('div', {}, box, legend(['bull', 'base', 'bear'].map(k => ({ color: SCEN[k][1], label: SCEN[k][0], line: true }))), el('div', { style: 'margin-top:12px' }, scenTable),
+    el('p', { class: 'note', text: 'Gross revenue basis (Anthropic books revenue gross of cloud-partner fees). FY2024 is implied and FY2025 is press-reported from a leaked draft prospectus; 2026 onward are model estimates. The base case follows the company’s own plan.' }));
+  const table = () => simpleTable(['Year', 'Bear', 'Base', 'Bull'], YEARS.map((y, i) => [xlab(y), ...['bear', 'base', 'bull'].map(k => fmt.usdB(S[k].revenue_usd_m[i] / 1e3, S[k].revenue_usd_m[i] < 1e4 ? 1 : 0))]), [1, 2, 3]);
+  const c = card('c7', 'Revenue by scenario', 'Annual revenue, $B, three cases.', wrap, table);
+  observe(box, draw);
+  return c;
+}
+function matrixCard() {
+  const i30 = YEARS.indexOf(2030), rev = k => S[k].revenue_usd_m[i30];
+  const wash = r => { const a = Math.min(.30, .08 + .11 * Math.abs(Math.log2(r))); return r >= 1 ? `rgba(var(--bull-rgb), ${a.toFixed(2)})` : `rgba(var(--bear-rgb), ${a.toFixed(2)})`; };
+  const tbl = el('table', { class: 'mx' }, el('thead', {}, el('tr', {}, el('th', { text: 'Price' }), ...['bear', 'base', 'bull'].map(k => el('th', { text: SCEN[k][0] })))),
+    el('tbody', {}, D.marks.map(m => el('tr', {}, el('td', { class: 'rowh' }, fmt.usdM(m.ev_usd_m), el('span', { text: (SHORT[m.key] || [m.label])[0] })),
+      ...['bear', 'base', 'bull'].map(k => { const need = m.by_scenario[k].req2030rev_usd_m, r = rev(k) / need;
+        return el('td', { class: 'cell', style: `background:${wash(r)}` }, el('div', { class: 'r', text: `${r >= 1 ? '✓' : '✕'} ${Math.round(r * 100)}%` }), el('div', { class: 'u', text: `${fmt.usdM(rev(k))} of ${fmt.usdM(need)}` })); })))));
+  return card('', 'Does each case support each price?', '2030 revenue the case delivers, as a share of the 2030 revenue at which its DCF value equals the price.', el('div', {}, el('div', { class: 'tablewrap' }, tbl),
+    el('p', { class: 'note', text: '100% or more (✓, blue) means the case supports the price; under 100% (✕, red) means it falls short. The required revenue holds each case’s 2026–2029 cash flows and its 2030 free-cash-flow margin, so the bull case needs less revenue than the base case does.' })));
+}
+
+/* ------------------------------------------------------------------ outside view */
+function outsideCard() {
+  const o = D.outside, max = Math.max(...o.rates.map(r => r.pct), 1), HZ = { one: '1 year', three: '3 years', five: '5 years', ten: '10 years' };
+  const rows = el('div', { style: 'display:grid;gap:7px' }, o.rates.map(r => el('div', { style: 'display:grid;grid-template-columns:62px minmax(0,1fr) 44px;gap:8px;align-items:center;font-size:12px' },
+    el('span', { class: 'muted', text: HZ[r.horizon] || r.horizon }), el('div', { style: 'height:12px' }, el('div', { style: `width:${r.pct === 0 ? 0 : Math.max(1.5, r.pct / max * 100)}%;height:12px;background:var(--series-1);border-radius:0 4px 4px 0` })),
+    el('b', { class: 'mono', style: 'font-weight:500;text-align:right', text: `${r.pct}%` }))));
+  const cagr = el('dl', { class: 'kv' }, ...['bear', 'base', 'bull'].flatMap(k => [el('dt', { text: `${SCEN[k][0]} case, 2026 to 2030` }), el('dd', { text: `${fmt.pct(S[k].cagr_2026_2030)} a year` })]),
+    o.median_5y_pct != null ? [el('dt', { text: 'Median firm above $25B, 5 years' }), el('dd', { text: `${o.median_5y_pct}% a year (real)` })] : null);
+  return card('', 'Outside view first', o.stat ? `${o.stat}.` : 'Base rate for a company this size.', el('div', {}, rows, cagr,
+    el('p', { class: 'note' }, 'Firms with sales above $25B, 1950–2015, inflation-adjusted. The scenario rates are nominal. ', o.source_url ? ext(o.source_url, `Source: The Base Rate Book, 2016 (${o.tier})`) : null, '.')));
+}
+
+/* ------------------------------------------------------------------ bull and bear scored */
+function scoreCard() {
+  const list = el('div', {}, D.scorecard.map(s => el('details', { class: 'srow' },
+    el('summary', {}, el('span', { class: 'dim', text: s.dimension }),
+      el('span', { class: 'bars' }, el('span', { class: 'b' }, el('i', { style: `width:${s.bull * 18}px;background:var(--bull)` }), `bull ${s.bull}`), el('span', { class: 'b' }, el('i', { style: `width:${s.bear * 18}px;background:var(--bear)` }), `bear ${s.bear}`)),
+      el('span', { class: `chip call ${s.edge === 'bull' ? 'bull' : s.edge === 'bear' ? 'bear' : 'mid'} edge` }, el('i'), s.edge === 'even' ? 'even' : `${s.edge} edge`)),
+    el('p', { text: s.note || '' }))));
+  return card('', 'Bull and bear, scored', 'Strength of each side’s evidence by dimension, 1 to 5. Open a row for the Judge’s note.', el('div', {}, list));
+}
+
+/* ------------------------------------------------------------------ why the Judge lands here, and what would change it */
+function whyCard() {
+  const items = D.verdict.rationale.map((t, i) => el('li', {}, el('div', {}, el('p', { text: t }), evInline((D.verdict.rationale_events[i] || []).slice(0, 2)))));
+  const notes = D.evidence.certifier.open_notes || [];
+  const callout = notes.length ? el('div', { class: 'callout' }, el('div', { class: 't', text: 'Open Certifier notes on this reasoning (non-blocking)' }), notes.map(n => el('p', {}, el('b', { text: `${n.id}. ` }), n.issue))) : null;
+  return card('c7', 'Why the Judge lands here', 'Seven steps, in the order the Judge took them: base rate first, then what each price needs, then the evidence quality.', el('div', {}, el('ol', { class: 'why' }, items), callout));
+}
+function flipsCard() {
+  const flips = el('ul', { class: 'flips' }, D.verdict.what_flips.map(t => el('li', { text: t })));
+  const br = D.breakers.length ? el('details', { class: 'more' }, el('summary', { text: `All ${D.breakers.length} thesis-breakers, with metric, threshold and date` }),
+    el('div', { class: 'tablewrap' }, simpleTable(['Metric', 'Threshold', 'By'], D.breakers.map(b => [b.metric, b.threshold, b.observable_by || '']))) ) : null;
+  const un = D.verdict.unresolved.length ? el('details', { class: 'more' }, el('summary', { text: `${D.verdict.unresolved.length} unresolved items the Judge lists` }), el('ul', { class: 'flips' }, D.verdict.unresolved.map(t => el('li', { text: t })))) : null;
+  return card('', 'What would change the call', 'Observable events with a threshold and a date. The decisive unknowns are Q3 2026 revenue and the S-1’s gross-margin and contractual-obligations disclosures.', el('div', {}, flips, br, un));
+}
+
+/* ------------------------------------------------------------------ how far to trust it */
+function trustCard() {
+  const ev = D.evidence, c = ev.certifier, g = ev.gates, a = ev.audit, cl = ev.claims;
+  const G = { PASS: 'var(--good)', WARN: 'var(--warn)', FAIL: 'var(--critical)' };
+  const row = (title, right, bar, lg, text) => el('div', { class: 'meter-row' }, el('div', { class: 'meter-h' }, el('b', { text: title }), el('span', { text: right })), bar, lg, text ? el('p', { class: 'note', text }) : null);
+  const g11 = g.items.find(x => x.status === 'WARN');
+  const gates = row('Ship gates', `${g.items.length} mechanical checks`, stackBar(['PASS', 'WARN', 'FAIL'].map(s => ({ n: g.summary[s], color: G[s], label: s })), g.items.length, 'Ship gate results'),
+    legend([{ color: G.PASS, label: '✓ Pass', n: g.summary.PASS }, { color: G.WARN, label: '! Warn', n: g.summary.WARN }, { color: G.FAIL, label: '✕ Fail', n: g.summary.FAIL }]),
+    g11 ? `${g11.id} warns: ${g11.detail}.` : null);
+  const av = a.verdicts, opened = a.n - (av.UNOPENABLE || 0);
+  const audit = row('Cold audit of a random sample', `${a.n} events, source pages re-opened`, stackBar([{ n: av.SUPPORTED, color: 'var(--good)', label: 'Fully supported' }, { n: av.PARTLY, color: 'var(--warn)', label: 'Core fact supported, a detail not' }, { n: av.UNOPENABLE || 0, color: 'var(--mid)', label: 'Page could not be opened' }].filter(x => x.n), a.n, 'Audit results'),
+    legend([{ color: 'var(--good)', label: '✓ Fully supported', n: av.SUPPORTED }, { color: 'var(--warn)', label: '! Partly supported', n: av.PARTLY }, { color: 'var(--mid)', label: '? Unopenable', n: av.UNOPENABLE || 0 }]),
+    `The core fact was supported in ${Math.round(a.supported_or_partly_share * 100)}% of the ${opened} events that could be opened; ${Math.round(a.supported_share * 100)}% were fully supported. ${a.corrections} audit-driven corrections were applied and logged.`);
+  const cs = cl.summary;
+  const claims = row('Load-bearing claims re-derived blind', `${cl.n} claims, four agents that never saw the draft`, stackBar([
+    { n: cs.MATCH, color: 'var(--good)', label: 'Match' }, { n: cs.NOTED, color: 'var(--mid)', label: 'Noted: text compared side by side' }, { n: cs.PARTIAL, color: 'var(--warn)', label: 'Partial' },
+    { n: cs.MISMATCH, color: 'var(--critical)', label: 'Mismatch, frozen' }, { n: cs.UNTRACEABLE, color: 'var(--ink-2)', label: 'Untraceable' }], cl.n, 'Claim reconciliation'),
+    legend([{ color: 'var(--good)', label: '✓ Match', n: cs.MATCH }, { color: 'var(--mid)', label: '≈ Noted', n: cs.NOTED }, { color: 'var(--warn)', label: '! Partial', n: cs.PARTIAL }, { color: 'var(--critical)', label: '✕ Mismatch', n: cs.MISMATCH }, { color: 'var(--ink-2)', label: '? Untraceable', n: cs.UNTRACEABLE }]),
+    `Mismatches are frozen with both values shown, never resolved by the desk (see below).`);
+  const passes = el('div', { class: 'pass-list' }, c.passes.map((p, i) => el('span', { class: 'chip', title: p.blocking ? `Blocking: ${p.blocking}` : '' }, el('i', { style: `background:${p.verdict === 'READY' ? 'var(--good)' : 'var(--critical)'}` }), `Pass ${i + 1} · ${p.head} · ${p.verdict}`)));
+  const cert = el('div', { class: 'meter-row' }, el('div', { class: 'meter-h' }, el('b', { text: 'Independent Certifier' }), el('span', { text: `default verdict NEEDS WORK; ${c.verdict} on pass ${c.passes.length}` })), passes,
+    el('p', { class: 'note', text: `Re-derived ${c.facts_total} load-bearing facts before opening any deliverable: ${c.facts_agree} of ${c.facts_total} agree. Recomputed ${c.recomputed_total} model and verdict figures: ${c.recomputed_ok} within tolerance (the miss was an earlier draft sentence the Judge then rewrote). ${c.blocking} blocking and ${c.non_blocking} non-blocking notes at ${c.certified_commit}. ${c.later_commits.length} commit${c.later_commits.length === 1 ? '' : 's'} since then were smoke-tested in a browser only, not re-certified.` }),
+    c.later_commits.length ? el('details', { class: 'more' }, el('summary', { text: 'Commits since certification' }), el('ul', { class: 'flips' }, c.later_commits.map(x => el('li', {}, el('span', { class: 'mono', text: `${x.sha} ` }), x.subject)))) : null,
+    null);
+  return card('c7', 'How far to trust it', 'Four independent layers, each run by agents that did not write the draft.', el('div', {}, gates, audit, claims, cert));
+}
+
+/* ------------------------------------------------------------------ compute */
+function computeCard() {
+  const k = D.compute, cols = ['var(--ord-1)', 'var(--ord-2)', 'var(--ord-3)', 'var(--ord-4)'];
+  const parts = k.segments.map((s, i) => ({ n: s.usd_m, valText: fmt.usdM(s.usd_m, 1), color: cols[i], label: s.label, note: `${fmt.pct(s.usd_m / k.announced_usd_m, 0)} of announced` }));
+  const bar = stackBar(parts, fmt.usdM(k.announced_usd_m, 1), 'Compute commitments by how firm they are');
+  const lg = legend(k.segments.map((s, i) => ({ color: cols[i], label: s.label, n: fmt.usdM(s.usd_m, 1) })));
+  const table = () => simpleTable(['Basis', 'Amount', 'Share'], k.segments.map(s => [s.label, fmt.usdM(s.usd_m, 1), fmt.pct(s.usd_m / k.announced_usd_m, 1)]).concat([['Announced total', fmt.usdM(k.announced_usd_m, 1), '100%']]), [1, 2]);
+  const body = el('div', {}, el('div', { style: 'font-size:13px;margin-bottom:8px' }, el('b', { style: 'font-size:26px;font-weight:600;letter-spacing:-.02em', text: fmt.usdM(k.announced_usd_m, 1) }), ' announced across ', `${k.commitments} commitments`),
+    bar, lg,
+    el('dl', { class: 'kv' }, el('dt', { text: 'Contracted or disclosed' }), el('dd', { text: fmt.usdM(k.contracted_usd_m, 1) }), el('dt', { text: 'Capacity announced' }), el('dd', { text: `${k.gw_announced} GW, of which ${k.gw_up_to_ceiling} GW are “up to” ceilings` }),
+      el('dt', { text: 'Leaked draft prospectus' }), el('dd', { text: `${fmt.usdM(k.s1_reference_usd_m, 1)}, ${fmt.pct(k.s1_non_cancelable_share, 1)} non-cancelable` })),
+    el('p', { class: 'note', text: '“Up to” is not contracted, announced is not closed, and the prospectus figures are press-reported from a leaked draft (Reuters), not from a public filing.' }));
+  return card('', 'Compute commitments by firmness', 'Darkest is firmest. The segments sum to the announced total.', body, table);
+}
+
+/* ------------------------------------------------------------------ facts */
+function factsCard() {
+  const items = D.facts.map(f => el('article', { class: 'fact' },
+    el('div', { class: 'fact-h' }, el('span', { class: 'fid', text: f.id }), el('h3', { text: f.label }), el('span', { class: 'basis', text: f.basis })),
+    el('p', { class: 'fact-v', text: f.headline }),
+    el('div', { class: 'fact-s' }, el('span', { text: `as of ${f.as_of}` }), f.single_source ? el('span', { text: 'single source' }) : null, f.sources.map(s => ext(s.url, s.publisher || s.url, '')).map((a, i) => el('span', { style: 'display:inline-flex;gap:5px;align-items:center' }, tierChip(f.sources[i].tier), a))),
+    el('details', { class: 'more' }, el('summary', { text: 'Certifier’s full text' }), el('p', { text: f.full }))));
+  return card('c12', 'Load-bearing facts, re-derived from source', 'The Certifier researched each one itself before it opened any deliverable, then compared. All eight agree with the dashboard.', el('div', { class: 'facts' }, items));
+}
+
+/* ------------------------------------------------------------------ frozen conflicts */
+const FIELD = { date: 'Date', size_usd_m: 'Round size, $M', pre_usd_m: 'Pre-money, $M', post_usd_m: 'Post-money, $M', equity_only_usd_m: 'Equity raised, $M', debt_usd_m: 'Debt, $M', total_usd_m: 'Total, $M', run_rate_usd_m: 'Run-rate, $M' };
+function mismatchCard() {
+  const rows = D.mismatches.map(m => [el('b', { style: 'font-weight:600', text: m.claim }), el('div', {}, m.compared.map(c => el('div', { class: 'small' }, el('span', { class: 'muted', text: `${FIELD[c.field] || c.field}: ` }), c.detail))), el('div', {}, m.sources.map(u => el('div', { class: 'small' }, ext(u, new URL(u).hostname.replace(/^www\./, '')))))]);
+  return card('c12', 'Frozen conflicts', `${D.mismatches.length} figures where the draft record and the blind re-derivation disagree beyond tolerance. Neither is adopted; both are shown.`, el('div', { class: 'tablewrap' }, simpleTable(['Claim in the record', 'Where they differ (record vs re-derivation)', 'Re-derivation sources'], rows)));
+}
+
+/* ------------------------------------------------------------------ the record, limits, disclosures */
+function recordCard() {
+  const r = D.record, box = el('div', { class: 'chartbox' }), yrs = Object.keys(r.by_year), max = Math.max(...Object.values(r.by_year));
+  const draw = W => {
+    box.replaceChildren();
+    const H = 150, m = { t: 20, r: 6, b: 22, l: 6 }, iw = W - m.l - m.r, ih = H - m.t - m.b, slot = iw / yrs.length, bw = Math.min(24, slot - 8);
+    const svg = sv('svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': `Events per year: ${yrs.map(y => `${y} ${r.by_year[y]}`).join(', ')}` });
+    svg.append(sv('line', { x1: m.l, x2: W - m.r, y1: m.t + ih, y2: m.t + ih, stroke: 'var(--axis)', 'stroke-width': 1 }));
+    yrs.forEach((y, i) => {
+      const v = r.by_year[y], h = Math.max(2, ih * v / max), x = m.l + slot * i + (slot - bw) / 2, g = sv('g', { tabindex: '0', 'aria-label': `${y}: ${v} events` });
+      g.append(sv('path', { d: `M${x},${m.t + ih} V${m.t + ih - h + 4} Q${x},${m.t + ih - h} ${x + 4},${m.t + ih - h} H${x + bw - 4} Q${x + bw},${m.t + ih - h} ${x + bw},${m.t + ih - h + 4} V${m.t + ih} Z`, fill: 'var(--series-1)' }));
+      g.append(sv('text', { class: 'svg-t', x: x + bw / 2, y: m.t + ih - h - 6, 'text-anchor': 'middle', text: String(v) }));
+      g.append(sv('text', { class: 'svg-m', x: x + bw / 2, y: H - 6, 'text-anchor': 'middle', text: y }));
+      g.append(sv('rect', { class: 'hit', x: m.l + slot * i, y: m.t, width: slot, height: ih }));
+      bindTip(g, () => ({ title: y, rows: [{ key: 'dated events', val: String(v), color: 'var(--series-1)' }] }));
+      svg.append(g);
+    });
+    box.append(svg);
+  };
+  const tierText = Object.entries(r.by_tier).map(([k, v]) => `${k} ${v}`).join(' · '), conf = Object.entries(r.by_confidence).map(([k, v]) => `${k} ${v}`).join(' · ');
+  const body = el('div', {}, box, el('dl', { class: 'kv' }, el('dt', { text: 'Source tier' }), el('dd', { text: tierText }), el('dt', { text: 'Confidence' }), el('dd', { text: conf }), el('dt', { text: 'Built by' }), el('dd', { text: `${r.agents} agents, ${r.logged_actions.toLocaleString('en-US')} logged actions` })),
+    el('p', { class: 'note', text: `${r.raw_findings.toLocaleString('en-US')} raw findings were deduplicated into ${r.events} dated events (${r.first} to ${r.last}) and ${r.entities} entities. Coverage is thickest in the last two years.` }));
+  const table = () => simpleTable(['Year', 'Dated events'], yrs.map(y => [y, String(r.by_year[y])]), [1]);
+  const c = card('', 'The record', 'Dated events by year, each with a one-sentence summary, a source and a tier.', body, table);
+  observe(box, draw);
+  return c;
+}
+function limitsCard() {
+  const lim = [
+    'No public S-1 exists. Every FY2024 and FY2025 financial is press-reported from a leaked draft prospectus, and FY2024 revenue is implied from a growth rate. Many prospectus figures trace to one Reuters reporting chain.',
+    'The model’s canonical 39.75% revenue-basis haircut is fitted to two valuation marks and has no public source. The record’s own evidence is about 7.6% (platform fees) and 6% to 10% (PitchBook); both are offered in the dashboard’s Model tab and neither is chosen.',
+    'Run-rate is not recognized revenue, “up to” is not contracted, and announced is not closed. The year-end $100B+ run-rates are expectations, not measurements.',
+    'The base case follows the company plan, which is an inside-view anchor. Net cash of about $100B in the Judge’s adjusted base is a modeler estimate, not a balance sheet.',
+    `${Math.round(D.evidence.audit.supported_share * 100)}% of the audited events were fully supported; the core fact held in ${Math.round(D.evidence.audit.supported_or_partly_share * 100)}% of those that could be opened. Many outlet pages (Reuters, Bloomberg, WSJ, FT, CNBC) were blocked, so some facts were read through relays.`];
+  const disc = [
+    ['PitchBook licence. ', 'This page includes licensed PitchBook Premium content (round sizes, valuations, investors, team data, analyst notes). It is not public: check your licence before sharing this page or its data.'],
+    ['MNPI screen. ', 'The S-1 is confidential. Any figure attributed to a leaked or reported prospectus is press-reported (T2/T3), not confirmed by the company. Nothing here was obtained from an insider. Run your compliance review before acting on reported-prospectus figures.'],
+    ['Conflict of interest. ', 'The desk’s model portfolio (project context dated Feb 27 2026; re-verify before relying on it) is overweight Anthropic (6%) and underweight OpenAI (2%). The analysis does not treat that position as evidence. This page is decision support, not investment advice.'],
+    ['Independence. ', 'An independent analysis by the desk. It is not affiliated with, reviewed by or endorsed by Anthropic PBC or any other company it names.']];
+  return card('c12', 'What the record cannot carry, and disclosures', null, el('div', { class: 'two' }, el('div', {}, el('div', { class: 'sub-h', style: 'margin-top:0', text: 'What the record cannot carry' }), el('ul', { class: 'lim' }, lim.map(t => el('li', { text: t })))), el('div', {}, el('div', { class: 'sub-h', style: 'margin-top:0', text: 'Disclosures' }), el('div', { class: 'disc' }, disc.map(([b, t]) => el('p', {}, el('b', { text: b }), t))))));
+}
+function footer() {
+  const l = D.links;
+  return el('footer', { class: 'foot', style: 'grid-column: span 12' }, el('span', {}, 'Every figure on this page is computed from the repository’s data files by ', el('span', { class: 'mono', text: 'scripts/build_summary.py' }), '.'),
+    el('span', {}, ext(l.full_dashboard, 'Full nine-tab dashboard'), ' · ', ext(l.repo, 'Code and data on GitHub'), el('span', { class: 'mono muted', text: ` · ${D.commit || ''}` })));
+}
+
+/* ------------------------------------------------------------------ boot */
+const app = document.getElementById('app');
+app.append(masthead(), lead());
+const col = (cls, ...cards) => el('div', { class: `col ${cls}` }, ...cards);
+app.append(el('div', { class: 'grid' }, tiles(), ladderCard(), revenueCard(), col('c5', matrixCard(), outsideCard()), whyCard(), col('c5', flipsCard(), scoreCard()), trustCard(), col('c5', computeCard(), recordCard()), factsCard(), mismatchCard(), limitsCard(), footer()));
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => redraws.forEach(f => f()));
+})();
+</script>

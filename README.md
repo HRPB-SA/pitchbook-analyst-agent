@@ -39,7 +39,7 @@ What the record cannot carry, stated plainly:
 | `data/agent_log.json` | The agents' own activity log (what the Agents floor replays) |
 | `agents/outputs/` | Raw output of every agent, as received |
 | `agents/briefs/` | The briefs each agent was given |
-| `scripts/` | `merge.py`, `q.py`, `health.py`, `make_claims.py`, `reconcile.py`, `sample_audit.py`, `model.py`, `parity.cjs`, `build_analysis.py`, `certify.py`, `export_xlsx.py`, `build_artifact.py`, `shot.cjs` |
+| `scripts/` | `merge.py`, `q.py`, `health.py`, `make_claims.py`, `reconcile.py`, `sample_audit.py`, `model.py`, `parity.cjs`, `build_analysis.py`, `certify.py`, `export_xlsx.py`, `build_artifact.py`, `build_summary.py`, `shot.cjs` |
 | `docs/` | `ARCHITECTURE.md` (design), `METHODOLOGY.md` (tiers, conflict rules, basis discipline, model conventions) |
 
 ## Run it locally
@@ -91,6 +91,10 @@ appear in the dashboard.
 
 To publish as a single-file page (for an artifact host): `python3 scripts/build_artifact.py` writes `dist/artifact.html` with CSS and JS inlined; publish it with the
 `data/*.json` files alongside so the relative fetches keep working.
+
+The one-page decision board (the call, the model behind it, the evidence checks, in one scrollable page) is a second single file that fetches nothing: `python3 scripts/build_summary.py`
+reads `data/*.json` and `agents/outputs/certifier.json`, fills `assets/summary.template.html` and writes `dist/summary.html`. Every figure on it is computed from those files;
+only labels, captions and the disclosure wording are written by hand. Rebuild it after any change to the data, then publish `dist/summary.html` on its own (no data files needed).
 
 ## Conventions you should know before quoting a number
 
